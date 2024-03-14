@@ -1598,24 +1598,20 @@
 <p>Backup the file systems in the Digital Experience 9.5 container profile (<strong>Persistent volume claim</strong> <code>wp_profile</code>). Refer to the <a href="../../../../manage/backup_restore/">Backup and restore</a> topic and component backup guidance for more information.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    The HCL Digital Asset Management (DAM) component uploads folder and the DAM persistent mount for the primary instance dx-deployment-persistence-0 in the statefulset.
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>    The HCL Digital Asset Management (DAM) component uploads folder and the DAM persistent mount for the primary instance dx-deployment-persistence-0 in the statefulset.
+</code></pre></div>
 </div>
 <p>To create a backup of the profile <strong>Persistent volume claim</strong> <code>wp_profile</code>, it is recommended that:</p>
 <ul>
 <li>The DX has only one instance.</li>
 <li>
 <p>The DX 9.5 container instance is stopped using the HCL Portal and HCL Web Content Manager command as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl exec --stdin --tty &lt;DX_POD_NAME&gt; -n &lt;NAMESPACE&gt; -- /bin/bash
+<div class="language-text highlight"><pre><span></span><code>kubectl exec --stdin --tty &lt;DX_POD_NAME&gt; -n &lt;NAMESPACE&gt; -- /bin/bash
 
 cd /opt/HCL/wp_profile/bin/
 
 /stopServer.sh WebSphere_Portal -username &lt;USERNAME&gt; -password &lt;PASSWORD&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p><img alt="Backup and restore stop server example" src="../_img/backup_restore_stop_server_example.png" /></p>
 </li>
 <li>
@@ -1624,12 +1620,10 @@ cd /opt/HCL/wp_profile/bin/
 </li>
 <li>
 <p>Before running the tar command, ensure that the backup file system that you are using has ~50% free profile.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>cd /opt/HCL/wp_profile
+<div class="language-text highlight"><pre><span></span><code>cd /opt/HCL/wp_profile
 
 tar -cvpzf backup.tar.gz --exclude=/backup.tar.gz --one-file-system /opt/HCL/wp_profile/*
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <p><img alt="Backup and restore wp_profile example" src="../_img/backup_restore_wp_profile2.png" /></p>
@@ -1648,12 +1642,12 @@ tar -cvpzf backup.tar.gz --exclude=/backup.tar.gz --one-file-system /opt/HCL/wp_
 <li>
 <p><strong>Persistence layer - database backup</strong></p>
 <p>Run the following command to back up the container components that are managed through the DX Persistence layer:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pg_dump name_of_database &gt; name_of_backup_file
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>pg_dump name_of_database &gt; name_of_backup_file
+</code></pre></div>
 <p><img alt="Backup and restore persistence database example" src="../_img/backup_restore_persistence_db.png" /></p>
 <p>To back up the system components on a remote system:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>   pg_dump -U user_name -h remote_host -p remote_port name_of_database &gt; name_of_backup_file
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>   pg_dump -U user_name -h remote_host -p remote_port name_of_database &gt; name_of_backup_file
+</code></pre></div>
 <p>After the backup command is completed, it is recommended that a copy of the resulting file is created and placed to an alternate long term storage.</p>
 <p>See <a href="../../../../../manage_content/digital_assets/dam_backup_restore_image/">Backup and restore a DAM image</a> for more information.</p>
 </li>
@@ -1666,8 +1660,8 @@ tar -cvpzf backup.tar.gz --exclude=/backup.tar.gz --one-file-system /opt/HCL/wp_
 <ul>
 <li>
 <p>Refer to the following examples:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>   tar -cvpzf backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system /opt/app/upload
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>   tar -cvpzf backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system /opt/app/upload
+</code></pre></div>
 <p><img alt="Backup and restore DAM media example 1" src="../_img/backup_restore_dam_media1.png" /></p>
 </li>
 <li>

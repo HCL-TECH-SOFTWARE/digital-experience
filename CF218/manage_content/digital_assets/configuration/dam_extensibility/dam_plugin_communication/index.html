@@ -2320,45 +2320,27 @@
 <p>This API route/URL is a middleware URL configured in DAM configurations. This is picked from plug-in configurations and a POST request is made to this API with the file, Auth-key, callback-url, and actions parameters passed along. The Auth-key is also configured in the configuration and is also picked by DAM. The <code>Callback-API</code> is called back by middleware after the operation is completed successfully by the plug-in and the modified asset is sent back to DAM.</p>
 <p>Refer to this documentation for more information on the <a href="https://opensource.hcltechsw.com/experience-api-documentation/image-processor-api/#tag/PluginController">Plugin-API Specification</a>.</p>
 <p><strong>Body request</strong>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
     &quot;callBackUrl&quot;:&quot;&quot;, // URL with the DES encrypted Operation ID
     &quot;file&quot;:&quot;&quot;, //File binary
     &quot;actionParams&quot;: {
        // any Object
     }
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p><strong>Acknowledgment response</strong>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
   &quot;error&quot;: {
     &quot;statusCode&quot;: &quot;string&quot;,
     &quot;message&quot;: &quot;string&quot;,
   }
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p><strong>Callback-API request</strong></p>
 <p>This is an API at the DAM end, the URL to this API is defined in the <code>Plugin-API</code> request itself. This can be accessed by making a PUT call by the middleware when the operation is successfully completed. This <code>Callback-API</code> expects the modified file, download URL, and other metadata which is served to the user through DAM. To successfully communicate with DAM, a callback request must be made with a defined structure of request and response.</p>
 <p>Refer to this documentation for more information on the <a href="https://opensource.hcltechsw.com/experience-api-documentation/dam-api/">Callback-API Specification</a>.</p>
 <p><strong>Body request</strong>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
     &quot;file&quot;:&quot;&quot;, //File binary
     &quot;downloadUrl&quot;:&quot;&quot;, //asset URL
     &quot;metadata&quot;:{
@@ -2366,20 +2348,15 @@
     }, //any object
     &quot;keywords&quot;:[]
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p><strong>Error scenario (400/500 code range)</strong>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
   &quot;error&quot;: {
     &quot;statusCode&quot;: &quot;string&quot;,
     &quot;message&quot;: &quot;string&quot;,
   }
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

@@ -3216,44 +3216,7 @@
 <h1 id="establishing-sso-connections-through-saml-20-tokens">Establishing SSO connections through SAML 2.0 tokens</h1>
 <p>It is possible to establish outbound HTTP connections to remote resources that are authenticated by using the SAML 2.0 protocol. Outbound HTTP connections take care of the communication with the Identity provider (IDP) to get an authenticated connection by using SAML tokens. The SAML Authentication handler uses the HTTP POST binding protocol of the SAML specification. Therefore, it is required that both the Identity Provider and the Service Provider support the HTTP POST binding, if they are used by Outbound HTTP Connections for authentication.</p>
 <p>An outbound HTTP connection is activated by setting the metadata SSO_SAML_20_IDP at the connection policy or policy mapping. The value of this metadata setting is a symbolic name for the Identity provider that establishes the connection. This name is used as a prefix for another set of metadata that define the settings of the Identity provider as the following example illustrates:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;mapping contextpath=&quot;/myproxy&quot; url=&quot;*&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;mapping contextpath=&quot;/myproxy&quot; url=&quot;*&quot;&gt;
     &lt;policy url=&quot;http://www.myremotesite.com/RESOURCE*&quot; &gt;   
         ...      
         &lt;!-- the following meta data setting activates the connection        --&gt;
@@ -3291,7 +3254,7 @@
     &lt;/meta-data&gt;
 
 &lt;/mapping&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li><strong><a href="cfg_saml_auth_conn/">Configuration settings for SAML authenticated connections</a></strong><br />
 To enable a connection policy for SAML-based authentication, the following settings must be defined in the metadata section of the policy, the policy mapping, or the default mapping.</li>

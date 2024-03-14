@@ -3566,14 +3566,11 @@
 </li>
 <li>
 <p>Run the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>$AdminTask configureLoginModule { -loginType system
+<div class="language-text highlight"><pre><span></span><code>$AdminTask configureLoginModule { -loginType system
       -loginEntryAlias WEB_INBOUND -loginModule com.ibm.wps.auth.jaas.EnrichAttributeLoginModule
       -useLoginModuleProxy true -authStrategy OPTIONAL  -newModule true }
 $AdminConfig save
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Exit wsadmin and restart the server.</p>
@@ -3588,16 +3585,12 @@ $AdminConfig save
 </li>
 <li>
 <p>Run the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>$AdminTask configureLoginModule { -loginType system
+<div class="language-text highlight"><pre><span></span><code>$AdminTask configureLoginModule { -loginType system
       -loginEntryAlias WEB_INBOUND -loginModule com.ibm.wps.auth.jaas.EnrichAttributeLoginModule
       -useLoginModuleProxy true -authStrategy OPTIONAL  -customProperties
       {&quot;vmm_email_attribute_name=internet\_mail&quot;} -newModule true }
 $AdminConfig save
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Where internet_mail is the alternative VMM attribute name for the email address.</p>
 </li>
 <li>
@@ -3613,16 +3606,12 @@ $AdminConfig save
 </li>
 <li>
 <p>Run the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>$AdminTask configureLoginModule { -loginType system
+<div class="language-text highlight"><pre><span></span><code>$AdminTask configureLoginModule { -loginType system
       -loginEntryAlias WEB_INBOUND -loginModule com.ibm.wps.auth.jaas.EnrichAttributeLoginModule
       -useLoginModuleProxy true -authStrategy OPTIONAL  -customProperties
       {&quot;context_email_attribute_name=email&quot;} -newModule true }
 $AdminConfig save
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Where email is the alternative attribute name for the security context.</p>
 </li>
 <li>
@@ -3638,18 +3627,13 @@ $AdminConfig save
 </li>
 <li>
 <p>Run the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>$AdminTask configureLoginModule
+<div class="language-text highlight"><pre><span></span><code>$AdminTask configureLoginModule
         { -loginType system -loginEntryAlias WEB_INBOUND -loginModule
         com.ibm.wps.auth.jaas.EnrichAttributeLoginModule -useLoginModuleProxy true -authStrategy
         OPTIONAL  -customProperties {&quot;vmm_email_attribute_name=internet\_mail&quot;,
         &quot;context_email_attribute_name=email&quot;} -newModule true }
 $AdminConfig save
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Where internet_mail is the alternative VMM attribute name for the email address and email is the alternative attribute name for the security context.</p>
 </li>
 <li>
@@ -3665,14 +3649,11 @@ $AdminConfig save
 </li>
 <li>
 <p>Run the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>$AdminTask
+<div class="language-text highlight"><pre><span></span><code>$AdminTask
         unconfigureLoginModule { -loginType application -loginEntryAlias Portal_LTPA -loginModule
         com.ibm.wps.auth.jaas.EnrichAttributeLoginModule }
 $AdminConfig save
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Exit wsadmin and restart the server.</p>

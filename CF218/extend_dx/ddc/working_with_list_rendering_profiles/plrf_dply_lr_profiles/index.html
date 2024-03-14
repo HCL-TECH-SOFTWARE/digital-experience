@@ -2150,8 +2150,8 @@
 <li>You can deploy a list-rendering profile by creating all entries that are contained in the list-rendering profile as custom properties in the WP List Rendering Profile Service resource environment provider in the WebSphere® Integrated Solutions Console.</li>
 <li>
 <p>You can implement a plug-in for the extension point with the ID <code>com.ibm.portal.wcm.plr.ListRenderingProfileProvider</code>. These extensions can make multiple list-rendering profiles available to the Digital Data Connector (DDC) for HCL Portal run time through the following method:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>com.ibm.portal.wcm.plr.ListRenderingProfileProvider.getListRenderingProfiles()
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>com.ibm.portal.wcm.plr.ListRenderingProfileProvider.getListRenderingProfiles()
+</code></pre></div>
 <p>This method is defined in the public Java API for the Digital Data Connector (DDC) for HCL Portal framework. With this approach, your plug-in returns the individual list-rendering profile entries as properties contained in <code>java.util.Properties</code> objects. By using this approach, you can package the required list-rendering profiles together with the DDC plug-in.</p>
 </li>
 </ul>

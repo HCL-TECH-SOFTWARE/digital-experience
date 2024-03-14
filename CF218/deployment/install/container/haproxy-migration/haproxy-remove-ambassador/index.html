@@ -1639,38 +1639,19 @@
 </ul>
 <h2 id="check-the-clusters-customresourcedefinitions">Check the clusters <code>CustomResourceDefinitions</code></h2>
 <p>To check if the definitions are on the cluster, run the following command:</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>crd<span class="w"> </span>--selector<span class="w"> </span>app.kubernetes.io/name<span class="o">=</span>ambassador
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>crd<span class="w"> </span>--selector<span class="w"> </span>app.kubernetes.io/name<span class="o">=</span>ambassador
+</code></pre></div>
 <p>This should return the 19 <code>CRDs</code> listed previously. If more <code>CRDs</code> are returned, it indicates that another Ambassador instance is deployed in your cluster. This needs to be taken into consideration when removing the <code>CRDs</code></p>
 <h2 id="check-the-clusters-customresources">Check the clusters <code>CustomResources</code></h2>
 <p>To see the actual resources that are using the <code>CRDs</code> above, run the following command:</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>ambassador-crds<span class="w"> </span>--all-namespaces
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>ambassador-crds<span class="w"> </span>--all-namespaces
+</code></pre></div>
 <p>If HCL Digital Experience is migrated to HAProxy and Ambassador is disabled, then the previous command should return the following message:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>No resources found
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>No resources found
+</code></pre></div>
 <h2 id="remove-the-customresourcedefinitions">Remove the <code>CustomResourceDefinitions</code></h2>
 <p>If no resources are using <code>CRDs</code>, it is safe to remove the resources from the cluster by running the following command:</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>delete<span class="w"> </span>crd<span class="w"> </span><span class="se">\</span>
+<div class="language-shell highlight"><pre><span></span><code>kubectl<span class="w"> </span>delete<span class="w"> </span>crd<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>filters.getambassador.io<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>filterpolicies.getambassador.io<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>authservices.getambassador.io<span class="w"> </span><span class="se">\</span>
@@ -1690,13 +1671,12 @@
 <span class="w">  </span>projectcontrollers.getambassador.io<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>projectrevisions.getambassador.io<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>ratelimits.getambassador.io
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="restore-customresourcedefinitions-as-fallback">Restore  <code>CustomResourceDefinitions</code> as fallback</h2>
 <p>In case you want the deleted <code>CRDs</code> back,  you can restore them from the HCL Digital Experience Helm chart. To restore CRDs, unpack the <code>CRDs</code> and apply them by running the following command:</p>
-<div class="language-console highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="go">tar zxvf hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz hcl-dx-deployment/crds</span>
+<div class="language-console highlight"><pre><span></span><code><span class="go">tar zxvf hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz hcl-dx-deployment/crds</span>
 <span class="go">kubectl apply -f ./hcl-dx-deployment/crds</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

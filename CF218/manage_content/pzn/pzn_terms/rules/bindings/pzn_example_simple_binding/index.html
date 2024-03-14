@@ -3166,20 +3166,14 @@
 <p>Consider a simple binding example. If the current user is not a previous customer, then show a limited number of current offers. If the current user is a known customer, then show offers appropriate to their status level.</p>
 <p>For example, the profiler <code>Customer Type</code> is used to check whether the current user is a known customer. If the customer is not a known customer, the action <code>Get Limited Number of Offers</code> is run. If the profiler indicates that the user is a known customer with a status of Gold or Platinum, then a different action is run and different offers are retrieved for display.</p>
 <h2 id="simple-binding">Simple binding</h2>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>When Customer Type is
+<div class="language-text highlight"><pre><span></span><code>When Customer Type is
          Not A Customer
             do Get Limited Number of Offers
          Gold or
          Platinum
              do Get Offers For User
          order as is
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

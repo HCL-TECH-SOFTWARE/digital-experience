@@ -3253,38 +3253,7 @@
 <h1 id="hiding-portlets-within-applications-palette-categories">Hiding portlets within Applications palette categories</h1>
 <p>If a portlet has been added to a category by adding it to a page that has been placed under a category label, remove the page it has been added to. Alternatively, if you do not want to delete the page, you can mark it as hidden.</p>
 <p>The following XMLAccess example marks a page as hidden.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;request xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; type=&quot;update&quot; xsi:noNamespaceSchemaLocation=&quot;PortalConfig_8.5.0.xsd&quot;&gt;
     &lt;portal action=&quot;locate&quot;&gt;
 
@@ -3316,34 +3285,10 @@ sharing.scope.page]]&amp;gt;&lt;/parameter&gt;
         &lt;/content-node&gt;
     &lt;/portal&gt;
 &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If a portlet becomes part of a category because the category label points to a feed returning portlet definitions (which contains the portlet), you can force the portlet to not appear by marking the portlet hidden. You can only mark the portlet hidden as long as the feed exposes portlet preferences, like the PortletDefinitionList feed does.</p>
 <p>The following example marks a portlet as hidden.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;request require-defined-oids=&quot;true&quot; type=&quot;update&quot; version=&quot;8.5.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
 xsi:noNamespaceSchemaLocation=
 &quot;PortalConfig_8.5.0.xsd&quot;&gt;
@@ -3368,7 +3313,7 @@ servletref=&quot;ZV_00000000000000AGU4RF6L0000&quot; uniquename=&quot;wps.p.Samp
         &lt;/web-app&gt;
     &lt;/portal&gt;
 &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

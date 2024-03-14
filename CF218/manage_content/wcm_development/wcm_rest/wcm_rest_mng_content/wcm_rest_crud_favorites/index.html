@@ -3311,44 +3311,7 @@
 </li>
 <li>
 <p><strong>Example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;feed xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm&quot;&gt;
     &lt;id&gt;wcmrest:favorite-items&lt;/id&gt;
     &lt;title&gt;wcmrest:favorite-items&lt;/title&gt;
@@ -3386,7 +3349,7 @@
         &lt;category label=&quot;Published&quot; scheme=&quot;wcmrest:workflowState&quot; term=&quot;PUBLISHED&quot; lang=&quot;en&quot;/&gt;
     &lt;/entry&gt;
 &lt;/feed&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="parameters">Parameters</h2>
@@ -3423,42 +3386,36 @@
 </table>
 <p>The values <code>_ascending</code> or <code>_descending</code> are appended to the query to determine sort order.</p>
 <p>For example, to sort a presentation template query in ascending order of creation, you would use:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/favorite-items?type=PresentationTemplate&amp;sort=created_ascending
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/favorite-items?type=PresentationTemplate&amp;sort=created_ascending
+</code></pre></div>
 <p>To sort a presentation template query in descending order of creation, you would use:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/favorite-items?type=PresentationTemplate&amp;sort=created_descending
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/favorite-items?type=PresentationTemplate&amp;sort=created_descending
+</code></pre></div>
 <p>If <code>_ascending</code> or <code>_descending</code> are not specified, the results as displayed in ascending order.</p>
 <p>|
 |<code>type</code>|This parameter is used to query items of a specific item type.For example, to query a list of components:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>`/favorite-items?type=LibraryHTMLComponent`
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>`/favorite-items?type=LibraryHTMLComponent`
+</code></pre></div>
 <p>|
 |<code>page</code>|This parameter is used with the <code>pagesize</code> parameter to define what set of results to display. For example, if <code>pagesize</code> is set to 5, and the <code>page</code> parameter is set to 2, then only results 6 - 10 are displayed.For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/favorite-items?type=PresentationTemplate&amp;pagesize=5&amp;page=2
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/favorite-items?type=PresentationTemplate&amp;pagesize=5&amp;page=2
+</code></pre></div>
 <p>|
 |<code>pagesize</code>|This parameter is used to restrict the number of items that are returned by a query to a set number. It can be used with the <code>page</code> parameter to return specific pages of results.For example, to restrict the number of queries to be returned to 5:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/favorite-items?type=PresentationTemplate&amp;pagesize=5
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/favorite-items?type=PresentationTemplate&amp;pagesize=5
+</code></pre></div>
 <p>|</p>
 <h2 id="adding-and-removing-favorite-items">Adding and removing favorite items</h2>
 <p>For item types that have an explicit REST URI, such as types that can be created or updated, the item can be added by performing an HTTP PUT to update the item, with the PUT request containing the favorites category.</p>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP 1.1 PUT /wps/mycontenthandler/wcmrest/LibraryHTMLComponent/47018149-fc6b-46af-a54d-1eab89a6fed7
+<div class="language-text highlight"><pre><span></span><code>HTTP 1.1 PUT /wps/mycontenthandler/wcmrest/LibraryHTMLComponent/47018149-fc6b-46af-a54d-1eab89a6fed7
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm&quot;&gt;
   ... data ...
     &lt;category scheme=&quot;wcmrest:favorite&quot; term=&quot;true&quot; lang=&quot;en&quot;/&gt;
     ... data ...
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li><code>term="true"</code> will add an item to the list of favorite items.</li>
 <li><code>term="false"</code> will remove an item from the list of favorite items.</li>
@@ -3469,21 +3426,21 @@
 <ul>
 <li>
 <p><strong>Adding:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP 1.1 POST /wps/mycontenthandler/wcmrest/favorite-items/additem?item-uri=/wps/mycontenthandler/!ut/p/digest!yGIcBv5sO9Vb0EY9LLhJyQ/wcmrest/item/65a46943-ed1c-4f5d-b497-03c18886ca8e
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>HTTP 1.1 POST /wps/mycontenthandler/wcmrest/favorite-items/additem?item-uri=/wps/mycontenthandler/!ut/p/digest!yGIcBv5sO9Vb0EY9LLhJyQ/wcmrest/item/65a46943-ed1c-4f5d-b497-03c18886ca8e
+</code></pre></div>
 </li>
 <li>
 <p><strong>Removing:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP 1.1 POST /wps/mycontenthandler/wcmrest/favorite-items/removeitem?item-uri=/wps/mycontenthandler/!ut/p/digest!yGIcBv5sO9Vb0EY9LLhJyQ/wcmrest/item/65a46943-ed1c-4f5d-b497-03c18886ca8e
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>HTTP 1.1 POST /wps/mycontenthandler/wcmrest/favorite-items/removeitem?item-uri=/wps/mycontenthandler/!ut/p/digest!yGIcBv5sO9Vb0EY9LLhJyQ/wcmrest/item/65a46943-ed1c-4f5d-b497-03c18886ca8e
+</code></pre></div>
 </li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The item-uri parameter specifies the item to add, and can be in the expanded form, as shown in the previous examples, or the compact form. For example:</p>
 </div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wcmrest:item/65a46943-ed1c-4f5d-b497-03c18886ca8e
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>wcmrest:item/65a46943-ed1c-4f5d-b497-03c18886ca8e
+</code></pre></div>
 
 
 

@@ -2228,20 +2228,7 @@
 <h1 id="syntax-for-basicjsonselection-based-list-rendering-profiles">Syntax for <code>BasicJSONSelection</code> based list-rendering profiles</h1>
 <p>A list-rendering profile that is based on <code>BasicJSONSelection</code> contains a set of name-value pairs called entries. This set of entries defines the set of available list properties and item attributes that are available for transforming external data into bean lists.</p>
 <p>The following list of list-rendering profile entries shows a sample <code>BasicJSONSelection</code> based list-rendering profile that you can use for transforming JSON documents:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>sample_json.Name=sample.profile.json
+<div class="language-text highlight"><pre><span></span><code>sample_json.Name=sample.profile.json
 sample_json.BeanListProviderID=ibm.portal.ddc.json
 sample_json.Type=BasicJSONSelection
 sample_json.ListItemSelection=children
@@ -2255,7 +2242,7 @@ sample_json.ItemAttribute.authorEmail=author.email
 
 # List Property Declarations:
 sample_json.ListProperty.id=id
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The names that you use in the list-rendering profile entries must adhere to a specific syntax to be parsed correctly by the Digital Data Connector (DDC) for HCL Portal framework.</p>
 <p>The format for the entry names is <code>profile-id.key[.name[.meta-data-key]]</code>. The meanings of the portions are described in the following list:</p>
 <ul>

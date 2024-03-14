@@ -3391,79 +3391,61 @@
 <li>
 <p><strong>SSO_SAML20_IDP</strong></p>
 <p>The unique name of the Identity Provider, for example, <code>IdpName</code>. This metadata enables the policy for SAML-based authentication and is used to locate the Identity Provider settings. This metadata is required to support SAML-based authentication. Refer to the following example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;meta-data&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;meta-data&gt;
     &lt;name&gt;SSO\_SAML20\_IDP&lt;/name&gt;
     &lt;value&gt;IdpName&lt;/value&gt;
 &lt;/meta-data&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Important</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>For the remaining settings, `IdpName` refers to the name of the Identity Provider that you specified in the SSO\_SAML20\_IDP setting.
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>For the remaining settings, `IdpName` refers to the name of the Identity Provider that you specified in the SSO\_SAML20\_IDP setting.
+</code></pre></div>
 </div>
 </li>
 <li>
 <p><strong>IdpName.IDP_HOST</strong></p>
 <p>The host name or IP address of the identity provider. This setting is required. Refer to the following example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;meta-data&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;meta-data&gt;
     &lt;name&gt;IdpName.IDP\_HOST&lt;/name&gt;
     &lt;value&gt;www.mytfim.org&lt;/value&gt;
 &lt;/meta-data&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>IdpName.IDP_PROTOCOL</strong></p>
 <p>This setting defines how the Identity Provider is connected and has two possible values, either <code>http</code> or <code>https</code>. Refer to the following example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;meta-data&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;meta-data&gt;
     &lt;name&gt;IdpName.IDP\_PROTOCOL&lt;/name&gt;
     &lt;value&gt;https&lt;/value&gt;
 &lt;/meta-data&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>IdpName.IDP_PORT</strong></p>
 <p>This setting defines the TCP port that is used for the Identity Provider connection. The default value is 80. Refer to the following example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;meta-data&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;meta-data&gt;
     &lt;name&gt;IdpName.IDP\_PORT&lt;/name&gt;
     &lt;value&gt;9443&lt;/value&gt;
 &lt;/meta-data&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>IdpName.IDP_URI</strong></p>
 <p>The URI of the Identity Provider service to which the SAML authentication is submitted. If this metadata setting is not defined, the connection uses the default URI /SAML2/SSO/POST. Refer to the following example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;meta-data&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;meta-data&gt;
     &lt;name&gt;IdpName.IDP\_URI&lt;/name&gt;
     &lt;value&gt;/idp/saml20/post&lt;/value&gt;
 &lt;/meta-data&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>IdpName.IDP_TIMEOUT</strong></p>
 <p>The timeout value of the connection to the Identity Provider. If this metadata setting is not defined, the connection timeout is 60 seconds. Refer to the following example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;meta-data&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;meta-data&gt;
     &lt;name&gt;IdpName.IDP\_TIMEOUT&lt;/name&gt;
     &lt;value&gt;120&lt;/value&gt; &lt;!-- wait 2 minutes --&gt;
 &lt;/meta-data&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>IdpName.IDP_AUTH_TOKEN_SOURCE</strong></p>
@@ -3479,28 +3461,17 @@
 </li>
 </ul>
 <p>Refer to the following example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;meta-data&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;meta-data&gt;
     &lt;name&gt;IdpName.IDP\_AUTH\_TOKEN\_SOURCE&lt;/name&gt;
     &lt;value&gt;cookies&lt;/value&gt;
 &lt;! -- take cookie list from IDP_AUTH_TOKEN_COOKIE.n as authentication tokens --&gt;
 &lt;/meta-data&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>IdpName.PARAM_NAME.n and IdpName.PARAM_VALUE.n</strong></p>
 <p>IdpName.PARAM_NAME.n is the name of a URL query parameter to the Identity Provider. Use this setting with IdpName.PARAM_VALUE.n, which defines the value of a URL query parameter to the Identity Provider. For both settings, n is a counter beginning with 1. Refer to the following example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;meta-data&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;meta-data&gt;
     &lt;name&gt;IdpName.PARAM\_NAME.1&lt;/name&gt;
     &lt;value&gt;RequestBinding&lt;/value&gt;
 &lt;/meta-data&gt;
@@ -3508,19 +3479,12 @@
     &lt;name&gt;IdpName.PARAM\_VALUE.1&lt;/name&gt;
     &lt;value&gt;HTTPPost&lt;/value&gt;
 &lt;/meta-data&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>IdpName.IDP_AUTH_COOKIE.n</strong></p>
 <p>The name of the authentication cookie, where n is a counter beginning with 1. If this metadata setting is not defined, the default authentication cookie is <code>SAML20</code>. Refer to the following example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;meta-data&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;meta-data&gt;
     &lt;name&gt;IdpName.IDP\_AUTH\_COOKIE.1&lt;/name&gt;
     &lt;value&gt;SAML20&lt;/value&gt;
 &lt;/meta-data&gt;
@@ -3528,23 +3492,12 @@
     &lt;name&gt;IdpName.IDP\_AUTH\_COOKIE.2&lt;/name&gt;
     &lt;value&gt;another_cookie&lt;/value&gt;
 &lt;/meta-data&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>IdpName.IDP_AUTH_TOKEN_COOKIE.n</strong></p>
 <p>The name of the authentication cookie that is used to authenticate against the Identity Provider to start the SAML authentication protocol. This metadata is only effective if the metadata IdpName.IDP_AUTH_TOKEN_SOURCE is set to <code>cookies</code>. Otherwise, the settings are ignored. The following example defines the authentication cookies <code>MSISAuthenticated</code>, <code>MSISAuth</code>, and <code>MSISAuth1</code>.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;meta-data&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;meta-data&gt;
     &lt;name&gt;IdpName.IDP\_AUTH\_TOKEN\_COOKIE.1&lt;/name&gt;
     &lt;value&gt;MSISAuthenticated&lt;/value&gt;
 &lt;/meta-data&gt;
@@ -3556,7 +3509,7 @@
     &lt;name&gt;IdpName.IDP\_AUTH\_TOKEN\_COOKIE.3&lt;/name&gt;
     &lt;value&gt;MSISAuth1&lt;/value&gt;
 &lt;/meta-data&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="adding-the-jaas-login-module-to-the-tfim-server">Adding the (JAAS) login module to the (TFIM) server</h2>
@@ -3588,14 +3541,11 @@
 </li>
 <li>
 <p>Run the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>$AdminTask configureLoginModule { -loginType system
+<div class="language-text highlight"><pre><span></span><code>$AdminTask configureLoginModule { -loginType system
       -loginEntryAlias WEB_INBOUND -loginModule com.ibm.wps.auth.jaas.EnrichAttributeLoginModule
       -useLoginModuleProxy true -authStrategy OPTIONAL  -newModule true }
 $AdminConfig save
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Exit wsadmin and restart the server.</p>
@@ -3610,16 +3560,12 @@ $AdminConfig save
 </li>
 <li>
 <p>Run the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>$AdminTask configureLoginModule { -loginType system
+<div class="language-text highlight"><pre><span></span><code>$AdminTask configureLoginModule { -loginType system
       -loginEntryAlias WEB_INBOUND -loginModule com.ibm.wps.auth.jaas.EnrichAttributeLoginModule
       -useLoginModuleProxy true -authStrategy OPTIONAL  -customProperties
       {&quot;vmm_email_attribute_name=internet\_mail&quot;} -newModule true }
 $AdminConfig save
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Where internet_mail is the alternative VMM attribute name for the email address.</p>
 </li>
 <li>
@@ -3635,16 +3581,12 @@ $AdminConfig save
 </li>
 <li>
 <p>Run the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>$AdminTask configureLoginModule { -loginType system
+<div class="language-text highlight"><pre><span></span><code>$AdminTask configureLoginModule { -loginType system
       -loginEntryAlias WEB_INBOUND -loginModule com.ibm.wps.auth.jaas.EnrichAttributeLoginModule
       -useLoginModuleProxy true -authStrategy OPTIONAL  -customProperties
       {&quot;context_email_attribute_name=email&quot;} -newModule true }
 $AdminConfig save
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Where email is the alternative attribute name for the security context.</p>
 </li>
 <li>
@@ -3660,18 +3602,13 @@ $AdminConfig save
 </li>
 <li>
 <p>Run the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>$AdminTask configureLoginModule
+<div class="language-text highlight"><pre><span></span><code>$AdminTask configureLoginModule
         { -loginType system -loginEntryAlias WEB_INBOUND -loginModule
         com.ibm.wps.auth.jaas.EnrichAttributeLoginModule -useLoginModuleProxy true -authStrategy
         OPTIONAL  -customProperties {&quot;vmm_email_attribute_name=internet\_mail&quot;,
         &quot;context_email_attribute_name=email&quot;} -newModule true }
 $AdminConfig save
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Where internet_mail is the alternative VMM attribute name for the email address and email is the alternative attribute name for the security context.</p>
 </li>
 <li>
@@ -3687,14 +3624,11 @@ $AdminConfig save
 </li>
 <li>
 <p>Run the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>$AdminTask
+<div class="language-text highlight"><pre><span></span><code>$AdminTask
         unconfigureLoginModule { -loginType application -loginEntryAlias Portal_LTPA -loginModule
         com.ibm.wps.auth.jaas.EnrichAttributeLoginModule }
 $AdminConfig save
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Exit wsadmin and restart the server.</p>
@@ -3704,32 +3638,7 @@ $AdminConfig save
 </ul>
 <h3 id="tivoli-federated-identity-manager-tfim-mapping-for-the-java-authentication-and-authorization-service-jaas-login-module">Tivoli Federated Identity Manager (TFIM) mapping for the Java Authentication and Authorization Service (JAAS) login module</h3>
 <p>By default, the JAAS plug-in reads a user's email address from the VMM attribute with the name mail. The JAAS plug-in sets the mail attribute in the security context. If you change the name of the attribute in the security context, update the following mapping rule accordingly.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;
 xmlns:xalan=&quot;http://xml.apache.org/xalan&quot;
 version=&quot;1.0&quot;
@@ -3755,7 +3664,7 @@ xmlns:stsuuser=&quot;urn:ibm:names:ITFIM:1.0:stsuuser&quot;&gt;
             &lt;/stsuuser:Attribute&gt;
         &lt;/xsl:template&gt;
 &lt;/xsl:stylesheet&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

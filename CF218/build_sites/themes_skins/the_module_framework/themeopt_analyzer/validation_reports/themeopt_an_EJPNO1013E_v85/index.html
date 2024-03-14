@@ -3995,8 +3995,8 @@
 <p>The theme contains static content deployed in a WAR. For security reasons, the WAR data source does not serve content until a special context parameter is set. This context parameter defines which files from your web module HCL Digital Experience is able to serve. You must define a whitelist using a regular expression that matches the files that you want to make available.</p>
 <h2 id="user-action">User action</h2>
 <p>The parameters are set in the web.xml file of the web module that contains the static theme content. For example, serve all files that are not part of the WEB-INF folder.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;div class=&quot;themeOptAnalyzerFixedText&quot;&gt;&lt;web-app&gt;&lt;br/&gt;...&lt;br/&gt;&lt;context-param&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;param-name&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;com.ibm.portal.whitelist&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;/param-name&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;param-value&gt;.*&lt;/param-value&gt;&lt;br/&gt;&lt;/context-param&gt;&lt;br/&gt;....&lt;br/&gt;&lt;/web-app&gt;&lt;/div&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;div class=&quot;themeOptAnalyzerFixedText&quot;&gt;&lt;web-app&gt;&lt;br/&gt;...&lt;br/&gt;&lt;context-param&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;param-name&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;com.ibm.portal.whitelist&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;/param-name&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;param-value&gt;.*&lt;/param-value&gt;&lt;br/&gt;&lt;/context-param&gt;&lt;br/&gt;....&lt;br/&gt;&lt;/web-app&gt;&lt;/div&gt;
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

@@ -2084,14 +2084,11 @@
 </ul>
 <h2 id="example-applying-custom-caching">Example: Applying custom caching</h2>
 <p>An example of the type of tag that can be used to cache individual elements within a presentation template:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;connect
+<div class="language-text highlight"><pre><span></span><code>&lt;connect
  SRV=&quot;cmpnt&quot; PATH=&quot;/Library/SiteArea/Content&quot;
  SOURCE=&quot;library&quot; CMPNTNAME=&quot;TestNav&quot; CONTENTCACHE=&quot;site&quot; CONTENTCACHEEXPIRES=&quot;REL 9000s&quot;&gt;
 &lt;/connect&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -2110,8 +2107,8 @@
 </tr>
 </tbody>
 </table>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[placeholder tag=&quot;sitepath&quot;]/[placeholder tag=&quot;name&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[placeholder tag=&quot;sitepath&quot;]/[placeholder tag=&quot;name&quot;]
+</code></pre></div>
 <p>|
 |<code>SOURCE="library"</code>|Source is either "content", "sitearea" or "library". In this example it is "library" because the element being cached comes from a component.|
 |<code>CMPNTNAME="TestNav"</code>|This parameter is the name of the element to be cached.|
@@ -2122,14 +2119,11 @@
 <p>If you have a set of cached components that use the same <code>ContentCacheExpires</code> parameter, save the <code>ContentCacheExpires</code> parameter as an HTML component and then reference that component in each connect tag that is used to cache components. If you then need to change the <code>ContentCacheExpires</code> parameter, you change it in the HTML component only, rather than in multiple connect tags. This also applies to any common cache tags.</p>
 <h2 id="example-disabling-caching">Example: Disabling caching</h2>
 <p>You can also use this method to disable caching. In this example the property CONTENTCACHE=NONE is used to disable caching of this element.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;connect
+<div class="language-text highlight"><pre><span></span><code>&lt;connect
  SRV=&quot;cmpnt&quot; PATH=&quot;/SiteArea/Content&quot;
  SOURCE=&quot;library&quot; CMPNTNAME=&quot;TestNav&quot; CONTENTCACHE=&quot;none&quot; &gt;
 &lt;/connect&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

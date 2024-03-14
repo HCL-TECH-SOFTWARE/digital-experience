@@ -2848,12 +2848,10 @@
 <p>Select one web content viewer to be the primary viewer on the page. Click <strong>Edit Shared Settings</strong>, and select a value for the <strong>Page Display Title</strong> field in the portlet settings for the viewer.</p>
 <p>To override the HTML title, you must select a value other than <strong>Use default title</strong>. If you want the title value to come directly from the web content that is rendered by the viewer, select <strong>Select from content</strong>. This setting uses the value of the <strong>Display title</strong> field for the content item in Web Content Manager.</p>
 <p>After you save the changes, the page header is updated with the new title value. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;head&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;head&gt;
    &lt;title&gt;Display title of the rendered web content&lt;/title&gt;
 &lt;/head&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Create portlet preferences for each meta tag that you want to add to the page header.</p>
@@ -2874,23 +2872,23 @@ If you do not set a portlet preference for the attribute name, the attribute nam
 <li>
 <p>Specify the portal preference for the name of the meta tag.</p>
 <p>The meta tag name takes the following format:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>meta.tag.name.suffix=name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>meta.tag.name.suffix=name
+</code></pre></div>
 <p>If you want to specify an attribute other than the name attribute, you can define the attribute name with the following format:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>meta.tag.attribute.suffix=attribute\_name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>meta.tag.attribute.suffix=attribute\_name
+</code></pre></div>
 <p>For example, to add the following meta tag with the name <code>keywords</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;meta name=”keywords” content=””/&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;meta name=”keywords” content=””/&gt;
+</code></pre></div>
 <p>Specify the following preference:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>meta.tag.name.1=keywords
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>meta.tag.name.1=keywords
+</code></pre></div>
 <p>To add the following meta tag with the <code>http-equiv</code> attribute:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;meta http-equiv=”content-language” content=”en-US”/&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;meta http-equiv=”content-language” content=”en-US”/&gt;
+</code></pre></div>
 <p>Specify the following preference:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>meta.tag.attribute.1=http-equiv
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>meta.tag.attribute.1=http-equiv
+</code></pre></div>
 </li>
 <li>
 <p>Specify the portal preference for the value of the meta tag.</p>
@@ -2905,15 +2903,15 @@ Depending on how you want to specify the meta tag value, different portlet prefe
 <li>
 <p><strong>Use preset text</strong></p>
 <p>The meta tag value takes the following format:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>meta.tag.content.text.suffix=text
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>meta.tag.content.text.suffix=text
+</code></pre></div>
 <p>The suffix portion must match the suffix value of the associated <code>meta.tag.name.suffix</code> preference. The text portion indicates the text to use for the meta tag value.</p>
 </li>
 <li>
 <p><strong>Use the value of an element</strong></p>
 <p>The meta tag value takes the following format:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>meta.tag.content.element.suffix=name\_of\_element
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>meta.tag.content.element.suffix=name\_of\_element
+</code></pre></div>
 <p>The suffix portion must match the suffix value of the associated <code>meta.tag.name.suffix</code> preference. The name_of_element portion indicates the name of the element from the web content that is rendered.</p>
 <table>
 <thead>
@@ -2945,8 +2943,8 @@ Depending on how you want to specify the meta tag value, different portlet prefe
 <li>
 <p><strong>Use a property</strong></p>
 <p>The meta tag value takes the following format:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>meta.tag.content.property.suffix=property
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>meta.tag.content.property.suffix=property
+</code></pre></div>
 <p>The suffix portion must match the suffix value of the associated <code>meta.tag.name.suffix</code> preference. The property portion indicates the property that contains information about the web content that is rendered. The properties are associated with fields on the rendered content.</p>
 <table>
 <thead>
@@ -3072,23 +3070,23 @@ Depending on how you want to specify the meta tag value, different portlet prefe
 <li>
 <p>If the value of the meta tag requires a scheme attribute, specify the scheme attribute with the <code>meta.tag.scheme.suffix</code> preference.</p>
 <p>The meta tag scheme attribute takes the following format:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>meta.tag.scheme.suffix=attribute\_value
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>meta.tag.scheme.suffix=attribute\_value
+</code></pre></div>
 <p>For example, to add the following scheme attribute with the value <code>W3CDTF</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;meta name=&quot;DC.date&quot; content=&quot;2000-01-01T12:00+00:00&quot; scheme=&quot;W3CDTF&quot;/&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;meta name=&quot;DC.date&quot; content=&quot;2000-01-01T12:00+00:00&quot; scheme=&quot;W3CDTF&quot;/&gt;
+</code></pre></div>
 <p>Specify the following preference:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>meta.tag.scheme.1=W3CDTF
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>meta.tag.scheme.1=W3CDTF
+</code></pre></div>
 <p>The format and scheme that are used to write date elements and content properties that are related to date and time information, such as the <code>LastModifiedDate</code> property, depends on the meta tag attribute name. By default, all date and time information is formatted according to the date format defined by the HTTP specification. The format that is used to write date and time information in other meta tags is the data and time format that is recommended by the World Wide Web Consortium (W3C) under the scheme named W3CDTF.</p>
 </li>
 <li>
 <p>If you want a specific metadata item to be written even if the portlet is not the primary portlet of the page and therefore does not set the page title, then add a preference with the following format:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>meta.tag.primary.portlet.only.suffix = false
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>meta.tag.primary.portlet.only.suffix = false
+</code></pre></div>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>meta.tag.primary.portlet.only.1 = false
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>meta.tag.primary.portlet.only.1 = false
+</code></pre></div>
 </li>
 </ul>
 </li>
@@ -3098,77 +3096,66 @@ Depending on how you want to specify the meta tag value, different portlet prefe
 <ul>
 <li>
 <p>Setting the meta tag value with the user who created the rendered content:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>meta.tag.name.1=DC.creator
+<div class="language-text highlight"><pre><span></span><code>meta.tag.name.1=DC.creator
 meta.tag.content.property.1=Creator
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Result:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;meta name=”DC.creator” content=”content admin”/&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;meta name=”DC.creator” content=”content admin”/&gt;
+</code></pre></div>
 </li>
 <li>
 <p>Setting the meta tag value with preset text:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>meta.tag.name.1=DC.publisher 
+<div class="language-text highlight"><pre><span></span><code>meta.tag.name.1=DC.publisher 
 meta.tag.content.text.1=IBM
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Result:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;meta name=”DC.publisher” content=”IBM”/&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;meta name=”DC.publisher” content=”IBM”/&gt;
+</code></pre></div>
 </li>
 <li>
 <p>Setting multiple meta tag values with the default value for the author and the value of the text element <code>descelement</code> in the rendered content:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>meta.tag.name.1=author
+<div class="language-text highlight"><pre><span></span><code>meta.tag.name.1=author
 meta.tag.name.2=description
 meta.tag.content.element.2=descelement
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Result:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;meta name=”author” content=”content author”/&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;meta name=”author” content=”content author”/&gt;
 &lt;meta name=”description” content=”Information about IBM”/&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Setting the meta tag with an <code>http-equiv</code> attribute and a value of the date that the rendered content was last modified.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>meta.tag.name.1=last-modified
+<div class="language-text highlight"><pre><span></span><code>meta.tag.name.1=last-modified
 meta.tag.attribute.1=http-equiv
 meta.tag.content.property.1=LastModifiedDate
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Result:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;meta http-equiv=”last-modified” content=”Mon, 01 Aug 2011 13:45:57 GMT”/&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;meta http-equiv=”last-modified” content=”Mon, 01 Aug 2011 13:45:57 GMT”/&gt;
+</code></pre></div>
 </li>
 <li>
 <p>Setting the meta tag and with a scheme attribute and a value of the date that the rendered content was published.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>meta.tag.name.1=DC.date
+<div class="language-text highlight"><pre><span></span><code>meta.tag.name.1=DC.date
 meta.tag.scheme.1=W3CDTF
 meta.tag.content.property.1=PublishDate
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Result:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;meta name=”DC.date” content=”2011-08-01T08:15:30+02:00” scheme=&quot;W3CDTF&quot;/&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;meta name=”DC.date” content=”2011-08-01T08:15:30+02:00” scheme=&quot;W3CDTF&quot;/&gt;
+</code></pre></div>
 </li>
 <li>
 <p>Setting the meta tag and using a relative URL to specify an image content item. You need to add <code>abs</code> to specify the format (e.g. <code>meta.tag.content.element.format.x = abs</code>).</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>meta.tag.content.element.1 TestImage 
+<div class="language-text highlight"><pre><span></span><code>meta.tag.content.element.1 TestImage 
 meta.tag.content.element.format.1 abs 
 meta.tag.name.1 CustomMetaTag
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The full URL should be included in a tag starting with <code>&lt;meta content=.....&gt;</code>.</p>
 </div>
 <p>Result:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;meta name=”DC.date” content=”2011-08-01T08:15:30+02:00” scheme=&quot;W3CDTF&quot;/&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;meta name=”DC.date” content=”2011-08-01T08:15:30+02:00” scheme=&quot;W3CDTF&quot;/&gt;
+</code></pre></div>
 </li>
 </ul>
 

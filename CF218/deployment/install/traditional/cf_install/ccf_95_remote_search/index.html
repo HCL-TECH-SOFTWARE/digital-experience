@@ -2469,34 +2469,29 @@
 <ul>
 <li>
 <p>Linux:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/IBM/InstallationManager/eclipse/tools
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/opt/IBM/InstallationManager/eclipse/tools
+</code></pre></div>
 </li>
 <li>
 <p>Windows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>C:\Program Files\IBM\Installation Manager\eclipse\tools
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>C:\Program Files\IBM\Installation Manager\eclipse\tools
+</code></pre></div>
 </li>
 </ul>
 </li>
 <li>
 <p>Run the following command to launch the installation program of IBM Installation Manager. NOTE: The command is shown here on multiple lines for clarity, but the entire command must be entered on one line. Include quotation marks around file paths that include spaces.</p>
 <p>For Linux:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>./imcl install com.ibm.websphere.PORTAL.REMOTESEARCH.v85 
+<div class="language-text highlight"><pre><span></span><code>./imcl install com.ibm.websphere.PORTAL.REMOTESEARCH.v85 
     -repositories &lt;fullpath/to/repository.config&gt; 
     -installationDirectory &lt;portal_remotesearch_root&gt; 
     -acceptLicense
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For Windows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>imcl.exe install com.ibm.websphere.PORTAL.REMOTESEARCH.v85 
+<div class="language-text highlight"><pre><span></span><code>imcl.exe install com.ibm.websphere.PORTAL.REMOTESEARCH.v85 
 -repositories &lt;fullpath/to/repository.config&gt; 
 -installationDirectory &lt;portal_remotesearch_root&gt; -acceptLicense 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>If you are running an external web server, restart it now.</p>
@@ -2521,28 +2516,27 @@
 </li>
 <li>
 <p>Update the sample response file that is packaged with your cumulative fix level according to the comments in the file. You can also record a response file to use to install the fix in silent mode. Go to the <a href="https://support.hcltechsw.com/csm">HCL Software Support</a> page for detailed instructions for recording an IBM Installation Manager response file. Note: The feature set listed in your response file must match the feature set you have installed. You cannot add or remove features during the cumulative fix update. The feature set listed in the sample response file is:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>features=&#39;main.ce,main.rs.install,main.dcs.install,main.rs.deploy,main.dcs.deploy&#39;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>features=&#39;main.ce,main.rs.install,main.dcs.install,main.rs.deploy,main.dcs.deploy&#39;
+</code></pre></div>
 <p>If the server you are applying the fix to is configured only as a remote search server, then you should remove <code>main.dcs.deploy</code> from this list.</p>
 <ul>
 <li>
 <p>Example (Remote Search server only):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>features=&#39;main.ce,main.rs.install,main.dcs.install,main.rs.deploy&#39;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>features=&#39;main.ce,main.rs.install,main.dcs.install,main.rs.deploy&#39;
+</code></pre></div>
 </li>
 <li>
 <p>Example (Document Conversion server only):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>features=&#39;main.ce,main.rs.install,main.dcs.install,main.dcs.deploy&#39;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>features=&#39;main.ce,main.rs.install,main.dcs.install,main.dcs.deploy&#39;
+</code></pre></div>
 </li>
 </ul>
 </li>
 <li>
 <p>Run the following command to install in silent mode:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>imcl -acceptLicense -input
+<div class="language-text highlight"><pre><span></span><code>imcl -acceptLicense -input
 &lt;Full_path_to_your_response_file&gt; -log &lt;Full_Path_to_a_log_file&gt; -showProgress
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>If you are running an external web server, restart it now.</p>
@@ -2563,26 +2557,25 @@
 <ul>
 <li>
 <p>Linux:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/IBM/InstallationManager/eclipse/tools
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/opt/IBM/InstallationManager/eclipse/tools
+</code></pre></div>
 </li>
 <li>
 <p>Windows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>C:\Program
+<div class="language-text highlight"><pre><span></span><code>C:\Program
 Files\IBM\Installation Manager\eclipse\tools
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 </li>
 <li>
 <p>Run the command to start the IBM Installation Manager in console mode.</p>
 <p>For Linux:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./imcl -c
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>./imcl -c
+</code></pre></div>
 <p>For Windows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>imcl.exe -c
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>imcl.exe -c
+</code></pre></div>
 </li>
 <li>
 <p>Complete the following steps to add the repositories:</p>
@@ -2639,15 +2632,13 @@ Files\IBM\Installation Manager\eclipse\tools
 <p>The command is shown here on multiple lines for clarity, but the entire command must be entered on one line. Include quotation marks around file paths that include spaces.</p>
 </div>
 <p>For Linux:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>./imcl rollback com.ibm.websphere.PORTAL.REMOTESEARCH.v85 -installationDirectory
+<div class="language-text highlight"><pre><span></span><code>./imcl rollback com.ibm.websphere.PORTAL.REMOTESEARCH.v85 -installationDirectory
 &lt;portal_remotesearch_root&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For Windows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>imcl.exe rollback com.ibm.websphere.PORTAL.REMOTESEARCH.v85
+<div class="language-text highlight"><pre><span></span><code>imcl.exe rollback com.ibm.websphere.PORTAL.REMOTESEARCH.v85
 -installationDirectory &lt;portal_remotesearch_root&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>If you are running an external web server, restart it now.</p>
@@ -2673,10 +2664,9 @@ Files\IBM\Installation Manager\eclipse\tools
 <li>Update the sample response file that is packaged with your cumulative fix level according to the comments in the file.</li>
 <li>
 <p>Run the following command to roll back in silent mode:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code> imcl -input
+<div class="language-text highlight"><pre><span></span><code> imcl -input
 (Full_path_to_your_response_file) -log (Full_Path_to_a_log_file) -showProgress
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>If you are running an external web server, restart it now.</p>
@@ -2704,13 +2694,13 @@ Files\IBM\Installation Manager\eclipse\tools
 <ul>
 <li>
 <p>Linux:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./imcl -c
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>./imcl -c
+</code></pre></div>
 </li>
 <li>
 <p>Windows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>imcl.exe -c
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>imcl.exe -c
+</code></pre></div>
 </li>
 </ul>
 </li>

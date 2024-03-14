@@ -4032,17 +4032,7 @@
 <p>PacList objects are read from and written back to the portal by using getacl and setacl in the Access bean. The command getacl returns the PacList object for a resource. It expects the category and identifier of the resource as arguments. The category identifies the Script bean that is responsible for the resource. It is given as a keyword, which can be the bean name or the type of the resource. The supported keywords are documented in the help for the Access bean. PacList objects are obtained only for resources that are handled by the Content and Portlet beans. For the root node of the portlet repository, there are no PacList objects.</p>
 <p>The command setacl writes a PacList object back to the portal. That command is necessary only if the PacList object is modified. The PacList object is the only argument to the command. Each PacList object is tied to a particular resource and cannot be written for any other resource.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>Access.getacl(category, ID)
+<div class="language-text highlight"><pre><span></span><code>Access.getacl(category, ID)
 Access.setacl(paclist)
 
 # example: get PacList object for a particular page
@@ -4053,18 +4043,9 @@ acl = Access.getacl(&quot;Content&quot;, Content.current())
 
 # example: write back PacList object in variable &quot;acl&quot;
 Access.setacl(acl)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>$Access getacl category ID
+<div class="language-text highlight"><pre><span></span><code>$Access getacl category ID
 $Access setacl paclist
 
 # example: get PacList object for a particular page
@@ -4074,20 +4055,10 @@ set acl [$Access getacl Content [$Content current]]
 
 # example: write back PacList object in variable &quot;acl&quot;
 $Access setacl $acl
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To access or manipulate a PacList object, it must be loaded in the PacList bean. The operations of the PacList bean always refer to the PacList object currently loaded. An object can be loaded only for viewing by using view, or for manipulation by using edit. Both commands expect the PacList object as an argument. The PacList bean is loaded only if it is unloaded, or if it is loaded with an object that is not modified.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>PacList.view(paclist)
+<div class="language-text highlight"><pre><span></span><code>PacList.view(paclist)
 PacList.edit(paclist)
 
 # example: load PacList object for content root, view only
@@ -4098,18 +4069,9 @@ Content.find(&quot;label&quot;, &quot;uniquename&quot;,
 &quot;ibm.portal.Administration&quot;, &quot;select&quot;)
 acl = Access.getacl(&quot;Content&quot;, Content.current())
 PacList.edit(acl)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>$PacList view paclist
+<div class="language-text highlight"><pre><span></span><code>$PacList view paclist
 $PacList edit paclist
 
 # example: load PacList object for content root, view only
@@ -4119,23 +4081,11 @@ $PacList view [$Access getacl Content [$Content root]]
 $Content find label uniquename ibm.portal.Administration select
 set acl [$Access getacl Content [$Content current]]
 $PacList edit $acl
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The command current returns the name of the loaded object, which includes the identifier of the resource. The command done unloads the PacList bean and returns the object that was loaded. If the PacList bean is already unloaded, done still returns the PacList object that was loaded before, which is useful for dealing with errors.</p>
 <p>If the currently loaded PacList object is modified since it was loaded, the command modified returns. If the keyword numeric is added, it returns the value of the flag as a Boolean 1 or 0. Without the keyword, it returns a string true or false.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>PacList.current()
+<div class="language-text highlight"><pre><span></span><code>PacList.current()
 PacList.done()
 
 PacList.modified()
@@ -4148,22 +4098,9 @@ if PacList.modified(&quot;numeric&quot;):
 
 # example: recover the last loaded PacList object
 PacList.view(PacList.done())
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>$PacList current
+<div class="language-text highlight"><pre><span></span><code>$PacList current
 $PacList done
 
 $PacList modified
@@ -4177,7 +4114,7 @@ if [$PacList modified numeric] {
 
 # example: recover the last loaded PacList object
 $PacList view [$PacList done]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

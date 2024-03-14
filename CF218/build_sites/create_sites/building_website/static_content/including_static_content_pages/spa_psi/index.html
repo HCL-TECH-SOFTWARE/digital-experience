@@ -3178,8 +3178,8 @@
 <p>This updates the specified static page content with the content of the compressed file c:/tmp/NewStaticContentPage.zip. The entry point for the page display is read from the file index.html. This file needs to be contained in the compressed file.</p>
 <h2 id="getting-attributes-of-a-static-page">Getting attributes of a static page</h2>
 <p>To get attributes of a static page, use the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$Content get oid attribute markup
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>$Content get oid attribute markup
+</code></pre></div>
 <p>Valid attributes are as follows:</p>
 <ul>
 <li>
@@ -3192,33 +3192,33 @@
 </li>
 </ul>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$Content get 6_CGAH47L00G2N802TJFV58Q3000 filename html
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>$Content get 6_CGAH47L00G2N802TJFV58Q3000 filename html
+</code></pre></div>
 <p>This returns the filename of the entry point for the page display, that is index.html for the specified markup.</p>
 <h2 id="setting-attributes-of-a-static-page">Setting attributes of a static page</h2>
 <p>To set attributes for a static page, use the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$Content set oid attribute value markup
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>$Content set oid attribute value markup
+</code></pre></div>
 <p>Valid attributes are as follows:</p>
 <ul>
 <li>filename. Use this attribute for getting the file name of the static page layout file in the compressed file.</li>
 <li>displayoption. Use this attribute for the markup, for example HTML.</li>
 </ul>
 <p>Example 1:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$Content set 6_CGAH47L00G2N802TJFV58Q3000 filename anotherindex.html html
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>$Content set 6_CGAH47L00G2N802TJFV58Q3000 filename anotherindex.html html
+</code></pre></div>
 <p>This sets the entry point for the page display to anotherindex.html for the specified markup.</p>
 <p>Example 2:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$Content set 6_CGAH47L00G2N802TJFV58Q3000 displayoption iframe html
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>$Content set 6_CGAH47L00G2N802TJFV58Q3000 displayoption iframe html
+</code></pre></div>
 <p>This sets the display option to iframe for the specified markup. Valid display option settings are inline, iframe, and ajax.</p>
 <h2 id="deleting-a-static-page">Deleting a static page</h2>
 <p>The command for deleting a static page is the same as for deleting a standard portal page. You can use the command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$Content delete oid
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>$Content delete oid
+</code></pre></div>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$Content delete 6_CGAH47L00G2N802TJFV58Q3000
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>$Content delete 6_CGAH47L00G2N802TJFV58Q3000
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

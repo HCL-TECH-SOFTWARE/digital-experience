@@ -3422,17 +3422,14 @@
 <p>Use Current Request Attributes to inspect request attributes which can be set on the current JSP.</p>
 <p>To use current Request attributes, you must know the name of the request attribute to use it in a rule. This request is the request passed into the content spot executing the rule. For example, you would use the portlet request to set the current Request attribute for portlets. The portlet request is not shared among portlets.</p>
 <p>For jsps directly within a Web application, the current Request Attribute is the HTTP request of the Web application. Consider the following code that can be inserted into a JSP to set a request attribute:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%
+<div class="language-text highlight"><pre><span></span><code>&lt;%
  request.setAttribute(&quot;user&quot;, userObject);
 %&gt;
 where userObject is of any Object type
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>An example rule condition constructed to evaluate the previous example might be:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>when current Request Attributes.user is equal to rob
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>when current Request Attributes.user is equal to rob
+</code></pre></div>
 <p>All data types are supported.</p>
 
 

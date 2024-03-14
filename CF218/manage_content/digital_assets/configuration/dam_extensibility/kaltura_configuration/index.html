@@ -2348,27 +2348,7 @@
 <p>Following kaltura configuration changes are required to configure through DAM extensibility in values.yaml</p>
 <p><strong>Kaltura Plugin configuration</strong>
 Under kaltura plugin configuration by default the enable flag will be set as false, the end user can enable kaltura-plugin by setting the enable flag to true.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code>kaltura-plugin:
+<div class="language-text highlight"><pre><span></span><code>kaltura-plugin:
         url: http://RELEASE_NAME-dam-plugin-kaltura:DAM_HTTP_PORT/dx/api/kaltura/v0/plugin
         callBackHost: http://RELEASE_NAME-digital-asset-management:DAM_HTTP_PORT
         authKey: Key
@@ -2389,94 +2369,28 @@ Under kaltura plugin configuration by default the enable flag will be set as fal
           delete:
             params: {}
             url: &quot;/delete&quot;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p><strong>Kaltura Plugin Server Configurations</strong></p>
 <ul>
 <li>Config Map
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
   &quot;thumbnailUrlPattern&quot;:string,
   &quot;partnerId&quot;:string
 }
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>damPluginKaltura:
+<div class="language-text highlight"><pre><span></span><code>damPluginKaltura:
 # kaltura plugin configuration for thumbnail URL.
 thumbnailUrlPattern: https://cfvod.kaltura.com/p/{PARTNERID}/sp/{PARTNERID}00/thumbnail/entry_id/{ENTRYID}/width/{width}/height/{height}/type/3
 # kaltura plugin configuration for partnerId.
 partnerId: partnerId
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 <ul>
 <li>Video Configuration in DAM
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span></pre></div></td><td class="code"><div><pre><span></span><code>video/mp4:
+<div class="language-text highlight"><pre><span></span><code>video/mp4:
         rendition:
         - name: Original
           transformationStack:
@@ -2536,7 +2450,7 @@ partnerId: partnerId
             operation:
               status:
                 entryId: &#39;&#39;
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 </ul>
 <h3 id="kaltura-synchronisation-time-interval-configuration-in-dam">Kaltura Synchronisation time interval configuration in DAM</h3>
 <p>We are using wait status in case of video synchronization. There will be 3 retries. each retry has same timeout of 2 minutes. Once all retries are finished the operation will go to FAILED status.</p>
@@ -2544,20 +2458,14 @@ partnerId: partnerId
 <h2 id="how-is-the-configuration-setup-for-kaltura-plugin">How is the configuration setup for Kaltura Plugin</h2>
 <h3 id="plugin-security-configuration">Plugin security Configuration</h3>
 <p>In DAM Extensibility, plugins come with the security enabled. So, the API requests are authenticated with the security key, which is transmitted and validated in every call, both for plugin and callback calls, and the user can write this in the same config file under security configuration and give the value to the authenticationKey parameter. This value is then passed for plugin configuration key attribute, so that DAM sends this with each request to authenticate.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>   # Security related configuration, e.g. default credentials default
+<div class="language-text highlight"><pre><span></span><code>   # Security related configuration, e.g. default credentials default
     # Security configuration for dam-kaltura-plugin
     damKalturaPlugin:
       # Authentication key for Plugin API
       authKey: &quot;kalturaPluginSecretAuthKey&quot;
       # Authentication key for Kaltura external service
       secretKey: &quot;cnVtYWFhYm9zZS1oY2wK&quot;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h3 id="list-of-removed-plugin-apis">List of removed Plugin APIs</h3>
 <p>The following DAM APIs are removed and no longer in use:-</p>
 <ul>

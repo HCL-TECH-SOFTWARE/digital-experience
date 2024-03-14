@@ -2266,19 +2266,7 @@
 </li>
 </ul>
 <p>The flyweight pattern, where the StateHolder or StateHolderController is used as an argument, is commonly used in the accessor factory interfaces. The navigational state the accessor operates on cannot be the base state that is retrieved from the request URL; typically, it is the state clone created for a particular EngineURL. Call getState() on the EngineURL object to obtain the URL-specific state holder. The following example shows how to make a created EngineURL point to a certain portal page (for example, the "Stock Market" page) by using the SelectionAccessorController:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>final EngineURL url = ...;
+<div class="language-text highlight"><pre><span></span><code>final EngineURL url = ...;
 final SelectionAccessorFactory selectionFct = ...;
 
 final SelectionAccessorController selectionCtrl = 
@@ -2291,7 +2279,7 @@ try {
 } finally {
     selectionCtrl.dispose();
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="using-the-selectionaccessorcontroller-to-create-a-page-link">Using the SelectionAccessorController to create a page link</h2>
 <p>The base Accessor interface is derived from the com.ibm.portal.Disposable interface. Start the dispose() method to indicate when the accessor is no longer required. Using the dispose() method allows the accessor factory to store the accessors and accessor controllers in object pools to achieve better performance (due to less initialization and garbage collection overhead).</p>
 <p>The Navigational State SPI offers the following accessor factories, each covering a certain state aspect:</p>

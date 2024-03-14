@@ -3485,20 +3485,14 @@
 <li>If you own or manage an application, you can delete it. The applications catalog is the only context where you can delete an application.</li>
 <li>
 <p>Use the following code sample to show the applications that you own or manage:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>AppListString = Application.listall(&quot;applications&quot;)
+<div class="language-text highlight"><pre><span></span><code>AppListString = Application.listall(&quot;applications&quot;)
 if AppListString == &#39;&#39;:
   print &#39;There are no composite applications.&#39;
 else:
   AppList = AppListString.split(&#39; &#39;)
   for app in AppList:
     print &quot;- &quot; + Application.nlsget(app,&quot;title&quot;,&quot;en&quot;) + &quot;(&quot; + app + &quot;)&quot;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>For each application that you want to delete, click the <strong>Delete</strong> icon.</p>

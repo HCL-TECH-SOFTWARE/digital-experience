@@ -3986,17 +3986,7 @@
 <p>The following are examples for deleting portlets and adding portlets.</p>
 <h2 id="delete-portlets">Delete portlets</h2>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code># delete all welcome-portlets from all pages of a user
+<div class="language-text highlight"><pre><span></span><code># delete all welcome-portlets from all pages of a user
 # see the Authentication section for portal_login and
 portal_logout
 portal_login(user_ID, password)
@@ -4007,18 +3997,9 @@ for page in Content.search(&quot;pages&quot;).split():
     Layout.delete(c)
 
 portal_logout()
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code># delete all welcome-portlets from all pages of a user
+<div class="language-text highlight"><pre><span></span><code># delete all welcome-portlets from all pages of a user
 # see the Authentication section for portal_login and portal_logout
 portal_login
 foreach page [$Content search pages] {
@@ -4028,35 +4009,10 @@ foreach page [$Content search pages] {
    }
  }
 portal_logout
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="add-portlets">Add portlets</h2>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code># add a FunPortlet next to each WeatherPortlet
+<div class="language-text highlight"><pre><span></span><code># add a FunPortlet next to each WeatherPortlet
 
 # procedure: add a portlet next to a control
 # this changes the current selection of the Layout bean
@@ -4082,35 +4038,9 @@ for page in Content.search(&quot;pages&quot;).split():
     add_portlet(c, fun)
 
 portal_logout()
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code># add a FunPortlet next to each WeatherPortlet
+<div class="language-text highlight"><pre><span></span><code># add a FunPortlet next to each WeatherPortlet
 
 # procedure: add a portlet next to a control
 # this changes the current selection of the Layout bean
@@ -4137,7 +4067,7 @@ foreach page [$Content search pages] {
   }
 }
 portal_logout
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 </details>

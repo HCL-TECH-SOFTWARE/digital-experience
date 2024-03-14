@@ -2754,29 +2754,10 @@
 <ul>
 <li>
 <p><strong>GET</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http(s)://host:port/wps/mycontenthandler/{VP Name}/!ut/p/wcmrest/Syndication/Syndicators
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http(s)://host:port/wps/mycontenthandler/{VP Name}/!ut/p/wcmrest/Syndication/Syndicators
+</code></pre></div>
 <p>Sample output:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
    &quot;entry&quot;:{
       &quot;content&quot;:{
          &quot;Syndicators&quot;:{
@@ -2796,35 +2777,14 @@
             ]
          }
       }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>GET</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http(s)://host:port/wps/mycontenthandler/{VP Name}/!ut/p/wcmrest/Syndication/Subscribers
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http(s)://host:port/wps/mycontenthandler/{VP Name}/!ut/p/wcmrest/Syndication/Subscribers
+</code></pre></div>
 <p>Sample output:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
    &quot;entry&quot;:{
       &quot;content&quot;:{
          &quot;Subscribers&quot;:{
@@ -2846,7 +2806,7 @@
       }
    }
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <p>The Virtual Portal (VP) "{VP Name}/" may be blank for the base VP. Information returned includes:</p>
@@ -2855,48 +2815,26 @@
 <li>UUID of Syndicator/Subscriber</li>
 </ul>
 <p>If the VP has no syndicators or subscribers, the returned JSON or ATOM will have no list and look like this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
    &quot;entry&quot;:{
       &quot;content&quot;:{
          &quot;Syndicators&quot;:{}
       }
    }
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Issuers of this REST call must have the DX role of "User" to get either of these lists.</p>
 <h2 id="status-of-a-syndicator-or-subscriber">Status of a Syndicator or Subscriber</h2>
 <p>Once a specific UUID of a syndicator/subscriber is obtained, the full status of that syndicator/subscriber can be obtained via the following REST call:</p>
 <ul>
 <li>
 <p><strong>GET</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http(s)://host:port/wps/mycontenthandler/{VP Name}/wcmrest/{&quot;Syndicator&quot;/&quot;Subscriber&quot;}/{UUID of syndicator/subscriber}/Status
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http(s)://host:port/wps/mycontenthandler/{VP Name}/wcmrest/{&quot;Syndicator&quot;/&quot;Subscriber&quot;}/{UUID of syndicator/subscriber}/Status
+</code></pre></div>
 <p>The "{VP Name}/" may be blank for the base Virtual Portal (VP).</p>
 <p>This WCM REST API will return the following attributes:</p>
 <p>Syndicator Status:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
    &quot;entry&quot;:{
       &quot;content&quot;:{
          &quot;SyndicatorStatus&quot;:{
@@ -2913,25 +2851,9 @@
       }
    }
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Subscriber Status:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
    &quot;entry&quot;:{
       &quot;content&quot;:{
          &quot;SyndicatorStatus&quot;:{
@@ -2948,23 +2870,10 @@
       }
    }
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Note that both the syndicator and its associated subscriber both have to be enabled to successfully syndicate content between the two.</p>
 <p>If the VP has no syndicators or subscribers, the returned JSON or ATOM will present no status attributes like this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
    &quot;entry&quot;:{
       &quot;content&quot;:{
          &quot;SyndicatorStatus&quot;:{}
@@ -2978,7 +2887,7 @@
       }
    }
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Developers must have the role of Administrator in order to retrieve these attributes.</p>
 </li>
 </ul>
@@ -2987,8 +2896,8 @@
 <ul>
 <li>
 <p><strong>PUT</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http(s)://host:port/wps/mycontenthandler/{VP Name}/wcmrest/{&quot;Syndicator&quot; or &quot;Subscriber&quot;}/{UUID of syndicator/subscriber}/Status
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http(s)://host:port/wps/mycontenthandler/{VP Name}/wcmrest/{&quot;Syndicator&quot; or &quot;Subscriber&quot;}/{UUID of syndicator/subscriber}/Status
+</code></pre></div>
 <p>Sample output:</p>
 <p>Note in this case the JSON input was exactly the same output from the corresponding GET request. However, two fields can change the status of the Syndicator:</p>
 <ul>

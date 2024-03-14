@@ -2380,14 +2380,7 @@
 <h2 id="configuring-which-properties-show-up-for-the-portal-user-collection">Configuring which properties show up for the Portal User Collection</h2>
 <p>The Personalization rule editor discovers the list of properties to show in rules through a public API (<code>com.ibm.portal.um.PumaProfile)</code>. The list exposed by this API is configurable in your Member Manager configuration.</p>
 <p>You may have a long list of properties that are available on the portal user, but do not want all of them to show up in the Personalization rule editor. For this purpose, set the property wmm.property.hide in the file wp_profile_root/PortalServer/config/config/services/PersonalizationService.properties as illustrated in this example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code># Use this configuration property to control which WMM properties show
+<div class="language-text highlight"><pre><span></span><code># Use this configuration property to control which WMM properties show
 # in the Personalization rule editor. wmm.property.hide will only
 # hide those properties which are introspected from the WMM configuration.
 wmm.property.hide=mobile,pager,roomNumber,secretary,carLicense,telephoneNumber,
@@ -2395,7 +2388,7 @@ facsimileTelephoneNumber,seeAlso,userPassword,ibm-firstWorkDayOfWeek,
 ibm-alternativeCalendar,ibm-preferredCalendar,ibm-firstDayOfWeek,ibm-primaryEmail,
 ibm-otherEmail,ibm-generationQualifier,labeledURI,createTimestamp,
 modifyTimestamp,ibm-middleName,ibm-timeZone,initials,jpegPhoto,WCM\:USERDATA,groups
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="the-portal-user-collection-and-the-personalization-server-installed-without-portal">The Portal User collection and the Personalization Server installed without Portal</h2>
 <p>The Portal User collection can only be used in rules running within a HCL Portal installation. The system will not prevent you from publishing rules using this collection to a Personalization Server installed outside of HCL Portal, but the rules will not function in this environment since Virtual Member Manager is not available. When HCL Portal is installed, the security context of the logged in user must have access (through Portal resource permissions) to the user information being accessed through the collection.</p>
 

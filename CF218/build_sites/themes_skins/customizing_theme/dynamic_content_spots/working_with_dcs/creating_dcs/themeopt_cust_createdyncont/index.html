@@ -3736,8 +3736,8 @@
 </li>
 <li>
 <p>Enter a value that is the URI to the dynamic content to be included by the mapping, similar to the following example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>res:/CustomThemeContext/themes/html/MyTheme/dynamicContent.jsp
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>res:/CustomThemeContext/themes/html/MyTheme/dynamicContent.jsp
+</code></pre></div>
 </li>
 <li>
 <p>Select <strong>OK</strong>.</p>
@@ -3753,8 +3753,8 @@
 </li>
 <li>
 <p>Locate where in the template you want to include the dynamic content and add the following line of code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;link rel=&quot;dynamic-content&quot; href=&quot;dyn-cs:id:&lt;your mappping ID\&gt;&quot;&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;link rel=&quot;dynamic-content&quot; href=&quot;dyn-cs:id:&lt;your mappping ID\&gt;&quot;&gt;
+</code></pre></div>
 <p>Replace &lt;your mapping ID&gt; with the name that you gave the mapping, for example newDynamicContent.</p>
 </li>
 <li>
@@ -3763,8 +3763,8 @@
 </ol>
 <h2 id="using-parameters">Using parameters</h2>
 <p>You can pass parameters to a JSP page that is rendering the dynamic content. If the page expects a parameter such as text, then you would locate where in the template you want to include the dynamic content and add the following line of code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;link rel=&quot;dynamic-content&quot; href=&quot;dyn-cs:id:&lt;your mappping ID\&gt;+&#39;?text=dynatext&#39;&quot;&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;link rel=&quot;dynamic-content&quot; href=&quot;dyn-cs:id:&lt;your mappping ID\&gt;+&#39;?text=dynatext&#39;&quot;&gt;
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

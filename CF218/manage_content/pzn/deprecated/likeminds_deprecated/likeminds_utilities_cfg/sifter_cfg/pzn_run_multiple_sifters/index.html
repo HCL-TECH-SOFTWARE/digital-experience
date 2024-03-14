@@ -3138,11 +3138,11 @@
 <p>Use the following settings to run multiple instances of the sifter and have all the sifters share some configuration parameters and override others.</p>
 <p>Running multiple <code>sifters</code> simultaneously allows you to distribute load on very large systems.</p>
 <p>To override a particular default parameter, add a prefix to the parameter. For example, to reload the mentor pool for the MovieSift <code>sifter</code> instance at 4 a.m.:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>MovieSift.&lt;mentor_set_name&gt;.reload_mentor_pool_at = 0 4 * * *
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>MovieSift.&lt;mentor_set_name&gt;.reload_mentor_pool_at = 0 4 * * *
+</code></pre></div>
 <p>If you run a <code>sifter</code> with the following setting,</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sifter -config MovieSift -conf &lt;lps config file&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>sifter -config MovieSift -conf &lt;lps config file&gt;
+</code></pre></div>
 <p>that <code>sifter</code> will use the<code>MovieSift.&lt;mentor_set_name&gt;. reload_mentor_pool_at = 0 3 * * * setting</code>.</p>
 
 

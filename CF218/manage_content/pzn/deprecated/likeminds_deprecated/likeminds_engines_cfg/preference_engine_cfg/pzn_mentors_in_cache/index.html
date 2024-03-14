@@ -3148,8 +3148,8 @@
 <h1 id="mentors-to-look-for-in-cache-likeminds-engine">Mentors to look for in cache | LikeMinds engine</h1>
 <p>Learn how to set numbers of mentors to look for a given user in your LikeMinds Preference Engine.</p>
 <p>If a user requests recommendations before the sifter has found mentors for that user, the Preference Engine checks the cache for mentors for the user. Set <code>&lt;eng_instance_name&gt;.db.engine.tune.max_cached_mentors</code> to the number of potential mentors which it should consider for a given user. The default is 500. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>movie_pref.db.engine.tune.max_cached_mentors = 600
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>movie_pref.db.engine.tune.max_cached_mentors = 600
+</code></pre></div>
 
 
 

@@ -2251,8 +2251,8 @@
 <li>You have a shoe shop, and you want to advertise a shoe promotion sale.</li>
 <li>
 <p>You have a portal page that has the following friendly URL:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://hostname:port/wps/portal/home/shoe_promotion_page
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://hostname:port/wps/portal/home/shoe_promotion_page
+</code></pre></div>
 </li>
 <li>
 <p>When you create a vanity URL, you define the vanity URL segment. Example: <code>shoe-sale</code>. You can also select from the following options:</p>
@@ -2263,20 +2263,20 @@
 </li>
 <li>
 <p>To advertise your shoe sale, insert your vanity URL segment <code>shoe-sale</code> into the URL, and add a preceding segment <code>vanityurl</code>. The URL now looks as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://hostname/wps/vanityurl/shoe-sale
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://hostname/wps/vanityurl/shoe-sale
+</code></pre></div>
 <p>This URL is the vanity URL that you pass out in your advertisements for the shoe sale.</p>
 </li>
 <li>
 <p>When a user accesses the page by using this URL, the portal redirects the user to your shoe sale page under the URL given earlier:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://hostname:port/wps/portal/home/shoe_promotion_page
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://hostname:port/wps/portal/home/shoe_promotion_page
+</code></pre></div>
 <p>When the portal redirects the user, it also adds state information to the URL. For example, this state information includes information about the portal content and the locale as selected when you created the vanity URL in earlier steps.</p>
 </li>
 <li>
 <p>You can make the vanity URLs shorter by omitting the portal root context <code>/wps</code> and the string <code>/vanityurl</code>. In this case, you must use a web server and define a rewrite rule. For more information, see <em>Providing short vanity URLs</em>. You can then pass out the following URL for your advertising campaign:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://hostname:port/shoe-sale
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://hostname:port/shoe-sale
+</code></pre></div>
 <p>When a user accesses this URL, the HTTP server rewrites this URL to the longer URL, and then redirects the user as described before.</p>
 </li>
 </ol>

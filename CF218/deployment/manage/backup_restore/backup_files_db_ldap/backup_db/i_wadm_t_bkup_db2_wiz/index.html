@@ -3138,14 +3138,11 @@
 <p class="admonition-title">Note</p>
 <p>The following example includes line breaks for readability. In actual practice, you need to type all commands, including the semicolons, on one line.</p>
 </div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>CONNECT TO WPSDB;QUIESCE DATABASE IMMEDIATE FORCE CONNECTIONS;CONNECT RESET;
+<div class="language-text highlight"><pre><span></span><code>CONNECT TO WPSDB;QUIESCE DATABASE IMMEDIATE FORCE CONNECTIONS;CONNECT RESET;
 BACKUP DATABASE WPSDB TO &quot;D:\BackupFiles\DB2backup\&quot; WITH 2 BUFFERS 
 BUFFER 1024 PARALLELISM 1 WITHOUT PROMPTING;CONNECT TO WPSDB;
 UNQUIESCE DATABASE;CONNECT RESET;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>When you are satisfied with your settings for the database backup, click <strong>Finish</strong> to start the backup task.</p>

@@ -2810,20 +2810,14 @@
 <h2 id="plug-ins">Plug-ins</h2>
 <p>Use the <strong>Plug-ins</strong> section to specify which context processor plug-ins are run during rendering.</p>
 <p>The Web Content Viewer provides a plug-point for context processor plug-ins that can be used to control which web content item is rendered by the Web Content Viewer. Context processor plug-ins must implement the <code>com.ibm.workplace.wcm.api.ContextProcessor</code> interface that is described in the Javadoc documentation for the Web Content Manager APIs and must provide a plugin.xml file that defines the extension of the <code>com.ibm.workplace.wcm.api.ContextProcessor</code> extension point. The following example shows how such an extension entry might be defined in a plugin.xml file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;?eclipse version=&quot;3.0&quot;?&gt;
 &lt;plugin id=&quot;your.plugin.id&quot; name=&quot;MyContextProcessor&quot; version=&quot;1.0.0&quot; provider-name=&quot;Example&quot;&gt;
  &lt;extension point=&quot;com.ibm.workplace.wcm.api.ContextProcessor&quot; id=&quot;MyContextProcessorPlugin&quot;&gt;
     &lt;processor class=&quot;yourcom.example.MyContextProcessorPlugin&quot;/&gt;
  &lt;/extension&gt;
 &lt;/plugin&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For more information about plugin.xml files or the extension framework, refer to the Eclipse Extension Point Framework documentation.</p>
 <p>The JAR file that implements the extension plug-in must be in a directory that is part of the class path of the Web Content Viewer. Create a new shared library that contains the custom resource bundle files by using the WebSphere® Application Server administrative console. Creating a new shared library that contains the resource bundle allows a clean separation of the custom resource bundle code from the base HCL Portal code. When the shared library is created, you need to add it to the class path of HCL Portal application server classloader. For details about creating shared libraries and adding shared libraries to the classloader's class path, refer to the <a href="http://publib.boulder.ibm.com/infocenter/wasinfo/v6r1/topic/com.ibm.websphere.base.doc/info/aes/ae/ucws_rsharedlib.html">Shared library collection</a> topic in the WebSphere Application Server information center.</p>
 <p>To select the context processor plug-ins that are run during rendering of web content items through the Web Content Viewer, click the name of the context processor plug-in in the box that lists all found plug-ins. To clear a plug-in, hold down the control key and click the name of the plug-in. If more than one plug-in is selected, the processing order of the plug-ins is not defined.</p>

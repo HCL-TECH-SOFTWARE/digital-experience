@@ -2589,21 +2589,7 @@
 <p>The business card sample identifies a user by the <code>authorObjectID</code> attribute of a social object that is returned by HCL Connections.</p>
 <p>If your HCL Digital Experience is configured to show the HCL Connections business card information, use the <code>authorID</code> attribute instead of <code>authorObjectID</code> . For more information, read <em>Integrating with HCL Connections</em>in the HCL Portal product documentation.</p>
 <p>The following sample shows how you can map the different social object attributes to the microformat class attributes. This microformat works with both the HCL Portal business card and with the HCL Connections business card. This means that the sample works, independent of whether HCL Portal is configured to show the portal business card or the HCL Connections business card.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;span class=&#39;vcard X-sametime-resolve&#39;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;span class=&#39;vcard X-sametime-resolve&#39;&gt;
    &lt;span class=&quot;lotusMeta&quot;&gt;
       &lt;a target=&quot;&quot; title=&quot;&quot; href=&quot;javascript:SemTagMenu.a11y(event)&quot;  
                    class=&quot;fn lotusPerson&quot; style=&quot;text-decoration:none;&quot; 
@@ -2618,7 +2604,7 @@
          class=&quot;x-lconn-userid&quot;&gt;[AttributeResource attributeName=&quot;authorID&quot; 
          separator=&quot;,&quot;]&lt;/span&gt;
 &lt;/span&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For more information, read <em>Integrating the business card and online status in a custom portlet</em>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

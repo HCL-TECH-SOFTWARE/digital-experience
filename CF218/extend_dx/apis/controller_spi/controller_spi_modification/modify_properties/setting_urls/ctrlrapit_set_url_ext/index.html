@@ -2688,17 +2688,7 @@
 <p>Set the required URL for the modifiable instance of the external content URL.</p>
 </li>
 </ol>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>// obtain modifiable instance of an existing ContentURL
+<div class="language-text highlight"><pre><span></span><code>// obtain modifiable instance of an existing ContentURL
 final Modifiable modifiable = cmController.getModifiableNode(contentUrl);
 
 // identify target of url
@@ -2709,7 +2699,7 @@ final Markup markup = ...
 
 // set URL
 ((ModifiableContentURL) modifiable).setURL(target, markup);
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

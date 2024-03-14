@@ -3228,20 +3228,14 @@
 <p>View an example of a profiler that uses arithmetic operations.</p>
 <p>To build an operation, select a combination of <strong>Resource.Attribute</strong> and other operands. You can do this on either side of the evaluation.</p>
 <h2 id="order-of-operations-is-in-effect-but-parentheses-cannot-be-used">Order of operations is in effect but parentheses cannot be used</h2>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>    AgeProfiler is
+<div class="language-text highlight"><pre><span></span><code>    AgeProfiler is
         Youth when
             current Date.Year - current User.BirthDate.Year is less than or equal to 25
         Adult when
             current Date.Year - current User.BirthDate.Year is between 25 and 65
         Senior when
             current Date.Year - current User.BirthDate.Year is greater than or equal to 65
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

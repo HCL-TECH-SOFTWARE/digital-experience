@@ -1844,12 +1844,10 @@
 <h1 id="enable-https">Enable HTTPS</h1>
 <p>Clients communicate with HCL Digital Experience via <a href="https://www.rfc-editor.org/rfc/rfc7230">Hypertext Transfer Protocol</a> (HTTP), for which you should review these basic <a href="https://www.rfc-editor.org/rfc/rfc7230#section-9">security considerations</a>. One major consideration is protecting sensitive information while it is in transit.</p>
 <p><a href="https://www.rfc-editor.org/rfc/rfc8446">Transport Layer Security</a> (TLS, the successor to Secure Sockets Layer {SSL}) provides a means of securing communications over the Internet. Implemented effectively, TLS:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>- Ensures confidentiality by encrypting communications to guard against eavesdropping
+<div class="language-text highlight"><pre><span></span><code>- Ensures confidentiality by encrypting communications to guard against eavesdropping
 - Ensures confidentiality by guarding against [man-in-the-middle attacks](https://owasp.org/www-community/attacks/Manipulator-in-the-middle_attack)
 - Helps ensure data integrity by guarding against replay attacks.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>HTTP over TLS (HTTPS, commonly) allows web applications to use TLS to secure communications with clients. Since these communications include such sensitive information as application data and single sign-on (SSO) cookies, HCL recommends enabling HTTPS for Digital Experience. The <a href="https://help.hcltechsw.com/digital-experience/8.5/security/ssl_intro.html">HCL Digital Experience Product Documentation</a> documents how to do this.</p>
 <p>The procedure in the <a href="https://help.hcltechsw.com/digital-experience/8.5/security/ssl_intro.html">Product Documentation</a> addresses the following common requirements:</p>
 <ul>

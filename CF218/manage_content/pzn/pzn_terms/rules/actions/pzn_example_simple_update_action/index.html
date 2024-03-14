@@ -3144,16 +3144,12 @@
 <p>View an example of an update action that is part of a Web site that allows visitors to manage certain information and preferences about themselves.</p>
 <p>When executed, the following update action will write to the fields <code>(Income Group</code>, <code>Role</code>) in the data store for the record associated with the current user (the current Web site visitor), using data contained in the current user's session variables, such as <code>incomeGroup</code> and <code>role</code>.</p>
 <h2 id="update-action">Update action</h2>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>Update
+<div class="language-text highlight"><pre><span></span><code>Update
          current Portal Users.Income Group set to current Session.incomeGroup
          current Portal Users.Role set to current Session.role
          current Portal Users.Last Name set to current Session.lastName
          current Portal Users.Title set to current Session.title 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

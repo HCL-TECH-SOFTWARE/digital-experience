@@ -2621,12 +2621,10 @@ To view the asset references, go to <strong>Properties &gt; Insights</strong>.</
 <p>Another way to modify the name of a media asset is to edit the asset by clicking the <strong>Pencil</strong> icon. Go to <strong>Properties</strong>. You can edit the <strong>Name</strong> of the media asset in this panel, along with the <strong>Title</strong> and <strong>Description</strong>. Click <strong>Save</strong>.</p>
 <h3 id="configuration-for-enabling-the-asset-rename-and-move-feature">Configuration for enabling the asset rename and move feature</h3>
 <p>The asset move and renaming feature can be enabled or disabled through the helm. By default, this feature is enabled.</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">digitalAssetManagement</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">enableAssetMoveRename</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="changing-duplicate-asset-names-using-dam">Changing duplicate asset names using DAM</h2>
 <p>If an asset happens to have the same name with another asset in a collection, a notification is displayed in the <strong>Information</strong> panel.</p>
 <p><img alt="Notification to rename an asset" src="../../../../../images/information_panel_rename_notification.png" width="50%" /></p>

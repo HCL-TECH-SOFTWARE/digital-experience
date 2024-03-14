@@ -3689,16 +3689,12 @@
 <p>Depending on the content of an XML request, these resources can be created, modified, deleted or exported. An XML request can contain any number of such resource definitions. It can therefore create hundreds of new resources in one step or modify only a single configuration setting of one existing resource.</p>
 <h2 id="request-types">Request Types</h2>
 <p>With XMLAccess, you can specify special processing parameters as part of the request tag. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;request
+<div class="language-text highlight"><pre><span></span><code>&lt;request
     xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
     xsi:noNamespaceSchemaLocation=&quot;PortalConfig_8.0.0.xsd&quot;
     type=&quot;update&quot;
     create-oids=&quot;true&quot;&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For information on the XML elements, refer to the following table:</p>
 <table>
 <thead>

@@ -2377,13 +2377,13 @@ Use the UUID obtained in the previous process and use it to access content and l
 <li>Execute Login API endpoint <code>auth/login</code> by entering a valid username and password.</li>
 <li>
 <p>Once the login is successful, execute the following content ID endpoint to fetch content based on the content ID:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/{accessType}/webcontent/contents/{contentId}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/{accessType}/webcontent/contents/{contentId}
+</code></pre></div>
 </li>
 <li>
 <p>Pass the UUID value copied earlier as <code>contentID</code>. The json in the request body will need to be update to have a correct content name. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>{&quot;contentName&quot;: &quot;Sample Article&quot;}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>{&quot;contentName&quot;: &quot;Sample Article&quot;}
+</code></pre></div>
 </li>
 <li>
 <p>Verify if the content payload is received. It should contain information about the article you wanted to access.</p>
@@ -2405,63 +2405,31 @@ Use the UUID obtained in the previous process and use it to access content and l
 <ol>
 <li>
 <p><strong>Login Script</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>mutation
+<div class="language-text highlight"><pre><span></span><code>mutation
 {
                 authLogin(authLoginInput:{username: &quot;wpsadmin&quot;, password:&quot;wpsadmin&quot;}){
                 message
                 statusCode
                 }
                 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p><img alt="Experience API login script" src="../assets/ExperienceAPI_login_script.png" /></p>
 </li>
 <li>
 <p><strong>Get Roles script (Without authentication)</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>query{
+<div class="language-text highlight"><pre><span></span><code>query{
                 accessGetRoles(accessType: dxrest, resourceId: &quot;hcl.portal.hiddenpages&quot;){
                 startIndex
                 itemsPerPage
                 totalResults
                 }
                 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p><img alt="Experience API get roles script without authorization" src="../assets/ExperienceAPI_get_roles_script.png" /></p>
 </li>
 <li>
 <p><strong>Get Roles script (With authentication)</strong> - Refer to the screenshot below to retrieve the cookie and pass using the HCL Experience API.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code>query{
+<div class="language-text highlight"><pre><span></span><code>query{
                   accessGetRoles(accessType: dxmyrest, resourceId: &quot;hcl.portal.hiddenpages&quot;, 
                   cookie :&quot;LtpaToken2=EF/
                   32eLqVkB8DmPoF2Oa7AK82OuP7UwVKejVMJzNiVGJ6DtGWzQjm/
@@ -2482,7 +2450,7 @@ Use the UUID obtained in the previous process and use it to access content and l
                   totalResults
                   }
                   }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p><img alt="Experience API get roles script with authorization" src="../assets/ExperienceAPI_get_roles_with_auth.png" /></p>
 </li>
 </ol>
@@ -2548,16 +2516,12 @@ Use the UUID obtained in the previous process and use it to access content and l
 <p>Do a <strong>POST</strong> request to the following endpoint to add a new mime type:</p>
 <p><code>https://&lt;domain&gt;/dx/api/dam/v1/mediatypes</code></p>
 <p>To add a new webp file type, use a payload similar to:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>[{
+<div class="language-text highlight"><pre><span></span><code>[{
     &quot;mimeType&quot;: &quot;image/webp&quot;,
     &quot;extensions&quot;: [&quot;webp&quot;],
     &quot;mediaTypeGroupId&quot;: &quot;&lt;mediaTypeGroupId from step #3&gt;&quot;
 }]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 <p>If you want to configure renditions for the newly added mime type, refer to <a href="../../../../manage_content/digital_assets/configuration/dam_extensibility/configure_dam_extensibility/">Extensibility configuration</a>.</p>

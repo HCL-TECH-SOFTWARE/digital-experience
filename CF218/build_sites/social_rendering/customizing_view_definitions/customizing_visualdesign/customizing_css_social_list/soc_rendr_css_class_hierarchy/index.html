@@ -2748,29 +2748,20 @@
 </tbody>
 </table>
 <p>By using the CSS classes shown in this table, you can build specific rules to style every aspect of a social list entry individually. In the sr_wptheme.css style file, you can find a number of CSS rules that are used as overrides for basic CSS definitions on narrow and thin columns. To identify a narrow or thin column in the HCL Portal default Portal 8.5 theme, use CSS rules like the following one:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>   .wpthemeThin   .lotusui30 .srComponent .srSimple .srEntryTitle,
+<div class="language-text highlight"><pre><span></span><code>   .wpthemeThin   .lotusui30 .srComponent .srSimple .srEntryTitle,
    .wpthemeNarrow .lotusui30 .srComponent .srSimple .srEntryTitle {
        font-size: 0.63em;
    }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Columns with the <code>wpthemeThin</code> CSS rule assigned to them are even smaller than columns with <code>wpthemeNarrow</code> assigned to them. If you want to define separate styles for narrow and thin columns, you can use the following CSS rules. The following code sample sets a smaller font size for the entry title on narrow columns and an even smaller font size for thin columns:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>   .wpthemeNarrow .lotusui30 .srComponent .srSimple .srEntryTitle {
+<div class="language-text highlight"><pre><span></span><code>   .wpthemeNarrow .lotusui30 .srComponent .srSimple .srEntryTitle {
        font-size: 0.63em;
    }
 
    .wpthemeThin .lotusui30 .srComponent .srSimple .srEntryTitle {
        font-size: 0.58em;
    }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

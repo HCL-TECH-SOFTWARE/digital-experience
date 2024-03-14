@@ -3631,12 +3631,10 @@
 </li>
 </ul>
 <p>Example for XML access:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>    &lt;parameter update=&quot;set&quot; name=&quot;com.ibm.portal.remote-cache-scope&quot; type=&quot;string&quot;&gt;SHARED&lt;/parameter&gt;
+<div class="language-text highlight"><pre><span></span><code>    &lt;parameter update=&quot;set&quot; name=&quot;com.ibm.portal.remote-cache-scope&quot; type=&quot;string&quot;&gt;SHARED&lt;/parameter&gt;
     &lt;parameter update=&quot;set&quot; name=&quot;com.ibm.portal.remote-cache-expiry&quot; type=&quot;string&quot;&gt;3000&lt;/parameter&gt;
     &lt;parameter update=&quot;set&quot; name=&quot;com.ibm.portal.IgnoreAccessControlInCaches&quot; type=&quot;string&quot;&gt;true&lt;/parameter&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following information lists the resources that contribute to the overall remote cache information for <strong>Themes</strong>:</p>
 <ul>
 <li>
@@ -3687,10 +3685,9 @@
 </li>
 </ul>
 <p>Example for XML access:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>    &lt;parameter update=&quot;set&quot; name=&quot;com.ibm.portal.remote-cache-scope&quot; type=&quot;string&quot;&gt;SHARED&lt;/parameter&gt;
+<div class="language-text highlight"><pre><span></span><code>    &lt;parameter update=&quot;set&quot; name=&quot;com.ibm.portal.remote-cache-scope&quot; type=&quot;string&quot;&gt;SHARED&lt;/parameter&gt;
     &lt;parameter update=&quot;set&quot; name=&quot;com.ibm.portal.remote-cache-expiry&quot; type=&quot;string&quot;&gt;3000&lt;/parameter&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following information lists the resources that contribute to the overall remote cache information on a <strong>Portlet Definition</strong>:</p>
 <ul>
 <li>
@@ -3819,14 +3816,11 @@
 <p>The portlet definition describes the portlet at a deployment time level given in the portlet deployment descriptor. Thus, attributes specified in the deployment descriptor are valid on all occurrences on all pages of this portlet. The portlet window describes the runtime entity for a portlet. While in the rendering phase of a portlet, the portlet can publish values or attributes via an API. Thus, attributes specified while rendering the portlet is portlet instance specific.</p>
 </div>
 <p>Example code snippet for publishing the information at render time:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>    String paramExpiry = &quot;3000&quot;;
+<div class="language-text highlight"><pre><span></span><code>    String paramExpiry = &quot;3000&quot;;
     String paramScope = &quot;SHARED&quot;;
     renderResponse.setProperty( &quot;portlet.remote-cache-scope&quot;, paramScope );
     renderResponse.setProperty( RenderResponse.EXPIRATION_CACHE, paramExpiry );
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following information lists the resources that contribute to the overall remote cache information on <strong>Portlet Wide Settings</strong>:</p>
 <ul>
 <li>

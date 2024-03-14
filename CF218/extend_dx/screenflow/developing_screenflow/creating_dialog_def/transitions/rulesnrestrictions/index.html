@@ -2379,30 +2379,7 @@
 <li>
 <p>The entire set of dialogs, together with all their transitions, needs to be deterministic. That is the transitions need to produce the same results all times. To achieve this condition, the HCL UX Screen Flow Manager must always clearly determine the transition that is to be triggered. The transition is determined based on the transition endpoint that emits an event and the name (<code>QName</code>) of the event. The screenflow is not valid if the definition is not deterministic. For example, the definition of two dialogs as shown in code sample is not valid, as it is not deterministic: The Screen Flow Manager might not decide whether to trigger the first or the second transition after <code>portlet1</code> emits event <code>e1</code>.</p>
 <p>Code sample</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code>  &lt;transition&gt;
+<div class="language-text highlight"><pre><span></span><code>  &lt;transition&gt;
       &lt;source&gt;
           &lt;transition-endpoint nameref=&quot;portlet1&quot;&gt;
               &lt;event qname=&quot;e1&quot;/&gt;
@@ -2426,7 +2403,7 @@
          &lt;/transition-endpoint&gt;
       &lt;/target&gt;
   &lt;/transition&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>A source cannot reference more than one single transition endpoint.</p>

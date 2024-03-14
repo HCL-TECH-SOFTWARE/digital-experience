@@ -4119,21 +4119,10 @@
 <p><strong>get(attribute)</strong></p>
 <p>Provides access to the defined attributes associated with the client/CCPP profile.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.clientProfile[&#39;DeviceClass&#39;]}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.clientProfile[&#39;DeviceClass&#39;]}
+</code></pre></div>
 <p>The following example shows how to access the device class information for the client profile:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;c:set var=deviceClass scope=request value=${wp.clientProfile[&#39;DeviceClass&#39;]} /&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;c:set var=deviceClass scope=request value=${wp.clientProfile[&#39;DeviceClass&#39;]} /&gt;
 &lt;c:choose&gt;
 &lt;c:when test=”${deviceClass == &#39;desktop&#39;}”&gt;
 &lt;jsp:forward page=”/jsp/html/desktop/View.jsp”/&gt;
@@ -4145,7 +4134,7 @@
 &lt;jsp:forward page=”/jsp/html/View.jsp”/&gt;
 &lt;/c:otherwise&gt;
 &lt;/choose&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Parameters:</p>
 <ul>
 <li>

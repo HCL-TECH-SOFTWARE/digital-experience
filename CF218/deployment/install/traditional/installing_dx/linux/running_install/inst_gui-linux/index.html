@@ -2374,8 +2374,8 @@
 <p class="admonition-title">Note</p>
 <p>Currently, the cw_profile starting point always defaults to 10200. If you install a second version of portal on the same server, you must customize the cw_profile port value. Add the following line to the InstallationManager_root/InstallationManager/eclipse/IBMIM.ini file:</p>
 </div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-Dcwprofile_startingport=new_starting_port_number
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-Dcwprofile_startingport=new_starting_port_number
+</code></pre></div>
 </li>
 <li>
 <p>If necessary, start the <strong>IBM® Installation Manager</strong>.</p>
@@ -2518,8 +2518,8 @@ Skip the following step, if you choose to install to an existing copy of WebSphe
 <p class="admonition-title">Attention</p>
 <p>When you install WebSphere Application Server and HCL Portal together, you might find the following message in the SystemErr.log file:</p>
 </div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[AppServer_root/properties/version/installed.xml (No such file or directory)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[AppServer_root/properties/version/installed.xml (No such file or directory)
+</code></pre></div>
 <p>This message is part of the installation process and is not repeated after the installation is complete. Therefore, the message can be ignored.</p>
 <p>After you upgrade to CF08 or higher, you can upgrade your SDK to version 7.1. Go to <em>Upgrading the SDK</em> for information.</p>
 

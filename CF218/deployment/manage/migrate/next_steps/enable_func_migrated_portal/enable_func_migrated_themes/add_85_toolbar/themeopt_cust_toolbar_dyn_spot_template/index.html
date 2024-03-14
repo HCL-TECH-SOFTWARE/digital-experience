@@ -3605,14 +3605,7 @@
 <ul>
 <li>
 <p>If you have a theme profile which does not have a deferred section, you need to add the <code>wp_toolbar_host</code> theme module.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
 &quot;moduleIDs&quot; : [
 &quot;getting_started_module&quot;,
 &quot;wp_toolbar_host&quot;,
@@ -3620,22 +3613,11 @@
 ]
 ...
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>If you have a theme profile with a non-deferred and a deferred section, it is recommended to combine the <code>wp_toolbar_host_view</code> with the <code>wp_toolbar_host_edit</code> module. In that case you must add the <code>wp_toolbar_host_view</code> to the non-deferred section and <code>wp_toolbar_host_edit</code> to the deferred section.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
 &quot;moduleIDs&quot; : [
 &quot;getting_started_module&quot;,
 &quot;wp_toolbar_host_view&quot;,
@@ -3647,7 +3629,7 @@
 ],
 ...
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The theme module <code>wp_toolbar_host_edit</code> will not be loaded until you enter edit mode.</p>
 </li>
 </ul>
@@ -3657,14 +3639,11 @@
 </li>
 <li>
 <p>To add this dynamic content spot, create a HTML anchor element which references this dynamic content spot. Embed the dynamic content spot in the header of your page</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;div class=&quot;wpthemeFrame&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;div class=&quot;wpthemeFrame&quot;&gt;
 &lt;header role=&quot;banner&quot;&gt;
 &lt;a rel=&quot;dynamic-content&quot; href=&quot;dyn-cs:id:85toolbar&quot;&gt;&lt;/a&gt;
 ...
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Add this dynamic content spot to the locale-specific versions of your theme templates.</p>

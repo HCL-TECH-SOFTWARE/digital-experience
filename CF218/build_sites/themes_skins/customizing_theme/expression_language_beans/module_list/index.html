@@ -4200,12 +4200,10 @@
 <p><strong>current</strong></p>
 <p>Returns the module list for the currently selected page and theme.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;c:forEach var=&quot;node&quot; items=&quot;${wp.moduleList.current}&quot;&gt;   
+<div class="language-text highlight"><pre><span></span><code>&lt;c:forEach var=&quot;node&quot; items=&quot;${wp.moduleList.current}&quot;&gt;   
     ${node.name}/${node.version},
 &lt;/c:forEach&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="current_module_list/themeopt_el_bean_mod_current_list/">CurrentModuleList</a>; Never null.</p>
 </li>
@@ -4213,10 +4211,9 @@
 <p><strong>get(moduleKey)</strong></p>
 <p>Returns the module for the module key. The module key must be in the format <code>&lt;module name&gt;</code> or <code>&lt;module name&gt;/&lt;module version&gt;</code>. The version is optional. If no version is used, then the module with the highest version is selected.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.moduleList[&quot;wp_portal&quot;]}
+<div class="language-text highlight"><pre><span></span><code>${wp.moduleList[&quot;wp_portal&quot;]}
 ${wp.moduleList[&quot;wp_portal/0.0&quot;]}
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Parameters:</p>
 <ul>
 <li>

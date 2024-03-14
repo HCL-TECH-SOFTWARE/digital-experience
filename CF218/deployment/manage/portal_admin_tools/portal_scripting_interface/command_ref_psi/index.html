@@ -3935,30 +3935,14 @@
 <li>Jython is case-sensitive.</li>
 </ul>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code># here is a comment
+<div class="language-text highlight"><pre><span></span><code># here is a comment
 single_statement(with_arguments)
 first_statement_in_line() ; second_statement()
 outer statement [first inner] [second inner statement]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>A variable can contain an object. In a statement, an object method starts with the object followed by a dot (.), the method name, and arguments that are passed to the method in parentheses ().</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code># variable &#39;Object&#39; holds the object to invoke
+<div class="language-text highlight"><pre><span></span><code># variable &#39;Object&#39; holds the object to invoke
 # invoke the double argument version of the method
 Object.method(arg1, arg2)
 
@@ -3972,7 +3956,7 @@ Object.method(arg1, arg2, arg3)
 # the single argument is provided as a nested statement
 # the nested statement invokes the double argument version
 Object.method(Object.method(argInner1, argInner2)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="jacl">Jacl</h2>
 <p>Jacl is an interpreted language without strong typing. It is a procedural language with some object-oriented concepts that are used by the scripting component.</p>
 <ul>
@@ -3983,30 +3967,14 @@ Object.method(Object.method(argInner1, argInner2)
 <li>Jacl is case-sensitive.</li>
 </ul>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code># here is a comment
+<div class="language-text highlight"><pre><span></span><code># here is a comment
 single statement with arguments
 first statement in line ; second statement
 outer statement [first inner] [second inner statement]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The value of a Jacl variable is accessed by placing a $ in front of the variable name. A variable can contain an object. An object method is started by using the object as the first part of a statement, followed by the method name, and any arguments that are passed to the method. Since there is no strong typing, a method can be overloaded only by varying the number of arguments.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code># variable &#39;Object&#39; holds the object to invoke
+<div class="language-text highlight"><pre><span></span><code># variable &#39;Object&#39; holds the object to invoke
 # invoke the double argument version of the method
 $Object method arg1 arg2
 
@@ -4020,7 +3988,7 @@ $Object method arg1 arg2 arg3
 # the single argument is provided as a nested statement
 # the nested statement invokes the double argument version
 $Object method [$Object method argInner1 argInner2]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

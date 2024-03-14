@@ -2176,27 +2176,7 @@
 <h1 id="important-things-to-note">Important Things To Note</h1>
 <h2 id="generated-dll-manifest">Generated DLL manifest</h2>
 <p>Take note of the location of the generated DLL manifest as configured in the DllPlugin section of submodule's webpack.<dxmodules>.js. The location and content of the manifest are critical as it is required to optimize and correctly build the dependent Script Applications.</p>
-<div class="language-js highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w"> </span><span class="nx">entry</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<div class="language-js highlight"><pre><span></span><code><span class="w"> </span><span class="nx">entry</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">     </span><span class="nx">dxmodules</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;./modules-index.js&#39;</span>
 <span class="w"> </span><span class="p">},</span>
 <span class="w"> </span><span class="nx">mode</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;production&quot;</span><span class="p">,</span>
@@ -2217,31 +2197,10 @@
 <span class="w">         </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name].bundle.css&quot;</span><span class="p">,</span>
 <span class="w">     </span><span class="p">})</span>
 <span class="w"> </span><span class="p">],</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="generated-library-name">Generated Library Name</h2>
 <p>Take note of the generated library name (with the added fullhash) and the exported component aliases in the generated DLL manifest (dx-dll-manifest.json). Please keep in mind that even minor edits in the DX module will result to a modified fullhash in the library name that will then require the dependent Script Applications to be rebuilt and redeployed. It is recommended to keep the fullhash suffix in the webpack library name config mentioned in previous step.</p>
-<div class="language-js highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w"> </span><span class="p">{</span>
+<div class="language-js highlight"><pre><span></span><code><span class="w"> </span><span class="p">{</span>
 <span class="w">   </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;dxmodules_2a35376eb9d458555803&quot;</span><span class="p">,</span>
 <span class="w">   </span><span class="s2">&quot;content&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">     </span><span class="s2">&quot;./modules-index.js&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
@@ -2263,23 +2222,12 @@
 <span class="w">     </span><span class="p">}</span>
 <span class="w">   </span><span class="p">}</span>
 <span class="w"> </span><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="deployment-descriptors">Deployment Descriptors</h2>
 <p>Any change in the aliases in both the entry config or in the output filenames in any of the SubModules Webpack config, will require corresponding changes to DX Module's deployment descriptor file src/main/config/war/WEB-INF/plugin.xml. The Javascript and styling files in the output folder dist-dx-module must correspond to the files listed in the  deployment descriptor. All @@auto-replaced-with-rootProject.name@@ tokens are dynamically replaced by the rootProject.name value set in settings.gradle.</p>
 <ul>
 <li>webpack.react18.js or webpack.react16.js or webpack.dxmodules.js
-   <div class="language-js highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w"> </span><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+   <div class="language-js highlight"><pre><span></span><code><span class="w"> </span><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <span class="w">     </span><span class="nx">entry</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nx">react18</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;./modules-index.js&#39;</span>
 <span class="w">     </span><span class="p">},</span>
@@ -2291,24 +2239,9 @@
 <span class="w">     </span><span class="p">},</span>
 <span class="w">     </span><span class="p">...</span>
 <span class="w"> </span><span class="p">}</span><span class="w"> </span>
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 <li>DxModule/src/main/config/war/WEB-INF/plugin.xml
-   <div class="language-xml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w"> </span>...
+   <div class="language-xml highlight"><pre><span></span><code><span class="w"> </span>...
 <span class="w"> </span><span class="nt">&lt;module</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;@@auto-replaced-with-rootProject.name@@&quot;</span><span class="nt">&gt;</span>
 <span class="w">     </span><span class="nt">&lt;contribution</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;head&quot;</span><span class="nt">&gt;</span>
 <span class="w">         </span><span class="nt">&lt;sub-contribution</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;js&quot;</span><span class="nt">&gt;</span>
@@ -2324,7 +2257,7 @@
 <span class="w">     </span><span class="nt">&lt;/contribution&gt;</span>
 <span class="w"> </span><span class="nt">&lt;/module&gt;</span>
 <span class="w"> </span>...
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 </ul>
 
 

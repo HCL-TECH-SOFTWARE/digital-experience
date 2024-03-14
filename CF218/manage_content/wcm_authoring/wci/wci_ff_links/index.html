@@ -2523,83 +2523,24 @@
 <p>Three types of embedded links can be processed: images, files, and content. In all cases, the link tag must include a GUID that points to another item in the feed, which describes the target item.</p>
 <h2 id="content-links">Content links</h2>
 <p>In this example, the following feed content contains a link to another web page:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;p&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;p&gt;
 &lt;a href=&quot;https://support.hcltechsw.com/csm&quot;&gt;Press Release&lt;/a&gt;
 &lt;/p&gt; 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To ensure that the embedded link is converted into a link to a related content item that is being created when the feed is processed, you add the following code to your feed. It contains a GUID to the HTML file also being processed by the Web Content Integrator:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;![CDATA[&lt;p&gt; 
+<div class="language-text highlight"><pre><span></span><code>&lt;![CDATA[&lt;p&gt; 
 &lt;a href=&#39;&lt;link type=&quot;content&quot; guid=&quot;80000002&quot;/&gt;&#39;&gt;Press Release&lt;/a&gt;
 This is some text.
 &lt;/p&gt;]]&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>When the content of the feed is saved within Web Content Manager, a link to a content item is added to the content.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;p&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;p&gt;
 &lt;a href=&quot;wps/wcm/myconnect/Portal/Press/Announcement1?contentIDR=29e04295034efb&quot;&gt;Press Release&lt;/a&gt;
 This is some text.
 &lt;/p&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Example feed</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot;?&gt;
 &lt;rss version=&quot;2.0&quot; xmlns:ibmwcm=&quot;http://purl.org/net/ibmfeedsvc/wcm/1.0&quot; &gt;
 &lt;channel&gt;
 &lt;title&gt;Sample Feed&lt;/title&gt;
@@ -2651,86 +2592,28 @@ This is some text.
 &lt;/item&gt;
 &lt;/channel&gt;
 &lt;/rss&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="file-links">File links</h2>
 <p>In this example, the following feed content contains a link to a PDF file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;p&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;p&gt;
 &lt;a href=&quot;https://support.hcltechsw.com/csm&quot;&gt;Product Spec&lt;/a&gt;
 This is some text.
 &lt;/p&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To ensure that the embedded link is converted into a link to a related file resource component that is being created when the feed is processed, you add the following code to your feed. It contains a GUID to the PDF file also being processed by the Web Content Integrator:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;![CDATA[&lt;p&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;![CDATA[&lt;p&gt;
 &lt;a href=&#39;&lt;link type=&quot;file&quot; guid=&quot;50000002&quot;/&gt;&#39;&gt;Product Spec&lt;/a&gt;
 This is some text.
 &lt;/p&gt;]]&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>When the content of the feed is saved within Web Content Manager, a component tag is added to the content.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;p&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;p&gt;
 &lt;a href=&quot;&lt;Component name=&quot;ProductSpec&quot; /&gt;&quot;&gt;Product Spec&lt;/a&gt;
 This is some text.
 &lt;/p&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Example feed</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot;?&gt;
 &lt;rss version=&quot;2.0&quot; xmlns:ibmwcm=&quot;http://purl.org/net/ibmfeedsvc/wcm/1.0&quot; &gt;
    &lt;channel&gt;
       &lt;title&gt;Sample Feed&lt;/title&gt;
@@ -2780,86 +2663,28 @@ This is some text.
       &lt;/item&gt;
    &lt;/channel&gt;
 &lt;/rss&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="image-links">Image links</h2>
 <p>In this example, the following feed content contains a link to an image file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;p&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;p&gt;
 &lt;img src=&quot;http://cmsserver.ibm.com/images/mylogo.gif&quot; /&gt;
 This is some text.
 &lt;/p&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To ensure that the embedded image link is converted into a link to a related image component that is being created when the feed is processed, you add the following code to your feed. It contains a GUID to the image file also being processed by the Web Content Integrator:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;![CDATA[&lt;p&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;![CDATA[&lt;p&gt;
 &lt;link type=&quot;image&quot; guid=&quot;50000001&quot; /&gt;
 This is some text.
 &lt;/p&gt;]]&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>When the content of the feed is saved within Web Content Manager, a component tag is added to the content.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;p&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;p&gt;
 **&lt;Component name=&quot;My Logo&quot; /\&gt;**
 This is some text.
 &lt;/p&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Example feed</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot;?&gt;
 &lt;rss version=&quot;2.0&quot; xmlns:ibmwcm=&quot;http://purl.org/net/ibmfeedsvc/wcm/1.0&quot; &gt;
    &lt;channel&gt;
       &lt;title&gt;Sample Feed&lt;/title&gt;
@@ -2909,7 +2734,7 @@ This is some text.
       &lt;/item&gt;
    &lt;/channel&gt;
 &lt;/rss&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="automatic-image-tag-processing">Automatic image tag processing</h2>
 <p>The Web Content Integrator has an optional feature, which can be used in place of the <code>&lt;link type="image" /&gt;</code> tag. If enabled, the Web Content Integrator automatically parses the values of any html or rich text elements and search for HTML <code>&lt;img/&gt;</code> tags that are embedded within the content. If any are found, the Web Content Integrator attempts to retrieve the referenced image file, create an image component, and then rewrite the reference so that it points to the new image component.</p>
 <p>This feature can be enabled by editing the disable.img.proc setting in the WCMConsumerPlugin.properties file and setting it to "false". Automatic image tag processing is disabled by default.</p>

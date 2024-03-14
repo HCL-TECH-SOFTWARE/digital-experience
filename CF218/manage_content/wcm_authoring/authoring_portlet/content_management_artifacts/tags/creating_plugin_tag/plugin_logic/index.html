@@ -4010,38 +4010,30 @@
 <p>Logic plug-ins are used for programming logic. This topic contains additional information for some of these plug-ins.</p>
 <h2 id="comment-rendering-plug-in">Comment rendering plug-in</h2>
 <p>Use the <code>Comment</code> rendering plug-in to insert comments that you want only content authors to view. All text that is written between the plug-in start and end tags is treated as comment. This text is not processed, but is omitted when the web content is rendered. Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:Comment] This is a comment [/Plugin:Comment]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:Comment] This is a comment [/Plugin:Comment]
+</code></pre></div>
 <h2 id="ifempty-and-ifnotempty-plug-ins">ifEmpty and ifNotEmpty plug-ins</h2>
 <p>These plug-ins are used render the enclosed text if a value parameter is either empty or not empty.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ifEmpty value=&quot; &quot;]
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ifEmpty value=&quot; &quot;]
 
 [Plugin:ifNotEmpty value=&quot; &quot;]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="equals-rendering-plug-in">Equals rendering plug-in</h2>
 <p>Use the <code>Equals</code> plug-in to insert markup into your web content only if the values of two text attributes match. The plug-in provides the two attributes text1 and text2. All markup between the start and end tags is rendered as part of your web content only if the values of these two attributes match.</p>
 <p>The following sample renders the markup between the plug-in start and end tags only if the rendered content is in a workflow stage named Review.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:Equals text1=&quot;Review&quot; text2=&quot;[Property type=&#39;content&#39; 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:Equals text1=&quot;Review&quot; text2=&quot;[Property type=&#39;content&#39; 
                context=&#39;current&#39; field=&#39;currentstage&#39;]&quot;] 
 Document in review
 [/Plugin:Equals]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="not-equals-rendering-plug-in">Not equals rendering plug-in</h2>
 <p>Use the <code>NotEquals</code> rendering plug-in to insert markup into your web content only if the values of two text attributes do not match. The plug-in provides the two attributes text1 and text2. All markup between the start and end tags is rendered with your web content only if the values of these two attributes do not match.</p>
 <p>The following sample renders the markup between the start and end tags only if thetype element of the rendered content does not have the value Internal:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:NotEquals text1=&quot;Internal&quot; text2=&quot;[Element type=&#39;content&#39; 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:NotEquals text1=&quot;Internal&quot; text2=&quot;[Element type=&#39;content&#39; 
                   context=&#39;current&#39; key=&#39;type&#39;]&quot;] 
 Public document
 [/Plugin:NotEquals]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="matches-rendering-plug-in">Matches rendering plug-in</h2>
 <p>Use the <code>Matches</code> rendering plug-in to conditionally insert markup into your web content by evaluating a regular expression against a passed text value. The plug-in provides two attributes: text and pattern. All markup between the plug-in start and end tags is rendered only if the value of the text attribute matches the regular expression in the pattern attribute.</p>
 <p>You can also have negative pattern matching. In this case, the markup of the body of the plug-in tag is rendered only if the text does not match the regular expression. To use negative pattern matching, set the negative-match attribute to true.</p>
@@ -4053,43 +4045,32 @@ Public document
 <ul>
 <li>
 <p>The following sample renders the markup between the start and end tags only if the rendered content is in a workflow stage whose name contains the word Review.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:Matches text=&quot;[Property type=&#39;content&#39; context=&#39;current&#39; 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:Matches text=&quot;[Property type=&#39;content&#39; context=&#39;current&#39; 
                 field=&#39;currentstage&#39;]&quot; pattern=&quot;.*Review.*&quot;] 
 Document in review
 [/Plugin:Matches]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To ignore the case of the character that is used for matching, prefix the control sequence (?i) to the regular expression. The following sample also matches workflow stage names such as review:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:Matches text=&quot;[Property type=&#39;content&#39; context=&#39;current&#39; 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:Matches text=&quot;[Property type=&#39;content&#39; context=&#39;current&#39; 
                 field=&#39;currentstage&#39;]&quot; pattern=&quot;(?i).*review.*&quot;] 
 Document in review
 [/Plugin:Matches]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>The following sample renders the markup between the start and end tags only if the rendered content is in a workflow stage whose name does not contain the word Review:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:Matches text=&quot;[Property type=&#39;content&#39; context=&#39;current&#39; 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:Matches text=&quot;[Property type=&#39;content&#39; context=&#39;current&#39; 
      field=&#39;currentstage&#39;]&quot; negative-match=&quot;true&quot; pattern=&quot;.*Review.*&quot;] 
 Document not in review
 [/Plugin:Matches]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>You can also use capture groups for regular expressions. To access the value of a group, use the <code>MatchedGroup</code> plug-in. You can use this plug-in only between the start and end tags of the <code>Matches</code> rendering plug-in. It provides the attribute group to retrieve a capture group by its index. For example, to access the first word in a list of comma-separated words, use the plug-in as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:Matches pattern=&quot;(.*)(,)(.*)&quot; text=&quot;key1,key2&quot;] 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:Matches pattern=&quot;(.*)(,)(.*)&quot; text=&quot;key1,key2&quot;] 
 First key is: [Plugin:MatchedGroup group=&quot;1&quot;]
 [/Plugin:Matches]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="otherwise-rendering-plug-in">Otherwise rendering plug-in</h2>
@@ -4103,54 +4084,36 @@ First key is: [Plugin:MatchedGroup group=&quot;1&quot;]
 <ul>
 <li>
 <p>The following sample renders the markup between the start and end tag of the <code>Otherwise</code> rendering plug-in (<code>Document not in review</code>) only if the rendered content is not in a workflow stage that is named Review.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:Equals text1=&quot;Review&quot; text2=&quot; [Property type=&#39;content&#39;
+<div class="language-text highlight"><pre><span></span><code>[Plugin:Equals text1=&quot;Review&quot; text2=&quot; [Property type=&#39;content&#39;
                context=&#39;current&#39; field=&#39;currentstage&#39;]&quot;] 
   Document in review.
 [/Plugin:Equals]
 [Plugin:Otherwise]
   Document in not review.
 [/Plugin:Otherwise]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>The following sample renders the markup between the start and end tag of the <code>Otherwise</code> rendering plug-in (<code>Internal document</code>) only if the type element of the rendered content has the value <code>Internal</code>.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:NotEquals text1=&quot;Internal&quot; text2=&quot; [Element type=&#39;content&#39;
+<div class="language-text highlight"><pre><span></span><code>[Plugin:NotEquals text1=&quot;Internal&quot; text2=&quot; [Element type=&#39;content&#39;
                   context=&#39;current&#39; key=&#39;type&#39;]&quot;]
   Public document
 [/Plugin:NotEquals]
 [Plugin:Otherwise]
   Internal document
 [/Plugin:Otherwise]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>The following sample renders the markup between the start and end tag of the <code>Otherwise</code> rendering plug-in (<code>Document not in review</code>) only if the rendered content is in a workflow stage whose name does not contain the word <code>Review</code>.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:Matches text=&quot; [Property type=&#39;content&#39; context=&#39;current&#39;
+<div class="language-text highlight"><pre><span></span><code>[Plugin:Matches text=&quot; [Property type=&#39;content&#39; context=&#39;current&#39;
                 field=&#39;currentstage&#39;]&quot; pattern=&quot;.*Review.*&quot;]
   Document in review
 [/Plugin:Matches]
 [Plugin:Otherwise]
   Document not in review
 [/Plugin:Otherwise]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <p>You can also nest the <code>Equals</code>, <code>NotEquals</code>, and <code>Matches</code> rendering plug-ins when conditionally adding markup. When you use these plug-ins together in this way, you might want to have different <code>Otherwise</code> plug-ins that are associated with each conditional rendering plug-in. To associate a plug-in with a specific <code>Otherwise</code> plug-in, add a scope attribute with the same value to the conditional rendering plug-in and to the <code>Otherwise</code> plug-in. If no scope attribute is specified for the <code>Otherwise</code> plug-in, it is applied to the conditional plug-in that was last evaluated.</p>
@@ -4158,20 +4121,7 @@ First key is: [Plugin:MatchedGroup group=&quot;1&quot;]
 <ul>
 <li>
 <p>The following sample uses multiple nested rendering plug-ins to conditionally render markup. The <code>Otherwise</code> plug-in with the scope attribute set to 1 refers to the <code>Equals</code> plug-in. The <code>Otherwise</code> plug-in with the scope attribute set to 2 refers to the <code>Matches</code> rendering plug-in.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:Equals text1=&quot;Review&quot; text2=&quot; [Property type=&#39;content&#39;
+<div class="language-text highlight"><pre><span></span><code>[Plugin:Equals text1=&quot;Review&quot; text2=&quot; [Property type=&#39;content&#39;
                context=&#39;current&#39; field=&#39;currentstage&#39;]&quot; scope=&quot;1&quot;]
   Document in review.
   [Plugin:Matches text=&quot; [Property type=&#39;content&#39; context=&#39;current&#39;
@@ -4185,7 +4135,7 @@ First key is: [Plugin:MatchedGroup group=&quot;1&quot;]
 [Plugin:Otherwise scope=&quot;1&quot;]
   Document in not review.
 [/Plugin:Otherwise]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 

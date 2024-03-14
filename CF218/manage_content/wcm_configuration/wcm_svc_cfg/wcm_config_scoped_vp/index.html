@@ -2282,20 +2282,20 @@
 <ul>
 <li>
 <p><strong>Host name:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>vp.uniquename.hostname=ExistingVPHost
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>vp.uniquename.hostname=ExistingVPHost
+</code></pre></div>
 </li>
 <li>
 <p><strong>Context path:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>vp.uniquename.context=ExistingVPContext
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>vp.uniquename.context=ExistingVPContext
+</code></pre></div>
 </li>
 </ul>
 </li>
 <li>
 <p>To add a scoped configuration setting for a virtual portal, use this format:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>PropertyKey.vp.uniquename=override\_value
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>PropertyKey.vp.uniquename=override\_value
+</code></pre></div>
 <p>This setting overrides the property key in the virtual portal that is specified in the unique name.</p>
 </li>
 <li>
@@ -2304,8 +2304,8 @@
 </ol>
 <h2 id="base-override-settings">Base override settings</h2>
 <p>If your virtual portal was named "yellowportal", you might create a scoped configuration for it using this format.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>vp.yellow.context=yellowportal
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>vp.yellow.context=yellowportal
+</code></pre></div>
 <p>The default value for the deployment subscriber is "false": <code>deployment.subscriberOnly=false</code></p>
 <p>You can override this value for the "yellowportal" virtual portal and change it to "true" by using this configuration parameter: <code>deployment.subscriberOnly.vp.yellow=true</code></p>
 <p>If the base configuration for a setting is different from all the virtual portals, it is more efficient to use a base override setting. To do this, add this setting: <code>enable.base.portal.overrides=true</code></p>

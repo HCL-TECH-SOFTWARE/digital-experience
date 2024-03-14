@@ -2672,8 +2672,8 @@
 <p>You can add other query parameters, for example for related tags.</p>
 <p>The query for related tags can be useful to search for related content, that is for resources that are or can be similar to a given resource. Resources are considered to be similar if they share at least one tag with a given resource.</p>
 <p>Example: To search for resources <code>r2 . . . rn</code> that are related to a resource <code>r1</code>, you determine the tags of resource <code>r1</code> and hand them over to the following query:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>tm:ts:related&amp;tmparam=tm:name:tagname
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>tm:ts:related&amp;tmparam=tm:name:tagname
+</code></pre></div>
 <p>This query returns a feed that contains all tags related to the tag names or set of tags that you specified. The query results in a list of all tags assigned to all resources that have been assigned at least one of the tags that resource <code>r1</code> has also been assigned. In other words, This query lists all tags of all similar or related resources <code>r2 . . . rn</code>. You can now use this list to query for all these listed resources <code>r2...rn</code>.</p>
 <!---
 -   **[Type-ahead with the deprecated tag widget](../admin-system/tag_rate_api_rest_oth_qu_typahed.md)**  

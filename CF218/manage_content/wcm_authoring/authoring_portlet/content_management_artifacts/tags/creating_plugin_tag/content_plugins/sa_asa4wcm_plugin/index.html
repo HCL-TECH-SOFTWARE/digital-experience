@@ -4035,10 +4035,9 @@
 <li>
 <p>Add the AnalyticsData plug-in tag to your content or presentation template design. Each tag can contain only one attribute.</p>
 <p>Use the following syntax:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:AnalyticsData property=&quot;&quot; | element=&quot;&quot; | value= &quot;&quot; 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:AnalyticsData property=&quot;&quot; | element=&quot;&quot; | value= &quot;&quot; 
                       css-class = &quot;&quot;]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To select a value that is used in the microformat for Active Site Analytics, use one of the following attributes:</p>
 <ul>
 <li>
@@ -4093,46 +4092,45 @@
 <li>
 <p><strong>[Plugin:AnalyticsData property="title"]</strong></p>
 <p>This setting selects the display title of the content item. The following microformat is inserted in the page:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;span style=&quot;display:none&quot; class=&quot;asa.wcm.content_item.title&quot;&gt;Display title&lt;/span&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;span style=&quot;display:none&quot; class=&quot;asa.wcm.content_item.title&quot;&gt;Display title&lt;/span&gt; 
+</code></pre></div>
 </li>
 <li>
 <p><strong>[Plugin:AnalyticsData property="authors" css-class="com.acme.content.authors"]</strong></p>
 <p>This setting selects the authors of the content item. If you use this setting and a custom CSS class, the following microformats are inserted in the page:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;span style=&quot;display:none&quot; class=&quot;com.acme.content.authors&quot;&gt;Author 1&lt;/span&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;span style=&quot;display:none&quot; class=&quot;com.acme.content.authors&quot;&gt;Author 1&lt;/span&gt;
 &lt;span style=&quot;display:none&quot; class=&quot;com.acme.content.authors&quot;&gt;Author 2&lt;/span&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>[Plugin:AnalyticsData element="element1"]</strong></p>
 <p>This setting selects the text value of the element on the content item. The following microformat is inserted in the page:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;span style=&quot;display:none&quot; class=&quot;asa.wcm.content_item.element1&quot;&gt;Value of element with name element1&lt;/span&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;span style=&quot;display:none&quot; class=&quot;asa.wcm.content_item.element1&quot;&gt;Value of element with name element1&lt;/span&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong>[Plugin:AnalyticsData element="element1" css-class="asa.wcm.content_item.path"]</strong></p>
 <p>This setting selects the text value of the element on the content item. The following microformat is inserted in the page:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;span style=&quot;display:none&quot; class=&quot;asa.wcm.content_item.path&quot;&gt;Value of element with name element1&lt;/span&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;span style=&quot;display:none&quot; class=&quot;asa.wcm.content_item.path&quot;&gt;Value of element with name element1&lt;/span&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong>[Plugin:AnalyticsData value="Some text" css-class="asa.wcm.content_item.title"]</strong></p>
 <p>This setting uses the text specified by the value attribute. The following microformat is inserted in the page:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;span style=&quot;display:none&quot; class=&quot;asa.wcm.content_item.title&quot;&gt;Some text&lt;/span&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;span style=&quot;display:none&quot; class=&quot;asa.wcm.content_item.title&quot;&gt;Some text&lt;/span&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong>[Plugin:AnalyticsData css-class="asa.wcm.content_item.title" value="[Property context='current' type='content' field='title']"]</strong></p>
 <p>This setting passes the value of the nested [Property] tag to the plug-in. The following microformat is inserted in the page:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;span style=&quot;display:none&quot; class=&quot;asa.wcm.content_item.title&quot;&gt;Display title from nested property tag&lt;/span&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;span style=&quot;display:none&quot; class=&quot;asa.wcm.content_item.title&quot;&gt;Display title from nested property tag&lt;/span&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong>[Plugin:AnalyticsData css-class="asa.tag.SitePromotion" value="Halloween2012"]</strong></p>
 <p>This setting creates a site promotion tag with the value that is passed to the plug-in. The following microformat is inserted in the page:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;span style=&quot;display:none&quot; class=&quot;asa.tag.SitePromotion&quot;&gt;Halloween2012&lt;/span&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;span style=&quot;display:none&quot; class=&quot;asa.tag.SitePromotion&quot;&gt;Halloween2012&lt;/span&gt;
+</code></pre></div>
 </li>
 </ul>
 

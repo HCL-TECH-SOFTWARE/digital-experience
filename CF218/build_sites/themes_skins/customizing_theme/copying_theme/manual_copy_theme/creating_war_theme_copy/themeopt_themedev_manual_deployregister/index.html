@@ -3740,15 +3740,7 @@
 </li>
 <li>
 <p>In the PortalServer_root\bin directory, create the file input.xml with the following contents:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;request xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
 xsi:noNamespaceSchemaLocation=&quot;PortalConfig_8.5.0.xsd&quot;
 type=&quot;export&quot;&gt;
@@ -3757,14 +3749,13 @@ type=&quot;export&quot;&gt;
       &lt;theme action=&quot;export&quot; objectid=&quot;*&quot; /&gt;
    &lt;/portal&gt;
 &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>From the command line, change to the PortalServer_root\bin directory and run the following XMLAccess command to export all skin and theme definitions to the file registerTheme.xml:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>xmlaccess -user &lt;admin userid&gt; -password &lt;admin password&gt; -url
+<div class="language-text highlight"><pre><span></span><code>xmlaccess -user &lt;admin userid&gt; -password &lt;admin password&gt; -url
 &lt;hostname&gt;:10039/wps/config -in input.xml -out registerTheme.xml
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Find the <code>Portal 8.5 - Hidden</code> skin in the file registerTheme.xml and delete all other skins.</p>
@@ -3780,18 +3771,7 @@ type=&quot;export&quot;&gt;
 </li>
 <li>
 <p>Set <code>default</code> to <code>false</code> in the following code block:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;skin action=&quot;update&quot; active=&quot;true&quot; context-root=&quot;/customTheme&quot;
+<div class="language-text highlight"><pre><span></span><code>&lt;skin action=&quot;update&quot; active=&quot;true&quot; context-root=&quot;/customTheme&quot;
 default=&quot;false&quot; domain=&quot;rel&quot; resourceroot=&quot;customSkin&quot;
 type=&quot;default&quot; uniquename=&quot;customSkin&quot;&gt;
 ...
@@ -3803,7 +3783,7 @@ type=&quot;default&quot; uniquename=&quot;customSkin&quot;&gt;
 update=&quot;set&quot;&gt;&lt;!
 [CDATA[war:customThemeStatic/themes/customTheme/skins/customSkin/]
 ]&gt;&lt;/parameter&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 </li>
@@ -3821,25 +3801,7 @@ update=&quot;set&quot;&gt;&lt;!
 </li>
 <li>
 <p>In the following code block, set <code>default</code> to <code>false</code>, and <code>defaultskinref</code> and the first occurrence of <code>allowed-skin</code> to the unique name of your custom skin. Delete all other <code>allowed-skin</code> entries.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;theme action=&quot;update&quot; active=&quot;true&quot; context-root=&quot;/customTheme&quot;
+<div class="language-text highlight"><pre><span></span><code>&lt;theme action=&quot;update&quot; active=&quot;true&quot; context-root=&quot;/customTheme&quot;
 default=&quot;false&quot; defaultskinref=&quot;customSkin&quot; domain=&quot;rel&quot;
 resourceroot=&quot;dynamicSpots&quot; uniquename=&quot;customTheme&quot;&gt;
 ...
@@ -3858,23 +3820,21 @@ update=&quot;set&quot;&gt;&lt;!
 type=&quot;string&quot; update=&quot;set&quot;&gt;&lt;!
 [CDATA[war:customThemeStatic/themes/customTheme/layouttemplates/
 TopColumn2ColumnUnequal/]]&gt;&lt;/parameter&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 </li>
 <li>
 <p>Save all of your changes in the registerTheme.xml file. Then, from the command line, run the following XMLAccess command to register your theme and skin in the PortalServer_root\bin directory:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>xmlaccess -user &lt;admin userid&gt; -password &lt;admin password&gt; -url
+<div class="language-text highlight"><pre><span></span><code>xmlaccess -user &lt;admin userid&gt; -password &lt;admin password&gt; -url
 &lt;hostname&gt;:10039/wps/config -in registerTheme.xml -out output.xml
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>From the command line, run the following XMLAccess command to export all of the theme and skin definitions again to the file output2.xml:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>xmlaccess -user admin userid -password admin password -url
+<div class="language-text highlight"><pre><span></span><code>xmlaccess -user admin userid -password admin password -url
 hostname:10039/wps/config -in input.xml -out output2.xml
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Edit the output2.xml file to verify that your theme and skin updates are correct. Then, delete the input.xml, output.xml, and output2.xml files.</p>

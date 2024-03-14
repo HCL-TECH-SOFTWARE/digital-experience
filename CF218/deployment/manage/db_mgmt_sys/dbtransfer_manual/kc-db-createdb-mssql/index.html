@@ -3484,16 +3484,12 @@
 <li>
 <p>Run the SQL statements that are listed in this script in your SQL processor.</p>
 <p>Example of the script that is created by the Configuration Wizard:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>CREATE DATABASE WPSDB ON (NAME=RELDB_DATA, FILENAME=&#39;C:\\Microsoft SQL Server\\instance\\MSSQL/Data/WPSDB_Data.MDF&#39;, SIZE=10MB, MAXSIZE=UNLIMITED, FILEGROWTH=5MB)
+<div class="language-text highlight"><pre><span></span><code>CREATE DATABASE WPSDB ON (NAME=RELDB_DATA, FILENAME=&#39;C:\\Microsoft SQL Server\\instance\\MSSQL/Data/WPSDB_Data.MDF&#39;, SIZE=10MB, MAXSIZE=UNLIMITED, FILEGROWTH=5MB)
 LOG ON (NAME=DB_LOG, FILENAME=&#39;C:\\Microsoft SQL Server\\instance\\MSSQL/Data/WPSDB_Log.LDF&#39;, SIZE=100MB, MAXSIZE=30000MB, FILEGROWTH=100MB)
 collate SQL_Latin1_General_CP1_CS_AS
 ;
 ALTER DATABASE WPSDB SET READ_COMMITTED_SNAPSHOT ON;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 

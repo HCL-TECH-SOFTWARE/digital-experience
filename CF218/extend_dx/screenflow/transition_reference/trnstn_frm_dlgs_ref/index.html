@@ -2032,18 +2032,7 @@
 <p>The transition represents the incoming transition. When the transition is triggered, it causes the continuation of the dialog that the transition is returned to. For more information about incoming transitions, go to <em>Transition Endpoints</em>.</p>
 <p>In this code sample, when <code>dialog2</code> emits the event <code>eX</code>, <code>dialog1</code> is continued and is initialized with event <code>e2</code>.</p>
 <p>Code sample</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;transition&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;transition&gt;
    &lt;source&gt;
        &lt;transition-endpoint nameref=&quot;dialog2&quot;&gt;
             &lt;event qname=&quot;eX&quot;/&gt;
@@ -2055,23 +2044,12 @@
          &lt;/transition-endpoint&gt;
      &lt;/target&gt;
 &lt;/transition&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="dialog-to-dialog">Dialog to dialog</h2>
 <p>The following code sample shows a transition where the source and the target point to dialogs. This transition represents the dispatching transition.</p>
 <p>A dispatching transition is triggered when the transition returns from one dialog and it causes another dialog to start. In this sample when <code>dialog2</code> emits the event <code>eX</code>, <code>dialog3</code> is started and is initialized with the event <code>eY</code>. For more information about dispatching transition, go to <em>Dialog Chaining and Nesting</em>.</p>
 <p>Code sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;transition type=&quot;nested&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;transition type=&quot;nested&quot;&gt;
    &lt;source&gt;
        &lt;transition-endpoint nameref=&quot;dialog2&quot;&gt;
             &lt;event qname=&quot;eX&quot;/&gt;
@@ -2083,7 +2061,7 @@
          &lt;/transition-endpoint&gt;
      &lt;/target&gt;
 &lt;/transition&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

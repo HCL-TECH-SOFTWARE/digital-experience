@@ -3670,25 +3670,19 @@
 <ol>
 <li>
 <p>Enter the following SQL:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>BEGIN
+<div class="language-text highlight"><pre><span></span><code>BEGIN
     dbms_auto_task_admin.enable(
         client_name =&gt; &#39;auto space advisor&#39;,
         operation  =&gt; NULL,
         window_name =&gt; NULL);
 END;
 /
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 <p>To ensure that you enabled the "Auto Space Advisor" task, you can check whether the task is enabled or disabled by entering the following command from SQL Plus:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>SQL&gt; select status from dba_autotask_client where client_name = &#39;auto space advisor&#39;;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>SQL&gt; select status from dba_autotask_client where client_name = &#39;auto space advisor&#39;;
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

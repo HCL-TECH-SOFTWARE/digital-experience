@@ -3716,16 +3716,7 @@
 <h1 id="importing-static-page-content-from-archive-or-compressed-files">Importing static page content from archive or compressed files</h1>
 <p>You can import the content of static pages from an external archive or compressed file by using the XML configuration interface.</p>
 <p>The following example imports static page content from the file index1.zip:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;content-node action=&quot;update&quot; active=&quot;true&quot; allportletsallowed=&quot;true&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;content-node action=&quot;update&quot; active=&quot;true&quot; allportletsallowed=&quot;true&quot; 
               content-parentref=&quot;homepage&quot; create-type=&quot;explicit&quot; 
               domain=&quot;rel&quot; ordinal=&quot;1500&quot; themeref=&quot;ibm.theme&quot;
               type=&quot;staticpage&quot; uniquename=&quot;samplestaticpage1&quot;&gt;
@@ -3735,7 +3726,7 @@
           &lt;/pagecontents&gt;
           ?
 &lt;/content-node&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The referenced archive or compressed files must be accessible to the portal when the XML request is processed. For details about the administration of static pages with the XML configuration interface refer to the topics about <em>Using the XML configuration interface to work with static pages</em>.</p>
 
 

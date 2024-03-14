@@ -3610,13 +3610,12 @@
 <p>You can add dynamic content to your custom theme's static content by using dynamic content spots. Dynamic content spots are hook points in your static markup such as the theme.html that delegates somewhere else to inject more markup at that spot the page. It can be delegated to any URI known to the system. For instance, it can point to a server-side component such as JSP or servlet.</p>
 <p>To abstract the theme from direct links into server-side code, use the dyn-cs: schema with a unique identifier for a dynamic content spot. This allows for advanced features such as delegating to different JSPs on different pages. Use the following examples.</p>
 <p>Including a named dynamic content spot mapping:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;a rel=&quot;dynamic-content&quot; href=&quot;dyn-cs:id:newDynamicContentSpotName&quot;&gt;&lt;/a&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;a rel=&quot;dynamic-content&quot; href=&quot;dyn-cs:id:newDynamicContentSpotName&quot;&gt;&lt;/a&gt;
+</code></pre></div>
 <p>Including a theme JSP directly:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;a rel=&quot;dynamic-content&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;a rel=&quot;dynamic-content&quot; 
    href=&quot;res:/CustomThemeContext/themes/html/MyTheme/dynamicContent.jsp&quot;&gt;&lt;/a&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="configuring-and-modifying-named-dynamic-content-spots">Configuring and modifying named dynamic content spots</h2>
 <p>The dynamic content spot mappings can be defined as part of the module definition by using the <code>ref-id</code> attribute on a <code>dyn-cs</code> contribution type. Or, they can be defined for the theme and skin templates in a Resource Environment Provider (REP) named WP DynamicContentSpotMappings in the WebSphere® Integrated Solutions Console. For more information, see <em>Creating a dynamic content spot</em>.</p>
 <p>The following tables are an overview of the dynamic content spots that are most frequently used. Use the Theme Analyzer's Contribution Explorer to see all the dynamic content spots provided.</p>

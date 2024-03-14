@@ -2899,43 +2899,19 @@
 </tbody>
 </table>
 <p>The full structure of the parameter in JSON format is</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>facet={&quot;id&quot;: &quot;&lt;facet_id&gt;&quot;, &quot;depth&quot;: &lt;depth&gt;, &quot;count&quot;: &lt;count&gt;, &quot;sortOrder&quot;: &quot;&lt;order&gt;&quot;}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>facet={&quot;id&quot;: &quot;&lt;facet_id&gt;&quot;, &quot;depth&quot;: &lt;depth&gt;, &quot;count&quot;: &lt;count&gt;, &quot;sortOrder&quot;: &quot;&lt;order&gt;&quot;}
+</code></pre></div>
 <p>Examples</p>
 <p>Some examples:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>facet={&quot;id&quot;: &quot;Tag&quot;, &quot;count&quot;: 50}
+<div class="language-text highlight"><pre><span></span><code>facet={&quot;id&quot;: &quot;Tag&quot;, &quot;count&quot;: 50}
 facet={&quot;id&quot;: &quot;Person&quot;, &quot;count&quot;: 250}
 facet={&quot;id&quot;: &quot;Date&quot;, &quot;count&quot;: 250, &quot;depth&quot;: 2}
 facet={&quot;id&quot;: &quot;Source&quot;, &quot;count&quot;: 50}
 facet={&quot;id&quot;: &quot;Trend&quot;, &quot;count&quot;: 50}
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="response-format">Response Format</h2>
 <p>The response format is designed to allow a faceted search client, which is as generic as possible. The format is XML-based, and augments the existing Atom search feed with elements. All additional elements have the ibmsc namespace, where ibmsc is short for http://www.ibm.com/search/content/2010. The root atom:feed element is augmented with ibmsc:facet elements, as defined in the following schema:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code>atomFeed = element atom:feed {
+<div class="language-text highlight"><pre><span></span><code>atomFeed = element atom:feed {
     ibmscFacets ~//in addition to existing elements
     }
 
@@ -2956,7 +2932,7 @@ facet={&quot;id&quot;: &quot;Trend&quot;, &quot;count&quot;: 50}
     attribute weight { float },
     ibmscFacetValue*
     }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Description of response elements:</p>
 <table>
 <thead>
@@ -3013,20 +2989,14 @@ facet={&quot;id&quot;: &quot;Trend&quot;, &quot;count&quot;: 50}
 <li>To explore facets in a subcategory of the selected facet value if it exists, use the id of the facetValue element as the id attribute of the facet request parameter.</li>
 </ol>
 <h2 id="example">Example:</h2>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;ibmsc:facets taxonomyId=&quot;facets&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmsc:facets taxonomyId=&quot;facets&quot;&gt;
 &lt;ibmsc:facet id=&quot;Date&quot; type=&quot;Date&quot;&gt;
 &lt;ibmsc:facetValue id=&quot;Date/2012&quot; label=&quot;2012&quot; weight=&quot;1&quot;&gt;
 &lt;ibmsc:facetValue id=&quot;Date/2012/07&quot; label=&quot;07&quot; weight=&quot;1&quot;/&gt;
 &lt;/ibmsc:facetValue&gt;
 &lt;/ibmsc:facet&gt;
 &lt;/ibmsc:facets&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

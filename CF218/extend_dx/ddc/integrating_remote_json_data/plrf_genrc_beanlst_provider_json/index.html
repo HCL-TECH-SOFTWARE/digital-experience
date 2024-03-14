@@ -2183,14 +2183,11 @@
 <li>
 <p><strong>source</strong></p>
 <p>You can set this attribute to identify the source URI that serves the JSON data. The URI must be accessible through the portal resource addressability framework. Supported URI schemes include <code>http</code>, <code>https</code>, and <code>dav</code>. If you access external JSON data by using <code>http</code> or <code>https</code> URLs, make sure to adjust your proxy configuration outbound HTTP connection to allow outbound access to these URLs. For more information, read the information about proxy configuration in the HCL Digital Experience documentation. For more information, read <em>Outbound HTTP connection</em>. Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;set&quot; extension-id=&quot;ibm.portal.ddc.json&quot; 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;set&quot; extension-id=&quot;ibm.portal.ddc.json&quot; 
    profile=&quot;yourprofile.name&quot; 
    attribute=&quot;source=https://www.your_company.com/your_json_feed&quot; 
    compute=&quot;always&quot;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>sortCriteria</strong></p>
@@ -2199,14 +2196,11 @@
 <li>
 <p><strong>sortOrder</strong></p>
 <p>Use this attribute in combination with the <code>sortCriteria</code> attribute to specify the sort order. Supported values are <code>asc</code> and <code>desc</code> for sorting in ascending or descending order. Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;set&quot; extension-id=&quot;ibm.portal.ddc.json&quot; 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;set&quot; extension-id=&quot;ibm.portal.ddc.json&quot; 
    profile=&quot;yourprofile.name&quot; 
    attribute=&quot;source=https://www.your_company.com/your_json_feed&quot; 
    attribute=&quot;sortCriteria=title&quot; attribute=&quot;sortOrder=asc&quot;]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>cacheScope</strong></p>
@@ -2222,14 +2216,11 @@
 </li>
 </ul>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;set&quot; extension-id=&quot;ibm.portal.ddc.json&quot; 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;set&quot; extension-id=&quot;ibm.portal.ddc.json&quot; 
    profile=&quot;yourprofile.name&quot; 
    attribute=&quot;source=https://www.your_company.com/your_json_feed&quot; 
    attribute=&quot;cacheScope=private&quot; compute=&quot;always&quot;]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>cacheType</strong></p>

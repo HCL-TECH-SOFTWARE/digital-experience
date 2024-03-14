@@ -3266,16 +3266,16 @@
 <p>Use the Java Portlet API to implement these portlets. For more information, see Predefined public render parameters.</p>
 <h2 id="accessing-the-main-portal-page-running-in-the-view-area">Accessing the main portal page running in the view area</h2>
 <p>If you want your toolbar portlet to access the main portal page that is currently displayed in the view area, you can use the following public render parameter. This parameter carries the serialized ObjectID of the main portal page, not the one of the toolbar content page. Use this ObjectID to locate the content page in the content model hierarchy of your portal using the public Model SPI or the Remote Model SPI if you want to query page information using REST. You can display properties of the main page in your toolbar portlet or even modify page properties by using the Controller SPIs.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>{http://www.ibm.com/xmlns/prod/websphere/portal/publicparams}selection
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>{http://www.ibm.com/xmlns/prod/websphere/portal/publicparams}selection
+</code></pre></div>
 <h2 id="working-with-page-edit-mode-and-page-view-mode">Working with page edit mode and page view mode</h2>
 <p>You can configure your toolbar portlet to differentiate between page edit mode and page view mode. In page edit mode, your content authors, page editors and administrators can modify the main portal page that is currently displayed in the main view area. In page view mode, you can provide read-only information about the main portal page. You can use the following public render parameter to detect if page edit mode is active or inactive.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>{http://www.ibm.com/xmlns/prod/websphere/portal/publicparams}editMode
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>{http://www.ibm.com/xmlns/prod/websphere/portal/publicparams}editMode
+</code></pre></div>
 <h2 id="working-with-page-information-mode">Working with page information mode</h2>
 <p>Use the following public render parameter if you want your toolbar portlet to display additional help information for your content authors, page editors and administrators. Or, use it if page information is active.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>{http://www.ibm.com/xmlns/prod/websphere/portal/publicparams}infoMode
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>{http://www.ibm.com/xmlns/prod/websphere/portal/publicparams}infoMode
+</code></pre></div>
 <h2 id="drag-and-drop">Drag and Drop</h2>
 <p>If you want your toolbar tab to display a list of items that can be dragged to the portal page that is currently displayed in the main view area, you need to make these items draggable according to the Drag and Drop model of HTML 5. For more information, see <em>Customize drag and drop</em>.</p>
 

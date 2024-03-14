@@ -2225,19 +2225,7 @@
 <h1 id="how-to-use-the-web-content-manager-api">How to use the Web Content Manager API</h1>
 <p>The workspace is the heart of the HCL Web Content Manager API. Items are created, saved, deleted and searched for in the workspace item. A workspace is basically an interface to Web Content Manager that is associated with a user. Using a workspace item, the user can perform operations as that user.</p>
 <p>To get a workspace item, you must first retrieve the <code>WebContentService</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>try
+<div class="language-text highlight"><pre><span></span><code>try
  {
     // Construct and initial Context
     InitialContext ctx = new InitialContext();
@@ -2250,10 +2238,10 @@
  {
     System.out.print(&quot;Naming Exception: &quot; + ne);
  }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You then request one from the repository singleton with the following call:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>webContentService.getRepository().getWorkspace(&quot;my username&quot;, &quot;my password&quot;);
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>webContentService.getRepository().getWorkspace(&quot;my username&quot;, &quot;my password&quot;);
+</code></pre></div>
 <p>To get a workspace item without specifying a user name and password, use one of the following calls:</p>
 <ul>
 <li>When used in a portlet: <code>Workspace workspace = webContentService.getRepository().getWorkspace( (Principal) portletRequest.getUser() );</code></li>
@@ -2269,8 +2257,8 @@
 <li>Saving and deleting editable items.</li>
 </ul>
 <p>You must call <code>endWorkspace()</code> when finished with the workspace item.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>webContentService.getRepository().endWorkspace();
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>webContentService.getRepository().endWorkspace();
+</code></pre></div>
 <p>!!! note
       You don't need to call <code>endWorkspace()</code> when using a JSP component as rendering and session management is handled by Web Content Manager.</p>
 <p>!!! note

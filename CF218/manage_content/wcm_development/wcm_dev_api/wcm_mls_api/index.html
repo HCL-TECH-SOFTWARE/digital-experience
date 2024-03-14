@@ -2321,12 +2321,10 @@
 <li>
 <p><strong>Expected Body</strong></p>
 <p>The body can have the basic WCM structure:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;feed xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
 &lt;/feed&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Expected Headers</strong></p>
@@ -2344,53 +2342,7 @@
 <p><strong>Return Body</strong></p>
 <p>The base library and translated libraries.</p>
 <p>Sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;feed xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;feed xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
     &lt;id&gt;d2b01f11-6f42-45e7-b6ee-df4d483d7c67&lt;/id&gt;
     &lt;title&gt;ML Configuration&lt;/title&gt;
     &lt;updated&gt;2021-02-16T18:24:57.479Z&lt;/updated&gt;
@@ -2437,7 +2389,7 @@
         &lt;/content&gt;
     &lt;/entry&gt;
 &lt;/feed&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="translated-content-api">Translated Content API</h2>
@@ -2463,12 +2415,10 @@
 <li>
 <p><strong>Expected Body for GET</strong></p>
 <p>The body can have the basic WCM structure:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;feed xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
 &lt;/feed&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Expected Body for PUT (From CF193 and higher)</strong></p>
@@ -2494,83 +2444,7 @@
 <p><strong>Return Body</strong></p>
 <p>The list of languages and the content of each item in the base language and the translated languages.</p>
 <p>Sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
     &lt;content&gt;
         &lt;data&gt;
             &lt;source_language&gt;en&lt;/source_language&gt;
@@ -2647,7 +2521,7 @@
         &lt;/data&gt;
     &lt;/content&gt;
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <p>??+ info "Related information"

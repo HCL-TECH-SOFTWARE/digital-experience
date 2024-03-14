@@ -3256,21 +3256,16 @@
 <li>If the outbound connection is accessed through the Ajax proxy, the policy mapping defines the connection settings for the Ajax proxy.</li>
 </ul>
 <p>The following code sample shows how you create an outbound connection service by using the policy mapping context path /mycontext:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>String theMappingContextPath = &quot;/mycontext&quot;;
+<div class="language-text highlight"><pre><span></span><code>String theMappingContextPath = &quot;/mycontext&quot;;
 
 OutboundConnectionServiceHome home = (OutboundConnectionServiceHome)
           ctx.lookup(&quot;portal:service/model/OutboundConnectionService&quot;);
 OutboundConnectionService connectionService = home.getOutboundConnectionService             
           (request, Response, theMappingContextPath);
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If the connection is established through the Ajax proxy, the mapping context root is used as context root for the proxy:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://localhost:10039/wps/mycontext/(...encoded remote url ...);
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://localhost:10039/wps/mycontext/(...encoded remote url ...);
+</code></pre></div>
 <p>An outbound connection profile contains at least one policy mapping item. This item is created when the outbound connection profile element is created. This default policy mapping does not have a context path. Therefore, policy rules that are defined in the default policy mapping are always accessible to outbound HTTP connection filters, independent of the context for which the connection was created. In the previous example, the following policy rules are available for the connection:</p>
 <ul>
 <li>The policy rules that are defined at the Policy Mapping with the context path /mycontext.</li>

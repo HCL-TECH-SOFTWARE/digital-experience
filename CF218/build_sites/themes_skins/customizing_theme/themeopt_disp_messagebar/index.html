@@ -3379,10 +3379,9 @@
 <li>
 <p>Add a line of JavaScript to Use this status bar in your themes, modules, and portlets can use this status bar.</p>
 <p>The following example shows the StatusMessage JavaScript code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>i$.fireEvent(&quot;/portal/status&quot;,[{message: new com.ibm.widgets.StatusMessage
+<div class="language-text highlight"><pre><span></span><code>i$.fireEvent(&quot;/portal/status&quot;,[{message: new com.ibm.widgets.StatusMessage
 (&quot;error&quot;, &quot;The specified name is in use. Please enter a unique name.&quot;, &quot;&quot;), uid: &#39;ibmStatusBox&#39;}]);
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p><code>i$.fireEvent</code> is the recommended syntax. If you are using the <code>dojo.publish</code> alternative syntax, refactor this code to use the <code>i$.fireEvent</code> procedure.</p>
 <ol>
 <li>
@@ -3398,20 +3397,20 @@
 </li>
 <li>
 <p>If you have an error that originates on the server, you can set a ibm.portal.operations.error cookie in the response, and the client shows the message when the response completes. Use parsable JSON code for the cookie string value, such as:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ibm.portal.operations.error={&quot;errorType&quot;:&quot;error&quot;,&quot;errorMessage&quot;:&quot;The specified name is in use. Please enter a unique name.&quot;,&quot;errorDetails&quot;:&quot;&quot;}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>ibm.portal.operations.error={&quot;errorType&quot;:&quot;error&quot;,&quot;errorMessage&quot;:&quot;The specified name is in use. Please enter a unique name.&quot;,&quot;errorDetails&quot;:&quot;&quot;}
+</code></pre></div>
 </li>
 <li>
 <p>Messages are cleared automatically on page reload. If you must clear one or more messages from the client by using JavaScript, then you can use the following code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>i$.fireEvent(&quot;/portal/status/clear&quot;, [{message: mymessage, uid: &#39;ibmStatusBox&#39;}]);
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>i$.fireEvent(&quot;/portal/status/clear&quot;, [{message: mymessage, uid: &#39;ibmStatusBox&#39;}]);
+</code></pre></div>
 <p>where mymessage is the StatusMessage instance you saved when displaying the message. Code like the following example is fine too:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>i$.fireEvent(&quot;/portal/status/clear&quot;, [{message: new com.ibm.widgets.StatusMessage (&quot;error&quot;, &quot;The specified name is in use. Please enter a unique name.&quot;, &quot;&quot;), uid: &#39;ibmStatusBox&#39;}]);
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>i$.fireEvent(&quot;/portal/status/clear&quot;, [{message: new com.ibm.widgets.StatusMessage (&quot;error&quot;, &quot;The specified name is in use. Please enter a unique name.&quot;, &quot;&quot;), uid: &#39;ibmStatusBox&#39;}]);
+</code></pre></div>
 <p>The event clears any messages whose StatusMessage type, message, and details strings match, so you do not have to reuse the same actual StatusMessage instance.</p>
 <p>If no StatusMessage is passed, then it clears all messages. You can clear everything with the following code sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>i$.fireEvent(&quot;/portal/status/clear&quot;, [{uid: &#39;ibmStatusBox&#39;}]);
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>i$.fireEvent(&quot;/portal/status/clear&quot;, [{uid: &#39;ibmStatusBox&#39;}]);
+</code></pre></div>
 </li>
 </ol>
 

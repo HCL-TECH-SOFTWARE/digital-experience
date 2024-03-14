@@ -2845,11 +2845,11 @@
 <h1 id="creating-a-portal-application-server-profile">Creating a Portal application server profile</h1>
 <p>You can create Portal profiles on a single Portal installation with HCL Digital Experience. Additional profiles are created by using a profile template. Profile templates must be regenerated after you install a fix pack. Profile templates must be generated only on the original wp_profile.</p>
 <p>The additional profiles can be created by using the Config Wizard workflow accessible through the following URL:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://&lt;HOSTNAME\&gt;:10202/hcl/wizard/Wizard/default/ver=2.0/rparam=currentPage=com.ibm.wplc.config.wizard.panels.execute.SetCondition/rparam=workflow=Create%20Portal%20Profile%20Using%20Template/rparam=previousPage=com.ibm.wplc.config.wizard.panels.ActivityPanel
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>https://&lt;HOSTNAME\&gt;:10202/hcl/wizard/Wizard/default/ver=2.0/rparam=currentPage=com.ibm.wplc.config.wizard.panels.execute.SetCondition/rparam=workflow=Create%20Portal%20Profile%20Using%20Template/rparam=previousPage=com.ibm.wplc.config.wizard.panels.ActivityPanel
+</code></pre></div>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://xyz.rtp.raleigh.ibm.com:10202/hcl/wizard/Wizard/default/ver=2.0/rparam=currentPage=com.ibm.wplc.config.wizard.panels.execute.SetCondition/rparam=workflow=Create%20Portal%20Profile%20Using%20Template/rparam=previousPage=com.ibm.wplc.config.wizard.panels.ActivityPanel
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>https://xyz.rtp.raleigh.ibm.com:10202/hcl/wizard/Wizard/default/ver=2.0/rparam=currentPage=com.ibm.wplc.config.wizard.panels.execute.SetCondition/rparam=workflow=Create%20Portal%20Profile%20Using%20Template/rparam=previousPage=com.ibm.wplc.config.wizard.panels.ActivityPanel
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Maintain a clean wp_profile profile to use when regenerating profile templates after you install a fix pack. Create additional profiles such as wp_profile_2 to use for more configuration and custom application deployment.</p>
@@ -2886,8 +2886,8 @@
 </li>
 <li>
 <p>Access the workflow directly by using the following URL to create an extra profile.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>`https://&lt;HOSTNAME\&gt;:10202/hcl/wizard/Wizard/default/ver=2.0/rparam=currentPage=com.ibm.wplc.config.wizard.panels.execute.SetCondition/rparam=workflow=Create%20Portal%20Profile%20Using%20Template/rparam=previousPage=com.ibm.wplc.config.wizard.panels.ActivityPanel`
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>`https://&lt;HOSTNAME\&gt;:10202/hcl/wizard/Wizard/default/ver=2.0/rparam=currentPage=com.ibm.wplc.config.wizard.panels.execute.SetCondition/rparam=workflow=Create%20Portal%20Profile%20Using%20Template/rparam=previousPage=com.ibm.wplc.config.wizard.panels.ActivityPanel`
+</code></pre></div>
 </li>
 <li>
 <p>Specify the values for the new profile (ex:wp_profile_2) and complete the workflow.</p>

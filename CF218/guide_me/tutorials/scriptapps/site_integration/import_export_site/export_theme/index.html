@@ -2174,14 +2174,7 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">MacOS or Linux</label><label for="__tabbed_1_2">Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># assumes other required parameters are already set via config file in store or via enviroment variables</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># assumes other required parameters are already set via config file in store or via enviroment variables</span>
 dxclient<span class="w"> </span>xmlaccess<span class="w"> </span><span class="se">\</span>
 <span class="w">   </span>-dxUsername<span class="w"> </span><span class="o">{</span>DXUSERNAME<span class="o">}</span><span class="w"> </span><span class="se">\</span>
 <span class="w">   </span>-dxPassword<span class="w"> </span><span class="o">{</span>DXPASSWORD<span class="o">}</span><span class="w"> </span><span class="se">\</span>
@@ -2189,17 +2182,10 @@ dxclient<span class="w"> </span>xmlaccess<span class="w"> </span><span class="se
 <span class="w">   </span>-dxProtocol<span class="w"> </span><span class="nv">$DXPROTOCOL</span><span class="w"> </span><span class="se">\</span>
 <span class="w">   </span>-hostname<span class="w"> </span><span class="nv">$HOSTNAME</span><span class="w"> </span><span class="se">\</span>
 <span class="w">   </span>-dxPort<span class="w"> </span><span class="nv">$DXPORT</span><span class="p">;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-bat highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">:</span><span class="c1">: assumes other required parameters are already set via config file in store or via enviroment variables</span>
+<div class="language-bat highlight"><pre><span></span><code><span class="p">:</span><span class="c1">: assumes other required parameters are already set via config file in store or via enviroment variables</span>
 dxclient xmlaccess <span class="se">^</span>
 <span class="se"> </span>  -dxUsername {DXUSERNAME} <span class="se">^</span>
 <span class="se"> </span>  -dxPassword {DXPASSWORD} <span class="se">^</span>
@@ -2207,7 +2193,7 @@ dxclient xmlaccess <span class="se">^</span>
 <span class="se"> </span>  -dxProtocol <span class="nv">%DXPROTOCOL%</span> <span class="se">^</span>
 <span class="se"> </span>  -hostname <span class="nv">%HOSTNAME%</span> <span class="se">^</span>
 <span class="se"> </span>  -dxPort <span class="nv">%DXPORT%</span>;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -2232,15 +2218,7 @@ dxclient xmlaccess <span class="se">^</span>
 <li>Use the same directory as before.</li>
 <li>
 <p>Find a undeploy request xml for your theme and then edit the uniquename to match yours or create yours like the following. Sample XML files can be found in the samples directory of DXClient or in DX server located in the following directory: <code>PortalServer_root/doc/xml-samples</code>. For example, theme-export.xml.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code> ```XML
+<div class="language-text highlight"><pre><span></span><code> ```XML
  &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
  &lt;request type=&quot;update&quot; version=&quot;8.0.0.1&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;PortalConfig_8.0.0.xsd&quot;&gt;
  &lt;portal action=&quot;locate&quot;&gt;
@@ -2249,18 +2227,15 @@ dxclient xmlaccess <span class="se">^</span>
  &lt;/portal&gt;
  &lt;/request&gt;
  ```
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li>
 <p>Modify the uniquename to match yours.</p>
-<div class="language-xml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">&lt;portal</span><span class="w"> </span><span class="na">action=</span><span class="s">&quot;locate&quot;</span><span class="nt">&gt;</span>
+<div class="language-xml highlight"><pre><span></span><code><span class="nt">&lt;portal</span><span class="w"> </span><span class="na">action=</span><span class="s">&quot;locate&quot;</span><span class="nt">&gt;</span>
 <span class="nt">&lt;skin</span><span class="w"> </span><span class="na">action=</span><span class="s">&quot;delete&quot;</span><span class="w"> </span><span class="na">uniquename=</span><span class="s">&quot;custom.portal.skin.Woodburn%20Insurance.Standard&quot;</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;theme</span><span class="w"> </span><span class="na">action=</span><span class="s">&quot;delete&quot;</span><span class="w"> </span><span class="na">uniquename=</span><span class="s">&quot;custom.portal.theme.Woodburn%20Insurance&quot;</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/portal&gt;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>You can find it by going to Theme Manager and then clicking the cog.
@@ -2277,21 +2252,7 @@ dxclient xmlaccess <span class="se">^</span>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">MacOS or Linux</label><label for="__tabbed_2_2">Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">source</span><span class="w"> </span>./<span class="o">{</span>configfile<span class="o">}</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>./<span class="o">{</span>configfile<span class="o">}</span>
 dxclient<span class="w"> </span>undeploy-theme<span class="w"> </span><span class="se">\</span>
 <span class="w">   </span>-dxProtocol<span class="w"> </span><span class="o">{</span>DXPROTOCOL<span class="o">}</span><span class="w"> </span><span class="se">\</span>
 <span class="w">   </span>-hostname<span class="w"> </span><span class="o">{</span>HOSTNAME<span class="o">}</span><span class="w"> </span><span class="se">\</span>
@@ -2306,24 +2267,10 @@ dxclient<span class="w"> </span>undeploy-theme<span class="w"> </span><span clas
 <span class="w">   </span>-themeName<span class="w"> </span><span class="o">{</span>THEMENAME<span class="o">}</span><span class="w"> </span><span class="se">\</span>
 <span class="w">   </span>-enableBackup<span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
 <span class="w">   </span>-dxProfileName<span class="w"> </span><span class="o">{</span>DXPROFILENAME<span class="o">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-bat highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>{configFile}
+<div class="language-bat highlight"><pre><span></span><code>{configFile}
 dxclient undeploy-theme <span class="se">^</span>
 <span class="se"> </span>  -dxUsername {DXUSERNAME} <span class="se">^</span>
 <span class="se"> </span>  -dxPassword {DXPASSWORD} <span class="se">^</span>
@@ -2338,7 +2285,7 @@ dxclient undeploy-theme <span class="se">^</span>
 <span class="se"> </span>  -dxConnectPort {DXCONNECTPORT} <span class="se">^</span>
 <span class="se"> </span>  -enableBackup true <span class="se">^</span>
 <span class="se"> </span>  -dxProfileName {DXPROFILENAME}
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -2368,20 +2315,7 @@ dxclient undeploy-theme <span class="se">^</span>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">MacOS or Linux</label><label for="__tabbed_3_2">Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">source</span><span class="w"> </span>./<span class="o">{</span>configfile<span class="o">}</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>./<span class="o">{</span>configfile<span class="o">}</span>
 dxclient<span class="w"> </span>deploy-theme<span class="w"> </span><span class="se">\</span>
 <span class="w">   </span>-xmlFile<span class="w"> </span><span class="o">{</span>INSTALLTHEME<span class="o">}</span><span class="w"> </span><span class="se">\</span>
 <span class="w">   </span>-themeName<span class="w"> </span><span class="s2">&quot;{THEMENAME}&quot;</span><span class="w"> </span><span class="se">\</span>
@@ -2395,23 +2329,10 @@ dxclient<span class="w"> </span>deploy-theme<span class="w"> </span><span class=
 <span class="w">   </span>-dxPort<span class="w"> </span><span class="nv">$DXPORT</span><span class="w"> </span><span class="se">\</span>
 <span class="w">   </span>-hostname<span class="w"> </span><span class="nv">$HOSTNAME</span><span class="w"> </span><span class="se">\</span>
 <span class="w">   </span>-dxProfileName<span class="w"> </span><span class="nv">$DXPROFILENAME</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-bat highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>{configFile}
+<div class="language-bat highlight"><pre><span></span><code>{configFile}
 dxclient deploy-theme <span class="se">^</span>
 <span class="se"> </span>  -xmlFile {INSTALLTHEME} <span class="se">^</span>
 <span class="se"> </span>  -themeName <span class="s2">&quot;{THEMENAME}&quot;</span> <span class="se">^</span>
@@ -2425,7 +2346,7 @@ dxclient deploy-theme <span class="se">^</span>
 <span class="se"> </span>  -dxPort <span class="nv">%DXPORT%</span> <span class="se">^</span>
 <span class="se"> </span>  -hostname <span class="nv">%HOSTNAME%</span> <span class="se">^</span>
 <span class="se"> </span>  -dxProfileName <span class="nv">%DXPROFILENAME%</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -2444,18 +2365,7 @@ dxclient deploy-theme <span class="se">^</span>
 </li>
 <li>
 <p>The output should look similar to this.</p>
-<div class="language-console highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="go">   2022-09-22 14:39:10 : Start to deploy theme in WebDav.</span>
+<div class="language-console highlight"><pre><span></span><code><span class="go">   2022-09-22 14:39:10 : Start to deploy theme in WebDav.</span>
 <span class="go">   (node:1) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to &#39;0&#39; makes TLS connections and HTTPS requests insecure by disabling certificate verification.</span>
 <span class="go">   (Use `node --trace-warnings ...` to show where the warning was created)</span>
 <span class="go">   2022-09-22 14:39:10 : The theme Woodburn Insurance is available under WebDAV themes collection.</span>
@@ -2467,7 +2377,7 @@ dxclient deploy-theme <span class="se">^</span>
 <span class="go">   2022-09-22 14:39:19 : </span>
 <span class="go">   Theme WebDAV deployment successful.</span>
 <span class="go">   Theme Registration successful.</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Verify your theme by going to the Theme Manager and your theme should still be here.

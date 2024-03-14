@@ -2556,43 +2556,7 @@
 <h2 id="representing-list-results-as-atom-feeds">Representing list results as ATOM feeds</h2>
 <p>All the REST service operations that return lists of resources return an ATOM feed document that represents each portal resource as a single ATOM entry. This applies to the GET cases for the operations <code>/um/attributes/users</code>, <code>/um/attributes/groups</code>, <code>/um/users/profiles</code>, and <code>/um/groups/profiles</code>. Depending on the value of the <code>expandRefs</code> parameter, the ATOM entries contain a <code>content</code> section that embeds the XML representation of the resource according to the schema defined in the interface.</p>
 <p>Example 1: This example shows a server response to the <code>/um/secure/attributes/groups</code> URI path:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;atom:feed xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema-datatypes&quot; 
            xmlns:um=&quot;http://www.ibm.com/xmlns/prod/websphere/um.xsd&quot; 
            xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot; 
@@ -2629,65 +2593,13 @@
         &lt;atom:updated&gt;2006-12-16T17:06:35.609Z&lt;/atom:updated&gt;
     &lt;/atom:entry&gt;
 &lt;/atom:feed&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <code>atom:updated</code> does not contain any useful information, but it has to be added to comply to the ATOM specification.</p>
 </div>
 <p>Example 2: The same URI including the option to expand the references, that is <code>/um/secure/attributes/groups?expandRefs=true</code>, gives the following server response:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;atom:feed xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema-datatypes&quot; 
            xmlns:um=&quot;http://www.ibm.com/xmlns/prod/websphere/um.xsd&quot; 
            xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot; 
@@ -2740,30 +2652,11 @@
         &lt;/atom:content&gt;
     &lt;/atom:entry&gt;
 &lt;/atom:feed&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="representing-resources-as-atom-entries">Representing resources as ATOM entries</h2>
 <p>All particular resources are represented in an ATOM entry document. This applies to the GET cases for the operations <code>/um/attributes/users/attribute name</code>, <code>/um/attributes/groups/attribute name</code>, <code>/um/currentuser/profile</code>, <code>/um/users/profiles/unique\_id\_of\_user</code>, <code>/um/groups/profiles/unique\_id\_of\_group</code>, <code>/um/groupmembership/unique\_id\_of\_user</code>, and <code>/um/groupmembership/unique\_id\_of\_group</code>. This means that the XML structure is wrapped in the <code>atom:content</code> element of one <code>atom:entry</code> element. This way useful meta information, such as the link to the resource and an ID can be returned together with the resource itself. Note that the group membership list is also treated as a single resource that contains the group membership information of one user or group.</p>
 <p>The following example retrieves a user profile directly by using the ATOM based output. It shows a useful convenience feature of the implementation: as ATOM allows you to add several <code>atom:link</code> elements with certain types, the <code>related</code> link element can be used for a shortcut to the group membership URL of the same user. This shortcut is provided for user and group profiles and allows the client to directly follow this link instead of constructing the URL from static and dynamic parts.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;atom:entry xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema-datatypes&quot; 
             xmlns:um=&quot;http://www.ibm.com/xmlns/prod/websphere/um.xsd&quot; 
             xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot;&gt;
@@ -2783,61 +2676,10 @@
       &lt;/um:profile&gt;
    &lt;/atom:content&gt;
 &lt;/atom:entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="result-for-a-paged-search">Result for a paged search</h2>
 <p>The result for a paged search will contain 3 openSearch elements, a link to the first and last page and if available links to previous and next page.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;atom:feed xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot;
 xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema-datatypes&quot;
 xmlns:um=&quot;http://www.ibm.com/xmlns/prod/websphere/um.xsd&quot;
@@ -2889,7 +2731,7 @@ identifier=&quot;uid=testUser5,o=defaultWIMFileBasedRealm&quot;&gt;
 &lt;/um:profile&gt;
 &lt;/atom:content&gt;
 &lt;/atom:entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="post-put-and-delete-cases">POST, PUT and DELETE cases</h2>
 <p>For the operations of the PUMA SPI REST Service interface that use one of the methods POST, PUT, or DELETE, you do not need to consider anything special from a client perspective when using the APP format. You can use the plain XML format as defined in the schema; you do not need to wrap it into ATOM elements when doing POSTs or PUTs of resources to the server. The client needs to make sure that the correct namespaces and syntax are used for the input that is posted to the server, as the server validates both the payload format defined in the <code>um.xsd</code> and the basic ATOM structures. This is not very strict, but elements that are not defined in the ATOM specification are rejected. The client should therefore check the response as follows:</p>
 <ul>

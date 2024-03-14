@@ -2331,16 +2331,7 @@
 <h2 id="configuring-pod-count">Configuring pod count</h2>
 <p>Even if you don't want to automatically scale your DX 9.5 deployment based on CPU and memory utilization, you still can control the amount of pods per application.</p>
 <p>You can use the following syntax to reconfigure the pod count per application in your custom-values.yaml file:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Scaling settings for deployed applications</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Scaling settings for deployed applications</span>
 <span class="nt">scaling</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># The default amount of replicas per application</span>
 <span class="w">  </span><span class="nt">replicas</span><span class="p">:</span>
@@ -2350,25 +2341,11 @@
 <span class="w">    </span><span class="nt">imageProcessor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
 <span class="w">    </span><span class="nt">ringApi</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
 <span class="w">    </span><span class="nt">haproxy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="configuring-horizontalpodautoscalers">Configuring HorizontalPodAutoscalers</h2>
 <p>The use of HorizontalPodAutoscalers requires your cluster to have the <a href="https://github.com/kubernetes-sigs/metrics-server">Kubernetes Metrics</a> running. Ensure that this is the case, and reference your cloud provider documentation for further information.</p>
 <p>You can set up the use of <code>HorizontalPodAutoscalers</code> on a per application basis using the following syntax in your custom-values.yaml file, showing Content Composer, as an example:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Scaling settings for deployed applications</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Scaling settings for deployed applications</span>
 <span class="nt">scaling</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Automated scaling using HorizontalPodAutoscaler</span>
 <span class="w">  </span><span class="nt">horizontalPodAutoScaler</span><span class="p">:</span>
@@ -2383,7 +2360,7 @@
 <span class="w">      </span><span class="nt">targetCPUUtilizationPercentage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">75</span>
 <span class="w">      </span><span class="c1"># Target Memory utilization scaling threshold</span>
 <span class="w">      </span><span class="nt">targetMemoryUtilizationPercentage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The example configures a <code>HorizontalPodAutoscaler</code> for Content Composer, that scales up to 3 pods maximum. It considers scaling when a CPU utilization of 75% or Memory utilization of 80% per pod is reached.</p>
 <p>Refer to the default values.yaml file for all configurable applications.</p>
 

@@ -2456,8 +2456,8 @@
 <li>Run the <code>action-backup-rdcs</code> ConfigEngine task. This will create a rdcs.bak.zip file containing the Oracle supplied DCS files used in remote DCS operations in the &lt;RemoteSearchProfileLocation&gt;/config/backup directory.
 <strong>Example:</strong></li>
 </ol>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;RemoteSearchProfileLocation&gt;/ConfigEngine/ConfigEngine.bat/sh action-backup-rdcs
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;RemoteSearchProfileLocation&gt;/ConfigEngine/ConfigEngine.bat/sh action-backup-rdcs
+</code></pre></div>
 </li>
 <li>
 <p><strong>Manual back up of DCS files for Remote Search</strong></p>
@@ -2465,19 +2465,18 @@
 <ol>
 <li>
 <p>From a directory with write permissions, extract the following files from your Digital Experience deployment:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Extract /WEB-INF/lib/Export.jar, and /WEB-INF/lib/export.cfg from ${PortalRemoteSearchHome}/dcs/wp.dcs.remotedcs/installableApps/dcs.war
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>Extract /WEB-INF/lib/Export.jar, and /WEB-INF/lib/export.cfg from ${PortalRemoteSearchHome}/dcs/wp.dcs.remotedcs/installableApps/dcs.war
+</code></pre></div>
 <p><strong>Example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>unzip -j ${PortalRemoteSearchHome}/dcs/wp.dcs.remotedcs/installableApps/dcs.war WEB-INF/lib/export.cfg
+<div class="language-text highlight"><pre><span></span><code>unzip -j ${PortalRemoteSearchHome}/dcs/wp.dcs.remotedcs/installableApps/dcs.war WEB-INF/lib/export.cfg
 unzip -j ${PortalRemoteSearchHome}/dcs/wp.dcs.remotedcs/installableApps/dcs.war WEB-INF/lib/Export.jar
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Make a copy of the ${OperatingSystem} directory containing the DCS files supporting remote search.</p>
 <p><strong>Example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>cp -r {PortalRemoteSearchHome}/dcs/wp.dcs.remotedcs/linux/ .
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>cp -r {PortalRemoteSearchHome}/dcs/wp.dcs.remotedcs/linux/ .
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you have deployed a Digital Experience 9.5 Container Update release to Kubernetes platforms prior to CF203, see <a href="#back-up-dcs-files">Backup of DCS files supporting remote search on Kubernetes platforms</a>, documented in <a href="#back-up-dcs-files-used-in-remote-search">step 4</a>, before continuing.</p>
@@ -2486,23 +2485,19 @@ unzip -j ${PortalRemoteSearchHome}/dcs/wp.dcs.remotedcs/installableApps/dcs.war 
 <li>
 <p>Compress the files directory created with contents and files that are created in Steps 1 and 2 above into a zip file as follows: ${WasUserHome}/config/backup/rdcs.bak.zip</p>
 <p><strong>Example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>zip -r ${WasUserHome}/config/backup/rdcs.bak.zip ./linux Export.jar export.cfg
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>zip -r ${WasUserHome}/config/backup/rdcs.bak.zip ./linux Export.jar export.cfg
+</code></pre></div>
 </li>
 <li>
 <p>Create a backup of DCS files supporting remote search on Kubernetes platforms.</p>
 <p>If your Digital Experience 9.5 Container Update CF203 or prior release is deployed to a Kubernetes platform, the DCS files supporting Remote Search will need to be copied from a Kubernetes container working directory with write access to a local machine.</p>
 <p><strong>Example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl cp &lt;POD NAME&gt;:/&lt;CONTAINER WORKING DIRECTORY&gt;/ . -n &lt;NAMESPACE&gt;
+<div class="language-text highlight"><pre><span></span><code>kubectl cp &lt;POD NAME&gt;:/&lt;CONTAINER WORKING DIRECTORY&gt;/ . -n &lt;NAMESPACE&gt;
 
 zip -r rdcs.bak.zip ./linux Export.jar export.cfg
 
 kubectl cp ./rdcs.bak.zip &lt;POD NAME&gt;:/opt/HCL/AppServer/profiles/prs_profile/config/backup/ -n &lt;NAMESPACE&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Administrators should verify that files are backed up successfully to target directories as outlined in the above sections.</p>
 </li>
 </ol>
@@ -2519,14 +2514,14 @@ kubectl cp ./rdcs.bak.zip &lt;POD NAME&gt;:/opt/HCL/AppServer/profiles/prs_profi
 <li>
 <p>Use the following ConfigEngine task <code>action-merge-rdcs</code> to restore the DCS files used in Remote Search that were backed up using the process documented in the above sections. This will merge the backed up DCS files into the current RemoteSearch CF binary tree and ensure continued remote DCS functionality.</p>
 <p><strong>Example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;RemoteSearchProfileLocation&gt;/ConfigEngine/ConfigEngine.bat/sh action-merge-rdcs
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;RemoteSearchProfileLocation&gt;/ConfigEngine/ConfigEngine.bat/sh action-merge-rdcs
+</code></pre></div>
 </li>
 <li>
 <p>If restoring DCS files supporting Remote Search copied manually to a local directory (Container Update CF203 and prior releases) to a Digital Experience 9.5 Container Update deployment on Kubernetes after August 20, 2022, obtain the files extracted to a local directory with write access, completed using instructions in Step 4 above, and copy back to the Digital Experience 9.5 Container Update deployment.</p>
 <p><strong>Example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl cp ./rdcs.bak.zip &lt;POD NAME&gt;:/opt/HCL/AppServer/profiles/prs_profile/config/backup/ -n &lt;NAMESPACE&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl cp ./rdcs.bak.zip &lt;POD NAME&gt;:/opt/HCL/AppServer/profiles/prs_profile/config/backup/ -n &lt;NAMESPACE&gt;
+</code></pre></div>
 </li>
 </ol>
 </li>

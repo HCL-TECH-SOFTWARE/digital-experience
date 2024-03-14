@@ -2591,20 +2591,7 @@ The filter chain contains the subsequent filters that can be started when needed
 </li>
 <li>
 <p>A plugin.xml file is needed whether the deployment is done by using a WAR or EAR file, or by using a JAR file. If you deploy with an application in a WAR or EAR file, include the plugin.xml file in the WEB-INF folder. When you use a JAR file, include the plugin.xml in the root of the JAR file.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;plugin id=&quot;com.example.content.url&quot;
        name=&quot;Sample content URL generation filter&quot;
        version=&quot;1.0.0&quot;
@@ -2618,7 +2605,7 @@ The filter chain contains the subsequent filters that can be started when needed
  &lt;/extension&gt;
 
 &lt;/plugin&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>When you create plug-ins, note the following characteristics:</p>
 <ul>
 <li>Each plug-in is represented by a single <code>&lt;extension&gt;</code> tag.</li>

@@ -2379,8 +2379,8 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To use the Web Content Manager JSP tags, the following directive must be provided in the JSP:
-    <div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%@taglib uri=&quot;/WEB-INF/tld/wcm.tld&quot; prefix=&quot;wcm&quot; %&gt;
-</code></pre></div></td></tr></table></div></p>
+    <div class="language-text highlight"><pre><span></span><code>&lt;%@taglib uri=&quot;/WEB-INF/tld/wcm.tld&quot; prefix=&quot;wcm&quot; %&gt;
+</code></pre></div></p>
 </div>
 <p><strong>Storing JSP files:</strong> JSP files are stored within a web application that runs on the portal. To reference a JSP file in another web application, use the following path: contextPath;jspPath. For example, /wps/customapplication;/jsp/jspFilename.jsp.</p>
 <p>A dynamic context path value can be defined by adding a token to the context path that corresponds to a key and value pair to the Web Content Manager configuration service environment provider. When this key is used as the token in the jsp value field, it is replaced dynamically at render time. For example, my.custom.key;myfile where my.custom.key is a constant within the Web Content Manager configuration service.</p>
@@ -2395,12 +2395,10 @@
 <li>Sets the Web Content Manager workspace on the pageContext as a parameter with key com.ibm.workplace.wcm.api.Workspace.WCM_WORKSPACE_KEY.</li>
 <li>
 <p>Sets the Web Content Manager RenderingContext on the request as a parameter with key Workspace.WCM_RENDERINGCONTEXT_KEY</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;wcm:initworkspace username=&quot; &quot; password=&quot; &quot; user=&quot; &quot; &gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;wcm:initworkspace username=&quot; &quot; password=&quot; &quot; user=&quot; &quot; &gt;
 [Error Message]
 &lt;/wcm:initworkspace&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <table>
@@ -2430,17 +2428,7 @@
 <p>User name, user, and password are optional. If not specified, the current user is used instead, including the anonymous user.</p>
 </div>
 <p><strong>Example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%@ taglib uri=&quot;/WEB-INF/tld/wcm.tld&quot; prefix=&quot;wcm&quot;%&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;%@ taglib uri=&quot;/WEB-INF/tld/wcm.tld&quot; prefix=&quot;wcm&quot;%&gt;
 &lt;%@ page import=&quot;com.ibm.workplace.wcm.api.*&quot; %&gt;
 
 &lt;p&gt;&lt;wcm:initworkspace&gt;login fail&lt;/wcm:initworkspace&gt;
@@ -2451,17 +2439,14 @@ Workspace workspace = (Workspace) pageContext.getAttribute(Workspace.WCM_WORKSPA
 // Get the WCM rendering context for use
 RenderingContext renderingContext = (RenderingContext) request.getAttribute(Workspace.WCM_RENDERINGCONTEXT_KEY);
 %&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="explicit-context-tag">Explicit context tag</h2>
 <p>This tag sets the path to your Web Content Manager server. This tag is not required in JSP that is displayed by using a JSP component.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;wcm:setExplicitContext wcmWebAppPath=&quot; &quot; wcmServletPath=&quot; &quot; path=&quot; &quot;
+<div class="language-text highlight"><pre><span></span><code>&lt;wcm:setExplicitContext wcmWebAppPath=&quot; &quot; wcmServletPath=&quot; &quot; path=&quot; &quot;
 requestParameters=&quot; &quot; prefix=&quot; &quot; project=&quot; &quot; &gt;
 [Error Message]
 &lt;/wcm:setExplicitContext&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -2499,12 +2484,10 @@ requestParameters=&quot; &quot; prefix=&quot; &quot; project=&quot; &quot; &gt;
 <p>Developers can add insert context tags at any place in the page and it changes the context for the rest of the page execution, but the tags cannot be nested.</p>
 <h2 id="context-retrieval-tag">Context retrieval tag</h2>
 <p>Sets the context given the location of a path string. This tag is not required in JSP that is displayed by using a JSP component.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>    &lt;wcm:setContext location=&quot; &quot;  wcmWebAppPath=&quot; &quot; wcmServletPath=&quot; &quot; param=&quot; &quot; project=&quot; &quot; defaultPath=&quot; &quot; &gt;
+<div class="language-text highlight"><pre><span></span><code>    &lt;wcm:setContext location=&quot; &quot;  wcmWebAppPath=&quot; &quot; wcmServletPath=&quot; &quot; param=&quot; &quot; project=&quot; &quot; defaultPath=&quot; &quot; &gt;
     [Error Message]
     &lt;/wcm:setContext&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -2549,12 +2532,10 @@ requestParameters=&quot; &quot; prefix=&quot; &quot; project=&quot; &quot; &gt;
 <ul>
 <li>
 <p><strong>Rendering an element from the current site area, or content item</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;wcm:contentComponent type=&quot; &quot; key=&quot; &quot; &gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;wcm:contentComponent type=&quot; &quot; key=&quot; &quot; &gt;
 [Error Message]
 &lt;/wcm:contentComponent&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -2573,12 +2554,10 @@ requestParameters=&quot; &quot; prefix=&quot; &quot; project=&quot; &quot; &gt;
 </tr>
 </tbody>
 </table>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;wcm:libraryComponent name=&quot; &quot; library=&quot; &quot; &gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;wcm:libraryComponent name=&quot; &quot; library=&quot; &quot; &gt;
 [Error Message]
 &lt;/wcm:libraryComponent &gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Rendering a component from the Component Library</strong></p>
@@ -2601,21 +2580,17 @@ requestParameters=&quot; &quot; prefix=&quot; &quot; project=&quot; &quot; &gt;
 </tbody>
 </table>
 <p><strong>Example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;wcm:libraryComponent name=&quot;SC Menu Events&quot; library=&quot;Showcase&quot; /&gt; 
+<div class="language-text highlight"><pre><span></span><code>&lt;wcm:libraryComponent name=&quot;SC Menu Events&quot; library=&quot;Showcase&quot; /&gt; 
 You do not have access to this item.
 &lt;/wcm:libraryComponent &gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Rendering Content based on the current context of a page</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;wcm:content pageDesign=&quot; &quot; &gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;wcm:content pageDesign=&quot; &quot; &gt;
 [Error Message]
 &lt;/wcm:content &gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -2637,16 +2612,12 @@ You do not have access to this item.
 <p><code>&lt;%=error%&gt;</code></p>
 <h2 id="plug-in-tag">Plug-in tag</h2>
 <p>Rendering plug-ins can be referenced within JSP code by using a plug-in tag:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;wcm:plugin name=&quot; &quot; param1=&quot;value&quot; param2=&quot;value2&quot; &gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;wcm:plugin name=&quot; &quot; param1=&quot;value&quot; param2=&quot;value2&quot; &gt;
 
 // Your text.
 
 &lt;/wcm:plugin&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For more information, see <a href="../../../wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/">Creating a plug-in tag</a>.</p>
 
 

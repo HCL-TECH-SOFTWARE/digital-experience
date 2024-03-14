@@ -4026,20 +4026,7 @@
 <p>The list valued attributes locales holds all locales for which a locale-specific attribute might be defined. However, all locale-specific attributes are optional for all locales. No fallback algorithm that would, for example, return the general Portuguese value if the Brazilian Portuguese value is not set is present. Such fallback algorithms are used when pages are assembled by the portal, but not for the administrative access that is provided by the portal scripting component.</p>
 <p>Locale-specific attributes that are not read-only are set by using the <code>nlsset</code> command. Specify the new value of the attribute as the last argument in the arguments for the nlsget command. By setting an attribute for a locale that was not used before, the new locale is added to the list valued attribute locales.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>Content.nlsget(ID, attribute, locale)
+<div class="language-text highlight"><pre><span></span><code>Content.nlsget(ID, attribute, locale)
 Content.nlsset(ID, attribute, locale, value)
 
 Content.nlsget(attribute, locale)
@@ -4053,22 +4040,9 @@ Content.nlsset(&quot;description&quot;, &quot;de_DE&quot;, &quot;Kurze Beschreib
 
 # example: set general english title of a specific node
 Content.nlsset(node_ID, &quot;title&quot;, &quot;en&quot;, &quot;English Title&quot;)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>$Content nlsget ID attribute locale
+<div class="language-text highlight"><pre><span></span><code>$Content nlsget ID attribute locale
 $Content nlsset ID attribute locale value
 
 $Content nlsget attribute locale
@@ -4082,18 +4056,16 @@ $Content nlsset description de_DE &quot;Kurze Beschreibung&quot;
 
 # example: set general english title of a specific node
 $Content nlsset node\_ID title en &quot;English Title&quot;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>As locale-specific attributes are often translated independently from script development, the <code>nlsimport</code> command is used to read a separate property file that defines attribute values for a set of locales. By specifying an appropriate prefix, you can load values from the same property files that are used by the XML configuration interface (XMLAccess).</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>Content.nlsimport(ID, file_name)
+<div class="language-text highlight"><pre><span></span><code>Content.nlsimport(ID, file_name)
 Content.nlsimport(ID, file_name, prefix)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>$Content nlsimport ID file_name
+<div class="language-text highlight"><pre><span></span><code>$Content nlsimport ID file_name
 $Content nlsimport ID file_name prefix
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To delete all locale-specific attributes before a set of values is imported, empty the list valued attribute locales as described in <em>List valued attributes</em>.</p>
 <details class="info" open="open">
 <summary>Related information</summary>

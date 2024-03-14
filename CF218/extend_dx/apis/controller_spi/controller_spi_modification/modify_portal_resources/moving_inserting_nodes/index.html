@@ -2554,16 +2554,7 @@
 </li>
 </ol>
 <p>Example 1 - Moving an existing portlet to a different container (error handling omitted):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>// obtain locator of LayoutModelController
+<div class="language-text highlight"><pre><span></span><code>// obtain locator of LayoutModelController
 final Locator locator = lmController.getLocator();
 
 // locate portlet and target containers
@@ -2573,7 +2564,7 @@ final LayoutContainer nextContainer = (LayoutContainer) locator.findByUniqueName
 
 // move portlet under parentContainer just before nextContainer
 lmController.insert(control, parentContainer, nextContainer);
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

@@ -4109,10 +4109,9 @@
 <h1 id="the-render-url-plug-in">The render URL plug-in</h1>
 <p>Use the RenderURL rendering plug-in to create URLs that set or remove render parameters.</p>
 <p>The syntax for this plug-in is as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:RenderURL copyCurrentParams=&quot;&quot; escape=&quot;&quot; uri=&quot;&quot; uriMode=&quot;&quot; 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:RenderURL copyCurrentParams=&quot;&quot; escape=&quot;&quot; uri=&quot;&quot; uriMode=&quot;&quot; 
 prefix.key=&quot;&quot; prefix.value=&quot;&quot; prefix.mode=&quot;&quot; prefix.type=&quot;&quot;]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This plug-in uses the following attributes:</p>
 <ul>
 <li>
@@ -4196,16 +4195,12 @@ prefix.key=&quot;&quot; prefix.value=&quot;&quot; prefix.mode=&quot;&quot; prefi
 <ul>
 <li>It sets a private render parameter <code>private1</code>.</li>
 <li>It adds multiple values <code>[pv1, pv2]</code> for the public render parameter <code>public1</code>.
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:RenderURL copyCurrentParams=&quot;true&quot; 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:RenderURL copyCurrentParams=&quot;true&quot; 
     pr1.key=&quot;private1&quot; pr1.value=&quot;v1&quot;                  
     pr1.type=&quot;private&quot; pr1.mode=&quot;set&quot;
     pr2.key=&quot;public1&quot;  pr2.value=&quot;pv1&quot; pr2.value=&quot;pv2&quot; 
     pr2.type=&quot;public&quot;  pr2.mode=&quot;add&quot;] 
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 </ul>
 </li>
 <li>
@@ -4213,14 +4208,11 @@ prefix.key=&quot;&quot; prefix.value=&quot;&quot; prefix.mode=&quot;&quot; prefi
 <ul>
 <li>It sets a public render parameter with multiple values by using the qualified name (<code>QName</code>) <code>{http://ibm.com}prp1</code> of the parameter.</li>
 <li>It removes the private render parameter with the name <code>private1</code>.
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin1:RenderURL copyCurrentParams=&quot;true&quot; 
+<div class="language-text highlight"><pre><span></span><code>[Plugin1:RenderURL copyCurrentParams=&quot;true&quot; 
     pr1.key=&quot;private1&quot; pr1.type=&quot;private&quot; pr1.mode=&quot;remove&quot;
     pr2.key=&quot;{http://ibm.com}prp1&quot; pr2.value=&quot;pv1&quot; pr2.value=&quot;pv2&quot; 
     pr2.type=&quot;public&quot;  pr2.mode=&quot;set&quot;]
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 </ul>
 </li>
 <li>
@@ -4228,12 +4220,10 @@ prefix.key=&quot;&quot; prefix.value=&quot;&quot; prefix.mode=&quot;&quot; prefi
 <ul>
 <li>It resolves the URI to a page that is identified by the URI parameter.</li>
 <li>It adds the value for the public render parameter by using the qualified name (<code>QName</code>) <code>{http://ibm.com}prp1</code> of the parameter on the page that was resolved in the previous step. It sets the value to <code>pv1</code>.
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:RenderURL copyCurrentParams=&quot;true&quot; uri=&quot;nm:oid:pageid&quot; 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:RenderURL copyCurrentParams=&quot;true&quot; uri=&quot;nm:oid:pageid&quot; 
     pr2.key=&quot;{http://ibm.com}prp1&quot; pr2.value=&quot;pv1&quot; 
     pr2.type=&quot;public&quot; pr2.mode=&quot;add&quot;] 
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 </ul>
 </li>
 </ul>
@@ -4241,30 +4231,22 @@ prefix.key=&quot;&quot; prefix.value=&quot;&quot; prefix.mode=&quot;&quot; prefi
 <ul>
 <li>
 <p>The following example sets a private render parameter, that is a parameter than can only be seen by the same portlet instance on the page that sets the parameter. To set the parameter value, specify as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;form method=&quot;get&quot; action=&quot;[Plugin:RenderURL copyCurrentParams=&quot;true&quot;]&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;form method=&quot;get&quot; action=&quot;[Plugin:RenderURL copyCurrentParams=&quot;true&quot;]&quot;&gt;
     &lt;!-- This sets a private render parameter with the name param1: --&gt;
     &lt;input type=&quot;text&quot; name=&quot;param1&quot;&gt;
     &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
 &lt;/form&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To read the parameter value, use the following tag in the page to which the form is submitted: <code>[Plugin:RenderParam key="param1"]</code></p>
 </li>
 <li>
 <p>The following example sets exactly one public render parameter, that is a parameter that all portlet instances can see. The example uses the <code>CUSTOM_CONTEXT</code> parameter that is reserved and declared in the portlet.xml file by the rendering portlet. To set the parameter value, specify as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;form method=&quot;get&quot; action=&quot;[Plugin:RenderURL copyCurrentParams=&quot;true&quot;]&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;form method=&quot;get&quot; action=&quot;[Plugin:RenderURL copyCurrentParams=&quot;true&quot;]&quot;&gt;
     &lt;!-- This sets a public render parameter with the name CUSTOM_CONTEXT: --&gt;
     &lt;input type=&quot;text&quot; name=&quot;CUSTOM_CONTEXT&quot;&gt;
     &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
 &lt;/form&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To read the parameter value, use the following tag in the page to which the form is submitted: <code>[Plugin:RenderParam key="CUSTOM_CONTEXT"]</code></p>
 </li>
 </ul>

@@ -2350,27 +2350,20 @@
 <p class="admonition-title">Note</p>
 <p>You can choose the secret name and this must be referenced in the next configuration step (for example, <code>custom-ca-cert</code>). The namespace is the Kubernetes namespace where you want to deploy HCL Digital Experience 9.5 to (for example, <code>digital-experience</code>). However, you must set the key name to <code>customCACert.pem</code> in the following command like in <a href="https://kubernetes.io/docs/tasks/configmap-secret/managing-secret-using-kubectl/#use-source-files"><code>--from-file=key=source</code></a>.</p>
 </div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code># Create secret with the name &quot;custom-ca-cert&quot; and the key &quot;customCACert.pem&quot;
+<div class="language-text highlight"><pre><span></span><code># Create secret with the name &quot;custom-ca-cert&quot; and the key &quot;customCACert.pem&quot;
 # Secret will be created in the namespace &quot;digital-experience&quot;
 
 kubectl create secret generic custom-ca-cert --from-file=customCACert.pem=./customCACert.pem -n digital-experience
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="configuring-secret-in-deployment">Configuring secret in deployment</h2>
 <p>Make sure that the reference to the secret is set up correctly in your <code>custom-values.yaml</code> file. Otherwise, Digital Asset Management will not be able to trust the additional certificates.</p>
 <p>You can set the name of the certificate used with the following syntax. By default, no secret is set:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Networking specific configuration</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Networking specific configuration</span>
 <span class="nt">networking</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">addon</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">digitalAssetManagement</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">caTrustSecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;custom-ca-cert&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Verify you have entered the correct name.</p>

@@ -2795,24 +2795,18 @@
 <li><code>/customerContextRoot</code> - optional context, can be used depending on customer requirements.</li>
 </ul>
 <p>Sample configurations from a specific web server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>    # Preserve Host and allow TLS proxy
+<div class="language-text highlight"><pre><span></span><code>    # Preserve Host and allow TLS proxy
     ProxyPreserveHost On
     SSLProxyEngine On
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>    # Proxy rules for Core
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>    # Proxy rules for Core
     ProxyPass /wps/ https://&lt;target container hostname&gt;/wps/
     ProxyPassReverse /wps/ https://&lt;target container hostname&gt;/wps/
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>    # Proxy rules for DX applications outside Core (like DAM)
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>    # Proxy rules for DX applications outside Core (like DAM)
     ProxyPass /dx/ https://&lt;target container hostname&gt; /dx/
     ProxyPassReverse /dx/ https://&lt;target container hostname&gt; /dx/
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <!--
 **Parent topic:**[Web servers](../config/config_webservers.md)
 -->

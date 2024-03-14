@@ -4204,24 +4204,24 @@
 <p><strong>wp.localizedDescription</strong></p>
 <p>Provides access to the description of the currently rendered page.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.localizedDescription}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.localizedDescription}
+</code></pre></div>
 <p>Returns: <a href="../common_beans/themeopt_el_bean_description/">Description</a> for the current page description; it is never null.  </p>
 </li>
 <li>
 <p><strong>wp.localizedTitle</strong></p>
 <p>Provides access to the title of the currently rendered page.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.localizedTitle}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.localizedTitle}
+</code></pre></div>
 <p>Returns: <a href="../common_beans/themeopt_el_bean_title/">Title</a> for the current page title; it is never null.</p>
 </li>
 <li>
 <p><strong><a href="../themeopt_el_bean_agg_meta_provi/">wp.metadata</a></strong></p>
 <p>Provides access to the aggregated metadata of a node. The metadata that can be provided by individual nodes of the content model are combined according to the hierarchy that the content model exposes for these nodes. Values set on the node itself take precedence over values set for its parents.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.metadata[wp.selectionModel.selected][&#39;com.ibm.portal.layout.template.ref&#39;]}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.metadata[wp.selectionModel.selected][&#39;com.ibm.portal.layout.template.ref&#39;]}
+</code></pre></div>
 <p>Returns: <a href="../common_beans/themeopt_el_bean_meta/">Metadata</a>, never null.</p>
 </li>
 <li>
@@ -4334,8 +4334,8 @@
 <p><strong>wp.title</strong></p>
 <p>Provides access to the title of the currently rendered page or the title information set by a portlet.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.title}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.title}
+</code></pre></div>
 <p>Returns: Title in the current locale as a string.</p>
 </li>
 <li>

@@ -4429,15 +4429,14 @@
 <ul>
 <li>
 <p><strong>Security Access Manager: Protected object space entry</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/WPSv6/Administrator@External_Access_Control/xxx/xxx/WPS/HCL Portal and HCL Web Content Manager/cell
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/WPSv6/Administrator@External_Access_Control/xxx/xxx/WPS/HCL Portal and HCL Web Content Manager/cell
+</code></pre></div>
 </li>
 <li>
 <p><strong>eTrust SiteMinder:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>resource/subrealms under Domain: WebSphere Portal v8
+<div class="language-text highlight"><pre><span></span><code>resource/subrealms under Domain: WebSphere Portal v8
 /cell/HCL Portal and HCL Web Content Manager/WPS/Administrator@External_Access_Control/xxx/xxx
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 </li>
@@ -4452,12 +4451,10 @@
 <li>
 <p><strong>externalaccesscontrol.pduser = sec_masterexternalaccesscontrol.pdpw = passw0rd</strong></p>
 <p>Use these properties to provide an administrative user ID and password with adequate rights in Tivoli to create, delete, modify the objects in the Protected Object Space. You can use the WebSphere® Application Server PropFilePasswordEncoder utility to mask the password. Using PropFilePasswordEncoder will remove any comments and uncommented properties. Therefore create a back up copy of this file for future reference. Example for AIX®, Linux™ and Windows™:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[AppServer_root](../reference/wpsdirstr.md#was_root)/bin/PropFilePasswordEncoder 
+<div class="language-text highlight"><pre><span></span><code>[AppServer_root](../reference/wpsdirstr.md#was_root)/bin/PropFilePasswordEncoder 
 [wp_profile_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/config/properties/ExternalAccessControlService.properties 
         externalaccesscontrol.pdpw
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This command should be typed <em>on one line</em> in a command line window.</p>
@@ -4573,20 +4570,14 @@
 </li>
 </ul>
 <p>An example for server 10.0.0.1 is as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>    10.0.0.1.accountingPort=44441
+<div class="language-text highlight"><pre><span></span><code>    10.0.0.1.accountingPort=44441
     10.0.0.1.authenticationPort=44442
     10.0.0.1.authorizationPort=44443
     10.0.0.1.connectionMax=30
     10.0.0.1.connectionMin=10
     10.0.0.1.connectionStep=5
     10.0.0.1.timeout=60
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 

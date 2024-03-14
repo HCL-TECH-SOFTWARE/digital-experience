@@ -3152,43 +3152,36 @@
 <p>Most component logs can be accessed directly on the Kubernetes or OpenShift platforms via the kubectl logs or OpenShift log access commands. The DX 9.5 Core component has additional important log files that are stored on persistent volumes, and need to be retrieved in a different manner. </p>
 <h2 id="accessing-dx-95-container-logs-on-kubernetes-or-openshift">Accessing DX 9.5 container logs on Kubernetes or OpenShift</h2>
 <p>All container logs from DX 9.5 pods in a deployment with Helm can be combined into a single output using the commands:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl logs -n your-namespace -l release=your-release-name --tail=-1
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl logs -n your-namespace -l release=your-release-name --tail=-1
+</code></pre></div>
 <p>In the example above, the <code>your-namespace</code> reference is the namespace in which your HCL Digital Experience 9.5 deployment is installed and <code>your-release-name</code> is the Helm release name you used when installing. On UNIX-based operating systems, the output can be directed to a file for convenience by appending <code>&gt; some-file-name</code> to the command.</p>
 <h2 id="retrieving-additional-dx-core-logs">Retrieving additional DX Core logs</h2>
 <p>Useful additional DX Core logs are stored on persistent volumes. To retrieve these, repeat the command below for each DX Core pod:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl cp -n your-namespace pod-name:opt/HCL/wp_profile/logs/WebSphere_Portal/ .
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl cp -n your-namespace pod-name:opt/HCL/wp_profile/logs/WebSphere_Portal/ .
+</code></pre></div>
 <p>In the example above the <code>your-namespace</code> reference is the namespace in which your HCL Digital Experience 9.5 deployment is installed and <code>pod-name</code> is the particular DX Core pod from which you wish to retrieve logs.</p>
 <h2 id="events">Events</h2>
 <p>Pod events can give useful information for troubleshooting, such as why certain pods are not running. To get the events for a pod, you can use the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl describe pod -n your-namespace pod-name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl describe pod -n your-namespace pod-name
+</code></pre></div>
 <p>In the above example, <code>your-namespace</code> is the namespace in which your HCL Digital Experience deployment is installed and <code>pod-name</code> is the particular pod that you wish to examine.</p>
 <h2 id="persistentvolumeclaims-pvcs">PersistentVolumeClaims (PVCs)</h2>
 <p>One of the more common reasons for a pod not starting that can be identified via the pod events (see above) is that it has unbound persistent volume claims. To understand why the claims have not been fulfilled, it is useful to list both the current persistent volume claims and the current persistent volumes and to compare the two. When comparing, it is useful to check mismatches in storage class, access modes and capacity between available volumes and unfulfilled claims.</p>
 <p>The commands to list these resources are:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl get pvc -n your-namespace
+<div class="language-text highlight"><pre><span></span><code>kubectl get pvc -n your-namespace
 kubectl get pv
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>In the above example, <code>your-namespace</code> is the namespace in which your HCL Digital Experience 9.5 deployment is installed.</p>
 <h2 id="retrieving-the-deployment-configuration">Retrieving the deployment configuration</h2>
 <p>In addition to logs, HCL Support may also request configuration information about your deployment. This is can be obtained using <code>kubectl</code> describe commands for different classes of objects and a selector to get all for your deployment. The most likely object types are given in the examples below:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl describe pods -n your-namespace -l release=your-release-name
+<div class="language-text highlight"><pre><span></span><code>kubectl describe pods -n your-namespace -l release=your-release-name
 kubectl describe deployments -n your-namespace -l release=your-release-name
 kubectl describe statefulsets -n your-namespace -l release=your-release-name
 kubectl describe secrets -n your-namespace -l release=your-release-name
 kubectl describe services -n your-namespace -l release=your-release-name
 kubectl describe mappings -n your-namespace -l release=your-release-name
 kubectl describe configmaps -n your-namespace -l release=your-release-name
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>In the above examples, <code>your-namespace</code> is the namespace in which your HCL Digital Experience deployment is installed and <code>your-release-name</code> is the Helm release name you used when installing. On UNIX-based operating systems, the output can be directed to a file by appending <code>&gt; some-file-name</code> to any command.</p>
 
 

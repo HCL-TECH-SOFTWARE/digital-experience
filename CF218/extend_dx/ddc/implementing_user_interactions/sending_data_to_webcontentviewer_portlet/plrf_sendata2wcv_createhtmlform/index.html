@@ -2285,20 +2285,17 @@
 <li>
 <p>Add a hidden input field with the name <code>_charset_</code> as the first input field to the form. This input field defines the character set that the browser uses to encode the form data. Initialize it with the character encoding of the page.</p>
 <p>To do so, use the following HTML code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;input type=&quot;hidden&quot; name=&quot;_charset_&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;input type=&quot;hidden&quot; name=&quot;_charset_&quot; 
        value=&quot;[Plugin:EvaluateEL 
        value=&quot;${pageContext.response.characterEncoding}&quot; 
        compute=&quot;once&quot;]&quot;/&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>To specify the target URI for the interaction, use a second hidden input field named <code>action.uri</code>. The target URI identifies the actual recipient of the data that is posted by this form, which must be a data sink.</p>
 <p>To do so, use the following HTML code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;input type=&quot;hidden&quot; name=&quot;action.uri&quot; value=&quot;...&quot;/&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;input type=&quot;hidden&quot; name=&quot;action.uri&quot; value=&quot;...&quot;/&gt;
+</code></pre></div>
 </li>
 <li>
 <p>Add more hidden or visible form input fields to the form. Use these input fields to assemble all the information that is necessary for the recipient of this form post. You can use the <code>action.uri</code> parameter to specify the recipient of this form post operation.</p>
@@ -2320,18 +2317,7 @@
 <li>You can use a custom implementation of the <code>com.ibm.portal.resolver.data.FormDataDataSink</code> interface. This interface is defined in the public POC resolution framework API. For more detailed information, refer to the <em>Package <code>com.ibm.portal.resolver.data</code> summary</em>.</li>
 </ul>
 <p>Here is an example of an HTML form for sending data to the Web Content Viewer portlet:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;form method=&quot;post&quot; enctype=&quot;multipart/form-data&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;form method=&quot;post&quot; enctype=&quot;multipart/form-data&quot; 
       action=&quot;[Plugin:ActionURL action=&quot;post&quot; copyCurrentParams=&quot;true&quot; 
       param=&quot;resultSessionAttribute=myResult&quot; compute=&quot;always&quot;]&quot;&gt;
      &lt;input type=&quot;hidden&quot; name=&quot;_charset_&quot; value=&quot;[Plugin:EvaluateEL 
@@ -2343,7 +2329,7 @@
      My Text: &lt;input type=&quot;text&quot; name=&quot;myTextField&quot;/&gt;&lt;br/&gt;
      &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;/&gt;
 &lt;/form&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Replace the variable <code>$DATA_SINK_URI</code> by the appropriate value for your environment.</p>
 <details class="info" open="open">
 <summary>Related information</summary>

@@ -2779,20 +2779,17 @@
 <li>Using POC to resolve an ID
 Example links to entry documents:</li>
 </ul>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;link rel=&quot;edit&quot; href=&quot;/wps/mycontenthandler/!ut/p/wcmrest/SiteArea/c6b00ee6-d628-4cbd-9e65-15c90f2093a6&quot;/&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;link rel=&quot;edit&quot; href=&quot;/wps/mycontenthandler/!ut/p/wcmrest/SiteArea/c6b00ee6-d628-4cbd-9e65-15c90f2093a6&quot;/&gt;
 &lt;link rel=&quot;parent&quot; href=&quot;/wps/mycontenthandler/!ut/p/wcmrest/item/ae6a3632-a1b5-456a-866e-e9baab84fe29&quot;/&gt;
 &lt;link rel=&quot;library&quot; href=&quot;/wps/mycontenthandler/!ut/p/wcmrest/item/54a68ca2-c550-4385-966f-b0b612147547&quot;/&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Media resources</strong></p>
 <p>In addition to the entry document, most items also have a media resource that is associated with them. The media resource exists to store the content of the item, for example, HTML or an image. The media resource location is found in the edit-media link of an items entry document. Media resource URLs support HTTP GET and PUT.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;link rel=&quot;edit-media&quot; type=&quot;text/html&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;link rel=&quot;edit-media&quot; type=&quot;text/html&quot; 
 href=&quot;/wps/mycontenthandler/!ut/p/wcmrest/PresentationTemplate/02da6e9d-20ca-4c54-ae4a-f1114fa8e948&quot;/&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="content-negotiation">Content Negotiation</h2>
@@ -2800,8 +2797,8 @@ href=&quot;/wps/mycontenthandler/!ut/p/wcmrest/PresentationTemplate/02da6e9d-20c
 <ul>
 <li>
 <p><strong>HTTP Accept header</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Accept: application/atom+xml
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>Accept: application/atom+xml
+</code></pre></div>
 </li>
 <li>
 <p><strong>Request parameter mime-type</strong></p>
@@ -2814,25 +2811,7 @@ href=&quot;/wps/mycontenthandler/!ut/p/wcmrest/PresentationTemplate/02da6e9d-20c
 </div>
 <h2 id="item-path">Item path</h2>
 <p>The path of a requested item can be included by specifying the <code>options=item-path</code> URL parameter. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP 1.1 GET /wps/mycontenthandler/wcmrest/SiteArea/c0b72020-10b7-4197-a436-62a1d94ce03f?options=item-path
+<div class="language-text highlight"><pre><span></span><code>HTTP 1.1 GET /wps/mycontenthandler/wcmrest/SiteArea/c0b72020-10b7-4197-a436-62a1d94ce03f?options=item-path
 
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm&quot;&gt;
@@ -2851,34 +2830,10 @@ href=&quot;/wps/mycontenthandler/!ut/p/wcmrest/PresentationTemplate/02da6e9d-20c
     &lt;/wcm:path&gt;
 …
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="example-entry">Example entry</h2>
 <p>This code is an example in <code>application/atom+xml</code> format:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;wcm/namespace&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;wcm/namespace&quot;&gt;
     &lt;id&gt;3aabfe14-cc9e-4eb5-ad06-d4fc8fd2f1df&lt;/id&gt;
     &lt;title&gt;SampleHTMLComponent&lt;/title&gt;
     &lt;link rel=&quot;edit&quot; href=&quot;/wps/mycontenthandler/!ut/p/wcmrest/LibraryHTMLComponent/3aabfe14-cc9e-4eb5-ad06-d4fc8fd2f1df&quot;/&gt;
@@ -2903,22 +2858,20 @@ href=&quot;/wps/mycontenthandler/!ut/p/wcmrest/PresentationTemplate/02da6e9d-20c
     &lt;wcm:type&gt;LibraryHTMLComponent&lt;/wcm:type&gt;
     &lt;wcm:state&gt;PUBLISHED&lt;/wcm:state&gt;
    &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="virtual-portal-usage-in-wcm-rest-api">Virtual portal usage in WCM REST API</h2>
 <p>When using the REST API on virtual portals, the correct format should be:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/wps/mycontenthandler/vpcontext/!ut/p/wcmrest/...
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/wps/mycontenthandler/vpcontext/!ut/p/wcmrest/...
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The API needs to contain /!ut/p/ after the VP context.</p>
 </div>
 <p>For example:
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>/wps/mycontenthandler/VP1/!ut/p/wcmrest/query?type=Library
+<div class="language-text highlight"><pre><span></span><code>/wps/mycontenthandler/VP1/!ut/p/wcmrest/query?type=Library
 Set the contentHandlerPath to be /wps/mycontenthandler/VP1 like this:
 { &quot;connectionId&quot;: &quot;myserver-vp1&quot; , &quot;host&quot;: &quot;myserver.hcl.com&quot; , &quot;port&quot;: 10039 , &quot;username&quot; : &quot;wpsadmin&quot; , &quot;password&quot; : &quot;wpsadmin&quot; , &quot;contentHandlerPath&quot; : &quot;/wps/mycontenthandler/VP1&quot; , &quot;secure&quot; : false , &quot;libraryName&quot; : &quot;&quot; }
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 <p>For more information, see <a href="https://support.hcltechsw.com/csm?id=kb_article&amp;sysparm_article=KB0074521">Sample URLs for WCM REST Service aka WCM REST API</a>.</p>
 
 

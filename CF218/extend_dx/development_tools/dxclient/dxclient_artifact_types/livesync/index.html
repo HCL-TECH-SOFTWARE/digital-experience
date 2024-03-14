@@ -2795,14 +2795,14 @@
 <p><strong>Command description</strong></p>
 <p>This command invokes the livesync push-theme tool inside the DXClient.</p>
 <p>This command initially pushes the local theme (provided in <code>themePath</code>) in WebDAV Server with the theme system name (provided in <code>themeName</code>). It will then create a file system watcher which will watch for any changes (files or folders) under <code>themePath</code> and immediately reflect those changes in WebDAV Server. To stop watching, press (Ctrl + C).</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>livesync<span class="w"> </span>push-theme
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>dxclient<span class="w"> </span>livesync<span class="w"> </span>push-theme
+</code></pre></div>
 </li>
 <li>
 <p><strong>Help command</strong></p>
 <p>This command shows the help document on the <code>livesync push-theme</code> command usage:</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>livesync<span class="w"> </span>push-theme<span class="w"> </span>-h
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>dxclient<span class="w"> </span>livesync<span class="w"> </span>push-theme<span class="w"> </span>-h
+</code></pre></div>
 </li>
 <li>
 <p><strong>Required files</strong></p>
@@ -2814,40 +2814,40 @@
 <li>
 <p><strong>Common Command options</strong></p>
 <p>Use this attribute to specify the protocol with which to connect to the DX server (<code>wp_profile</code>):</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProtocol<span class="w"> </span>&lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>-dxProtocol<span class="w"> </span>&lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the hostname of the target DX server:</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname<span class="w"> </span>&lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>-hostname<span class="w"> </span>&lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port on which to connect to the DX server (<code>wp_profile</code>):</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPort<span class="w"> </span>&lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>-dxPort<span class="w"> </span>&lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the username to authenticate with the DX server (<code>wp_profile</code>):</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername<span class="w"> </span>&lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>-dxUsername<span class="w"> </span>&lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password for the user in the <code>dxUsername</code> attribute:</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword<span class="w"> </span>&lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>-dxPassword<span class="w"> </span>&lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the path to the contenthandler servlet on the DX server (for example, /wps/mycontenthandler):</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-contenthandlerPath<span class="w"> </span>&lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>-contenthandlerPath<span class="w"> </span>&lt;value&gt;
+</code></pre></div>
 <p>Use the Disable Prompt attribute to disable the confirmation prompt for overwriting local and server files. This bypasses the prompt and immediately proceeds to pushing theme files.</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-disablePrompt,<span class="w"> </span>--disablePrompt<span class="w"> </span>&lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>-disablePrompt,<span class="w"> </span>--disablePrompt<span class="w"> </span>&lt;value&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong>Required options for LiveSync Push Theme</strong></p>
 <p>Use this attribute to specify the Theme System Name of the theme created under DX server:</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-themeName<span class="w"> </span>&lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>-themeName<span class="w"> </span>&lt;value&gt;
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Difference between Theme System Name and Theme Title</p>
 <p>The <strong><em>Theme System Name</em></strong> can only have the following characters: <code>a-z</code>, <code>A-Z</code>, <code>0-9</code>, <code>spaces</code>, and <code>- _ . ! ( ) ,</code>. Invalid characters in the title are converted to underscore "_" in the system name by default. The <strong><em>Theme Title</em></strong> can include any characters.</p>
 <p><img alt="theme-title-vs-theme-system-name" src="../../../../../images/theme-title-vs-theme-system-name.png" style="height:350px;" /></p>
 </div>
 <p>Use this attribute to specify the theme folder path that contains all static WebDAV based files to be pushed into DX theme, it accepts the folder path of the WebDAV based theme folder:</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-themePath<span class="w"> </span>&lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>-themePath<span class="w"> </span>&lt;value&gt;
+</code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <ol>
@@ -2860,21 +2860,18 @@
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient livesync push-theme -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -dxPort &lt;dxPort&gt; -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -contenthandlerPath &lt;contenthandlerPath&gt; -themePath &lt;themePath&gt; -themeName &lt;themeSystemName&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient livesync push-theme -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -dxPort &lt;dxPort&gt; -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -contenthandlerPath &lt;contenthandlerPath&gt; -themePath &lt;themePath&gt; -themeName &lt;themeSystemName&gt;
+</code></pre></div>
 </div>
 <h3 id="ignoring-files">Ignoring Files</h3>
 <p>You can opt to ignore files and folder paths to push to the server by creating an ignore file (<code>.ignore</code>) under the root of the theme folder (the theme that is provided in <code>--themePath</code>).</p>
 <p>When changing the contents of the ignore file, the command needs to be re-run again to reflect the files that needs to be ignored.</p>
 <p>Sample <code>.ignore</code> file contents:
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>#.ignore
+<div class="language-text highlight"><pre><span></span><code>#.ignore
 
 .DS_Store
 logs/
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 <h2 id="livesync-pull-theme">LiveSync Pull Theme</h2>
 <p>This command is used to sync a theme from a DX WebDAV based theme on a remote server to a local folder.</p>
 <ul>
@@ -2882,14 +2879,14 @@ logs/
 <p><strong>Command description</strong></p>
 <p>This command invokes the livesync push-theme tool inside the DXClient.</p>
 <p>This command will download the WebDAV based theme files in WebDAV Server under the given theme system name (provided in <code>-themeName</code>). This will then be saved to the target local directory of the theme (provided in <code>-themePath</code>), overwriting existing files in this local directory which also deletes stale files in the process.</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>livesync<span class="w"> </span>pull-theme
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>dxclient<span class="w"> </span>livesync<span class="w"> </span>pull-theme
+</code></pre></div>
 </li>
 <li>
 <p><strong>Help command</strong></p>
 <p>This command shows the help document on the <code>livesync pull-theme</code> command usage:</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>livesync<span class="w"> </span>pull-theme<span class="w"> </span>-h
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>dxclient<span class="w"> </span>livesync<span class="w"> </span>pull-theme<span class="w"> </span>-h
+</code></pre></div>
 </li>
 <li>
 <p><strong>Required files</strong></p>
@@ -2901,42 +2898,34 @@ logs/
 <li>
 <p><strong>Common Command options</strong></p>
 <p>Use this attribute to specify the protocol with which to connect to the DX server (<code>wp_profile</code>):</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProtocol<span class="w"> </span>&lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>-dxProtocol<span class="w"> </span>&lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the hostname of the target DX server:</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname<span class="w"> </span>&lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>-hostname<span class="w"> </span>&lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port on which to connect to the DX server (<code>wp_profile</code>):</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPort<span class="w"> </span>&lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>-dxPort<span class="w"> </span>&lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the username to authenticate with the DX server (<code>wp_profile</code>):</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername<span class="w"> </span>&lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>-dxUsername<span class="w"> </span>&lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password for the user in the <code>dxUsername</code> attribute:</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword<span class="w"> </span>&lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>-dxPassword<span class="w"> </span>&lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the path to the contenthandler servlet on the DX server (for example, /wps/mycontenthandler):</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-contenthandlerPath<span class="w"> </span>&lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>-contenthandlerPath<span class="w"> </span>&lt;value&gt;
+</code></pre></div>
 <p>Use the Disable Prompt attribute to disable the confirmation prompt for overwriting local and server files. This bypasses the prompt and immediately proceeds to pulling theme files.</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-disablePrompt,<span class="w"> </span>--disablePrompt<span class="w"> </span>&lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>-disablePrompt,<span class="w"> </span>--disablePrompt<span class="w"> </span>&lt;value&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong>Required option for LiveSync Pull Theme</strong></p>
 <p>Use this attribute to specify the Theme System Name of the theme created under the DX server:</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-themeName<span class="w"> </span>&lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>-themeName<span class="w"> </span>&lt;value&gt;
+</code></pre></div>
 <p>Starting from CF214, if <code>themeName</code> option is not provided, a list of WebDAV themes is displayed and you can select a theme to pull into their local.</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span>dxclient<span class="w"> </span>livesync<span class="w"> </span>pull-theme<span class="w"> </span>-dxUsername<span class="w"> </span>&lt;dxUsername&gt;<span class="w"> </span>-dxPassword<span class="w"> </span>&lt;dxPassword&gt;<span class="w"> </span>-dxPort<span class="w"> </span>&lt;dxPort&gt;<span class="w"> </span>-dxProtocol<span class="w"> </span>&lt;dxProtocol&gt;<span class="w"> </span>-hostname<span class="w"> </span>&lt;hostname&gt;<span class="w"> </span>-contenthandlerPath<span class="w"> </span>&lt;contenthandlerPath&gt;<span class="w"> </span>-themePath<span class="w"> </span>&lt;themePath&gt;
+<div class="language-shell highlight"><pre><span></span><code>$<span class="w"> </span>dxclient<span class="w"> </span>livesync<span class="w"> </span>pull-theme<span class="w"> </span>-dxUsername<span class="w"> </span>&lt;dxUsername&gt;<span class="w"> </span>-dxPassword<span class="w"> </span>&lt;dxPassword&gt;<span class="w"> </span>-dxPort<span class="w"> </span>&lt;dxPort&gt;<span class="w"> </span>-dxProtocol<span class="w"> </span>&lt;dxProtocol&gt;<span class="w"> </span>-hostname<span class="w"> </span>&lt;hostname&gt;<span class="w"> </span>-contenthandlerPath<span class="w"> </span>&lt;contenthandlerPath&gt;<span class="w"> </span>-themePath<span class="w"> </span>&lt;themePath&gt;
 <span class="m">2023</span>-08-03<span class="w"> </span><span class="m">18</span>:18:55<span class="w"> </span>:<span class="w"> </span>Extracting<span class="w"> </span>themes<span class="w"> </span>list<span class="w"> </span>from<span class="w"> </span>xml
 <span class="m">2023</span>-08-03<span class="w"> </span><span class="m">18</span>:18:55<span class="w"> </span>:<span class="w"> </span>Please<span class="w"> </span><span class="k">select</span><span class="w"> </span>a<span class="w"> </span>Theme<span class="w"> </span>name
 <span class="o">(</span>x<span class="o">)</span><span class="w"> </span>My<span class="w"> </span>Theme
@@ -2945,15 +2934,15 @@ logs/
 <span class="o">(</span><span class="w"> </span><span class="o">)</span><span class="w"> </span>Simple
 <span class="o">(</span><span class="w"> </span><span class="o">)</span><span class="w"> </span>ThemeDevSite
 <span class="o">(</span><span class="w"> </span><span class="o">)</span><span class="w"> </span>Toolbar8.5
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Difference between Theme System Name vs. Theme Title</p>
 <p>The <strong><em>Theme System Name</em></strong> can only have the following characters: <code>a-z</code>, <code>A-Z</code>, <code>0-9</code>, <code>spaces</code>, and <code>- _ . ! ( ) ,</code>. Invalid characters in the title are converted to underscore "_" in the system name by default. The <strong><em>Theme Title</em></strong> can include any characters.</p>
 <p><img alt="theme-title-vs-theme-system-name" src="../../../../../images/theme-title-vs-theme-system-name.png" style="height:350px;" /></p>
 </div>
 <p>Use this attribute to specify the theme folder path where DX theme static files should be placed. This attribute accepts a folder path:</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-themePath<span class="w"> </span>&lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>-themePath<span class="w"> </span>&lt;value&gt;
+</code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <ol>
@@ -2966,19 +2955,16 @@ logs/
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient livesync pull-theme -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -dxPort &lt;dxPort&gt; -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -contenthandlerPath &lt;contenthandlerPath&gt; -themePath &lt;themePath&gt; -themeName &lt;themeSystemName&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient livesync pull-theme -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -dxPort &lt;dxPort&gt; -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -contenthandlerPath &lt;contenthandlerPath&gt; -themePath &lt;themePath&gt; -themeName &lt;themeSystemName&gt;
+</code></pre></div>
 </div>
 <p>Note that LiveSync Pull Theme commands can be triggered from within the target local theme path.</p>
 <p>See the following example where '...' represents truncated parameters.</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span><span class="nb">pwd</span>
+<div class="language-shell highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">pwd</span>
 /Users/path/to/theme
 
 dxclient<span class="w"> </span>livesync<span class="w"> </span>pull-theme<span class="w"> </span>--themePath<span class="w"> </span><span class="s2">&quot;/Users/path/to/theme&quot;</span><span class="w"> </span>--themeName<span class="w"> </span><span class="s2">&quot;Portal8.5SyncTest&quot;</span><span class="w"> </span>...
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="limitations-troubleshooting">Limitations &amp; Troubleshooting</h2>
 <ol>
 <li>This command does not register or unregister themes. For that, use <a href="../themes/#deploy-theme">Deploy Themes</a> or <a href="../themes/#undeploy-theme">Undeploy Themes</a> commands.</li>

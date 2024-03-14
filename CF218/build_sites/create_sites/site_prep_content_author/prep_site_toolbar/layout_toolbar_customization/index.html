@@ -3223,35 +3223,27 @@
 </ul>
 <p>Both of these parameters are required and relate to each other. The layout in position X in the layouts list relates to the group in position X in the groups list.</p>
 <p>For example, if users in a group called "See1ColumnGroup" are allowed to see the "1Column" layout, the theme metadata would look like:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;parameter name=&quot;layout.hidebydefault&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;parameter name=&quot;layout.hidebydefault&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;
 &lt;![CDATA[1Column]]&gt;&lt;/parameter&gt;
 &lt;parameter name=&quot;group.show&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;
 &lt;![CDATA[See1ColumnGroup]]&gt;&lt;/parameter&gt; 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The layout name used in the metadata must match the ID of the layout as listed in the custom theme layouts.json file located in the static theme WAR. For the OOB theme or a custom theme that stores the static resources in WebDAV, the layouts.json is located in this directory in WebDAV: /fs-type1/themes/yourcustomtheme/system/</p>
 <p>For an EAR-based theme the layouts.json file will be located in this directory: yourcustomthemestaticWARcontext/themes/yourcustomtheme/system</p>
 <p>For example, the 1Column layout is listed in the JSON file as:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>{&#39;url&#39;:ibmCfg.themeConfig.themeWebDAVBaseURI+&#39;layout-templates/1Column/
+<div class="language-text highlight"><pre><span></span><code>{&#39;url&#39;:ibmCfg.themeConfig.themeWebDAVBaseURI+&#39;layout-templates/1Column/
 &#39;,&#39;id&#39;:&#39;1Column&#39;,&#39;thumbnail&#39;:ibmCfg.themeConfig.themeRootURI+&#39;/
 layout-templates/1Column/icon.png&#39;,&#39;titles&#39;: [{&#39;value&#39;:&#39;1 Column&#39;,&#39;lang&#39;:&#39;en&#39;}]},
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The metadata can be set by exporting the themes and skins using XMLAccess and the ExportThemesAndSkins.xml file in the PortalServer/doc/xml-samples directory and updating the theme. Then, import the xml file.</p>
 <p>Users in the "See1ColumnGroup" group will see the "1Column" layout in the toolbar layouts.</p>
 <p>Extra layouts and groups can be specified by using a "," delimiter. If extra layouts and groups are specified, there’s a one-to-one relationship between those layouts and groups. For example:</p>
 <p>If the metadata looks like this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;parameter name=&quot;layout.hidebydefault&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;parameter name=&quot;layout.hidebydefault&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;
 &lt;![CDATA[1Column, 2ColumnRight]]&gt;&lt;/parameter&gt;
 &lt;parameter name=&quot;group.show&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;
 &lt;![CDATA[See1ColumnGroup, See2ColumnRightGroup]]&gt;&lt;/parameter&gt; 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Users in the "See1ColumnGroup" group will see the "1Column" layout and users in the "See2ColumnRightGroup" group will see the "2ColumnRight" layout. All other users won’t see either layout. Any layout or group that doesn’t have a matching layout or group will be ignored. Any number of layout/group pairs can be specified.</p>
 
 

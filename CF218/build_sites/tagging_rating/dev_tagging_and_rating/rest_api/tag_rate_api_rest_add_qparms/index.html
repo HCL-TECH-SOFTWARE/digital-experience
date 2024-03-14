@@ -2784,8 +2784,8 @@
 </li>
 </ul>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>tm:ts:all&amp;orderMetric=TAG_SPACE_COUNT_NAME&amp;order=ASC
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>tm:ts:all&amp;orderMetric=TAG_SPACE_COUNT_NAME&amp;order=ASC
+</code></pre></div>
 <p>This returns a feed that contains all available tag spaces, that is all available tags and their names and counts. The results are sorted in ascending order, first by tag count, and, if counts are equal, by tags name.</p>
 <h2 id="limiting-the-results">Limiting the results</h2>
 <p>You can use the query parameters <code>start-index</code> and <code>max-results</code> to limit the query results in the feed to a subset.</p>
@@ -2885,16 +2885,16 @@
 </li>
 </ul>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>tm:ts:all&amp;scope=COMMUNITY&amp;scope=PERSONAL_PUBLIC 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>tm:ts:all&amp;scope=COMMUNITY&amp;scope=PERSONAL_PUBLIC 
+</code></pre></div>
 <p>This returns a feed that contains all available tag spaces with community tags and the public tags of the current user.</p>
 <h2 id="locale-sensitive-queries">Locale sensitive queries</h2>
 <p>You can specify that you want to search only a specific locale or set of locales. This can be useful when you work with URIs that address tags by their name locales. To do this, use the parameter <code>locale</code>. Examples:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>tm:name:tag\_name&amp;locale=de
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>tm:name:tag\_name&amp;locale=de
+</code></pre></div>
 <p>This returns a feed that contains all tags that match the name <code>tag\_name</code> in the locale <code>de</code>.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>tm:name:tag\_name&amp;locale=de&amp;locale=en
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>tm:name:tag\_name&amp;locale=de&amp;locale=en
+</code></pre></div>
 <p>This returns a feed that contains all tags that match the name <code>tag\_name</code> in the locale <code>de</code> or <code>en</code>.</p>
 <!--
 **Related information**  

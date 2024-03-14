@@ -3108,25 +3108,18 @@
 <h1 id="implementing-category-logging">Implementing category logging</h1>
 <p>To implement category logging, insert a Category bean into your JSP.</p>
 <p>Consider the following code for inserting a category bean in your JSP.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;jsp:useBean class=&quot;com.ibm.wcp.analysis.beans.Category&quot; id=&quot;category&quot; scope=&quot;session&quot;/&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;jsp:useBean class=&quot;com.ibm.wcp.analysis.beans.Category&quot; id=&quot;category&quot; scope=&quot;session&quot;/&gt;
 &lt;% category.log( request, &quot;Sports&quot; ); %&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You can also pass an object to a JSP and implicitly log the content category. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;jsp:useBean class=&quot;com.ibm.wcp.analysis.beans.Category&quot; id=&quot;category&quot; scope=&quot;session&quot;/&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;jsp:useBean class=&quot;com.ibm.wcp.analysis.beans.Category&quot; id=&quot;category&quot; scope=&quot;session&quot;/&gt;
 
 &lt;%
    NewsManager newsManager = new NewsManager();
    News news = newsManager.findById( request.getParameter( &quot;newsId&quot; ), null );
    category.log( request, news );
 %&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>In the previous example, the category bean logs the news category by querying the <code>LoggableResource</code> interface to get the category.</p>
 
 

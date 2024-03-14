@@ -3698,23 +3698,11 @@
 </li>
 <li>
 <p>Add the following parameter to your script:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;parameter name=&quot;com.ibm.portal.theme.dnd.sources&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;parameter name=&quot;com.ibm.portal.theme.dnd.sources&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;
 &lt;![CDATA[ibmDndColumn:com.ibm.pb.dnd.layout.LayoutColumnSource:vertical,ibmDndRow:com.ibm.pb.dnd.layout.LayoutRowSource:horizontal]]&gt;&lt;/parameter&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following is a sample theme deployment script file with the drag parameter included:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;theme action=&quot;update&quot; active=&quot;true&quot; context-root=&quot;/wps/myCustomTheme&quot; default=&quot;false&quot; defaultskinref=&quot;myCustomSkin&quot; domain=&quot;rel&quot;  resourceroot=&quot;dynamicSpots&quot; uniquename=&quot;my.custom.theme&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;theme action=&quot;update&quot; active=&quot;true&quot; context-root=&quot;/wps/myCustomTheme&quot; default=&quot;false&quot; defaultskinref=&quot;myCustomSkin&quot; domain=&quot;rel&quot;  resourceroot=&quot;dynamicSpots&quot; uniquename=&quot;my.custom.theme&quot;&gt;
             &lt;localedata locale=&quot;en&quot;&gt;
                 &lt;title&gt;Custom Theme&lt;/title&gt;
             &lt;/localedata&gt;
@@ -3726,7 +3714,7 @@
             &lt;parameter name=&quot;com.ibm.portal.theme.dnd.sources&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;
 &lt;![CDATA[ibmDndColumn:com.ibm.pb.dnd.layout.LayoutColumnSource:vertical,ibmDndRow:com.ibm.pb.dnd.layout.LayoutRowSource:horizontal]]&gt;&lt;/parameter&gt;
         &lt;/theme&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Re-import your theme deployment script file.</p>
@@ -3741,10 +3729,9 @@
 </li>
 <li>
 <p>Locate your theme in the exported file and add the following parameter to your theme:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;parameter name=&quot;com.ibm.portal.theme.dnd.sources&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;parameter name=&quot;com.ibm.portal.theme.dnd.sources&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;
 &lt;![CDATA[ibmDndColumn:com.ibm.pb.dnd.layout.LayoutColumnSource:vertical,ibmDndRow:com.ibm.pb.dnd.layout.LayoutRowSource:horizontal]]&gt;&lt;/parameter&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Save your changes.</p>

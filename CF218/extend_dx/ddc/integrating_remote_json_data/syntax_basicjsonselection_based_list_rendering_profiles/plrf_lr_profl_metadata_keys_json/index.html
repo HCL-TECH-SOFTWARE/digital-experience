@@ -2242,20 +2242,17 @@
 <li>
 <p><strong>Default</strong></p>
 <p>Use this metadata key to specify a static default value that you want to be returned if the appropriate value cannot be retrieved. Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>xyz.ItemAttribute.rating=./avgRating 
+<div class="language-text highlight"><pre><span></span><code>xyz.ItemAttribute.rating=./avgRating 
 xyz.ItemAttribute.rating.default=0.5
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Depends</strong></p>
 <p>To enforce a specific computation order for the non-lazy computed item attributes and list properties in the current profile, set this metadata on the <code>ComputedItemAttribute</code> and <code>ComputedListProperty</code>. Such a computation order can be required if specific computed attributes must access the value of other computed attributed values. In this case, the attribute that requires the value of another computed attributed must list the other attribute in the <code>Depends</code> metadata key. If the attribute depends on multiple other computed attributes, you can list multiple attribute names as a comma-separated list. Example: You defined computed attributes named <code>link</code> and <code>proxiedLink</code>. You want to make sure that the value for the <code>link</code> attribute is computed before the value for the <code>proxiedLink</code> attribute. In this case, specify as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>xyz.ItemAttribute.link={computed} 
+<div class="language-text highlight"><pre><span></span><code>xyz.ItemAttribute.link={computed} 
 xyz.ItemAttribute.proxiedLink={computed} 
 xyz.ItemAttribute.proxiedLink.depends=link
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You do not have to flag dependencies on non-computed attributes. Non-computed attributes are always extracted from the JSON before the computed attributes are resolved.</p>
@@ -2276,10 +2273,9 @@ xyz.ItemAttribute.proxiedLink.depends=link
 <li>
 <p><strong>Processors</strong></p>
 <p>Use this metadata on an <code>ItemAttribute</code>, <code>AssociatedItemAttribute</code>, <code>ConstructedItemAttribute</code>, or <code>ComputedItemAttribute</code> to specify one or multiple IDs of attribute value processor plug-ins that you want to run when the attribute value is retrieved. The ID specified must reference the unique ID of attribute value processor plug-ins that are deployed to your system. If you specify multiple IDs, separate them using a comma. Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>xyz.ItemAttribute.updated=entry.title
+<div class="language-text highlight"><pre><span></span><code>xyz.ItemAttribute.updated=entry.title
 xyz.ItemAttribute.updated.Processors=com.acme.TransformText
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For more information, read <em>Creating and deploying custom attribute value processor plug-ins</em>.</p>
 </li>
 </ul>

@@ -2298,30 +2298,7 @@
 <li>
 <p><strong><code>spHelper.getScriptPortletPreference()</code></strong></p>
 <p>Retrieves the values for the portlet preference that is used for Script Applications.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code>// Sample using the Promise object calling the then function for the promise object
+<div class="language-text highlight"><pre><span></span><code>// Sample using the Promise object calling the then function for the promise object
  // adding functions as parameters to the then function to handle success and error 
  function sampleRetrievePreference() {
   myspHelper.getScriptPortletPreference().then(function(prefData) {
@@ -2345,18 +2322,17 @@
             alert(error.name + &quot;\n&quot; + error.message);
           });
  };
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li>
 <p><strong>Returns</strong></p>
 <p><code>{Promise}</code> A promise that resolves to {preferenceData: Object} on success and {error: Error} on error. The preferenceData is any JavaScript object that contains your preference values and can be serialized to a string value that represents the object. For example, you can define a JSON object that has a list of holidays where the portlet behaves differently.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>{&quot;holidays&quot;:[ {&quot;Month&quot;:&quot;January&quot;,&quot;Date&quot;:&quot;1&quot;}, 
+<div class="language-text highlight"><pre><span></span><code>{&quot;holidays&quot;:[ {&quot;Month&quot;:&quot;January&quot;,&quot;Date&quot;:&quot;1&quot;}, 
 {&quot;Month&quot;:&quot;June&quot;,&quot;Date&quot;:&quot;22&quot;}, {&quot;Month&quot;:&quot;July&quot;,&quot;Date&quot;:&quot;5&quot;} ]}
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Or, you can define an ordered string array where the values control a fields visibility.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[&quot;true&quot;, &quot;true&quot;, &quot;true&quot;, &quot;true&quot;, &quot;true&quot;, &quot;true&quot;, &quot;true&quot;, &quot;true&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[&quot;true&quot;, &quot;true&quot;, &quot;true&quot;, &quot;true&quot;, &quot;true&quot;, &quot;true&quot;, &quot;true&quot;, &quot;true&quot;]
+</code></pre></div>
 <p>The error is an Error object that contains the information about the Error. For example, the error ERR0001:Preference data is not available in this context results when the code is run in the preview view or the dependency on the <code>wp_client_ext</code> is missing.</p>
 </li>
 </ul>
@@ -2364,25 +2340,7 @@
 <li>
 <p><strong><code>spHelper.setScriptPortletPreference(preferenceData)</code></strong></p>
 <p>Sets the values for the portlet preference that is used for Script Applications.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>// Sample using the Promise object calling the then function for the promise object
+<div class="language-text highlight"><pre><span></span><code>// Sample using the Promise object calling the then function for the promise object
  // adding functions as parameters to the then function to handle success and error 
  function sampleSetPreference() {
  // for this script application the preferences are an array of strings
@@ -2401,18 +2359,17 @@
             alert(error.name + &quot;\n&quot; + error.message);
      });
  };
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li>
 <p><strong>Parameters</strong></p>
 <p><code>{Object}preferenceDatacan</code> can be null or any JavaScript object that contains your preference values and can be serialized to a string value that represents the object. Setting the value to null removes all preference values. Or, you can specify an array of any size of preference values that you want for this instance of the portlet. You can use these preference values to customize the portlet. For example, you can define a JSON object that has a list of holidays where the portlet behaves differently.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>{&quot;holidays&quot;:[ {&quot;Month&quot;:&quot;January&quot;,&quot;Date&quot;:&quot;1&quot;}, 
+<div class="language-text highlight"><pre><span></span><code>{&quot;holidays&quot;:[ {&quot;Month&quot;:&quot;January&quot;,&quot;Date&quot;:&quot;1&quot;}, 
 {&quot;Month&quot;:&quot;June&quot;,&quot;Date&quot;:&quot;22&quot;}, {&quot;Month&quot;:&quot;July&quot;,&quot;Date&quot;:&quot;5&quot;} ]}
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Or, you can define an ordered string array where the values control a fields visibility when the data is stored the previous data is replaced with the new data.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[&quot;true&quot;, &quot;true&quot;, &quot;true&quot;, &quot;true&quot;, &quot;true&quot;, &quot;true&quot;, &quot;true&quot;, &quot;true&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[&quot;true&quot;, &quot;true&quot;, &quot;true&quot;, &quot;true&quot;, &quot;true&quot;, &quot;true&quot;, &quot;true&quot;, &quot;true&quot;]
+</code></pre></div>
 </li>
 <li>
 <p><strong>Returns</strong></p>

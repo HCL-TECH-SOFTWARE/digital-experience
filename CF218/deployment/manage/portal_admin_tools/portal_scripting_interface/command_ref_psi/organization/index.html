@@ -3989,27 +3989,7 @@
 <p>The order of nodes is changed by the move command. It is used on a single node to assign an absolute position or to displace by a distance. The positions of the other affected nodes are updated automatically. In both cases, the new position of the node always remains within bounds. The position or displacement argument is adjusted by the bean.</p>
 <p>The move command expects the ID of the node to be moved, a keyword that indicates whether the change is absolute or relative, and the new position or distance. If the bean supports a current selection, the ID is omitted to move the selected object.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code>Layout.move(ID, &quot;to&quot;, position)
+<div class="language-text highlight"><pre><span></span><code>Layout.move(ID, &quot;to&quot;, position)
 Layout.move(ID, &quot;by&quot;, distance)
 
 # only for beans with a current selection
@@ -4030,29 +4010,9 @@ Layout.move(&quot;by&quot;, -4)
 # example: move given node to the last position
 # negative absolute positions are interpreted as max int
 Layout.move(node_ID, &quot;to&quot;, -1)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code>$Layout move ID to position
+<div class="language-text highlight"><pre><span></span><code>$Layout move ID to position
 $Layout move ID by distance
 
 # only for beans with a current selection
@@ -4073,40 +4033,28 @@ $Layout move by -4
 # example: move given node to the last position
 # negative absolute positions are interpreted as max int
 $Layout move node_ID to -1
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="hierarchy">Hierarchy</h2>
 <p>In some tree beans, you can change the parent of a node in the tree, moving the whole subtree under that node to another part of the tree.</p>
 <p>This change of the parent of a node in the tree is achieved by the commands transfer or adopt. With transfer, the ID of the node and new parent are specified explicitly, whereas adopt uses the selected layout mode as the new parent. To improve readability and avoid confusion about the interpretation of the two IDs, the arguments of the transfer command are separated by the keyword "to".</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>Content.transfer(child_ID, &quot;to&quot;, parent_ID)
+<div class="language-text highlight"><pre><span></span><code>Content.transfer(child_ID, &quot;to&quot;, parent_ID)
 Layout.transfer(child_ID, &quot;to&quot;, parent_ID)
 Layout.adopt(child_ID)
 
 # example: move a layout node under the root component of the page
 Layout.select(&quot;the&quot;, &quot;root&quot;)
 Layout.adopt(node_id)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>$Content transfer child_ID to parent_ID
+<div class="language-text highlight"><pre><span></span><code>$Content transfer child_ID to parent_ID
 $Layout transfer child_ID to parent_ID
 $Layout adopt child_ID
 
 # example: move a layout node under the root component of the page
 $Layout select the root
 $Layout adopt node_ID
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

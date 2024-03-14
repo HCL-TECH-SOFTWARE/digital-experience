@@ -5034,17 +5034,17 @@
 <h2 id="creating-a-link-to-a-file-resource">Creating a link to a file resource</h2>
 <p>To create a link to a file resource in a presentation template or element design to enable users to download the file reference, use the following tag structures.</p>
 <p>To create a link to a file resource component, you use a component tag:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;a href=&quot;[component name=&quot;FileResourceName&quot;]&quot;&gt;Link Text&lt;/a&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;a href=&quot;[component name=&quot;FileResourceName&quot;]&quot;&gt;Link Text&lt;/a&gt;
+</code></pre></div>
 <p>To create a link to a file resource element, you use an element tag. For example, to link to a file resource element in the current content item:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;a href=&quot;[element type=&quot;content&quot; context=&quot;current&quot; key=&quot;FileResourceName&quot;]&quot;&gt;Link Text&lt;/a&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;a href=&quot;[element type=&quot;content&quot; context=&quot;current&quot; key=&quot;FileResourceName&quot;]&quot;&gt;Link Text&lt;/a&gt;
+</code></pre></div>
 <h2 id="rendering-a-file-resource-on-a-page">Rendering a file resource on a page</h2>
 <p>If your file resource is a file type that can be converted to HTML, you can instead convert the file to HTML and render the converted HTML directly in your web content with the  parameter in a component or element tag. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[component name=&quot;FileResourceName&quot; ]
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[element type=&quot;content&quot; context=&quot;current&quot; key=&quot;FileResourceName&quot; ]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[component name=&quot;FileResourceName&quot; ]
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>[element type=&quot;content&quot; context=&quot;current&quot; key=&quot;FileResourceName&quot; ]
+</code></pre></div>
 <p>Examples of supported file types include:</p>
 <ul>
 <li>word-processing documents (<em>.doc, </em>.odt)</li>

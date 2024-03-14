@@ -3441,20 +3441,14 @@
 <p>Learn about the changes that were made to the XML configuration interface from earlier versions to current versions of HCL Digital Experience. This information can be useful to you if you migrate your HCL Portal from one version to a later version.</p>
 <h2 id="changed-xml-schema">Changed XML schema</h2>
 <p>The XML schema is updated for new versions of HCL Digital Experience as required. Make sure that your XML scripts specify the correct version of the XML schema according to the version of your portal installation. For example, for HCL Portal 8.5 specify the current version of the XML schema as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>   &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>   &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
    &lt;request
     xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
     xsi:noNamespaceSchemaLocation=&quot;**PortalConfig\_8.5.0.xsd**&quot;
     type=&quot;export \| update&quot;&gt;
      . . . configuration . . .
    &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The different versions of HCL Portal use the following syntax definitions for the XML configuration interface:</p>
 <table>
 <thead>

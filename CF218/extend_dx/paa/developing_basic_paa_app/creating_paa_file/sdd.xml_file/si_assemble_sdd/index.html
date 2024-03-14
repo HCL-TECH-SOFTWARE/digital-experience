@@ -2170,43 +2170,7 @@
 <p>In the PortalServer_root/doc/paa-samples directory, some sample files illustrate the PAA directory structure. You can use the assembly level sdd.xml file of the sample1.paa file as an example. This file can be used as a starting point for developers to create their own working sdd.xml files. This sample PAA file is an installable application. It can be registered with the ConfigEngine. However, it is not a working PAA file because there are no installable resources. The structure is provided so that a developer can use it to create their own PAA files.</p>
 </div>
 <p>The following is an example of an assembly level sdd.xml file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 
 h&lt;iudd:iudd
     xmlns:iudd=&quot;http://www.ibm.com/xmlns/prod/autonomic/solutioninstall/IUDD&quot;
@@ -2243,20 +2207,13 @@ h&lt;iudd:iudd
         &lt;/rootIU&gt;
     &lt;/content&gt;
 &lt;/iudd:iudd&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Inside the root <code>&lt;iudd:iudd&gt;</code> element, the following three subelements are required for installation with the Solution Installer:</p>
 <ul>
 <li>
 <p><strong>The <code>&lt;packageIdentity&gt;</code> element</strong></p>
 <p>The first element is the <code>&lt;packageIdentity&gt;</code> element; for example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;packageIdentity contentType=&quot;Assembly&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;packageIdentity contentType=&quot;Assembly&quot;&gt;
         &lt;name&gt;sample_paa&lt;/name&gt;
         &lt;version&gt;8.5.0.0&lt;/version&gt;
         &lt;displayName key=&quot;d0001&quot; default=&quot;sample_paa&quot; /&gt;
@@ -2264,7 +2221,7 @@ h&lt;iudd:iudd
             &lt;displayName key=&quot;DU_01&quot; default=&quot;IBM&quot; /&gt;
         &lt;/manufacturer&gt;
     &lt;/packageIdentity&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The <code>&lt;packageIdentity&gt;</code> element informs the Solution Installer and the ConfigEngine of the type of application to be installed. In this case, the contentType attribute equals Assembly. An assembly is a grouping of one or more components. The Solution Installer considers each PAA file as an assembly, even though it might contain only one component. Do not edit this attribute.</p>
 <p>The <code>&lt;packageIdentity&gt;</code> element contains a number of subelements that provide information about the content. The name and version elements need to be altered to suit the application you are installing. The <code>&lt;displayName&gt;</code> element can also be edited to include the assembly name, but is not required.</p>
 <p><strong>Important:</strong> The name element that is provided for an assembly must match the name of the PAA file root directory. For example, a name of sample_paa requires the root directory to also be called sample_paa.</p>
@@ -2272,29 +2229,15 @@ h&lt;iudd:iudd
 <li>
 <p><strong>The <code>&lt;topology&gt;</code> element</strong></p>
 <p>The next subelement is the <code>&lt;topology&gt;</code> element. This element does not require any alterations. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;topology&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;topology&gt;
         &lt;resource type=&quot;OSRT:OperatingSystem&quot; id=&quot;OS&quot; /&gt;
     &lt;/topology&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>The <code>&lt;content&gt;</code> element</strong></p>
 <p>The final element block is the <code>&lt;content&gt;</code> element. This element provides the Solution Installer and the ConfigEngine with the information about what to install and on which servers. The <code>&lt;rootIU&gt;</code> element is where the actual information is included. Set the ID attribute of the <code>&lt;rootIU&gt;</code> element to the name of the application as used in the <code>&lt;name&gt;</code> element of the <code>&lt;packageIdentity&gt;</code> element.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;content xsi:type=&quot;iudd:RootIUContent&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;content xsi:type=&quot;iudd:RootIUContent&quot;&gt;
         &lt;rootIU id=&quot;sample_paa&quot; targetRef=&quot;OS&quot;&gt;
         &lt;identity&gt;
                 &lt;name&gt;sample_paa&lt;/name&gt;
@@ -2307,7 +2250,7 @@ h&lt;iudd:iudd
 
         &lt;/rootIU&gt;
     &lt;/content&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The <code>&lt;identity&gt;</code> element contains the <code>&lt;name&gt;</code> subelement. Set this element to the name of the assembly found in the <code>&lt;packageIdentity&gt;</code> name element.</p>
 </li>
 </ul>

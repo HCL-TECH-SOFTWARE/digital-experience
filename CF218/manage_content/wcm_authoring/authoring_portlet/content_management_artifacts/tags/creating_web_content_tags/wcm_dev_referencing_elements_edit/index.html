@@ -3953,14 +3953,11 @@
 <h1 id="editable-element-tag">Editable element tag</h1>
 <p>The editable element tag is used to make elements from content items and site areas editable when rendered by using a web content viewer portlet when the page is in edit mode.</p>
 <p>The format of an editable element tag:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>[EditableElement type=&quot; &quot; context=&quot; &quot; name=&quot; &quot; key=&quot; &quot; format=&quot; &quot; mode=&quot; &quot; 
+<div class="language-text highlight"><pre><span></span><code>[EditableElement type=&quot; &quot; context=&quot; &quot; name=&quot; &quot; key=&quot; &quot; format=&quot; &quot; mode=&quot; &quot; 
      callback=&quot; &quot; stateChangeCallback=&quot; &quot; refreshValueOnEdit=&quot; &quot; class=&quot; &quot; htmlencode=&quot; &quot; placeholder=&quot; &quot;]
 
 [/EditableElement]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Do not use this tag if basic or advanced rendering caches are enabled because with these caches enabled, authoring updates are not immediately displayed on the rendered page.</p>
@@ -4078,20 +4075,16 @@
 </table>
 <p>Additional text, HTML, or tags must be added between the <code>[EditableElement]</code> and <code>[/EditableElement]</code> tags. The text and tags added here is what is rendered on the page. When the page is in edit mode, this region is editable. When first added to your design, a corresponding element tag is added by default.</p>
 <p>For example, to display an editable element that is named body use the following tags:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[EditableElement type=&quot;content&quot; context=&quot;current&quot; key=&quot;body&quot;]
+<div class="language-text highlight"><pre><span></span><code>[EditableElement type=&quot;content&quot; context=&quot;current&quot; key=&quot;body&quot;]
 [Element type=&quot;content&quot; context=&quot;current&quot; key=&quot;body&quot;]
 [/EditableElement]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Adding <code>pre="true"</code> to the editable element tag forces the editable element to maintain the line-formatting that is entered by the user to be retained. For example, if a user enters line-breaks, they are preserved when the field is saved. This feature is only applicable to the text and short text elemenst. This parameter should also be added to the element tag so that the line breaks are also rendered.</p>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[EditableElement type=&quot;content&quot; context=&quot;current&quot; key=&quot;body&quot; pre=&quot;true&quot;]
+<div class="language-text highlight"><pre><span></span><code>[EditableElement type=&quot;content&quot; context=&quot;current&quot; key=&quot;body&quot; pre=&quot;true&quot;]
 [Element type=&quot;content&quot; context=&quot;current&quot; key=&quot;body&quot; pre=&quot;true&quot;]
 [/EditableElement]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The context settings of portalContext and portalMapping cannot be used with the editable element tag. This restriction applies both to the editable element tag itself, and any other tags that are referenced between the <code>[EditableElement]</code> and <code>[/EditableElement]</code> tags.</p>

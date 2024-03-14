@@ -2594,49 +2594,35 @@
 </li>
 </ol>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>protected void doHeaders(RenderRequest request, RenderResponse response)
+<div class="language-text highlight"><pre><span></span><code>protected void doHeaders(RenderRequest request, RenderResponse response)
 {
     Element title = response.createElement(&quot;title&quot;);
         title.setTextContent(&quot;My Portal Page Title&quot;);
         response.addProperty(MimeResponse.MARKUP_HEAD_ELEMENT, title);  
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If you add a script tag to the portlet head section, be sure to add text to the tag. If you do not add text, the script tag is not closed properly. Consider the following incorrect code sample from a <code>doHeader</code> :</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>   String url = &quot;/sample.js&quot;;
+<div class="language-text highlight"><pre><span></span><code>   String url = &quot;/sample.js&quot;;
    Element scriptElement = response.createElement(Tag.SCRIPT.toString());
    scriptElement.setAttribute(Attribute.TYPE.toString(), &quot;text/javascript&quot;);
    scriptElement.setAttribute(Attribute.SRC.toString(), url);
    response.addProperty(MimeResponse.MARKUP_HEAD_ELEMENT, scriptElement);
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This generates a script tag in the header like as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;script src=&quot;/sample.js&quot; type=&quot;text/javascript&quot; /&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;script src=&quot;/sample.js&quot; type=&quot;text/javascript&quot; /&gt;
+</code></pre></div>
 <p>This causes rendering problems in Mozilla FireFox and other browsers.</p>
 <p>The code needs to call <code>setTextContent</code> with a non-empty string as given in the fifth line of the following code sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>   String url = &quot;/sample.js&quot;;
+<div class="language-text highlight"><pre><span></span><code>   String url = &quot;/sample.js&quot;;
    Element scriptElement = response.createElement(Tag.SCRIPT.toString());
    scriptElement.setAttribute(Attribute.TYPE.toString(), &quot;text/javascript&quot;);
    scriptElement.setAttribute(Attribute.SRC.toString(), url);
    scriptElement.setTextContent(&quot; &quot;);
    response.addProperty(MimeResponse.MARKUP_HEAD_ELEMENT, scriptElement);
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This generates a properly closed script tag in the header as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>   &lt;script src=&quot;/sample.js&quot; type=&quot;text/javascript&quot;&gt; &lt;/script&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>   &lt;script src=&quot;/sample.js&quot; type=&quot;text/javascript&quot;&gt; &lt;/script&gt;
+</code></pre></div>
 
 
 

@@ -3108,16 +3108,12 @@
 <h1 id="implementing-pageview-logging">Implementing PageView logging</h1>
 <p>To implement Web usage logging, insert a PageView bean in your JSP.</p>
 <p>Following is an example of implementing PageView logging:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;jsp:useBean class=&quot;com.ibm.wcp.analysis.beans.PageView&quot;; id=&quot;pageView&quot; scope=&quot;session&quot;; /&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;jsp:useBean class=&quot;com.ibm.wcp.analysis.beans.PageView&quot;; id=&quot;pageView&quot; scope=&quot;session&quot;; /&gt;
 
 &lt;%
    pageView.log( request );
 %&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

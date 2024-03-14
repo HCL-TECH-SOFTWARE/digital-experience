@@ -3182,23 +3182,7 @@
 <ol>
 <li>
 <p>Add ports for each portal database and for both database servers in the /etc/services file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>DB2_db2inst1      60000/tcp
+<div class="language-text highlight"><pre><span></span><code>DB2_db2inst1      60000/tcp
 DB2_db2inst1_1    60001/tcp
 DB2_db2inst1_2    60002/tcp
 DB2_db2inst1_END  60003/tcp
@@ -3215,33 +3199,23 @@ DB2_HADR_REL_1    50011/tcp
 DB2_HADR_REL_2    50012/tcp
 DB2_HADR_CUS_1    50013/tcp
 DB2_HADR_CUS_2    50002/tcp
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>DB2_HADR_DB_1 represents a database on the primary server. DB2_HADR_DB_2 represents a database on the standby server.</p>
 </li>
 <li>
 <p>Run the following command, for each portal database, to enable log archiving in the databases:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>db2 update db cfg for DBNAME using LOGARCHMETH1 LOGRETAIN
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>db2 update db cfg for DBNAME using LOGARCHMETH1 LOGRETAIN
+</code></pre></div>
 <p>The archive logs are stored in the log directory. The databases are placed into the backup pending state, which is required for the standby server.</p>
 </li>
 <li>
 <p>Run the following command for each portal database to take an offline backup:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>db2 &quot;backup database DBNAME&quot;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>db2 &quot;backup database DBNAME&quot;
+</code></pre></div>
 </li>
 <li>
 <p>Enter the following commands to configure the HADR parameters:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>db2 update db cfg for DBNAME using HADR_LOCAL_HOST IP_ADDRESS_OF_PRIMARY
+<div class="language-text highlight"><pre><span></span><code>db2 update db cfg for DBNAME using HADR_LOCAL_HOST IP_ADDRESS_OF_PRIMARY
 db2 update db cfg for DBNAME using HADR_LOCAL_SVC PORT_NUMBER_OF_PRIMARY
 db2 update db cfg for DBNAME using HADR_REMOTE_HOST IP_ADDRESS_OF_STNDBY
 db2 update db cfg for DBNAME using HADR_REMOTE_SVC PORT_NUMBER_OF_STNDBY
@@ -3252,19 +3226,9 @@ db2 update db cfg for DBNAME using HADR_SPOOL_LIMIT 0
 db2 update db cfg for DBNAME using HADR_REPLAY_DELAY 0
 db2 update db cfg for DBNAME using HADR_PEER_WINDOW 0
 db2 update db cfg for DBNAME using LOGINDEXBUILD ON
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>db2 update db cfg for COM85DB using HADR_LOCAL_HOST psvtclc08.rtp.raleigh.ibm.com
+<div class="language-text highlight"><pre><span></span><code>db2 update db cfg for COM85DB using HADR_LOCAL_HOST psvtclc08.rtp.raleigh.ibm.com
 db2 update db cfg for COM85DB using HADR_LOCAL_SVC 50003
 db2 update db cfg for COM85DB using HADR_REMOTE_HOST 9.37.17.237
 db2 update db cfg for COM85DB using HADR_REMOTE_SVC 50004
@@ -3275,20 +3239,20 @@ db2 update db cfg for COM85DB using HADR_SPOOL_LIMIT 0
 db2 update db cfg for COM85DB using HADR_REPLAY_DELAY 0
 db2 update db cfg for COM85DB using HADR_PEER_WINDOW 0
 db2 update db cfg for COM85DB using LOGINDEXBUILD ON
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Enter the following command to update the database catalog with alternative server information:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>UPDATE ALTERNATE SERVER FOR DATABASE database USING HOSTNAME hostname PORT instance\_portnumber
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>UPDATE ALTERNATE SERVER FOR DATABASE database USING HOSTNAME hostname PORT instance\_portnumber
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>db2 UPDATE ALTERNATE SERVER FOR DATABASE COM85DB USING HOSTNAME 9.37.17.237 PORT 50000
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>db2 UPDATE ALTERNATE SERVER FOR DATABASE COM85DB USING HOSTNAME 9.37.17.237 PORT 50000
+</code></pre></div>
 </li>
 <li>
 <p>Run the following command for each portal database to take an offline backup:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>db2 &quot;backup database DBNAME&quot;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>db2 &quot;backup database DBNAME&quot;
+</code></pre></div>
 </li>
 </ol>
 </li>
@@ -3300,23 +3264,7 @@ db2 update db cfg for COM85DB using LOGINDEXBUILD ON
 </li>
 <li>
 <p>Add ports for each portal database and for both database servers in the /etc/services file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>DB2_db2inst1      60000/tcp
+<div class="language-text highlight"><pre><span></span><code>DB2_db2inst1      60000/tcp
 DB2_db2inst1_1    60001/tcp
 DB2_db2inst1_2    60002/tcp
 DB2_db2inst1_END  60003/tcp
@@ -3333,7 +3281,7 @@ DB2_HADR_REL_1    50011/tcp
 DB2_HADR_REL_2    50012/tcp
 DB2_HADR_CUS_1    50013/tcp
 DB2_HADR_CUS_2    50002/tcp
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>DB2_HADR_DB_1 represents a database on the primary server. DB2_HADR_DB_2 represents a database on the standby server.</p>
 </li>
 <li>
@@ -3341,22 +3289,12 @@ DB2_HADR_CUS_2    50002/tcp
 </li>
 <li>
 <p>Run the following command to restore the database:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>db2 &quot;restore database DBNAME&quot;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>db2 &quot;restore database DBNAME&quot;
+</code></pre></div>
 </li>
 <li>
 <p>Enter the following commands to configure the HADR parameters:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>db2 update db cfg for DBNAME using HADR_LOCAL_HOST IP\_ADDRESS\_OF\_STNDBY
+<div class="language-text highlight"><pre><span></span><code>db2 update db cfg for DBNAME using HADR_LOCAL_HOST IP\_ADDRESS\_OF\_STNDBY
 db2 update db cfg for DBNAME using HADR_LOCAL_SVC PORT\_NUMBER\_OF\_STNDBY
 db2 update db cfg for DBNAME using HADR_REMOTE_HOST IP\_ADDRESS\_OF\_PRIMARY
 db2 update db cfg for DBNAME using HADR_REMOTE_SVC PORT\_NUMBER\_OF\_PRIMARY
@@ -3367,19 +3305,9 @@ db2 update db cfg for DBNAME using HADR_SPOOL_LIMIT 0
 db2 update db cfg for DBNAME using HADR_REPLAY_DELAY 0
 db2 update db cfg for DBNAME using HADR_PEER_WINDOW 0
 db2 update db cfg for DBNAME using LOGINDEXBUILD ON
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>db2 update db cfg for COM85DB using HADR_LOCAL_HOST 9.37.17.237
+<div class="language-text highlight"><pre><span></span><code>db2 update db cfg for COM85DB using HADR_LOCAL_HOST 9.37.17.237
 db2 update db cfg for COM85DB using HADR_LOCAL_SVC 50004
 db2 update db cfg for COM85DB using HADR_REMOTE_HOST psvtclc08.rtp.raleigh.ibm.com
 db2 update db cfg for COM85DB using HADR_REMOTE_SVC 50003
@@ -3390,20 +3318,20 @@ db2 update db cfg for COM85DB using HADR_SPOOL_LIMIT 0
 db2 update db cfg for COM85DB using HADR_REPLAY_DELAY 0
 db2 update db cfg for COM85DB using HADR_PEER_WINDOW 0
 db2 update db cfg for COM85DB using LOGINDEXBUILD ON
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Enter the following command to update the database catalog with alternative server information:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>UPDATE ALTERNATE SERVER FOR DATABASE database USING HOSTNAME hostname PORT instance\_portnumber
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>UPDATE ALTERNATE SERVER FOR DATABASE database USING HOSTNAME hostname PORT instance\_portnumber
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>db2 UPDATE ALTERNATE SERVER FOR DATABASE COM85DB USING HOSTNAME psvtclc08.rtp.raleigh.ibm.com PORT 50000
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>db2 UPDATE ALTERNATE SERVER FOR DATABASE COM85DB USING HOSTNAME psvtclc08.rtp.raleigh.ibm.com PORT 50000
+</code></pre></div>
 </li>
 <li>
 <p>Run the following command to start the HADR on the standby server for each portal database:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>db2 start hadr on database DBNAME as standby
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>db2 start hadr on database DBNAME as standby
+</code></pre></div>
 </li>
 </ol>
 </li>
@@ -3412,20 +3340,20 @@ db2 update db cfg for COM85DB using LOGINDEXBUILD ON
 <ol>
 <li>
 <p>Run the following command to activate the database:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>db2 activate database DBNAME
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>db2 activate database DBNAME
+</code></pre></div>
 </li>
 <li>
 <p>Run the following command for each portal database to start the HADR:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>db2 start hadr on database DBNAME as primary
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>db2 start hadr on database DBNAME as primary
+</code></pre></div>
 </li>
 </ol>
 </li>
 <li>
 <p>Run the following command to verify that the HADR is running:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>db2pd -db DBNAME -hadr
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>db2pd -db DBNAME -hadr
+</code></pre></div>
 </li>
 <li>
 <p>Complete the following steps to set up the IBM® WebSphere® Application Server JDBC connections:</p>

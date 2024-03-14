@@ -2946,46 +2946,18 @@
 <ol>
 <li>
 <p>Use and save the following as your storage class file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>kind: StorageClass 
+<div class="language-text highlight"><pre><span></span><code>kind: StorageClass 
                     apiVersion: storage.k8s.io/v1 
                     metadata: 
                     name: dx-deploy-stg 
                     provisioner: kubernetes.io/no-provisioner 
                     reclaimPolicy: Retain 
                     volumeBindingMode: WaitForFirstConsumer 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Use and save the following as your storage volume file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code>kind: PersistentVolume 
+<div class="language-text highlight"><pre><span></span><code>kind: PersistentVolume 
                     apiVersion: v1 
                     metadata: 
                     name: wp-profile-volume 
@@ -3008,7 +2980,7 @@
                     - retrans=2 
                     - noresvport 
                     volumeMode: Filesystem
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Copy both files to your local file system.</p>
@@ -3016,13 +2988,13 @@
 <li>Change at least the server and path in your sample volume .yaml file to an appropriate NFS server and volume.</li>
 <li>
 <p>To create the storage class, run the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl apply -f subclass.yaml
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl apply -f subclass.yaml
+</code></pre></div>
 </li>
 <li>
 <p>To create the storage volume, run the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl apply -f SampleZVolume.yaml
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl apply -f SampleZVolume.yaml
+</code></pre></div>
 </li>
 <li>
 <p>Continue with deployment.</p>
@@ -3032,12 +3004,10 @@
 <p class="admonition-title">Note</p>
 <p>In these examples, NFS volumes have been used. You can use the following sample yaml to create the volume in Amazon EKS OpenShift with the corrected values: </p>
 </div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>nfs:    
+<div class="language-text highlight"><pre><span></span><code>nfs:    
                 server: your_nfs_server.com    
                 path: /exports/volume_name
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

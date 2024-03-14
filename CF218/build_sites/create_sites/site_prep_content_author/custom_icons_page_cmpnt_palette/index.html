@@ -2818,21 +2818,10 @@
 </div>
 <h2 id="multi-scale-icons">Multi-scale icons</h2>
 <p>If you are using multi-scale icons, each individual image is a single entry in the ZIP file. Images with the same base name represent one logical icon. The variations of an image are size, device class, and locale. These variations are organized in the following structure:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;Width&gt;x&lt;Height&gt;/&lt;FileName&gt;_&lt;DeviceClass&gt;_&lt;Locale&gt;_&lt;TextDirection&gt;.&lt;Suffix&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;Width&gt;x&lt;Height&gt;/&lt;FileName&gt;_&lt;DeviceClass&gt;_&lt;Locale&gt;_&lt;TextDirection&gt;.&lt;Suffix&gt;
+</code></pre></div>
 <p>Where <code>&lt;Width&gt;</code> and <code>&lt;Height&gt;</code> group the icons by size. These values are a mandatory top-level directory. <code>&lt;DeviceClass&gt;</code>, <code>&lt;Locale&gt;</code>, and <code>&lt;TextDirection&gt;</code> are optional identifiers. The variations are not a part of the base name. The base name of the image is formed by <code>&lt;FileName&gt;.&lt;Suffix&gt;</code>, for instance, Applications.png. The following example is a sample directory structure inside a compressed file. The sample directory structure defines one icon, Applications.png, in different variations:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>32x32/
+<div class="language-text highlight"><pre><span></span><code>32x32/
      Applications_ar.png
      Applications_he.png
      Applications_ltr.png
@@ -2844,7 +2833,7 @@
      Applications.png
      Applications_tablet_de.png
      Applications_tablet.png
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Applications.png has two size variations, <code>32x32</code> and <code>64x64</code>. The smaller variation (<code>32x32</code>) defines an icon for <code>ar</code> and <code>he</code> variations in addition to a generic fallback icon. The smaller variation also defines an icon for languages that are read left to right by including a <code>&lt;TextDirection&gt;</code> variation that specifies <code>ltr</code>. The large one (<code>64x64</code>) includes a variation for <code>de_de</code> that specifies the German language in the locale of Germany in addition to a fallback icon for <code>de</code>. The <code>&lt;TextDirection&gt;</code> variation that specifies <code>rtl</code> defines an icon for languages that are read right to left. <code>&lt;DeviceClass&gt;</code> variations are also included for tablet devices.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

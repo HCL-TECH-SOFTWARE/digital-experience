@@ -4202,8 +4202,8 @@
 </li>
 <li>
 <p>The general format for the pdadmin command to create a virtual host junction is</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdadmin&gt; server task WebSEAL-instance\_name-webseald-WebSEAL-HostName virtualhost create -t type -h hostname \[options\] vhost-label
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>pdadmin&gt; server task WebSEAL-instance\_name-webseald-WebSEAL-HostName virtualhost create -t type -h hostname \[options\] vhost-label
+</code></pre></div>
 <p>The following information describes the mandatory parameters in the pdadmin command:</p>
 <ul>
 <li>
@@ -4257,8 +4257,8 @@ The [options] includes the following parameters:</p>
 <p>Junctions to HCL Digital Experience whether direct or through an HTTP server does not support the -q option the query_contents function. Query_contents is not possible on HCL Digital Experience.</p>
 </div>
 <p>The following information is a sample command to create a virtual host TCP junction, on the web 1 WebSEAL instance that is running on a host webseal.yourco.com, for the virtual host name portalvhost.yourco.com running on port 80 that requires a TAI in WebSphere Application Server. The virtual host junction is labeled vhost_junction_portal_1. The virtual host junction host name must be mapped in DNS to the WebSEAL server. The portal or http server is running on host portal.yourco.com and is using port 8080:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdadmin&gt; server task web1-webseald-webseal.yourco.com virtualhost create -t tcp -v portalvhost.yourco.com:80 -h portal.yourco.com -p 8080 -c all -k -b supply vhost_junction_portal_1
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>pdadmin&gt; server task web1-webseald-webseal.yourco.com virtualhost create -t tcp -v portalvhost.yourco.com:80 -h portal.yourco.com -p 8080 -c all -k -b supply vhost_junction_portal_1
+</code></pre></div>
 </li>
 </ol>
 </li>
@@ -4310,64 +4310,57 @@ The [options] includes the following parameters:</p>
 <tr>
 <td> AIX® </td>
 <td></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh validate-pdadmin-connection -DWasPassword=password 
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh validate-pdadmin-connection -DWasPassword=password 
                                               -Dwp.ac.impl.PDAdminPwd=password
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p></td>
 </tr>
 <tr>
 <td> HP-UX </td>
 <td></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh validate-pdadmin-connection -DWasPassword=password 
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh validate-pdadmin-connection -DWasPassword=password 
                                               -Dwp.ac.impl.PDAdminPwd=password
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p></td>
 </tr>
 <tr>
 <td> IBM i </td>
 <td></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>ConfigEngine.sh validate-pdadmin-connection -DWasPassword=password 
+<div class="language-text highlight"><pre><span></span><code>ConfigEngine.sh validate-pdadmin-connection -DWasPassword=password 
                                             -Dwp.ac.impl.PDdAdminPwd=password
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p></td>
 </tr>
 <tr>
 <td> Linux™ </td>
 <td></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh validate-pdadmin-connection -DWasPassword=password 
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh validate-pdadmin-connection -DWasPassword=password 
                                               -Dwp.ac.impl.PDAdminPwd=password
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p></td>
 </tr>
 <tr>
 <td> Solaris </td>
 <td></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh validate-pdadmin-connection -DWasPassword=password 
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh validate-pdadmin-connection -DWasPassword=password 
                                               -Dwp.ac.impl.PDAdminPwd=password
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p></td>
 </tr>
 <tr>
 <td> Windows™ </td>
 <td></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>ConfigEngine.bat validate-pdadmin-connection -DWasPassword=password 
+<div class="language-text highlight"><pre><span></span><code>ConfigEngine.bat validate-pdadmin-connection -DWasPassword=password 
                                              -Dwp.ac.impl.PDAdminPwd=password
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p></td>
 </tr>
 <tr>
 <td> z/OS® </td>
 <td></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh validate-pdadmin-connection -DWasPassword=password 
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh validate-pdadmin-connection -DWasPassword=password 
                                               -Dwp.ac.impl.PDAdminPwd=password
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p></td>
 </tr>
 </table></p>
@@ -4419,64 +4412,57 @@ The [options] includes the following parameters:</p>
 <tr>
 <td> AIX® </td>
 <td></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh enable-tam-tai -DWasPassword=password 
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh enable-tam-tai -DWasPassword=password 
                                  -Dwp.ac.impl.PDAdminPwd=password
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p></td>
 </tr>
 <tr>
 <td> HP-UX </td>
 <td></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh enable-tam-tai -DWasPassword=password 
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh enable-tam-tai -DWasPassword=password 
                                  -Dwp.ac.impl.PDAdminPwd=password
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p></td>
 </tr>
 <tr>
 <td> IBM i </td>
 <td></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>ConfigEngine.sh enable-tam-tai -DWasPassword=password 
+<div class="language-text highlight"><pre><span></span><code>ConfigEngine.sh enable-tam-tai -DWasPassword=password 
                                -Dwp.ac.impl.PDAdminPwd=password
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p></td>
 </tr>
 <tr>
 <td> Linux™ </td>
 <td></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh enable-tam-tai -DWasPassword=password 
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh enable-tam-tai -DWasPassword=password 
                                  -Dwp.ac.impl.PDAdminPwd=password
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p></td>
 </tr>
 <tr>
 <td> Solaris </td>
 <td></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh enable-tam-tai -DWasPassword=password 
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh enable-tam-tai -DWasPassword=password 
                                  -Dwp.ac.impl.PDAdminPwd=password
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p></td>
 </tr>
 <tr>
 <td> Windows™ </td>
 <td></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>ConfigEngine.bat enable-tam-tai -DWasPassword=password 
+<div class="language-text highlight"><pre><span></span><code>ConfigEngine.bat enable-tam-tai -DWasPassword=password 
                                 -Dwp.ac.impl.PDAdminPwd=password
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p></td>
 </tr>
 <tr>
 <td> z/OS® </td>
 <td></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh enable-tam-tai -DWasPassword=password 
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh enable-tam-tai -DWasPassword=password 
                                  -Dwp.ac.impl.PDAdminPwd=password
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p></td>
 </tr>
 </table></p>
@@ -4527,12 +4513,10 @@ The [options] includes the following parameters:</p>
 </li>
 <li>
 <p>Import HCL Digital Experience users and groups into Security Access Manager. Enter the following commands on the Security Access Manager administrative command, where wpsadmin is the user ID for the administrator, and wpsadmins is the administrators group name. The fully distinguished names of the user and group IDs vary depending on your LDAP settings.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code> user import wpsadmin uid=wpsadmin,cn=users,dc=ibm,dc=com
+<div class="language-text highlight"><pre><span></span><code> user import wpsadmin uid=wpsadmin,cn=users,dc=ibm,dc=com
  user modify wpsadmin account-valid yes
  group import wpsadmins cn=wpsadmins,cn=groups,dc=ibm,dc=com
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Some functions of HCL Digital Experience require the use of the PUT, and DELETE HTTP method. By default, WebSEAL does not allow these requests. You must either allow this method at the applicable WebSEAL ACL and web server, or change the HTTP methods in the x-method-override configuration in the WebSEAL config file webseald-instance.conf.</p>

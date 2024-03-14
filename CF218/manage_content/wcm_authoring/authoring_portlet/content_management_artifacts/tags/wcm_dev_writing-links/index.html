@@ -3684,10 +3684,9 @@
 <p>The following examples show how to write links to web content that are to be used with the web content viewer or the Web Content Manager servlet.</p>
 <h2 id="linking-to-web-content-from-other-web-content">Linking to web content from other web content</h2>
 <p>To create a link from a piece of web content to another piece of web content, use the following URL format:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>[URLCmpnt mode=&quot;current&quot; context=&quot;Selected&quot; type=&quot;Content&quot; 
+<div class="language-text highlight"><pre><span></span><code>[URLCmpnt mode=&quot;current&quot; context=&quot;Selected&quot; type=&quot;Content&quot; 
 name=&quot;library/site\_area\_path/content&quot;]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li>
 <p><strong>library</strong></p>
@@ -3704,8 +3703,8 @@ name=&quot;library/site\_area\_path/content&quot;]
 </ul>
 <h2 id="linking-to-web-content-from-an-external-portlet-or-website">Linking to web content from an external portlet or website</h2>
 <p>To create a link from an external portlet or website that displays web content, use the following URL format:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>`http://hostname/context\_root/library/site\_area\_path/content`
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>`http://hostname/context\_root/library/site\_area\_path/content`
+</code></pre></div>
 <ul>
 <li>
 <p><strong>hostname</strong></p>
@@ -3744,14 +3743,14 @@ name=&quot;library/site\_area\_path/content&quot;]
 </li>
 </ul>
 <p>Use one of the POC URIs to create a URL with the following format:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://hostname/context\_root/mypoc/virtual\_portal\_context?urile=poc\_uri
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://hostname/context\_root/mypoc/virtual\_portal\_context?urile=poc\_uri
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The POC URI needs to be URL encoded. For example:</p>
 </div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://myportal/wps/mypoc/myvp?urile=wcm%3Apath%3A/Web+Content/Articles/Sample+Article
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://myportal/wps/mypoc/myvp?urile=wcm%3Apath%3A/Web+Content/Articles/Sample+Article
+</code></pre></div>
 <p>You can add query parameters to the URL to specify how the portal resolves the POC URI.</p>
 <p>To address a specific portal page, use one of the following parameters. The parameters cannot be combined:</p>
 <ul>
@@ -3787,8 +3786,8 @@ name=&quot;library/site\_area\_path/content&quot;]
 </li>
 </ul>
 <p><strong>Dynamic page lookup:</strong> The <code>page</code> parameter is optional. You can use the link broadcasting feature of the web content viewer to dynamically look up pages by omitting the <code>page</code> parameter. For example, if you have a content item <strong>News1</strong>, stored in the library <strong>Web Content</strong> under the site area <strong>News</strong>, you can create a link to that content item with the following URL:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://hostname/context\_root\_poc?urile=wcm%3Apath%3A/Web+Content/News/News1
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://hostname/context\_root\_poc?urile=wcm%3Apath%3A/Web+Content/News/News1
+</code></pre></div>
 <ul>
 <li>
 <p><strong>hostname</strong></p>
@@ -3801,8 +3800,8 @@ name=&quot;library/site\_area\_path/content&quot;]
 </li>
 </ul>
 <p>Alternatively you can also add a specific portal page by using a URL mapping by using the following format:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://hostname/context\_root/portal_page_url_mapping/?current=true&amp;urile=wcm%3Apath%3Alibrary/site\_area\_path/content
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://hostname/context\_root/portal_page_url_mapping/?current=true&amp;urile=wcm%3Apath%3Alibrary/site\_area\_path/content
+</code></pre></div>
 <ul>
 <li>
 <p><strong>hostname</strong></p>
@@ -3835,8 +3834,8 @@ name=&quot;library/site\_area\_path/content&quot;]
 </div>
 <h2 id="adding-cache-parameters-to-a-url">Adding cache parameters to a URL</h2>
 <p>You can add web content <a href="../../../../../wcm_configuration/custom_caching/wcm_dev_caching_cache-parameters/">Cache parameters</a> and <a href="../../../../../wcm_configuration/custom_caching/wcm_dev_caching_expire-parameters/">Cache expire parameters</a> to a URL to custom caching strategies to individual items. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>`http://hostname/context\_root/library/site\_area\_path/content?cache=site&amp;contentcache=session`
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>`http://hostname/context\_root/library/site\_area\_path/content?cache=site&amp;contentcache=session`
+</code></pre></div>
 <ul>
 <li>
 <p><strong>hostname</strong></p>
@@ -3862,8 +3861,8 @@ name=&quot;library/site\_area\_path/content&quot;]
 </ul>
 <h2 id="adding-a-last-modified-parameter-to-a-url">Adding a last modified parameter to a URL</h2>
 <p>You can add the last modified date of the current content item to the header of the rendered page. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>`http://hostname/context\_root/library/site\_area\_path/content?returnLastModified=true`
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>`http://hostname/context\_root/library/site\_area\_path/content?returnLastModified=true`
+</code></pre></div>
 <ul>
 <li>
 <p><strong>hostname</strong></p>

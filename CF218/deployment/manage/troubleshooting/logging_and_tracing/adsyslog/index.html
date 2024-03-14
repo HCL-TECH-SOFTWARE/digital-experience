@@ -3476,18 +3476,17 @@
 <li>Windows™: wp_profile_root\PortalServer\config\config</li>
 </ul>
 <p>Add the following line:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>locale=xx 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>locale=xx 
+</code></pre></div>
 <p>Where xx is the two-letter abbreviation for the locale. For a list of the locale abbreviations that are used with HCL Portal, refer to the topic about Directory structure and go to the section about Directories for languages. For example, to have log information that is generated in English, you would add the following line:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code> locale=en 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code> locale=en 
+</code></pre></div>
 <h2 id="reference-log-file-format">Reference: Log file format</h2>
 <p>If the logs are written to the log file of HCL Portal and not redirected to the logging facility WebSphere Application Server, the log file consists of a sequence log records that are separated by blank lines.</p>
 <p>The log records have the following format:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>     timestamp classification classname method threadID
+<div class="language-text highlight"><pre><span></span><code>     timestamp classification classname method threadID
      messagecode: logmessage
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Where:</p>
 <ul>
 <li>The timestamp is the time (to the millisecond) when the log record was created.</li>
@@ -3541,14 +3540,11 @@
 </ol>
 </div>
 <p>Here is an example of a log record:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>2011.05.16 13:36:14.449 W com.ibm.wps.services.datastore.DataStoreServiceImpl init 0000003a
+<div class="language-text highlight"><pre><span></span><code>2011.05.16 13:36:14.449 W com.ibm.wps.services.datastore.DataStoreServiceImpl init 0000003a
 DSTO0063W: The transaction isolation level is not set to READ_COMMITTED.
 
 The current value is TRANSACTION_REPEATABLE_READ.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

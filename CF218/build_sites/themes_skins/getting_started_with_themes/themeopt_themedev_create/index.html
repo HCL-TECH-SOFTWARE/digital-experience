@@ -2623,8 +2623,8 @@
 <li>After you enter a system name that is unique and includes only valid characters, click <strong>Create</strong> to begin the theme creation. When the theme is complete, the dialog displays either a success message or an error message.</li>
 </ol>
 <p>You can also designate a theme that you created as a template. Only WebDAV-based themes are supported as templates. To designate your own theme as a template, add the following theme metadata to your theme:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>com.ibm.portal.isTemplate = true
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>com.ibm.portal.isTemplate = true
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Newly created themes are WebDAV-based. By default, they are connected to the WAR file of the template that you select, and you can reuse the dynamic content spots that are included in the template. If you want to create your own dynamic content spot, create your own WAR file with a module that defines the dynamic content spot ID. Then, you can reference that module within your profile and use that dynamic content spot ID.</p>

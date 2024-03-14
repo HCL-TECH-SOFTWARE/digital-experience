@@ -2682,8 +2682,8 @@
 <p>To make search for tag names by users easier, search suggestions provide suggestions for tag names as they appear in the tag cloud and in the tag result portlet.</p>
 <p>This is important with respect to normalization as you can configure the display mode of the tags in a tag cloud independently from the type-ahead suggestions. Compared to the query for the type-ahead feature, the search suggestions behave in terms of normalization like the display mechanism of the Tag Cloud.</p>
 <p>To query for search suggestions, use the following query:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>tos:searchsuggestions&amp;term=term
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>tos:searchsuggestions&amp;term=term
+</code></pre></div>
 <p>where term represents the beginning of a term that a user is typing for which you want the portal to provide search suggestions.</p>
 <p>The returned feed is by default sorted by relevance. This means that tags that have been applied more often are displayed before tags that have been applied less often.</p>
 <p>This query allows you to modify all of the following:</p>

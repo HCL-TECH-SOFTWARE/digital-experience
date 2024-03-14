@@ -2338,16 +2338,7 @@
 <p>If a transition defines a target that points to a transition-endpoint that references a dialog, the transition is referred to as outgoing transition. An outgoing transition represents a transition that starts when it leaves the calling dialog and enters the called one. For example, if the Car booking dialog is defined as the target in a transition and the Flight booking dialog is defined as the source, the Flight booking dialog would be the calling dialog and the Car booking dialog would be the called one. Therefore, an outgoing transition is one that starts when it leaves the Flight booking dialog and enters the Car booking dialog.</p>
 <p>If a transition defines a source that points to a transition-endpoint that references a dialog, the transition is referred to as incoming transition. An incoming transition represents a transition that starts when it returns from the called dialog and continues with the calling one. For example, if the Flight booking dialog is referenced as the source, a transition that returns from the target Car booking, the called dialog to the source Flight booking, the calling dialog and continues with the steps then it is an incoming transition.</p>
 <p>For more information about transitions, go to <em>Transitions</em> and for more information about starting dialogs from within other dialogs, go to <em>Dialog chaining and nesting</em>.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;dialog name=&quot;dialog1&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;dialog name=&quot;dialog1&gt;
  &lt;transition-endpoint name=&quot;dialog2&quot;&gt;
       &lt;localedata locale=&quot;en&quot;&gt;
            &lt;title&gt;Dialog 2&lt;/title&gt;
@@ -2357,7 +2348,7 @@
       &lt;invocation type=&quot;static&quot;/&gt;
 ...
  &lt;/transition-endpoint&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

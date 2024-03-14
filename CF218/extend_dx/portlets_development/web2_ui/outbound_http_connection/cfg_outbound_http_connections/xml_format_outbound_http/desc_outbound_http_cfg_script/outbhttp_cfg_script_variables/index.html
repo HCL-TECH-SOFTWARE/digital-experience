@@ -3382,15 +3382,7 @@
 </li>
 </ul>
 <p>The following example illustrates the usage of an endpoint variable:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;proxy-rules xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;    
+<div class="language-text highlight"><pre><span></span><code>&lt;proxy-rules xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;    
    xsi:noNamespaceSchemaLocation=&quot;http://www.ibm.com/xmlns/prod/sw/http/outbound/proxy-config/2.0&quot;&gt;
      &lt;variables&gt;
           &lt;endpoint name=&quot;the_remote_host&quot;&gt;www.myremotehost.com&lt;/endpoint&gt;
@@ -3399,7 +3391,7 @@
           &lt;actions&gt;&lt;method&gt;GET&lt;/method&gt;&lt;/actions&gt;
      &lt;/policy&gt;
 &lt;/proxy-rules&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following example shows the usage of a dynamic policy variable. The policy that is defined in this example applies to the following URL patterns:</p>
 <ul>
 <li><code>http://www.myremotehost.com/*</code></li>
@@ -3407,23 +3399,7 @@
 <li><code>https://www.myremotehost.com/*</code></li>
 <li><code>https://w3.myremotehost.com/*</code></li>
 </ul>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;proxy-rules xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;    
+<div class="language-text highlight"><pre><span></span><code>&lt;proxy-rules xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;    
     xsi:noNamespaceSchemaLocation=&quot;http://www.ibm.com/xmlns/prod/sw/http/outbound/proxy-config/2.0&quot;&gt;
      &lt;variables&gt;
           &lt;dynamic-policy name=&quot;my_prot_selector&quot;&gt;
@@ -3440,7 +3416,7 @@
           &lt;actions&gt;&lt;method&gt;GET&lt;/method&gt;&lt;/actions&gt;
      &lt;/policy&gt;
 &lt;/proxy-rules&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

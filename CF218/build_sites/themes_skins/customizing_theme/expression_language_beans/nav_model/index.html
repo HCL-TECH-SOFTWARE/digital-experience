@@ -4168,12 +4168,10 @@
 <p><strong>children(node)</strong></p>
 <p>Returns an iterator of child nodes.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;c:forEach var=&quot;node&quot; items=&quot;${wp.navigationModel.children[wp.identification[wp.selectionModel.selected]]}&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;c:forEach var=&quot;node&quot; items=&quot;${wp.navigationModel.children[wp.identification[wp.selectionModel.selected]]}&quot;&gt;
     ${node}&lt;br&gt;
 &lt;/c:forEach&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Parameters:</p>
 <ul>
 <li>
@@ -4187,8 +4185,8 @@
 <p><strong>get(id)</strong></p>
 <p>Get an individual navigation node.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.navigationModel[id]}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.navigationModel[id]}
+</code></pre></div>
 <p>Parameters:</p>
 <ul>
 <li>
@@ -4202,8 +4200,8 @@
 <p><strong>hasChildren</strong></p>
 <p>Determines whether the specified <a href="themeopt_el_bean_nav_node/">NavigationNode</a> has associated nodes.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.navigationModel.hasChildren[wp.selectionModel.selected]}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.navigationModel.hasChildren[wp.selectionModel.selected]}
+</code></pre></div>
 <p>Parameters:</p>
 <ul>
 <li>
@@ -4217,8 +4215,8 @@
 <p><strong>parent</strong></p>
 <p>Access to the parent of a <a href="themeopt_el_bean_nav_node/">NavigationNode</a>.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.navigationModel.parent[wp.selectionModel.selected]}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.navigationModel.parent[wp.selectionModel.selected]}
+</code></pre></div>
 <p>Parameters:</p>
 <ul>
 <li>
@@ -4232,12 +4230,10 @@
 <p><strong>path(node)</strong></p>
 <p>Provides access to the path information for the node. The path represents the hierarchy from the root to the give node as a list. It is like a breadcrumb.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;c:forEach var=&quot;node&quot; items=&quot;${wp.navigationModel.path[wp.selectionModel.selected]}&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;c:forEach var=&quot;node&quot; items=&quot;${wp.navigationModel.path[wp.selectionModel.selected]}&quot;&gt;
     &amp;lt;- ${node}
 &lt;/c:forEach&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Parameters:</p>
 <ul>
 <li>
@@ -4251,8 +4247,8 @@
 <p><strong>root</strong></p>
 <p>Returns the root node of the navigation model.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.navigationModel.root}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.navigationModel.root}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="themeopt_el_bean_nav_node/">NavigationNode</a>; it is never null.</p>
 </li>

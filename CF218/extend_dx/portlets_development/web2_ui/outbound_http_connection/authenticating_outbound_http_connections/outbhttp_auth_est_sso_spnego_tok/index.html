@@ -3156,20 +3156,14 @@
 <h1 id="establishing-sso-connections-through-spnego-token">Establishing SSO connections through SPNEGO token</h1>
 <p>To establish a Single Sign-On (SSO) connection through SPNEGO token, you enable an outbound connection policy for the SSO connection through SPNEGO token.</p>
 <p>The settings in the following example code snippet enable an SSO outbound connection policy through SPNEGO token. The example assumes that the connection <code>http://the_remote_server.com/sso-protected/</code> is a remote site that is protected by an SPNEGO token.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;policy url=&quot;http://the_remote_server.com/sso-protected/*&quot;  
+<div class="language-text highlight"><pre><span></span><code>&lt;policy url=&quot;http://the_remote_server.com/sso-protected/*&quot;  
      basic-auth-support=&quot;true&quot;&gt;
      &lt;meta-data&gt;
           &lt;name&gt;hpaa.authtype&lt;/name&gt;
           &lt;value&gt;spnego&lt;/value&gt;
      &lt;/meta-data&gt;
 &lt;/policy&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li>The policy attribute <code>basic-auth-support</code> enables the authentication filter.</li>
 <li>The value of the metadata parameter <code>hpaa.authtype</code> specifies the authentication type as SSO authentication by using SPNEGO tokens.</li>

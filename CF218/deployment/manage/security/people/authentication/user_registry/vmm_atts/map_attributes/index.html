@@ -4130,21 +4130,16 @@
 <li>federated.ldap.attributes.mapping.entityTypes</li>
 </ul>
 <p>The following values flag certificate and members as unsupported attributes and maps ibm-primaryEmail to mail and ibm-jobTitle to title for the PersonAccount entityTypes:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>federated.ldap.attributes.nonSupported=certificate, members
+<div class="language-text highlight"><pre><span></span><code>federated.ldap.attributes.nonSupported=certificate, members
 federated.ldap.attributes.nonSupported.delete=
 
 federated.ldap.attributes.mapping.ldapName=mail, title
 federated.ldap.attributes.mapping.portalName=ibm-primaryEmail, ibm-jobTitle
 federated.ldap.attributes.mapping.entityTypes=PersonAccount
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If you want to map attributes for your groups instead of users, set the entityTypes to Group.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>federated.ldap.attributes.mapping.entityTypes=Group
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>federated.ldap.attributes.mapping.entityTypes=Group
+</code></pre></div>
 </li>
 <li>
 <p>Save your changes to the wkplc.properties file.</p>

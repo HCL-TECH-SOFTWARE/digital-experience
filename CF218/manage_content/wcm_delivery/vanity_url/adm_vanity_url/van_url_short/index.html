@@ -2361,38 +2361,34 @@
 </li>
 <li>
 <p>Activate the following modules:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>proxy_module
+<div class="language-text highlight"><pre><span></span><code>proxy_module
 proxy_http_module 
 rewrite_module
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Activate the rewrite engine by adding the following line:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>RewriteEngine   On
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>RewriteEngine   On
+</code></pre></div>
 </li>
 <li>
 <p>Add the rewrite rule by adding the following line:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>RewriteRule ^/([^/]+)$             /wps/vanityurl/$1        [P]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>RewriteRule ^/([^/]+)$             /wps/vanityurl/$1        [P]
+</code></pre></div>
 <p>This rule redirects all single path requests to the vanity URL servlet. The <code>P</code> flag at the end of the line tells the rewrite engine to use a proxy request. This flag is required for the IBM® WebSphere® Application Server plug-in to handle the request without an extra redirect.</p>
 </li>
 <li>
 <p>If your website editors work in projects and you want them to be able to use short vanity URLs by the HTTP server, you need an extra rewrite rule as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>RewriteRule     ^/\$project/([^/]+)/([^/]+)$             /wps/vanityurl/\$project/$1/$2         [P]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>RewriteRule     ^/\$project/([^/]+)/([^/]+)$             /wps/vanityurl/\$project/$1/$2         [P]
+</code></pre></div>
 <p>This rule rewrites all URLs that start with <code>/$project/project name/vanity name</code>.</p>
 </li>
 <li>
 <p>The rules that are given in the previous steps might prevent static files in the document directories of your HTTP server from being served. To have them served, add conditions before the rewrite rule as in the following example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>RewriteCond     %{DOCUMENT_ROOT}%{REQUEST_FILENAME}     !-f
+<div class="language-text highlight"><pre><span></span><code>RewriteCond     %{DOCUMENT_ROOT}%{REQUEST_FILENAME}     !-f
 RewriteCond     %{DOCUMENT_ROOT}%{REQUEST_FILENAME}     !-d
 RewriteCond     %{DOCUMENT_ROOT}%{REQUEST_FILENAME}     !-l
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>In this example, <code>f</code> means file, <code>d</code> means directory, and <code>l</code> means symbolic link. With these conditions added, the portal does not apply the rewrite rule on requests that match a file, directory, or symbolic link. The user accesses the file, directory, or link and is not redirected to the target website of the vanity URL. For more information, see the information under <em>Apache Module mod_rewrite</em>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -2402,8 +2398,8 @@ RewriteCond     %{DOCUMENT_ROOT}%{REQUEST_FILENAME}     !-l
 <li>
 <p>If you use Web Application Bridge, add a rewrite rule to avoid namespace conflicts.</p>
 <p>Web Application Bridge must be mapped to the root context. As a result, vanity URLs and Web Application Bridge are in the same namespace, which can result in conflicts. Therefore, if you use Web Application Bridge, you might also define a more specific rewrite rule than the rule given earlier. Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>RewriteRule ^/([^/\.]+)$             /wps/vanityurl/$1        [P]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>RewriteRule ^/([^/\.]+)$             /wps/vanityurl/$1        [P]
+</code></pre></div>
 <p>With this rewrite rule, the portal redirects only names that consist of only one segment and contain no periods. This rewrite rule avoids conflicts with file names, such as shoe_sale.html. For project work, modify the rule as required.</p>
 </li>
 <li>

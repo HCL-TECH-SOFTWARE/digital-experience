@@ -3909,8 +3909,8 @@
 <li>
 <p>Create the new virtual host junctions that are based on the junctions from the previous instance:</p>
 <p>The general format for the pdadmin command to create a virtual host junction is</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdadmin&gt; server task WebSEAL-instance_name-webseald-WebSEAL-HostName virtualhost create -t type -h hostname [options] vhost-label
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>pdadmin&gt; server task WebSEAL-instance_name-webseald-WebSEAL-HostName virtualhost create -t type -h hostname [options] vhost-label
+</code></pre></div>
 <p>The following information describes the mandatory parameters in the pdadmin command:</p>
 <ul>
 <li>
@@ -3960,8 +3960,8 @@ The header types must be comma-separated, and cannot have a space between the ty
 <p>Junctions to HCL Digital Experience whether direct or through an HTTP server does not support the -q option the query_contents function. Query_contents is not possible on HCL Digital Experience</p>
 </div>
 <p>The following information is a sample command to create a virtual host TCP junction, on the web 1 WebSEAL instance that is running on a host webseal.yourco.com, for the virtual host name portalvhost.yourco.com running on port 80 that requires a TAI in WebSphere Application Server. The virtual host junction is labeled vhost_junction_portal_1. The virtual host junction host name must be mapped in DNS to the WebSEAL server. The portal or http server is running on host portal.yourco.com and is using port 8080:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pdadmin&gt; server task web1-webseald-webseal.yourco.com virtualhost create -t tcp -v portalvhost.yourco.com:80 -h portal.yourco.com -p 8080 -c all -k -b supply vhost_junction_portal_1
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>pdadmin&gt; server task web1-webseald-webseal.yourco.com virtualhost create -t tcp -v portalvhost.yourco.com:80 -h portal.yourco.com -p 8080 -c all -k -b supply vhost_junction_portal_1
+</code></pre></div>
 </li>
 <li>
 <p>Delete the old junctions with the appropriate administration commands.</p>

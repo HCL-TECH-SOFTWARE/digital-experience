@@ -2371,16 +2371,7 @@
 <p>A transition endpoint can reference pages as the target of a screen flow transition.</p>
 <h2 id="reference-a-single-page">Reference a single page</h2>
 <p>A transition with a source that points to a transition endpoint that references a single page is triggered. The transition is triggered when any portlet on the particular page that is referenced emits the event that is defined as part of the transitions source. For example, in a travel site, in a Flight booking dialog the transition with Calendar portlet as the source can reference the departure date page as the target.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;dialog name=&quot;dialog1&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;dialog name=&quot;dialog1&quot;&gt;
    &lt;transition-endpoint name=&quot;page1&quot;&gt;
         &lt;localedata locale=&quot;page1&quot;&gt;
               &lt;title&gt;Subdialog 1&lt;/title&gt;
@@ -2390,22 +2381,11 @@
         &lt;invocation type=&quot;static&quot;/&gt;
 ...
 &lt;/transition-endpoint&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="reference-multiple-pages">Reference multiple pages</h2>
 <p>As with portlets, it is also possible to reference multiple pages as part of a single transition-endpoint. For example, in a Flight booking dialog, the transition with Calendar portlet as the source can reference the departure date page and return date page as targets.</p>
 <p>A transition with a source that points to a transition-endpoint that references multiple pages is triggered. The transition is triggered when any portlet on any of the pages that are referenced emits the event. The emitted event must be defined as part of the transitions source.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;dialog name=&quot;dialog1&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;dialog name=&quot;dialog1&quot;&gt;
    &lt;transition-endpoint name=&quot;page1_2_3&quot;&gt;
          &lt;localedata locale=&quot;en&quot;&gt;
                &lt;title&gt;Subdialog 1&lt;/title&gt;
@@ -2417,22 +2397,13 @@
           &lt;invocation type=&quot;static&quot;/&gt;
 ...
 &lt;/transition-endpoint&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="reference-page-hierarchies">Reference page hierarchies</h2>
 <p>A portlet can consist of a well-defined set of topologically connected pages. The pages are part of a connected graph. In some scenarios, you might want a transition to be triggered when any portlet on any page that is part of a connected graph emits the event. The event that is emitted must be defined as part of the transition's source.</p>
 <p>To list all the pages, you can point to a page hierarchy by referencing the hierarchy's root page. You can reference the root page through its unique name and with the optional attribute <code>type</code> with value hierarchy.</p>
 <p>A transition with a source that points to a transition-endpoint that references a page hierarchy is triggered. The transition is triggered when any page that is a direct or indirect child of the referenced root page emits the event. The event that is emitted must be defined as part of the transitions source.</p>
 <p>For example, in a travel site, in a Flight booking dialog, the transition can point to the Destination portlet. The Destination portlet can consist of several pages that provide data on possible destination locations the user can choose. To list all the pages in the destination portlet the transition can reference the hierarchy root page, for example, Europe.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;dialog name=&quot;dialog1&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;dialog name=&quot;dialog1&quot;&gt;
   &lt;transition-endpoint name=&quot;pageHierarchy1&quot;&gt;
        &lt;localedata locale=&quot;en&quot;&gt;
             &lt;title&gt;Subdialog 1&lt;/title&gt;
@@ -2442,7 +2413,7 @@
         &lt;invocation type=&quot;static&quot;/&gt;
 ...
 &lt;/transition-endpoint&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

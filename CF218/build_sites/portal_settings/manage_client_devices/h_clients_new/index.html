@@ -2294,8 +2294,8 @@
 <ul>
 <li>
 <p><strong>User agent:</strong> This field is mandatory. Enter the name of the client, which should match, as close as possible, the user agent string that the client sends in its request header. You might need to enter several string patterns for a single client. In addition, surround the name with a period plus asterisk combination, for example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code> .*useragent.* 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code> .*useragent.* 
+</code></pre></div>
 <p>This wild card string is used and resolved according to the wild card resolution rules of the Apache foundation. Keep the following in mind:</p>
 <ul>
 <li>Some user agent strings contain locale information about the language of the client browser. The portal uses the language definition in the HTTP request header for its language selection. It usually is not necessary to define user agent patterns that take respect on certain browser languages.</li>

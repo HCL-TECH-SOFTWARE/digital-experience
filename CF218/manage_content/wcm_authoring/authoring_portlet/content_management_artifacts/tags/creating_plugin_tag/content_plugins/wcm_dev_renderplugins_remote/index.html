@@ -3970,10 +3970,9 @@
 
 <p>Use the RemoteAction plug-in to reference remote actions from your web content. Remote actions are used to run actions, such as creating and editing items and generating views.</p>
 <p>You can reference remote actions by using plug-in tags with the following format:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>[plugin:RemoteAction action=&quot; &quot; docid=&quot; &quot; 
+<div class="language-text highlight"><pre><span></span><code>[plugin:RemoteAction action=&quot; &quot; docid=&quot; &quot; 
 useCurrentSelection=&quot; &quot; dialog=&quot; &quot; useCurrentContext=&quot; &quot;]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li>
 <p><strong><code>action=</code></strong></p>
@@ -3993,18 +3992,13 @@ useCurrentSelection=&quot; &quot; dialog=&quot; &quot; useCurrentContext=&quot; 
 </li>
 </ul>
 <p>This example demonstrates a "new" action to create a content item:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>[plugin:RemoteAction action=&quot;new&quot; 
+<div class="language-text highlight"><pre><span></span><code>[plugin:RemoteAction action=&quot;new&quot; 
 type=&quot;com.ibm.workplace.wcm.api.WCM_Content&quot; 
 pid=&quot;com.ibm.workplace.wcm.api.WCM_SiteArea/ID2&quot; 
 atid=&quot;com.aptrix.pluto.presentation.template/ID1&quot; 
 wcmfield.content.name=&quot;newcontent&quot; 
 wcmfield.autosave=&quot;true&quot; wcmfield.saveValidate=&quot;true&quot; ] 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For details on the remote actions that you can access with plug-in tags, see <em>Using remote actions</em>.</p>
 
 

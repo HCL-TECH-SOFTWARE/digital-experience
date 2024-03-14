@@ -2325,39 +2325,37 @@
 </li>
 <li>
 <p>Load the HCL Experience API image using the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>docker load --input hcl-dx-ringapi-image-v1.4.0.&lt;YOUR_BUILD_NUMBER&gt;.tar.gz
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>docker load --input hcl-dx-ringapi-image-v1.4.0.&lt;YOUR_BUILD_NUMBER&gt;.tar.gz
+</code></pre></div>
 </li>
 <li>
 <p>Verify if the Docker image is loaded using the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>docker image ls
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>REPOSITORY                         TAG                    IMAGE ID       CREATED        SIZE
+<div class="language-text highlight"><pre><span></span><code>docker image ls
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>REPOSITORY                         TAG                    IMAGE ID       CREATED        SIZE
 
 hcl/dx/ringapi                     v1.4.0_20201109-2209   0d5efd03401f   4 weeks ago    947MB
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Execute the following Docker command to bring up the HCL Experience API Docker image:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>docker run -it -p 3000:3000 -p 3001:3001 hcl/dx/ringapi:v1.4.0.&lt;YOUR_BUILD_NUMBER&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>docker run -it -p 3000:3000 -p 3001:3001 hcl/dx/ringapi:v1.4.0.&lt;YOUR_BUILD_NUMBER&gt;
+</code></pre></div>
 <ul>
 <li>
 <p>You may modify the most common values by passing in the parameters as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>docker run -it -p 3000:3000 -p 3001:3001 -e PORTAL_HOST=172.16.1.4 -e PORTAL_PORT=30015 hcl/dx/ringapi:v1.4.0.&lt;YOUR_BUILD_NUMBER&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>docker run -it -p 3000:3000 -p 3001:3001 -e PORTAL_HOST=172.16.1.4 -e PORTAL_PORT=30015 hcl/dx/ringapi:v1.4.0.&lt;YOUR_BUILD_NUMBER&gt;
+</code></pre></div>
 </li>
 <li>
 <p>If you wish to use <code>https</code> to connect to HCL Digital Experience 9.5 for security reasons, the command to start would be:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>docker run -it -p 3000:3000 -p 3001:3001 -e PORTAL_HOST=172.16.1.4 -e PORTAL_PORT=30015 -e PORTAL_SSL_ENABLED=true hcl/dx/ringapi:v1.4.0.&lt;YOUR_BUILD_NUMBER&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>docker run -it -p 3000:3000 -p 3001:3001 -e PORTAL_HOST=172.16.1.4 -e PORTAL_PORT=30015 -e PORTAL_SSL_ENABLED=true hcl/dx/ringapi:v1.4.0.&lt;YOUR_BUILD_NUMBER&gt;
+</code></pre></div>
 </li>
 <li>
 <p>If you wish to update the <code>CORS_ORIGIN</code>, the command to start would be:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>docker run -it -p 3000:3000 -p 3001:3001 -e PORTAL_HOST=172.16.1.4 -e PORTAL_PORT=30015 -e CORS_ORIGIN=&quot;http://localhost:3002, http://localhost:3003&quot; hcl/dx/ringapi:v1.4.0.&lt;YOUR_BUILD_NUMBER&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>docker run -it -p 3000:3000 -p 3001:3001 -e PORTAL_HOST=172.16.1.4 -e PORTAL_PORT=30015 -e CORS_ORIGIN=&quot;http://localhost:3002, http://localhost:3003&quot; hcl/dx/ringapi:v1.4.0.&lt;YOUR_BUILD_NUMBER&gt;
+</code></pre></div>
 </li>
 </ul>
 </li>
@@ -2367,13 +2365,13 @@ hcl/dx/ringapi                     v1.4.0_20201109-2209   0d5efd03401f   4 weeks
 <li>Verify if the GraphQL application is accessible through URL <code>http://&lt;HOST&gt;:&lt;GRAPHQL_PORT&gt;dx/api/core/v1/graphql</code> (example: http://127.0.0.1:3001/dx/api/core/v1/graphql).</li>
 <li>
 <p>To verify if the HCL Experience API is properly connected to HCL Digital Experience 9.5, please run the following command. Login credentials must be an authenticated username and password:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>curl -X POST &quot;http://&lt;HOST&gt;:&lt;PORT&gt;dx/api/core/v1/auth/login&quot; -H &quot;accept: application/json&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{\&quot;username\&quot;:\&quot;&lt;USER_NAME&gt;\&quot;,\&quot;password\&quot;:\&quot;&lt;PASSWORD&gt;\&quot;}&quot;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>curl -X POST &quot;http://&lt;HOST&gt;:&lt;PORT&gt;dx/api/core/v1/auth/login&quot; -H &quot;accept: application/json&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{\&quot;username\&quot;:\&quot;&lt;USER_NAME&gt;\&quot;,\&quot;password\&quot;:\&quot;&lt;PASSWORD&gt;\&quot;}&quot;
+</code></pre></div>
 </li>
 <li>
 <p>To validate if login is successful, response should be:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>{&quot;statusCode&quot;:200,&quot;message&quot;:&quot;Login Successful&quot;,&quot;data&quot;:{&quot;UId&quot;:&quot;(USER_NAME)&quot;}}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>{&quot;statusCode&quot;:200,&quot;message&quot;:&quot;Login Successful&quot;,&quot;data&quot;:{&quot;UId&quot;:&quot;(USER_NAME)&quot;}}
+</code></pre></div>
 </li>
 </ol>
 <h2 id="limitations">Limitations</h2>

@@ -3812,17 +3812,15 @@
 </li>
 <li>
 <p><strong>Jacl example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;$DocumentLibrary create &quot;Library1&quot;
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;$DocumentLibrary create &quot;Library1&quot;
 &quot;library1&quot;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Jython example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;DocumentLibrary.create(&quot;Library1&quot;)
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;DocumentLibrary.create(&quot;Library1&quot;)
 &#39;&quot;library1&quot;&#39;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="delete-libraries">Delete libraries</h2>
@@ -3834,13 +3832,13 @@
 </li>
 <li>
 <p><strong>Jacl example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;$DocumentLibrary delete &quot;Library1&quot;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;$DocumentLibrary delete &quot;Library1&quot;
+</code></pre></div>
 </li>
 <li>
 <p><strong>Jython example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;DocumentLibrary.delete(&quot;Library1&quot;)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;DocumentLibrary.delete(&quot;Library1&quot;)
+</code></pre></div>
 </li>
 </ul>
 <h2 id="list-libraries">List libraries</h2>
@@ -3852,25 +3850,19 @@
 </li>
 <li>
 <p><strong>Jacl example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;$DocumentLibrary listall
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;$DocumentLibrary listall
 &quot;template page content&quot; &quot;wiki template v70&quot; &quot;blog template v70&quot; &quot;web resources v70&quot;
 &quot;portal site&quot; &quot;web content templates&quot; &quot;blog solo template v70&quot; &quot;web content&quot;
 &quot;library1&quot;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Jython example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;DocumentLibrary.listall()
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;DocumentLibrary.listall()
 &#39;&quot;template page content&quot; &quot;wiki template v70&quot; &quot;blog template v70&quot; &quot;web resources v70&quot;
 &quot;portal site&quot; &quot;web content templates&quot; &quot;blog solo template v70&quot; &quot;web content&quot;
 &quot;library1&quot;&#39;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="retrieve-library-details">Retrieve library details</h2>
@@ -3882,37 +3874,25 @@
 </li>
 <li>
 <p><strong>Jacl example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;$DocumentLibrary details &quot;Library1&quot;
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;$DocumentLibrary details &quot;Library1&quot;
 uuid       : 64fa541a-a189-4ed6-8a6f-4c3dcc148295
 name       : library1
 title      : Library1
 description:
 enabled            : true
 deletion prohibited: false
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Jython example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;print DocumentLibrary.details(&quot;Library1&quot;)
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;print DocumentLibrary.details(&quot;Library1&quot;)
 uuid       : 13b06eb0-52c7-415b-9a93-4195968aa2a3
 name       : library1
 title      : Library1
 description:
 enabled            : true
 deletion prohibited: false
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <details class="info" open="open">

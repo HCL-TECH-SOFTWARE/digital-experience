@@ -2441,25 +2441,16 @@
 <h1 id="lookup-facility-in-the-portal">Lookup facility in the portal</h1>
 <p>For both convenience and alignment to other portal REST services, the portal remote REST service for PUMA offers a lookup facility. This lookup facility is done by plugging a provider into a reusable lookup facility in the portal. This function makes it possible for you to retrieve particular URLs of the service by specifying an absolute URI as a parameter to the so-called lookup servlet addressed by <code>/wps/poc</code>.</p>
 <p>The absolute URIs for the remote REST service for PUMA can be constructed from the service URL paths. They can also be taken from the <code>atom:id</code> elements of the ATOM feeds or entries. The URIs are completely UTF-8 encoded. When you construct a URI manually, you take the URI path after the element <code>/um/</code> without a leading slash, add <code>um:</code> as URI prefix, and encode the whole expression by using UTF-8. Example URL:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/um/secure/users/profiles?searchAttributes=uid%3Dwps*
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/um/secure/users/profiles?searchAttributes=uid%3Dwps*
+</code></pre></div>
 <p>This URL has the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>um:secure/users/profiles%3FsearchAttributes%3Duid%3Dwps*
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>um:secure/users/profiles%3FsearchAttributes%3Duid%3Dwps*
+</code></pre></div>
 <p>You can then call the following URL:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/wps/poc?uri=um:secure/users/profiles%3FsearchAttributes%3Duid%3Dwps*
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/wps/poc?uri=um:secure/users/profiles%3FsearchAttributes%3Duid%3Dwps*
+</code></pre></div>
 <p>If you do so, you are redirected to the corresponding REST service URL. For GET operations, it is mandatory to append <code>&amp;mode=download</code> to the URI so that a redirect is done to get the data. Or, when you use the <code>verb=lookup</code> parameter, which is mandatory for operations other than GET, get an ATOM feed with the service description such as the one shown here:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;atom:entry xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot; xmlns:xhtml=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
     &lt;atom:author&gt;
         &lt;atom:name&gt;HCL Digital Experience&lt;/atom:name&gt;
@@ -2469,7 +2460,7 @@
     &lt;atom:title&gt;Remote PUMA REST service URI information&lt;/atom:title&gt;
     &lt;atom:updated&gt;2006-12-19T19:21:37.562Z&lt;/atom:updated&gt;
 &lt;/atom:entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If you need the service description of several REST Service URLs, you can set the <code>uri</code> parameter multiple times by using different URIs. In this case, the lookup servlet aggregates the descriptions into one ATOM feed.</p>
 
 

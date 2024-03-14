@@ -3913,45 +3913,26 @@
 <p>Jacl: $Content root</p>
 <p>You can select a node by its ID by using the select command. You can clear the current selection by using deselect or by using select without an argument. You can return the ID of the selected node by using the current command. For interactive use, csn is an alias for current.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>Content.select ID
+<div class="language-text highlight"><pre><span></span><code>Content.select ID
 Content.deselect
 Content.current
 Content.csn
 
 # example: select the root node
 Content.select(Content.root())
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>$Content select ID
+<div class="language-text highlight"><pre><span></span><code>$Content select ID
 $Content deselect
 $Content current
 $Content csn
 
 # example: select the root node
 $Content select [$Content root]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The path command returns a list of all IDs from the root to the currently selected node. In a similar way, the children command returns the children of the selected node. You can obtain the ID of the parent of the selected node by using parent.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>Content.path
+<div class="language-text highlight"><pre><span></span><code>Content.path
 Content.parent
 Content.children
 
@@ -3959,48 +3940,36 @@ Content.children
 Content.select(node\_ID)
 for child in Content.children().split():
     print child
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>$Content path
+<div class="language-text highlight"><pre><span></span><code>$Content path
 $Content parent
 $Content children
 
 # example: select a node and print its children
 $Content select node_ID
 foreach child [$Content children] { puts &quot;$child&quot; }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You can also use the commands path, parent, and children with an explicit ID instead of implicitly referring to the currently selected node.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>Content.path(ID)
+<div class="language-text highlight"><pre><span></span><code>Content.path(ID)
 Content.parent(ID)
 Content.children(ID)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>$Content path ID
+<div class="language-text highlight"><pre><span></span><code>$Content path ID
 $Content parent ID
 $Content children ID
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For simplicity, there are dedicated select commands for the root node and for the parent of the currently selected node. In the following example, the first argument is a dummy that is used to distinguish the method from the select with an ID argument. The dummy argument is not interpreted. The second argument is a keyword, which is not case-sensitive. Alternative, shorter keywords are documented in the bean help.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>Content.select(&quot;the&quot;, &quot;root&quot;)
+<div class="language-text highlight"><pre><span></span><code>Content.select(&quot;the&quot;, &quot;root&quot;)
 Content.select(&quot;the&quot;, &quot;parent&quot;)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>$Content select the root
+<div class="language-text highlight"><pre><span></span><code>$Content select the root
 $Content select the parent
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

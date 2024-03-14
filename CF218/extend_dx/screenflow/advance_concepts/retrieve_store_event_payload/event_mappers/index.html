@@ -2156,21 +2156,7 @@
 <p>Implement <code>MapperFactory</code> to make the mappers available. You can register the <code>MapperFactory</code> with an Eclipse Extension Point. The advantage of this approach is that you can register new mappers without having to restart the server. This method is also called hot deployment. To use a <code>MapperFactory</code>, you need to implement the interface <code>MapperFactory</code> and return an object instance of type <code>ContextToPayloadMapper</code> or <code>PayloadToContextMapper</code>. This implementation depends on the concrete event mapper that is requested.</p>
 <p>The following code sample shows an example of how a <code>MapperFactory</code> can look.</p>
 <p>Code sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code> public class MapperFactory implements com.ibm.portal.pcm.events.MapperFactory {
+<div class="language-text highlight"><pre><span></span><code> public class MapperFactory implements com.ibm.portal.pcm.events.MapperFactory {
 
   public ContextToPayloadMapper getContextToPayloadMapper(String name) {      
       ContextToPayloadMapper result = null;       
@@ -2185,20 +2171,10 @@
       // ...
   }
  }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following code sample shows how you can register a <code>MapperFactory</code> with a plugin.xml file.</p>
 <p>Code sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code> &lt;plugin
+<div class="language-text highlight"><pre><span></span><code> &lt;plugin
      id=&quot;com.ibm.wps.portlet.pcm.demo&quot;
      name=&quot;Portlet Control Manager Demo&quot;
      version=&quot;1.0.0&quot;
@@ -2209,7 +2185,7 @@
          &lt;factory class=&quot;com.ibm.wps.pcm.demo.mapper.MapperFactory&quot;/&gt;
      &lt;/extension&gt;
  &lt;/plugin&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

@@ -3299,12 +3299,10 @@
 <h1 id="dynamically-changing-the-language-during-the-user-session">Dynamically changing the language during the user session</h1>
 <p>Allow users to change the language while they are logged in to the portal.</p>
 <p>If you want your users to be able to change the language during the session, use the following command provided by HCL Digital Experience:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portal-navigation:url command=&quot;ChangeLanguage&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;portal-navigation:url command=&quot;ChangeLanguage&quot;&gt;
    &lt;portal-navigation:urlParam name=&quot;locale&quot; value=&quot;language&quot;/&gt;
 &lt;/portal-navigation:url&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>where language is the two character code for the required language, such as en, de, or fr. For a list of the available languages and their two character codes read <em>Language support</em>.</p>
 <p>For users to be able to dynamically change the language for the session, add a link to the portal theme with the following text and link reference:</p>
 <ul>
@@ -3314,20 +3312,14 @@
 <p>Users can then click this link to change to the language specified by the locale parameter with the command. If you want to make more than one language available to users, you create a separate link for each language.</p>
 <p><strong>Example:</strong> 
 To create links for English and German, add the lines shown in the following example to the banner area of your theme:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;!-- add these lines --&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;!-- add these lines --&gt;
 &lt;a href=&quot;&lt;portal-navigation:url command=&quot;ChangeLanguage&quot;&gt;&lt;portal-navigation:urlParam name=&quot;locale&quot; 
      value=&quot;en&quot;/&gt;&lt;/portal-navigation:url&gt;&quot;&gt;English&lt;/a&gt;
 &lt;a href=&quot;&lt;portal-navigation:url command=&quot;ChangeLanguage&quot;&gt;&lt;portal-navigation:urlParam name=&quot;locale&quot; 
      value=&quot;de&quot;/&gt;&lt;/portal-navigation:url&gt;&quot;&gt;Deutsch&lt;/a&gt;
 
 &lt;%-- logout button --%&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The banner area can be defined in different files, depending on the different themes. Themes in recent portal versions commonly define the banner area within the Default.jsp, whereas older themes can include a separate JSP, such as banner_toolbar.jsp. For more information about locating the files for your themes refer to the topic about the Location of theme resources.</p>
 <div class="admonition note">
 <p class="admonition-title">Notes</p>

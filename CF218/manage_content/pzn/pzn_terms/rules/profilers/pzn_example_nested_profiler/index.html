@@ -3228,16 +3228,12 @@
 <p>View an example of a nested profiler.</p>
 <p>A nested profiler is true if any, all, or none of the profilers within the profiler are true. You can categorize a condition as a combination of other conditions. For example, a Web site visitor can be profiled as a young male if a preexisting gender profiler classifies the visitor as male, and a preexisting age profiler classifies as the visitor as being in his teens or twenties.</p>
 <h2 id="nested-profiler">Nested profiler</h2>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>AgeGenderProfiler is
+<div class="language-text highlight"><pre><span></span><code>AgeGenderProfiler is
          YoungMale when
              GenderProfiler is Male and
              AgeProfiler is any of Teenager or Twenties
         Otherwise NotInTargetAudience
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

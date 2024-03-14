@@ -3797,24 +3797,20 @@
 </li>
 </ul>
 <p>Note that even in symbolic object IDs, anything after the first space is not significant for processing. For example, you could use the following snippet to create a portlet and put it on a page using a symbolic object ID:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>   &lt;portlet action=&quot;update&quot; . . . objectid=&quot;Welcome_Portlet&quot; . . . &gt;
+<div class="language-text highlight"><pre><span></span><code>   &lt;portlet action=&quot;update&quot; . . . objectid=&quot;Welcome_Portlet&quot; . . . &gt;
        . . .
    &lt;portletinstance action=&quot;update&quot; . . . portletref=&quot;Welcome_Portlet&quot; . . . &gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>As the object ID values are purely symbolic, you cannot use them in a reference without first "defining" them in the same XML script. Before you can use the portletref="Welcome_Portlet" attribute specification in an XML update, you must also have a portlet with objectid="Welcome_Portlet" defined in the same XML; otherwise a syntax error is reported.</p>
 <p>Of course, the object IDs in the XML are also not used for looking up a resource. If you want to refer to an existing resource, you need to use a unique name instead. For details see the information later in this section and in the topic about <em>Lookup of portal resources</em>. In ID generating mode, the following snippet locates an existing portlet by its name, "defines" a symbolic object ID for it and places the portlet on a page:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>   &lt;portlet action=&quot;locate&quot; name=&quot;Welcome Portlet&quot; objectid=&quot;Welcome_Portlet&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>   &lt;portlet action=&quot;locate&quot; name=&quot;Welcome Portlet&quot; objectid=&quot;Welcome_Portlet&quot;&gt;
         . . .
    &lt;portletinstance action=&quot;update&quot; . . . portletref=&quot;Welcome_Portlet&quot; . . . &gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>As object IDs are not used to identify existing resources in ID generating mode, it is good practice to define unique names for all resources that are created in such scripts. That way, if the script is executed twice, the second execution can find and update the resource by its unique name, instead of creating two identical resources.</p>
 <p>When you create resources using symbolic object IDs, it can sometimes be useful to know the actual object IDs of the new resources. You can set the export-mapping flag on the main request attribute to obtain this information:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>     &lt;request . . .export-mapping=&quot;true&quot; . . . &gt;  
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>     &lt;request . . .export-mapping=&quot;true&quot; . . . &gt;  
+</code></pre></div>
 <p>When you set this flag, a mapping section is appended to the XML response. For every symbolic object ID given in the input, this mapping shows the actual object ID in the portal data store.</p>
 <p>The ID generating mode is useful if you want to create an XML script that installs a group of new resources and is executed on many different portal installations. This can be, for example, a part of the installation procedure of a portal add-on that you give out to other parties. In this case, you have no control over the systems on which the XML script is executed, and it is of no interest to you which object IDs the resources actually get.</p>
 <div class="admonition note">

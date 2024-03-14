@@ -3245,33 +3245,7 @@
 <li>In the credential slot, you need to enter the Coremetrics user name and client ID, separated by a hash sign ( <code>**\#**</code> ), either as a shared user ID in the portal Administration user interface, or as an <code>external-id</code> in the XML configuration interface script.<br>
    For example: If you have a Coremetrics user name <code>Bob</code> and a Coremetrics client ID <code>123456789</code>, enter these values as <code>"Bob#123456789"</code> in the credential slot. Here is a sample XML configuraion interface script for creating required Credential Vault entries:</li>
 </ol>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;request    
+<div class="language-text highlight"><pre><span></span><code>&lt;request    
    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;    
    xsi:noNamespaceSchemaLocation=&quot;PortalConfig_8.5.0.xsd&quot;    
    type=&quot;update&quot; create-oids=&quot;true&quot;&gt;        
@@ -3298,7 +3272,7 @@
       &lt;/credential-segment&gt;    
    &lt;/portal&gt;
 &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>In the sample XML script, replace the following variables with your actual Coremetrics user data values:</p>
 <ul>
 <li>

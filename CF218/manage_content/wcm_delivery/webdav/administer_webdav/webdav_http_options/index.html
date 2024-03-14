@@ -2474,27 +2474,20 @@
 </li>
 <li>
 <p>Edit the file application.xml of the exported EAR, and uncomment or add the following section:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;module&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;module&gt;
                                                   &lt;web&gt;
                                                   &lt;web-uri&gt;wp.webdav.options.war&lt;/web-uri&gt;
                                                   &lt;context-root&gt;/&lt;/context-root&gt;
                                                   &lt;/web&gt;
                                                   &lt;/module&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Run the following command to collapse the EAR:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>./EARExpander.sh|bat   -ear directory/wps.ear 
+<div class="language-text highlight"><pre><span></span><code>./EARExpander.sh|bat   -ear directory/wps.ear 
                                                             -operationDir directory/wps_expanded 
                                                             -operation collapse
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Update the enterprise application with these changes by using the WebSphere Integrated Solutions Console.</p>

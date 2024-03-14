@@ -2537,16 +2537,7 @@
 <li>
 <p>To add a menu item, add XML code to the end of the file, just before &lt;/body&gt;&lt;/html&gt; tags.</p>
 <p>The following sample code adds a menu item called <strong>Test Action</strong>.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;div class=&quot;com.ibm.portal.action&quot; style=&quot;display:none;&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;div class=&quot;com.ibm.portal.action&quot; style=&quot;display:none;&quot;&gt;
  &lt;span class=&quot;action-id&quot;&gt;test.action1&lt;/span&gt;
  &lt;span class=&quot;action-impl&quot;&gt;/javascript/TestAction.js&lt;/span&gt;
  &lt;span class=&quot;action-context&quot;&gt;person&lt;/span&gt;
@@ -2556,7 +2547,7 @@
  &lt;span class=&quot;action-url&quot;&gt;javascript:TestAction.execute(@@@ARGS@@@)&lt;/span&gt;
  &lt;span class=&quot;action-order&quot;&gt;0&lt;/span&gt;
 &lt;/div&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Save the changes to the file.</p>
@@ -2564,14 +2555,7 @@
 <li>
 <p>Create a JavaScript™ file that executes the action you want to occur when the associated menu item is selected.</p>
 <p>The following sample code generates an alert when the menu item <strong>Test Action</strong> is selected.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>var TestAction = {
+<div class="language-text highlight"><pre><span></span><code>var TestAction = {
   showif: function(person) {
     return true;
   },
@@ -2579,7 +2563,7 @@
     alert(&quot;TestAction executed for: &quot; + person.fn);
   }
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Paste the JavaScript file (TestAction.js) in a directory where it can be accessed by a URL. For example you could put the TestAction.js file in either a JavaScript directory in the root of your web server (/javascript/TestAction.js) or a directory in your theme WAR file /yourthemecontext/javascript/TestAction.js.</p>
 </li>
 <li>

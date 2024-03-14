@@ -3315,11 +3315,11 @@
 </li>
 <li>
 <p>From the &lt;profile_root&gt;/bin directory, launch the wsadmin tool.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./wsadmin.sh -user &lt;PortalAdminId&gt; -password &lt;PortalAdminPwd&gt; -lang jython -port &lt;WAS_SOAP_port&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>./wsadmin.sh -user &lt;PortalAdminId&gt; -password &lt;PortalAdminPwd&gt; -lang jython -port &lt;WAS_SOAP_port&gt;
+</code></pre></div>
 <p>Replace the values in &lt;&gt; with those for your environment.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./wsadmin.sh -user wpsadmin -password wpsadmin -lang jython -port 10033
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>./wsadmin.sh -user wpsadmin -password wpsadmin -lang jython -port 10033
+</code></pre></div>
 </li>
 <li>
 <p>Run the command to export the wps application. In this example, the EAR file will be written to /tmp/wps.ear/AdminApp.export('wps','/tmp/wps.ear')</p>
@@ -3329,33 +3329,33 @@
 </li>
 <li>
 <p>From the &lt;profile_root&gt;/bin directory, extract the EAR file using EARExpander.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./EARExpander.sh -ear /tmp/wps.ear -operationDir /tmp/wpsear_expanded -operation expand -expansionFlags all
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>./EARExpander.sh -ear /tmp/wps.ear -operationDir /tmp/wpsear_expanded -operation expand -expansionFlags all
+</code></pre></div>
 </li>
 <li>
 <p>Make the updates to the web.xml and web_merged.xml files.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/tmp/wpsear_expanded/wps.war/WEB-INF/web.xml
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/tmp/wpsear_expanded/wps.war/WEB-INF/web_merged.xml
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/tmp/wpsear_expanded/wps.war/WEB-INF/web.xml
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>/tmp/wpsear_expanded/wps.war/WEB-INF/web_merged.xml
+</code></pre></div>
 </li>
 <li>
 <p>Run the EARExpander tool to compress the EAR file.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./EARExpander.sh -ear /tmp/wps.ear -operationDir /tmp/wpsear_expanded -operation collapse
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>./EARExpander.sh -ear /tmp/wps.ear -operationDir /tmp/wpsear_expanded -operation collapse
+</code></pre></div>
 </li>
 <li>
 <p>Back in the wsadmin command prompt, run this command to deploy the updated wps.ear file.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>AdminApp.update(&#39;wps&#39;, &#39;app&#39;, [&#39;-operation&#39;, &#39;update&#39;, &#39;-contents&#39;, &#39;/tmp/wps.ear&#39;, &#39;-deployejb.classpath&#39;, &#39;&lt;PortalServer_root&gt;/base/wp.base/shared/app/wp.base.jar&#39;])
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>AdminApp.update(&#39;wps&#39;, &#39;app&#39;, [&#39;-operation&#39;, &#39;update&#39;, &#39;-contents&#39;, &#39;/tmp/wps.ear&#39;, &#39;-deployejb.classpath&#39;, &#39;&lt;PortalServer_root&gt;/base/wp.base/shared/app/wp.base.jar&#39;])
+</code></pre></div>
 <p>Replace the value in <code>&lt;PortalServer_root&gt;</code> with the path for the PortalServer binaries your environment.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>AdminApp.update(&#39;wps&#39;, &#39;app&#39;, [&#39;-operation&#39;, &#39;update&#39;, &#39;-contents&#39;, &#39;/tmp/wps.ear&#39;, &#39;-deployejb.classpath&#39;, &#39;/opt/IBM/WebSphere/PortalServer/base/wp.base/shared/app/wp.base.jar&#39;])
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>AdminApp.update(&#39;wps&#39;, &#39;app&#39;, [&#39;-operation&#39;, &#39;update&#39;, &#39;-contents&#39;, &#39;/tmp/wps.ear&#39;, &#39;-deployejb.classpath&#39;, &#39;/opt/IBM/WebSphere/PortalServer/base/wp.base/shared/app/wp.base.jar&#39;])
+</code></pre></div>
 </li>
 <li>
 <p>Commit the changes to the WAS configuration with this command.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>AdminConfig.save()
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>AdminConfig.save()
+</code></pre></div>
 </li>
 <li>
 <p>Exit the wsadmin tool.</p>

@@ -4275,19 +4275,7 @@
 <li>Install DB2.</li>
 <li>Enter the following commands to tune your database:</li>
 </ol>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>db2 &quot;CREATE DB dbname using codeset UTF-8 territory us PAGESIZE 8192&quot;
+<div class="language-text highlight"><pre><span></span><code>db2 &quot;CREATE DB dbname using codeset UTF-8 territory us PAGESIZE 8192&quot;
 db2 &quot;UPDATE DB CFG FOR dbname USING applheapsz 4096&quot;
 db2 &quot;UPDATE DB CFG FOR dbname USING app_ctl_heap_sz 1024&quot;
 db2 &quot;UPDATE DB CFG FOR dbname USING stmtheap 32768&quot;
@@ -4300,7 +4288,7 @@ db2 &quot;UPDATE DB CFG FOR dbname USING logbufsz 32&quot;
 db2 &quot;UPDATE DB CFG FOR dbname USING avg_appls 5&quot;
 db2 &quot;UPDATE DB CFG FOR dbname USING locktimeout 30&quot;
 db2 &quot;UPDATE DB CFG FOR dbname using AUTO_MAINT off&quot;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p></td>
 </tr>
 <tr>

@@ -3011,15 +3011,13 @@
 <h1 id="allowable-rating-values">Allowable rating values</h1>
 <p>Learn about the parameters that govern the allowable range of ratings.</p>
 <p>Specify the allowable range of ratings by setting <code>db.applic.param.lowestrating</code> (default is 0) to the lowest allowable rating and <code>db.applic.param.numberratingvalues</code>(default is 13) to the number of possible ratings. This setting also determines the recommendation value. This example specifies a rating scale of zero to twelve:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>db.applic.param.lowestrating = 0
+<div class="language-text highlight"><pre><span></span><code>db.applic.param.lowestrating = 0
 db.applic.param.numberratingvalues = 13
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The parameters <code>db.applic.param.wontrate</code> (default is -1) and <code>db.applic.param.unrated</code> (default is -2) set special allowable rating values that are not part of the normal rating scale. Setting an item to unrated marks the rating for deletion. <code>wontrate</code> means that a user has specifically indicated that he or she does not plan to rate the item.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>db.applic.param.wontrate = -3
+<div class="language-text highlight"><pre><span></span><code>db.applic.param.wontrate = -3
 db.applic.param.unrated = -2
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The LikeMinds server ignores ratings which are neither in the specified range of rating values nor equal to <code>db.applic.param.wontrate</code> or <code>db.applic.param.unrated</code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

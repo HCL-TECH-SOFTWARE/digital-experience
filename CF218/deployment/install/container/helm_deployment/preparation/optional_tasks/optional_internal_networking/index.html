@@ -2325,28 +2325,20 @@
 <p>This section contains the procedure to deploy DX on the internal network.</p>
 <h2 id="how-to-deploy-dx-on-the-internal-network">How to deploy DX on the internal network</h2>
 <p>To deploy DX on the internal network (with no public access), we need to add the platform-specific annotations for the HAProxy service. Update your custom <code>values.yaml</code> file with the annotation specific to your cloud provider. Refer to the list of <a href="https://kubernetes.io/docs/concepts/services-networking/service/#internal-load-balancer">annotations</a>.</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">annotations</span><span class="p">:</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span>
 <span class="w">    </span><span class="c1"># Annotations for haproxy service.</span>
 <span class="w">    </span><span class="nt">haproxy</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="example">
 <summary>Example for GKE:</summary>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">annotations</span><span class="p">:</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span>
 <span class="w">    </span><span class="c1"># Annotations for haproxy service.</span>
 <span class="w">    </span><span class="nt">haproxy</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cloud.google.com/load-balancer-type</span>
 <span class="w">      </span><span class="nt">value </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Internal&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </details>
 <h2 id="how-to-update-the-existing-deployment">How to update the existing deployment</h2>
 <p>Follow the steps to update an existing deployment from an external network to an internal network or vice-versa:</p>
@@ -2359,46 +2351,26 @@
 <p>Disable HAProxy in your custom <code>values.yaml</code> file and then do helm update.</p>
 <details class="example">
 <summary>Example:</summary>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">  </span><span class="c1"># Controls which application is deployed and configured</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="w">  </span><span class="c1"># Controls which application is deployed and configured</span>
 <span class="nt">applications</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Deploys haproxy</span>
 <span class="w">  </span><span class="nt">haproxy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </details>
 </li>
 <li>
 <p>After updating your custom <code>values.yaml</code> file, run helm update command.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>helm upgrade dx-deployment -n &lt;your namespace&gt; . -f ./&lt;your customized `values.yaml` file&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>helm upgrade dx-deployment -n &lt;your namespace&gt; . -f ./&lt;your customized `values.yaml` file&gt;
+</code></pre></div>
 <details class="example">
 <summary>Example:</summary>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>helm upgrade dx-deployment -n dxns . -f ./cloud-deploy-values.yaml
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>helm upgrade dx-deployment -n dxns . -f ./cloud-deploy-values.yaml
+</code></pre></div>
 </details>
 </li>
 <li>
 <p>After the update is completed, enable HAProxy and add annotations specific to your cloud provider in custom <code>values.yaml</code> file.</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Controls which application is deployed and configured</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Controls which application is deployed and configured</span>
 <span class="nt">applications</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Deploys haproxy</span>
 <span class="w">  </span><span class="nt">haproxy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -2416,32 +2388,32 @@
 <span class="w">    </span><span class="nt">haproxy</span><span class="p">:</span>
 <span class="w">     </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cloud.google.com/load-balancer-type</span>
 <span class="w">       </span><span class="nt">value </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Internal&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>To switch your existing deployment from an internal network to a public network, remove the annotation from the ***haproxy service.***
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>To switch your existing deployment from an internal network to a public network, remove the annotation from the ***haproxy service.***
+</code></pre></div>
 </div>
 </li>
 <li>
 <p>After updating <code>values.yaml</code> with annotations, run helm update command.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>helm upgrade dx-deployment -n &lt;your namespace&gt; . -f ./&lt;your custom values file&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>helm upgrade dx-deployment -n &lt;your namespace&gt; . -f ./&lt;your custom values file&gt;
+</code></pre></div>
 <details class="example">
 <summary>Example:</summary>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>helm upgrade dx-deployment -n dxns . -f ./cloud-deploy-values.yaml
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>helm upgrade dx-deployment -n dxns . -f ./cloud-deploy-values.yaml
+</code></pre></div>
 </details>
 </li>
 <li>
 <p>Do a helm update with your existing custom <code>values.yaml</code> file to make sure all the updates are present in the deployment.</p>
 <p>Run the helm update command with the updated <code>values.yaml</code> file.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>helm upgrade dx-deployment -n &lt;your namespace&gt; . -f ./your custom values file&gt;&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>helm upgrade dx-deployment -n &lt;your namespace&gt; . -f ./your custom values file&gt;&gt;
+</code></pre></div>
 <details class="example">
 <summary>Example:</summary>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>helm upgrade dx-deployment -n external-lb . -f ./cloud-deploy-values.yaml
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>helm upgrade dx-deployment -n external-lb . -f ./cloud-deploy-values.yaml
+</code></pre></div>
 </details>
 </li>
 </ol>

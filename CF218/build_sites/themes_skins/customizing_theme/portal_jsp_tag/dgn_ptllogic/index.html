@@ -3506,16 +3506,12 @@
 <p class="admonition-title">Note</p>
 <p>All earlier attributes that started with "not" are deprecated. Use the &lt;portal-logic:unless/&gt; tag instead of these attributes.</p>
 </div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>    &lt;portal-logic:if loggedIn=&quot;yes&quot; screen=&quot;Home&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>    &lt;portal-logic:if loggedIn=&quot;yes&quot; screen=&quot;Home&quot;&gt;
 
        &lt;!--  content area --&gt;
 
     &lt;/portal-logic:if&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Attributes of the &lt;portal-logic:if/&gt; tag:</p>
 <ul>
 <li>
@@ -3556,15 +3552,7 @@ If you have a syntax error in your equation, such as mismatched parentheses, an 
 <li>
 <p><strong>loggedIn="yes|no"</strong></p>
 <p>Indicates whether the user is logged in. For example, the following code displays a login link if the user is not logged in:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>   &lt;%-- login button --%&gt;
+<div class="language-text highlight"><pre><span></span><code>   &lt;%-- login button --%&gt;
    &lt;portal-logic:if loggedIn=&quot;no&quot; notScreen=&quot;Login&quot;&gt;
       &lt;td class=&quot;wpsToolBar&quot; valign=&quot;middle&quot; nowrap&gt;
          &lt;a class=&quot;wpsToolBarLink&quot; 
@@ -3573,7 +3561,7 @@ If you have a syntax error in your equation, such as mismatched parentheses, an 
          &lt;/a&gt;
       &lt;/td&gt;
    &lt;/portal-logic:if&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>navigationAvailable="yes|no"</strong></p>
@@ -3598,32 +3586,23 @@ If you have a syntax error in your equation, such as mismatched parentheses, an 
 <li>
 <p><strong>pageCompletelyActive="yes|no"</strong></p>
 <p>Indicates whether the page and its parents are active. The following example displays a message if the page is not active.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>    &lt;portal-logic:if pageCompletelyActive=&quot;no&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>    &lt;portal-logic:if pageCompletelyActive=&quot;no&quot;&gt;
        &lt;p align=&quot;center&quot; class=&quot;wpsFieldErrorText&quot;&gt;&lt;b&gt;&lt;br&gt;
           &amp;gt;&amp;gt;&amp;gt;
                 &lt;portal-fmt:text key=&quot;info.pagenotcompletelyactive&quot; bundle=&quot;nls.engine&quot;/&gt;
           &amp;lt;&amp;lt;&amp;lt;
        &lt;br&gt;&lt;/b&gt;&lt;/p&gt;
     &lt;/portal-logic:if&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>pageBookmarkable="true|false"</strong></p>
 <p>Renders its contents if the page can be bookmarked. A page can be set to bookmark with <strong>Manage pages</strong>. The following example provides an "Add to favorites" option in a select list. Users can bookmark the current page, if it can be bookmarked.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>    &lt;portal-logic:if pageBookmarkable=&quot;true&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>    &lt;portal-logic:if pageBookmarkable=&quot;true&quot;&gt;
        &lt;option value=&#39;&lt;portal:url command=&quot;AddBookmark&quot; alias=&quot;Favorites&quot;/&gt;&#39; &gt;
        &lt;portal-fmt:text key=&#39;link.favorites.add&#39; bundle=&#39;nls.engine&#39;/&gt;
     &lt;/portal-logic:if&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>portletMaximized="yes|no"</strong></p>
@@ -3637,24 +3616,19 @@ If you have a syntax error in your equation, such as mismatched parentheses, an 
 <li>
 <p><strong>portletState="portlet_state"</strong></p>
 <p>Checks if the portlet is in the indicated state. Portlet states are <code>normal</code>, <code>maximized</code>, and <code>minimized</code>. For example, in <code>Control.jsp</code>, the following code sets the <code>tableHeight</code> variable to 100%.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>    &lt;portal-logic:if portletState=&quot;Normal,Maximized&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>    &lt;portal-logic:if portletState=&quot;Normal,Maximized&quot;&gt;
         &lt;% tableHeight = &quot;height=\&quot;100%\&quot;&quot;; %&gt;
     &lt;/portal-logic:if&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>portletSolo="yes|no"</strong></p>
 <p>Checks whether the portal is displaying a portlet in solo state. In the following example from <code>Default.jsp</code>, the navigation are hidden when the current portlet is displayed in solo state.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>       &lt;portal-logic:if portletSolo=&quot;no&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>       &lt;portal-logic:if portletSolo=&quot;no&quot;&gt;
           &lt;%@ include file=&quot;./topNav.jspf&quot; %&gt;                              
           &lt;%@ include file=&quot;./sideNav.jspf&quot; %&gt;
        &lt;/portal-logic:if&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>problem="problem"</strong></p>
@@ -3681,47 +3655,25 @@ If you have a syntax error in your equation, such as mismatched parentheses, an 
 <li>
 <p><strong>screen="screen_name"</strong></p>
 <p>Checks the value of the current screen name. Use a comma to separate multiple screen names. In the following example, the content of the tag is displayed only when the selected screen is Home, LoggedIn, or LoggedOut.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>    &lt;portal-logic:if navigationAvailable=&quot;yes&quot; screen=&quot;Home,LoggedIn,LoggedOut&quot;&gt;    
+<div class="language-text highlight"><pre><span></span><code>    &lt;portal-logic:if navigationAvailable=&quot;yes&quot; screen=&quot;Home,LoggedIn,LoggedOut&quot;&gt;    
 
     ....
 
     &lt;/portal-logic:if&gt;    
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>selection</strong></p>
 <p>Specifies the unique name or object ID of the currently selected page. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>    &lt;portal-logic:if selection=&quot;ibm.portal.Home&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>    &lt;portal-logic:if selection=&quot;ibm.portal.Home&quot;&gt;
       You are on Home
     &lt;/portal-logic:if&gt;    
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>showTools="yes|no"</strong></p>
 <p>Indicates whether to display more controls for the portlet title bar and page tabs. In the following example, the <code>show_tools_off.gif</code> icon is displayed for the condition when showTools="no".</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>      &lt;portal-logic:if showTools=&quot;no&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>      &lt;portal-logic:if showTools=&quot;no&quot;&gt;
        &lt;% if (firstButton) { firstButton = false; } else { %&gt; | &lt;% } %&gt;
          &lt;a href=&#39;&lt;portal-navigation:url command=&quot;ShowTools&quot;/&gt;&#39;&gt; 
             &lt;img border=&quot;0&quot; align=&quot;absmiddle&quot; width=&quot;16&quot; height=&quot;19&quot; 
@@ -3738,7 +3690,7 @@ If you have a syntax error in your equation, such as mismatched parentheses, an 
                  alt=&#39;&lt;portal-fmt:text key=&quot;link.hide.tools&quot; bundle=&quot;nls.engine&quot;/&gt;&#39; 
                  title=&#39;&lt;portal-fmt:text key=&quot;link.hide.tools&quot; bundle=&quot;nls.engine&quot;/&gt;&#39;&lt;/a&gt;
       &lt;/portal-logic:if&gt;   
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For either condition, the <portal-navigation:url command="ShowTools"/> command is used to change the value of showTools. It allows the icon on the portal page to be used as a toggle. This condition is also checked in <code>ShowTools.jsp</code> to determine whether to render the move and delete portlet icons in the portlet title bar.</p>
 </li>
 <li>
@@ -3762,14 +3714,7 @@ If you have a syntax error in your equation, such as mismatched parentheses, an 
 </li>
 </ul>
 <p>The Content metadata model is described in more detail in the Model SPI overview topic. The following example outputs a table with all names and values of the aggregated metadata of the current page.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portal-logic:pageMetaData varname=&quot;pageMetaData&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;portal-logic:pageMetaData varname=&quot;pageMetaData&quot;&gt;
   &lt;table&gt;
     &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Value&lt;/th&gt;&lt;/tr&gt;
     &lt;c:forEach var=&quot;metaItem&quot; items=&quot;${pageMetaData}&quot;&gt;
@@ -3777,7 +3722,7 @@ If you have a syntax error in your equation, such as mismatched parentheses, an 
     &lt;/c:forEach&gt;
   &lt;/table&gt;
 &lt;/portal-logic:pageMetaData&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong><portal-logic:unless></strong></p>

@@ -3492,18 +3492,7 @@
 <ol>
 <li>
 <p>Run the following XML to create the "Vietnamese" language. Click the <strong>Administration menu</strong> icon. Then, click <strong>Portal Settings &gt; Import XML</strong>.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;request xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
     type=&quot;update&quot; 
     xsi:noNamespaceSchemaLocation=&quot;PortalConfig_8.5.0.xsd&quot;&gt;
@@ -3515,7 +3504,7 @@
         &lt;/language&gt;
     &lt;/portal&gt;
 &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Copy the contents of the following files from your Portal server into a new file called language_vi_vn.js:</p>
@@ -3526,17 +3515,17 @@
 <li>If you use Tagging and Rating P(ortalServer_root/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/modules/portalclient/js/nls/tagging_rating_en_us.js)</li>
 <li>In the language_vi_vn.js file, replace all instances of:</li>
 </ul>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>en_us&quot;)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>en_us&quot;)
+</code></pre></div>
 <p>with:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>vi_vn&quot;)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>vi_vn&quot;)
+</code></pre></div>
 <p>and all instances of:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>.en_us=
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>.en_us=
+</code></pre></div>
 <p>with:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>.vi_vn=
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>.vi_vn=
+</code></pre></div>
 </li>
 <li>
 <p>Place the language_vi_vn.js file into the js folder of your custom theme.</p>
@@ -3544,24 +3533,7 @@
 </li>
 <li>
 <p>Create a theme module for the language_vi_vn.js file by creating a languages.json file with the following contents:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
     &quot;modules&quot;:[{
         &quot;id&quot;:&quot;custom_languages&quot;,
         &quot;prereqs&quot;:[{
@@ -3579,7 +3551,7 @@
         }]
     }]
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For more information about theme modules, see Registering theme modules.</p>
 </li>
 <li>

@@ -2449,14 +2449,7 @@
 <ol>
 <li>
 <p>Create a Java class that implements the interface com.ibm.workplace.wcm.api.ContextProcessor. This class must implement the following method:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>/**
+<div class="language-text highlight"><pre><span></span><code>/**
     * Processes the supplied &lt;i&gt;ContextProcessorParams&lt;/i&gt; and updates parameters within
     * as necessary
     * 
@@ -2464,7 +2457,7 @@
     * @param p_contextProcessorParams The editable &lt;i&gt;ContextProcessorParams&lt;/i&gt; object 
     */
    public void process(HttpSession p_currentSession, ContextProcessorParams p_contextProcessorParams);
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the <a href="../../../../guide_me/wpsdirstr/">PortalServer_root</a> <code>/doc/Javadoc/spi_docs/com/ibm/workplace/wcm</code> directory.</p>
 </li>
 <li>
@@ -2472,14 +2465,7 @@
 </li>
 <li>
 <p>A plugin.xml file is needed whether the deployment is done by using a WAR or EAR, or by using a loose JAR file. If deployed by using an application in a WAR or EAR, include the plugin.xml file in the application "WEB-INF" folder. When a JAR file is used, include the plugin.xml in the root of the JAR file.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;plugin id=&quot;SampleContextProcessorPluginId&quot; 
 name=&quot;SampleContextProcessor&quot; provider-name=&quot;IBM&quot; version=&quot;1.0.0&quot;&gt;
     &lt;extension point=&quot;com.ibm.workplace.wcm.api.ContextProcessor&quot; 
@@ -2487,7 +2473,7 @@ name=&quot;SampleContextProcessor&quot; provider-name=&quot;IBM&quot; version=&q
         &lt;processor class=&quot;com.acme.SampleContextProcessor&quot;/&gt;
     &lt;/extension&gt;
 &lt;/plugin&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Edit the settings of the web content viewer portlet you want to associate with your context processor:</p>

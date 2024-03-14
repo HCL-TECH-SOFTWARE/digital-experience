@@ -2782,14 +2782,11 @@
 <li>
 <p>Copy the original error.jsp file from wp_profile_root/installedApps/node_name/PA_WCMLRingPortJSR286.ear/ilwwcm‑localrende.war/jsp/html directory to create your custom error JSP file.</p>
 <p>Almost everything in the original JSP file can be changed according to your requirements. If you want to show the cause of the error, you must retain this part of the original file in your error JSP file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%-- use errorbean from request --%&gt; 
+<div class="language-text highlight"><pre><span></span><code>&lt;%-- use errorbean from request --%&gt; 
 &lt;jsp:useBean id=&quot;errorbean&quot; scope=&quot;request&quot; 
     type=&quot;com.ibm.portal.portletui.messages.StatusMessageBean&quot; /&gt; 
 &lt;% String msg = errorbean.getMessage(); %&gt; 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The variable msg contains the message text of the error. In the original error.jsp file, this message is only shown in a separate window if a user selects the <strong>View details</strong> link.</p>
 </li>
 </ol>

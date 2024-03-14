@@ -3411,16 +3411,7 @@
 <h1 id="defining-tooltips-with-powertip">Defining tooltips with PowerTip</h1>
 <p>Once your PowerTip module is active, you can add one or more tooltips to your pages through a dynamic content spot, or a config markup type subcontribution in a module.</p>
 <p>The PowerTip offers flexible tip positioning at the compass points. You can position the tip so it is never clipped off the edge of the view port. And, you can let the tip remain visible while the mouse is on it so the user can interact with the contents of the tip. Here is an example of PowerTip usage code for those options:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;script type=&quot;text/javascript&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;script type=&quot;text/javascript&quot;&gt;
     $(function() {
         $(&#39;#myelement&#39;).data(&#39;powertiptarget&#39;, &#39;mytip&#39;);
         $(&#39;#myelement).powerTip({ placement: &#39;s&#39;, mouseOnToPopup: true, smartPlacement: true });
@@ -3430,7 +3421,7 @@
     &lt;input type=&quot;text&quot; /&gt;
     &lt;input type=&quot;button&quot; value=&quot;Search&quot; /&gt;
 &lt;/div&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>In this example, myelement must be replaced with the ID of the element on the page that you want to add the tip to. And mytip is the ID of the <code>div</code> that is the tip itself, which is defined by the <code>div</code> in the example. Notice that the tip <code>div</code> is set to <code>display:none</code> initially. The PowerTip shows it when the user mouses over the <code>myelement</code> element.</p>
 <p>You can define multiple tooltips by copying the data and PowerTip lines for each tooltip and copying the <code>div</code> block for each tooltip. Modify the IDs for each one.</p>
 <p>You can put the example code anywhere on the page. You can add the tooltip to a dynamic content spot to add the code to the page. Or, you can add the code to a config markup type subcontribution of a module.</p>
@@ -3441,26 +3432,15 @@
 </li>
 <li>
 <p>Your theme_powertips module will prereq the jquery_powertip module, so create a file that is named prereqs.properties in your theme_powertips folder with the following content:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>jquery_powertip
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>jquery_powertip
+</code></pre></div>
 </li>
 <li>
 <p>Create a config subfolder in your theme_powertips folder.</p>
 </li>
 <li>
 <p>Create a theme_powertips.html markup file in your config folder. You can copy and paste the following code as an example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;script type=&quot;text/javascript&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;script type=&quot;text/javascript&quot;&gt;
     $(function() {
         $(&#39;#wpthemeHelp img&#39;).data(&#39;powertiptarget&#39;, &#39;wpthemeHelpTip&#39;);
         $(&#39;#wpthemeHelp img&#39;).powerTip({ placement: &#39;s&#39;, mouseOnToPopup: true, smartPlacement: true });
@@ -3472,7 +3452,7 @@
         &lt;input type=&quot;submit&quot; value=&quot;Search&quot; /&gt;
     &lt;/form&gt;
 &lt;/div&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This example assumes that your theme has a help element with ID <code>wpthemeHelp</code> similar to the default theme. If your theme does not have an element with ID <code>wpthemeHelp</code>, then change the two instances of <code>'#wpthemeHelp img'</code> to a selector that identifies one of the elements in your theme, and rename the two instances of <code>'wpthemeHelpTip'</code>.</p>
 <p>This example uses a simple form on the tooltip that searches the HCL Digital Experience wiki documentation. You can change the markup in your tooltip <code>div</code> entirely to whatever you need to appear on your tooltip.</p>
 </li>

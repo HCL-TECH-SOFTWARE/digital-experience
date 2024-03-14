@@ -3953,14 +3953,11 @@
 <h1 id="editable-property-tag">Editable property tag</h1>
 <p>An editable property tag is used to make fields and metadata from content items and site areas editable when rendered by using a web content viewer portlet when the page is in edit mode.</p>
 <p>An example of the format of an editable property tag:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>[EditableProperty field=&quot; &quot; context=&quot; &quot; type=&quot; &quot; name=&quot; &quot; format=&quot; &quot; pre=&quot; &quot;
+<div class="language-text highlight"><pre><span></span><code>[EditableProperty field=&quot; &quot; context=&quot; &quot; type=&quot; &quot; name=&quot; &quot; format=&quot; &quot; pre=&quot; &quot;
      callback=&quot; &quot; stateChangeCallback=&quot; &quot; refreshValueOnEdit=&quot; &quot; class=&quot; &quot; mode=&quot; &quot; placeholder=&quot; &quot;]
 
 [/EditableProperty]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This tag doesn't work correctly if basic or advanced rendering caches are enabled because authoring updates cannot immediately be displayed on the rendered page.</p>
@@ -4086,20 +4083,16 @@
 </table>
 <p>Extra text, HTML, or tags must be added between the <code>[EditableProperty]</code> and <code>[/EditableProperty]</code> tags. The text and tags added here is what is rendered on the page. When the page is in edit mode, this region is editable. When first added to your design, a corresponding property tag is added by default.</p>
 <p>For example, to make an editable title, use the following tags:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[EditableProperty type=&quot;content&quot; context=&quot;current&quot; field=&quot;title&quot;]
+<div class="language-text highlight"><pre><span></span><code>[EditableProperty type=&quot;content&quot; context=&quot;current&quot; field=&quot;title&quot;]
 [Property type=&quot;content&quot; context=&quot;current&quot; field=&quot;title&quot;]
 [/EditableProperty]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Adding <code>pre="true"</code> to the editable property tag forces the editable property to maintain the line-formatting that is entered by the user to be retained. For example, if a user enters line-breaks, they are preserved when the field is saved. This feature is only applicable to the description field. This parameter should also be added to the property tag so that the line breaks are also rendered.</p>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[EditableProperty type=&quot;content&quot; context=&quot;current&quot; field=&quot;description&quot; pre=&quot;true&quot;]
+<div class="language-text highlight"><pre><span></span><code>[EditableProperty type=&quot;content&quot; context=&quot;current&quot; field=&quot;description&quot; pre=&quot;true&quot;]
 [Property type=&quot;content&quot; context=&quot;current&quot; field=&quot;description&quot; pre=&quot;true&quot;]
 [/EditableProperty]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The context settings of portalContext and portalMapping cannot be used with the editable property tag. This context applies both to the editable property tag itself, and any other tags that are referenced between the <code>[EditableProperty]</code> and <code>[/EditableProperty]</code> tags.</p>

@@ -2585,16 +2585,12 @@
 <li>
 <p>Update the doHeaders call in the javax.portlet.CacheControl object to set the portlet caching parameters.</p>
 <p>The following sample code sets the portlet's cache scope to private and the cache expiration time to a value of 30 seconds.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>protected void doHeaders(RenderRequest request, RenderResponse response)
+<div class="language-text highlight"><pre><span></span><code>protected void doHeaders(RenderRequest request, RenderResponse response)
 {
         response.getCacheControl().setExpirationTime(30);
         response.getCacheControl().setPublicScope(false);
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 

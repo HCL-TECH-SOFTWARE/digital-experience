@@ -3141,17 +3141,17 @@
 <li>
 <p>Disable all instances of the <code>sifter</code> except for one, which you will use as the master <code>sifter</code> instance. Rebuilding the mentor pool uses a large amount of database resources, so it is better to use only one <code>sifter</code> to rebuild the mentor pool.</p>
 <p>For the <code>sifter</code> instance to be used as the master, type the following:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;mentor_set_name&gt;.disable_build_mentor_pool = false
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;mentor_set_name&gt;.disable_build_mentor_pool = false
+</code></pre></div>
 <p>For each <code>sifter</code> instance to be disabled, type the following:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;mentor_set_name&gt;.disable_build_mentor_pool = true
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;mentor_set_name&gt;.disable_build_mentor_pool = true
+</code></pre></div>
 </li>
 <li>
 <p>Rebuild the mentor pool on the master <code>sifter</code> instance by specifying a time for the recomputation to take place.</p>
 <p>Because rebuilding the mentor pool requires heavy database access, schedule it for a time when the database has little usage. For example, the following setting is for 2 a.m.:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;mentor_set_name&gt;.build_mentor_pool_at = 0 2 * * *
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;mentor_set_name&gt;.build_mentor_pool_at = 0 2 * * *
+</code></pre></div>
 <p>The times are interpreted as follows:</p>
 <p><img alt="Times" src="../../../../../../../images/time2.jpg" /></p>
 </li>
@@ -3159,8 +3159,8 @@
 <p>For each <code>sifter</code> instance you disabled, set a time to reload the mentor pool after it has been rebuilt.</p>
 <p>The <code>sifter</code> will destroy the current mentor pool and reload the pool from the mentor pool table specified in the <code>&lt;mentor_set_name&gt;.mentor_pool.table</code> setting. Usually, you should set it for about an hour after the <code>sifter</code> instance has been reloaded.</p>
 <p>For example, to reload the mentor pool at 3 a.m.:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;mentor_set_name&gt;.reload_mentor_pool_at= 0 3 * * *
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;mentor_set_name&gt;.reload_mentor_pool_at= 0 3 * * *
+</code></pre></div>
 </li>
 </ol>
 

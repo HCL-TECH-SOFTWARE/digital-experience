@@ -1887,10 +1887,9 @@
 <li>versions: This attribute is optional. You can add multiple HCL Portal version values for this attribute as a comma-separated list.</li>
 </ul>
 <p>For example, you might add the following information to your sdd.xml file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;serverVersionDependency name=&quot;PortalServer&quot; lowerVersion=&quot;6.0.0.0&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;serverVersionDependency name=&quot;PortalServer&quot; lowerVersion=&quot;6.0.0.0&quot; 
                          higherVersion=&quot;8.5.0.0&quot; versions=&quot;7.0.0.1,7.0.0.2&quot; /&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If you want to add dependencies for a specific fix level, you must add the following attributes to the <code>&lt;server&gt;</code> subelement within the <code>&lt;serverVersionDependency&gt;</code> element:</p>
 <ul>
 <li>version: This value is the version of HCL Portal where you want to set the level restriction.</li>
@@ -1899,16 +1898,12 @@
 <li>higher: This attribute is optional. Set this value to true if the fixlevel is the highest version for the current server.</li>
 </ul>
 <p>For example, you might add the following information to your sdd.xml file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;serverVersionDependency name=&quot;PortalServer&quot; lowerVersion=&quot;&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;serverVersionDependency name=&quot;PortalServer&quot; lowerVersion=&quot;&quot; 
                          higherVersion=&quot;&quot; versions=&quot;&quot; &gt;
 &lt;server version=&quot;8.5.0.0&quot; fixlevel=&quot;CF02&quot; lower=&quot;true&quot;
                     higher=&quot;false&quot; /&gt;
 &lt;/serverVersionDependency&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The Solution Installer uses the following rules to determine whether a PAA file is compatible with the current HCL Portal version:</p>
 <ul>
 <li>

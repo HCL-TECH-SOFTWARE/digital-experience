@@ -3316,14 +3316,11 @@ Assume that the browser sends the Accept-Language header <code>"DE_de, en"</code
 <li>Edit the wp_profile_root/config/cells/node-name/applications/wps.ear/deployments/wps/wps.war/WEB-INF/web.xml file.</li>
 <li>
 <p>Locate the following section:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;filter&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;filter&gt;
     &lt;filter-name&gt;Locale Filter&lt;/filter-name&gt;
     &lt;filter-class&gt;com.ibm.wps.engine.ExtendedLocaleFilter&lt;/filter-class&gt; 
 &lt;/filter&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Replace the filter class <code>com.ibm.wps.engine.ExtendedLocaleFilter</code> by the class name of your custom language filter.</p>

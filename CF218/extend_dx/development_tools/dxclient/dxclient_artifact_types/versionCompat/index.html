@@ -2660,32 +2660,32 @@
 <li>
 <p><strong>Command description</strong></p>
 <p>Use the following command to show version compatibility details between DX Core and DXClient:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient version-compat
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient version-compat
+</code></pre></div>
 </li>
 <li>
 <p><strong>Command options</strong></p>
 <p>Use this attribute to specify the hostname of the target server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the protocol with which to connect to the CW server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectProtocol &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectProtocol &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the username that is required for authenticating to the cw_profile:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password that is required for authenticating to the cw_profile:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port number of the cw_profile (for Kubernetes Environment, dxConnectPort is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectPort &lt;value&gt;
+</code></pre></div>
 </li>
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient version-compat -dxConnectUsername &lt;dxUsername&gt; -dxConnectPassword &lt;dxPassword&gt; -dxConnectPort &lt;dxPort&gt; -dxConnectProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient version-compat -dxConnectUsername &lt;dxUsername&gt; -dxConnectPassword &lt;dxPassword&gt; -dxConnectPort &lt;dxPort&gt; -dxConnectProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt;
+</code></pre></div>
 </div>
 
 

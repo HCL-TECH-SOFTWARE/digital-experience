@@ -2212,16 +2212,12 @@
 <li>
 <p><strong>Setting a render parameter</strong></p>
 <p>To set a public render parameter, use the predefined <code>CUSTOM_CONTEXT</code> parameter that is defined by the Web Content Manager Rendering Portlet. The following code snippet is an excerpt from the published sample of how to set a public render parameter.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;form id=&quot;form1&quot; action=&quot;[Plugin:RenderUrl copyCurrentParams=&quot;true&quot;]&quot; method=&quot;get&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;form id=&quot;form1&quot; action=&quot;[Plugin:RenderUrl copyCurrentParams=&quot;true&quot;]&quot; method=&quot;get&quot;&gt;
         &lt;label for=&quot;customerSelect&quot;&gt;Select customer:&lt;/label&gt; 
         &lt;select name=&quot;CUSTOM_CONTEXT&quot; id=&quot;customerSelect&quot;&gt;&lt;/select&gt;
         &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
     &lt;/form&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Retrieve value of a shared render parameter</strong></p>

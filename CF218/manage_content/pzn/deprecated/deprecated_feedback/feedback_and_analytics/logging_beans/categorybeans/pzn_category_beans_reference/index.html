@@ -3126,24 +3126,19 @@
 |<br><pre>`<code>`&lt;br&gt;public void log( HttpServletRequest request, &lt;br&gt;                 String[]  categories ) &lt;br&gt;```|Logs an array of category literals.|
 |&lt;br&gt;&lt;pre&gt;\```&lt;br&gt; public void log( HttpServletRequest request, &lt;br&gt;                 LoggableResource   resource ) &lt;br&gt;```|Logs categories of interest by querying the</code>LoggableResource` interface of the object.|</p>
 <p>The <code>LoggableResource</code> interface can be implemented in addition to the Resource interface in order to facilitate logging. The categories of you resources can then be stored and retrieved from a database. By using this interface, you avoid the specification of category literals in your JSPs.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>public interface LoggableResource
+<div class="language-text highlight"><pre><span></span><code>public interface LoggableResource
 {
    String[] getTopics( );
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Each of the topics returned by <code>getTopics</code> is logged as a category. If <code>getTopics</code> returns null, no category will be logged.</p>
 <p>The log methods create a CategoryEvent with the request and category. The CategoryEvent is routed to all of the registered log listeners.</p>
 <p>Category beans should be instantiated as session beans. They maintain category information for the current session including the categories logged and their corresponding log counts.</p>
 <p>The following methods are accessible through rules. They can also be accessed directly through the category bean.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>public String[] getCategoryNames( HttpServletRequest request)
+<div class="language-text highlight"><pre><span></span><code>public String[] getCategoryNames( HttpServletRequest request)
 public int      getCategoryCount( HttpServletRequest request,
                                   String category )
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

@@ -4491,31 +4491,15 @@
 <p><strong>audit.service.enable = (false)</strong></p>
 <p>This parameter is the global switch. Set this parameter to <code>true</code> to turn on the service. Set this parameter to <code>false</code> to turn off the service. The default setting is <code>false</code>.</p>
 <p>Use the following property to configure the actual log file access of the service:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>audit.logFileName = log/audit_$APPSERVER_NAME_$CREATE_TIME.log
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>audit.logFileName = log/audit_$APPSERVER_NAME_$CREATE_TIME.log
+</code></pre></div>
 <p>You can use the auditing service to have the transaction ID written to the audit log file. The project ID can also be written to the audit log file. Because these IDs can be long and might not be required in every environment, you can disable the inclusion of the IDs.</p>
 <h3 id="auditshowtransactionidenable-true">audit.showTransactionID.enable = (true)</h3>
 <p>Use this property to disable transaction IDs in the audit log. Change the value to <code>false</code>. The default value is <code>true</code>.</p>
 <h3 id="auditprojectsenable-true">audit.projects.enable = (true)</h3>
 <p>Use this property to disable project IDs in the audit log. Change the value to <code>false</code>. The default value is <code>true</code>.
 You determine the events that you want to be logged by enabling the appropriate properties as required. Set the events that you want to enable to the value <code>true</code>. The following groups of events are defined:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>    audit.groupEvents.enable
+<div class="language-text highlight"><pre><span></span><code>    audit.groupEvents.enable
     audit.userEvents.enable
     audit.portletEvents.enable
     audit.roleEvents.enable
@@ -4532,7 +4516,7 @@ You determine the events that you want to be logged by enabling the appropriate 
     audit.ratingEvents.enable
     audit.projectPublishEvents.enable
     audit.vanityURLEvents.enable
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The default value for all of these properties is <code>false</code>. That means that no events are logged by default, even if you turned on the service by setting the property audit.service.enable to <code>true</code>.</p>
 <p>To enable one or more groups of events, change the default value of the appropriate <strong>audit.eventGroup.enable</strong> property to <code>true</code>.</p>
 <h2 id="available-events">Available events</h2>

@@ -2631,18 +2631,13 @@
 </li>
 </ol>
 <p>Example - Setting orientation of an existing layout container:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>//  get modifiable instance of layout container
+<div class="language-text highlight"><pre><span></span><code>//  get modifiable instance of layout container
 final ModifiableLayoutNode modifiable = (ModifiableLayoutNode) lmController.getModifiableNode(container);
 
 //  get modifiable layout metrics and set the orientation
 ModifiableLayoutMetrics modifiableLayoutMetrics = modifiable.getModifiableLayoutMetrics();
 modifiableLayoutMetrics.setValue(LayoutMetrics.ORIENTATION, Orientation.HORIZONTAL);
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title"><strong>Notes:</strong></p>
 <p>If you do not set the orientation of a container, it is automatically set when you insert the container into the topology of the controller by the following rules:

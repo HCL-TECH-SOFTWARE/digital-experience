@@ -2257,44 +2257,44 @@
 <ul>
 <li>
 <p><strong>Commands description</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-dam-assets export-assets
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-dam-assets export-assets
+</code></pre></div>
 </li>
 <li>
 <p><strong>Help command</strong></p>
 <p>This command shows the help information for <code>manage-dam-assets</code> command usage:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-dam-assets export-assets -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-dam-assets export-assets -h
+</code></pre></div>
 </li>
 <li>
 <p><strong>Command options</strong></p>
 <p>Use this attribute to specify the protocol with which to connect to the DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProtocol &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProtocol &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the hostname of the DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port on which to connect to the server(e.g. for Kubernetes environment, <code>-dxPort</code> is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the username that is required for authenticating with the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password that is required for authenticating with the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port number of the DAM server for any Kubernetes Environment. For example, default port is 443 (<code>default: ""</code>):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-damAPIPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-damAPIPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port number of the DX Core API server for any Kubernetes Environment. For example, default port is 443 (<code>default: ""</code>):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-ringAPIPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-ringAPIPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify a location <strong>folder_path/folder_name/</strong> that is different from the default location to export the DAM assets. The value of exportPath should be either an absolute or relative folder path. The default location "export" is <strong>store/outputFiles/dam-export-assets/</strong>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-exportPath &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-exportPath &lt;value&gt;
+</code></pre></div>
 <p>Use true or false to include or exclude binary as part of <code>export</code> (default is true):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-exportBinary &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-exportBinary &lt;value&gt;
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Optional parameters are <code>exportPath</code> and <code>exportBinary</code>.<br>
@@ -2302,8 +2302,8 @@ If the exportPath value is not a relative or full path, the output will be place
 </div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-dam-assets export-assets -dxProtocol https -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -damAPIPort &lt;damAPIPort&gt; -ringAPIPort &lt;ringAPIPort&gt; -exportPath &lt;exportPath&gt; -exportBinary &lt;exportBinary&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-dam-assets export-assets -dxProtocol https -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -damAPIPort &lt;damAPIPort&gt; -ringAPIPort &lt;ringAPIPort&gt; -exportPath &lt;exportPath&gt; -exportBinary &lt;exportBinary&gt;
+</code></pre></div>
 </div>
 </li>
 </ul>
@@ -2316,31 +2316,31 @@ If the exportPath value is not a relative or full path, the output will be place
 <ul>
 <li>
 <p><strong>Commands description</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-dam-assets validate-assets
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-dam-assets validate-assets
+</code></pre></div>
 </li>
 <li>
 <p><strong>Help command</strong></p>
 <p>This command shows the help information for <code>manage-dam-assets</code> command usage:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-dam-assets validate-assets -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-dam-assets validate-assets -h
+</code></pre></div>
 </li>
 <li>
 <p><strong>Commands Optional options</strong></p>
 <p>Use this attribute to specify a location <strong>store/folder_name/</strong> that is different from the default location to validate the DAM assets. The default location "export" is <strong>store/outputFiles/dam-export-assets/</strong>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-exportPath &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-exportPath &lt;value&gt;
+</code></pre></div>
 <p>Use true or false to include or exclude binary as part of validation (default is true):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-importBinary &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-importBinary &lt;value&gt;
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Optional parameters are <code>exportPath</code> and <code>exportBinary</code>.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-dam-assets validate-assets -exportPath &lt;exportPath&gt; -importBinary &lt;importBinary&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-dam-assets validate-assets -exportPath &lt;exportPath&gt; -importBinary &lt;importBinary&gt;
+</code></pre></div>
 </div>
 </li>
 </ul>
@@ -2349,52 +2349,52 @@ If the exportPath value is not a relative or full path, the output will be place
 <ul>
 <li>
 <p><strong>Commands description</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-dam-assets import-assets -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-dam-assets import-assets -h
+</code></pre></div>
 </li>
 <li>
 <p><strong>Help command</strong></p>
 <p>This command shows the help information for <code>manage-dam-assets</code> command usage:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-dam-assets import-assets -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-dam-assets import-assets -h
+</code></pre></div>
 </li>
 <li>
 <p><strong>Command options</strong></p>
 <p>Use this attribute to specify the protocol with which to connect to the DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProtocol &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProtocol &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the hostname of the DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port on which to connect to the server (e.g. for Kubernetes Environment, <code>dxPort</code> is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the username that is required for authenticating with the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password that is required for authenticating with the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port number of the DAM server. For any Kubernetes Environment, default port is 443 (<code>default: ""</code>):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-damAPIPort &lt;value&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-damAPIPort &lt;value&gt; 
+</code></pre></div>
 <p>Use this attribute to specify the port number of the DX Core API server. For any Kubernetes Environment, default port is 443 (<code>default: ""</code>)</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-ringAPIPort &lt;value&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-ringAPIPort &lt;value&gt; 
+</code></pre></div>
 <p>Use this attribute to specify a location <strong>store/folder_name/</strong> that is different from the default location to import the DAM assets. The default location "import" is <strong>store/outputFiles/dam-export-assets/</strong>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-exportPath &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-exportPath &lt;value&gt;
+</code></pre></div>
 <p>Use <code>true</code> or <code>false</code> to include or exclude binary as part of <code>import</code> (default is <code>true</code>):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-importBinary &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-importBinary &lt;value&gt;
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Optional parameters are <code>exportPath</code> and <code>exportBinary</code>.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-dam-assets import-assets -dxProtocol https -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -damAPIPort &lt;damAPIPort&gt; -ringAPIPort &lt;ringAPIPort&gt; -exportPath &lt;exportPath&gt; -importBinary &lt;importBinary&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-dam-assets import-assets -dxProtocol https -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -damAPIPort &lt;damAPIPort&gt; -ringAPIPort &lt;ringAPIPort&gt; -exportPath &lt;exportPath&gt; -importBinary &lt;importBinary&gt;
+</code></pre></div>
 </div>
 </li>
 </ul>

@@ -3195,17 +3195,15 @@
 <li>
 <p>Based on your file system, complete the following steps to enable the server to run in farm mode:</p>
 <p>The systemTemp parameter specifies where the server-specific directory is located. This directory contains all directories and files that the running portal instance writes to, such as for logging and page-compiling.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>|**Cloned file system**|Run the following task to enable the server to run in farm mode: &lt;br&gt; -  AIX: `./ConfigEngine.sh enable-farm-mode -DsystemTemp=/usr/IBM/WebSphere/wp_profile -DWasPassword=password` &lt;br&gt;-   Linux: `./ConfigEngine.sh enable-farm-mode -DsystemTemp=/opt/IBM/WebSphere/wp_profile -DWasPassword=password`&lt;br&gt;-   Windows: `ConfigEngine.bat enable-farm-mode -DsystemTemp=C:\IBM\WebSphere\wp_profile -DWasPassword=password`|
+<div class="language-text highlight"><pre><span></span><code>|**Cloned file system**|Run the following task to enable the server to run in farm mode: &lt;br&gt; -  AIX: `./ConfigEngine.sh enable-farm-mode -DsystemTemp=/usr/IBM/WebSphere/wp_profile -DWasPassword=password` &lt;br&gt;-   Linux: `./ConfigEngine.sh enable-farm-mode -DsystemTemp=/opt/IBM/WebSphere/wp_profile -DWasPassword=password`&lt;br&gt;-   Windows: `ConfigEngine.bat enable-farm-mode -DsystemTemp=C:\IBM\WebSphere\wp_profile -DWasPassword=password`|
 |**Shared file system**|    1.  Create the target directory path; for example:&lt;br&gt;
 -   AIX: /var/log/was_tmp &lt;br&gt;-   Linux: /var/log/was_tmp &lt;br&gt;-   Windows: C:\temp\was_tmp&lt;br&gt;&lt;br&gt;2.  Run the following task to enable the server to run in farm mode:&lt;br&gt;-   AIX: `./ConfigEngine.sh enable-farm-mode -DsystemTemp=/var/log/was_tmp -DWasPassword=password`&lt;br&gt;-   Linux: `./ConfigEngine.sh enable-farm-mode -DsystemTemp=/var/log/was_tmp -DWasPassword=password`&lt;br&gt;-   `Windows: ConfigEngine.bat enable-farm-mode -DsystemTemp=C:\temp\was_tmp -DWasPassword=password`|
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Each server that you add to the farm is called a Farm Worker.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>|**Cloned file system**|Create a clone of the Farm Master. Go to [Configuring a cloned file system](../../../../../deployment/manage/portalfarm_cfg/choose_portalfarm/settingup_with_sharedconfig/cfg_farm_clone.md) for information.|
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>|**Cloned file system**|Create a clone of the Farm Master. Go to [Configuring a cloned file system](../../../../../deployment/manage/portalfarm_cfg/choose_portalfarm/settingup_with_sharedconfig/cfg_farm_clone.md) for information.|
+</code></pre></div>
 <p>|<strong>Shared file system</strong>|On each Farm Worker, mount the network accessible file system on a new system in the same location as on the Farm Master. This step preserves the installation path configuration.|</p>
 </li>
 <li>

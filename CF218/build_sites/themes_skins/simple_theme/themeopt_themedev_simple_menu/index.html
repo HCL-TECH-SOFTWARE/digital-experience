@@ -2818,18 +2818,13 @@
 <p>The Simple Theme template uses the simple menu framework for three menus: the portlet menu, the actions menu, and the profile menu. Using this framework, you can add menu entries by adding entries to the .json files in the fs-type1/themes/themename/menuDefinitions directory of the theme.</p>
 <p>You must add the main module <code>wp_simple_contextmenu_main</code> to your theme profile for the current page before you can use simple menus in your theme.</p>
 <p>Use the following sample markup in your theme.html, skin.html, or other markup source to register a simple menu so that it opens when a user clicks the HTML element:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;span role=&quot;button&quot; aria-haspopup=&quot;true&quot;
+<div class="language-text highlight"><pre><span></span><code>&lt;span role=&quot;button&quot; aria-haspopup=&quot;true&quot;
             class=&quot;wpthemeMenuFocus&quot; onclick=&quot;if (typeof wptheme != &#39;undefined&#39;)
             wptheme.contextMenu.init({ &#39;node&#39;: this, menuId: &#39;pageAction&#39;, jsonQuery:
             {&#39;navID&#39;:ibmCfg.portalConfig.currentPageOID}, params:
           {&#39;alignment&#39;:&#39;right&#39;}});&quot;&lt;span class=&quot;wpthemeUnderlineText&quot;
             id=&quot;wpContextMenu&quot;&gt;My Menu&lt;/span&gt;&lt;/span&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Note that the JavaScript calls <code>wptheme.contextMenu.init</code> and specified several parameters, including the <code>menuID</code>, which refers to the .json file in the menuDefinitions directory.</p>
 <p>You can create menu content based on the content of a JSON file. The Simple Theme contains three such JSON files, which are located in the menuDefitions folder in WebDAV. You can modify the existing files to add menu entries or add your own menus by using a similar format. Go to <a href="../../customizing_theme/menus/simple_menu_framework/themeopt_cust_serverframe/">Server-side framework</a> to learn more about the format and content of these JSON files.</p>
 <ul>

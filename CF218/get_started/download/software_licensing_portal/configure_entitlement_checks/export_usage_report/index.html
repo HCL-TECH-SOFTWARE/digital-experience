@@ -1799,40 +1799,24 @@
 <p>For information on how user sessions are defined and when they begin and end, see <a href="../entitlement_checks_scenarios/#how-to-monitor-user-session-consumption-for-hcl-dx-cloud-native-v95-production-deployments">User Session consumption for HCL DX Cloud Native v9.5 production deployments</a>.</p>
 <h2 id="unique-identifier-for-the-dx-deployment-session-usage-report">Unique identifier for the DX deployment session usage report</h2>
 <p>Optionally, set a unique identifier for the specified DX Kubernetes deployment. This is included in the exported user session data.</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">licenseManager</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">licenseManualReportUniqueIdentifier</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;myUniqueIdentifier-123&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If no unique DX Kubernetes deployment identity is set in the helm value, the deployment uses the release name and namespace combination by default. See <a href="../../../../plan_deployment/container_deployment/">Kubernetes Overview</a> for deployment and configuration guidance. </p>
 <h2 id="exporting-the-user-session-usage-report">Exporting the user session usage report</h2>
 <p>To export the user session usage report, use the following command and include the start date and end date:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl exec -it &lt;release name&gt;-license-manager-0 -n &lt;namespace&gt; sh exportUsageReport.sh &lt;YYYY-MM-DD&gt; &lt;YYYY-MM-DD&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl exec -it &lt;release name&gt;-license-manager-0 -n &lt;namespace&gt; sh exportUsageReport.sh &lt;YYYY-MM-DD&gt; &lt;YYYY-MM-DD&gt;
+</code></pre></div>
 <p>The result can be sent to a file using the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl exec -it &lt;release name&gt;-license-manager-0 -n &lt;namespace&gt; sh exportUsageReport.sh &lt;YYYY-MM-DD&gt; &lt;YYYY-MM-DD&gt; &gt; /tmp/output.txt
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl exec -it &lt;release name&gt;-license-manager-0 -n &lt;namespace&gt; sh exportUsageReport.sh &lt;YYYY-MM-DD&gt; &lt;YYYY-MM-DD&gt; &gt; /tmp/output.txt
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The timestamps provided indicate the time in UTC format.</p>
 </div>
 <h3 id="expected-result">Expected result</h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>############################################################
+<div class="language-text highlight"><pre><span></span><code>############################################################
 Session Usage Report from the Environment: UAT-ENV
 This can take a few minutes...
 All dates are in the format YYYY-MM-DD
@@ -1847,7 +1831,7 @@ Gap between 2024-01-15 and 2024-01-30: 14 day(s)
 ############################################################
 Total session usage: 185
 ############################################################
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Optionally, you can import the local .txt file to a spreadsheet or other reporting tools for viewing and further analysis.</p>
 
 

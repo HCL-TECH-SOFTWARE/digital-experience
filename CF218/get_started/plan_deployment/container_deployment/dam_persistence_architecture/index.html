@@ -1909,33 +1909,19 @@
 <p>In case of PostgreSQL master server failure, the <code>repmgr</code> service switches the server role from primary to standby.</p>
 <p>The <code>persistence-node</code> configurations are available in the Helm chart <a href="../../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration/">values.yaml</a> file as <code>persistenceNode</code>.</p>
 <p>The administrator can configure the number of <code>persistence-nodes</code> under <code>scaling</code> configuration.</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Scaling settings for deployed applications</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Scaling settings for deployed applications</span>
 <span class="nt">scaling</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># The default amount of replicas per application</span>
 <span class="w">  </span><span class="nt">replicas</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">persistenceConnectionPool</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="w">    </span><span class="nt">persistenceNode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Scaling affects only the read requests and ensures failover capabilities. Write requests are always directed only to the primary pod.</p>
 </div>
 <p>The <code>persistence-node</code> is a stateful application and it requires a volume. The configuration must have a dynamic volume class to start the container. You must update the <code>storageClassName</code> and <code>storage</code>  according to the cloud service provider and project requirements.</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Persistent Volumes for Persistence Node</span>
 <span class="w">  </span><span class="nt">persistenceNode</span><span class="p">:</span>
 <span class="w">    </span><span class="c1"># Database PVC, one per Persistence Node</span>
@@ -1945,7 +1931,7 @@
 <span class="w">        </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2Gi&quot;</span>
 <span class="w">      </span><span class="c1"># Optional volume name to specifically map to.</span>
 <span class="w">      </span><span class="nt">volumeName</span><span class="p">:</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="persistence-connection-pool"><code>persistence-connection-pool</code></h2>
 <p>The <code>persistence-connection-pool</code> container runs the <a href="https://www.pgpool.net/mediawiki/index.php/Main_Page">Pg-pool</a> service. Pg-pool is middleware that works between <code>persistence-node</code> and HCL Digital Asset Management <a href="../../../../manage_content/digital_assets/">HCL Digital Asset Management</a>.</p>
 <p>The service provides the following services:</p>
@@ -1954,18 +1940,13 @@
 <li>Load balancing</li>
 </ul>
 <p>For better performance, the administrator can scale the <code>persistence-connection-pool</code> to more than one pod. The <code>persistence-connection-pool</code> configurations are available in Helm chart <a href="../../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/probes_configuration/">values.yaml</a> file as <code>persistenceConnectionPool</code>.</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Scaling settings for deployed applications</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Scaling settings for deployed applications</span>
 <span class="nt">scaling</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># The default amount of replicas per application</span>
 <span class="w">  </span><span class="nt">replicas</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">persistenceConnectionPool</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="w">    </span><span class="nt">persistenceNode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following example shows a persistence cluster in a successful deployment.</p>
 <p><img alt="" src="../../../../images/cluster_status_example.png" title="Persistence cluster in a successful deployment" /></p>
 <details class="info" open="open">

@@ -3233,31 +3233,16 @@
 <li>
 <p>In the menu definition file, find the menu entry of type <code>ModuleRef</code>, which references the theme module <code>wp_analytics_overlay_reports</code>.</p>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>        {
+<div class="language-text highlight"><pre><span></span><code>        {
                 &quot;type&quot;:&quot;ModuleRef&quot;,
                 &quot;id&quot;:&quot;wp_analytics_overlay_reports&quot;
         },
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>To add the theme module for analytics overlay to a deferred theme profile, add the module code to the deferred section of the profile in WebDAV to fs-type1/themes/Portal8.5/profiles/profile_deferred.json.</p>
 <p>In the following example, add the <code>deferredModuleIDs</code> code between the <code>ModuleIDs</code> and the <code>wp_analytics_overlay_reports</code> line.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
    &quot;moduleIDs&quot;: [
         ... modules that are loaded immediately...
         ...
@@ -3270,7 +3255,7 @@
    ],
    ...
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Restart your Portal server or invalidate the resource aggregator cache. To invalidate your cache, click <strong>Theme Analyzer &gt; Utilities &gt; Control Center &gt; Invalidate Cache</strong>. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see <a href="../../../../../../../build_sites/themes_skins/the_module_framework/themeopt_analyzer/utilities/">Utilities for theme issues</a>.</p>

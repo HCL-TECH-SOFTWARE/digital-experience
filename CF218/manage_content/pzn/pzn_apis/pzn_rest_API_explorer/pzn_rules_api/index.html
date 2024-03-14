@@ -2619,11 +2619,11 @@
 <ul>
 <li>
 <p><strong>GET request format:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules
+</code></pre></div>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules?limit=30&amp;offset=0&amp;ruleType=Visibility%20Rule
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules?limit=30&amp;offset=0&amp;ruleType=Visibility%20Rule
+</code></pre></div>
 </li>
 <li>
 <p><strong>Steps to execute the API:</strong></p>
@@ -2646,78 +2646,7 @@
 <li>
 <p><strong>Response structure details:</strong></p>
 <p>The response structure will get the list of all the Visibility and Profiler rules details. The example below shows the response for one Personalization rule:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
   &quot;offset&quot;: 0,
   &quot;limit&quot;: 30,
   &quot;total&quot;: 2,
@@ -2789,83 +2718,12 @@
     }
   ]
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p><strong>Example 1</strong></p>
 <p>List of rules created in the Personalization interface:</p>
 <p><img alt="List of rules in the Personalization workspace" src="../../../../../images/workspaceRule.png" /></p>
 <p>In the example API response structure below, the list of Visibility and Profiler rules available in the Workspace interface is presented:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
   &quot;offset&quot;: 0,
   &quot;limit&quot;: 30,
   &quot;total&quot;: 2,
@@ -2937,98 +2795,12 @@
     }
   ]
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p><strong>Example 2</strong></p>
 <p>List of Personalization rules in the Personalization interface:</p>
 <p><img alt="List of Personalization rules in the Personalization interface" src="../../../../../images/folderRule.png" /></p>
 <p>In the example API response structure below, the list of Visibility and Profiler rules available in the Folder created under the Workspace interface is presented:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span>
-<span class="normal">79</span>
-<span class="normal">80</span>
-<span class="normal">81</span>
-<span class="normal">82</span>
-<span class="normal">83</span>
-<span class="normal">84</span>
-<span class="normal">85</span>
-<span class="normal">86</span>
-<span class="normal">87</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
   &quot;offset&quot;: 0,
   &quot;limit&quot;: 30,
   &quot;total&quot;: 2,
@@ -3115,7 +2887,7 @@
     }
   ]
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Combined Response Structure:</strong></p>
@@ -3125,169 +2897,18 @@
 <li>
 <p><code>Workspace parentId</code> always starts with a hyphen ("-").</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&quot;parentId&quot;: &quot;_6QR_0048AAQUGF0A1T2A_18L&quot;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&quot;parentId&quot;: &quot;_6QR_0048AAQUGF0A1T2A_18L&quot;
+</code></pre></div>
 </li>
 <li>
 <p><code>Folder parentId</code> always starts without a hyphen ("-").</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&quot;parentId&quot;: &quot;ee99433c-82d2-46eb-b48b-90cc234e57e2&quot;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&quot;parentId&quot;: &quot;ee99433c-82d2-46eb-b48b-90cc234e57e2&quot;
+</code></pre></div>
 </li>
 </ul>
 <p>Refer to the following API response structure:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
-<span class="normal">  2</span>
-<span class="normal">  3</span>
-<span class="normal">  4</span>
-<span class="normal">  5</span>
-<span class="normal">  6</span>
-<span class="normal">  7</span>
-<span class="normal">  8</span>
-<span class="normal">  9</span>
-<span class="normal"> 10</span>
-<span class="normal"> 11</span>
-<span class="normal"> 12</span>
-<span class="normal"> 13</span>
-<span class="normal"> 14</span>
-<span class="normal"> 15</span>
-<span class="normal"> 16</span>
-<span class="normal"> 17</span>
-<span class="normal"> 18</span>
-<span class="normal"> 19</span>
-<span class="normal"> 20</span>
-<span class="normal"> 21</span>
-<span class="normal"> 22</span>
-<span class="normal"> 23</span>
-<span class="normal"> 24</span>
-<span class="normal"> 25</span>
-<span class="normal"> 26</span>
-<span class="normal"> 27</span>
-<span class="normal"> 28</span>
-<span class="normal"> 29</span>
-<span class="normal"> 30</span>
-<span class="normal"> 31</span>
-<span class="normal"> 32</span>
-<span class="normal"> 33</span>
-<span class="normal"> 34</span>
-<span class="normal"> 35</span>
-<span class="normal"> 36</span>
-<span class="normal"> 37</span>
-<span class="normal"> 38</span>
-<span class="normal"> 39</span>
-<span class="normal"> 40</span>
-<span class="normal"> 41</span>
-<span class="normal"> 42</span>
-<span class="normal"> 43</span>
-<span class="normal"> 44</span>
-<span class="normal"> 45</span>
-<span class="normal"> 46</span>
-<span class="normal"> 47</span>
-<span class="normal"> 48</span>
-<span class="normal"> 49</span>
-<span class="normal"> 50</span>
-<span class="normal"> 51</span>
-<span class="normal"> 52</span>
-<span class="normal"> 53</span>
-<span class="normal"> 54</span>
-<span class="normal"> 55</span>
-<span class="normal"> 56</span>
-<span class="normal"> 57</span>
-<span class="normal"> 58</span>
-<span class="normal"> 59</span>
-<span class="normal"> 60</span>
-<span class="normal"> 61</span>
-<span class="normal"> 62</span>
-<span class="normal"> 63</span>
-<span class="normal"> 64</span>
-<span class="normal"> 65</span>
-<span class="normal"> 66</span>
-<span class="normal"> 67</span>
-<span class="normal"> 68</span>
-<span class="normal"> 69</span>
-<span class="normal"> 70</span>
-<span class="normal"> 71</span>
-<span class="normal"> 72</span>
-<span class="normal"> 73</span>
-<span class="normal"> 74</span>
-<span class="normal"> 75</span>
-<span class="normal"> 76</span>
-<span class="normal"> 77</span>
-<span class="normal"> 78</span>
-<span class="normal"> 79</span>
-<span class="normal"> 80</span>
-<span class="normal"> 81</span>
-<span class="normal"> 82</span>
-<span class="normal"> 83</span>
-<span class="normal"> 84</span>
-<span class="normal"> 85</span>
-<span class="normal"> 86</span>
-<span class="normal"> 87</span>
-<span class="normal"> 88</span>
-<span class="normal"> 89</span>
-<span class="normal"> 90</span>
-<span class="normal"> 91</span>
-<span class="normal"> 92</span>
-<span class="normal"> 93</span>
-<span class="normal"> 94</span>
-<span class="normal"> 95</span>
-<span class="normal"> 96</span>
-<span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span>
-<span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span>
-<span class="normal">113</span>
-<span class="normal">114</span>
-<span class="normal">115</span>
-<span class="normal">116</span>
-<span class="normal">117</span>
-<span class="normal">118</span>
-<span class="normal">119</span>
-<span class="normal">120</span>
-<span class="normal">121</span>
-<span class="normal">122</span>
-<span class="normal">123</span>
-<span class="normal">124</span>
-<span class="normal">125</span>
-<span class="normal">126</span>
-<span class="normal">127</span>
-<span class="normal">128</span>
-<span class="normal">129</span>
-<span class="normal">130</span>
-<span class="normal">131</span>
-<span class="normal">132</span>
-<span class="normal">133</span>
-<span class="normal">134</span>
-<span class="normal">135</span>
-<span class="normal">136</span>
-<span class="normal">137</span>
-<span class="normal">138</span>
-<span class="normal">139</span>
-<span class="normal">140</span>
-<span class="normal">141</span>
-<span class="normal">142</span>
-<span class="normal">143</span>
-<span class="normal">144</span>
-<span class="normal">145</span>
-<span class="normal">146</span>
-<span class="normal">147</span>
-<span class="normal">148</span>
-<span class="normal">149</span>
-<span class="normal">150</span>
-<span class="normal">151</span>
-<span class="normal">152</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
   &quot;offset&quot;: 0,
   &quot;limit&quot;: 30,
   &quot;total&quot;: 4,
@@ -3439,7 +3060,7 @@
     }
   ]
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Success and Error Messages</strong></p>
@@ -3484,11 +3105,11 @@
 <ul>
 <li>
 <p><strong>GET Request format:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules/{rule-id}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules/{rule-id}
+</code></pre></div>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules/d3548bd9-fcf5-49c4-a926-09b6c03d1fbf
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules/d3548bd9-fcf5-49c4-a926-09b6c03d1fbf
+</code></pre></div>
 </li>
 <li>
 <p><strong>Steps to execute the API:</strong></p>
@@ -3503,20 +3124,14 @@
 <p><strong>Response structure details:</strong></p>
 <p>When the GET request is executed by providing the rule-id, the response gets the rule details.</p>
 <p>In the example response structure details below, it shows results for <code>rule-id</code>, <code>rule-description</code>, <code>rule-title</code>, <code>rule-Type</code>, and <code>rule-contents</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
   &quot;id&quot;: &quot;ce285ec1-af9e-485b-8911-ab454946a104&quot;,
   &quot;description&quot;: &quot;This is Test rule.&quot;,
   &quot;title&quot;: &quot;TestRule&quot;,
   &quot;ruleType&quot;: &quot;Visibility Rule&quot;,
   &quot;contents&quot;:
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Success and Error Messages:</strong></p>
@@ -3557,13 +3172,13 @@
 <ul>
 <li>
 <p><strong>POST request format:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules/{rule-id}/invoke
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules/{rule-id}/invoke
+</code></pre></div>
 </li>
 <li>
 <p><strong>POST Personalization ID invoke example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules/d3548bd9-fcf5-49c4-a926-09b6c03d1fbf/invoke
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules/d3548bd9-fcf5-49c4-a926-09b6c03d1fbf/invoke
+</code></pre></div>
 </li>
 <li>
 <p><strong>Steps to execute the API:</strong></p>
@@ -3637,58 +3252,15 @@
 <ul>
 <li>
 <p><strong>POST request format:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules
+</code></pre></div>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules
+</code></pre></div>
 </li>
 <li>
 <p><strong>Sample request payload for creating a new Visibility rule:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
   &quot;title&quot;: &quot;Visibility Rule Example&quot;,
   &quot;description&quot;: &quot;Visibility Rule Description&quot;,
   &quot;ruleType&quot;: &quot;Visibility Rule&quot;,
@@ -3732,39 +3304,11 @@
   },
   &quot;parentId&quot;: &quot;_6QR_0048AAQUGF0A1T2A_18L&quot;
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Sample request payload for creating a new Profiler rule:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
     &quot;description&quot;: &quot;Profiler Rule&quot;,
     &quot;title&quot;: &quot;Profiler Rule 1&quot;,
     &quot;ruleType&quot;: &quot;Profiler&quot;,
@@ -3793,7 +3337,7 @@
     },
     &quot;parentId&quot;: &quot;_6QR_0048AAQUGF0A1T2A_18L&quot;
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Steps to execute the API:</strong></p>
@@ -3862,11 +3406,11 @@
 <ul>
 <li>
 <p><strong>PUT request format:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules/{rule-id}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules/{rule-id}
+</code></pre></div>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules/5bd89b0d-f024-4de2-a991-976315e917be
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules/5bd89b0d-f024-4de2-a991-976315e917be
+</code></pre></div>
 </li>
 <li>
 <p><strong>Steps to execute the API:</strong></p>
@@ -3880,29 +3424,7 @@
 </li>
 <li>
 <p><strong>Sample request payload for updating a Visibility rule:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
   &quot;description&quot;: &quot;Visibility Rule&quot;,
   &quot;title&quot;: &quot;Visibility Rule 1&quot;,
   &quot;ruleType&quot;: &quot;Visibility Rule&quot;,
@@ -3925,44 +3447,13 @@
   },
   &quot;parentId&quot;: &quot;_6QR_0048AAQUGF0A1T2A_18L&quot;
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Screenshot for reference for Visibility rule:</p>
 <p><img alt="Update Personalization rule API" src="../../../../../images/Update-rule-API.png" /></p>
 </li>
 <li>
 <p><strong>Response structure details for Visibility rule:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
   &quot;id&quot;: &quot;d5cf10d8-f167-48f8-abc2-28b5f088714d&quot;,
   &quot;description&quot;: &quot;Visibility Rule&quot;,
   &quot;title&quot;: &quot;Visibility Rule 1&quot;,
@@ -3994,38 +3485,11 @@
 }
 parentId&quot;: &quot;_6QR_0048AAQUGF0A1T2A_18L&quot;
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Sample request payload for updating a Profiler rule:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
   &quot;description&quot;: &quot;Profiler rule updated&quot;,
   &quot;title&quot;: &quot;Profiler Update&quot;,
   &quot;ruleType&quot;: &quot;Profiler&quot;,
@@ -4053,47 +3517,13 @@ parentId&quot;: &quot;_6QR_0048AAQUGF0A1T2A_18L&quot;
   },
   &quot;parentId&quot;: &quot;_6QR_0048AAQUGF0A1T2A_18L&quot;
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Screenshot for reference for Visibility rule:</p>
 <p><img alt="Update Profiler rule API" src="../../../../../images/Update-profiler-rule-API.png" /></p>
 </li>
 <li>
 <p><strong>Response structure details for Profiler rule:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
   &quot;id&quot;: &quot;a0631df2-67b9-474c-b678-c904f80a02dd&quot;,
   &quot;description&quot;: &quot;Profiler rule updated&quot;,
   &quot;title&quot;: &quot;Profiler Update&quot;,
@@ -4128,7 +3558,7 @@ parentId&quot;: &quot;_6QR_0048AAQUGF0A1T2A_18L&quot;
   &quot;lastModifier&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
   &quot;parentId&quot;: &quot;_6QR_0048AAQUGF0A1T2A_18L&quot;
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Steps to get the <code>ResourceId</code>:</p>
 <ol>
 <li>Login to HCL Digital Experience.</li>
@@ -4187,23 +3617,18 @@ parentId&quot;: &quot;_6QR_0048AAQUGF0A1T2A_18L&quot;
 <ul>
 <li>
 <p><strong>GET Request format</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/dynamic-properties
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/dynamic-properties
+</code></pre></div>
 </li>
 <li>
 <p><strong>Sample request payload</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
   &quot;attr1&quot;: {
     &quot;displayName&quot;: &quot;attr1&quot;,
     &quot;propertyType&quot;: &quot;Text&quot;
   }
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Steps to execute the API:</strong></p>
@@ -4215,20 +3640,7 @@ For example, the dynamic properties added in one of the resource type <code>Acti
 </ol>
 <p><img alt="PZN Get Action Count dynamic properties" src="../../../../../images/pzn-get-action-count-dynamic-properties.png" /></p>
 <p>To get the dynamic properties of the resource type <code>Action Count</code>, the list of properties is returned in the specific resource type as an object:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
   &quot;attr2&quot;: {
     &quot;displayName&quot;: &quot;attr2&quot;,
     &quot;propertyType&quot;: &quot;Number&quot;
@@ -4242,7 +3654,7 @@ For example, the dynamic properties added in one of the resource type <code>Acti
     &quot;propertyType&quot;: &quot;Date&quot;
   }
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Response structure details:</strong></p>
@@ -4250,152 +3662,7 @@ For example, the dynamic properties added in one of the resource type <code>Acti
 <ul>
 <li>Different types of resource types for dynamic properties comprise of <code>Action Count</code>, <code>User</code>, <code>Category Count</code>, <code>Request</code>, <code>Shared Data</code>, <code>Portlet Attributes</code>, <code>Render Parameter</code> and <code>Session</code>.</li>
 <li>Different types of allowed property types for dynamic properties comprise of <code>Text</code>, <code>Date</code>, <code>Time</code>, <code>Timestamp</code>, <code>Number</code>, <code>Decimal Number</code>, <code>Boolean</code>, <code>List</code>, <code>Person</code>, and <code>Group</code>.
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
-<span class="normal">  2</span>
-<span class="normal">  3</span>
-<span class="normal">  4</span>
-<span class="normal">  5</span>
-<span class="normal">  6</span>
-<span class="normal">  7</span>
-<span class="normal">  8</span>
-<span class="normal">  9</span>
-<span class="normal"> 10</span>
-<span class="normal"> 11</span>
-<span class="normal"> 12</span>
-<span class="normal"> 13</span>
-<span class="normal"> 14</span>
-<span class="normal"> 15</span>
-<span class="normal"> 16</span>
-<span class="normal"> 17</span>
-<span class="normal"> 18</span>
-<span class="normal"> 19</span>
-<span class="normal"> 20</span>
-<span class="normal"> 21</span>
-<span class="normal"> 22</span>
-<span class="normal"> 23</span>
-<span class="normal"> 24</span>
-<span class="normal"> 25</span>
-<span class="normal"> 26</span>
-<span class="normal"> 27</span>
-<span class="normal"> 28</span>
-<span class="normal"> 29</span>
-<span class="normal"> 30</span>
-<span class="normal"> 31</span>
-<span class="normal"> 32</span>
-<span class="normal"> 33</span>
-<span class="normal"> 34</span>
-<span class="normal"> 35</span>
-<span class="normal"> 36</span>
-<span class="normal"> 37</span>
-<span class="normal"> 38</span>
-<span class="normal"> 39</span>
-<span class="normal"> 40</span>
-<span class="normal"> 41</span>
-<span class="normal"> 42</span>
-<span class="normal"> 43</span>
-<span class="normal"> 44</span>
-<span class="normal"> 45</span>
-<span class="normal"> 46</span>
-<span class="normal"> 47</span>
-<span class="normal"> 48</span>
-<span class="normal"> 49</span>
-<span class="normal"> 50</span>
-<span class="normal"> 51</span>
-<span class="normal"> 52</span>
-<span class="normal"> 53</span>
-<span class="normal"> 54</span>
-<span class="normal"> 55</span>
-<span class="normal"> 56</span>
-<span class="normal"> 57</span>
-<span class="normal"> 58</span>
-<span class="normal"> 59</span>
-<span class="normal"> 60</span>
-<span class="normal"> 61</span>
-<span class="normal"> 62</span>
-<span class="normal"> 63</span>
-<span class="normal"> 64</span>
-<span class="normal"> 65</span>
-<span class="normal"> 66</span>
-<span class="normal"> 67</span>
-<span class="normal"> 68</span>
-<span class="normal"> 69</span>
-<span class="normal"> 70</span>
-<span class="normal"> 71</span>
-<span class="normal"> 72</span>
-<span class="normal"> 73</span>
-<span class="normal"> 74</span>
-<span class="normal"> 75</span>
-<span class="normal"> 76</span>
-<span class="normal"> 77</span>
-<span class="normal"> 78</span>
-<span class="normal"> 79</span>
-<span class="normal"> 80</span>
-<span class="normal"> 81</span>
-<span class="normal"> 82</span>
-<span class="normal"> 83</span>
-<span class="normal"> 84</span>
-<span class="normal"> 85</span>
-<span class="normal"> 86</span>
-<span class="normal"> 87</span>
-<span class="normal"> 88</span>
-<span class="normal"> 89</span>
-<span class="normal"> 90</span>
-<span class="normal"> 91</span>
-<span class="normal"> 92</span>
-<span class="normal"> 93</span>
-<span class="normal"> 94</span>
-<span class="normal"> 95</span>
-<span class="normal"> 96</span>
-<span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span>
-<span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span>
-<span class="normal">113</span>
-<span class="normal">114</span>
-<span class="normal">115</span>
-<span class="normal">116</span>
-<span class="normal">117</span>
-<span class="normal">118</span>
-<span class="normal">119</span>
-<span class="normal">120</span>
-<span class="normal">121</span>
-<span class="normal">122</span>
-<span class="normal">123</span>
-<span class="normal">124</span>
-<span class="normal">125</span>
-<span class="normal">126</span>
-<span class="normal">127</span>
-<span class="normal">128</span>
-<span class="normal">129</span>
-<span class="normal">130</span>
-<span class="normal">131</span>
-<span class="normal">132</span>
-<span class="normal">133</span>
-<span class="normal">134</span>
-<span class="normal">135</span>
-<span class="normal">136</span>
-<span class="normal">137</span>
-<span class="normal">138</span>
-<span class="normal">139</span>
-<span class="normal">140</span>
-<span class="normal">141</span>
-<span class="normal">142</span>
-<span class="normal">143</span>
-<span class="normal">144</span>
-<span class="normal">145</span>
-<span class="normal">146</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
   &quot;Action Count&quot;: {
     &quot;attr2&quot;: {
       &quot;displayName&quot;: &quot;attr2&quot;,
@@ -4541,7 +3808,7 @@ For example, the dynamic properties added in one of the resource type <code>Acti
     }
   }
 }
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 </ul>
 </li>
 <li>
@@ -4588,28 +3855,12 @@ For example, the dynamic properties added in one of the resource type <code>Acti
 <ul>
 <li>
 <p><strong>PUT request format:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/dynamic-properties
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/dynamic-properties
+</code></pre></div>
 </li>
 <li>
 <p><strong>Sample request payload:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
   &quot;Action Count&quot;: {
     &quot;attr2&quot;: {
       &quot;displayName&quot;: &quot;attr2&quot;,
@@ -4626,7 +3877,7 @@ For example, the dynamic properties added in one of the resource type <code>Acti
   }
   ... other resource types
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Steps to execute the API:</strong></p>
@@ -4640,152 +3891,7 @@ For example, the dynamic properties added in one of the resource type <code>Acti
 <ul>
 <li>Different types of resource types for dynamic properties comprise of <code>Action Count</code>, <code>User</code>, <code>Category Count</code>, <code>Request</code>, <code>Shared Data</code>, <code>Portlet Attributes</code>, <code>Render Parameter</code>, and <code>Session</code>.</li>
 <li>Different types of allowed property types for dynamic properties comprise of <code>Text</code>, <code>Date</code>, <code>Time</code>, <code>Timestamp</code>, <code>Number</code>, <code>Decimal Number</code>, <code>Boolean</code>, <code>List</code>, <code>Person</code>, and <code>Group</code>.
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
-<span class="normal">  2</span>
-<span class="normal">  3</span>
-<span class="normal">  4</span>
-<span class="normal">  5</span>
-<span class="normal">  6</span>
-<span class="normal">  7</span>
-<span class="normal">  8</span>
-<span class="normal">  9</span>
-<span class="normal"> 10</span>
-<span class="normal"> 11</span>
-<span class="normal"> 12</span>
-<span class="normal"> 13</span>
-<span class="normal"> 14</span>
-<span class="normal"> 15</span>
-<span class="normal"> 16</span>
-<span class="normal"> 17</span>
-<span class="normal"> 18</span>
-<span class="normal"> 19</span>
-<span class="normal"> 20</span>
-<span class="normal"> 21</span>
-<span class="normal"> 22</span>
-<span class="normal"> 23</span>
-<span class="normal"> 24</span>
-<span class="normal"> 25</span>
-<span class="normal"> 26</span>
-<span class="normal"> 27</span>
-<span class="normal"> 28</span>
-<span class="normal"> 29</span>
-<span class="normal"> 30</span>
-<span class="normal"> 31</span>
-<span class="normal"> 32</span>
-<span class="normal"> 33</span>
-<span class="normal"> 34</span>
-<span class="normal"> 35</span>
-<span class="normal"> 36</span>
-<span class="normal"> 37</span>
-<span class="normal"> 38</span>
-<span class="normal"> 39</span>
-<span class="normal"> 40</span>
-<span class="normal"> 41</span>
-<span class="normal"> 42</span>
-<span class="normal"> 43</span>
-<span class="normal"> 44</span>
-<span class="normal"> 45</span>
-<span class="normal"> 46</span>
-<span class="normal"> 47</span>
-<span class="normal"> 48</span>
-<span class="normal"> 49</span>
-<span class="normal"> 50</span>
-<span class="normal"> 51</span>
-<span class="normal"> 52</span>
-<span class="normal"> 53</span>
-<span class="normal"> 54</span>
-<span class="normal"> 55</span>
-<span class="normal"> 56</span>
-<span class="normal"> 57</span>
-<span class="normal"> 58</span>
-<span class="normal"> 59</span>
-<span class="normal"> 60</span>
-<span class="normal"> 61</span>
-<span class="normal"> 62</span>
-<span class="normal"> 63</span>
-<span class="normal"> 64</span>
-<span class="normal"> 65</span>
-<span class="normal"> 66</span>
-<span class="normal"> 67</span>
-<span class="normal"> 68</span>
-<span class="normal"> 69</span>
-<span class="normal"> 70</span>
-<span class="normal"> 71</span>
-<span class="normal"> 72</span>
-<span class="normal"> 73</span>
-<span class="normal"> 74</span>
-<span class="normal"> 75</span>
-<span class="normal"> 76</span>
-<span class="normal"> 77</span>
-<span class="normal"> 78</span>
-<span class="normal"> 79</span>
-<span class="normal"> 80</span>
-<span class="normal"> 81</span>
-<span class="normal"> 82</span>
-<span class="normal"> 83</span>
-<span class="normal"> 84</span>
-<span class="normal"> 85</span>
-<span class="normal"> 86</span>
-<span class="normal"> 87</span>
-<span class="normal"> 88</span>
-<span class="normal"> 89</span>
-<span class="normal"> 90</span>
-<span class="normal"> 91</span>
-<span class="normal"> 92</span>
-<span class="normal"> 93</span>
-<span class="normal"> 94</span>
-<span class="normal"> 95</span>
-<span class="normal"> 96</span>
-<span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span>
-<span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span>
-<span class="normal">113</span>
-<span class="normal">114</span>
-<span class="normal">115</span>
-<span class="normal">116</span>
-<span class="normal">117</span>
-<span class="normal">118</span>
-<span class="normal">119</span>
-<span class="normal">120</span>
-<span class="normal">121</span>
-<span class="normal">122</span>
-<span class="normal">123</span>
-<span class="normal">124</span>
-<span class="normal">125</span>
-<span class="normal">126</span>
-<span class="normal">127</span>
-<span class="normal">128</span>
-<span class="normal">129</span>
-<span class="normal">130</span>
-<span class="normal">131</span>
-<span class="normal">132</span>
-<span class="normal">133</span>
-<span class="normal">134</span>
-<span class="normal">135</span>
-<span class="normal">136</span>
-<span class="normal">137</span>
-<span class="normal">138</span>
-<span class="normal">139</span>
-<span class="normal">140</span>
-<span class="normal">141</span>
-<span class="normal">142</span>
-<span class="normal">143</span>
-<span class="normal">144</span>
-<span class="normal">145</span>
-<span class="normal">146</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
   &quot;Action Count&quot;: {
     &quot;attr2&quot;: {
       &quot;displayName&quot;: &quot;attr2&quot;,
@@ -4931,7 +4037,7 @@ For example, the dynamic properties added in one of the resource type <code>Acti
     }
   }
 }
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 </ul>
 </li>
 <li>
@@ -4973,11 +4079,11 @@ For example, the dynamic properties added in one of the resource type <code>Acti
 <ul>
 <li>
 <p><strong>DELETE request format:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules/{rule-id}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules/{rule-id}
+</code></pre></div>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules/a7f72eb5-fffa-4bbb-955e-7dd0a9c9c88f
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules/a7f72eb5-fffa-4bbb-955e-7dd0a9c9c88f
+</code></pre></div>
 </li>
 <li>
 <p><strong>Steps to execute the API:</strong></p>
@@ -4992,12 +4098,10 @@ For example:</li>
 <li>
 <p><strong>Response Structure Details:</strong></p>
 <p>The response structure is a success message that says the rule with the provided ID is deleted successfully, just like in this example shown below:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
   &quot;message&quot;: rule with id: 880bb281-bb82-489c-a220-56104f0f638d deleted successfully
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Success and Error Messages:</strong></p>

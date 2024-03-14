@@ -2680,23 +2680,7 @@
 <p>One of the most useful aspects of the client side programming model is the ability to read, modify, and save portlet preferences on the client.</p>
 <p>The interface <code>ibm.portal.portlet.PortletPreferences</code> JavaScript mirrors its server side counterpart <code>javax.portlet.PortletPreferences</code> as closely as possible. For the full description of the JavaScript interfaces refer to the public API documentation.</p>
 <p>The following code sample shows how you can retrieve and read the portlet preferences on the client:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;script&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;script&gt;
     function &lt;%=namespace%&gt;_handleLoadPortletPreferences(portletWindow, status, portletPrefs) { 
         if (status==ibm.portal.portlet.PortletWindow.STATUS_OK) {
             portletWindow.setAttribute(&quot;preferences&quot;, portletPrefs);
@@ -2713,7 +2697,7 @@
     &lt;%=namespace%&gt;_portletWindow = new ibm.portal.portlet.PortletWindow(&quot;&lt;%=portletWindowID%&gt;&quot;);
     &lt;%=namespace%&gt;_portletWindow.getPortletPreferences(&lt;%=namespace%&gt;_handleLoadPortletPreferences);
 &lt;/script&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For the full description of the JavaScript interfaces refer to the public API documentation.</p>
 
 

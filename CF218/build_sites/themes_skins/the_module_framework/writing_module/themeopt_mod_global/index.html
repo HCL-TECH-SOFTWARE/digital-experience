@@ -3446,15 +3446,13 @@ Different schemes can be used within the value attribute.</p>
 <li>res: Use the res scheme to access an arbitrary resource, such as a JSP, a servlet, or a static file, in a web module that is installed on the server.</li>
 <li>
 <p>dav: Use the dav scheme to access resources in the portal file store. You can also use replacement tokens for the URI value, for example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>res:{rep=WP
+<div class="language-text highlight"><pre><span></span><code>res:{rep=WP
 
 CommonComponentConfigService;key=cc.theme.context}/themes/html/PageBuilder2/modules/css/markup/head_m.jsp
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The code</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>{rep=WP CommonComponentConfigService;key=cc.theme.context}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>{rep=WP CommonComponentConfigService;key=cc.theme.context}
+</code></pre></div>
 <p>is replaced with the value of the custom property cc.theme.context in the resource environment provider WP CommonComponentConfigService.</p>
 </li>
 </ul>
@@ -3507,12 +3505,10 @@ Child-elements:</p>
 Example:</p>
 </li>
 </ul>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;runtimeActivation&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;runtimeActivation&gt;
          &lt;condition deviceClass=&quot;worklight&quot;/&gt;
 &lt;/runtimeActivation&gt;&quot;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Element: condition</strong></p>

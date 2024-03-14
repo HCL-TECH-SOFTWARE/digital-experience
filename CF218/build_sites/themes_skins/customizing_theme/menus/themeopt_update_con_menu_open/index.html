@@ -3494,32 +3494,7 @@
 </li>
 <li>
 <p>Add the HTML for the icon to the custom skins. Add the following code to the custom skin templates after the <code>&lt;h2&gt;</code> node.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;a aria-haspopup=&quot;true&quot; aria-label=&quot;Display component action menu&quot; role=&quot;button&quot; href=&quot;javascript:;&quot; class=&quot;wpthemeIcon wpthemeMenuFocus contextMenuInSkinIcon&quot; style=&quot;display:none&quot; tabindex=&quot;0&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;a aria-haspopup=&quot;true&quot; aria-label=&quot;Display component action menu&quot; role=&quot;button&quot; href=&quot;javascript:;&quot; class=&quot;wpthemeIcon wpthemeMenuFocus contextMenuInSkinIcon&quot; style=&quot;display:none&quot; tabindex=&quot;0&quot;&gt;
                 &lt;span title=&quot;Display component action menu&quot;&gt;&lt;img aria-label=&quot;Display component action menu&quot; alt=&quot;&quot; src=&quot;data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7&quot;&gt;&lt;/span&gt;
                 &lt;span class=&quot;wpthemeAltText&quot;&gt;Component Action Menu&lt;/span&gt;
                 &lt;!-- start CAM template --&gt;
@@ -3545,19 +3520,17 @@
                 &lt;/span&gt;
                 &lt;!-- end CAM template --&gt;
             &lt;/a&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Translate the values of the <code>aria-label</code> and <code>wpthemeAltText</code> to support any languages you support.</p>
 </li>
 <li>
 <p>Add the CSS for the icon. Add the following code anywhere in the custom theme.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>.wpthemeControlHeader a.wpthemeIcon.contextMenuInSkinIcon img {
+<div class="language-text highlight"><pre><span></span><code>.wpthemeControlHeader a.wpthemeIcon.contextMenuInSkinIcon img {
                 background-position:0 -1496px;
             }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Add the new content menu to the custom theme profile. Open the theme profile and add <code>wp_skin_cam</code> to the <code>deferredModuleIDs</code> section.</p>

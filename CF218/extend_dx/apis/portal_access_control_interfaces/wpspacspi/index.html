@@ -2128,14 +2128,7 @@
 </li>
 </ul>
 <p>Examples of how these interfaces are used are provided in the accompanying Javadoc. The following example shows how to evaluate if a principal has view permissions on a resource:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>Identifiable resource = ... ; // some resource, for example a portlet
+<div class="language-text highlight"><pre><span></span><code>Identifiable resource = ... ; // some resource, for example a portlet
 Principal bob = ... ; // some principal, for example Bob
 Context ctx = new InitialContext();
 AccessControlHome home = (AccessControlHome) ctx.lookup(AccessControlHome.JNDI_NAME);
@@ -2143,7 +2136,7 @@ AccessControlEnvironment environment = home.getAccessControlEnvironment();
 Permission permission = environment.getPermission(resource, RoleType.USER);
 AccessControlGlobalRuntimeModel globalModel = home.getAccessControlGlobalRuntimeModel();
 isAllowed = globalModel.hasPermission(bob, permission); 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

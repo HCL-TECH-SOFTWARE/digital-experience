@@ -2574,17 +2574,15 @@
 <ul>
 <li>
 <p>Requests from the consumer contain:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>If-Modified-Since : {last-modified_value}
+<div class="language-text highlight"><pre><span></span><code>If-Modified-Since : {last-modified_value}
 If-None-Match: {etag_value}
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Responses from the producer contain:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>ETag: {etag_value}
+<div class="language-text highlight"><pre><span></span><code>ETag: {etag_value}
 Last-Modified: {last-modified_value}
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 </li>
@@ -2593,15 +2591,14 @@ Last-Modified: {last-modified_value}
 <ul>
 <li>
 <p>Requests from the consumer are in the form:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://cmsserver.example.org/ProducerApp?etag={etag_value}&amp;lastMod={last-modified_value}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://cmsserver.example.org/ProducerApp?etag={etag_value}&amp;lastMod={last-modified_value}
+</code></pre></div>
 </li>
 <li>
 <p>Feeds sent back from the producer contain the following channel-level elements:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;lastBuildDate&gt;{last-modified_value}&lt;/lastBuildDate&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;lastBuildDate&gt;{last-modified_value}&lt;/lastBuildDate&gt;
 &lt;ibmfs:etag&gt;{etag_value}&lt;/ibmfs:etag&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 </li>
@@ -2611,27 +2608,24 @@ Last-Modified: {last-modified_value}
 <li>The consumer makes its first request to the producer. This request does not contain any special header fields.</li>
 <li>
 <p>The producer receives the request, and since there were no special headers, it responds with a feed that contains items which represent all transactions that have occurred up to that point. Before sending the response it sets the Last-Modified header to the current time and the ETag header to a value that enables the producer identify this specific instance of the feed.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>Last-Modified: Thu, 7 Sep 2006 12:00:00 GMT
+<div class="language-text highlight"><pre><span></span><code>Last-Modified: Thu, 7 Sep 2006 12:00:00 GMT
 ETag: ABC0011
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>The consumer receives the response, processes the feed, and stores the Last-Modified and ETag values only if the feed was processed successfully.</p>
 </li>
 <li>
 <p>The next time the consumer is triggered, it again makes a request to the producer for the transaction feed. This time it sets the If-Modified-Since header to the Last-Modified date it received on the last request and the If-None-Match field to the value of the ETag it received on the last request.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>If-Modified-Since: Thu, 7 Sep 2006 12:00:00 GMT
+<div class="language-text highlight"><pre><span></span><code>If-Modified-Since: Thu, 7 Sep 2006 12:00:00 GMT
 If-None-Match: ABC0011
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>The producer receives the request, and checks the values of the header fields. It then uses its own internal logic to generate a new feed which only contains changes that occurred since the last feed it sent to this consumer. It sends back a feed with the following header values:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>Last-Modified: Thu, 7 Sep 2006 13:00:00 GMT
+<div class="language-text highlight"><pre><span></span><code>Last-Modified: Thu, 7 Sep 2006 13:00:00 GMT
 ETag: ABC0032
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>The consumer receives the response, processes the feed, and updates its stored values for the Last-Modified date and ETag.</p>

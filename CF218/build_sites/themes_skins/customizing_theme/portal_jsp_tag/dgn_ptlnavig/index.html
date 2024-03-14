@@ -3502,33 +3502,7 @@
 <p>By default, the uiNavigationModel lists the visible pages as part of its iterator. When the <strong>Show hidden pages</strong> option is selected in the toolbar, it lists the hidden pages also. There is a special mobile hidden flag for pages. The model also allows you to specify a mobile test device class expression, which is used to evaluate if the system is rendered as part of a mobile request.</p>
 <p>The uiNavigationModel tag makes the <a href="../../expression_language_beans/ui_nav_model/">uiNavigationModel</a> EL Bean available as a variable that can be specified as part of the <code>var</code> attribute.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portal-navigation:uiNavigationModel var=&quot;uiNavigationModel&quot; mobileDeviceClassTest=&quot;smartphone/tablet&quot; &gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;portal-navigation:uiNavigationModel var=&quot;uiNavigationModel&quot; mobileDeviceClassTest=&quot;smartphone/tablet&quot; &gt;
     &lt;%-- loop through all children of the page at the given curLevel --%&gt;
     &lt;c:forEach var=&quot;node&quot; items=&quot;${uiNavigationModel.children[selectionPath[curLevel]]}&quot;&gt;
 
@@ -3555,7 +3529,7 @@
         &lt;/li&gt;
     &lt;/c:forEach&gt;
 &lt;/portal-navigation:uiNavigationModel&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Required parameters:</p>
 <ul>
 <li>
@@ -3592,14 +3566,11 @@
 <p><strong>&lt;portal-navigation:url command="ChangeLanguage"&gt;</strong></p>
 <p>This tag is used to change the active language in the navigational state in which the URL is generated.</p>
 <p>The following code example uses this tag to change the language to German.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;a href=&#39;&lt;portal-navigation:url 
+<div class="language-text highlight"><pre><span></span><code>&lt;a href=&#39;&lt;portal-navigation:url 
          command=&quot;ChangeLanguage&quot;&gt;&lt;portal-navigation:urlParam name=&quot;locale&quot; 
          value=&quot;de&quot;/&gt;&lt;/portal-navigation:url&gt;&#39;&gt;Diese Seite in deutsch
 &lt;/a&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>&lt;portal-navigation:urlParam name="parameter_name" value="parameter_value"&gt;</strong></p>
@@ -3637,8 +3608,8 @@
 <li>
 <p><strong>&lt;portal-navigation:urlGeneration attribute="value"&gt;</strong></p>
 <p>This tag creates a URL to pages or portlets. The tag is conditional. If the URL cannot be found, the body of the tag is not evaluated. Inside the body of the tag, the &lt;% wpsURL %&gt; scripting variable can be used to write the URL directly to the output stream. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;a class=&quot;wpsToolBarLink&quot; href=&#39;&lt;% wpsURL.write(out); %&gt;&#39;&gt;My page&lt;/a&gt;  
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;a class=&quot;wpsToolBarLink&quot; href=&#39;&lt;% wpsURL.write(out); %&gt;&#39;&gt;My page&lt;/a&gt;  
+</code></pre></div>
 <p>Attributes are as follows:</p>
 <ul>
 <li>
@@ -3665,19 +3636,15 @@ If the user does not have the required permission, the body of the tag is not ru
 <li>
 <p><strong>actionName="name"</strong></p>
 <p>This attribute indicates the name of an action that would be called by the URL to an IBM portlet. The following example generates a URL that calls the <code>myAction</code> action of the portlet, which is contained by <code>my.LayoutNode</code> on <code>my.ContentNode</code>.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portal-navigation:urlGeneration actionName=&quot;myAction&quot; contentNode=&quot;my.ContentNode&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;portal-navigation:urlGeneration actionName=&quot;myAction&quot; contentNode=&quot;my.ContentNode&quot; 
                           layoutNode=&quot;my.LayoutNode&quot;&gt;
        &lt;a href=&quot;&lt;%wpsURL.write(out);%&gt;&quot;&gt;Link to portlet with myAction&lt;/a&gt;
     &lt;/portal-navigation:urlGeneration&gt;   
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following code is from the <code>actionPerformed()</code> aspect of the portlet that handles the <code>myAction</code> action.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>     PortletURI actionURL = portletResponse.createURI();
+<div class="language-text highlight"><pre><span></span><code>     PortletURI actionURL = portletResponse.createURI();
      actionURL.addAction(&quot;myAction&quot;);     
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>allowRelativeURL="true|false"</strong></p>
@@ -3722,18 +3689,13 @@ If the user does not have the required permission, the body of the tag is not ru
 <li>
 <p><strong>normalize="true|false"</strong></p>
 <p>This attribute indicates that the URL to be generated must be normalized. If more parameters are set, the normalization is run first and afterward the other state modifications are accomplished. Setting the "normalize" parameter to true normalizes the URL with the same XSL file used to normalize URLs for search engines. The normalized representation of the URL can also be used to bookmark a page. The following example shows how to use the tag with this attribute:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portal-navigation:urlGeneration normalize=&quot;true&quot; &gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;portal-navigation:urlGeneration normalize=&quot;true&quot; &gt;
       &lt;a href=&quot;&lt;% wpsURL.write(out); %&gt;&quot;&gt;
         This is the normalized URL of the current 
         selected page.
       &lt;/a&gt;    
 &lt;/portal-navigation:urlGeneration&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If more parameters are set for the <code>&lt;portal-navigation:urlGeneration&gt;</code> tag the XSL transformation is run first and all other state modifications is accomplished afterward.</p>
 </li>
 <li>
@@ -3761,18 +3723,7 @@ If the user does not have the required permission, the body of the tag is not ru
 <li>
 <p><strong>commandParam="parameter_name"</strong></p>
 <p>This attribute directs the portal engine to obtain the actual command to run from an HTTP request parameter instead of on the URL directly. The name of the parameter is the value of the commandParam attribute. This is useful in situations where different commands need to be conditionally run yet only one URL can be specified. Such is the case when using a <code>&lt;form&gt;</code> tag with a <code>&lt;select&gt;</code>. This enables use of the HTML form without requiring JavaScript. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>   &lt;form name=&quot;someFormName&quot; method=&quot;GET&quot; style=&quot;margin-bottom: 0&quot;
+<div class="language-text highlight"><pre><span></span><code>   &lt;form name=&quot;someFormName&quot; method=&quot;GET&quot; style=&quot;margin-bottom: 0&quot;
                action=&#39;&lt;portal-navigation:url commandParam=&quot;requestParamName&quot;/&gt;&#39;&gt;
            &lt;select name=&quot;requestParamName&quot; onchange=&quot;javascript: this.form.submit(); &quot;&gt;
                    &lt;portal-navigation:someLoop&gt;
@@ -3784,7 +3735,7 @@ If the user does not have the required permission, the body of the tag is not ru
                    &lt;input type=&quot;image&quot; border=0 align=absmiddle src=&#39;go.gif&#39;/&gt;Go
            &lt;/noscript&gt;
    &lt;/form&gt;        
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The previous code example works both with and without JavaScript enabled.</p>
 </li>
 <li>
@@ -3797,14 +3748,11 @@ If the user does not have the required permission, the body of the tag is not ru
 </li>
 </ul>
 <p>Example: The following example shows part of a user login form that uses the <code>&lt;portal:url&gt;</code> tag to process input fields, user ID, and password.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>    &lt;FORM method=&quot;POST&quot;
+<div class="language-text highlight"><pre><span></span><code>    &lt;FORM method=&quot;POST&quot;
          action=&#39;&lt;portal-navigation:url command=&quot;LoginUser&quot;/&gt;&#39;
          enctype=&quot;application/x-www-form-urlencoded&quot;
          name=&quot;LoginPage&quot;&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>&lt;portal-navigation:navigationUrl type="link|expand|collapse|launch" varname="node_name" var="variable_name"/&gt;</strong></p>
@@ -3885,14 +3833,7 @@ If the user does not have the required permission, the body of the tag is not ru
 <li>
 <p><strong>scopeUniqueName</strong></p>
 <p>Specifies where to start the rendering of the portal navigation. The expected value is a unique name or string representation of the navigation node's ObjectID. This also replaces the <code>&lt;portal:favoritesLoop/&gt;</code> tag for enabling Organize Favorites functionality. The following code example shows how to use the <code>&lt;portal-navigation:navigation&gt;</code> with the <code>scopeUniqueName</code> attribute to enable Organize Favorites:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portal-navigation:navigation scopeUniqueName=&quot;wps.Favorites&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;portal-navigation:navigation scopeUniqueName=&quot;wps.Favorites&quot;&gt;
    &lt;portal-navigation:navigationLoop&gt;
      &lt;a href=&#39;&lt;portal-navigation:navigationUrl type=&quot;link&quot;/&gt;&#39;
         title=&#39;&lt;portal-fmt:description varname=&quot;&lt;%=wpsNavNode%&gt;&quot;/&gt;&#39;&gt;
@@ -3900,7 +3841,7 @@ If the user does not have the required permission, the body of the tag is not ru
      &lt;/a&gt;
    &lt;/portal-navigation:navigationLoop&gt;
  &lt;/portal-navigation:navigation&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 </li>
@@ -3908,89 +3849,7 @@ If the user does not have the required permission, the body of the tag is not ru
 <p><strong>&lt;portal:favoritesLoop/&gt;</strong></p>
 <p>This tag is deprecated and must be replaced by using the <code>&lt;portal-navigation:navigation/&gt;</code> tag with its <code>scopeUniqueName</code> attribute.</p>
 <p>The following code example uses this tag to create the Organize Favorites functionality. To use this code, you must place it within the themes that you want to have this functionality.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span>
-<span class="normal">79</span>
-<span class="normal">80</span>
-<span class="normal">81</span>
-<span class="normal">82</span>
-<span class="normal">83</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%@ taglib uri=&quot;/WEB-INF/tld/portal.tld&quot; prefix=&quot;portal&quot; %&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;%@ taglib uri=&quot;/WEB-INF/tld/portal.tld&quot; prefix=&quot;portal&quot; %&gt;
 &lt;portal-logic:if loggedIn=&quot;yes&quot; notScreen=&quot;SelfcareUserForm,SelfcareUserConf&quot;&gt;
 &lt;table border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; &gt;
     &lt;tr&gt;
@@ -4073,7 +3932,7 @@ If the user does not have the required permission, the body of the tag is not ru
     &lt;/tr&gt;
 &lt;/table&gt;
 &lt;/portal-logic:if&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 

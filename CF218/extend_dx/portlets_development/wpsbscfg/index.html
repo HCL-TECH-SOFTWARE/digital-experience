@@ -2539,29 +2539,7 @@ Rational Application Developer provides wizards to help you build, test, and dep
 <p>You can use an editor of your choice like the Eclipse IDE or Visual Studio Code and deploy to DX via dxclient tooling. DX can either run in docker or in Kubernetes or as a traditional install.</p>
 <h2 id="writing-the-portlet-code">Writing the portlet code</h2>
 <p>The Hello World portlet described in this article provides an introduction to writing your first portlet. Hello World provides the fewest methods that are required for a portlet. It uses the portlet response object to write simple output directly to the portal page.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code>package com.ibm.wps.samples.jsr;
+<div class="language-text highlight"><pre><span></span><code>package com.ibm.wps.samples.jsr;
 
 import javax.portlet.*;
 import java.io.*;
@@ -2584,7 +2562,7 @@ public class HelloWorld extends GenericPortlet {
     }
 
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="compiling-java-source">Compiling Java source</h2>
 <p>Compile your Java source files. Before you compile your Java source, set the class path for the compiler to find the JAR files for any portlet packages that your portlet uses by running the following command:</p>
 <ul>
@@ -2646,14 +2624,12 @@ public class HelloWorld extends GenericPortlet {
 </li>
 </ul>
 <p>Then, compile the portlet using the fully qualified path to the Java portlet source.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>   appserver\java\bin\javac -classpath %WAS_CLASSPATH%;path_to\portletapi_20.jar 
+<div class="language-text highlight"><pre><span></span><code>   appserver\java\bin\javac -classpath %WAS_CLASSPATH%;path_to\portletapi_20.jar 
         com.ibm.wps.samples.jsr.HelloWorld.java  
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>   appserver\java\bin\javac -classpath %WAS_CLASSPATH%;path_to\portletapi_20.jar 
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>   appserver\java\bin\javac -classpath %WAS_CLASSPATH%;path_to\portletapi_20.jar 
         com.ibm.wps.samples.v4.HelloWorld.java  
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li>
 <p><strong>Loading classes for portlets</strong></p>
@@ -2666,8 +2642,8 @@ public class HelloWorld extends GenericPortlet {
 </ul>
 <h2 id="creating-the-jar-file">Creating the JAR file</h2>
 <p>Next, the portlet must be packaged in the JAR file format. To create a JAR file with the name <code>HelloWorld.jar</code>, enter the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>   jar -cf HelloWorld.jar HelloWorld.class
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>   jar -cf HelloWorld.jar HelloWorld.class
+</code></pre></div>
 <p>Refer to the JDK documentation for more information about the JAR command.</p>
 <h2 id="writing-the-portlet-descriptors">Writing the portlet descriptors</h2>
 <p>The following samples can be packaged with the Hello World portlet.</p>
@@ -2689,44 +2665,19 @@ public class HelloWorld extends GenericPortlet {
 <p>indicates the portlet application security role mapping. Omit this tag if the portlet does not use this feature.</p>
 </li>
 </ul>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE web-app PUBLIC &quot;-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN&quot; 
                          &quot;http://java.sun.com/dtd/web-app_2_3.dtd&quot;&gt;
 &lt;web-app id=&quot;WebApp&quot;&gt;
     &lt;display-name&gt;Hello World (JSR)&lt;/display-name&gt;
     &lt;description&gt;Basic JSR 168 portlet&lt;/description&gt;
 &lt;/web-app&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Standard portlet deployment descriptor:</strong></p>
 <p>The following shows the minimum elements that are required for the standard portlet deployment descriptor.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;portlet-app xmlns=&quot;http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd&quot; version=&quot;2.0&quot; 
              xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
              xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd 
@@ -2746,7 +2697,7 @@ public class HelloWorld extends GenericPortlet {
       &lt;/portlet-info&gt;
    &lt;/portlet&gt;
 &lt;/portlet-app&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The standard portlet descriptor is defined by an XML schema and does not require a DTD.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
@@ -2813,23 +2764,23 @@ public class HelloWorld extends GenericPortlet {
 <ul>
 <li>
 <p>To create a WAR file with the name <code>HelloWorld.war</code> and include all of the files in the <code>/WEB-INF</code> and <code>/images</code> directories:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>   jar -cf HelloWorld.war images WEB-INF
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>   jar -cf HelloWorld.war images WEB-INF
+</code></pre></div>
 </li>
 <li>
 <p>To update an existing WAR file, <code>HelloWorld.war</code> with a revised portlet descriptor:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>   jar -uf HelloWorld.war WEB-INF/portlet.xml
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>   jar -uf HelloWorld.war WEB-INF/portlet.xml
+</code></pre></div>
 </li>
 <li>
 <p>To extract the portlet descriptor from the WAR file, <code>HelloWorld.war</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>   jar -xf HelloWorld.war WEB-INF/portlet.xml
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>   jar -xf HelloWorld.war WEB-INF/portlet.xml
+</code></pre></div>
 </li>
 <li>
 <p>To extract all files from an existing WAR file, <code>HelloWorld.war</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>   jar -xf HelloWorld.war
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>   jar -xf HelloWorld.war
+</code></pre></div>
 </li>
 </ul>
 <p>After the WAR file is created, it can be installed to HCL DX as described in <a href="../../../deployment/manage/portal_admin_tools/portal_admin_portlets/">Portal administration portlets</a>.</p>
@@ -2857,16 +2808,7 @@ public class HelloWorld extends GenericPortlet {
 </li>
 </ul>
 <p>For example, a portlet application might use a portlet descriptor:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portlet-app 
+<div class="language-text highlight"><pre><span></span><code>&lt;portlet-app 
     xmlns=&quot;http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd&quot;
     version=&quot;1.0&quot;
     xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
@@ -2876,17 +2818,9 @@ public class HelloWorld extends GenericPortlet {
         &lt;portlet&gt;
         &lt;portlet-name&gt;Banner Ad&lt;/portlet-name&gt;
         ...
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>In this example, there is no ID attribute that is provided on the <portlet-app/> element. Therefore, the <portlet-app/> element of the XMLAccess script would use the WAR file name:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code> &lt;web-app action=&quot;update&quot; active=&quot;true&quot; uid=&quot;com.ibm.wps.banner&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code> &lt;web-app action=&quot;update&quot; active=&quot;true&quot; uid=&quot;com.ibm.wps.banner&quot;&gt;
      &lt;url&gt;file:///$server_root$/bp/wp.bp.bannerad/installableApps/bannerad.war&lt;/url&gt;
      &lt;servlet action=&quot;update&quot; 
               active=&quot;true&quot; 
@@ -2895,7 +2829,7 @@ public class HelloWorld extends GenericPortlet {
          &lt;portlet action=&quot;update&quot; active=&quot;true&quot; name=&quot;Banner Ad&quot;&gt;
      &lt;/portlet-app&gt;
  &lt;/web-app&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <details class="info" open="open">

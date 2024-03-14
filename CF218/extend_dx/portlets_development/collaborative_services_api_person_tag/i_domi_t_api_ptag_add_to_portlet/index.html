@@ -2533,13 +2533,13 @@
 <li>Integrating the Business card and online status in a custom portlet</li>
 <li>
 <p>Add the following line to your page:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%@taglib uri=&quot;/WEB-INF/tld/people.tld&quot;prefix=&quot;pa&quot;%&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;%@taglib uri=&quot;/WEB-INF/tld/people.tld&quot;prefix=&quot;pa&quot;%&gt;
+</code></pre></div>
 </li>
 <li>
 <p>Include a statement in your page similar to the following line:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;pa:person value=&quot;CN=John Smith,OU=SALES,O=CNTSERV_EXMP&quot; valueType=&quot;LDAPDN&quot; displayName=&quot;John Smith&quot; isActive=&quot;true/false&quot; /&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;pa:person value=&quot;CN=John Smith,OU=SALES,O=CNTSERV_EXMP&quot; valueType=&quot;LDAPDN&quot; displayName=&quot;John Smith&quot; isActive=&quot;true/false&quot; /&gt;
+</code></pre></div>
 <p>The displayName and isActive attributes are optional. The isActive attribute controls the formation of the Business card for a users name, depending on the activity of the user.</p>
 <ul>
 <li>If a user is active and selectable, then the isActive attribute is true.</li>
@@ -2549,33 +2549,33 @@ The supported types for valueType are:</p>
 </li>
 <li>
 <p>EMAIL</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;pa:person value=&quot;wpsadmin@cntserv_exmp.com&quot; valueType=&quot;EMAIL&quot; displayName=&quot;John Smith&quot;  isActive=&quot;true/false&quot; /&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;pa:person value=&quot;wpsadmin@cntserv_exmp.com&quot; valueType=&quot;EMAIL&quot; displayName=&quot;John Smith&quot;  isActive=&quot;true/false&quot; /&gt;
+</code></pre></div>
 </li>
 <li>
 <p>LDAPDN</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;pa:person value=&quot;CN=John Smith,OU=SALES,O=CNTSERV_EXMP&quot; valueType=&quot;LDAPDN&quot; displayName=&quot;John Smith&quot; isActive=&quot;true/false&quot; /&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;pa:person value=&quot;CN=John Smith,OU=SALES,O=CNTSERV_EXMP&quot; valueType=&quot;LDAPDN&quot; displayName=&quot;John Smith&quot; isActive=&quot;true/false&quot; /&gt;
+</code></pre></div>
 </li>
 <li>
 <p>MEMBERDN</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;pa:person value=&quot;CN=John Smith,OU=SALES,O=CNTSERV_EXMP&quot; valueType=&quot;MEMBERDN&quot; displayName=&quot;John Smith&quot; isActive=&quot;true/false&quot; /&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;pa:person value=&quot;CN=John Smith,OU=SALES,O=CNTSERV_EXMP&quot; valueType=&quot;MEMBERDN&quot; displayName=&quot;John Smith&quot; isActive=&quot;true/false&quot; /&gt;
+</code></pre></div>
 </li>
 <li>
 <p>OBJID</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;pa:person value=&quot;Z9eAe1JRU6N5FDRRANP14GRR47Q5CC38ANPLCI3&quot; valueType=&quot;OBJID&quot; displayName=&quot;John Smith&quot;&amp;nbp; isActive=&quot;true/false&quot; /&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;pa:person value=&quot;Z9eAe1JRU6N5FDRRANP14GRR47Q5CC38ANPLCI3&quot; valueType=&quot;OBJID&quot; displayName=&quot;John Smith&quot;&amp;nbp; isActive=&quot;true/false&quot; /&gt;
+</code></pre></div>
 </li>
 <li>
 <p>CN</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;pa:person value=&quot;wpsadmin&quot; valueType=&quot;CN&quot; displayName=&quot;John Smith&quot;&amp;nbp; isActive=&quot;true/false&quot; /&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;pa:person value=&quot;wpsadmin&quot; valueType=&quot;CN&quot; displayName=&quot;John Smith&quot;&amp;nbp; isActive=&quot;true/false&quot; /&gt;
+</code></pre></div>
 </li>
 <li>
 <p>WMMID</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;pa:person value=&quot;wpsadmin&quot; valueType=&quot;WMMID&quot; displayName=&quot;John Smith&quot;  isActive=&quot;true/false&quot; /&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;pa:person value=&quot;wpsadmin&quot; valueType=&quot;WMMID&quot; displayName=&quot;John Smith&quot;  isActive=&quot;true/false&quot; /&gt;
+</code></pre></div>
 </li>
 </ul>
 <p>Where OBJID corresponds to the objectId of the user.</p>
@@ -2588,50 +2588,42 @@ The supported types for valueType are:</p>
 <ol>
 <li>
 <p>Business card with online status:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;span class=&#39;vcard X-sametime-resolve&#39;&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;span class=&#39;vcard X-sametime-resolve&#39;&gt;
+</code></pre></div>
 </li>
 <li>
 <p>Business card without online status:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;span class=&#39;vcard&#39;&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;span class=&#39;vcard&#39;&gt;
+</code></pre></div>
 </li>
 </ol>
 </li>
 <li>
 <p>Include this line to add a user display name.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;a class=&#39;fn&#39; href=&#39;javascript:SemTagMenu.a11y(event)&#39; style=&#39;color:black; text-decoration:none;&#39; 
+<div class="language-text highlight"><pre><span></span><code>&lt;a class=&#39;fn&#39; href=&#39;javascript:SemTagMenu.a11y(event)&#39; style=&#39;color:black; text-decoration:none;&#39; 
    onclick=&#39;return false;&#39;&gt;{displayName}&lt;/a&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Any of the class <code>'email'</code>, <code>'uid'</code> and <code>'objectId'</code> are sufficient as long as they resolve to a unique user.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;span class=&#39;email&#39; style=&#39;display:none;&#39;&gt;{email id}span class=&#39;email&#39; style=&#39;display:none;&#39;&gt;{email id}&lt;/span&gt;
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;span class=&#39;uid&#39; style=&#39;display:none;&#39;&gt;{LDAPDN}span class=&#39;uid&#39; style=&#39;display:none;&#39;&gt;{LDAPDN}&lt;/span&gt;
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;span class=&#39;userObjectId&#39; style=&#39;display:none;&#39;&gt;{objectId}span class=&#39;userObjectId&#39; style=&#39;display:none;&#39;&gt;{objectId}
+<div class="language-text highlight"><pre><span></span><code>&lt;span class=&#39;email&#39; style=&#39;display:none;&#39;&gt;{email id}span class=&#39;email&#39; style=&#39;display:none;&#39;&gt;{email id}&lt;/span&gt;
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;span class=&#39;uid&#39; style=&#39;display:none;&#39;&gt;{LDAPDN}span class=&#39;uid&#39; style=&#39;display:none;&#39;&gt;{LDAPDN}&lt;/span&gt;
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;span class=&#39;userObjectId&#39; style=&#39;display:none;&#39;&gt;{objectId}span class=&#39;userObjectId&#39; style=&#39;display:none;&#39;&gt;{objectId}
 &lt;/span&gt;&lt;/span&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 <p>In the following example, <code>&lt;%@taglib uri="/WEB-INF/tld/people.tld" prefix="pa" %&gt;</code> interacts with Collaborative Services. The first % statement is a reference to the Collaborative Services tag library. The <code>pa:person value="wpsadmin@cntserv_exmp.com" valueType="EMAIL"</code> statement uses the Collaborative Services person tag to display the name of a person as a live link.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%@taglib uri=&quot;/WEB-INF/tld/people.tld&quot; prefix=&quot;pa&quot; %&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;%@taglib uri=&quot;/WEB-INF/tld/people.tld&quot; prefix=&quot;pa&quot; %&gt;
 &lt;%@taglib uri=&quot;/WEB-INF/tld/portlet.tld&quot; prefix=&quot;portletAPI&quot; %&gt;
 &lt;portletAPO:init/&gt;
 Hello example
 &lt;h1&gt;Collaborative Services Hello JSP&lt;/h1&gt;
 &lt;br /&gt;
 &lt;h2&gt;Hello,&lt;pa:person value=&quot;wpsadmin@cntserv_exmp.com&quot; valueType=&quot;EMAIL&quot; /&gt; !&lt;/h2&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

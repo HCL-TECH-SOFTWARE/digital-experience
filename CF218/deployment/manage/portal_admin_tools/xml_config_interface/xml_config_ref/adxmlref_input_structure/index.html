@@ -3716,18 +3716,7 @@
 <h1 id="xml-input-script-file-structure">XML input script file structure</h1>
 <p>When you use the XML configuration interface command line client, the XML script you use specifies the root element, the XML schema, the portal resources, and actions to be performed.</p>
 <p>The main level structure of an XML request or response is always as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
    &lt;request
     xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
     xsi:noNamespaceSchemaLocation=&quot;PortalConfig\_8.5.0.xsd&quot;
@@ -3739,7 +3728,7 @@
       success or failure indication for the processing
       &lt;/status&gt;
    &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The main request element specifies the XML schema used by the XML configuration interface. You must always use the schema reference that is shown in the example, that is a reference with no namespace to the schema <code>PortalConfig_8.5.0.xsd</code>. All XML requests must conform to this schema. For your reference, you can find the schema declaration in the JAR file wp.xml.jar under the location <code>com/ibm/wps/command/xml/PortalConfig_8.5.0.xsd</code>. The JAR file wp.xml.jar is located under the following directory:</p>
 <ul>
 <li><strong>For UNIX™Linux™:</strong> PortalServer_root/base/wp.xml/shared/app</li>
@@ -3755,18 +3744,13 @@
 <p>The portal section describes the parts of the portal configuration that should be exported or updated. The contents of the hierarchy used are described in more detail in the following sections.</p>
 <p>The status section is optional; in an XML response it indicates success or failure of the requested operation. If a status element is present in a XML request, the server simply ignores it.</p>
 <p>The simplest request that you can send to a server is the following:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>   &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>   &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
       &lt;request xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
          xsi:noNamespaceSchemaLocation=&quot;PortalConfig_8.5.0.xsd&quot;
             type=&quot;export&quot;&gt; 
          &lt;portal action=&quot;export&quot;/&gt;
       &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This request exports the entire configuration of the portal. You can look at the contents of the response to see how the configuration of individual portal resources, such as portlets or pages, is represented in XML elements and attributes.</p>
 <p>Additional to the <code>export</code> and <code>update</code> request types, a third request type <code>export-orphaned-data</code> is available for the special scenario of preparing the deletion of orphaned data.</p>
 <details class="info" open="open">

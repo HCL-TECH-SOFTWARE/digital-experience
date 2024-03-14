@@ -2749,8 +2749,8 @@
 <li>
 <p><strong>Command description</strong></p>
 <p>The <code>manage-virtual-portal</code> command is used to manage virtual portal tasks such as create, list, export, and import in the DX server.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-virtual-portal
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-virtual-portal
+</code></pre></div>
 </li>
 <li>
 <p><strong>Help command</strong></p>
@@ -2758,23 +2758,23 @@
 <ul>
 <li>
 <p>Help command for creating virtual portals:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-virtual-portal create -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-virtual-portal create -h
+</code></pre></div>
 </li>
 <li>
 <p>Help command for listing virtual portals:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-virtual-portal list -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-virtual-portal list -h
+</code></pre></div>
 </li>
 <li>
 <p>Help command for importing virtual portals:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-virtual-portal import -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-virtual-portal import -h
+</code></pre></div>
 </li>
 <li>
 <p>Help command for exporting virtual portals:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-virtual-portal export -h 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-virtual-portal export -h 
+</code></pre></div>
 </li>
 </ul>
 </li>
@@ -2783,28 +2783,28 @@
 <ul>
 <li>
 <p>Create virtual portal task in the DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>manage-virtual-portal create [OPTIONS]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>manage-virtual-portal create [OPTIONS]
+</code></pre></div>
 </li>
 <li>
 <p>List virtual portal task in the DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>manage-virtual-portal list [OPTIONS]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>manage-virtual-portal list [OPTIONS]
+</code></pre></div>
 </li>
 <li>
 <p>Import virtual portal task in the DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>manage-virtual-portal import [OPTIONS]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>manage-virtual-portal import [OPTIONS]
+</code></pre></div>
 </li>
 <li>
 <p>Export virtual portal task in the DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>manage-virtual-portal export [OPTIONS]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>manage-virtual-portal export [OPTIONS]
+</code></pre></div>
 </li>
 <li>
 <p>Use this attribute and retrigger the command to check the status of any previous request that was incomplete.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-requestId &lt;Unique ID of a previously triggered create virtual portal request&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-requestId &lt;Unique ID of a previously triggered create virtual portal request&gt;
+</code></pre></div>
 </li>
 </ul>
 </li>
@@ -2814,148 +2814,148 @@
 <li>
 <p><strong><code>manage-virtual-portal create</code> command:</strong></p>
 <p>Use this parameter to specify the username that is required for authenticating with the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt; 
+</code></pre></div>
 <p>Use this parameter to specify the password that is required for authenticating with the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the hostname of the target DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this parameter to specify the port number of the cw_profile (e.g. for Kubernetes Environment dxConnectPort is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectPort &lt;value&gt;
+</code></pre></div>
 <p>Use this parameter to specify the username that is required for authenticating to the cw_profile:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this parameter to specify the password that is required for authenticating to the cw_profile:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this parameter to specify the profile name of the DX core server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProfileName &lt;Profile name of the DX core server&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProfileName &lt;Profile name of the DX core server&gt; 
+</code></pre></div>
 <p>Use this parameter to specify the username of the DX WAS server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxWASUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxWASUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this parameter to specify the password of the DX WAS server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxWASPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxWASPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this parameter to specify the virtual portal Title:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-vpTitle &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-vpTitle &lt;value&gt;
+</code></pre></div>
 <p>Use this parameter to specify the virtual portal Realm:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-vpRealm &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-vpRealm &lt;value&gt;
+</code></pre></div>
 <p>Use this parameter to specify the virtual portal AdminGroup:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-vpAdminGroup &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-vpAdminGroup &lt;value&gt;
+</code></pre></div>
 <p>Use this parameter to specify the virtual portal HostName:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-vpHostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-vpHostname &lt;value&gt;
+</code></pre></div>
 <p>Use this parameter to specify the virtual portal Context:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-vpContext &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-vpContext &lt;value&gt;
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Create virtual portal task creates an empty virtual portal in the DX server.</p>
 </div>
 <div class="admonition example usage">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-virtual-portal create -hostname &lt;hostname&gt; -dxConnectPort &lt;dxConnectPort&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -dxProfileName &lt;Profile name of the DX Server&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -dxWASUsername &lt; Username of the DX WAS server&gt; -dxWASPassword &lt;Password of the DX WAS server&gt; -vpTitle &lt;virtual-portal-Title&gt; -vpRealm &lt;virtual-portal-realm&gt;  -vpAdminGroup &lt;virtual-portal-adminGroup&gt; -vpHostname &lt;virtual-portal-hostname&gt; -vpContext&lt;virtual-portal-context&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-virtual-portal create -hostname &lt;hostname&gt; -dxConnectPort &lt;dxConnectPort&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -dxProfileName &lt;Profile name of the DX Server&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -dxWASUsername &lt; Username of the DX WAS server&gt; -dxWASPassword &lt;Password of the DX WAS server&gt; -vpTitle &lt;virtual-portal-Title&gt; -vpRealm &lt;virtual-portal-realm&gt;  -vpAdminGroup &lt;virtual-portal-adminGroup&gt; -vpHostname &lt;virtual-portal-hostname&gt; -vpContext&lt;virtual-portal-context&gt;
+</code></pre></div>
 </div>
 </li>
 <li>
 <p><strong><code>manage-virtual-portal list</code> command</strong></p>
 <p>Use this parameter to specify the username that is required for authenticating with the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt; 
+</code></pre></div>
 <p>Use this parameter to specify the password that is required for authenticating with the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this parameter to specify the port number of the cw_profile (e.g. for Kubernetes Environment dxConnectPort is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectPort &lt;value&gt;
+</code></pre></div>
 <p>Use this parameter to specify the username that is required for authenticating to the cw_profile:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this parameter to specify the password that is required for authenticating to the cw_profile:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this parameter to specify the profile name of the DX core server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProfileName &lt;Profile name of the DX core server&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProfileName &lt;Profile name of the DX core server&gt; 
+</code></pre></div>
 <p>Use this parameter to specify the username of the DX WAS server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxWASUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxWASUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this parameter to specify the password of the DX WAS server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxWASPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxWASPassword &lt;value&gt;
+</code></pre></div>
 <div class="admonition example usage">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-virtual-portal list -hostname &lt;hostname&gt; -dxConnectPort &lt;dxConnectPort&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -dxProfileName &lt;profile-name-of-the-DX-server&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -dxWASUsername &lt;username-of-the-DX-WAS-server&gt; -dxWASPassword &lt;password-of-the-DX-WAS-server&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-virtual-portal list -hostname &lt;hostname&gt; -dxConnectPort &lt;dxConnectPort&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -dxProfileName &lt;profile-name-of-the-DX-server&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -dxWASUsername &lt;username-of-the-DX-WAS-server&gt; -dxWASPassword &lt;password-of-the-DX-WAS-server&gt; 
+</code></pre></div>
 </div>
 </li>
 <li>
 <p><strong><code>manage-virtual-portal import</code> command:</strong></p>
 <p>Use this parameter to specify the protocol with which to connect to the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProtocol &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProtocol &lt;value&gt;
+</code></pre></div>
 <p>Use this parameter to specify the username that is required for authenticating with the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt; 
+</code></pre></div>
 <p>Use this parameter to specify the password that is required for authenticating with the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this parameter to specify the port on which to connect to the server (e.g. for Kubernetes Environment dxPort is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPort &lt;value&gt;
+</code></pre></div>
 <p>Use this parameter to specify the path to DX configuration endpoint (for example: /wps/config):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-xmlConfigPath &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-xmlConfigPath &lt;value&gt;
+</code></pre></div>
 <p>Use this parameter to specify the XML file name with absolute path of the input file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-xmlFile &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-xmlFile &lt;value&gt;
+</code></pre></div>
 <p>Use this parameter to specify the virtual portal Context:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-vpContext &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-vpContext &lt;value&gt;
+</code></pre></div>
 <div class="admonition example usage">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-virtual-portal import -dxProtocol &lt;http/https&gt; -hostname &lt;host-name&gt; -dxPort &lt;dxPort&gt; -xmlConfigPath &lt;xmlConfigPath&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt;  -xmlFile &lt;xml-file-with-path&gt; -vpContext &lt;virtual-portal-context&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-virtual-portal import -dxProtocol &lt;http/https&gt; -hostname &lt;host-name&gt; -dxPort &lt;dxPort&gt; -xmlConfigPath &lt;xmlConfigPath&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt;  -xmlFile &lt;xml-file-with-path&gt; -vpContext &lt;virtual-portal-context&gt;
+</code></pre></div>
 </div>
 </li>
 <li>
 <p><strong><code>manage-virtual-portal export</code> command:</strong></p>
 <p>Use this parameter to specify the protocol with which to connect to the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProtocol &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProtocol &lt;value&gt;
+</code></pre></div>
 <p>Use this parameter to specify the user name that is required for authenticating with the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt; 
+</code></pre></div>
 <p>Use this parameter to specify the password that is required for authenticating with the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this parameter to specify the port on which to connect to the server (e.g. for Kubernetes Environment dxPort is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPort &lt;value&gt;
+</code></pre></div>
 <p>Use this parameter to specify the path to DX configuration endpoint (for example: /wps/config):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-xmlConfigPath &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-xmlConfigPath &lt;value&gt;
+</code></pre></div>
 <p>Use this parameter to specify the virtual portal Context:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-vpContext &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-vpContext &lt;value&gt;
+</code></pre></div>
 <p>Use this parameter to specify the virtual portal Title:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-vpTitle &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-vpTitle &lt;value&gt;
+</code></pre></div>
 <p>Use this parameter to specify the XML file name with absolute path of the input file to export the virtual portal content:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-xmlFile &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-xmlFile &lt;value&gt;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-virtual-portal export -hostname &lt;hostname&gt; -dxProtocol &lt;dxProtocol&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -vpTitle &lt;vpTitle&gt; -vpContext &lt;vpContext&gt; -xmlFile &lt;xml-file-with-path&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-virtual-portal export -hostname &lt;hostname&gt; -dxProtocol &lt;dxProtocol&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -vpTitle &lt;vpTitle&gt; -vpContext &lt;vpContext&gt; -xmlFile &lt;xml-file-with-path&gt;
+</code></pre></div>
 </div>
 </li>
 </ul>

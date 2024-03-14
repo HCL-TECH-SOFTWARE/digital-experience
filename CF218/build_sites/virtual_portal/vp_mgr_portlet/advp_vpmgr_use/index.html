@@ -2349,16 +2349,16 @@
 <li>The URL context for each virtual portal must be unique.</li>
 <li>
 <p>All virtual portal URL contexts must be built from the root context for the portal server and must be unique. They cannot be subcontexts. For example, this URL is invalid:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://www.example.com/wps/portal/vp1/vp2
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://www.example.com/wps/portal/vp1/vp2
+</code></pre></div>
 <p>This is the correct format:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://www.example.com/wps/portal/vp2
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://www.example.com/wps/portal/vp2
+</code></pre></div>
 </li>
 <li>
 <p>Use only ASCII characters for the URL Context of the virtual portal. Non-ASCII characters are not allowed for the URL Context. Examples: språk or <strong>D&uuml;ne</strong>. Using non-ASCII characters results in an error message such as the following one:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>EJPAH2009E: Invalid characters were found in a context name or label
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>EJPAH2009E: Invalid characters were found in a context name or label
+</code></pre></div>
 <p>Similarly, do not use escaped URL encoding either. For example, a URL Context of spr%E5k is not allowed.</p>
 </li>
 </ul>

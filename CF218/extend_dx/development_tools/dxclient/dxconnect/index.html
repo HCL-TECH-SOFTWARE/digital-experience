@@ -2378,18 +2378,18 @@
 <h2 id="dxconnect-installation-only-applicable-for-on-premises-installations">DXConnect Installation (only applicable for on-premises installations)</h2>
 <p>To install DXConnect under Configuration Wizard server, you must issue the command to the ConfigEngine script present under 'wp_profile'.
 Navigate to the ConfigEngine script location under 'wp_profile':</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/opt/HCL/wp_profile/ConfigEngine/
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/opt/HCL/wp_profile/ConfigEngine/
+</code></pre></div>
 <p>To install DXConnect, use the command below:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh<span class="w"> </span>install-dxconnect-application
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>./ConfigEngine.sh<span class="w"> </span>install-dxconnect-application
+</code></pre></div>
 <p>This task not only installs the DXConnect application, but it also creates the "DXC_ConfigSettings" WAS Resource Environment Provider and creates <a href="#resource-environment-provider-property-for-dxconnect"><code>DXCONNECT_MAX_FILE_SIZE_MB</code></a> custom property in that REP. </p>
 <p>To remove DXConnect, use the command below:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh<span class="w"> </span>remove-dxconnect-application
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>./ConfigEngine.sh<span class="w"> </span>remove-dxconnect-application
+</code></pre></div>
 <p>To re-install DXConnect, use the command below:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh<span class="w"> </span>reinstall-dxconnect-application
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>./ConfigEngine.sh<span class="w"> </span>reinstall-dxconnect-application
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In on-premise environments setups, you must run the <code>ConfigEngine</code> task under the <code>wp_profile</code> to have DXConnect installed in the correct location. A restart of the <code>cw_profile</code> server may be required.</p>
@@ -2406,11 +2406,11 @@ Navigate to the ConfigEngine script location under 'wp_profile':</p>
 <h2 id="accessing-the-configuration-wizard-admin-console-in-a-container-environment">Accessing the Configuration Wizard admin console in a container environment</h2>
 <p>Access the ConfigWizard admin console in a container environment from your local system. The ConfigWizard admin console opens to the TCP port number 10203, navigate to the following URL to open the ConfigWizard admin console: </p>
 <p>In localhost:
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://localhost:10203/ibm/console
-</code></pre></div></td></tr></table></div></p>
+<div class="language-text highlight"><pre><span></span><code>https://localhost:10203/ibm/console
+</code></pre></div></p>
 <p>In Kube Environments:
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://YOUR_KUBE_ENV_NAME.com:10203/ibm/console
-</code></pre></div></td></tr></table></div></p>
+<div class="language-text highlight"><pre><span></span><code>https://YOUR_KUBE_ENV_NAME.com:10203/ibm/console
+</code></pre></div></p>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

@@ -2340,8 +2340,8 @@ If your API does not provide any unique field, you might want to leverage the <a
 <p>Select the type of tag to create, and then define parameters for the selected tag. You can then either copy and paste the tag into your design, or click <code>OK</code> to insert the tag at the current cursor location.</p>
 <p><img alt="" src="../../../assets/WCM_Presentation_Select_Plugin.png" title="Select plugin in Presentation Template." /></p>
 <p>Sample Presentation Template Options - </p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;set&quot; attribute=&quot;source=[Element context=&#39;current&#39; type=&#39;content&#39; key=&#39;sourceuri&#39;]&quot; profile=&quot;[Element context=&#39;current&#39; type=&#39;content&#39; key=&#39;profile&#39;]&quot; extension-id=&quot;[Element context=&#39;current&#39; type=&#39;content&#39; key=&#39;provider&#39;]&quot;][Component name=&quot;ddc foundry/appearances/ddc volt mx list appearances&quot; resultsPerPage=&quot;&quot; startPage=&quot;&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;set&quot; attribute=&quot;source=[Element context=&#39;current&#39; type=&#39;content&#39; key=&#39;sourceuri&#39;]&quot; profile=&quot;[Element context=&#39;current&#39; type=&#39;content&#39; key=&#39;profile&#39;]&quot; extension-id=&quot;[Element context=&#39;current&#39; type=&#39;content&#39; key=&#39;provider&#39;]&quot;][Component name=&quot;ddc foundry/appearances/ddc volt mx list appearances&quot; resultsPerPage=&quot;&quot; startPage=&quot;&quot;]
+</code></pre></div>
 <ul>
 <li>Under <code>attribute</code>, define the data <code>source</code> endpoint. The content field set in this example is <code>sourceuri</code>, where you saved the <strong>endpoint</strong> in the content item.</li>
 <li><code>profile</code> refers to the List-Rendering Profile which was saved earlier in the WAS console. The content field that is set in this example is also <code>profile</code>, which is saved in the content item with the <code>ddcDemo.profile.json</code> value.</li>
@@ -2355,8 +2355,8 @@ If your API does not provide any unique field, you might want to leverage the <a
 <p>If you selected any other <strong>Resource Method</strong> (for example, <strong>POST</strong> from <code>Advanced</code> &gt; <code>Front End API</code> &gt; <code>Resource Method</code>) while creating a new integration service with Volt MX Foundry, you might need the capability to submit data to the API which DDC will try to parse as <strong>sourceParams</strong>. In that case, you must include that in your Presentation Template.</p>
 </div>
 <p>Sample Presentation Template Options - with params</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;set&quot; attribute=&quot;source=[Element context=&#39;current&#39; type=&#39;content&#39; key=&#39;sourceuri&#39;]&quot; attribute=&quot;sourceParams=[Element context=&#39;current&#39; type=&#39;content&#39; key=&#39;params&#39;]&quot; profile=&quot;[Element context=&#39;current&#39; type=&#39;content&#39; key=&#39;profile&#39;]&quot; extension-id=&quot;[Element context=&#39;current&#39; type=&#39;content&#39; key=&#39;provider&#39;]&quot;][Component name=&quot;ddc foundry/appearances/ddc volt mx list appearances&quot; resultsPerPage=&quot;&quot; startPage=&quot;&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;set&quot; attribute=&quot;source=[Element context=&#39;current&#39; type=&#39;content&#39; key=&#39;sourceuri&#39;]&quot; attribute=&quot;sourceParams=[Element context=&#39;current&#39; type=&#39;content&#39; key=&#39;params&#39;]&quot; profile=&quot;[Element context=&#39;current&#39; type=&#39;content&#39; key=&#39;profile&#39;]&quot; extension-id=&quot;[Element context=&#39;current&#39; type=&#39;content&#39; key=&#39;provider&#39;]&quot;][Component name=&quot;ddc foundry/appearances/ddc volt mx list appearances&quot; resultsPerPage=&quot;&quot; startPage=&quot;&quot;]
+</code></pre></div>
 <ul>
 <li>Under <code>attribute</code>, define the data <code>sourceParams</code>. The content field set in this example is <code>params</code>, which is saved in the content item.</li>
 </ul>
@@ -2490,12 +2490,10 @@ But if you selected any other <strong>Resource Method</strong> (for example - <s
 <ul>
 <li>Header: <code>&lt;ul&gt;</code></li>
 <li>Result design:
-      <div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;li&gt;[AttributeResource attributeName=&quot;fullname&quot; separator=&quot;,&quot;]&lt;/li&gt;
+      <div class="language-text highlight"><pre><span></span><code>&lt;li&gt;[AttributeResource attributeName=&quot;fullname&quot; separator=&quot;,&quot;]&lt;/li&gt;
 &lt;li&gt;[AttributeResource attributeName=&quot;username&quot; separator=&quot;,&quot;]&lt;/li&gt;
 &lt;li&gt;[AttributeResource attributeName=&quot;email&quot; separator=&quot;,&quot;]&lt;/li&gt;
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 <li>Footer: <code>&lt;/ul&gt;</code></li>
 </ul>
 <div class="admonition note">

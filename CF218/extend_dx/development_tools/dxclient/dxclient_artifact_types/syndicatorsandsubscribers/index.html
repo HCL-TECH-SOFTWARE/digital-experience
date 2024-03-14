@@ -2774,48 +2774,48 @@
 <li>
 <p><strong>Command description</strong></p>
 <p>This command invokes the manage-syndicator tool inside the DXClient. It is used to enable or disable the syndicator.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-syndicator
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-syndicator
+</code></pre></div>
 </li>
 <li>
 <p><strong>Help command</strong></p>
 <p>This command shows the help document on the manage-syndicator command usage:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-syndicator -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-syndicator -h
+</code></pre></div>
 </li>
 <li>
 <p><strong>Command options</strong></p>
 <p>Use this attribute to specify the hostname of the target server.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the protocol with which to connect to the server.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProtocol &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProtocol &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port on which to connect to the server(for Kubernetes Environment dxPort is 443)</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the username that is required for authenticating with the server.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password that is required for authenticating with the server.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the path to the contenthandler servlet on the DX server (example: /wps/mycontenthandler).</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-contenthandlerPath &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-contenthandlerPath &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the UUID of the syndicator instance.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-UUID &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-UUID &lt;value&gt;
+</code></pre></div>
 <p>Use true or false to enable or disable the syndicator.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-enable &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-enable &lt;value&gt;
+</code></pre></div>
 <p>The options that are passed through the command line override the default values.</p>
 </li>
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-syndicator -dxProtocol &lt;dxProtocol&gt; -hostname &lt;host-name&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -contenthandlerPath &lt;contenthandlerPath&gt; -UUID &lt;UUID&gt; -enable &lt;enable&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-syndicator -dxProtocol &lt;dxProtocol&gt; -hostname &lt;host-name&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -contenthandlerPath &lt;contenthandlerPath&gt; -UUID &lt;UUID&gt; -enable &lt;enable&gt;
+</code></pre></div>
 </div>
 <h2 id="manage-syndicator-get-syndication-report">Manage-syndicator get-syndication-report</h2>
 <p>The manage-syndicator get-syndication-report command is used to fetch the failed reports of the syndicator.</p>
@@ -2823,49 +2823,49 @@
 <li>
 <p><strong>Command description</strong></p>
 <p>This command invokes the <code>syndicator-faileditems</code> tool inside the DXClient, which is used to fetch the failed reports.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-syndicator get-syndication-report
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-syndicator get-syndication-report
+</code></pre></div>
 </li>
 <li>
 <p><strong>Help command</strong></p>
 <p>This command shows the help document on the manage-syndicator get-syndication-report command usage:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient  manage-syndicator get-syndication-report -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient  manage-syndicator get-syndication-report -h
+</code></pre></div>
 </li>
 <li>
 <p><strong>Command options</strong></p>
 <p>Use this attribute to specify the hostname of the target server</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the protocol with which to connect to the server</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProtocol &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProtocol &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port on which to connect to the server (for Kubernetes Environment, dxPort is 443)</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the username that is required for authenticating with the server</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password that is required for authenticating with the server</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the path to the contenthandler servlet on the DX server (for example, /wps/mycontenthandler)</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-contenthandlerPath &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-contenthandlerPath &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the UUID of the syndicator instance</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-UUID &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-UUID &lt;value&gt;
+</code></pre></div>
 <p>The options that are passed through the command line override the default values.</p>
 </li>
 <li>
 <p><strong>Example usage with UUID:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-syndicator get-syndication-report -dxProtocol &lt;dxProtocol&gt; -hostname &lt;host-name&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -contenthandlerPath &lt;contenthandlerPath&gt; -UUID &lt;UUID&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-syndicator get-syndication-report -dxProtocol &lt;dxProtocol&gt; -hostname &lt;host-name&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -contenthandlerPath &lt;contenthandlerPath&gt; -UUID &lt;UUID&gt; 
+</code></pre></div>
 </li>
 <li>
 <p><strong>Example usage without UUID:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-syndicator get-syndication-report -dxProtocol &lt;dxProtocol&gt; -hostname &lt;host-name&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -contenthandlerPath &lt;contenthandlerPath&gt;  
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-syndicator get-syndication-report -dxProtocol &lt;dxProtocol&gt; -hostname &lt;host-name&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -contenthandlerPath &lt;contenthandlerPath&gt;  
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If UUID of a syndicator is specified, then the command provides the report for only the particular syndicator that is present in the target DX Server; otherwise, it provides the failure report for all syndicators.</p>
@@ -2878,48 +2878,48 @@
 <li>
 <p><strong>Command description</strong></p>
 <p>This command invokes the manage-subscriber tool inside the DXClient. It is used to enable/disable the subscriber.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-subscriber
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-subscriber
+</code></pre></div>
 </li>
 <li>
 <p><strong>Help command</strong></p>
 <p>This command shows the help document on the manage-syndicator command usage:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-subscriber -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-subscriber -h
+</code></pre></div>
 </li>
 <li>
 <p><strong>Command options</strong></p>
 <p>Use this attribute to specify the hostname of the target server.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the protocol with which to connect to the server.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProtocol &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProtocol &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port on which to connect to the server (for Kubernetes Environment dxPort is 443).</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the username that is required for authenticating with the server.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password that is required for authenticating with the server.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the path to the contenthandler servlet on the DX server (for example, /wps/mycontenthandler).</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-contenthandlerPath &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-contenthandlerPath &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the UUID of the subscriber instance.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-UUID &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-UUID &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the enable or disable the subscriber instance. Use true or false to enable or disable the subscriber.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-enable &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-enable &lt;value&gt;
+</code></pre></div>
 <p>The options passed through command line overrides the default values.</p>
 </li>
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-subscriber -dxProtocol &lt;dxProtocol&gt; -hostname &lt;host-name&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -contenthandlerPath &lt;contenthandlerPath&gt; -UUID &lt;UUID&gt; -enable &lt;enable&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-subscriber -dxProtocol &lt;dxProtocol&gt; -hostname &lt;host-name&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -contenthandlerPath &lt;contenthandlerPath&gt; -UUID &lt;UUID&gt; -enable &lt;enable&gt;
+</code></pre></div>
 </div>
 <h2 id="create-syndication-relation">Create Syndication Relation</h2>
 <p>The <code>create-syndication-relation</code> command is used to create the syndication relation between syndicator and subscriber in the DX server.</p>
@@ -2927,87 +2927,84 @@
 <li>
 <p><strong>Command description</strong></p>
 <p>Use the <code>create-syndication-relation</code> to create syndication relation:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient create-syndication-relation
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient create-syndication-relation
+</code></pre></div>
 </li>
 <li>
 <p><strong>Help command</strong></p>
 <p>This command shows the help information for <code>create-syndication-relation</code> command usage:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient create-syndication-relation -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient create-syndication-relation -h
+</code></pre></div>
 </li>
 <li>
 <p><strong>Command options</strong></p>
 <p>Use this attribute to specify the protocol with which to connect to the DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProtocol &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProtocol &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the hostname of the target DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port on which to connect to the DX server (for Kubernetes Environment, dxPort is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the username to authenticate with the DX server</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password for the user in the "dxUsername" attribute</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>The path to the contenthandler servlet on the Script Application server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-contenthandlerPath &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-contenthandlerPath &lt;value&gt;
+</code></pre></div>
 <p>Syndicator URL of target server, for example, http(s)://host:port/wps/wcm:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-syndicatorUrl &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-syndicatorUrl &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the new syndicator name:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-syndicatorName &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-syndicatorName &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the new subscriber name:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-subscriberName &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-subscriberName &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the Credential Vault Name of source server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-vaultSlotName &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-vaultSlotName &lt;value&gt;
+</code></pre></div>
 <p>Whether the syndicator/subscriber pair is enabled on creation: isEnabled (default is true):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-isEnabled &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-isEnabled &lt;value&gt;
+</code></pre></div>
 <p>Whether the syndicator/subscriber pair is updateAfterCreation : updateAfterCreation (default is true):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-updateAfterCreation &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-updateAfterCreation &lt;value&gt;
+</code></pre></div>
 <p>The libraries to syndicate eg. all-items,liveItems,liveProjectsItem,all-items,published-items and all-items-and-versions:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-syndicationType &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-syndicationType &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the Libraries Name of target Server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-webContentLibraries &lt;value&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-webContentLibraries &lt;value&gt; 
+</code></pre></div>
 <p>Use this attribute to specify the Subscriber URL, for example, http(s)://host:port/wps/wcm:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-subscriberURL &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-subscriberURL &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the Syndicator/subscriber mode:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-mode &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-mode &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the Credential Vault Name:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-syndicatorVaultSlotName &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-syndicatorVaultSlotName &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the path to the context root on the DX server (for example, /wps):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxContextRoot &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxContextRoot &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the path to the Virtual portal Context:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-virtualPortalContext &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-virtualPortalContext &lt;value&gt;
+</code></pre></div>
 <p>Log files from command execution can be found in the logs directory of the DXClient installation.</p>
 </li>
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient create-syndication-relation -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -contenthandlerPath &lt;contenthandlerPath&gt; -dxUsername &lt;dxUsername&gt; 
+<div class="language-text highlight"><pre><span></span><code>dxclient create-syndication-relation -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -contenthandlerPath &lt;contenthandlerPath&gt; -dxUsername &lt;dxUsername&gt; 
 -dxPassword &lt;dxPassword&gt; -syndicatorUrl &lt;syndicatorUrl&gt; -syndicatorName &lt;syndicatorName&gt; -subscriberName &lt;subscriberName&gt; -vaultSlotName &lt;vaultSlotName&gt;
 -isEnabled &lt;isEnabled&gt; -updateAfterCreation &lt;updateAfterCreation&gt; -syndicationType &lt;syndicationType&gt; -webContentLibraries &lt;webContentLibraries&gt; -subscriberURL &lt;subscriberURL&gt;
 -mode &lt;mode&gt; -syndicatorVaultSlotName &lt;syndicatorVaultSlotName&gt; -dxContextRoot &lt;dxContextRoot&gt; -virtualPortalContext &lt;virtualPortalContext&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 <details class="info" open="open">
 <summary>Related information</summary>

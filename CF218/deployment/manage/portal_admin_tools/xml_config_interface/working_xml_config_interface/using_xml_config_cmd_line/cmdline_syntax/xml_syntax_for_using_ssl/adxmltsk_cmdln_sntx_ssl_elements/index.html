@@ -4062,34 +4062,26 @@
 <p>See the following examples.</p>
 <h2 id="example-1">Example 1</h2>
 <p>The following is an example of how to use the XML configuration interface to establish an SSL connection with a HCL Portal server, using the default certificate stores that are provided by WebSphere Application Server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>xmlaccess.sh -user wpsadmin -password your_password -url https://portalhost:10035/wps/config/
+<div class="language-text highlight"><pre><span></span><code>xmlaccess.sh -user wpsadmin -password your_password -url https://portalhost:10035/wps/config/
              -in $PortalHome/doc/xml-samples/ExportAllUsers.xml -out result.xml
              **-truststore $WASHome/profiles/wp_profile/etc/trust.p12 
              -trustpwd WebAS -trusttype PKCS12**
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For this example to run, use the trusttype parameter with a value of PKCS12 to avoid an invalid file format error.</p>
 <h2 id="example-2">Example 2</h2>
 <p>The following is an example of how to use the XML configuration interface to establish an SSL connection with a HCL Portal server, using the dummy certificate stores that are provided by WebSphere Application Server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>xmlaccess.sh -user wpsadmin -password your_password -url https://portalhost:10035/wps/config/
+<div class="language-text highlight"><pre><span></span><code>xmlaccess.sh -user wpsadmin -password your_password -url https://portalhost:10035/wps/config/
              -in $PortalHome/doc/xml-samples/ExportAllUsers.xml -out result.xml 
              **-truststore $WASHome/profiles/wp_profile/etc/DummyClientTrustFile.jks -trustpwd WebAS**
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For this example to be able to run, you need to configure the SSL configuration in WebSphere Application Server using the <code>DummyServerKeyFile.jks</code> and the <code>DummyServerTrustFile.jks</code> for secure connections. The option <strong>require client authentication</strong> must not be active.</p>
 <h2 id="example-3">Example 3</h2>
 <p>If the option <strong>require client authentication</strong> is active, you need to provide a keyfile when establishing the SSL connection with the XML configuration interface:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>xmlaccess.sh -user wpsadmin -password yourpassword -url https://portalhost:10035/wps/config/
+<div class="language-text highlight"><pre><span></span><code>xmlaccess.sh -user wpsadmin -password yourpassword -url https://portalhost:10035/wps/config/
              -in $PortalHome/doc/xml-samples/ExportAllUsers.xml -out result.xml 
              **-truststore $WASHome/profiles/wp_profile/etc/DummyClientTrustFile.jks -trustpwd WebAS 
              -keystore $WASHome/profiles/wp_profile/etc/DummyClientKeyFile.jks -keypwd WebAS**
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This example allows the XML configuration interface to send a client certificate to the server, if the server requests one. Using client certificate authentication is required wherever the number of clients that can administer HCL Portal needs to be controlled. Only clients with the correct client certificate will be able establish a connection with HCL Portal.</p>
 
 

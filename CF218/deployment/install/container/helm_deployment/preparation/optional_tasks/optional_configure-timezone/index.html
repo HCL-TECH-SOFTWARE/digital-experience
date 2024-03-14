@@ -2368,10 +2368,9 @@
 </div>
 <p>See <a href="#supported-input-types">supported input types</a> for examples of valid timezone formats.</p>
 <p>For example, to use <strong>GMT/BST</strong> you need to set the <code>configuration.containerTimezone</code> to <code>Europe/London</code>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">containerTimezone</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Europe/London&quot;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 <p>And then apply the changes using the following command:</p>
 <p><code>helm upgrade -n &lt;namespace&gt; -f &lt;custom-values.yaml&gt; &lt;prefix&gt; &lt;chart&gt;</code></p>
 <p>If you want to go back to the <strong>UTC</strong>, you can pass an empty string to the <code>configuration.containerTimezone</code> field.</p>

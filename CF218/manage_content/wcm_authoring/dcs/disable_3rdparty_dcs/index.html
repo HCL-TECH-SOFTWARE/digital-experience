@@ -2429,12 +2429,12 @@
 <p>If you are upgrading to a Kubernetes deployment, see <a href="../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps/#replacing-document-conversion-services-with-apache-tika">Replacing Document Conversion Services with Apache Tika</a>.</p>
 <h2 id="enabling-dcs-manually">Enabling DCS manually</h2>
 <p>You can enable DCS manually anytime. For example, if you run <code>applyCF</code> without setting the <code>disableStellentDCS</code> flag to false or if you decide to set and use Oracle DCS again as your DX DCS, you can manually re-enable by running the following <code>ConfigEngine</code> task.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ConfigEngine.sh|bat action-re-enable-stellent-dcs
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>ConfigEngine.sh|bat action-re-enable-stellent-dcs
+</code></pre></div>
 <h2 id="disabling-dcs-manually">Disabling DCS manually</h2>
 <p>If after enabling Oracle DCS as DX DCS, you prefer not to use it, you can manually disable Oracle DCS by running the following <code>ConfigEngine</code> task:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ConfigEngine.sh|bat action-disable-stellent-dcs
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>ConfigEngine.sh|bat action-disable-stellent-dcs
+</code></pre></div>
 
 
 

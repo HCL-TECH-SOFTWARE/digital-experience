@@ -2062,18 +2062,7 @@
 <p class="admonition-title">Note</p>
 <p>When you upgrade from older CF versions (for example, CF212) to CF213 or later to enable AI analysis, you can complete the configuration during the <code>helm upgrade</code>.</p>
 </div>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Application configuration</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Application configuration</span>
 <span class="nt">configuration</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Application specific configuration for Core</span>
 <span class="w">  </span><span class="nt">core</span><span class="p">:</span>
@@ -2085,7 +2074,7 @@
 <span class="w">      </span><span class="c1"># and possible values are &#39;OPEN_AI&#39; or &#39;CUSTOM&#39;</span>
 <span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;CUSTOM&quot;</span>
 <span class="w">      </span><span class="nt">className</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;com.ai.sample.CustomerAI&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For enabling AI analysis for content, set <code>enabled</code> as <code>true</code> inside the contentAI section. You must specify the content AI provider to be used in the <code>provider</code> property. Possible values for the provider are <code>OPEN_AI</code> or <code>CUSTOM</code>.</p>
 <h3 id="configuring-an-ai-class-for-a-custom-content-ai-provider">Configuring an AI class for a custom content AI provider</h3>
 <p>Only administrators can configure an AI class to use a custom content AI provider.</p>
@@ -2105,36 +2094,7 @@
 </li>
 </ol>
 <p>The following example of a custom content AI provider class can be used to call custom AI services for AI analysis. </p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code>package com.ai.sample;
+<div class="language-text highlight"><pre><span></span><code>package com.ai.sample;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -2164,7 +2124,7 @@ public class CustomerAI implements IAIGeneration {
   }
 
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Configure the content AI provider class in the Helm chart and run <code>helm upgrade</code>.</p>
@@ -2174,15 +2134,7 @@ public class CustomerAI implements IAIGeneration {
 
 <h3 id="configuring-a-custom-cecret-or-api-key-for-the-content-ai-provider">Configuring a custom cecret or API Key for the content AI provider</h3>
 <p>The API key or custom secret of a content AI provider can be configured in the <code>security</code> section of the <code>core</code>, as shown in the following example.</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Security related configuration, e.g. default credentials</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Security related configuration, e.g. default credentials</span>
 <span class="nt">security</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Security configuration for Core</span>
 <span class="w">  </span><span class="nt">core</span><span class="p">:</span>
@@ -2191,7 +2143,7 @@ public class CustomerAI implements IAIGeneration {
 <span class="w">    </span><span class="nt">contentAIProviderAPIKey</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
 <span class="w">    </span><span class="c1"># Provide a secret name that will be used to set AI API Keys</span>
 <span class="w">    </span><span class="nt">customContentAISecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;sample-core-content-ai-secret&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>After AI analysis is enabled, the administrator must specify the content AI provider's API key in the <code>contentAIProviderAPIKey</code> property. </p>
@@ -2201,16 +2153,7 @@ public class CustomerAI implements IAIGeneration {
 <h2 id="disabling-ai-analysis-in-the-helm-chart">Disabling AI analysis in the Helm chart</h2>
 <p>The <code>content-ai</code> configurations are available in the Helm chart <a href="../../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration/">values.yaml</a> file as <code>contentAI</code>.</p>
 <p>The administrator can disable AI analysis for content in the <code>configuration</code> section of the <code>core</code>, as shown in the following example.</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Application configuration</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Application configuration</span>
 <span class="nt">configuration</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Application specific configuration for Core</span>
 <span class="w">  </span><span class="nt">core</span><span class="p">:</span>
@@ -2220,7 +2163,7 @@ public class CustomerAI implements IAIGeneration {
 <span class="w">      </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">      </span><span class="c1"># Settings for checking content AI provider. When contentAI enabled is true, provider will be used.</span>
 <span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For disbaling AI analysis for content, set <code>enabled</code> as <code>false</code> inside the contentAI section. Specifying the provider is not required to disable AI analysis.</p>
 <h2 id="custom-configurations-for-ai-analysis">Custom configurations for AI analysis</h2>
 <p>To customize AI analysis-related configurations, log in to the WebSphere Application Server console for customizing any of the custom properties in the WCM config service. Click <strong>Resource &gt; Resource Environment &gt; Resource Environment Providers &gt; WCM_WCMConfigService &gt; Custom Properties</strong>.</p>

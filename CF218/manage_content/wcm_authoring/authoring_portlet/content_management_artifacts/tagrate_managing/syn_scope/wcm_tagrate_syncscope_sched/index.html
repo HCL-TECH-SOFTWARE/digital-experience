@@ -3514,18 +3514,13 @@
 <li>
 <p>Create an export file that you can use with the xmlaccess command.</p>
 <p>Here is an example of a request you can use to query the current configuration:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; 
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; 
 &lt;request type=&quot;export&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;PortalConfig_8.5.0.xsd&quot; &gt; 
   &lt;portal action=&quot;locate&quot;&gt; 
     &lt;task action=&quot;export&quot; name=&quot;com.ibm.portal.cp.SynchronizationTask&quot;/&gt; 
   &lt;/portal&gt; 
 &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Run the xmlaccess command, specifying the export file.</p>
@@ -3539,14 +3534,7 @@
 <li>
 <p>To set a time for a scheduled synchronization, create an XML request document.</p>
 <p>For example, to schedule a synchronization to occur at 15:36 hours every day, you would use a request like this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; 
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; 
 &lt;request type=&quot;update&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;PortalConfig_8.5.0.xsd&quot;&gt; 
   &lt;portal action=&quot;locate&quot;&gt; 
     &lt;task action=&quot;create&quot; name=&quot;com.ibm.portal.cp.SynchronizationTask&quot;&gt; 
@@ -3554,7 +3542,7 @@
     &lt;/task&gt; 
   &lt;/portal&gt; 
 &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For each scheduled synchronization, create a separate <code>task</code> element and specify the time with a <code>startTime</code> element.</p>
 </li>
 <li>

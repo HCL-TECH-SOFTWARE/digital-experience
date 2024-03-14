@@ -2668,23 +2668,7 @@
 </li>
 <li>
 <p>Replace the existing text with the following sample. The <code>setRequest</code> calls pass the user context to personalization:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%@ page session=&quot;false&quot; contentType=&quot;text/html&quot; import=&quot;java.util.*, pers_offers.*&quot;%&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;%@ page session=&quot;false&quot; contentType=&quot;text/html&quot; import=&quot;java.util.*, pers_offers.*&quot;%&gt;
 
 &lt;%@ taglib uri=&quot;/WEB-INF/tld/portlet.tld&quot; prefix=&quot;portletAPI&quot; %&gt;
 
@@ -2701,28 +2685,14 @@ offersSpot.setRequest(request);
 userSpot.setRequest(request);
 
 %&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Save the file and check for syntax errors.</p>
 </li>
 <li>
 <p>Insert the following code at the end of the JSP file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;DIV style=&quot;margin: 6px&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;DIV style=&quot;margin: 6px&quot;&gt;
 
 
 
@@ -2737,7 +2707,7 @@ Here is a personalized offer:&lt;BR&gt;
 &lt;br&gt;
 
 &lt;%=offersSpot.getRuleContent()[0].getDetails() %&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Save and close the JSP file.</p>

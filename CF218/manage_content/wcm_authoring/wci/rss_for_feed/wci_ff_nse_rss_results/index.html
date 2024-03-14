@@ -2510,18 +2510,7 @@
 <h1 id="results-feeds">Results Feeds</h1>
 <p>When feed processing is initiated by using a call to the feed service servlet, the Web Content Integrator responds with an output feed. The first entry in this feed contains status information for the feed as a whole. Each of the subsequent entries in the output feed corresponds to an item that was in the input feed. These latter entries contain status information about the results of processing each item. Feed producers might use this information to attempt to automatically recover from certain types of errors.</p>
 <p>Each entry in the output feed has the following general format:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;item&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;item&gt;
    &lt;title&gt;Results for: [INPUT_TITLE]&lt;/title&gt;
    &lt;link&gt;[INPUT_LINK]&lt;/link&gt;
    &lt;pubDate&gt;[CREATION_TIME_OF_OUTPUT_FEED_ENTRY]&lt;/pubDate&gt;
@@ -2533,7 +2522,7 @@
    &lt;ibmfs:documentId&gt;[WCM_DOCUMENT_ID]&lt;/ibmfs:documentId&gt;
    &lt;description&gt;[LIST_OF_PROGRESS_MESSAGES]&lt;/description&gt;
 &lt;/item&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

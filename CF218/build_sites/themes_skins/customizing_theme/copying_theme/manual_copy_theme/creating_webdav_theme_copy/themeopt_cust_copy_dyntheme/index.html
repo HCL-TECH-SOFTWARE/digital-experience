@@ -3808,22 +3808,7 @@
 <p><strong>In a context parameter in the web.xml of the web application</strong></p>
 <p>You can define a whitelist by using a regular expression that matches the files that you want to make available. Then, in a blacklist, you can remove certain entries from the set of files that are available in the whitelist. A blacklist is helpful if you want to serve a folder but not a certain file within that folder. The expressions are case-sensitive. For example, WEB-INF is different than Web-Inf.</p>
 <p>The parameters are set in the web.xml file of the web module that contains the static theme content. In the following example, the context parameter is set to serve all files that are not part of the WEB-INF folder:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;web-app&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;web-app&gt;
 ...
    &lt;context-param&gt;
       &lt;description&gt;A regular expression that defines which of the resources in the war file can be
@@ -3839,7 +3824,7 @@
    &lt;/context-param&gt;
 ...    
 &lt;/web-app&gt;    
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>In the Resource Environment Provider settings</strong></p>

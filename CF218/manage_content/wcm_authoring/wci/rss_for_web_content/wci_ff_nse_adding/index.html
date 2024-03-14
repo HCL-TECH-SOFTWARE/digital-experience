@@ -2636,28 +2636,11 @@
 <h1 id="adding-the-custom-namespace-definition-to-the-feed">Adding the custom namespace definition to the feed</h1>
 <p>The first requirement is to add the namespace reference to the RSS element at the beginning of the feed.</p>
 <p>The URL of the namespace is specified by using the following tag:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;rss version=&quot;2.0&quot; xmlns:ibmwcm=&quot;http://purl.org/net/ibmfeedsvc/wcm/1.0&quot; &gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;rss version=&quot;2.0&quot; xmlns:ibmwcm=&quot;http://purl.org/net/ibmfeedsvc/wcm/1.0&quot; &gt;
+</code></pre></div>
 <p>This is a fixed property value that the feed parser uses as the key to identify elements that belong to the custom Web Content Integrator namespace.</p>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot;?&gt;
     **&lt;rss version=&quot;2.0&quot; xmlns:ibmwcm=&quot;http://purl.org/net/ibmfeedsvc/wcm/1.0&quot; \&gt;**
     &lt;channel&gt;
         &lt;title&gt;Sample Feed&lt;/title&gt;
@@ -2675,7 +2658,7 @@
         &lt;/item&gt;
     &lt;/channel&gt;
 &lt;/rss&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The namespace label "ibmwcm" can be changed if the label specified in the namespace declaration matches the label that is used on the extended elements in the feed.</p>
 
 

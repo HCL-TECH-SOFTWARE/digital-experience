@@ -3423,33 +3423,31 @@
 <li>
 <p><strong>Endpoint</strong></p>
 <p><strong>GET request to Content:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://host:port/wps/mycontenthandler/wcmrest/Content/&lt;UUID of the content&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://host:port/wps/mycontenthandler/wcmrest/Content/&lt;UUID of the content&gt;
+</code></pre></div>
 <p><strong>Sample URL:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://localhost:10039/wps/mycontenthandler/wcmrest/Content/5331114d-e07e-4d10-9091-f037e0f0a42f
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://localhost:10039/wps/mycontenthandler/wcmrest/Content/5331114d-e07e-4d10-9091-f037e0f0a42f
+</code></pre></div>
 <p><strong>GET request to ImageComponent:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://host:port/wps/mycontenthandler/wcmrest/LibraryImageComponent/&lt;UUID of the component&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://host:port/wps/mycontenthandler/wcmrest/LibraryImageComponent/&lt;UUID of the component&gt;
+</code></pre></div>
 <p><strong>Sample URL:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://localhost:10039/wps/mycontenthandler/wcmrest/LibraryImageComponent/5331114d-e07e-4d10-9091-f037e0f0a42f
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://localhost:10039/wps/mycontenthandler/wcmrest/LibraryImageComponent/5331114d-e07e-4d10-9091-f037e0f0a42f
+</code></pre></div>
 <p><strong>GET request to FileComponent:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://host:port/wps/mycontenthandler/wcmrest/LibraryFileComponent/&lt;UUID of the component&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://host:port/wps/mycontenthandler/wcmrest/LibraryFileComponent/&lt;UUID of the component&gt;
+</code></pre></div>
 <p><strong>Sample URL:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://localhost:10039/wps/mycontenthandler/wcmrest/LibraryFileComponent/5331114d-e07e-4d10-9091-f037e0f0a42f
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://localhost:10039/wps/mycontenthandler/wcmrest/LibraryFileComponent/5331114d-e07e-4d10-9091-f037e0f0a42f
+</code></pre></div>
 </li>
 <li>
 <p><strong>Expected Body</strong></p>
 <p>The content Body can have the basic WCM structure or be empty:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
                     &lt;feed xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
                     &lt;/feed&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Expected Headers</strong></p>
@@ -3465,113 +3463,7 @@
 <strong>Sample for a content item that has a file and image element that are populated by linked Digital Asset Manager (external) references:</strong></li>
 </ul>
 </div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
-<span class="normal">  2</span>
-<span class="normal">  3</span>
-<span class="normal">  4</span>
-<span class="normal">  5</span>
-<span class="normal">  6</span>
-<span class="normal">  7</span>
-<span class="normal">  8</span>
-<span class="normal">  9</span>
-<span class="normal"> 10</span>
-<span class="normal"> 11</span>
-<span class="normal"> 12</span>
-<span class="normal"> 13</span>
-<span class="normal"> 14</span>
-<span class="normal"> 15</span>
-<span class="normal"> 16</span>
-<span class="normal"> 17</span>
-<span class="normal"> 18</span>
-<span class="normal"> 19</span>
-<span class="normal"> 20</span>
-<span class="normal"> 21</span>
-<span class="normal"> 22</span>
-<span class="normal"> 23</span>
-<span class="normal"> 24</span>
-<span class="normal"> 25</span>
-<span class="normal"> 26</span>
-<span class="normal"> 27</span>
-<span class="normal"> 28</span>
-<span class="normal"> 29</span>
-<span class="normal"> 30</span>
-<span class="normal"> 31</span>
-<span class="normal"> 32</span>
-<span class="normal"> 33</span>
-<span class="normal"> 34</span>
-<span class="normal"> 35</span>
-<span class="normal"> 36</span>
-<span class="normal"> 37</span>
-<span class="normal"> 38</span>
-<span class="normal"> 39</span>
-<span class="normal"> 40</span>
-<span class="normal"> 41</span>
-<span class="normal"> 42</span>
-<span class="normal"> 43</span>
-<span class="normal"> 44</span>
-<span class="normal"> 45</span>
-<span class="normal"> 46</span>
-<span class="normal"> 47</span>
-<span class="normal"> 48</span>
-<span class="normal"> 49</span>
-<span class="normal"> 50</span>
-<span class="normal"> 51</span>
-<span class="normal"> 52</span>
-<span class="normal"> 53</span>
-<span class="normal"> 54</span>
-<span class="normal"> 55</span>
-<span class="normal"> 56</span>
-<span class="normal"> 57</span>
-<span class="normal"> 58</span>
-<span class="normal"> 59</span>
-<span class="normal"> 60</span>
-<span class="normal"> 61</span>
-<span class="normal"> 62</span>
-<span class="normal"> 63</span>
-<span class="normal"> 64</span>
-<span class="normal"> 65</span>
-<span class="normal"> 66</span>
-<span class="normal"> 67</span>
-<span class="normal"> 68</span>
-<span class="normal"> 69</span>
-<span class="normal"> 70</span>
-<span class="normal"> 71</span>
-<span class="normal"> 72</span>
-<span class="normal"> 73</span>
-<span class="normal"> 74</span>
-<span class="normal"> 75</span>
-<span class="normal"> 76</span>
-<span class="normal"> 77</span>
-<span class="normal"> 78</span>
-<span class="normal"> 79</span>
-<span class="normal"> 80</span>
-<span class="normal"> 81</span>
-<span class="normal"> 82</span>
-<span class="normal"> 83</span>
-<span class="normal"> 84</span>
-<span class="normal"> 85</span>
-<span class="normal"> 86</span>
-<span class="normal"> 87</span>
-<span class="normal"> 88</span>
-<span class="normal"> 89</span>
-<span class="normal"> 90</span>
-<span class="normal"> 91</span>
-<span class="normal"> 92</span>
-<span class="normal"> 93</span>
-<span class="normal"> 94</span>
-<span class="normal"> 95</span>
-<span class="normal"> 96</span>
-<span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span>
-<span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
     &lt;id&gt;wcmrest:5331114d-e07e-4d10-9091-f037e0f0a42f&lt;/id&gt;
     &lt;title xml:lang=&quot;en&quot;&gt;content&lt;/title&gt;
     &lt;summary xml:lang=&quot;en&quot;&gt;&lt;/summary&gt;
@@ -3678,7 +3570,7 @@ elements&quot; xml:lang=&quot;en&quot; label=&quot;Elements&quot;/&gt;
          &lt;/wcm:content&gt;
      &lt;/content&gt;
  &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="web-content-manager-reference-api">Web Content Manager Reference API</h2>
@@ -3694,35 +3586,33 @@ elements&quot; xml:lang=&quot;en&quot; label=&quot;Elements&quot;/&gt;
 <ul>
 <li>
 <p><strong>GET</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://host:port/wps/mycontenthandler/wcmrest/references/wcm/&lt;UUID of WCM item&gt;
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://host:port/wps/mycontenthandler/wcmrest/references/wcm/&lt;UUID of WCM item&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://host:port/wps/mycontenthandler/wcmrest/references/wcm/&lt;UUID of WCM item&gt;
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>http://host:port/wps/mycontenthandler/wcmrest/references/wcm/&lt;UUID of WCM item&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong>JSON</strong></p>
 <p>For JSON, add</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>?mime-type=application/json
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>?mime-type=application/json
+</code></pre></div>
 </li>
 </ul>
 <p>Sample URL:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://samplehost.com:10039/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/wcmrest/references/wcm/3d464f55-d909-41dd-b760-57667ddd290c
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://samplehost.com:10039/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/wcmrest/references/wcm/3d464f55-d909-41dd-b760-57667ddd290c
+</code></pre></div>
 <p>Sample URL JSON:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://samplehost.com:10039/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/wcmrest/references/wcm/3d464f55-d909-41dd-b760-57667ddd290c?mime-type=application/json
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://samplehost.com:10039/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/wcmrest/references/wcm/3d464f55-d909-41dd-b760-57667ddd290c?mime-type=application/json
+</code></pre></div>
 <p>Expected Body</p>
 <p>The body can just have the basic WCM structure:</p>
 <ul>
 <li>
 <p><strong>BODY</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;feed xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
 &lt;/feed&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <p>Expected Headers</p>
@@ -3734,105 +3624,7 @@ elements&quot; xml:lang=&quot;en&quot; label=&quot;Elements&quot;/&gt;
 <p>Return Body</p>
 <p>The found/retrieved results.</p>
 <p>Sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span>
-<span class="normal">79</span>
-<span class="normal">80</span>
-<span class="normal">81</span>
-<span class="normal">82</span>
-<span class="normal">83</span>
-<span class="normal">84</span>
-<span class="normal">85</span>
-<span class="normal">86</span>
-<span class="normal">87</span>
-<span class="normal">88</span>
-<span class="normal">89</span>
-<span class="normal">90</span>
-<span class="normal">91</span>
-<span class="normal">92</span>
-<span class="normal">93</span>
-<span class="normal">94</span>
-<span class="normal">95</span>
-<span class="normal">96</span>
-<span class="normal">97</span>
-<span class="normal">98</span>
-<span class="normal">99</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;feed xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;feed xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
     &lt;id&gt;wcmrest:Project/3d464f55-d909-41dd-b760-57667ddd290c/project-items&lt;/id&gt;
     &lt;title&gt;wcmrest:Project/3d464f55-d909-41dd-b760-57667ddd290c/project-items&lt;/title&gt;
     &lt;updated&gt;2020-04-24T15:59:54.529Z&lt;/updated&gt;
@@ -3931,40 +3723,12 @@ elements&quot; xml:lang=&quot;en&quot; label=&quot;Elements&quot;/&gt;
         &lt;category scheme=&quot;wcmrest:workflowState&quot; term=&quot;PUBLISHED&quot; label=&quot;Published&quot; xml:lang=&quot;en&quot;/&gt;
     &lt;/entry&gt;
 &lt;/feed&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="updating-references">Updating references</h2>
 <p>Both Digital Asset Management and Web Content Manager references can be updated with the published APIs as documented here: <a href="../wcm_rest_crud_component/">How to use REST with components</a></p>
 <p>Example for Digital Asset Management, to retrieve references to UUID: <code>7e3cb713-251a-485c-a578-1aa219411b5e</code></p>
 <p>Response:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;feed xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;feed xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
     &lt;id&gt;wcmrest:Project/7e3cb713-251a-485c-a578-1aa219411b5e/project-items&lt;/id&gt;
     &lt;title&gt;wcmrest:Project/7e3cb713-251a-485c-a578-1aa219411b5e/project-items&lt;/title&gt;
     &lt;updated&gt;2020-05-11T15:59:18.639Z&lt;/updated&gt;
@@ -3993,77 +3757,14 @@ elements&quot; xml:lang=&quot;en&quot; label=&quot;Elements&quot;/&gt;
         &lt;category scheme=&quot;wcmrest:workflowState&quot; term=&quot;PUBLISHED&quot; label=&quot;Published&quot; xml:lang=&quot;en&quot;/&gt;
     &lt;/entry&gt;
 &lt;/feed&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Iterating over the results will use the edit link to fetch the item:</p>
 <ul>
 <li>
 <p><strong>GET</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
     &lt;id&gt;wcmrest:43174081-4f88-436a-a87b-16e6375c2e8f&lt;/id&gt;
     &lt;title xml:lang=&quot;en&quot;&gt;testmeout&lt;/title&gt;
     &lt;summary xml:lang=&quot;en&quot;&gt;&lt;/summary&gt;
@@ -4127,74 +3828,11 @@ elements&quot; xml:lang=&quot;en&quot; label=&quot;Elements&quot;/&gt;
         &lt;/wcm:content&gt;
     &lt;/content&gt;
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <p>To send an update to the item to replace the resourceUri and add fileName and type:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
     &lt;id&gt;wcmrest:43174081-4f88-436a-a87b-16e6375c2e8f&lt;/id&gt;
     &lt;title xml:lang=&quot;en&quot;&gt;testmeout&lt;/title&gt;
     &lt;summary xml:lang=&quot;en&quot;&gt;&lt;/summary&gt;
@@ -4258,11 +3896,11 @@ elements&quot; xml:lang=&quot;en&quot; label=&quot;Elements&quot;/&gt;
         &lt;/wcm:content&gt;
     &lt;/content&gt;
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="create">Create</h2>
 <p>A content item can be created by sending a POST request to the following URI with an Atom entry used to represent the content item:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/Content
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/Content
+</code></pre></div>
 <ul>
 <li>A library or parent link relation must be used to define the location of the hierarchical item that is being created.</li>
 <li>An authoring template must be specified to set what authoring template to use when the item is created.</li>
@@ -4271,19 +3909,7 @@ elements&quot; xml:lang=&quot;en&quot; label=&quot;Elements&quot;/&gt;
 <ul>
 <li>
 <p><strong>POST</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 POST 
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 POST 
 http://host:port/wps/mycontenthandler/wcmrest/Content/
 Content-Type: application/atom+xml
         &lt;atom:entry xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;wcm/namespace&quot;&gt;
@@ -4296,61 +3922,20 @@ Content-Type: application/atom+xml
             &lt;atom:link atom:rel=&quot;content-template&quot; atom:href=&quot;/wps/
             mycontenthandler/wcmrest/item/588127d0-a4f8-44b5-87a4-5fe3f7bd3da7&quot;/&gt;
         &lt;/atom:entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Response:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>201 Created
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>201 Created
+</code></pre></div>
 </li>
 </ul>
 <h2 id="create-from-a-skeleton">Create from a skeleton</h2>
 <p>A "skeleton" representation of a content item that is created from a content template can be obtained to aid in the creation of content items. This can be obtained by using a GET request to the following URI. When the skeleton is obtained and completed a POST request can be made by using this data to create the item.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/ContentTemplate/template-uuid/new-content
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/ContentTemplate/template-uuid/new-content
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 GET http://host:port/wps/mycontenthandler/wcmrest/ContentTemplate/b7b8b3fb-8fa1-4eb3-915e-ce7514f7067f/new-content
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 GET http://host:port/wps/mycontenthandler/wcmrest/ContentTemplate/b7b8b3fb-8fa1-4eb3-915e-ce7514f7067f/new-content
 
 Response 
 200 OK
@@ -4392,48 +3977,30 @@ mycontenthandler/!ut/p/digest!PQo5Yhy68oeppWcEz2sddA/wcmrest/Content/b7b8b3fb-8f
         &lt;/content&gt;
     &lt;/content&gt;
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="update">Update</h2>
 <p>A content item can be updated by sending a PUT request to the following URI with an Atom entry that specifies the fields on the item that need to be changed.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <code>name</code> field is required. If the name is not included in the script, the "name must be entered" error appears. This is applicable from CF181 to CF200.</p>
 </div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/Content/item-uuid
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/Content/item-uuid
+</code></pre></div>
 <p>For example:</p>
 <ul>
 <li>
 <p><strong>PUT</strong></p>
 <p>XML body</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 PUT
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 PUT
 http://host:port/wps/mycontenthandler/wcmrest/Content/abae799b-4cca-47ae-aad8-b3d8204deefb
 Content-Type: application/atom+xml
 &lt;atom:entry xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;wcm/namespace&quot;&gt;
     &lt;wcm:name&gt;Updated Content Name&lt;/wcm:name&gt;
     &lt;atom:title&gt;Updated Content Title&lt;/atom:title&gt;
 &lt;/atom:entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>JSON body</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 PUT
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 PUT
 http://host:port/wps/mycontenthandler/wcmrest/Content/abae799b-4cca-47ae-aad8-b3d8204deefb
 Content-Type: application/json
 {
@@ -4446,48 +4013,23 @@ Content-Type: application/json
         }
     }
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Response:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>200 OK
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>200 OK
+</code></pre></div>
 </li>
 </ul>
 <h2 id="read">Read</h2>
 <p>A content item can be read by sending a GET request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/Content/item-uuid
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/Content/item-uuid
+</code></pre></div>
 <p>For example:</p>
 <ul>
 <li>
 <p><strong>GET</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 GET
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 GET
 http://host:port/wps/mycontenthandler/wcmrest/Content/fa2bfd32-7b2f-4394-a5ab-2e150c5ed8aa
 
 &lt;atom:entry xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;wcm/namespace&quot;&gt;
@@ -4513,7 +4055,7 @@ wcmrest/item/588127d0-a4f8-44b5-87a4-5fe3f7bd3da7&quot;/&gt;
     &lt;atom:link atom:rel=&quot;elements&quot; atom:href=&quot;/wps/mycontenthandler/
 wcmrest/Content/fa2bfd32-7b2f-4394-a5ab-2e150c5ed8aa/elements&quot;/&gt;
 &lt;/atom:entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Response:</strong></p>
@@ -4522,21 +4064,20 @@ wcmrest/Content/fa2bfd32-7b2f-4394-a5ab-2e150c5ed8aa/elements&quot;/&gt;
 </ul>
 <h2 id="delete">Delete</h2>
 <p>A content item can be deleted by sending a DELETE request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/Content/item-uuid
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/Content/item-uuid
+</code></pre></div>
 <p>For example:</p>
 <ul>
 <li>
 <p><strong>DELETE</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 DELETE
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 DELETE
 http://host:port/wps/mycontenthandler/wcmrest/Content/fa2bfd32-7b2f-4394-a5ab-2e150c5ed8aa/
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Response:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>200 OK
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>200 OK
+</code></pre></div>
 </li>
 </ul>
 <details class="info" open="open">

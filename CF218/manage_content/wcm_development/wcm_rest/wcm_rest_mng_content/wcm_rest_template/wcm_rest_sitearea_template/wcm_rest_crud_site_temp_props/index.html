@@ -3516,33 +3516,10 @@
 </ul>
 <h2 id="update">Update</h2>
 <p>You can update the default properties of a site area template by sending a PUT request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/SiteAreaTemplate/item-uuid/Prototype/properties
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/SiteAreaTemplate/item-uuid/Prototype/properties
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code>PUT /wps/mycontenthandler/wcmrest/SiteAreaTemplate/7f1055db-29ac-43ea-88b8-c6b23019b6b9/Prototype/properties
+<div class="language-text highlight"><pre><span></span><code>PUT /wps/mycontenthandler/wcmrest/SiteAreaTemplate/7f1055db-29ac-43ea-88b8-c6b23019b6b9/Prototype/properties
 Content-Type: application/vnd.ibm.wcm+xml
 
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
@@ -3566,24 +3543,13 @@ Content-type: application/atom+xml
     &lt;/workflow-control&gt;
     &lt;link rel=&quot;default-presentation&quot; href=&quot;/wps/mycontenthandler/!ut/p/wcmrest/PresentationTemplate/37d77b82-c3fb-4ee8-ba88-3ce0a2c1443f&quot; type=&quot;application/vnd.ibm.wcm+xml&quot;  label=&quot;Default Presentation&quot;/&gt;
 &lt;/sitearea-properties&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="read">Read</h2>
 <p>The default properties of a site area template can be read by sending a GET request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/SiteAreaTemplate/item-uuid/Prototype/properties
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/SiteAreaTemplate/item-uuid/Prototype/properties
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>GET /wps/mycontenthandler/wcmrest/SiteAreaTemplate/7f1055db-29ac-43ea-88b8-c6b23019b6b9/Prototype/properties
+<div class="language-text highlight"><pre><span></span><code>GET /wps/mycontenthandler/wcmrest/SiteAreaTemplate/7f1055db-29ac-43ea-88b8-c6b23019b6b9/Prototype/properties
 
 HTTP/1.0 200 OK
 Content-type: application/vnd.ibm.wcm+xml
@@ -3595,7 +3561,7 @@ Content-type: application/vnd.ibm.wcm+xml
         &lt;option name=&quot;HIDE_WORKFLOW_SECTION&quot; enabled=&quot;false&quot;/&gt;
     &lt;/workflow-control&gt;
 &lt;/sitearea-properties&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

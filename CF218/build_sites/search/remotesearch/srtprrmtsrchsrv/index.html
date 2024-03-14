@@ -2978,10 +2978,9 @@
 </li>
 <li>
 <p>Start the WebSphere Integrated Solutions Console and select <strong>Environment &gt; Shared Libraries</strong>. Create a new shared library that is named PSE with a class path as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>     $(APP_INSTALL_ROOT)/cell_name/dcs_war.ear/dcs.war/WEB-INF/lib/convertors.jar
+<div class="language-text highlight"><pre><span></span><code>     $(APP_INSTALL_ROOT)/cell_name/dcs_war.ear/dcs.war/WEB-INF/lib/convertors.jar
      $(APP_INSTALL_ROOT)/cell_name/dcs_war.ear/dcs.war/WEB-INF/lib/Export.jar
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>where cell_name is the IBM WebSphere Application Server cell name where DCS is installed.</p>
 </li>
 <li>
@@ -3011,8 +3010,8 @@
 <li>
 <p>Add the libraries <code>extract/lib</code> to the class path by adding a line to the class path and giving the full path: AppServer_root/installableApps/extract/lib`.</p>
 <p>AppServer_root is the profile directory of your WebSphere Application Server installation. For example, this path can be:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>      /usr/WebSphere/AppServer/profiles/profile_name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>      /usr/WebSphere/AppServer/profiles/profile_name
+</code></pre></div>
 </li>
 <li>
 <p>Click <strong>Apply &gt; Save</strong> to save your changes to the configuration.</p>
@@ -3057,16 +3056,15 @@
 <li>For EJB: Determine the value for the port under <strong>Servers &gt; Server Types &gt; WebSphere application servers &gt; YourAppServer1 &gt; Communications &gt; Port &gt; BOOTSTRAP_ADDRESS</strong>.</li>
 <li>
 <p>For SOAP: Determine the value for the port number for the SOAP URL parameter. The appropriate port number for the SOAP URL parameter is the port on which the application server runs, in other words, the HTTP transport on which the remote server is configured to run. Determine the correct port number from <strong>Application servers &gt; server1 &gt; Ports &gt; WC_defaulthost</strong>. The WC_defaulthost value is 10014; therefore, if you did not change the default, you can use this value. Make sure that the port number that is set in the following file matches this port:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>AppServer_root/installedApps/cell/WebScannerEar.ear/WebScannerSoap.war/
+<div class="language-text highlight"><pre><span></span><code>AppServer_root/installedApps/cell/WebScannerEar.ear/WebScannerSoap.war/
      wsdl/com/ibm/hrl/portlets/WsPSE/WebScannerLiteServerSOAPService.wsdl
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Replace the variables as follows:</p>
 <ul>
 <li>
 <p>AppServer_root is the profile directory of your WebSphere Application Server installation. For example, this directory can be:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>      /usr/WebSphere/AppServer/profiles/profile\_name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>      /usr/WebSphere/AppServer/profiles/profile\_name
+</code></pre></div>
 </li>
 <li>
 <p><strong><code>cell</code></strong> is the cell name of your remote search computer.</p>
@@ -3074,8 +3072,8 @@
 <li><strong><code>WebScannerEar.ear</code></strong> is the name that you gave to the Enterprise Application when you installed the <code>WebScannerSoap.war</code> file.
 Edit the file and look for the port that is given in the value for the SOAP address location. Example:</li>
 </ul>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>  &lt;soap: address location=&quot;http://localhost:**your_port_no**/WebScannerSOAP/servlet/rpcrouter&quot;/&gt; .
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>  &lt;soap: address location=&quot;http://localhost:**your_port_no**/WebScannerSOAP/servlet/rpcrouter&quot;/&gt; .
+</code></pre></div>
 <p>In the example the port is <code>your_port_no</code>. The default value for the WC_defaulthost is 10014.</p>
 </li>
 </ul>
@@ -3083,18 +3081,13 @@ Edit the file and look for the port that is given in the value for the SOAP addr
 <li>
 <p>In the WebSphere Integrated Solutions Console, go to <strong>Resources &gt; Asynchronous beans &gt; Work managers</strong>, create a new Work manager who is named PSEWorkManager with the following attributes:</p>
 <p><strong>WebSphere Application Server V9:</strong> If you upgraded to IBM® WebSphere Application Server Version 9.0, the WebSphere Integrated Solutions Console path is <strong>Resources &gt; Concurency &gt; Work managers</strong>.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>   Name:                       PSEWorkManager
+<div class="language-text highlight"><pre><span></span><code>   Name:                       PSEWorkManager
    JNDI Name:                  wps/searchIndexWM
    Minimum Number of Threads:  20
    Maximum number of Threads:  60
    Growable =                  True (Ensure that the **Growable** check box is selected.) 
    Service Names:              Application Profiling Service, WorkArea, Security, Internationalization
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Click <strong>Apply &gt; Save</strong> to save your changes to the configuration.</p>
@@ -3172,19 +3165,15 @@ For more detailed information, refer to the WebSphere Application Server informa
 <p class="admonition-title">Cluster note</p>
 <p>In a clustered environment, complete this step on the primary node and all secondary nodes.</p>
 </div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;user-data-constraint&gt;     
+<div class="language-text highlight"><pre><span></span><code>&lt;user-data-constraint&gt;     
      &lt;transport-guarantee&gt;CONFIDENTIAL&lt;/transport-guarantee&gt;
 &lt;/user-data-constraint&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Replace it by the following code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;user-data-constraint&gt;     
+<div class="language-text highlight"><pre><span></span><code>&lt;user-data-constraint&gt;     
      &lt;transport-guarantee&gt;NONE&lt;/transport-guarantee&gt;
 &lt;/user-data-constraint&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Save the file.</p>
@@ -3199,8 +3188,8 @@ For more detailed information, refer to the WebSphere Application Server informa
 <p class="admonition-title">Cluster note</p>
 <p>In a clustered environment, complete this step on the primary node only.</p>
 </div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh action-update-ear-wp.search.servlets/seedlist/servletEAR
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh action-update-ear-wp.search.servlets/seedlist/servletEAR
+</code></pre></div>
 </li>
 <li>
 <p>Restart all servers in your configuration for your updates to take effect.</p>

@@ -3242,32 +3242,25 @@
 <li>
 <p><strong>For title search:</strong> <br>
     By default, searches for <strong>Title starts with</strong> and <strong>Title contains</strong> return only portal resources with titles in the locale of the current portal session. You can configure portal administration portlets to return search results across all supported locales, regardless of the locale of the current portal session or the locale set in the browser. To do this configuration, proceed as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>1.  Access the **Manage Portlets portlet**.
+<div class="language-text highlight"><pre><span></span><code>1.  Access the **Manage Portlets portlet**.
 2.  Locate the administration portlet for which you want to configure search of resources across all locales. To locate, use the search feature that is described earlier.
 3.  Click the **Configure portlet** icon for the portlet.
 4.  Add the parameter searchByTitle.all.locales with the value true.
 5.  Click **Add** and **OK**.
 The default value of the parameter searchByTitle.all.locales is `false`. Searches for portal resources return results only in the locale of the current portal session or the locale set in the browser.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p><strong>Note:</strong> Configuring search across all locales can have an impact on the search performance.</p>
 </li>
 <li>
 <p><strong>For the Users and Groups portlet:</strong><br>
     Searching with wild characters, such as the asterisk ( * ), is only supported for the User and Groups and User and Groups Permissions portlets. Wildcard character searches for the User and Groups and User and Groups Permissions portlets must have the asterisk ( * ) at the end or beginning of the search parameter. For example, the following searches are supported for the User and Groups and User and Groups Permissions portlets:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>-   *user
+<div class="language-text highlight"><pre><span></span><code>-   *user
 -   user*
 -   *user*
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following searches are not supported for the User and Groups and User and Groups Permissions portlets:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-   us*r
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-   us*r
+</code></pre></div>
 </li>
 </ul>
 </div>

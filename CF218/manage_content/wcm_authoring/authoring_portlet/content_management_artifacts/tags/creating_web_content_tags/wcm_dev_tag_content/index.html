@@ -4006,8 +4006,8 @@
 
 <p>The <code>Content</code> tag directly renders a content item or site area.</p>
 <p>The format of an <code>Content</code> tag:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Content context=&quot; &quot; presentationPath=&quot; &quot; renderMode=&quot; &quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Content context=&quot; &quot; presentationPath=&quot; &quot; renderMode=&quot; &quot;]
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The content tag renders nothing in the case of an infinite loop. For example if a presentation template uses the content tag to render the current content, this will cause the same presentation template to render, which in turn will render the content, and so forth without end. Take care to avoid this occurring because it slows down the time that is taken to render the tag.</p>
@@ -4076,17 +4076,17 @@
 </tbody>
 </table>
 <p>For example, setting a content or site area with a specified UUID to render by specifying the site area or content that is linked to by an element named <code>MyLinkElement</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Content uuid=&quot;[Element key=&#39;MyLinkElement&#39; format=&#39;id&#39;]&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Content uuid=&quot;[Element key=&#39;MyLinkElement&#39; format=&#39;id&#39;]&quot;]
+</code></pre></div>
 <p>You can render a content or site area from a predefined context. This context can be <code>portalContext</code>, <code>portletContext</code>, <code>portalMapping</code>, or <code>autofill</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Content context=&quot;portalContext&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Content context=&quot;portalContext&quot;]
+</code></pre></div>
 <p>The content or site area to render can be specified by using the name path. For example, to render /Web Content/My Site Area/My Content:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Content path=&quot;/Web Content/My Site Area/My Content&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Content path=&quot;/Web Content/My Site Area/My Content&quot;]
+</code></pre></div>
 <p>The content or site area to render can be specified relative to the name path of the current context:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Content path=&quot;./My Content&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Content path=&quot;./My Content&quot;]
+</code></pre></div>
 
 
 

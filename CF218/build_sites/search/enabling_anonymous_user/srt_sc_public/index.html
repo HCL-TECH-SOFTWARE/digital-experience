@@ -2778,8 +2778,8 @@
 </li>
 <li>
 <p>Locate the following code snippet that points to the default Search Center page:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wp.navigationModel[&#39;ibm.portal.Search Center&#39;].urlGeneration.setPortlet(&#39;ibm.portal.Search Center Portlet Window&#39;)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>wp.navigationModel[&#39;ibm.portal.Search Center&#39;].urlGeneration.setPortlet(&#39;ibm.portal.Search Center Portlet Window&#39;)
+</code></pre></div>
 </li>
 <li>
 <p>Change the values for <code>navigation node</code> and <code>control holding</code>:</p>
@@ -2788,8 +2788,8 @@
 <li>Change the value for <code>control holding</code> to the unique name that you gave the copy of your Search Center portlet.</li>
 </ul>
 <p>After your updates, the code snippet might look like the following:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wp.navigationModel[&#39;ibm.portal.your_public_search_center_page_unique_name&#39;].urlGeneration.setPortlet(&#39;ibm.portal.your_public_search_center_portlet_window_unique_name&#39;)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>wp.navigationModel[&#39;ibm.portal.your_public_search_center_page_unique_name&#39;].urlGeneration.setPortlet(&#39;ibm.portal.your_public_search_center_portlet_window_unique_name&#39;)
+</code></pre></div>
 </li>
 <li>
 <p>Restart your portal server.</p>

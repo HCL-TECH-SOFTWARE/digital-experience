@@ -4106,12 +4106,10 @@
 <h1 id="setting-the-list-rendering-context">Setting the list-rendering context</h1>
 <p>Learn about how you set the list-rendering context in Digital Data Connector (DDC) for HCL Portal.</p>
 <p>To establish the list-rendering context, you add the following tag to your presentation template:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;set&quot; 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;set&quot; 
                              extension-id=&quot;bean list provider id&quot; 
                              profile=&quot;profile name&quot;]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Replace the <code>bean list provider id</code> variable by the ID that identifies the DDC plug-in instance through which you want to render this list. If the addressed DDC plug-in is the generic XML DDC plug-in or a DDC plug-in that delegates its requests to that provider, you must identify the list-rendering profile. The XML DDC plug-in uses the identified profile to transform the XML data into bean list objects. Custom DDC plug-ins might or might not require this profile parameter.</p>
 <p>To address one of the two DDC plug-ins that are provided with HCL Digital Experience Version 8.5, use one of the following values for the <code>extension-id</code> parameter:</p>
 <ul>
@@ -4127,14 +4125,11 @@
 <p>If you use one of the providers, you must set the profile parameter.</p>
 <p>Depending on your choice, the addressed DDC plug-in can support or even require that you pass extra information through the <code>attribute</code> parameters. For details about which information is supported or required with the DDC plug-ins, read the documentation about the DDC plug-in that you use.</p>
 <p>Here is an example of how to set a list-rendering context that uses the generic Atom list-rendering profile to retrieve the list of public IBM communities:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ListRenderingContext action=”set” extension-id=”ibm.portal.ddc.xml” 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ListRenderingContext action=”set” extension-id=”ibm.portal.ddc.xml” 
      profile=”ibm.portal.atom” 
      attribute=”source=https://www.ibm.com/connections/communities/service/atom/catalog/public” 
      compute=“always“]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you want to test this example, you might have to adjust your proxy configuration to allow your portal to access the source URL. For more information, read the information about proxy configuration in the HCL Digital Experience documentation.</p>

@@ -3119,29 +3119,25 @@
 <li>Log in to the WebSphere Application Server Integrated Solutions Console for the HCL Connections server, rather than the Portal server.</li>
 <li>
 <p>Enter the host, port, and alias for the Portal server. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>Host : portal.example.com
+<div class="language-text highlight"><pre><span></span><code>Host : portal.example.com
 Port : 10025 (SOAP default port on Portal. Please specify appropriate port if non default is used)
 Alias : Portal Certificate (Admin can choose any appropriate alias)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 </li>
 <li>
 <p>Update the VMM schema so that PersonAccount on the Portal server includes personCorrelationAttribute. Use this attribute to specify the corresponding person relative distinguished name attribute. For example, ibm-primaryEmail. For more information about name attributes for different directories, go to <a href="https://support.hcltechsw.com/csm">HCL Software Support</a>. In a clustered environment, run this command on the Deployment manager. To open the scripting interface, go to <a href="https://support.hcltechsw.com/csm">HCL Software Support</a> for more information. Enter the following commands in the scripting interface:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$AdminTask addIdMgrPropertyToEntityTypes {-name &lt;personCorrelationAttribute&gt; -dataType string -entityTypeNames PersonAccount} 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>$AdminTask addIdMgrPropertyToEntityTypes {-name &lt;personCorrelationAttribute&gt; -dataType string -entityTypeNames PersonAccount} 
+</code></pre></div>
 <p>Then, enter the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$AdminConfig save
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>$AdminConfig save
+</code></pre></div>
 <p>For example, if the personCorrelationAttribute matches ibm-entryUuid, use:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>$AdminTask addIdMgrPropertyToEntityTypes {-name ibm-entryUuid -dataType string -entityTypeNames PersonAccount} 
+<div class="language-text highlight"><pre><span></span><code>$AdminTask addIdMgrPropertyToEntityTypes {-name ibm-entryUuid -dataType string -entityTypeNames PersonAccount} 
 
 $AdminConfig save
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Portal must be running while you run this command. Restart the server to apply the changes.</p>

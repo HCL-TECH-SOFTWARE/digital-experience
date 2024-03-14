@@ -2444,25 +2444,7 @@
 <p>Using an example, learn how a standard portlet can retrieve and use a sample portlet service. Accessing a portlet service requires a JNDI lookup for a PortletServiceHome. To use the portlet service, you retrieve a service object from the home, cast it to the service-specific interface and invoke service methods.</p>
 <p>This section describes how a portlet can invoke a portlet service. See <a href="../">Portlet services</a> for a general overview of portlet services. The following example shows how a standard portlet can retrieve and use a sample portlet service. The service implementation and deployment is explained in <a href="../wpsbsservice/">Creating your own portlet service</a>.</p>
 <p>Accessing a portlet service requires a JNDI lookup for a PortletServiceHome. As this is may be a rather expensive operation, you should do it in the init() method of the portlet and store the returned object in an instance variable:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>   import javax.portlet.*;
+<div class="language-text highlight"><pre><span></span><code>   import javax.portlet.*;
    import com.ibm.portal.portlet.service.*;
 
    private PortletServiceHome helloServiceHome = null;
@@ -2481,20 +2463,10 @@
       config.getPortletContext().log(&quot;No hello service available&quot;);
       }
    }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The example is written to gracefully handle a situation where the service is not available because the service is optional for the functionality of the portlet. If possible, you should write your portlets so that they are portable across portal installations, whether they support a given portlet service or not. Such portlets can still run on portals that have not support for portlet services at all and do not even provide the IBM-specifc PortletServiceHome class, because this class is only loaded when the service is actually registered in JNDI.</p>
 <p>To use the portlet service, you retrieve a service object from the home, cast it to the service-specific interface and invoke service methods:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>   public void doView(RenderRequest request, RenderResponse response)
+<div class="language-text highlight"><pre><span></span><code>   public void doView(RenderRequest request, RenderResponse response)
    {
       if (helloServiceHome != null)
       {
@@ -2505,7 +2477,7 @@
 
       //... do other stuff
    }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Note that, while it is good practice to store the PortletServiceHome object in an instance variable, you must not store the actual service object, because references to service objects may not be held for longer than a single request.</p>
 <details class="info" open="open">
 <summary>Related information</summary>

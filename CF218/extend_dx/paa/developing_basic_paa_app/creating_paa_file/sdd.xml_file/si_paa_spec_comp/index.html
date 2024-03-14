@@ -2239,79 +2239,7 @@
 <h1 id="component-level-sddxml-file-overview">Component level sdd.xml file overview</h1>
 <p>For most installation scenarios, generation of the component level sdd.xml file is automated. However, there are still occasions where it might be necessary to create it manually. The component level sdd.xml file contains the information on how to install the artifacts of the component. It lists the extension points that need to be processed. The extension points ensure that the resources can be installed and configured on the server. Ant tasks complete the deployment and configuration work.</p>
 <h2 id="sample-sddxml-file">Sample sdd.xml file</h2>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;iudd:iudd
+<div class="language-text highlight"><pre><span></span><code>&lt;iudd:iudd
     xmlns:iudd=&quot;http://www.ibm.com/xmlns/prod/autonomic/solutioninstall/IUDD&quot;
     xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
     xmlns:OSRT=&quot;http://www.ibm.com/xmlns/prod/autonomic/resourcemodel/OS/resourcetypes&quot;
@@ -2384,7 +2312,7 @@ defaultValue=&quot;/usr/dummy.offr.1&quot; /&gt;
     &lt;/content&gt;
  
 &lt;/iudd:iudd&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>See <a href="../../../../developing_adv_paa_app/si_component_sdd/">The component level sdd.xml file</a> for information about editing the sdd.xml file.</p>
 <h2 id="syntax-information-for-component-names">Syntax information for component names</h2>
 <p>The syntax for naming the component is important. There are dependencies within the PAA file that determine part of the component name that is registered in the sdd.xml file. You are free to name your components as you like; however, the component names must be unique. The ConfigEngine and by extension Solution Installer impose a restriction that a component name not clash with an existing component in the ConfigEngine registry. This restriction is not limited to an assembly, but is registry wide. Therefore, if a component has the same name as an existing component, it is not automatically installed. If the user wants to install this new component, they can use the update-paa-components task. This task removes the existing version and installs the new component as part of the new assembly.</p>
@@ -2397,28 +2325,7 @@ defaultValue=&quot;/usr/dummy.offr.1&quot; /&gt;
 <p>The value of the FunctionalArea parameter is set to featurepackSI. This value is important so the Solution Installer can determine that the components are to be installed with the Solution Installer specific feature pack. See the sdd.xml file example at the beginning of this file for how to implement the feature pack approach.</p>
 </div>
 <p>In the sample sdd.xml file, there are two <code>SCU</code> elements. The first one shows how to register the extension point to deploy a portlet and the second one demonstrates how to remove the portlets.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;SCU id=&quot;deploy-portlets-applySIFeaturePack&quot; targetRef=&quot;OS&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;SCU id=&quot;deploy-portlets-applySIFeaturePack&quot; targetRef=&quot;OS&quot;&gt;
     &lt;identity&gt;
     &lt;name&gt;Do Configuration Task&lt;/name&gt;
     &lt;version&gt;1.0.0.0&lt;/version&gt;
@@ -2440,7 +2347,7 @@ defaultValue=&quot;/usr/dummy.offr.1&quot; /&gt;
         &lt;/requirement&gt;
         &lt;/requirements&gt;
 &lt;/SCU&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The <code>SCU</code> element example notifies the Solution Installer about the task you want to run. The extension point in this case is called deploy-portlets-applySIFeaturePack. It deviates from the core extension points for portal by adding applySIFeaturePack’ to the end of the extension point. With an uninstall task, ‘removeSIFeaturePack’ is appended instead. It allows the Solution Installer to distinguish between installation and uninstall tasks. Append these strings to the extension point names to create a definite distinction between core extension points and those points included for the Solution Installer to handle a PAA distribution. The Solution Installer expects and runs only extension points that conform to this format.</p>
 <p>To provide an implementation task for an extension point, read <a href="../../si_paa_spec_inst/">Installation tasks</a> for information.</p>
 

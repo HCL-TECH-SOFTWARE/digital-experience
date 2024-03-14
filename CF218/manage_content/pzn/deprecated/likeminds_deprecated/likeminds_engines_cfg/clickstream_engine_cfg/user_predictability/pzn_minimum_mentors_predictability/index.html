@@ -3110,8 +3110,8 @@
 <p>Learn how to set the number of mentors the Clickstream Engine will examine before it checks to see whether the user is predictable.</p>
 <p>When it determines whether it can make recommendations for a given user, the Clickstream Engine must examine the user's mentors. <code>&lt;eng_instance_name&gt;.engine.titan.predictable.loop_check_cutoff</code> specifies the number of mentors the Clickstream Engine will examine before it checks to see whether the user is predictable. The default is 10.</p>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>movie_pref.engine.titan.predictable.loop_check_cutoff = 12
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>movie_pref.engine.titan.predictable.loop_check_cutoff = 12
+</code></pre></div>
 <p>If the user is not predictable, the engine will examine another group of <code>&lt;eng_instance_name&gt;.engine.titan.predictable.loop_check_cutoff</code> mentors, and then check to see whether the user is predictable. It will continue until it finds that the user is predictable or it runs out of mentors.</p>
 
 

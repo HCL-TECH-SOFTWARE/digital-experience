@@ -2765,25 +2765,23 @@
 <li>
 <p><strong>Endpoint</strong></p>
 <p>GET request to:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;http://host:port/wps/mycontenthandler/wcmrest/item/&quot;UUID of the content&quot;/versions/&gt;                     
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;http://host:port/wps/mycontenthandler/wcmrest/item/&quot;UUID of the content&quot;/versions/&gt;                     
+</code></pre></div>
 <p>Returns list of versions for the content item.</p>
 <p>PUT request to:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://host:port/wps/mycontenthandler/wcmrest/item/&lt;UUID of the content&gt;/versions?setVersion=&lt;versionName&gt;&amp;restoreAsPublished=&lt;true|false&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://host:port/wps/mycontenthandler/wcmrest/item/&lt;UUID of the content&gt;/versions?setVersion=&lt;versionName&gt;&amp;restoreAsPublished=&lt;true|false&gt;
+</code></pre></div>
 <p>Sample URL:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;http://localhost:10039/wps/mycontenthandler/wcmrest/item/2436ab87-d823-41f3-9a37-64d531d4919b/versions?setVersion=1,restoreAsPublished=false/&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;http://localhost:10039/wps/mycontenthandler/wcmrest/item/2436ab87-d823-41f3-9a37-64d531d4919b/versions?setVersion=1,restoreAsPublished=false/&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong>Expected Body</strong></p>
 <p>Body can just have the basic WCM structure:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>                    &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?/&gt;
+<div class="language-text highlight"><pre><span></span><code>                    &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?/&gt;
                     &lt;feed xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;/&gt;
                     &lt;/feed/&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Expected Headers</strong></p>
@@ -2801,37 +2799,7 @@
 <p>The list of versions. Same as when calling <strong>.../wcmrest/item/uuid/versions</strong> </p>
 <p>Structure see: <a href="../../wcm_rest_mng_content/wcm_rest_crud_versions/">How to use REST with versions</a></p>
 <p>Sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;feed xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
     &lt;entry&gt;
         &lt;versionContent&gt;
@@ -2862,7 +2830,7 @@
         &lt;link rel=&quot;versioned-item&quot; href=&quot;/wps/mycontenthandler/!ut/p/digest!SMx91r5Xh87lqsxXlMQqeQ/wcmrest/item/2436ab87-d823-41f3-9a37-64d531d4919b/version/1&quot; xml:lang=&quot;en&quot; label=&quot;Versioned Item&quot;/&gt;
     &lt;/entry&gt;
 &lt;/feed&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 

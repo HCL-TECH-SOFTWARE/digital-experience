@@ -2387,12 +2387,10 @@
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>To prevent CORS issue and be able to access DX Picker in a custom web application, it is required to add the host of the custom web application in the list of origins of the RingAPI service.
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>    ringApi:
+<div class="language-text highlight"><pre><span></span><code>    ringApi:
     # CORS Origin configuration for Ring API, array of elements
     corsOrigin: []
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 </div>
 <h2 id="accessing-dx-picker_1">Accessing DX Picker</h2>
 <div class="admonition note">
@@ -2403,32 +2401,18 @@
 <ol>
 <li>
 <p>Add the DX Picker script as one of the dependencies in your HTML page.</p>
-<div class="language-html highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>  <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<div class="language-html highlight"><pre><span></span><code>  <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
       // Import the dx-picker.js inside 
       <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://&lt;DX_HOSTNAME&gt;/dx/ui/picker/dx-picker.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>After adding the script, you can now use the <code>dx-picker</code> tag inside your HTML page.</p>
-<div class="language-html highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>  <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<div class="language-html highlight"><pre><span></span><code>  <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
       // Insert the tag inside your code
@@ -2437,33 +2421,12 @@
       <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://&lt;DX_HOSTNAME&gt;/dx/ui/picker/dx-picker.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Open DX Picker by setting the <code>open</code> attribute of the picker to <code>true</code>.</p>
 <p>You can assign an id to the <code>dx-picker</code> tag and add an onclick handler button that sets the <code>open</code> attribute to <code>true</code>.</p>
-<div class="language-html highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code>  <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<div class="language-html highlight"><pre><span></span><code>  <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
       function toggleDxPicker() {
         const dxPicker = document.getElementById(&#39;dx-picker-id&#39;)
@@ -2485,25 +2448,12 @@
       <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://&lt;DX_HOSTNAME&gt;/dx/ui/picker/dx-picker.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 <h3 id="picker-events">Picker Events</h3>
 <p>Interacting with the DX Picker triggers events which can be accessed by listening to the <code>message</code> event and inspecting the <code>data</code> object. </p>
-<div class="language-js highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<div class="language-js highlight"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">eventData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">event</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
 <span class="w">  </span><span class="cm">/*</span>
 <span class="cm">   * event.data object will have the following structure:</span>
@@ -2517,29 +2467,13 @@
 <span class="cm">   *</span>
 <span class="cm">   */</span>
 <span class="p">})</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following are the current events available in the DX Picker:</p>
 <ul>
 <li>
 <p><code>HCL-DX-PICKER-SELECT</code> - Triggered when selecting an item.</p>
 <p>This event contains the following object:</p>
-<div class="language-json highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
+<div class="language-json highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HCL-DX-PICKER-SELECT&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;detail&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dam&quot;</span><span class="p">,</span>
@@ -2556,23 +2490,18 @@
 <span class="w">    </span><span class="p">]</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><code>HCL-DX-PICKER-CLOSE</code> - Triggered when the Cancel button is clicked.</p>
 <p>This event contain the following object:</p>
-<div class="language-json highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
+<div class="language-json highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HCL-DX-PICKER-CLOSE&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;detail&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;close&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">boolea</span><span class="kc">n</span><span class="err">;</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 

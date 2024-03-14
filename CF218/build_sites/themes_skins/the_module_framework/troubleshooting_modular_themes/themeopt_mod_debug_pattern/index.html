@@ -3197,10 +3197,9 @@
 <li>
 <p>Add logging to your resources. The HCL DX code logs throughout the product for serviceability. However, your custom code might need more logging that is inserted to track down an issue. For client-side code, use a console log statement. A typical console log statement for displaying a value with a label is <code>console.debug("example value: "+value);</code>.</p>
 <p>Using this code displays a string value. To display the object in the console to see the values that are stored in the object, you can use</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>console.log(&quot;the ibmCfg object:&quot;);
+<div class="language-text highlight"><pre><span></span><code>console.log(&quot;the ibmCfg object:&quot;);
 console.debug(ibmCfg);
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The first line tracks the instance of the object. The second line adds the object to the console. Then, you can use the console to see the attributes and their values.</p>
 </li>
 <li>
@@ -3214,14 +3213,7 @@ console.debug(ibmCfg);
 </li>
 <li>
 <p>Export all theme definitions to modify the advanced features such as the metadata, resource root, default layout, or theme template definition. You can also modify other attributes through this definition.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;request 
 xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;PortalConfig_7.0.0.xsd&quot;
 type=&quot;export&quot; create-oids=&quot;true&quot;&gt;
@@ -3229,18 +3221,11 @@ type=&quot;export&quot; create-oids=&quot;true&quot;&gt;
 &lt;theme action=&quot;export&quot; active=&quot;true&quot; objectid=&quot;*&quot;&gt;&lt;/theme&gt;
 &lt;/portal&gt;
 &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Export page definition to modify features specific to the theme such as theme template override, dynamic content spot overrides, or device class filtering.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;request 
 xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;PortalConfig_7.0.0.xsd&quot;
 type=&quot;export&quot; create-oids=&quot;true&quot;&gt;
@@ -3248,18 +3233,11 @@ type=&quot;export&quot; create-oids=&quot;true&quot;&gt;
 &lt;content-node action=&quot;export&quot; uniquename=&quot;ibm.portal.SamplePage&quot;/&gt;
 &lt;/portal&gt;
 &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Export all defined clients to modify the device class assigned. You can view this information in the Manage Clients portlets as well.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;request 
 xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;PortalConfig_7.0.0.xsd&quot;
 type=&quot;export&quot; create-oids=&quot;true&quot;&gt;
@@ -3267,18 +3245,11 @@ type=&quot;export&quot; create-oids=&quot;true&quot;&gt;
 &lt;client action=&quot;export&quot; uniquename=&quot;*&quot;&gt;&lt;/client&gt;
 &lt;/portal&gt;
 &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Export all defined device classes to view the available groups and change the title or ID.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;request type=&quot;export&quot; create-oids=&quot;true&quot;
 xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
 xsi:noNamespaceSchemaLocation=&quot;PortalConfig_7.0.0_2.xsd&quot;&gt;
@@ -3286,7 +3257,7 @@ xsi:noNamespaceSchemaLocation=&quot;PortalConfig_7.0.0_2.xsd&quot;&gt;
 &lt;device-class action=&quot;export&quot; uniquename=&quot;*&quot; /&gt;
 &lt;/portal&gt;   
 &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 <details class="info" open="open">

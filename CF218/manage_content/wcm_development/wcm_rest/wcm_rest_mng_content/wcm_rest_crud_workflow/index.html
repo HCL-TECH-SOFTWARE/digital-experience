@@ -3506,16 +3506,7 @@
 <h2 id="creating-a-draft-of-an-item-that-does-not-use-a-workflow">Creating a draft of an item that does not use a workflow</h2>
 <p>You can create a draft of items that do not use workflows.</p>
 <p>To do that, specify explicitly the draft workflow state in the request entry data. For example, to create a link component as draft:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 POST
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 POST
 
 http://host:port/wps/mycontenthandler/wcmrest/LibraryLinkComponent
 &lt;atom:entry xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;wcm/namespace&quot;&gt;
@@ -3525,107 +3516,78 @@ http://host:port/wps/mycontenthandler/wcmrest/LibraryLinkComponent
 &lt;/atom:entry&gt;
 
 201 Created
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="creating-a-draft-in-a-workflow">Creating a draft in a workflow</h2>
 <p>You can use the REST service to create a new draft item. This is equivalent to using the <strong>Create Draft</strong> icon in the authoring portlet.</p>
 <p>A new draft of an item can be created by sending a POST request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/item/item-uuid/create-draft
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/item/item-uuid/create-draft
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 POST
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 POST
 http://host:port/wps/mycontenthandler/wcmrest/item/item-uuid/create-draft
 
 201 Created
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="moving-an-item-to-the-next-stage">Moving an item to the next stage</h2>
 <p>You can use the REST service to move an item to the next stage of a workflow. This is equivalent to using the <strong>Next Stage</strong> icon in the authoring portlet.</p>
 <p>An item can be moved to the next stage by sending a POST request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/item/item-uuid/next-stage
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/item/item-uuid/next-stage
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 POST
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 POST
 http://host:port/wps/mycontenthandler/wcmrest/item/&lt;item-uuid&gt;/next-stage
 
 201 Created
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="moving-an-item-to-the-previous-stage">Moving an item to the previous stage</h2>
 <p>You can use the REST service to move an item to the previous stage of a workflow. This is equivalent to using the <strong>Previous Stage</strong> icon in the authoring portlet.</p>
 <p>An item can be moved to the previous stage by sending a POST request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/item/item-uuid/previous-stage
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/item/item-uuid/previous-stage
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 POST
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 POST
 http://host:port/wps/mycontenthandler/wcmrest/item/item-uuid/previous-stage
 
 201 Created
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="approving-an-item-within-a-workflow">Approving an item within a workflow</h2>
 <p>You can use the REST service to move an item to the next stage of a workflow by approving it. This is equivalent to using the <strong>Approve</strong> icon in the authoring portlet.</p>
 <p>An item can be approved by sending a POST request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/item/item-uuid/approve
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/item/item-uuid/approve
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 POST
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 POST
 http://host:port/wps/mycontenthandler/wcmrest/item/item-uuid/approve
 
 201 Created
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="rejecting-an-item-within-a-workflow">Rejecting an item within a workflow</h2>
 <p>You can use the REST service to reject an item in a workflow. This is equivalent to using the <strong>Reject</strong> icon in the authoring portlet.</p>
 <p>An item can be rejected by sending a POST request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/item/item-uuid/reject
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/item/item-uuid/reject
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 POST
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 POST
 http://host:port/wps/mycontenthandler/wcmrest/item/item-uuid/reject
 
 201 Created
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="restarting-a-workflow">Restarting a workflow</h2>
 <p>You can use the REST service to restart a workflow. This is equivalent to using the <strong>Restart</strong> icon in the authoring portlet.</p>
 <p>An item can be restarted by sending a POST request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/item/item-uuid/restart
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/item/item-uuid/restart
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 POST
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 POST
 http://host:port/wps/mycontenthandler/wcmrest/item/item-uuid/restart
 
 201 Created
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="workflow-comments">Workflow Comments</h2>
 <p>To ensure that comments are added to workflow stages that require comments, a GET request must be issued to the associated link. This will return an HTML form indicating whether a comment is required.</p>
 <p>To add the comment you either submit the form, or perform an HTTP Post request with a content type of <code>text/plain</code>.</p>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP GET /wps/mycontenthandler/wcmrest/item/84e35979-d7c4-429a-b2ab-eb79abc5debc/next-stage 
+<div class="language-text highlight"><pre><span></span><code>HTTP GET /wps/mycontenthandler/wcmrest/item/84e35979-d7c4-429a-b2ab-eb79abc5debc/next-stage 
  Accept: text/html 
 
 &lt;html&gt; 
@@ -3637,7 +3599,7 @@ next-stage&quot; enctype=&quot;multipart/form-data&quot; method=&quot;POST&quot;
    &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;&lt;/input&gt; 
 &lt;/form&gt; 
 &lt;/html&gt; 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="process-now-and-remove-workflow-apis">Process Now and Remove Workflow APIs</h2>
 <p>The Process Now and Remove Workflow from an item functionality are equivalent to their functionality in user interfaces:</p>
 <p><img alt="" src="../../../../../assets/Process_Now_API.png" title="Process Now" /></p>
@@ -3654,12 +3616,10 @@ next-stage&quot; enctype=&quot;multipart/form-data&quot; method=&quot;POST&quot;
 <li>
 <p><strong>Expected Body</strong></p>
 <p>The Body can just have the basic Web Content Manager structure or be empty altogether.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;feed xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
 &lt;/feed&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Expected Headers</strong></p>
@@ -3669,90 +3629,7 @@ next-stage&quot; enctype=&quot;multipart/form-data&quot; method=&quot;POST&quot;
 <p><strong>Return Body</strong></p>
 <p>The item API for the updated item. This is the same result as when calling .../wcmrest/item/</p>
 <p>Sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span>
-<span class="normal">79</span>
-<span class="normal">80</span>
-<span class="normal">81</span>
-<span class="normal">82</span>
-<span class="normal">83</span>
-<span class="normal">84</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
       &lt;id&gt;wcmrest:09a555cc-05ac-466c-9c8b-80aed68e4f7b&lt;/id&gt;
       &lt;title xml:lang=&quot;en&quot;&gt;dfvdfv&lt;/title&gt;
@@ -3836,7 +3713,7 @@ Content/09a555cc-05ac-466c-9c8b-80aed68e4f7b/elements&quot; xml:lang=&quot;en&qu
           &lt;/wcm:content&gt;
      &lt;/content&gt;
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="using-the-remove-workflow-api">Using the Remove Workflow API</h2>
@@ -3851,12 +3728,10 @@ Content/09a555cc-05ac-466c-9c8b-80aed68e4f7b/elements&quot; xml:lang=&quot;en&qu
 <li>
 <p><strong>Expected Body</strong></p>
 <p>The Body can just have the basic Web Content Manager structure or just be empty altogether.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;feed xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
 &lt;/feed&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Expected Headers</strong></p>
@@ -3866,83 +3741,7 @@ Content/09a555cc-05ac-466c-9c8b-80aed68e4f7b/elements&quot; xml:lang=&quot;en&qu
 <p><strong>Return Body</strong></p>
 <p>The item API for the updated item. The result is the same as when calling .../wcmrest/item/.</p>
 <p>Sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
      &lt;id&gt;wcmrest:02894453-b03a-4935-8078-5f8ac923a5b0&lt;/id&gt;
      &lt;title xml:lang=&quot;en&quot;&gt;tedst33&lt;/title&gt;
@@ -4019,7 +3818,7 @@ wcmrest/ContentTemplate/3fdeaf06-48d4-4fee-87e7-564d210aee71&quot; xml:lang=&quo
               &lt;/wcm:content&gt;
        &lt;/content&gt;
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="using-the-workflow-comments-api">Using the Workflow Comments API</h2>
@@ -4028,19 +3827,18 @@ wcmrest/ContentTemplate/3fdeaf06-48d4-4fee-87e7-564d210aee71&quot; xml:lang=&quo
 <li>
 <p><strong>Endpoint</strong></p>
 <p>GET request to retrieve any item - e.g. Content item:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://host:port/wps/mycontenthandler/wcmrest/Content/&lt;uuid&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://host:port/wps/mycontenthandler/wcmrest/Content/&lt;uuid&gt;
+</code></pre></div>
 <p>Sample URL:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://dx.dev.com:10039/wps/mycontenthandler/wcmrest/Content/35381882-69e2-4d06-8553-e8bed1e09e68
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://dx.dev.com:10039/wps/mycontenthandler/wcmrest/Content/35381882-69e2-4d06-8553-e8bed1e09e68
+</code></pre></div>
 </li>
 <li>
 <p><strong>Expected Body</strong></p>
 <p>With Payload:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Expected Headers</strong></p>
@@ -4050,23 +3848,7 @@ wcmrest/ContentTemplate/3fdeaf06-48d4-4fee-87e7-564d210aee71&quot; xml:lang=&quo
 <p><strong>Return body:</strong></p>
 <p>Result: 200 if successful.</p>
 <p>Result Payload:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
     &lt;id&gt;wcmrest:35381882-69e2-4d06-8553-e8bed1e09e68&lt;/id&gt;
     &lt;title xml:lang=&quot;en&quot;&gt;Give me comments&lt;/title&gt;
     &lt;summary xml:lang=&quot;en&quot;&gt;&lt;/summary&gt;
@@ -4083,7 +3865,7 @@ wcmrest/ContentTemplate/3fdeaf06-48d4-4fee-87e7-564d210aee71&quot; xml:lang=&quo
         &lt;wcm:workflowComments wcm:date=&quot;2020-10-12T20:04:34.551Z&quot; wcm:commenter=&quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot; wcm:comment=&quot;Yeah on second thoughts maybe not that great. Retiring approved.&quot;/&gt;
     &lt;/wcm:workflow&gt;
 ...
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="using-the-wcm-add-comment-api">Using the WCM Add Comment API</h2>
@@ -4094,11 +3876,11 @@ wcmrest/ContentTemplate/3fdeaf06-48d4-4fee-87e7-564d210aee71&quot; xml:lang=&quo
 <li>
 <p><strong>Endpoint</strong></p>
 <p>POST request to:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://host:port/wps/mycontenthandler/wcmrest/item/&lt;UUID of WCM item&gt;/comment
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://host:port/wps/mycontenthandler/wcmrest/item/&lt;UUID of WCM item&gt;/comment
+</code></pre></div>
 <p>Sample URL:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://localhost:10039/wps/mycontenthandler/!ut/p/digest!d0kIL5ON1sJd3Q8JsF2F9A/wcmrest/item/11e7dded-f65a-426c-b865-d3bc18395ee0/comment
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://localhost:10039/wps/mycontenthandler/!ut/p/digest!d0kIL5ON1sJd3Q8JsF2F9A/wcmrest/item/11e7dded-f65a-426c-b865-d3bc18395ee0/comment
+</code></pre></div>
 </li>
 <li>
 <p><strong>Expected Body</strong></p>
@@ -4122,85 +3904,7 @@ wcmrest/ContentTemplate/3fdeaf06-48d4-4fee-87e7-564d210aee71&quot; xml:lang=&quo
 <p><strong>Return body:</strong></p>
 <p>The updated item.</p>
 <p>Sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span>
-<span class="normal">79</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
     &lt;id&gt;wcmrest:11e7dded-f65a-426c-b865-d3bc18395ee0&lt;/id&gt;
     &lt;title xml:lang=&quot;en&quot;&gt;workflow&lt;/title&gt;
     &lt;wcm:displayTitle xml:lang=&quot;en&quot;&gt;workflow&lt;/wcm:displayTitle&gt;
@@ -4279,7 +3983,7 @@ wcmrest/ContentTemplate/3fdeaf06-48d4-4fee-87e7-564d210aee71&quot; xml:lang=&quo
         &lt;/wcm:content&gt;
     &lt;/content&gt;
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 

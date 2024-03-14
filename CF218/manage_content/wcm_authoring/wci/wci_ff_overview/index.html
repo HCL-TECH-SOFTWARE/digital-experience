@@ -2505,31 +2505,7 @@
 <h2 id="rss-20-feed-file-format">RSS 2.0 feed file format</h2>
 <p>The most commonly used media type options are "text/xml" and "application/rss+xml". The choice of media type does impact how the Web Content Integrator is able to determine the character encoding of the feed. If the character encoding cannot be determined correctly, the Web Content Integrator will produce errors when parsing the feed. Therefore it is important to choose an appropriate media type for your environment.</p>
 <p>Following the XML prolog, an RSS 2.0 file begins with a single &lt;rss&gt; element. This element has one required attribute, "version", which must be set to "2.0". The file must also contain a single &lt;channel&gt; element which contains a number of sub-elements that provide some metadata about the feed as a whole. The &lt;channel&gt; element must contain one or more &lt;item&gt; elements. The &lt;item&gt; elements in turn contain sub-elements which provide information about the content that is being syndicated. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot;?&gt;
 &lt;rss version=&quot;2.0&quot;&gt;
     &lt;channel&gt;
         &lt;title&gt;Sample Feed&lt;/title&gt;
@@ -2554,7 +2530,7 @@
         &lt;/item&gt;
         &lt;/channel&gt;
     &lt;/rss&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If non-ascii data is used in a feed, then encoding="UTF-8" must be specified in the feed: <code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</code></p>

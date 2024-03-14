@@ -2896,21 +2896,17 @@
 <ul>
 <li>
 <p>In the portlet XML file, add the <code>readOnly="true"</code> option to the lines with <code>item id="title"</code> and <code>item id="description"</code> as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;iw:item id=&quot;title&quot; lang=&quot;en&quot; value=&quot;iWidget Title&quot; readOnly=&quot;true&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;iw:item id=&quot;title&quot; lang=&quot;en&quot; value=&quot;iWidget Title&quot; readOnly=&quot;true&quot;&gt;
   ...              
 &lt;iw:item id=&quot;description&quot; lang=&quot;en&quot; value=&quot;iWidget Description&quot; readOnly=&quot;true&quot;&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>When you run the ConfigEngine task, include the option <code>-DForceRefresh=true</code> option as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh refresh-iwidget-definitions 
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh refresh-iwidget-definitions 
                   -DIWidgetDefinition=/iWidget/iWidget.xml 
                   -DForceRefresh=true
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Add the following portlet parameter to the installed iWidget: <code>com.ibm.portal.replace.attributes = true</code>.</p>

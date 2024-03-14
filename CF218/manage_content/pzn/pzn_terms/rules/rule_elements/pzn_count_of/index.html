@@ -3426,8 +3426,8 @@
 <p>This option can only be used in profiler and visibility rules.</p>
 </div>
 <p>Because the tally is made at the time the rule is triggered, it could produce different results at different times during the session if used on an application object or a current resource. For example, you might profile a visitor's color preference as red by creating an evaluation that checks to see if the number of red items in the user's shopping cart is greater than 5. The rule syntax for this evaluation could be:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Count of (shoppingCart.item.color is red) is greater than 5
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>Count of (shoppingCart.item.color is red) is greater than 5
+</code></pre></div>
 <p>Although you can make counts of any data type, the tally must be compared against a value or resource attribute that has a data type of number, decimal number, or integer.</p>
 
 

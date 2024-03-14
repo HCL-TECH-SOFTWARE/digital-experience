@@ -4157,11 +4157,11 @@
 <p><strong>get(key)</strong></p>
 <p>Retrieves the property that is defined on the Resource Environment Provider.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.rep[&#39;resourceEnvironmentProvider&#39;][&#39;property&#39;]}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.rep[&#39;resourceEnvironmentProvider&#39;][&#39;property&#39;]}
+</code></pre></div>
 <p>To retrieve the Portal defined Dojo context root.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.rep[&#39;WP GlobalThemeConfig&#39;][&#39;resources.js.dojo.contextRoot&#39;]}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.rep[&#39;WP GlobalThemeConfig&#39;][&#39;resources.js.dojo.contextRoot&#39;]}
+</code></pre></div>
 <p>Parameters: String; specifies the property key.</p>
 <p>Returns: String; specifies the property value. It can be null if not found.</p>
 </li>
@@ -4169,12 +4169,10 @@
 <p><strong>iterator</strong></p>
 <p>Retrieves all properties that are stored in the resource environment provider.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;c:forEach var=&quot;node&quot; items=&quot;${wp.rep[&#39;WP GlobalThemeConfig&#39;]}&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;c:forEach var=&quot;node&quot; items=&quot;${wp.rep[&#39;WP GlobalThemeConfig&#39;]}&quot;&gt;
 ${node.key}  =&gt;  ${node.value}&lt;br&gt;
 &lt;/c:forEach&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Parameters: None</p>
 </li>
 </ul>

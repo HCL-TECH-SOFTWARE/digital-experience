@@ -3713,14 +3713,11 @@
 </ul>
 <p>Open the menu with the JavaScript function wptheme.contextMenu.init. For more information, see the <em>JsDoc</em>.</p>
 <p>To register a simple menu so that it opens when a user clicks the HTML element, use the following example.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;span role=&quot;button&quot; aria-haspopup=&quot;true&quot; class=&quot;wpthemeMenuFocus&quot;
+<div class="language-text highlight"><pre><span></span><code>&lt;span role=&quot;button&quot; aria-haspopup=&quot;true&quot; class=&quot;wpthemeMenuFocus&quot;
           onclick=&quot;if (typeof wptheme != &#39;undefined&#39;) wptheme.contextMenu.init({ &#39;node&#39;: this, menuId: &#39;pageAction&#39;, jsonQuery: {&#39;navID&#39;:ibmCfg.portalConfig.currentPageOID}, params: {&#39;alignment&#39;:&#39;right&#39;}});&quot;
           &lt;span class=&quot;wpthemeUnderlineText&quot; id=&quot;wpContextMenu&quot;&gt;My Menu&lt;/span&gt;
       &lt;/span&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This example has the <code>pageAction</code> ID, which triggers a request to the server to load a JSON file with the same id. For more information, see Server-side framework.</p>
 <p>You can create as many menus as you want in a custom theme.</p>
 <p>To force the regeneration of menus, use the JavaScript command: i$.fireEvent('wptheme/contextMenu/invalidate/all');</p>
@@ -3756,34 +3753,14 @@
 <h2 id="templates">Templates</h2>
 <p>The menu provides a default template that is embedded into the page markup and contributed through the module <code>wp_simple_contextmenu_template</code>. If no inline template or not templateID is passed when initializing the menu, the framework reverts to the default template.</p>
 <p>You can define your template with an inline template, which is embedded with the menu markup.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;span role=&quot;button&quot; aria-haspopup=&quot;true&quot; class=&quot;wpthemeMenuFocus&quot;
+<div class="language-text highlight"><pre><span></span><code>&lt;span role=&quot;button&quot; aria-haspopup=&quot;true&quot; class=&quot;wpthemeMenuFocus&quot;
           onclick=&quot;if (typeof wptheme != &#39;undefined&#39;) wptheme.contextMenu.init({ &#39;node&#39;: this, menuId: &#39;pageAction&#39;, jsonQuery: {&#39;navID&#39;:ibmCfg.portalConfig.currentPageOID}, params: {&#39;alignment&#39;:&#39;right&#39;}});&quot;
           &lt;span class=&quot;wpthemeUnderlineText&quot; id=&quot;wpContextMenu&quot;&gt;My Menu&lt;/span&gt;
           ... &lt;your template markup appears here&gt; ...
       &lt;/span&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Or, you can use a referenced template through an ID. When calling the init method of the menu, you can pass a templateID as part of the parameters. This ID is resolved as HTML element ID in the DOM and must point to a valid template.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;span id=&quot;exampleTemplateId&quot; class=&quot;wpthemeMenuLeft&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;span id=&quot;exampleTemplateId&quot; class=&quot;wpthemeMenuLeft&quot;&gt;
     &lt;div class=&quot;wpthemeMenuBorder&quot;&gt;
         &lt;div class=&quot;wpthemeMenuNotchBorder&quot;&gt;&lt;/div&gt;
         &lt;!-- define the menu item template inside the &quot;ul&quot; element.  only &quot;css-class&quot;, &quot;description&quot;, and &quot;title&quot; are handled by the theme&#39;s sample javascript. --&gt;
@@ -3800,7 +3777,7 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/span&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The template contains 3 sub templates that are identified through classes.</p>
 <ul>
 <li>
@@ -3847,20 +3824,7 @@
 </ul>
 <h2 id="example">Example</h2>
 <p>This example shows the close handler, another templateId, and alignment.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>addClass(control.parentNode, VALUE_SELECTED);
+<div class="language-text highlight"><pre><span></span><code>addClass(control.parentNode, VALUE_SELECTED);
             args = {
                 &quot;node&quot;: control.parentNode,
                 &quot;menuId&quot;: menuID,
@@ -3874,7 +3838,7 @@
                 }
             };
             wptheme.contextMenu.init(args);
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="simple-menu-extensions">Simple menu extensions</h2>
 <p>The framework supports extra extensions as part of the module <code>wp_simple_contextmenu_ext</code>. The following extensions are available.</p>
 <ul>
@@ -3896,15 +3860,7 @@
 </li>
 </ul>
 <p>As an alternative to the <code>badgeURL</code>, <code>menuitem</code> can also contain the <code>badgeData</code> element. The <code>badgeData</code> element must be a JSON object with the same elements as the feed that is returned from badgeURL. The following is a <code>badgeURL</code> example.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
   &quot;type&quot;: &quot;StaticMenuitem&quot;,
   &quot;id&quot;: &quot;myEditFct&quot;,
   ...
@@ -3913,20 +3869,9 @@
     &quot;badgeUrl&quot;: &quot;?uri=theme-validation:count&quot;
   }
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following is an example of <code>badgeData</code>.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
   &quot;type&quot;: &quot;StaticMenuitem&quot;,
   &quot;id&quot;: &quot;myEditFct&quot;,
   ...
@@ -3938,7 +3883,7 @@
     }
   }
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

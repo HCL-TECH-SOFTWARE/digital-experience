@@ -4395,18 +4395,7 @@
 </li>
 </ul>
 <p>The administrative user and group are granted administrator roles on the full hierarchy of protected resources starting from the virtual root resource of the domain defined with the third setting. These roles are granted in addition to the portal roles of the user or group and therefore not displayed in the Access Control portlets. A valid set of values to these properties could for example look like the following:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>accessControlDataManagement.domain.rel.adminuser=uid=Bob,o=Your Company
+<div class="language-text highlight"><pre><span></span><code>accessControlDataManagement.domain.rel.adminuser=uid=Bob,o=Your Company
 accessControlDataManagement.domain.rel.admingroup=cn=Admins,o=Your Company
 accessControlDataManagement.domain.rel.virtualresource=PORTAL
 accessControlDataManagement.domain.cust.adminuser=uid=Bob,o=Your Company
@@ -4418,7 +4407,7 @@ accessControlDataManagement.domain.comm.virtualresource=PORTAL
 accessControlDataManagement.domain.jcr.adminuser=uid=Bob,o=Your Company
 accessControlDataManagement.domain.jcr.admingroup=cn=Admins,o=Your Company
 accessControlDataManagement.domain.jcr.virtualresource=PORTAL
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following additional properties of the Access Control Data Management Service are optional:</p>
 <ul>
 <li>

@@ -2137,14 +2137,7 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">MacOS or Linux</label><label for="__tabbed_1_2">Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># assumes other required parameters are already set via config file in store or via enviroment variables</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># assumes other required parameters are already set via config file in store or via enviroment variables</span>
 dxclient<span class="w"> </span>xmlaccess<span class="w"> </span><span class="se">\</span>
 <span class="w">   </span>-dxUsername<span class="w"> </span><span class="o">{</span>DXUSERNAME<span class="o">}</span><span class="w"> </span><span class="se">\</span>
 <span class="w">   </span>-dxPassword<span class="w"> </span><span class="o">{</span>DXPASSWORD<span class="o">}</span><span class="w"> </span><span class="se">\</span>
@@ -2152,17 +2145,10 @@ dxclient<span class="w"> </span>xmlaccess<span class="w"> </span><span class="se
 <span class="w">   </span>-dxProtocol<span class="w"> </span><span class="nv">$DXPROTOCOL</span><span class="w"> </span><span class="se">\</span>
 <span class="w">   </span>-hostname<span class="w"> </span><span class="nv">$HOSTNAME</span><span class="w"> </span><span class="se">\</span>
 <span class="w">   </span>-dxPort<span class="w"> </span><span class="nv">$DXPORT</span><span class="p">;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-bat highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">:</span><span class="c1">: assumes other required parameters are already set via config file in store or via enviroment variables</span>
+<div class="language-bat highlight"><pre><span></span><code><span class="p">:</span><span class="c1">: assumes other required parameters are already set via config file in store or via enviroment variables</span>
 dxclient xmlaccess <span class="se">^</span>
 <span class="se"> </span>  -dxUsername {DXUSERNAME} <span class="se">^</span>
 <span class="se"> </span>  -dxPassword {DXPASSWORD} <span class="se">^</span>
@@ -2170,7 +2156,7 @@ dxclient xmlaccess <span class="se">^</span>
 <span class="se"> </span>  -dxProtocol <span class="nv">%DXPROTOCOL%</span> <span class="se">^</span>
 <span class="se"> </span>  -hostname <span class="nv">%HOSTNAME%</span> <span class="se">^</span>
 <span class="se"> </span>  -dxPort <span class="nv">%DXPORT%</span>;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -2187,12 +2173,10 @@ dxclient xmlaccess <span class="se">^</span>
 </li>
 <li>
 <p>The output should look similar to this.</p>
-<div class="language-console highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="go">2022-09-05 21:46:57 : XML Access execution in progress.</span>
+<div class="language-console highlight"><pre><span></span><code><span class="go">2022-09-05 21:46:57 : XML Access execution in progress.</span>
 <span class="gp gp-VirtualEnv">(node:27677)</span> <span class="go">Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to &#39;0&#39; makes TLS connections and HTTPS requests insecure by disabling certificate verification.</span>
 <span class="go">2022-09-05 21:47:01 : XML Access execution successfully completed, please find the output below, also refer to this file for more details store/outputFiles/xmlaccess/Output-20220905214701.xml.</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Update the wcm libraries that are referencing to this DX Site page hierarchy. You can do this by doing the <a href="../import_wcm_libraries/">import process</a> of the wcm library again or by manually updating each of the component in Authoring of Practitioner Studio.</p>

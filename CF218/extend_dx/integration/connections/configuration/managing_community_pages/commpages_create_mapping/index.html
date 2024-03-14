@@ -2599,17 +2599,7 @@ Activating this feature is restricted to users that are granted all roles that a
 <p>When you are defining the association in the XML import file, use the &lt;content-mapping-info&gt; element, and specify a content mapping scope of <code>ibm.connections</code> for an individual nested &lt;content-mapping&gt; element.</p>
 <p>For additional information about the XML configuration interface and &lt;content-mapping-info&gt; elements, see <a href="https://help.hcltechsw.com/digital-experience/9.5/admin-system/mp_wcm_contentmap_xml.html">XML configuration interface and content associations</a>.</p>
 <p>This XML sample shows how to map a page to a community. In this example, the page has the unique name <code>unique-name-of-the-page-to-be-updated</code>, and the community is specified with the community UUID <code>some-ibm-connections-community-uuid</code> in HCL Connections.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;request type=&quot;update&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;request type=&quot;update&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
          xsi:noNamespaceSchemaLocation=&quot;PortalConfig\_8.5.0.xsd&quot;&gt;
     &lt;portal action=&quot;locate&quot;&gt;
         &lt;content-node action=&quot;update&quot;  domain=&quot;rel&quot; uniquename=&quot;unique-name-of-the-page-to-be-updated&quot;&gt;
@@ -2620,7 +2610,7 @@ Activating this feature is restricted to users that are granted all roles that a
         &lt;/content-node&gt;
     &lt;/portal&gt;
 &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <details class="info" open="open">

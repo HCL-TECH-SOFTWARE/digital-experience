@@ -2900,28 +2900,7 @@
 <p>Programming details for portlet events are defined in the Java Portlet Specification 2.0. Portlets can publish events by using the <code>response.setEvent()</code> call and receive events in the <code>processEvent</code> method. The <code>GenericPortlet</code> class provides a default event handling mechanism that dispatches events based on the <code>@ProcessEvent</code> annotation.</p>
 <p>As a portlet programmer, declare all events that a portlet can publish or receive in the <code>portlet.xml</code> deployment descriptor.</p>
 <p>Example declaration in the deployment descriptor:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portlet-app xmlns:x=&quot;http://www.cntserv_exmp.com/portlet&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;portlet-app xmlns:x=&quot;http://www.cntserv_exmp.com/portlet&quot; 
              xmlns:std=&quot;http://somestandardsbody.org/interop-events&quot;&gt;
     &lt;portlet&gt;
         ...
@@ -2943,22 +2922,9 @@
         &lt;value-type&gt;com.cntserv_exmp.portlets.common.Address&lt;/value-type&gt;
     &lt;/event-definition&gt;  
 &lt;/portlet-app&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This declares a publishing and a processing event with a Java payloads of class <code>com.acme.portlets.common.Address</code> and global names <code>address.showForUpdate</code> and <code>address.updated</code> in the namespace <code>http://cntserv_exmp.com/portlet</code>. In addition, the alias <code>address</code> in the namespace <code>http://somestandardsbody.org/interop-events</code> of some presumed standardization organization indicates that these events are compatible with any events of another portlet that has the same alias and can therefore work with input or output values of the provided address type. Here is a coding example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>public class MyPortlet extends GenericPortlet {
+<div class="language-text highlight"><pre><span></span><code>public class MyPortlet extends GenericPortlet {
     public static String NAMESPACE = &quot;http://cntserv_exmp.com/portlet&quot;;
 
     @ProcessAction(name=&quot;address.updated&quot;)
@@ -2972,7 +2938,7 @@
       Address myAddress = (Address) request.getEvent();
       ...
     }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="controlling-event-distribution-in-the-portal">Controlling event distribution in the portal</h2>
 <p>The Java Portlet Specification intentionally leaves open how events are passed between portlets, but only specifies how they are published and received. In HCL Digital Experience Version 8.5, event distribution is based on the same event broker and wiring techniques that are used to connect cooperative portlets. That means that when you place a portlet on a page, it will initially not be able to publish or receive any events. You must use the portlet wiring tool link to connect the events declared by the portlet to outputs or inputs of other portlets.</p>
 <p>Portlets can declare localized display names and descriptions for portlet events in the application resource bundle. Provide at least a display name, as the portlet wiring tool needs this information to display event sources and targets properly.</p>

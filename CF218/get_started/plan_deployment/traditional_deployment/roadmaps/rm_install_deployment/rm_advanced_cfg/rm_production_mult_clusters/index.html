@@ -2824,8 +2824,8 @@
 <h2 id="creating-cluster-a">Creating cluster A</h2>
 <p>Create your first cluster, including the database transfer, augmenting the Deployment Manager, creating a cluster node, enabling security, and creating additional horizontal cluster nodes. These instructions are for a horizontal cluster only. For information about setting up a vertical cluster, see <a href="../../../../../../../deployment/manage/config_cluster/">Setting up a cluster</a>.</p>
 <p>Log in to HCL Digital Experience to verify that your portal works:</p>
-<p><div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://&lt;hostname.example.com&gt;:&lt;10039&gt;/wps/portal
-</code></pre></div></td></tr></table></div>
+<p><div class="language-text highlight"><pre><span></span><code>http://&lt;hostname.example.com&gt;:&lt;10039&gt;/wps/portal
+</code></pre></div>
 where:
 - <em>hostname.example.com</em> is the fully qualified host name of the server. 
 - The portal is running and <em>10039</em> is the default transport port that the DX® Application Server created. The port number might be different
@@ -2985,14 +2985,11 @@ for your environment.</p>
 <h2 id="configuring-portal-b">Configuring portal B</h2>
 <p>Install HCL Digital Experience. Then, use the Configuration Wizard to deploy a stand-alone portal.</p>
 <p>Log in to HCL Digital Experience to verify that you have a working portal:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>http://hostname.example.com:10039/wps/portal,
+<div class="language-text highlight"><pre><span></span><code>http://hostname.example.com:10039/wps/portal,
 where hostname.example.com is the fully qualified host name of the server where
 Portal is running and 10039 is the default transport port that is created by DX Application Server. The port number might be different
 for your environment.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ol>
 <li>
 <p>Access the Configuration Wizard. Go to http://your_server:10200/hcl/wizard.</p>
@@ -3061,14 +3058,7 @@ for your environment.
 <li>Complete the following steps on the primary node of Cluster A:</li>
 </ol>
 <p>Use the same database user ID and password for each identically named domain or data source. By using the same IDs and passwords, the existing JAAS Authentication Aliases remain functional. If a unique database user ID and password are required, more manual configuration is required to create and map JAAS Authentication Aliases for each data source.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>1.  Open a command prompt.
+<div class="language-text highlight"><pre><span></span><code>1.  Open a command prompt.
 
 2.  Change to the ``wp_profile_root/ConfigEngine`` directory.
 
@@ -3076,7 +3066,7 @@ for your environment.
 
     -   AIX® and Linux™: `./ConfigEngine.sh create-alias-multiple-cluster -DauthDomainList=release,jcr -DWasPassword=dmgr_password`
     -   Windows™: `ConfigEngine.bat create-alias-multiple-cluster -DauthDomainList=release,jcr -DWasPassword=dmgr_password`
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>where,
 <em>DauthDomainList</em> is set to a list of domains that use unique database user IDs and passwords. The domain properties are set correctly in the <code>wkplc_dbdomain.properties</code> file, including user IDs and passwords.</p>
 <ol>
@@ -3103,18 +3093,14 @@ for your environment.
 </li>
 <li>
 <p>Run the following command from the <code>wp_profile_root/bin</code> directory to federate Portal B:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>./addNode.sh dmgr_hostname dmgr_port -includeapps
+<div class="language-text highlight"><pre><span></span><code>./addNode.sh dmgr_hostname dmgr_port -includeapps
     -username was_admin_user
     -password was_admin_password
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>addNode.bat dmgr_hostname dmgr_port -includeapps
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>addNode.bat dmgr_hostname dmgr_port -includeapps
     -username was_admin_user
     -password was_admin_password
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 <p>Where:</p>
@@ -3131,14 +3117,7 @@ for your environment.
 <li><code>localpassword local_was_admin_password</code></li>
 </ul>
 <p>For information about the addNode command and other optional parameters, see <a href="http://publib.boulder.ibm.com/infocenter/wasinfo/v8r0/index.jsp?topic=/com.ibm.websphere.nd.multiplatform.doc/info/ae/ae/rxml_addnode.html">addNode command</a>.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>!!!Important
+<div class="language-text highlight"><pre><span></span><code>!!!Important
     If the addNode task fails for any reason, you must complete the following steps before you rerun the task:
 
 1.  If the AddNode task created the node, remove the node.
@@ -3146,24 +3125,12 @@ for your environment.
 
     1.  Remove the HCL Portal server definition.
     2.  Remove the HCL Portal JDBC Provider.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ol>
 <li>Stop the HCL Portal server on the primary node of Cluster B and ensure that the following parameters are set correctly in the <code>wkplc.properties</code> file:</li>
 </ol>
 <p>You can add these parameters (particularly passwords) directly to any task. However, consider adding them temporarily to the properties file. You can then remove them when you are finished to keep your environment secure.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>1.  Set the ``WasSoapPort`` address to the port used to connect remotely to the deployment manager.
+<div class="language-text highlight"><pre><span></span><code>1.  Set the ``WasSoapPort`` address to the port used to connect remotely to the deployment manager.
 
 2.  Set the ``WasRemoteHostName`` name to the full host name of the server that is used to remotely connect to the deployment manager.
 
@@ -3176,7 +3143,7 @@ for your environment.
 6.  Verify that ``ClusterName`` value is set.
 
 7.  Verify that the ``PrimaryNode`` value is set to ``true``.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ol>
 <li>
 <p>Run one of the following commands to determine which applications from the inventory list are no longer mapped to Portal B. The command uses the application profiles in the cell to restore the mappings. Wait 30 minutes after you run this command to allow all EAR files to expand before you proceed to the next step.</p>

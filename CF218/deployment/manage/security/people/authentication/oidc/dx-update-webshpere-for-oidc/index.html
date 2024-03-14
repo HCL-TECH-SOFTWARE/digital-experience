@@ -4059,15 +4059,7 @@
 <ol>
 <li>
 <p>Install the OIDC RP TAI. For more information, see <a href="https://www.ibm.com/docs/en/was-nd/9.0.5?topic=users-configuring-openid-connect-relying-party">Configuring an OpenID Connect Relying Party</a>.</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>dx-deployment-core-0<span class="w"> </span>bash<span class="w"> </span>-n<span class="w"> </span>dxns
+<div class="language-sh highlight"><pre><span></span><code>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>dx-deployment-core-0<span class="w"> </span>bash<span class="w"> </span>-n<span class="w"> </span>dxns
 
 <span class="nb">cd</span><span class="w"> </span>/opt/HCL/AppServer/bin
 ./wsadmin.sh<span class="w"> </span>-f<span class="w"> </span>installOIDCRP.py<span class="w"> </span>install<span class="w"> </span>dockerNode<span class="w"> </span>WebSphere_Portal
@@ -4076,7 +4068,7 @@ Password:<span class="w"> </span>wpsadmin
 
 ...
 ADMA5013I:<span class="w"> </span>Application<span class="w"> </span>WebSphereOIDCRP<span class="w"> </span>installed<span class="w"> </span>successfully.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Open the ISC and go to <strong>Applications &gt; Application types &gt; Enterprise Applications &gt; WebsphereOIDCRP &gt;  Manage modules</strong>.</p>
@@ -4088,10 +4080,9 @@ ADMA5013I:<span class="w"> </span>Application<span class="w"> </span>WebSphereOI
 </ol>
 <h3 id="restarting-the-server-dx-core-to-apply-all-changes">Restarting the server / DX core to apply all changes</h3>
 <p>Restart the server (that is, the DX core JVM) do load the newly installed OIDC RP TAI. This is required for the next configuration steps. Restarting the server can be done in various ways, for example, through the ConfigEngine:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>dx-deployment-core-0<span class="w"> </span>bash<span class="w"> </span>-n<span class="w"> </span>dxns
+<div class="language-sh highlight"><pre><span></span><code>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>dx-deployment-core-0<span class="w"> </span>bash<span class="w"> </span>-n<span class="w"> </span>dxns
 /opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh<span class="w"> </span>stop-portal-server
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="configuring-the-oidc-rp-tai-against-your-idp">Configuring the OIDC RP TAI against your IdP</h2>
 <p>The following configuration allows the OIDC TAI to contextualize which requests should be intercepted and how to treat them. In particular, this configuration is tightly connected to the IdP realm and client configuration.</p>
 <p>The interceptor is configured in the ISC under <strong>Security &gt; Global Security &gt; Web and SIP security &gt; Trust association &gt; Interceptors</strong>:</p>
@@ -4341,14 +4332,7 @@ ADMA5013I:<span class="w"> </span>Application<span class="w"> </span>WebSphereOI
 <p class="admonition-title">Note</p>
 <p>This requires a manual update of the file, make sure to back the file up as this will corrupt your instance.</p>
 </div>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>dx-deployment-core-0<span class="w"> </span>bash<span class="w"> </span>-n<span class="w"> </span>dxns
+<div class="language-sh highlight"><pre><span></span><code>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>dx-deployment-core-0<span class="w"> </span>bash<span class="w"> </span>-n<span class="w"> </span>dxns
 
 <span class="nb">cd</span><span class="w"> </span>/opt/HCL/wp_profile/config/cells/dockerCell/wim/config/
 <span class="c1"># Create a backup</span>
@@ -4356,20 +4340,16 @@ cp<span class="w"> </span>wimconfig.xml<span class="w"> </span>wimconfig.xml.bac
 
 <span class="c1"># Start editing the wimconfig.xml</span>
 vi<span class="w"> </span>wimconfig.xml
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Find the <code>userSecurityNameMapping</code> config attribute in the realmConfiguration and change the value of the property <code>propertyForOutput</code> to <code>uniqueName</code>:</p>
-<div class="language-xml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>#<span class="w"> </span>before
+<div class="language-xml highlight"><pre><span></span><code>#<span class="w"> </span>before
 <span class="nt">&lt;config:userSecurityNameMapping</span><span class="w"> </span><span class="na">propertyForInput=</span><span class="s">&quot;principalName&quot;</span><span class="w"> </span><span class="na">propertyForOutput=</span><span class="s">&quot;principalName&quot;</span><span class="nt">/&gt;</span>
 
 #<span class="w"> </span>after
 <span class="nt">&lt;config:userSecurityNameMapping</span><span class="w"> </span><span class="na">propertyForInput=</span><span class="s">&quot;principalName&quot;</span><span class="w"> </span><span class="na">propertyForOutput=</span><span class="s">&quot;uniqueName&quot;</span><span class="nt">/&gt;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Make sure to save the changes.</p>
@@ -4377,14 +4357,11 @@ vi<span class="w"> </span>wimconfig.xml
 </ol>
 <h3 id="restarting-the-server-dx-core-to-apply-all-changes_1">Restarting the server / DX core to apply all changes</h3>
 <p>Restart the DX environment (specifically, the DX core JVM) for the changes to take effect. Restarting the server can be done in various ways, for example, through the ConfigEngine:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>dx-deployment-core-0<span class="w"> </span>bash<span class="w"> </span>-n<span class="w"> </span>dxns
+<div class="language-sh highlight"><pre><span></span><code>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>dx-deployment-core-0<span class="w"> </span>bash<span class="w"> </span>-n<span class="w"> </span>dxns
 <span class="nb">cd</span><span class="w"> </span>/opt/HCL/AppServer/bin<span class="w"> </span>
 ./stopServer.sh<span class="w"> </span>WebSphere_Portal
 ./startServer.sh<span class="w"> </span>WebSphere_Portal
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The restart takes a few minutes to complete.</p>
 <h2 id="whats-next">What's next</h2>
 <div class="admonition note">

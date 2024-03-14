@@ -2573,44 +2573,29 @@
 <p>Authenticated and remembered users must have cookies enabled on their browser. Users can access portal sites without cookies enabled if they are anonymous users. If you turn on session tracking for anonymous users, then anonymous users also require cookies.</p>
 </div>
 <p>Administrators can place your portlet on a page that is presented to anonymous users (similar to the Welcome page provided by HCL Portal). By default, when a portlet is placed on a page that does not require authentication and no user is logged in, the portal server does track sessions across subsequent request to the server. Portlets should not create a session using the <code>request.getSession(true)</code> call in this case; which results in WebSphere Application Server warning messages similar to:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>SESN0066E: Response is already commited to client. Session cookie cannot be set. 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>SESN0066E: Response is already commited to client. Session cookie cannot be set. 
+</code></pre></div>
 <p>In this case, a temporary session is created and your session information will be lost in the next request. If you need to enable session tracking across requests for non-authenticated users, you can do so by setting the <code>public.session</code> parameter in the portal Navigator service configuration or by setting the <code>com.ibm.portal.public.session</code> container run time option in a JSR 286 portlet deployment descriptor. Note that this may result in significantly increased memory consumption. For details about the <code>com.ibm.portal.public.session</code> option and a code sample refer to the topic about Deployment descriptors, section about Container run time options. Instead of using these options, portlets that need to maintain interaction state even for non-authenticated users should use render parameters to keep this information instead of the portlet session, as recommended by the Java Portlet Specification.</p>
 <p>The portlet may need to present the user with an appropriate message if it requires a valid portlet session to operate correctly. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>   This content cannot be displayed until you log in.
+<div class="language-text highlight"><pre><span></span><code>   This content cannot be displayed until you log in.
    Please report this problem to the site administrator.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>In addition, the administrator will need more helpful information that the portlet can provide in the portlet log:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>   Unable to locate the portlet session.  
+<div class="language-text highlight"><pre><span></span><code>   Unable to locate the portlet session.  
    This portlet requires a session to function.
    Move the portlet to an authenticated page or 
    turn on session tracking for anonymous users.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If the portlet does not require a session for critical operation, then perhaps any subfunctions within the portlet require the session can be suppressed to anonymous users. This should be evaluated for each individual portlet.</p>
 <p>If <code>request.getPortletSession()</code> or <code>request.getPortletSession(true)</code> are called when the user is not logged in and HCL Portal is not configured to use a session for anonymous users, each request from each client creates an extraneous <code>PortletSession</code> object that is lost and consumes JVM memory. This causes more frequent JVM garbage collection and hurts overall HCL Portal performance.</p>
 <p>In order for a portlet to function without a portlet session, you must add this line to the beginning of all portlet JSPs.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    &lt;%@ page session=&quot;false&quot; %&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>    &lt;%@ page session=&quot;false&quot; %&gt;
+</code></pre></div>
 <p>Without this directive, the JSP page compiler generates code that accesses the session even if you don't use it in your JSP. You also cannot access any beans with scope set to session in any of your JSP pages as shown.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    &lt;jsp:useBean ... scope=&quot;session&quot; /&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>    &lt;jsp:useBean ... scope=&quot;session&quot; /&gt;
+</code></pre></div>
 <p>This will create sessions when you do not want them. Instead, determine whether the session exists, for example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%
+<div class="language-text highlight"><pre><span></span><code>&lt;%
    com.ibm.MyClassName theBeanId = null;
    PortletSession session = request.getPortletSession(false);
    if (session != null) {
@@ -2622,7 +2607,7 @@
       // use the bean
    }
 %&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

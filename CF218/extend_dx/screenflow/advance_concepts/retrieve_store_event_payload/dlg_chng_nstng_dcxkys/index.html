@@ -2110,67 +2110,7 @@
 </ol>
 <p>The following code sample shows an option to convert the event <code>Qnames</code>. The outgoing transition responsible for calling the red dialog assigned the attribute <code>dcx-key</code> with value <code>customerID</code> to the event element associated with this transition's source transition endpoint. Thus, even though the transition endpoint step_1 emits an event with <code>QName travellerID</code>, the information is stored in theblue dialog's DCX under the key <code>customerID</code>. Thus it can be sent to the red dialog through an event with <code>QName customerID</code> as the corresponding payload can be found in the blue dialog's DCX under exactly that key. The blue dialog's incoming transition receives the customer information through an event with <code>QName customerBean</code>, but stores the corresponding payload under the key <code>travellerBean</code>. Thus the customer information can be propagated with events with <code>QName travellerBean</code> as the corresponding payload can be found in the blue dialog's DCX under exactly that name.</p>
 <p>Code sample</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;dialog name=&quot;dialog blue&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;dialog name=&quot;dialog blue&quot;&gt;
   ...
   &lt;transition type=&quot;nested&quot;&gt;
       &lt;source&gt;
@@ -2231,72 +2171,12 @@
 &lt;/dialog&gt;
 ...
 &lt;/dialog&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Event mappers</p>
 <p>Assume the screen flow that carries the customer information under the key <code>travellerID</code> to be the blue screen flow. Assume the screen flow that carries the customer information under the key <code>customerID</code> to be the red screen flow. Assume the <code>travellerID</code> is of type <code>string</code> while the <code>customerID</code> is of type <code>Integer</code>. Also, assume that the beans <code>travellerBean</code> and <code>customerBean</code> differ not only by name but are also of different object type.</p>
 <p>The following code sample shows an option to convert the keys and the bean. The mappers ensure that the events are properly renamed and the data types are properly transformed.</p>
 <p>Code sample</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;dialog name=&quot;dialog blue&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;dialog name=&quot;dialog blue&quot;&gt;
   ...
   &lt;transition type=&quot;nested&quot;&gt;
       &lt;source&gt;
@@ -2357,7 +2237,7 @@
 &lt;/dialog&gt;
 ...
 &lt;/dialog&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In the context of dialog chaining and dialog nesting, the definition of a mapper as part of an outgoing transition's target is invalid. The definition of a mapper as part of the called dialog's start transition's source is also invalid.</p>

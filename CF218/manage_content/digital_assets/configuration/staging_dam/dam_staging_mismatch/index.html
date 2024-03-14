@@ -2431,56 +2431,56 @@
 <li>
 <p><strong>Command description</strong></p>
 <p>You can trigger the staging mismatch between the publisher and the subscriber with the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-dam-staging find-staging-mismatch
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-dam-staging find-staging-mismatch
+</code></pre></div>
 </li>
 <li>
 <p><strong>Help command</strong></p>
 <p>The following command shows the help information for <code>manage-dam-staging find-staging-mismatch</code> command usage:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-dam-staging find-staging-mismatch -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-dam-staging find-staging-mismatch -h
+</code></pre></div>
 </li>
 <li>
 <p><strong>Command options</strong></p>
 <p>Use this attribute to specify the protocol with which to connect to the DX server of the publisher (default: ""):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProtocol &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProtocol &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the host name of the DX server of the publisher (default: ""):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port on which to connect to the DX server of the publisher (default: ""; default port for any Kubernetes environment is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the username that is required for authenticating with the DX server of the publisher (default: ""):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt; 
+</code></pre></div>
 <p>Use this attribute to specify the password that is required for authenticating with the DX server of the publisher <br/> (default: ""):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port number of the DAM server of the publisher (default: ""; default port for any Kubernetes environment is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-damAPIPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-damAPIPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port number of the DX Core API server of the publisher (default: ""; default port for any Kubernetes environment is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-ringAPIPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-ringAPIPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the API version number of DAM of the publisher (default: ""; default version is v1):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-damAPIVersion &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-damAPIVersion &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default version is v1):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-ringAPIVersion &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-ringAPIVersion &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the subscriber ID against which the find mismatch needs to be triggered:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-subscriberId &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-subscriberId &lt;value&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong>Commands:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-dam-staging find-staging-mismatch -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -damAPIPort &lt;damAPIPort&gt; -ringAPIPort &lt;ringAPIPort&gt; -damAPIVersion &lt;damAPIVersion&gt; -ringAPIVersion &lt;ringAPIVersion&gt; -subscriberId &lt;subscriberId&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-dam-staging find-staging-mismatch -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -damAPIPort &lt;damAPIPort&gt; -ringAPIPort &lt;ringAPIPort&gt; -damAPIVersion &lt;damAPIVersion&gt; -ringAPIVersion &lt;ringAPIVersion&gt; -subscriberId &lt;subscriberId&gt;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-dam-staging find-staging-mismatch -dxProtocol https -hostname dam-staging-publisher.domain.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -subscriberId 8c72ef60-e8d4-425d-903a-232bb8726222
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-dam-staging find-staging-mismatch -dxProtocol https -hostname dam-staging-publisher.domain.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -subscriberId 8c72ef60-e8d4-425d-903a-232bb8726222
+</code></pre></div>
 </div>
 </li>
 </ul>
@@ -2490,56 +2490,56 @@
 <li>
 <p><strong>Command description</strong></p>
 <p>You can download the report of staging mismatch with the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-dam-staging get-staging-mismatch-report
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-dam-staging get-staging-mismatch-report
+</code></pre></div>
 </li>
 <li>
 <p><strong>Help command</strong></p>
 <p>The following command shows the help information for <code>manage-dam-staging get-staging-mismatch-report</code> command usage:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-dam-staging get-staging-mismatch-report -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-dam-staging get-staging-mismatch-report -h
+</code></pre></div>
 </li>
 <li>
 <p><strong>Command options</strong></p>
 <p>Use this attribute to specify the protocol with which to connect to the DX server of the publisher (default: ""):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProtocol &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProtocol &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the host name of the DX server of the publisher (default: ""):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port on which to connect to the DX server of the publisher (default: ""; default port for any Kubernetes environment is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the user name that is required for authenticating with the DX server of the publisher (default: ""):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt; 
+</code></pre></div>
 <p>Use this attribute to specify the password that is required for authenticating with the DX server of the publisher <br/> (default: ""):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port number of the DAM server of the publisher (default: ""; default port for any Kubernetes environment is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-damAPIPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-damAPIPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port number of the DX Core API server of the publisher (default: ""; default port for any Kubernetes environment is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-ringAPIPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-ringAPIPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the API version number of DAM of the publisher (default: ""; default version is v1):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-damAPIVersion &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-damAPIVersion &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default version is v1):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-ringAPIVersion &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-ringAPIVersion &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the subscriber ID against which the mismatch is found:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-subscriberId &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-subscriberId &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the record type (default: ""). Other possible values are COLLECTION, MEDIA_ITEM, RENDITION, VERSION, FAVORITE, KEYWORD, CUSTOM_URL, MEDIA_TYPE, MEDIA_TYPE_GROUP, RESOURCE, and PERMISSION:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-recordType &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-recordType &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the record action (default: ""). Other possible values are CREATE, UPDATE, and DELETE:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-recordAction &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-recordAction &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify a location <strong>store/folder_name/</strong> that is different from the default location where the report is downloaded. The default location is <strong>store/outputFiles/</strong>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-reportPath &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-reportPath &lt;value&gt;
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><code>recordType</code>, <code>recordAction</code>, and <code>reportPath</code> are optional parameters.</p>
@@ -2547,12 +2547,12 @@
 </li>
 <li>
 <p><strong>Commands:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-dam-staging get-staging-mismatch-report -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -damAPIPort &lt;damAPIPort&gt; -ringAPIPort &lt;ringAPIPort&gt; -damAPIVersion &lt;damAPIVersion&gt; -ringAPIVersion &lt;ringAPIVersion&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-dam-staging get-staging-mismatch-report -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -damAPIPort &lt;damAPIPort&gt; -ringAPIPort &lt;ringAPIPort&gt; -damAPIVersion &lt;damAPIVersion&gt; -ringAPIVersion &lt;ringAPIVersion&gt;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-dam-staging get-staging-mismatch-report -dxProtocol https -hostname dam-staging-publisher.domain.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-dam-staging get-staging-mismatch-report -dxProtocol https -hostname dam-staging-publisher.domain.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1
+</code></pre></div>
 </div>
 </li>
 </ul>
@@ -2562,56 +2562,56 @@
 <li>
 <p><strong>Command description</strong></p>
 <p>You can delete the staging mismatch found with the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-dam-staging delete-staging-mismatch
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-dam-staging delete-staging-mismatch
+</code></pre></div>
 </li>
 <li>
 <p><strong>Help command</strong></p>
 <p>The following command shows the help information for <code>manage-dam-staging delete-staging-mismatch</code> command usage:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-dam-staging delete-staging-mismatch -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-dam-staging delete-staging-mismatch -h
+</code></pre></div>
 </li>
 <li>
 <p><strong>Command options</strong></p>
 <p>Use this attribute to specify the protocol with which to connect to the DX server of the publisher (default: ""):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProtocol &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProtocol &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the host name of the DX server of the publisher (default: ""):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port on which to connect to the DX server of the publisher (default: ""; default port for any Kubernetes environment is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the user name that is required for authenticating with the DX server of the publisher (default: ""):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt; 
+</code></pre></div>
 <p>Use this attribute to specify the password that is required for authenticating with the DX server of the publisher <br/> (default: ""):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port number of the DAM server of the publisher (default: ""; default port for any Kubernetes environment is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-damAPIPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-damAPIPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port number of the DX Core API server of the publisher (default: ""; default port for any Kubernetes environment is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-ringAPIPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-ringAPIPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the API version number of DAM of the publisher (default: ""; default version is v1):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-damAPIVersion &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-damAPIVersion &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default version is v1):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-ringAPIVersion &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-ringAPIVersion &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the subscriber ID for which the mismatch needs to be deleted. If this field is not passed, then all the mismatch information will be deleted:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-subscriberId &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-subscriberId &lt;value&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong>Commands:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-dam-staging delete-staging-mismatch -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -damAPIPort &lt;damAPIPort&gt; -ringAPIPort &lt;ringAPIPort&gt; -damAPIVersion &lt;damAPIVersion&gt; -ringAPIVersion &lt;ringAPIVersion&gt; -subscriberId &lt;subscriberId&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-dam-staging delete-staging-mismatch -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -damAPIPort &lt;damAPIPort&gt; -ringAPIPort &lt;ringAPIPort&gt; -damAPIVersion &lt;damAPIVersion&gt; -ringAPIVersion &lt;ringAPIVersion&gt; -subscriberId &lt;subscriberId&gt;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-dam-staging delete-staging-mismatch -dxProtocol https -hostname dam-staging-publisher.domain.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -subscriberId 8c72ef60-e8d4-425d-903a-232bb8726222
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-dam-staging delete-staging-mismatch -dxProtocol https -hostname dam-staging-publisher.domain.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -subscriberId 8c72ef60-e8d4-425d-903a-232bb8726222
+</code></pre></div>
 </div>
 </li>
 </ul>
@@ -2621,56 +2621,56 @@
 <li>
 <p><strong>Command description</strong></p>
 <p>You can trigger the staging resync between the publisher and the subscriber with the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-dam-staging start-staging-resync
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-dam-staging start-staging-resync
+</code></pre></div>
 </li>
 <li>
 <p><strong>Help command</strong></p>
 <p>The following command shows the help information for <code>manage-dam-staging start-staging-resync</code> command usage:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-dam-staging start-staging-resync -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-dam-staging start-staging-resync -h
+</code></pre></div>
 </li>
 <li>
 <p><strong>Command options</strong></p>
 <p>Use this attribute to specify the protocol with which to connect to the DX server of the publisher (default: ""):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProtocol &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProtocol &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the host name of the DX server of the publisher (default: ""):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port on which to connect to the DX server of the publisher (default: ""; default port for any Kubernetes environment is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the user name that is required for authenticating with the DX server of the publisher (default: ""):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt; 
+</code></pre></div>
 <p>Use this attribute to specify the password that is required for authenticating with the DX server of the publisher <br/> (default: ""):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port number of the DAM server of the publisher (default: ""; default port for any Kubernetes environment is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-damAPIPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-damAPIPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port number of the DX Core API server of the publisher (default: ""; default port for any Kubernetes environment is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-ringAPIPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-ringAPIPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the API version number of DAM of the publisher (default: ""; default version is v1):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-damAPIVersion &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-damAPIVersion &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default version is v1):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-ringAPIVersion &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-ringAPIVersion &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the subscriber ID against which the resync needs to be done:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-subscriberId &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-subscriberId &lt;value&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong>Commands:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-dam-staging start-staging-resync -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -damAPIPort &lt;damAPIPort&gt; -ringAPIPort &lt;ringAPIPort&gt; -damAPIVersion &lt;damAPIVersion&gt; -ringAPIVersion &lt;ringAPIVersion&gt; -subscriberId &lt;subscriberId&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-dam-staging start-staging-resync -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -damAPIPort &lt;damAPIPort&gt; -ringAPIPort &lt;ringAPIPort&gt; -damAPIVersion &lt;damAPIVersion&gt; -ringAPIVersion &lt;ringAPIVersion&gt; -subscriberId &lt;subscriberId&gt;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient manage-dam-staging start-staging-resync -dxProtocol https -hostname dam-staging-publisher.domain.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -subscriberId 8c72ef60-e8d4-425d-903a-232bb8726222
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient manage-dam-staging start-staging-resync -dxProtocol https -hostname dam-staging-publisher.domain.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -subscriberId 8c72ef60-e8d4-425d-903a-232bb8726222
+</code></pre></div>
 </div>
 </li>
 </ul>
@@ -2696,10 +2696,9 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If your <code>values.yaml</code> or <code>custom-values.yaml</code> file contains the following entries, remove them. The following values can be found under <code>configuration</code> of the <code>digitalAssetManagement</code> section in <code>incubator</code>.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>enableStagingCleanupHeartbeats
+<div class="language-text highlight"><pre><span></span><code>enableStagingCleanupHeartbeats
 findStagingMismatchHeartbeatIntervalTimeInMinutes
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 </li>
 <li>

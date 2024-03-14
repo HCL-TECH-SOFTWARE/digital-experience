@@ -2740,8 +2740,8 @@
     <servlet-name>MailPortlet</servlet-name>
     ...
   </servlet></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>```
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>```
+</code></pre></div>
 <p>|
     |    ```xmp
   <portlet id="Portlet_2"
@@ -2749,16 +2749,16 @@
     <portlet-name>Calendar</portlet-name>
     ...
   </portlet></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>```
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>```
+</code></pre></div>
 <p>|    ```xmp
   <servlet
     id="Servlet_2">
     <servlet-name>CalendarPortlet</servlet-name>
     ...
   </servlet></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>```
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>```
+</code></pre></div>
 <p>|</p>
 <h2 id="portlet-deployment-descriptor">Portlet deployment descriptor</h2>
 <p>This section describes the portlet.xml for standard portlets.</p>
@@ -2775,13 +2775,13 @@
 <li>Add some portlet application-specific description</li>
 <li>
 <p>Add some arbitrary characters to ensure uniqueness within the namespace, for example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code> com.ibm.wps.samplet.mail.4969
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code> com.ibm.wps.samplet.mail.4969
+</code></pre></div>
 </li>
 <li>
 <p>For HCL portlets, add suffixes for the corresponding concrete portlet applications, for example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code> com.ibm.wps.samplet.mail.4969.1
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code> com.ibm.wps.samplet.mail.4969.1
+</code></pre></div>
 </li>
 </ul>
 <p>Portlet identifiers must be unique within the application.</p>
@@ -2836,8 +2836,8 @@
     <portlet-name>Mail Box</portlet-name>
     ...
   </concrete-portlet></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>```
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>```
+</code></pre></div>
 <p>|
     |    ```
   <portlet id="Portlet_2"
@@ -2845,15 +2845,15 @@
     <portlet-name>Calendar</portlet-name>
     ...
   </portlet></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>```
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>```
+</code></pre></div>
 <p>|    ```
   <concrete-portlet href="#Portlet_2">
     <portlet-name>Group calendar</portlet-name>
     ...
   </concrete-portlet></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>```
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>```
+</code></pre></div>
 <p>|</p>
 <p>--&gt;</p>
 <h2 id="reserved-parameter-names">Reserved parameter names</h2>
@@ -2904,14 +2904,11 @@
 <li>
 <p><strong>com.ibm.portal.public.session</strong></p>
 <p>Set this parameter to true to allow session creation for anonymous users for this particular portlet. Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;container-runtime-option&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;container-runtime-option&gt;
    &lt;name&gt;com.ibm.portal.public.session&lt;/name&gt;
    &lt;value&gt;true&lt;/value&gt;
 &lt;/container-runtime-option&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <details class="info" open="open">

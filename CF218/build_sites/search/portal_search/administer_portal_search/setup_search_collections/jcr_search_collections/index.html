@@ -3333,26 +3333,19 @@ If neither of the preceding options succeed in creating the JCR search collectio
 <li>Provide the name for the new Content Source in the field <strong>Content Source Name</strong>. For example, you can specify JCRSource.</li>
 <li>
 <p>Specify the value for the <strong>URL</strong> field <strong>Collect documents linked from this URL:</strong> as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>http://server\_name:port\_number/wps/seedlist/myserver?Action=GetDocuments
+<div class="language-text highlight"><pre><span></span><code>http://server\_name:port\_number/wps/seedlist/myserver?Action=GetDocuments
    &amp;Format=ATOM&amp;Locale=en_US&amp;Range=100
    &amp;Source=com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory&amp;Start=0
    &amp;SeedlistId=1@OOTB_CRAWLER1
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>In this URL the range parameter specifies 100 documents in one page of a session and the workspace ID of the base portal is 1.</p>
 <p>If you are working in a virtual portal, specify the content source URL for the virtual portal as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>http://server\_name:port\_number/wps/seedlist/myserver/
+<div class="language-text highlight"><pre><span></span><code>http://server\_name:port\_number/wps/seedlist/myserver/
    **virtual\_portal\_context**?Action=GetDocuments
    &amp;Format=ATOM&amp;Locale=en_US&amp;Range=100
    &amp;Source=com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory&amp;Start=0
    &amp;SeedlistId=1@OOTB_CRAWLERwsid
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Where wsid is the workspace ID of the virtual portal. To determine the workspace ID of the virtual portal, complete the following steps:</p>
 <ol>
 <li>Click the <strong>Administration menu</strong> icon. Then, click <strong>Portal Analysis</strong> &gt; <strong>Enable Tracing</strong>.</li>
@@ -3360,12 +3353,10 @@ If neither of the preceding options succeed in creating the JCR search collectio
 <li>Save all Web Content Manager documents in the virtual portal.</li>
 <li>
 <p>In trace.log, you can find trace information similar to the following:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[6/5/13 18:51:04:337 IDT] 000001c3 BaseDBImpl 3 insertSeedlistEvents: 
+<div class="language-text highlight"><pre><span></span><code>[6/5/13 18:51:04:337 IDT] 000001c3 BaseDBImpl 3 insertSeedlistEvents: 
  Inserted event: Event: 
 action=&#39;Update_Node(3)&#39;, timestamp=&#39;2013-06-05 18:51:04.337&#39;, document id=,&lt;workspace: 3, itemid:AB001001N13F05B8320005B295&gt;&#39;, parentID:&lt;workspace: 3, itemid: &gt;&#39;, wsid: 3 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 </li>
@@ -3380,8 +3371,8 @@ action=&#39;Update_Node(3)&#39;, timestamp=&#39;2013-06-05 18:51:04.337&#39;, do
 <li>
 <p>Click <strong>Create</strong> to create the new content source.</p>
 <p>If the Content Source was created successfully, the following message is displayed on the page:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>EJPJB0025I: Content source source\_name in collection collection\_name is OK.
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>EJPJB0025I: Content source source\_name in collection collection\_name is OK.
+</code></pre></div>
 </li>
 <li>
 <p>You can start the crawler manually or schedule it to run at regular intervals.</p>

@@ -3994,30 +3994,27 @@
 <ol>
 <li>
 <p>In your presentation template, render the appearance component by using the following code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ListRenderingCache action=&quot;render&quot; elementName=&quot;&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ListRenderingCache action=&quot;render&quot; elementName=&quot;&quot;]
+</code></pre></div>
 <p>When you render the appearance component by using the <code>ListRenderingCache</code> plug-in, specify the name of the component reference defined in the current content item that holds the reference to the appearance component. For a full example, view the Cached List of Social Objects presentation template and the Comprehensive and Simple list appearance components that the Social Lists 1.0 library contains.</p>
 </li>
 <li>
 <p>At the beginning of the header of your appearance component, initialize the cache key by using the following code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ListRenderingCache action=&quot;start&quot; compute=&quot;once&quot; 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ListRenderingCache action=&quot;start&quot; compute=&quot;once&quot; 
      currentPage=&quot;[PageInfo value=&#39;currentPage&#39;]&quot; 
      itemsPerPage=&quot;[PageInfo value=&#39;itemsPerPage&#39;]&quot;]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>At the beginning of the Result design of your appearance component, initialize a new item in the list by using the following code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ListRenderingCache action=&quot;renderItem&quot; 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ListRenderingCache action=&quot;renderItem&quot; 
      index=&quot;[Placeholder tag=&#39;listnum&#39;]&quot; compute=&quot;always&quot;]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>At the beginning of the footer of your appearance component, finalize the cache value by using the following code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ListRenderingCache action=&quot;stop&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ListRenderingCache action=&quot;stop&quot;]
+</code></pre></div>
 </li>
 </ol>
 </li>
@@ -4031,8 +4028,8 @@
 </ul>
 </div>
 <p>When you use the list rendering cache, you can still have context dependent data in the markup. By default, all values of non-lazy computed item attributes and list properties are not cached with the markup, but recomputed with every rendering. This way, state dependent data, for example stateful portal URLs, continue to work as expected. If you want to improve performance even more, you can cache the full markup. To do so add a <code>type="static"</code> parameter to the render action as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ListRenderingCache action=&quot;render&quot; type=&quot;static&quot; elementName=&quot;&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ListRenderingCache action=&quot;render&quot; type=&quot;static&quot; elementName=&quot;&quot;]
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

@@ -4147,11 +4147,11 @@
 <p><strong>get(provider key)</strong></p>
 <p>Retrieves the property that is defined in the Resource Environment Provider.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.rep[&#39;resourceEnvironmentProvider&#39;][&#39;property&#39;]}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.rep[&#39;resourceEnvironmentProvider&#39;][&#39;property&#39;]}
+</code></pre></div>
 <p>To retrieve the Portal defined Dojo context root.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.rep[&#39;WP GlobalThemeConfig&#39;][&#39;resources.js.dojo.contextRoot&#39;]}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.rep[&#39;WP GlobalThemeConfig&#39;][&#39;resources.js.dojo.contextRoot&#39;]}
+</code></pre></div>
 <p>Parameters: String; specifies the provider key. .</p>
 <p>Returns: <a href="themeopt_el_bean_prop/">Properties</a>; it can be null if not found.</p>
 </li>

@@ -3915,27 +3915,19 @@
 <p>In Jython, you use the method split () on the result string to create a list.</p>
 <p>Unlike with the GUI, where geometric arrangement and a locale-specific title provide information about an object, the IDs used in the script are unintelligible to the user. Most of the Script beans therefore provide a details method that prints information about an object. The details method of a bean works only for the objects that are handled by that bean. For example, the content bean cannot provide details about IDs returned by the layout bean.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code># &#39;search&#39; returns a list of objects
+<div class="language-text highlight"><pre><span></span><code># &#39;search&#39; returns a list of objects
 for child in Content.search(&quot;all&quot;).split():
   # details get printed, they are not returned as a result
   Content.details(child)
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code># &#39;search&#39; returns a list of objects
+<div class="language-text highlight"><pre><span></span><code># &#39;search&#39; returns a list of objects
 foreach child [$Content search all] {
   # details get printed, they are not returned as a result
   $Content details $child
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The scripting component tries to generate a common name for the portal objects. The common name is based on a global unique name, an object name, or a title that is assigned to the object. The common name never contains white space, special characters, or characters outside of the US-ASCII range. Hence, even a terminal window that does not support national character sets can display the common name. If suitable input data is available, the generated common name might provide an indication of what an object represents.</p>
 
 

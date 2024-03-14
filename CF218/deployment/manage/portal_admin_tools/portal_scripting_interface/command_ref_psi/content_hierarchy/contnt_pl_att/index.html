@@ -4101,11 +4101,11 @@
 <p>The themeid attribute is writable. The themename attribute is not writable, but the value depends on the themeid attribute. The position attribute is not writable either, but the value depends on the organization of the content tree.</p>
 <p>To get attributes of a static page content node, run the following command</p>
 <p>Jython:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Content.get(oid, attribute, markup)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>Content.get(oid, attribute, markup)
+</code></pre></div>
 <p>Jacl:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$Content get oid attribute markup
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>$Content get oid attribute markup
+</code></pre></div>
 <p>Valid attributes are as follows:</p>
 <ul>
 <li>
@@ -4122,11 +4122,11 @@
 <p>The preceding example returns the file name of the entry point for the page display.</p>
 <p>To set attributes for a static page, run the following command:</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Content.set(oid, attribute, value, markup)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>Content.set(oid, attribute, value, markup)
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$Content set oid attribute value markup
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>$Content set oid attribute value markup
+</code></pre></div>
 <p>Valid attributes are filename and displayoption.</p>
 <ul>
 <li>

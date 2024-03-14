@@ -3228,11 +3228,11 @@
 <h1 id="pausing-the-sifter-during-heavy-database">Pausing the sifter during heavy database</h1>
 <p>Learn how to configure the sifter during heavy database.</p>
 <p>You can pause the <code>sifter</code> during times of heavy database access. This frees up database resources for other activities during heavy database activity. For example, to put the <code>sifter</code> asleep at 11 a.m.:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;mentor_set_name&gt;.pause_sifting_at= 0 11 * * *
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;mentor_set_name&gt;.pause_sifting_at= 0 11 * * *
+</code></pre></div>
 <p>If you set &lt;<code>mentor_set_name&gt;.pause_sifting_at</code>, use the following setting to wake up the <code>sifter</code> afterwards. For example, to wake the <code>sifter</code> up at 4 p.m.:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;mentor_set_name&gt;.resume_sifting_at= 0 16 * * *  
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;mentor_set_name&gt;.resume_sifting_at= 0 16 * * *  
+</code></pre></div>
 
 
 

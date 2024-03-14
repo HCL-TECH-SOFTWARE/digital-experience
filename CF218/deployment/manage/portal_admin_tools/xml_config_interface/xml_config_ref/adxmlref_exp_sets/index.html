@@ -3720,15 +3720,14 @@
 <li>
 <p>When you export a content node, you can specify the export-descendants attribute for that resource. If you set this attribute to true, the export response file also includes the entire subtree in the content hierarchy that is located under that node. In addition, all derived pages that override the layout of pages in that subtree, are also exported. In other words, this exports all content nodes that can be reached via a chain of content-parentref or derivation-parentref attributes.</p>
 <p>Example: the following fragment exports a subtree of the content hierarchy that starts with the label as specified:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>     &lt;content-node uniquename=&quot;MyPages&quot; action=&quot;export&quot; 
+<div class="language-text highlight"><pre><span></span><code>     &lt;content-node uniquename=&quot;MyPages&quot; action=&quot;export&quot; 
              export-descendants=&quot;true&quot; /&gt;   
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>All first level resources that can take an objectid attribute, such as markup, virtual-resource, user, group, client, event-handler, web-app, theme, skin, content-node, credential-segment and url-mapping-context support the asterisk ( * ) as a wild card symbol that you can use as a value for the object ID. The asterisk can be used as a wild card symbol only with the export and delete actions. Depending on the action with which it is specified, it exports or deletes all resources of the respective type. For example: the following fragment exports the complete client configuration of the portal:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>     &lt;client objectid=&quot;*&quot; action=&quot;export&quot;/&gt;    
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>     &lt;client objectid=&quot;*&quot; action=&quot;export&quot;/&gt;    
+</code></pre></div>
 </li>
 </ul>
 <div class="admonition note">

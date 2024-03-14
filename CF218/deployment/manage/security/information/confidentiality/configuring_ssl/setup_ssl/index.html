@@ -3413,23 +3413,7 @@
 <li>
 <p>Set the value of the <code>&lt;transport-guarantee&gt;</code> element to CONFIDENTIAL under the <code>&lt;security-constraint&gt;</code> element for the /myportal/* URL. Do not change the values for the other <code>&lt;transport-guarantee&gt;</code> elements.</p>
 <p>Use the following information to update the XML file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>      &lt;security-constraint id=&quot;SecurityConstraint_1&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>      &lt;security-constraint id=&quot;SecurityConstraint_1&quot;&gt;
          &lt;web-resource-collection id=&quot;WebResourceCollection_1&quot;&gt;
             &lt;web-resource-name&gt;&lt;/web-resource-name&gt;
          &lt;url-pattern&gt;/myportal/*&lt;/url-pattern&gt;
@@ -3446,7 +3430,7 @@
             &lt;transport-guarantee&gt;CONFIDENTIAL&lt;/transport-guarantee&gt; 
          &lt;/user-data-constraint&gt;
       &lt;/security-constraint&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Save and close web.xml.</p>

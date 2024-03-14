@@ -2550,20 +2550,15 @@
 <p>Download and extract the HCL Digital Experience 9.5 components from your Digital Experience entitlements from the <a href="https://www.hcltech.com/software/support/release" target="_blank">HCL Software License Portal</a> to the local file system.</p>
 <p><strong>Sample download package name</strong>: <code>hcl-dx-kubernetes-v95-CF181-other.zip</code> or higher, depending on the DX 9.5 Container Update version you are installing.</p>
 <p><strong>Example</strong>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>**hcl-dx-kubernetes-v95-CF181-other.zip:**
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>-   **HCL Experience API (Docker image)** - `hcl-dx-ringapi-image-v1.0.0_xxxxxxxx-xxxx.tar.gz`
+<div class="language-text highlight"><pre><span></span><code>**hcl-dx-kubernetes-v95-CF181-other.zip:**
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>-   **HCL Experience API (Docker image)** - `hcl-dx-ringapi-image-v1.0.0_xxxxxxxx-xxxx.tar.gz`
 -   **Postgres** - `hcl-dx-postgres-image-v1.0.0_xxxxxxxx-xxxx.tar.gz`
 -   **HCL Digital Asset Management (Operator)** - `hcl-dx-medialibrary-operator-image-v95_CF181_xxxxxxxx-xxxx.tar.gz`
 -   **HCL Digital Asset Management (Image processor)** - `hcl-dx-image-processor-image-v1.0.0_xxxxxxxx-xxxx.tar.gz`
 -   **HCL Digital Asset Management (Docker image)** - `hcl-dx-digital-asset-manager-image-v1.0.0_xxxxxxxx-xxxx.tar.gz`
 -   **HCL Content Composer (Docker image)** - `hcl-dx-content-composer-image-v1.0.0_xxxxxxxx-xxxx.tar.gz`
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Extract the images to the local file system.</p>
@@ -2574,18 +2569,18 @@
 <li>
 <p>Load the images into your Docker environment.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Docker load &lt; hcl-dx-ringapi-image-v1.0.0_xxxxxxxx-xxxx.tar.gz
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Docker load &lt; hcl-dx-medialibrary-operator-image-v95_CF181_xxxxxxxx-xxxx.tar.gz
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Docker load &lt; hcl-dx-digital-asset-manager-image-v1.0.0_xxxxxxxx-xxxx.tar.gz
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Docker load &lt; hcl-dx-content-composer-image-v1.0.0_xxxxxxxx-xxxx.tar.gz
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Docker load &lt; hcl-dx-image-processor-image-v1.0.0_xxxxxxxx-xxxx.tar.gz
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Docker load &lt; hcl-dx-postgres-image-v1.0.0_xxxxxxxx-xxxx.tar.gz
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>Docker load &lt; hcl-dx-ringapi-image-v1.0.0_xxxxxxxx-xxxx.tar.gz
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>Docker load &lt; hcl-dx-medialibrary-operator-image-v95_CF181_xxxxxxxx-xxxx.tar.gz
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>Docker load &lt; hcl-dx-digital-asset-manager-image-v1.0.0_xxxxxxxx-xxxx.tar.gz
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>Docker load &lt; hcl-dx-content-composer-image-v1.0.0_xxxxxxxx-xxxx.tar.gz
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>Docker load &lt; hcl-dx-image-processor-image-v1.0.0_xxxxxxxx-xxxx.tar.gz
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>Docker load &lt; hcl-dx-postgres-image-v1.0.0_xxxxxxxx-xxxx.tar.gz
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Either <strong><code>-i</code></strong> or <strong><code>&lt;</code></strong> works for the load command. In case you encounter an error when using one, try running the command using the other.</p>
@@ -2633,12 +2628,11 @@
 </li>
 <li>
 <p>Create a YAML file with the following config map settings:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kind: `ConfigMap`
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>metadata:
+<div class="language-text highlight"><pre><span></span><code>kind: `ConfigMap`
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>metadata:
   name: dx-deployment
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Use the following example YAML (<code>dx-deploy-config-map.yaml</code>) to deploy the HCL Experience API, HCL Content Composer, and HCL Digital Asset Management CF181 or higher components. If deploying HCL Content Composer and HCL Digital Asset Management CF181 components, replace their file names in the sample YAML file services lines used.</p>
@@ -2646,34 +2640,7 @@
 <p class="admonition-title">Note</p>
 <p>It is possible to deploy the services for the HCL Experience API and HCL Content Composer and/or Digital Asset Management by removing either the HCL Content Composer or HCL Digital Asset Management service lines from the YAML file.</p>
 </div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code>kind: ConfigMap
+<div class="language-text highlight"><pre><span></span><code>kind: ConfigMap
 metadata:
   name: dx-deployment
 data:
@@ -2701,7 +2668,7 @@ data:
   dx.deploy.dam.operator.tag: v95_CF181_20200622-1756
   dx.deploy.dam.operator.image: hcl-medialibrary-operator
   dx.deploy.remotesearch.volume.storageclass: gp2
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition notes">
 <p class="admonition-title">Notes</p>
 <ul>
@@ -2718,8 +2685,8 @@ data:
 </li>
 <li>
 <p>Administrators can override the repository by adding the following to the config map entries:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dx.deploy.contentui.repository
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dx.deploy.contentui.repository
+</code></pre></div>
 </li>
 <li>
 <p>The <code>dx.deploy.dam.enabled</code> tells the operator to deploy the HCL Digital Asset Management component. Note that there are 4 required sets of image/tag parameters:</p>
@@ -2736,8 +2703,8 @@ data:
 <p>In the Digital Experience 9.5 core deployment, the <code>dx.config.cors</code> setting is set in the DX configuration map. Reference the <a href="../../../../../deployment/install/container/">Kubernetes Deployment</a> pages for additional details.</p>
 <p>An additional self-provisioning volume is created for each of the HCL Digital Asset Management Persistence (Postgres) pods. The access mode of these self-provisioning persistent volumes must include <code>ReadWriteOnce</code>. If this volume is not present the images are lost and shows blank if/when the HCL Digital Asset Management library is restarted.</p>
 <p>Administrators can override the repository by adding to:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dx.deploy.contentui.repository
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dx.deploy.contentui.repository
+</code></pre></div>
 <p>In addition, the following default settings are configurable:</p>
 <ul>
 <li><code>dx.deploy.contentui.resources.cpurequest</code>, the default is 1.</li>
@@ -2759,16 +2726,16 @@ data:
 <ul>
 <li>
 <p>Kubernetes command:
-    <div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl apply -f dx-deploy-config-map.yaml -n your-namespace
-</code></pre></div></td></tr></table></div></p>
+    <div class="language-text highlight"><pre><span></span><code>kubectl apply -f dx-deploy-config-map.yaml -n your-namespace
+</code></pre></div></p>
 </li>
 <li>
 <p>OpenShift command:
-    <div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>oc project your-namespace
-</code></pre></div></td></tr></table></div></p>
+    <div class="language-text highlight"><pre><span></span><code>oc project your-namespace
+</code></pre></div></p>
 <p>followed by:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>oc apply -f dx-deploy-config-map.yaml
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>oc apply -f dx-deploy-config-map.yaml
+</code></pre></div>
 </li>
 </ul>
 </li>
@@ -2785,8 +2752,8 @@ data:
 </li>
 <li>
 <p>Change to the extracted hcl-dx-cloud-scripts directory.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./scripts/removeDx.sh NAMESPACE
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>./scripts/removeDx.sh NAMESPACE
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This script removes resources from the existing deployment (pods, statefulsets, etc) but does not remove persisted data or existing configmaps.</p>
@@ -2797,39 +2764,33 @@ data:
 </li>
 <li>
 <p>Open the persistent volume in a visual editor (vi) using the Kubernetes or OpenShift command line client command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl edit pv &lt;pv name&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl edit pv &lt;pv name&gt;
+</code></pre></div>
 <p>or</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>oc edit pv &lt;pv name&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>oc edit pv &lt;pv name&gt;
+</code></pre></div>
 </li>
 <li>
 <p>Remove the <code>claimRef</code> section:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>claimRef:
+<div class="language-text highlight"><pre><span></span><code>claimRef:
 apiVersion: v1
 kind: PersistentVolumeClaim
 name: dx-deploy-pvc
 namespace: awseks-demo
 resourceVersion: &quot;488931120&quot;
 uid: ebd58361-0e2a-11ea-b02e-02f8fe687954
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Ensure you get the '<code>persistentvolume/your_namespace edited</code>' message.</p>
 </li>
 <li>
 <p>Change to the extracted hcl-dx-cloud-scripts directory.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./scripts/deployDx.sh NAMESPACE REPLICAS REPOSITORY IMAGENAME IMAGETAG VOLUMENAME STORAGECLASS DBTYPE
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>./scripts/deployDx.sh NAMESPACE REPLICAS REPOSITORY IMAGENAME IMAGETAG VOLUMENAME STORAGECLASS DBTYPE
+</code></pre></div>
 <p>or</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./scripts/deployDx.sh NAMESPACE REPLICAS REPOSITORY IMAGENAME IMAGETAG VOLUMENAME STORAGECLASS DBTYPE INGRESSIMAGE INGRESSTAG
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>./scripts/deployDx.sh NAMESPACE REPLICAS REPOSITORY IMAGENAME IMAGETAG VOLUMENAME STORAGECLASS DBTYPE INGRESSIMAGE INGRESSTAG
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You must restart the deployment with one (1) replica. Once it is fully started, you can safely scale it to <code>N</code> instances.</p>
@@ -2841,18 +2802,18 @@ uid: ebd58361-0e2a-11ea-b02e-02f8fe687954
 </li>
 <li>
 <p>Access the HCL Content Composer and HCL Digital Asset Management components by navigating to <strong>Practitioner Studio &gt; Web Content &gt; Content</strong>, or <strong>Practitioner Studio &gt; Digital Assets</strong>.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://your-portal.net/wps/myportal/Practitioner/Web Content/Content Library
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://your-portal.net/wps/myportal/Practitioner/Digital Assets
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>https://your-portal.net/wps/myportal/Practitioner/Web Content/Content Library
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>https://your-portal.net/wps/myportal/Practitioner/Digital Assets
+</code></pre></div>
 </li>
 <li>
 <p>Access the HCL Experience API Explorer at the following URL:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://&lt;HOST&gt;:&lt;PORT&gt;dx/api/core/v1/explorer
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://&lt;HOST&gt;:&lt;PORT&gt;dx/api/core/v1/explorer
+</code></pre></div>
 <p>For example,</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://127.0.0.1:3000/dx/api/core/v1/explorer
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://127.0.0.1:3000/dx/api/core/v1/explorer
+</code></pre></div>
 </li>
 </ol>
 <h2 id="optional-configure-digital-asset-management-with-a-cdn">(Optional) Configure Digital Asset Management with a CDN</h2>

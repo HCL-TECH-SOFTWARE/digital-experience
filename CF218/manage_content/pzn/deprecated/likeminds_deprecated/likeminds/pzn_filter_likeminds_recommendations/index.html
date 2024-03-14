@@ -2903,28 +2903,19 @@
 <h1 id="filtering-likeminds-recommendations">Filtering LikeMinds recommendations</h1>
 <p>When LikeMinds makes recommendations, it can make the recommendations based on all items in your resource collection, or it can limit the predictions to only items that have certain characteristics.</p>
 <p>Tell LikeMinds about an item by including key/value pairs describing its characteristics as you log actions and ratings that occur against it. The format for the key/value pair is</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>Key = LMFilter.&lt;item_characteristic&gt;
+<div class="language-text highlight"><pre><span></span><code>Key = LMFilter.&lt;item_characteristic&gt;
 value = &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For example, to tell LikeMinds that an item's color is blue, and its category is sports, you would add the 2 key/value pairs:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>LMFilter.color,blue
+<div class="language-text highlight"><pre><span></span><code>LMFilter.color,blue
 LMFilter.category,sports
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Specify which characteristics that you want LikeMinds to use in making predictions by setting request attributes in the RequestContext object immediately before the content spot that contains the LikeMinds rule. To specify characteristics for filtering, do the following:</p>
 <ul>
 <li>Add a request attribute that tells LikeMinds which characteristic or characteristics you want to filter on. The name of that attribute should be LMFilter and the value should be a string or an array of strings, where the string or each string in the array is a characteristic that you would like to filter on.</li>
 </ul>
 <p>For example, to return predictions only from among items whose category is "clearance" and season is "spring" or "summer", you would add the following code before the content spot:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>com.ibm.websphere.personalization.RequestContext.context =
+<div class="language-text highlight"><pre><span></span><code>com.ibm.websphere.personalization.RequestContext.context =
 com.ibm.servlet.personalization.context.PersonalizationContext.getRequestContext(httpRequest);
 
 context.setRequestAttribute(&quot;LMFilter&quot;, new String[] { &quot;LMFilter.category&quot;, &quot;LMFilter.season&quot; });
@@ -2932,20 +2923,15 @@ context.setRequestAttribute(&quot;LMFilter&quot;, new String[] { &quot;LMFilter.
 context.setRequestAttribute(&quot;LMFilter.category&quot;, &quot;clearance&quot;);
 
 context.setRequestAttribute(&quot;LMFilter.season&quot;, new String[] { &quot;spring&quot;, &quot;summer&quot; });
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To return predictions only from items whose color is blue, you would add the following code before the content spot:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>com.ibm.websphere.personalization.RequestContext.context =
+<div class="language-text highlight"><pre><span></span><code>com.ibm.websphere.personalization.RequestContext.context =
 com.ibm.servlet.personalization.context.PersonalizationContext.getRequestContext(httpRequest);
 
 context.setRequestAttribute(&quot;LMFilter&quot;, &quot;LMFilter.color&quot;);
 
 context.setRequestAttribute(&quot;LMFilter.color&quot;, &quot;blue&quot;);
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

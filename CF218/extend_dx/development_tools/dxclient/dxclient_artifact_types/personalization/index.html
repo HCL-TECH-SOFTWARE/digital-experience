@@ -2737,42 +2737,42 @@
 <li>
 <p><strong>Command description</strong></p>
 <p>The <code>pzn-export</code> command is used to export the rules from the source server location specified by the user:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient pzn-export
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient pzn-export
+</code></pre></div>
 </li>
 <li>
 <p><strong>Help command</strong></p>
 <p>This command shows the help information for <code>pzn-export</code> command usage:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient pzn-export -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient pzn-export -h
+</code></pre></div>
 </li>
 <li>
 <p><strong>Command options</strong></p>
 <p>Use this attribute to specify the protocol with which to connect to the DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProtocol &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProtocol &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the hostname of the target DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port on which to connect to the DX server (e.g. for Kubernetes Environment <code>dxPort</code> is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the username to authenticate with the DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password for the user in the <code>dxUsername</code> attribute:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the location in the target workspace, which is the parent for the published nodes. The target path must exist before publishing:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-targetPath &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-targetPath &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the name of the workspace containing the rules in DX server (default <code>targetWorkspace</code> is 'ROOTWORKSPACE'):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-targetWorkspace &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-targetWorkspace &lt;value&gt;
+</code></pre></div>
 <p>The <code>targetPath</code> and <code>targetWorkspace</code> parameters are optional. If the user does not pass the respective parameters, then the default values are taken.</p>
 <p>Use this attribute to specify the path to the context root on the DX server (for example, /wps):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxContextRoot &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxContextRoot &lt;value&gt;
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Log files from command execution can be found in the logs directory of the DXClient installation.</p>
@@ -2781,8 +2781,8 @@
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient pzn-export -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient pzn-export -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt;
+</code></pre></div>
 <p>The outputfile for pzn export is generated in the following path: store/outputFiles/pznrules</p>
 </div>
 <h2 id="import-pzn-rules">Import PZN rules</h2>
@@ -2790,8 +2790,8 @@
 <li>
 <p><strong>Command description</strong></p>
 <p>The <code>pzn-import</code> command is used to import the rules into the target server.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient pzn-import
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient pzn-import
+</code></pre></div>
 </li>
 <li>
 <p><strong>Required files</strong></p>
@@ -2800,47 +2800,47 @@
 <li>
 <p><strong>Help command</strong></p>
 <p>This command shows the help information for <code>pzn-import</code> command usage:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient pzn-import -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient pzn-import -h
+</code></pre></div>
 </li>
 <li>
 <p><strong>Command options</strong></p>
 <p>Use this attribute to specify the protocol with which to connect to the DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProtocol &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProtocol &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the hostname of the target DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port on which to connect to the DX server (e.g. for Kubernetes Environment dxPort is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the username to authenticate with the DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password for the user in the "dxUsername" attribute:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the username that is required for authenticating to the cw_profile:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password that is required for authenticating to the cw_profile:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port number of the cw_profile (e.g. for Kubernetes Environment dxConnectPort is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the import file path that is required while executing the pzn import task:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-rulesFilePath &lt;Absolute or relative path to import nodes file&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-rulesFilePath &lt;Absolute or relative path to import nodes file&gt; 
+</code></pre></div>
 <p>Use this attribute to specify the location in the target workspace, which is the parent for the published nodes. The target path must exist before publishing:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-targetPath &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-targetPath &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the name of the workspace containing the rules in DX server (default targetWorkspace is 'ROOTWORKSPACE'):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-targetWorkspace &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-targetWorkspace &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the path to the context root on the DX server (for example, /wps):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxContextRoot &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxContextRoot &lt;value&gt;
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
@@ -2853,8 +2853,8 @@ Log files from command execution can be found in the logs directory of the DXCli
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient pzn-import -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -hostname &lt;dxConnectHostname&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -dxConnectPort &lt;dxConnectPort&gt; -rulesFilePath &lt;rulesFilePath&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient pzn-import -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -hostname &lt;dxConnectHostname&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -dxConnectPort &lt;dxConnectPort&gt; -rulesFilePath &lt;rulesFilePath&gt;
+</code></pre></div>
 </div>
 <details class="info" open="open">
 <summary>Related information</summary>

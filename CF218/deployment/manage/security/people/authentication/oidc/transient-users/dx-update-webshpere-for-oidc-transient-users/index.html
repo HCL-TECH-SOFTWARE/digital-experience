@@ -3935,10 +3935,9 @@
 <ol>
 <li>
 <p>Enable transient users:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/opt/HCL/wp_profile/ConfigEngine
+<div class="language-sh highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/opt/HCL/wp_profile/ConfigEngine
 ./ConfigEngine.sh<span class="w"> </span>enable-transient-user<span class="w"> </span>-DWasUserId<span class="o">=</span>wpsadmin<span class="w"> </span>-DWasPassword<span class="o">=</span>wpsadmin
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>After you run the <code>enable-transient-user</code> task, all identified users are identified with the authenticated group and do not have explicit groups.</p>
@@ -3946,14 +3945,11 @@
 </li>
 <li>
 <p>Restart the server:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>dx-deployment-core-0<span class="w"> </span>bash<span class="w"> </span>-n<span class="w"> </span>dxns
+<div class="language-sh highlight"><pre><span></span><code>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>dx-deployment-core-0<span class="w"> </span>bash<span class="w"> </span>-n<span class="w"> </span>dxns
 <span class="nb">cd</span><span class="w"> </span>/opt/HCL/AppServer/bin<span class="w"> </span>
 ./stopServer.sh<span class="w"> </span>WebSphere_Portal
 ./startServer.sh<span class="w"> </span>WebSphere_Portal
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>(Optional):</strong> Complete the following steps to create group objects for external providers to assign different access rights:</p>

@@ -4050,12 +4050,12 @@
 <h1 id="using-friendly-urls">Using friendly URLs</h1>
 <p>You can associate friendly URLs with portal pages and labels. You and your users can use these friendly URLs to access specific portal pages or labels by using a human readable path, which is easy to remember.</p>
 <p>For a friendly URL to work for a specific page, you must define a friendly URL name for every page or label in the path of the portal page hierarchy that leads to that page. You can do this in the page properties. Friendly URLs take the following general form:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://host_name:port_number/PortalServer_root/portal/page_id/[!ut/p/encoded_portal_suffix]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://host_name:port_number/PortalServer_root/portal/page_id/[!ut/p/encoded_portal_suffix]
+</code></pre></div>
 <p>The <code>page_id</code> portion of the friendly URL is made up of the friendly URL names of all pages in the path of the page hierarchy. This path begins at the content root and ends with the page for which you want to give your users a friendly URL.</p>
 <p>Example: You have a portal page that is named <strong>Products</strong> in the user interface and has a friendly URL name <code>products</code>. Under this Products page you have another page, which is named <strong>Appliances</strong> and has a friendly URL name <code>appliances</code>. To access the <strong>Appliances</strong> page, users can type the following friendly URL into the browser address field:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://www.example.com:10039/wps/portal/products/appliances
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://www.example.com:10039/wps/portal/products/appliances
+</code></pre></div>
 <p>You can configure a friendly URL by using the portal toolbar or the Manage Pages administration portlet. To configure a friendly URL by using the Manage Pages portlet, use the following procedure.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

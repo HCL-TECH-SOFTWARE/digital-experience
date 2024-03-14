@@ -3990,22 +3990,7 @@
 <p>Plain attributes have a single value that is queried by using the get command. The object for which to query the attribute is specified by an ID, and the attribute is specified by name.</p>
 <p>If the attribute is not read-only, the value is set by using the set command, which expects the new value as the last argument. If the bean supports a current selection, the ID is omitted for both commands to refer to the selected object.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>Content.get(ID, attribute)
+<div class="language-text highlight"><pre><span></span><code>Content.get(ID, attribute)
 Content.set(ID attribute value)
 
 # only for beans with a current selection
@@ -4021,24 +4006,9 @@ Content.get(&quot;type&quot;)
 # example: set theme of a content node
 themeid = Look.find(&quot;theme&quot;, &quot;commonameis&quot;, &quot;Science&quot;)
 Content.set(ID, &quot;theme&quot;, themeid)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>$Content get ID attribute
+<div class="language-text highlight"><pre><span></span><code>$Content get ID attribute
 $Content set ID attribute value
 
 # only for beans with a current selection
@@ -4054,7 +4024,7 @@ $Content get type
 # example: set theme of a content node
 set themeid [$Look find theme commonameis &quot;Science&quot;]
 $Content set ID theme $themeid
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following are standard attribute names available for all objects. Names for more attributes of individual portal object types are documented with the respective bean. Alternative or shorter names are documented in the bean help.</p>
 <table>
 <thead>

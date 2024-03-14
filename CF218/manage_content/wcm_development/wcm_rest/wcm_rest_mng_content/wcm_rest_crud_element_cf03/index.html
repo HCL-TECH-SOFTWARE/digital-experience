@@ -3407,23 +3407,23 @@
 <ul>
 <li>
 <p><strong>Content item</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/Content/content-id/elements
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/Content/content-id/elements
+</code></pre></div>
 </li>
 <li>
 <p><strong>Site area</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/SiteArea/site-area-id/elements
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/SiteArea/site-area-id/elements
+</code></pre></div>
 </li>
 <li>
 <p><strong>The default content of a content template</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/ContentTemplate/template-id/Prototype/elements
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/ContentTemplate/template-id/Prototype/elements
+</code></pre></div>
 </li>
 <li>
 <p><strong>The default content of a site area template</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/SiteAreaTemplate/template-id/Prototype/elements
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/SiteAreaTemplate/template-id/Prototype/elements
+</code></pre></div>
 </li>
 </ul>
 <div class="admonition note">
@@ -3431,34 +3431,7 @@
 <p>The type of the element to be created must be specified in the type field of the entry that is posted.</p>
 </div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 POST /wps/mycontenthandler/wcmrest/ContentTemplate/12015598-24c4-40f6-9be0-68c52663c03f/Prototype/elements/
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 POST /wps/mycontenthandler/wcmrest/ContentTemplate/12015598-24c4-40f6-9be0-68c52663c03f/Prototype/elements/
 
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
@@ -3486,61 +3459,33 @@ Content-Location: /wps/mycontenthandler/wcmrest/ContentTemplate/3f6311ae-d277-42
         &lt;wcm:date type=&quot;DateTime&quot;&gt;2014-08-05T06:01:07.152Z&lt;/wcm:date&gt;
     &lt;/content&gt;
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="update">Update</h2>
 <p>An element can be updated by sending a PUT request to one of the following URIs:</p>
 <ul>
 <li>
 <p><strong>Content item</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/Content/content-id/elements/element-name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/Content/content-id/elements/element-name
+</code></pre></div>
 </li>
 <li>
 <p><strong>Site area</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/SiteArea/site-area-id/elements/element-name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/SiteArea/site-area-id/elements/element-name
+</code></pre></div>
 </li>
 <li>
 <p><strong>The default content of a content template</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/ContentTemplate/template-id/Prototype/elements/element-name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/ContentTemplate/template-id/Prototype/elements/element-name
+</code></pre></div>
 </li>
 <li>
 <p><strong>The default content of a site area template</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/SiteAreaTemplate/template-id/Prototype/elements/element-name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/SiteAreaTemplate/template-id/Prototype/elements/element-name
+</code></pre></div>
 </li>
 </ul>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 PUT /wps/mycontenthandler/wcmrest/ContentTemplate/3f6311ae-d277-42d0-869c-eeb7a28ba754/Prototype/elements/MyDateElement
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 PUT /wps/mycontenthandler/wcmrest/ContentTemplate/3f6311ae-d277-42d0-869c-eeb7a28ba754/Prototype/elements/MyDateElement
 Content-Type: application/atom+xml
 
 &lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
@@ -3569,50 +3514,33 @@ Content-Type: application/atom+xml
         &lt;wcm:date type=&quot;DateTime&quot;&gt;2013-08-05T06:01:07.152Z&lt;/wcm:date&gt;
     &lt;/content&gt;
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="read">Read</h2>
 <p>An element can be read by sending a GET request to one of the following URIs:</p>
 <ul>
 <li>
 <p><strong>Content item</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/Content/content-id/elements/element-name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/Content/content-id/elements/element-name
+</code></pre></div>
 </li>
 <li>
 <p><strong>Site area</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/SiteArea/site-area-id/elements/element-name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/SiteArea/site-area-id/elements/element-name
+</code></pre></div>
 </li>
 <li>
 <p><strong>The default content of a content template</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/ContentTemplate/template-id/Prototype/elements/element-name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/ContentTemplate/template-id/Prototype/elements/element-name
+</code></pre></div>
 </li>
 <li>
 <p><strong>The default content of a site area template</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/SiteAreaTemplate/template-id/Prototype/elements/element-name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/SiteAreaTemplate/template-id/Prototype/elements/element-name
+</code></pre></div>
 </li>
 </ul>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 GET /wps/mycontenthandler/wcmrest/ContentTemplate/3f6311ae-d277-42d0-869c-eeb7a28ba754/Prototype/elements/MyDateElement
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 GET /wps/mycontenthandler/wcmrest/ContentTemplate/3f6311ae-d277-42d0-869c-eeb7a28ba754/Prototype/elements/MyDateElement
 Accept: application/atom+xml
 
 HTTP/1.1 200 OK
@@ -3630,98 +3558,62 @@ Content-Type: application/atom+xml
         &lt;wcm:date type=&quot;DateTime&quot;&gt;2014-08-05T06:01:07.152Z&lt;/wcm:date&gt;
     &lt;/content&gt;
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="delete">Delete</h2>
 <p>An element can be deleted by sending a DELETE request to one of the following URIs:</p>
 <ul>
 <li>
 <p><strong>Content item</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/Content/content-id/elements/element-name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/Content/content-id/elements/element-name
+</code></pre></div>
 </li>
 <li>
 <p><strong>Site area</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/SiteArea/site-area-id/elements/element-name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/SiteArea/site-area-id/elements/element-name
+</code></pre></div>
 </li>
 <li>
 <p><strong>The default content of a content template</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/ContentTemplate/template-id/Prototype/elements/element-name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/ContentTemplate/template-id/Prototype/elements/element-name
+</code></pre></div>
 </li>
 <li>
 <p><strong>The default content of a site area template</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/SiteAreaTemplate/template-id/Prototype/elements/element-name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/SiteAreaTemplate/template-id/Prototype/elements/element-name
+</code></pre></div>
 </li>
 </ul>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 DELETE /wps/mycontenthandler/wcmrest/ContentTemplate/3f6311ae-d277-42d0-869c-eeb7a28ba754/Prototype/elements/MyDateElement
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 DELETE /wps/mycontenthandler/wcmrest/ContentTemplate/3f6311ae-d277-42d0-869c-eeb7a28ba754/Prototype/elements/MyDateElement
 
 HTTP/1.1 200 OK
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="read-feed-with-multiple-elements">Read feed with multiple elements</h2>
 <p>Element feeds can be obtained by issuing a GET request to the following URIs:</p>
 <ul>
 <li>
 <p><strong>Content item</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/Content/content-id/elements/element-name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/Content/content-id/elements/element-name
+</code></pre></div>
 </li>
 <li>
 <p><strong>Site area</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/SiteArea/site-area-id/elements/element-name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/SiteArea/site-area-id/elements/element-name
+</code></pre></div>
 </li>
 <li>
 <p><strong>The default content of a content template</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/ContentTemplate/template-id/Prototype/elements/element-name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/ContentTemplate/template-id/Prototype/elements/element-name
+</code></pre></div>
 </li>
 <li>
 <p><strong>The default content of a site area template</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/SiteAreaTemplate/template-id/Prototype/elements/element-name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/SiteAreaTemplate/template-id/Prototype/elements/element-name
+</code></pre></div>
 </li>
 </ul>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 GET /wps/mycontenthandler/wcmrest/Content/4f9dfaa1-a823-4964-9583-8bbd69504595/elements
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 GET /wps/mycontenthandler/wcmrest/Content/4f9dfaa1-a823-4964-9583-8bbd69504595/elements
 Accept: application/atom+xml
 
 HTTP/1.1 200 OK
@@ -3756,69 +3648,33 @@ HTTP/1.1 200 OK
         &lt;content type=&quot;text/plain&quot;&gt;This is some text&lt;/content&gt;
     &lt;/entry&gt;
 &lt;/feed&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="read-inline-with-multiple-elements">Read inline with multiple elements</h2>
 <p>Element within an entry can be obtained by issuing a GET request to the following URIs:</p>
 <ul>
 <li>
 <p><strong>Content item</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/Content/content-id/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/Content/content-id/
+</code></pre></div>
 </li>
 <li>
 <p><strong>Site area</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/SiteArea/site-area-id/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/SiteArea/site-area-id/
+</code></pre></div>
 </li>
 <li>
 <p><strong>The default content of a content template</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/ContentTemplate/template-id/Prototype/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/ContentTemplate/template-id/Prototype/
+</code></pre></div>
 </li>
 <li>
 <p><strong>The default content of a site area template</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/SiteAreaTemplate/template-id/Prototype/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/SiteAreaTemplate/template-id/Prototype/
+</code></pre></div>
 </li>
 </ul>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 GET /wps/mycontenthandler/wcmrest/Content/4f9dfaa1-a823-4964-9583-8bbd69504595
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 GET /wps/mycontenthandler/wcmrest/Content/4f9dfaa1-a823-4964-9583-8bbd69504595
 Accept: application/atom+xml
 
 HTTP/1.1 200 OK
@@ -3855,70 +3711,34 @@ HTTP/1.1 200 OK
         &lt;/wcm:content&gt;
     &lt;/content&gt;
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="update-multiple-elements">Update multiple elements</h2>
 <p>An item that contains elements can have elements added, removed, or updated by issuing a PUT request, specifying the elements that should be present on the item. Any elements that don't exist on the item are added. Any elements that are not specified in the request will be removed. Any existing elements will be updated.</p>
 <p>The elements of an item can be modified by issuing a PUT request to the following URIs:</p>
 <ul>
 <li>
 <p><strong>Content item</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/Content/content-id/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/Content/content-id/
+</code></pre></div>
 </li>
 <li>
 <p><strong>Site area</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/SiteArea/site-area-id/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/SiteArea/site-area-id/
+</code></pre></div>
 </li>
 <li>
 <p><strong>The default content of a content template</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/ContentTemplate/template-id/Prototype/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/ContentTemplate/template-id/Prototype/
+</code></pre></div>
 </li>
 <li>
 <p><strong>The default content of a site area template</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/SiteAreaTemplate/template-id/Prototype/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/SiteAreaTemplate/template-id/Prototype/
+</code></pre></div>
 </li>
 </ul>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 GET /wps/mycontenthandler/wcmrest/Content/4f9dfaa1-a823-4964-9583-8bbd69504595
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 GET /wps/mycontenthandler/wcmrest/Content/4f9dfaa1-a823-4964-9583-8bbd69504595
 Accept: application/atom+xml
 
 HTTP/1.1 200 OK
@@ -3955,84 +3775,14 @@ HTTP/1.1 200 OK
         &lt;/wcm:content&gt;
     &lt;/content&gt;
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This response is used to perform the following modifications:</p>
 <ol>
 <li>Remove MyTextComponent.</li>
 <li>Modify MyRichTextElement.</li>
 <li>Add an element named MyNewTextElement.</li>
 </ol>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 PUT /wps/mycontenthandler/wcmrest/Content/4f9dfaa1-a823-4964-9583-8bbd69504595
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 PUT /wps/mycontenthandler/wcmrest/Content/4f9dfaa1-a823-4964-9583-8bbd69504595
 Content-Type: application/atom+xml
 
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
@@ -4103,7 +3853,7 @@ HTTP/1.1 200 OK
         &lt;/wcm:content&gt;
     &lt;/content&gt;
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

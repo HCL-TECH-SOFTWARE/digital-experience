@@ -4791,19 +4791,15 @@
 </ol>
 <p>For example: An item has a component reference element that refers to a list presentation component called "list presentation". It also has a component reference element that refers to a list component (such as a menu, navigator, search, or personalization component) named "list". You can edit the tag with the details of the list presentation to override and pair it with a matching element tag.</p>
 <p>To set the ID, you might use this example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:RequestAttribute key=&quot;ListPresentationId&quot; compute=&quot;once&quot; value=&quot;[Element context=&#39;...&#39; type=&#39;...&#39; key=&#39;list presentation&#39; format=&#39;id&#39;]&quot;]
+<div class="language-text highlight"><pre><span></span><code>[Plugin:RequestAttribute key=&quot;ListPresentationId&quot; compute=&quot;once&quot; value=&quot;[Element context=&#39;...&#39; type=&#39;...&#39; key=&#39;list presentation&#39; format=&#39;id&#39;]&quot;]
 [Element context=&quot;...&quot; type=&quot;...&quot; key=&quot;list&quot;] 
 [Plugin:RequestAttribute key=&quot;ListPresentationId&quot; mode=&quot;delete&quot;]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To set the path, you might use this example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:RequestAttribute key=&quot;ListPresentation&quot; compute=&quot;once&quot; value=&quot;[Element context=&#39;...&#39; type=&#39;...&#39; key=&#39;list presentation&#39; format=&#39;namepath&#39;]&quot;]
+<div class="language-text highlight"><pre><span></span><code>[Plugin:RequestAttribute key=&quot;ListPresentation&quot; compute=&quot;once&quot; value=&quot;[Element context=&#39;...&#39; type=&#39;...&#39; key=&#39;list presentation&#39; format=&#39;namepath&#39;]&quot;]
 [Element context=&quot;...&quot; type=&quot;...&quot; key=&quot;list&quot;]
 [Plugin:RequestAttribute key=&quot;ListPresentation&quot; mode=&quot;delete&quot;]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

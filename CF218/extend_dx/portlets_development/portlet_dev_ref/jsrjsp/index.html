@@ -2569,24 +2569,20 @@
 <h1 id="jsp-tags-for-standard-portlets">JSP tags for standard portlets</h1>
 <p>The standard portlet API defines several tags that can be used in portlet JSPs to access the portlet request and response and to generate URLs.</p>
 <p>To make these tags available in a JSP, the following directive is required at the beginning of the JSP:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>   &lt;%@ taglib uri=&quot;http://java.sun.com/portlet&quot; prefix=&quot;portlet&quot;%&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>   &lt;%@ taglib uri=&quot;http://java.sun.com/portlet&quot; prefix=&quot;portlet&quot;%&gt;
+</code></pre></div>
 <p>For more information, see <a href="http://jcp.org/en/jsr/detail?id=168">Java Portlet Specification</a>.</p>
 <p>HCL Portal provides an extra tag for use in standard portlets. To make these tags available in a JSP, the following directive is required:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code> &lt;%@ taglib uri=&quot;/WEB-INF/tld/ibm-portlet-ext-v60.tld&quot; prefix=&quot;portlet-ext&quot; %&gt;   &lt;%@ taglib uri=&quot;/WEB-INF/tld/ibm-portlet-ext-v61.tld&quot; prefix=&quot;portlet-ext&quot; %&gt; 
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%@ taglib 
+<div class="language-text highlight"><pre><span></span><code> &lt;%@ taglib uri=&quot;/WEB-INF/tld/ibm-portlet-ext-v60.tld&quot; prefix=&quot;portlet-ext&quot; %&gt;   &lt;%@ taglib uri=&quot;/WEB-INF/tld/ibm-portlet-ext-v61.tld&quot; prefix=&quot;portlet-ext&quot; %&gt; 
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;%@ taglib 
     uri=&quot;http://www.ibm.com/xmlns/prod/websphere/portal/v7/portlet/ibm-portlet-ext&quot; 
     prefix=&quot;portlet-ext&quot; %&gt;
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%@ taglib 
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;%@ taglib 
     uri=&quot;http://www.ibm.com/xmlns/prod/websphere/portal/v8/portlet/ibm-portlet-ext&quot; 
     prefix=&quot;portlet-ext&quot; %&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following is a brief description of the extension to the JSR 168 portlet JSP tag library.</p>
 <ul>
 <li>

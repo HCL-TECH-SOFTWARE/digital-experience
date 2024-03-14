@@ -4073,35 +4073,23 @@
 <h1 id="locale-specific-attributes-content-bean-content-hierarchy">Locale-specific attributes | Content bean content hierarchy</h1>
 <p>The content nodes have two locale-specific attributes, title and description. See the bean help for alternative, shorter names for these attributes. The title must be defined for each locale, though you can set it to the empty string. A new locale is defined by setting the title for it.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code># example for manipulating locales of a content node:
+<div class="language-text highlight"><pre><span></span><code># example for manipulating locales of a content node:
 # select node, remove all, import, add one manually
 Content.select(ID)
 Content.empty(&quot;locales&quot;)
 Content.nlsimport(&quot;nls/content.nls&quot;, &quot;page.visualization&quot;)
 Content.nlsset(&quot;title&quot;, &quot;en_GB&quot;, &quot;Visualisation&quot;)
 Content.nlsset(&quot;description&quot;, &quot;en_GB&quot;, &quot;A page for...&quot;)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code># example for manipulating locales of a content node:
+<div class="language-text highlight"><pre><span></span><code># example for manipulating locales of a content node:
 # select node, remove all, import, add one manually
 $Content select ID
 $Content empty locales
 $Content nlsimport nls/content.nls page.visualization
 $Content nlsset title en_GB &quot;Visualisation&quot;
 $Content nlsset description en_GB &quot;A page for...&quot;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

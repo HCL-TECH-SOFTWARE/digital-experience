@@ -2251,32 +2251,20 @@
 </li>
 <li>
 <p>Create a DxModule/gradle.properties file and set the node and npm versions required. Set nodeInstall to false if the existing executables of the current environment is preferred. The gradle project included in this guide is going to be capable of downloading and using its own set of node and npm executables for the build process.
-    <div class="language-properties highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="na">nodeInstall</span><span class="o">=</span><span class="s">true</span>
+    <div class="language-properties highlight"><pre><span></span><code><span class="na">nodeInstall</span><span class="o">=</span><span class="s">true</span>
 <span class="na">nodeVersion</span><span class="o">=</span><span class="s">16.17.0</span>
 <span class="na">npmVersion</span><span class="o">=</span><span class="s">8.15.0</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
     Add the details of the DX deployment target. They will be relayed as parameters whenever the DXClient executable is called by the deploy tasks.
-    <div class="language-properties highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="na">dxProtocol</span><span class="o">=</span><span class="s">https</span>
+    <div class="language-properties highlight"><pre><span></span><code><span class="na">dxProtocol</span><span class="o">=</span><span class="s">https</span>
 <span class="na">dxHostname</span><span class="o">=</span><span class="s">localhost</span>
 <span class="na">dxPort</span><span class="o">=</span><span class="s">10041</span>
 <span class="na">dxProfileName</span><span class="o">=</span><span class="s">wp_profile</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
     Add the folder names for the submodules and Script Applications. Use only one submodule and/or Script Application folder each if it's the requirement for this setup.</p>
 <ul>
 <li>Single SubModule
-<div class="language-properties highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w"> </span><span class="c1"># SubModules</span>
+<div class="language-properties highlight"><pre><span></span><code><span class="w"> </span><span class="c1"># SubModules</span>
 <span class="w"> </span><span class="na">subModulesCSV</span><span class="o">=</span><span class="s">SubModule01</span>
 
 <span class="w"> </span><span class="c1"># ScriptApp Projects</span>
@@ -2284,16 +2272,9 @@
 <span class="w"> </span><span class="c1">## last subfolder of path (i.e: subfolder1/subfolder2 --&gt; subfolder2) must be unique to avoid overlapping gradle task names</span>
 <span class="w"> </span><span class="c1">## verify using ./gradlew tasks</span>
 <span class="w"> </span><span class="na">scriptAppFoldersCSV</span><span class="o">=</span><span class="s">ScriptApp01</span>
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 <li>Multiple SubModules
-<div class="language-properties highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w"> </span><span class="c1"># SubModules</span>
+<div class="language-properties highlight"><pre><span></span><code><span class="w"> </span><span class="c1"># SubModules</span>
 <span class="w"> </span><span class="na">subModulesCSV</span><span class="o">=</span><span class="s">SubModuleReact16,SubModuleReact18</span>
 
 <span class="w"> </span><span class="c1"># ScriptApp Projects</span>
@@ -2301,41 +2282,14 @@
 <span class="w"> </span><span class="c1">## last subfolder of path (i.e: subfolder1/subfolder2 --&gt; subfolder2) must be unique to avoid overlapping gradle task names</span>
 <span class="w"> </span><span class="c1">## verify using ./gradlew tasks</span>
 <span class="w"> </span><span class="na">scriptAppFoldersCSV</span><span class="o">=</span><span class="s">SampleAppReact16,SampleAppReact18</span>
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 </ul>
 </li>
 <li>
 <p>Create or update the package.json file for each of the submodule to enumerate the libraries that will be included.</p>
 <ul>
 <li>DxModule/SubModuleReact16/package.json and DxModule/SubModuleReact18/package.json
-<div class="language-json highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
+<div class="language-json highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;WebAppDxModule&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
@@ -2363,46 +2317,34 @@
 <span class="w">  </span><span class="p">},</span>
 <span class="w">  </span><span class="nt">&quot;overrides&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 <li>Set the appropriate dependencies for the submodule. DxModule/SubModuleReact16/package.json
-<div class="language-json highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">&quot;dependencies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<div class="language-json highlight"><pre><span></span><code><span class="nt">&quot;dependencies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;react&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^16.14.0&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;react-dom&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^16.14.0&quot;</span>
 <span class="p">},</span>
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 <li>Set the appropriate dependencies for the submodule. DxModule/SubModuleReact18/package.json
-<div class="language-json highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">&quot;dependencies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<div class="language-json highlight"><pre><span></span><code><span class="nt">&quot;dependencies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;react&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^18.2.0&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;react-dom&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^18.2.0&quot;</span>
 <span class="p">},</span>
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 <li>Make sure to set the main file to modules-index.js
-<div class="language-json highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">&quot;main&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;modules-index.js&quot;</span><span class="p">,</span>
-</code></pre></div></td></tr></table></div></li>
+<div class="language-json highlight"><pre><span></span><code><span class="nt">&quot;main&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;modules-index.js&quot;</span><span class="p">,</span>
+</code></pre></div></li>
 <li>Make sure to add the build-dx-modules among the scripts. DxModule/SubModuleReact16/package.json:
-<div class="language-json highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">&quot;scripts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<div class="language-json highlight"><pre><span></span><code><span class="nt">&quot;scripts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="err">...</span>
 <span class="w">  </span><span class="nt">&quot;build-dxsubmodule&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;webpack --config  webpack.react16.js&quot;</span>
 <span class="p">},</span>
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 <li>Make sure to add the build-dx-modules among the scripts. DxModule/SubModuleReact18/package.json:
-<div class="language-json highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">&quot;scripts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<div class="language-json highlight"><pre><span></span><code><span class="nt">&quot;scripts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="err">...</span>
 <span class="w">  </span><span class="nt">&quot;build-dxsubmodule&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;webpack --config  webpack.react18.js&quot;</span>
 <span class="p">},</span>
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 </ul>
 </li>
 <li>
@@ -2410,17 +2352,7 @@
 <ul>
 <li>
 <p>DxModule/SubModuleReact16/module-index.js
-   <div class="language-js highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">/* Import and Export Main Libraries</span>
+   <div class="language-js highlight"><pre><span></span><code><span class="cm">/* Import and Export Main Libraries</span>
 <span class="cm"> */</span>
 <span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">React16</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span>
 <span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">ReactDOM16</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react-dom&#39;</span><span class="p">;</span>
@@ -2431,21 +2363,11 @@
 <span class="cm">/* Export index file for the styles (added here to be able to share the filename of JS bundle&#39;s alias in Webpack entry config).</span>
 <span class="cm"> */</span>
 <span class="k">export</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./styles-index.css&#39;</span><span class="w">    </span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 </li>
 <li>
 <p>DxModule/SubModuleReact18/module-index.js
-   <div class="language-js highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">/* Import and Export Main Libraries</span>
+   <div class="language-js highlight"><pre><span></span><code><span class="cm">/* Import and Export Main Libraries</span>
 <span class="cm"> */</span>
 <span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">React18</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span>
 <span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">ReactDOM18</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react-dom&#39;</span><span class="p">;</span>
@@ -2456,7 +2378,7 @@
 <span class="cm">/* Export index file for the styles (added here to be able to share the filename of JS bundle&#39;s alias in Webpack entry config).</span>
 <span class="cm"> */</span>
 <span class="k">export</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./styles-index.css&#39;</span><span class="w">    </span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 </li>
 </ul>
 </li>
@@ -2464,31 +2386,18 @@
 <p>Add a styles-index.css file to each of the submodule. Enumerate via import statements the component styling (CSS, SCSS, etc.) required that are not yet imported by any JS nor HTML files in the modules-index.js. Leave it empty if no imports are needed at the moment.</p>
 <ul>
 <li>DxModule/SubModuleReact16/styles-index.css  and DxModule/SubModuleReact16/styles-index.css
-  <div class="language-js highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">  </span><span class="cm">/* sample import:</span>
+  <div class="language-js highlight"><pre><span></span><code><span class="w">  </span><span class="cm">/* sample import:</span>
 <span class="cm">   *    @import &#39;smart-webcomponents-react/source/styles/smart.default.css&#39;;</span>
 <span class="cm">   */</span>
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 </ul>
 </li>
 <li>Add a DxModule/settings.gradle file. Set the value of the rootProject.name. It will be used as the name of the DX Module (war file, ear file, etc.) and the names and ids in the deployment descriptors (web context path, etc.).
-    <div class="language-groovy highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;React16AndReact18&#39;</span>
-</code></pre></div></td></tr></table></div></li>
+    <div class="language-groovy highlight"><pre><span></span><code><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;React16AndReact18&#39;</span>
+</code></pre></div></li>
 <li>Add a tsconfig.json file to each of the submodules:</li>
 <li>DxModule/SubModuleReact16/tsconfig.json and DxModule/SubModuleReact18/tsconfig.json
-   <div class="language-json highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
+   <div class="language-json highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;compilerOptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;outDir&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;./dist/&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;noImplicitAny&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
@@ -2500,256 +2409,12 @@
 <span class="w">    </span><span class="nt">&quot;esModuleInterop&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 </ol>
 <h3 id="add-a-gradle-build-script">Add a Gradle Build Script</h3>
 <ol>
 <li>Add a DxModule/build.gradle file with the following content:
-   <div class="language-groovy highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
-<span class="normal">  2</span>
-<span class="normal">  3</span>
-<span class="normal">  4</span>
-<span class="normal">  5</span>
-<span class="normal">  6</span>
-<span class="normal">  7</span>
-<span class="normal">  8</span>
-<span class="normal">  9</span>
-<span class="normal"> 10</span>
-<span class="normal"> 11</span>
-<span class="normal"> 12</span>
-<span class="normal"> 13</span>
-<span class="normal"> 14</span>
-<span class="normal"> 15</span>
-<span class="normal"> 16</span>
-<span class="normal"> 17</span>
-<span class="normal"> 18</span>
-<span class="normal"> 19</span>
-<span class="normal"> 20</span>
-<span class="normal"> 21</span>
-<span class="normal"> 22</span>
-<span class="normal"> 23</span>
-<span class="normal"> 24</span>
-<span class="normal"> 25</span>
-<span class="normal"> 26</span>
-<span class="normal"> 27</span>
-<span class="normal"> 28</span>
-<span class="normal"> 29</span>
-<span class="normal"> 30</span>
-<span class="normal"> 31</span>
-<span class="normal"> 32</span>
-<span class="normal"> 33</span>
-<span class="normal"> 34</span>
-<span class="normal"> 35</span>
-<span class="normal"> 36</span>
-<span class="normal"> 37</span>
-<span class="normal"> 38</span>
-<span class="normal"> 39</span>
-<span class="normal"> 40</span>
-<span class="normal"> 41</span>
-<span class="normal"> 42</span>
-<span class="normal"> 43</span>
-<span class="normal"> 44</span>
-<span class="normal"> 45</span>
-<span class="normal"> 46</span>
-<span class="normal"> 47</span>
-<span class="normal"> 48</span>
-<span class="normal"> 49</span>
-<span class="normal"> 50</span>
-<span class="normal"> 51</span>
-<span class="normal"> 52</span>
-<span class="normal"> 53</span>
-<span class="normal"> 54</span>
-<span class="normal"> 55</span>
-<span class="normal"> 56</span>
-<span class="normal"> 57</span>
-<span class="normal"> 58</span>
-<span class="normal"> 59</span>
-<span class="normal"> 60</span>
-<span class="normal"> 61</span>
-<span class="normal"> 62</span>
-<span class="normal"> 63</span>
-<span class="normal"> 64</span>
-<span class="normal"> 65</span>
-<span class="normal"> 66</span>
-<span class="normal"> 67</span>
-<span class="normal"> 68</span>
-<span class="normal"> 69</span>
-<span class="normal"> 70</span>
-<span class="normal"> 71</span>
-<span class="normal"> 72</span>
-<span class="normal"> 73</span>
-<span class="normal"> 74</span>
-<span class="normal"> 75</span>
-<span class="normal"> 76</span>
-<span class="normal"> 77</span>
-<span class="normal"> 78</span>
-<span class="normal"> 79</span>
-<span class="normal"> 80</span>
-<span class="normal"> 81</span>
-<span class="normal"> 82</span>
-<span class="normal"> 83</span>
-<span class="normal"> 84</span>
-<span class="normal"> 85</span>
-<span class="normal"> 86</span>
-<span class="normal"> 87</span>
-<span class="normal"> 88</span>
-<span class="normal"> 89</span>
-<span class="normal"> 90</span>
-<span class="normal"> 91</span>
-<span class="normal"> 92</span>
-<span class="normal"> 93</span>
-<span class="normal"> 94</span>
-<span class="normal"> 95</span>
-<span class="normal"> 96</span>
-<span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span>
-<span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span>
-<span class="normal">113</span>
-<span class="normal">114</span>
-<span class="normal">115</span>
-<span class="normal">116</span>
-<span class="normal">117</span>
-<span class="normal">118</span>
-<span class="normal">119</span>
-<span class="normal">120</span>
-<span class="normal">121</span>
-<span class="normal">122</span>
-<span class="normal">123</span>
-<span class="normal">124</span>
-<span class="normal">125</span>
-<span class="normal">126</span>
-<span class="normal">127</span>
-<span class="normal">128</span>
-<span class="normal">129</span>
-<span class="normal">130</span>
-<span class="normal">131</span>
-<span class="normal">132</span>
-<span class="normal">133</span>
-<span class="normal">134</span>
-<span class="normal">135</span>
-<span class="normal">136</span>
-<span class="normal">137</span>
-<span class="normal">138</span>
-<span class="normal">139</span>
-<span class="normal">140</span>
-<span class="normal">141</span>
-<span class="normal">142</span>
-<span class="normal">143</span>
-<span class="normal">144</span>
-<span class="normal">145</span>
-<span class="normal">146</span>
-<span class="normal">147</span>
-<span class="normal">148</span>
-<span class="normal">149</span>
-<span class="normal">150</span>
-<span class="normal">151</span>
-<span class="normal">152</span>
-<span class="normal">153</span>
-<span class="normal">154</span>
-<span class="normal">155</span>
-<span class="normal">156</span>
-<span class="normal">157</span>
-<span class="normal">158</span>
-<span class="normal">159</span>
-<span class="normal">160</span>
-<span class="normal">161</span>
-<span class="normal">162</span>
-<span class="normal">163</span>
-<span class="normal">164</span>
-<span class="normal">165</span>
-<span class="normal">166</span>
-<span class="normal">167</span>
-<span class="normal">168</span>
-<span class="normal">169</span>
-<span class="normal">170</span>
-<span class="normal">171</span>
-<span class="normal">172</span>
-<span class="normal">173</span>
-<span class="normal">174</span>
-<span class="normal">175</span>
-<span class="normal">176</span>
-<span class="normal">177</span>
-<span class="normal">178</span>
-<span class="normal">179</span>
-<span class="normal">180</span>
-<span class="normal">181</span>
-<span class="normal">182</span>
-<span class="normal">183</span>
-<span class="normal">184</span>
-<span class="normal">185</span>
-<span class="normal">186</span>
-<span class="normal">187</span>
-<span class="normal">188</span>
-<span class="normal">189</span>
-<span class="normal">190</span>
-<span class="normal">191</span>
-<span class="normal">192</span>
-<span class="normal">193</span>
-<span class="normal">194</span>
-<span class="normal">195</span>
-<span class="normal">196</span>
-<span class="normal">197</span>
-<span class="normal">198</span>
-<span class="normal">199</span>
-<span class="normal">200</span>
-<span class="normal">201</span>
-<span class="normal">202</span>
-<span class="normal">203</span>
-<span class="normal">204</span>
-<span class="normal">205</span>
-<span class="normal">206</span>
-<span class="normal">207</span>
-<span class="normal">208</span>
-<span class="normal">209</span>
-<span class="normal">210</span>
-<span class="normal">211</span>
-<span class="normal">212</span>
-<span class="normal">213</span>
-<span class="normal">214</span>
-<span class="normal">215</span>
-<span class="normal">216</span>
-<span class="normal">217</span>
-<span class="normal">218</span>
-<span class="normal">219</span>
-<span class="normal">220</span>
-<span class="normal">221</span>
-<span class="normal">222</span>
-<span class="normal">223</span>
-<span class="normal">224</span>
-<span class="normal">225</span>
-<span class="normal">226</span>
-<span class="normal">227</span>
-<span class="normal">228</span>
-<span class="normal">229</span>
-<span class="normal">230</span>
-<span class="normal">231</span>
-<span class="normal">232</span>
-<span class="normal">233</span>
-<span class="normal">234</span>
-<span class="normal">235</span>
-<span class="normal">236</span>
-<span class="normal">237</span>
-<span class="normal">238</span>
-<span class="normal">239</span>
-<span class="normal">240</span>
-<span class="normal">241</span>
-<span class="normal">242</span>
-<span class="normal">243</span>
-<span class="normal">244</span>
-<span class="normal">245</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">plugins</span><span class="w"> </span><span class="o">{</span>
+   <div class="language-groovy highlight"><pre><span></span><code><span class="n">plugins</span><span class="w"> </span><span class="o">{</span>
 <span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s1">&#39;ear&#39;</span>
 <span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s1">&#39;war&#39;</span>
 <span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s2">&quot;com.github.node-gradle.node&quot;</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="s2">&quot;3.4.0&quot;</span>
@@ -2994,90 +2659,13 @@
 <span class="w">    </span><span class="o">}</span>
 <span class="w">    </span><span class="n">tasks</span><span class="o">.</span><span class="na">named</span><span class="o">(</span><span class="s2">&quot;npmSetup&quot;</span><span class="o">).</span><span class="na">configure</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">finalizedBy</span><span class="w"> </span><span class="n">fixedNpm</span><span class="w"> </span><span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 </ol>
 <h3 id="add-webpack-files">Add Webpack Files</h3>
 <ol>
 <li>Add a webpack file to each of the submodules. Assign a unique filename(path) for the DLL Manifest that could describe the submodule.<ul>
 <li>DxModule/SubModuleReact16/webpack.react16.js and DxModule/SubModuleReact18/webpack.react18.js
-<div class="language-js highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;path&quot;</span><span class="p">);</span>
+<div class="language-js highlight"><pre><span></span><code><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;path&quot;</span><span class="p">);</span>
 <span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">TerserPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;terser-webpack-plugin&quot;</span><span class="p">);</span>
 <span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">MiniCssExtractPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mini-css-extract-plugin&#39;</span><span class="p">);</span>
 <span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">DllPlugin</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;webpack&#39;</span><span class="p">);</span>
@@ -3155,37 +2743,25 @@
 <span class="w">         </span><span class="p">]</span>
 <span class="w">     </span><span class="p">},</span>
 <span class="w"> </span><span class="p">};</span>
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 <li>DxModule/SubModuleReact16/webpack.react16.js
-<div class="language-js highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">...</span>
+<div class="language-js highlight"><pre><span></span><code><span class="p">...</span>
 <span class="w">        </span><span class="ow">new</span><span class="w"> </span><span class="nx">DllPlugin</span><span class="p">({</span>
 <span class="w">            </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name]_[fullhash]&quot;</span><span class="p">,</span>
 <span class="w">            </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;./dx-dll-manifest-react16.json&quot;</span><span class="p">),</span>
 <span class="w">            </span><span class="nx">format</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <span class="w">        </span><span class="p">}),</span>
 <span class="p">...</span>
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 <li>DxModule/SubModuleReact16/webpack.react18.js
-<div class="language-js highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">...</span>
+<div class="language-js highlight"><pre><span></span><code><span class="p">...</span>
 <span class="w">       </span><span class="ow">new</span><span class="w"> </span><span class="nx">DllPlugin</span><span class="p">({</span>
 <span class="w">           </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name]_[fullhash]&quot;</span><span class="p">,</span>
 <span class="w">           </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;./dx-dll-manifest-react18.json&quot;</span><span class="p">),</span>
 <span class="w">           </span><span class="nx">format</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <span class="w">       </span><span class="p">}),</span>
 <span class="p">...</span>
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 </ul>
 </li>
 </ol>
@@ -3195,27 +2771,7 @@
 <p>Create the plugin.xml file in the DxModule/src/main/config/war/WEB-INF folder. Note that each generated JS and CSS files in the dist-dx-module folder after a DX Module build needs to be declared in the plugin.xml file.</p>
 <ul>
 <li>Single Sub Module
-<div class="language-xml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">  </span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;</span>
+<div class="language-xml highlight"><pre><span></span><code><span class="w">  </span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;</span>
 <span class="w">  </span><span class="cp">&lt;?eclipse version=&quot;3.0&quot;?&gt;</span>
 <span class="w">  </span><span class="nt">&lt;plugin</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;@@auto-replaced-with-rootProject.name@@&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;@@auto-replaced-with-rootProject.name@@&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1.0.0&quot;</span><span class="w"> </span><span class="na">provider-name=</span><span class="s">&quot;IBM&quot;</span><span class="nt">&gt;</span>
 
@@ -3236,41 +2792,9 @@
 <span class="w">        </span><span class="nt">&lt;/module&gt;</span>
 <span class="w">    </span><span class="nt">&lt;/extension&gt;</span>
 <span class="w">  </span><span class="nt">&lt;/plugin&gt;</span>
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 <li>Multiple Sub Modules
-<div class="language-xml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w"> </span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;</span>
+<div class="language-xml highlight"><pre><span></span><code><span class="w"> </span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;</span>
 <span class="w"> </span><span class="cp">&lt;?eclipse version=&quot;3.0&quot;?&gt;</span>
 <span class="w"> </span><span class="nt">&lt;plugin</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;@@auto-replaced-with-rootProject.name@@&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;@@auto-replaced-with-rootProject.name@@&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1.0.0&quot;</span><span class="w"> </span><span class="na">provider-name=</span><span class="s">&quot;IBM&quot;</span><span class="nt">&gt;</span>
 
@@ -3303,40 +2827,12 @@
 <span class="w">       </span><span class="nt">&lt;/module&gt;</span>
 <span class="w">   </span><span class="nt">&lt;/extension&gt;</span>
 <span class="w"> </span><span class="nt">&lt;/plugin&gt;</span>
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 </ul>
 </li>
 <li>
 <p>Create the was.policy file in the DxModule/src/main/config/ear/META-INF folder:
-     <div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code>//
+     <div class="language-text highlight"><pre><span></span><code>//
 // Template policy file for enterprise application.
 // Extra permissions can be added if required by the enterprise application.
 //
@@ -3365,50 +2861,29 @@ grant codeBase &quot;file:${webComponent}&quot; {
 grant codeBase &quot;file:${ejbComponent}&quot; {
     permission java.security.AllPermission;
 };
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 </li>
 <li>
 <p>Create the ibm-web-bnd.xmi file in the DxModule/src/main/config/war/WEB-INF folder:
-    <div class="language-xml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+    <div class="language-xml highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
 <span class="nt">&lt;webappbnd:WebAppBinding</span><span class="w"> </span><span class="na">xmi:version=</span><span class="s">&quot;2.0&quot;</span><span class="w"> </span><span class="na">xmlns:xmi=</span><span class="s">&quot;http://www.omg.org/XMI&quot;</span><span class="w"> </span><span class="na">xmlns:webappbnd=</span><span class="s">&quot;webappbnd.xmi&quot;</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;WebAppBinding_1203959801006&quot;</span><span class="w"> </span><span class="na">virtualHostName=</span><span class="s">&quot;default_host&quot;</span><span class="nt">&gt;</span>
 <span class="w">  </span><span class="nt">&lt;webapp</span><span class="w"> </span><span class="na">href=</span><span class="s">&quot;WEB-INF/web.xml#@@auto-replaced-with-rootProject.name@@&quot;</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/webappbnd:WebAppBinding&gt;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 </li>
 <li>
 <p>Create the ibm-web-ext.xmi file in the DxModule/src/main/config/war/WEB-INF folder:
-   <div class="language-xml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+   <div class="language-xml highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
 <span class="nt">&lt;webappext:WebAppExtension</span><span class="w"> </span><span class="na">xmi:version=</span><span class="s">&quot;2.0&quot;</span><span class="w"> </span><span class="na">xmlns:xmi=</span><span class="s">&quot;http://www.omg.org/XMI&quot;</span><span class="w"> </span><span class="na">xmlns:webappext=</span><span class="s">&quot;webappext.xmi&quot;</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;WebAppExtension_1203959801006&quot;</span><span class="w"> </span><span class="na">reloadInterval=</span><span class="s">&quot;3&quot;</span><span class="w"> </span><span class="na">reloadingEnabled=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">additionalClassPath=</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="na">fileServingEnabled=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">directoryBrowsingEnabled=</span><span class="s">&quot;false&quot;</span><span class="w"> </span><span class="na">serveServletsByClassnameEnabled=</span><span class="s">&quot;false&quot;</span><span class="w"> </span><span class="na">preCompileJSPs=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
 <span class="w">  </span><span class="nt">&lt;webApp</span><span class="w"> </span><span class="na">href=</span><span class="s">&quot;WEB-INF/web.xml#@@auto-replaced-with-rootProject.name@@&quot;</span><span class="nt">/&gt;</span>
 <span class="w">  </span><span class="nt">&lt;jspAttributes</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;JSPAttribute_1&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;jdkSourceLevel&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;15&quot;</span><span class="nt">/&gt;</span>
 <span class="w">  </span><span class="nt">&lt;jspAttributes</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;JSPAttribute_2&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;keepgenerated&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;false&quot;</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/webappext:WebAppExtension&gt;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 </li>
 <li>
 <p>Create the template web.xml file in the DxModule/src/main/config/war folder:
-   <div class="language-xml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+   <div class="language-xml highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
 <span class="nt">&lt;web-app</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;@@auto-replaced-with-rootProject.name@@&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;2.4&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://java.sun.com/xml/ns/j2ee&quot;</span><span class="w"> </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span><span class="w"> </span><span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd&quot;</span><span class="nt">&gt;</span>
 <span class="w">    </span><span class="nt">&lt;display-name&gt;</span>@@auto-replaced-with-rootProject.name@@<span class="nt">&lt;/display-name&gt;</span>
 <span class="w">    </span><span class="nt">&lt;context-param&gt;</span>
@@ -3422,7 +2897,7 @@ grant codeBase &quot;file:${ejbComponent}&quot; {
 <span class="w">        </span><span class="nt">&lt;param-value&gt;</span>WEB-INF/.*<span class="nt">&lt;/param-value&gt;</span>
 <span class="w">    </span><span class="nt">&lt;/context-param&gt;</span>
 <span class="nt">&lt;/web-app&gt;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 </li>
 </ol>
 

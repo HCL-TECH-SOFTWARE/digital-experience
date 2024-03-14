@@ -4045,71 +4045,11 @@
 <h3 id="creating-config-properties-file">Creating config properties file</h3>
 <p>You have to create a file named <code>oidc-config.properties</code> file under <code>/opt/HCL/wp_profile/ConfigEngine/properties/</code> in the <code>dx-core</code> pod. You can create this file anywhere but ensure that you specify this path while running the config engine task. The properties file is used for both the enable and disable oidc configuration tasks.</p>
 <p>Execute the following commands for creating a file:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>dx-deployment-core-0<span class="w"> </span>bash<span class="w"> </span>-n<span class="w"> </span>dxns
+<div class="language-sh highlight"><pre><span></span><code>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>dx-deployment-core-0<span class="w"> </span>bash<span class="w"> </span>-n<span class="w"> </span>dxns
 vi<span class="w"> </span>/opt/HCL/wp_profile/ConfigEngine/properties/oidc-config.properties
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Copy the following content and ensure you provided values for the placeholders before saving.</p>
-<div class="language-properties highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="na">oidc.clientId</span><span class="o">=</span><span class="s">&lt;YOUR_CLIENT_ID&gt;</span>
+<div class="language-properties highlight"><pre><span></span><code><span class="na">oidc.clientId</span><span class="o">=</span><span class="s">&lt;YOUR_CLIENT_ID&gt;</span>
 <span class="na">oidc.clientSecret</span><span class="o">=</span><span class="s">&lt;YOUR_CLIENT_SECRET&gt;</span>
 <span class="c1"># For example: https://&lt;YOUR_IDP_HOST&gt;/realms/&lt;&lt;REALM_NAME&gt;&gt;/.well-known/openid-configuration</span>
 
@@ -4169,24 +4109,14 @@ vi<span class="w"> </span>/opt/HCL/wp_profile/ConfigEngine/properties/oidc-confi
 <span class="na">oidc.dsName</span><span class="o">=</span><span class="s">&lt;&lt;DATASOURCE_NAME&gt;&gt;</span>
 <span class="na">oidc.dbSchema</span><span class="o">=</span><span class="s">&lt;&lt;DATABASE_SCHEMA&gt;&gt;</span>
 <span class="na">oidc.jdbcProvider</span><span class="o">=</span><span class="s">&lt;&lt;JDBC_PROVIDER&gt;&gt;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h3 id="enablinginstalling-the-oidc-configuration-through-a-config-engine-task">Enabling/Installing the OIDC configuration through a config engine task</h3>
 <p>Run the config engine tasks to start the OIDC configuration for DX. To do this, run the following command:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh<span class="w"> </span>-DSaveParentProperties<span class="o">=</span><span class="nb">true</span><span class="w"> </span>-DparentProperties<span class="o">=</span><span class="s2">&quot;/opt/HCL/wp_profile/ConfigEngine/properties/oidc-config.properties&quot;</span><span class="w"> </span>enable-oidc-configuration
-</code></pre></div></td></tr></table></div>
+<div class="language-sh highlight"><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh<span class="w"> </span>-DSaveParentProperties<span class="o">=</span><span class="nb">true</span><span class="w"> </span>-DparentProperties<span class="o">=</span><span class="s2">&quot;/opt/HCL/wp_profile/ConfigEngine/properties/oidc-config.properties&quot;</span><span class="w"> </span>enable-oidc-configuration
+</code></pre></div>
 <h3 id="softgroups-with-db2">Softgroups with DB2</h3>
 <p>If you want to enable the softgroups with DB2 database, create a softgroup database by using the following SQL commands.</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>CREATE<span class="w"> </span>DATABASE<span class="w"> </span>sgdb
+<div class="language-sh highlight"><pre><span></span><code>CREATE<span class="w"> </span>DATABASE<span class="w"> </span>sgdb
 
 CONNECT<span class="w"> </span>TO<span class="w"> </span>sgdb<span class="w"> </span>USER<span class="w"> </span>db2inst1<span class="w"> </span>USING<span class="w"> </span>&lt;YOUR_DB_PASSWORD&gt;
 
@@ -4197,14 +4127,14 @@ CREATE<span class="w"> </span>TABLE<span class="w"> </span>softgrouptest.SOFTGRO
 CREATE<span class="w"> </span>INDEX<span class="w"> </span>softgrouptest.SOFTGROUPSIX1<span class="w"> </span>ON<span class="w"> </span>softgrouptest.SOFTGROUPS<span class="w"> </span><span class="o">(</span>LASTMODIFIED<span class="w"> </span>DESC<span class="o">)</span><span class="p">;</span>
 
 COMMIT<span class="p">;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Then, run the config engine tasks to start the OIDC configuration for DX. To do this, run the following command:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh<span class="w"> </span>-DSaveParentProperties<span class="o">=</span><span class="nb">true</span><span class="w"> </span>-DparentProperties<span class="o">=</span><span class="s2">&quot;/opt/HCL/wp_profile/ConfigEngine/properties/oidc-config.properties&quot;</span><span class="w"> </span>enable-oidc-configuration
-</code></pre></div></td></tr></table></div>
+<div class="language-sh highlight"><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh<span class="w"> </span>-DSaveParentProperties<span class="o">=</span><span class="nb">true</span><span class="w"> </span>-DparentProperties<span class="o">=</span><span class="s2">&quot;/opt/HCL/wp_profile/ConfigEngine/properties/oidc-config.properties&quot;</span><span class="w"> </span>enable-oidc-configuration
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>This document outlines the steps for DB2 and derby. For other databases, the steps may vary and using config tasks might not be supported.
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>This document outlines the steps for DB2 and derby. For other databases, the steps may vary and using config tasks might not be supported.
+</code></pre></div>
 </div>
 <h3 id="additional-configuration-required-for-softgroups">Additional configuration required for softgroups</h3>
 <p>Softgroups require additional manual steps for creating and managing groups and mapping users to roles/groups.</p>
@@ -4224,8 +4154,8 @@ COMMIT<span class="p">;</span>
 </ol>
 <h3 id="disablinguninstalling-the-oidc-configuration-through-a-config-engine-task">Disabling/Uninstalling the OIDC configuration through a config engine task</h3>
 <p>If you are having an issue with the automation enable/install script or are encountering issues with the manual configuration, you can run the disable-oidc-configuration config engine task to disable the OIDC configuration and revert to the original state. To do this, run the following command:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh<span class="w"> </span>-DSaveParentProperties<span class="o">=</span><span class="nb">true</span><span class="w"> </span>-DparentProperties<span class="o">=</span><span class="s2">&quot;/opt/HCL/wp_profile/ConfigEngine/properties/oidc-config.properties&quot;</span><span class="w"> </span>disable-oidc-configuration
-</code></pre></div></td></tr></table></div>
+<div class="language-sh highlight"><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh<span class="w"> </span>-DSaveParentProperties<span class="o">=</span><span class="nb">true</span><span class="w"> </span>-DparentProperties<span class="o">=</span><span class="s2">&quot;/opt/HCL/wp_profile/ConfigEngine/properties/oidc-config.properties&quot;</span><span class="w"> </span>disable-oidc-configuration
+</code></pre></div>
 <p>Additionally, if any of the configuration steps in the enable-oidc-configuration fails, the uninstall script automatically reverts the newly added config changes.</p>
 <h3 id="troubleshooting">Troubleshooting</h3>
 <p>You can refer to <code>ConfigTrace.log</code> resource for determining the state the server is in. The <code>ConfigTrace.log</code> should contain the history. The file should be located at <code>/opt/HCL/wp_profile/ConfigEngine/log/ConfigTrace.log</code>. In addition, you can also verify your configuration against the manual steps mentioned in <a href="../../">Configuring OIDC for HCL Digital Experience</a>.</p>

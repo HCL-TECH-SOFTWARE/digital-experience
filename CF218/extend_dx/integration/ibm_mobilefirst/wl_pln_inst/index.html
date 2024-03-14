@@ -2374,20 +2374,17 @@
 <li>User information</li>
 </ul>
 <p>These platform modules are loaded or not based on device class conditions, as you can see in the following plugin.xml code snippet for the <code>mf_android_70</code> module:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;module id=&quot;mf_android_70&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;module id=&quot;mf_android_70&quot;&gt;
             &lt;runtimeActivation&gt;
                 &lt;condition deviceClass=&quot;worklight+android&quot;/&gt;
             &lt;/runtimeActivation&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The <code>mf_android_70</code> module loads if the device class is both MobileFirst and Android. The device class is determined by the HCL Portal server that is based on the user agent string of the client device. For example, a user agent string for an Android phone looks like this example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Mozilla/5.0 (Linux; U; Android 4.0.4; en-gb; GT-I9300 Build/IMM76D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>Mozilla/5.0 (Linux; U; Android 4.0.4; en-gb; GT-I9300 Build/IMM76D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30
+</code></pre></div>
 <p>A MobileFirst hybrid application automatically appends <code>"/Worklight/version"</code> to the end of the user agent string, such as:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Mozilla/5.0 (Linux; U; Android 4.0.4; en-gb; GT-I9300 Build/IMM76D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30/Worklight/6.1.0.0
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>Mozilla/5.0 (Linux; U; Android 4.0.4; en-gb; GT-I9300 Build/IMM76D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30/Worklight/6.1.0.0
+</code></pre></div>
 <p>Windows Phone MobileFirst applications cannot modify the user agent. Instead, HCL Portal sets a session cookie that is called <code>wp.agent.ext</code> to "/Worklight" whenever it detects a <code>uri=wl:id</code> request parameter, and appends that cookie's value to the agent before it evaluates device classes. This parameter must be present on the initial request from the hybrid application or MobileFirst is not available on Windows Phone devices.</p>
 <p>Appropriate matching is used to determine the device classes from the user agent string. The device classes in turn determine the appropriate platform modules to load. For example, the <code>mf_android_70</code> native resources are loaded for a portal that runs in a MobileFirst hybrid application on an Android device. But it does not load in many other cases. For example, if it is on an iOS device, or if it is a portal that is not wrapped in a MobileFirst hybrid application, these resources do not load.</p>
 <p>The same portal pages adapt their capability that is automatically based on the context in which they are running. For example, a page can provide access to the device's camera if it runs in the context of a MobileFirst hybrid application. The same page cannot get access while it is running outside the context of a MobileFirst hybrid application.</p>

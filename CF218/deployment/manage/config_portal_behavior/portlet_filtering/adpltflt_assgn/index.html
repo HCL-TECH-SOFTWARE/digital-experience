@@ -3500,8 +3500,8 @@
 <p>To assign multiple portlet filters to a portlet, you define the portlet setting FilterChain and specify a list of filters separated by commas or semicolons as the value.</p>
 <p>To add this setting to the relevant portlet during run time, use the Modify Parameters option in the Manage Portlets portlet.</p>
 <p>The request will pass to the filters in the list in sequential order and then proceed to the portlet. The portlet response will then traverse back through all filters in reverse order. Refer to the following example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>FilterChain = MyTranscodingFilter, MyAdStripper
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>FilterChain = MyTranscodingFilter, MyAdStripper
+</code></pre></div>
 <p>In this filter chain example, the filters perform the following actions:</p>
 <ul>
 <li><code>MyTranscodingFilter</code> can transcode HTML to WML.</li>

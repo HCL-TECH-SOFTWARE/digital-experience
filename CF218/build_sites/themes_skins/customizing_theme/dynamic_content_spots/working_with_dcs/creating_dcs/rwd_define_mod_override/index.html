@@ -3660,8 +3660,8 @@
 <h1 id="creating-a-dynamic-content-spot-with-a-module">Creating a dynamic content spot with a module</h1>
 <p>In most situations, use the modularized approach to define dynamic content spots. This approach is more flexible than defining them through Resource Environment Providers. You can also switch the dynamic content spot per page and override existing content spot when you define them with a module.</p>
 <p>A dynamic content spot is defined in theme.html. You must create a module with the ID <code>85theme_topNav</code> and then add that module to a profile. The following example renders the top navigation.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;a rel=&quot;dynamic-content&quot; href=&quot;dyn-cs:id:85theme_topNav&quot;&gt;&lt;/a&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;a rel=&quot;dynamic-content&quot; href=&quot;dyn-cs:id:85theme_topNav&quot;&gt;&lt;/a&gt;
+</code></pre></div>
 <p>For more information, see <em>Modules and dynamic content spots</em>.</p>
 <ol>
 <li>
@@ -3669,24 +3669,7 @@
 <ul>
 <li>
 <p>The following example shows the definition of a module by using the JSON format. To define the override module as a JSON file. Add the file in WebDAV at fs-type1/themes/YourTheme/contributions/.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code>{ 
+<div class="language-text highlight"><pre><span></span><code>{ 
   &quot;modules&quot;: [{   
     &quot;id&quot; : &quot;topnavoverlay&quot;,
     &quot;prereqs&quot;: [{    
@@ -3704,7 +3687,7 @@
     }]
   }] 
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li>
 <p><strong><code>id</code></strong></p>
@@ -3730,16 +3713,7 @@
 </li>
 <li>
 <p>You can also define the override module in a plugin.xml file.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;extension point=&quot;com.ibm.portal.resourceaggregator.module&quot; id=&quot;topnavoverlay&quot; &gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;extension point=&quot;com.ibm.portal.resourceaggregator.module&quot; id=&quot;topnavoverlay&quot; &gt;
    &lt;module id=&quot;topnavoverlay&quot;&gt;
     &lt;preqreq id=&quot;wp_dynamicContentSpots_85&quot;/&gt;
     &lt;contribution type=&quot;dyn-cs&quot;&gt;
@@ -3749,7 +3723,7 @@
      &lt;/contribution&gt;
    &lt;/module&gt;
  &lt;/extension&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li>
 <p><strong><code>extension id</code></strong></p>
@@ -3778,18 +3752,13 @@
 <li>
 <p>Include the module in a profile.</p>
 <p>For example, in newtopnav_profile.json.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>{{
+<div class="language-text highlight"><pre><span></span><code>{{
   {
       &quot;moduleIDs&quot;: [
       &quot;topnavoverlay&quot;,
       ...
 }}
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The newtopnav_profile.json file must be copied to WebDAV at fs-type1/themes/YourTheme/profiles/. For more information, see <em>Create a module profile</em>.</p>
 </li>
 <li>

@@ -3455,48 +3455,10 @@
 </table>
 <h2 id="create">Create</h2>
 <p>A component can be created by sending a POST request to the following URI with an Atom entry that represents the component:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/&lt;library-component-api-type&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/&lt;library-component-api-type&gt;
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span></pre></div></td><td class="code"><div><pre><span></span><code>POST /wps/mycontenthandler/wcmrest/LibraryNumericComponent HTTP/1.0
+<div class="language-text highlight"><pre><span></span><code>POST /wps/mycontenthandler/wcmrest/LibraryNumericComponent HTTP/1.0
 Content-Type: application/atom+xml
 
 &lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;wcm/namespace&quot;&gt;
@@ -3535,51 +3497,13 @@ Content-location: /wps/mycontenthandler/!ut/p/wcmrest/LibraryNumericComponent/0d
     &lt;wcm:type&gt;NUMERIC&lt;/wcm:type&gt;
     &lt;wcm:state&gt;PUBLISHED&lt;/wcm:state&gt;
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="update">Update</h2>
 <p>A component can be updated by sending a PUT request to the following URI with an Atom entry that includes the fields of the item that need to be changed.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/&lt;library-component-api-type&gt;/&lt;itemuuid&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/&lt;library-component-api-type&gt;/&lt;itemuuid&gt;
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span></pre></div></td><td class="code"><div><pre><span></span><code>PUT /wps/mycontenthandler/wcmrest/LibraryNumericComponent/c98d11e1-7f2a-480e-9aac-40eb1949cbda HTTP/1.0
+<div class="language-text highlight"><pre><span></span><code>PUT /wps/mycontenthandler/wcmrest/LibraryNumericComponent/c98d11e1-7f2a-480e-9aac-40eb1949cbda HTTP/1.0
 Content-type : application/atom+xml
 
 &lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;wcm/namespace&quot;&gt;
@@ -3618,43 +3542,13 @@ Content-type: application/atom+xml; type=entry
     &lt;wcm:type&gt;NUMERIC&lt;/wcm:type&gt;
     &lt;wcm:state&gt;PUBLISHED&lt;/wcm:state&gt;
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="read">Read</h2>
 <p>A component can be read by sending a GET request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/&lt;library-component-api-type&gt;/&lt;itemuuid&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/&lt;library-component-api-type&gt;/&lt;itemuuid&gt;
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code>GET /wps/mycontenthandler/wcmrest/LibraryNumericComonent/0d678334-69ae-4d3a-a525-91bb551e5a18 HTTP/1.0
+<div class="language-text highlight"><pre><span></span><code>GET /wps/mycontenthandler/wcmrest/LibraryNumericComonent/0d678334-69ae-4d3a-a525-91bb551e5a18 HTTP/1.0
 
 
 HTTP/1.0 200 OK
@@ -3685,59 +3579,43 @@ Content-type: application/atom+xml; type=entry
     &lt;wcm:type&gt;NUMERIC&lt;/wcm:type&gt;
     &lt;wcm:state&gt;PUBLISHED&lt;/wcm:state&gt;
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="delete">Delete</h2>
 <p>A component can be deleted by sending a DELETE request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/&lt;library-component-api-type&gt;/&lt;itemuuid&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/&lt;library-component-api-type&gt;/&lt;itemuuid&gt;
+</code></pre></div>
 <p>For example:</p>
 <ul>
 <li>
 <p><strong>DELETE</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 DELETE
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 DELETE
 http://host:port/wps/mycontenthandler/wcmrest/LibraryNumericComponent/&lt;itemuuid&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Response</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>Status Code :200
+<div class="language-text highlight"><pre><span></span><code>Status Code :200
 Status Message : OK
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="specifying-raw-data">Specifying raw data</h2>
 <p>The content of a component is accessed from the location that is specified in the HREF attribute of the edit-media link. The link also contains a TYPE attribute that contains the accepted media type for the content. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;link rel=&quot;edit-media&quot; type=&quot;text/plain&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;link rel=&quot;edit-media&quot; type=&quot;text/plain&quot; 
 href=&quot;/wps/mycontenthandler/!ut/p/wcmrest/LibraryTextComponent/0d678334-69ae-4d3a-a525-91bb551e5a18&quot;/&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>A complete list of media types are documented here: <a href="../../wcm_rest_referencematerial/wcm_rest_media_types/">Supported media types</a>.</p>
 <p>To update content of a library component PUT content in an accepted media type to the edit-media URL. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>PUT /wps/mycontenthandler/!ut/p/wcmrest/LibraryTextComponent/0d678334-69ae-4d3a-a525-91bb551e5a18 HTTP/1.0
+<div class="language-text highlight"><pre><span></span><code>PUT /wps/mycontenthandler/!ut/p/wcmrest/LibraryTextComponent/0d678334-69ae-4d3a-a525-91bb551e5a18 HTTP/1.0
 Content-type: text/plain
 
 This is some text to add to the component.
 
 
 HTTP/1.0 200 OK
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To retrieve content from a library component GET content from the edit-media URL. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>GET  /wps/mycontenthandler/!ut/p/wcmrest/LibraryTextComponent/0d678334-69ae-4d3a-a525-91bb551e5a18 HTTP/1.0
+<div class="language-text highlight"><pre><span></span><code>GET  /wps/mycontenthandler/!ut/p/wcmrest/LibraryTextComponent/0d678334-69ae-4d3a-a525-91bb551e5a18 HTTP/1.0
 Accept: text/plain
 
 
@@ -3745,22 +3623,16 @@ HTTP/1.0 200 OK
 Content-type: text/plain
 
 This is some text to add to the component.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>An alternative to specifying the media type in the HTTP accept header is to use the request parameter mime-type. You must URL encode the value. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>GET  /wps/mycontenthandler/!ut/p/wcmrest/LibraryTextComponent/0d678334-69ae-4d3a-a525-91bb551e5a18?mime-type=text%2Fplain HTTP/1.0
+<div class="language-text highlight"><pre><span></span><code>GET  /wps/mycontenthandler/!ut/p/wcmrest/LibraryTextComponent/0d678334-69ae-4d3a-a525-91bb551e5a18?mime-type=text%2Fplain HTTP/1.0
 
 
 HTTP/1.0 200 OK
 Content-type: text/plain
 
 This is some text to add to the component.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

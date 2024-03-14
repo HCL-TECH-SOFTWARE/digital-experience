@@ -4157,8 +4157,8 @@
 <p><strong>hasAddChildPermission</strong></p>
 <p>Determine whether the page is a non-private page and the current user has contributor, editor, manager, or admin permission for the specified page.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code> ${wp.ac[wp.selectionModel.selected].hasAddChildPermission}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code> ${wp.ac[wp.selectionModel.selected].hasAddChildPermission}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: Boolean; true if the check is successful, otherwise false.</p>
 </li>
@@ -4166,8 +4166,8 @@
 <p><strong>hasEditSharedPermission</strong></p>
 <p>Determines whether the page is a non-private page and the current user has editor, manager, or admin permission for the specified page.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.ac[wp.selectionModel.selected].hasEditSharedPermission}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.ac[wp.selectionModel.selected].hasEditSharedPermission}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: Boolean; true if the check is successful, otherwise false.</p>
 </li>
@@ -4175,8 +4175,8 @@
 <p><strong>hasPersonalizePermission</strong></p>
 <p>Determines whether the specified page is a private page and the current user has PRIVILEGED_USER permission.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.ac[wp.selectionModel.selected].hasPersonalizePermission}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.ac[wp.selectionModel.selected].hasPersonalizePermission}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: Boolean; true if the check is successful, otherwise false.</p>
 </li>
@@ -4184,12 +4184,10 @@
 <p><strong>hasPermission</strong></p>
 <p>Determines whether the resource has a specific permission. Attribute is the case in-sensitive name of the <code>com.ibm.portal.ac.data.RoleType</code>.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.ac[wp.selectionModel.selected].hasPermission[&#39;Administrator&#39;]}
+<div class="language-text highlight"><pre><span></span><code>${wp.ac[wp.selectionModel.selected].hasPermission[&#39;Administrator&#39;]}
 ${wp.ac[wp.selectionModel.selected].hasPermission[&#39;ManageR&#39;]}
 ${wp.ac[wp.selectionModel.selected].hasPermission[&#39;editor&#39;]}
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: Boolean; true if the check is successful, otherwise false.</p>
 </li>
@@ -4197,8 +4195,8 @@ ${wp.ac[wp.selectionModel.selected].hasPermission[&#39;editor&#39;]}
 <p><strong>isPrivate</strong></p>
 <p>Determines whether the specified page is private.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code> ${wp.ac[wp.selectionModel.selected].isPrivate}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code> ${wp.ac[wp.selectionModel.selected].isPrivate}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: Boolean; true if the page is private, false if it is not.</p>
 </li>

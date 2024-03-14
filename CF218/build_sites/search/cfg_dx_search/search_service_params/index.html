@@ -3355,8 +3355,8 @@
 </li>
 </ul>
 <p>The following example shows the boost parameters and some sample values.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>{&quot;phraseBoost&quot;: {&quot;Enabled&quot;:&quot;true&quot;}, &quot;fieldBoost&quot;: [{&quot;field&quot;:&quot;title&quot;, &quot;boost&quot;: 3.0} , {&quot;field&quot;:&quot;description&quot;, &quot;boost&quot;:3.0}, {&quot;field&quot;:&quot;keywords&quot;, &quot;boost&quot;:2.0}]}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>{&quot;phraseBoost&quot;: {&quot;Enabled&quot;:&quot;true&quot;}, &quot;fieldBoost&quot;: [{&quot;field&quot;:&quot;title&quot;, &quot;boost&quot;: 3.0} , {&quot;field&quot;:&quot;description&quot;, &quot;boost&quot;:3.0}, {&quot;field&quot;:&quot;keywords&quot;, &quot;boost&quot;:2.0}]}
+</code></pre></div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>After you set these values, restart the portal server. If you changed your content items to test your settings, recrawl your content to see the effects of the settings. Readjust the settings to find the best values for your search data.</p>

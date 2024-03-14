@@ -2622,18 +2622,13 @@
 <li>
 <p><strong>Custom Properties (Hidden)</strong></p>
 <p>This field is an optional input field. It is hidden by default. To make it show, click <strong>Show hidden fields</strong> at the beginning or end of the screen. Add one or more custom properties in this input field. You can use such more custom properties to add more flexibility to the layout of your list as required. For example, you can change the layout of your social list by defining a specific condition that uses the custom property added in this field. The following code sample shows how you change the color of the social list heading by specifying the string <code>blue</code> at the <code>Custom Properties</code> element:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:Equals text1=&quot;blue&quot; text2=&quot;[Element context=&#39;current&#39; type=&#39;content&#39; key=&#39;custom&#39;]&quot;]
+<div class="language-text highlight"><pre><span></span><code>[Plugin:Equals text1=&quot;blue&quot; text2=&quot;[Element context=&#39;current&#39; type=&#39;content&#39; key=&#39;custom&#39;]&quot;]
    &lt;h2 style=&quot;color:blue;&quot;&gt;[Property context=&quot;current&quot; type=&quot;content&quot; field=&quot;title&quot;]&lt;/h2&gt;
 [/Plugin:Equals]
 [Plugin:NotEquals text1=&quot;blue&quot; text2=&quot;[Element context=&#39;current&#39; type=&#39;content&#39; key=&#39;custom&#39;]&quot;]
    &lt;h2 style=&quot;color:black;&quot;&gt;[Property context=&quot;current&quot; type=&quot;content&quot; field=&quot;title&quot;]&lt;/h2&gt;
 [/Plugin:NotEquals]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Custom Link Resolution Root Page (Hidden)</strong></p>

@@ -2693,8 +2693,8 @@
 <li>Localized elements can be referenced from the current site area.</li>
 <li>
 <p>Localized components can be referenced by prefixing the name attribute in the component tag with <code>name="./item"</code>. By using dot notation in component tags, the library name is not resolved from the current library until the item is rendered. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;component name=&quot;./my_component&quot; /&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;component name=&quot;./my_component&quot; /&gt;
+</code></pre></div>
 </li>
 </ul>
 <p>In other cases however, a locale requires such different presentation that an entirely different template is required. For example, to support locales with languages that read right to left, or for locales with different branding.</p>
@@ -2741,16 +2741,7 @@
 <p>When creating a navigator, if the <strong>Current site area</strong> or <strong>Current content</strong> options are used, you can reuse navigators across multilingual sites.</p>
 <p>Navigators that use selected start positions cannot easily be shared across locales. To use these types of navigators, the <code>name="./item"</code> parameter must be used to retrieve localized components.</p>
 <p>Another way of localizing a navigator is to use a JSP fragment to set a different context before rendering the navigator. The navigator would be set to use the <strong>Current site area</strong> as the starting point, and by changing the context that you can manipulate this start area by using code. Because the code uses a path lookup, the same JSP fragment works in all of your localized sites.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%@ page import=&quot;com.ibm.workplace.wcm.api.*&quot; %&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;%@ page import=&quot;com.ibm.workplace.wcm.api.*&quot; %&gt;
 &lt;%@ taglib uri=&quot;/WEB-INF/tld/wcm.tld&quot; prefix=&quot;wcm&quot; %&gt;
 &lt;wcm:initworkspace user=&quot;&lt;%= request.getUserPrincipal() %&gt;&quot; /&gt;
 &lt;% 
@@ -2760,7 +2751,7 @@ String navStart = currentLibrary+&quot;/mySiteArea&quot;;
 %&gt;
 &lt;wcm:setExplicitContext path=&quot;&lt;%=navStart%&gt;&quot;/&gt;
 &lt;wcm:libraryComponent name=&quot;theNavigator&quot; library=&quot;theLibrary&quot; /&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>In this example:</p>
 <ul>
 <li><code>./mySiteArea</code> is the path.</li>
@@ -2771,18 +2762,7 @@ String navStart = currentLibrary+&quot;/mySiteArea&quot;;
 <p>Menus that use the <strong>Current content site area</strong> option can be reused across multilingual sites.</p>
 <p>Menus that use selected site areas cannot easily be shared across locales. To use these types of menus, the dot notation parameter must be used to retrieve localized versions.</p>
 <p>Another way of localizing a menu is to use a JSP fragment to allow a list of site areas to be specified at render time. Because the path is the same for each locale, the same JSP fragment works in all of your localized sites.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%@ page import=&quot;com.ibm.workplace.wcm.api.*, java.util.*&quot;%&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;%@ page import=&quot;com.ibm.workplace.wcm.api.*, java.util.*&quot;%&gt;
 &lt;%@ taglib uri=&quot;/WEB-INF/tld/wcm.tld&quot; prefix=&quot;wcm&quot; %&gt;
 &lt;wcm:initworkspace user=&quot;&lt;%= request.getUserPrincipal() %&gt;&quot; /&gt;
 &lt;% 
@@ -2794,7 +2774,7 @@ myparams.put(&quot;SiteAreas&quot;, currentLibrary+&quot;/mySite/mySiteArea1,&qu
 %&gt;
 &lt;wcm:setExplicitContext path=&quot;&lt;%=currentPath%&gt;&quot; requestParameters=&quot;&lt;%=myparams%&gt;&quot;/&gt;
 &lt;wcm:libraryComponent name=&quot;theMenu&quot; library=&quot;theLibrary&quot; /&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>In this example:</p>
 <ul>
 <li><code>theMenu</code> refers to the menu component.</li>

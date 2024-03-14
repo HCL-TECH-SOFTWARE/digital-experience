@@ -3089,21 +3089,7 @@
 <li>
 <p>In the theme, that you want configure, for short stateless URLs, set the parameter <code>com.ibm.portal.theme.hasBaseURL</code> to true.</p>
 <p>You can update the theme parameter by using the XML configuration interface. Here is an example XML script:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 
 &lt;request
    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
@@ -3118,7 +3104,7 @@
       &lt;/theme&gt;
    &lt;/portal&gt;
 &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Make sure that all generated URLs in the theme do not include the navigational state.</p>
@@ -3137,17 +3123,15 @@
 </li>
 <li>
 <p>Search for the string <code>&lt;a href="?uri=nm:oid:${wp.identification[node]}" class="wpthemeLeft${titleClass}"&gt;</code> and change it to the following code snippet:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portal-navigation:urlGeneration contentNode=&quot;${wp.identification[node]}&quot; keepNavigationalState=&quot;false&quot;&gt;    
+<div class="language-text highlight"><pre><span></span><code>&lt;portal-navigation:urlGeneration contentNode=&quot;${wp.identification[node]}&quot; keepNavigationalState=&quot;false&quot;&gt;    
 &lt;a href=&quot;&lt;%wpsURL.write(out);%&gt;&quot; class=&quot;wpthemeLeft${titleClass}&quot;&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Locate the first <code>&lt;/a&gt;</code> tag after the updated string <code>&lt;a href="&lt;%wpsURL.write(out);%&gt;"</code> and change it to the following code snippet:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;/a&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;/a&gt;
 &lt;/portal-navigation:urlGeneration&gt; 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 <p>To change the file sideNavigation.jsp, proceed as follows:</p>
@@ -3160,17 +3144,15 @@
 </li>
 <li>
 <p>Search for the string <code>&lt;a href="?uri=nm:oid:${wp.identification[node]}" class="&lt;c:if test="${isSelectedNode}"&gt; wpthemeSelected&lt;/c:if&gt;${titleClass}"&gt;</code> and change it to the following code snippet:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portal-navigation:urlGeneration contentNode=&quot;${wp.identification[node]}&quot; keepNavigationalState=&quot;false&quot;&gt;    
+<div class="language-text highlight"><pre><span></span><code>&lt;portal-navigation:urlGeneration contentNode=&quot;${wp.identification[node]}&quot; keepNavigationalState=&quot;false&quot;&gt;    
 &lt;a href=&quot;&lt;%wpsURL.write(out);%&gt;&quot; class=&quot;&lt;c:if test=&quot;${isSelectedNode}&quot;&gt;wpthemeSelected&lt;/c:if&gt;${titleClass}&quot;&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Locate the first <code>&lt;/a&gt;</code> tag after the updated string <code>&lt;a href="&lt;%wpsURL.write(out);%&gt;"</code> and change it to the following code snippet:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;/a&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;/a&gt;
 &lt;/portal-navigation:urlGeneration&gt; 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 </li>
@@ -3185,17 +3167,15 @@
 </li>
 <li>
 <p>Search for the string <code>&lt;a href="?uri=nm:oid:${nodeID}"&gt;</code> and change it to the following code snippet:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portal-navigation:urlGeneration contentNode=&quot;${nodeID}&quot; keepNavigationalState=&quot;false&quot;&gt;    
+<div class="language-text highlight"><pre><span></span><code>&lt;portal-navigation:urlGeneration contentNode=&quot;${nodeID}&quot; keepNavigationalState=&quot;false&quot;&gt;    
 &lt;a href=&quot;&lt;%wpsURL.write(out);%&gt;&quot;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Locate the first <code>&lt;/a&gt;</code> tag after the updated string <code>&lt;a href="&lt;%wpsURL.write(out);%&gt;"</code> and change it to the following code snippet:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;/a&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;/a&gt;
 &lt;/portal-navigation:urlGeneration&gt; 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 </li>
@@ -3210,12 +3190,10 @@
 <li>
 <p>You might want to present language-specific portal pages with stateless friendly URLs to your site visitors. In this case, structure your portal site to reflect which pages or pages are targeted for specific countries or regions.</p>
 <p>For example, you can create a node for a specific page, and then create language-specific child pages under that node. Example: In the node <code>home</code>, you create pages in English, French, and German. You can then give your site visitors the appropriate one of the following friendly URLs:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>http://www.myco.com/wps/home/en/shop
+<div class="language-text highlight"><pre><span></span><code>http://www.myco.com/wps/home/en/shop
 http://www.myco.com/wps/home/fr/shop
 http://www.myco.com/wps/home/de/shop
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 <p>The portal now no longer displays the state information with the URLs.</p>

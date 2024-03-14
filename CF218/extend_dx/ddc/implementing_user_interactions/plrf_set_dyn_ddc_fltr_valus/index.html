@@ -2160,20 +2160,14 @@
 <h1 id="setting-dynamic-digital-data-connector-filter-values">Setting dynamic Digital Data Connector filter values</h1>
 <p>Digital Data Connector (DDC) for HCL Portal defines a dedicated public render parameter that can be used by DDC plug-ins for filtering lists.</p>
 <p>You can set the value of the DDC filter public render parameter by submitting an HTML form that addresses the URI <code>ddc:filter</code> by using an HTTP get method. You can create the HTML form by using HCL Web Content Manager design components. The following HTML fragment shows a simple search form:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;form action=&quot;.&quot; method=&quot;get&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;form action=&quot;.&quot; method=&quot;get&quot;&gt;
    &lt;input type=&quot;hidden&quot; name=&quot;uri&quot; value=&quot;ddc:filter&quot; /&gt;
    &lt;input type=&quot;hidden&quot; name=&quot;prefix&quot; value=&quot;&lt;your DDC filter prefix&gt;&quot; /&gt;
    &lt;input type=&quot;hidden&quot; name=&quot;action&quot; value=&quot;set&quot; /&gt;
    &lt;input name=&quot;value&quot; type=&quot;text&quot; value=&quot;Enter keywords&quot; title=&quot;Search keywords&quot; /&gt;
    &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; name=&quot;submitButton&quot; /&gt; 
 &lt;/form&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>When you define such HTML form, take care of the following aspects:</p>
 <ul>
 <li>Set the form action attribute to a period (<code>.</code>) and the form method attribute to <code>get</code>.</li>

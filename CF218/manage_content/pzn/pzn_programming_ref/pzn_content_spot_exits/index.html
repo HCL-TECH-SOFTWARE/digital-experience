@@ -2689,10 +2689,9 @@
 <ol>
 <li>
 <p>Specify a <code>RuleExit</code> class in PersonalizationService.properties, as shown:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>rulesEngine.defaultRuleExit=com.ibm.websphere.personalization.RuleExitSample
+<div class="language-text highlight"><pre><span></span><code>rulesEngine.defaultRuleExit=com.ibm.websphere.personalization.RuleExitSample
     ...
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>At startup time, the Personalization run-time environment creates an instance of that class (<code>aRuleExit</code> in this scenario) and caches it in a private <code>RuleTrigger</code> static method</p>

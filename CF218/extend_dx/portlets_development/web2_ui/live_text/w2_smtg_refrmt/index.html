@@ -2759,12 +2759,10 @@
 <p>The class attribute can be attached to any HTML element and that it can have multiple values, which are separated by spaces. Therefore, you can annotate any HTML element in your output with a click-to-action class, even if it has already a class attribute for CSS formatting.</p>
 </div>
 <p>Sources for Live text are span (<code>&lt;span&gt;</code>) or division (<code>&lt;div&gt;</code>) elements that are annotated with a <code>c2a:source</code> class. Targets are HTML form (<code>&lt;form&gt;</code>) elements that are annotated with a <code>c2a:target</code> class. Both sources and targets have mandatory and optional properties. These properties are provided by annotated subelements of the main source or target tag. The property value is the entire content of the annotated property element with leading and trailing white spaces removed Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;b class=&quot;c2a:value&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;b class=&quot;c2a:value&quot;&gt;
     johndoe@cntserv_exmp.com
 &lt;/b&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>represents a <code>c2a:value</code> property with the value <code>johndoe@acme.com</code>. In many cases some of the source or target content is only relevant for the click-to-action framework but not for the user. In such cases, you might want to hide that part of the source or target content from rendering. To do this action, use the HTML attribute <code>style="display:none"</code>.</p>
 <h2 id="source-tag">Source tag</h2>
 <p>The source tag must be an HTML span (<code>&lt;span&gt;</code>) or division (<code>&lt;div&gt;</code>) elements that are annotated with a <code>c2a:source</code> class. The properties of a source tag are as follows:</p>
@@ -2800,25 +2798,12 @@
 </tbody>
 </table>
 <p>When the portal finds one or more matching targets for a source tag, the <code>c2a:anchor</code> subelement is marked as an active click-to-action source. And hovering over the element displays a click-to-action menu trigger. You can control the way that source anchors are displayed in the browser by the CSS file <code>styles.css</code> that is located under the directory c:<code>\IBM\WebSphere\PortalServer\ui\wp.tagging.liveobject\semTagEar\Live_Object\Framework.ear\Live_Object_Framework.war\ui</code>. The decoration for elements that offer a hover menu is defined by the following styles by default:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>.hasHover { border-bottom: 1px dotted #306bc4; }
+<div class="language-text highlight"><pre><span></span><code>.hasHover { border-bottom: 1px dotted #306bc4; }
 img.hasHover { padding:1px; border:1px dotted #306bc4; }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The value of the property <code>c2a:typename</code> is used to match sources to targets. This value can have an XML namespace associated to avoid unintended type name clashes. As plain HTML does not support the use of standard XML namespaces and namespace prefixes, a namespaced name is represented as <code>namespaceURI#localPart</code>.</p>
 <p>Source tag example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;div class=&quot;c2a:source someotherclass&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;div class=&quot;c2a:source someotherclass&quot;&gt;
     &lt;span class=&quot;c2a:typename&quot; 
           style=&quot;display:none&quot;&gt;http://www.ibm.com/xmlns/prod/datatype#email822&lt;/span&gt;
     &lt;p&gt;some content that is not relevant to click-to-action, also to make clear 
@@ -2831,7 +2816,7 @@ img.hasHover { padding:1px; border:1px dotted #306bc4; }
         &lt;b&gt;&lt;c&gt;You can add an optional header to your action menu&lt;/c&gt;&lt;/b&gt;
   &lt;/p&gt; 
 &lt;/div&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="target-tag">Target tag</h2>
 <p>The target tag must be an HTML form (<code>&lt;form&gt;</code>) that is annotated with a <code>c2a:target</code> class. The properties of a target tag are as follows:</p>
 <table>
@@ -2861,37 +2846,26 @@ img.hasHover { padding:1px; border:1px dotted #306bc4; }
 </tbody>
 </table>
 <p>When the portal finds one or more matching targets for a source tag, the <code>c2a:anchor</code> subelement is marked as an active click-to-action source. And hovering over the element displays a click-to-action menu trigger. You can control the way that source anchors are displayed in the browser by the CSS file <code>styles.css</code> that is located under the directory c:<code>\IBM\WebSphere\PortalServer\ui\wp.tagging.liveobject\semTagEar\Live_Object\Framework.ear\Live_Object_Framework.war\ui</code>. The decoration for elements that offer a hover menu is defined by the following styles by default:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>.hasHover { border-bottom: 1px dotted #306bc4; }
+<div class="language-text highlight"><pre><span></span><code>.hasHover { border-bottom: 1px dotted #306bc4; }
 img.hasHover { padding:1px; border:1px dotted #306bc4; }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>When a target is selected from a click-to-action menu, the corresponding HTML form is processed as if a user submitted it. The input field that was annotated as <code>c2a:action-param</code> is filled with the source data. Then, JavaScript <code>onsubmit</code> handlers are started, and finally the portal sends the form to its target URL. The target URL must point to the server-side target for click-to-action. If you want to implement a client-side click-to-action handler, use an <code>onsubmit</code> handler on the form. The JavaScript handler can retrieve the form and the input value from the page Document Object Model (DOM). But for convenience, the source data is also passed in the global variable <code>window.ibm.portal.c2a.event.value</code>.</p>
 <p>Target tag example for a server-side handler:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;FORM class=&quot;c2a:target&quot; action=&quot;/myapp/do.something&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;FORM class=&quot;c2a:target&quot; action=&quot;/myapp/do.something&quot;&gt;
     &lt;span class=&quot;c2a:typename&quot;&gt; http://www.ibm.com/xmlns/prod/datatype#email822&lt;/span&gt;
     &lt;p class=&quot;c2a:action-label&quot;&gt;Show inbox&lt;/p&gt; 
        Email: &lt;input type=&quot;text&quot; class=&quot;c2a:action-param&quot; name=&quot;someInputName&quot;&gt; 
     &lt;input type=&quot;submit&quot;&gt;
 &lt;/FORM&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Target tag example for a client-side handler:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;FORM class=&quot;c2a:target&quot; onsubmit=&quot;doSomething(this);return false&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;FORM class=&quot;c2a:target&quot; onsubmit=&quot;doSomething(this);return false&quot; 
       action=&quot;javascript:void(0)&quot; style=&quot;display:none&quot;&gt; 
     &lt;span class=&quot;c2a:typename&quot;&gt; http://www.ibm.com/xmlns/prod/datatype#email822&lt;/span&gt;
     &lt;p class=&quot;c2a:action-label&quot;&gt;Show inbox&lt;/p&gt; 
     &lt;input type=&quot;text&quot; class=&quot;c2a:action-param&quot; name=&quot;someInputName&quot;&gt;
 &lt;/FORM&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

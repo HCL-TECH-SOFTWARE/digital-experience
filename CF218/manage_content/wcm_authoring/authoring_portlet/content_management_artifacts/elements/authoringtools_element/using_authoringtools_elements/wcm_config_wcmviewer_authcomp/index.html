@@ -5096,15 +5096,7 @@
 <h2 id="authoring-tools-components-that-open-in-a-window">Authoring tools components that open in a window</h2>
 <p>When you use a window to display an authoring task, the window opens on the portal page and can be moved within the boundaries of the browser window while still showing the portal page. After you complete the task that is triggered by the authoring tools element, the window closes automatically, and the portal page refreshes, updating the view in the web content viewer. You can cancel the authoring task by clicking the close icon in the window's title bar. When a task is canceled, no web content information is saved, unless you explicitly save changes before manually closing the window.</p>
 <p>The default value of the <code>format</code> attribute for a placeholder tag is <code>tag</code>, so to use a window for inline editing, it is not necessary to specify a value for the <code>format</code> attribute. Either of the following design examples creates a URL that opens a window for authoring tasks:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;Placeholder tag=&quot;namelink&quot;/&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;Placeholder tag=&quot;namelink&quot;/&gt;
 &lt;Placeholder tag=&quot;namelink&quot; format=&quot;tag&quot;/&gt;
 
 &lt;a href=&quot;&lt;Placeholder tag=&quot;href&quot;/&gt;&quot;&gt;
@@ -5113,7 +5105,7 @@
 &lt;a href=&quot;&lt;Placeholder tag=&quot;href&quot; format=&quot;tag&quot;/&gt;&quot;&gt;
   &lt;Placeholder tag=&quot;name&quot;/&gt;
 &lt;/a&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>It is not possible to open the window in a separate browser window by adding <code>target="_blank"</code> to the HTML anchor tag in the design.</p>
@@ -5121,14 +5113,7 @@
 <h2 id="authoring-tools-components-that-open-on-another-page">Authoring tools components that open on another page</h2>
 <p>Instead of running tasks from authoring tools elements in a window on the current page, you can open authoring tasks by browsing to a hidden portal page that contains a web content viewer that contains the reserved authoring portlet. Clicking a link for an authoring tools element automatically redirects you to the other page, but after you complete the authoring task, you must manually browse back to the original page. If the page with the reserved authoring portlet was opened in a new browser window or tab, you must close the window or tab and manually refresh the original page to see any changes.</p>
 <p>To redirect users to another page for authoring tasks, specify a value of <code>url</code> for the <code>format</code> attribute in the placeholder tag in the authoring tools element design. Either of the following design examples creates a URL that redirects users to another portal page for authoring tasks:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;Placeholder tag=&quot;namelink&quot; format=&quot;url&quot;/&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;Placeholder tag=&quot;namelink&quot; format=&quot;url&quot;/&gt;
 
 &lt;a href=&quot;&lt;Placeholder tag=&quot;href&quot; format=&quot;url&quot;/&gt;&quot;&gt;
   &lt;Placeholder tag=&quot;name&quot;/&gt;
@@ -5136,7 +5121,7 @@
 &lt;a href=&quot;&lt;Placeholder tag=&quot;href&quot; format=&quot;url&quot;/&gt;&quot; target=&quot;_blank&quot;&gt;
   &lt;Placeholder tag=&quot;name&quot;/&gt;
 &lt;/a&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You can open the portal page in a separate browser window by adding <code>target="_blank"</code> to the HTML anchor tag in the design.</p>

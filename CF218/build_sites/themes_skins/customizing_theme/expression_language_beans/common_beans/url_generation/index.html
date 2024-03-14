@@ -4301,15 +4301,15 @@
 <p><strong>autoNavigationalState</strong></p>
 <p>The configuration determines if the navigational state is included in the URL. See the description for <code>stateless.urls.enabled</code>, <code>generate.stateless.redirect.urls</code> and <code>generate.stateless.urls</code> of <em>Configuration Service</em>. Parameters: none. Returns: <a href="./">UrlGeneration</a>, which is the same object, so multiple method calls can be concatenated.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.autoNavigationalState}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.autoNavigationalState}
+</code></pre></div>
 </li>
 <li>
 <p><strong>keepNavigationalState</strong></p>
 <p>The navigational state is included into the URL.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.keepNavigationalState}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.keepNavigationalState}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="./">UrlGeneration</a>, which is the same object, so multiple method calls can be concatenated.</p>
 </li>
@@ -4317,8 +4317,8 @@
 <p><strong>noNavigationalState</strong></p>
 <p>The current navigational state that includes all portlet modes, states, and render parameters is not included in the URL, and the portal is reset to its default state.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.noNavigationalState}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.noNavigationalState}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="./">UrlGeneration</a>, which is the same object, so multiple method calls can be concatenated.</p>
 </li>
@@ -4326,8 +4326,8 @@
 <p><strong>setParam(name, value)</strong></p>
 <p>Use this attribute to add parameters to the URL. Parameters added to the URLGeneration object occur as unscoped query parameters. Parameter handling depends on the target of the URL. If the URL points to a page, the parameters are visible to all HCL portlets on that page. Parameters are not visible to standard portlets if the URL does not point specifically to that portlet.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.setParam(&#39;a&#39;,&#39;b&#39;)}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.setParam(&#39;a&#39;,&#39;b&#39;)}
+</code></pre></div>
 <p>Parameters:</p>
 <ul>
 <li>
@@ -4345,8 +4345,8 @@
 <p><strong>setLocale(locale)</strong></p>
 <p>Use this attribute to change the active language in the navigational state in which the URL is generated.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.setLocale(&#39;de&#39;)}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.setLocale(&#39;de&#39;)}
+</code></pre></div>
 <p>Parameters:</p>
 <ul>
 <li>
@@ -4360,8 +4360,8 @@
 <p><strong>clearThemeTemplate</strong></p>
 <p>Removes the theme template from the navigational state.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.clearThemeTemplate}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.clearThemeTemplate}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="./">UrlGeneration</a>, which is the same object, so multiple method calls can be concatenated.</p>
 </li>
@@ -4369,8 +4369,8 @@
 <p><strong>setThemeTemplate(template)</strong></p>
 <p>This specifies the theme template that is taken for rendering the requested page. Can be referenced as either a JSP or a class and is used as theme for this URL.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.setThemeTemplate(&#39;Plain&#39;)}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.setThemeTemplate(&#39;Plain&#39;)}
+</code></pre></div>
 <p>Parameters:</p>
 <ul>
 <li>
@@ -4384,8 +4384,8 @@
 <p><strong>secure</strong></p>
 <p>This attribute creates a secure URL (HTTPS).</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.secure}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.secure}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="./">UrlGeneration</a>, which is the same object, so multiple method calls can be concatenated.</p>
 </li>
@@ -4393,8 +4393,8 @@
 <p><strong>unsecure</strong></p>
 <p>This attribute creates an unsecure URL (HTTP).</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.unsecure}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.unsecure}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="./">UrlGeneration</a>, which is the same object, so multiple method calls can be concatenated.</p>
 </li>
@@ -4402,8 +4402,8 @@
 <p><strong>forceProtected</strong></p>
 <p>This attribute creates a URL pointing to the protected (logged in) page of the portal.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.forceProtected}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.forceProtected}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="./">UrlGeneration</a>, which is the same object, so multiple method calls can be concatenated.</p>
 </li>
@@ -4411,8 +4411,8 @@
 <p><strong>forcePublic</strong></p>
 <p>This attribute creates a URL pointing to the public (anonymous) page of the portal.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.forcePublic}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.forcePublic}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="./">UrlGeneration</a>, which is the same object, so multiple method calls can be concatenated.</p>
 </li>
@@ -4420,8 +4420,8 @@
 <p><strong>forceAbsolute</strong></p>
 <p>If you use this attribute, absolute URLs are enforced; in this case other settings that affect the generation of URLs might be overridden.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.forceAbsolute}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.forceAbsolute}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="./">UrlGeneration</a>, which is the same object, so multiple method calls can be concatenated.</p>
 </li>
@@ -4429,8 +4429,8 @@
 <p><strong>allowRelativeURL</strong></p>
 <p>This attribute indicates that a relative URL is generated. If not called for this <code>Urlgeneration</code>, then default is used, which is set by the property com.ibm.portal.state.accessors.url.URLContext.enableRelative in the StateManagerService.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.allowRelativeURL}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.allowRelativeURL}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="./">UrlGeneration</a>, which is the same object, so multiple method calls can be concatenated.</p>
 </li>
@@ -4438,8 +4438,8 @@
 <p><strong>normalize</strong></p>
 <p>This attribute indicates that the URL to be generated should be normalized. If more parameters are set, the normalization is run first and afterward the other state modifications are accomplished. It normalizes the URL with the same XSL file used to normalize URLs for search engines. The normalized representation of the URL can also be used to bookmark a page.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.normalize}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.normalize}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="./">UrlGeneration</a>, which is the same object, so multiple method calls can be concatenated.</p>
 </li>
@@ -4447,8 +4447,8 @@
 <p><strong>logout</strong></p>
 <p>Creates a URL that logs out the current user.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.logout}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.logout}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="./">UrlGeneration</a>, which is the same object, so multiple method calls can be concatenated.</p>
 </li>
@@ -4456,8 +4456,8 @@
 <p><strong>login</strong></p>
 <p>Creates a URL that logs in a user to portal. This attribute is typically used for the login panel. The user ID and password parameters must be carried with a login URL.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.login}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.login}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="./">UrlGeneration</a>, which is the same object, so multiple method calls can be concatenated.</p>
 </li>
@@ -4465,8 +4465,8 @@
 <p><strong>setPageEditMode(flag)</strong></p>
 <p>You can set the page edit mode as used by the toolbar.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.setPageEditMode(&#39;true&#39;)}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.setPageEditMode(&#39;true&#39;)}
+</code></pre></div>
 <p>Parameters:</p>
 <ul>
 <li>
@@ -4480,10 +4480,9 @@
 <p><strong>url</strong></p>
 <p>Generates the url with all its attributes and returns it as a string. This is the default method that is called when no further attributes are specified.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.url}
+<div class="language-text highlight"><pre><span></span><code>${wp.selectionModel.selected.urlGeneration.url}
 ${wp.selectionModel.selected.urlGeneration}
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: String; the generated URL as a string.</p>
 </li>

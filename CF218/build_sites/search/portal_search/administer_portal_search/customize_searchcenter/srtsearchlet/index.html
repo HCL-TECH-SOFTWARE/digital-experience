@@ -3242,8 +3242,8 @@
 <li>
 <p>Edit the value of the <strong>searchEngineUrl</strong> parameter. This value represents the URL of the third-party search engine that you want to be queried. The value of the <strong>searchEngineUrl</strong> parameter returns a feed of search results for the specified search terms. The feed is in RSS or ATOM syndication format. The string <code>${searchTerms}</code> must be included in the value. This string is replaced by the actual query during the search.</p>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://www.ibm.com/developerworks/views/rss/customrssatom.jsp?zone_type=AllZones&amp;content_type=AllTypes&amp;search_by=${searchTerms}&amp;day=1&amp;month=01&amp;year=2008
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://www.ibm.com/developerworks/views/rss/customrssatom.jsp?zone_type=AllZones&amp;content_type=AllTypes&amp;search_by=${searchTerms}&amp;day=1&amp;month=01&amp;year=2008
+</code></pre></div>
 </li>
 </ol>
 <p>Be careful to insure that if the URL of the external search service is SSL (HTTPS) based, that you import the SSL certificate of that search provider in the appropriate <em>truststore</em> in the WebSphere Application Server console for SSL. Otherwise, the search site will not be accessible and you will get errors in the SystemOut.log file pertaining to SSL errors.</p>
@@ -3251,8 +3251,8 @@
 <li>
 <p>Edit the value of the parameter <strong>searchEngineFullPageUrl</strong>. This parameter is optional. You can delete it or leave it empty. When you set this parameter, a <strong>More</strong> link is added to the portlet. It links to the website of the external search engine. The value represents a parameterized form of the URL used to locate the search engine that is queried. The string <code>${searchTerms}</code> must be included in the parameter value. During the search, the portlet replaces the string by the actual query.</p>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://developer.ibm.com/?s=${searchTerms}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>https://developer.ibm.com/?s=${searchTerms}
+</code></pre></div>
 <p>This URL returns the public HTML page of the search engine.</p>
 </li>
 <li>

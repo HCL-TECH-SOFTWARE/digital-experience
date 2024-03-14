@@ -3601,16 +3601,12 @@
 <li>
 <p>Add the page metadata key com.ibm.portal.theme.template.file.name.html with a value <code>&lt;![CDATA[theme_sidenav.html]]&gt;</code> to the exported XML file.</p>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;content-node action=&quot;update&quot; content-parentref=&quot;wp.example.parent&quot; active=&quot;true&quot; objectid=&quot;wp.example.id&quot; uniquename=&quot;wp.example&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;content-node action=&quot;update&quot; content-parentref=&quot;wp.example.parent&quot; active=&quot;true&quot; objectid=&quot;wp.example.id&quot; uniquename=&quot;wp.example&quot;&gt;
         ...
         &lt;parameter name=&quot;com.ibm.portal.theme.template.file.name.html&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;&lt;![CDATA[theme_sidenav.html]]&gt;&lt;/parameter&gt;
         ...
 &lt;/content-node&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Save the new page XML file.</p>

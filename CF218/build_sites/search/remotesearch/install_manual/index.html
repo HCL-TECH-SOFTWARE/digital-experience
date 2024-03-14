@@ -3005,12 +3005,10 @@
 </li>
 <li>
 <p>Start the WebSphere Integrated Solutions Console and select <strong>Environment &gt; Shared Libraries</strong>. Create a new shared library that is named PSE with a class path as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>$(APP_INSTALL_ROOT)/cell_name/dcs_war.ear/dcs.war/WEB-INF/lib/convertors.jar
+<div class="language-text highlight"><pre><span></span><code>$(APP_INSTALL_ROOT)/cell_name/dcs_war.ear/dcs.war/WEB-INF/lib/convertors.jar
 $(APP_INSTALL_ROOT)/cell_name/dcs_war.ear/dcs.war/WEB-INF/lib/Export.jar
 $(APP_INSTALL_ROOT)/cell_name/dcs_war.ear/dcs.war/WEB-INF/lib/commons-fileupload.jar
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>where <code>cell_name</code> is the WebSphere Application Server cell name where DCS is installed.</p>
 </li>
 <li>
@@ -3040,8 +3038,8 @@ $(APP_INSTALL_ROOT)/cell_name/dcs_war.ear/dcs.war/WEB-INF/lib/commons-fileupload
 <li>
 <p>Add the libraries <code>extract/lib</code> to the class path by adding a line to the class path and giving the full path: AppServer_root/installableApps/extract/lib`.</p>
 <p>AppServer_root is the profile directory of your WebSphere Application Server installation. For example, this path can be:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>      /usr/WebSphere/AppServer/profiles/profile_name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>      /usr/WebSphere/AppServer/profiles/profile_name
+</code></pre></div>
 </li>
 <li>
 <p>Click <strong>Apply &gt; Save</strong> to save your changes to the configuration.</p>
@@ -3086,16 +3084,15 @@ $(APP_INSTALL_ROOT)/cell_name/dcs_war.ear/dcs.war/WEB-INF/lib/commons-fileupload
 <li>For EJB: Determine the value for the port from <strong>Servers &gt; Server Types &gt; WebSphere application servers &gt; YourAppServer1 &gt; Communications &gt; Port &gt; BOOTSTRAP_ADDRESS</strong>.</li>
 <li>
 <p>For SOAP: Determine the value for the port number for the SOAP URL parameter. The appropriate port number for the SOAP URL parameter is the port on which the application server runs. In other words, the HTTP transport on which the remote server is configured to run. Determine the correct port number from <strong>Application servers &gt; server1 &gt; Ports &gt; WC_defaulthost</strong>. The WC_defaulthost value is 10014. If you did not change the default, you can use this value. Make sure that the port number that is set in the following file matches this port:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>AppServer_root/installedApps/cell/WebScannerEar.ear/WebScannerSoap.war/
+<div class="language-text highlight"><pre><span></span><code>AppServer_root/installedApps/cell/WebScannerEar.ear/WebScannerSoap.war/
      wsdl/com/ibm/hrl/portlets/WsPSE/WebScannerLiteServerSOAPService.wsdl
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Replace the variables as follows:</p>
 <ul>
 <li>
 <p>AppServer_root is the profile directory of your WebSphere Application Server installation. For example, this directory can be:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>      /usr/WebSphere/AppServer/profiles/profile_name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>      /usr/WebSphere/AppServer/profiles/profile_name
+</code></pre></div>
 </li>
 <li>
 <p><code>cell</code> is the cell name of your remote search computer.</p>
@@ -3103,26 +3100,21 @@ $(APP_INSTALL_ROOT)/cell_name/dcs_war.ear/dcs.war/WEB-INF/lib/commons-fileupload
 <li><code>WebScannerEar.ear</code> is the name that you gave to the Enterprise Application when you installed the <code>WebScannerSoap.war</code> file.
 Edit the file and look for the port that is given in the value for the SOAP address location. Example:</li>
 </ul>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>  &lt;soap: address location=&quot;http://localhost:**your_port_no**/WebScannerSOAP/servlet/rpcrouter&quot;/&gt; .
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>  &lt;soap: address location=&quot;http://localhost:**your_port_no**/WebScannerSOAP/servlet/rpcrouter&quot;/&gt; .
+</code></pre></div>
 <p>In the example, the port is <code>your_port_no</code>. The default value for the WC_defaulthost is 10014.</p>
 </li>
 </ul>
 </li>
 <li>
 <p>In the WebSphere Integrated Solutions Console, from <strong>Resources &gt; Asynchronous beans &gt; Work managers</strong>, create a new Work manager who is named PSEWorkManager with the following attributes:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>   Name:                       PSEWorkManager
+<div class="language-text highlight"><pre><span></span><code>   Name:                       PSEWorkManager
    JNDI Name:                  wps/searchIndexWM
    Minimum Number of Threads:  20
    Maximum number of Threads:  60
    Growable =                  True (Ensure that the **Growable** check box is selected.) 
    Service Names:              Application Profiling Service, WorkArea, Security, Internationalization
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Click <strong>Apply &gt; Save</strong> to save your changes to the configuration.</p>

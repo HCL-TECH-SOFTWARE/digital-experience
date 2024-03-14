@@ -3968,14 +3968,7 @@
 <h1 id="virtual-portal-selection-portal-authentication">Virtual portal selection | Portal authentication</h1>
 <p>You can set a virtual portal for a login or Portal.login() command with the $Portal setvp or Portal.setvp() command. It is possible to set the virtual portal during a session, but the session becomes effective only during the $Portal login command. The virtual portal is specified by the URL context. The URL context is the part of the home URL that identifies the virtual portal. If $Portal setvp or Portal.setvp() is started without a URL context, the default virtual portal is set.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code># example: set the virtual portal and execute a portal login
+<div class="language-text highlight"><pre><span></span><code># example: set the virtual portal and execute a portal login
 # in the example, the virtual portal URL context is employees,
 # which would correspond with a base URL of
 &#39;/wps/myportal/employees&#39;
@@ -3983,22 +3976,16 @@
 Portal.setvp(&quot;employees&quot;)
 
 Portal.login()
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code># example: set the virtual portal and execute a portal login
+<div class="language-text highlight"><pre><span></span><code># example: set the virtual portal and execute a portal login
 # in the example, the virtual portal URL context is employees,
 # which would correspond with a base URL of &#39;/wps/myportal/employees&#39;
 
 $Portal setvp employees
 
 $Portal login
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

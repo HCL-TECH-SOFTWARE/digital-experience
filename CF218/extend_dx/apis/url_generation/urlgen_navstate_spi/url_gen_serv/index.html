@@ -2327,62 +2327,7 @@
 <p>The lifetime of a PortalStateManagerService object depends on whether you requested a "request-specific" service or "offline" service. The request-specific service has request scope; it is only used for the duration of one servlet request. For all subsequent servlet requests, request a new service instance from the home interface. The lifetime of the offline PortalStateManagerService corresponds with the lifetime of the ServerContext object.</p>
 <p>The obtained PortalStateManagerServiceHome object is valid for the lifetime of the portal. You must do the JNDI lookup only once and store the retrieved home object accordingly, for example in an instance or static variable.</p>
 <p>The following example shows how to get access to the service:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span></pre></div></td><td class="code"><div><pre><span></span><code>/** the JNDI name to retrieve the PortalStateManagerServiceHome object */
+<div class="language-text highlight"><pre><span></span><code>/** the JNDI name to retrieve the PortalStateManagerServiceHome object */
 private static final String JNDI_NAME = 
   &quot;portal:service/state/PortalStateManager&quot;;
 
@@ -2438,40 +2383,14 @@ private static PortalStateManagerServiceHome getServiceHome() {
   }
   return serviceHome;
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 </div>
 <p>The PortalStateManagerService interface is derived from the generic StateManagerService interface. As the StateManagerService extends the com.ibm.portal.Disposable interface, you must indicate when you do not need to access the service any longer by starting the offered dispose() method on it. Dispose the request-specific PortalStateManagerService by the end of the processed servlet request.</p>
 <h2 id="getting-access-to-the-portletstatemanagerservice">Getting access to the PortletStateManagerService</h2>
 <p>Access the PortletStateManagerService through JNDI with the lookup name "portletservice/com.ibm.portal.state.service.PortletStateManagerService". The lookup returns a generic com.ibm.portal.portlet.service.PortletServiceHome interface, which offers a getPortletService(Class) method to get the PortletStateManagerService. The retrieved PortletStateManagerService instance is valid for the lifetime of the portal. You must do the service retrieval in the method of the portlet and store it in a portlet instance variable. The following example shows the required lookup code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code>public class MyPortlet extends GenericPortlet {
+<div class="language-text highlight"><pre><span></span><code>public class MyPortlet extends GenericPortlet {
 
   /** The JNDI name which is needed to lookup the service */
   private static final String JNDI_NAME =
@@ -2498,7 +2417,7 @@ private static PortalStateManagerServiceHome getServiceHome() {
       throw new PortletException(e);
     }
   }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You can use the actual service within the render method of the portlet to include URLs into the markup. Or use the service in the helper methods that serve the mandatory portlet modes such as doView, doEdit, and doHelp) to include URLs into the markup. Or use the service in the processAction method to send a redirect to a certain URL. The PortletStateManagerService interface shows the following two methods:</p>
 <ul>
 <li>
@@ -2511,26 +2430,7 @@ private static PortalStateManagerServiceHome getServiceHome() {
 </li>
 </ul>
 <p>Both the PortletStateManager and the PortletStateManagerController have request scope, which means that you must not store references to them across requests. Instead, you must retrieve the service from the PortletServiceHome object. To indicate that the retrieved PortletStateManager or PortletStateManagerController instance is no longer accessed in the scope of a request, you must start the dispose method. The dispose method is inherited from the Disposable interface on it. The following example shows you how to retrieve the service from the PortletServiceHome object:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code>/**
+<div class="language-text highlight"><pre><span></span><code>/**
  * @see javax.portlet.GenericPortlet#doView(RenderRequest, RenderResponse)
  */
 protected void doView(
@@ -2550,7 +2450,7 @@ protected void doView(
     throw new PortletException(e);
   }
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="the-base-interface-statemanagerservice">The base interface StateManagerService</h2>
 <p>The PortletStateManager and the PortalStateManagerService are derived from the com.ibm.portal.state.service.StateManagerService interface, which offers functionality that is common to both URL generation services. The use cases that are common to both services refer to the creation of EngineURLs that carry navigational state and resource URLs. Therefore, the StateManagerService interface must be sufficient to implement most of the use cases. The interface provides the following two methods:</p>
 <ul>
@@ -2568,29 +2468,7 @@ protected void doView(
 </li>
 </ul>
 <p>Typically, you request an EngineURL object from the URLFactory and then modify the navigational state according to the required URL semantics. To do this step, call the getState() method of the EngineURL to get the StateHolderController object that is required to modify the navigational state through the Accessor SPI. The following code snippet exemplarily illustrates this typical usage pattern. The following example shows how to call the getState() method of the EngineURL:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code>protected EngineURL createPageLink(final ObjectID pageID)
+<div class="language-text highlight"><pre><span></span><code>protected EngineURL createPageLink(final ObjectID pageID)
   throws StateException {
   // get the URL factory from the state manager service
   final URLFactory urlFactory = service.getURLFactory();
@@ -2613,7 +2491,7 @@ protected void doView(
     urlFactory.dispose();
   }
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>In the previous code sample, the newURL(Constants.Clone) method of the URLFactory is used. However, the URLFactory offers several more convenience methods to create EngineURLs and resource URLs. The following list provides a complete description of the URLFactory interface:</p>
 <ul>
 <li>

@@ -4200,8 +4200,8 @@
 <p><strong>children</strong></p>
 <p>Returns the children of the specified node.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.layoutModel[wp.selectionModel.selected].children[node]}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.layoutModel[wp.selectionModel.selected].children[node]}
+</code></pre></div>
 <p>Parameters:</p>
 <ul>
 <li>
@@ -4215,8 +4215,8 @@
 <p><strong>get(id)</strong></p>
 <p>Gets an individual layout model.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.layoutModel[id]}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.layoutModel[id]}
+</code></pre></div>
 <p>Parameters:</p>
 <ul>
 <li>
@@ -4230,8 +4230,8 @@
 <p><strong>hasChildren</strong></p>
 <p>Determines whether the current specified LayoutNode has associated nodes.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.layoutModel[wp.selectionModel.selected].hasChildren[node]}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.layoutModel[wp.selectionModel.selected].hasChildren[node]}
+</code></pre></div>
 <p>Parameters:</p>
 <ul>
 <li>
@@ -4245,10 +4245,9 @@
 <p><strong>iterator</strong></p>
 <p>Iterates through layout nodes.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;c:forEach var=&quot;node&quot; items=&quot;${wp.layoutModel[wp.selectionModel.selected]}&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;c:forEach var=&quot;node&quot; items=&quot;${wp.layoutModel[wp.selectionModel.selected]}&quot;&gt;
 &lt;/c:forEach&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Parameters: None</p>
 <p>Returns: an iterator with LayoutNode objects; it is never null.</p>
 </li>
@@ -4256,8 +4255,8 @@
 <p><strong>parent</strong></p>
 <p>Access to the parent of a node.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.layoutModel[wp.selectionModel.selected].parent[node]}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.layoutModel[wp.selectionModel.selected].parent[node]}
+</code></pre></div>
 <p>Parameters:</p>
 <ul>
 <li>
@@ -4271,8 +4270,8 @@
 <p><strong>path</strong></p>
 <p>Provides access to the path information for the node. The path represents the hierarchy from the root to the give node as a list. It is like a breadcrumb.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.layoutModel[wp.selectionModel.selected].path[node]}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.layoutModel[wp.selectionModel.selected].path[node]}
+</code></pre></div>
 <p>Parameters:</p>
 <ul>
 <li>
@@ -4286,8 +4285,8 @@
 <p><strong>root</strong></p>
 <p>Returns the root node of the layout model.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.layoutModel[wp.selectionModel.selected].root}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.layoutModel[wp.selectionModel.selected].root}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: LayoutNode; it is never null.</p>
 </li>

@@ -1625,73 +1625,67 @@
 <ol>
 <li>
 <p>Connect to the Core pod. The following command opens a shell in the running core container:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl exec --stdin --tty pod/&lt;pod-name&gt; -n &lt;namespace&gt; -- /bin/bash
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl exec --stdin --tty pod/&lt;pod-name&gt; -n &lt;namespace&gt; -- /bin/bash
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl exec --stdin --tty pod/dx-deployment-0 -n dxns -- /bin/bash
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl exec --stdin --tty pod/dx-deployment-0 -n dxns -- /bin/bash
+</code></pre></div>
 </div>
 <ol>
 <li>
 <p>Start the server. Navigate to the profile <code>bin</code> folder and run the <code>startServer</code> command.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>cd /opt/HCL/wp_profile/bin/./startServer.sh WebSphere_Portal
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>cd /opt/HCL/wp_profile/bin/./startServer.sh WebSphere_Portal
+</code></pre></div>
 </li>
 <li>
 <p>Exit the core container. Close the shell in the core container.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>exit
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>exit
+</code></pre></div>
 </li>
 </ol>
 </li>
 <li>
 <p>Reset the scaling of the Core pods. Reset the replication settings for Core to the previous values if necessary. On the operator deployment adjust the DXCTL property file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>dx.minreplicas:&lt;min_number_of_replicas&gt;
+<div class="language-text highlight"><pre><span></span><code>dx.minreplicas:&lt;min_number_of_replicas&gt;
 dx.maxreplicas:&lt;max_number_of_replicas&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>and apply it via DXCTL tool:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./dxctl -–update -p deployment.properties
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>./dxctl -–update -p deployment.properties
+</code></pre></div>
 <p>The change is applied after a few seconds and the core pods are started. Use the <code>kubectl get pods</code> command to check the progress. If the pods are not started after a few minutes, force the change to be applied using the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl delete statefulset -n &lt;namespace&gt; dx-deployment
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl delete statefulset -n &lt;namespace&gt; dx-deployment
+</code></pre></div>
 </li>
 </ol>
 <h2 id="restore-dam-operator-deployment">Restore DAM Operator deployment</h2>
 <ol>
 <li>
 <p>Disable maintenance mode for DAM. Digital Asset Management must be started without maintenance mode to restore the running status. We achieve this by changing the <code>ConfigMap</code> of the Operator deployment.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl -n &lt;namespace&gt; edit cm &lt;configmap&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; edit cm &lt;configmap&gt;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl edit cm -n dxns dx-deployment
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl edit cm -n dxns dx-deployment
+</code></pre></div>
 </div>
 <p>In the <code>data</code> section, remove <code>maintenance_mode:true</code> from the <code>dx.deploy.dam.features</code> entry and save the changes. If <code>maintenance_mode:true</code> is the only entry for this key, <code>dx.deploy.dam.features</code> can be removed completely.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>data:
+<div class="language-text highlight"><pre><span></span><code>data:
     dx.deploy.dam.features: &quot;maintenance_mode:true&quot;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>After saving the changes, the DAM pod will restart automatically after some seconds. Please wait until the pod is restarted before proceeding.</p>
 </li>
 <li>
 <p>Reset the scaling of the DAM and Persistence pods. Reset the replication settings for DAM and Persistence to the previous values if necessary. On the operator deployment adjust the DXCTL property file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>dam.minreplicas:&lt;min_number_of_replicas&gt;
+<div class="language-text highlight"><pre><span></span><code>dam.minreplicas:&lt;min_number_of_replicas&gt;
 dam.maxreplicas:&lt;max_number_of_replicas&gt;
 
 persist.minreplicas:&lt;min_number_of_replicas&gt;
 persist.maxreplicas:&lt;max_number_of_replicas&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>and apply it via DXCTL tool:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./dxctl -–update -p deployment.properties
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>./dxctl -–update -p deployment.properties
+</code></pre></div>
 </li>
 </ol>
 

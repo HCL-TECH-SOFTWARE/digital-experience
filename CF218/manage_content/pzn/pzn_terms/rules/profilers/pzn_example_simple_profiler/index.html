@@ -3229,16 +3229,12 @@
 <p>The profiler <code>User Clearance</code> is based on a user resource called <code>Personnel</code>. When the profiler was created, the name <code>User Clearance</code> and the settings, <code>Confidential</code> and <code>Regular</code>, were arbitrarily defined for later reference within bindings. One side of the comparison line (<code>current Personnel.Role</code>) refers to a user resource named <code>Personnel</code> created from a Personnel table in a database.<code>Role</code> is a mapped value, defined when the resource was created, that points to the Personnel.Role column in the Personnel table. The values in the Role column in the database are either Employee, Executive, or Manager.</p>
 <p>This completed profiler is used within a binding as a means of determining whether confidential company news articles will be shown to the current Web site visitor.</p>
 <h2 id="simple-profiler">Simple profiler</h2>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>    User Clearance is
+<div class="language-text highlight"><pre><span></span><code>    User Clearance is
          Confidential when
              current Personnel.Role is Executive or
              current Personnel.Role is Manager
         Otherwise Regular
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

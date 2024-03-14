@@ -3305,23 +3305,10 @@
 <h1 id="generic-reading-by-using-rest-services-for-web-content-manager">Generic reading by using REST services for Web Content Manager</h1>
 <p>Although not all item types are handled by the REST service, all item types can be read in a generic fashion by using the REST service.</p>
 <p>You can send a GET request to any web content item by using the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/item/{item-uuid}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/item/{item-uuid}
+</code></pre></div>
 <h2 id="example">Example</h2>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>GET /wps/mycontenthandler/wcmrest/item/c98d11e1-7f2a-480e-9aac-40eb1949cbda HTTP/1.0
+<div class="language-text highlight"><pre><span></span><code>GET /wps/mycontenthandler/wcmrest/item/c98d11e1-7f2a-480e-9aac-40eb1949cbda HTTP/1.0
 
 
 HTTP/1.0 200 OK
@@ -3335,26 +3322,25 @@ HTTP/1.0 200 OK
     &lt;wcm:type&gt;interface com.ibm.workplace.wcm.api.Library&lt;/wcm:type&gt;
     &lt;wcm:state&gt;PUBLISHED&lt;/wcm:state&gt;
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="digital-experience-core-configuration-api">Digital Experience Core Configuration API</h2>
 <p>The Digital Experience Core Configuration API allows developers to retrieve DX configuration settings. It is available for use with HCL Digital Experience 9.5 Container Update CF181 and higher releases.</p>
 <ul>
 <li>
 <p><strong>Endpoint</strong></p>
 <p><strong>GET request to:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://host:port/wps/mycontenthandler/dxconfig/configuration/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://host:port/wps/mycontenthandler/dxconfig/configuration/
+</code></pre></div>
 <p><strong>Sample URL:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://localhost:10039/wps/mycontenthandler/!ut/p/digest!gZZrj7OT0HwfuJ4loXv_ng/dxconfig/configuration/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://localhost:10039/wps/mycontenthandler/!ut/p/digest!gZZrj7OT0HwfuJ4loXv_ng/dxconfig/configuration/
+</code></pre></div>
 </li>
 <li>
 <p><strong>Expected Body</strong></p>
 <p><strong>With payload:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Expected Headers</strong></p>
@@ -3364,17 +3350,7 @@ HTTP/1.0 200 OK
 <p><strong>Return body</strong></p>
 <p>Result: 200, if successful.</p>
 <p>Result Payload:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>    &quot;dam&quot;: {
+<div class="language-text highlight"><pre><span></span><code>    &quot;dam&quot;: {
         &quot;enabled&quot;: true,
         &quot;picker-url-files&quot;: &quot;/wps/myportal/!ut/p/z0/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zizS0sLTy8TIwC_J2CnQwCQ0PDDIxDAw0MLIz1I4EKzDEUmJoEGZqFGhu4G-n7G-v7BeQkZubph-BXWJAd6AgAFF9JPg!!/?hcldam=true&amp;assetType=File&quot;,
         &quot;picker-url-images&quot;: &quot;/wps/myportal/!ut/p/z0/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zizS0sLTy8TIwC_J2CnQwCQ0PDDIxDAw0MLIz1I4EKzDEUmJoEGZqFGhu4G-n7G-n7BeQkZubph-BXWJAd6AgAdmdhFA!!/?hcldam=true&amp;assetType=Image&quot;
@@ -3385,7 +3361,7 @@ HTTP/1.0 200 OK
         &quot;picker-url-content&quot;: &quot;/wps/myportal/!ut/p/z0/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zi_RwNXD3cTYwC_F2CnQwCXU3DDNx8jA29DU31_Q3N9P0CchIz8_RDoszjfQ0MnQ2cTAwMLAN8DA0CQ32cPD2CzIwNzEz0C7IdFQE0ftdV/?mode=picker&quot;
     }
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <p>Explanation of parameters</p>

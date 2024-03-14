@@ -5046,39 +5046,29 @@
 <p>If you want to force the results to be filtered, you must construct the query yourself. This allows you to force either that the results must use a specified parameter, or that they must not use a specified parameter. You can then send the constructed query to the search component by using the "search_query" field, which is passed on to the search engine.</p>
 <h2 id="filtering-by-authoring-template">Filtering by authoring template</h2>
 <p>To include only content that is using a specific authoring template, append this string to the end of the search query:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>^authoringtemplate::&quot;Template Title&quot; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>^authoringtemplate::&quot;Template Title&quot; 
+</code></pre></div>
 <p>To specify multiple authoring templates, append the appropriate string to the end of the search query:</p>
 <ul>
 <li>
 <p>For query results that match either template:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>^(authoringtemplate::&quot;Template Title 1&quot; authoringtemplate::&quot;Template Title 2&quot;)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>^(authoringtemplate::&quot;Template Title 1&quot; authoringtemplate::&quot;Template Title 2&quot;)
+</code></pre></div>
 </li>
 <li>
 <p>For query results that match all templates:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>^(+authoringtemplate::&quot;Template Title 1&quot;  +authoringtemplate::&quot;Template Title 2&quot;)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>^(+authoringtemplate::&quot;Template Title 1&quot;  +authoringtemplate::&quot;Template Title 2&quot;)
+</code></pre></div>
 </li>
 </ul>
 <p>To include only content that does not use a specific authoring template, append this string to the search query:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-authoringtemplate::&quot;Template Title&quot; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-authoringtemplate::&quot;Template Title&quot; 
+</code></pre></div>
 <p>To exclude multiple authoring templates, append this string to the end of the search query:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-authoringtemplate::&quot;Template Title 1&quot; -authoringtemplate::&quot;Template Title 2&quot; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-authoringtemplate::&quot;Template Title 1&quot; -authoringtemplate::&quot;Template Title 2&quot; 
+</code></pre></div>
 <p>You can also construct your query by using some JavaScript. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;script language=&quot;Javascript&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;script language=&quot;Javascript&quot;&gt;
 
 function addFilter(queryIn)
 
@@ -5089,41 +5079,25 @@ return queryIn + &#39; -authoringtemplate::&quot;Template Title&quot;;
 }
 
 &lt;/script&gt; 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>In your search form, hide the "search_query" query field and compute it during the submit by using what the user typed in plus the template filter:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;form onSubmit=&quot;this.search_query.value=addFilter(this.query.value)&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;form onSubmit=&quot;this.search_query.value=addFilter(this.query.value)&quot;&gt;
 
 Query: &lt;input name=&quot;query&quot;/&gt;
 
 &lt;input type=hidden name=&quot;search_query&quot;/&gt;
 
 &lt;/form&gt; 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="filtering-by-content-path">Filtering by content path</h2>
 <p>To include only content that is on a specific path, append this string to the end of the search query:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>^contentpath::&quot;/LibraryName/SiteName/SiteArea1Name/SiteArea1.1Name&quot; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>^contentpath::&quot;/LibraryName/SiteName/SiteArea1Name/SiteArea1.1Name&quot; 
+</code></pre></div>
 <p>To include only content that is not on a specific path, append this string to the search query:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-contentpath::&quot;/LibraryName/SiteName/SiteArea1Name/SiteArea1.1Name&quot;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-contentpath::&quot;/LibraryName/SiteName/SiteArea1Name/SiteArea1.1Name&quot;
+</code></pre></div>
 <p>You can also construct your query by using some JavaScript. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;script language=&quot;Javascript&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;script language=&quot;Javascript&quot;&gt;
 
 function addFilter(queryIn)
 
@@ -5134,22 +5108,16 @@ return queryIn + &#39; -contentpath::&quot;/LibraryName/SiteName/SiteArea1Name/S
 }
 
 &lt;/script&gt;  
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>In your search form, hide the "search_query" query field and compute it during the submit by using what the user typed in plus the path filter:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;form onSubmit=&quot;this.search_query.value=addFilter(this.query.value)&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;form onSubmit=&quot;this.search_query.value=addFilter(this.query.value)&quot;&gt;
 
 Query: &lt;input name=&quot;query&quot;/&gt;
 
 &lt;input type=hidden name=&quot;search_query&quot;/&gt;
 
 &lt;/form&gt;  
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

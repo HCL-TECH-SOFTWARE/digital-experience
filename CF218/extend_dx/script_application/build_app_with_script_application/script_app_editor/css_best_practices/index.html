@@ -2251,15 +2251,7 @@
 <h1 id="css-best-practices">CSS best practices</h1>
 <p>If your code uses a map, or another element that has no fixed height, you must give it an explicit height, such as <code>400px vs 50%</code>.</p>
 <p>Use <code>100%</code> as the value width so that the page and layout can manage the width that the application uses. For height, choose a reasonable value. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>#map-canvas {
+<div class="language-text highlight"><pre><span></span><code>#map-canvas {
           height: 400px;
           width: 100%;
           }
@@ -2268,7 +2260,7 @@
           height: 50%;
           width: 100%;
           }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If the script uses styles with absolute positions, such as <code>position: absolute;</code>, consider choosing relative positions instead, such as <code>position: relative;</code>. Otherwise, the item is likely to be positioned outside of the application space.</p>
 
 

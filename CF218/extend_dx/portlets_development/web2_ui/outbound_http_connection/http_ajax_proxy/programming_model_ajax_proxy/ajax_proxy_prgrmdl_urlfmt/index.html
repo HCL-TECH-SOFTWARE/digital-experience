@@ -3038,32 +3038,24 @@
 <h1 id="url-format-and-examples">URL format and examples</h1>
 <p>The proxy can be addressed via URLs that comply with the REST-based URL format given here.</p>
 <p>This format is as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;protocol&gt;://&lt;portal-domain&gt;/&lt;proxyurl&gt;/&lt;protocol&gt;/&lt;host&gt;%3a&lt;port&gt;/&lt;url&gt;?&lt;query&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;protocol&gt;://&lt;portal-domain&gt;/&lt;proxyurl&gt;/&lt;protocol&gt;/&lt;host&gt;%3a&lt;port&gt;/&lt;url&gt;?&lt;query&gt;
+</code></pre></div>
 <p>The proxy URL carries the target URL in its path information part. Depending on the context path mapping in the proxy configuration, the target URL can be an absolute or relative URL.</p>
 <p><strong>Examples:</strong> Refer to the following sample proxy URLs. They show how you can load a URL via the proxy depending on the context path mapping in the proxy configuration.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>URL: http://www.ibm.com/developerworks/news/dw_dwtp.rss
+<div class="language-text highlight"><pre><span></span><code>URL: http://www.ibm.com/developerworks/news/dw_dwtp.rss
 Context path mapping (from proxy-config.xml): &lt;mapping contextpath=&quot;/proxy&quot; url=&quot;*&quot;/&gt;
 Proxy URL: http://myportal.com:10040/wps/proxy/http/www.ibm.com/developerworks/news/dw_dwtp.rss
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>URL: http://myotherportal.com:1234/sitemap
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>URL: http://myotherportal.com:1234/sitemap
 Context path mapping (from proxy-config.xml): &lt;mapping contextpath=&quot;/proxy&quot; url=&quot;*&quot;/&gt;
 Proxy URL: http://myportal.com:10040/wps/proxy/http/myotherportal.com%3a1234/sitemap  
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>URL: http://www-01.ibm.com/software/swnews/swnews.nsf/swnewsrss?openview&amp;RestrictToCategory=lotus
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>URL: http://www-01.ibm.com/software/swnews/swnews.nsf/swnewsrss?openview&amp;RestrictToCategory=lotus
 Context path mapping (from proxy-config.xml): &lt;mapping contextpath=&quot;/ibmsoftwarenews&quot; 
         url=&quot;http://www-01.ibm.com/software/swnews/&quot;/&gt;
 Proxy URL: http://myportal.com:10040/wps/ibmsoftwarenews/swnews.nsf/swnewsrss?openview&amp;RestrictToCategory=lotus
    
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

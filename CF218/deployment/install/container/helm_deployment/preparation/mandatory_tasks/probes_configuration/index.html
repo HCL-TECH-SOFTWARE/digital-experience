@@ -2058,20 +2058,7 @@
 
 <h1 id="probes-configuration-in-valuesyaml-file">Probes Configuration in values.yaml file</h1>
 <p>The <code>liveness</code> and <code>readiness</code> probes such as the status thresholds and time values can be modified. The probe target values are not configurable anymore because they are application specific and the values must not be changed.</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Liveness probe using the applications HTTP probe endpoint </span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Liveness probe using the applications HTTP probe endpoint </span>
 <span class="w">    </span><span class="nt">livenessProbe</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">failureThreshold</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
 <span class="w">      </span><span class="nt">initialDelaySeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
@@ -2085,7 +2072,7 @@
 <span class="w">      </span><span class="nt">periodSeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
 <span class="w">      </span><span class="nt">successThreshold</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="w">      </span><span class="nt">timeoutSeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Information about the configuration options can be found in the <a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#configure-probes">Kubernetes documentation</a>.</p>
 
 

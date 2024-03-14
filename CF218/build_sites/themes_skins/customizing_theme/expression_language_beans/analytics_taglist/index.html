@@ -4148,12 +4148,10 @@
 <p><strong>get(objectid)</strong></p>
 <p>Determines the list of analytics tags for the portal resource with the given objectID.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;c:forEach items=&quot;${wp.analyticsTagList[wp.identification[wp.selectionModel.selected]]}&quot; var=&quot;current&quot;&gt;    
+<div class="language-text highlight"><pre><span></span><code>&lt;c:forEach items=&quot;${wp.analyticsTagList[wp.identification[wp.selectionModel.selected]]}&quot; var=&quot;current&quot;&gt;    
      &lt;span class=&quot;asa.tag.&lt;c:out value=&#39;${current.name}&#39;/&gt;&quot;&gt;&lt;c:out value=&#39;${current.value}&#39; /&gt;&lt;/span&gt; 
 &lt;/c:forEach&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Parameters:</p>
 <ul>
 <li>

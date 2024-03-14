@@ -3716,14 +3716,7 @@
 <h1 id="hints-and-tips-for-using-the-portal-xml-configuration-interface">Hints and tips for using the portal XML configuration interface</h1>
 <p>In an example configuration, you might have two HCL Digital Experience environments that are both configured for security with an LDAP server. However, the two LDAP servers have different directory structures.</p>
 <p>For example, this can be different LDAP suffixes for the users or groups. To transfer such a portal configuration from one portal to the other, you can use the following XML script:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>     &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>     &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
      &lt;request
          xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
          xsi:noNamespaceSchemaLocation=&quot;PortalConfig_8.5.0.xsd&quot;
@@ -3731,7 +3724,7 @@
          export-users=&quot;false&quot;&gt;
          &lt;portal action=&quot;export&quot;/&gt;
      &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>When you use this XML script to transfer the configuration data between these two environments, be aware of the following:</p>
 <ol>
 <li>By setting the tag export-users to false you only prevent the export of the LDAP hierarchy. Ownership and access control rules are still exported.</li>
@@ -3740,14 +3733,7 @@
 <li>Credential slots and segments. To avoid exceptions centering around the credential slots and segments, remove the references to these elements from your XML prior to running your XML import.</li>
 <li>
 <p>Private pages. The destination server cannot use information about private pages. To address exceptions centering around the private pages, use the following script for the XML export:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>     &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>     &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
      &lt;request type=&quot;update&quot;
          xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
          xsi:noNamespaceSchemaLocation=&quot;PortalConfig_8.5.0.xsd&quot;&gt;
@@ -3755,7 +3741,7 @@
          &lt;content-node action=&quot;export&quot; name=&quot;*&quot; create-type=&quot;explicit&quot;/&gt;
      &lt;/portal&gt;
      &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This procedure exports all pages which are not private, along with the information that is required to put the portlets on the pages. However, you must either deploy the portlet applications on the target portal prior to running the XML import, or you must modify the XML script to deploy the portlets in the same run.</p>
 </li>
 </ul>

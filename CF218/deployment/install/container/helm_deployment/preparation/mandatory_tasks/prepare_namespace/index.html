@@ -2137,23 +2137,14 @@
 <p>Identify a name for your namespace and create it using the following syntax:</p>
 <h2 id="on-kubernetes-platforms">On Kubernetes platforms</h2>
 <p><strong>Kubectl</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code># Command to create a namespace using kubectl
+<div class="language-text highlight"><pre><span></span><code># Command to create a namespace using kubectl
 # This example creates a namespace called &quot;my-namespace&quot;
 kubectl create ns my-namespace
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="openshift">OpenShift</h2>
 <p>For OpenShift, you must create a namespace with specific settings.</p>
 <p>Use the following namespace definition and save it as namespace.yaml. You must replace <code>my-namespace</code> in the template with the name of the namespace you are using.</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Namespace</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-namespace</span>
@@ -2161,12 +2152,11 @@ kubectl create ns my-namespace
 <span class="w">    </span><span class="nt">openshift.io/sa.scc.mcs</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;s0:c24,c4&quot;</span>
 <span class="w">    </span><span class="nt">openshift.io/sa.scc.supplemental-groups</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1001/10000&quot;</span>
 <span class="w">    </span><span class="nt">openshift.io/sa.scc.uid-range</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1000/10000&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p><strong>OpenShift client</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code># Command to create namespace from template file
+<div class="language-text highlight"><pre><span></span><code># Command to create namespace from template file
 oc apply -f namespace.yaml
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

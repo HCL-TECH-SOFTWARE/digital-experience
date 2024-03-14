@@ -4032,17 +4032,7 @@
 <p>The Layout bean is a tree bean. The layout bean provides the index command to obtain and resolve so-called index paths. For more information, see Index paths. When started with an ID as argument, the command returns the absolute index path for that component. When started without an argument, it returns the absolute index path for the currently selected component.</p>
 <p>When started with an index path and a keyword, the index command resolves the argument path. If the keyword is find, it returns the ID of the addressed component. If the keyword is select, it also selects it. The keyword is not case-sensitive. If the index path is not absolute, it is resolved relative to the selected component.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>Layout.index()
+<div class="language-text highlight"><pre><span></span><code>Layout.index()
 Layout.index(ID)
 
 Layout.index(ipath, &quot;find&quot;)
@@ -4053,19 +4043,9 @@ Layout.index(&quot;/1/0/3&quot;, &quot;find&quot;)
 
 # example: select first child of current container
 Layout.index(&quot;0&quot;, &quot;select&quot;)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>$Layout index
+<div class="language-text highlight"><pre><span></span><code>$Layout index
 $Layout index ID
 
 $Layout index ipath find
@@ -4076,7 +4056,7 @@ $Layout index /1/0/3 find
 
 # example: select first child of current container
 $Layout index 0 select
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

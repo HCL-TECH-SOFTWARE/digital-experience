@@ -2595,13 +2595,13 @@
 <ul>
 <li>
 <p><strong>When you first subscribe to a syndicator, on-prem deployments will use a URL in this format:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://HostName:HostPort/WcmContextRoot
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://HostName:HostPort/WcmContextRoot
+</code></pre></div>
 </li>
 <li>
 <p><strong>When syndicating between Kubernetes setups, the URL should look like this:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://service_name.namespace_name:HostPort/WcmContextRoot
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>https://service_name.namespace_name:HostPort/WcmContextRoot
+</code></pre></div>
 </li>
 </ul>
 <div class="admonition note">
@@ -2611,8 +2611,8 @@
 <ul>
 <li>
 <p><strong>Once the syndication pair has been created, you must edit the syndicator. The Subscriber URL field needs to be modified to look like this:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://service_name.namespace_name:HostPort/WcmContextRoot/connect?MOD=Subs
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://service_name.namespace_name:HostPort/WcmContextRoot/connect?MOD=Subs
+</code></pre></div>
 </li>
 </ul>
 <p>Once the change to the syndicator properties has been made, syndication will work properly.</p>
@@ -2622,13 +2622,13 @@
 <ul>
 <li>
 <p><strong>Using the URL context of a virtual portal:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://HostName:HostPort/wps/wcm/url_context
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://HostName:HostPort/wps/wcm/url_context
+</code></pre></div>
 </li>
 <li>
 <p><strong>Using the host name of a virtual portal:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://VirtualHostName:HostPort/wps/wcm
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://VirtualHostName:HostPort/wps/wcm
+</code></pre></div>
 </li>
 </ul>
 </div>

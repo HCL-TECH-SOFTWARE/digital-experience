@@ -3386,20 +3386,7 @@
 <h1 id="modifying-configuration-settings-of-the-outbound-http-connection">Modifying configuration settings of the outbound HTTP connection</h1>
 <p>You can change configuration settings of the outbound HTTP connection by using the following interfaces: ModifiableOutboundConnectionProfile, ModifiablePolicyMapping, ModifiablePolicyRule, ModifiableCookieRule, and ModifiablePolicyVariable.</p>
 <p>You can access these interfaces by using the method <code>OutboundConnectionModelController.getModifiableNode()</code>. Changes that you make are not immediately applied at the data backend. You must confirm the changes. The following code example illustrates how you can modify configuration settings:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>OutboundConnectionModel model; // For information about how to instantiate this model 
+<div class="language-text highlight"><pre><span></span><code>OutboundConnectionModel model; // For information about how to instantiate this model 
                                // refer to the previous examples.
 OutboundConnectionModelController ctrl; // For information about how to instantiate this
                                         // controller, refer to the previous examples.
@@ -3413,7 +3400,7 @@ mrule.setUrlPattern(&quot;http://localhost:9091/*&quot;);
 // Apply the changes.
 ctrl.commit();
 System.out.println(&quot;The URL pattern of the PolicyRule is now &quot;+rule.getUrlPattern());
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

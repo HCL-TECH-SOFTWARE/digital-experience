@@ -2759,59 +2759,59 @@
 <ul>
 <li>
 <p><strong>Command description</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient wcm-library-export
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient wcm-library-export
+</code></pre></div>
 </li>
 <li>
 <p><strong>Help command</strong></p>
 <p>This command shows the help document about the <code>wcm-library-export</code> command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient wcm-library-export -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient wcm-library-export -h
+</code></pre></div>
 </li>
 <li>
 <p><strong>Command options</strong></p>
 <p>Use this attribute to specify the user name that is required to authenticate to the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password that is required to authenticate to the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the hostname of the target DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port number of the <code>cw_profile</code> (for Kubernetes Environment, <code>dxConnectPort</code> is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the user name that is required for authenticating to the <code>cw_profile</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password that is required for authenticating to the <code>cw_profile</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the user name of the DX WAS server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxWASUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxWASUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password of the DX WAS server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxWASPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxWASPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the profile name of the DX core server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProfileName &lt;Profile name of the DX core server&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProfileName &lt;Profile name of the DX core server&gt; 
+</code></pre></div>
 <p>Use this attribute to specify the names of the WCM libraries of the DX core server (for example, "hello_library,demo_library"):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-librariesName &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-librariesName &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the export libraries. This value can be either true or false. If the value is true, then export the all libraries:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-exportAllLibraries &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-exportAllLibraries &lt;value&gt;
+</code></pre></div>
 <p>Starting in CF210, use this attribute to specify the context of the virtual portal that contains the WCM Library that you want to export, if any:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-virtualPortalContext &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-virtualPortalContext &lt;value&gt;
+</code></pre></div>
 <p>Log files from running the command can be found in the logs directory of the DXClient installation.</p>
 </li>
 <li>
 <p><strong>Example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code> dxclient wcm-library-export -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt;  -hostname &lt;hostname&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -dxWASUsername &lt;dxWASUsername&gt; -dxProfileName &lt;dxProfileName&gt; -librariesName &lt;librariesName&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code> dxclient wcm-library-export -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt;  -hostname &lt;hostname&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -dxWASUsername &lt;dxWASUsername&gt; -dxProfileName &lt;dxProfileName&gt; -librariesName &lt;librariesName&gt; 
+</code></pre></div>
 </li>
 </ul>
 <h2 id="import-wcm-libraries">Import WCM libraries</h2>
@@ -2819,51 +2819,51 @@
 <ul>
 <li>
 <p><strong>Command description</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient wcm-library-import
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient wcm-library-import
+</code></pre></div>
 </li>
 <li>
 <p><strong>Help command</strong></p>
 <p>Use this attribute to specify the user name that is required to authenticate to the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt; 
+</code></pre></div>
 <p>Use this attribute to specify the password that is required to authenticate to the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the hostname of the target DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port number of the <code>cw_profile</code> (for Kubernetes Environment, <code>dxConnectPort</code> is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the user name that is required for authenticating to the <code>cw_profile</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password that is required for authenticating to <code>cw_profile</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the user name of the DX WAS server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxWASUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxWASUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password of the DX WAS server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxWASPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxWASPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the profile name of the DX core server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProfileName &lt;Profile name of the DX core server&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProfileName &lt;Profile name of the DX core server&gt; 
+</code></pre></div>
 <p>Use this attribute to specify the path to a zip file or folder that contains the WCM libraries:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-libFilePath &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-libFilePath &lt;value&gt;
+</code></pre></div>
 <p>Starting in CF210, use this attribute to specify the context of the virtual portal that contains the WCM Library that you want to import, if any:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-virtualPortalContext &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-virtualPortalContext &lt;value&gt;
+</code></pre></div>
 <p>Log files from running the command can be found in the logs directory of the DXClient installation.</p>
 </li>
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient wcm-library-import -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt;  -hostname &lt;hostname&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -dxWASUsername &lt;dxWASUsername&gt; -dxProfileName &lt;dxProfileName&gt; -libFilePath &lt;libFilePath&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient wcm-library-import -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt;  -hostname &lt;hostname&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -dxWASUsername &lt;dxWASUsername&gt; -dxProfileName &lt;dxProfileName&gt; -libFilePath &lt;libFilePath&gt; 
+</code></pre></div>
 </div>
 <h2 id="limitations-troubleshooting">Limitations &amp; Troubleshooting</h2>
 <ol>

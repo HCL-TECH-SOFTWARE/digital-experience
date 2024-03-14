@@ -2518,21 +2518,7 @@
 <p>You can now use the handler in your Consumer portal</p>
 <p>The following samples show excerpts from the file web.xml. The samples contain a handler definition for the WSRP Consumer.</p>
 <p>Before CF 05:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;service-ref&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;service-ref&gt;
    &lt;description&gt;WSRP 2.0 Default Service Reference&lt;/description&gt;
    &lt;service-ref-name&gt;service/wsrp/WSRPService_v2&lt;/service-ref-name&gt;
    &lt;service-interface&gt;javax.xml.ws.Service&lt;/service-interface&gt;
@@ -2547,27 +2533,9 @@
       &lt;/handler-chain&gt;
    &lt;/handler-chains&gt;
 &lt;/service-ref&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>With CF 05 and later fix packs, you must not modify the default handler definition named <code>WSRP 2.0 Default Consumer Handler</code>. You can add more handlers as shown in the following example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;service-ref&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;service-ref&gt;
    &lt;description&gt;WSRP 2.0 Default Service Reference&lt;/description&gt;
    &lt;service-ref-name&gt;service/wsrp/WSRPService_v2&lt;/service-ref-name&gt;
    &lt;service-interface&gt;javax.xml.ws.Service&lt;/service-interface&gt;
@@ -2586,22 +2554,10 @@
       &lt;/handler-chain&gt;
    &lt;/handler-chains&gt;
 &lt;/service-ref&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h1 id="registering-a-soaphandler-as-a-wsrp-extension">Registering a SOAPHandler as a WSRP extension</h1>
 <p>To register a handler that implements the SOAPHandler interface, you can use a WSRP extension point. In this case, you do not need to modify the web.xml file of the portal application. To do so, provide a JAR file that contains the handler implementation and a plugin.xml file that defines an extension of extension point <code>com.ibm.portal.wsrp.consumer.SOAPHandler</code>. You can also define multiple handlers inside one plugin.xml file as shown in the following example. The class attribute must specify the handler implementation class.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;plugin
    id=&quot;sample.handler&quot;
    name=&quot;Sample WSRP Handlers&quot;
@@ -2614,7 +2570,7 @@
       &lt;impl class=&quot;com.ibm.wps.wsrp.test.handler.ConsumerHandler2&quot; weight=&quot;110/&gt;
    &lt;/extension&gt;
 &lt;/plugin&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

@@ -2544,29 +2544,20 @@
 <p>You can only combine creation contexts that have not already been combined by using the creation context builder.</p>
 </div>
 <p>Example 1 - Obtaining a simple creation context:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>// obtain creation context builder
+<div class="language-text highlight"><pre><span></span><code>// obtain creation context builder
 final CreationContextBuilderFactory builder = CreationContextBuilderFactory.getInstance();
 
 // obtain creation context
 final CreationContext creationContext = builder.newIdentifiableCreationContext(objectID);
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Example 2 - Obtaining a combined creation context:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>// obtain creation context builder
+<div class="language-text highlight"><pre><span></span><code>// obtain creation context builder
 final CreationContextBuilderFactory builder = CreationContextBuilderFactory.getInstance();
 
 // obtain combined creation context
 final CreationContext creationContext = builder.combine(new CreationContext[] 
      {builder.newContentPageCreationContext(true), builder.newIdentifiableCreationContext(objectID)});
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following list describes creation contexts that you can create by using the creation context builder factory:</p>
 <ul>
 <li>

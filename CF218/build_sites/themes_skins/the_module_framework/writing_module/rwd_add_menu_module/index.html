@@ -3220,21 +3220,7 @@
 <ul>
 <li>
 <p>Define the override module as a JSON file.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
 &quot;modules&quot;:[{
         &quot;id&quot;:&quot;menuModule&quot;,
         &quot;contributions&quot;:[{
@@ -3249,7 +3235,7 @@
         }]
     }]
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li>
 <p><strong><code>ref-id</code></strong></p>
@@ -3263,21 +3249,7 @@
 </li>
 <li>
 <p>Define the override module in a plugin.xml file.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;extension point=&quot;com.ibm.portal.resourceaggregator.module&quot; id=&quot;staticMenuModule&quot; &gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;extension point=&quot;com.ibm.portal.resourceaggregator.module&quot; id=&quot;staticMenuModule&quot; &gt;
     &lt;module id=&quot;staticMenuModule&quot;&gt;
         &lt;contribution type=&quot;config&quot;&gt;
                 &lt;sub-contribution type=&quot;config_dynamic&quot; ref-id=&quot;pageAction&quot;&gt;
@@ -3292,7 +3264,7 @@
         &lt;/contribution&gt;
     &lt;/module&gt;   
 &lt;/extension&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li>
 <p><strong><code>extension id</code></strong></p>
@@ -3320,26 +3292,20 @@
 <li>
 <p>Include the override module in a profile.</p>
 <p>For example, in profile_menuModule.json:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
     &quot;moduleIDs&quot;: [
         &quot;menuModule&quot;,
         ...
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The profile_menuModule.json file must be copied to WebDAV at fs-type1/themes/YourTheme/profiles/.</p>
 </li>
 <li>
 <p>Open the desired menu json and add an entry for the module to the menu. Use the following example.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
 &quot;type&quot;:&quot;ModuleRef&quot;,
 &quot;id&quot;:&quot;menuModule&quot;
 } 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 <details class="info" open="open">

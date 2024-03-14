@@ -1868,14 +1868,11 @@ cookie.getName().equals(" Cookie3"))
                     cookie.setDomain(DOMAIN);
                     cookie.setMaxAge(0);
                     cookie.setValue</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>                response.addProperty(cookie);
+<div class="language-text highlight"><pre><span></span><code>                response.addProperty(cookie);
             }
         }
     }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li>
 <p><a href="https://help.hcltechsw.com/digital-experience/8.5/security/tam_setup_esm.html">Externalizing resources</a> such that an external security manager (ESM) controls access/authorization is for administrative convenience only. Favor managing access natively within HCL Digital Experience if your business requirements allow it. If you must externalize access control, ensure that the communications link between Digital Experience and the ESM is secured. Refer to ESM documentation on hardening the ESM itself. </p>

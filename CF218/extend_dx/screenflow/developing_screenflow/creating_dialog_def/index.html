@@ -2129,22 +2129,7 @@
 <p>With the Screen Flow Manager, different teams or even third-party vendors can develop different types of user interface artifacts. The user puts together the correct set of user interface artifacts and creates the declarative model in XML known as the dialog definition. The dialog definition describes the specific screen flow that is also known as dialog, which consists of multiple steps and single steps referred to as subdialogs. The dialog definition contains all information about the subdialogs that participate and the transitions that route the user from one subdialog to another.</p>
 <h2 id="dialogs">Dialogs</h2>
 <p>Dialogs, also known as dialog definitions, define all the artifacts of which a single dialog is comprised. They define the resources such as pages and portlets, also called transition endpoints, that are part of the specific dialog. Dialog definitions also define the transitions that route a user from one subdialog to another. For more information, go to <em>Transition endpoints</em> and <em>Transitions</em>. You can define dialog definitions by using a unique name. For example, in a travel site, the flight booking step can be described as a dialog, which defines artifacts such as Passenger information portlet, and Travel dates portlet.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>  &lt;dialog-set&gt;
+<div class="language-text highlight"><pre><span></span><code>  &lt;dialog-set&gt;
       &lt;dialog name=&quot;dialog1&quot;&gt;
           &lt;transition-endpoint name=&quot;portlet1&quot;&gt;
               ...
@@ -2160,19 +2145,12 @@
           &lt;/transition&gt;
      &lt;/dialog&gt;
   &lt;/dialog-set&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>During run time, dialog definitions form the templates from which concrete dialog instances are created. These instances are uniquely identified by DialogInstanceIDs.</p>
 <p>Dialogs are scoped to virtual portals. This scoping means that a screen flow that is running in one virtual portal does not show in another virtual portal or vice versa.</p>
 <h2 id="dialog-sets">Dialog sets</h2>
 <p>Dialog sets can contain one or more screen flow definitions. For example, in a travel site the Flight booking dialog and Car booking dialog that working together can be referred to as Dialog sets.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>  &lt;dialog-set&gt;
+<div class="language-text highlight"><pre><span></span><code>  &lt;dialog-set&gt;
    &lt;dialog name=&quot;dialog1&quot;&gt;
        ...
    &lt;/dialog&gt;
@@ -2180,7 +2158,7 @@
        ...
    &lt;/dialog&gt;
   &lt;/dialog-set&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

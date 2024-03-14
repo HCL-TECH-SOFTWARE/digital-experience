@@ -2218,51 +2218,31 @@
 </div>
 <h3 id="pull-directly-from-harbor-container-registry">Pull directly from Harbor container registry</h3>
 <p>To access the harbor container registry, you need to log in with docker. This can easily be done using the following command:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>docker<span class="w"> </span>login<span class="w"> </span>hclcr.io
+<div class="language-sh highlight"><pre><span></span><code>docker<span class="w"> </span>login<span class="w"> </span>hclcr.io
 <span class="c1"># Enter your harbor username and CLI secret to login</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You can obtain the CLI secret from harbor by navigating to your <code>User Profile</code> in <a href="https://hclcr.io">HCL Harbor</a>. You can copy it from the field called <code>CLI secret</code>.</p>
 <p>After a successful login, you will see the message:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    Login Succeeded
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>    Login Succeeded
+</code></pre></div>
 <p>You can now pull images from the Harbor container registry.</p>
 <h3 id="from-hcl-digital-experience-95-package">From HCL Digital Experience 9.5 package</h3>
 <p>The HCL Digital Experience 9.5 Container Update packages are provided in a compressed .zip file, that can easily be unzipped using a utility of your choice. Refer to the latest <a href="../../../../image_list/">Container file listing</a> topic for a list of the files contained in the .zip archive.</p>
 <p>Unzip the archive. </p>
 <p>To load the individual image files, you may use the following command, replacing the name of each image you would like to load. You will have to run this command multiple times to load all images.</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Command to load container image into local repository</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Command to load container image into local repository</span>
 <span class="c1"># docker load &lt; image-file-name.tar.gz</span>
 docker<span class="w"> </span>load<span class="w"> </span>&lt;<span class="w"> </span>hcl-dx-core-image-v95_CFXXX_XXXXXXXX-XXXX.tar.gz
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If you want to load all DX 9.5 CFxxx image files via one command, use the following command:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Command to load all images at once</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Command to load all images at once</span>
 <span class="c1"># Since HCL Digital Experience images are all containing the word &quot;images&quot;, </span>
 <span class="c1"># we can filter for fitting tar.gz files</span>
 ls<span class="w"> </span>-f<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>image<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>-L<span class="w"> </span><span class="m">1</span><span class="w"> </span>docker<span class="w"> </span>load<span class="w"> </span>-i
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This loads all images to your local repository, ready for further usage.</p>
 <p>You may verify if the loading is successful with the following command:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># List all images</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># List all images</span>
 docker<span class="w"> </span>images
 
 <span class="c1"># Command output (minified, example)</span>
@@ -2277,7 +2257,7 @@ hcl/dx/digital-asset-management-operator<span class="w">      </span>v95_CF195_2
 hcl/dx/content-composer<span class="w">                       </span>v1.8.0_20210514-1707<span class="w">                  </span>62b7b54d3895<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>427MB
 hcl/dx/postgres<span class="w">                               </span>v1.8.0_20210514-1708<span class="w">                  </span>d94672f395ad<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>498MB
 hcl/dx/ringapi<span class="w">                                </span>v1.8.0_20210514-1709<span class="w">                  </span>505eebb52ebf<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>397MB
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="load-images-to-your-own-repository">Load Images to Your Own Repository</h2>
 <h3 id="re-tag-images">Re-tag images</h3>
 <p>If you are using a Kubernetes cluster that is not configured to operate on your local machine, you may need to push the HCL Digital Experience 9.5 container images to a remote repository.</p>
@@ -2287,58 +2267,23 @@ hcl/dx/ringapi<span class="w">                                </span>v1.8.0_2021
 <p>Do not change the version tags of the DX 9.5 images, because they are used for uniquely identifying which versions of DX applications are running in your cluster.</p>
 </div>
 <p>You may re-tag any image using the following command:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Re-tag an existing loaded image</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Re-tag an existing loaded image</span>
 <span class="c1"># docker tag OLD_IMAGE_PATH:VERSION NEW_IMAGE_TAG:VERSION</span>
 
 <span class="c1"># Example command for DX Core:</span>
 docker<span class="w"> </span>tag<span class="w"> </span>dx/core:v95_CF195_20210514-1708<span class="w"> </span>my/test/repository/dx/core:v95_CF195_20210514-1708
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If you want to prefix all HCL Digital Experience 9.5 container images with your repository structure, you may use the following command:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Command to prefix all HCL Digital Experience container images</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Command to prefix all HCL Digital Experience container images</span>
 <span class="c1"># export the prefix for the repository structure, without tailing slash</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">REMOTE_REPO_PREFIX</span><span class="o">=</span><span class="s2">&quot;my/test/repository&quot;</span>
 
 <span class="c1"># First we list all HCL Digital Experience 9.5 Images, then we remove the first line containing the header</span>
 <span class="c1"># Then we execute the docker tag command, prefixing each image with the $REMOTE_REPO_PREFIX</span>
 docker<span class="w"> </span>images<span class="w"> </span>dx/*<span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-n<span class="w"> </span>+2<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span>-F<span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="s1">&#39;{system(&quot;docker tag &quot; $1 &quot;:&quot; $2 &quot; $REMOTE_REPO_PREFIX/&quot; $1 &quot;:&quot; $2) }&#39;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The output may be verified by using the following command:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># List all images</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># List all images</span>
 docker<span class="w"> </span>images
 
 <span class="c1"># Command output (minified, example)</span>
@@ -2364,32 +2309,23 @@ hcl/dx/postgres<span class="w">                                               </
 my/test/repository/hcl/dx/postgres<span class="w">                            </span>v1.8.0_20210514-1708<span class="w">                 </span>d94672f395ad<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>498MB
 hcl/dx/ringapi<span class="w">                                                </span>v1.8.0_20210514-1709<span class="w">                 </span>505eebb52ebf<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>397MB
 my/test/repository/hcl/dx/ringapi<span class="w">                             </span>v1.8.0_20210514-1709<span class="w">                 </span>505eebb52ebf<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>397MB
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h3 id="push-to-repository">Push to repository</h3>
 <p>You may use the following command to push the container images to your repository:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Push the new tagged images</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Push the new tagged images</span>
 <span class="c1"># docker push NEW_IMAGE_TAG:VERSION</span>
 <span class="c1"># Example command for core:</span>
 docker<span class="w"> </span>push<span class="w"> </span>my/test/repository/dx/core:v95_CF195_20210514-1708
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If you want to push all your locally processed images, use the following command:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Command to push all HCL Digital Experience images to a remote repository</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Command to push all HCL Digital Experience images to a remote repository</span>
 <span class="c1"># export the prefix for the repository structure, without tailing slash</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">REMOTE_REPO_PREFIX</span><span class="o">=</span><span class="s2">&quot;my/test/repository&quot;</span>
 
 <span class="c1"># Push the images, first we filter for the ones necessary</span>
 <span class="c1"># Second we execute a docker push for each image</span>
 docker<span class="w"> </span>images<span class="w"> </span><span class="nv">$REMOTE_REPO_PREFIX</span>/dx/*<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span>-F<span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="s1">&#39;{system(&quot;docker push &quot; $1 &quot;:&quot; $2)}&#39;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>After running this command, Docker goes ahead and pushes the images to your remote repository. After the push, the container images are now ready for use by your Kubernetes cluster.</p>
 <h3 id="adjust-deployment-configuration">Adjust deployment configuration</h3>
 <p>After you have successfully prepared all DX 9.5 images, you need to configure the images inside your custom-values.yaml.</p>
@@ -2402,45 +2338,15 @@ docker<span class="w"> </span>images<span class="w"> </span><span class="nv">$RE
 <p class="admonition-title">Note</p>
 <p>From CF205 onwards, the image name and tag configuration of the Helm Chart is pre-filled using the default image names and matching version tags for the respective version of DX. You might need to re-adjust these if you have renamed/re-tagged the images in your local container image repository.</p>
 <p>If you want to use the HCL Harbor container registry, ensure to configure your target repository accordingly and have the <a href="../../optional_tasks/optional_imagepullsecrets/">ImagePullSecret</a> configured:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">images</span><span class="p">:</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">images</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Configure the HCL Harbor registry repository</span>
 <span class="w">  </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;hclcr.io&quot;</span>
 <span class="w">  </span><span class="c1"># Use the image pull secret configured before</span>
 <span class="w">  </span><span class="nt">imagePullSecrets</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx-harbor&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Fill in the values fitting to your configuration</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Fill in the values fitting to your configuration</span>
 <span class="c1"># Ensure to use the correct image version tags</span>
 <span class="nt">images</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my/test/repository&quot;</span>
@@ -2466,7 +2372,7 @@ docker<span class="w"> </span>images<span class="w"> </span><span class="nv">$RE
 <span class="w">    </span><span class="nt">remoteSearch</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/remote-search&quot;</span>
 <span class="w">    </span><span class="nt">ringApi</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/ringapi&quot;</span>
 <span class="w">    </span><span class="nt">runtimeController</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/runtime-controller&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="additional-tasks">Additional Tasks</h2>
 <p>If your remote repository requires access credentials, it is necessary to configure an <code>ImagePullSecret</code> to allow your cluster nodes to have proper access to the HCL DX 9.5 container images. This is also required if you want to use the HCL Harbor container registry directly.</p>
 <p>Please refer to <a href="../../optional_tasks/optional_imagepullsecrets/">Using ImagePullSecrets</a> topic for instructions on how to configure this.</p>

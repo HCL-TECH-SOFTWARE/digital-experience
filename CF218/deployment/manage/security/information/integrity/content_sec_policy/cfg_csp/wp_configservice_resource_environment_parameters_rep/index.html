@@ -3411,13 +3411,13 @@
 <p><strong>Literal string replacements</strong></p>
 <p>The separator <code>'@'</code> does a literal find/replace in the markup.</p>
 <p>For example, the out-of-the-box <code>csp-replace-string.1</code> is:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;style @&lt;style nonce=\&quot;nonceID\&quot;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;style @&lt;style nonce=\&quot;nonceID\&quot;
+</code></pre></div>
 <p>This parameter replaces the string referencing the style element preceding the <code>'@'</code> with the string following the <code>'@'</code> (a string for string replacement). Please note that the quotations in the string are being escaped using the \ character and that "nonceID" is an internal keyword that signals the filter to call the nonce service for a nonce to go in the place of "nonceID".</p>
 <p>Customers can use this literal find/replace to append a nonce to any inline script that they choose to permit in custom code. However, as previously stated, this is considered risky. One option would be for developers to use a "shared secret" that could be placed on script tags that should contain a nonce value. This "shared secret" could be shared with the Portal admin creating the resource environment parameters used by the filter.</p>
 <p>For example,</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;script secret!abc @&lt;script nonce=\&quot;nonceID\&quot;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;script secret!abc @&lt;script nonce=\&quot;nonceID\&quot;
+</code></pre></div>
 <p>would specify that a nonce value should be placed on this script tag.</p>
 </li>
 <li>
@@ -3428,24 +3428,24 @@
 </div>
 <p>The separator <code>'='</code> searches the markup for the regex value preceding the <code>'='</code> and replaces it on the element with the CSS class following the <code>'='</code>.</p>
 <p>Out of the box, DX filters CSS inline styles of <code>"display:none"</code> and <code>"clear:both"</code> and adds the necessary classes to the DOM element. The format of the parameter is:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>regex find string = replacement class
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>regex find string = replacement class
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>display:none;?=wpthemeDisplayNone
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>display:none;?=wpthemeDisplayNone
+</code></pre></div>
 <p>will replace either <code>style="display:none"</code> or <code>style="display:none;"</code> with <code>class="wpthemeDisplayNone"</code>.</p>
 <p>In addition, the replacement will consider whether or not a class attribute already exists on the element. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;div style=&quot;display:none&quot;&gt;&lt;/div&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;div style=&quot;display:none&quot;&gt;&lt;/div&gt;
+</code></pre></div>
 <p>will be changed to:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;div class=&quot;wpthemeDisplayNone&quot;&gt;&lt;/div&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;div class=&quot;wpthemeDisplayNone&quot;&gt;&lt;/div&gt;
+</code></pre></div>
 <p>However, this element</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;div class = &quot;abc&quot; style=&quot;display:none&quot;&gt;&lt;/div&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;div class = &quot;abc&quot; style=&quot;display:none&quot;&gt;&lt;/div&gt;
+</code></pre></div>
 <p>will be changed to:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;div class=&quot;abc wpthemeDisplayNone&quot;&gt;&lt;/div&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;div class=&quot;abc wpthemeDisplayNone&quot;&gt;&lt;/div&gt;
+</code></pre></div>
 </li>
 </ol>
 <details class="info" open="open">

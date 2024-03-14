@@ -2208,10 +2208,9 @@
 <div class="admonition note">
 <p class="admonition-title">Clustered environment parameters</p>
 <p>If you are deploying to a clustered environment and your PAA file contains XMLAccess script files, add the following two parameters to the deploy-paa task:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>-   -`DmaxTimeToWait`
+<div class="language-text highlight"><pre><span></span><code>-   -`DmaxTimeToWait`
 -   -`DmaxAppTimeToWait`
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 <p>These values define the time that the wplc-wait-for-sync-to-complete task waits to synchronize your nodes. The default values are -DmaxTimeToWait=30 and -DmaxAppTimeToWait=5. The values are in minutes. Add these parameters to your deploy-paa task with values that meet your requirements.</p>
 <div class="admonition note">

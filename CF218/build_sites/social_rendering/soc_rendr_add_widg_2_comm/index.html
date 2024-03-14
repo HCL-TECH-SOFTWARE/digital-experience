@@ -2232,8 +2232,8 @@
 <p>As an owner of an HCL Connections community, you can define the set of widgets that are available in the community. For this purpose, you use the Customize option in HCL Connections. For example, you might choose to add the Blog widget to a specific community. This way, community owners have control over the set of services available in the communities they own.</p>
 <p>When you use portal pages as the front end for communities, the pages typically contain social content that interact with one or more widgets of the community. For example, the List of Community Blog Posts shows blog posts that were created by using the Blog widget. You can flag such social content items with Drag and Drop configurations to depend on specific sets of widgets that are available in the associated community. You set this flag by setting a specific portlet preference on the portlet entity of the associated Drag and Drop configuration. Whenever a page editor adds such portlet to a community page, the portal infrastructure tries to dynamically add the required widgets to the associated community.</p>
 <p>To flag a drag and drop configuration to require a specific set of widgets, you set the following preference on the portlet entity:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ibm.portal.instantiation.community.widgets=comma separated list of widget definition IDs
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>ibm.portal.instantiation.community.widgets=comma separated list of widget definition IDs
+</code></pre></div>
 <p>You set this preference by using the Manage Portlets portlet, or the XML configuration interface (XMLAccess).</p>
 <p>The following list shows the supported widget definition IDs :</p>
 <ul>
@@ -2252,11 +2252,11 @@
 <li><code>RelatedCommunities</code></li>
 </ul>
 <p>Example: To flag a drag and drop configuration to require the Blog and Wiki widgets, set the preference as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ibm.portal.instantiation.community.widgets=Blog,Wiki
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>ibm.portal.instantiation.community.widgets=Blog,Wiki
+</code></pre></div>
 <p>By default, the portal tries a best effort to add the widget. If the operation fails for whatever reason, the portal still adds the social content item to the page, but it does not add the widget to the community. If you require a different behavior, you can set an additional portlet preference to generate an error message instead. To flag a drag and drop configuration to generate an error message if the required widgets cannot be added to the associated community, set the following portlet preference:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ibm.portal.instantiation.community.widgets.failonerror=[true|false]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>ibm.portal.instantiation.community.widgets.failonerror=[true|false]
+</code></pre></div>
 <p>The default value is <code>false</code>. You set this preference by using the Manage Portlets portlet, or the XML configuration interface (XMLAccess). With the <code>failonerror</code> portlet preference enabled, the portal does not add the social content item to the page, but shows an error message instead.</p>
 <p>The drag-and-drop configurations for the community-focused list view definitions have the setting <code>failonerror</code> set to the value <code>false</code>. The following list shows these configurations for your reference:</p>
 <ul>

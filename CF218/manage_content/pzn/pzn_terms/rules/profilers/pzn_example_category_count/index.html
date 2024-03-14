@@ -3227,28 +3227,22 @@
 <h1 id="example-category-count">Example: Category Count</h1>
 <p>Get an overview of implementing category counts from a profiler that will contain profile definitions for movies, cooking, and sports (implicit profiling).</p>
 <p>For the Category Count example, assume a repository of articles on sports, movies, and cooking is available for the user to view. Each time the user views an article, a record is logged to show his or her preference for that topic. For this to occur, each article must be a JSP that implements category beans. For example, the following code would appear on a sports article:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;jsp:useBean class=&quot;com.ibm.wcp.analysis.beans.Category&quot; id=&quot;category&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;jsp:useBean class=&quot;com.ibm.wcp.analysis.beans.Category&quot; id=&quot;category&quot; 
 scope=&quot;session&quot;&gt;
 &lt;/jsp:useBean&gt;
 &lt;% category.log(request, &quot;Articles/Sports&quot;); %&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>These values were typed into the Attribute text field during the creation of this profiler after selecting current Category Count.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>A complete version of this profiler will contain profile definitions for movies and cooking for the cases where those category counts are greater than sports and each other.</p>
 </div>
 <h2 id="category-count">Category count</h2>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>ArticlePreference is
+<div class="language-text highlight"><pre><span></span><code>ArticlePreference is
          Sports when
              current Category Count.Articles.Sports is greater than current Category Count.Articles.Cooking and
              current Category Count.Articles.Sports is greater than current Category Count.Articles.Movies
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

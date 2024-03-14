@@ -2262,15 +2262,7 @@
 <p class="admonition-title">Important</p>
 <p>You can only expose log files inside of the /var/profile/ directory.</p>
 </div>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">logging</span><span class="p">:</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">logging</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">remoteSearch</span><span class="p">:</span>
 <span class="w">    </span><span class="c1"># List of sidecar containers mapping a container name to a file path for a log file to be exposed</span>
 <span class="w">    </span><span class="c1"># Each element must consist of a `containerName` and a `logFilePath`, the latter must be located in /var/profile</span>
@@ -2279,20 +2271,16 @@
 <span class="w">    </span><span class="c1">#   - containerName: &quot;trace&quot;</span>
 <span class="w">    </span><span class="c1">#     logFilePath: &quot;/var/profile/logs/server1/trace.log&quot;</span>
 <span class="w">    </span><span class="nt">customLogSidecarContainers</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example:</p>
 <p>The following example starts a new sidecar container, and exposes the logs in /var/profile/logs/server1/trace.log.</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">logging</span><span class="p">:</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">logging</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">remoteSearch</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">customLogSidecarContainers</span><span class="p">:</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;trace&quot;</span>
 <span class="w">        </span><span class="nt">logFilePath</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/var/profile/logs/server1/trace.log&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 
 

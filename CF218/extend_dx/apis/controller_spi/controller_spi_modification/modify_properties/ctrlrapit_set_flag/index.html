@@ -2669,19 +2669,15 @@
 </div>
 <p>In case of layered resources, for example derived content pages, you set flags only on the layer on which you work. To set flags, use the appropriate method. For example, to set the <code>ActiveFlag</code>, use the <code>setActiveFlag</code> method on the <code>ModifiableContentNode</code> instance. For more details about how the flags are aggregated in derivation scenarios refer to the Model SPI documentation.</p>
 <p>Example 1 - Setting the <code>DeletableFlag</code> for a layout container:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>// set modifiable flag on the layout model controller
+<div class="language-text highlight"><pre><span></span><code>// set modifiable flag on the layout model controller
 lmController.setDeletableFlag(container, true);
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Example 2 - Setting the <code>BookmarkableFlag</code> for a content page:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code> // obtain modifiable instance of an existing content page 
+<div class="language-text highlight"><pre><span></span><code> // obtain modifiable instance of an existing content page 
     final Modifiable modifiable = cmController.getModifiableNode(page);  
 // set modifiable flag on the modifiable instance 
     ((ModifiableBookmarkableFlag) modifiable).setBookmarkableFlag(true);
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

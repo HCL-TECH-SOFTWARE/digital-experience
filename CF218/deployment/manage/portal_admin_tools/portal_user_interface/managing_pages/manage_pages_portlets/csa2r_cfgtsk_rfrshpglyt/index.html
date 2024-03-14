@@ -4052,8 +4052,8 @@
 <p>Description: You need to run this task if you have manually modified page layout template files stored in the folder layout-templates of the portal file store and you want those changes to be reflected on existing pages. The task reads the data of a specific page layout template from the portal file store and update all pages that are currently assigned that page template accordingly. Depending on the number of page affected, this task can run for a several minutes.</p>
 <p>Assumptions/Prerequisites: HCL Portal is running. The execution of this task requires that the portal is running. If the portal is not running, the task starts the portal.</p>
 <p>Usage: Reference the layout template by its file store URI, for example as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code> /fs-type1/themes/Portal8.5/layout-templates/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code> /fs-type1/themes/Portal8.5/layout-templates/
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Make sure to provide the full URI here, especially if the URI has a trailing slash ( / ).</p>
@@ -4087,12 +4087,10 @@
 <li>Synchronous (=true) Use this parameter to specify the execution mode. The default is <code>synchronous</code>. If you want to run this task in asynchronous manner, specify false.</li>
 </ul>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh refresh-page-layout-template 
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh refresh-page-layout-template 
      -DPageLayoutTemplate=dav:fs-type1/layout-templates/2Columnequal/ 
      -DVirtualPortalContext=virtual_portal_context_url 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

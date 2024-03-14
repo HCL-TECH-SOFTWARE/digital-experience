@@ -1687,20 +1687,17 @@
 <p>The configuration changes made once this task completes remains in a persisted DX profile.</p>
 <h2 id="source-file-listing-of-hcl-dx-required-portlets-and-applications-that-will-autostart">Source File listing of HCL DX required portlets and applications that will autostart:</h2>
 <p>The introduced ConfigEngine tasks use four files to obtain the list of HCL DX portlet/applications to modify. All the files are located in the same directory:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>{configuration root}/PortalServer/installer/wp.config/config/includes
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>{configuration root}/PortalServer/installer/wp.config/config/includes
+</code></pre></div>
 <p>For example, a list of this reference system is located at:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/HCL/PortalServer/installer/wp.config/config/includes
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/opt/HCL/PortalServer/installer/wp.config/config/includes
+</code></pre></div>
 <p>The four import files are:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>advancedEditorEAR - Enable the WCM Advanced and Enhanced Editors and Services applications
+<div class="language-text highlight"><pre><span></span><code>advancedEditorEAR - Enable the WCM Advanced and Enhanced Editors and Services applications
 defaultListOfEnabledApps - The out of the box autostart parameters
 listOfAppsDockerDisable - List of all portlets and applications where autostart is now initially disabled
 listOfAppsDockerEnable - List of portlets and applications to ensure autostart is enabled after having disabled those in listOfAppsDockerDisable
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li>
 <p><strong>List of portlets and applications that are automatically initialized by default</strong></p>

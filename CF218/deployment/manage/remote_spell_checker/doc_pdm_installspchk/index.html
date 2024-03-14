@@ -2738,8 +2738,8 @@
 <li>
 <p>Use the WebSphere Integrated Solutions Console to deploy SpellChecker.ear onto the remote server. Specify /wps/spellcheck as the context root.</p>
 <p>You can also use a context root other than the default. To use a different context root, before you deploy SpellChecker.ear, change the following line in the application.xml file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;context-root&gt;/anydirectory/spellcheck&lt;/context-root&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;context-root&gt;/anydirectory/spellcheck&lt;/context-root&gt;
+</code></pre></div>
 <p>For example, to change the context root for spell checker to /test/, change the line in application.xml to <code>&lt;context-root&gt;/test/spellcheck&lt;/context-root&gt;</code>. Also, update the context root value in the SpellCheckconfig.properties file of the Portal server.</p>
 </li>
 <li>

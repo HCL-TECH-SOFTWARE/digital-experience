@@ -4033,26 +4033,7 @@
 <p>The interpretation of the second argument depends on the type of object to create. When you create a container, it is the initial value for the orientation attribute. When you create a control, it is the value for the <code>portletdefinition</code> attribute. See <em>Plain attributes</em> for both attributes. If the keyword select is appended, the newly created node becomes the current selection.</p>
 <p>A page that is created, or from which all components are deleted, does not have a root container. Only in that case, it is possible to create a container without selecting a parent. The new container becomes the root container for the page. It is not possible to create a page with a root control.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code>Layout.create(&quot;container&quot;, orientation)
+<div class="language-text highlight"><pre><span></span><code>Layout.create(&quot;container&quot;, orientation)
 Layout.create(&quot;container&quot;, orientation, &quot;select&quot;)
 
 Layout.create(&quot;control&quot;, portlet_ID)
@@ -4072,27 +4053,9 @@ Content.create(&quot;page&quot;, &quot;New Page&quot;, &quot;html&quot;, &quot;s
 # no deselect required, since nothing can be selected
 Layout.create(&quot;container&quot;, &quot;row&quot;, &quot;select&quot;)
 Layout.create(&quot;control&quot;, portlet_ID)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>$Layout create container orientation
+<div class="language-text highlight"><pre><span></span><code>$Layout create container orientation
 $Layout create container orientation select
 
 $Layout create control portlet_ID
@@ -4111,14 +4074,14 @@ $Content create page &quot;New Page&quot; html select
 # no deselect required, since nothing can be selected
 $Layout create container row select
 $Layout create control portlet_ID
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The only argument that is required for the delete command is the ID of the node to delete. To prevent accidental deletion, you must explicitly specify the ID even if the node is selected. You can delete a container only if it is empty. If the selected node is deleted, the bean automatically clears.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Layout.delete ID
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>Layout.delete ID
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$Layout delete ID
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>$Layout delete ID
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

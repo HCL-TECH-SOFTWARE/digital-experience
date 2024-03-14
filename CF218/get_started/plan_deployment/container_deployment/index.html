@@ -1868,20 +1868,14 @@
 <p>For more information about Helm, refer to documentation about Helm for Red Hat container platforms:  <a href="https://docs.openshift.com/container-platform/4.7/cli_reference/helm_cli/getting-started-with-helm-on-openshift-container-platform.html">Red Hat OpenShift</a> and <a href="https://helm.sh/">Kubernetes</a>.</p>
 <h2 id="helm-chart-contents">Helm chart contents</h2>
 <p>The HCL Digital Experience 9.5 Deployment Helm chart (Helm chart name: <code>hcl-dx-deployment</code>) follows standard Helm structures and guidelines.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>hcl-dx-deployment/
+<div class="language-text highlight"><pre><span></span><code>hcl-dx-deployment/
   templates/            # The directory containing all Helm templates for e.g. Kubernetes resources
   value-samples/        # Contains sample value files for different types of deployments
   README.md             # README with information on Helm Chart usage and references to further documentation
   values.yaml           # Default chart configuration values
   values.schema.json    # Defines the validation schema for values.yaml 
   Chart.yaml            # The Chart yaml file containing chart specific information
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li><strong>templates</strong>: The <code>templates</code> directory contains all resource definitions, for example, services and pods.</li>
 <li><strong>values.yaml</strong>: The <code>values.yaml</code> file contains all default values for a deployment. You can customize the deployment by overwriting the default values of the <code>values.yaml</code> file.</li>

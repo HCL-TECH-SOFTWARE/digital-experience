@@ -3490,39 +3490,38 @@
 <ul>
 <li>```
 ${WpsInstallLocation}/jcr/wp.content.repository.install/lib/wp.content.repository.install.jar
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>    -   ```
+<div class="language-text highlight"><pre><span></span><code>    -   ```
 ${WasUserHome}/PortalServer/jcr/config/registerCollationUDFTemplate.sql
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 </ul>
 </li>
 <li>
 <p>Set up collation on the database where the JCR domain is located. Change to this directory:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>db2_instance_owner_home/sqllib/function
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>db2_instance_owner_home/sqllib/function
+</code></pre></div>
 </li>
 <li>
 <p>Enter this command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>db2home/sqllib/java/jdk/bin/jar -xvf ${wf.ejp.collationTempDir}/wp.content.repository.install.jar icm/CollationUDF.class 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>db2home/sqllib/java/jdk/bin/jar -xvf ${wf.ejp.collationTempDir}/wp.content.repository.install.jar icm/CollationUDF.class 
+</code></pre></div>
 </li>
 <li>
 <p>Change to the temporary directory where you copied the files in a previous step. For example, you can use this temporary directory on the DB2 server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wf.ejp.collationTempDir}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wf.ejp.collationTempDir}
+</code></pre></div>
 </li>
 <li>
 <p>Open the file <code>registerCollationUDFTemplate.sql</code>, and change the multiple</p>
 </li>
 <li>
 <p>Connect to the JCR database.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>db2 connect to ${jcr.DbName} user ${jcr.DBA.DbUser} using ${jcr.DBA.DbPassword}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>db2 connect to ${jcr.DbName} user ${jcr.DBA.DbUser} using ${jcr.DBA.DbPassword}
+</code></pre></div>
 </li>
 <li>
 <p>Enter this command to run the script:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>db2 -tvf ${wf.ejp.collationTempDir}/registerCollationUDFTemplate.sql
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>db2 -tvf ${wf.ejp.collationTempDir}/registerCollationUDFTemplate.sql
+</code></pre></div>
 </li>
 <li>
 <p>Disconnect from the JCR database.</p>
@@ -3538,20 +3537,19 @@ ${WasUserHome}/PortalServer/jcr/config/registerCollationUDFTemplate.sql
 </li>
 <li>
 <p>Connect to the database that contains JCR domain:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>db2 connect to ${jcr.DbName} user ${jcr.DbUser} 
+<div class="language-text highlight"><pre><span></span><code>db2 connect to ${jcr.DbName} user ${jcr.DbUser} 
        using ${jcr.DbPassword}
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>When you have connected to the JCR database, verify that the UDF is registered properly. To verify the UDF registration, run this command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>db2 values ${jcr.DbSchema}.sortkeyj(&#39;abc&#39;,&#39;en&#39;)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>db2 values ${jcr.DbSchema}.sortkeyj(&#39;abc&#39;,&#39;en&#39;)
+</code></pre></div>
 </li>
 <li>
 <p>Disconnect from the DB2 terminal window:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>db2 disconnect all db2 terminate
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>db2 disconnect all db2 terminate
+</code></pre></div>
 </li>
 <li>
 <p>Start the HCL server.</p>

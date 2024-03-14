@@ -1973,14 +1973,11 @@
 </li>
 </ul>
 <p>You can specify more than one <code>&lt;paaDependency&gt;</code> tag in the <code>&lt;paaDependencies&gt;</code> tag. For example, you might add the following information to your sdd.xml file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;paaDependencies&gt; 
+<div class="language-text highlight"><pre><span></span><code>&lt;paaDependencies&gt; 
     &lt;paaDependency name=&quot;Dependency1&quot; lowerVersion=&quot;8.0.0.0&quot; higherVersion=&quot;8.0.0.1&quot; versions=&quot;8.5.0.0&quot; /&gt; 
     &lt;paaDependency name=&quot;Dependency2&quot; lowerVersion=&quot;8.0.0.0&quot; higherVersion=&quot;8.0.0.1&quot; versions=&quot;8.5.0.0&quot; /&gt; 
 &lt;/paaDependencies&gt; 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>All the PAA dependencies that are specified in the <code>&lt;paaDependencies&gt;</code> tag must be deployed on the Portal server. The version of each PAA dependency must match the values that are specified in <code>&lt;paaDependencies&gt;</code> tag. Then, the PAA file can be deployed into the Portal server.</p>
 <p>The Solution Installer uses the following rules to determine whether a PAA file can be deployed:</p>
 <ul>
@@ -2018,14 +2015,11 @@
 </li>
 </ul>
 <p>You can specify more than one <code>&lt;paaDependency&gt;</code> tag in the <code>&lt;paaDependencies&gt;</code> tag. For example, you might add the following information to your sdd.xml file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;paaDependencies&gt; 
+<div class="language-text highlight"><pre><span></span><code>&lt;paaDependencies&gt; 
     &lt;removePaaDependency name=&quot;Dependency1&quot; lowerVersion=&quot;8.0.0.0&quot; higherVersion=&quot;8.0.0.1&quot; versions=&quot;8.5.0.0&quot; /&gt; 
     &lt;removePaaDependency name=&quot;Dependency2&quot; lowerVersion=&quot;8.0.0.0&quot; higherVersion=&quot;8.0.0.1&quot; versions=&quot;8.5.0.0&quot; /&gt; 
 &lt;/paaDependencies&gt; 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The Solution Installer uses the following rules to determine whether a PAA file can be removed:</p>
 <ul>
 <li>

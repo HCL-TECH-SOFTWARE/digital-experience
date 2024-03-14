@@ -3527,35 +3527,26 @@
 <p>This version of Portal supports <code>ios</code>, <code>android</code>, <code>blackberry</code>, and <code>worklight</code> in addition to the <code>smartphone</code> and <code>tablet</code> themes it already supports. You can also use equation support to combine individual device classes to check for multiple client conditions.</p>
 <p>For example, if you were manually integrating with MobileFirst® in a previous version, and manually created some combination device classes, such as <code>smartphone-ios</code>, <code>tablet-ios</code>, <code>smartphone-android</code>, <code>tablet-android</code>, your combination device classes are no longer needed. The individual device classes can be combined in equations, such as <code>smartphone+ios</code>, <code>tablet+ios</code>. If you had a combination device class such as <code>hires-tablet-ios</code>, you can change to define the singular <code>hires</code> device class. Then, use equations to combine with the other default singular device classes, such as <code>hires+tablet+ios</code>. In these equations, use <code>+</code> for AND, <code>/</code> for OR, <code>!</code> for NOT and parentheses to group items together. For more information, see <em>Device Class Equations</em>.</p>
 <p>In your .jsp logic, for example, you can change the previous version syntax with <code>&lt;c:if&gt;</code> against <code>deviceClass</code>. Here is an example of code from a previous version:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;c:set var=&quot;deviceClass&quot; scope=&quot;request&quot; value=&quot;${wp.clientProfile[&#39;DeviceClass&#39;]}&quot; /&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;c:set var=&quot;deviceClass&quot; scope=&quot;request&quot; value=&quot;${wp.clientProfile[&#39;DeviceClass&#39;]}&quot; /&gt;
 &lt;c:set var=&quot;isMobile&quot; scope=&quot;request&quot; value=&quot;${deviceClass == &#39;tablet&#39; || deviceClass == &#39;smartphone&#39;}&quot; /&gt;
 &lt;c:if test=&quot;${isMobile}&quot;&gt;
 ...
 &lt;/c:if&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You can change that to a new equation syntax with <code>&lt;portal-logic:if&gt;</code> with the new deviceClass parameter. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portal-logic:if deviceClass=&quot;tablet/smartphone&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;portal-logic:if deviceClass=&quot;tablet/smartphone&quot;&gt;
 ...
 &lt;/portal-logic:if&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You can now use device class equations in module subcontributions in theme contributions .json files. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>}, {
+<div class="language-text highlight"><pre><span></span><code>}, {
                     &quot;value&quot;:&quot;/css/my_css_smartphone_ios.css&quot;,
                     &quot;type&quot;:&quot;smartphone+ios&quot;
                 }, {
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Dynamic content spots in theme templates can now also be varied entirely with device class equations. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>mvc:res:/hello.jsp,smartphone+ios@res:/hello_smartphone_ios.jsp,(smartphone/tablet)+android@res:/hello_mobile_android.jsp
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>mvc:res:/hello.jsp,smartphone+ios@res:/hello_smartphone_ios.jsp,(smartphone/tablet)+android@res:/hello_mobile_android.jsp
+</code></pre></div>
 <p>In this example, you can use <code>res:/hello.jsp</code> as the default URI, <code>res:/hello_smartphone_ios.jsp</code> as the URI for iOS smartphones, and <code>res:/hello_mobile_android.jsp</code> as the URI for Android smartphones and tablets.</p>
 
 

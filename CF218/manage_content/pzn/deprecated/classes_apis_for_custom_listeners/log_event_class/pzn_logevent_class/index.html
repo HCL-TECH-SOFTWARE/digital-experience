@@ -2709,10 +2709,9 @@
 <p>The LogEvent class is the base class for all run-time logging events. The methods in this class are used to access all basic HTTP request information.</p>
 <p>All run-time log data is accessible through the log event sub classes. These log events are constructed by either a rule trigger or a logging bean. They are then routed to the registered log listeners.</p>
 <p>The direct subclasses of the LogEvent class are ActionEvent, CategoryEvent, CustomLogEvent, PageViewEvent, RatingEvent, and RuleEvent.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>public class com.ibm.wcp.analysis.event.LogEvent extends com.ibm.wcp.analysis.event.Event
+<div class="language-text highlight"><pre><span></span><code>public class com.ibm.wcp.analysis.event.LogEvent extends com.ibm.wcp.analysis.event.Event
                                                  implements Serializable
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <table>
 <thead>
 <tr>

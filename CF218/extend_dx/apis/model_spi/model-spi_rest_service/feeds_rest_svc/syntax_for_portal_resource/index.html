@@ -2486,11 +2486,11 @@
 <p>To obtain information about a portal resource or to modify a portal resource, you need to obtain a feed for this resource, or you send a request to a certain URL that can contain a feed. Find out how you can construct URLs to which you can send HTTP requests related to the REST service.</p>
 <p>For example, a URL can address a specific resource or can contain certain query parameters that allow you to control the extent and the way by which information on resources is exposed, or they allow you to control the way by which resources are modified.</p>
 <p>In order to obtain a feed that contains certain portal resources, you send an HTTP GET request to the following URL:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/wps/[my]contenthandler[/vpmapping]?(uri=model-uri)+(&amp;mode=verb)?(&amp;name=value)*
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/wps/[my]contenthandler[/vpmapping]?(uri=model-uri)+(&amp;mode=verb)?(&amp;name=value)*
+</code></pre></div>
 <p>For Virtual Portals, use the following URL instead:
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/wps/[my]contenthandler[/vpmapping]/!ut/p/?(uri=model-uri)+(&amp;mode=verb)?(&amp;name=value)*
-</code></pre></div></td></tr></table></div></p>
+<div class="language-text highlight"><pre><span></span><code>/wps/[my]contenthandler[/vpmapping]/!ut/p/?(uri=model-uri)+(&amp;mode=verb)?(&amp;name=value)*
+</code></pre></div></p>
 <p>The meanings of the syntax elements are as follows:</p>
 <ul>
 <li>

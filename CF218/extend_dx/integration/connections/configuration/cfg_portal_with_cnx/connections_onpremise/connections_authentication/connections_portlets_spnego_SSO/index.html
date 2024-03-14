@@ -3039,8 +3039,8 @@
 </li>
 <li>
 <p>To augment a deployment manager profile, run the following command from the AppServer_root/bin directory:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>manageprofiles.bat -augment -templatePath  c:/IBM/WebSphere/AppServer/profileTemplates/management.portal.augment -profileName Dmgr01
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>manageprofiles.bat -augment -templatePath  c:/IBM/WebSphere/AppServer/profileTemplates/management.portal.augment -profileName Dmgr01
+</code></pre></div>
 </li>
 <li>
 <p>Restart the deployment manager.</p>
@@ -3050,15 +3050,13 @@
 </li>
 <li>
 <p>Run the following command from the wp_profile_root/bin directory to federate the primary node:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>addNode.bat dmgr_hostname dmgr_port -includeapps -includebuses
+<div class="language-text highlight"><pre><span></span><code>addNode.bat dmgr_hostname dmgr_port -includeapps -includebuses
 -username was_admin_user
 -password was_admin_password
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>addNode.bat DMhost.cn.ibm.com 8879 -includeapps -includebuses -username adminuser -password adminpwd
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>addNode.bat DMhost.cn.ibm.com 8879 -includeapps -includebuses -username adminuser -password adminpwd
+</code></pre></div>
 </li>
 <li>
 <p>On the Portal server, run syncNode.bat and then restart the Deployment manager and all node agents.</p>
@@ -3074,12 +3072,10 @@
 </li>
 <li>
 <p>Create keytab file for Portal server on AD:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>ktpass -out path_to_keytab –princ SPN
+<div class="language-text highlight"><pre><span></span><code>ktpass -out path_to_keytab –princ SPN
 
 -mapuser account_name -mapOp set –pass account_password
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Where:</p>
 <ul>
 <li>path_to_keytab is the file path where you want to store the generated keytab file.</li>
@@ -3088,38 +3084,25 @@
 <li>account_password is the password that is associated with the service account.
 For example:</li>
 </ul>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ktpass -princ HTTP/portal.cn.ibm.com@cn.ibm.com -out c:\portal.keytab -mapuser portaluser -mapOp set -pass Passw0rd
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>ktpass -princ HTTP/portal.cn.ibm.com@cn.ibm.com -out c:\portal.keytab -mapuser portaluser -mapOp set -pass Passw0rd
+</code></pre></div>
 </li>
 <li>
 <p>Merge the portal keytab into the merged Connections keytab by running the ktab command with the following switch:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-m source_keytab_name destination_keytab_name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-m source_keytab_name destination_keytab_name
+</code></pre></div>
 <p>Where:</p>
 <ul>
 <li>source_keytab_name is the name of the keytab file on the source system.</li>
 <li>destination_keytab_name is the name of the keytab file on the destination system.
 For example:</li>
 </ul>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>c:\IBM\WebSphere\AppServer\java\jre\bin&gt;ktab.exe -m y:\SPNEGO\portal.keytab y:\SPNEGO\merged.keytab
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>c:\IBM\WebSphere\AppServer\java\jre\bin&gt;ktab.exe -m y:\SPNEGO\portal.keytab y:\SPNEGO\merged.keytab
+</code></pre></div>
 </li>
 <li>
 <p>Re-create the krb5.conf file by using the new merged keytab file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>$AdminTask createKrbConfigFile
+<div class="language-text highlight"><pre><span></span><code>$AdminTask createKrbConfigFile
 
 {
 
@@ -3133,12 +3116,11 @@ For example:</li>
 
 -keytabPath path_to_keytab
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin.bat -user adminuser -password adminpwd
+<div class="language-text highlight"><pre><span></span><code>wsadmin.bat -user adminuser -password adminpwd
 $AdminTask createKrbConfigFile {-krbPath y:\SPNEGO\krb5.conf -realm CN.IBM.COM -kdcHost AD.cn.ibm.com -dns cn.ibm.com -keytabPath y:\SPNEGO\merged.keytab}
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Enable SPNEGO single sign-on by configuring Kerberos in the WebSphere Application Server Integrated Solutions Console, following the steps in the <a href="https://help.hcltechsw.com/connections/v65/admin/secure/t_install_kerb_setup_spnego.html">Enabling single sign-on for the Windows desktop</a> topic.</p>

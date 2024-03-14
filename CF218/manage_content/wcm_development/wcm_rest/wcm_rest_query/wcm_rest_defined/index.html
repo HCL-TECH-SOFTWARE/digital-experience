@@ -2829,19 +2829,10 @@
 <p>The defined queries feature allows administrators to define a query in XML format through the REST service, and bind that query to a URI. This query is used to obtain the results by sending a GET request to the bound URI.</p>
 <h2 id="create">Create</h2>
 <p>A defined query is created by sending a POST request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/DefinedQueryComponent/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/DefinedQueryComponent/
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 POST 
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 POST 
 http://host:port/wps/mycontenthandler/wcmrest/DefinedQueryComponent
 Content-Type: application/atom+xml
 &lt;atom:entry xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;wcm/namespace&quot;&gt;
@@ -2851,53 +2842,27 @@ Content-Type: application/atom+xml
 &lt;/atom:entry&gt;
 
 201 Created
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The URI that is bound to this query has the following format:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/definedquery/component-name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/definedquery/component-name
+</code></pre></div>
 <p>For example, the URI used to obtain the results of the previous query example is:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/definedquery/query-name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/definedquery/query-name
+</code></pre></div>
 <p>The response to a create operation contains a link relation "query-results" specifying this URI.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;atom:link atom:rel=&quot;query-results&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;atom:link atom:rel=&quot;query-results&quot; 
 atom:href=&quot;/wps/mycontenthandler/!ut/p/wcmrest/definedquery/query-name&quot;/&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The only way to update this URI is by modifying the name of the component.</p>
 </div>
 <h2 id="read">Read</h2>
 <p>To retrieve a list of defined queries, you send a GET request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/DefinedQueryComponent/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/DefinedQueryComponent/
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 GET
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 GET
 http://host:port/wps/mycontenthandler/wcmrest/DefinedQueryComponent
 Accept-Type: application/atom+xml
 
@@ -2923,29 +2888,13 @@ Accept-Type: application/atom+xml
         &lt;atom:link atom:rel=&quot;edit&quot; atom:href=&quot;/wps/mycontenthandler/!ut/p/wcmrest/DefinedQueryComponent/6276ff18-f370-45eb-89c3-053d335aba88&quot;/&gt;
     &lt;/atom:entry&gt;
 &lt;/atom:feed&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To retrieve the XML of a specific defined query, you send a GET request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/DefinedQueryComponent/item-uuid
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/DefinedQueryComponent/item-uuid
+</code></pre></div>
 <p>query-name</p>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 GET
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 GET
 http://host:port/wps/mycontenthandler/wcmrest/DefinedQueryComponent/6276ff18-f370-45eb-89c3-053d335aba88
 Accept-Type: application/atom+xml
 
@@ -2962,37 +2911,12 @@ Accept-Type: application/atom+xml
     &lt;atom:link atom:rel=&quot;edit-media&quot; atom:type=&quot;application/vnd.ibm.wcm+xml&quot; atom:href=&quot;/wps/mycontenthandler/!ut/p/wcmrest/DefinedQueryComponent/6276ff18-f370-45eb-89c3-053d335aba88&quot;/&gt;
     &lt;atom:link atom:rel=&quot;query-results&quot; atom:href=&quot;/wps/mycontenthandler/!ut/p/wcmrest/definedquery/query-name&quot;/&gt;
 &lt;/atom:entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To retrieve the raw data of a specific defined query, send a GET request to the edit-media link relation:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/DefinedQueryComponent/item-id
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/DefinedQueryComponent/item-id
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 GET
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 GET
 http://host:port/wps/mycontenthandler/wcmrest/DefinedQueryComponent/items-id
 Accept-Type: application/vnd.ibm.wcm+xml
 
@@ -3018,64 +2942,48 @@ Accept-Type: application/vnd.ibm.wcm+xml
         &lt;parameter&gt;authoringtemplateid&lt;/parameter&gt;
     &lt;/allowParameters&gt;
 &lt;/definedQuery&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="update">Update</h2>
 <p>To update the metadata of a query, use a PUT request that contains the new specification to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/DefinedQueryComponent/item-uuid
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/DefinedQueryComponent/item-uuid
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 PUT
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 PUT
 http://host:port/wps/mycontenthandler/wcmrest/DefinedQueryComponent/6276ff18-f370-45eb-89c3-053d335aba88
 Content-Type: application/atom+xml
 (… atom data … )
 
 200 OK
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To update the raw data of a query that specifies the parameters that are used to conduct the query, use a PUT request that contains the new specification to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/DefinedQueryComponent/item-uuid
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/DefinedQueryComponent/item-uuid
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 PUT
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 PUT
 http://host:port/wps/mycontenthandler/wcmrest/DefinedQueryComponent/6276ff18-f370-45eb-89c3-053d335aba88
 Content-Type: application/vnd.ibm.wcm+xml
 (… xml data … )
 
 200 OK
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="delete">Delete</h2>
 <p>To delete a defined query, send a DELETE request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/DefinedQueryComponent/item-id
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/DefinedQueryComponent/item-id
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 DELETE
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 DELETE
 http://host:port/wps/mycontenthandler/wcmrest/definedquery/6276ff18-f370-45eb-89c3-053d335aba88
 
 200 OK
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="white-list">White List</h2>
 <p>The white list is a list of extra query parameters that can be used to refine the scope of the defined query. These parameters are the only parameters that have an effect when appended to the bound URI.</p>
 <p>For example, if the white list includes a parameter of <code>name</code>, the following request returns the results of the defined query that have the name "hello world":</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 GET
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 GET
 http://host:port/wps/mycontenthandler/wcmrest/query-name?name=hello+world
 
 200 OK
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

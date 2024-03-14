@@ -2410,26 +2410,24 @@
 <h1 id="managing-workflows-by-using-the-workflow-checker-tool">Managing workflows by using the workflow checker tool</h1>
 <p>Use the workflow checker tool to update workflow security settings, reschedule pending workflow actions, or to detect and fix items with an invalid workflow.</p>
 <p>You must first enable the workflow update tool by adding the following parameters to the <strong>WCM WCMConfigService</strong> service by using the WebSphere® Integrated Solutions Console:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>connect.businesslogic.module.workflowcontrolchecker.class=com.aptrix.pluto.workflow.WorkflowControlCheckerModule
+<div class="language-text highlight"><pre><span></span><code>connect.businesslogic.module.workflowcontrolchecker.class=com.aptrix.pluto.workflow.WorkflowControlCheckerModule
 connect.businesslogic.module.workflowcontrolchecker.remoteaccess=true
 connect.businesslogic.module.workflowcontrolchecker.autoload=false
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ol>
 <li>
 <p>Log in to the portal as an administrator.</p>
 </li>
 <li>
 <p>Open one of the following URLs in the browser:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://[HOST]:[PORT]/wps/wcm/myconnect/?MOD=WorkflowControlChecker&amp;library=libraryname&amp;updateDocSecurity=true&amp;fix=true
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://[HOST]:[PORT]/wps/wcm/myconnect/?MOD=WorkflowControlChecker&amp;library=libraryname&amp;rescheduleActions=true&amp;fix=true
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://[HOST]:[PORT]/wps/wcm/myconnect/?MOD=WorkflowControlChecker&amp;library=Web+Content&amp;repairInvalidWorkflow=true
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://[HOST]:[PORT]/wps/wcm/myconnect/?MOD=WorkflowControlChecker&amp;library=Web+Content&amp;repairInvalidWorkflow=true&amp;fix=true
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://[HOST]:[PORT]/wps/wcm/myconnect/?MOD=WorkflowControlChecker&amp;library=libraryname&amp;updateDocSecurity=true&amp;fix=true
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>http://[HOST]:[PORT]/wps/wcm/myconnect/?MOD=WorkflowControlChecker&amp;library=libraryname&amp;rescheduleActions=true&amp;fix=true
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>http://[HOST]:[PORT]/wps/wcm/myconnect/?MOD=WorkflowControlChecker&amp;library=Web+Content&amp;repairInvalidWorkflow=true
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>http://[HOST]:[PORT]/wps/wcm/myconnect/?MOD=WorkflowControlChecker&amp;library=Web+Content&amp;repairInvalidWorkflow=true&amp;fix=true
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If the "<code>library</code>" parameter is omitted, the default library that is configured in the <strong>WCM WCMConfigService</strong> service is used.</p>
@@ -2493,13 +2491,13 @@ connect.businesslogic.module.workflowcontrolchecker.autoload=false
 <ul>
 <li>
 <p><strong>Using the URL context of a virtual portal:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://[HOST]:[PORT]/wps/wcm/myconnect/[url_context]?MOD=WorkflowControlChecker&amp;library=*libraryname*&amp;updateDocSecurity=true&amp;fix=true
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://[HOST]:[PORT]/wps/wcm/myconnect/[url_context]?MOD=WorkflowControlChecker&amp;library=*libraryname*&amp;updateDocSecurity=true&amp;fix=true
+</code></pre></div>
 </li>
 <li>
 <p><strong>Using the host name of a virtual portal:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://[Virtual_HOST]:[PORT]/wps/wcm/myconnect?MOD=WorkflowControlChecker&amp;library=*libraryname*&amp;updateDocSecurity=true&amp;fix=true
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://[Virtual_HOST]:[PORT]/wps/wcm/myconnect?MOD=WorkflowControlChecker&amp;library=*libraryname*&amp;updateDocSecurity=true&amp;fix=true
+</code></pre></div>
 </li>
 </ul>
 

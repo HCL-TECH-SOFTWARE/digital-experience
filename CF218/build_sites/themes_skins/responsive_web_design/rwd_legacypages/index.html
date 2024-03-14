@@ -2590,16 +2590,12 @@
 <p>Since standard pages are table-based, it is more difficult to implement responsive web design on standard pages. Limited support for responsive web design is implemented for standard pages on smartphone devices. When a standard page is viewed on a smartphone, all of its layout containers and portlets stack vertically. Stacking the containers and portlets ensures that the page contents fit better on the screen. The look of standard pages remains unchanged on desktop and tablet devices, which have more available real estate.</p>
 <p>If you want to introduce more responsiveness to the standard page layouts of your portal site, use CSS selectors for pinpointing containers and controls to achieve the preferred designs. To add this support to your theme, add the <code>wp_legacy_layouts</code> module to your theme profile. For more information, see <em>Adding or removing a ready-to-use module to a theme</em>.</p>
 <p>For example, if you want to hide the third column of a three column layout on a tablet sized device, you can target the screen size by using a media query and the third column with an appropriate CSS selector:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>@media (max-width: 800px) {
+<div class="language-text highlight"><pre><span></span><code>@media (max-width: 800px) {
     table.layoutRow tbody tr td:nth-child(3) {
         display: none;
     }
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

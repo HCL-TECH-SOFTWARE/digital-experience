@@ -3241,10 +3241,9 @@
 <li>
 <p>Edit the local copy of the file and modify it to point to the profile desired.</p>
 <p>For Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>com.ibm.portal.themetype=CSA2
+<div class="language-text highlight"><pre><span></span><code>com.ibm.portal.themetype=CSA2
 resourceaggregation.profile=profiles/profile_lightweight.json
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Copy the local copy of the metadata.properties file back into the folder for your theme in the themelist folder.</p>
@@ -3255,15 +3254,7 @@ resourceaggregation.profile=profiles/profile_lightweight.json
 <li>
 <p>Export the theme.</p>
 <p>You can export all themes defined for HCL Digital Experience (DX) using the following script, or insert the specific theme object ID you want to export:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;request
 xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
 xsi:noNamespaceSchemaLocation=&quot;PortalConfig\_8.5.0.xsd&quot; type=&quot;export&quot;
@@ -3272,13 +3263,13 @@ create-oids=&quot;true&quot;&gt;
        &lt;theme action=&quot;export&quot; objectid=&quot;*&quot; /&gt;
     &lt;/portal&gt;
 &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Modify the parameter resourceaggregation.profile to point to the new profile.</p>
 <p>For Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;parameter name=&quot;resourceaggregation.profile&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;&lt;![CDATA[profiles/profile_lightweight.json]]&gt;&lt;/parameter&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;parameter name=&quot;resourceaggregation.profile&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;&lt;![CDATA[profiles/profile_lightweight.json]]&gt;&lt;/parameter&gt;
+</code></pre></div>
 </li>
 <li>
 <p>Import the XML file using the command line or <strong>Import XML</strong>.</p>

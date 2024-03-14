@@ -2376,17 +2376,7 @@
 <p>You can use the portal XML configuration interface (XMLAccess) to work with dialog sets.</p>
 <p>You can import dialog sets by specifying the value <code>create</code> for the <code>action</code> attribute.</p>
 <p>Code sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code> &lt;request type=&quot;update&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;PCM_1.0.xsd&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code> &lt;request type=&quot;update&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;PCM_1.0.xsd&quot;&gt;
 
   &lt;portal action=&quot;create&quot;&gt;
      &lt;dialog-set&gt;
@@ -2397,17 +2387,10 @@
       &lt;/dialog-set&gt;
   &lt;/portal&gt;
  &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You can export dialog sets by specifying the value <code>export</code> for the <code>action</code> attribute. For example, you can use this option for staging or migration purposes. The following code sample shows how you can export a single dialog definition <code>dialog1</code>.</p>
 <p>Code sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code> &lt;request type=&quot;update&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;PCM_1.0.xsd&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code> &lt;request type=&quot;update&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;PCM_1.0.xsd&quot;&gt;
 
   &lt;portal action=&quot;export&quot;&gt;
      &lt;dialog-set&gt;
@@ -2415,17 +2398,10 @@
      &lt;/dialog-set&gt;
   &lt;/portal&gt;
  &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>When you export dialog sets or definitions, you can use wildcards. The following code sample shows how to export all available dialog definitions.</p>
 <p>Code sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code> &lt;request type=&quot;update&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;PCM_1.0.xsd&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code> &lt;request type=&quot;update&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;PCM_1.0.xsd&quot;&gt;
 
   &lt;portal action=&quot;export&quot;&gt;
       &lt;dialog-set&gt;
@@ -2433,17 +2409,10 @@
       &lt;/dialog-set&gt;
   &lt;/portal&gt;
  &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following code sample shows how to export all dialog definitions with the name that starts with the string <code>toBeExported</code>.</p>
 <p>Code sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;request type=&quot;update&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;PCM_1.0.xsd&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;request type=&quot;update&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;PCM_1.0.xsd&quot;&gt;
 
     &lt;portal action=&quot;export&quot;&gt;
         &lt;dialog-set&gt;
@@ -2451,17 +2420,10 @@
         &lt;/dialog-set&gt;
   &lt;/portal&gt;
  &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following code sample shows how to export all dialog definitions with the name that ends with the string <code>toBeExported</code>.</p>
 <p>Code sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code> &lt;request type=&quot;update&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;PCM_1.0.xsd&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code> &lt;request type=&quot;update&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;PCM_1.0.xsd&quot;&gt;
 
   &lt;portal action=&quot;export&quot;&gt;
       &lt;dialog-set&gt;
@@ -2469,17 +2431,10 @@
       &lt;/dialog-set&gt;
   &lt;/portal&gt;
  &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following code sample shows how to export all dialog definitions with the name that contains the string <code>toBeExported</code>.</p>
 <p>Code sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code> &lt;request type=&quot;update&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;PCM_1.0.xsd&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code> &lt;request type=&quot;update&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;PCM_1.0.xsd&quot;&gt;
 
   &lt;portal action=&quot;export&quot;&gt;
       &lt;dialog-set&gt;
@@ -2487,17 +2442,10 @@
       &lt;/dialog-set&gt;
   &lt;/portal&gt;
  &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You can delete dialog sets by specifying the value <code>delete</code> for the <code>action</code> attribute. The following code sample shows how to delete a single dialog definition with the name <code>dialog1</code>. You can use the same wildcards as for exporting.</p>
 <p>Code sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code> &lt;request type=&quot;update&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;PCM_1.0.xsd&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code> &lt;request type=&quot;update&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;PCM_1.0.xsd&quot;&gt;
 
   &lt;portal action=&quot;delete&quot;&gt;
       &lt;dialog-set&gt;
@@ -2505,7 +2453,7 @@
       &lt;/dialog-set&gt;
   &lt;/portal&gt;
  &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You cannot use the XML configuration interface to merge an updated dialog definition with an existing one that you imported earlier. The XMLAccess request type <code>update</code> overwrites the specified existing portal resource with the new one. Therefore, if you want to merge a previous dialog definition with a newer one, you need to manually merge the two XML scripts. To merge the two XML scripts, make sure that the new dialog definition contains both the new sections and the old sections that you want to preserve.</p>

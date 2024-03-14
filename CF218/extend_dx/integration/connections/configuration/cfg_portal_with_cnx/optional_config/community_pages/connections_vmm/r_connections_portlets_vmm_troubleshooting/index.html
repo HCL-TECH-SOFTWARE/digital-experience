@@ -3149,38 +3149,20 @@
 <h2 id="verifying-the-vmm-adapter-library-deployment-and-enablement">Verifying the VMM adapter library deployment and enablement</h2>
 <p>Run the following task from wp_profile/ConfigEngine to confirm that VMM is successfully configured: ConfigEngine.bat verify-SNPortletsVMM-setup -DWasPassword=password -DPortalAdminPwd=password -DWasUserid=userid -DPortalUserid=userid</p>
 <p>If the VMM adapter libraries are deployed successfully, you see the following output in the console:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[wsadmin] AdapterClassVerification --&gt; Success - Adapter Class Found.
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[wsadmin] AdapterClassVerification --&gt; Success - Adapter Class Found.
+</code></pre></div>
 <p>If the VMM adapter libraries are not deployed successfully, you see the following output in the console:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>[wsadmin] AdapterClassVerification --&gt; Failed - Adapter class could not be found. Verify VMM Adapter jars are added at correct path.
+<div class="language-text highlight"><pre><span></span><code>[wsadmin] AdapterClassVerification --&gt; Failed - Adapter class could not be found. Verify VMM Adapter jars are added at correct path.
  [wsadmin] AdapterClassVerification --&gt; Failed - ClassNotFoundException - Verify that the path for com.ibm.ws.wim.adapter.connections.jar is correct.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If the VMM adapter configuration is successful, the task generates the following output:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>  [wsadmin] AdapterClassVerification --&gt; Success - Adapter Class Found.
+<div class="language-text highlight"><pre><span></span><code>  [wsadmin] AdapterClassVerification --&gt; Success - Adapter Class Found.
   [wsadmin] PortalLoginVerification --&gt; Success - Correct credentials found for DSX Admin and login done in Portal.
   [wsadmin] HTTPSAuthCallVerification --&gt; Success - HTTPS Call using DSX Admin credentials returned 200 status code.
   [wsadmin] SonataCallVerification --&gt; Success - DSX API HTTPS Call using DSX Admin credentials returned 200 status code.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If there is a configuration failure, you see one or more of the following messages:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code> [wsadmin] AdapterClassVerification --&gt; Failed - Adapter class could not be found. Verify VMM Adapter jars are added at correct path.
+<div class="language-text highlight"><pre><span></span><code> [wsadmin] AdapterClassVerification --&gt; Failed - Adapter class could not be found. Verify VMM Adapter jars are added at correct path.
  [wsadmin] AdapterClassVerification --&gt; Failed - ClassNotFoundException - Verify that the path for com.ibm.ws.wim.adapter.connections.jar is correct.
  [wsadmin] PortalLoginVerification --&gt; Failed - Verify the DSX Admin credentials in Security and J2CAlias REP.
  [wsadmin] PortalLoginVerification --&gt; Failed - Unable to find J2CAuthAlias REP property. Make sure it is defined.
@@ -3195,7 +3177,7 @@
  [wsadmin] SonataCallVerification --&gt; Failed - 401 exception encountered while making Sonata call due to empty or invalid credentials.
  [wsadmin] SonataCallVerification --&gt; Failed - 403 exception encountered while making Sonata call. Verify that correct DSX Admin is defined.
  [wsadmin] SonataCallVerification --&gt; Failed - Cannot read service document. Attempting retry.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="additional-checkpoints-for-vmm-adapter">Additional checkpoints for VMM adapter</h2>
 <p>If the Virtual Member Manager is not working, for example, if community groups are not displaying on the Portal server, first check the timeout settings on the Portal and HCL Connections servers to make sure that they are compatible.</p>
 <ol>
@@ -3217,12 +3199,10 @@
 <li>Open LotusConnections-config.xml.</li>
 <li>
 <p>Update the <code>&lt;customAuthenticator name="DefaultAuthenticator"/&gt;</code> element to</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;customAuthenticator name=&quot;DefaultAuthenticator&quot;&gt; 
+<div class="language-text highlight"><pre><span></span><code>&lt;customAuthenticator name=&quot;DefaultAuthenticator&quot;&gt; 
 &lt;attribute key=&quot;CookieTimeout&quot; value=&quot;24&quot; /&gt; 
 &lt;/customAuthenticator&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Set the value of CookieTimeout to the same value you set in sonata.services.xml on the Portal service.</p>

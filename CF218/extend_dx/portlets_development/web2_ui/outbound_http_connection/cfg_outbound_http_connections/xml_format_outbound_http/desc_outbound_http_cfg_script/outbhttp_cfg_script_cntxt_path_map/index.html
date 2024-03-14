@@ -3371,12 +3371,12 @@
 <h1 id="context-path-mapping">Context path mapping</h1>
 <p>You use a context path mapping to map a specific context path to a specific target URL. The proxy resolves context path mappings before it applies the matching access policy.</p>
 <p>To work with context path mappings, you work with the <code>mapping</code> setting. An example <code>mapping</code> setting can look as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;mapping contextpath=&quot;/ibmproducts&quot; url=&quot;http://www.ibm.com/products&quot;/&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;mapping contextpath=&quot;/ibmproducts&quot; url=&quot;http://www.ibm.com/products&quot;/&gt;
+</code></pre></div>
 <p>It maps requests that contain the context path /ibmproducts to the URL http://www.ibm.com/products. As a result, the incoming proxy URL is http://myportal.com/wps/ibmproducts/us/en, the proxy forwards the request to http://www.ibm.com/products/us/en. For more details about the proxy URL format and the usage of context path mappings, read <a href="../../../../outbhttp_progr_model/">The programming model for the outbound HTTP connection service</a>.</p>
 <p>You can also define generic context path mappings that are not tied to a specific URL pattern. You do so by specifying the asterisk as a wildcard: <code>url="*"</code>. Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;mapping contextpath=&quot;/proxy&quot; url=&quot;*&quot;&gt;&lt;/mapping&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;mapping contextpath=&quot;/proxy&quot; url=&quot;*&quot;&gt;&lt;/mapping&gt;
+</code></pre></div>
 <p>However, if your application must connect to only a few external systems, for example to one external REST service that provides the application data, it is better to use a specific context path mapping.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

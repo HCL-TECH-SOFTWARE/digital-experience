@@ -3340,36 +3340,31 @@
 <ol>
 <li>
 <p>You can add the identifier of a portlet to the DOM tree by adding the following line to the file skin.html in the theme WebDAV folder:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;span class=&quot;asa.portlet.id&quot; style=&quot;display:none;&quot;&gt;&lt;%= myPortletID %&gt;&lt;/span&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;span class=&quot;asa.portlet.id&quot; style=&quot;display:none;&quot;&gt;&lt;%= myPortletID %&gt;&lt;/span&gt;
+</code></pre></div>
 <p><strong>Note:</strong> If the <code>span</code> element is styled in an external CSS file, you need to escape each period in the class name by a backslash. Example: <code>asa\.portlet\.id{display:none;}</code></p>
 <p>With the code sample, the aggregator can fetch the identifiers of all portlets on a page by iterating over all occurrences of <code>"span"</code> elements with a class attribute of <code>"asa.portlet.id"</code>.</p>
 <p>The correct function of the code sample depends on the definition of <code>myPortletID</code> earlier in the file skin.html. By default, it is defined by using the following JSP code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portal-skin:portletID var=&quot;myPortletID&quot;/&gt; 
+<div class="language-text highlight"><pre><span></span><code>&lt;portal-skin:portletID var=&quot;myPortletID&quot;/&gt; 
 &lt;jsp:useBean id=&quot;myPortletID&quot; class=&quot;java.lang.String&quot; scope=&quot;page&quot;/&gt; 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>You can add the portlet title to the DOM tree by wrapping the <code>&lt;portal-skin:portletTitle&gt;</code> statement in the file skin.html with a span element that has a class attribute of <code>"asa.portlet.title"</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;span class=&quot;asa.portlet.title&quot;&gt;&lt;portal-skin:portletTitle&gt;&lt;/portal-skin:portletTitle&lt;/span&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;span class=&quot;asa.portlet.title&quot;&gt;&lt;portal-skin:portletTitle&gt;&lt;/portal-skin:portletTitle&lt;/span&gt;
+</code></pre></div>
 </li>
 </ol>
 </li>
 <li>
 <p><strong>Including aggregators with the page</strong></p>
 <p>The portal includes a default implementation of the theme extension point com.ibm.portal.theme.plugin.ActiveSiteAnalyticsAggregators. The extension point locates a JavaScript file that is specified in the page metadata. The extension point includes the content of that file in the HTML code of the page. The metadata key must start with <code>asa_aggregator</code> or <code>asa_js</code> , and its value is the JavaScript file name. For details see the topic about <em>Adding an Active Site Analytics aggregator to a portal page</em>. Add the following code somewhere near the closing body tag ( <code>&lt;/body&gt;</code> ) of the file <code>themeName\nls\theme_languageCode.html</code> of the theme WebDAV folder:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portal-theme-ext:themeExtension id=&quot;com.ibm.portal.theme.plugin.ActiveSiteAnalyticsAggregators&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;portal-theme-ext:themeExtension id=&quot;com.ibm.portal.theme.plugin.ActiveSiteAnalyticsAggregators&quot;&gt;
    &lt;portal-theme-ext:themeExtensionLoop&gt;
       &lt;portal-theme-ext:themeExtensionItemText /&gt;
    &lt;/portal-theme-ext:themeExtensionLoop&gt; 
 &lt;/portal-theme-ext:themeExtension&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This code loops over every implementation of the theme extension point and executes it. The default implementation included with the portal follows the approach previously outlined.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -3379,16 +3374,12 @@
 <li>
 <p><strong>Including dependencies with the page</strong></p>
 <p>If you want dependencies to be used by more than one aggregator, add them to the head of the html page. The portal includes a default implementation of the theme extension point <code>com.ibm.portal.theme.plugin.ActiveSiteAnalyticsDependencies</code> . The extension point locates a JavaScript file that is specified in the page metadata. The extension point includes the content of that file in the HTML code of the page. The metadata key must start with <code>asa_dependency</code> , and its value is the JavaScript file name. For details see the topic about <em>Adding an Active Site Analytics aggregator to a portal page</em>. Add the following code to the head of the theme:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portal-theme-ext:themeExtension id=&quot;com.ibm.portal.theme.plugin.ActiveSiteAnalyticsDependencies&quot;&gt;   
+<div class="language-text highlight"><pre><span></span><code>&lt;portal-theme-ext:themeExtension id=&quot;com.ibm.portal.theme.plugin.ActiveSiteAnalyticsDependencies&quot;&gt;   
    &lt;portal-theme-ext:themeExtensionLoop&gt;      
       &lt;portal-theme-ext:themeExtensionItemText /&gt;   
    &lt;/portal-theme-ext:themeExtensionLoop&gt; 
 &lt;/portal-theme-ext:themeExtension&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This code loops over every implementation of the theme extension point and executes it. The default implementation included with the portal follows the approach previously outlined.</p>
 </li>
 <li>
@@ -3400,29 +3391,25 @@
 <p>If the key of a piece of metadata is <code>asa_jsp</code> and its value is set to <code>asa_sample.jsp</code>, then the portal searches for a JSP with a file name asa_sample.jsp and, if it finds such a file, it includes it in the page contents.</p>
 </div>
 <p>You can use the extension point <code>com.ibm.portal.theme.plugin.ActiveSiteAnalyticsInclude</code> to include a JSP into the page content. The metadata key must start with <code>asa_jsp</code> . Add the following code in the theme:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portal-theme-ext:themeExtension id=&quot;com.ibm.portal.theme.plugin.ActiveSiteAnalyticsInclude&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;portal-theme-ext:themeExtension id=&quot;com.ibm.portal.theme.plugin.ActiveSiteAnalyticsInclude&quot;&gt;
    &lt;portal-theme-ext:themeExtensionLoop&gt;
       &lt;portal-theme-ext:themeExtensionRenderInclude/&gt;
    &lt;/portal-theme-ext:themeExtensionLoop&gt;
 &lt;/portal-theme-ext:themeExtension&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This code loops over each implementation of the theme extension point and executes it. The default implementation included with the portal follows the approach outlined earlier.</p>
 </li>
 <li>
 <p><strong>Including microformats of interest</strong></p>
 <p>You might need to modify the skins used by a theme so that all of the microformat information that you want to be captured is present when the page is rendered. For example, you can add this code to the skin.html file of a skin to ensure the portlet ID of all portlets on the page is available for the aggregator script to discover:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;span class=&quot;asa.portlet.id&quot; style=&quot;display:none;&quot;&gt;&lt;%= myPortletID %&gt;&lt;/span&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;span class=&quot;asa.portlet.id&quot; style=&quot;display:none;&quot;&gt;&lt;%= myPortletID %&gt;&lt;/span&gt;
+</code></pre></div>
 <p>In this case the file <code>asa_sample.js</code> looks for elements with the class <code>asa.portlet.id</code> to find the portlet ID of all portlets present on the page. Portlet titles can be rendered by using code similar to this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portal-skin:portletTitle /&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;portal-skin:portletTitle /&gt;
+</code></pre></div>
 <p>To capture such portlet titles, you can add an additional span element with a class defined for titles that the analytics JavaScript file will look for:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;span class=&quot;asa.portlet.title&quot;&gt;&lt;portal-skin:portletTitle /&gt;&lt;/span&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;span class=&quot;asa.portlet.title&quot;&gt;&lt;portal-skin:portletTitle /&gt;&lt;/span&gt;
+</code></pre></div>
 <p>In this case, <code>asa.portlet.title</code> is recognized as the class for all span elements that encompass the rendered text of the portlet titles.</p>
 </li>
 <li>

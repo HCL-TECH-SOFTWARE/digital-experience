@@ -3050,16 +3050,16 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <code>author</code> and <code>owner</code> queries can be used as "OR" queries if the request URL parameter <code>option=search-any</code> is used. For example, if a query specifies:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>?author=user1&amp;author=user2&amp;option=search-any
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>?author=user1&amp;author=user2&amp;option=search-any
+</code></pre></div>
 <p>then all items that have user1 or user2 as their author are returned in the results. If the option parameter is not used, then only items that have both user1 and user2 as the author are returned.</p>
 </div>
 </li>
 <li>
 <p><strong>Sort values</strong></p>
 <p>Sort values are comma-separated. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>?sort=created_ascending,title_descending
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>?sort=created_ascending,title_descending
+</code></pre></div>
 </li>
 </ul>
 </li>
@@ -3073,20 +3073,20 @@
 <li>
 <p><strong>Endpoint</strong></p>
 <p><strong>GET request to:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://host:port/wps/mycontenthandler/wcmrest/query?textcontainsexact=...
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://host:port/wps/mycontenthandler/wcmrest/query?textcontainsexact=...
+</code></pre></div>
 <p>or</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://host:port/wps/mycontenthandler/wcmrest/query?textcontains=...
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://host:port/wps/mycontenthandler/wcmrest/query?textcontains=...
+</code></pre></div>
 <p><strong>Sample URL:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://samplehost.team-q-dev.com:10039/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/query?textcontainsexact=Sample%20Article
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://samplehost.team-q-dev.com:10039/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/query?textcontainsexact=Sample%20Article
+</code></pre></div>
 </li>
 <li>
 <p><strong>Expected Body</strong></p>
 <p>Body can just have the basic WCM structure:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://samplehost.team-q-dev.com:10039/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/query?textcontainsexact=Sample%20Article
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://samplehost.team-q-dev.com:10039/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/query?textcontainsexact=Sample%20Article
+</code></pre></div>
 </li>
 <li>
 <p><strong>Expected Headers</strong></p>
@@ -3094,58 +3094,15 @@
 </li>
 <li>
 <p><strong>Query Parameters</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>textcontains: Any of the words
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>textcontainsexact: Exact phrase
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>textcontains: Any of the words
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>textcontainsexact: Exact phrase
+</code></pre></div>
 </li>
 <li>
 <p><strong>Return body</strong></p>
 <p>The found results. Same as when calling existing query API.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;feed xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;feed xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
     &lt;id&gt;wcmrest:query?textcontainsexact=Sample%20Article&lt;/id&gt;
     &lt;title&gt;wcmrest:query?textcontainsexact=Sample%20Article&lt;/title&gt;
     &lt;updated&gt;2020-04-14T12:36:14.477Z&lt;/updated&gt;
@@ -3189,30 +3146,12 @@
         &lt;category scheme=&quot;wcmrest:workflowState&quot; term=&quot;PUBLISHED&quot; label=&quot;Published&quot; xml:lang=&quot;en&quot;/&gt;
     &lt;/entry&gt;
 &lt;/feed&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="adding-workflow-date-fields-and-link-to-the-rest-api-search-query-results">Adding Workflow date fields and link to the REST API search query results</h2>
 <p>You can include the date fields associated with the workflow of a requested item by specifying the <code>options=workflow</code> URL parameter. Only the date fields that have been set to a valid value are returned. A link is also added to the workflow. This option is ignored for items that do not have a workflow. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>```
+<div class="language-text highlight"><pre><span></span><code>```
 
 HTTP 1.1 GET /wps/mycontenthandler/wcmrest/query?name=SiteAreaName&amp;options=workflow
 
@@ -3231,23 +3170,10 @@ HTTP 1.1 GET /wps/mycontenthandler/wcmrest/query?name=SiteAreaName&amp;options=w
 &lt;/entry&gt;
 
 ```
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="adding-item-path-information-to-the-rest-api-search-query-results">Adding item path information to the REST API search query results</h2>
 <p>The parent path of a requested item can be included by specifying the <code>options=item-path</code> URL parameter. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP 1.1 GET /wps/mycontenthandler/wcmrest/query?type=SiteArea&amp;options=item-path
+<div class="language-text highlight"><pre><span></span><code>HTTP 1.1 GET /wps/mycontenthandler/wcmrest/query?type=SiteArea&amp;options=item-path
 
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm&quot;&gt;
@@ -3261,27 +3187,9 @@ HTTP 1.1 GET /wps/mycontenthandler/wcmrest/query?name=SiteAreaName&amp;options=w
     &lt;/wcm:path&gt;
 …
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The <code>options=item-path</code> URL parameter omits the parent preset folder that can be seen in the navigation breadcrumb trail of WCM Authoring when inspecting an item in a library. In the above example of a SiteArea, the Content folder is omitted and only the parent Library information is returned. To include the parent preset folder, use <code>options=item-path-full</code> as the URL parameter instead. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP 1.1 GET /wps/mycontenthandler/wcmrest/query?type=SiteArea&amp;options=item-path-full
+<div class="language-text highlight"><pre><span></span><code>HTTP 1.1 GET /wps/mycontenthandler/wcmrest/query?type=SiteArea&amp;options=item-path-full
 
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm&quot;&gt;
@@ -3300,40 +3208,21 @@ HTTP 1.1 GET /wps/mycontenthandler/wcmrest/query?name=SiteAreaName&amp;options=w
     &lt;/wcm:path&gt;
 …
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <code>options=item-path-full</code> only works with the query API.</p>
 </div>
 <h2 id="adding-more-detailed-information-to-the-rest-api-search-query-results">Adding more detailed information to the REST API search query results</h2>
 <p>Several other fields of a requested item can be included by specifying the <code>options=details</code> URL parameter. These include: </p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>- the user who created the item
+<div class="language-text highlight"><pre><span></span><code>- the user who created the item
 - the creation date
 - if the item is a favorite
 - if the item is locked
 - an access control link that gets added to the links section
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP 1.1 GET /wps/mycontenthandler/wcmrest/query?type=SiteArea&amp;options=details
+<div class="language-text highlight"><pre><span></span><code>HTTP 1.1 GET /wps/mycontenthandler/wcmrest/query?type=SiteArea&amp;options=details
 
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm&quot;&gt;
@@ -3349,31 +3238,9 @@ HTTP 1.1 GET /wps/mycontenthandler/wcmrest/query?name=SiteAreaName&amp;options=w
     &lt;category scheme=&quot;wcmrest:favorite&quot; term=&quot;false&quot; xml:lang=&quot;en&quot;/&gt;
     &lt;category scheme=&quot;wcmrest:locked&quot; term=&quot;false&quot; label=&quot;&quot;/&gt;
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To also include the list of owners of an item along with all the other details listed above, use <code>options=details-full</code> as the URL parameter instead. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP 1.1 GET /wps/mycontenthandler/wcmrest/query?type=SiteArea&amp;options=details-full
+<div class="language-text highlight"><pre><span></span><code>HTTP 1.1 GET /wps/mycontenthandler/wcmrest/query?type=SiteArea&amp;options=details-full
 
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm&quot;&gt;
@@ -3396,7 +3263,7 @@ HTTP 1.1 GET /wps/mycontenthandler/wcmrest/query?name=SiteAreaName&amp;options=w
     &lt;category scheme=&quot;wcmrest:locked&quot; term=&quot;false&quot; label=&quot;&quot;/&gt;
 …
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <code>options=details-full</code> only works with the query API.</p>

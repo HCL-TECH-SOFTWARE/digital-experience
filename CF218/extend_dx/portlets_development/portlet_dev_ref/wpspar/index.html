@@ -2675,8 +2675,8 @@
 <li>
 <p>Use portlet classes in the portal server's stylesheet, Styles.css. If you hardcode the fonts and colors, the portlet's appearance looks out of place when the user changes the page style settings. Portal administrators and users can affect the appearance of the portal by changing the portal theme and the portlet skins. Portlets can pick up on style changes by using styles that are defined in the portal theme's cascading stylesheet, Styles.css. For example, instead of decorating an <code>&lt;input&gt;</code> element with the style attribute, refer to the theme's input class definition: <code>&lt;inputclass="portlet-form-button" type="submit"&gt;</code></p>
 <p>Portlet style classes are marked with the following comment:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/* Styles used in portlets
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/* Styles used in portlets
+</code></pre></div>
 <p>When available, use the WSRP style classes, which have a <code>portlet-</code> prefix. See <em>CSS Style Definitions</em> in the <a href="https://www.oasis-open.org/committees/">WSRP 1.0 specification</a>.</p>
 <p>The relevant document says, <em>"One of the goals of an aggregated page is a common look-and-feel across the Portlets contained on that page. This not only affects the decorations around the Portlets, but also their 25 content. Using a common CSS stylesheet for all Portlets, and defining a set of standard styles, provides this common look-and-feel without requiring the Portlets to generate Consumer-specific markup. Portlets SHOULD use the CSS style definitions from this specification in order to participate in a uniform display of their content by various Consumers. For markup types that support CSS stylesheets, Consumers MUST supply a CSS stylesheet to the End-User's agent 30 with definitions for the classes defined in section 10.6 of this specification. This section defines styles for various logical units in the markup."</em></p>
 </li>
@@ -2686,8 +2686,8 @@
 <li>Limit the size of the portlet output. Portlets contribute a portion of a larger page. The size of the JSPs (in terms of horizontal and vertical span) can determine how easily the portlet can fit on a page with multiple columns and other portlets. A large portlet forces other portlets off the screen and creates large scrolling regions, resulting in usability issues. When you design a portlet's JSPs, avoid unnecessary layout elements. Focus the portlet's view on the pertinent information and consider whether the portlet is intended to be placed on pages with other portlets. In particular, take notice of image size, pre-formatted text (<code>&lt;pre/&gt;</code> tag), and absolute widths on elements, such as tables.</li>
 <li>
 <p>Use Java style comments instead of HTML style. HTML comments remain in the rendered content, adding to the document size and the amount of data that passes to the client. If you use Java style comments within your JSPs, instead, they are removed from the rendered source, along with the rest of the Java code. You must embed these comments within scriptlets:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;% // this is a comment %&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;% // this is a comment %&gt;
+</code></pre></div>
 </li>
 <li>
 <p>Make pages fully accessible. To allow portal users with disabilities to be able to use your portlet, the JSPs must be fully enabled for keyboard-only control and other assistive technologies. Follow these general guidelines:</p>

@@ -1809,10 +1809,9 @@
 <p>The recommended approach for configuration changes is to update the custom-values.yaml file used to install the deployment, and then run a Helm upgrade. This has the added benefit that your custom-values.yaml file remains an up-to-date description of the configuration of your environment.</p>
 <h2 id="helm-upgrade-configuration-command">Helm Upgrade configuration command</h2>
 <p>After making the needed changes to your custom-values.yaml file, use the following command:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Helm upgrade command</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Helm upgrade command</span>
 helm<span class="w"> </span>upgrade<span class="w"> </span>-n<span class="w"> </span>your-namespace<span class="w"> </span>-f<span class="w"> </span>path/to/your/custom-values.yaml<span class="w"> </span>your-release-name<span class="w"> </span>path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li>The <code>your-namespace</code> is the namespace in which your HCL Digital Experience 9.5 deployment is installed and <code>your-release-name</code> is the Helm release name you used when installing.</li>
 <li>The <code>-f path/to/your/custom-values.yaml</code> parameter must point to the custom-values.yaml you have updated.</li>

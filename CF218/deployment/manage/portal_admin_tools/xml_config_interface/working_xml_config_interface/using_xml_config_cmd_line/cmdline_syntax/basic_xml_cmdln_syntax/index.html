@@ -3952,22 +3952,19 @@
 
 <h1 id="basic-xml-command-line-syntax">Basic XML command line syntax</h1>
 <p>The basic command line syntax for the XML configuration interface is as follows.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>     xmlaccess -user user_ID -password password 
+<div class="language-text highlight"><pre><span></span><code>     xmlaccess -user user_ID -password password 
                -url myhost:10039/wps/config 
                -in input_file.xml -out result_file.xml
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>All data, including the user ID and password, are sent to the server unencrypted. Therefore you should only connect to the XML configuration interface from inside a protected intranet where you can be sure that the HTTP connection is not compromised. In all other networks use a secure HTTPS connection to connect to the XML configuration interface.</p>
 </div>
 <h2 id="prompting-for-credentials">Prompting for credentials</h2>
 <p>You can use the parameter askForCredential and leave out the parameters user and password. The XML configuration interface will then prompt you for the user ID and password. This can be useful in security sensitive environments, as the user credentials are not visible on the console or in the process view. The parameter askForCredential requires no value to be specified. Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>   xmlaccess **-askForCredential** -url myhost:10039/wps/config 
+<div class="language-text highlight"><pre><span></span><code>   xmlaccess **-askForCredential** -url myhost:10039/wps/config 
              -in input_file.xml -out result_file.xml
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="placing-the-credentials-in-a-properties-file">Placing the credentials in a properties file</h2>
 <p>You can also place the credentials in a properties file and use the option useEncryptedCredentials. This option reads the encrypted or unencrypted credentials from the properties file, and then saves the file back using the encrypted password. If you do not want to write the properties file back with the encrypted credentials, use the <strong>additional</strong> flag noUpdateProperties. In this case you can use the <code>PropFilePasswordEncoder</code> utility to encrypt the password in the properties file. This option reads the following properties out of the file:</p>
 <ul>
@@ -3975,25 +3972,20 @@
 <li>for the password: <code>com.ibm.SOAP.loginPassword = password</code></li>
 </ul>
 <p>An example of a command line is as follows</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>xmlaccess -in Export.xml -useEncryptedCredentials myProperties.properties 
+<div class="language-text highlight"><pre><span></span><code>xmlaccess -in Export.xml -useEncryptedCredentials myProperties.properties 
                          -url portal.example.com:10039/wps/config
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="virtual-portals">Virtual portals</h2>
 <p>If you have virtual portals in your configuration, you can access a virtual portal by its host name or its URL mapping context. Example for accessing a virtual portal by its URL mapping context:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>     xmlaccess -user user_ID -password password 
+<div class="language-text highlight"><pre><span></span><code>     xmlaccess -user user_ID -password password 
                -url myhost:10039/wps/config/**URL_mapping_context_of_the_VP** 
                -in input_file.xml -out result_file.xml
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Example for accessing a virtual portal by its host name:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>     xmlaccess -user user_ID -password password 
+<div class="language-text highlight"><pre><span></span><code>     xmlaccess -user user_ID -password password 
                -url my_VP_host:10039/wps/config
                -in input_file.xml -out result_file.xml 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

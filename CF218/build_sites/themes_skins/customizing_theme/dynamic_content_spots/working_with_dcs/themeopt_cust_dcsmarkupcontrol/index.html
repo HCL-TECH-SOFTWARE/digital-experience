@@ -3604,11 +3604,11 @@
 <p>The module-id is the module this URI is tested for. If the module is enabled, the dynamic content spot is rendered. The delegate-uri represents the dynamic content spot URI.</p>
 <p>In the Portal 8.5 theme, the status bar component renders error, warning, or informational messages.</p>
 <p>In the theme HTML template, the status bar component is rendered with the following dynamic content spot.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;a rel=&quot;dynamic-content&quot; href=&quot;dyn-cs:id:85theme_status&quot;&gt;&lt;/a&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;a rel=&quot;dynamic-content&quot; href=&quot;dyn-cs:id:85theme_status&quot;&gt;&lt;/a&gt;
+</code></pre></div>
 <p>This dynamic content spot maps to the following URI through the system module for the Portal 8.5 theme:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&#39;wp_dynamicContentSpots_85&#39;: mc:wp_status_bar@res:{war:context-root}/themes/html/dynamicSpots/status.jsp.
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&#39;wp_dynamicContentSpots_85&#39;: mc:wp_status_bar@res:{war:context-root}/themes/html/dynamicSpots/status.jsp.
+</code></pre></div>
 <p>The wp_status_bar module contains the JavaScript resources necessary to display the messages. The markup renders when the module is active.</p>
 
 

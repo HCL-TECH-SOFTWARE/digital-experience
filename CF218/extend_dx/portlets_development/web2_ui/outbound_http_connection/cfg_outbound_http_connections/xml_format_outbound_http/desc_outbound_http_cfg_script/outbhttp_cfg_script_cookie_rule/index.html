@@ -3432,21 +3432,7 @@
 </li>
 </ul>
 <p>The following example shows a cookie rule that contains a cookie rule for LTPA tokens, an application cookie that is named <code>app_cookie</code>, and a further cookie that is named <code>another_cookie</code>. By these cookie rules, the LTPA token is saved in a cookie store, and the two cookies <code>app_cookie</code> and <code>another_cookie</code> are passed through the proxy to the client.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;proxy-rules xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+<div class="language-text highlight"><pre><span></span><code>&lt;proxy-rules xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
     xsi:noNamespaceSchemaLocation=&quot;http://www.ibm.com/xmlns/prod/sw/http/outbound/proxy-config/2.0&quot;&gt;
      &lt;policy name=&quot;SamplePolicy&quot; url=&quot;http://www.myremotehost.com/*&quot;&gt;
           &lt;actions&gt;&lt;method&gt;GET&lt;/method&gt;&lt;/actions&gt;
@@ -3461,7 +3447,7 @@
           &lt;/cookie-rule&gt;
      &lt;/policy&gt;
 &lt;/proxy-rules&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

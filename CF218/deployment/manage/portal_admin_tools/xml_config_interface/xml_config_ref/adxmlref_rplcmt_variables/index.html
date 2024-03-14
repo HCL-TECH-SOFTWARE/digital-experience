@@ -3716,11 +3716,11 @@
 <h1 id="replacement-variables-in-xml-configuration-interface-script-files">Replacement variables in XML configuration interface script files</h1>
 <p>XML script files that were created by an XML configuration interface export or that can be imported by the XML configuration interface can contain URLs to portal files. These URLs reference files that are in HCL Portal server directories. Depending on the installation directory of your HCL Digital Experience installation, these file locations can differ. You can avoid the dependency on the file location by using variables.</p>
 <p>For example, the web application of the portal login module contains the following XML element:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;url&gt;file://localhost/$archive_root$/login.war.webmod/login.war&lt;/url&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;url&gt;file://localhost/$archive_root$/login.war.webmod/login.war&lt;/url&gt;
+</code></pre></div>
 <p>On a Linux installation of HCL Portal, this URL might be interpreted as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;url&gt;file://localhost//opt/WebSphere/PortalServer/login.war.webmod/login.war&lt;/url&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;url&gt;file://localhost//opt/WebSphere/PortalServer/login.war.webmod/login.war&lt;/url&gt;
+</code></pre></div>
 <p>On other HCL Portal installations, the login.war file can be in a different directory.</p>
 <p>As the XML configuration interface uses different values for the variable replacement, the XML input file is independent of the specific HCL Portal installation directories.</p>
 <p>The following table shows the available variables and provides examples of the replacement values they might have on a Linux installation of HCL Portal:</p>

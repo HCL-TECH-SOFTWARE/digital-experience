@@ -3080,16 +3080,16 @@
 </li>
 <li>
 <p>Navigate to the PortalServer/bin directory to export the base server.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://mysource.machine.fqdn:10039/wps/config -user &lt;your DX admin user&gt; –password &lt;your DX admin user password&gt; –in /opt/HCL/PortalServer/doc/xml-samples/ExportRelease.xml -out /tmp/ExportReleaseResults.xml
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://mysource.machine.fqdn:10039/wps/config -user &lt;your DX admin user&gt; –password &lt;your DX admin user password&gt; –in /opt/HCL/PortalServer/doc/xml-samples/ExportRelease.xml -out /tmp/ExportReleaseResults.xml
+</code></pre></div>
 </li>
 <li>
 <p>Save the output XML file (ExportReleaseResults.xml) to an external or shared drive, for use later when importing to the target environment.</p>
 </li>
 <li>
 <p>Export the content for each Virtual Portal that exists in the source environment, renaming each file uniquely for easy identification.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://mysource.machine.fqdn:10039/wps/config/vpcontextroot -user &lt;your DX admin user&gt; –password &lt;your DX admin user password&gt; –in /opt/HCL/PortalServer/doc/xml-samples/ExportUniqueRelease.xml -out /tmp/ExportVP1Results.xml
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://mysource.machine.fqdn:10039/wps/config/vpcontextroot -user &lt;your DX admin user&gt; –password &lt;your DX admin user password&gt; –in /opt/HCL/PortalServer/doc/xml-samples/ExportUniqueRelease.xml -out /tmp/ExportVP1Results.xml
+</code></pre></div>
 </li>
 <li>
 <p>Save the Virtual Portal output files to an external or shared drive for later use when importing to the target environment.</p>
@@ -3125,24 +3125,24 @@
 <ol>
 <li>
 <p>OpenShift:
-  <div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>oc exec –it dx-deployment-nnnnn /bin/bash
-</code></pre></div></td></tr></table></div></p>
+  <div class="language-text highlight"><pre><span></span><code>oc exec –it dx-deployment-nnnnn /bin/bash
+</code></pre></div></p>
 </li>
 <li>
 <p>Non OpenShift:
-  <div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl exec –it dx-deployment-nnnnn /bin/bash
-</code></pre></div></td></tr></table></div></p>
+  <div class="language-text highlight"><pre><span></span><code>kubectl exec –it dx-deployment-nnnnn /bin/bash
+</code></pre></div></p>
 </li>
 </ol>
-<p><div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh empty-portal –DWasPassword=&lt;your WAS admin user password&gt; –DPortalAdminPwd=&lt;your DX admin user password&gt;
-</code></pre></div></td></tr></table></div>
+<p><div class="language-text highlight"><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh empty-portal –DWasPassword=&lt;your WAS admin user password&gt; –DPortalAdminPwd=&lt;your DX admin user password&gt;
+</code></pre></div>
 <a href=""></a></p>
 <p>The output displays a <strong>BUILD SUCCESSFUL</strong> message. If not, check the /opt/HCL/wp_profile/ConfigEngine/log/ConfigTrace.log for errors.</p>
 </li>
 <li>
 <p>Clean up the remaining content in the target server by using XML Access:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config -user &lt;your DX admin user&gt; –password &lt;your DX admin user password&gt; –in /opt/HCL/PortalServer/doc/xml-samples/Task.xml -out /tmp/task_result.xml
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config -user &lt;your DX admin user&gt; –password &lt;your DX admin user password&gt; –in /opt/HCL/PortalServer/doc/xml-samples/Task.xml -out /tmp/task_result.xml
+</code></pre></div>
 <p>The output displays a <strong>BUILD SUCCESSFUL</strong> message. If not, check the /opt/HCL/wp_profile/logs/WebSphere_Portal/SystemOut.log for errors.</p>
 </li>
 <li>
@@ -3153,20 +3153,20 @@
 </li>
 <li>
 <p>OpenShift:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>oc cp /tmp/* dx-deployment-nnnnn:/tmp/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>oc cp /tmp/* dx-deployment-nnnnn:/tmp/
+</code></pre></div>
 </li>
 <li>
 <p>Non OpenShift:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl cp /tmp/* dx-deployment-nnnnn:/tmp/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl cp /tmp/* dx-deployment-nnnnn:/tmp/
+</code></pre></div>
 </li>
 </ol>
 </li>
 <li>
 <p>Create a directory under /opt/HCL/wp_profile to house any custom code or shared libraries.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>mkdir –p /opt/HCL/wp_profile/customApps
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>mkdir –p /opt/HCL/wp_profile/customApps
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In any containerized environment, all custom code and shared libraries need to exist under the persisted profile volume.</p>
@@ -3193,23 +3193,23 @@
 <ul>
 <li>
 <p>OpenShift:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>oc exec –it dx-deployment-nnnnn /bin/bash
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>oc exec –it dx-deployment-nnnnn /bin/bash
+</code></pre></div>
 </li>
 <li>
 <p>Non OpenShift:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl exec –it dx-deployment-nnnnn /bin/bash
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl exec –it dx-deployment-nnnnn /bin/bash
+</code></pre></div>
 </li>
 </ul>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config -user &lt;your DX admin user&gt; -password &lt;your DX admin user password&gt; -in /tmp/ExportReleaseResults.xml -out /tmp/ExportReleaseResults_ImportResult.xml
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config -user &lt;your DX admin user&gt; -password &lt;your DX admin user password&gt; -in /tmp/ExportReleaseResults.xml -out /tmp/ExportReleaseResults_ImportResult.xml
+</code></pre></div>
 <p>The output displays a successful execution. If not, check /tmp/ExportReleaseResults_ImportResult.xml for errors.</p>
 </li>
 <li>
 <p>Update the WCM content in the HCL Portal server instance:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh update-wcm -DWasPassword=&lt;your WAS admin user password&gt; -DPortalAdminPwd=&lt;your DX admin user password&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh update-wcm -DWasPassword=&lt;your WAS admin user password&gt; -DPortalAdminPwd=&lt;your DX admin user password&gt;
+</code></pre></div>
 <p>The output displays a <strong>BUILD SUCCESSFUL</strong> message. If not, check the /opt/HCL/wp_profile/ConfigEngine/log/ConfigTrace.log for errors.</p>
 </li>
 <li>
@@ -3222,19 +3222,19 @@
 </li>
 <li>
 <p>Log in to the HCL Portal home page and verify that the base server is functioning correctly:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://my.target.fqdn/wps/portal
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://my.target.fqdn/wps/portal
+</code></pre></div>
 <p>Check the /opt/HCL/wp_profile/logs/WebSphere_Portal/SystemOut.log to ensure that there are no startup errors.</p>
 </li>
 <li>
 <p>Create all of your Virtual Portals.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh create-virtual-portal -DWasPassword=&lt;your WAS admin user password&gt; -DPortalAdminPwd=&lt;your DX admin user password&gt; -DVirtualPortalTitle=VirtualPortal1 -DVirtualPortalRealm=VirtualPortal1Realm -DVirtualPortalContext=VirtualPortal1
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh create-virtual-portal -DWasPassword=&lt;your WAS admin user password&gt; -DPortalAdminPwd=&lt;your DX admin user password&gt; -DVirtualPortalTitle=VirtualPortal1 -DVirtualPortalRealm=VirtualPortal1Realm -DVirtualPortalContext=VirtualPortal1
+</code></pre></div>
 </li>
 <li>
 <p>For each Virtual Portal, import the content using XML Access. Make sure that the context root and the Virtual Portal name both match in the XML Access command.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config/VirtualPortal1 -user &lt;your DX admin user&gt; -password &lt;your DX admin user password&gt; -in /tmp/ExportVP1Results.xml -out /tmp/ExportVP1Results_ImportResults.xml
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config/VirtualPortal1 -user &lt;your DX admin user&gt; -password &lt;your DX admin user password&gt; -in /tmp/ExportVP1Results.xml -out /tmp/ExportVP1Results_ImportResults.xml
+</code></pre></div>
 </li>
 <li>
 <p>Restart the HCL Portal server and check /opt/HCL/wp_profile/logs/WebSphere_Portal/SystemOut.log to ensure no startup errors.</p>

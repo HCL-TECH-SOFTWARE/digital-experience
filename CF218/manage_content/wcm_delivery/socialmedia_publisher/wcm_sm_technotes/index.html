@@ -2437,18 +2437,13 @@
 <li>
 <p><strong>Symptom</strong></p>
 <p>The following warning from WebSphere® Application Server may be observed in the System log:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>[7/19/12 13:26:39:031 EDT] 00000033 ThreadMonitor W   WSVR0605W: Thread &quot;WorkManager.wpsDefaultWorkManager : 72&quot; (000000ee) has been active for 682689 milliseconds and may be hung.  There is/are 1 thread(s) in total in the server that may be hung.
+<div class="language-text highlight"><pre><span></span><code>[7/19/12 13:26:39:031 EDT] 00000033 ThreadMonitor W   WSVR0605W: Thread &quot;WorkManager.wpsDefaultWorkManager : 72&quot; (000000ee) has been active for 682689 milliseconds and may be hung.  There is/are 1 thread(s) in total in the server that may be hung.
     at sun.misc.Unsafe.park(Native Method)
     at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:224)
     at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2036)
     at java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:435)
     at com.ibm.workplace.wcm.messaging.data.JMSTopicContext.getNextMessage(JMSTopicContext.java:232)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Cause</strong></p>

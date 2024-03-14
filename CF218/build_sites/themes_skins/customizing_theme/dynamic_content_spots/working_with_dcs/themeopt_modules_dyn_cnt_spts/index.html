@@ -3682,8 +3682,8 @@
 <p>Portal identifies dynamic content spots after it analyzes the profile of a page and all the modules in the profile that includes its <code>prereqs</code>. If any module within the hierarchy contains a dynamic content spot, the spot participates in the page rendering process. If the page's profile does not contain a dynamic content spot's ID that is used within the theme.html, nothing is rendered. If Portal identifies a dynamic content spot with a matching ID, it renders the dynamic content spot at the referenced URI.</p>
 <p>To use the same dynamic content spot on two different pages, but with different markup, reference different profiles that contain a different module for the dynamic content spot.</p>
 <p>In this example, there are two pages, Home and Applications. Home has an inline top navigation, and Applications has a fly-out navigation. The theme.html is identical and uses the following dynamic content spot</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;a rel=&quot;dynamic-content&quot; href=&quot;dyn-cs:id:85theme_topNav&quot;&gt;&lt;/a&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;a rel=&quot;dynamic-content&quot; href=&quot;dyn-cs:id:85theme_topNav&quot;&gt;&lt;/a&gt;
+</code></pre></div>
 <p>Create two modules and two profiles to create the two pages with different markup.</p>
 <p>Modules:</p>
 <ul>

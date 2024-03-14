@@ -3294,18 +3294,13 @@
 </li>
 </ul>
 <p>Here is an example of an XML definition for deploying a portlet without specifying the objectid attribute:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;web-app action=&quot;update&quot; active=&quot;true&quot; uid=&quot;com.ibm.wps.portlets.welcome&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;web-app action=&quot;update&quot; active=&quot;true&quot; uid=&quot;com.ibm.wps.portlets.welcome&quot;&gt;
     &lt;url&gt;file://c:/tmp/WelcomePortlet.war&lt;/url&gt;
     &lt;portlet-app action=&quot;update&quot; active=&quot;true&quot; uid=&quot;com.ibm.wps.portlets.welcome.1&quot;&gt;
         &lt;portlet action=&quot;update&quot; active=&quot;true&quot; objectid=&quot;theIbmPortletApiPortlet&quot; name=&quot;Welcome Portlet&quot;/&gt;
     &lt;/portlet-app&gt;
 &lt;/web-app&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

@@ -2983,44 +2983,32 @@
 <p><strong>Task dependencies:</strong> None</p>
 <p><strong>Tasks invoked:</strong> None</p>
 <p><strong>Examples:</strong> You can register the iWidget definition XML file located at http://server_name:port_number/someWidget/someWidget/someWidget.xml as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh register-iwidget-definition
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh register-iwidget-definition
    -DPortletUniqueName=&quot;someWidget&quot;
    -DIWidgetDefinition=http://server_name:port_number/someWidget/someWidget/someWidget.xml  
    -DPortalAdminPwd=wpsadmin -DWasPassword=wpsadmin
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You can refresh the IWidget Wrapper portlet clone with the unique name someWidget:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh register-iwidget-definition -DPortletDefinition=&quot;someWidget&quot;
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh register-iwidget-definition -DPortletDefinition=&quot;someWidget&quot;
    -DPortalAdminPwd=wpsadmin -DWasPassword=wpsadmin
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You can register the iWidget definition XML file located at http://server_name:port_number/someWidget/someWidget/someWidget.xml considering titles and descriptions from the Mashup Center catalog XML file located at http://server_name:port_number/someWidget/someWidget/catalog.xml:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh register-iwidget-definition
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh register-iwidget-definition
    -DIWidgetDefinition=http://server_name:port_number/someWidget/someWidget/someWidget.xml
    -DIWidgetCatalog=http://server_name:port_number/someWidget/someWidget/catalog.xml  
    -DPortalAdminPwd=wpsadmin -DWasPassword=wpsadmin
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You can refresh the IWidget Wrapper portlet clone with the unique name someWidget, considering titles and descriptions from the Mashup Center catalog XML file located at http://server_name:port_number/someWidget/someWidget/catalog.xml:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh register-iwidget-definition
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh register-iwidget-definition
    -DPortletDefinition=&quot;someWidget&quot;
    -DIWidgetCatalog=http://server_name:port_number/someWidget/someWidget/catalog.xml
    -DPortalAdminPwd=wpsadmin -DWasPassword=wpsadmin
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You can perform a bulk registration of iWidget definition XML files or a refresh of IWidget Wrapper portlet clones by using an Mashup Center catalog XML file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh register-iwidget-definition
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh register-iwidget-definition
    -DIWidgetCatalog=http://server_name:port_number/catalog.xml
    -DPortalAdminPwd=wpsadmin -DWasPassword=wpsadmin
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition notes">
 <p class="admonition-title">Notes</p>
 <ol>
@@ -3033,20 +3021,18 @@
 </div>
 <h2 id="registering-an-iwidget-hosted-on-a-portal-server">Registering an iWidget hosted on a Portal server</h2>
 <p>If you want to register iWidgets deployed as WAR or EAR files directly on your portal server, you can use server relative URLs pointing to the corresponding iWidget definition XML files; for example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh register-iwidget-definition 
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh register-iwidget-definition 
      -DIWidgetDefinition=/someWidget/someWidget/someWidget.xml
      -DPortalAdminPwd=wpsadmin -DWasPassword=wpsadmin     
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition remember">
 <p class="admonition-title">Remember</p>
 <p>Do not forget the leading slash "/" in your iWidget definition URL.</p>
 </div>
 <h2 id="registering-an-iwidget-hosted-on-an-external-server">Registering an iWidget hosted on an external server</h2>
 <p>If you use an iWidget definition URL that points to a server different from your portal server, you need to make sure that your current AJAX proxy configuration allows accessing this server. For details about this refer to the topics about AJAX proxy Configuration. One way of configuring this is to make sure that the URL to the iWidget definition XML file is mapped to the default_policy dynamic policy in the global AJAX proxy configuration file. You can map a given URL, for example <code>http://server_name:port_number/someWidget/someWidget/someWidget.xml</code>, to that policy by adding a custom property such as the following to the WP ConfigService Resource Environment Provider in the WebSphere Application Server administrative console:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wp.proxy.config.urlreplacement.default_policy.someID=http://some.server.com:10039/*
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>wp.proxy.config.urlreplacement.default_policy.someID=http://some.server.com:10039/*
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ol>
@@ -3056,24 +3042,19 @@
 </div>
 <h2 id="registering-light-weight-iwidgets-stored-in-the-webdav-file-store">Registering light weight iWidgets stored in the WebDAV file store</h2>
 <p>Additional to HTTP or HTTPs based iWidget definition URLs, you can also use WebDAV file store URIs pointing to iWidget definition XML files located in the WebDAV file store. Such URIs have the following format:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dav:fs-type1/path_to_your_IWidget_definition_XML_file
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dav:fs-type1/path_to_your_IWidget_definition_XML_file
+</code></pre></div>
 <p>For example, you might have an archive or compressed file with a light weight iWidget that contains an iWidget definition XML file called someWidget.xml in the file root folder of the archive or compressed file. In this case you typically first copy the archive or compressed file to the WebDAV file store by using a generic WebDAV client or by using the configuration task <code>webdav-deploy-zip-file</code> as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh webdav-deploy-zip-file 
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh webdav-deploy-zip-file 
      -DZipFilePath=/tmp/SomeWidgetPackage.zip 
      -DTargetURI=dav:fs-type1/iwidgets/SomeWidget/
      -DPortalAdminPwd=wpsadmin -DWasPassword=wpsadmin
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This extracts your light weight iWidget package represented by the file /tmp/SomeWidgetPackage.zip into the folder /iwidgets/SomeWidget of the WebDAV file store. Make sure to add the trailing slash ( <strong>/</strong> ) in the parameter <code>TargetURI</code>. After the extraction you can register the iWidget definition XML file <code>someWidget.xml</code> as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh register-iwidget-definition 
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh register-iwidget-definition 
      -DIWidgetDefinition=dav:fs-type1/iwidgets/SomeWidget/someWidget.xml 
      -DPortalAdminPwd=wpsadmin -DWasPassword=wpsadmin
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

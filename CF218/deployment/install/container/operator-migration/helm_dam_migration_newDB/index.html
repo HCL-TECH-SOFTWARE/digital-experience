@@ -1642,33 +1642,33 @@
 <li>
 <p><strong>Connect to the Persistence pod:</strong></p>
 <p>The following command opens a shell in the running Persistence container.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl exec --stdin --tty pod/&lt;pod-name&gt; -n &lt;namespace&gt; -- /bin/bash
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl exec --stdin --tty pod/&lt;pod-name&gt; -n &lt;namespace&gt; -- /bin/bash
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl exec --stdin --tty pod/dx-deployment-persistence-rw-0 -n dxns -- /bin/bash
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl exec --stdin --tty pod/dx-deployment-persistence-rw-0 -n dxns -- /bin/bash
+</code></pre></div>
 </div>
 </li>
 <li>
 <p><strong>Dump the current database using the <code>pg_dump</code> command:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pg_dump dxmediadb &gt; /tmp/dxmediadb.dmp
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>pg_dump dxmediadb &gt; /tmp/dxmediadb.dmp
+</code></pre></div>
 </li>
 <li>
 <p><strong>Exit the Persistence container:</strong></p>
 <p>Close the shell in the Persistence container.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>exit
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>exit
+</code></pre></div>
 </li>
 <li>
 <p><strong>Download the dumped database to local system by using the following command:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl cp &lt;namespace&gt;/&lt;pod-name&gt;:&lt;source-file&gt; &lt;target-file&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl cp &lt;namespace&gt;/&lt;pod-name&gt;:&lt;source-file&gt; &lt;target-file&gt;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl cp dxns/dx-deployment-persistence-0:/tmp/dxmediadb.dmp /tmp/dxmediadb.dmp
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl cp dxns/dx-deployment-persistence-0:/tmp/dxmediadb.dmp /tmp/dxmediadb.dmp
+</code></pre></div>
 </div>
 </li>
 </ol>
@@ -1678,32 +1678,25 @@
 <ol>
 <li>
 <p><strong>Enable DAM Database Migration mode:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code># Flags to enable various migration modes
+<div class="language-text highlight"><pre><span></span><code># Flags to enable various migration modes
 migration:
   damDB:
     # Enable for DAM Database migration from old DB to new DB
     enabled: true
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Scale down persistence nodes to 1:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>scaling:
+<div class="language-text highlight"><pre><span></span><code>scaling:
   # The default amount of replicas per application
   replicas:
     persistenceNode: 1
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Perform an upgrade with the new configuration:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>helm upgrade dx-deployment . -f  &lt; your_custom_value_file.yaml &gt; -n &lt;namespace&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>helm upgrade dx-deployment . -f  &lt; your_custom_value_file.yaml &gt; -n &lt;namespace&gt;
+</code></pre></div>
 <p>The upgrade will turn off the deprecated old Database system and deploy the new DAM Database system.</p>
 </li>
 </ol>
@@ -1713,45 +1706,43 @@ migration:
 <li>
 <p><strong>Upload Old DB backup to persistence pod:</strong></p>
 <p>You can now transfer the backup database to the remote Persistence container.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl cp &lt;source-file&gt; &lt;namespace&gt;/&lt;pod-name&gt;:&lt;target-file&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl cp &lt;source-file&gt; &lt;namespace&gt;/&lt;pod-name&gt;:&lt;target-file&gt;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl cp /tmp/dxmediadb.dmp dxns/dx-deployment-persistence-node-0:/tmp/dxmediadb.dmp
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl cp /tmp/dxmediadb.dmp dxns/dx-deployment-persistence-node-0:/tmp/dxmediadb.dmp
+</code></pre></div>
 </div>
 </li>
 <li>
 <p><strong>Connect to Persistence pod:</strong></p>
 <p>The following command opens a shell in the running Persistence container.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl exec --stdin --tty pod/&lt;pod-name&gt; -n &lt;namespace&gt; -- /bin/bash
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl exec --stdin --tty pod/&lt;pod-name&gt; -n &lt;namespace&gt; -- /bin/bash
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl exec --stdin --tty pod/dx-deployment-persistence-node-0 -n dxns -- /bin/bash
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl exec --stdin --tty pod/dx-deployment-persistence-node-0 -n dxns -- /bin/bash
+</code></pre></div>
 </div>
 </li>
 <li>
 <p><strong>Drop the DAM database if it exists:</strong></p>
 <p>Disconnect all connections that use the database and drop any existing databases of the deployment.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>echo &quot;SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE pid &lt;&gt; pg_backend_pid();&quot; | psql
+<div class="language-text highlight"><pre><span></span><code>echo &quot;SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE pid &lt;&gt; pg_backend_pid();&quot; | psql
 dropdb dxmediadb
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Restore the database from the previous backup:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>createdb -O dxuser dxmediadb
+<div class="language-text highlight"><pre><span></span><code>createdb -O dxuser dxmediadb
 psql dxmediadb &lt; /tmp/dxmediadb.dmp
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Exit the Persistence container:</strong></p>
 <p>Close the shell in the Persistence container.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>exit
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>exit
+</code></pre></div>
 </li>
 </ol>
 <h2 id="5-disable-dam-database-migration-mode-and-scale-the-persistence-nodes-to-3">5. Disable DAM Database Migration mode and Scale the persistence nodes to 3</h2>
@@ -1759,32 +1750,25 @@ psql dxmediadb &lt; /tmp/dxmediadb.dmp
 <ol>
 <li>
 <p><strong>Disable DAM Database Migration mode:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code># Flags to enable various migration modes
+<div class="language-text highlight"><pre><span></span><code># Flags to enable various migration modes
 migration:
   damDB:
     # Enable for DAM Database migration from old DB to new DB
     enabled: false
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Scale up persistence nodes to 3:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>scaling:
+<div class="language-text highlight"><pre><span></span><code>scaling:
   # The default amount of replicas per application
   replicas:
     persistenceNode: 3
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Perform a helm upgrade with the updated values.yaml file:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>helm upgrade dx-deployment . -f  &lt; your_custom_value_file.yaml &gt; -n &lt; namespace &gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>helm upgrade dx-deployment . -f  &lt; your_custom_value_file.yaml &gt; -n &lt; namespace &gt;
+</code></pre></div>
 <p>On successful migration, you will receive the following message.</p>
 <p><strong>Success message:</strong></p>
 <p>Installation of HCL DX 95 CF200 done.</p>

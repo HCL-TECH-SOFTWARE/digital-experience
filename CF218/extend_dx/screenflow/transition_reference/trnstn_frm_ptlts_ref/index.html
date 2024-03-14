@@ -2103,18 +2103,7 @@
 <p>The transition from a single portlet to single portlet is the most simple transition. The code sample shows an example of such a transition.</p>
 <p>The source points to a single transition endpoint a portlet, for example, in a travel site, a passenger information portlet and the target points to another single transition endpoint another portlet, for example, the Calendar portlet. After the source Passenger information portlet <code>portlet1</code> emits the event <code>e1</code>, the user is routed to the target Calendar portlet <code>portlet2</code>, which is fed with event <code>e2</code>.</p>
 <p>Code sample</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;transition&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;transition&gt;
     &lt;source&gt;
         &lt;transition-endpoint nameref=&quot;portlet1&quot;&gt;
              &lt;event qname=&quot;e1&quot;/&gt;
@@ -2126,7 +2115,7 @@
           &lt;/transition-endpoint&gt;
      &lt;/target&gt;
 &lt;/transition&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="single-portlet-to-multiple-portlets">Single portlet to multiple portlets</h2>
 <p>This code sample shows a transition from a single portlet to multiple portlets where the target points to multiple portlets instead of a single one.</p>
 <p>Some portlets are associated with different events than others. In the code sample, both the portlets that are referenced by the transition-endpoints <code>portlet2a</code> and <code>portlet2b</code> receive the event <code>e2a</code>. The portlet that is referenced by the transition endpoint <code>portlet2c</code> receives the event <code>e2c</code>.</p>
@@ -2135,24 +2124,7 @@
 <p>In case multiple portlets are referenced as part of a target, all portlets must be on the same page.</p>
 </div>
 <p>Code sample</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;transition&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;transition&gt;
     &lt;source&gt;
         &lt;transition-endpoint nameref=&quot;portlet1&quot;&gt;
              &lt;event qname=&quot;e1&quot;/&gt;
@@ -2170,23 +2142,12 @@
         &lt;/transition-endpoint&gt;
     &lt;/target&gt;
 &lt;/transition&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="single-portlet-to-page">Single portlet to page</h2>
 <p>This code sample shows a transition from a single portlet to a page instead of a portlet. This transition causes the event to be propagated to all portlets that are found on the page.</p>
 <p>All portlets that are found on the page that is referenced by the transition-endpoint <code>page2</code> receives the event <code>e2</code>.</p>
 <p>Code sample</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;transition&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;transition&gt;
     &lt;source&gt;
         &lt;transition-endpoint nameref=&quot;portlet1&quot;&gt;
             &lt;event qname=&quot;e1&quot;/&gt;
@@ -2198,7 +2159,7 @@
          &lt;/transition-endpoint&gt;
      &lt;/target&gt;
 &lt;/transition&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="single-portlet-to-a-page-and-multiple-portlets">Single portlet to a page and multiple portlets</h2>
 <p>This code sample shows a transition with the target that points to page and multiple portlets. The page and each portlet are associated with a different event. This transition causes each portlet to receive the event that is associated with the page and the event that is associated with the particular portlet.</p>
 <p>In code sample, the portlet that is referenced by the transition-endpoint receives the events as follows</p>
@@ -2212,27 +2173,7 @@
 <p>If pages and portlets are both referenced as targets, all portlets must be on the referenced page.</p>
 </div>
 <p>Code sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;transition&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;transition&gt;
     &lt;source&gt;
         &lt;transition-endpoint nameref=&quot;portlet1&quot;&gt;
              &lt;event qname=&quot;e1&quot;/&gt;
@@ -2253,27 +2194,10 @@
           &lt;/transition-endpoint&gt;
       &lt;/target&gt;
 &lt;/transition&gt; 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following code sample shows an alternative way to declare what is declared in the previous code sample. Two of the previously shown transition-endpoints are merged into a single one. Both notations lead to the same effect.</p>
 <p>Code sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;transition&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;transition&gt;
     &lt;source&gt;
         &lt;transition-endpoint nameref=&quot;portlet1&quot;&gt;
              &lt;event qname=&quot;e1&quot;/&gt;
@@ -2291,7 +2215,7 @@
           &lt;/transition-endpoint&gt;
       &lt;/target&gt;
 &lt;/transition&gt; 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>It is also possible to transmit multiple events to a single target transition-endpoint. In the following code sample, transition-endpoints are associated with events as shown</p>
 <ul>
 <li>The page that is referenced by the transition-endpoint <code>page2</code> is associated with the events <code>e2-1</code> and <code>e2-2</code>.</li>
@@ -2304,26 +2228,7 @@
 <p>Transmission of multiple events is supported only for targets.</p>
 </div>
 <p>Code sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;transition&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;transition&gt;
     &lt;source&gt;
         &lt;transition-endpoint nameref=&quot;portlet1&quot;&gt;
              &lt;event qname=&quot;e1&quot;/&gt;
@@ -2343,7 +2248,7 @@
           &lt;/transition-endpoint&gt;
       &lt;/target&gt;
 &lt;/transition&gt; 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="multiple-portlets-to-single-portlet">Multiple portlets to single portlet</h2>
 <p>The following code sample shows a transition where the source points to multiple portlets and the target points to a single portlet.</p>
 <p>When any of the referenced source portlets, <code>portlet1a</code> or <code>portlet1b</code>, emits the event <code>e1</code>, the user is routed to the target portlet <code>portlet2</code>, which is fed with event <code>e2</code>.</p>
@@ -2352,18 +2257,7 @@
 <p>For sources, it is not possible to alternatively reference multiple transition-endpoints as it was done with targets.</p>
 </div>
 <p>Code sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;transition&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;transition&gt;
     &lt;source&gt;
         &lt;transition-endpoint nameref=&quot;portlet1a_1b&quot;&gt;
             &lt;event qname=&quot;e1&quot;/&gt;
@@ -2375,24 +2269,13 @@
           &lt;/transition-endpoint&gt;
       &lt;/target&gt;
 &lt;/transition&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="single-portlet-to-another-dialog">Single portlet to another dialog</h2>
 <p>The following code sample shows a transition where the source points to a single portlet and the target to another dialog.</p>
 <p>This transition represents the outgoing transition. When the transition is triggered, it starts the referenced dialog, which is initialized by the defined event. For more information about the outgoing transition, go to <em>Transition Endpoints</em>.</p>
 <p>In this code sample, when <code>portlet1</code> emits the event <code>e1</code>, <code>dialog2</code> is started and initialized with event <code>eX</code>. From here, continuing to a particular step of <code>dialog2</code> depends on the transitions that are defined as part of <code>dialog2</code>. For more information, go to the topic <em>Dialog Chaining and Nesting</em>.</p>
 <p>Code sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;transition type=&quot;nested&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;transition type=&quot;nested&quot;&gt;
    &lt;source&gt;
        &lt;transition-endpoint nameref=&quot;portlet1&quot;&gt;
             &lt;event qname=&quot;e1&quot;/&gt;
@@ -2404,7 +2287,7 @@
          &lt;/transition-endpoint&gt;
      &lt;/target&gt;
 &lt;/transition&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

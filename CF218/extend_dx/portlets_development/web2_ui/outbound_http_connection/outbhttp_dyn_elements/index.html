@@ -2887,28 +2887,7 @@
 <p>In some cases, it is useful to control configuration settings at run time. For example, an administrator might want to have the program decide at run time which policy rule is applied. In another scenario, parts of a policy rule configuration that are known only at run time must be included in the configuration.</p>
 <p>Enabling and disabling policy rules: Administrators can use the metadata parameter <code>active</code> to enable or disable the policy rule to which the metadata belongs. Instead of setting a static metadata value to <code>true</code> or <code>false</code>, the administrator can set a variable token. The following example uses this feature to disable policy mappings. For more details, read the information about <em>deactivate policy rules, mappings, or custom connection filters</em> under <a href="../cfg_outbound_http_connections/xml_format_outbound_http/desc_outbound_http_cfg_script/">Description of the outbound HTTP connection configuration script</a>.</p>
 <p>The following example deactivates multiple policy rules, depending on a single policy variable:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;proxy-rules ...&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;proxy-rules ...&gt;
      &lt;variables&gt;
           &lt;endpoint name=&quot;am_i_active&quot;&gt;false&lt;/endpoint&gt;
      &lt;variables&gt;
@@ -2930,26 +2909,9 @@
      &lt;/mapping&gt;
 
 &lt;/policy-rules&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>In some cases, the decision whether the policy rules is active or inactive can be made only at run time. In this case, the policy variable must be passed to the Ajax proxy as a URL parameter. The following example shows the configuration:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;proxy-rules ...&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;proxy-rules ...&gt;
      &lt;mapping contextPath=&quot;/theproxy&quot;&gt;
           &lt;policy url=&quot;http://the_remote_server.com/*&quot;&gt;     
                 ...
@@ -2967,10 +2929,10 @@
           &lt;/policy&gt;
      &lt;/mapping&gt;
 &lt;/policy-rules&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following example activates the first rule and deactivates the second rule:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://localhost/wps/theproxy/http/the_remote_server.com/main.html?active_a=true&amp;active_b=false
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://localhost/wps/theproxy/http/the_remote_server.com/main.html?active_a=true&amp;active_b=false
+</code></pre></div>
 
 
 

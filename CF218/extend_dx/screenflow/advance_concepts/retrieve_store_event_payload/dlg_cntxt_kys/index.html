@@ -2108,18 +2108,7 @@
 The car renters information portlet <code>portlet2</code> is then initialized with the data stored in the DCX under the key <code>userID</code>. If no previous transition stored anything under the key <code>userID, portlet2</code> does not receive any data.</li>
 </ul>
 <p>Code sample</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>  &lt;transition&gt;
+<div class="language-text highlight"><pre><span></span><code>  &lt;transition&gt;
       &lt;source&gt;
           &lt;transition-endpoint nameref=&quot;portlet1&quot;&gt;
               &lt;event qname=&quot;passengerID&quot;/&gt;
@@ -2131,7 +2120,7 @@ The car renters information portlet <code>portlet2</code> is then initialized wi
           &lt;/transition-endpoint&gt;
       &lt;/target&gt;
   &lt;/transition&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <p>DCX keys make it possible to specify under which key a portlet stores data in the DCX, or under which key a portlet reads data from the DCX.</p>
@@ -2140,18 +2129,7 @@ The car renters information portlet <code>portlet2</code> is then initialized wi
 <li>
 <p>You can make <code>portlet1</code> store its payload under the key <code>userID,</code> even though it emits an event with the <code>QName passengerID</code>. The following code sample shows how you can make <code>portlet1</code> store data under <code>userID</code>.</p>
 <p>Code sample</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>  &lt;transition&gt;
+<div class="language-text highlight"><pre><span></span><code>  &lt;transition&gt;
       &lt;source&gt;
           &lt;transition-endpoint nameref=&quot;portlet1&quot;&gt;
               &lt;event qname=&quot;passengerID&quot; dcx-key=&quot;userID&quot;/&gt;
@@ -2163,23 +2141,12 @@ The car renters information portlet <code>portlet2</code> is then initialized wi
           &lt;/transition-endpoint&gt;
       &lt;/target&gt;
   &lt;/transition&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>You can make <code>portlet2</code> read the key <code>passengerID</code>, even though it expects an event with the <code>QName userID</code>. The following code sample shows how you can make <code>portlet2</code> read data under <code>passengerID</code>.</p>
 <p>Code sample</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>  &lt;transition&gt;
+<div class="language-text highlight"><pre><span></span><code>  &lt;transition&gt;
       &lt;source&gt;
           &lt;transition-endpoint nameref=&quot;portlet1&quot;&gt;
               &lt;event qname=&quot;passengerID&quot;/&gt;
@@ -2191,7 +2158,7 @@ The car renters information portlet <code>portlet2</code> is then initialized wi
           &lt;/transition-endpoint&gt;
       &lt;/target&gt;
   &lt;/transition&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 

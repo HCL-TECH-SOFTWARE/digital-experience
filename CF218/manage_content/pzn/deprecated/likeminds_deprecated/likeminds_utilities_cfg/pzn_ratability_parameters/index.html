@@ -2894,31 +2894,31 @@
 <p>Ai=Kx(log10(num_rating))rpow</p>
 <p><strong>num_rating</strong> is the number of ratings for the item.</p>
 <p>To specify K, set <code>db.ratability.num_rating.coefficient</code> (default is 1.0):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>db.ratability.num_rating.coefficient = 1.0
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>db.ratability.num_rating.coefficient = 1.0
+</code></pre></div>
 <p>To specify rpow, the rating power, set <code>db.ratability.num_rating.power</code> (default is 1.0):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>db.ratability.num_rating.power= 1.0
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>db.ratability.num_rating.power= 1.0
+</code></pre></div>
 <p>Bi is a measure of how controversial the item is:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Bi=Kx(rating_std_dev)sdpow
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>Bi=Kx(rating_std_dev)sdpow
+</code></pre></div>
 <p><strong>rating_std_dev</strong> is the standard deviation of the ratings for the item.</p>
 <p>To specify K, set <code>db.ratability.stddev.coefficient</code> (default is 1.0):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>db.ratability.stddev.coefficient = 1.0
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>db.ratability.stddev.coefficient = 1.0
+</code></pre></div>
 <p>To specify stdpow, the standard deviation power, set <code>db.ratability.stddev.power</code> (default is 1.0):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>db.ratability.stddev.power= 1.0
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>db.ratability.stddev.power= 1.0
+</code></pre></div>
 <p>Ciis a weight based on the age of the item:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Ci=Kxexp(-(current_year - release_year)) exp ^ apow
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>Ci=Kxexp(-(current_year - release_year)) exp ^ apow
+</code></pre></div>
 <p><strong>release_year</strong> is the value of the year field in the <code>Lps_Item_Data</code> table for the item.</p>
 <p>To specify K, set <code>db.ratability.age.coefficient</code>. You can set this to zero if you do not want to consider age in determining ratability (default is 2.7):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>db.ratability.age.coefficient = 2.7
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>db.ratability.age.coefficient = 2.7
+</code></pre></div>
 <p>To specify apow, set <code>db.ratability.age.power</code> (default is 0.5):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>db.ratability.age.power= 0.5
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>db.ratability.age.power= 0.5
+</code></pre></div>
 
 
 

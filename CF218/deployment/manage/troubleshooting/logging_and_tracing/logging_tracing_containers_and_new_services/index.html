@@ -3385,8 +3385,8 @@
 <li>
 <p><strong>Trace string format</strong></p>
 <p>The trace strings must use the following format. Any text not in angled brackets ("&lt;&gt;") should not be changed:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>hcl.logging.&lt;app-name&gt;.client.&lt;severity&gt;.&lt;client-hierarchy&gt;.*=all
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>hcl.logging.&lt;app-name&gt;.client.&lt;severity&gt;.&lt;client-hierarchy&gt;.*=all
+</code></pre></div>
 <p>The text strings in angled bracket placeholders must be replaced as described here.</p>
 </li>
 <li>
@@ -3440,10 +3440,9 @@ The Warning <strong>The configured trace state included the following specificat
 <li>
 <p>Enter the trace details you would like to enable in the <strong>TraceSpecification</strong> field.</p>
 <p>For example, to trace all events, use the following value:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>hcl.logging.content-ui.*=all 
+<div class="language-text highlight"><pre><span></span><code>hcl.logging.content-ui.*=all 
 hcl.logging.medialibrary.*=all
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Save the changes.</p>
@@ -3456,10 +3455,9 @@ hcl.logging.medialibrary.*=all
 <li>
 <p>Enter any of the following values in the <strong>Append these trace settings</strong> field.</p>
 <p>For example, to trace all events, enter the following value:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>hcl.logging.content-ui.*=all 
+<div class="language-text highlight"><pre><span></span><code>hcl.logging.content-ui.*=all 
 hcl.logging.medialibrary.*=all
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 <p>Once a trace string is added or removed in the Tracing portlet, the Digital Experience platform page containing the <strong>Tracing portlet</strong> application must be refreshed in the browser.</p>

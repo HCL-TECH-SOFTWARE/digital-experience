@@ -2338,19 +2338,7 @@
 <p class="admonition-title">Important</p>
 <p>You can only expose log files inside of the /opt/HCL/logs directory or the <code>mountPath</code> specified for each entry in <code>volumes.core.customPVCs</code>.</p>
 </div>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">logging</span><span class="p">:</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">logging</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Core specific logging configuration</span>
 <span class="w">  </span><span class="nt">core</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
@@ -2363,41 +2351,23 @@
 <span class="w">    </span><span class="c1">#   - containerName: &quot;trace&quot;</span>
 <span class="w">    </span><span class="c1">#     logFilePath: &quot;/opt/HCL/logs/WebSphere_Portal/trace.log&quot;</span>
 <span class="w">    </span><span class="nt">customLogSidecarContainers</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example:</p>
 <p>The following example starts a new sidecar container, and exposes the logs in /opt/HCL/logs/WebSphere_Portal/trace.log.</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">logging</span><span class="p">:</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">logging</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">core</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">customLogSidecarContainers</span><span class="p">:</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;trace&quot;</span>
 <span class="w">        </span><span class="nt">logFilePath</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/opt/HCL/logs/WebSphere_Portal/trace.log&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 <h2 id="config-wizard-logs">Config Wizard logs</h2>
 <p>We can use the combination of <a href="../../mandatory_tasks/prepare_persistent_volume_claims/#configuring-additional-core-persistent-volumes">custom PVCs defined in the values</a> and <code>customLogSidecarContainers</code> to access the logs of the Config Wizard and make them available to Kubernetes.</p>
 <div class="admonition example">
 <p class="admonition-title">Example:</p>
 <p>The following example creates a custom PVC for the Config Wizard logs and starts a new sidecar container that tails the <code>SystemOut.log</code> of it.</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">core</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">customPVCs</span><span class="p">:</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;cw-log-pvc&quot;</span>
@@ -2412,7 +2382,7 @@
 <span class="w">    </span><span class="nt">customLogSidecarContainers</span><span class="p">:</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;cw-system-out-log&quot;</span>
 <span class="w">        </span><span class="nt">logFilePath</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/opt/HCL/AppServer/profiles/cw_profile/logs/server1/SystemOut.log&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The logs can then be accessed using <code>kubectl logs -n &lt;namespace&gt; &lt;release-name&gt;-core-0 cw-system-out-log</code>.</p>
 </div>
 

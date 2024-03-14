@@ -3360,26 +3360,10 @@
 <p>You can use the Web Content Manager REST service to create, read, update, query locale information, and delete libraries.</p>
 <h2 id="create-a-new-library">Create a new library</h2>
 <p>A library can be created by sending a POST request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/Library
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/Library
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 POST /wps/mycontenthandler/wcmrest/Library
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 POST /wps/mycontenthandler/wcmrest/Library
 Content-Type: application/atom+xml
 
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
@@ -3396,61 +3380,13 @@ Content-Type: application/atom+xml
 &lt;/entry&gt;
 
 HTTP 201 Created
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="update-an-existing-library">Update an existing library</h2>
 <p>An existing library can be updated by sending a PUT request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/Library/library-id
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/Library/library-id
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 PUT /wps/mycontenthandler/wcmrest/Library/ff207ba6-ac9a-4b38-b831-99528ff5067c
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 PUT /wps/mycontenthandler/wcmrest/Library/ff207ba6-ac9a-4b38-b831-99528ff5067c
 Content-Type: application/atom+xml
 Accept: application/atom+xml
 
@@ -3499,38 +3435,13 @@ HTTP 200 OK
         &lt;/wcm:library&gt;
     &lt;/content&gt;
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="read-an-existing-library">Read an existing library</h2>
 <p>An existing library can be read by sending a GET request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/Library/library-id
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/Library/library-id
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 GET /wps/mycontenthandler/wcmrest/Library/ff207ba6-ac9a-4b38-b831-99528ff5067c
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 GET /wps/mycontenthandler/wcmrest/Library/ff207ba6-ac9a-4b38-b831-99528ff5067c
 Accept: application/atom+xml
 
 HTTP 200 OK
@@ -3556,29 +3467,10 @@ HTTP 200 OK
         &lt;/wcm:library&gt;
     &lt;/content&gt;
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p><strong>With HCL DX CF19 and higher releases, locale information can be obtained from Web Content Manager libraries</strong>.</p>
 <p>When the WCM REST API is used to search for WCM libraries, the language of the libraries is provided in the <code>displayTitle</code> and summary elements, as shown in the following example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code>...
+<div class="language-text highlight"><pre><span></span><code>...
 &lt;entry&gt;
     &lt;id&gt;wcmrest:94e69f30-15d7-464a-ab1b-76598eb0758b&lt;/id&gt;
     &lt;title&gt;Web Resource v70&lt;/title&gt;
@@ -3598,32 +3490,27 @@ jLKSL8JD0hftsmhoz53-EA/wcmrest/Library/94e69fe0-15d7-464a-
 ab1b-76598eb0758b&quot; xml:lang=&quot;en&quot; label=&quot;Library&quot;/&gt;
 &lt;/entry&gt;
 ...
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To read the locale of the Web Content Manager library, the read request can be set by using the <code>Accept-Language</code> header. If a version for that specific locale is not set, the default title/summary will be returned.</p>
 <h2 id="delete-a-library">Delete a library</h2>
 <p>An existing library can be deleted by sending a DELETE request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/Library/library-id
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/Library/library-id
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 DELETE /wps/mycontenthandler/wcmrest/Library/ff207ba6-ac9a-4b38-b831-99528ff5067c
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 DELETE /wps/mycontenthandler/wcmrest/Library/ff207ba6-ac9a-4b38-b831-99528ff5067c
 
 HTTP 200 OK
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="asynchronous-delete">Asynchronous Delete</h2>
 <p>An existing library can also be deleted asynchronously by using the following URI. The response contains a <code>Content-Location</code> header, containing a URI that can be used to monitor the progress of the delete operation:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/Library/library-id?synchronous=true
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/Library/library-id?synchronous=true
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 DELETE /wps/mycontenthandler/wcmrest/Library/ff207ba6-ac9a-4b38-b831-99528ff5067c?synchronous=true
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 DELETE /wps/mycontenthandler/wcmrest/Library/ff207ba6-ac9a-4b38-b831-99528ff5067c?synchronous=true
 
 HTTP 202 Accepted
 Content-Location: /wps/mycontenthandler/wcmrest/Library/fd18e3a0-b96b-4a66-9bcc-f3d142c7837e/wcmTask:com.ibm.workplace.wcm.services.task.DeleteTask:ced02fae-abc7-4ff4-af4d-c08804b32811/delete-status
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

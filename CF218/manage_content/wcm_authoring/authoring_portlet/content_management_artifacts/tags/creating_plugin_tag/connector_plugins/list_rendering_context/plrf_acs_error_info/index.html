@@ -4099,12 +4099,12 @@
 <p>When you use the Digital Data Connector (DDC) for HCL Portal, you can access error messages for problems that occurred during the bean list computation.</p>
 <p>Computing the bean list objects that result from setting a specific list-rendering context can fail due to various reasons. For example, there can be network problems, or the backend service that normally serves the data can be down. In this situation, the resulting bean list is empty and does not contain any items. To detect whether an error occurred and to access the error message that the DDC framework generates for the error situation, access the <code>[Plugin:ListRenderingContext]</code> plug-in.</p>
 <p>To detect whether an error occurred, you can add the following HCL Web Content Manager tag to your design:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;exceptionOccured&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;exceptionOccured&quot;]
+</code></pre></div>
 <p>If the bean list computation succeeds, the plug-in writes the string <code>false</code>. If it fails, the plug-in writes the string <code>true</code>. To render different types of markup in the two situations, you can use the <code>[Plugin:Equals]</code> tag.</p>
 <p>To access the error message if an error occurred, add the following Web Content Manager tag to your design:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;getExceptionMessage&quot; escape=&quot;xml&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;getExceptionMessage&quot; escape=&quot;xml&quot;]
+</code></pre></div>
 <p>If the bean list computation fails, the plug-in writes the exception message. If no exception occurs, the plug-in writes no markup. To escape characters, use the escape parameter.</p>
 
 

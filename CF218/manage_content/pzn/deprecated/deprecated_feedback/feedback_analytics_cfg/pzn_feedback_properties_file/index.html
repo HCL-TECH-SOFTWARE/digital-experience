@@ -2906,10 +2906,9 @@
 <h2 id="loglisteners">logListeners</h2>
 <p>Log events are generated whenever the log method of a bean is called or whenever a rule is fired. Log listeners process these log events and can store the event data or perform other actions as a result of these events. The Feedback component provides two default log listeners, the LMListener that collects data for use by the LikeMinds Recommendation Engine and the FeedbackListener that collects data for use in the Feedback reports. Custom log listeners can be used to modify the default behavior of the FeedbackListener or to provide a listener that processes the Feedback events in a user-specified manner.</p>
 <p>After being developed, custom listener class files must be placed in the classpath of the server where Personalization run-time is installed. The class names of these listeners must be identified in the logListeners property. Multiple custom listener class names are separated by semicolons:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>logListeners = 
+<div class="language-text highlight"><pre><span></span><code>logListeners = 
 LogListenerClassName1;LogListenerClassName2
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="logbuffersize">logBufferSize</h2>
 <p>When log events are produced by logging beans or rules, they are placed on a process queue. Each of the registered log listeners consumes events from this queue. This enables listeners to consume log events at independent rates, minimally impacting the performance of other listeners. It also enables the Feedback component to queue events originating from Web page requests with minimal impact on the Web site performance.</p>
 <p>The log event queue (or log buffer) has a default maximum size of 10,000 events. The optimal size of this buffer is affected by Web site volume, Web site usage spikes, and many other Web application performance factors. You can change the maximum size of the log buffer by modifying the logBufferSize property in the <code>FeedbackService.properties</code> file:</p>

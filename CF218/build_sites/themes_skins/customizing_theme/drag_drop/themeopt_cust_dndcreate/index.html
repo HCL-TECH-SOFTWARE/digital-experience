@@ -3432,18 +3432,18 @@
 <h1 id="custom-drag-sources-and-drop-targets">Custom drag sources and drop targets</h1>
 <p>Drag sources and drop targets must be created according to the HTML 5 specification. In HTML 5, the DataTransfer object is used to exchange data from source to target.</p>
 <p>The source sets the data with <code>dataTransfer.setData(format, data)</code> and the target reads the data with <code>dataTransfer.getData(format)</code>. HCL Digital Experience (DX) always uses format <code>= "Text"</code>. The data is a stringified JSON object with the following structure:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>{ &quot;uri&quot; : URI }
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>{ &quot;uri&quot; : URI }
+</code></pre></div>
 <p>In the previous example, the <code>URI</code> is the URI of the object that is dragged. If more than one object is dragged, the structure looks like this example.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>{ &quot;uri&quot; : [ URI\_1, URI\_2, ... ] }
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>{ &quot;uri&quot; : [ URI\_1, URI\_2, ... ] }
+</code></pre></div>
 <p>Each URI can have a list of parameters. In this case, the JSON object has the following structure.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>{ &quot;uri&quot; : [ { key_11 : value_11, key_12 : value_12, ... }, URI\_1, { key_21 : value_21, key_22 : value_22, ... }, URI\_2, ... ] }
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>{ &quot;uri&quot; : [ { key_11 : value_11, key_12 : value_12, ... }, URI\_1, { key_21 : value_21, key_22 : value_22, ... }, URI\_2, ... ] }
+</code></pre></div>
 <p>In the previous example, key_1x:value_1x are the parameters of URI_1 and key_2x:value_2x are the parameters of URI_2.</p>
 <p>The theme module i$.dnd provides two convenience functions that simplify the creation of HTML 5 drag sources and drop targets. To create a drag source, you can use the following code.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>i$.dnd.addSource(parameter)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>i$.dnd.addSource(parameter)
+</code></pre></div>
 <p>In the previous example, the parameter object needs to have the following elements:</p>
 <ul>
 <li>
@@ -3482,8 +3482,8 @@
 </li>
 </ul>
 <p>To create a drop target, you can use the following code.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>i$.dnd.addTarget(parameter)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>i$.dnd.addTarget(parameter)
+</code></pre></div>
 <p>In the previous example, the parameter object must have the following elements:</p>
 <ul>
 <li>

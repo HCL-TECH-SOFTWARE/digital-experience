@@ -4178,8 +4178,8 @@
 <p><strong>current</strong></p>
 <p>Gets the current theme.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.themeList.current}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.themeList.current}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="theme/">Theme</a>, never null.</p>
 <p>Exception: <code>current</code> requires a valid main portal request. If the required context is not included, an exception is thrown.</p>
@@ -4188,8 +4188,8 @@
 <p><strong>get(id)</strong></p>
 <p>Get an individual theme.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.themeList[id]}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.themeList[id]}
+</code></pre></div>
 <p>Parameters:</p>
 <ul>
 <li>
@@ -4203,10 +4203,9 @@
 <p><strong>iterator</strong></p>
 <p>Iterates through themes.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;c:forEach var=&quot;node&quot; items=&quot;${wp.themeList}&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;c:forEach var=&quot;node&quot; items=&quot;${wp.themeList}&quot;&gt;
 &lt;/c:forEach&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: An iterator with <a href="theme/">Theme</a> objects; it is never null.</p>
 </li>

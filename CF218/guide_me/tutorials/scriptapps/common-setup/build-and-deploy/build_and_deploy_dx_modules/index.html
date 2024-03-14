@@ -2145,47 +2145,17 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">On MacOS or Linux</label><label for="__tabbed_1_2">On Windows </label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./gradlew<span class="w"> </span>deployDxModule<span class="w"> </span>-DdxUsername<span class="o">={</span>username<span class="o">}</span><span class="w"> </span>-DdxPassword<span class="o">={</span>password<span class="o">}</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>./gradlew<span class="w"> </span>deployDxModule<span class="w"> </span>-DdxUsername<span class="o">={</span>username<span class="o">}</span><span class="w"> </span>-DdxPassword<span class="o">={</span>password<span class="o">}</span>
+</code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>gradlew.bat<span class="w"> </span>deployDxModule<span class="w"> </span>-DdxUsername<span class="o">={</span>username<span class="o">}</span><span class="w"> </span>-DdxPassword<span class="o">={</span>password<span class="o">}</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>gradlew.bat<span class="w"> </span>deployDxModule<span class="w"> </span>-DdxUsername<span class="o">={</span>username<span class="o">}</span><span class="w"> </span>-DdxPassword<span class="o">={</span>password<span class="o">}</span>
+</code></pre></div>
 </div>
 </div>
 </div>
 <p>Sample successful <em>deployDxModule</em> log:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">     </span>&gt;<span class="w"> </span>Task<span class="w"> </span>:npmInstallDXModule
+<div class="language-bash highlight"><pre><span></span><code><span class="w">     </span>&gt;<span class="w"> </span>Task<span class="w"> </span>:npmInstallDXModule
 <span class="w">     </span>up<span class="w"> </span>to<span class="w"> </span>date,<span class="w"> </span>audited<span class="w"> </span><span class="m">167</span><span class="w"> </span>packages<span class="w"> </span><span class="k">in</span><span class="w"> </span>932ms
 <span class="w">     </span><span class="m">24</span><span class="w"> </span>packages<span class="w"> </span>are<span class="w"> </span>looking<span class="w"> </span><span class="k">for</span><span class="w"> </span>funding
 <span class="w">       </span>run<span class="w"> </span><span class="sb">`</span>npm<span class="w"> </span>fund<span class="sb">`</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>details
@@ -2216,7 +2186,7 @@
 <span class="w">     </span>dxclient<span class="w"> </span>deploy-application<span class="w"> </span>--dxUsername<span class="w"> </span>****<span class="w"> </span>--dxPassword<span class="w"> </span>****<span class="w"> </span>--dxConnectUsername<span class="w"> </span>****<span class="w"> </span>--dxConnectPassword<span class="w"> </span>****<span class="w"> </span>--applicationFile<span class="w"> </span>Reactv18r2.ear<span class="w"> </span>--applicationName<span class="w"> </span>Reactv18r2<span class="w"> </span>--dxProtocol<span class="w"> </span>https<span class="w"> </span>--hostname<span class="w"> </span>localhost<span class="w"> </span>--dxPort<span class="w"> </span><span class="m">10041</span><span class="w"> </span>--dxProfileName<span class="w"> </span>wp_profile
 <span class="w">     </span>BUILD<span class="w"> </span>SUCCESSFUL<span class="w"> </span><span class="k">in</span><span class="w"> </span>1m<span class="w"> </span>41s
 <span class="w">     </span><span class="m">10</span><span class="w"> </span>actionable<span class="w"> </span>tasks:<span class="w"> </span><span class="m">6</span><span class="w"> </span>executed,<span class="w"> </span><span class="m">4</span><span class="w"> </span>up-to-date
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ol>
 <li>If you intend to manually upload the EAR file, follow this <a href="../manual_ear_upload/">guide</a> and skip the next step below.</li>
 <li>In case the <em>deployDxModule</em> task returned an error, check the dxclient logs in build/libs/store/logs/ folder.</li>

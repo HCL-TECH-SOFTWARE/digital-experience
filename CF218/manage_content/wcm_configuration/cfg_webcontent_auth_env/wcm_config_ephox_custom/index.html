@@ -2340,20 +2340,20 @@
 <ul>
 <li>
 <p>If you disabled this editor in an on-premise setup and need to enable it again, run:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ConfigEngine<span class="o">(</span>sh/bat<span class="o">)</span><span class="w"> </span>action-deploy-tinymce-editor
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>ConfigEngine<span class="o">(</span>sh/bat<span class="o">)</span><span class="w"> </span>action-deploy-tinymce-editor
+</code></pre></div>
 </li>
 <li>
 <p>If you disabled this editor and need to enable it again in a Kubernetes deployment, run:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ConfigEngine<span class="o">(</span>sh/bat<span class="o">)</span><span class="w"> </span>action-deploy-tinymce-editor-cloud
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>ConfigEngine<span class="o">(</span>sh/bat<span class="o">)</span><span class="w"> </span>action-deploy-tinymce-editor-cloud
+</code></pre></div>
 </li>
 </ul>
 </li>
 <li>
 <p>If a custom configuration is used for this editor, run this configuration process:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ConfigEngine<span class="o">(</span>sh/bat<span class="o">)</span><span class="w"> </span>configure-wcm-ephox-editor-custom-configuration
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>ConfigEngine<span class="o">(</span>sh/bat<span class="o">)</span><span class="w"> </span>configure-wcm-ephox-editor-custom-configuration
+</code></pre></div>
 <p>If no custom configuration is used, proceed to Step 3.</p>
 </li>
 <li>
@@ -2381,13 +2381,13 @@
 <ul>
 <li>
 <p><strong>Windows™</strong></p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="sb">`</span>ConfigEngine.bat<span class="w"> </span>configure-wcm-ephox-editor-custom-configuration<span class="w"> </span>-DWasPassword<span class="o">=</span>password<span class="w"> </span>-DPortalAdminId<span class="o">=</span>username<span class="w"> </span>-DPortalAdminPwd<span class="o">=</span>password<span class="sb">`</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code><span class="sb">`</span>ConfigEngine.bat<span class="w"> </span>configure-wcm-ephox-editor-custom-configuration<span class="w"> </span>-DWasPassword<span class="o">=</span>password<span class="w"> </span>-DPortalAdminId<span class="o">=</span>username<span class="w"> </span>-DPortalAdminPwd<span class="o">=</span>password<span class="sb">`</span>
+</code></pre></div>
 </li>
 <li>
 <p><strong>UNIX™ and Linux™</strong></p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="sb">`</span>./ConfigEngine.sh<span class="w"> </span>configure-wcm-ephox-editor-custom-configuration<span class="w"> </span>-DWasPassword<span class="o">=</span>password<span class="w"> </span>-DPortalAdminId<span class="o">=</span>username<span class="w"> </span>-DPortalAdminPwd<span class="o">=</span>password<span class="sb">`</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code><span class="sb">`</span>./ConfigEngine.sh<span class="w"> </span>configure-wcm-ephox-editor-custom-configuration<span class="w"> </span>-DWasPassword<span class="o">=</span>password<span class="w"> </span>-DPortalAdminId<span class="o">=</span>username<span class="w"> </span>-DPortalAdminPwd<span class="o">=</span>password<span class="sb">`</span>
+</code></pre></div>
 </li>
 </ul>
 <div class="admonition note">
@@ -2424,13 +2424,13 @@
 <ul>
 <li>
 <p>Single toolbar in space-separated list of buttons</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>formatselect<span class="w"> </span><span class="p">|</span><span class="w"> </span>bold<span class="w"> </span>italic<span class="w"> </span>strikethrough<span class="w"> </span>forecolor<span class="w"> </span>backcolor<span class="w"> </span><span class="p">|</span><span class="w"> </span>link<span class="w"> </span><span class="p">|</span><span class="w"> </span>alignleft<span class="w"> </span>aligncenter<span class="w"> </span>alignright<span class="w"> </span>alignjustify<span class="w">  </span><span class="p">|</span><span class="w"> </span>numlist<span class="w"> </span>bullist<span class="w"> </span>outdent<span class="w"> </span>indent<span class="w">  </span><span class="p">|</span><span class="w"> </span>removeformat
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>formatselect<span class="w"> </span><span class="p">|</span><span class="w"> </span>bold<span class="w"> </span>italic<span class="w"> </span>strikethrough<span class="w"> </span>forecolor<span class="w"> </span>backcolor<span class="w"> </span><span class="p">|</span><span class="w"> </span>link<span class="w"> </span><span class="p">|</span><span class="w"> </span>alignleft<span class="w"> </span>aligncenter<span class="w"> </span>alignright<span class="w"> </span>alignjustify<span class="w">  </span><span class="p">|</span><span class="w"> </span>numlist<span class="w"> </span>bullist<span class="w"> </span>outdent<span class="w"> </span>indent<span class="w">  </span><span class="p">|</span><span class="w"> </span>removeformat
+</code></pre></div>
 </li>
 <li>
 <p>Multiple toolbars in an array</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">[</span><span class="w"> </span><span class="s1">&#39;undo redo | bold italic underline | fontselect fontsizeselect&#39;</span>,<span class="w"> </span><span class="s1">&#39;forecolor backcolor | alignleft aligncenter alignright alignfull | numlist bullist outdent indent | a11ycheck&#39;</span><span class="w"> </span><span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code><span class="o">[</span><span class="w"> </span><span class="s1">&#39;undo redo | bold italic underline | fontselect fontsizeselect&#39;</span>,<span class="w"> </span><span class="s1">&#39;forecolor backcolor | alignleft aligncenter alignright alignfull | numlist bullist outdent indent | a11ycheck&#39;</span><span class="w"> </span><span class="o">]</span>
+</code></pre></div>
 </li>
 </ul>
 </li>
@@ -2449,12 +2449,10 @@
 <ol>
 <li>
 <p>To disable TinyMCE editor and to revert to an earlier version of the Rich Text editor, run the following process:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>ConfigEngine<span class="o">(</span>sh/bat<span class="o">)</span><span class="w"> </span>action-remove-tinymce-editor
+<div class="language-bash highlight"><pre><span></span><code>ConfigEngine<span class="o">(</span>sh/bat<span class="o">)</span><span class="w"> </span>action-remove-tinymce-editor
 ConfigEngine<span class="o">(</span>sh/bat<span class="o">)</span><span class="w"> </span>configure-wcm-editor
 ConfigEngine<span class="o">(</span>sh/bat<span class="o">)</span><span class="w"> </span>remove-wcm-ephox-editor-custom-configuration<span class="w"> </span><span class="o">(</span><span class="k">if</span><span class="w"> </span>a<span class="w"> </span>custom<span class="w"> </span>configuration<span class="w"> </span>is<span class="w"> </span>used<span class="o">)</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Restart the WebSphere_Portal server.</p>
@@ -2474,29 +2472,27 @@ ConfigEngine<span class="o">(</span>sh/bat<span class="o">)</span><span class="w
 <ol>
 <li>
 <p>To enable the new Textbox I/O editor fix using HCL Digital Experience CF18 or later, run this configuration process:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ConfigEngine<span class="o">(</span>sh/bat<span class="o">)</span><span class="w"> </span>action-deploy-tiny-editors
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>ConfigEngine<span class="o">(</span>sh/bat<span class="o">)</span><span class="w"> </span>action-deploy-tiny-editors
+</code></pre></div>
 </li>
 <li>
 <p>If a custom configuration is used for this editor, run this configuration process:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ConfigEngine<span class="o">(</span>sh/bat<span class="o">)</span><span class="w"> </span>configure-wcm-ephox-editor-custom-configuration
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>ConfigEngine<span class="o">(</span>sh/bat<span class="o">)</span><span class="w"> </span>configure-wcm-ephox-editor-custom-configuration
+</code></pre></div>
 </li>
 <li>
 <p>Restart the WebSphere_Portal server once the configuration process is completed.</p>
 </li>
 </ol>
 <p><strong>Beginning with HCL DX 9.5 Container Update CF182</strong>, the updated Textbox.io Rich Text editor is deployed out-of-box for the HCL DX 9.5 Containers. When deployed in supported Kubernetes environments, a ConfigEngine task is required to be run before the Textbox.io editor application will work correctly (i.e. before for selecting the Advanced editor for use in Web Content Manager). Run the ConfigEngine task:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh<span class="w"> </span>action-create-was-variable-tiny-editors-cloud<span class="w"> </span>-DDxHost<span class="o">=</span>&lt;FQDN<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>exposed<span class="w"> </span>DX<span class="w"> </span>host&gt;<span class="w"> </span>
+<div class="language-bash highlight"><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh<span class="w"> </span>action-create-was-variable-tiny-editors-cloud<span class="w"> </span>-DDxHost<span class="o">=</span>&lt;FQDN<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>exposed<span class="w"> </span>DX<span class="w"> </span>host&gt;<span class="w"> </span>
 -DWasUserid<span class="o">=</span>wpsadmin<span class="w"> </span>-DWasPassword<span class="o">=</span>wpsadmin
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>with <code>&lt;FQDN of the exposed DX host&gt;</code> being the value of the hostname used to access DX.</p>
 <p>For example, if the URL for accessing DX in your cloud environment is <a href="https://dx-deployment-service-dx-home-sec.net/wps/portal">https://dx-deployment-service-dx-home-sec.net/wps/portal</a>, the DxHost value would be <code>dx-deployment-service-dx-home-sec.net</code> so the ConfigEngine command would look like:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh<span class="w"> </span>action-create-was-variable-tiny-editors-cloud<span class="w"> </span>-DDxHost<span class="o">=</span>dx-deployment-service-dx-home-sec.net<span class="w"> </span>
+<div class="language-bash highlight"><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh<span class="w"> </span>action-create-was-variable-tiny-editors-cloud<span class="w"> </span>-DDxHost<span class="o">=</span>dx-deployment-service-dx-home-sec.net<span class="w"> </span>
 -DWasUserid<span class="o">=</span>wpsadmin<span class="w"> </span>-DWasPassword<span class="o">=</span>wpsadmin
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="using-a-custom-textboxio-editor-toolbar">Using a custom Textbox.io editor toolbar</h2>
 <ol>
 <li>
@@ -2514,13 +2510,13 @@ ConfigEngine<span class="o">(</span>sh/bat<span class="o">)</span><span class="w
 <ul>
 <li>
 <p><strong>Windows™</strong></p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="sb">`</span>ConfigEngine.bat<span class="w"> </span>configure-wcm-ephox-editor-custom-configuration<span class="w"> </span>-DWasPassword<span class="o">=</span>password<span class="w"> </span>-DPortalAdminId<span class="o">=</span>username<span class="w"> </span>-DPortalAdminPwd<span class="o">=</span>password<span class="sb">`</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code><span class="sb">`</span>ConfigEngine.bat<span class="w"> </span>configure-wcm-ephox-editor-custom-configuration<span class="w"> </span>-DWasPassword<span class="o">=</span>password<span class="w"> </span>-DPortalAdminId<span class="o">=</span>username<span class="w"> </span>-DPortalAdminPwd<span class="o">=</span>password<span class="sb">`</span>
+</code></pre></div>
 </li>
 <li>
 <p><strong>UNIX™ and Linux™</strong></p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="sb">`</span>./ConfigEngine.sh<span class="w"> </span>configure-wcm-ephox-editor-custom-configuration<span class="w"> </span>-DWasPassword<span class="o">=</span>password<span class="w"> </span>-DPortalAdminId<span class="o">=</span>username<span class="w"> </span>-DPortalAdminPwd<span class="o">=</span>password<span class="sb">`</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code><span class="sb">`</span>./ConfigEngine.sh<span class="w"> </span>configure-wcm-ephox-editor-custom-configuration<span class="w"> </span>-DWasPassword<span class="o">=</span>password<span class="w"> </span>-DPortalAdminId<span class="o">=</span>username<span class="w"> </span>-DPortalAdminPwd<span class="o">=</span>password<span class="sb">`</span>
+</code></pre></div>
 </li>
 </ul>
 <div class="admonition note">
@@ -2541,12 +2537,12 @@ ConfigEngine<span class="o">(</span>sh/bat<span class="o">)</span><span class="w
 <ol>
 <li>
 <p>To disable Textbox I/O editor and to revert to an earlier version of the Rich Text editor, run the following process:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ConfigEngine<span class="o">(</span>sh/bat<span class="o">)</span><span class="w"> </span>action-remove-tiny-editors
-</code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ConfigEngine<span class="o">(</span>sh/bat<span class="o">)</span><span class="w"> </span>configure-wcm-editor
-</code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ConfigEngine<span class="o">(</span>sh/bat<span class="o">)</span><span class="w"> </span>remove-wcm-ephox-editor-custom-configuration<span class="w"> </span><span class="o">(</span><span class="k">if</span><span class="w"> </span>a<span class="w"> </span>custom<span class="w"> </span>configuration<span class="w"> </span>is<span class="w"> </span>used<span class="o">)</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>ConfigEngine<span class="o">(</span>sh/bat<span class="o">)</span><span class="w"> </span>action-remove-tiny-editors
+</code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code>ConfigEngine<span class="o">(</span>sh/bat<span class="o">)</span><span class="w"> </span>configure-wcm-editor
+</code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code>ConfigEngine<span class="o">(</span>sh/bat<span class="o">)</span><span class="w"> </span>remove-wcm-ephox-editor-custom-configuration<span class="w"> </span><span class="o">(</span><span class="k">if</span><span class="w"> </span>a<span class="w"> </span>custom<span class="w"> </span>configuration<span class="w"> </span>is<span class="w"> </span>used<span class="o">)</span>
+</code></pre></div>
 </li>
 <li>
 <p>Restart the WebSphere_Portal server.</p>

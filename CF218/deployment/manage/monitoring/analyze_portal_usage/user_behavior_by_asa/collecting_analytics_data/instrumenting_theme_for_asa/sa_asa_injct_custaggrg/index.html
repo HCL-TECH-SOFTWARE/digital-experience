@@ -3336,27 +3336,21 @@
 <h1 id="injecting-custom-aggregators">Injecting custom aggregators</h1>
 <p>By implementing a new theme extension point, you can apply different approaches to Active Site Analytics.</p>
 <p>To do this, define your implementation within the following theme extension point in the file plugin.xml:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>com.ibm.portal.theme.plugin.ActiveSiteAnalyticsAggregators
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>com.ibm.portal.theme.plugin.ActiveSiteAnalyticsAggregators
+</code></pre></div>
 <p>If the theme extension loop is in place, it picks up the custom implementation of the extension point, and its output is added to the markup of the portal page. If you want to have the output added to the head of the HTML page, implement the following extension point:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>com.ibm.portal.theme.plugin.ActiveSiteAnalyticsDependencies
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>com.ibm.portal.theme.plugin.ActiveSiteAnalyticsDependencies
+</code></pre></div>
 <p>For details about the extension loop refer to the topic about Instrumenting a special theme for Active Site Analytics under the section about Including microformats of interest.</p>
 <p>Alternatively, you can use the following JSP code to iterate over the page metadata and add the aggregator JavaScript include statement to the page:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portal-logic:pageMetaData varname=&quot;pageMetaData&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;portal-logic:pageMetaData varname=&quot;pageMetaData&quot;&gt;
    &lt;portal-logic:urlFindInTheme file=&#39;js/${pageMetaData[&quot;asa_aggregator&quot;]}&#39; 
          id=&quot;asa_aggregator_file&quot;/&gt;
    &lt;c:if test=&quot;${asa_aggregator_file != null}&quot;&gt;
       &lt;script type=&quot;text/javascript&quot; src=&#39;&lt;%=asa_aggregator_file%&gt;&#39;&gt;&lt;/script&gt;
    &lt;/c:if&gt;
 &lt;/portal-logic:pageMetaData&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 </div>

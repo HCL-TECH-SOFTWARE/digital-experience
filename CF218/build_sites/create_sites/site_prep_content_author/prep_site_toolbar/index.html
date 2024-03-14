@@ -3178,10 +3178,9 @@
 <p>As this parameter is already set on the Toolbar Content Root parent node, the new page or label inherits it. Therefore, you cannot set it as a new parameter. You need to edit the existing parameter and overwrite the inherited value of <code>true</code> explicitly with the value <code>true</code>. Then, you can view the new page or label on the toolbar side navigation.</p>
 </div>
 <p>To use the XML configuration interface for creating and managing your toolbar tabs, set this parameter as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;parameter name=&quot;ibm.portal.toolbar.isToolbarPage&quot; type=&quot;string&quot;
+<div class="language-text highlight"><pre><span></span><code>&lt;parameter name=&quot;ibm.portal.toolbar.isToolbarPage&quot; type=&quot;string&quot;
 update=&quot;set&quot;&gt;&lt;![CDATA[true]]&amp;gt;&lt;/parameter&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For performance reasons, this parameter must be set on every toolbar content node. If it is not set, the toolbar tab does not have access to the context of the main page.</p>
 <p>You can now start to add content to your toolbar. Add a portlet to the content page that your toolbar tab represents. For more information, see <em>Implementing portlets for the site toolbar</em>.</p>
 <p>The feed that displays all portlets is cached after it is displayed. If you deploy a portlet after you view the portlets on the toolbar, the newly deployed portlet is not visible until the cache expires. The cache expires after one hour. Alternatively, you can look up the portlet in <strong>Manage Portlets</strong> and then go back to the toolbar.</p>

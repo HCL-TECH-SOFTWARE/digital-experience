@@ -3003,58 +3003,15 @@
 <li>
 <p>Standard portlet examples</p>
 <p>Sample <code>web.xml</code> file for standard portlet with empty content:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE web-app PUBLIC &quot;-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN&quot; 
                          &quot;http://java.sun.com/dtd/web-app_2_3.dtd&quot;&gt;
 &lt;web-app&gt;
     &lt;display-name&gt;Shipping Portlets - Standard Version&lt;/display-name&gt;
 &lt;/web-app&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Sample standard <code>portlet.xml</code> file</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot;?&gt;
 &lt;portlet-app 
    xmlns=&quot;http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd&quot;
    version=&quot;1.0&quot;
@@ -3093,22 +3050,17 @@
     ...
 
 &lt;/portlet-app&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For standard portlets, you must use a special <code>&lt;preference&gt;</code> entry to specify the application portlet class.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portlet-preferences&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;portlet-preferences&gt;
 &lt;preference&gt;
     &lt;name&gt;com.ibm.portal.propertybroker.wsdllocation&lt;/name&gt;
     &lt;value&gt;/wsdl/OrderDetail.wsdl&lt;/value&gt;
 &lt;/preference&gt;
 &lt;/portlet-preferences&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 </li>
 </ul>

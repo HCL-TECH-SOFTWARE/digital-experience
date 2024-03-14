@@ -3505,27 +3505,19 @@
 </li>
 <li>
 <p>Register the style by adding an entry to the items array in the following format:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>      {&#39;label&#39;:&#39;display_name_for_the_style&#39;,
+<div class="language-text highlight"><pre><span></span><code>      {&#39;label&#39;:&#39;display_name_for_the_style&#39;,
    &#39;id&#39;:&#39;unique_name_for_style&#39;,
 &#39;url&#39;:&#39;path_to_the_stylesheet_relative_to_theme_folder_in_webdav&#39;,
 &#39;thumbnail&#39;:&#39;path_to_the_thumbnail_image&#39;,
 &#39;help&#39;:&#39;short_description_for_the_style&#39;}
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following code is an example of the items array:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>      {&#39;label&#39;:&#39;change_style_white&#39;,
+<div class="language-text highlight"><pre><span></span><code>      {&#39;label&#39;:&#39;change_style_white&#39;,
    &#39;id&#39;:&#39;white.css&#39;,
 &#39;url&#39;:&#39;css/white/white.css&#39;,
 &#39;thumbnail&#39;:ibmCfg.themeConfig.themeRootURI+&#39;/css/white/icon.gif&#39;,
 &#39;help&#39;:&#39;The white style.&#39;}
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The display name shows in the site toolbar. Make the path relative to the folder in WebDAV. The JSON object in the file styles.json contains two attributes that are used for globalizing the style display strings localizationPackageName and localizationBundleName. These objects are used by the dojo.i18n file to provide localized strings by creating bundles with dojo.i18n.getLocalization("localizationPackageName", "localizationBundleName"). If you choose to globalize the display name of your new style, add a key to the bundle and replace the label value in the JSON with the key name. The site toolbar automatically looks up the display name in the bundle using the key.</p>
 </li>
 </ol>

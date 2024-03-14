@@ -2278,17 +2278,7 @@
 <p>A transition has a source that points to a transition-endpoint. The transition-endpoint references one or multiple portlets through metadata markers. When the particular portlet or any of the portlets that are referenced emits the event, the transition is triggered. The event that is emitted is defined as part of the transition's source.</p>
 <p>Alternatively, a transition has a source that points to a transition-endpoint. The transition-endpoint references one or multiple pages through metadata markers. When any portlet on the particular page or on any of the pages that are referenced emits the event, the transition is triggered. The event that is emitted is defined as part of the transitions source.</p>
 <p>Code sample shows an example where resources, either pages or portlets, that are assigned metadata with keys uxfm.marker.1 and uxfm.marker.2 are being referenced.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;dialog name=&quot;dialog1&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;dialog name=&quot;dialog1&quot;&gt;
   &lt;transition-endpoint name=&quot;marked_resources&quot;&gt;
       &lt;localedata locale=&quot;en&quot;&gt;
           &lt;title&gt;Subdialog 1&lt;/title&gt;
@@ -2299,7 +2289,7 @@
        &lt;invocation type=&quot;static&quot;/&gt;
 ...
 &lt;/transition-endpoint&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 </div>

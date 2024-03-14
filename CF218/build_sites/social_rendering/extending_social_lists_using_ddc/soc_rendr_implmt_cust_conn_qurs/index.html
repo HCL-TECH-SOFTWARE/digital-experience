@@ -2346,30 +2346,25 @@
 <li>If you use a custom list-rendering profile, you can use either the generic XML DDC plug-in or a custom DDC plug-in that you deployed.
 Example: To retrieve the list of all public communities, you establish the list-rendering context as follows:</li>
 </ul>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;set&quot; 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;set&quot; 
    extension-id=&quot;ibm.portal.ddc.sr&quot; 
    profile=&quot;ibm.portal.sr.communities&quot; 
    attribute=&quot;source=https://www.cntserv_exmp.com/connections/communities/service/atom/catalog/public&quot;]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>To render the result, you must render an appearance component of Digital Data Connector. In that component, you extract the individual pieces of information. You do so by using the <code>[AttributeResource]</code> tag and the attribute names that the list-rendering profile that you use supports.</p>
 <p>Example: In the community query that is shown in the previous step, you can render a link to a detail view of the community. You do so by adding the following markup to your Result Design section of the DDC appearance component:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;a href=&quot;[AttributeResource attributeName=&#39;link&#39;]&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;a href=&quot;[AttributeResource attributeName=&#39;link&#39;]&quot;&gt;
     [AttributeResource attributeName=&#39;title&#39;]
 &lt;/a&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>After the rendering of the appearance component is completed, make sure to remove the list rendering context again. This is especially important if you want to nest list rendering contexts to render nested lists.</p>
 <p>You remove the list rendering context as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;remove&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;remove&quot;]
+</code></pre></div>
 <p>For more information, read <em>Setting the list-rendering context</em>.</p>
 </li>
 </ol>

@@ -3984,10 +3984,9 @@
 <h1 id="hcl-connections-context-rendering-plug-in">HCL Connections context rendering plug-in</h1>
 <p>You can use the ConnectionsContext rendering plug-in to access information that is related to the current HCL Connections integration context.</p>
 <p>This plug-in has the following syntax:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ConnectionsContext type=&quot;service|portal|context|config&quot; 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ConnectionsContext type=&quot;service|portal|context|config&quot; 
                            key=&quot;&quot; defaultValue=&quot;&quot; context=&quot;&quot;]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The plug-in uses the following attributes:</p>
 <ul>
 <li>
@@ -4070,28 +4069,28 @@
 <ul>
 <li>
 <p>To get the service URL of the forums service, specify as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ConnectionsContext type=&quot;service&quot; key=&quot;forums&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ConnectionsContext type=&quot;service&quot; key=&quot;forums&quot;]
+</code></pre></div>
 </li>
 <li>
 <p>To get the community ID of the community with which the current selection is associated, specify as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ConnectionsContext type=&quot;portal&quot; key=&quot;communityID&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ConnectionsContext type=&quot;portal&quot; key=&quot;communityID&quot;]
+</code></pre></div>
 </li>
 <li>
 <p>To get the user ID of the current user, specify as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ConnectionsContext type=&quot;portal&quot; key=&quot;userID&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ConnectionsContext type=&quot;portal&quot; key=&quot;userID&quot;]
+</code></pre></div>
 </li>
 <li>
 <p>To get the Atom resource URL of the social list item link that a user clicked, specify as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ConnectionsContext type=&quot;context&quot; key=&quot;url&quot; defaultValue=&quot;no context available&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ConnectionsContext type=&quot;context&quot; key=&quot;url&quot; defaultValue=&quot;no context available&quot;]
+</code></pre></div>
 </li>
 <li>
 <p>You might want to obtain the HCL Connections server type. For example, you might want to check whether that portal integrates an on-premise HCL Connections server or an HCL Connections server that runs on the Smart Cloud for Social Business. In this case, specify as follows: </p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ConnectionsContext type=&quot;config&quot; key=&quot;server.type]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ConnectionsContext type=&quot;config&quot; key=&quot;server.type]
+</code></pre></div>
 </li>
 </ul>
 <details class="info" open="open">

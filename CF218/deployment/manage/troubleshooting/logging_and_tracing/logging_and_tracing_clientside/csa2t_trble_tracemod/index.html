@@ -3372,8 +3372,8 @@
 <ol>
 <li>
 <p>To debug a module or theme, enable portal tracing with the following trace string.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>com.ibm.wps.resourceaggregator.CombinerDataSource.RemoteDebug=all
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>com.ibm.wps.resourceaggregator.CombinerDataSource.RemoteDebug=all
+</code></pre></div>
 <p>This string loads the modules by using separate links and script tags, isolating each one independently. If the module definition defines a debug version, it also loads debug versions of each contribution. Typically, the debug version is an uncompressed version of the &lt;script&gt; tag that contains the same data as the normal version.</p>
 <p>Both using separate links and by using uncompressed &lt;script&gt; tags makes it easier to debug a running HCL Portal environment from the browser.</p>
 </li>

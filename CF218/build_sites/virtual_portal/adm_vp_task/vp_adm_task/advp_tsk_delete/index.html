@@ -2657,29 +2657,22 @@ ConfigEngine.sh delete-virtual-portal
 </ul>
 </li>
 </ul>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>        -   ```
+<div class="language-text highlight"><pre><span></span><code>        -   ```
 ConfigEngine.sh delete-virtual-portal 
                -DremoveResourcesInSharedDomains=true
                -DVirtualPortalHostName=host\_name\_of\_the\_VP
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>-   For Windows™:
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>-   For Windows™:
     -   ```
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>ConfigEngine.bat delete-virtual-portal 
                  -DremoveResourcesInSharedDomains=true 
                  -DVirtualPortalContext=URL_context_of_the_VP</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>        -   ```
+<div class="language-text highlight"><pre><span></span><code>        -   ```
 ConfigEngine.bat delete-virtual-portal 
                 -DremoveResourcesInSharedDomains=true
                 -DVirtualPortalHostName=host\_name\_of\_the\_VP
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For a list of database domains that can be shared, read the topic about Shared database domains and sharing database domains for your environment.</p>
 <h2 id="cleaning-up-remaining-resources-if-a-virtual-portal-has-been-deleted-already">Cleaning up remaining resources if a virtual portal has been deleted already</h2>
 <p>If a virtual portal was deleted already without prior cleanup of resources in shareable database domains, and if these resources cannot be accessed by any other portal installation that shares the database domains, proceed by the following steps to remove the remaining resources:</p>

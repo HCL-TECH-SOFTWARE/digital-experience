@@ -3682,36 +3682,25 @@
 <h1 id="configuration-settings-for-capability-filters">Configuration settings for capability filters</h1>
 <p>Set the following properties in the Wp ConfigService Resource Environment Provider to enable or disable the various capability filters.</p>
 <h2 id="enable-or-disable-the-runtime-filter-for-the-local-rendering-use-case">Enable or disable the runtime filter for the local rendering use case</h2>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>Property : resourceaggregation.enableRuntimePortletCapabilitiesFilter
+<div class="language-text highlight"><pre><span></span><code>Property : resourceaggregation.enableRuntimePortletCapabilitiesFilter
 Possible Values:
 true: Enables the runtime filter
 false: Disables the runtime filter
 Default: true
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="enable-or-disable-the-buildtime-filter-for-the-local-rendering-use-case">Enable or disable the buildtime filter for the local rendering use case</h2>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>Property : resourceaggregation.enableBuildtimePortletCapabilitiesFilter
+<div class="language-text highlight"><pre><span></span><code>Property : resourceaggregation.enableBuildtimePortletCapabilitiesFilter
 Possible Values:
 true: Enables the buildtime filter
 false: Disables the buildtime filter
 Default: true
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="set-the-themes-to-which-the-filters-are-applied-in-the-local-rendering-case">Set the themes to which the filters are applied in the local rendering case</h2>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>Property : resourceaggregation.themeObjectIDs
+<div class="language-text highlight"><pre><span></span><code>Property : resourceaggregation.themeObjectIDs
 Possible Values:
 Comma separated list of unique names of themes for which the filters should apply.
 Default: ibm.portal.80Theme, ibm.portal.85Theme
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This setting does not apply for the remote rendering use case (WSRP).</p>
@@ -3723,40 +3712,29 @@ Default: ibm.portal.80Theme, ibm.portal.85Theme
 <h2 id="disable-theme-filters-in-local-rendering">Disable theme filters in local rendering</h2>
 <p>Theme filters check whether a portlet can be rendered based on the current rendering context or not. This particular filter checks all <code>capability.*.id</code> preferences and validates them against the theme capabilities. If a capability is not available, the portlet is either not rendered or is not allowed to be added to the page. For more information, see <em>Module dependencies in portlets</em>.</p>
 <p>This feature is enabled by default in Combined Cumulative Fix 03 and can be disabled by adding the following theme metadata to your theme.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>resourceaggregation.disableThemeFilter = true
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>resourceaggregation.disableThemeFilter = true
+</code></pre></div>
 <p>The easiest way to set a theme metadata is through the themelist entry point. Modify the metadata.properties. You can also use XMLaccess to update your theme.</p>
 <h2 id="enable-or-disable-the-runtime-filter-for-the-remote-rendering-use-case-wsrp">Enable or disable the runtime filter for the remote rendering use case (WSRP)</h2>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>Property : resourceaggregation.enableRuntimePortletCapabilitiesFilterForWSRP
+<div class="language-text highlight"><pre><span></span><code>Property : resourceaggregation.enableRuntimePortletCapabilitiesFilterForWSRP
 Possible Values:
 true: Enables the runtime filter for WSRP
 false: Disables the runtime filter for WSRP
 Default: true
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="enable-or-disable-the-buildtime-filter">Enable or disable the buildtime filter</h2>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>Property : resourceaggregation.enableBuildtimePortletCapabilitiesFilter
+<div class="language-text highlight"><pre><span></span><code>Property : resourceaggregation.enableBuildtimePortletCapabilitiesFilter
 Possible Values:
 true: Enables the buildtime filter
 false: Disables the buildtime filter
 Default: true
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="disable-json-file-filter">Disable JSON file filter</h2>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>Property: resourceaggregation.load.json.only
+<div class="language-text highlight"><pre><span></span><code>Property: resourceaggregation.load.json.only
 Possible values: 
 true: Filters files other than json files when creating WebDav contribution and profile directories.
 false: Does not filter any files in the WebDav contribution and profile directories.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

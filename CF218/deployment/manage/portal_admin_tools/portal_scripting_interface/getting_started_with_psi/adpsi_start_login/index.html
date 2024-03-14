@@ -3418,13 +3418,12 @@
 <h1 id="logging-in-to-the-portal">Logging in to the portal</h1>
 <p>Before you can work with portal scripting commands, you need to log in to the portal server instance where you want to work with the Portal Scripting Interface.</p>
 <p>At the command prompt <code>wsadmin&gt;</code> use the following command: <code>Portal.login("your_userid", "your_password")</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt; **Portal.login(your_userid, your_password)**
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt; **Portal.login(your_userid, your_password)**
+</code></pre></div>
 <p>If you logged in successfully, the Portal Scripting Interface returns a message that starts with <code>logged in as . . .</code>. The console now shows the following lines:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt; **Portal.login(your_userid, your_password)**wsadmin&gt; 
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt; **Portal.login(your_userid, your_password)**wsadmin&gt; 
 **logged in as &quot;uid=your_userid,o=defaultWIMFileBasedRealm&quot;**
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You can now administer the portal instance in a similar way as by using the Portal Administration user interface. The following examples show how you can work with pages.</p>
 
 

@@ -3230,16 +3230,15 @@
 <p>In the DX default implementation of Content Security Policy, the nonce value is not appended to any script tags due to the risk of marking malicious script as valid. Style changes are considered less risky, therefore, nonce values are appended to style tags.</p>
 </div>
 <p>For example, the nonce value that would be included on the header looks like this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Content-Security-Policy: script-src &#39;nonce-EDNnf03nceIOfn39fn3e9h3sdfa’
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>Content-Security-Policy: script-src &#39;nonce-EDNnf03nceIOfn39fn3e9h3sdfa’
+</code></pre></div>
 <p>The same nonce value would be included on the script tag as well:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;script nonce=&quot;EDNnf03nceIOfn39fn3e9h3sdfa&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;script nonce=&quot;EDNnf03nceIOfn39fn3e9h3sdfa&quot;&gt;
      var element = document.getElementById(“myelement”);&lt;/script&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>DX now supplies a CSPService which can be used to obtain a unique nonce value. Customers can use this service to append a nonce to any inline script that they choose to permit in custom code. The format to obtain a nonce from the service is:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>String nonce=CSPService.getInstance().getNonce();
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>String nonce=CSPService.getInstance().getNonce();
+</code></pre></div>
 <p>The implementation supports generation of 128-bit and random nonce values. For more information, refer <a href="https://w3c.github.io/webappsec-csp/#security-nonces">W3C specifications- Content Security Policy Level 3</a>.</p>
 
 

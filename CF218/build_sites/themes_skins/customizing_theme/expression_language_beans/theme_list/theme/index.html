@@ -4245,8 +4245,8 @@
 <p><strong>description</strong></p>
 <p>The description of the theme.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.themeList.current.description}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.themeList.current.description}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="../../common_beans/themeopt_el_bean_description/">Description</a> object for the theme node; it is never null. You can use the value of the title object to retrieve the description in current locale.</p>
 </li>
@@ -4254,8 +4254,8 @@
 <p><strong>metadata</strong></p>
 <p>The metadata map of this theme.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.themeList.current.metadata[&#39;com.ibm.portal.Hidden&#39;]}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.themeList.current.metadata[&#39;com.ibm.portal.Hidden&#39;]}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="../../common_beans/themeopt_el_bean_meta/">Metadata</a>, never null.</p>
 </li>
@@ -4263,8 +4263,8 @@
 <p><strong>profiles</strong></p>
 <p>Represents the profile list of this theme.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.themeList.current.profiles}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.themeList.current.profiles}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="profile_list/">ProfileList</a>, it is never null.</p>
 </li>
@@ -4272,16 +4272,12 @@
 <p><strong>themeTemplateURI</strong></p>
 <p>Represents the URI pointing to the theme template that is configured for the current page that is rendered.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%@ taglib uri=&quot;http://www.ibm.com/xmlns/prod/websphere/portal/v8.5/resolver&quot; prefix=&quot;r&quot; %&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;%@ taglib uri=&quot;http://www.ibm.com/xmlns/prod/websphere/portal/v8.5/resolver&quot; prefix=&quot;r&quot; %&gt;
 &lt;r:dataSource uri=&#39;spa:${wp.identification[${wp.selectionModel.selected}]}&#39; escape=&quot;none&quot;&gt;
     &lt;r:param name=&quot;themeURI&quot; value=&quot;${wp.themeList.current.themeTemplateURI}&quot;/&gt;
     &lt;r:param name=&quot;mime-type&quot; value=&quot;text/html&quot;/&gt;
 &lt;/r:dataSource&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: The URI pointing to the theme template that is configured for the current page that is rendered.</p>
 <p>Exception: This attribute works for the current theme and current page that is rendered only.</p>
@@ -4290,8 +4286,8 @@
 <p><strong>title</strong></p>
 <p>The title of this theme.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.themeList.current.title}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.themeList.current.title}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="../../common_beans/themeopt_el_bean_title/">Title</a> object for the theme node; it is never null. You can use the value of the title object to retrieve the title in current locale.</p>
 </li>

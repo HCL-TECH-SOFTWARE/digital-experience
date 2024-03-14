@@ -3185,45 +3185,15 @@
 <p>When a portlet requires existing client-side capabilities, such as Dojo, loaded on the page, it can define a set of portlet preferences that declare the capabilities it requires.</p>
 <p>Define two preferences for each capability the portlet depends upon. One preference that describes the ID of the capability and one that defines the minimal value or version in the following format, major.minor.revision:</p>
 <p>ID:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>Preference Name: capability.&lt;sequence-number&gt;.id
+<div class="language-text highlight"><pre><span></span><code>Preference Name: capability.&lt;sequence-number&gt;.id
 Preference Value : &lt;the capability name&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Value:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>Preference Name: capability.&lt;sequence-number&gt;.minValue
+<div class="language-text highlight"><pre><span></span><code>Preference Name: capability.&lt;sequence-number&gt;.minValue
 Preference Value: &lt;the capability value&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Sample</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portlet-preferences&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;portlet-preferences&gt;
     &lt;preference&gt;
         &lt;name&gt;capability.1.id&lt;/name&gt;
         &lt;value&gt;dojo&lt;/value&gt;
@@ -3252,7 +3222,7 @@ Preference Value: &lt;the capability value&gt;
         &lt;read-only&gt;true&lt;/read-only&gt;
     &lt;/preference&gt;            
 &lt;/portlet-preferences&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>In this version, <code>capability.sequence-number.minValue</code> is optional. If you do not know the version numbers or the portlet works with any version of the capability, then do not specify the minValue preference, and the system loads the highest available version of the capability.</p>
 <p>There is not always a capability that is defined for every module. Many modules are not part of any capability. Every module automatically surfaces itself as an implicit capability, or a capability with the same name and version number as the module. If there is no capability or you only know the name of the module, you can specify the module name for the value of <code>capability.sequence-number.id</code>.</p>
 <p>For the list of available capabilities, see <em>Modules provided with the HCL Digital Experience (DX) theme</em>.</p>
@@ -3278,30 +3248,22 @@ Preference Value: &lt;the capability value&gt;
 <h2 id="deferred-capabilities">Deferred Capabilities</h2>
 <p>A portlet can now also declare a deferred capability dependency.</p>
 <p>ID:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>Preference Name: deferredCapability.&lt;sequence-number&gt;.id
+<div class="language-text highlight"><pre><span></span><code>Preference Name: deferredCapability.&lt;sequence-number&gt;.id
 Preference Value : the capability name
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Value:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>Preference Name: deferredCapability.&lt;sequence-number&gt;.minValue
+<div class="language-text highlight"><pre><span></span><code>Preference Name: deferredCapability.&lt;sequence-number&gt;.minValue
 Preference Value: the capability minimum version
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portlet-preferences&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;portlet-preferences&gt;
     &lt;preference&gt;
         &lt;name&gt;deferredCapability.1.id&lt;/name&gt;
         &lt;value&gt;wcm_inplacEdit&lt;/value&gt;
         &lt;read-only&gt;true&lt;/read-only&gt;
     &lt;/preference&gt;
 &lt;/portlet-preferences&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>With auto-loading on, a deferred capability does not load until the page is in edit mode or when the <code>i$.loadDeferred</code> API is used. With auto-loading off, a deferred capability declaration behaves like a capability declaration in that the loading of the capability's modules is done by the profile and not the portlet.</p>
 <p>The <code>deferredCapability</code> sequence-number is independent of the <code>capability</code> sequence-number. For example, both can start at 1. And, like <code>capability</code>, <code>deferredCapability.sequence-number.minValue</code> is optional.</p>
 <details class="info" open="open">

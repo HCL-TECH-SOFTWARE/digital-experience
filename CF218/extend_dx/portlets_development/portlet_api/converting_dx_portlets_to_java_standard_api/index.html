@@ -2514,147 +2514,114 @@
 <li>
 <p>Change import statements to use the standard packages.</p>
 <p>Change this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>import org.apache.jetspeed.portlet.*; 
+<div class="language-text highlight"><pre><span></span><code>import org.apache.jetspeed.portlet.*; 
 import org.apache.jetspeed.service.*; 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>to this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>import javax.portlet.*;
+<div class="language-text highlight"><pre><span></span><code>import javax.portlet.*;
 import com.ibm.portal.portlet.service.*;   
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Change class inheritance to use GenericPortlet. Notice that the ActionListener is not implemented.</p>
 <p>Change this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>public class SamplePortlet extends PortletAdapter implements ActionListener{  
+<div class="language-text highlight"><pre><span></span><code>public class SamplePortlet extends PortletAdapter implements ActionListener{  
 ...
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>to this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>public class SamplePortlet extends GenericPortlet{
+<div class="language-text highlight"><pre><span></span><code>public class SamplePortlet extends GenericPortlet{
 ...
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Change objects that are used for all render methods. In the standard portlet API, the PortletRequest and PortletResponse define common functions for the RenderRequest and RenderResponse subclasses. These subclasses are the arguments for all implementations of the render() method, including doView(), doEdit(), and doHelp().</p>
 <p>Change this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>public void doView(PortletRequest request, PortletResponse response) {  
+<div class="language-text highlight"><pre><span></span><code>public void doView(PortletRequest request, PortletResponse response) {  
 ...
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>to this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>public void doView(RenderRequest request, RenderResponse response)
+<div class="language-text highlight"><pre><span></span><code>public void doView(RenderRequest request, RenderResponse response)
 throws PortletException, IOException{
 ...
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Change the actionPerformed() method. In the standard portlet API, this method is replaced by the processAction() method, which does not require the portlet to implement a listener. The processAction() methods accepts the ActionRequest and ActionResponse as arguments, which extend the PortletRequest and PortletResponse.</p>
 <p>Change this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>public void actionPerformed(ActionEvent event) throws PortletException{  
+<div class="language-text highlight"><pre><span></span><code>public void actionPerformed(ActionEvent event) throws PortletException{  
 ...
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>to this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>public void processAction(ActionRequest request, ActionResponse response)  
+<div class="language-text highlight"><pre><span></span><code>public void processAction(ActionRequest request, ActionResponse response)  
 throws PortletException, IOException{
 ...
 } 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Change how the response content type is set. In the standard portlet API, the MIME type of the output that is returned in the response must be set before including the JSP. HCL portlets declare the MIME type using the contentType attribute of JSP's page directive. Therefore, this change makes the contentType setting in the JSP unnecessary.</p>
 <p>Add the following code before including the JSP:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>response.setContentType(&quot;text/html&quot;);
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>response.setContentType(&quot;text/html&quot;);
+</code></pre></div>
 </li>
 <li>
 <p>Change JSP includes. In the standard portlet API, JSPs are included by a request dispatcher's include() method. In the portlets' render method, set the MIME type of the output before returning it in the response.</p>
 <p>Change this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>PortletContext context = getPortletConfig().getContext();
+<div class="language-text highlight"><pre><span></span><code>PortletContext context = getPortletConfig().getContext();
 context.include(&quot;/jsp/View.jsp&quot;, request, response);
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>to this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>response.setContentType(&quot;text/html&quot;);
+<div class="language-text highlight"><pre><span></span><code>response.setContentType(&quot;text/html&quot;);
 PortletContext context = getPortletConfig().getPortletContext();
 context.getRequestDispatcher(&quot;/jsp/View.jsp&quot;).include( request, response);  
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Change classes where user data is stored. In the standard portlet API, user data is stored in a PortletPreferences object, rather than the PortletData object that is available using the HCL portlet API. Notice the different getter methods that are used with the request object and setter methods that are used for the data object.</p>
 <p>Change this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>PortletData portData = request.getData();
+<div class="language-text highlight"><pre><span></span><code>PortletData portData = request.getData();
 portData.setAttribute(&quot;userName&quot;, userName);
 portData.store();
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>to this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>PortletPreferences prefs = request.getPreferences();
+<div class="language-text highlight"><pre><span></span><code>PortletPreferences prefs = request.getPreferences();
 prefs.setValue(&quot;userName&quot;,request.getParameter(&quot;username&quot;));  
 prefs.store();
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Some preferences are read-only and can be modified only by an administrator. See Change configuration parameters to preferences (Step 10) for information.</p>
 </li>
 <li>
 <p>Change the method that is used for namespace encoding. For example, if the portlet uses encodeNamespace() to return a unique string to be prefixed to a JavaScript variable name within the content that is generated by the portlet, the portlet can use getNamespace().</p>
 <p>Change this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>PortletResponse.encodeNamespace()
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>PortletResponse.encodeNamespace()
+</code></pre></div>
 <p>to this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>RenderResponse.getNamespace()
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>RenderResponse.getNamespace()
+</code></pre></div>
 </li>
 <li>
 <p>Change how portlet URLs are generated. For example, a portlet's doEdit() method might save the URI to the edit mode to pass to the JSP. The portlet must instantiate a PortletURL object using the createRenderURL() method.</p>
 <p>Change this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>// Save URI for the edit page
+<div class="language-text highlight"><pre><span></span><code>// Save URI for the edit page
 PortletURI editURI = response.createURI();
 ...
 // Preserve the edit page URI in the request to make 
 // it accessible by the edit JSP  
 request.setAttribute(&quot;editURI&quot;, editURI.toString());
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>to this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>// Save URI for the edit page
+<div class="language-text highlight"><pre><span></span><code>// Save URI for the edit page
 PortletURL editURL = response.createRenderURL();
 ...
 // Preserve the edit page URI in the request 
 // to make it accessible by the edit JSP  
 request.setAttribute(&quot;editURL&quot;, editURL.toString());
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The standard portlet API does not have an equivalent method for createReturnURI(). If the URL is intended to call the portlets' action method, however, the portlet should use the createActionURL() method.</p>
 </li>
 </ol>
@@ -2665,88 +2632,72 @@ request.setAttribute(&quot;editURL&quot;, editURL.toString());
 <li>
 <p>Change the tag library to use the standard tag library.</p>
 <p>Change this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%@ taglib uri=&quot;/WEB-INF/tld/portlet.tld&quot; prefix=&quot;portletAPI&quot; %&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;%@ taglib uri=&quot;/WEB-INF/tld/portlet.tld&quot; prefix=&quot;portletAPI&quot; %&gt;
+</code></pre></div>
 <p>to this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%@ taglib uri=&quot;http://java.sun.com/portlet&quot; prefix=&quot;portlet&quot; %&gt;  
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;%@ taglib uri=&quot;http://java.sun.com/portlet&quot; prefix=&quot;portlet&quot; %&gt;  
+</code></pre></div>
 </li>
 <li>
 <p>Change references to API objects. In the standard portlet API, the <code>&lt;portlet:defineObjects /&gt;</code> JSP tag makes the RenderRequest, RenderResponse, and PortletConfig objects available to JSP files. After making this change, all references in the JSP to the PortletRequest and PortletResponse should be changed to the corresponding RenderRequest and RenderResponse.</p>
 <p>Change this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portletAPI:init /&gt; 
+<div class="language-text highlight"><pre><span></span><code>&lt;portletAPI:init /&gt; 
 ...
 &lt;%
 PortletData prefs = portletRequest.getData();
 %&gt;    
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>to this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portlet:defineObjects /&gt; 
+<div class="language-text highlight"><pre><span></span><code>&lt;portlet:defineObjects /&gt; 
 ...
 &lt;%
 PortletPreferences prefs = renderRequest.getPreferences();
 %&gt;    
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Change JSP tags that are used for namespace encoding. For example, if the portlet uses <code>&lt;portletAPI:encodeNamespace/&gt;</code> to uniquely qualify the name of a text input field, this tag must be changed as follows.</p>
 <p>Change this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;input name=&quot;&lt;portletAPI:encodeNamespace value=&#39;name&#39;/&gt;&quot;  type=&quot;text&quot; &gt;   
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;input name=&quot;&lt;portletAPI:encodeNamespace value=&#39;name&#39;/&gt;&quot;  type=&quot;text&quot; &gt;   
+</code></pre></div>
 <p>to this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;input name=&quot;&lt;portlet:namespace/&gt;name&quot;  type=&quot;text&quot; &gt;   
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;input name=&quot;&lt;portlet:namespace/&gt;name&quot;  type=&quot;text&quot; &gt;   
+</code></pre></div>
 </li>
 <li>
 <p>Change how portlet URLs are generated. If the portlet JSP creates a URL to itself, it should specify which method gets control using the <code>&lt;portlet:actionURL/&gt;</code> or <code>&lt;portlet:renderURL/&gt;</code> tags. Any parameters passed on the URL are specified using the <code>&lt;portlet:param/&gt;</code> tag.</p>
 <p>Change this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;a href=&quot;&lt;portletAPI:createURI&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;a href=&quot;&lt;portletAPI:createURI&gt;
              &lt;portlet:URIParameter name=&#39;action&#39; value=&#39;search&#39;/&gt;   
           &lt;/portlet:createURI&gt;&quot; &gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>to this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;a href=&quot;&lt;portlet:actionURL&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;a href=&quot;&lt;portlet:actionURL&gt;
              &lt;portlet:param name=&#39;action&#39; value=&#39;search&#39;/&gt;
           &lt;/portlet:actionURL&gt;&quot; &gt;  
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Change resource bundles. The <code>&lt;portletAPI:text/&gt;</code> tag of the HCL Portlet API has been deprecated and should be replaced in all portlets by the JSTL equivalent. See <a href="https://help.hcltechsw.com/digital-experience/8.5/dev-portlet/jsrjsp.html">Using JSTL in portlet JSPs</a> for more information.</p>
 <p>Change this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portletAPI:text key=&quot;my.label&quot; bundle=&quot;nls.myproperties&quot;/&gt;  
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;portletAPI:text key=&quot;my.label&quot; bundle=&quot;nls.myproperties&quot;/&gt;  
+</code></pre></div>
 <p>to this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;fmt:setBundle basename=&quot;nls.myproperties&quot;/&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;fmt:setBundle basename=&quot;nls.myproperties&quot;/&gt;
 ...
 &lt;fmt:message key=&quot;my.label&quot;/&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Change how resources are invoked from the JSP. For example, if the JSP displays an image, it should use the encodeURL() method of the appropriate response object and, in addition, add the context path of the portlet from the request.</p>
 <p>Change this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;img src=&#39;&lt;%= portletResponse.encodeURL(&quot;images/photo01.jpg&quot;) %&gt;&#39; 
+<div class="language-text highlight"><pre><span></span><code>&lt;img src=&#39;&lt;%= portletResponse.encodeURL(&quot;images/photo01.jpg&quot;) %&gt;&#39; 
   alt=&quot;photo&quot;&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>to this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;img src=&#39;&lt;%= renderResponse.encodeURL(renderRequest.getContextPath() + 
+<div class="language-text highlight"><pre><span></span><code>&lt;img src=&#39;&lt;%= renderResponse.encodeURL(renderRequest.getContextPath() + 
               &quot;/images/photo01.jpg&quot;) %&gt;&#39; alt=&quot;photo&quot;&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 </li>
@@ -2757,20 +2708,17 @@ PortletPreferences prefs = renderRequest.getPreferences();
 <li>
 <p>Remove the DOCTYPE declaration. The portlet descriptor for the standard portlets uses an XML schema that is added in the next step.</p>
 <p>Remove this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;!DOCTYPE portlet-app-def PUBLIC &quot;-//IBM//DTD Portlet Application 1.1//EN&quot;
+<div class="language-text highlight"><pre><span></span><code>&lt;!DOCTYPE portlet-app-def PUBLIC &quot;-//IBM//DTD Portlet Application 1.1//EN&quot;
               &quot;portlet_1.1.dtd &quot;&gt; 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Remove the <code>&lt;portlet-app-def/&gt;</code> element. The first-level element in the standard portlet descriptor is &lt;portlet-app/&gt;.</p>
 <p>Remove this code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portlet-app-def&gt;    
+<div class="language-text highlight"><pre><span></span><code>&lt;portlet-app-def&gt;    
   ....
 &lt;/portlet-app-def&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Update the <code>&lt;portlet-app/&gt;</code> element.</p>
@@ -2781,19 +2729,11 @@ PortletPreferences prefs = renderRequest.getPreferences();
 <li>Change the uid attribute to id.
 Change this code:</li>
 </ul>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portlet-app uid=&quot;com.mycompany.samples.MyPortletApp.001c&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;portlet-app uid=&quot;com.mycompany.samples.MyPortletApp.001c&quot; 
              major-version=&quot;1&quot; minor-version=&quot;0&quot;&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>to this code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portlet-app 
+<div class="language-text highlight"><pre><span></span><code>&lt;portlet-app 
      xmlns=&quot;http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd&quot; 
      version=&quot;1.0&quot; 
      id=&quot;com.mycompany.samples.MyPortletApp.001c&quot;
@@ -2801,7 +2741,7 @@ Change this code:</li>
      xsi:schemaLocation=
         &quot;http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd 
          http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd&quot;&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Remove all <code>&lt;concrete-portlet-app/&gt;</code> elements and their contents. Save any required information, such as configuration parameters and language definitions, for use in the portlet definition.</p>
@@ -2809,28 +2749,18 @@ Change this code:</li>
 <li>
 <p>Update the <code>&lt;portlet/&gt;</code> element. Remove the href, minor-version, and major-version attributes.</p>
 <p>Change this code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portlet id=&quot;com.mycompany.samples.MyPortlet.110x&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;portlet id=&quot;com.mycompany.samples.MyPortlet.110x&quot; 
          href=&quot;WEB-INF/web.xml#com.mycompany.samples.MyPortlet.href110x&quot;   
          major-version=&quot;1&quot; minor-version=&quot;0&quot;&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>to this code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portlet id=&quot;com.mycompany.samples.MyPortlet.110x&quot;&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;portlet id=&quot;com.mycompany.samples.MyPortlet.110x&quot;&gt;
+</code></pre></div>
 </li>
 <li>
 <p>Move the definition of the portlet class from the web.xml file to the portlet.xml file.</p>
 <p>Remove this code from the web.xml file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;servlet id=&quot;com.mycompany.samples.MyPortlet.001c&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;servlet id=&quot;com.mycompany.samples.MyPortlet.001c&quot;&gt;
      &lt;servlet-name&gt;MyPortlet&lt;/servlet-name&gt;
      &lt;servlet-class&gt;com.mycompany.samples.MyPortlet&lt;/servlet-class&gt;
 &lt;/servlet&gt;
@@ -2839,25 +2769,22 @@ Change this code:</li>
      &lt;servlet-name&gt;MyPortlet&lt;/servlet-name&gt;
      &lt;url-pattern&gt;/MyPortlet/*&lt;/url-pattern&gt;
 &lt;/servlet-mapping&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Add this code to the portlet.xml file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portlet-class&gt;com.mycompany.samples.MyPortlet&lt;/portlet-class&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;portlet-class&gt;com.mycompany.samples.MyPortlet&lt;/portlet-class&gt;
+</code></pre></div>
 </li>
 <li>
 <p>Change how caching is defined. Use the <code>&lt;expires/&gt;</code> value from the HCL portlet descriptor as the value for the <code>&lt;expiration-cache/&gt;</code> element in the standard descriptor. There is no equivalent in the standard descriptor to the <code>&lt;shared/&gt;</code> element.</p>
 <p>Change this code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;cache&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;cache&gt;
    &lt;expires&gt;-1&lt;/expires&gt;
    &lt;shared&gt;no&lt;/shared&gt;
 &lt;/cache&gt; 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>to this code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;expiration-cache&gt;-1&lt;/expiration-cache&gt;     
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;expiration-cache&gt;-1&lt;/expiration-cache&gt;     
+</code></pre></div>
 </li>
 <li>
 <p>Change the content of the <code>&lt;supports/&gt;</code> element.</p>
@@ -2867,29 +2794,15 @@ Change this code:</li>
 The standard portlet descriptor allows you to declare only MIME types. In some cases, two markup types use the same MIME type. For example, both HTML and cHTML use 'text/html' as the MIME type. For standard portlets, HCL Portal accepts the value of a <code>wps.markup</code> initialization parameter as the markup type.</li>
 </ul>
 <p>Change this code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;supports&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;supports&gt;
    &lt;markup name=&quot;html&quot;&gt;
        &lt;view /&gt;
        &lt;edit /&gt;
        &lt;/markup&gt;
 &lt;/supports&gt; 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>to this code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;init-param&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;init-param&gt;
     &lt;name&gt;wps.markup&lt;/name&gt;
     &lt;value&gt;html,chtml&lt;/value&gt;
 &lt;/init-param&gt;
@@ -2899,47 +2812,35 @@ The standard portlet descriptor allows you to declare only MIME types. In some c
        &lt;portlet-mode&gt;VIEW&lt;/portlet-mode&gt;   
        &lt;portlet-mode&gt;EDIT&lt;/portlet-mode&gt;
 &lt;/supports&gt; 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Be sure to place the initialization parameters before the <code>&lt;expiration-cache&gt;</code> element.</p>
 </li>
 <li>
 <p>Remove window state elements. Normal, maximized, and minimized window states are supported by default and not declared in the standard portlet deployment descriptor.</p>
 <p>Remove this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;allows&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;allows&gt;
    &lt;maximized/&gt;   
    &lt;minimized/&gt;
 &lt;/allows&gt; 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Change configuration parameters to preferences. In the standard portlet descriptor, preferences can be changed by users in any of the standard modes, or they can be declared as read-only and modified only by an administrator.</p>
 <p>Change this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;config-param&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;config-param&gt;
     &lt;param-name&gt;Location&lt;/param-name&gt;
     &lt;param-value&gt;Antartica&lt;/param-value&gt;
 &lt;/config-param&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>to this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portlet-preferences&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;portlet-preferences&gt;
      &lt;preference&gt;
            &lt;name&gt;Location&lt;/name&gt;
                 &lt;value&gt;Antartica&lt;/value&gt;
                 &lt;read-only&gt;true&lt;/read-only&gt;
      &lt;/preference&gt;
 &lt;/portlet-preferences&gt;           
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Change localized settings.</p>
@@ -2947,40 +2848,26 @@ The standard portlet descriptor allows you to declare only MIME types. In some c
 <li>Remove the <code>&lt;default-locale/&gt;</code> element. In the standard portlet descriptor, the first locale listed in the descriptor is the default. If no locale is specified, then English is used as the default.</li>
 <li>
 <p>Create resource bundles for each supported language containing the title, short title, and keywords for the portlet. Use the following parameter names:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>javax.portlet.title = My Portlet Title
+<div class="language-text highlight"><pre><span></span><code>javax.portlet.title = My Portlet Title
 javax.portlet.short-title = Title
 javax.portlet.keywords = portlets, JSR 168, portal
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Declare the resource bundle in the portlet descriptor as in the following example.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;resource-bundle&gt;nls.MyPortlet&lt;/resource-bundle&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;resource-bundle&gt;nls.MyPortlet&lt;/resource-bundle&gt;
+</code></pre></div>
 <p>In this example, the default resource bundle <code>MyPortlet.properties</code> is in the <code>/WEB-INF/nls</code> sub-directory of the WAR file and all of the locale-specific resource bundles append the locale to the file name (for example, <code>MyPortlet_ja.properties</code> for Japanese).</p>
 </li>
 <li>
 <p>Declare each supported locale as in the following example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;supported-locale&gt;en&lt;/supported-locale&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;supported-locale&gt;en&lt;/supported-locale&gt;
 &lt;supported-locale&gt;de&lt;/supported-locale&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Set the localized values for the portlet description and display name as in the following example.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;description xml:lang=&quot;EN&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;description xml:lang=&quot;EN&quot;&gt;
    English description
 &lt;/description&gt;
 &lt;display-name xml:lang=&quot;EN&quot;&gt;
@@ -2992,7 +2879,7 @@ javax.portlet.keywords = portlets, JSR 168, portal
 &lt;display-name xml:lang=&quot;DE&quot;&gt;
    German display name
 &lt;/display&gt;-name&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p><strong>Note:</strong> The display name should be set for compatibility reasons. However, it is not currently used by HCL Portal.</p>
 </li>
 </ol>

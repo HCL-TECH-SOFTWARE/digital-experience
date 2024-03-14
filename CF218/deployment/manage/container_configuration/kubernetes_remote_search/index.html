@@ -3607,12 +3607,10 @@ From release CF211 onwards, you can either use the automated configuration contr
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>If you see that the Remote Search Service in the DX Search Administration is unavailable after a DX Remote Search Pod restart, it may be required to restart DX Core as well. You can use the following command to perform a ripple restart of all DX Core Pods:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Perform the restart of DX Core</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Perform the restart of DX Core</span>
 <span class="c1"># adjust the deployment prefix &quot;dx-&quot; and the namespace &quot;dxns&quot; to match your environment</span>
 kubectl<span class="w"> </span>rollout<span class="w"> </span>restart<span class="w"> </span>statefulset<span class="w"> </span>dx-core<span class="w"> </span>-n<span class="w"> </span>dxns
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -3634,18 +3632,7 @@ kubectl<span class="w"> </span>rollout<span class="w"> </span>restart<span class
 <h3 id="configuration-properties">Configuration properties</h3>
 <p>To leverage the automated configuration, you will need to adjust the <code>custom-values.yaml</code> that you are using for your Helm deployment. (See <a href="../../../install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration/#custom-value-files">Custom value files</a>).</p>
 <p>Inside your <code>custom-values.yaml</code> you can configure the following section to leverage Remote Search automated configuration:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Configuration section of hcl-dx-deployment</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Configuration section of hcl-dx-deployment</span>
 <span class="nt">configuration</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Remote Search specific configuration parameters</span>
 <span class="w">  </span><span class="nt">remoteSearch</span><span class="p">:</span>
@@ -3657,7 +3644,7 @@ kubectl<span class="w"> </span>rollout<span class="w"> </span>restart<span class
 <span class="w">    </span><span class="nt">remoteSearchWaitTime</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5400</span>
 <span class="w">    </span><span class="c1"># Define the maximum amount of retries that DX Remote Search will attempt to run its configuration task</span>
 <span class="w">    </span><span class="nt">remoteSearchConfigTries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following parameters are available for adjustments:</p>
 <table>
 <thead>
@@ -3751,56 +3738,38 @@ In that case, DX Remote Search will retry the configuration, starting with the s
 <h4 id="overriding-pre-flight-checks">Overriding pre-flight checks</h4>
 <p>If case you have at some point configured either the suppression of automated default search collection creation or the JCR Text Search, but not configured Remote Search yet, you can override the pre-flight checks that would cause the configuration to not continue in that case.</p>
 <p>To do so, connect into the DX Core Pod and create a file. See the following example:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Connect into your DX Core Pod</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Connect into your DX Core Pod</span>
 <span class="c1"># adjust the deployment prefix &quot;dx-&quot; and the namespace &quot;dxns&quot; to match your environment</span>
 kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>dx-core-0<span class="w"> </span>-c<span class="w"> </span>core<span class="w"> </span>--<span class="w"> </span>/bin/bash
 <span class="c1"># Create the preflight check override file</span>
 <span class="c1"># This file is persisted in the DX Core Pods Persistent Volume</span>
 touch<span class="w"> </span>/opt/HCL/wp_profile/rsAutoConfigOverridePreflight
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If your automated configuration has failed due to those checks, you can re-run it using the commands from the next section.</p>
 <h4 id="re-run-automated-configuration-steps">Re-run automated configuration steps</h4>
 <p>In case your automated configuration failed, you can easily re-run it using the following procedure:</p>
 <p>Remove the configuration semaphore file in the DX Core Pod:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Connect into your DX Core Pod</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Connect into your DX Core Pod</span>
 <span class="c1"># adjust the deployment prefix &quot;dx-&quot; and the namespace &quot;dxns&quot; to match your environment</span>
 kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>dx-core-0<span class="w"> </span>-c<span class="w"> </span>core<span class="w"> </span>--<span class="w"> </span>/bin/bash
 <span class="c1"># Remove the config status semaphore file</span>
 rm<span class="w"> </span>-f<span class="w"> </span>/opt/HCL/wp_profile/rsAutoConfigStatus
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Remove the configuration semaphore file in the DX Remote Search Pod:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Connect into your DX Remote Search Pod</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Connect into your DX Remote Search Pod</span>
 <span class="c1"># adjust the deployment prefix &quot;dx-&quot; and the namespace &quot;dxns&quot; to match your environment</span>
 kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>dx-remote-search-0<span class="w"> </span>-c<span class="w"> </span>remote-search<span class="w"> </span>--<span class="w"> </span>/bin/bash
 <span class="c1"># Remove the config status semaphore file</span>
 rm<span class="w"> </span>-f<span class="w"> </span>/opt/HCL/AppServer/profiles/prs_profile/rsAutoConfigStatus
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Perform a restart rollout of DX Core and DX Remote Search:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Perform the restart of DX Remote Search</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Perform the restart of DX Remote Search</span>
 <span class="c1"># adjust the deployment prefix &quot;dx-&quot; and the namespace &quot;dxns&quot; to match your environment</span>
 kubectl<span class="w"> </span>rollout<span class="w"> </span>restart<span class="w"> </span>statefulset<span class="w"> </span>dx-remote-search<span class="w"> </span>-n<span class="w"> </span>dxns
 <span class="c1"># Perform the restart of DX Core</span>
 <span class="c1"># adjust the deployment prefix &quot;dx-&quot; and the namespace &quot;dxns&quot; to match your environment</span>
 kubectl<span class="w"> </span>rollout<span class="w"> </span>restart<span class="w"> </span>statefulset<span class="w"> </span>dx-core<span class="w"> </span>-n<span class="w"> </span>dxns
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="manual-configuration">Manual configuration</h2>
 <p>For manual configuration, you can rely on existing ConfigEngine tasks that will assist you in configuration of both the DX Core Pod and the DX Remote Search Pod.</p>
 <h3 id="pre-requisites-and-limitations_1">Pre-requisites and limitations</h3>
@@ -3812,65 +3781,41 @@ kubectl<span class="w"> </span>rollout<span class="w"> </span>restart<span class
 </ul>
 <h3 id="configure-the-core-pod">Configure the Core Pod</h3>
 <p>Execute the ConfigEngine task:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Connect into your DX Core Pod</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Connect into your DX Core Pod</span>
 <span class="c1"># adjust the deployment prefix &quot;dx-&quot; and the namespace &quot;dxns&quot; to match your environment</span>
 kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>dx-core-0<span class="w"> </span>-c<span class="w"> </span>core<span class="w"> </span>--<span class="w"> </span>/bin/bash
 <span class="c1"># Inside the container execute the ConfigEngine task</span>
 <span class="c1"># make sure that your deployment prefix (dx in this sample, e.g. dx-remote-search) is adjusted to your environment</span>
 <span class="c1"># Ensure to use the right credentials for DWasPassword</span>
 /opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh<span class="w"> </span>configure-portal-for-remote-search<span class="w"> </span>-DWasPassword<span class="o">=[</span>WAS<span class="w"> </span>ADMIN<span class="w"> </span>PASSWORD<span class="o">]</span><span class="w"> </span>-Dremote.search.host.name<span class="o">=</span><span class="s2">&quot;dx-remote-search&quot;</span><span class="w"> </span>-Dremote.search.host.port<span class="o">=</span><span class="s2">&quot;9043&quot;</span><span class="w"> </span>-Dremote.search.cert.alias<span class="o">=</span><span class="s2">&quot;remotesearchalias&quot;</span><span class="w"> </span>-Dremote.search.iiop.url<span class="o">=</span><span class="s2">&quot;iiop://dx-remote-search:2809&quot;</span><span class="w"> </span>-Dremote.search.index.directory<span class="o">=</span><span class="s2">&quot;/opt/HCL/AppServer/profiles/prs_profile/SearchCollections&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>After this ConfigEngine task has been executed, a file containing the LTPA Key export will be created inside the Container.<br />
 Copy that file out of the Container into your local host:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Copy out the LTPA key export</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Copy out the LTPA key export</span>
 <span class="c1"># adjust the deployment prefix &quot;dx-&quot; and the namespace &quot;dxns&quot; to match your environment</span>
 kubectl<span class="w"> </span>cp<span class="w"> </span>dx-core-0:/home/dx_user/LTPAKeyExported<span class="w"> </span>./LTPAKeyExported<span class="w"> </span>-c<span class="w"> </span>core<span class="w"> </span>-n<span class="w"> </span>dxns
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h3 id="configure-the-remote-search-pod">Configure the Remote Search Pod</h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Before configuring the remote search pod, you must set up single sign-on (SSO) between the WebSphere Application Server running in the <strong>core</strong> pod and the WebSphere Application Server running in the <strong>remote-search</strong> pod. See the topics <a href="https://www.ibm.com/docs/en/was/9.0.5?topic=authentication-single-sign-using-ltpa-cookies">Single sign-on for authentication using LTPA cookies</a> and <a href="../../../../build_sites/search/remotesearch/sso_portal_rss/">Creating a single-sign on domain between HCL Portal and the remote search service</a> for pre-requisites and instructions for setting up SSO.</p>
 </div>
 <p>Copy the LTPA Key exported from DX Core into the Remote Search Pod:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># adjust the deployment prefix &quot;dx-&quot; and the namespace &quot;dxns&quot; to match your environment</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># adjust the deployment prefix &quot;dx-&quot; and the namespace &quot;dxns&quot; to match your environment</span>
 kubectl<span class="w"> </span>cp<span class="w"> </span>./LTPAKeyExported<span class="w"> </span>dx-remote-search-0:/home/dx_user/<span class="w"> </span>-c<span class="w"> </span>remote-search<span class="w"> </span>-n<span class="w"> </span>dxns
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Execute the ConfigEngine task:
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Connect into your DX Remote Search Pod</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Connect into your DX Remote Search Pod</span>
 <span class="c1"># adjust the deployment prefix &quot;dx-&quot; and the namespace &quot;dxns&quot; to match your environment</span>
 kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>dx-remote-search-0<span class="w"> </span>-c<span class="w"> </span>remote-search<span class="w"> </span>--<span class="w"> </span>/bin/bash
 <span class="c1"># Inside the container execute the ConfigEngine task</span>
 <span class="c1"># make sure that your deployment prefix (dx in this sample, e.g., dx-core) is adjusted to your environment</span>
 <span class="c1"># Ensure to use the right credentials for DWasPassword</span>
 /opt/HCL/AppServer/profiles/prs_profile/ConfigEngine/./ConfigEngine.sh<span class="w"> </span>configure-remote-search-server-for-remote-search<span class="w"> </span>-DWasPassword<span class="o">=[</span>WAS<span class="w"> </span>ADMIN<span class="w"> </span>PASSWORD<span class="o">]</span><span class="w"> </span>-Dportal.host.name<span class="o">=</span><span class="s2">&quot;dx-core&quot;</span><span class="w"> </span>-Dportal.port.number<span class="o">=</span><span class="s2">&quot;10042&quot;</span><span class="w"> </span>-Dportal.cert.alias<span class="o">=</span><span class="s2">&quot;portaldockeralias&quot;</span><span class="w"> </span>-Dremote.search.host.name<span class="o">=</span><span class="s2">&quot;localhost&quot;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 <h3 id="restart-both-core-and-remote-search">Restart both Core and Remote Search</h3>
 <p>To restart Remote Search:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Connect into your DX Remote Search Pod</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Connect into your DX Remote Search Pod</span>
 <span class="c1"># adjust the deployment prefix &quot;dx-&quot; and the namespace &quot;dxns&quot; to match your environment</span>
 kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>dx-remote-search-0<span class="w"> </span>-c<span class="w"> </span>remote-search<span class="w"> </span>--<span class="w"> </span>/bin/bash
 <span class="c1"># Create a semaphore file which will ensure, the Pod is not recycled during your restart</span>
@@ -3880,18 +3825,9 @@ touch<span class="w"> </span>/home/dx_user/configInProgress
 /opt/HCL/AppServer/profiles/prs_profile/bin/./startServer.sh<span class="w"> </span>server1
 <span class="c1"># Remove semaphore file</span>
 rm<span class="w"> </span>-f<span class="w"> </span>/home/dx_user/configInProgress
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To restart DX Core:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Connect into your DX Core Pod</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Connect into your DX Core Pod</span>
 <span class="c1"># adjust the deployment prefix &quot;dx-&quot; and the namespace &quot;dxns&quot; to match your environment</span>
 kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>dx-core-0<span class="w"> </span>-c<span class="w"> </span>core<span class="w"> </span>--<span class="w"> </span>/bin/bash
 <span class="c1"># Create a semaphore file which will ensure, the Pod is not recycled during your restart</span>
@@ -3901,7 +3837,7 @@ touch<span class="w"> </span>/opt/app/configInProgress
 /opt/HCL/wp_profile/bin/./startServer.sh<span class="w"> </span>WebSphere_Portal
 <span class="c1"># Remove semaphore file</span>
 rm<span class="w"> </span>-f<span class="w"> </span>/opt/app/configInProgress
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h3 id="search-services-and-collections">Search Services and Collections</h3>
 <h4 id="new-search-service">New Search Service</h4>
 <p>Create a new search service and use the following values for a Remote Search services configuration to a Kubernetes container deployment. See the section on <a href="https://help.hcltechsw.com/digital-experience/9.5/admin-system/create_search_service.html">Creating a new search service</a><!-- (../../9.0/admin-system/create_search_service.md) --> for more information.</p>

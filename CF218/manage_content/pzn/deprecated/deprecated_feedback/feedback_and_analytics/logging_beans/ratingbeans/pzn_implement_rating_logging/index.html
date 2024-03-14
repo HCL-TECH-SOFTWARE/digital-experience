@@ -3108,16 +3108,7 @@
 <h1 id="implementing-rating-logging">Implementing rating logging</h1>
 <p>To implement rating logging, insert a Rating bean into your JSP.</p>
 <p>Following is an example that demonstrates implementation of rating logging by inserting a Rating bean in a JSP.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;jsp:useBean class=&quot;com.ibm.wcp.analysis.beans.Rating&quot; id=&quot;pref&quot; scope=&quot;session&quot; /&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;jsp:useBean class=&quot;com.ibm.wcp.analysis.beans.Rating&quot; id=&quot;pref&quot; scope=&quot;session&quot; /&gt;
 
 &lt;%
     // Note:  The mediaId, collectionName, and rating were added to the request
@@ -3127,7 +3118,7 @@
              request.getParameter( &quot;collectionName&quot; ),
              request.getParameter( &quot;rating&quot; ));
 %&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Web applications implementing preference logging must provide a user interface (UI) to enable preference setting. Once retrieved from the UI, the preference settings can be logged with the Rating bean.</p>

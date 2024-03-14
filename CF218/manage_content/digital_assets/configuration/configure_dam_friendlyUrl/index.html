@@ -2057,19 +2057,15 @@
 
 <h1 id="configure-friendly-urls-for-digital-asset-management">Configure Friendly URLs for Digital Asset Management</h1>
 <p>Optional custom path definition to access the DAM resources using friendly URLs. A new context route is created based on the value defined in <code>friendlyUrlContextRoot</code>. By default, this feature is disabled with no value set for <code>friendlyUrlContextRoot</code>.</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">digitalAssetManagement</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">friendlyUrlContextRoot</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Example:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">digitalAssetManagement</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">friendlyUrlContextRoot</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/assets&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>When the context root is set as <code>/assets</code>, it will make the  DAM assets accessible at <code>/assets/{collection name/unique id}/{asset name/unique id}</code>.</p>
 <p>The following optional query parameters can be used with the friendly URLs:</p>
 <ul>

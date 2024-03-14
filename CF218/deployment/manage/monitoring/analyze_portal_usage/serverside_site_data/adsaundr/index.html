@@ -2989,22 +2989,17 @@
 <h1 id="understanding-the-site-analysis-log">Understanding the site analysis log</h1>
 <p>Learn more details about how to read the site analysis log.</p>
 <p>The HCL Digital Experience site analysis log information is collected in the following file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/logs/app_server_name/sa_date_time.log
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/logs/app_server_name/sa_date_time.log
+</code></pre></div>
 <p>where <a href="../../../../../../guide_me/wpsdirstr/">wp_profile_root</a> is the HCL Digital Experience root directory and date_time is the date and time when the file was created. The current (active) log file is named <strong>sa.log</strong>. As explained in the previous section, the dateFormat parameter determines the interval at which the file is created.</p>
 <p>The site analysis log uses the NCSA Combined log format, which is a combination of NCSA Common log format and three additional fields: the referrer field, the user_agent field, and the cookie field. The following example displays a sample entry in the site analysis log. The table describes each field of the log format:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>9.37.3.88 - customer2 [10/Apr/2002:21:33:16 +0000]
+<div class="language-text highlight"><pre><span></span><code>9.37.3.88 - customer2 [10/Apr/2002:21:33:16 +0000]
 &quot;GET /Portlet/146/Welcome_Portlet?PortletPID=146&amp;PortletMode=View&amp;PortletState=Normal
 HTTP/1.1&quot; 200 -1 &quot;http://myserver.company.com/Page/110/Welcome&quot;
 &quot;Mozilla/4.0 \(compatible; MSIE 5.5; Windows NT 4.0\)&quot;
 
 &quot;JSESSIONID=OXDFAPVR4SXYZOIHSLVGA2Y&quot;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <table>
 <thead>
 <tr>

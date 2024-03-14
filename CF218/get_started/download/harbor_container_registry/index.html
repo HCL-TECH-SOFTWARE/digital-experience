@@ -1720,26 +1720,22 @@
 <ol>
 <li>
 <p>Log in to the Helm registry using the following command: </p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>helm<span class="w"> </span>registry<span class="w"> </span>login<span class="w"> </span>-u<span class="w"> </span>&lt;YOUR_HARBOR_USERNAME&gt;<span class="w"> </span>-p<span class="w"> </span>&lt;YOUR_HARBOR_CLI_SECRET_&gt;<span class="w"> </span>https://hclcr.io/
-</code></pre></div></td></tr></table></div>
+<div class="language-sh highlight"><pre><span></span><code>helm<span class="w"> </span>registry<span class="w"> </span>login<span class="w"> </span>-u<span class="w"> </span>&lt;YOUR_HARBOR_USERNAME&gt;<span class="w"> </span>-p<span class="w"> </span>&lt;YOUR_HARBOR_CLI_SECRET_&gt;<span class="w"> </span>https://hclcr.io/
+</code></pre></div>
 </li>
 <li>
 <p>After logging in, execute the OCI-based pull command:.</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>helm<span class="w"> </span>pull<span class="w"> </span>oci://hclcr.io/dx/hcl-dx-deployment<span class="w"> </span>--version<span class="w"> </span>&lt;HELM_CHART_VERSION_NUMBER&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-sh highlight"><pre><span></span><code>helm<span class="w"> </span>pull<span class="w"> </span>oci://hclcr.io/dx/hcl-dx-deployment<span class="w"> </span>--version<span class="w"> </span>&lt;HELM_CHART_VERSION_NUMBER&gt;
+</code></pre></div>
 </li>
 <li>
 <p>After running the pull command, you can check if the Helm Chart has been downloaded to your local machine:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># List directory content to check successful pull</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># List directory content to check successful pull</span>
 ls<span class="w"> </span>-lah<span class="w"> </span>
 
 <span class="c1"># total 8868</span>
 <span class="c1"># -rw-r--r--. 1 user user  136052 Jul  7 11:28 hcl-dx-deployment-2.7.1.tgz</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 <h2 id="non-oci-based-registry">Non-OCI-based registry</h2>
@@ -1748,31 +1744,25 @@ ls<span class="w"> </span>-lah<span class="w"> </span>
 <p>As an alternative to downloading the DX 9.5 Helm Charts from the Docker components from your HCL DX offering entitlements in the HCL Software License Portal, you can also directly use the HCL Harbor Helm repository with Helm from Container Update CF205 and later releases.</p>
 <h4 id="adding-the-hcl-harbor-helm-repository">Adding the HCL Harbor Helm repository</h4>
 <p>To add the HCL Harbor Helm repository to your Helm configuration, you can use the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>helm repo add 
+<div class="language-text highlight"><pre><span></span><code>helm repo add 
 --username &lt;YOUR_HARBOR_USERNAME&gt; 
 --password &lt;YOUR_HARBOR_CLI_SECRET_&gt; 
 hcl-dx https://hclcr.io/chartrepo/dx
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To obtain the <code>CLI secret</code>, you must log in to <a href="https://hclcr.io/">HCL Harbor</a> using your authorized user credentials, navigate to your <code>User Profile</code> in HCL Harbor, and then copy it from the field called <code>CLI secret</code>.</p>
 <p>After adding the repository to your Helm deployment, you should see the following message:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&quot;hcl-dx&quot; has been added to your repositories
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&quot;hcl-dx&quot; has been added to your repositories
+</code></pre></div>
 <h4 id="listing-available-helm-chart-versions">Listing available Helm Chart versions</h4>
 <p>To verify that your Helm configuration works to connect and to see which <a href="../../../deployment/install/container/image_list/">HCL DX 9.5 Container Update CF application versions</a> are available from the HCL Harbor repository, you can use the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code># Using helm search to find available versions, the DX helm charts are named hcl-dx-deployment
+<div class="language-text highlight"><pre><span></span><code># Using helm search to find available versions, the DX helm charts are named hcl-dx-deployment
 
 helm search repo hcl-dx/hcl-dx-deployment --versions
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This would return you a list of available versions, looking similar to this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>NAME                        CHART VERSION   APP VERSION DESCRIPTION                                    
+<div class="language-text highlight"><pre><span></span><code>NAME                        CHART VERSION   APP VERSION DESCRIPTION                                    
 hcl-dx/hcl-dx-deployment    2.7.1           95_CF204    Kubernetes Deployment of HCL Digital Experience
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You can see which chart version correlates to which HCL Digital Experience 9.5 Container Update CF version. In the above example, installing Container Update CF204 would require you to use Helm Chart version 2.7.1.</p>
 <p>Your Helm configuration is now capable of using HCL DX 9.5 Helm Charts directly from the HCL Harbor Helm Repository.</p>
 <div class="admonition note">
@@ -1782,21 +1772,16 @@ hcl-dx/hcl-dx-deployment    2.7.1           95_CF204    Kubernetes Deployment of
 <h4 id="pulling-helm-chart-for-deployment">Pulling Helm Chart for deployment</h4>
 <p>To use the HCL Digital Experience v9.5 Helm Chart from the HCL Harbor Helm repository, we recommend you pull it via Helm to your local machine. Using this method, you can work in the same manner as the manually downloaded method.</p>
 <p>To do so, run the following command with the correct Helm Chart version:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code># Use Helm Pull with the version you want to deploy (example uses 2.7.1, please fill in your desired version)
+<div class="language-text highlight"><pre><span></span><code># Use Helm Pull with the version you want to deploy (example uses 2.7.1, please fill in your desired version)
 helm pull hcl-dx/hcl-dx-deployment --version 2.7.1
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>After running this command, you can check to verify if the Helm Chart has been downloaded to your local machine:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code># List directory content to check successful pull
+<div class="language-text highlight"><pre><span></span><code># List directory content to check successful pull
 ls -lah 
 
 # total 8868
 # -rw-r--r--. 1 user user  136052 Jul  7 11:28 hcl-dx-deployment-2.7.1.tgz
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You have now downloaded your DX 9.5 Container Update Helm Chart from the HCL Harbor repository and can continue with your deployment. </p>
 <p>After the Helm charts are downloaded, the next step is <a href="../../../deployment/install/container/helm_deployment/preparation/get_the_code/prepare_load_images/#re-tag-images">Re-tagging images</a>.</p>
 <details class="info" open="open">

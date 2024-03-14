@@ -3012,11 +3012,11 @@
 <p>The LikeMinds server generates recommendation vectors that include all recommendations for a given user in order from best quality to the least. You can configure the number of items to be returned as Best Bets and the maximum percentage of the total recommendation vector to include in the Best Bets list.</p>
 <p>The LikeMinds server produces Best Bets by beginning with the highest-quality item in the recommendation vector and listing items in decreasing order of rating quality.</p>
 <p>To specify how many items the LikeMinds server should return as Best Bets, set <code>db.applic.param.BestBets.Threshold</code>. The default value of this parameter is the number of rating levels (specified by the <code>db.applic.param.NumberRatingValues</code> parameter) divided by 2. For example, if <code>db.applic.param.NumberRatingValues</code> were set to 12, the default would be 6. You can specify a different value, for example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>db.applic.param.BestBets.Threshold = 7
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>db.applic.param.BestBets.Threshold = 7
+</code></pre></div>
 <p>Set <code>db.applic.param.BestBets.list.cutoff</code> to the maximum percentage of the total recommendation vector to include in the Best Bets list. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>db.applic.param.BestBets.list.cutoff = 50
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>db.applic.param.BestBets.list.cutoff = 50
+</code></pre></div>
 
 
 

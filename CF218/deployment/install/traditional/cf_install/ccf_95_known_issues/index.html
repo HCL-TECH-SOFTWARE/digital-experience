@@ -2036,42 +2036,32 @@
 </li>
 <li>
 <p>Problem: The HCL Portal 8.5 and 9.0 CF15 <code>applyCF</code> task may fail if using the specific combination of WAS 8.5.5.12 on a Windows OS. An error similar to the following may be seen in the failure*.log in the (profile_root)/ConfigEngine/log directory:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wp.theme.modules.webapp_cfg.xml:296: java.lang.NoClassDefFoundError: com.ibm.ffdc.config.Formattable
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>wp.theme.modules.webapp_cfg.xml:296: java.lang.NoClassDefFoundError: com.ibm.ffdc.config.Formattable
+</code></pre></div>
 </li>
 <li>
 <p>Solution: This is due to an OSGi issue in WAS 8.5.5.12 that will be fixed in their next release. Simply rerunning the <code>applyCF</code> task should allow continuation and success of the CF15 update. The following command also remediates the issue:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>(profile_root)/bin/osgiCfgInit.sh|bat
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>(profile_root)/bin/osgiCfgInit.sh|bat
+</code></pre></div>
 </li>
 <li>
 <p>Problem: A failure, similar to the following, may be seen when running a Rollback on a system configured with WAS 8.5.5.x with JDK8:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/IBM/WebSphere/PortalServer/toolbar/wp.toolbar.themes/toolbar85/config/includes/wp.theme.themes.toolbar85_cfg.xml:217: The 
+<div class="language-text highlight"><pre><span></span><code>/opt/IBM/WebSphere/PortalServer/toolbar/wp.toolbar.themes/toolbar85/config/includes/wp.theme.themes.toolbar85_cfg.xml:217: The 
 following error occurred while executing this line:
 /opt/IBM/WebSphere/ConfigEngine/config/includes/utils.xml:2093: EJPXB0019E: Server response indicates an error. For status and 
 details of the XMLAccess error look at file /opt/IBM/WebSphere/wp_profile/ConfigEngine/config/work/xmlaccess.temp.file.657596238.xml.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Solution: This is due to an EJBDeploy incompatibility with JDK8 on WAS 8.5.5.x. The following steps can be used to bypass the issue: After rollback failure, use the following command to switch the JDK used by the profile to 1.7.</p>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/IBM/WebSphere/wp_profile/bin/managesdk.sh -enableProfileAll -sdkName 1.7_64
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/opt/IBM/WebSphere/wp_profile/bin/managesdk.sh -enableProfileAll -sdkName 1.7_64
+</code></pre></div>
 <p>Then rerun the failing <code>rollbackCF</code> command, from the start by removing the rollbackCFprogress directory in example (profile_root)/ConfigEngine/log. After rollback success, the JDK can then be switched back to the original JDK8 via the same command and substituting <code>-sdkName 1.8_64</code>. This is planned to be fixed in the next Portal CF.</p>
 </li>
 <li>
 <p>Problem: The following error may be seen when working with or installing Portal Web Modules, when configured with WAS 8.5.5.12 / 9.0.0.5 generates this error:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>com.ibm.portal.tasks.wtf.XmlAccessException: Xmlaccess request failed with an error. Result [failed], 
+<div class="language-text highlight"><pre><span></span><code>com.ibm.portal.tasks.wtf.XmlAccessException: Xmlaccess request failed with an error. Result [failed], 
 Messages: 
 [[EJPXA0043E: EJPXA0043E: An error occurred while creating or updating the resource.], 
 [EJPPD0015E: EJPPD0015E: Portlet application manager failed when user xmlaccess scripting user executed command InstallWebApplication.], 
@@ -2079,12 +2069,12 @@ Messages:
 [EJPPE0001E: EJPPE0001E: Instantiation of the WebSphere Application Server administration manager failed.], 
 [EJPPH0007E: EJPPH0007E: Instantiation of the administration module for Portal context failed.], 
 [EJPPH0010E: EJPPH0010E: Failed to retrieve and initialize administration runtime variables from Application Server.],
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Solution: This is expected to be fixed in an upcoming WAS level. The temporary workaround to alleviate this problem is to set the following JVM Property:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>com.ibm.ws.management.connector.soap.disableSOAPAuthCheck = true
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>com.ibm.ws.management.connector.soap.disableSOAPAuthCheck = true
+</code></pre></div>
 </li>
 <li>
 <p>Problem: Errors may be seen in DCS (Document Conversion Service) based on Oracle OIT (Outside In Technology) levels. The new OIT 8.5.3 level has additional prerequisites outside of Portal's scope.</p>
@@ -2094,8 +2084,8 @@ Messages:
 </li>
 <li>
 <p>Problem: On a Linux system, it is possible that the <code>applyCF</code> command may fail, with this error message recorded in ConfigTrace.log:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Couldn&#39;t flush user prefs: java.util.prefs.BackingStoreException: Couldn&#39;t get file lock.
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>Couldn&#39;t flush user prefs: java.util.prefs.BackingStoreException: Couldn&#39;t get file lock.
+</code></pre></div>
 </li>
 <li>
 <p>Solution: The problem concerns Java system and/or user preferences and can potentially be addressed in one of the following ways:</p>
@@ -2112,16 +2102,7 @@ Messages:
 </li>
 <li>
 <p>Problem: An error may occur during <code>applyCF</code> on the primary cluster node, similar to the following:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>[wplc-remove-ear] AppName EphoxTbioServices 
+<div class="language-text highlight"><pre><span></span><code>[wplc-remove-ear] AppName EphoxTbioServices 
 [wplc-remove-ear] ADMA5017I: Uninstallation of EphoxTbioServices started. 
 [wplc-remove-ear] ADMA5104I: The server index entry for WebSphere:cell=psvtmigwin08Cell01,node=psvtmigwin11+WebSphere:cell=psvtmigwin08Cell01,node=psvtmigwin09+WebSphere:cell=psvtmigwin08Cell01,node=psvtmigwin10Node01 is updated successfully. 
 [wplc-remove-ear] ADMA5102I: The configuration data for EphoxTbioServices from the configuration repository is deleted successfully. 
@@ -2131,45 +2112,38 @@ Messages:
 [wplc-remove-ear] com.ibm.websphere.management.exception.ConfigServiceException 
 [wplc-remove-ear] com.ibm.ws.sm.workspace.WorkSpaceException 
 [wplc-remove-ear] com.ibm.websphere.management.exception.DocumentIOException: cells/psvtmigwin08Cell01/applications/EphoxTbioServices.ear/EphoxTbioServices.ear
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Solution: Go and log in to <a href="https://support.hcltechsw.com/csm">HCL Software Support</a> page to find related information about disabling auto plugin generation. Once <code>applyCF</code> completes, re-enable the two plugin settings.</p>
 </li>
 <li>
 <p>Problem: The post-was-configuration-update task may fail due to an error in the Portal server startup. SystemOut.log shows an exception related to the <code>wps_scheduler</code>, and the <code>wps_scheduler</code> does not start when the Portal server starts. Error logs may appear similar to the following:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>[6/21/17 23:05:06:112 EDT] 00000080 InternalGetSc E com.ibm.wps.command.scheduler.internal.InternalGetSchedulerTaskCommand AbstractCommand.throwCommandException EJPDD0009E: JNDI naming lookup failed for name = [ejb/wpsSchedulerManager].
+<div class="language-text highlight"><pre><span></span><code>[6/21/17 23:05:06:112 EDT] 00000080 InternalGetSc E com.ibm.wps.command.scheduler.internal.InternalGetSchedulerTaskCommand AbstractCommand.throwCommandException EJPDD0009E: JNDI naming lookup failed for name = [ejb/wpsSchedulerManager].
 javax.naming.NameNotFoundException: Context: w7944aCell/nodes/w7944aNode/servers/HCL Portal and HCL Web Content Manager, 
 name: ejb/wpsSchedulerManager: First component in name wpsSchedulerManager not found. 
 [Root exception is org.omg.CosNaming.NamingContextPackage.NotFound: IDL:omg.org/CosNaming/NamingContext/NotFound:1.0]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Solution: Edit the WAS 9 properties file, ex. AppServer/properties/migration.properties.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>#-------------------------------------------------------------------------
+<div class="language-text highlight"><pre><span></span><code>#-------------------------------------------------------------------------
 # Specify the number of apps which can be installed in parallel.  default=3
 #-------------------------------------------------------------------------
 #com.ibm.ws.migration.application.install.threadPoolSize=3
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Then uncomment the property and set to a value of 1. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>com.ibm.ws.migration.application.install.threadPoolSize=1
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>com.ibm.ws.migration.application.install.threadPoolSize=1
+</code></pre></div>
 <p>Then, save the change and continue with the profile migration. Stop the Portal server, and run the following command again:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>post-was-configuration-update
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>post-was-configuration-update
+</code></pre></div>
 </li>
 <li>
 <p>Problem: When creating a portal page, there is an option to Create Content. When clicking on that option, it presents available templates to create content from <strong>Content Hub Authoring Template</strong> is one of them. If selecting this template, it may show an error:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&quot;The new content item could not be created. The selected template is not supported. A workflow is required, but the workflow is not 
+<div class="language-text highlight"><pre><span></span><code>&quot;The new content item could not be created. The selected template is not supported. A workflow is required, but the workflow is not 
 set for the item&quot;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Solution: This authoring template is not designed for this feature. It has to be exempted from creating content items off it from toolbar. To do that:</p>
@@ -2187,16 +2161,15 @@ set for the item&quot;
 </li>
 <li>
 <p>Solution: The CF install attempts to update the Portal owned pages in the base portal and all virtual portals. Prior to CF11 there were some cases where error conditions were suppressed for both the base portal and all virtual portals. This has changed and error conditions are no longer suppressed. If the CF install (<code>applyCF</code> command) reports an error while running the XMLAccess tool on a virtual portal, there may be a problem with the virtual portal. If virtual portal(s) have been modified and removed some of the Portal owned pages on purpose then these errors can be safely suppressed and allow the CF install to continue. This can be done by adding the <code>ignore-errors-all-vps</code> property to the <code>applyCF</code> command. Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>applyCF.(sh|bat) ..... -Dignore-errors-all-vps=&#39;true&#39;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>applyCF.(sh|bat) ..... -Dignore-errors-all-vps=&#39;true&#39;
+</code></pre></div>
 <p>If Portal-owned pages have not been purposely removed from the virtual portal, then the error should be investigated and attempted to be fixed.</p>
 </li>
 <li>
 <p>Problem: After HCL Portal 8.5 CF12 or later is applied, warning messages may be seen in the <code>SystemOut.log</code> similar to the following, and custom themes or custom portlets may stop working:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>[10/5/15 8:00:00:000 EDT] 0000000a AbstractReque W com.ibm.wps.resolver.resource.AbstractRequestDispatcherFactory matchesWebAppDefault(aResource) Servlet context [/...] does not specify a blackwhite list when accessing resource [...], 
+<div class="language-text highlight"><pre><span></span><code>[10/5/15 8:00:00:000 EDT] 0000000a AbstractReque W com.ibm.wps.resolver.resource.AbstractRequestDispatcherFactory matchesWebAppDefault(aResource) Servlet context [/...] does not specify a blackwhite list when accessing resource [...], 
 falling back to the default [[whitelist(null), blacklist(.*)]]...
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>There might be many of these warning messages which could cause a significant performance issue.</p>
 </li>
 <li>
@@ -2219,11 +2192,11 @@ then default renditions may not be created automatically.</li>
 </li>
 <li>
 <p>Problem: If HCL Portal is configured with an empty value for the <code>wps</code> context root or an empty value for the <code>portal</code> mapping for public pages then the following message may be seen in the browser when a user accesses a page that has a whitespace character or any other special character in the friendly page name:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Error 400: EJBCD0006E: The resolution of a URI failed. Refer to the SystemOut.log for more detailed information.
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>Error 400: EJBCD0006E: The resolution of a URI failed. Refer to the SystemOut.log for more detailed information.
+</code></pre></div>
 <p>A similar warning in the SystemOut.log may also be seen:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ExceptionLogg W com.ibm.wps.logging.ExceptionLogger logThrowable An exception occurred: [Illegal character in path at index 43: com.ibm.portal.friendly.name:/Search/Search Center]. Enable traces for [com.ibm.wps.logging.ExceptionLogger=all] to see the exception stack trace.
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>ExceptionLogg W com.ibm.wps.logging.ExceptionLogger logThrowable An exception occurred: [Illegal character in path at index 43: com.ibm.portal.friendly.name:/Search/Search Center]. Enable traces for [com.ibm.wps.logging.ExceptionLogger=all] to see the exception stack trace.
+</code></pre></div>
 </li>
 <li>
 <p>Solution: This is a known issue and is fixed by applying the WAS interim fix for PI67942 for WAS 8.5.5.10. This issue will also be fixed or included in WAS 8.5.5.11. <a href="https://www.hcltechsw.com/wps/portal/about/welcome">HCL Software</a> page in the maintenance package.</p>
@@ -2236,17 +2209,14 @@ then default renditions may not be created automatically.</li>
 </li>
 <li>
 <p>Problem: If WAS 8.5.5.10 is installed with JDK8 for the Portal server profile and CF12 or later is installed, the following errors may be found in the ConfigTrace.logfile:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>[exec] SEVERE:
+<div class="language-text highlight"><pre><span></span><code>[exec] SEVERE:
 [exec] java.lang.UnsupportedClassVersionError: JVMCFRE003 bad major version; class=sun/rmi/rmic/Main, offset=6
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>and</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[exec] SEVERE: Error generating RMI code: Cannot run RMIC because it is not installed. Expected location of RMIC is the 
+<div class="language-text highlight"><pre><span></span><code>[exec] SEVERE: Error generating RMI code: Cannot run RMIC because it is not installed. Expected location of RMIC is the 
 following: /opt/IBM/WebSphere/AppServer/java_1.8_64/lib.
 [exec] Exception in thread &quot;main&quot; java/lang/NullPointerException
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Solution: There is a problem communicating with RMIC while preparing an Enterprise Application for installation. This is fixed by installing WAS APAR PI67166 and retrying the <code>applyCF.sh</code> command. It can also be avoided by installing WAS APAR PI67166 before the Portal CF update.</p>
@@ -2271,13 +2241,13 @@ following: /opt/IBM/WebSphere/AppServer/java_1.8_64/lib.
 <li>Open Terminal.</li>
 <li>
 <p>Run the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>cd /lib64
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>cd /lib64
+</code></pre></div>
 </li>
 <li>
 <p>If Linux is installed with <code>libbz2.so.1.0.4</code> for example, then do:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ln -s libbz2.so.1.0.4 libbz2.so.1.0
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>ln -s libbz2.so.1.0.4 libbz2.so.1.0
+</code></pre></div>
 </li>
 </ol>
 </li>
@@ -2295,11 +2265,11 @@ following: /opt/IBM/WebSphere/AppServer/java_1.8_64/lib.
 <li>Locate the <code>PERF_JVM_OPTIONS=</code> line specific to your operating system.</li>
 <li>
 <p>Modify this line to have an Xmx parameter of 2048, e.g. from</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>PERF_JVM_OPTIONS=&quot;-Xms256m -Xmx256m -Xquickstart&quot; ;;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>PERF_JVM_OPTIONS=&quot;-Xms256m -Xmx256m -Xquickstart&quot; ;;
+</code></pre></div>
 <p>to</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>PERF_JVM_OPTIONS=&quot;-Xms256m -Xmx2048m -Xquickstart&quot; ;;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>PERF_JVM_OPTIONS=&quot;-Xms256m -Xmx2048m -Xquickstart&quot; ;;
+</code></pre></div>
 </li>
 <li>
 <p>Save changes.</p>
@@ -2312,11 +2282,11 @@ following: /opt/IBM/WebSphere/AppServer/java_1.8_64/lib.
 <li>Locate the <code>set PERFJAVAOPTION</code> statement.</li>
 <li>
 <p>Modify this line to have an Xmx parameter of 2048, e.g.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>set PERFJAVAOPTION=-Xms256m -Xmx256m -Xquickstart
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>set PERFJAVAOPTION=-Xms256m -Xmx256m -Xquickstart
+</code></pre></div>
 <p>to</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>set PERFJAVAOPTION=-Xms256m -Xmx2048m -Xquickstart
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>set PERFJAVAOPTION=-Xms256m -Xmx2048m -Xquickstart
+</code></pre></div>
 </li>
 <li>
 <p>Save changes.</p>
@@ -2334,17 +2304,14 @@ following: /opt/IBM/WebSphere/AppServer/java_1.8_64/lib.
 </li>
 <li>
 <p>Problem: During the migration process the node may not start after upgrading to WAS 8.5.5.9 and before executing upgrade-profile. The node does not start with error message:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>ADMU3200I: Server launched. Waiting for initialization status.
+<div class="language-text highlight"><pre><span></span><code>ADMU3200I: Server launched. Waiting for initialization status.
 ADMU3011E: Server launched but failed initialization. Server logs, startServer.log, and other log files
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The log contains the following error message:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>HMGR0031E: A conflicting IP address and port has been detected for the DCS_UNICAST_ADDRESS end point.
+<div class="language-text highlight"><pre><span></span><code>HMGR0031E: A conflicting IP address and port has been detected for the DCS_UNICAST_ADDRESS end point.
 The node does not start due to conflicting port configuration for the DCS_UNICAST_ADDRESS end point of server1 and nodeagent in the node 
 serverindex.xml.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Solution: It is recommended to execute <code>upgrade-profile</code> before upgrading to WAS 8.5.5.9. Alternatively the conflicting port configuration for the DCS_UNICAST_ADDRESS needs to be solved by setting unique port numbers for <code>server1</code> and <code>nodeagent</code>.</p>
@@ -2357,18 +2324,13 @@ serverindex.xml.
 </li>
 <li>
 <p>Problem: During the upgrade-profile task in migration, there may be an intermittent issue which can cause the uninstall of an application to fail because files from the application are locked and cannot be deleted. This is an example of an error message that may be seen:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>BUILD FAILED
+<div class="language-text highlight"><pre><span></span><code>BUILD FAILED
 C:\ibm\wp85\ConfigEngine\config\includes\apply_PTF.xml:172: 
 C:\ibm\wp85\PortalServer\jcr\wp.content.repository.install\config\includes\jcr.mig_cfg.xml:382: Exception found when executing wsadmin: &lt;hostname&gt;
 c:/ibm/wp85/ConfigEngine/lib/wkplc.misc.jar;
 C:/ibm/wp85/AppServer/deploytool/itp/batchboot.jar;C:/ibm/wp85/AppServer/deploytool/itp/batch2.jar;
 C:/ibm/wp85/PortalServer/base/wp.base/shared/app/wp.base.jar;C:/ibm/wp85/PortalServer/shared/app/wp.base.jar
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Solution: If this issue is encountered, wait 5 minutes and re-run the <code>upgrade-profile</code> task with the same options to resume the migration. The lock on the file should be released and the uninstall can continue as expected.</p>
@@ -2381,23 +2343,15 @@ C:/ibm/wp85/PortalServer/base/wp.base/shared/app/wp.base.jar;C:/ibm/wp85/PortalS
 </li>
 <li>
 <p>Problem: Non-English characters are not supported when exporting a Site/Section template from Site Builder. When importing Site or Section templates into the Site Builder application, you may encounter an error that the template PAA file could not be imported. This could be due to using non-English characters in the Site/Section template PAA import object file name. You will see the following messages on the site builder interface:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&quot;Could not import the template. The solution installer import of the PAA file failed. Review the server logs for more information.&quot;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&quot;Could not import the template. The solution installer import of the PAA file failed. Review the server logs for more information.&quot;
+</code></pre></div>
 </li>
 <li>
 <p>Solution: Use only English characters in the PAA file name.</p>
 </li>
 <li>
 <p>Problem: If local hostname resolution is not configured properly, the <code>applyCF</code> command may fail with an error like this:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>C:\IBM\WebSphere\PortalServer\theme\wp.setup.themedev\config\includes\wp.setup.themedev_cfg.xml:52: Exception found when executing wsadmin: jacl
+<div class="language-text highlight"><pre><span></span><code>C:\IBM\WebSphere\PortalServer\theme\wp.setup.themedev\config\includes\wp.setup.themedev_cfg.xml:52: Exception found when executing wsadmin: jacl
 C:/IBM/WebSphere/ConfigEngine/lib/wkplc.misc.jar;C:/IBM/WebSphere/AppServer/deploytool/itp/batchboot.jar;
 C:/IBM/WebSphere/AppServer/deploytool/itp/batch2.jar;C:/IBM/WebSphere/PortalServer/base/wp.base/shared/app/wp.base.jar;
 C:/IBM/WebSphere/PortalServer/shared/app/wp.base.jar
@@ -2406,33 +2360,29 @@ Ear File C:/IBM/WebSphere/PortalServer/theme/wp.setup.themedev/installedApps/The
 WASX7015E: Exception running command: &quot;source &quot;C:/IBM/WebSphere/wp_profile/ConfigEngine/config/work/was/curJaclScript.jacl&quot;&quot;; 
 exception information: com.ibm.websphere.management.filetransfer.client.TransferFailedException
 java.io.FileNotFoundException: java.io.FileNotFoundException: C:\IBM\WebSphere\PortalServer\theme\wp.setup.themedev\installedApps\ThemeDevAssets.ear (Access is denied)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Solution: This indicates a SOAP issue on the Web server where the hostname does not resolve as expected. ﻿The solution is to make sure that all host names of the machine are associated with the loopback in the hosts file. Edit the following file.</p>
 <p>For Linux, the hosts file is:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/etc/hosts
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/etc/hosts
+</code></pre></div>
 <p>For Windows, the hosts file is:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>%SystemRoot%\System32\drivers\etc\hosts
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>%SystemRoot%\System32\drivers\etc\hosts
+</code></pre></div>
 <p>Add a line similar to the following, substituting your actual machine name where indicated like:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>127.0.0.1 yourhostname yourhostname.yourdomain localhost localhost.localdomain
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>127.0.0.1 yourhostname yourhostname.yourdomain localhost localhost.localdomain
+</code></pre></div>
 <p>If a line for <code>localhost</code> already exists, you can add your hostname to this existing line.</p>
 </li>
 <li>
 <p>Problem: After the CF is applied, warning messages may be seen in the SystemOut.log similar to:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>[10/5/15 8:00:00:000 EDT] 0000000a AbstractReque W 
+<div class="language-text highlight"><pre><span></span><code>[10/5/15 8:00:00:000 EDT] 0000000a AbstractReque W 
 com.ibm.wps.resolver.resource.AbstractRequestDispatcherFactory matchesWebAppDefault(aResource) 
 Servlet context [/...] does not specify a blackwhite list when accessing resource [...], falling back to the default 
 [[(null), (WEB-INF/.*)]]. Applications can define a custom list by adding the keys [com.ibm.portal.resource.whitelist] and 
 [com.ibm.portal.resource.blacklist] to their web.xml deployment descriptor.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>There might be many of these warning messages which could cause a significant performance issue.</p>
 </li>
 <li>
@@ -2456,24 +2406,22 @@ Servlet context [/...] does not specify a blackwhite list when accessing resourc
 </li>
 <li>
 <p>Problem: Error messages can be seen in the SystemOut.log after rollback regarding <code>ManagedRules</code> feature updates. These features would no longer be available after the rollback to a level earlier than CF08. The following error example may be seen in the log:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>java.lang.RuntimeException: java.lang.ClassNotFoundException: com.aptrix.pluto.pzn.Segment
+<div class="language-text highlight"><pre><span></span><code>java.lang.RuntimeException: java.lang.ClassNotFoundException: com.aptrix.pluto.pzn.Segment
 at com.aptrix.identity.IdentityReference.getTypeClass(IdentityReference.java:190)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Solution: These logging errors are expected if content was created against a Portal feature at an updated CF level and a rollback occurs to a level that does not support it. The logging exceptions could be removed by running the following two <code>ConfigEngine</code> tasks:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh drop-wcm-recents-and-favorites-tables
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh create-wcm-recents-and-favorites-tables
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh drop-wcm-recents-and-favorites-tables
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh create-wcm-recents-and-favorites-tables
+</code></pre></div>
 </li>
 <li>
 <p>Problem: Starting with HCL Portal Version 8.5 Cumulative Fix 5, a new check has been added to the XML configuration interface. When the XML configuration interface processes update requests, now all locale identifiers are checked if they represent a locale available on the system. If this is not the case, then the update request fails and the XML configuration interface returns with an error. For example, language-dependent strings are marked with a locale:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>{code:} (localedata locale=&quot;en&quot;) (title)Home(/title) 
+<div class="language-text highlight"><pre><span></span><code>{code:} (localedata locale=&quot;en&quot;) (title)Home(/title) 
 (/localedata){code}
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Here, for <code>en</code> which stands for the English locale, a title is defined. For other locales, other strings can be defined. Now, if the attribute <code>locale</code> contains an empty value or an identifier of a locale which does not exist on the system, then the file cannot be imported. As on levels prior to HCL Portal Version 8.5 Cumulative Fix 5, this check has not been performed, XML files exported from Portal systems can lead to errors when trying to import them on a HCL Portal Version 8.5 system with at least Cumulative Fix 5. Even HCL Portal systems migrated or upgraded to at least HCL Portal Version 8.5 Cumulative Fix 5 can contain configuration data with invalid locales. Exporting such data with the XML configuration interface is possible without problem. However, trying to import this data can lead to the error described above.</p>
 </li>
 <li>
@@ -2487,14 +2435,11 @@ at com.aptrix.identity.IdentityReference.getTypeClass(IdentityReference.java:190
 </li>
 <li>
 <p>Problem: The <code>applyCF.bat|sh</code> task may fail with an error like the following:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>action-clear-was-caches:
+<div class="language-text highlight"><pre><span></span><code>action-clear-was-caches:
      [echo] /usr/IBM/WebSphere/AppServer/deploytool/scripts/install/ejbdeploy-clear-cache.sh
 --- Exception Thrown ---
 /usr/IBM/WebSphere/PortalServer/installer/wp.update/config/includes/cumulative_fix.xml:302: The directory you specified does not exist. 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Solution: Portal Server requires the optional WebSphere Application Server EJBDeploy tool, and the above error will occur if this tool is not installed. To resolve the error, use IBM Installation Manager to modify your copy of WebSphere Application Server and add the feature named <strong>EJBDeploy tool for pre-EJB 3.0 modules</strong>.</p>
@@ -2504,8 +2449,8 @@ at com.aptrix.identity.IdentityReference.getTypeClass(IdentityReference.java:190
 </li>
 <li>
 <p>Solution: There are potentially two issues at work. The first is <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=215234">an eclipse bug</a> caused by an infinite loop in code that tries to enumerate printers. This first issue can be resolved by updating your Installation Manager client to v1.8 or later. If updating your client is not a viable option at the moment, you can alternatively work around the problem by adding the following line to the /opt/IBM/InstallationManager/eclipse/IBMIM.ini file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-Dorg.eclipse.swt.internal.gtk.disablePrinting
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-Dorg.eclipse.swt.internal.gtk.disablePrinting
+</code></pre></div>
 <p>The second issue is caused by a different eclipse bug, related to a mismatch between the GTK version and the cairo library. The resolution is to update the cairo libraries.</p>
 </li>
 <li>
@@ -2522,14 +2467,11 @@ at com.aptrix.identity.IdentityReference.getTypeClass(IdentityReference.java:190
 </li>
 <li>
 <p>Problem: After installing and rolling back the Cumulative Fix, you may observe error messages similar to the following in the Installation Manager if you subsequently uninstall HCL Portal 8.5:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>Basedir /usr/IBM/WebSphere/wp_profile does not exist
+<div class="language-text highlight"><pre><span></span><code>Basedir /usr/IBM/WebSphere/wp_profile does not exist
 Basedir /usr/IBM/WebSphere/wp_profile does not exist
 org.apache.tools.ant.Project.setBaseDir(Project.java:844)
 org.apache.tools.ant.Project.setBasedir(Project.java:829)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Solution: The product will be successfully uninstalled despite these messages, so you can safely choose to ignore them. The errors will be avoided if you uninstall HCL Portal 8.5 without first rolling back the Cumulative Fix.</p>
@@ -2542,8 +2484,8 @@ org.apache.tools.ant.Project.setBasedir(Project.java:829)
 </li>
 <li>
 <p>Problem: After installing or rolling back the cumulative fix, you may observe error messages similar to the following in the Installation Manager log file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&quot;Installation Manager cannot remove feature Portal Server Profile during the Update or Rollback.&quot;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&quot;Installation Manager cannot remove feature Portal Server Profile during the Update or Rollback.&quot;
+</code></pre></div>
 </li>
 <li>
 <p>Solution: These messages do not indicate a problem. To prevent a configuration error, you are prevented from changing your feature selections when performing an update. If you want to add or drop a portal, you must select the Modify function of Installation Manager instead.</p>

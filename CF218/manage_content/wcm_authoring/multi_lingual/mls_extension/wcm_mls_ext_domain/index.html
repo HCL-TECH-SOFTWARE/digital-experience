@@ -2722,21 +2722,17 @@
 <ul>
 <li>
 <p><strong>Before version 8.5 CF03</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>LoadModule rewrite_module modules/mod_rewrite.so
+<div class="language-text highlight"><pre><span></span><code>LoadModule rewrite_module modules/mod_rewrite.so
 RewriteEngine on
 RewriteRule ^/$ /wps/wcmml/jsp/html/MLServletHomePageRedirection.jsp [PT]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Version 8.5 CF03 or higher</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>LoadModule rewrite_module modules/mod_rewrite.so
+<div class="language-text highlight"><pre><span></span><code>LoadModule rewrite_module modules/mod_rewrite.so
 RewriteEngine on
 RewriteRule ^/$ /MLS_CONTEXT_ROOT/wcmml/jsp/html/MLServletHomePageRedirection.jsp [PT]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Where MLS_CONTEXT_ROOT is the context root for the multilingual solution application.</p>
 </li>
 </ul>
@@ -2746,8 +2742,8 @@ RewriteRule ^/$ /MLS_CONTEXT_ROOT/wcmml/jsp/html/MLServletHomePageRedirection.js
 <ul>
 <li>
 <p><strong>Before version 8.5 CF03</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>RewriteRule ^/LOCALE$ /wps/wcm/connect/LIBRARY/SITE [PT]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>RewriteRule ^/LOCALE$ /wps/wcm/connect/LIBRARY/SITE [PT]
+</code></pre></div>
 <ul>
 <li>LOCALE: The string representation of the corresponding Java Locale object. For example,"fi" for Finnish and "pt_BR" for Brazilian Portuguese.</li>
 <li>LIBRARY: The web content library that is associated with the locale</li>
@@ -2758,8 +2754,8 @@ For example: <code>RewriteRule ^/en$ /wps/wcm/connect/english/Internet [PT]</cod
 </li>
 <li>
 <p><strong>Version 8.5 CF03 or higher</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>RewriteRule ^/LOCALE$ /PORTAL_CONTEXT_ROOT/wcm/connect/LIBRARY/SITE [PT]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>RewriteRule ^/LOCALE$ /PORTAL_CONTEXT_ROOT/wcm/connect/LIBRARY/SITE [PT]
+</code></pre></div>
 <ul>
 <li>LOCALE: The string representation of the corresponding Java Locale object. For example: "fi" for Finnish and "pt_BR" for Brazilian Portuguese.</li>
 <li>PORTAL_CONTEXT_ROOT: The context root for HCL Portal.</li>

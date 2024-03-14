@@ -2177,50 +2177,50 @@
 <li>
 <p><strong>Command description</strong></p>
 <p>This command invokes list-dam-schemas inside DXClient and provides a list DAM schemas.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient list-dam-schemas
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient list-dam-schemas
+</code></pre></div>
 </li>
 <li>
 <p><strong>Help command</strong></p>
 <p>This command shows the help information for <code>list-dam-schemas</code> command usage:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient list-dam-schemas -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient list-dam-schemas -h
+</code></pre></div>
 </li>
 <li>
 <p><strong>Command options</strong></p>
 <p>Use this attribute to specify the protocol with which to connect to the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProtocol &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProtocol &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the hostname of the target server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port on which to connect to the server (e.g. for Kubernetes Environment, dxPort is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the username that is required for authenticating with the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt; 
+</code></pre></div>
 <p>Use this attribute to specify the password that is required for authenticating with the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port number of the DAM server (e.g. for Kubernetes Environment, default port is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-damAPIPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-damAPIPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port number of the DX Core API server (e.g. for Kubernetes Environment, default port is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-ringAPIPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-ringAPIPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the API Version number of DAM (e.g. for Kubernetes Environment, default version is v1): </p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-damAPIVersion &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-damAPIVersion &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the API Version number of DX Core (e.g. for Kubernetes Environment, default version is v1):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-ringAPIVersion &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-ringAPIVersion &lt;value&gt;
+</code></pre></div>
 </li>
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient list-dam-schemas -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -damAPIPort &lt;damAPIPort&gt; -ringAPIPort &lt;ringAPIPort&gt; -ringAPIVersion &lt;ringAPIVersion&gt; -damAPIVersion &lt;damAPIVersion&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient list-dam-schemas -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -damAPIPort &lt;damAPIPort&gt; -ringAPIPort &lt;ringAPIPort&gt; -ringAPIVersion &lt;ringAPIVersion&gt; -damAPIVersion &lt;damAPIVersion&gt;
+</code></pre></div>
 </div>
 <h2 id="deleting-dam-schemas">Deleting DAM schemas</h2>
 <p>Deleting DAM schema is a recommended step when the configuration of the DAM database schema has been changed, due to a release update such as from Container Update CF196 to Container Update CF197. When a DAM database is migrated, a new schema gets generated and the old schema is rendered inactive. To avoid the accumulation of inactive schemas, you can use the delete-dam-schema command to delete them.</p>
@@ -2229,47 +2229,47 @@
 <li>
 <p><strong>Command description</strong></p>
 <p>This command invokes delete-dam-schema inside DXClient and deletes the DAM schema:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient delete-dam-schema
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient delete-dam-schema
+</code></pre></div>
 </li>
 <li>
 <p><strong>Help command</strong></p>
 <p>This command shows the help information for <code>delete-dam-schema</code> command usage:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient delete-dam-schema -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient delete-dam-schema -h
+</code></pre></div>
 </li>
 <li>
 <p><strong>Command options</strong></p>
 <p>Use this attribute to specify the protocol that is used to connect to the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProtocol &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProtocol &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the hostname of the target server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port on which to connect to the server (e.g. for Kubernetes Environment, dxPort is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the username that is required for authenticating with the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt; 
+</code></pre></div>
 <p>Use this attribute to specify the password that is required for authenticating with the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port number of the DAM server (e.g. for Kubernetes Environment, default port is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-damAPIPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-damAPIPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port number of the DX Core API server (e.g. for Kubernetes Environment, default port is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-ringAPIPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-ringAPIPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the API Version number of DAM (e.g. for Kubernetes Environment, default version is v1):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-damAPIVersion &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-damAPIVersion &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the API Version number of DX Core (e.g. for Kubernetes Environment, default version is v1):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-ringAPIVersion &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-ringAPIVersion &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the DAM Schema Version (e.g. for Kubernetes Environment, default port is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-schemaVersion &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-schemaVersion &lt;value&gt;
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In case the user does not enter the <code>schemaVersion</code>, user is prompted with a list of inactive schemas to choose from.</p>
@@ -2278,8 +2278,8 @@
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient delete-dam-schema -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -damAPIPort &lt;damAPIPort&gt; -ringAPIPort &lt;ringAPIPort&gt; -ringAPIVersion &lt;ringAPIVersion&gt; -damAPIVersion &lt;damAPIVersion&gt; -schemaVersion &lt;schemaVersion&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient delete-dam-schema -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -damAPIPort &lt;damAPIPort&gt; -ringAPIPort &lt;ringAPIPort&gt; -ringAPIVersion &lt;ringAPIVersion&gt; -damAPIVersion &lt;damAPIVersion&gt; -schemaVersion &lt;schemaVersion&gt;
+</code></pre></div>
 </div>
 
 

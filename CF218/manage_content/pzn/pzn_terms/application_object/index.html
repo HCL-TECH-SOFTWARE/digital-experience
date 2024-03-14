@@ -2930,20 +2930,14 @@
 -   The DynamicApplicationObject class implements an interface that contains a get() method that must be included in the application object class. 
     The get() method will automatically be called if the dynamic property is associated with a rule on a page. The get() method has the name of the dynamic property as the input so it is easy to determine which function to perform based on the name.</p>
 <p>For example:</p>
-<p><div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>private String dynamicPropertyName = &quot;propertyName&quot;;
+<p><div class="language-text highlight"><pre><span></span><code>private String dynamicPropertyName = &quot;propertyName&quot;;
 public Object get(String name) {
     Object returnValue = null;
     if (name.equals(dynamicPropertyName))
 {  returnValue = true;    }
     return returnValue;
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 All of the application object properties (both fixed and dynamic) are available for selection when rules based on the application object are created.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -2961,56 +2955,26 @@ All of the application object properties (both fixed and dynamic) are available 
 <h3 id="script-portlet-sample-code">Script portlet sample code</h3>
 <p>The following sample code shows how a header could be inserted to check a condition for that header in a rule.</p>
 <p>The corresponding rule:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>Profile User Rule 1 is
+<div class="language-text highlight"><pre><span></span><code>Profile User Rule 1 is
 
   Mike  when
 
     current Request.test  is  test
 
   Otherwise  Thomas
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The script portlet sample code:</p>
 <ul>
 <li>
 <p>HTML:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;div id=&#39;pzn&#39;&gt;Hello World&lt;/div&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;div id=&#39;pzn&#39;&gt;Hello World&lt;/div&gt;
 
 &lt;button type=&quot;button&quot; id=&quot;myBtn&quot;&gt;Check Profile&lt;/button&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Javascript (need to adjust the host and port and rule UUID accordingly):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code>document.getElementById(&quot;myBtn&quot;).onclick = () =&gt; {
+<div class="language-text highlight"><pre><span></span><code>document.getElementById(&quot;myBtn&quot;).onclick = () =&gt; {
         fetch(&quot;http://localhost:10039/wps/contenthandler/pzn-rest/rules/b1820994-0dfa-4115-81ac-6bea0a4bacdf/invoke&quot;, {
         method: &#39;post&#39;,
         body: &#39;{}&#39;,
@@ -3033,7 +2997,7 @@ All of the application object properties (both fixed and dynamic) are available 
         console.log(err);
         })
     };
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <p>The following topics contain an overview of the installed application objects. This overview includes descriptions and examples of using the application objects in rules that you create. To select the attributes that are used in the examples, you must enable the application objects. Instructions for enabling the location attributes associated with the Device application are also included in this section.</p>

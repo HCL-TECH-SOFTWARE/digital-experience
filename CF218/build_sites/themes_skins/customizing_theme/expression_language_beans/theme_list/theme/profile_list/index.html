@@ -4283,8 +4283,8 @@
 <p><strong>current</strong></p>
 <p>Gets the current profile.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code> ${wp.themeList.current.profiles.current}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code> ${wp.themeList.current.profiles.current}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="themeopt_el_bean_profile/">Profile</a>; it is never null.</p>
 <p>Exception: <code>current</code> requires a valid main portal request. If the required context is not included, an exception is thrown.</p>
@@ -4293,12 +4293,10 @@
 <p><strong>iterator</strong></p>
 <p>Iterates through profiles.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;c:forEach var=&quot;profile&quot; items=&quot;${wp.themeList.current.profiles}&quot; varStatus=&quot;profileStatus&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;c:forEach var=&quot;profile&quot; items=&quot;${wp.themeList.current.profiles}&quot; varStatus=&quot;profileStatus&quot;&gt;
      ${profile.title} / ${profile.relativePath}&lt;br/&gt;
 &lt;/c:forEach&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Parameters: None</p>
 <p>Returns: An iterator with <a href="themeopt_el_bean_profile/">Profile</a> objects; it is never null.</p>
 </li>

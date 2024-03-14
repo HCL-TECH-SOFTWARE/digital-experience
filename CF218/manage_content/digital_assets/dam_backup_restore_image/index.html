@@ -1899,44 +1899,40 @@
 <h2 id="backup">Backup</h2>
 <h3 id="prerequisites">Prerequisites</h3>
 <p>Verify that <code>core</code>, <code>persistence-node</code> and <code>digital-asset-management</code> pods are up and in <code>Running</code> state.</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>get<span class="w"> </span>pods
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>get<span class="w"> </span>pods
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>get<span class="w"> </span>pods
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>get<span class="w"> </span>pods
+</code></pre></div>
 </div>
 <p>You may see more than one <code>persistence-node</code> pods running:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>dx-deployment-core-0<span class="w">                                         </span><span class="m">3</span>/3<span class="w">     </span>Running<span class="w">   </span><span class="m">0</span><span class="w">          </span>3h49m
+<div class="language-bash highlight"><pre><span></span><code>dx-deployment-core-0<span class="w">                                         </span><span class="m">3</span>/3<span class="w">     </span>Running<span class="w">   </span><span class="m">0</span><span class="w">          </span>3h49m
 dx-deployment-persistence-node-0<span class="w">                             </span><span class="m">2</span>/2<span class="w">     </span>Running<span class="w">   </span><span class="m">0</span><span class="w">          </span>3h49m
 dx-deployment-persistence-node-1<span class="w">                             </span><span class="m">2</span>/2<span class="w">     </span>Running<span class="w">   </span><span class="m">0</span><span class="w">          </span>3h48m
 dx-deployment-persistence-node-2<span class="w">                             </span><span class="m">2</span>/2<span class="w">     </span>Running<span class="w">   </span><span class="m">0</span><span class="w">          </span>3h48m
 dx-deployment-digital-asset-management-0<span class="w">                     </span><span class="m">1</span>/1<span class="w">     </span>Running<span class="w">   </span><span class="m">0</span><span class="w">          </span>3h48m
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h3 id="backup-core-references-for-dam">Backup Core references for DAM</h3>
 <ol>
 <li>
 <p><strong>Export DAM collection references from Core:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;release-name&gt;-core-0 -c core -- /bin/bash -c &quot;/opt/HCL/PortalServer/bin/xmlaccess.sh -user &lt;wpsadmin-user&gt; -password &lt;wpsadmin-password&gt; -url http://localhost:10039/wps/config -in /opt/HCL/PortalServer/doc/xml-samples/ExportAllDAMCollections.xml -out /path/to/export/to/damExport.xml&quot;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;release-name&gt;-core-0 -c core -- /bin/bash -c &quot;/opt/HCL/PortalServer/bin/xmlaccess.sh -user &lt;wpsadmin-user&gt; -password &lt;wpsadmin-password&gt; -url http://localhost:10039/wps/config -in /opt/HCL/PortalServer/doc/xml-samples/ExportAllDAMCollections.xml -out /path/to/export/to/damExport.xml&quot;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-core-0<span class="w"> </span>-c<span class="w"> </span>core<span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;/opt/HCL/PortalServer/bin/xmlaccess.sh -user wpsadmin -password wpsadmin -url http://localhost:10039/wps/config -in /opt/HCL/PortalServer/doc/xml-samples/ExportAllDAMCollections.xml -out /tmp/damExport.xml&quot;</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-core-0<span class="w"> </span>-c<span class="w"> </span>core<span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;/opt/HCL/PortalServer/bin/xmlaccess.sh -user wpsadmin -password wpsadmin -url http://localhost:10039/wps/config -in /opt/HCL/PortalServer/doc/xml-samples/ExportAllDAMCollections.xml -out /tmp/damExport.xml&quot;</span>
+</code></pre></div>
 </div>
 </li>
 <li>
 <p><strong>Download the collection dump to the local system:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl cp -c core &lt;namespace&gt;/&lt;release-name&gt;-core-0:/path/to/export/to/damExport.xml &lt;target-file&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl cp -c core &lt;namespace&gt;/&lt;release-name&gt;-core-0:/path/to/export/to/damExport.xml &lt;target-file&gt;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>cp<span class="w"> </span>-c<span class="w"> </span>core<span class="w"> </span>dxns/dx-deployment-core-0:/tmp/damExport.xml<span class="w"> </span>/tmp/damExport.xml
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>kubectl<span class="w"> </span>cp<span class="w"> </span>-c<span class="w"> </span>core<span class="w"> </span>dxns/dx-deployment-core-0:/tmp/damExport.xml<span class="w"> </span>/tmp/damExport.xml
+</code></pre></div>
 </div>
 </li>
 </ol>
@@ -1944,37 +1940,37 @@ dx-deployment-digital-asset-management-0<span class="w">                     </s
 <ol>
 <li>
 <p><strong>Determine the primary <code>persistence-node</code> using the following command:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;release-name&gt;-persistence-node-&lt;running-node-index&gt; -c persistence-node -- repmgr cluster show --compact --terse 2&gt;/dev/null | grep &quot;primary&quot; | awk &#39;{split($0,a,&quot;|&quot;); print a[2]}&#39; | xargs
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;release-name&gt;-persistence-node-&lt;running-node-index&gt; -c persistence-node -- repmgr cluster show --compact --terse 2&gt;/dev/null | grep &quot;primary&quot; | awk &#39;{split($0,a,&quot;|&quot;); print a[2]}&#39; | xargs
+</code></pre></div>
 <p>For <code>&lt;running-node-index&gt;</code>, select the index of any <code>persistence-node</code> that is in the <code>Running</code> state. In most cases, node <code>0</code> can be used.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>--<span class="w"> </span>repmgr<span class="w"> </span>cluster<span class="w"> </span>show<span class="w"> </span>--compact<span class="w"> </span>--terse<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;primary&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{split($0,a,&quot;|&quot;); print a[2]}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>--<span class="w"> </span>repmgr<span class="w"> </span>cluster<span class="w"> </span>show<span class="w"> </span>--compact<span class="w"> </span>--terse<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;primary&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{split($0,a,&quot;|&quot;); print a[2]}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs
+</code></pre></div>
 </div>
 <p>This command returns the name of the primary <code>persistence-node</code>. Please use this node for the following steps when <code>&lt;primary-node-name&gt;</code> is referenced.</p>
 <p>Example output:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dx-deployment-persistence-node-0
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dx-deployment-persistence-node-0
+</code></pre></div>
 </li>
 <li>
 <p><strong>Dump the current database:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;primary-node-name&gt; -c persistence-node -- /bin/bash -c &quot;pg_dump dxmediadb &gt; /path/to/export/to/dxmediadb.dmp&quot;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;primary-node-name&gt; -c persistence-node -- /bin/bash -c &quot;pg_dump dxmediadb &gt; /path/to/export/to/dxmediadb.dmp&quot;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;pg_dump dxmediadb &gt; /tmp/dxmediadb.dmp&quot;</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;pg_dump dxmediadb &gt; /tmp/dxmediadb.dmp&quot;</span>
+</code></pre></div>
 </div>
 </li>
 <li>
 <p><strong>Download the database dump to the local system:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl cp -c persistence-node &lt;namespace&gt;/&lt;primary-node-name&gt;:/path/to/export/to/dxmediadb.dmp &lt;target-file&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl cp -c persistence-node &lt;namespace&gt;/&lt;primary-node-name&gt;:/path/to/export/to/dxmediadb.dmp &lt;target-file&gt;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>cp<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>dxns/dx-deployment-persistence-node-0:/tmp/dxmediadb.dmp<span class="w"> </span>/tmp/dxmediadb.dmp
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>kubectl<span class="w"> </span>cp<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>dxns/dx-deployment-persistence-node-0:/tmp/dxmediadb.dmp<span class="w"> </span>/tmp/dxmediadb.dmp
+</code></pre></div>
 </div>
 </li>
 </ol>
@@ -1982,67 +1978,63 @@ dx-deployment-digital-asset-management-0<span class="w">                     </s
 <ol>
 <li>
 <p><strong>Compress the DAM binaries located in the <code>/opt/app/upload</code> directory:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;dam-pod-name&gt; -- /bin/bash -c &quot;tar -cvpzf /path/to/backupml.tar.gz --one-file-system --directory /opt/app/upload .&quot;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;dam-pod-name&gt; -- /bin/bash -c &quot;tar -cvpzf /path/to/backupml.tar.gz --one-file-system --directory /opt/app/upload .&quot;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-digital-asset-management-0<span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;tar -cvpzf /tmp/backupml.tar.gz --one-file-system --directory /opt/app/upload .&quot;</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-digital-asset-management-0<span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;tar -cvpzf /tmp/backupml.tar.gz --one-file-system --directory /opt/app/upload .&quot;</span>
+</code></pre></div>
 </div>
 </li>
 <li>
 <p><strong>Download the compressed binaries to the local system.</strong></p>
 <p>From a local system, you can now download the backup DAM binaries from the DAM pod:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl cp &lt;namespace&gt;/&lt;dam-pod-name&gt;:&lt;source-file&gt; &lt;target-file&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl cp &lt;namespace&gt;/&lt;dam-pod-name&gt;:&lt;source-file&gt; &lt;target-file&gt;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>cp<span class="w"> </span>dxns/dx-deployment-digital-asset-management-0:/tmp/backupml.tar.gz<span class="w"> </span>/tmp/backupml.tar.gz
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>kubectl<span class="w"> </span>cp<span class="w"> </span>dxns/dx-deployment-digital-asset-management-0:/tmp/backupml.tar.gz<span class="w"> </span>/tmp/backupml.tar.gz
+</code></pre></div>
 </div>
 </li>
 </ol>
 <h2 id="restore">Restore</h2>
 <h3 id="prerequisites_1">Prerequisites</h3>
 <p>Verify that <code>core</code>, <code>persistence-node</code> and <code>digital-asset-management</code> pods are up and in <code>Running</code> state.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl -n &lt;namespace&gt; get pods
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; get pods
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>get<span class="w"> </span>pods
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>get<span class="w"> </span>pods
+</code></pre></div>
 </div>
 <p>You may see more than one <code>persistence-node</code> pods running:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>dx-deployment-core-0                                         3/3     Running   0          3h49m
+<div class="language-text highlight"><pre><span></span><code>dx-deployment-core-0                                         3/3     Running   0          3h49m
 dx-deployment-persistence-node-0                             2/2     Running   0          3h49m
 dx-deployment-persistence-node-1                             2/2     Running   0          3h48m
 dx-deployment-persistence-node-2                             2/2     Running   0          3h48m
 dx-deployment-digital-asset-management-0                     1/1     Running   0          3h48m
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h3 id="restore-core-references-for-dam">Restore Core references for DAM</h3>
 <ol>
 <li>
 <p><strong>Upload the collection dump to the core pod:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl cp -c core &lt;source-file&gt; &lt;namespace&gt;/&lt;release-name&gt;-core-0:/path/to/damExport.xml
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl cp -c core &lt;source-file&gt; &lt;namespace&gt;/&lt;release-name&gt;-core-0:/path/to/damExport.xml
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>cp<span class="w"> </span>-c<span class="w"> </span>core<span class="w"> </span>/tmp/damExport.xml<span class="w"> </span>dxns/dx-deployment-core-0:/tmp/damExport.xml
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>kubectl<span class="w"> </span>cp<span class="w"> </span>-c<span class="w"> </span>core<span class="w"> </span>/tmp/damExport.xml<span class="w"> </span>dxns/dx-deployment-core-0:/tmp/damExport.xml
+</code></pre></div>
 </div>
 </li>
 <li>
 <p><strong>Import DAM collection references to Core</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;release-name&gt;-core-0 -c core -- /bin/bash -c &quot;/opt/HCL/PortalServer/bin/xmlaccess.sh -user &lt;wpsadmin-user&gt; -password &lt;wpsadmin-password&gt; -url http://localhost:10039/wps/config -in /path/to/damExport.xml&quot;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;release-name&gt;-core-0 -c core -- /bin/bash -c &quot;/opt/HCL/PortalServer/bin/xmlaccess.sh -user &lt;wpsadmin-user&gt; -password &lt;wpsadmin-password&gt; -url http://localhost:10039/wps/config -in /path/to/damExport.xml&quot;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-core-0<span class="w"> </span>-c<span class="w"> </span>core<span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;/opt/HCL/PortalServer/bin/xmlaccess.sh -user wpsadmin -password wpsadmin -url http://localhost:10039/wps/config -in /tmp/damExport.xml&quot;</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-core-0<span class="w"> </span>-c<span class="w"> </span>core<span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;/opt/HCL/PortalServer/bin/xmlaccess.sh -user wpsadmin -password wpsadmin -url http://localhost:10039/wps/config -in /tmp/damExport.xml&quot;</span>
+</code></pre></div>
 </div>
 </li>
 </ol>
@@ -2050,22 +2042,22 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 <ol>
 <li>
 <p><strong>Upload the backup binary to the DAM pod. You can now transfer the backup database to the remote DAM pod:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl cp &lt;source-file&gt; &lt;namespace&gt;/&lt;dam-pod-name&gt;:&lt;target-file&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl cp &lt;source-file&gt; &lt;namespace&gt;/&lt;dam-pod-name&gt;:&lt;target-file&gt;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>cp<span class="w"> </span>/tmp/backupml.tar.gz<span class="w"> </span>dxns/dx-deployment-digital-asset-management-0:/tmp/backupml.tar.gz
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>kubectl<span class="w"> </span>cp<span class="w"> </span>/tmp/backupml.tar.gz<span class="w"> </span>dxns/dx-deployment-digital-asset-management-0:/tmp/backupml.tar.gz
+</code></pre></div>
 </div>
 </li>
 <li>
 <p><strong>Restore the DAM binaries:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;dam-pod-name&gt; -- /bin/bash -c &quot;tar -mpxf /path/to/backupml.tar.gz --directory /opt/app/upload&quot;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;dam-pod-name&gt; -- /bin/bash -c &quot;tar -mpxf /path/to/backupml.tar.gz --directory /opt/app/upload&quot;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-digital-asset-management-0<span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;tar -mpxf /tmp/backupml.tar.gz --directory /opt/app/upload&quot;</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-digital-asset-management-0<span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;tar -mpxf /tmp/backupml.tar.gz --directory /opt/app/upload&quot;</span>
+</code></pre></div>
 </div>
 </li>
 </ol>
@@ -2073,27 +2065,27 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 <ol>
 <li>
 <p><strong>Determine the primary <code>persistence-node</code> using:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;release-name&gt;-persistence-node-&lt;running-node-index&gt; -c persistence-node -- repmgr cluster show --compact --terse 2&gt;/dev/null | grep &quot;primary&quot; | awk &#39;{split($0,a,&quot;|&quot;); print a[2]}&#39; | xargs
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;release-name&gt;-persistence-node-&lt;running-node-index&gt; -c persistence-node -- repmgr cluster show --compact --terse 2&gt;/dev/null | grep &quot;primary&quot; | awk &#39;{split($0,a,&quot;|&quot;); print a[2]}&#39; | xargs
+</code></pre></div>
 <p>For <code>&lt;running-node-index&gt;</code> select the index of any <code>persistence-node</code> that is in the <code>Running</code> state. In most cases, node <code>0</code> can be used.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>--<span class="w"> </span>repmgr<span class="w"> </span>cluster<span class="w"> </span>show<span class="w"> </span>--compact<span class="w"> </span>--terse<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;primary&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{split($0,a,&quot;|&quot;); print a[2]}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>--<span class="w"> </span>repmgr<span class="w"> </span>cluster<span class="w"> </span>show<span class="w"> </span>--compact<span class="w"> </span>--terse<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;primary&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{split($0,a,&quot;|&quot;); print a[2]}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs
+</code></pre></div>
 </div>
 <p>This command returns the name of the primary <code>persistence-node</code>. Please use this node for the following steps when <code>&lt;primary-node-name&gt;</code> is referenced.</p>
 <p>Example output:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dx-deployment-persistence-node-0
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dx-deployment-persistence-node-0
+</code></pre></div>
 </li>
 <li>
 <p><strong>Copy the database dump file to the primary <code>persistence-node</code> pod:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl cp -c persistence-node &lt;target-file&gt; &lt;namespace&gt;/&lt;primary-node-name&gt;:&lt;target-file&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl cp -c persistence-node &lt;target-file&gt; &lt;namespace&gt;/&lt;primary-node-name&gt;:&lt;target-file&gt;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>cp<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>/tmp/dxmediadb.dmp<span class="w"> </span>dxns/dx-deployment-persistence-node-0:/tmp/dxmediadb.dmp
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>kubectl<span class="w"> </span>cp<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>/tmp/dxmediadb.dmp<span class="w"> </span>dxns/dx-deployment-persistence-node-0:/tmp/dxmediadb.dmp
+</code></pre></div>
 </div>
 </li>
 <li>
@@ -2101,68 +2093,68 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 <ol>
 <li>
 <p>Set the database connection limit to 0 for <code>dxmediadb</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;primary-node-name&gt; -c persistence-node -- psql -c &quot;ALTER DATABASE dxmediadb CONNECTION LIMIT 0;&quot;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;primary-node-name&gt; -c persistence-node -- psql -c &quot;ALTER DATABASE dxmediadb CONNECTION LIMIT 0;&quot;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>--<span class="w"> </span>psql<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;ALTER DATABASE dxmediadb CONNECTION LIMIT 0;&quot;</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>--<span class="w"> </span>psql<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;ALTER DATABASE dxmediadb CONNECTION LIMIT 0;&quot;</span>
+</code></pre></div>
 </div>
 </li>
 <li>
 <p>Terminate all the existing connections to the database, if any:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;primary-node-name&gt; -c persistence-node -- psql -c &quot;SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE pg_stat_activity.datname = &#39;dxmediadb&#39; AND pid &lt;&gt; pg_backend_pid();&quot;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;primary-node-name&gt; -c persistence-node -- psql -c &quot;SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE pg_stat_activity.datname = &#39;dxmediadb&#39; AND pid &lt;&gt; pg_backend_pid();&quot;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>--<span class="w"> </span>psql<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE pg_stat_activity.datname = &#39;dxmediadb&#39; AND pid &lt;&gt; pg_backend_pid();&quot;</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>--<span class="w"> </span>psql<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE pg_stat_activity.datname = &#39;dxmediadb&#39; AND pid &lt;&gt; pg_backend_pid();&quot;</span>
+</code></pre></div>
 </div>
 </li>
 <li>
 <p>Drop the database <code>dxmediadb</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;primary-node-name&gt; -c persistence-node -- dropdb dxmediadb
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;primary-node-name&gt; -c persistence-node -- dropdb dxmediadb
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>--<span class="w"> </span>dropdb<span class="w"> </span>dxmediadb
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>--<span class="w"> </span>dropdb<span class="w"> </span>dxmediadb
+</code></pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you are getting the following error, run the commands from this step again until they are completed without errors.</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dropdb:<span class="w"> </span>database<span class="w"> </span>removal<span class="w"> </span>failed:<span class="w"> </span>ERROR:<span class="w">  </span>database<span class="w"> </span><span class="s2">&quot;dxmediadb&quot;</span><span class="w"> </span>is<span class="w"> </span>being<span class="w"> </span>accessed<span class="w"> </span>by<span class="w"> </span>other<span class="w"> </span>users
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>dropdb:<span class="w"> </span>database<span class="w"> </span>removal<span class="w"> </span>failed:<span class="w"> </span>ERROR:<span class="w">  </span>database<span class="w"> </span><span class="s2">&quot;dxmediadb&quot;</span><span class="w"> </span>is<span class="w"> </span>being<span class="w"> </span>accessed<span class="w"> </span>by<span class="w"> </span>other<span class="w"> </span>users
+</code></pre></div>
 </div>
 </li>
 <li>
 <p>Create the database:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;primary-node-name&gt; -c persistence-node -- /bin/bash -c &quot;createdb -O dxuser dxmediadb&quot;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;primary-node-name&gt; -c persistence-node -- /bin/bash -c &quot;createdb -O dxuser dxmediadb&quot;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;createdb -O dxuser dxmediadb&quot;</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;createdb -O dxuser dxmediadb&quot;</span>
+</code></pre></div>
 </div>
 </li>
 <li>
 <p>Restore the database:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;primary-node-name&gt; -c persistence-node -- /bin/bash -c &quot;psql dxmediadb &lt; /tmp/dxmediadb.dmp&quot;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;primary-node-name&gt; -c persistence-node -- /bin/bash -c &quot;psql dxmediadb &lt; /tmp/dxmediadb.dmp&quot;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;psql dxmediadb &lt; /tmp/dxmediadb.dmp&quot;</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;psql dxmediadb &lt; /tmp/dxmediadb.dmp&quot;</span>
+</code></pre></div>
 </div>
 </li>
 <li>
 <p>Restore the database connection limit:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;primary-node-name&gt; -c persistence-node -- psql -c &quot;ALTER DATABASE dxmediadb CONNECTION LIMIT 500;&quot;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;primary-node-name&gt; -c persistence-node -- psql -c &quot;ALTER DATABASE dxmediadb CONNECTION LIMIT 500;&quot;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>--<span class="w"> </span>psql<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;ALTER DATABASE dxmediadb CONNECTION LIMIT 500;&quot;</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>--<span class="w"> </span>psql<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;ALTER DATABASE dxmediadb CONNECTION LIMIT 500;&quot;</span>
+</code></pre></div>
 </div>
 </li>
 </ol>
@@ -2173,12 +2165,12 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 <ol>
 <li>
 <p><strong>Delete the DAM pod to restart it:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl delete pod &lt;dam-pod-name&gt; -n &lt;namespace&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl delete pod &lt;dam-pod-name&gt; -n &lt;namespace&gt;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>delete<span class="w"> </span>pod<span class="w"> </span>dx-deployment-digital-asset-management-0<span class="w"> </span>-n<span class="w"> </span>dxns
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>kubectl<span class="w"> </span>delete<span class="w"> </span>pod<span class="w"> </span>dx-deployment-digital-asset-management-0<span class="w"> </span>-n<span class="w"> </span>dxns
+</code></pre></div>
 </div>
 </li>
 </ol>

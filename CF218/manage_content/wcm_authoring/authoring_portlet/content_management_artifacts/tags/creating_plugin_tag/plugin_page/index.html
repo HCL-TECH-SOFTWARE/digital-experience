@@ -3970,25 +3970,18 @@
 <h2 id="theme-capability-rendering-plug-in">Theme capability rendering plug-in</h2>
 <p>Use the <code>ThemeCapability</code> rendering plug-in to retrieve the list of available theme capabilities of the page that is rendered. These capabilities are described in <em>Basic artifacts and their relation.</em> The plug-in returns the capabilities, in no specific order, as a string of name-value pairs that are separated by commas.</p>
 <p>Here is an example of a string that is returned when the <code>[Plugin:ThemeCapability]</code> tag is rendered on a page that uses the Lightweight profile theme:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>{analytics_aggregator=8.0, portal.livetext.hcard=8.0, widget_container=2.1, 
+<div class="language-text highlight"><pre><span></span><code>{analytics_aggregator=8.0, portal.livetext.hcard=8.0, widget_container=2.1, 
 active_site_analytics=8.0, portal.livetext.action=8.0, 
 open_ajax_hub=2.0, dojo=1.7, mashups.enabler=3.0.0.1, 
 content_mapping.picker=8.0, cp_tagging_rating=8.0, oneUI=3.0.1, 
 portal.livetext.adr=8.0, mashups.builder=3.0.0.1, 
 federated_documents.picker=8.0, portal.livetext.c2a=8.0}
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You can use the <code>Matches</code> plug-in to check for the availability of specific theme capabilities and then dynamically add markup to the rendered content. The following sample adds a string (<code>... Dojo is available ...</code>) to the markup only if the Dojo theme capability is available in the current rendering context:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:Matches text=&quot;[Plugin:ThemeCapability]&quot; pattern=&quot;.*dojo=.*&quot;] 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:Matches text=&quot;[Plugin:ThemeCapability]&quot; pattern=&quot;.*dojo=.*&quot;] 
 ... Dojo is available ...
 [/Plugin:Matches]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="url-encode-plug-in">URL encode plug-in</h2>
 <ul>
 <li>This plug-in encodes text so that it can be used in a URL.</li>

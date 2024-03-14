@@ -2719,8 +2719,8 @@
 <h2 id="setting-up-a-stand-alone-server">Setting up a stand-alone server</h2>
 <p>To set up your stand-alone server, start the configuration wizard. First, transfer your database. Click the <strong>Database Transfer</strong> configuration option in the wizard, and it assigns users and permissions, creates databases, obtains support for database collation, and transfers your database. After you transfer your database, enable your federated LDAP user registry.</p>
 <p>Log in to HCL Digital Experience to verify that the portal works:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://&lt;hostname.example.com&gt;:&lt;10039&gt;/wps/portal
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://&lt;hostname.example.com&gt;:&lt;10039&gt;/wps/portal
+</code></pre></div>
 <p>where:
 - <em>hostname.example.com</em> is the fully qualified host name of the server where the
 portal is running
@@ -2736,10 +2736,9 @@ for your environment.</p>
 </li>
 </ol>
 <p>If you are working with an HCL Digital Experience V8.5 or 9 software at a level earlier than CF18, the wizard address is http://your_server:10200/ibm/wizard. After installing CF18, the configuration wizard automatically changes to http://your_server:10200/hcl/wizard.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>!!!important
+<div class="language-text highlight"><pre><span></span><code>!!!important
     There is a known issue with Chrome version 45.x and the Configuration Wizard. If you are experiencing difficulties, use a different browser when you access the wizard.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ol>
 <li>Log in to the Configuration wizard with the administrative ID for the configuration wizard profile, cw_profile.</li>
 </ol>

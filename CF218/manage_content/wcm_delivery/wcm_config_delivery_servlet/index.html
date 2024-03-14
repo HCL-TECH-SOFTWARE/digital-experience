@@ -2208,8 +2208,8 @@
 <p>Users can access content that is displayed by using the Web Content Manager servlet by connecting to a URL. A servlet delivered website is used when you don't need to use any HCL Portal based features such as authoring tools.</p>
 <h2 id="accessing-a-web-page-by-using-a-servlet">Accessing a web page by using a servlet</h2>
 <p>The following URL structure is used to connect to a web page:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://[HOST]:[PORT]/wps/wcm/connect/[PATH]?srv=
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://[HOST]:[PORT]/wps/wcm/connect/[PATH]?srv=
+</code></pre></div>
 <p><strong>Non-ascii characters:</strong></p>
 <p>Non-ascii characters cannot be used in the query string section of URLs. For this reason, it is best not to name Web Content Manager items using Non-ASCII characters if you plan to use URLs to call Web Content Manager items.</p>
 <ul>
@@ -2238,32 +2238,29 @@
 <ul>
 <li>
 <p><strong>URL to content:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://[HOST]:[PORT]/wps/wcm/connect/[PATH]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://[HOST]:[PORT]/wps/wcm/connect/[PATH]
+</code></pre></div>
 <p>Example: <code>http://host:10039/wps/wcm/connect/sitearea/content</code></p>
 </li>
 <li>
 <p><strong>URL to content with a presentation template defined:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>http://[HOST]:[PORT]/wps/wcm/connect/[PATH]
+<div class="language-text highlight"><pre><span></span><code>http://[HOST]:[PORT]/wps/wcm/connect/[PATH]
 ?presentationtemplate=[libraryname/presentationtemplatename]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Example: <code>http://host:10039/wps/wcm/connect/sitearea/content?presentationtemplate=library/presentationtemplate</code></p>
 </li>
 <li>
 <p><strong>URL to a library component:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>http://[HOST]:[PORT]/wps/wcm/connect/[PATH]
+<div class="language-text highlight"><pre><span></span><code>http://[HOST]:[PORT]/wps/wcm/connect/[PATH]
 ?srv=cmpnt&amp;source=library&amp;cmpntname=[componentname]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Example: <code>http://host:10039/wps/wcm/connect/sitearea/content?srv=cmpnt&amp;source=library&amp;cmpntname=component</code></p>
 </li>
 <li>
 <p><strong>URL to a content component:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>http://[HOST]:[PORT]/wps/wcm/connect/[PATH]
+<div class="language-text highlight"><pre><span></span><code>http://[HOST]:[PORT]/wps/wcm/connect/[PATH]
 ?srv=cmpnt&amp;source=content&amp;cmpntname=[componentname]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Example: <code>http://host:10039/wps/wcm/connect/sitearea/content?srv=cmpnt&amp;source=content&amp;cmpntname=component</code></p>
 </li>
 </ul>
@@ -2272,8 +2269,8 @@
 <ul>
 <li>
 <p><strong>Example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://[HOST]:[PORT]/wps/wcm/connect/[PATH]?CACHE=SITE&amp;EXPIRES=REL+9000s
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://[HOST]:[PORT]/wps/wcm/connect/[PATH]?CACHE=SITE&amp;EXPIRES=REL+9000s
+</code></pre></div>
 <p>In this example, the content being retrieved by this URL is saved in the Basic Site Cache, and expired after 9000 seconds (two and half hours).</p>
 </li>
 </ul>

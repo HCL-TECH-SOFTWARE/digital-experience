@@ -3990,17 +3990,7 @@
 <h1 id="removing-person-tag-hidden-pages">Removing Person Tag hidden pages</h1>
 <p>Remove Person Tag hidden pages from migrated environments where Search for Portal Site was previously configured. If you migrated or updated to HCL Digital Experience 9.5 or 8.5 CF04 or later, then you do not need to complete these steps.</p>
 <p>You might find errors that are captured in the SystemOut.log file if the migrated system has Search for Portal Site configured and crawling runs. The following excerpt is provided as an example.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>00000052 PortletContai E com.ibm.wps.pe.pc.legacy.PortletContainerImpl 
+<div class="language-text highlight"><pre><span></span><code>00000052 PortletContai E com.ibm.wps.pe.pc.legacy.PortletContainerImpl 
          performBeginEvents EJPPG1122E: 
 
          An error occurred during portlet event processing.
@@ -4011,7 +4001,7 @@
          dynamicpersontag.DynamicPersonTagPortlet
 
          at com.ibm.wps.pe.pc.legacy.PortletContainerImpl.callPortletMethod(PortletContainerImpl.java:1308)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ol>
 <li>Remove the hidden pages to avoid these errors in the SystemOut.log.</li>
 <li>

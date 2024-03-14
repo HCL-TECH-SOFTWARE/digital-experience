@@ -2589,14 +2589,7 @@
 <strong>Note:</strong> When setting cookies, you must invoke the addProperty method before the response headers are committed. This should occur no later than during the render headers sub phase of the render lifecycle phase.</li>
 </ul>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>protected void doHeaders(RenderRequest request, RenderResponse response)
+<div class="language-text highlight"><pre><span></span><code>protected void doHeaders(RenderRequest request, RenderResponse response)
 {
     ... 
     Cookie c = new Cookie(&quot;myCookieName&quot;, &quot;myCookieValue&quot;);
@@ -2604,7 +2597,7 @@
     response.addProperty(c);
     ...
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 

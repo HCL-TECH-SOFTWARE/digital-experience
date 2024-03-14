@@ -2577,22 +2577,7 @@
 <h2 id="absolute-image-source-urls">Absolute image source URLs</h2>
 <p>Images within HTML and rich text elements can be specified by using absolute HTTP URLs within the image source attribute. The Web Content Integrator processes absolute image source URLs as specified in the feed.</p>
 <p>Example feed item:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;item&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;item&gt;
     &lt;title&gt;RichText Component With Image 1&lt;/title&gt;
     &lt;pubDate&gt;Thu, 30 Mar 2011 16:00:00 EDT&lt;/pubDate&gt;
     &lt;guid&gt;Image_Example_1&lt;/guid&gt;
@@ -2608,27 +2593,11 @@
       &lt;/ibmwcm:value&gt;
     &lt;/ibmwcm:element&gt;
   &lt;/item&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="relative-image-source-urls">Relative image source URLs</h2>
 <p>Images within HTML and rich text elements can be specified by using relative HTTP URLs within the image source attribute and a base URL from the link element of the item. The Web Content Integrator processes relative image source URLs as a concatenation of the item's link element and image source attributes in the HTML.</p>
 <p>Example feed item:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;item&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;item&gt;
     &lt;title&gt;RichText Component With Image 2&lt;/title&gt;
     &lt;pubDate&gt;Thu, 30 Mar 2011 16:00:00 EDT&lt;/pubDate&gt;
     &lt;guid&gt;Image_Example_2&lt;/guid&gt;
@@ -2645,28 +2614,11 @@
       &lt;/ibmwcm:value&gt;
     &lt;/ibmwcm:element&gt;
   &lt;/item&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="how-to-use-both-absolute-and-relative-image-source-urls">How to use both absolute and relative image source URLs</h2>
 <p>Images within HTML and rich text elements can be specified by using a combination of relative and absolute HTTP URLs within the image source attributes. The Web Content Integrator processes relative image source URLs as a concatenation of the item's link element and image source attributes in the HTML. The Web Content Integrator processes absolute image source URLs as specified in the feed.</p>
 <p>Example feed item:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;item&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;item&gt;
     &lt;title&gt;RichText Component With Image 3&lt;/title&gt;
     &lt;pubDate&gt;Thu, 30 Mar 2011 16:00:00 EDT&lt;/pubDate&gt;
     &lt;guid&gt;Image_Example_3&lt;/guid&gt;
@@ -2684,24 +2636,10 @@
       &lt;/ibmwcm:value&gt;
     &lt;/ibmwcm:element&gt;
   &lt;/item&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="expected-results-for-a-rich-text-component">Expected results for a rich text component</h2>
 <p>Example rich text component feed item:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;item&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;item&gt;
     &lt;title&gt;RichText Component With Image 4&lt;/title&gt;
     &lt;pubDate&gt;Thu, 30 Mar 2011 16:00:00 EDT&lt;/pubDate&gt;
     &lt;guid&gt;Image_Example_4&lt;/guid&gt;
@@ -2716,7 +2654,7 @@
       &lt;/ibmwcm:value&gt;
     &lt;/ibmwcm:element&gt;
   &lt;/item&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li>
 <p><strong>Rich text component with image processing disabled:</strong></p>
@@ -2749,21 +2687,7 @@
 </ul>
 <h2 id="expected-results-for-a-html-component">Expected results for a HTML component</h2>
 <p>Example feed item:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;item&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;item&gt;
     &lt;title&gt;HTML Component With Image 1&lt;/title&gt;
     &lt;pubDate&gt;Thu, 30 Mar 2011 16:00:00 EDT&lt;/pubDate&gt;
     &lt;guid&gt;Image_Example_5&lt;/guid&gt;
@@ -2778,7 +2702,7 @@
       &lt;/ibmwcm:value&gt;
     &lt;/ibmwcm:element&gt;
   &lt;/item&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li>
 <p><strong>HTML element with image processing disabled</strong></p>

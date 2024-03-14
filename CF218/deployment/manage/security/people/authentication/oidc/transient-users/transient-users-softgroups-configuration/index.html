@@ -4211,17 +4211,7 @@
 <p>This configuration is not tested on SQL or Oracle. But should work in general.</p>
 </div>
 <p>Use the following commands to create the database, tables and schema:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>CREATE<span class="w"> </span>DATABASE<span class="w"> </span>sgdb
+<div class="language-sh highlight"><pre><span></span><code>CREATE<span class="w"> </span>DATABASE<span class="w"> </span>sgdb
 
 CONNECT<span class="w"> </span>TO<span class="w"> </span>sgdb<span class="w"> </span>USER<span class="w"> </span>db2inst1<span class="w"> </span>USING<span class="w"> </span>&lt;YOUR_DB_PASSWORD&gt;
 
@@ -4232,7 +4222,7 @@ CREATE<span class="w"> </span>TABLE<span class="w"> </span>softgrouptest.SOFTGRO
 CREATE<span class="w"> </span>INDEX<span class="w"> </span>softgrouptest.SOFTGROUPSIX1<span class="w"> </span>ON<span class="w"> </span>softgrouptest.SOFTGROUPS<span class="w"> </span><span class="o">(</span>LASTMODIFIED<span class="w"> </span>DESC<span class="o">)</span><span class="p">;</span>
 
 COMMIT<span class="p">;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="configuring-a-data-source">Configuring a data source</h2>
 <p>When you create a data source, you associate it with a Java Database Connectivity (JDBC) provider that is configured to access a specific vendor database. The application server requires both objects for your applications to make calls to that particular database and receive data from it. The data source provides connection management capabilities that physically make possible these exchanges between your applications and the database.</p>
 <ol>
@@ -4429,12 +4419,10 @@ COMMIT<span class="p">;</span>
 </li>
 <li>
 <p>Restart the DX server:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/opt/HCL/AppServer/bin
+<div class="language-sh highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/opt/HCL/AppServer/bin
 ./stopServer.sh<span class="w"> </span>WebSphere_Portal
 ./startServer.sh<span class="w"> </span>WebSphere_Portal
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 <h2 id="configuring-the-vmm-rule-based-groups-repository">Configuring the VMM rule-based groups repository</h2>
@@ -4444,29 +4432,25 @@ COMMIT<span class="p">;</span>
 <li>Open a command prompt and change to wp_profile_root/ConfigEngine directory.</li>
 <li>
 <p>Run the following task to add the repository configuration to VMM:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh<span class="w"> </span>wp-create-cur<span class="w"> </span>-Dfederated.cur.id<span class="o">=</span>SoftGroups<span class="w"> </span>-Dfederated.cur.adapterClassName<span class="o">=</span>com.ibm.wps.vmm.adapter.softgroups.SoftgroupsAdapter<span class="w"> </span>-Dfederated.cur.baseDN<span class="o">=</span><span class="nv">o</span><span class="o">=</span>softgroups<span class="w"> </span>-DWasUserId<span class="o">=</span>yourwasuserid<span class="w"> </span>-DWasPassword<span class="o">=</span>yourwaspassword
-</code></pre></div></td></tr></table></div>
+<div class="language-sh highlight"><pre><span></span><code>./ConfigEngine.sh<span class="w"> </span>wp-create-cur<span class="w"> </span>-Dfederated.cur.id<span class="o">=</span>SoftGroups<span class="w"> </span>-Dfederated.cur.adapterClassName<span class="o">=</span>com.ibm.wps.vmm.adapter.softgroups.SoftgroupsAdapter<span class="w"> </span>-Dfederated.cur.baseDN<span class="o">=</span><span class="nv">o</span><span class="o">=</span>softgroups<span class="w"> </span>-DWasUserId<span class="o">=</span>yourwasuserid<span class="w"> </span>-DWasPassword<span class="o">=</span>yourwaspassword
+</code></pre></div>
 </li>
 <li>
 <p>Run the following command to update the repository configuration with custom properties:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh<span class="w"> </span>wp-create-cur-custom-property<span class="w"> </span>-Dcur.id<span class="o">=</span>SoftGroups<span class="w"> </span>-Dcur.name<span class="o">=</span>dataSource<span class="w"> </span>-Dcur.value<span class="o">=</span>nameofdatasource<span class="w"> </span>-DWasUserId<span class="o">=</span>wpsadmin<span class="w"> </span>-DWasPassword<span class="o">=</span>yourwaspassword
+<div class="language-sh highlight"><pre><span></span><code>./ConfigEngine.sh<span class="w"> </span>wp-create-cur-custom-property<span class="w"> </span>-Dcur.id<span class="o">=</span>SoftGroups<span class="w"> </span>-Dcur.name<span class="o">=</span>dataSource<span class="w"> </span>-Dcur.value<span class="o">=</span>nameofdatasource<span class="w"> </span>-DWasUserId<span class="o">=</span>wpsadmin<span class="w"> </span>-DWasPassword<span class="o">=</span>yourwaspassword
 
 ./ConfigEngine.sh<span class="w"> </span>wp-create-cur-custom-property<span class="w"> </span>-Dcur.id<span class="o">=</span>SoftGroups<span class="w"> </span>-Dcur.name<span class="o">=</span>dbSchema<span class="w"> </span>-Dcur.value<span class="o">=</span>yourschema<span class="w"> </span>-DWasUserId<span class="o">=</span>wpsadmin<span class="w"> </span>-DWasPassword<span class="o">=</span>yourwaspassword
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Example of DB2 specific tasks:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh<span class="w"> </span>wp-create-cur-custom-property<span class="w"> </span>-Dcur.id<span class="o">=</span>SoftGroups<span class="w"> </span>-Dcur.name<span class="o">=</span>dataSource<span class="w"> </span>-Dcur.value<span class="o">=</span>jdbc/sgdb<span class="w"> </span>-DWasUserId<span class="o">=</span>wpsadmin<span class="w"> </span>-DWasPassword<span class="o">=</span>wpsadmin
+<div class="language-sh highlight"><pre><span></span><code>./ConfigEngine.sh<span class="w"> </span>wp-create-cur-custom-property<span class="w"> </span>-Dcur.id<span class="o">=</span>SoftGroups<span class="w"> </span>-Dcur.name<span class="o">=</span>dataSource<span class="w"> </span>-Dcur.value<span class="o">=</span>jdbc/sgdb<span class="w"> </span>-DWasUserId<span class="o">=</span>wpsadmin<span class="w"> </span>-DWasPassword<span class="o">=</span>wpsadmin
 
 ./ConfigEngine.sh<span class="w"> </span>wp-create-cur-custom-property<span class="w"> </span>-Dcur.id<span class="o">=</span>SoftGroups<span class="w"> </span>-Dcur.name<span class="o">=</span>dbSchema<span class="w"> </span>-Dcur.value<span class="o">=</span>softgrouptest<span class="w"> </span>-DWasUserId<span class="o">=</span>wpsadmin<span class="w"> </span>-DWasPassword<span class="o">=</span>wpsadmin
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Enable the cross-repository group lookup for the repositories you want to use. To find Groups Entities in the SoftGroups Repository, run the following task:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh<span class="w"> </span>wp-update-group-repository-relationship<span class="w"> </span>-Drepository.id<span class="o">=</span>transientidp<span class="w"> </span>-Drepository.forgroups<span class="o">=</span>SoftGroups<span class="w"> </span>-DWasUserId<span class="o">=</span>wpsadmin<span class="w"> </span>-DWasPassword<span class="o">=</span>yourwaspassword
-</code></pre></div></td></tr></table></div>
+<div class="language-sh highlight"><pre><span></span><code>./ConfigEngine.sh<span class="w"> </span>wp-update-group-repository-relationship<span class="w"> </span>-Drepository.id<span class="o">=</span>transientidp<span class="w"> </span>-Drepository.forgroups<span class="o">=</span>SoftGroups<span class="w"> </span>-DWasUserId<span class="o">=</span>wpsadmin<span class="w"> </span>-DWasPassword<span class="o">=</span>yourwaspassword
+</code></pre></div>
 </li>
 </ol>
 <div class="admonition note">
@@ -4478,14 +4462,7 @@ COMMIT<span class="p">;</span>
 <ol>
 <li>
 <p>Edit the file <code>wimxmlextension.xml</code> in the directory <code>[PortalServer\_root]/config/cells/dockerCell/wim/model</code>. If the file does not exists create a new one. Add the following attribute definition to the file:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;sdo:datagraph<span class="w"> </span>xmlns:sdo<span class="o">=</span><span class="s2">&quot;commonj.sdo&quot;</span>
+<div class="language-sh highlight"><pre><span></span><code>&lt;sdo:datagraph<span class="w"> </span>xmlns:sdo<span class="o">=</span><span class="s2">&quot;commonj.sdo&quot;</span>
 <span class="w">    </span>xmlns:wim<span class="o">=</span><span class="s2">&quot;http://www.ibm.com/websphere/wim&quot;</span>&gt;
 <span class="w">    </span>&lt;wim:schema&gt;
 <span class="w">            </span>&lt;wim:propertySchema<span class="w"> </span><span class="nv">nsURI</span><span class="o">=</span><span class="s2">&quot;http://www.ibm.com/websphere/wim&quot;</span><span class="w"> </span><span class="nv">dataType</span><span class="o">=</span><span class="s2">&quot;String&quot;</span><span class="w"> </span><span class="nv">multiValued</span><span class="o">=</span><span class="s2">&quot;false&quot;</span><span class="w"> </span><span class="nv">propertyName</span><span class="o">=</span><span class="s2">&quot;rule&quot;</span>&gt;
@@ -4493,28 +4470,25 @@ COMMIT<span class="p">;</span>
 <span class="w">            </span>&lt;/wim:propertySchema&gt;
 <span class="w">    </span>&lt;/wim:schema&gt;
 &lt;/sdo:datagraph&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Edit the file <code>wimconfig.xml</code> in the directory <code>[PortalServer\_root]/config/cells/dockerCell/wim/config</code> and ensure that the following value exists, if not update it:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;config:CustomProperties<span class="w"> </span><span class="nv">name</span><span class="o">=</span><span class="s2">&quot;dataSource&quot;</span><span class="w"> </span><span class="nv">value</span><span class="o">=</span><span class="s2">&quot;jdbc/sgdb&quot;</span>/&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-sh highlight"><pre><span></span><code>&lt;config:CustomProperties<span class="w"> </span><span class="nv">name</span><span class="o">=</span><span class="s2">&quot;dataSource&quot;</span><span class="w"> </span><span class="nv">value</span><span class="o">=</span><span class="s2">&quot;jdbc/sgdb&quot;</span>/&gt;
+</code></pre></div>
 </li>
 </ol>
 <h2 id="enabling-softgroups-portlet">Enabling Softgroups portlet</h2>
 <h3 id="deploying-softgroups-war">Deploying Softgroups WAR</h3>
 <p>To create the Softgroups portlet application, you need additional resources, that is the WAR file. To deploy this WAR file run the following command:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/opt/HCL/wp_profile/ConfigEngine
+<div class="language-sh highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/opt/HCL/wp_profile/ConfigEngine
 ./ConfigEngine.sh<span class="w"> </span>action-deploy-portlets-wp.portlets.softgroups<span class="w"> </span>-DPortalAdminPwd<span class="o">=</span>wpsadmin
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>After the config engine task is executed, ensure to restart the portal server using the following commands:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/opt/HCL/AppServer/bin
+<div class="language-sh highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/opt/HCL/AppServer/bin
 ./stopServer.sh<span class="w"> </span>WebSphere_Portal
 ./startServer.sh<span class="w"> </span>WebSphere_Portal
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h3 id="creating-softgroups-admin-page">Creating Softgroups Admin page</h3>
 <p>Once the WAR is deployed, create an <strong>Admin</strong> page which will allow you to define the rule-based groups using the following steps:</p>
 <ol>

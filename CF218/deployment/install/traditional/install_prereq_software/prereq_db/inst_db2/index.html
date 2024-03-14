@@ -2149,14 +2149,14 @@
 <ol>
 <li>
 <p>Get the value for the TCP/IP service name (SVCENAME). Open a shell and log in as the instance owner. Enter the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>db2 &quot;get dbm cfg&quot;|grep (SVCENAME)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>db2 &quot;get dbm cfg&quot;|grep (SVCENAME)
+</code></pre></div>
 <p>A typical value for the SVCENAME is (SVCENAME) = db2c_db2inst1</p>
 </li>
 <li>
 <p>Get the DB2 port number by using the SVCENAME value. Enter the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>echo /etc/services | grep your\_SVCENAME\_value
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>echo /etc/services | grep your\_SVCENAME\_value
+</code></pre></div>
 <p>A typical output for the port number:</p>
 <p>your_SVCENAME_value 50000/tcp</p>
 <p>In this example, 50000 is the port number.</p>
@@ -2166,14 +2166,14 @@
 <ol>
 <li>
 <p>Get the value for the TCP/IP service name (SVCENAME). Open a DB2 Command Window and enter the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>db2 get dbm cfg | findstr (SVCENAME)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>db2 get dbm cfg | findstr (SVCENAME)
+</code></pre></div>
 <p>A typical value for the SVCENAME is (SVCENAME) = db2c_DB2</p>
 </li>
 <li>
 <p>Get the DB2 port number by using the SVCENAME value. Enter the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>type %SystemRoot%\system32\drivers\etc\services | findstr db2c_DB2
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>type %SystemRoot%\system32\drivers\etc\services | findstr db2c_DB2
+</code></pre></div>
 <p>A typical output for the port number:</p>
 <p>your_SVCENAME_value 50000/tcp</p>
 <p>In this example, 50000 is the port number.</p>

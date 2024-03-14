@@ -4008,17 +4008,15 @@
 </li>
 <li>
 <p><strong>Jacl example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;$Project listall
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;$Project listall
 &#39;&quot;TestProject1&quot; &quot;TestProject2&quot;&#39;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Jython example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;Project.listall()
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;Project.listall()
 &#39;&quot;TestProject1&quot; &quot;TestProject2&quot;&#39;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="create-projects">Create projects</h2>
@@ -4030,17 +4028,15 @@
 </li>
 <li>
 <p><strong>Jacl example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;$Project create &quot;TestProject1&quot;
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;$Project create &quot;TestProject1&quot;
 TestProject1
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Jython example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>Project.create(&quot;TestProject1&quot;)
+<div class="language-text highlight"><pre><span></span><code>Project.create(&quot;TestProject1&quot;)
 &#39;TestProject1&#39;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <div class="admonition note">
@@ -4056,13 +4052,13 @@ TestProject1
 </li>
 <li>
 <p><strong>Jacl example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;$Project delete &quot;TestProject1&quot;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;$Project delete &quot;TestProject1&quot;
+</code></pre></div>
 </li>
 <li>
 <p><strong>Jython example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;Project.delete(&quot;TestProject1&quot;)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;Project.delete(&quot;TestProject1&quot;)
+</code></pre></div>
 </li>
 </ul>
 <h2 id="set-active-project">Set active project</h2>
@@ -4075,13 +4071,13 @@ TestProject1
 </li>
 <li>
 <p><strong>Jacl example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;$Portal setproject &quot;TestProject1&quot;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;$Portal setproject &quot;TestProject1&quot;
+</code></pre></div>
 </li>
 <li>
 <p><strong>Jython example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;Portal.setproject(&quot;TestProject1&quot;)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;Portal.setproject(&quot;TestProject1&quot;)
+</code></pre></div>
 </li>
 </ul>
 <h2 id="retrieve-project-details">Retrieve project details</h2>
@@ -4104,28 +4100,7 @@ TestProject1
 </li>
 <li>
 <p><strong>Jacl example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;$Project details &quot;TestProject2&quot;
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;$Project details &quot;TestProject2&quot;
 uuid                 : 47c7f3bd-b004-4b94-a6b5-397272d69eb7
 state                : ACTIVE
 name                 : TestProject2
@@ -4147,32 +4122,11 @@ history              : 9/24/13 1:02 PM: Document created by wpsadmin
                        9/24/13 6:35 PM: Project state changed to Active
 items:
   testpagep2 (draft / new / publish pending)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Jython example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;print Project.details(&quot;TestProject2&quot;)
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;print Project.details(&quot;TestProject2&quot;)
 uuid                 : 47c7f3bd-b004-4b94-a6b5-397272d69eb7
 state                : ACTIVE
 name                 : TestProject2
@@ -4194,7 +4148,7 @@ history              : 9/24/13 1:02 PM: Document created by wpsadmin
                        9/24/13 6:35 PM: Project state changed to Active
 items:
   testpagep2 (draft / new / publish pending)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="retrieve-translated-attributes">Retrieve translated attributes</h2>
@@ -4211,17 +4165,15 @@ items:
 </li>
 <li>
 <p><strong>Jacl example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;$Project nlsget &quot;TestProject1&quot; descr en
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;$Project nlsget &quot;TestProject1&quot; descr en
 This is the description for TestProject1.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Jython example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;print Project.nlsget(&quot;TestProject1&quot;, &quot;descr&quot;, &quot;en&quot;)
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;print Project.nlsget(&quot;TestProject1&quot;, &quot;descr&quot;, &quot;en&quot;)
 This is the description for TestProject1.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <p>If you do not specify a value for the locale parameter, the currently selected locale is used.</p>
@@ -4234,21 +4186,7 @@ This is the description for TestProject1.
 </li>
 <li>
 <p><strong>Jacl example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;$Project submitforreview TestProject
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;$Project submitforreview TestProject
 
 wsadmin&gt;$Project details TestProject
 uuid                 : 035c4488-973f-44a4-aa8e-92b9f36e2412
@@ -4263,25 +4201,11 @@ history              : 10/16/13 6:23 PM: Document created by wpsadmin
                        10/16/13 6:26 PM: Project state changed to Review
 items:
   testpage (draft / new / publish pending)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Jython example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;Project.submitforreview(&quot;TestProject&quot;)
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;Project.submitforreview(&quot;TestProject&quot;)
 
 wsadmin&gt;print Project.details(&quot;TestProject&quot;)
 uuid                 : 035c4488-973f-44a4-aa8e-92b9f36e2412
@@ -4296,7 +4220,7 @@ history              : 10/16/13 6:23 PM: Document created by wpsadmin
                        10/16/13 6:26 PM: Project state changed to Review
 items:
   testpage (draft / new / publish pending)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="withdraw-a-project-from-review">Withdraw a project from review</h2>
@@ -4308,29 +4232,7 @@ items:
 </li>
 <li>
 <p><strong>Jacl example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;$Project withdrawfromreview TestProject
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;$Project withdrawfromreview TestProject
 
 wsadmin&gt;$Project details TestProject
 uuid                 : 035c4488-973f-44a4-aa8e-92b9f36e2412
@@ -4353,33 +4255,11 @@ history              : 10/16/13 6:23 PM: Document created by wpsadmin
                        10/16/13 6:28 PM: Project state changed to Active
 items:
   testpage (draft / new / publish pending)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Jython example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;Project.withdrawfromreview(&quot;TestProject&quot;)
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;Project.withdrawfromreview(&quot;TestProject&quot;)
 
 wsadmin&gt;print Project.details(&quot;TestProject&quot;)
 uuid                 : 035c4488-973f-44a4-aa8e-92b9f36e2412
@@ -4402,7 +4282,7 @@ history              : 10/16/13 6:23 PM: Document created by wpsadmin
                        10/16/13 6:28 PM: Project state changed to Active
 items:
   testpage (draft / new / publish pending)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="approve-projects">Approve projects</h2>
@@ -4411,48 +4291,19 @@ items:
 <ul>
 <li>
 <p>Jacl syntax:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>$Project approve &quot;project_name&quot;
+<div class="language-text highlight"><pre><span></span><code>$Project approve &quot;project_name&quot;
 $Project approve &quot;project_name&quot; &quot;comment&quot;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Jython syntax:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>Project.approve(&quot;project_name&quot;)
+<div class="language-text highlight"><pre><span></span><code>Project.approve(&quot;project_name&quot;)
 Project.approve(&quot;project_name&quot;, &quot;comment&quot;)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Jacl example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;$Project approve TestProject &quot;ok&quot;
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;$Project approve TestProject &quot;ok&quot;
 
 wsadmin&gt;$Project details TestProject
 uuid                 : 035c4488-973f-44a4-aa8e-92b9f36e2412
@@ -4480,37 +4331,11 @@ history              : 10/16/13 6:23 PM: Document created by wpsadmin
                        10/16/13 6:28 PM: Project state changed to Pending
 items:
   testpage (draft / new / publish pending)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Jython example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;Project.approve(&quot;TestProject1&quot;)
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;Project.approve(&quot;TestProject1&quot;)
 wsadmin&gt;print Project.details(&quot;TestProject1&quot;)
 uuid                 : 035c4488-973f-44a4-aa8e-92b9f36e2412
 state                : PENDING
@@ -4537,7 +4362,7 @@ history              : 10/16/13 6:23 PM: Document created by wpsadmin
                        10/16/13 6:28 PM: Project state changed to Pending
 items:
   testpage (draft / new / publish pending)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="decline-projects">Decline projects</h2>
@@ -4545,39 +4370,19 @@ items:
 <ul>
 <li>
 <p>Jacl syntax:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>$Project decline &quot;project\_name&quot;
+<div class="language-text highlight"><pre><span></span><code>$Project decline &quot;project\_name&quot;
 $Project decline &quot;project\_name&quot; &quot;comment&quot;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Jython syntax:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>Project.decline(&quot;project\_name&quot;)
+<div class="language-text highlight"><pre><span></span><code>Project.decline(&quot;project\_name&quot;)
 Project.decline(&quot;project\_name&quot;, &quot;comment&quot;)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Jacl example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;$Project decline TestProject &quot;needs rework&quot;
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;$Project decline TestProject &quot;needs rework&quot;
 
 wsadmin&gt;$Project details TestProject
 uuid                 : 035c4488-973f-44a4-aa8e-92b9f36e2412
@@ -4596,28 +4401,11 @@ history              : 10/16/13 6:23 PM: Document created by wpsadmin
                        10/16/13 6:26 PM: Project state changed to Active
 items:
   testpage (draft / new / publish pending)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Jython example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;Project.decline(&quot;TestProject1&quot;)
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;Project.decline(&quot;TestProject1&quot;)
 wsadmin&gt;print Project.details(&quot;TestProject1&quot;)
 uuid                 : 035c4488-973f-44a4-aa8e-92b9f36e2412
 state                : ACTIVE
@@ -4635,7 +4423,7 @@ history              : 10/16/13 6:23 PM: Document created by wpsadmin
                        10/16/13 6:26 PM: Project state changed to Active
 items:
   testpage (draft / new / publish pending)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="approve-all-documents-of-a-project">Approve all documents of a project</h2>
@@ -4647,20 +4435,7 @@ items:
 </li>
 <li>
 <p><strong>Jacl example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;$Project approvedocuments TestProject
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;$Project approvedocuments TestProject
 
 wsadmin&gt;$Project details TestProject
 uuid                 : 5dffe3e4-59d1-4abf-8697-3e62a29a0cbf
@@ -4674,24 +4449,11 @@ history              : 10/16/13 6:14 PM: Document created by wpsadmin
                        10/16/13 6:16 PM: Project state changed to Pending
 items:
   testpage (draft / new / publish pending)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Jython example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;Project.approvedocuments(&quot;TestProject&quot;)
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;Project.approvedocuments(&quot;TestProject&quot;)
 
 wsadmin&gt;Project.details(&quot;TestProject&quot;)
 uuid                 : 5dffe3e4-59d1-4abf-8697-3e62a29a0cbf
@@ -4705,7 +4467,7 @@ history              : 10/16/13 6:14 PM: Document created by wpsadmin
                        10/16/13 6:16 PM: Project state changed to Pending
 items:
   testpage (draft / new / publish pending)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="decline-all-documents-of-a-project">Decline all documents of a project</h2>
@@ -4717,20 +4479,7 @@ items:
 </li>
 <li>
 <p><strong>Jacl example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;$Project declinedocuments TestProject
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;$Project declinedocuments TestProject
 wsadmin&gt;$Project details TestProject
 uuid                 : 5dffe3e4-59d1-4abf-8697-3e62a29a0cbf
 state                : ACTIVE
@@ -4744,24 +4493,11 @@ history              : 10/16/13 6:14 PM: Document created by wpsadmin
                        10/16/13 6:18 PM: Project state changed to Active
 items:
   testpage (draft / new)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Jython example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;$Project.declinedocuments(&quot;TestProject&quot;)
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;$Project.declinedocuments(&quot;TestProject&quot;)
 wsadmin&gt;$Project.details(&quot;TestProject&quot;)
 uuid                 : 5dffe3e4-59d1-4abf-8697-3e62a29a0cbf
 state                : ACTIVE
@@ -4775,7 +4511,7 @@ history              : 10/16/13 6:14 PM: Document created by wpsadmin
                        10/16/13 6:18 PM: Project state changed to Active
 items:
   testpage (draft / new)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="publish-projects">Publish projects</h2>
@@ -4787,36 +4523,7 @@ items:
 </li>
 <li>
 <p><strong>Jacl example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;$Project publish TestProject
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;$Project publish TestProject
 
 wsadmin&gt;$Project details TestProject
 uuid                 : 035c4488-973f-44a4-aa8e-92b9f36e2412
@@ -4846,39 +4553,11 @@ history              : 10/16/13 6:23 PM: Document created by wpsadmin
                        10/16/13 6:29 PM: Project state changed to Published
 items:
   testpage (published)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Jython example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;Project.publish(&quot;TestProject1&quot;)
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;Project.publish(&quot;TestProject1&quot;)
 wsadmin&gt;print Project.details(&quot;TestProject1&quot;)
 uuid                 : 035c4488-973f-44a4-aa8e-92b9f36e2412
 state                : PUBLISHED
@@ -4907,7 +4586,7 @@ history              : 10/16/13 6:23 PM: Document created by wpsadmin
                        10/16/13 6:29 PM: Project state changed to Published
 items:
   testpage (published)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="examples">Examples</h2>
@@ -4925,14 +4604,7 @@ items:
 </li>
 <li>
 <p><strong>Jacl example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>$Portal login
+<div class="language-text highlight"><pre><span></span><code>$Portal login
 set myproject [$Project create &quot;My new project&quot;
 $Project details $myproject
 $Portal setproject $myproject
@@ -4940,18 +4612,11 @@ $Content find any un ibm.portal.Home select
 $Content create page testpage1 html shared public
 $Portal setproject
 $Portal logout
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Jython example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>Portal.login()
+<div class="language-text highlight"><pre><span></span><code>Portal.login()
 myproject = Project.create(&quot;My new project&quot;)
 Project.details(myproject)
 Portal.setproject(myproject)
@@ -4959,7 +4624,7 @@ Content.find(&quot;any&quot;, &quot;un&quot;, &quot;ibm.portal.Home&quot;, &quot
 Content.create(&quot;page&quot;,&quot;testpage1&quot;,&quot;html&quot;, &quot;shared&quot;, &quot;public&quot;)
 Portal.setproject()
 Portal.logout()
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <details class="info" open="open">

@@ -3115,15 +3115,7 @@
 <ol>
 <li>
 <p>Export the theme. You can export all themes that are defined for HCL Digital Experience (DX) with the following script, or insert the specific theme object ID you want to export.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;request
 xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
 xsi:noNamespaceSchemaLocation=&quot;PortalConfig_8.5.0.xsd&quot; type=&quot;export&quot;
@@ -3132,13 +3124,13 @@ create-oids=&quot;true&quot;&gt;
        &lt;theme action=&quot;export&quot; objectid=&quot;*&quot; /&gt;
     &lt;/portal&gt;
 &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Modify the value of the resourceaggregation.autoLoadPortletCapabilities parameter to true or false, or add the parameter if it does not exist.</p>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;parameter name=&quot;resourceaggregation.autoLoadPortletCapabilities&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;&lt;![CDATA[true]]&gt;&lt;/parameter&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;parameter name=&quot;resourceaggregation.autoLoadPortletCapabilities&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;&lt;![CDATA[true]]&gt;&lt;/parameter&gt;
+</code></pre></div>
 </li>
 <li>
 <p>Import the XML file with the command line or Import XML.</p>

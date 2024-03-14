@@ -3492,8 +3492,8 @@
 </li>
 <li>
 <p>Start the WebSphere Integrated Solutions Console by entering the following string in the <strong>URL location</strong> field of a web browser:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://example.com:admin_port/ibm/console
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://example.com:admin_port/ibm/console
+</code></pre></div>
 <p>where <code>example.com</code> is the name of your server or node host name of your server and <code>admin_port</code> is the port that is assigned to the WebSphere Integrated Solutions Console.</p>
 </li>
 <li>
@@ -3552,10 +3552,9 @@
 <ol>
 <li>
 <p>Locate the properties file for the appropriate Resource Environment Provider:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>-   The properties files for HCL Portal are in the directory `wp_profile_root/PortalServer/config`.
+<div class="language-text highlight"><pre><span></span><code>-   The properties files for HCL Portal are in the directory `wp_profile_root/PortalServer/config`.
 -   The properties files for HCL Web Content Manager are in the directory `wp_profile_root/PortalServer/wcm/shared/app/config/wcmservices`.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If there is no default properties file for a Resource Environment Provider, for example, for WP DynamicContentSpotMappings, create a new properties file as follows:</p>
 <ol>
 <li>
@@ -3571,8 +3570,8 @@
 <li>
 <p>Edit the properties file and modify or add configuration properties as needed.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>newDynamicContent=res:/CustomThemeContext/themes/html/MyTheme/dynamicContent.jsp
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>newDynamicContent=res:/CustomThemeContext/themes/html/MyTheme/dynamicContent.jsp
+</code></pre></div>
 </li>
 <li>
 <p>Save the updated properties file.</p>

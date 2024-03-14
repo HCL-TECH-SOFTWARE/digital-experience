@@ -2180,19 +2180,15 @@
 <p>The main use of device classes is by modules, which can use them to specify when a subcontribution resource is used. Dynamic content spots can also target a device class with a multiview choice (MVC) URL. For more information, see <a href="../../../../build_sites/themes_skins/device_classes/rwd_mvcuri_scheme/">mvc:URI scheme</a>. The device class is available as an attribute on the Composite Capabilities/Preference Profiles and can be retrieved within a JSP. You can also use device equations, which are device classes with Boolean logic for further control of what devices receive which set of resources. For more information, see <a href="../../../../build_sites/themes_skins/device_classes/themeopt_devclass_equat/">Device class equations</a>. There is a global variable available on the configuration object that can help targeting code in the JavaScript editor. For more information, see <a href="../../../../build_sites/themes_skins/device_classes/themeopt_devclass_devlop/">Additional information about device classes for developers</a>.</p>
 <p>There are some cases where you cannot use device classes with the device class logic equations. They cannot be used to determine layout templates, page filtering with the <code>supported-deviceclass</code> tag, and personalization. Personalization cannot use device equation logic directly as defined by the Boolean logic. But it can create its own targeting rules of Boolean logic with the visibility rules editor. For more information, see <a href="../../../../build_sites/themes_skins/device_classes/">Device classes</a>.</p>
 <p>A global JavaScript variable is provided for further customizing the user experience.  The global variable <code>com_ibm_device_class</code> provides an array list of all currently set devices classes. If none are set, it is an empty array. For example, if you have JavaScript specific for processing smartphones, you can include the following code.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>if (com_ibm_device_class.indexOf(&quot;smartphone&quot;) !== -1) {
+<div class="language-text highlight"><pre><span></span><code>if (com_ibm_device_class.indexOf(&quot;smartphone&quot;) !== -1) {
 //process smartphone
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If you wanted to be more specific and target an iOS device that runs in a MobileFirst® container, you can include the following code.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>if (com_ibm_device_class.indexOf(&quot;ios&quot;) !== -1 &amp;&amp; com_ibm_device_class.indexOf(&quot;worklight&quot;) !== -1 ) {
+<div class="language-text highlight"><pre><span></span><code>if (com_ibm_device_class.indexOf(&quot;ios&quot;) !== -1 &amp;&amp; com_ibm_device_class.indexOf(&quot;worklight&quot;) !== -1 ) {
 //process ios worklight
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

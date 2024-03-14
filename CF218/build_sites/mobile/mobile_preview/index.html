@@ -2074,40 +2074,7 @@
 <ol>
 <li>
 <p><strong>Create a new Content Item</strong> (reference the <a href="../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/content_items/">Create Content Items</a> topic for additional information) for use with the designated Authoring Template or Page Template, that renders the following HTML:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span></pre></div></td><td class="code"><div><pre><span></span><code>[IfEditMode]
+<div class="language-text highlight"><pre><span></span><code>[IfEditMode]
 &lt;h2&gt;Mobile Preview Icon&lt;/h2&gt;
 [/IfEditMode]
 
@@ -2141,19 +2108,11 @@
 &lt;/div&gt;
 [/Plugin:ifNotDevice]
 [/IfNotEditMode]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>In the specified Content or Page template, include the Content item created in Step 1 as a Content Item that launches the Mobile Preview simulator as a button directly on a page (by using Specified Content on the Web Content Viewer).</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;c:set var=&quot;mobilePreview&quot; value=&quot;${pageContext.request.contextPath}/mobilepreview/MobileBrowserSimulator/index.html?webpage=${fn:escapeXml(wp.selectionModel.selected.urlGeneration.noNavigationalState.allowRelativeURL)}&quot;/&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;c:set var=&quot;mobilePreview&quot; value=&quot;${pageContext.request.contextPath}/mobilepreview/MobileBrowserSimulator/index.html?webpage=${fn:escapeXml(wp.selectionModel.selected.urlGeneration.noNavigationalState.allowRelativeURL)}&quot;/&gt;
 
 &lt;portal-logic:if loggedIn=&quot;yes&quot;&gt;
   &lt;div class=&quot;wb-mobile-preview-container&quot;&gt;
@@ -2162,7 +2121,7 @@
     &lt;/a&gt;
   &lt;/div&gt;
 &lt;/portal-logic:if&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 <p>Option 2: Reference the Mobile Preview simulator for launch in an HCL DX theme</p>
@@ -2173,21 +2132,13 @@
 <ol>
 <li>
 <p>As shown in the following example, the Mobile Preview simulator can be referenced for launch in a Simple Theme, using the <code>st_wcm_content</code> Dynamic Content spot:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;a rel=&quot;dynamic-content&quot; href=&quot;dyn-cs:id:st_wcm_content?path=myLibrary/mySiteArea/mobilePreview.html&quot;&gt;&lt;/a&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;a rel=&quot;dynamic-content&quot; href=&quot;dyn-cs:id:st_wcm_content?path=myLibrary/mySiteArea/mobilePreview.html&quot;&gt;&lt;/a&gt;
+</code></pre></div>
 </li>
 </ol>
 <p>Option 3: Access the Mobile Preview simulator from a Dynamic Content Spot configured to the Woodburn Studio demonstration site</p>
 <p>In Woodburn Studio demonstration site delivered in HCL DX 9.5 CF19 and later releases, the Mobile Preview Simulator is added as a Dynamic Content Spot in the default theme.html. This serves to make the simulator capability available to all of the Woodburn Studio demonstration site pages by default. The code example below shows how the Dynamic Content Spot is added to the Woodburn Studio demonstration site:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;c:set var=&quot;mobilePreview&quot; value=&quot;${pageContext.request.contextPath}/mobilepreview/MobileBrowserSimulator/index.html?webpage=${fn:escapeXml(wp.selectionModel.selected.urlGeneration.noNavigationalState.allowRelativeURL)}&quot;/&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;c:set var=&quot;mobilePreview&quot; value=&quot;${pageContext.request.contextPath}/mobilepreview/MobileBrowserSimulator/index.html?webpage=${fn:escapeXml(wp.selectionModel.selected.urlGeneration.noNavigationalState.allowRelativeURL)}&quot;/&gt;
 
 &lt;portal-logic:if loggedIn=&quot;yes&quot;&gt;
   &lt;div class=&quot;wb-mobile-preview-container&quot;&gt;
@@ -2196,11 +2147,10 @@
     &lt;/a&gt;
   &lt;/div&gt;
 &lt;/portal-logic:if&gt;  
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;!-- mobile preview button --&gt;
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;!-- mobile preview button --&gt;
 &lt;a rel=&quot;dynamic-content&quot; href=&quot;dyn-cs:id:MP_button&quot;&gt;&lt;/a&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following examples demonstrate use of the Mobile Preview simulator to view display of the Woodburn Studio demonstration site on mobile device displays.</p>
 <p><img alt="Using the Mobile Preview simulator to view Woodburn Studio demonstration site display on mobile devices" src="../../../images/using_mobile_preview_simulator.png" /></p>
 

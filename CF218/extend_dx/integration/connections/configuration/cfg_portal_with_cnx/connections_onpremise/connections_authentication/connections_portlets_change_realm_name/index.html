@@ -3031,8 +3031,8 @@
 </li>
 <li>
 <p>Run the following task from the wp_profile_root/ConfigEngine directory to set this realm as the default realm:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh wp-default-realm -DWasPassword=password
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh wp-default-realm -DWasPassword=password
+</code></pre></div>
 </li>
 <li>
 <p>Stop and restart all necessary servers to propagate your changes.</p>
@@ -3044,8 +3044,8 @@
 <ol>
 <li>
 <p>Run the following command from the wp_profile_root/ConfigEngine directory to replace the existing WebSphere Application Server administrative user ID and group ID with the new user and group.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh wp-change-was-admin-user -DWasPassword=password -DnewAdminId=newadminid -DnewAdminPw=newpassword -DnewAdminGroupId=newadmingroupid
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh wp-change-was-admin-user -DWasPassword=password -DnewAdminId=newadminid -DnewAdminPw=newpassword -DnewAdminGroupId=newadmingroupid
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Important</p>
 <p>You must provide the full distinguished name (DN) for the newAdminId and newAdminGroupId parameters.</p>
@@ -3060,8 +3060,8 @@
 </li>
 <li>
 <p>Run this task to replace the old HCL Portal administrative user ID and group ID with the new user and group:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh wp-change-portal-admin-user -DWasPassword=password -DnewAdminId=newadminid -DnewAdminPw=newpassword -DnewAdminGroupId=newadmingroupid
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh wp-change-portal-admin-user -DWasPassword=password -DnewAdminId=newadminid -DnewAdminPw=newpassword -DnewAdminGroupId=newadmingroupid
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Important</p>
 <p>You must provide the full distinguished name (DN) for the newAdminId and newAdminGroupId parameters.</p>

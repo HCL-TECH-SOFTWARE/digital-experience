@@ -2379,12 +2379,12 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux and Apple macOS</label><label for="__tabbed_1_2">Microsoft Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>make<span class="w"> </span>unlink
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>make<span class="w"> </span>unlink
+</code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>make_unlink.bat
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>make_unlink.bat
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -2398,20 +2398,16 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Linux and Apple macOS</label><label for="__tabbed_2_2">Microsoft Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">CONTAINER_RUNTIME</span><span class="o">=</span>&lt;YOUR_CONTAINER_RUNTIME&gt;
+<div class="language-bash highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">CONTAINER_RUNTIME</span><span class="o">=</span>&lt;YOUR_CONTAINER_RUNTIME&gt;
 
 <span class="c1"># For example: export CONTAINER_RUNTIME=podman</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-batch highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">set</span> <span class="nv">CONTAINER_RUNTIME</span><span class="p">=&lt;</span>YOUR_CONTAINER_RUNTIME&gt;
+<div class="language-batch highlight"><pre><span></span><code><span class="k">set</span> <span class="nv">CONTAINER_RUNTIME</span><span class="p">=&lt;</span>YOUR_CONTAINER_RUNTIME&gt;
 
 <span class="p">:</span><span class="c1">: For example: set CONTAINER_RUNTIME=podman</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -2422,12 +2418,12 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Linux and Apple macOS</label><label for="__tabbed_3_2">Microsoft Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>docker<span class="w"> </span>load<span class="w"> </span>&lt;<span class="w"> </span>dxclient.tar.gz
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>docker<span class="w"> </span>load<span class="w"> </span>&lt;<span class="w"> </span>dxclient.tar.gz
+</code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-batch highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>docker load -i dxclient.tar.gz
-</code></pre></div></td></tr></table></div>
+<div class="language-batch highlight"><pre><span></span><code>docker load -i dxclient.tar.gz
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -2438,13 +2434,13 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Linux and Apple macOS</label><label for="__tabbed_4_2">Microsoft Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>&lt;working-directory&gt;/bin:<span class="nv">$PATH</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>&lt;working-directory&gt;/bin:<span class="nv">$PATH</span>
+</code></pre></div>
 </div>
 <div class="tabbed-block">
 <p>Open command prompt, add <code>dxclient.bat</code> script in the bin directory to the PATH variable, to call DXClient from any directory.</p>
-<div class="language-batch highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">set</span> <span class="nv">PATH</span><span class="p">=&lt;</span>working-directory<span class="p">&gt;</span>\bin;<span class="nv">%PATH%</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-batch highlight"><pre><span></span><code><span class="k">set</span> <span class="nv">PATH</span><span class="p">=&lt;</span>working-directory<span class="p">&gt;</span>\bin;<span class="nv">%PATH%</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -2458,14 +2454,11 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Linux and Apple macOS</label><label for="__tabbed_5_2">Microsoft Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>chmod<span class="w"> </span>xxx<span class="w"> </span>&lt;working-directory&gt;/bin
+<div class="language-bash highlight"><pre><span></span><code>chmod<span class="w"> </span>xxx<span class="w"> </span>&lt;working-directory&gt;/bin
 
 <span class="c1"># where xxx is a 3-digit number where each digit can be anything from 0 to 7.</span>
 <span class="c1"># Ref: https://wiki.archlinux.org/title/File_permissions_and_attributes#Numeric_method</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 <div class="tabbed-block">
 <ol>
@@ -2484,24 +2477,18 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Linux and Apple macOS</label><label for="__tabbed_6_2">Microsoft Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">VOLUME_DIR</span><span class="o">=</span>storeForScriptApplication
+<div class="language-bash highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">VOLUME_DIR</span><span class="o">=</span>storeForScriptApplication
 
 <span class="c1"># or if you want spaces in its value, enclosed it in double quotes (&quot;&quot;)</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">VOLUME_DIR</span><span class="o">=</span><span class="s2">&quot;store for script application&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-batch highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">set</span> <span class="nv">VOLUME_DIR</span><span class="p">=</span>storeForScriptApplication
+<div class="language-batch highlight"><pre><span></span><code><span class="k">set</span> <span class="nv">VOLUME_DIR</span><span class="p">=</span>storeForScriptApplication
 
 <span class="p">:</span><span class="c1">: or if you want spaces in its value</span>
 <span class="k">set</span> <span class="nv">VOLUME_DIR</span><span class="p">=</span>store for script application
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Do not enclose the value of <code>VOLUME_DIR</code> in double quotes ("") in Windows. This will produce unwanted errors when executing dxclient commands.</p>
@@ -2513,14 +2500,11 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Linux and Apple macOS</label><label for="__tabbed_7_2">Microsoft Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>chmod<span class="w"> </span>xxx<span class="w"> </span>&lt;working-directory&gt;/&lt;VOLUME_DIR&gt;
+<div class="language-bash highlight"><pre><span></span><code>chmod<span class="w"> </span>xxx<span class="w"> </span>&lt;working-directory&gt;/&lt;VOLUME_DIR&gt;
 
 <span class="c1"># where xxx is a 3-digit number where each digit can be anything from 0 to 7.</span>
 <span class="c1"># Ref: https://wiki.archlinux.org/title/File_permissions_and_attributes#Numeric_method</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 <div class="tabbed-block">
 <ol>
@@ -2544,12 +2528,12 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Linux and Apple macOS</label><label for="__tabbed_8_2">Microsoft Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">Timezone</span><span class="o">=</span>Asia/Kolkata
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">Timezone</span><span class="o">=</span>Asia/Kolkata
+</code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-batch highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SET</span> <span class="nv">Timezone</span><span class="p">=</span>Asia/Kolkata
-</code></pre></div></td></tr></table></div>
+<div class="language-batch highlight"><pre><span></span><code><span class="k">SET</span> <span class="nv">Timezone</span><span class="p">=</span>Asia/Kolkata
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -2569,12 +2553,12 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Linux and Apple macOS</label><label for="__tabbed_9_2">Microsoft Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>make<span class="w"> </span>unlink
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>make<span class="w"> </span>unlink
+</code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-batch highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>make_unlink.bat
-</code></pre></div></td></tr></table></div>
+<div class="language-batch highlight"><pre><span></span><code>make_unlink.bat
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -2594,12 +2578,12 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Linux and Apple macOS</label><label for="__tabbed_10_2">Microsoft Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>make<span class="w"> </span>install
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>make<span class="w"> </span>install
+</code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>make_install.bat
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>make_install.bat
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -2609,12 +2593,12 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Linux and Apple macOS</label><label for="__tabbed_11_2">Microsoft Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>make<span class="w"> </span>link
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>make<span class="w"> </span>link
+</code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>make_link.bat
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>make_link.bat
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -2627,12 +2611,12 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Linux and Apple macOS</label><label for="__tabbed_12_2">Microsoft Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./bin/dxclient
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>./bin/dxclient
+</code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>node<span class="w"> </span>bin/dxclient
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>node<span class="w"> </span>bin/dxclient
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -2646,12 +2630,12 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Linux and Apple macOS</label><label for="__tabbed_13_2">Microsoft Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>make<span class="w"> </span>clean
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>make<span class="w"> </span>clean
+</code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>make_uninstall.bat
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>make_uninstall.bat
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -2661,12 +2645,12 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Linux and Apple macOS</label><label for="__tabbed_14_2">Microsoft Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>make<span class="w"> </span>unlink
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>make<span class="w"> </span>unlink
+</code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>make_unlink.bat
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>make_unlink.bat
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -2863,57 +2847,7 @@ You can use "<code>dxclient version-compat</code>" to check version compatibilit
 </ol>
 <h2 id="configuring-dxclient">Configuring DXClient</h2>
 <p>Common command arguments can be pre-configured inside the <code>config.json</code> file available under dist/src/configuration folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json), or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/samples/sample-configurations for reference. If you want to override any of the parameters in the config.json, add them in your command line.</p>
-<div class="language-json highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
+<div class="language-json highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;config.json&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;desc&quot;</span><span class="p">:</span><span class="s2">&quot;The attributes in this file are used for configuration purpose and those must not be deleted.&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;dxProtocol&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
@@ -2964,123 +2898,123 @@ You can use "<code>dxclient version-compat</code>" to check version compatibilit
 <span class="w">    </span><span class="nt">&quot;wcmLibraryName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;wcmProjectName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="dxclient-commands">DXClient commands</h2>
 <p>Command syntax conventions:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span><span class="o">[</span>command<span class="o">]</span><span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span><span class="o">[</span>command<span class="o">]</span><span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <p>Use the following command to execute the <a href="dxclient_artifact_types/portlets/">deploy portlet action</a>:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>deploy-portlet<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>deploy-portlet<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <p>Use the following command to execute the <a href="dxclient_artifact_types/portlets/">undeploy portlet action</a>:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>undeploy-portlet<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>undeploy-portlet<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <p>Use the following command to execute the <a href="dxclient_artifact_types/xmlaccess/">xmlaccess action</a>:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>xmlaccess<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>xmlaccess<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <p>Use the following command to execute the <em>pull</em> <a href="dxclient_artifact_types/scriptapplications/">script application action</a>:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>deploy-scriptapplication<span class="w"> </span>pull<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>deploy-scriptapplication<span class="w"> </span>pull<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <p>Use the following command to execute the <em>push</em> <a href="dxclient_artifact_types/scriptapplications/">script application action</a>:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>deploy-scriptapplication<span class="w"> </span>push<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>deploy-scriptapplication<span class="w"> </span>push<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <p>Use the following command to execute the undeploy <a href="dxclient_artifact_types/scriptapplications/">script application action</a>:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>undeploy-scriptapplication<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>undeploy-scriptapplication<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <p>Use the following command to execute the restore <a href="dxclient_artifact_types/scriptapplications/">script application action</a>:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>restore-scriptapplication<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>restore-scriptapplication<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <p>Use the following command to execute the <a href="dxclient_artifact_types/deployapplication/">deploy application action</a>:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>deploy-application<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>deploy-application<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <p>Use the following command to execute the <a href="dxclient_artifact_types/dxcoreserver/">DX Core restart action</a>:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>restart-dx-core
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>restart-dx-core
+</code></pre></div>
 <p>Use the following command to restart <a href="dxclient_artifact_types/dxcoreserver/">DX Core pods in a Kubernetes deployment</a>:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>restart-core-pods<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>restart-core-pods<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <p>Use the following command to execute <a href="dxclient_artifact_types/syndicatorsandsubscribers/">manage-subscriber action</a>:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>manage-subscriber<span class="w"> </span>-h
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>manage-subscriber<span class="w"> </span>-h
+</code></pre></div>
 <p>Use the following command to execute <a href="dxclient_artifact_types/syndicatorsandsubscribers/">manage-syndicator action</a>:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>manage-syndicator<span class="w"> </span>-h
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>manage-syndicator<span class="w"> </span>-h
+</code></pre></div>
 <p>Use the following command to execute the <a href="dxclient_artifact_types/themes/">deploy theme action</a>:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>deploy-theme<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>deploy-theme<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <p>Use the following command to execute the <a href="dxclient_artifact_types/themes/">undeploy theme action</a>:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>undeploy-theme<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>undeploy-theme<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <p>Use the following command to execute the <a href="dxclient_artifact_types/syndicatorsandsubscribers/">manage-syndicator get-syndication-report action</a>:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w">  </span>manage-syndicator<span class="w"> </span>get-syndication-report<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w">  </span>manage-syndicator<span class="w"> </span>get-syndication-report<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <p>Use the following command to execute the <a href="dxclient_artifact_types/wcmlibraries/">shared-library action</a>:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w">  </span>shared-library<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w">  </span>shared-library<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <p>Use the following command to execute the delete <a href="../../../manage_content/digital_assets/usage/managing_dam/damschemas/">DAM schema action</a>:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>delete-dam-schema<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>delete-dam-schema<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <p>Use the following command to list all <a href="../../../manage_content/digital_assets/usage/managing_dam/damschemas/">DAM schemas present</a>:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>list-dam-schemas<span class="w">  </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>list-dam-schemas<span class="w">  </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <p>Use the following command to export the <a href="dxclient_artifact_types/personalization/">personalization rules</a> from the target server:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>pzn-export<span class="w">  </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>pzn-export<span class="w">  </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <p>Use the following command to import the <a href="dxclient_artifact_types/personalization/">personalization rules</a> into the target server:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>pzn-import<span class="w">  </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>pzn-import<span class="w">  </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <p>Use the following command to <a href="dxclient_artifact_types/virtualportals/">manage virtual portal</a> tasks in the DX server:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>manage-virtual-portal<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>manage-virtual-portal<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <p>Use the following command to register subscriber:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>manage-dam-staging<span class="w"> </span>register-dam-subscriber<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>manage-dam-staging<span class="w"> </span>register-dam-subscriber<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <p>Use the following command to deregister subscriber:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>manage-dam-staging<span class="w"> </span>deregister-dam-subscriber<span class="w">  </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>manage-dam-staging<span class="w"> </span>deregister-dam-subscriber<span class="w">  </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <p>Use the following command to trigger manual sync:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>manage-dam-staging<span class="w"> </span>trigger-staging<span class="w">  </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>manage-dam-staging<span class="w"> </span>trigger-staging<span class="w">  </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <p>Use the following command to create <a href="dxclient_artifact_types/credentialvaultslot/">credential vault</a> slot in the DX server:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>create-credential-vault<span class="w">  </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>create-credential-vault<span class="w">  </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <p>Use the following command to create the <a href="dxclient_artifact_types/syndicatorsandsubscribers/">syndication relation between syndicator and subscriber</a> in DX server:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>create-syndication-relation<span class="w">  </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>create-syndication-relation<span class="w">  </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <p>Use the following command to create, update, delete, export or import a custom property from an existing <a href="dxclient_artifact_types/resourceenvironments/">Resource Environment</a> Provider:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>resource-env-provider<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>resource-env-provider<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <p>Use this command to <a href="dxclient_artifact_types/wcmlibraries/">export WCM libraries</a>:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>wcm-library-export
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>wcm-library-export
+</code></pre></div>
 <p>Use this command to <a href="dxclient_artifact_types/wcmlibraries/">import WCM libraries</a>:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>wcm-library-import
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>wcm-library-import
+</code></pre></div>
 <p>Use the <code>dx-core-configuration-reports</code> command to get a summary of the configurations of a single DX server or both source and target DX servers, which users can use to compare.</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>dx-core-configuration-reports<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>dx-core-configuration-reports<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div>
 <p>Use this command to sync WebDAV themes in server and then watch for succeeding changes which will immediately reflect in the WebDAV Server:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>livesync<span class="w"> </span>push-theme<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>livesync<span class="w"> </span>push-theme<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <p>Use this command to download the theme files in WebDAV Server in preparation for <a href="dxclient_artifact_types/livesync/#livesync-push-theme"><code>livesync push-theme</code></a>:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>livesync<span class="w"> </span>pull-theme<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>livesync<span class="w"> </span>pull-theme<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <p>Use this command to show version compatibility details between DX Core and DXClient <a href="dxclient_artifact_types/versionCompat/"><code>version-compat</code></a>:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>version-compat<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>version-compat<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 <h2 id="dxclient-command-line-help">DXClient command line help</h2>
 <p>The following commands show the Help documents for DXClient command usage.</p>
 <p>Use the following commands to display the Help document for DXClient:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient
-</code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>-h,<span class="w"> </span>--help<span class="w"> </span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient
+</code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>-h,<span class="w"> </span>--help<span class="w"> </span>
+</code></pre></div>
 <p>Use the following command to display the DXClient version number:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span>-V,<span class="w"> </span>--version
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span>-V,<span class="w"> </span>--version
+</code></pre></div>
 <p>Use the following command to display the detailed help for a specific command:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient<span class="w"> </span><span class="nb">help</span><span class="w"> </span><span class="o">[</span>command<span class="o">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>dxclient<span class="w"> </span><span class="nb">help</span><span class="w"> </span><span class="o">[</span>command<span class="o">]</span>
+</code></pre></div>
 <h2 id="hclsoftware-u-learning-materials">HCLSoftware U learning materials</h2>
 <p>For an introduction and a demo on how to use DXClient, go to <a href="https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&amp;id=3&amp;forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D505">Staging</a>. To try it out yourself, refer to <a href="https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-100_DXClient_for_Beginners.pdf">DXClient Lab</a>.</p>
 <details class="info" open="open">

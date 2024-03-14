@@ -2090,10 +2090,9 @@
 </li>
 <li>
 <p>Check the buffer pool allocations for your system and define the buffer pools as appropriate for your installation and define a large enough size.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>-db2 display bufferpool(bp2) 
+<div class="language-text highlight"><pre><span></span><code>-db2 display bufferpool(bp2) 
 -db2 alter bufferpool(bp2) vpsize(15000)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ol>
 <li>
 <p>Repeat for extra buffer pools as needed.</p>
@@ -2167,18 +2166,16 @@
 </li>
 <li>
 <p>If you are using the older DB2 Type 2 JDBC driver, enable extended shared memory usage with the following commands:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>export EXTSHM=ON
+<div class="language-text highlight"><pre><span></span><code>export EXTSHM=ON
 db2set DB2ENVLIST=EXTSHM
 db2start
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For permanent changes, add the environment variable to the profile.env file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>DB2ENVLIST=&#39;EXTSHM&#39;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>DB2ENVLIST=&#39;EXTSHM&#39;
+</code></pre></div>
 <p>in /home/db2inst/sqllib/userprofile add:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>export EXTSHM=ON
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>export EXTSHM=ON
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The shell must be reopened before you restart DB2 for z/OS.</p>
@@ -2186,10 +2183,9 @@ db2start
 </li>
 <li>
 <p>If you are using the older DB2 Type 2 JDBC driver, configure your DB2 Connect client with the following commands:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>db2 update dbm cfg using tp_mon_name WAS
+<div class="language-text highlight"><pre><span></span><code>db2 update dbm cfg using tp_mon_name WAS
 db2 update dbm cfg using spm_name hostname
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>where <code>hostname</code> is the host name for the server where the DB2 Connect client is installed (same as portal server).</p>
 </li>
 <li>

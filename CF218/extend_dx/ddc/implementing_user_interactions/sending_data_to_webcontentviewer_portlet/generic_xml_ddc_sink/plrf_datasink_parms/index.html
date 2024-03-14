@@ -2584,28 +2584,7 @@ The <code>suffix</code> value does not imply any semantics. Use it to correlate 
 </ul>
 <h2 id="example-creating-a-resource">Example: Creating a resource</h2>
 <p>Typical XML REST services support the creation of new resources by sending a corresponding resource XML document to the service. To do so, the client typically uses an HTTP POST request. The following HTML fragment shows an HTML form that you can use to create a comment on a HCL Connections blog post:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;form id=&quot;[AttributeResource attributeName=&#39;id&#39;]CreateBlogPostComment&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;form id=&quot;[AttributeResource attributeName=&#39;id&#39;]CreateBlogPostComment&quot; 
       method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot; 
       action=&quot;[Plugin:ActionURL copyCurrentParams=&quot;true&quot; 
       param=&quot;resultSessionAttribute=myResult&quot; compute=&quot;always&quot;]&quot;&gt;
@@ -2627,24 +2606,19 @@ The <code>suffix</code> value does not imply any semantics. Use it to correlate 
   &lt;input type=&quot;hidden&quot; name=&quot;ddc.method&quot; value=&quot;post&quot;/&gt;
   &lt;input type=&quot;submit&quot; class=&quot;lotusBtn&quot; value=&quot;Submit&quot; name=&quot;submitButton&quot;/&gt;
 &lt;/form&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The form sets the <code>action</code>, <code>method</code>, and <code>enctype</code> parameters. The form also specifies the <code>_charset_</code> and <code>action.uri</code> input fields. For more information about these fields, read <em>Creating the HTML form</em>. Additionally, the form specifies the following behavior:</p>
 <ul>
 <li>The form sets the <code>action.uri</code> parameter to the value <code>ddc:operation:blp:ibm.portal.ddc.xml</code>. As a result, the generic XML Digital Data Connector data sink processes the form.</li>
 <li>
 <p>The template document that represents the blog post comment XML entry is referenced by using the <code>ddc.uri.template</code> parameter. In this example, the template document is served from a Web Content Manager HTML component that is referenced by a corresponding <code>wcmrest</code> URI. For more information about the Web Content Manager REST URI format, read <em>REST service for Web Content Manager</em>in the Web Content Manager documentation. In this example, the referenced HTML component contains the following XML fragment:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&#39;1.0&#39; encoding=&#39;UTF-8&#39;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&#39;1.0&#39; encoding=&#39;UTF-8&#39;?&gt;
 &lt;entry xmlns=&#39;http://www.w3.org/2005/Atom&#39;
 xmlns:thr=&quot;http://purl.org/syndication/thread/1.0&quot;&gt;
    &lt;content type=&#39;html&#39;&gt;
    &lt;/content&gt;
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>The profile for this template document is identified by using the <code>ddc.profile.in</code> parameter. As the example posts a blog post comment document, the profile <code>ibm.portal.sr.blogs.post.comments</code> is used.</p>
@@ -2654,20 +2628,7 @@ xmlns:thr=&quot;http://purl.org/syndication/thread/1.0&quot;&gt;
 </ul>
 <h2 id="example-deleting-an-existing-resource">Example: Deleting an existing resource</h2>
 <p>Typical XML REST services support the deletion of existing resources by sending a corresponding an HTTP DELETE request to the resource URL. The following HTML fragment shows an HTML form that you can use to delete a comment from an HCL Connections blog post:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;form id=&quot;[AttributeResource attributeName=&quot;id&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;form id=&quot;[AttributeResource attributeName=&quot;id&quot; 
       separator=&quot;,&quot;]DeleteBlogComment&quot; method=&quot;POST&quot; 
       enctype=&quot;multipart/form-data&quot; action=&quot;[Plugin:ActionURL 
       action=&quot;post&quot; copyCurrentParams=&quot;true&quot; 
@@ -2681,7 +2642,7 @@ xmlns:thr=&quot;http://purl.org/syndication/thread/1.0&quot;&gt;
            value=&quot;[AttributeResource attributeName=&quot;rawEditLink&quot; 
                    separator=&quot;,&quot;]&quot; /&gt;
 &lt;/form&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The form specifies the following behavior:</p>
 <ul>
 <li>The form sets the <code>uri</code> parameter to the value <code>ddc:operation:blp:ibm.portal.ddc.xml</code>. As a result, the generic XML Digital Data Connector (DDC) for HCL Portal data sink processes the form.</li>

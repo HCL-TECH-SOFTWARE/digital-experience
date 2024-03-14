@@ -3460,17 +3460,7 @@
 <ul>
 <li>
 <p>To change the cookie domain, open the web.CONF of the IIS ADFS module and add the following:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;configuration&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;configuration&gt;
 
 ...
 
@@ -3481,20 +3471,11 @@
 &lt;httpCookies domain=&quot;your\_domain&quot; httpOnlyCookies=&quot;false&quot; requireSSL=&quot;false&quot; /&gt;
 
 ...
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>To change the cookie path, an outboundRule on IIS is needed. To support this outboundRule via the IIS Management console, Application Request Routing (ARR) is needed. This enhancement creates an outboundRule like the following example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;rewrite&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;rewrite&gt;
 &lt;outboundRules&gt;
 &lt;remove name=&quot;ChangeCookiePath&quot; /&gt;
 &lt;rule name=&quot;ChangeCookiePath&quot;&gt;
@@ -3504,7 +3485,7 @@
 &lt;/rule&gt;
 &lt;/outboundRules&gt;
 &lt;/rewrite&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 

@@ -3066,12 +3066,12 @@
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>To get memory and CPU usage details for the pods in your DX deployment:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl top pod -n your-namespace -l release=your-release-name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl top pod -n your-namespace -l release=your-release-name
+</code></pre></div>
 <p>In the above example <code>your-namespace</code> is the namespace in which your HCL Digital Experience 9.5 deployment is installed and <code>your-release-name</code> is the Helm release name you used when installing.</p>
 <p>To get memory and CPU usage details for the current Kubernetes node:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl top node
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl top node
+</code></pre></div>
 </div>
 
 

@@ -3716,12 +3716,10 @@
 <h1 id="importing-war-files">Importing WAR files</h1>
 <p>To create new portlet applications, you need additional resources, the WAR files.</p>
 <p>You cannot include those WAR files in the XML input. Instead, you can add references to external URL locations to the XML input. See the following example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>     &lt;web-app uid=&quot;MySpecialPortlet&quot; action=&quot;create&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>     &lt;web-app uid=&quot;MySpecialPortlet&quot; action=&quot;create&quot;&gt;
              &lt;url&gt;file://localhost/C:/myportlets/Special.war&lt;/url&gt;
      &lt;/web-app&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The WAR files are not used in the running portal. However, when you process the XML request, the WAR files referenced in the XML script must be accessible to the portal. When you update a package and specify a URL <strong>subelement</strong>, the WAR file is re-deployed, just as if you had selected the update of a portlet application in the browser. If you intend to deploy the same configuration into several new portals, you can set the URL to http://deploymentserver/path/filename.war. This way there is no need to copy all WAR files to each server machine. The <strong>deploymentserver</strong> machine needs to be set up properly so that the WAR files can be accessed by HTTP.</p>
 <p>An XML export request does not create any archive files that might be required. Instead, it only creates pseudo-references in the form of file URLs that rely on the assumption that the file resides in the <strong>/installableApps/ sub-directory</strong> of the portal installation. If these assumptions are not met, an exported portal configuration cannot be successfully re-created without editing the generated URLs manually. A back up of a portal configuration requires that the WAR files required for redeployment are saved in addition to the XML export.</p>
 <details class="info" open="open">

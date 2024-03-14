@@ -1606,46 +1606,41 @@
 <ol>
 <li>You must start Digital Asset Management in maintenance mode, to ensure that no actions are performed during the migration. You can set DAM to maintenance mode by changing the ConfigMap of the Operator deployment:</li>
 </ol>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl -n &lt;namespace&gt; edit cm &lt;configmap&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; edit cm &lt;configmap&gt;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl edit cm -n dxns dx-deployment
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl edit cm -n dxns dx-deployment
+</code></pre></div>
 </div>
 <p>In the <code>data</code> section, add the following entry and save the changes:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>data:
+<div class="language-text highlight"><pre><span></span><code>data:
     dx.deploy.dam.features: &quot;maintenance_mode:true&quot;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>After saving the changes, the DAM pod restarts automatically. Please wait until the pod restarts before proceeding.</p>
 <ol>
 <li>
 <p>Verify that persistence (read-write) and DAM pods are up and running, and are in maintenance mode. Use the following command to see the current status of the pods:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl -n &lt;namespace&gt; get pods
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; get pods
+</code></pre></div>
 <p>If more than one DAM or persistence pod is running, scale down the pods to only one of each type. Adjust the <code>dxctl</code> property file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>dam.minreplicas:1
+<div class="language-text highlight"><pre><span></span><code>dam.minreplicas:1
 dam.maxreplicas:1
 
 persist.minreplicas:1
 persist.maxreplicas:1
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>And apply it using the <code>dxctl</code> tool.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./dxctl -–update -p deployment.properties
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>./dxctl -–update -p deployment.properties
+</code></pre></div>
 <p>The changes are applied and any replicas are terminated. Use <code>kubectl</code> to check the progress.</p>
 <p>Verify that DAM is in maintenance mode by running the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl -n &lt;namespace&gt; logs &lt;pod-name&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; logs &lt;pod-name&gt;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl -n dxns logs dx-deployment-dam-0
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl -n dxns logs dx-deployment-dam-0
+</code></pre></div>
 </div>
 <p>If your output looks similar to the following, maintenance mode is enabled and you can continue:</p>
 <ul>
@@ -1654,66 +1649,66 @@ persist.maxreplicas:1
 <li>Maintenance mode is enabled. This mode solely starts the pod without any processes within it.</li>
 <li>Connect to the persistence pod. The following command opens a shell in the running persistence pod:</li>
 </ul>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl exec --stdin --tty pod/&lt;pod-name&gt; -n &lt;namespace&gt; -- /bin/bash
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl exec --stdin --tty pod/&lt;pod-name&gt; -n &lt;namespace&gt; -- /bin/bash
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl exec --stdin --tty pod/dx-deployment-persistence-0 -n dxns -- /bin/bash
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl exec --stdin --tty pod/dx-deployment-persistence-0 -n dxns -- /bin/bash
+</code></pre></div>
 </div>
 <ol>
 <li>
 <p>Dump the current database using <code>pg_dump</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pg_dump dxmediadb &gt; /tmp/dxmediadb.dmp
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>pg_dump dxmediadb &gt; /tmp/dxmediadb.dmp
+</code></pre></div>
 </li>
 <li>
 <p>Exit the shell in the persistence pod</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>exit
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>exit
+</code></pre></div>
 </li>
 </ol>
 </li>
 <li>
 <p>Download the dumped database from the persistence pod to your local system:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl cp &lt;namespace&gt;/&lt;pod-name&gt;:&lt;source-file&gt; &lt;target-file&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl cp &lt;namespace&gt;/&lt;pod-name&gt;:&lt;source-file&gt; &lt;target-file&gt;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl cp dxns/dx-deployment-persistence-0:/tmp/dxmediadb.dmp /tmp/dxmediadb.dmp
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl cp dxns/dx-deployment-persistence-0:/tmp/dxmediadb.dmp /tmp/dxmediadb.dmp
+</code></pre></div>
 </div>
 </li>
 <li>
 <p>Connect to the DAM pod. The following command opens a shell in the running DAM pod:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl exec --stdin --tty pod/&lt;pod-name&gt; -n &lt;namespace&gt; -- /bin/bash
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl exec --stdin --tty pod/&lt;pod-name&gt; -n &lt;namespace&gt; -- /bin/bash
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl exec --stdin --tty pod/dx-deployment-dam-0 -n dxns -- /bin/bash
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl exec --stdin --tty pod/dx-deployment-dam-0 -n dxns -- /bin/bash
+</code></pre></div>
 </div>
 <ol>
 <li>
 <p>Compress the DAM binaries located in /opt/app/upload:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>tar -cvpzf backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system --directory /opt/app/upload .
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>tar -cvpzf backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system --directory /opt/app/upload .
+</code></pre></div>
 </li>
 <li>
 <p>Exit the shell in the DAM pod:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>exit
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>exit
+</code></pre></div>
 </li>
 </ol>
 </li>
 <li>
 <p>Download the compressed DAM binaries from the DAM pod to your local system:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl cp &lt;namespace&gt;/&lt;pod-name&gt;:&lt;source-file&gt; &lt;target-file&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl cp &lt;namespace&gt;/&lt;pod-name&gt;:&lt;source-file&gt; &lt;target-file&gt;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl cp dxns/dx-deployment-dam-0:/opt/app/server-v1/backupml.tar.gz /tmp/backupml.tar.gz
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl cp dxns/dx-deployment-dam-0:/opt/app/server-v1/backupml.tar.gz /tmp/backupml.tar.gz
+</code></pre></div>
 </div>
 </li>
 </ol>
@@ -1732,26 +1727,14 @@ persist.maxreplicas:1
 <li>Ensure that you have extracted the Kubernetes DX configuration from the Operator-based deployment to a valid custom-values.yaml file.</li>
 <li>
 <p>You must enable <code>migration</code> mode for <code>operatorToHelm</code> by adding or updating the following value in custom-values.yaml:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>migration:
+<div class="language-text highlight"><pre><span></span><code>migration:
     operatorToHelm:
     enabled: true
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Disable all the applications, except <code>digitalAssetManagement</code> and the <code>persistence</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>applications:
+<div class="language-text highlight"><pre><span></span><code>applications:
     core: false
     runtimeController: false
     contentComposer: false
@@ -1762,32 +1745,30 @@ persist.maxreplicas:1
     remoteSearch: false
     ringApi: false
     haproxy: false
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Scale down persistence to a single node:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>scaling:
+<div class="language-text highlight"><pre><span></span><code>scaling:
     replicas:
     persistenceNode: 1
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You can now start the Helm deployment.</p>
 <p>If you're running the migration of DAM first:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>helm install -n &lt;namespace&gt; --create-namespace -f &lt;custom-values.yaml&gt; &lt;prefix&gt; &lt;chart&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>helm install -n &lt;namespace&gt; --create-namespace -f &lt;custom-values.yaml&gt; &lt;prefix&gt; &lt;chart&gt;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>helm install -n dxns-helm --create-namespace -f custom-values.yaml dx-deployment hcl-dx-deployment
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>helm install -n dxns-helm --create-namespace -f custom-values.yaml dx-deployment hcl-dx-deployment
+</code></pre></div>
 </div>
 <p>If core migration is done first:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>helm upgrade -n &lt;namespace&gt; -f &lt;custom-values.yaml&gt; &lt;prefix&gt; &lt;chart&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>helm upgrade -n &lt;namespace&gt; -f &lt;custom-values.yaml&gt; &lt;prefix&gt; &lt;chart&gt;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>helm upgrade -n dxns-helm -f custom-values.yaml dx-deployment hcl-dx-deployment
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>helm upgrade -n dxns-helm -f custom-values.yaml dx-deployment hcl-dx-deployment
+</code></pre></div>
 </div>
 </li>
 <li>
@@ -1799,66 +1780,63 @@ persist.maxreplicas:1
 </li>
 <li>Upload the backup database. Use the following command to transfer the backup database to the remote persistence pod:</li>
 </ul>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl cp &lt;source-file&gt; &lt;namespace&gt;/&lt;pod-name&gt;:&lt;target-file&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl cp &lt;source-file&gt; &lt;namespace&gt;/&lt;pod-name&gt;:&lt;target-file&gt;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl cp /tmp/dxmediadb.dmp dxns-helm/dx-deployment-persistence-node-0:/tmp/dxmediadb.dmp
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl cp /tmp/dxmediadb.dmp dxns-helm/dx-deployment-persistence-node-0:/tmp/dxmediadb.dmp
+</code></pre></div>
 </div>
 </li>
 <li>
 <p>Connect to the persistence (read-write) pod. Use the following command to open a shell in the running persistence pod:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl exec --stdin --tty pod/&lt;pod-name&gt; -n &lt;namespace&gt; -- /bin/bash
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl exec --stdin --tty pod/&lt;pod-name&gt; -n &lt;namespace&gt; -- /bin/bash
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example:</p>
 </div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl exec --stdin --tty pod/dx-deployment-persistence-node-0 -n dxns-helm -- /bin/bash
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl exec --stdin --tty pod/dx-deployment-persistence-node-0 -n dxns-helm -- /bin/bash
+</code></pre></div>
 <ol>
 <li>
 <p>You must drop the DAM database, if it exists. Disconnect all connections that use the database and drop any existing databases of the Helm deployment.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>echo &quot;SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE pid &lt;&gt; pg_backend_pid();&quot; | psql
+<div class="language-text highlight"><pre><span></span><code>echo &quot;SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE pid &lt;&gt; pg_backend_pid();&quot; | psql
 dropdb dxmediadb
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Restore the database from the previous backup:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>createdb -O dxuser dxmediadb
+<div class="language-text highlight"><pre><span></span><code>createdb -O dxuser dxmediadb
 psql dxmediadb &lt; /tmp/dxmediadb.dmp
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Exit the shell in the persistence pod:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>exit
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>exit
+</code></pre></div>
 </li>
 </ol>
 </li>
 <li>
 <p>Connect to the DAM pod. Use the following command to open a shell in the running DAM pod:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl exec --stdin --tty pod/&lt;pod-name&gt; -n &lt;namespace&gt; -- /bin/bash
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl exec --stdin --tty pod/&lt;pod-name&gt; -n &lt;namespace&gt; -- /bin/bash
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl exec --stdin --tty pod/dx-deployment-digital-asset-management-0 -n dxns-helm -- /bin/bash
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl exec --stdin --tty pod/dx-deployment-digital-asset-management-0 -n dxns-helm -- /bin/bash
+</code></pre></div>
 </div>
 <ol>
 <li>
 <p>Restore the DAM binaries:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>tar -mpxf /tmp/backupml.tar.gz --directory /opt/app/upload
+<div class="language-text highlight"><pre><span></span><code>tar -mpxf /tmp/backupml.tar.gz --directory /opt/app/upload
 rm /backupml.tar.gz
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Exit the shell in the DAM pod:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>exit
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>exit
+</code></pre></div>
 </li>
 </ol>
 </li>
@@ -1868,24 +1846,22 @@ rm /backupml.tar.gz
 <ol>
 <li>
 <p>Disable the <code>migration</code> mode by updating the following value in custom-values.yaml</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>migration:
+<div class="language-text highlight"><pre><span></span><code>migration:
     operatorToHelm:
     enabled: false
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Enable all relevant applications.</p>
 </li>
 <li>
 <p>You can now upgrade the Helm deployment.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>helm upgrade -n &lt;namespace&gt; --create-namespace -f &lt;custom-values.yaml&gt; &lt;prefix&gt; &lt;chart&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>helm upgrade -n &lt;namespace&gt; --create-namespace -f &lt;custom-values.yaml&gt; &lt;prefix&gt; &lt;chart&gt;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>helm upgrade -n dxns-helm --create-namespace -f custom-values.yaml dx-deployment hcl-dx-deployment
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>helm upgrade -n dxns-helm --create-namespace -f custom-values.yaml dx-deployment hcl-dx-deployment
+</code></pre></div>
 </div>
 </li>
 </ol>

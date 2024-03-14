@@ -2137,13 +2137,12 @@
 <p>Learn how to resolve HCL Portal server startup/restart failure on HCL Portal Express 8.5 or 9.0 or new HCL Portal Express installation failures.</p>
 <h2 id="overview">Overview</h2>
 <p>Starting October 1st, 2018, attempts to start/restart the server on HCL Portal Express 8.5 or 9.0 will fail with the following error in SystemOut.log:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>CLFBD0026E: The product HCL Portal Express does not have a valid license key installed and the evaluation period has expired. 
+<div class="language-text highlight"><pre><span></span><code>CLFBD0026E: The product HCL Portal Express does not have a valid license key installed and the evaluation period has expired. 
 Functions specific to this product are not enabled.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>or</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>CLFBD0030E: Caught error, message: Past the expiration date on license.
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>CLFBD0030E: Caught error, message: Past the expiration date on license.
+</code></pre></div>
 <p>Similarly, attempts to install the product will also fail. A review of the installation logs will show the same CLFBD0026E and CLFBD0030E errors. The cause of this issue is an invalid license duration in the license file (wpe85.lic). This issue impacts both trial (evaluation) and non-trial versions of HCL Portal Express 8.5, 9.0 and new installations.</p>
 <h2 id="recommended-solution">Recommended Solution</h2>
 <p>To apply iFix PH03610 solution, users need to visit the HCL Software License Portal page and <a href="https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/entitledDownloadFile.action?downloadPkgId=HCL_Portal_Maintenance&amp;orgId=HCL">download the fix</a>.</p>
@@ -2152,8 +2151,8 @@ Functions specific to this product are not enabled.
 <ol>
 <li>
 <p>Replace the existing file of the same name with the following: lc_adv_cfg.xml. Where</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;PortalHome&gt;/installer/wp.exp.wart/lcComponent/config/includes/lc_adv_cfg.xml
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;PortalHome&gt;/installer/wp.exp.wart/lcComponent/config/includes/lc_adv_cfg.xml
+</code></pre></div>
 <p>where &lt;PortalHome&gt; represents the installed location. By default, this is:</p>
 <ul>
 <li>Windows: C:\IBM\WebSphere\PortalServer</li>

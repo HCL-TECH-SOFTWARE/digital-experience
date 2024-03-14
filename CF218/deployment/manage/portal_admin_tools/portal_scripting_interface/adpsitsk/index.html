@@ -3501,45 +3501,7 @@ JACL: <code>wpscript.sh -port port_number -f script_file_name.jacl</code></p>
 <li>
 <p><strong>Portal Jython script example</strong></p>
 <p>The following example is a Jython script file named testme.py:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span></pre></div></td><td class="code"><div><pre><span></span><code># Scripting bean example: create a simple page (multi-column Layout)
+<div class="language-text highlight"><pre><span></span><code># Scripting bean example: create a simple page (multi-column Layout)
 #
 
 # Procedure: create a multi-column page under the page that is currently
@@ -3578,52 +3540,12 @@ Content.select(Content.find(&quot;all&quot;, &quot;uniquename&quot;, &quot;ibm.p
 newbie = create_multi_col_page(&quot;A Page&quot;, [&quot;Reminder&quot;, &quot;Welcome_to_HCL Portal and HCL Web Content Manager&quot;])
 
 print &quot;ok, we are done.&quot;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Portal JACL script example</strong></p>
 <p>The following example is a JACL script file named testme.jacl:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span></pre></div></td><td class="code"><div><pre><span></span><code># Scripting bean example: create a simple page (multi-column Layout)           
+<div class="language-text highlight"><pre><span></span><code># Scripting bean example: create a simple page (multi-column Layout)           
 #                                                                              
 
 # Procedure: create a multi-column page under the page that is currently       
@@ -3664,7 +3586,7 @@ $Content select [$Content find all uniquename &quot;ibm.portal.Home&quot;]
 set newbie [create_multi_col_page &quot;A Page&quot; { &quot;Reminder&quot; &quot;Welcome_to_HCL Portal and HCL Web Content Manager&quot; } ]
 
 puts &quot;ok, we are done.&quot;       
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <p>The scripts can receive parametric information externally, by using one of the following features:</p>
@@ -3684,41 +3606,29 @@ puts &quot;ok, we are done.&quot;
 </li>
 </ul>
 <p>Jython: In the preceding example script, testme.py, delete the following statements:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>user = &quot;portaladmin&quot;
+<div class="language-text highlight"><pre><span></span><code>user = &quot;portaladmin&quot;
 pwd = &quot;adminpwd&quot;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>and replace them with the following statements:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>if len(sys.argv) != 2:
+<div class="language-text highlight"><pre><span></span><code>if len(sys.argv) != 2:
    print &quot;invocation syntax: wpscript testme.py &lt;user&gt; &lt;pwd&gt;&quot;
    sys.exit(1)
 
 user = argv[0]
 pwd = argv[1]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>JACL: In the preceding example script, testme.jacl, delete the following statements:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>set user portaladmin                                                           
+<div class="language-text highlight"><pre><span></span><code>set user portaladmin                                                           
 set pwd  adminpwd 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>and replace them with the following statements:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>if { $argc != 2 }  {
+<div class="language-text highlight"><pre><span></span><code>if { $argc != 2 }  {
     puts &quot;invocation syntax: wpscript testme.jacl &lt;user&gt; &lt;pwd&gt;&quot;
       exit
   }
   set user [lindex $argv 0]
   set pwd [lindex $argv 1]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The security-sensitive username and password are removed from the script. The modified code expects the user ID and password to be specified as command line arguments, for example:</p>
 <p>Jython: <code>wpscript.sh -port port_number -f testme.py user_IDpassword</code><br />
 JACL: <code>wpscript.sh -port port_number -f testme.jacl user_ID password</code></p>
@@ -3728,16 +3638,7 @@ JACL: <code>wpscript.sh -port port_number -f testme.jacl user_ID password</code>
 <li>
 <p><strong>Jython profile script example</strong></p>
 <p>The following example is a Jython profile script named mylogin.py:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code># scripting profile
+<div class="language-text highlight"><pre><span></span><code># scripting profile
 # contains log-in procedure on portal with disabled security
 if len(sys.argv) != 2:
    print &quot;invocation syntax: wpscript -f testme.jacl -profile
@@ -3747,36 +3648,22 @@ mylogin.py user_ID password&quot;
 user = argv[0]
 pwd = argv[1]
 Portal.login(user, pwd)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Remove or comment out the following statements in the testme.py script file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>if len(sys.argv) != 2:
+<div class="language-text highlight"><pre><span></span><code>if len(sys.argv) != 2:
    print &quot;invocation syntax: wpscript testme.py user_ID password&quot;
    sys.exit(1)
 
 user = argv[0]
 pwd = argv[1]
 Portal.login(user, pwd)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To invoke <code>mylogin.py</code>, enter the following command: wpscript.sh -port port_number -profile mylogin.py -f testme.py user_ID password</p>
 </li>
 <li>
 <p><strong>JACL profile script example</strong></p>
 <p>The following example is a JACL profile script named mylogin.jacl:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code># scripting profile 
+<div class="language-text highlight"><pre><span></span><code># scripting profile 
   # contains log-in procedure on portal with disabled security
   if { $argc != 2 }  {
     puts &quot;invocation syntax: wpscript -f testme.jacl -profile mylogin.jacl user_ID password&quot;
@@ -3785,22 +3672,16 @@ Portal.login(user, pwd)
   set user [lindex $argv 0]
   set pwd [lindex $argv 1]
   $Portal login $user $pwd
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Remove or comment out the following statements in the testme.jacl script file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>  if { $argc != 2 }  {
+<div class="language-text highlight"><pre><span></span><code>  if { $argc != 2 }  {
     puts &quot;invocation syntax: wpscript testme.jacl user_ID password&quot;
     exit
   }
   set user [lindex $argv 0]
   set pwd [lindex $argv 1]
   $Portal login $user $pwd 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To invoke <code>mylogin.jacl</code>, enter the following command: wpscript.sh -port port_number -profile mylogin.jacl -f testme.jacl user_ID password</p>
 </li>
 </ul>
@@ -3808,21 +3689,17 @@ Portal.login(user, pwd)
 <ul>
 <li>
 <p><strong>Jython scripts</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>  # scripting profile 
+<div class="language-text highlight"><pre><span></span><code>  # scripting profile 
   # contains log-in procedure on portal with enabled security
   Portal.login()
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>JACL scripts</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>  # scripting profile 
+<div class="language-text highlight"><pre><span></span><code>  # scripting profile 
   # contains log-in procedure on portal with enabled security
   $Portal login
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <details class="info" open="open">

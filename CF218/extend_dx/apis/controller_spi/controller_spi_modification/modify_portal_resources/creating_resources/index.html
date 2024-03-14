@@ -2576,14 +2576,7 @@
 <li>For content nodes, that is content pages, content labels, and content URLs, you must set a supported markup. Otherwise, they do not show in the read-only model.</li>
 </ol>
 <p>Example 1 - Creating a resource by using the creation context builder: This example creates a <code>ContentPage</code> that you can later insert into the content model.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>// obtain creation context builder
+<div class="language-text highlight"><pre><span></span><code>// obtain creation context builder
 final CreationContextBuilderFactory builder = CreationContextBuilderFactory.getInstance();
 
 // obtain creation context
@@ -2591,24 +2584,19 @@ final CreationContext creationContext = builder.newIdentifiableCreationContext(o
 
 // create resource (which is not yet part of the topology of the controller!)
 final Modifiable modifiable = controller.create(ContentPage.class, creationContext);
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Example 2 - Cloning an existing portlet definition: To clone an existing portlet definition, create a portlet definition by using a portlet model controller and specify a <code>PortletDefinitionCloningContext</code>.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>// obtain portlet definition cloning context; includes obtaining a portlet definition
+<div class="language-text highlight"><pre><span></span><code>// obtain portlet definition cloning context; includes obtaining a portlet definition
 final PortletDefinitionCloningContext context = ... (portletDefinition)
 
 // create portlet definition
 pmController.create(PortletDefinition.class, context);
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The result of the <code>create()</code> method is a <code>Modifiable</code> instance of the created resource that you can cast to the type of the created resource as shown in the following example.</p>
 <p>Example 3 - Casting a created resource to its type:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>final ModifiableContentPage modifiableContentPage = (ModifiableContentPage) 
+<div class="language-text highlight"><pre><span></span><code>final ModifiableContentPage modifiableContentPage = (ModifiableContentPage) 
       controller.create(ContentPage.class, creationContext); 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

@@ -3706,23 +3706,7 @@
 <p>You can use these samples to create the Producer definition online or offline.</p>
 <h2 id="xml-sample-script-for-creating-a-producer-definition">XML sample script for creating a Producer definition</h2>
 <p>The following XML sample shows how you use the XML configuration interface to create a Producer if you work offline:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt; 
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt; 
 &lt;request type=&quot;update&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
    xsi:noNamespaceSchemaLocation=&quot;PortalConfig\_8.5.0.xsd&quot; create-oids=&quot;true&quot;&gt;
    &lt;portal action=&quot;locate&quot;&gt;
@@ -3739,30 +3723,12 @@
       &lt;/wsrp-producer&gt;
    &lt;/portal&gt;
 &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Replace http://producer_portal_host:producer_port/wp_contextRoot with the appropriate values for the environment of your Producer.</p>
 <p>This sample specifies the minimum required mandatory WSRP interfaces Service Description and Markup.</p>
 <h2 id="xml-sample-script-for-creating-a-producer-definition-for-a-producer-who-requires-registration">XML sample script for creating a Producer definition for a Producer who requires registration</h2>
 <p>The following XML sample shows how you use the XML configuration interface to create a Producer who requires registration. You can use this sample if you work online and have access to the Producer's WSDL document.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
 &lt;request type=&quot;update&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
    xsi:noNamespaceSchemaLocation=&quot;PortalConfig\_8.5.0.xsd&quot; create-oids=&quot;true&quot;&gt;
    &lt;portal action=&quot;locate&quot;&gt;
@@ -3781,7 +3747,7 @@
       &lt;/wsrp-producer&gt;
    &lt;/portal&gt;
 &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Replace http://producer_portal_host:producer_port/wp_contextRoot/wsdl/wsrp_service.wsdl with the appropriate values for the environment of your Producer.</p>
 <p>This sample also includes specification of user attributes.</p>
 <p>To use this sample with a HCL Portal Producer portal, set registration-required="false" and remove the parameter tags. This modification is necessary because the HCL Portal Producer does not support registration.</p>

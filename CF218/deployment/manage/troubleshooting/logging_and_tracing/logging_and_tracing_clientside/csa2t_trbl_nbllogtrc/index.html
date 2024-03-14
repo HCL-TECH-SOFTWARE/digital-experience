@@ -3382,8 +3382,8 @@
 <li>
 <p>Set the value of the property <code>cc.traceConfig</code> property to a value that represents a correctly formatted JavaScript array of strings. Each string in the array is the name of the component that you want to trace. You can use the wildcard character asterisk (<code>**\***</code>) for multiple matching.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[&quot;com.ibm.mashups.enabler.*&quot;,&quot;com.ibm.mashups.builder.model.ContextMenu&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[&quot;com.ibm.mashups.enabler.*&quot;,&quot;com.ibm.mashups.builder.model.ContextMenu&quot;]
+</code></pre></div>
 <p>This value adds client-side trace-logging for all components in the namespace <code>com.ibm.mashups.enabler</code> and the component <code>com.ibm.mashups.builder.model.ContextMenu</code>.</p>
 </li>
 <li>
@@ -3394,11 +3394,11 @@
 </li>
 </ol>
 <p>Examples: To activate all iWidget related logging and tracing, you use the following line:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>traceConfig: [&quot;com.ibm.mm.iwidget.*&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>traceConfig: [&quot;com.ibm.mm.iwidget.*&quot;]
+</code></pre></div>
 <p>To set multiple patterns, you separate them by commas like this example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>traceConfig: [&quot;com.ibm.mm.iwidget.*&quot;, &quot;com.ibm.portal.*&quot;, &quot;com.ibm.portal.wps.*&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>traceConfig: [&quot;com.ibm.mm.iwidget.*&quot;, &quot;com.ibm.portal.*&quot;, &quot;com.ibm.portal.wps.*&quot;]
+</code></pre></div>
 <p>By alternative, you can also achieve the same result by using scripting tools that WebSphere Application Server provides. For more information, refer to the WebSphere Application Server Help Center under topic <em>configuring custom properties for resource environment providers by using wsadmin scripting</em>.</p>
 <p><strong>Related information</strong>  </p>
 <p><a href="https://www.ibm.com/docs/en/was-nd/8.5.5?topic=cmureews-configuring-custom-properties-resource-environment-providers-using-wsadmin-scripting">Configuring custom properties for resource environment providers using wsadmin scripting</a></p>

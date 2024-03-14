@@ -2315,8 +2315,8 @@
 <p>In contrast, a <code>binaryUrl</code> you get from <strong>Copy link</strong> on the <strong>Edit</strong> page, consists of a string of characters representing the <code>collection_id</code>, <code>item_id</code>, and <code>rendition_id</code>.</p>
 <p><img alt="" src="../../../../images/copy_link_edit_page.png" title="Copy link from the Edit page" width="50%" /></p>
 <p><strong>Sample <code>binaryUrl</code></strong>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/collections/5c11a585-c8e6-4ef7-ba6b-6c79977ee408/items/e0a81aeb-86bb-42a8-8287-338a65e13db1/renditions/8b5e2885-e7ca-4a68-83ed-24faf58ca574?binary=true
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/collections/5c11a585-c8e6-4ef7-ba6b-6c79977ee408/items/e0a81aeb-86bb-42a8-8287-338a65e13db1/renditions/8b5e2885-e7ca-4a68-83ed-24faf58ca574?binary=true
+</code></pre></div>
 <p>Using the DAM API explorer, you can set a friendly URL for each asset, individually.</p>
 <p>You can get the content of an asset by choosing a specific property such as:</p>
 <ul>
@@ -2326,11 +2326,11 @@
 <li>The version number for each version of a rendition.</li>
 </ul>
 <p>Here is a DAM API URL with an item ID, rendition ID, and version ID:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/collections/7e86ff73-a12a-4180-9db1-387f59674b6a/items/3ea7e44b-38a1-4abc-bc3b-46584a29efd3/renditions/4ea7e44b-38a1-4abc-bc3b-46584a29efd7/versions/8aa7e44b-38a1-4abc-bc3b-46584a29efd9
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/collections/7e86ff73-a12a-4180-9db1-387f59674b6a/items/3ea7e44b-38a1-4abc-bc3b-46584a29efd3/renditions/4ea7e44b-38a1-4abc-bc3b-46584a29efd7/versions/8aa7e44b-38a1-4abc-bc3b-46584a29efd9
+</code></pre></div>
 <p>With a friendly URL for the collection unique-name, asset file name, rendition name, and version number, the DAM API URL looks as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/collections/collection-one/items/img_1705.jpg/renditions/Desktop/versions/2 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/collections/collection-one/items/img_1705.jpg/renditions/Desktop/versions/2 
+</code></pre></div>
 <h2 id="setting-a-friendly-url-for-an-asset-using-dam-api-explorer">Setting a friendly URL for an asset using DAM API explorer</h2>
 <p>Before doing the steps in this section, you must have the following information from the asset:</p>
 <ul>
@@ -2356,17 +2356,16 @@
 </li>
 <li>
 <p>Check the request API URL looks similar to the following:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://sample-url.com/dx/api/dam/v1/collections/collection-one/items/car.jpg/renditions/Desktop/versions/1.
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>https://sample-url.com/dx/api/dam/v1/collections/collection-one/items/car.jpg/renditions/Desktop/versions/1.
+</code></pre></div>
 </li>
 <li>
 <p>In the response data, check that the binary, thumbnail, and self URLs have friendly URLs similar to the following:
      ```
 binaryUrl: /collections/collection-one/items/car.jpg/renditions/Desktop?binary=true.
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>    ```
+<div class="language-text highlight"><pre><span></span><code>    ```
 thumbnailUrl: /collections/collection-one/items/car.jpg/renditions/Desktop?thumbnail=true.
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 <p><code>self: /collections/collection-one/items/car.jpg/renditions/Desktop.</code></p>
 </li>
 </ol>

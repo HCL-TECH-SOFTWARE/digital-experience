@@ -2178,8 +2178,8 @@
 <li>
 <p>Click <strong>New</strong>, and enter the property name wp.proxy.config.urlreplacement.federated_documents_policy.suffix, and set the string value to the URL pattern of the Enterprise Content Manager server.</p>
 <p>For example, to enable the server to access information from the Enterprise Content Manager server <code>ecm.example.com</code> on port 10038 over HTTP, you would add the following property:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wp.proxy.config.urlreplacement.federated_documents_policy.1=http://ecm.example.com:10038/*
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>wp.proxy.config.urlreplacement.federated_documents_policy.1=http://ecm.example.com:10038/*
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The value of the property key <code>suffix</code> can be any value as long as it is unique within the set of keys mapping to the <code>federated_documents_policy</code>.</p>
@@ -2193,10 +2193,9 @@
 </li>
 </ol>
 <p>If a user tries to access a server (for example, <code>www.example.com</code>) that has not been added to the list of allowed domains, the following message is displayed:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>Access to remote server www.example.com has not been granted. 
+<div class="language-text highlight"><pre><span></span><code>Access to remote server www.example.com has not been granted. 
 Please contact your system administrator.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

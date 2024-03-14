@@ -3136,10 +3136,9 @@
 </table>
 <p>Action beans should be instantiated as session beans. They maintain user action information for the current session including the actions logged by resource and their corresponding log counts.</p>
 <p>The following methods are accessible from rules. These methods are provided through a custom application object.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>public String[] getActionNames(HttpServletRequest request);
+<div class="language-text highlight"><pre><span></span><code>public String[] getActionNames(HttpServletRequest request);
 public int      getActionCount(HttpServletRequest request, String actionName );
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Actions can be logged with or without respect to a specific resource. For example, the "OrderCancel" action does not apply to a specific resource whereas the "BrowseContent" action applies to a specific content resource.</p>
 <p>If the call to the action log method specifies a <code>resourceId</code> and the <code>collectionName</code> is <code>null</code>, the name of a <code>ResourceCollection</code> is inferred. The <code>ResourceCollection</code> used will be any one containing a <code>resource</code> with the specified <code>resourceId</code>. The determination of the <code>ResourceCollection</code> used in this scenario is non-deterministic. Note that these variants are suitable for user implementations supporting one and only one <code>ResourceCollection</code> per <code>resource</code> class. If an implementation utilizes multiple <code>ResourceCollections</code> for the same <code>resource</code> class, the <code>collectionName</code> should be specified.</p>
 

@@ -2610,17 +2610,7 @@
 <ol>
 <li>
 <p>Specify the two virtual portal property sets in the file wkplc.properties as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>vp1.VirtualPortalTitle=**vp1**
+<div class="language-text highlight"><pre><span></span><code>vp1.VirtualPortalTitle=**vp1**
 vp1.VirtualPortalRealm=
 vp1.VirtualPortalHostName=
 vp1.VirtualPortalContext=**vp1**
@@ -2631,13 +2621,13 @@ vp2.VirtualPortalRealm=
 vp2.VirtualPortalHostName=
 vp2.VirtualPortalContext=**vp2**
 vp2.VirtualPortalNlsFile=
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Specify the realms and host names only if your portal has multiple realms.</p>
 </li>
 <li>
 <p>To create both virtual portals by using a single configuration command, use the parameter -DvirtualPortalList to specify the two portals vp1 and vp2:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ConfigEngine create-virtual-portal -DvirtualPortalList=vp1,vp2
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>ConfigEngine create-virtual-portal -DvirtualPortalList=vp1,vp2
+</code></pre></div>
 <ul>
 <li>For Linux™: <code>ConfigEngine.sh create-virtual-portal -DvirtualPortalList=vp1,vp2</code></li>
 <li>For Windows™: <code>ConfigEngine.bat create-virtual-portal -DvirtualPortalList=vp1,vp2</code></li>

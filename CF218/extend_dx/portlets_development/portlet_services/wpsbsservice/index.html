@@ -2558,19 +2558,7 @@
 <p>The service provider interfaces can be used to write portlet services for Standard portlets. The HCL Portlet API is no longer supported starting with HCL Portal Version 8.5.0. You must convert portlets based on the HCL Portlet API to the Standard Portlet API. Learn how to convert HCL Portlets to Standard API portlets.</p>
 <h2 id="defining-the-interface">Defining the interface</h2>
 <p>This step is not required if you want to implement your service against an existing interface. Defining a portlet service interface requires the same careful considerations as defining any public API interface. A portlet service interface must extend the <code>PortletService</code> interface defined in the com.ibm.portal.portlet.service package. The following is an example interface for the <code>HelloWorldService</code> .</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>package sample.portletservice;
+<div class="language-text highlight"><pre><span></span><code>package sample.portletservice;
 
 import java.io.IOException;
 import javax.portlet.RenderRequest;
@@ -2583,46 +2571,10 @@ public interface HelloService extends PortletService
     public void sayHello(RenderRequest request, RenderResponse response) 
            throws IOException;
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="writing-the-service-implementation">Writing the service implementation</h2>
 <p>The service implementation must implement the PortletServiceProvider interface of the com.ibm.portal.portlet.service.spi package to be able to make use of the portlet service life cycle methods in addition to your service interface. The <code>PortletServiceConfig</code> parameter of the init() method allows you, for example, to access the configuration of the service (see <a href="#registering-the-service">Registering the service</a> for more information).</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code>package sample.portletservice;
+<div class="language-text highlight"><pre><span></span><code>package sample.portletservice;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -2659,22 +2611,10 @@ public class HelloServiceImpl
     }
 
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="making-the-service-accessible-for-hcl-digital-experience-portlets">Making the service accessible for HCL Digital Experience portlets</h2>
 <p>This step is optional. If you want your portlet service to be available for HCL portlets, you need to create an additional service interface that extends org.apache.jetspeed.portlet.service.PortletService and provides the same functionality.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>package sample.portletservice;
+<div class="language-text highlight"><pre><span></span><code>package sample.portletservice;
 
 import java.io.IOException;
 import org.apache.jetspeed.portlet.PortletRequest;
@@ -2687,55 +2627,9 @@ public interface HelloServiceIBM extends PortletService {
     public void sayHello(PortletRequest request, PortletResponse response) throws IOException;
 
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You can have a single implementation that is registered for both interfaces and implements both. If the service methods take arguments that are classes or interfaces from the portlet API, the method signatures are different for the two service interfaces. You can still use a common implementation for both interfaces by using the APIConverterFactory class of the com.ibm.portal.portlet.apiconvert package. This class includes methods that wrap objects from the HCL portlet API, such as PortletRequest and PortletSession, and implement the corresponding standard portlet API objects on the service side, so that you can re-use your service implementation for standard portlets.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span></pre></div></td><td class="code"><div><pre><span></span><code>package sample.portletservice;
+<div class="language-text highlight"><pre><span></span><code>package sample.portletservice;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -2782,7 +2676,7 @@ public class HelloServiceImpl2
     }
 
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="registering-the-service">Registering the service</h2>
 <ol>
 <li>Put all service interface and implementation classes into a JAR file.</li>
@@ -2825,8 +2719,8 @@ public class HelloServiceImpl2
 <div class="admonition note">
 <p class="admonition-title">Tip</p>
 <p>To check whether your service has been registered successfully, use the application server dumpNamespace tool. The following command, run from the <a href="../../../../guide_me/wpsdirstr/">AppServer_root</a>/bin directory, lists all portlet service entries in JNDI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    dumpNamespace -port bootstrap_port -root server -startAt portletservice
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>    dumpNamespace -port bootstrap_port -root server -startAt portletservice
+</code></pre></div>
 </div>
 <p>Using the WebSphere Integrated Solutions Console, you can find the bootstrap port of your portal server in the "End Points" section of the settings for the server "HCL Portal and HCL Web Content Manager".</p>
 

@@ -3294,18 +3294,13 @@
 <p>If you need all features of the framework, you must define your modules through a plugin.xml or JSON file in the contributions folder.</p>
 <h2 id="module-quick-start">Module quick start</h2>
 <p>Each sub-directory within the modules folder defines one module.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>WebDAV Root
+<div class="language-text highlight"><pre><span></span><code>WebDAV Root
 + modules
 +-- module A
 +-- module B
 +-- ...
 +-- module Z
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The getting_started_module is predefined so you can start quickly. Add your JavaScript, CSS, or markup file to one of the subfolders, and your resources are integrated into HCL Digital Experience (DX).</p>
 <p>You must invalidate the resource aggregator cache before your changes are integrated. Click the <strong>Administration menu</strong> icon. Then, click <strong>Portal Analysis</strong> &gt; <strong>Theme Analyzer</strong>. Then, click <strong>Utilities</strong> &gt; <strong>Control Center</strong> &gt; <strong>Invalidate cache</strong> to invalidate the cache. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see <a href="../../themeopt_analyzer/utilities/">Utilities</a>.</p>
 <h2 id="module-directory">Module directory</h2>
@@ -3322,26 +3317,23 @@
 <li>
 <p><strong>/module-id/prereqs.properties</strong></p>
 <p>Optional file that defines the <code>prereqs</code> of this module. In the file, there is one <code>module-id</code> per new line. Module versions are not supported. For example,</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>module-id
+<div class="language-text highlight"><pre><span></span><code>module-id
 module-id
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>/module-id/capabilities.properties</strong></p>
 <p>Optional file that defines the capabilities of this module. In the file, there is a property such as style with the <code>name</code> and <code>value</code> that is separated by an equal sign. Add one per line.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>name=value
+<div class="language-text highlight"><pre><span></span><code>name=value
 name=value
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>/module-id/localization.properties</strong></p>
 <p>Optional file that defines title and description of this module. In the file, there is a property such as style. For example,</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>title.locale=title
+<div class="language-text highlight"><pre><span></span><code>title.locale=title
 description.locale=description
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Replace locale and with the local representing code for the location. For example, for the United States, use <code>en_us</code>. Replace title with the title of the module.</p>
 </li>
 <li>

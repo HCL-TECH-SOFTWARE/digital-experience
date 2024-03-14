@@ -3108,17 +3108,7 @@
 <h1 id="implementing-action-logging">Implementing action logging</h1>
 <p>To implement action logging, insert an Action bean into your JSP. To log additional application data associated with the action, add key/value pair information to the log method call.</p>
 <p>To implement action logging, insert an Action bean into your JSP, for example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;jsp:useBean class=&quot;com.ibm.wcp.analysis.beans.Action&quot; id=&quot;action&quot; scope=&quot;session&quot;/&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;jsp:useBean class=&quot;com.ibm.wcp.analysis.beans.Action&quot; id=&quot;action&quot; scope=&quot;session&quot;/&gt;
 
 
 &lt;%
@@ -3129,25 +3119,9 @@
                request.getParameter( &quot;collectionName&quot; ),
                &quot;ItemView&quot; );
 %&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To log additional application data associated with the action, add key/value pair information to the log method call in. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;jsp:useBean class=&quot;com.ibm.wcm.analysis.beans.Action&quot; id=&quot;action&quot; scope=&quot;session&quot;/&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;jsp:useBean class=&quot;com.ibm.wcm.analysis.beans.Action&quot; id=&quot;action&quot; scope=&quot;session&quot;/&gt;
 
 &lt;jsp:useBean class=&quot;ShoppingCart&quot; id=&quot;cart&quot; scope=&quot;session&quot;&gt;&lt;/jsp:useBean&gt;
 
@@ -3164,7 +3138,7 @@
                &quot;Shopping Cart Insert&quot;,
                actionInfo );
 %&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

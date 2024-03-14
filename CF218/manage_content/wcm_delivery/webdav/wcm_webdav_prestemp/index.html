@@ -2336,24 +2336,7 @@
 <h1 id="creating-presentation-templates-in-webdav">Creating presentation templates in WebDAV</h1>
 <p>With WebDAV, you can create and maintain presentation templates to define the layout and appearance characteristics of web pages that are used to display content. You can also create nested image components for use with the presentation templates. Presentation templates are stored in a folder with nested image components in an associated folder.</p>
 <p>All presentation templates for a library are listed under the <code>presentationTemplates</code> folder for that library. Because they are data-oriented items, presentation templates are represented as files and <code>meta-data</code> folders. Nested image components are stored in a folder that is named after its associated presentation template–for example, <code>template\_name_files</code>.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code> libraries
+<div class="language-text highlight"><pre><span></span><code> libraries
    - wcm.library.my_library
        - presentationTemplates
           template1
@@ -2371,11 +2354,10 @@
           - template1_files
               nested_image.jpg
           - myTemplate_files
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>!!! important
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>!!! important
     The presentation templates html content can be edited even if they do not have html extension.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ol>
 <li>
 <p>To create presentation templates for your library, drag one or more files into the <code>presentationTemplates</code> folder.</p>
@@ -2398,11 +2380,11 @@
 <li>
 <p>If you have added a nested image component, update the presentation template's HTML code to reference the component according to the relative WebDAV path to the component.</p>
 <p>For example, to reference a nested image component, you would update the <code>template1</code> file with the following code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;img src=&quot;./template1_files/nestedImage.jpg&quot; border=&quot;0&quot; title=&quot;my nested image&quot;/&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;img src=&quot;./template1_files/nestedImage.jpg&quot; border=&quot;0&quot; title=&quot;my nested image&quot;/&gt;
+</code></pre></div>
 <p>To reference a standard image component, you would use HTML code similar to the following example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;img src=&quot;../components/wcm.comps.image/test2.jpg&quot; border=&quot;0&quot; title=&quot;my test image&quot;/&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;img src=&quot;../components/wcm.comps.image/test2.jpg&quot; border=&quot;0&quot; title=&quot;my test image&quot;/&gt;
+</code></pre></div>
 </li>
 </ol>
 

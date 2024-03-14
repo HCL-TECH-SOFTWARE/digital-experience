@@ -3230,8 +3230,8 @@
 <p>The header is defined for each page and will be included on every response sent to the browser.</p>
 </div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Content-Security-Policy: script-src &#39;self&#39; https://apis.google.com
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>Content-Security-Policy: script-src &#39;self&#39; https://apis.google.com
+</code></pre></div>
 <p>The <code>Content-Security-Policy</code> header instructs the browser to allow resources from this site or apis.google.com. It also throws an error, like the one below, if it tries to load script from any other source.</p>
 <p><img alt="Content-Security-Policy header" src="../../../../../../../images/csp-browser-error.png" /></p>
 <p>Below are some of the resource directives which can be included on the <code>Content-Security-Policy</code> header:</p>
@@ -3276,8 +3276,8 @@
 <p><strong>‘unsafe-eval’</strong></p>
 <p>Allows text-to-Javascript mechanisms like eval.</p>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Content-Security-Policy: script-src &#39;self&#39; https://apis.google.com
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>Content-Security-Policy: script-src &#39;self&#39; https://apis.google.com
+</code></pre></div>
 </li>
 </ul>
 

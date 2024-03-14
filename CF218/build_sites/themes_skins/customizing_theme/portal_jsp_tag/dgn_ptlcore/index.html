@@ -3722,24 +3722,7 @@
 <h2 id="detailed-descriptions-of-the-portal-core-jsp-tags">Detailed descriptions of the &lt;portal-core/&gt; JSP tags</h2>
 <p>The following section provides detailed descriptions of the &lt;portal-core/&gt; JSP tags:</p>
 <h3 id="portal-corecacheproxyurl-forwardurlurl_string"><strong>&lt;portal-core:cacheProxyUrl forwardurl="url_string"/&gt;</strong></h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code>Creates a URL to the caching proxy servlet. The URL created is fully cacheable and includes information about the requesting client. The CC/PP client profile is used for gathering information about the client for the URL. The purpose of this tag is to link .CSS files into the JSP. The tag has one attribute.
+<div class="language-text highlight"><pre><span></span><code>Creates a URL to the caching proxy servlet. The URL created is fully cacheable and includes information about the requesting client. The CC/PP client profile is used for gathering information about the client for the URL. The purpose of this tag is to link .CSS files into the JSP. The tag has one attribute.
 
 !!! note
     For security reasons, the cache proxy servlet will only serve URLs pointing to resources located in the themes, skins, and screens directories. This makes all resources underneath these directories public. Also, any URLs containing the &quot;..&quot; characters will not be served.
@@ -3757,21 +3740,9 @@ The following code example uses this tag to link a CSS file in a JSP:
       forwardurl=&quot;&lt;portal-logic:urlFindInTheme type=&quot;css&quot; 
                 file=&quot;styles.jsp&quot;/&gt;&quot;/&gt;&quot;&gt;
 ```
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h3 id="portal-coreconstants"><strong>&lt;portal-core:constants/&gt;</strong></h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>Makes the following constants available to the page:
+<div class="language-text highlight"><pre><span></span><code>Makes the following constants available to the page:
 
 -   &lt;%= wpsBaseURL %\&gt;
 
@@ -3784,20 +3755,9 @@ The following code example uses this tag to link a CSS file in a JSP:
     ```
             &lt;%= wpsDocURL %&gt;/help/index.html             
     ```
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h3 id="portal-coredefineobjects"><strong>&lt;portal-core:defineObjects/&gt;</strong></h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>Defines a set of objects which can be used later \(for example, `escapeXmlWriter`\). Makes the following constants available to the page:
+<div class="language-text highlight"><pre><span></span><code>Defines a set of objects which can be used later \(for example, `escapeXmlWriter`\). Makes the following constants available to the page:
 
 -   &lt;%= escapeXmlWriter %\&gt;
 
@@ -3809,38 +3769,12 @@ The following code example uses this tag to link a CSS file in a JSP:
             &lt;a href=&quot;&lt;% wpsURL.write(escapeXmlWriter); %&gt;&quot;&gt;&lt;c-rt:out value=&#39;${title}&#39; escapeXml=&#39;true&#39; /&gt;&lt;/a&gt;
         &lt;/portal-navigation:urlGeneration&gt; 
     ```
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h3 id="portal-corepagerender"><strong>&lt;portal-core:pageRender/&gt;</strong></h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Used in the Home screen to render the content of the selected page. Do not confuse this with the &lt;portal-core:pageRender/\&gt; tag deprecated in V4.2. This tag renders the portal page without the navigation. When this tag is called, all pages that are available for the user are determined.
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>Used in the Home screen to render the content of the selected page. Do not confuse this with the &lt;portal-core:pageRender/\&gt; tag deprecated in V4.2. This tag renders the portal page without the navigation. When this tag is called, all pages that are available for the user are determined.
+</code></pre></div>
 <h3 id="portal-corescreenrender"><strong>&lt;portal-core:screenRender/&gt;</strong></h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code>Renders the current screen. Types of screens include Home \(default\), Login, and Error. This tag can only be used once in the portal. This tag should be used only in theme JSPs.
+<div class="language-text highlight"><pre><span></span><code>Renders the current screen. Types of screens include Home \(default\), Login, and Error. This tag can only be used once in the portal. This tag should be used only in theme JSPs.
 
 Example
 
@@ -3867,10 +3801,10 @@ This part of the `Default.jsp` portlets.
     &lt;portal-logic:if loggedIn=&quot;yes&quot;&gt;        
 &lt;/div&gt;    
 ```
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h3 id="portal-corestatebase"><strong>&lt;portal-core:stateBase/&gt;</strong></h3>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Stores a base URL which can be used instead of full, newly-coded URLs on each occurrence of a URL in the markup. This enables shorter URLs and can improve the page serving performance. This tag should occur only in the header section of the markup - it is not allowed to occur outside of the header section. Theme JSPs are responsible for the header section, using `Head.jsp` by default.
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>Stores a base URL which can be used instead of full, newly-coded URLs on each occurrence of a URL in the markup. This enables shorter URLs and can improve the page serving performance. This tag should occur only in the header section of the markup - it is not allowed to occur outside of the header section. Theme JSPs are responsible for the header section, using `Head.jsp` by default.
+</code></pre></div>
 
 
 

@@ -2863,22 +2863,7 @@
 </li>
 <li>
 <p>Create a status JSP by using the following sample code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%@ page session=&quot;false&quot; buffer=&quot;none&quot;%&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;%@ page session=&quot;false&quot; buffer=&quot;none&quot;%&gt;
 &lt;%@ page trimDirectiveWhitespaces=&quot;true&quot;%&gt;
 &lt;%-- The div in which the statusbar prints out any message it receives --%&gt;
 &lt;div class=&quot;wpthemeInner&quot;&gt;
@@ -2894,25 +2879,12 @@ src=&quot;data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEA
       &lt;/noscript&gt;
    &lt;/div&gt;
 &lt;/div&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Create a plugin.xml file in your WebContent directory by using the following sample code:</p>
 <p><strong>Note:</strong> This sample code uses the dynamicContentSpots directory, which holds the JSP file.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;plugin id=&quot;com.yourcompany.customtheme&quot; name=&quot;Custom Theme Modules&quot; provider-name=&quot;Your Company&quot; version=&quot;1.0.0&quot;&gt;
    &lt;extension id=&quot;wp_dynamicContentSpots_custom&quot;
 point=&quot;com.ibm.portal.resourceaggregator.module&quot;&gt;
@@ -2926,7 +2898,7 @@ root}/themes/html/customDynamicSpots/status.jsp&quot;/&gt;
       &lt;/module&gt;
    &lt;/extension&gt;
 &lt;/plugin&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>To create the WAR file, right-click on the project and select <strong>Export</strong> &gt; <strong>WAR file</strong>.</p>
@@ -2962,28 +2934,7 @@ root}/themes/html/customDynamicSpots/status.jsp&quot;/&gt;
 <ol>
 <li>
 <p>Create an XML file. You can use the following sample code to create the file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;request
    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
    xsi:noNamespaceSchemaLocation=&quot;PortalConfig_8.0.0.xsd&quot;
@@ -3005,7 +2956,7 @@ uniquename=&quot;theme.dyn-cs.Custom&quot; resourceroot=&quot;customDynamicSpots
       &lt;/theme&gt;
    &lt;/portal&gt;
 &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Navigate to your Portal site. Click the <strong>Administration menu</strong> icon. Then, click <strong>Portal Settings</strong> &gt; <strong>Import XML</strong>.</p>

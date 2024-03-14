@@ -3386,14 +3386,7 @@
 <h1 id="obtaining-the-model-spi">Obtaining the Model SPI</h1>
 <p>You can obtain the home object for the outbound HTTP connection configuration model by using JNDI lookup.</p>
 <p>Here is a sample code snippet:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>import com.ibm.portal.outbound.config.*;
+<div class="language-text highlight"><pre><span></span><code>import com.ibm.portal.outbound.config.*;
 ...
 
 javax.naming.Context ctx = new javax.naming.InitialContext();
@@ -3401,7 +3394,7 @@ OutboundConnectionModelHome home = (OutboundConnectionModelHome)
             ctx.lookup(&quot;portal:service/model/OutboundConnectionModel&quot;);
 OutboundConnectionModel model = home.getOutboundConnectionModelProvider().
                                 GetOutboundConnectionModel();
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The code that calls the SPI must run in the context of the portal server.</p>
 <details class="info" open="open">
 <summary>Related information</summary>

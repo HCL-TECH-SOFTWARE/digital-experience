@@ -2205,44 +2205,32 @@
 <p>Update the package.json file for each of the submodule to enumerate the libraries that will be included.</p>
 <ul>
 <li>Set the appropriate dependencies for the submodule. DxModule/SubModuleReact16/package.json
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&quot;dependencies&quot;: {
+<div class="language-text highlight"><pre><span></span><code>&quot;dependencies&quot;: {
     &quot;react&quot;: &quot;^16.14.0&quot;,
     &quot;react-dom&quot;: &quot;^16.14.0&quot;
 },
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 <li>Set the appropriate dependencies for the submodule. DxModule/SubModuleReact18/package.json
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&quot;dependencies&quot;: {
+<div class="language-text highlight"><pre><span></span><code>&quot;dependencies&quot;: {
     &quot;react&quot;: &quot;^18.2.0&quot;,
     &quot;react-dom&quot;: &quot;^18.2.0&quot;
 },
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 <li>Make sure to set the main file to modules-index.js
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&quot;main&quot;: &quot;modules-index.js&quot;,
-</code></pre></div></td></tr></table></div></li>
+<div class="language-text highlight"><pre><span></span><code>&quot;main&quot;: &quot;modules-index.js&quot;,
+</code></pre></div></li>
 <li>Make sure to add the build-dx-modules among the scripts. DxModule/SubModuleReact16/package.json:
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&quot;scripts&quot;: {
+<div class="language-text highlight"><pre><span></span><code>&quot;scripts&quot;: {
   ...
   &quot;build-dxsubmodule&quot;: &quot;webpack --config  webpack.react16.js&quot;
 },
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 <li>Make sure to add the build-dx-modules among the scripts. DxModule/SubModuleReact18/package.json:
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&quot;scripts&quot;: {
+<div class="language-text highlight"><pre><span></span><code>&quot;scripts&quot;: {
   ...
   &quot;build-dxsubmodule&quot;: &quot;webpack --config  webpack.react18.js&quot;
 },
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 </ul>
 </li>
 <li>
@@ -2250,17 +2238,7 @@
 <ul>
 <li>
 <p>DxModule/SubModuleReact16/module-index.js
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>/* Import and Export Main Libraries
+<div class="language-text highlight"><pre><span></span><code>/* Import and Export Main Libraries
  */
 import * as React16 from &#39;react&#39;;
 import * as ReactDOM16 from &#39;react-dom&#39;;
@@ -2271,21 +2249,11 @@ export const ReactV16 = {
 /* Export index file for the styles (added here to be able to share the filename of JS bundle&#39;s alias in Webpack entry config).
  */
 export * from &#39;./styles-index.css&#39;    
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 </li>
 <li>
 <p>DxModule/SubModuleReact18/module-index.js
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>/* Import and Export Main Libraries
+<div class="language-text highlight"><pre><span></span><code>/* Import and Export Main Libraries
  */
 import * as React18 from &#39;react&#39;;
 import * as ReactDOM18 from &#39;react-dom&#39;;
@@ -2296,7 +2264,7 @@ export const ReactV18 = {
 /* Export index file for the styles (added here to be able to share the filename of JS bundle&#39;s alias in Webpack entry config).
 */
 export * from &#39;./styles-index.css&#39;    
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 </li>
 </ul>
 </li>
@@ -2305,75 +2273,31 @@ export * from &#39;./styles-index.css&#39;
 <ul>
 <li>
 <p>DxModule/SubModuleReact16/webpack.react16.js
- <div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>...
+ <div class="language-text highlight"><pre><span></span><code>...
        new DllPlugin({
            name: &quot;[name]_[fullhash]&quot;,
            path: path.resolve(__dirname, &quot;./dx-dll-manifest-react16.json&quot;),
            format: true,
        }),
 ...
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 </li>
 <li>
 <p>DxModule/SubModuleReact16/webpack.react18.js
- <div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>...
+ <div class="language-text highlight"><pre><span></span><code>...
       new DllPlugin({
           name: &quot;[name]_[fullhash]&quot;,
           path: path.resolve(__dirname, &quot;./dx-dll-manifest-react18.json&quot;),
           format: true,
       }),
 ...
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 </li>
 </ul>
 </li>
 <li>
 <p>The plugin.xml file in the DxModule/src/main/config/war/WEB-INF folder needs to list all expected JS and CSS file bundles in the build (i.e: DxModule/dist-dx-module).
-   <div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
+   <div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
 &lt;?eclipse version=&quot;3.0&quot;?&gt;
 &lt;plugin id=&quot;@@auto-replaced-with-rootProject.name@@&quot; name=&quot;@@auto-replaced-with-rootProject.name@@&quot; version=&quot;1.0.0&quot; provider-name=&quot;IBM&quot;&gt;
 
@@ -2406,7 +2330,7 @@ export * from &#39;./styles-index.css&#39;
         &lt;/module&gt;
     &lt;/extension&gt;
 &lt;/plugin&gt;
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 </li>
 </ol>
 <h2 id="how-to-build-and-deploy-dx-modules">How To Build and Deploy DX Modules</h2>
@@ -2440,55 +2364,47 @@ export * from &#39;./styles-index.css&#39;
 <p>Update the project package.json file for each of the Script Application (SampleAppReact16/package.json and SampleAppReact18/package.json).</p>
 <ul>
 <li>Set the name of the project and the main JavaScript or TypeScript file.
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>   &quot;name&quot;: &quot;sample-react-app-16&quot;,
-</code></pre></div></td></tr></table></div></li>
+<div class="language-text highlight"><pre><span></span><code>   &quot;name&quot;: &quot;sample-react-app-16&quot;,
+</code></pre></div></li>
 <li>Create a dependency linking this application to the folder of the correct submodule. Remove the dependencies that are redundant with the submodule's scope(i.e: React, ReactDom). 
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>   &quot;dependencies&quot;: {
+<div class="language-text highlight"><pre><span></span><code>   &quot;dependencies&quot;: {
        &quot;dxmodules&quot;: &quot;file:../DxModule/SubModuleReact16&quot;
    },
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 </ul>
 </li>
 <li>
 <p>Find all the React Apps' JS and TS files (i.e: index.jsx, App.jsx, etc.), divert all imports of the libraries that are bundled in the DX Module (i.e: React, ReactDOM) to use the dxmodules alias set in package.json.
-    <div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>// From
+    <div class="language-text highlight"><pre><span></span><code>// From
 import React from &#39;react&#39;;
 import ReactDOM from &#39;react-dom/client&#39;;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
     for React version 16
-    <div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>// To
+    <div class="language-text highlight"><pre><span></span><code>// To
 import { ReactV16 } from &#39;dxmodules&#39;;
 const { React, ReactDOM } = ReactV16;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
     or for React version 18
-    <div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>// To
+    <div class="language-text highlight"><pre><span></span><code>// To
 import { ReactV18 } from &#39;dxmodules&#39;;
 const { React, ReactDOM } = ReactV1;
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 </li>
 <li>
 <p>Assign an id for the root html tags unique for each of the ScriptApps. Make sure to use the same id in the corresponding index.jsx within the same ScriptApp.</p>
 <ul>
 <li>SampleAppReact16/src/index.html
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    &lt;div id=&quot;sample-app-react-16-root&quot;&gt;&lt;/div&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>    &lt;div id=&quot;sample-app-react-16-root&quot;&gt;&lt;/div&gt;
+</code></pre></div>
    SampleAppReact16/src/index.jsx
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    const root = ReactDOM.createRoot(document.getElementById(&#39;sample-app-react-16-root&#39;));
-</code></pre></div></td></tr></table></div></li>
+<div class="language-text highlight"><pre><span></span><code>    const root = ReactDOM.createRoot(document.getElementById(&#39;sample-app-react-16-root&#39;));
+</code></pre></div></li>
 <li>SampleAppReact18/public/index.html
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    &lt;div id=&quot;sample-app-react-18-root&quot;&gt;&lt;/div&gt;]()
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>    &lt;div id=&quot;sample-app-react-18-root&quot;&gt;&lt;/div&gt;]()
+</code></pre></div>
    SampleAppReact18/src/index.js
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    const root = ReactDOM.createRoot(document.getElementById(&#39;sample-app-react-18-root&#39;));
-</code></pre></div></td></tr></table></div></li>
+<div class="language-text highlight"><pre><span></span><code>    const root = ReactDOM.createRoot(document.getElementById(&#39;sample-app-react-18-root&#39;));
+</code></pre></div></li>
 </ul>
 </li>
 <li>
@@ -2496,46 +2412,34 @@ const { React, ReactDOM } = ReactV1;
 <ul>
 <li>Configure the build entry pointing to the styles index file of the specific submodule. This will simulate the styling injection that will be done by DX in the HTML header of a DX page.</li>
 <li>SampleAppReact16/webpack.dev.js:
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>  entry: {
+<div class="language-text highlight"><pre><span></span><code>  entry: {
     // Note: point this to the DX Module project&#39;s submodule
     dxmodulesstyles: path.resolve(__dirname, &#39;../DxModule/SubModuleReact16/styles-index.css&#39;),
   },
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 <li>SampleAppReact18/webpack.dev.js:
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>  entry: {
+<div class="language-text highlight"><pre><span></span><code>  entry: {
     // Note: point this to the DX Module project&#39;s submodule
     dxmodulesstyles: path.resolve(__dirname, &#39;../DxModule/SubModuleReact18/styles-index.css&#39;),
   },
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 </ul>
 </li>
 <li>
 <p>Update the webpack.dx-scriptapp.js file to each of the ScriptApps. Point the DllReferencePlugin of the app needing React v16/v18 to the correct submodule context and manifest.</p>
 <ul>
 <li>SampleAppReact16/webpack.dx-scriptapp.js
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>        new DllReferencePlugin({
+<div class="language-text highlight"><pre><span></span><code>        new DllReferencePlugin({
             context: path.resolve(__dirname, &#39;../DxModule/SubModuleReact16&#39;),
             manifest: require(&#39;../DxModule/SubModuleReact16/dx-dll-manifest-react16.json&#39;),
         }),
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 <li>SampleAppReact18/webpack.dx-scriptapp.js
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>        new DllReferencePlugin({
+<div class="language-text highlight"><pre><span></span><code>        new DllReferencePlugin({
             context: path.resolve(__dirname, &#39;../DxModule/SubModuleReact18&#39;),
             manifest: require(&#39;../DxModule/SubModuleReact18/dx-dll-manifest-react18.json&#39;),
         }),
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 </ul>
 </li>
 </ol>

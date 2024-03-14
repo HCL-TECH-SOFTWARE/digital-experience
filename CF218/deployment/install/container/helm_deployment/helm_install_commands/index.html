@@ -1899,10 +1899,9 @@
 <p>Modification to any files (chart.yaml, templates, crds) in hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz, except custom-values.yaml or values.yaml, is not supported.</p>
 </div>
 <p>To run the installation of your prepared configurations using Helm, use the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code># Helm install command
+<div class="language-text highlight"><pre><span></span><code># Helm install command
 helm install -n my-namespace -f path/to/your/custom-values.yaml your-release-name path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li>The <code>my-namespace</code> is the namespace where your HCL Digital Experience 9.5 deployment is installed to.</li>
 <li>The <code>-f path/to/your/custom-values.yaml</code> must point to the custom-values.yaml you have created, which contains all deployment configuration.</li>
@@ -1910,39 +1909,30 @@ helm install -n my-namespace -f path/to/your/custom-values.yaml your-release-nam
 <li>path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz is the HCL Digital Experience 9.5 Helm Chart that you have extracted as described earlier in the planning and preparation steps.</li>
 </ul>
 <p>After a successful deployment, Helm responds with the following message:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>    NAME: dx
+<div class="language-text highlight"><pre><span></span><code>    NAME: dx
     LAST DEPLOYED: Thu Jun 17 14:27:58 2021
     NAMESPACE: my-namespace
     STATUS: deployed
     REVISION: 1
     TEST SUITE: None
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="hybrid-deployment-configuration">Hybrid deployment configuration</h2>
 <p>If you are installing in a Hybrid deployment<!-- <a href="https://help.hcltechsw.com/digital-experience/9.5/containerization/hybrid_deployment_helm.html">Hybrid deployment</a>(../../hybrid/hybrid_deployment_helm.md) --> pattern, after successfully running the Helm deployment, you need to configure services in DX Core to be aware of the <code>external host name</code> of your hybrid DX environment. To complete these steps, log on to the DX Core Server and run the following Config Engine tasks to enable other DX applications.</p>
 <p>In the following examples, replace &lt;host-url&gt; with your corresponding external host name.</p>
 <ul>
 <li>
 <p>Content Composer:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>    &lt;Path to wp_profile&gt;/ConfigEngine/ConfigEngine.sh enable-headless-content 
+<div class="language-text highlight"><pre><span></span><code>    &lt;Path to wp_profile&gt;/ConfigEngine/ConfigEngine.sh enable-headless-content 
     -Dstatic.ui.url=https://&lt;host-url&gt;/dx/ui/content-ui/static -DWasPassword=&lt;was-
     password&gt; -DPortalAdminPwd=&lt;admin-password&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Digital Asset Manager:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>    &lt;Path to wp_profile&gt;/ConfigEngine/ConfigEngine.sh enable-media-library 
+<div class="language-text highlight"><pre><span></span><code>    &lt;Path to wp_profile&gt;/ConfigEngine/ConfigEngine.sh enable-media-library 
     -Dstatic.ui.url=https://&lt;host-url&gt;/dx/ui/dam/static -DWasPassword=&lt;was-
     password&gt; -DPortalAdminPwd=&lt;admin-password&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="default-urls-post-installation">Default URLs post installation</h2>
@@ -1971,8 +1961,8 @@ helm install -n my-namespace -f path/to/your/custom-values.yaml your-release-nam
 <ul>
 <li>
 <p>Run the following command to get a load balancer external IP:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl get services -n &lt;your-namespace&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl get services -n &lt;your-namespace&gt;
+</code></pre></div>
 </li>
 <li>
 <p>For Amazon EKS, you must add the external IP to route53.</p>
@@ -1982,23 +1972,22 @@ helm install -n my-namespace -f path/to/your/custom-values.yaml your-release-nam
 <h2 id="optional-automated-host-extraction">(Optional) Automated host extraction</h2>
 <p>As described in the <a href="../preparation/mandatory_tasks/prepare_configure_networking/">Configure networking</a> topic, there are instances wherein you do not know the resulting external IP or FQDN for your deployment and the host value is empty. In that case, run a Helm upgrade command, and it automatically polls HAProxy and extracts the IP or FQDN values. The Helm Chart logic then populates all application configurations with the correct settings.</p>
 <p>An example is provided below. You may use the following Helm upgrade command to trigger the automated host extraction:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code># Helm upgrade command
+<div class="language-text highlight"><pre><span></span><code># Helm upgrade command
 helm upgrade -n my-namespace -f path/to/your/custom-values.yaml your-release-name path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="optional-override-content-composer-and-dam-url">(Optional) Override Content Composer and DAM URL</h2>
 <p>If you are using a hybrid deployment with Content Composer and/or DAM and have multiple environments connected to different Kubernetes deployments and syndicate pages, you can use the following overrides to avoid the same Kubernetes deployment being used across environments. </p>
 <p>To override the static user interface URL being set in React Integration Portlet, do it in the DX WebSphere Application Server user interface. In the WAS Server, go to <strong>Resources</strong> and select <strong>Resources Environment Providers</strong>. In <strong>Resources Environment Providers</strong>, select <strong>WP_ConfigService</strong> and go to <strong>Custom properties</strong> to add new variables as provided below:</p>
 <ul>
 <li>For Content Composer:</li>
 </ul>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>override.cc.url
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>override.cc.url
+</code></pre></div>
 <ul>
 <li>For DAM:</li>
 </ul>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>override.dam.url
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>override.dam.url
+</code></pre></div>
 <p>Sample values below
 <img alt="WAS override variables" src="../_img/was_override_cc_dam_url.png" /></p>
 <h2 id="additional-reference">Additional reference</h2>

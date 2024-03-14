@@ -2884,10 +2884,10 @@
 <ol>
 <li>
 <p>Add the following tags to the head section of your theme template:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;link rel=&quot;alternate&quot; href=&quot;nls/theme_de.html&quot; hreflang=&quot;de&quot;&gt;
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;link rel=&quot;alternate&quot; href=&quot;nls/theme_en.html&quot; hreflang=&quot;en&quot;&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;link rel=&quot;alternate&quot; href=&quot;nls/theme_de.html&quot; hreflang=&quot;de&quot;&gt;
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;link rel=&quot;alternate&quot; href=&quot;nls/theme_en.html&quot; hreflang=&quot;en&quot;&gt;
+</code></pre></div>
 </li>
 <li>
 <p>In WebDAV, create a new directory that is named <code>nls</code> in <code>fs-type1/themes/themename</code>.</p>
@@ -2901,15 +2901,13 @@
 <ol>
 <li>
 <p>Add the following tag to the section tag of your template:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;a rel=&quot;alternate&quot; href=&quot;nls/skin_de.html&quot; hreflang=&quot;de&quot; class=&quot;wpthemeDisplayNone&quot;&gt;&lt;/a&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;a rel=&quot;alternate&quot; href=&quot;nls/skin_de.html&quot; hreflang=&quot;de&quot; class=&quot;wpthemeDisplayNone&quot;&gt;&lt;/a&gt;
+</code></pre></div>
 <p>The section tag will look similar to the following sample section tag:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;section class=&quot;ibmPortalControl stControl wpthemeControl a11yRegionTarget&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;section class=&quot;ibmPortalControl stControl wpthemeControl a11yRegionTarget&quot;&gt;
 &lt;a rel=&quot;alternate&quot; href=&quot;nls/skin_de.html&quot; hreflang=&quot;de&quot; class=&quot;wpthemeDisplayNone&quot;&gt;&lt;/a&gt;
 &lt;a rel=&quot;alternate&quot; href=&quot;nls/skin_en.html&quot; hreflang=&quot;en&quot; class=&quot;wpthemeDisplayNone&quot;&gt;&lt;/a&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>In WebDAV, create a new directory that is named <code>nls</code> in <code>fs-type1/themes/themename/yourskin</code>.</p>
@@ -2923,16 +2921,7 @@
 <li>Locate and open the .json file.</li>
 <li>
 <p>Locate the <strong>Titles</strong> element. To add a new locale, add its <strong>lang</strong> and <strong>value</strong> attributes, which are separated by commas:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>&quot;titles&quot;:[
+<div class="language-text highlight"><pre><span></span><code>&quot;titles&quot;:[
 {
 &quot;lang&quot;:&quot;de&quot;,
 value&quot;:&quot;Verzögert&quot;
@@ -2942,15 +2931,15 @@ value&quot;:&quot;Verzögert&quot;
 &quot;value&quot;:&quot;Deferred&quot;
 }
 ]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Repeat Step 2, editing the <strong>lang</strong> and <strong>value</strong> attributes for descriptions.</p>
 </li>
 <li>
 <p>Edit the <strong>class</strong> attribute in the body element from <code>locale_en</code> to <code>locale_lang</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;body id=&quot;content&quot; class=&quot;lotusui30dojo tundra claro locale_lang
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;body id=&quot;content&quot; class=&quot;lotusui30dojo tundra claro locale_lang
+</code></pre></div>
 </li>
 <li>
 <p><strong><a href="themeopt_themedev_rtl_locales/">Adding support for RTL locales</a></strong><br />

@@ -4192,8 +4192,8 @@
 <p>There are multiple entries in the Security Access Manager object space for every externalized resource, one entry per existing Portal role on that resource. Recall that in HCL Portal there are multiple different role types; for example, User, Privileged User, Editor, Manager, Administrator. Not every Portal role might be instantiated for every resource instance, and entries in Security Access Manager exist only if the corresponding actual role on that Portal resource exists.</p>
 <p><strong>Format of the entries in Security Access Manager:</strong></p>
 <p>By default, the entries in the Security Access Manager object space have the following format:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;PDRoot_Value&gt;/&lt;Portal Rolename-on-resource&gt;[/&lt;EACappname_value&gt;/&lt;EACserverName_value&gt;/&lt;EACcellName_value&gt;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;PDRoot_Value&gt;/&lt;Portal Rolename-on-resource&gt;[/&lt;EACappname_value&gt;/&lt;EACserverName_value&gt;/&lt;EACcellName_value&gt;]
+</code></pre></div>
 <p>By default, the <code>Portal Rolename-on-resource</code> is in the form of <code>&lt;Portal_RoleType&gt;@&lt;Portal_Resource_Identifier&gt;</code>. For example: <code>Administrator@VIRTUAL_EXTERNAL_ACCESS_CONTROL</code>.</p>
 <p>The Security Access Manager object space entries might be different from the default, depending on the following properties:</p>
 <ul>
@@ -4216,64 +4216,57 @@
 <tr>
 <td> AIX® </td>
 <td></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh validate-pdadmin-connection -DWasPassword=password 
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh validate-pdadmin-connection -DWasPassword=password 
                                               -Dwp.ac.impl.PDAdminPwd=password
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p></td>
 </tr>
 <tr>
 <td> HP-UX </td>
 <td></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh validate-pdadmin-connection -DWasPassword=password 
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh validate-pdadmin-connection -DWasPassword=password 
                                               -Dwp.ac.impl.PDAdminPwd=password
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p></td>
 </tr>
 <tr>
 <td> IBM i </td>
 <td></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>ConfigEngine.sh validate-pdadmin-connection -DWasPassword=password 
+<div class="language-text highlight"><pre><span></span><code>ConfigEngine.sh validate-pdadmin-connection -DWasPassword=password 
                                             -Dwp.ac.impl.PDdAdminPwd=password
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p></td>
 </tr>
 <tr>
 <td> Linux™ </td>
 <td></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh validate-pdadmin-connection -DWasPassword=password 
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh validate-pdadmin-connection -DWasPassword=password 
                                               -Dwp.ac.impl.PDAdminPwd=password
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p></td>
 </tr>
 <tr>
 <td> Solaris </td>
 <td></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh validate-pdadmin-connection -DWasPassword=password 
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh validate-pdadmin-connection -DWasPassword=password 
                                               -Dwp.ac.impl.PDAdminPwd=password
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p></td>
 </tr>
 <tr>
 <td> Windows™ </td>
 <td></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>ConfigEngine.bat validate-pdadmin-connection -DWasPassword=password 
+<div class="language-text highlight"><pre><span></span><code>ConfigEngine.bat validate-pdadmin-connection -DWasPassword=password 
                                              -Dwp.ac.impl.PDAdminPwd=password
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p></td>
 </tr>
  <tr>
 <td> z/OS® </td>
 <td></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh validate-pdadmin-connection -DWasPassword=password 
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh validate-pdadmin-connection -DWasPassword=password 
                                               -Dwp.ac.impl.PDAdminPwd=password
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p></td>
 </tr>
 </table></p>

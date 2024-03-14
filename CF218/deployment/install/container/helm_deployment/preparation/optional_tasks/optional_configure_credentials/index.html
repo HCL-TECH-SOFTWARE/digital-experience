@@ -2607,50 +2607,7 @@
 <p>HCL Digital Experience 9.5 uses several credentials in its deployment to manage access between applications and from outside the container deployment.</p>
 <h2 id="adjusting-default-credentials">Adjusting default credentials</h2>
 <p>You can adjust the default credentials that HCL Digital Experience 9.5 is using by adding the following syntax to your custom-values.yaml file and changing the values you need:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Security related configuration, e.g. default credentials</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Security related configuration, e.g. default credentials</span>
 <span class="nt">security</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Security configuration for Core</span>
 <span class="w">  </span><span class="nt">core</span><span class="p">:</span>
@@ -2694,7 +2651,7 @@
 <span class="w">    </span><span class="c1"># - If LDAP is configured as the user repository, the WebSphere Application Server admin user won&#39;t be applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wasUser and wasPassword need to be manually updated accordingly.</span>
 <span class="w">    </span><span class="nt">wasUser</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;wpsadmin&quot;</span>
 <span class="w">    </span><span class="nt">wasPassword</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;wpsadmin&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="core-security-credentials">Core security credentials</h2>
 <p>The security credentials defined in the <code>security</code> section of the Helm values are necessary to pass the user credentials to the IBM Websphere Application Server and HCL Digital Experience Core startup scripts. The behavior slightly differs depending on the user registry that is configured for HCL Digital Experience. See <a href="#registry-types">Registry Types</a>.</p>
 <h2 id="remote-search-security-credentials">Remote Search security credentials</h2>
@@ -2707,14 +2664,11 @@
 <li>After the Helm upgrade, the Config Wizard credentials can now be updated if needed, separately from the Core. </li>
 </ul>
 <p>The section in your <code>custom-values.yaml</code> must be set like this:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">security</span><span class="p">:</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">security</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">core</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">configWizardUser</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;wpsadmin&quot;</span>
 <span class="w">    </span><span class="nt">configWizardPassword</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;your</span><span class="nv"> </span><span class="s">wpsadmin</span><span class="nv"> </span><span class="s">password</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file-based</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">registry</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Core</span><span class="nv"> </span><span class="s">&gt;&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Alternatively, you can set the username <code>wpsadmin</code> and the correct password in a custom secret and reference them as <code>customConfigWizardSecret</code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -2780,25 +2734,7 @@
 <p>Ensure that the current credentials are <a href="#updating-credentials">set properly</a> in the Helm Values before doing the upgrade.</p>
 <h2 id="configuring-credentials-from-secrets">Configuring Credentials from Secrets</h2>
 <p>You can also configure the credentials that HCL Digital Experience 9.5 is using by creating a secret that contains the credentials and referencing them by adding the secret name to your <code>custom-values.yaml</code> file and doing a <code>helm upgrade</code> to apply it in the deployments:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Referencing the secret to configure credential, e.g. core credentials</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Referencing the secret to configure credential, e.g. core credentials</span>
 <span class="nt">security</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Security configuration for Core using secrets</span>
 <span class="w">  </span><span class="nt">core</span><span class="p">:</span>
@@ -2817,7 +2753,7 @@
 <span class="w">    </span><span class="c1">#   - password</span>
 <span class="w">    </span><span class="c1"># Secret name is being referenced to configure credentials, this secret conatians the key-value pair for &quot;username&quot; and &quot;password&quot;</span>
 <span class="w">    </span><span class="nt">customWasSecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my-was-credential-secret&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Only one method of configuring credentials can be applied at once. Either configure it by using secrets or using the credentials in the Helm <code>custom-values.yaml</code>, unused credential values should be explicitly set to <strong>empty/null</strong>.</p>
@@ -2836,8 +2772,8 @@
 <p>There are two ways to create and deploy custom secrets:</p>
 <p><strong>By Kubectl Command</strong>\
 This is the preferred way of creating a secret inside a cluster, Kubernetes will handle the encoding of the key-value pairs in a base64-encoding format. </p>
-<div class="language-console highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="gp">$ </span>kubectl<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>generic<span class="w"> </span>&lt;secret-name&gt;<span class="w"> </span>--from-literal<span class="o">=</span><span class="nv">username</span><span class="o">=</span>&lt;your-username&gt;<span class="w"> </span>--from-literal<span class="o">=</span><span class="nv">password</span><span class="o">=</span>&lt;your-password&gt;<span class="w"> </span>--namespace<span class="o">=</span>&lt;namespace&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-console highlight"><pre><span></span><code><span class="gp">$ </span>kubectl<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>generic<span class="w"> </span>&lt;secret-name&gt;<span class="w"> </span>--from-literal<span class="o">=</span><span class="nv">username</span><span class="o">=</span>&lt;your-username&gt;<span class="w"> </span>--from-literal<span class="o">=</span><span class="nv">password</span><span class="o">=</span>&lt;your-password&gt;<span class="w"> </span>--namespace<span class="o">=</span>&lt;namespace&gt;
+</code></pre></div>
 <p>For details please refer to the official Kubernetes documentation about <a href="https://kubernetes.io/docs/tasks/configmap-secret/managing-secret-using-kubectl/">Managing Secrets using kubectl</a>.</p>
 <p><strong>By YAML files</strong>\
 Secrets can also be created using a secret yaml manifest. </p>
@@ -2845,19 +2781,7 @@ Secrets can also be created using a secret yaml manifest. </p>
 <p class="admonition-title">Note</p>
 <p>The string values assigned in the data fields of the secret should be base64-encoded. The containers expect a base64-encoded string to be passed from the secrets key-value pairs. The credentials will not work if the values passed are plain strings.</p>
 </div>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Example manifest for creating secret by using a yaml file</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Example manifest for creating secret by using a yaml file</span>
 <span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
 <span class="nt">data</span><span class="p">:</span>
@@ -2870,7 +2794,7 @@ Secrets can also be created using a secret yaml manifest. </p>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;secret-name&gt;</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
 <span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h4 id="2-reference-the-secret">2. Reference the Secret</h4>
 <p>Once the secret is created inside the cluster, you can now reference them in their respective custom secret fields inside the <code>custom-values.yaml</code> under <code>security</code> section. See this <a href="./#configuring-credentials-from-secrets">example</a> for reference.</p>
 <div class="admonition note">
@@ -2993,18 +2917,7 @@ Secrets can also be created using a secret yaml manifest. </p>
 </tbody>
 </table>
 <p><strong>Core WAS Credential secret</strong>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
 <span class="nt">data</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Required attribute</span>
@@ -3016,20 +2929,9 @@ Secrets can also be created using a secret yaml manifest. </p>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-was-secret</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
 <span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 <p><strong>Core WPS Credential secret</strong>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
 <span class="nt">data</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Required attribute</span>
@@ -3041,20 +2943,9 @@ Secrets can also be created using a secret yaml manifest. </p>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-wps-secret</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
 <span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 <p><strong>Core Config Wizard Credential secret</strong>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
 <span class="nt">data</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Required attribute</span>
@@ -3066,20 +2957,9 @@ Secrets can also be created using a secret yaml manifest. </p>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-config-wizard-secret</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
 <span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 <p><strong>Core LDAP Credential secret</strong>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
 <span class="nt">data</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Required attribute</span>
@@ -3091,28 +2971,9 @@ Secrets can also be created using a secret yaml manifest. </p>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-core-ldap-secret</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
 <span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 <p><strong>Core LTPA Credential secret</strong>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
 <span class="nt">data</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Required attribute</span>
@@ -3132,18 +2993,9 @@ Secrets can also be created using a secret yaml manifest. </p>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-core-ltpa-secret</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
 <span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 <p><strong>Core Content AI Secret</strong>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
 <span class="nt">data</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Required attribute</span>
@@ -3153,20 +3005,9 @@ Secrets can also be created using a secret yaml manifest. </p>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-core-content-ai-secret</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
 <span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 <p><strong>DAM Plugin Google Vision Credential secret</strong>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
 <span class="nt">data</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Required attribute</span>
@@ -3178,20 +3019,9 @@ Secrets can also be created using a secret yaml manifest. </p>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-google-vision-secret</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
 <span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 <p><strong>DAM Plugin Kaltura Credential secret</strong>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
 <span class="nt">data</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Required attribute</span>
@@ -3203,20 +3033,9 @@ Secrets can also be created using a secret yaml manifest. </p>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-kaltura-secret</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
 <span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 <p><strong>Persistence Connection Pool Credential secret</strong>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
 <span class="nt">data</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Required attribute</span>
@@ -3228,20 +3047,9 @@ Secrets can also be created using a secret yaml manifest. </p>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-connection-pool-secret</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
 <span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 <p><strong>Persistence DAM User Credential secret</strong>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
 <span class="nt">data</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Required attribute</span>
@@ -3253,20 +3061,9 @@ Secrets can also be created using a secret yaml manifest. </p>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-dam-user-secret</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
 <span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 <p><strong>Persistence Replication Credential secret</strong>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
 <span class="nt">data</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Required attribute</span>
@@ -3278,20 +3075,9 @@ Secrets can also be created using a secret yaml manifest. </p>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-replication-secret</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
 <span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 <p><strong>Persistence User Credential secret</strong>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
 <span class="nt">data</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Required attribute</span>
@@ -3303,18 +3089,9 @@ Secrets can also be created using a secret yaml manifest. </p>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-replication-secret</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
 <span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 <p><strong>Image Processor Credential secret</strong>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
 <span class="nt">data</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Required attribute</span>
@@ -3324,20 +3101,9 @@ Secrets can also be created using a secret yaml manifest. </p>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-kaltura-secret</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
 <span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 <p><strong>License Manager Credential secret</strong>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
 <span class="nt">data</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Required attribute</span>
@@ -3349,20 +3115,9 @@ Secrets can also be created using a secret yaml manifest. </p>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-license-manager-secret</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
 <span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 <p><strong>Open LDAP Credential secret</strong>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
 <span class="nt">data</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Required attribute</span>
@@ -3374,20 +3129,9 @@ Secrets can also be created using a secret yaml manifest. </p>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-open-ldap-secret</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
 <span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 <p><strong>Remote Search WAS Credential secret</strong>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
 <span class="nt">data</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Required attribute</span>
@@ -3399,7 +3143,7 @@ Secrets can also be created using a secret yaml manifest. </p>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-remote-search-was-secret</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
 <span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 
 
 

@@ -4032,16 +4032,7 @@
 <p>A composition hierarchy has several global flags. The global flags are similar to attributes of the content page node, except that they are associated with the composition hierarchy rather than the content node. Therefore, they are accessed through the Layout bean after the page in the Content bean is selected.</p>
 <p>You can query the global flags with the getflag and modify them with the setflag command. The getflag command expects the name of the flag as the first argument. If the keyword numeric is added, it returns the value of the flag as a Boolean 1 or 0. Without the keyword, it returns a string true or false. The setflag command expects the name of the flag as the first argument, the new value as the second. You can specify the new value as any Boolean value recognized by the BSF, like 1/0, true/false, t/f, on/off.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>Layout.getflag(flag)
+<div class="language-text highlight"><pre><span></span><code>Layout.getflag(flag)
 Layout.getflag(flag, &quot;numeric&quot;)
 
 Layout.setflag(flag, value)
@@ -4051,22 +4042,16 @@ if Layout.getflag(&quot;active&quot;, &quot;numeric&quot;):
   ...
 else:
   ...
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>$Layout getflag flag
+<div class="language-text highlight"><pre><span></span><code>$Layout getflag flag
 $Layout getflag flag numeric
 
 $Layout setflag flag value
 
 # query a flag in a condition
 if [$Layout getflag active numeric] then {...} else {...}
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following global flags are supported. The bean help documents alternative and shorter names.</p>
 <table>
 <thead>

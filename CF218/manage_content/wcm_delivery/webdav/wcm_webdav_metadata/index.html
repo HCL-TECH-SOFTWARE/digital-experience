@@ -2414,21 +2414,7 @@
 <h2 id="metadata">Metadata</h2>
 <p>An item's metadata is represented by the <code>meta-data.xml</code> file, which describes identification information for the item, including the name and title for the item and the list of authors and owners that are associated with the item.</p>
 <p>Here is a sample <code>meta-data.xml</code> file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;meta-data&gt;
   &lt;item&gt;
     &lt;title lang=&quot;en&quot; value=&quot;test1.JPG&quot;/&gt;
@@ -2443,7 +2429,7 @@
     &lt;/wcm-group&gt;
   &lt;/item&gt;
 &lt;/meta-data&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="access-control">Access control</h2>
 <p>An item's access control information is represented by the following files:</p>
 <ul>
@@ -2452,26 +2438,7 @@
 </ul>
 <p>In addition to these item-specific files, the <code>access-control.xml</code> file is provided for folders that represent resource types, like the <code>components</code> folder, and contains access control settings for the resource type.</p>
 <p>Here is a sample <code>access-control.xml</code> file for resource access control settings:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;access-control&gt;
   &lt;resource-config&gt;
     &lt;role-block role-type=&quot;Editor&quot; type=&quot;inheritance&quot;/&gt;
@@ -2491,23 +2458,9 @@
     &lt;/role&gt;
   &lt;/role-list&gt;
 &lt;/access-control&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Here is a sample <code>access-control-system.xml</code> file for an item's administrator-defined access control settings:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;access-control&gt;
   &lt;resource-config&gt;
     &lt;role-block role-type=&quot;Contributor&quot; type=&quot;inheritance&quot;/&gt;
@@ -2522,22 +2475,9 @@
     &lt;/role&gt;
   &lt;/role-list&gt;
 &lt;/access-control&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Here is a sample <code>access-control-user.xml</code> file for an item's user-defined access control settings:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;access-control&gt;
   &lt;role-list&gt;
     &lt;role type=&quot;Contributor&quot;&gt;
@@ -2551,7 +2491,7 @@
     &lt;/role&gt;
   &lt;/role-list&gt;
 &lt;/access-control&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 </details>

@@ -2243,19 +2243,7 @@
 <p>Quick Links can also be used to access major areas of the site. Quick Links are also accessible from any location within the site, and you can customize them. Quick Links can be customized to provide one-click access to major areas of the site. Refer to the Adding a Quick Link section of this topic for more information.</p>
 <h2 id="creating-a-url-to-a-portlet">Creating a URL to a portlet</h2>
 <p>The <portal-navigation:urlGeneration/> tag can be used together with <portal-navigation:urlParam/> to pass parameters to a portlet. In the following example, the <portal-navigation:urlParam/> tag is used to send render parameters to a standard portlet. The parameters specified by <portal-navigation:urlParam/> tags can be read by the targeted portlet by calling the getParameter() method on the portlet request.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portal-navigation:urlGeneration contentNode=&quot;ibm.portal.HCL Portal.Welcome&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;portal-navigation:urlGeneration contentNode=&quot;ibm.portal.HCL Portal.Welcome&quot; 
                          layoutNode=&quot;welcome.bookmarks&quot;
                          portletWindowState=&quot;Maximized&quot; accessControlCheck=&quot;NoCheck&quot;&gt;
 
@@ -2268,37 +2256,27 @@
    &lt;/a&gt;
 
 &lt;/portal-navigation:urlGeneration&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To target the action phase on a standard portlet, you need to also include the portletParameterType attribute on the <portal-navigation:urlGeneration/> tag, as in the following example.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portal-navigation:urlGeneration contentNode=&quot;sample.page&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;portal-navigation:urlGeneration contentNode=&quot;sample.page&quot; 
                       layoutNode=&quot;sample.portlet&quot; portletParameterType=&quot;action&quot;&gt;
    &lt;portal-navigation:urlParam name=&quot;key&quot; value=&quot;value&quot;/&gt;
    &lt;a href=&quot;&lt;% wpsURL.write(out); %&gt;&quot;&gt;
       // simple action with param
    &lt;/a&gt;
 &lt;/portal-navigation:urlGeneration&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To target the action phase of an IBM portlet, you must use the actionName attribute, which is described in <portal-navigation/> tags.</p>
 </div>
 <p>The following example is used in the drop-down list in the toolbar to generate a URL to the Organize Favorites portlet. The noCheck value indicates that the user's access control is not checked prior to generating the tag content.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>      &lt;portal-navigation:urlGeneration contentNode=&quot;wps.Organize Favorites&quot; 
+<div class="language-text highlight"><pre><span></span><code>      &lt;portal-navigation:urlGeneration contentNode=&quot;wps.Organize Favorites&quot; 
                          portletWindowState=&quot;Normal&quot; pacCheck=&quot;NoCheck&quot;&gt;
          &lt;option value=&#39;&lt;% wpsURL.write(out); %&gt;&#39; &gt;
          &lt;portal-fmt:text key=&#39;link.favorites.orgainize&#39; bundle=&#39;nls.engine&#39;/&gt;
       &lt;/portal-navigation:urlGeneration&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="creating-a-url-to-a-page">Creating a URL to a page</h2>
 <p>The following steps show how to add a custom page link in one of the theme JSPs. The link opens a page using its custom unique name. The steps use a page with the custom unique name of <code>yourCo.MyAccountsPage</code>.</p>
 <ol>
@@ -2308,15 +2286,7 @@
 <li>Assign a unique name for this portlet, for example, <code>yourCo.MyAccountsPage</code>.</li>
 <li>
 <p>Add a link in one of your theme JSPs as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>    &lt;portal-logic:if loggedIn=&quot;yes&quot; portletSolo=&quot;no&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>    &lt;portal-logic:if loggedIn=&quot;yes&quot; portletSolo=&quot;no&quot;&gt;
        &lt;portal-navigation:urlGeneration contentNode=&quot;yourCo.MyAccountsPage&quot;&gt;
           &lt;td class=&quot;wpsToolBar&quot; valign=&quot;middle&quot; align=&quot;&lt;%=bidiAlignRight%&gt;&quot; nowrap&gt;
              &lt;a href=&quot;&lt;% wpsURL.write(out); %&gt;&quot; class=&quot;wpsToolBarLink&quot;&gt;
@@ -2325,7 +2295,7 @@
           &lt;/td&gt;
        &lt;/portal-navigation:urlGeneration&gt;
     &lt;/portal-logic:if&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li>The contentNode attribute specifies the unique name for the node.</li>
 <li><portal-logic:if/> tag is used to verify that the user is logged in and the navigation is intended to be displayed.</li>
@@ -2401,8 +2371,8 @@ The following settings allow the fine grained control of relative URL generation
 <p><strong>location.href property in JavaScript</strong></p>
 <p>Some code relies on JavaScript to perform interactions on the client side. Although it is not valid to construct URLs by performing string concatenation, JavaScript code often uses the location.href property for navigation. A very common pattern is to make the href attribute of a link point to a JavaScript method, pass a generated URL to this method, and set the href field of the global location variable to that URL within the JavaScript method. Such JavaScript code will fail to work with URLs that are relative to a base tag because the location object - by definition - ignores this base tag. As a result, code that uses this navigation pattern will not work with relative URLs.</p>
 <p>Code should not pass the value returned by a <portal-navigation:urlGeneration/> tag as a parameter to a JavaScript method, but rather the href attribute of the respective link. For example, assume that a JavaScript method doSth(url) should be called if a link is clicked and that the url has been generated by <portal-navigation:urlGeneration/>. The following syntax works with all types of URLs:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>   &lt;a href=&quot;url&quot; onClick=&quot;doSth(this.href)&quot;&gt;some text&lt;/a&gt;.
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>   &lt;a href=&quot;url&quot; onClick=&quot;doSth(this.href)&quot;&gt;some text&lt;/a&gt;.
+</code></pre></div>
 </li>
 </ul>
 </li>

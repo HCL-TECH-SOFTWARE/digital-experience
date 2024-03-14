@@ -3865,21 +3865,7 @@
 </li>
 <li>
 <p>Replace the login button anchor tag that is not commented out with the following JSP fragment:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%-- comment this to enable screen login --%&gt; 
+<div class="language-text highlight"><pre><span></span><code>&lt;%-- comment this to enable screen login --%&gt; 
             &lt;%-- loginOnClick is provided so the client-side aggregation 
 theme can add this link without creating a different copy of this file. 
 --%&gt;
@@ -3894,7 +3880,7 @@ bundle=&quot;nls.engine&quot;/&gt;&lt;/a&gt;&lt;/li&gt;
              &lt;/c:if&gt;
         &lt;/portal-logic:if&gt;
         --%&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The previous example uses the 'portal-fmt:' prefix to designate JSP tags from the tag library in portal.tld. Your custom JSPs might use a different tag prefix.</p>

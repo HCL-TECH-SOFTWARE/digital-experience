@@ -3371,18 +3371,13 @@
 <h1 id="policies">Policies</h1>
 <p>Each policy setting defines an access policy for a URL pattern. You specify the pattern by using the url attribute. A url attribute can be either a URL, or the wildcard character, or URL part that ends with the wildcard character "*". The following are examples for url attribute values: http://localhost/index.html *http://www.ibm.com/developerWorks/*.</p>
 <p>The following example shows a simple policy:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;proxy-rules xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+<div class="language-text highlight"><pre><span></span><code>&lt;proxy-rules xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
     xsi:noNamespaceSchemaLocation=&quot;http://www.ibm.com/xmlns/prod/sw/http/outbound/proxy-config/2.0&quot;&gt;        
      &lt;policy name=&quot;SamplePolicy&quot; url=&quot;http://www.myremotehost.com/*&quot;&gt;
           &lt;actions&gt;&lt;method&gt;GET&lt;/method&gt;&lt;/actions&gt;
      &lt;/policy&gt;
 &lt;/policy-rules&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For each incoming request, the proxy applies the policy with the best URL match. If the proxy finds a policy, it applies this policy to the outbound connection. If the proxy finds no matching policy, the proxy rejects the request. Mappings can optionally declare <code>policy</code> setting that represents mapping-specific access policies.</p>
 <p>A <code>policy</code> setting can have a <code>name</code> attribute that identifies this policy for administrative tasks. If this attribute is not set, the portal sets a unique administrative name for it. The administrative name must be unique for all policies that have the same parent <code>mapping</code> setting or parent <code>proxy-rules</code> setting.</p>
 <p>To enable Basic Authentication for a policy, you can set the attribute <code>basic-auth-support</code> to <code>true</code>.</p>
@@ -3391,18 +3386,7 @@
 <li>
 <p><strong>actions</strong></p>
 <p>This setting is mandatory. Use it to define the list of HTTP methods that can be used to access resources in the target domain. These methods are <code>GET</code>, <code>HEAD</code>, <code>POST</code>, <code>PUT</code>, and <code>DELETE</code>. The proxy denies requests that use HTTP methods that are not on this list. Specify each HTTP method by using a separate <code>method</code> setting. The following example shows a policy that supports the methods DELETE, GET, HEAD, POST, and PUT:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;proxy-rules xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+<div class="language-text highlight"><pre><span></span><code>&lt;proxy-rules xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
     xsi:noNamespaceSchemaLocation=&quot;http://www.ibm.com/xmlns/prod/sw/http/outbound/proxy-config/2.0&quot;&gt;
      &lt;policy name=&quot;SamplePolicy_supporting_all_methods&quot; url=&quot;http://www.myremotehost.com/*&quot;&gt;
           &lt;actions&gt;
@@ -3414,23 +3398,14 @@
           &lt;/actions&gt;
      &lt;/policy&gt;
 &lt;/policy-rules&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>headers</strong></p>
 <p>This setting is optional. Use it to define the list of header names that you want the proxy to forward to the target domain. The header names can include wildcard characters. If you specify no header names for the policy, the proxy by default forwards headers that match the following name expressions: <code>Cache-Control</code>, <code>Pragma</code>, <code>User-Agent</code>, <code>Accept*</code>, <code>Host</code>, and <code>Content*</code>. Specify each header name by using a separate <code>header</code> setting.</p>
 <p><strong>Note:</strong> The value <code>Cookies</code> is not allowed. Instead, use the <code>cookie-rules</code> setting to specify the cookie forwarding behavior for the policy.</p>
 <p>The following example shows a policy that supports the <code>X-Method-Override</code> header:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;proxy-rules xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;proxy-rules xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
     xsi:noNamespaceSchemaLocation=&quot;http://www.ibm.com/xmlns/prod/sw/http/outbound/proxy-config/2.0&quot;&gt;
      &lt;policy name=&quot;SamplePolicy_custom_header_added&quot; url=&quot;http://www.myremotehost.com/*&quot;&gt;
           &lt;actions&gt;&lt;method&gt;GET&lt;/method&gt;&lt;/actions&gt;
@@ -3440,21 +3415,12 @@
           &lt;/headers&gt;
      &lt;/policy&gt;
 &lt;/proxy-rules&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>mime-types</strong></p>
 <p>This setting is optional. Use it to specify the list of accepted mime types. The mime types refer to the response that the proxy receives from the target server. If you specify at least one mime type, the proxy accepts only responses with a <code>Content-Type</code> response header that matches one of the specified mime types. If you specify no mime type, the proxy accepts all responses. Specify each mime type by using a separate <code>mime-type</code> setting. Servers might append the character encoding to the mime type. Therefore, it can be useful to use wildcard characters when you specify mime types. For example, if you specify <code>text/html*</code>, the proxy also accepts responses with the Content-Type <code>text/html; charset=utf-8</code>. The following example shows a policy that uses mime type filtering:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;proxy-rules xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+<div class="language-text highlight"><pre><span></span><code>&lt;proxy-rules xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
     xsi:noNamespaceSchemaLocation=&quot;http://www.ibm.com/xmlns/prod/sw/http/outbound/proxy-config/2.0&quot;&gt;
      &lt;policy name=&quot;SamplePolicy_filtered_mimetype&quot; url=&quot;http://www.myremotehost.com/*&quot;&gt;
           &lt;actions&gt;&lt;method&gt;GET&lt;/method&gt;&lt;/actions&gt;
@@ -3464,7 +3430,7 @@
           &lt;/mime-types&gt;
      &lt;/policy&gt;
 &lt;/proxy-rules&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 

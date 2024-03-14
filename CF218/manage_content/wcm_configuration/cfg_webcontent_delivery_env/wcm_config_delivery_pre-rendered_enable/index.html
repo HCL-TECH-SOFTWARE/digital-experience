@@ -2231,14 +2231,11 @@
 <li>Under <strong>Additional Properties</strong>, click <strong>Custom Properties</strong>.</li>
 <li>
 <p>Edit the connect.businesslogic.module property, and append cacher to the value. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>web,mail,default,ajpe,federatedproxy,ajpecatselect,memberfixer,workflowenablement,
+<div class="language-text highlight"><pre><span></span><code>web,mail,default,ajpe,federatedproxy,ajpecatselect,memberfixer,workflowenablement,
 itemdispatcher,plutouploadfile,plutodownloadfile,synd,subs,syndication,
 refreshallitems,unlocklibrary,custom,data,clearversions,clearhistory,
 reseteventlog,cacher
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Ensure that connect.businesslogic.module.cacher.autoload is set to true.</p>
@@ -2338,10 +2335,9 @@ reseteventlog,cacher
 <p>If any of your site area names contain commas, you must create separate parameters for each site area using this format: <code>connect.moduleconfig.cacher.task.siteareas.N</code></p>
 </div>
 <p>N represents a different integer for each parameter. For example, if you want to pre-render a site area named "SiteArea,Red" and a site named "Site,Yellow", you would need to create the following parameters:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>connect.moduleconfig.cacher.task.siteareas.1=MyLib/SiteArea,Red
+<div class="language-text highlight"><pre><span></span><code>connect.moduleconfig.cacher.task.siteareas.1=MyLib/SiteArea,Red
 connect.moduleconfig.cacher.task.siteareas.2=Site,Yellow
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong><code>connect.moduleconfig.cacher.task.interval.recurrence``connect.moduleconfig.cacher.task.interval.startdelay</code></strong></p>
@@ -2383,14 +2379,14 @@ connect.moduleconfig.cacher.task.siteareas.2=Site,Yellow
 <p><strong><code>connect.moduleconfig.cacher.useTieredResourceFolders</code></strong></p>
 <p>Value: <code>false</code></p>
 <p>All resources, such as images and file resources, are stored under the following folder:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>CACHER_DIR\LIBRARY\SITEAREA\resources
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>CACHER_DIR\LIBRARY\SITEAREA\resources
+</code></pre></div>
 <p>By default, each individual resource is saved under its own folder. For example, a resource with the ID of "7961d78049717f29bc57fee5670e9d7b" will be stored under this folder:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>CACHER_DIR\LIBRARY\SITEAREA\resources\**7961d78049717f29bc57fee5670e9d7b**
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>CACHER_DIR\LIBRARY\SITEAREA\resources\**7961d78049717f29bc57fee5670e9d7b**
+</code></pre></div>
 <p>You can change this behavior so that resources are stored under a tiered set of sub-folders based on the first two characters of the resource ID by changing the value of connect.moduleconfig.cacher.useTieredResourceFolders to <code>true</code>. For example, a resource with the ID of "7961d78049717f29bc57fee5670e9d7b" will be stored under this folder:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>CACHER_DIR\LIBRARY\SITEAREA\resources\7\9\
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>CACHER_DIR\LIBRARY\SITEAREA\resources\7\9\
+</code></pre></div>
 <p>All other resources that whose IDs begin with "79" will also be stored under this folder. This is done to reduce the number of sub-folders under the "resources" folders.</p>
 </li>
 </ul>

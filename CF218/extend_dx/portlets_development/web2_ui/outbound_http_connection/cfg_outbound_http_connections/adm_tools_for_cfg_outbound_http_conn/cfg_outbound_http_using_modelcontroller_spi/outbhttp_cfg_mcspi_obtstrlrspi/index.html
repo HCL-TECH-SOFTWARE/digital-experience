@@ -3386,17 +3386,7 @@
 <h1 id="obtaining-the-controller-spi">Obtaining the Controller SPI</h1>
 <p>The Outbound HTTP Connection configuration model SPI grants read access to the configuration only. You can make updates to the outbound HTTP connection configuration model by using the Controller SPI.</p>
 <p>Here is a sample code snippet:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>import com.ibm.portal.outbound.config.*;
+<div class="language-text highlight"><pre><span></span><code>import com.ibm.portal.outbound.config.*;
 ...
 OutboundConnectionModel model; // refer to the previous example for information 
                                // about how to instantiate this model
@@ -3407,39 +3397,10 @@ OutboundConnectionModelControllerHome chome = (OutboundConnectionModelController
     ctx.lookup(&quot;portal:service/model/OutboundConnectionModelController&quot;);
 OutboundConnectionModelController ctrl = 
     home.getOutboundConnectionModelControllerProvider().getOutboundConnectionModelController(model);
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The code that calls the SPI must run in the context of the portal server. Note that access to the Controller SPI is only possible for users who have administrative rights.</p>
 <p>Locating configuration items: You can access configuration items by using <code>Locator</code> interfaces that are provided by the Outbound Connection Model. The following locators are defined at the model SPI: <code>OutboundConnectionProfileLocator</code>, <code>PolicyMappingLocator</code>, <code>PolicyRuleLocator CookieRuleLocator</code>, and <code>PolicyVariableLocator</code>. The following example shows how to locate configuration items using various locators:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code>import com.ibm.portal.outbound.config.*;
+<div class="language-text highlight"><pre><span></span><code>import com.ibm.portal.outbound.config.*;
 
 OutboundConnectionModel model; // refer to previous examples, how to instantiate this model 
 ...
@@ -3469,7 +3430,7 @@ model.getCookieRuleLocator(rule).collectAllMatching(
 
 // Locate a policy variable by its name:
 PolicyVariable pvar = model.getPolicyVariableLocator(globalProfile).findByName(&quot;the.policy.var&quot;);
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

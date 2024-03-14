@@ -2838,12 +2838,10 @@
 </li>
 <li>
 <p>Run the updated file searchsecret.xml by using the XML configuration interface command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>xmlaccess.sh|bat -in searchsecret.xml -out results.xml 
+<div class="language-text highlight"><pre><span></span><code>xmlaccess.sh|bat -in searchsecret.xml -out results.xml 
                  -user wpsadmin -pwd wpsadmin 
                  -url http://local_host:local_port/wps/config 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ol>
 <li>
 <p>Specify the file name using the -in option.</p>
@@ -2857,10 +2855,9 @@
 </ol>
 <p>The script creates a slot called <code>search.secret</code> in the credential vault. Portal search uses this slot to encrypt the passwords configured for crawlers. If this slot does not exist, the password is saved as clear text on the portal server hard drive.</p>
 <p>The file xmlaccess.sh|bat is located in the directory PortalServer_root/bin. Example of the full command syntax for running the script searchsecret.xml:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>PortalServer_root/bin/xmlaccess.sh|bat -in temp/searchsearchsecret.xml 
+<div class="language-text highlight"><pre><span></span><code>PortalServer_root/bin/xmlaccess.sh|bat -in temp/searchsearchsecret.xml 
      -user wpsadmin -password wpsadmin -url http://localhost:10039/wps/config
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For more details about how to use the XML configuration interface, refer to the topics about the XML configuration interface, especially about Working with the XML configuration interface.</p>
 </li>
 <li>

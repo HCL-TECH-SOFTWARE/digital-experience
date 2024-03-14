@@ -4189,12 +4189,10 @@
 <p><strong>children(node)</strong></p>
 <p>Returns an iterator of child nodes.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;c:forEach var=&quot;node&quot; items=&quot;${wp.layoutModel.children[wp.identification[wp.selectionModel.selected]]}&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;c:forEach var=&quot;node&quot; items=&quot;${wp.layoutModel.children[wp.identification[wp.selectionModel.selected]]}&quot;&gt;
     ${node}&lt;br&gt;
 &lt;/c:forEach&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Parameters:</p>
 <ul>
 <li>
@@ -4209,10 +4207,9 @@
 <p>Get the layout model for a navigation node or navigation node ID.</p>
 <p>Example:</p>
 <p>The following example displays getting the layout model for the currently selected node from the selection model. The second line retrieves the children of the root mode of the layout model.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;c:set var=&quot;layoutmodel&quot; value=&quot;${wp.layoutModel[wp.selectionModel.selected]}&quot;/&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;c:set var=&quot;layoutmodel&quot; value=&quot;${wp.layoutModel[wp.selectionModel.selected]}&quot;/&gt;
 &lt;c:set var=&quot;containers&quot; value=&quot;${layoutmodel.children[layoutmodel.root]}&quot;/&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Parameters:</p>
 <ul>
 <li>
@@ -4226,8 +4223,8 @@
 <p><strong>hasChildren</strong></p>
 <p>Determines whether the specified <a href="../nav_model/themeopt_el_bean_nav_node/">NavigationNode</a> has associated nodes.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.layoutModel.hasChildren[wp.selectionModel.selected]}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.layoutModel.hasChildren[wp.selectionModel.selected]}
+</code></pre></div>
 <p>Parameters:</p>
 <ul>
 <li>
@@ -4241,8 +4238,8 @@
 <p><strong>parent</strong></p>
 <p>Access to the parent of a <a href="../nav_model/themeopt_el_bean_nav_node/">NavigationNode</a>.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.layoutModel.parent[wp.selectionModel.selected]}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.layoutModel.parent[wp.selectionModel.selected]}
+</code></pre></div>
 <p>Parameters:</p>
 <ul>
 <li>
@@ -4256,12 +4253,10 @@
 <p><strong>path(node)</strong></p>
 <p>Provides access to the path information for the node. The path represents the hierarchy from the root to the give node as a list. It is like a breadcrumb.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;c:forEach var=&quot;node&quot; items=&quot;${wp.layoutModel.path[wp.selectionModel.selected]}&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;c:forEach var=&quot;node&quot; items=&quot;${wp.layoutModel.path[wp.selectionModel.selected]}&quot;&gt;
     &amp;lt;- ${node}
 &lt;/c:forEach&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Parameters:</p>
 <ul>
 <li>
@@ -4275,8 +4270,8 @@
 <p><strong>root</strong></p>
 <p>Returns the root node of the layout model.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.layoutModel.root}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.layoutModel.root}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="../nav_model/themeopt_el_bean_nav_node/">NavigationNode</a>; it is never null.</p>
 </li>

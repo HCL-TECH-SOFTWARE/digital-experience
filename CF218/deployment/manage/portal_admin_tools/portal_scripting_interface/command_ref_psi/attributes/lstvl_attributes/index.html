@@ -3993,25 +3993,7 @@
 <p>These commands are appropriate if the values do not contain white space and the order of the elements is not important. Currently, all list valued attributes satisfy these restrictions.</p>
 <p>You cannot modify all list valued attributes by all of these commands. For example, some lists might not be empty, in which case the empty command is not available. However, if an operation is supported for an attribute, the operation uses the command as described here. List valued attributes might also change as a side effect of other operations. For example, if a title is set for a previously undefined locale, the new locale shows up in the list of locales. For more information, see <em>Local specific attributes</em> for details on titles and locales.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>Content.list(ID, attribute)
+<div class="language-text highlight"><pre><span></span><code>Content.list(ID, attribute)
 Content.add(ID, list, value)
 Content.drop(ID, list, value)
 Content.empty(ID, list)
@@ -4030,27 +4012,9 @@ Content.drop(node_ID, &quot;locale&quot;, &quot;en_US&quot;)
 
 # example: drop all locales for the given node
 Content.empty(node_ID, &quot;locale&quot;)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>$Content list ID attribute
+<div class="language-text highlight"><pre><span></span><code>$Content list ID attribute
 $Content add ID list value
 $Content drop ID list value
 $Content empty ID list
@@ -4069,7 +4033,7 @@ $Content drop node_ID locale en_US
 
 # example: drop all locales for the given node
 $Content empty node_ID locale
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

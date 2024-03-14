@@ -4109,8 +4109,8 @@
 <h1 id="the-render-parameter-plug-in">The render parameter plug-in</h1>
 <p>Use the RenderParam rendering plug-in to access public and private render parameters from your web content.</p>
 <p>The syntax for this plug-in is as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:RenderParam key=&quot;&quot; type=&quot;&quot; defaultValue=&quot;&quot; separator=&quot;&quot; escape=&quot;&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:RenderParam key=&quot;&quot; type=&quot;&quot; defaultValue=&quot;&quot; separator=&quot;&quot; escape=&quot;&quot;]
+</code></pre></div>
 <p>This plug-in uses the following attributes:</p>
 <ul>
 <li>
@@ -4156,26 +4156,26 @@
 <ul>
 <li>
 <p>To retrieve the value of a private render parameter with the name <code>key1</code>, use the following plug-in tag:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:RenderParam key=&quot;key1&quot; type=&quot;private&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:RenderParam key=&quot;key1&quot; type=&quot;private&quot;]
+</code></pre></div>
 </li>
 <li>
 <p>To insert the value <code>defaultValue</code> into your content, if the render parameter with the name <code>key1</code> does not exist or if the value is <code>null</code>, use the following plug-in tag:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:RenderParam key=&quot;key1&quot; type=&quot;private&quot; defaultValue=&quot;defaultValue&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:RenderParam key=&quot;key1&quot; type=&quot;private&quot; defaultValue=&quot;defaultValue&quot;]
+</code></pre></div>
 </li>
 <li>
 <p>To retrieve the value of a public render parameter, use the full qualified name (<code>QName</code>) of the parameter in the format that is defined by <code>javax.xml.namespace.QName.valueOf(String)</code>. Examples:</p>
 <ul>
 <li>
 <p>To access the public context render parameter of Web Content Manager, use the following plug-in tag:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:RenderParam key=&quot;{http://www.ibm.com/xmlns/prod/datatype/content}context&quot; type=&quot;public&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:RenderParam key=&quot;{http://www.ibm.com/xmlns/prod/datatype/content}context&quot; type=&quot;public&quot;]
+</code></pre></div>
 </li>
 <li>
 <p>To access the custom context render parameter of Web Content Manager, use the following plug-in tag:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:RenderParam key=&quot;{http://www.ibm.com/xmlns/prod/datatype/content}custom-context&quot; type=&quot;public&quot;] 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:RenderParam key=&quot;{http://www.ibm.com/xmlns/prod/datatype/content}custom-context&quot; type=&quot;public&quot;] 
+</code></pre></div>
 </li>
 </ul>
 </li>
@@ -4184,30 +4184,30 @@
 <ul>
 <li>
 <p>To access the public context render parameter of Web Content Manager, use the following plug-in tag:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:RenderParam key=&quot;PUBLIC_CONTEXT&quot; type=&quot;public&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:RenderParam key=&quot;PUBLIC_CONTEXT&quot; type=&quot;public&quot;]
+</code></pre></div>
 </li>
 <li>
 <p>To access the custom context render parameter of Web Content Manager, use the following plug-in tag:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:RenderParam key=&quot;CUSTOM_CONTEXT&quot; type=&quot;public&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:RenderParam key=&quot;CUSTOM_CONTEXT&quot; type=&quot;public&quot;]
+</code></pre></div>
 </li>
 </ul>
 </li>
 <li>
 <p>To retrieve the value of a render parameter with the name <code>key1</code>, no matter whether it is a private or public render parameter, use the following plug-in tag:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:RenderParam key=&quot;key1&quot; type=&quot;any&quot;] 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:RenderParam key=&quot;key1&quot; type=&quot;any&quot;] 
+</code></pre></div>
 </li>
 <li>
 <p>To separate multiple values of a render parameter with the name <code>key1</code>, for example, by using a semicolon, use the following plug-in tag:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:RenderParam key=&quot;key1&quot; type=&quot;any&quot; separator=&quot;;&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:RenderParam key=&quot;key1&quot; type=&quot;any&quot; separator=&quot;;&quot;]
+</code></pre></div>
 </li>
 <li>
 <p>To retrieve the value of a query parameter that was passed to a Web Content Manager resolution URL with the name <code>key1</code>, use the following plug-in tag:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:RenderParam key=&quot;key1&quot; type=&quot;query&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:RenderParam key=&quot;key1&quot; type=&quot;query&quot;]
+</code></pre></div>
 </li>
 </ul>
 <details class="info" open="open">

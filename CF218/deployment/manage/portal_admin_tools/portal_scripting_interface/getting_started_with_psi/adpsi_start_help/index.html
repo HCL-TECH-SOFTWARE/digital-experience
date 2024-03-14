@@ -3418,23 +3418,10 @@
 <h1 id="getting-help-for-a-command">Getting help for a command</h1>
 <p>The Portal Scripting Interface provides more commands and variants of commands than shown in the previous topics. To learn more about these commands and their syntax and function, and beans and parameters, refer to the integrated help of the Portal Scripting Interface.</p>
 <p>Use the command help () and specify the command for which you want to get help. Start by entering the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;print Content.help(&quot;find&quot;)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;print Content.help(&quot;find&quot;)
+</code></pre></div>
 <p>This returns the following help output about how to use the help command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>&gt; find &lt;what&gt; [&lt;by&gt; &lt;value&gt;] [select]
+<div class="language-text highlight"><pre><span></span><code>&gt; find &lt;what&gt; [&lt;by&gt; &lt;value&gt;] [select]
 Finds a particular content node. The search scope is the subtree starting
 at the current selection, or the whole tree if nothing is selected. Unlike
 the &#39;search&#39; command, this operation expects a single matching node as the
@@ -3448,28 +3435,12 @@ Example:&gt; find page uniquename &quot;My page&quot;
 Returns the id of a portal page node with the given unique name. If the page
 with the given unique name does not exist, or if the node with the specified
 unique name is not a page node, the command throws an exception.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To find out more detail about the search types, enter the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;print Content.help(&quot;search-types&quot;)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;print Content.help(&quot;search-types&quot;)
+</code></pre></div>
 <p>This returns the following help information about the search criteria:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>&gt; search &lt;what&gt;
+<div class="language-text highlight"><pre><span></span><code>&gt; search &lt;what&gt;
 &gt; find &lt;what&gt;
 The following is a list of supported keywords for content node types.
 These keywords can be used as the first argument in &#39;search&#39; and &#39;find&#39;
@@ -3486,32 +3457,15 @@ Any type of URL node.
 Only internal URL nodes.
 - xurl, xurls, externalurl, externalurls, eurl, eurls
 Only external URL nodes.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To find out about the search criteria, use the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;print Content.help(&quot;search-criteria&quot;)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;print Content.help(&quot;search-criteria&quot;)
+</code></pre></div>
 <p>To find out which command the <code>Content</code> bean supports, enter the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;print Content.help()
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;print Content.help()
+</code></pre></div>
 <p>This returns the following help output:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code>This bean provides access to the content hierarchy of the portal. The
+<div class="language-text highlight"><pre><span></span><code>This bean provides access to the content hierarchy of the portal. The
 content hierarchy consists of labels, pages, and links. Pages are also
 called &quot;compositions&quot;. Links can be internal or external URLs. Content
 nodes can be accessed, created, and deleted with this bean. URLs of a
@@ -3529,7 +3483,7 @@ pageget, pageset, parmget, parmset, transfer, deletecustomization
 Other available help topics:
 attribute-names, nls-files, list-names,
 search-types, search-criteria, create-types
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

@@ -2225,27 +2225,7 @@
 <h1 id="the-query-api">The Query API</h1>
 <p>The query API provides querying capabilities that are much more rich than the "findBy" methods on the workspace class.</p>
 <p>Here is an example of how to retrieve and use the QueryService to find the first content directly under the SiteArea parentSiteArea that has an element that is called "myElement":</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code>            Content contentWithMyElement;
+<div class="language-text highlight"><pre><span></span><code>            Content contentWithMyElement;
             QueryService queryService = workspace.getQueryService();
             Query query = queryService.createQuery(Content.class);
             query.addParentId(parentSiteArea.getId(), QueryDepth.CHILDREN);
@@ -2266,31 +2246,9 @@
             {
                // Handle exception
             }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Here is an example of how to use create a query with 'AND' and 'OR' conditions by using Conjunction and Disjunction. The example processes all content whose name starts with 'news', or whose name starts with 'article' and has a keyword 'news':</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code>            QueryService queryService = workspace.getQueryService();
+<div class="language-text highlight"><pre><span></span><code>            QueryService queryService = workspace.getQueryService();
             Query query = queryService.createQuery(Content.class);
             Disjunction or = new Disjunction();
             or.add(Selectors.nameLike(&quot;news%&quot;));
@@ -2313,7 +2271,7 @@
             {
                // Handle exception
             }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

@@ -3684,27 +3684,12 @@
 <h2 id="scoping-styles-to-the-side-navigation-template">Scoping styles to the side navigation template</h2>
 <p>You can scope styles specifically to the side navigation template so you do not need to include different styles between templates. By default, the template applies the CSS class wpthemeSplitView to the HTML body element. This class can be used in the CSS to scope styles and is demonstrated in the sideNav.css.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>.wpthemeSplitView .someStyle { color: #000; }
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>.wpthemeSplitView .someStyle { color: #000; }
+</code></pre></div>
 <p>This style demonstrates that it applies only to the element with someStyle class when the side navigation template is applied.</p>
 <h2 id="change-the-width-of-the-navigation-and-main-content">Change the width of the navigation and main content</h2>
 <p>You can change the width of the side navigation area or main content area by modifying the styles. The applicable styles are:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>.wpthemeSplitView .wpthemeFrame { 
+<div class="language-text highlight"><pre><span></span><code>.wpthemeSplitView .wpthemeFrame { 
 min-width: 1225px;
 }
 
@@ -3720,20 +3705,10 @@ width: 850px;
 width: 275px; 
 margin: 10px 10px 10px 0;
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="change-the-layout-container-width">Change the layout container width</h2>
 <p>The ready-to-use layout templates have specific side navigation styles applied. If you change the width of the main content, you need to adapt the layouts. These styles are also in the sideNav.css file. The applicable styles are:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>.wpthemeSplitView .wptheme1Col .wpthemeCol {width:850px;}
+<div class="language-text highlight"><pre><span></span><code>.wpthemeSplitView .wptheme1Col .wpthemeCol {width:850px;}
 .wpthemeSplitView .wptheme2Col .wpthemeCol {width:400px;}
 .wpthemeSplitView .wptheme3Col .wpthemeCol {width:260px;}
 .wpthemeSplitView .wptheme2Col.wpthemeUnequal .wpthemePrimaryContainer {width:545px;}
@@ -3744,7 +3719,7 @@ margin: 10px 10px 10px 0;
 .wpthemeSplitView .wpthemeTopCol .wpthemeHeadlineContainer {width: 830px; margin-right: 15px; margin-bottom: 20px;}
 .wpthemeSplitView .wpthemeRow {margin: 0 0 20px 20px;}
 .wpthemeSplitView #layoutContainers .layoutRow .layoutColumn .component-control { width: 850px; }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

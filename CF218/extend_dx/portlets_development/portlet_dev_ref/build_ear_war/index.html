@@ -2582,17 +2582,7 @@
 <li>output.war: The location of the generated war file.
 The following information is an example of the build-war-file task:</li>
 </ul>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>Extract the bannerad.war file to a directory
+<div class="language-text highlight"><pre><span></span><code>Extract the bannerad.war file to a directory
     cd /tmp/files
     jar -xvf /opt/IBM/WebSphere/PortalServer/bp/wp.bp.bannerad/installableApps/bannerad.war
 
@@ -2603,7 +2593,7 @@ Build a new war from the expanded directory
 
 You can now install the updated portlet into HCL Digital Experience
     /tmp/wars/bannerad.war
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Run the following task to build an .ear file:</p>
@@ -2620,21 +2610,7 @@ You can now install the updated portlet into HCL Digital Experience
 <li>disp.name: The display name substituted in the application.xml template.</li>
 </ul>
 <p>The following information is an example of the build-ear-file task:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>Make a local copy of the expanded PA_ThemesAndSkinsMgr.ear file (which contains an expanded 
+<div class="language-text highlight"><pre><span></span><code>Make a local copy of the expanded PA_ThemesAndSkinsMgr.ear file (which contains an expanded 
 ThemesAndSkinsMgr.war file inside of it)
     cd /tmp/files
     cp -R /opt/IBM/WebSphere/wp_profile/installedApps/Cell_name/PA_ThemesAndSkinsMgr.ear/* /tmp/files
@@ -2649,7 +2625,7 @@ Build a new ear from the expanded directory
 
 You can now install an enterprise application into the WebSphere Integrated Solutions Console.
     /tmp/ears/PA_ThemesAndSkinsMgr.ear
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 

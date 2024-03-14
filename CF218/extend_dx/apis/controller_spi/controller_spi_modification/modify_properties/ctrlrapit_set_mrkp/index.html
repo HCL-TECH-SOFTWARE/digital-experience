@@ -2639,17 +2639,7 @@
 </li>
 </ol>
 <p>Example - Setting a supported markup on a layout control (error handling omitted):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>// obtain markup list 
+<div class="language-text highlight"><pre><span></span><code>// obtain markup list 
 final MarkupList markupList = ...;
 
 // obtain modifiable instance of a layout control
@@ -2660,7 +2650,7 @@ Markup markup = markupList.getByName(&quot;html&quot;);
 
 // set markup 
 ((ModifiableMarkupCapable) modifiable).addMarkup(markup);
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For more detail about the markup list in the first line of the example and how to obtain it refer to <a href="/apis/model_spi/dgn_modelobt.md">Obtain a model from the portal</a>.</p>
 
 

@@ -3495,15 +3495,7 @@
 </li>
 <li>
 <p>You must set the buffer pools allocated to the Oracle database in order for HCL Portal to communicate with the Java™ Content Repository database. Refer to the Oracle product documentation for information on how to set the buffer pools. Use these recommended buffer pool values as a guide for setting your values:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>db_block_size = 8192 bytes
+<div class="language-text highlight"><pre><span></span><code>db_block_size = 8192 bytes
 db_cache_size = 1 gigabyte
 db_files = 1024 files
 log_buffer = 65536 bytes
@@ -3512,7 +3504,7 @@ pga_aggregate_target = 200 megabytes
 pre_page_sga = true
 processes = 300 processes
 shared_pool_size = 200 megabytes
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>If you are using Java Content Repository, the open_cursors value might need to be increased based on the table count in the Java Content Repository schema.</p>

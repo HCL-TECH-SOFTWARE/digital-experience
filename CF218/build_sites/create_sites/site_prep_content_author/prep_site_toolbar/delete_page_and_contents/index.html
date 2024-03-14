@@ -3151,8 +3151,8 @@
 
 <h1 id="deleting-pages-and-their-contents">Deleting pages and their contents</h1>
 <p>When you delete a page (or a tree of pages) while using Site Manager, the page, its child pages or child content are also deleted. However, the content that is referred by WCM rendering portlets on the page is not deleted. Beginning with CF205, a new feature is added that allows you to delete the page as well as the content that is referenced by the WCM rendering portlets on the page. The new delete feature comes disabled by default, and you can enable the same by setting the following in the <strong>WP ConfigService Resources Environment Provider</strong>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sitemanager.showDeleteWithContent=true
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>sitemanager.showDeleteWithContent=true
+</code></pre></div>
 <p>After setting the configuration, restart Core. When the feature is enabled, a new option called <strong>Delete Page and Associated Content</strong> is displayed in the <strong>Managed Pages Site Manager</strong> UI. When the <strong>Delete Page and Associated Content</strong> option is selected, the content referenced by the WCM portlets of the page and all affected sub pages will be deleted. The result message shows the content that was deleted and also if some content could not be deleted (for example, due to references or insufficient access).</p>
 <p>The following screen shot shows the new option as well as the message after a successful delete.</p>
 <p><img alt="Delete page with its content" src="../../../../../images/deletewithcontent.png" /></p>

@@ -4036,15 +4036,15 @@
 <li>
 <p>To add a rating widget to a content item, include the rating plug-in in your presentation template.</p>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;div id=&quot;ratings&quot;&gt;[Plugin:ratings]&lt;/div&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;div id=&quot;ratings&quot;&gt;[Plugin:ratings]&lt;/div&gt;
+</code></pre></div>
 <p>The rating plug-in supports the following parameters that are specified in a <code>key=value</code> format:</p>
 <ul>
 <li>
 <p><strong><code>design=path</code></strong></p>
 <p>The <code>design</code> parameter indicates which design to use when rendering the rating widget. Specify the <code>path</code> information using the full library path to the HTML component that contains the design template for the rating widget. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ratings design=&quot;Web Content/folder/myRatingDesign&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ratings design=&quot;Web Content/folder/myRatingDesign&quot;]
+</code></pre></div>
 <p>If the <code>design</code> parameter is not specified, a default design is defined in the <code>HTML - Rating Widget Light</code> component, which is provided with <code>Web Resources v70</code> library that is included in the product. During rendering the system checks the following locations for the default design:</p>
 <ol>
 <li>The current web content library</li>
@@ -4054,8 +4054,8 @@
 </li>
 </ol>
 <p>The <code>actionScope</code> parameter indicates the scope of tags that you want to show in this widget. For a list of possible values see the description of the <code>ratingScope</code> parameter used with the inline tag widget. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ratings actionScope=&quot;community&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ratings actionScope=&quot;community&quot;]
+</code></pre></div>
 </li>
 </ul>
 <p><strong>Stylesheet class note:</strong> The presentation template that includes the widget must ensure that the <code>lotusui30</code> stylesheet class is assigned to the markup that contains the widget. You can specify this stylesheet class in the following ways:</p>

@@ -2048,18 +2048,15 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">javascript.js</label><label for="__tabbed_1_2">stylesheet.scss</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-js highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">);</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-js highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">);</span>
+</code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-scss highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<div class="language-scss highlight"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="nt">min-height</span><span class="nd">:</span><span class="w"> </span><span class="nt">100vh</span><span class="o">;</span>
 <span class="w">  </span><span class="nt">width</span><span class="nd">:</span><span class="w"> </span><span class="nt">100vw</span><span class="o">;</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -2073,21 +2070,7 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">webpack.common.js</label><label for="__tabbed_2_2">webpack.dev.js</label><label for="__tabbed_2_3">webpack.dx-scriptapp.js</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-js highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">...</span>
+<div class="language-js highlight"><pre><span></span><code><span class="p">...</span>
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">entry</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="cm">/* Main File Entry */</span>
@@ -2102,24 +2085,10 @@
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="p">...</span>
 <span class="p">};</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">/* Import common.js */</span><span class="w">        </span>
+<div class="language-js highlight"><pre><span></span><code><span class="cm">/* Import common.js */</span><span class="w">        </span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">common</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./webpack.common&#39;</span><span class="p">);</span><span class="w"> </span>
 <span class="cm">/* Import webpack merge plugin */</span>
 <span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">merge</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;webpack-merge&#39;</span><span class="p">);</span>
@@ -2134,23 +2103,10 @@
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="p">...</span>
 <span class="p">});</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">/* Import common.js */</span><span class="w">        </span>
+<div class="language-js highlight"><pre><span></span><code><span class="cm">/* Import common.js */</span><span class="w">        </span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">common</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./webpack.common&#39;</span><span class="p">);</span><span class="w"> </span>
 <span class="cm">/* Import webpack merge plugin */</span>
 <span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">merge</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;webpack-merge&#39;</span><span class="p">);</span>
@@ -2164,7 +2120,7 @@
 <span class="w">  </span><span class="p">},</span>
 <span class="w">  </span><span class="p">...</span>
 <span class="p">});</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -2175,23 +2131,7 @@
 <p class="admonition-title">Note</p>
 <p>The new entrypoints (ie. stylesheetEntry and javascriptEntry) will be automatically added when running <code>npm start</code> or <code>npm run build</code> in the index.html of the build output.</p>
 </div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>import { ReactV18 } from &#39;dxmodule&#39;;
+<div class="language-text highlight"><pre><span></span><code>import { ReactV18 } from &#39;dxmodule&#39;;
 import App from &#39;./App&#39;;
 
 /* Remove the lines below */
@@ -2208,7 +2148,7 @@ root.render(
     &lt;App /&gt;
   &lt;/React.StrictMode&gt;
 );
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <hr />
@@ -2217,17 +2157,7 @@ root.render(
 <p class="admonition-title">When or when not to split the css code bundle</p>
 <p>Only split the css code when it is not directly coupled with a react component.</p>
 <p>When to split the code bundle: The css selectors from global.scss is not directly integrated to a specific component.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>import { ReactV18 } from &#39;dxmodule&#39;;
+<div class="language-text highlight"><pre><span></span><code>import { ReactV18 } from &#39;dxmodule&#39;;
 import App from &#39;./App&#39;;
 
 const { ReactDOM, React } = ReactV18;
@@ -2238,35 +2168,9 @@ root.render(
     &lt;App /&gt;
     &lt;/React.StrictMode&gt;
 );
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>When not to split the code bundle: The css selectors are being used as className for the React component.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code>/* Imported css file */
+<div class="language-text highlight"><pre><span></span><code>/* Imported css file */
 import InsuranceClaimSummaryItem from &#39;./_InsuranceClaimSummaryItem.css&#39;;
 
 function InsuranceClaimSummary(props) {
@@ -2293,7 +2197,7 @@ function InsuranceClaimSummary(props) {
     &lt;/section&gt;
   );
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 
 

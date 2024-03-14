@@ -3911,14 +3911,7 @@
 <p>The generic examples use the Content bean. Searches in trees are scoped. The search scope is the subtree under the selected node, including the selected node itself. If nothing is selected, the search scope is the full tree that starts at the root.</p>
 <p>There are two different commands for searching:search and find.search returns a list of matches, whereas find succeeds only if there is a single, unique match for the search. It fails if there is more than one match, or no match at all. find is used in cases where a script must end if the search result is not a unique match. If the keyword select is passed to find, the search result becomes the selected node.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>Content.search(type)
+<div class="language-text highlight"><pre><span></span><code>Content.search(type)
 Content.search(type), &quot;by&quot;, (value)
 
 Content.find(type)
@@ -3926,16 +3919,9 @@ Content.find(type), &quot;by&quot;, (value)
 
 Content.find(type, &quot;select&quot;)
 Content.find(type, &quot;by&quot;, (value, &quot;select&quot;)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>$Content search type
+<div class="language-text highlight"><pre><span></span><code>$Content search type
 $Content search type by value
 
 $Content find type
@@ -3943,41 +3929,31 @@ $Content find type by value
 
 $Content find type select
 $Content find type by value select
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The first argument for all searches is the type of the nodes to look for. The type is specified by a keyword, which is not case-sensitive. The available types and corresponding keywords depend on the bean. In all beans, the keywords all and any are used to search regardless of the type. There is a dedicated help topic for the search types.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code># example: return all nodes in the search scope
+<div class="language-text highlight"><pre><span></span><code># example: return all nodes in the search scope
 Content.search all
 
 # example: get help on the available type keywords
 Content.help search-types
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code># example: return all nodes in the search scope
+<div class="language-text highlight"><pre><span></span><code># example: return all nodes in the search scope
 $Content search all
 
 # example: get help on the available type keywords
 $Content help search-types
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You can combine the type selection with an extra search criteria, which is specified by a keyword (<code>by</code>) and a value to match against (<code>value</code>). The available search criteria and corresponding keywords depend on the bean. There is a dedicated help topic for the search criteria.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code># example: get help on the available by keywords
+<div class="language-text highlight"><pre><span></span><code># example: get help on the available by keywords
 Content.help(&quot;search-criteria&quot;)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code># example: get help on the available by keywords
+<div class="language-text highlight"><pre><span></span><code># example: get help on the available by keywords
 $Content help search-criteria
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following are common search criteria. Alternative, shorter keywords are described in the help text on search criteria of the respective bean.</p>
 <table>
 <thead>
@@ -4006,15 +3982,13 @@ $Content help search-criteria
 </tbody>
 </table>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code># example: find and select by unique name
+<div class="language-text highlight"><pre><span></span><code># example: find and select by unique name
 Content.find(&quot;any&quot;, &quot;uniquename&quot;, &quot;ibm.portal.Portlets&quot;, &quot;select&quot;)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code># example: find and select by unique name
+<div class="language-text highlight"><pre><span></span><code># example: find and select by unique name
 $Content find any uniquename &quot;ibm.portal.Portlets&quot; select
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

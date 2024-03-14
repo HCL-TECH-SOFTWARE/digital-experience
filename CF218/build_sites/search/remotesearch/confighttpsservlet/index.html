@@ -2903,19 +2903,15 @@
 <li>
 <p>Update the following code:</p>
 <p><strong>Cluster note:</strong> In a clustered environment, complete this step on the primary node and all secondary nodes.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;user-data-constraint&gt;     
+<div class="language-text highlight"><pre><span></span><code>&lt;user-data-constraint&gt;     
      &lt;transport-guarantee&gt;CONFIDENTIAL&lt;/transport-guarantee&gt;
 &lt;/user-data-constraint&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Replace it by the following code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;user-data-constraint&gt;     
+<div class="language-text highlight"><pre><span></span><code>&lt;user-data-constraint&gt;     
      &lt;transport-guarantee&gt;NONE&lt;/transport-guarantee&gt;
 &lt;/user-data-constraint&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Save the file.</p>
@@ -2924,8 +2920,8 @@
 <li>
 <p>Run the following portal ConfigEngine script:</p>
 <p><strong>Cluster note:</strong> In a clustered environment, complete this step on the primary node only.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh action-update-ear-wp.search.servlets/seedlist/servletEAR
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh action-update-ear-wp.search.servlets/seedlist/servletEAR
+</code></pre></div>
 </li>
 <li>
 <p>Restart all servers in your configuration for your updates to take effect.</p>

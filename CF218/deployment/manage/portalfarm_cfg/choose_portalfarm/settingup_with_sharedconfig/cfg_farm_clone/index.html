@@ -3124,14 +3124,11 @@
 </li>
 <li>
 <p>Run the following commands to copy the base directory files from the Farm Master:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>rsync -az --delete --stats root@master.example.com:/opt/IBM/WebSphere/wp_profile/ /opt/IBM/WebSphere/wp_profile/
+<div class="language-text highlight"><pre><span></span><code>rsync -az --delete --stats root@master.example.com:/opt/IBM/WebSphere/wp_profile/ /opt/IBM/WebSphere/wp_profile/
 rsync -az --delete --stats root@master.example.com:/opt/IBM/WebSphere/PortalServer/ /opt/IBM/WebSphere/PortalServer/
 rsync -az --delete --stats root@master.example.com:/opt/IBM/WebSphere/AppServer/ /opt/IBM/WebSphere/AppServer/
 rsync -az --delete --stats root@master.example.com:/opt/IBM/WebSphere/ConfigEngine/ /opt/IBM/WebSphere/ConfigEngine/
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>On the Farm Worker server, run the following command to create the database directory:</p>
@@ -3139,30 +3136,24 @@ rsync -az --delete --stats root@master.example.com:/opt/IBM/WebSphere/ConfigEngi
 </li>
 <li>
 <p>Run the following command to copy the database files from the Farm Master:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>rsync -az --delete --stats root@master.example.com:/home/db2inst1/sqllib/java/ /home/db2inst1/sqllib/java/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>rsync -az --delete --stats root@master.example.com:/home/db2inst1/sqllib/java/ /home/db2inst1/sqllib/java/
+</code></pre></div>
 </li>
 <li>
 <p>Run the following command to clean the temporary space on the farm work server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>rm -rf /opt/IBM/WebSphere/wp_profile/tranlog/
+<div class="language-text highlight"><pre><span></span><code>rm -rf /opt/IBM/WebSphere/wp_profile/tranlog/
 rm -rf /opt/IBM/WebSphere/wp_profile/temp/
 rm -rf /opt/IBM/WebSphere/wp_profile/wstemp/
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Run the following command to set the host name:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/IBM/WebSphere/wp_profile/bin/wsadmin.sh -conntype NONE -c &quot;\$AdminTask changeHostName {-nodeName MYNODE -hostName worker1.example.com}&quot;
+<div class="language-text highlight"><pre><span></span><code>/opt/IBM/WebSphere/wp_profile/bin/wsadmin.sh -conntype NONE -c &quot;\$AdminTask changeHostName {-nodeName MYNODE -hostName worker1.example.com}&quot;
 
 echo WasRemoteHostName=worker1.example.com &gt; /var/wkplc.properties
 echo WpsHostName=worker1.example.com &gt;&gt; /var/wkplc.properties
 /opt/IBM/WebSphere/wp_profile/ConfigEngine/ConfigEngine.sh -DparentProperties=/var/wkplc.properties -DSaveParentProperties=true localize-clone action-clean-scheduled-tasks
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 

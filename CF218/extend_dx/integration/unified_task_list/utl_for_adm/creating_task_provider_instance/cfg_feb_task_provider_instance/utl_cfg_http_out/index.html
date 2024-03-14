@@ -2200,41 +2200,7 @@
 <p class="admonition-title">Note</p>
 <p>Change <code>{$serverHostname}</code> and <code>{$serverPort}</code> to reflect the Forms Experience Builder server configuration. <code>/forms/</code> is the standard context-root of the Forms Experience Builder application. If the <code>/forms/</code> context-root was configured differently during the setup, change it as required. Change <code>{$token.ltpa.name}</code> and <code>{$token.ltpa2.name}</code> to reflect the single sign-on (SSO) configuration page on the portal server. If the fields are blank, then use LtpaToken and LtpaToken2.</p>
 </div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;policy url=&quot;{http|https}://{$serverHostname}:{$serverPort}/forms/*&quot;&quot; name=&quot;feb&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;policy url=&quot;{http|https}://{$serverHostname}:{$serverPort}/forms/*&quot;&quot; name=&quot;feb&quot;&gt;
     &lt;actions&gt;
         &lt;method&gt;GET&lt;/method&gt;
         &lt;method&gt;HEAD&lt;/method&gt;
@@ -2269,18 +2235,15 @@
         &lt;cookie&gt;SimpleToken&lt;/cookie&gt;
     &lt;/cookie-rule&gt;
 &lt;/policy&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Add the following information to the metadata section of the proxy-config.xml file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;meta-data&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;meta-data&gt;
     &lt;name&gt;forward-http-errors&lt;/name&gt;
     &lt;value&gt;true&lt;/value&gt;
 &lt;/meta-data&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Open a command prompt on the portal server. Change to the wp_profile_root\ConfigEngine directory.</p>
@@ -2290,21 +2253,17 @@
 <ul>
 <li>
 <p>AIX® and Linux™:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh -DWasPassword=wpsadmin
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh -DWasPassword=wpsadmin
                   -DPortalAdminPwd=wpsadmin checkin-wp-proxy-config
                   -DProxyConfigFileName=/proxy-config.xml
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Windows™:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>ConfigEngine.bat  -DWasPassword=wpsadmin
+<div class="language-text highlight"><pre><span></span><code>ConfigEngine.bat  -DWasPassword=wpsadmin
                   -DPortalAdminPwd=wpsadmin checkin-wp-proxy-config
                   -DProxyConfigFileName=C:\proxy-config.xml
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <p>Starting with Combined Cumulative Fix CF10, also perform the following extra steps to configure the proxy:</p>
@@ -2320,21 +2279,17 @@
 <ul>
 <li>
 <p>AIX and Linux:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh update-outbound-http-connection-config   
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh update-outbound-http-connection-config   
                   -DConfigFileName=c:/IBM/feb-configuration.xml 
                   -DOutboundProfileType=global
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Windows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>ConfigEngine.bat  update-outbound-http-connection-config   
+<div class="language-text highlight"><pre><span></span><code>ConfigEngine.bat  update-outbound-http-connection-config   
                   -DConfigFileName=c:/IBM/feb-configuration.xml 
                   -DOutboundProfileType=global
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 </li>
@@ -2343,26 +2298,21 @@
 <ul>
 <li>
 <p>AIX and Linux:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh read-outbound-http-connection-config
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh read-outbound-http-connection-config
                   -DConfigFileName=c:/IBM/the-global-profile.xml
                   -DOutboundProfileType=global
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>```
 ConfigEngine.sh   read-outbound-http-connection-config 
           -DConfigFileName=c:/IBM/the-global-profile.xml 
           -DOutboundProfileType=global
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>        -   ```
+<div class="language-text highlight"><pre><span></span><code>        -   ```
 ConfigEngine.bat  read-outbound-http-connection-config 
                   -DConfigFileName=c:/IBM/the-global-profile.xml 
                   -DOutboundProfileType=global
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 </li>
 </ul>
 </li>

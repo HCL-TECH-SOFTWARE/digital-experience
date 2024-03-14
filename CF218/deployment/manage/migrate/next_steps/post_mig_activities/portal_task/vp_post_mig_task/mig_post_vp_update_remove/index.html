@@ -4185,34 +4185,24 @@
 <li>
 <p>Remove the web-app sequence that includes the opening <code>&lt;web-app...&gt;</code> and the closing <code>&lt;/web-app&gt;</code> tags, and everything in between.</p>
 <p>See the following example to see how the portlet is defined in a web-app sequence:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;web-app action=&quot;locate&quot; uid=&quot;com.ibm.wkplc.people.portal.portlet.dynamicpersontag.web.app&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;web-app action=&quot;locate&quot; uid=&quot;com.ibm.wkplc.people.portal.portlet.dynamicpersontag.web.app&quot;&gt;
   &lt;portlet-app action=&quot;locate&quot; uid=&quot;com.ibm.wkplc.people.portal.portlet.dynamicpersontag.portlet.app&quot;&gt;
     &lt;portlet action=&quot;locate&quot; name=&quot;Dynamic Person Tag&quot; objectid=&quot;3_CGAH47L008DE402BK8543I1O47&quot;&gt;&lt;/portlet&gt;
   &lt;/portlet-app&gt;
 &lt;/web-app&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Remove the Person Tag page that includes the opening <code>&lt;content-node...&gt;</code> and the closing <code>&lt;/content-node&gt;</code> tags, and everything in between. The object <code>ids</code>, <code>portletrefs</code>, <code>sharerefs</code>, and other references in the example might vary in your installation.</p>
 <p>See the following example of the page that is defined in the content-node sequence.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;content-node type=&quot;page&quot; uniquename=&quot;ibm.portal.Person.Tag&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;content-node type=&quot;page&quot; uniquename=&quot;ibm.portal.Person.Tag&quot;&gt;
   &lt;supported-markup markup=&quot;html&quot; update=&quot;set&quot;&gt;&lt;/supported-markup&gt;
   &lt;localedata locale=&quot;en&quot;&gt;
 &lt;title&gt;Person Tag&lt;/title&gt;
 &lt;description&gt;Person Tag portlet, which enables live names and information for names in IBM Portal&lt;/description&gt;
   &lt;/localedata&gt;
 &lt;/content-node&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Select VirtualPortal.zip, and click <strong>Update</strong>.</p>
@@ -4231,112 +4221,73 @@
 <p class="admonition-title">Note</p>
 <p>Your script can contain references to the CAI/TAI portlets. These portlets are no longer available and any reference to these portlets cause your script to fail.</p>
 </div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;web-app action=&quot;locate&quot; uid=&quot;com.ibm.workplace.community.portal&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;web-app action=&quot;locate&quot; uid=&quot;com.ibm.workplace.community.portal&quot;&gt;
   &lt;portlet-app action=&quot;locate&quot; uid=&quot;com.ibm.workplace.community.portal.1&quot;&gt;
     &lt;portlet action=&quot;locate&quot; name=&quot;Community&quot; objectid=&quot;Z3_CGAH47L0008270I7MOUHLP18C5&quot;/&gt;
   &lt;/portlet-app&gt;
 &lt;/web-app&gt;
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;web-app action=&quot;locate&quot; uid=&quot;com.ibm.workplace.builder.parameterPortlet.ParamConfigPortlet.40b0885181fd00171b3b9587aea11c02&quot;&gt;
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;web-app action=&quot;locate&quot; uid=&quot;com.ibm.workplace.builder.parameterPortlet.ParamConfigPortlet.40b0885181fd00171b3b9587aea11c02&quot;&gt;
   &lt;portlet-app action=&quot;locate&quot; uid=&quot;com.ibm.workplace.builder.parameterPortlet.ParamConfigPortlet.40b0885181fd00171b3b9587aea11c02.1&quot;&gt;
     &lt;portlet action=&quot;locate&quot; name=&quot;Parameters&quot; objectid=&quot;Z3_CGAH47L0008270I7MOUHLP18O5&quot;/&gt;
   &lt;/portlet-app&gt;
 &lt;/web-app&gt;
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;web-app action=&quot;locate&quot; uid=&quot;com.ibm.workplace.policystatus.PolicyStatus&quot;&gt;
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;web-app action=&quot;locate&quot; uid=&quot;com.ibm.workplace.policystatus.PolicyStatus&quot;&gt;
   &lt;portlet-app action=&quot;locate&quot; uid=&quot;com.ibm.workplace.policystatus.PolicyStatus.1&quot;&gt;
     &lt;portlet action=&quot;locate&quot; name=&quot;Policy Status Portlet&quot; objectid=&quot;Z3_CGAH47L0008270I7MOUHLP18S5&quot;/&gt;
   &lt;/portlet-app&gt;
 &lt;/web-app&gt;
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;web-app action=&quot;locate&quot; uid=&quot;com.ibm.workplace.builder.propertiesPortlet.portal&quot;&gt;
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;web-app action=&quot;locate&quot; uid=&quot;com.ibm.workplace.builder.propertiesPortlet.portal&quot;&gt;
   &lt;portlet-app action=&quot;locate&quot; uid=&quot;com.ibm.workplace.builder.propertiesPortlet.portal.1&quot;&gt;
     &lt;portlet action=&quot;locate&quot; name=&quot;Properties portlet&quot; objectid=&quot;Z3_CGAH47L0008270I7MOUHLP1845&quot;/&gt;
   &lt;/portlet-app&gt;
 &lt;/web-app&gt;
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;web-app action=&quot;locate&quot; uid=&quot;com.ibm.workplace.builder.manageroles.ManageRoles.50047239651b0018123cdeae474aa5c4&quot;&gt;
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;web-app action=&quot;locate&quot; uid=&quot;com.ibm.workplace.builder.manageroles.ManageRoles.50047239651b0018123cdeae474aa5c4&quot;&gt;
   &lt;portlet-app action=&quot;locate&quot; uid=&quot;com.ibm.workplace.builder.manageroles.ManageRoles.50047239651b0018123cdeae474aa5c4.1&quot;&gt;
     &lt;portlet action=&quot;locate&quot; name=&quot;Roles portlet&quot; objectid=&quot;Z3_CGAH47L0008270I7MOUHLP18K5&quot;/&gt;
   &lt;/portlet-app&gt;
 &lt;/web-app&gt;
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;web-app action=&quot;locate&quot; uid=&quot;com.ibm.workplace.cdo.portal&quot;&gt;
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;web-app action=&quot;locate&quot; uid=&quot;com.ibm.workplace.cdo.portal&quot;&gt;
       &lt;portlet-app action=&quot;locate&quot; uid=&quot;com.ibm.workplace.cdo.portal.1&quot;&gt;
         &lt;portlet action=&quot;locate&quot; name=&quot;Application Catalog&quot; objectid=&quot;Z3_CGAH47L00OJ790IAH1AFAN1067&quot;/&gt;
       &lt;/portlet-app&gt;
     &lt;/web-app&gt;
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;web-app action=&quot;locate&quot; uid=&quot;com.ibm.workplace.tai.tc&quot;&gt;
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;web-app action=&quot;locate&quot; uid=&quot;com.ibm.workplace.tai.tc&quot;&gt;
       &lt;portlet-app action=&quot;locate&quot; uid=&quot;com.ibm.workplace.tai.tc.1&quot;&gt;
         &lt;portlet action=&quot;locate&quot; name=&quot;Template Catalog Manager&quot; objectid=&quot;Z3_CGAH47L00OJ790IAH1AFAN1060&quot;/&gt;
       &lt;/portlet-app&gt;
     &lt;/web-app&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The pages that reference these portlets in sequences like the following examples.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;component action=&quot;update&quot; active=&quot;true&quot; deletable=&quot;false&quot; domain=&quot;rel&quot; modifiable=&quot;undefined&quot; objectid=&quot;Z7_CGAH47L0008270I7MOUHLP18M7&quot; ordinal=&quot;100&quot; skinref=&quot;undefined&quot; type=&quot;control&quot; width=&quot;undefined&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;component action=&quot;update&quot; active=&quot;true&quot; deletable=&quot;false&quot; domain=&quot;rel&quot; modifiable=&quot;undefined&quot; objectid=&quot;Z7_CGAH47L0008270I7MOUHLP18M7&quot; ordinal=&quot;100&quot; skinref=&quot;undefined&quot; type=&quot;control&quot; width=&quot;undefined&quot;&gt;
   &lt;portletinstance action=&quot;update&quot; domain=&quot;rel&quot; objectid=&quot;Z5_CGAH47L0008270I7MOUHLP18E0&quot; portletref=&quot;Z3_CGAH47L0008270I7MOUHLP18C5&quot; shareref=&quot;Z5_CGAH47L0008270I7MOUHLP18E0&quot;/&gt;
 &lt;/component&gt;
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;component action=&quot;update&quot; active=&quot;true&quot; deletable=&quot;false&quot; domain=&quot;rel&quot; modifiable=&quot;undefined&quot; objectid=&quot;Z7_CGAH47L0008270I7MOUHLP18I0&quot; ordinal=&quot;100&quot; skinref=&quot;undefined&quot; type=&quot;control&quot; width=&quot;undefined&quot;&gt;
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;component action=&quot;update&quot; active=&quot;true&quot; deletable=&quot;false&quot; domain=&quot;rel&quot; modifiable=&quot;undefined&quot; objectid=&quot;Z7_CGAH47L0008270I7MOUHLP18I0&quot; ordinal=&quot;100&quot; skinref=&quot;undefined&quot; type=&quot;control&quot; width=&quot;undefined&quot;&gt;
   &lt;portletinstance action=&quot;update&quot; domain=&quot;rel&quot; objectid=&quot;Z5_CGAH47L0008270I7MOUHLP18I4&quot; portletref=&quot;Z3_CGAH47L0008270I7MOUHLP18O5&quot; shareref=&quot;Z5_CGAH47L0008270I7MOUHLP18I4&quot;/&gt;
 &lt;/component&gt;
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;component action=&quot;update&quot; active=&quot;true&quot; deletable=&quot;false&quot; domain=&quot;rel&quot; modifiable=&quot;undefined&quot; objectid=&quot;Z7_CGAH47L0008270I7MOUHLP18U4&quot; ordinal=&quot;100&quot; skinref=&quot;undefined&quot; type=&quot;control&quot; width=&quot;undefined&quot;&gt;
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;component action=&quot;update&quot; active=&quot;true&quot; deletable=&quot;false&quot; domain=&quot;rel&quot; modifiable=&quot;undefined&quot; objectid=&quot;Z7_CGAH47L0008270I7MOUHLP18U4&quot; ordinal=&quot;100&quot; skinref=&quot;undefined&quot; type=&quot;control&quot; width=&quot;undefined&quot;&gt;
   &lt;portletinstance action=&quot;update&quot; domain=&quot;rel&quot; objectid=&quot;Z5_CGAH47L0008270I7MOUHLP18U2&quot; portletref=&quot;Z3_CGAH47L0008270I7MOUHLP18S5&quot; shareref=&quot;Z5_CGAH47L0008270I7MOUHLP18U2&quot;/&gt;
 &lt;/component&gt;
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;component action=&quot;update&quot; active=&quot;true&quot; deletable=&quot;false&quot; domain=&quot;rel&quot; modifiable=&quot;undefined&quot; objectid=&quot;Z7_CGAH47L0008270I7MOUHLP18Q6&quot; ordinal=&quot;100&quot; skinref=&quot;undefined&quot; type=&quot;control&quot; width=&quot;undefined&quot;&gt;
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;component action=&quot;update&quot; active=&quot;true&quot; deletable=&quot;false&quot; domain=&quot;rel&quot; modifiable=&quot;undefined&quot; objectid=&quot;Z7_CGAH47L0008270I7MOUHLP18Q6&quot; ordinal=&quot;100&quot; skinref=&quot;undefined&quot; type=&quot;control&quot; width=&quot;undefined&quot;&gt;
   &lt;portletinstance action=&quot;update&quot; domain=&quot;rel&quot; objectid=&quot;Z5_CGAH47L0008270I7MOUHLP18Q1&quot; portletref=&quot;Z3_CGAH47L0008270I7MOUHLP1845&quot; shareref=&quot;Z5_CGAH47L0008270I7MOUHLP18Q1&quot;/&gt;
 &lt;/component&gt;
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;component action=&quot;update&quot; active=&quot;true&quot; deletable=&quot;false&quot; domain=&quot;rel&quot; modifiable=&quot;undefined&quot; objectid=&quot;Z7_CGAH47L0008270I7MOUHLP1865&quot; ordinal=&quot;100&quot; skinref=&quot;undefined&quot; type=&quot;control&quot; width=&quot;undefined&quot;&gt;
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;component action=&quot;update&quot; active=&quot;true&quot; deletable=&quot;false&quot; domain=&quot;rel&quot; modifiable=&quot;undefined&quot; objectid=&quot;Z7_CGAH47L0008270I7MOUHLP1865&quot; ordinal=&quot;100&quot; skinref=&quot;undefined&quot; type=&quot;control&quot; width=&quot;undefined&quot;&gt;
   &lt;portletinstance action=&quot;update&quot; domain=&quot;rel&quot; objectid=&quot;Z5_CGAH47L0008270I7MOUHLP1863&quot; portletref=&quot;Z3_CGAH47L0008270I7MOUHLP18K5&quot; shareref=&quot;Z5_CGAH47L0008270I7MOUHLP1863&quot;/&gt;
 &lt;/component&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The <code>portletref</code> attribute of the <code>portletinstance</code> tag matches one of the <code>objectid</code> attributes from the portlet tags in the web-app section.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portlet action=&quot;locate&quot; name=&quot;Roles portlet&quot; objectid=&quot;Z3_CGAH47L0008270I7MOUHLP18K5&quot;/&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;portlet action=&quot;locate&quot; name=&quot;Roles portlet&quot; objectid=&quot;Z3_CGAH47L0008270I7MOUHLP18K5&quot;/&gt;
 &lt;portletinstance portletref=&quot;Z3_CGAH47L0008270I7MOUHLP18K5&quot; ... /&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Make sure to remove the web-app sequence that includes the opening <code>&lt;web-app...&gt;</code> and the closing <code>&lt;/web-app&gt;</code> tags, and everything in between. Also, remove the components that reference the portlets. It includes the opening <code>&lt;component ...&gt;</code> and the closing <code>&lt;/component&gt;</code> tags, and everything in between. The <code>object ids</code>, <code>portletrefs</code>, <code>sharerefs</code>, and other references in the example might vary in your installation.</p>
 </li>
 </ol>

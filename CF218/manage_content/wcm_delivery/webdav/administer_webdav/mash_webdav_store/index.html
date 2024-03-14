@@ -2648,15 +2648,7 @@
 <p>The HTTP Basic Authentication Trust Association Interceptor (TAI) must be enabled to use WebDAV in HCL Portal. This TAI is enabled by default. See the related links for information.</p>
 </div>
 <p>You can obtain the entry point URL to the WebDAV file store from the service document under the URL /wps/mycontenthandler/!ut/p/model/service-document. The service document contains the top-level access point as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;app:collection href=&quot;/webdav/!ut/p/dav/fs-type1/&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;app:collection href=&quot;/webdav/!ut/p/dav/fs-type1/&quot;&gt;
                               &lt;atom:title&gt;fs-type1&lt;/atom:title&gt;
                               &lt;app:categories fixed=&quot;yes&quot;&gt;
                               . . . . . 
@@ -2665,36 +2657,36 @@
                               . . . . . 
                               &lt;/app:categories&gt;
                               &lt;/app:collection&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The entry point URL for themes is as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://server:port/[PortalServer_root](../reference/wpsdirstr.md#wp_root)/mycontenthandler/dav/fs-type1/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://server:port/[PortalServer_root](../reference/wpsdirstr.md#wp_root)/mycontenthandler/dav/fs-type1/
+</code></pre></div>
 <p>Examples of URLs for themes are as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://www.my_company.com:10027/wps/mycontenthandler/dav/fs-type1/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://www.my_company.com:10027/wps/mycontenthandler/dav/fs-type1/
+</code></pre></div>
 <ul>
 <li>
 <p>For theme-related resources:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://my_company.com:10027/wps/mycontenthandler/dav/fs-type1/themes/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://my_company.com:10027/wps/mycontenthandler/dav/fs-type1/themes/
+</code></pre></div>
 </li>
 <li>
 <p>For skin-related resources:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://my_company.com:10027/wps/mycontenthandler/dav/fs-type1/skins/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://my_company.com:10027/wps/mycontenthandler/dav/fs-type1/skins/
+</code></pre></div>
 </li>
 </ul>
 <p>If you want to authenticate against a specific virtual portal, you can identify the target virtual portal either by its host name or its URL context. Examples:</p>
 <ul>
 <li>
 <p>To authenticate to the virtual portal identified by the host name <code>vp.mycompany.com</code> and then connect to the themes folder, use the following URL entry point:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://vp.mycompany.com:10027/wps/mycontenthandler/dav/fs-type1/themes/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://vp.mycompany.com:10027/wps/mycontenthandler/dav/fs-type1/themes/
+</code></pre></div>
 </li>
 <li>
 <p>To authenticate to the virtual portal identified by the URL context <code>vp1</code> and then connect to the themes folder, use the following URL entry point:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://localhost:10027/wps/mycontenthandler/vp1/!ut/p/dav/fs-type1/themes/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://localhost:10027/wps/mycontenthandler/vp1/!ut/p/dav/fs-type1/themes/
+</code></pre></div>
 </li>
 </ul>
 <h2 id="folder-structure-and-reserved-folder-names">Folder structure and reserved folder names</h2>
@@ -2763,36 +2755,21 @@
 <ul>
 <li>
 <p>Code to add the manager role to a user:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;icm:role icm:actions=&quot;actionset:Manager,actions:Traverse,View,Edit,Add_Child,Delete,Join,&quot;&gt;                                            
+<div class="language-text highlight"><pre><span></span><code>&lt;icm:role icm:actions=&quot;actionset:Manager,actions:Traverse,View,Edit,Add_Child,Delete,Join,&quot;&gt;                                            
                                              &lt;icm:principal icm:name=&quot;uid=testuser,o=defaultwimfilebasedrealm&quot; icm:type=&quot;USER&quot; /&gt;                                                  
                                              &lt;/icm:role&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Code to add the manager role to a group:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;icm:role icm:actions=&quot;actionset:Manager,actions:Traverse,View,Edit,Add_Child,Delete,Join,&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;icm:role icm:actions=&quot;actionset:Manager,actions:Traverse,View,Edit,Add_Child,Delete,Join,&quot;&gt;
                                              &lt;icm:principal icm:name=&quot;cn=mygroup,o=defaultWIMFileBasedRealm&quot; icm:type=&quot;USER_GROUP&quot; /&gt;
                                              &lt;/icm:role&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <p>Add it after the <code>&lt;icm:owner&gt;</code> element. See the following complete code snippet for reference.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;icm:node&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;icm:node&gt;
                                    &lt;icm:access&gt;                                                         
                                    &lt;icm:wps&gt;                                                           
                                    &lt;icm:owner&gt;                                                        
@@ -2804,7 +2781,7 @@
                                    &lt;/icm:wps&gt;                                                          
                                    &lt;/icm:access&gt;                                                        
                                    &lt;/icm:node&gt;       
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Import the file with the following ConfigEngine task.</p>
@@ -2835,16 +2812,7 @@
 <p>To have human readable folder names, the portal uses the user IDs of the individual users as the names for the users' folders <code>user_name</code>. Internally, the portal uses the VMM ID of the user, so data does not need to be moved when the user name is changed.</p>
 </div>
 <p>If you want to programmatically find the URL entry point to a folder for the current user, you can look into the services document. The access point for user-specific data is provided as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;app:collection href=&quot;/webdav/!ut/p/dav/fs-type1/users/&lt;username&gt;&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;app:collection href=&quot;/webdav/!ut/p/dav/fs-type1/users/&lt;username&gt;&quot;&gt;
                               &lt;atom:title&gt;fs-type1-user&lt;/atom:title&gt;
                               &lt;app:categories fixed=&quot;yes&quot;&gt;
                               . . . . .
@@ -2854,7 +2822,7 @@
                               . . . . .    
                               &lt;/app:categories&gt;
                               &lt;/app:collection&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>/users/user_name/public</strong></p>
@@ -2871,30 +2839,26 @@
 <h2 id="file-store-cache-control">File store cache control</h2>
 <p>The WebDAV file store supports serving timeout values for HTTP Cache Header entries.</p>
 <p>You can use regular expressions to specify the timeout value for elements in the file store folder structure that match the regular expression. You need to add the following two custom properties to the WP Config Service resource environment provider with the following key = value properties:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>filestore.cache.expiration.id.re=regular expression 
+<div class="language-text highlight"><pre><span></span><code>filestore.cache.expiration.id.re=regular expression 
                          filestore.cache.expiration.id.seconds=value
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The id value can consist of an arbitrary string. It is used only to establish the mapping between a regular expression and its associated timeout value. If there are multiple regular expressions that match any file store resource, the maximum of the associated timeout values are used. Examples:</p>
 <ol>
 <li>
 <p>All items under the /themes folder have an expiration time of 1800 seconds:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>filestore.cache.expiration.0.re=themes/.* 
+<div class="language-text highlight"><pre><span></span><code>filestore.cache.expiration.0.re=themes/.* 
                                    filestore.cache.expiration.0.seconds=1800
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>All items of a certain resource type, such as jpg or gif have an expiration time of 6000 seconds:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>filestore.cache.expiration.1.re=.*.jpg|.*.gif 
+<div class="language-text highlight"><pre><span></span><code>filestore.cache.expiration.1.re=.*.jpg|.*.gif 
                                    filestore.cache.expiration.1.seconds=6000
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>All CSS files in the themes folder have an expiration time of 8000 seconds:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>filestore.cache.expiration.2.re=themes/.*.css 
+<div class="language-text highlight"><pre><span></span><code>filestore.cache.expiration.2.re=themes/.*.css 
                                    filestore.cache.expiration.2.seconds=8000
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 <h2 id="supported-http-methods">Supported HTTP methods</h2>

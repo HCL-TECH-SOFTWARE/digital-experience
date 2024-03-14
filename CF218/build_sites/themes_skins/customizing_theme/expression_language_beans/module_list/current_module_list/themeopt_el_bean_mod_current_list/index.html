@@ -4299,12 +4299,10 @@
 <p><strong>iterator</strong></p>
 <p>Iterates through modules.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;c:forEach var=&quot;node&quot; items=&quot;${wp.moduleList.current}&quot;&gt;   
+<div class="language-text highlight"><pre><span></span><code>&lt;c:forEach var=&quot;node&quot; items=&quot;${wp.moduleList.current}&quot;&gt;   
     ${node.name}/${node.version},
 &lt;/c:forEach&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Parameters: None</p>
 <p>Returns: An iterator with <a href="../../themeopt_el_bean_module/">Module</a> objects; it is never null.</p>
 </li>
@@ -4312,12 +4310,10 @@
 <p><strong>capabilities</strong></p>
 <p>Returns the aggregated non-deferred capabilities for all modules that are part of the currently selected page and theme.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;c:forEach var=&quot;node&quot; items=&quot;${wp.moduleList.current.capabilities}&quot;&gt;   
+<div class="language-text highlight"><pre><span></span><code>&lt;c:forEach var=&quot;node&quot; items=&quot;${wp.moduleList.current.capabilities}&quot;&gt;   
     ${node.name}/${node.value},
 &lt;/c:forEach&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="../module_capabilities_list/">ModuleCapabilitiesList</a>; Never null.</p>
 </li>
@@ -4325,12 +4321,10 @@
 <p><strong>deferredCapabilities</strong></p>
 <p>Returns the aggregated deferred capabilities for all modules that are part of the currently selected page and theme.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;c:forEach var=&quot;node&quot; items=&quot;${wp.moduleList.current.deferredCapabilities}&quot;&gt;   
+<div class="language-text highlight"><pre><span></span><code>&lt;c:forEach var=&quot;node&quot; items=&quot;${wp.moduleList.current.deferredCapabilities}&quot;&gt;   
     ${node.name}/${node.value},
 &lt;/c:forEach&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="../module_capabilities_list/">ModuleCapabilitiesList</a>; Never null.</p>
 </li>
@@ -4338,10 +4332,9 @@
 <p><strong>get(moduleKey)</strong></p>
 <p>Returns the module for the module key. The module key must be in the format <code>&lt;module name&gt;</code> or <code>&lt;module name&gt;/&lt;module version&gt;</code>. The version is optional. If no version is used, then the module with the highest version is selected.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.moduleList.current[&quot;wp_portal&quot;]}
+<div class="language-text highlight"><pre><span></span><code>${wp.moduleList.current[&quot;wp_portal&quot;]}
 ${wp.selectionModel.selected.moduleList[&quot;wp_portal&quot;]}
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Parameters:</p>
 <ul>
 <li>

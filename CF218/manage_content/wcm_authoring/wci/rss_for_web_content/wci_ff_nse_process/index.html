@@ -2752,8 +2752,8 @@
 </tbody>
 </table>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;ibmwcm:action&gt;update&lt;/ibmwcm:action&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:action&gt;update&lt;/ibmwcm:action&gt;
+</code></pre></div>
 <h2 id="itemtype">itemType</h2>
 <p>The itemType element indicates the type of item that is represented by the feed entry. These correspond to the Web Content Manager item types that can be created or updated via the feed. In some cases, the value of this element is combined with the value in the <code>&lt;ibmwcm:path&gt;</code> element to determine which Web Content Manager item type to create.</p>
 <table>
@@ -2810,32 +2810,30 @@
 <ul>
 <li>
 <p><strong>Site Area</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;ibmwcm:itemType&gt;siteArea&lt;/ibmwcm:itemType&gt; + any other value for &lt;ibmwcm:path&gt; 
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:itemType&gt;siteArea&lt;/ibmwcm:itemType&gt; + any other value for &lt;ibmwcm:path&gt; 
 or the lack of an &lt;ibmwcm:path&gt; element.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Taxonomy</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;ibmwcm:itemType&gt;category&lt;/ibmwcm:itemType&gt; + &lt;ibmwcm:path&gt;/&lt;/ibmwcm:path&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:itemType&gt;category&lt;/ibmwcm:itemType&gt; + &lt;ibmwcm:path&gt;/&lt;/ibmwcm:path&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong>Category</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;ibmwcm:itemType&gt;category&lt;/ibmwcm:itemType&gt; + any other value for &lt;ibmwcm:path&gt; 
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:itemType&gt;category&lt;/ibmwcm:itemType&gt; + any other value for &lt;ibmwcm:path&gt; 
 or the lack of an &lt;ibmwcm:path&gt; element.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Component</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;ibmwcm:itemType&gt;component&lt;/ibmwcm:itemType&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:itemType&gt;component&lt;/ibmwcm:itemType&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong>Content</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;ibmwcm:itemType&gt;content&lt;/ibmwcm:itemType&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:itemType&gt;content&lt;/ibmwcm:itemType&gt;
+</code></pre></div>
 </li>
 </ul>
 

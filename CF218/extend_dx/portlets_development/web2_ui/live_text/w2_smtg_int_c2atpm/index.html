@@ -2679,12 +2679,12 @@
 <h1 id="integrating-click-to-action-targets-with-the-person-menu">Integrating click-to-action targets with the person menu</h1>
 <p>Target actions for live text based click-to-action can also integrate with the person menus that are generated for hCard microformats found in the page markup.</p>
 <p>Target actions that you want to be displayed in a person menu need to declare the special type name as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://www.ibm.com/xmlns/prod/websphere/portal/v6.1/livetext#hcard
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://www.ibm.com/xmlns/prod/websphere/portal/v6.1/livetext#hcard
+</code></pre></div>
 <p>Unlike normal click-to-action sources, the person data that is available in the person menu is complex structured information. Therefore the value of the variable <code>window.ibm.portal.c2a.event.value</code> is not a string, but a JavaScript object with multiple nested properties that represent available information about the person. Refer to the person tag documentation about available attributes. The value that is passed in a target input field annotated with <code>c2a:action-param</code> is a string representation of this object in JavaScript Object Notation (JSON) format.</p>
 <p>If you want target actions to receive only individual fields of the person record, you can indicate this by appending the field selector to the type name. For example, a target action that is declared with the following type name will receive only the <code>email.internet</code> nested property of the person record.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://www.ibm.com/xmlns/prod/websphere/portal/v6.1/livetext#hcard.email.internet
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://www.ibm.com/xmlns/prod/websphere/portal/v6.1/livetext#hcard.email.internet
+</code></pre></div>
 <p>If the specified field is not available for a given source, then the target action is not displayed in the person menu.</p>
 
 

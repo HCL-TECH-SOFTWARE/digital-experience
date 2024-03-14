@@ -2353,11 +2353,11 @@
 <h1 id="configuring-the-vanity-url-preview-link">Configuring the vanity URL preview link</h1>
 <p>The user interface for managing vanity URLs has a preview link. By default, this link shows the full vanity URL. If you installed an HTTP server and configured it to allow short vanity URLs, you can configure the preview link to show the short vanity URL instead.</p>
 <p>By default, the preview link points directly to the vanity URL servlet. Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://hostname/wps/vanityurl/shoe-sale
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://hostname/wps/vanityurl/shoe-sale
+</code></pre></div>
 <p>If you installed an HTTP server and configured it to allow short vanity URLs, you can configure the preview link to point to the HTTP server instead. It then shows the short vanity URL, for example as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://hostname/shoe-sale
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://hostname/shoe-sale
+</code></pre></div>
 <p>You switch between these two options by using the appropriate portal configuration tasks:</p>
 <ul>
 <li>If you want the preview link to point to the HTTP server, run the portal configuration task <code>**enable-vanityurl-httpserver-preview</code>.</li>

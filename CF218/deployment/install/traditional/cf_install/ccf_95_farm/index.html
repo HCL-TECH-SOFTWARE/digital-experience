@@ -2728,10 +2728,10 @@
 <p>Otherwise syndication updates that run during install may clash with install modifications and can cause the CF update to fail.</p>
 <p>Syndicators and subscribers can be disabled by editing them in the syndication administration portlet. Go to the <a href="../../../../../manage_content/wcm_delivery/syndication/manage_synd_subs/">How to manage syndicators and subscribers</a> topic pages in the HCL Digital Experience Version 8.5 product documentation for more information. Syndication should then be re-enabled after the update is complete.</p>
 <p>Alternatively, the following ConfigEngine tasks have also been integrated into CF09 or later to globally disable and enable syndication (These tasks can be used in place of the manual updates linked above:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;wp_profile root&gt;/ConfigEngine/ConfigEngine.sh|.bat disable-syndication-auto-scheduler
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;wp_profile root&gt;/ConfigEngine/ConfigEngine.sh|.bat enable-syndication-auto-scheduler
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;wp_profile root&gt;/ConfigEngine/ConfigEngine.sh|.bat disable-syndication-auto-scheduler
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;wp_profile root&gt;/ConfigEngine/ConfigEngine.sh|.bat enable-syndication-auto-scheduler
+</code></pre></div>
 <h2 id="search-crawler-information">Search Crawler Information</h2>
 <p>It is recommended that any search crawlers are disabled before applying the CF. If a CF is applied at the same time the crawler is running, this may corrupt the search collection. The search crawler should be restarted after the CF update is complete.</p>
 <h2 id="backing-up-the-installation-manager-data">Backing up the Installation Manager data</h2>
@@ -2801,8 +2801,8 @@
 </div>
 <h2 id="update-process-linux-and-windows">Update process (Linux and Windows)</h2>
 <p>The update process removes plain text passwords from the wkplc*.properties files. To keep these passwords in the properties files, include the following line in the wkplc.properties file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>PWordDelete=false
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>PWordDelete=false
+</code></pre></div>
 <h2 id="multiple-profile-considerations">Multiple profile considerations</h2>
 <p>Verify that all of your profiles are at the same level before starting the upgrade or rollback. All profiles that share the same Portal installation directory (multiple profile option) must be manually upgraded after the IBM Installation Manager update completes. See the <em>Additional configuration steps</em> for details.</p>
 <h2 id="non-root-considerations">Non-root considerations</h2>
@@ -2818,13 +2818,13 @@
 <li>Open a command line window.</li>
 <li>
 <p>Run this command to check your current <code>umask</code> setting:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>umask
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>umask
+</code></pre></div>
 </li>
 <li>
 <p>If necessary, run this command to set the <code>umask</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>umask 0022
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>umask 0022
+</code></pre></div>
 </li>
 </ol>
 <h2 id="anti-virus-and-file-indexing-software-considerations-windows-only">Anti-virus and file indexing software considerations (Windows only)</h2>
@@ -2915,13 +2915,13 @@
 <ul>
 <li>
 <p>Linux:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./imcl install com.ibm.websphere.PORTAL.SERVER.v85 -repositories (fullpath/to/repository.config) -installationDirectory (portal_server_root) -acceptLicense
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>./imcl install com.ibm.websphere.PORTAL.SERVER.v85 -repositories (fullpath/to/repository.config) -installationDirectory (portal_server_root) -acceptLicense
+</code></pre></div>
 </li>
 <li>
 <p>Windows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>imcl.exe install com.ibm.websphere.PORTAL.SERVER.v85 -repositories (fullpath/to/repository.config) -installationDirectory (portal_server_root) -acceptLicense
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>imcl.exe install com.ibm.websphere.PORTAL.SERVER.v85 -repositories (fullpath/to/repository.config) -installationDirectory (portal_server_root) -acceptLicense
+</code></pre></div>
 </li>
 </ul>
 </li>
@@ -2948,16 +2948,16 @@
 </li>
 <li>
 <p>Update the sample response file that is packaged with your cumulative fix level according to the comments in the file. You can also record a response file to use to install the fix in silent mode. Go to <a href="https://support.hcltechsw.com/csm">HCL Software Support</a> page for detailed instructions for recording an IBM Installation Manager response file. Note: The feature set listed in your response file must match the feature set you have installed. You cannot add or remove features during the cumulative fix update. The feature set listed in the sample response file is:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>features=&#39;ce.install,portal.binary,portal.profile&#39;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>features=&#39;ce.install,portal.binary,portal.profile&#39;
+</code></pre></div>
 <p>If you do not have any profiles on this node (because you are in the process of migration from a previous version of HCL Portal, or creating multiple profiles, or you originally installed Portal 8.5 as a binary install), then you should remove the <code>'portal.profile'</code> feature from this list:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>features=&#39;ce.install,portal.binary&#39;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>features=&#39;ce.install,portal.binary&#39;
+</code></pre></div>
 </li>
 <li>
 <p>Run the following command to install in silent mode:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>imcl -acceptLicense -input (Full_path_to_your_response_file) -log (Full_Path_to_a_log_file) -showProgress
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>imcl -acceptLicense -input (Full_path_to_your_response_file) -log (Full_Path_to_a_log_file) -showProgress
+</code></pre></div>
 </li>
 <li>
 <p>After installation completes, proceed with the <em>Additional configuration steps</em>.</p>
@@ -2985,13 +2985,13 @@
 <ul>
 <li>
 <p>Linux:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./imcl  -c
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>./imcl  -c
+</code></pre></div>
 </li>
 <li>
 <p>Windows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>imcl.exe -c
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>imcl.exe -c
+</code></pre></div>
 </li>
 </ul>
 </li>
@@ -3026,10 +3026,9 @@
 <p>To skip regeneration of the profile template, add the following flag to the CF update command. For example: <code>applyCF.sh -Dskip.profile.template.update=true</code></p>
 </div>
 <p>If an updated template is needed at a later time, this command can be run to do so at any time: ex.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>ConfigEngine.sh
+<div class="language-text highlight"><pre><span></span><code>ConfigEngine.sh
 cf-create-profile-templates
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Ensure the HCL Portal server is stopped on the profile you intend to upgrade.</p>
 <h2 id="on-the-farm-master-server">On the Farm Master Server</h2>
 <p>Execute the following command from within the path of the profile to configure:</p>
@@ -3050,21 +3049,21 @@ cf-create-profile-templates
 <ul>
 <li>
 <p>If you have created any custom content on top of the empty portal, you must first use XMLAccess to export the Portal content. From the wp_profile_root/PortalServer/bin directory run:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>xmlaccess.bat/sh -user Portal_admin_user -password Portal_admin_password -url http://&lt;myhost&gt;:&lt;port&gt;/wps/config -in &lt;Portal home&gt;/doc/xml-samples/Export.xml -out result.xml
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>xmlaccess.bat/sh -user Portal_admin_user -password Portal_admin_password -url http://&lt;myhost&gt;:&lt;port&gt;/wps/config -in &lt;Portal home&gt;/doc/xml-samples/Export.xml -out result.xml
+</code></pre></div>
 </li>
 <li>
 <p>Upgrade the portal profile to the new CF level. Because many of the expected artifacts will not exist in an empty portal, you must define the <code>"isEmptyPortal"</code> property when performing this step:</p>
 <ul>
 <li>
 <p>Linux:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;profile_root&gt;/PortalServer/bin/applyCF.sh -DisEmptyPortal=true -DPortalAdminPwd=&lt;password&gt; -DWasPassword=&lt;password&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;profile_root&gt;/PortalServer/bin/applyCF.sh -DisEmptyPortal=true -DPortalAdminPwd=&lt;password&gt; -DWasPassword=&lt;password&gt;
+</code></pre></div>
 </li>
 <li>
 <p>Windows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;profile_root&gt;\PortalServer\bin\applyCF.bat -DisEmptyPortal=true -DPortalAdminPwd=&lt;password&gt; -DWasPassword=&lt;password&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;profile_root&gt;\PortalServer\bin\applyCF.bat -DisEmptyPortal=true -DPortalAdminPwd=&lt;password&gt; -DWasPassword=&lt;password&gt;
+</code></pre></div>
 </li>
 </ul>
 <div class="admonition important">
@@ -3077,20 +3076,20 @@ cf-create-profile-templates
 <ul>
 <li>
 <p>Linux:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;profile_root&gt;/ConfigEngine/ ./ConfigEngine.sh empty-portal -DWasPassword=&lt;password&gt; -DPortalAdminPwd=&lt;password&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;profile_root&gt;/ConfigEngine/ ./ConfigEngine.sh empty-portal -DWasPassword=&lt;password&gt; -DPortalAdminPwd=&lt;password&gt;
+</code></pre></div>
 </li>
 <li>
 <p>Windows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;profile_root&gt;/ConfigEngine/ ConfigEngine.bat empty-portal -DWasPassword=&lt;password&gt; -DPortalAdminPwd=&lt;password&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;profile_root&gt;/ConfigEngine/ ConfigEngine.bat empty-portal -DWasPassword=&lt;password&gt; -DPortalAdminPwd=&lt;password&gt;
+</code></pre></div>
 </li>
 </ul>
 </li>
 <li>
 <p>If you exported custom content in step #1 above, you can now use XMLAccess to re-import that content. From the wp_profile_root/PortalServer/bin directory run:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>xmlaccess.bat/sh -user &lt;Portal_admin_user&gt; -password &lt;Portal_admin_password&gt; -url http://&lt;myhost&gt;:&lt;port&gt;/wps/config -in result.xml -out importResults.xml
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>xmlaccess.bat/sh -user &lt;Portal_admin_user&gt; -password &lt;Portal_admin_password&gt; -url http://&lt;myhost&gt;:&lt;port&gt;/wps/config -in result.xml -out importResults.xml
+</code></pre></div>
 </li>
 </ul>
 <h2 id="farm-support-server-setup">Farm Support Server setup</h2>
@@ -3116,21 +3115,21 @@ cf-create-profile-templates
 <ul>
 <li>
 <p>If you have created any custom content on top of the empty portal, you must first use XMLAccess to export the Portal content. From the wp_profile_root/PortalServer/bin directory run:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>xmlaccess.bat/sh -user Portal_admin_user -password Portal_admin_password -url http://&lt;myhost&gt;:&lt;port&gt;/wps/config -in &lt;Portal home&gt;/doc/xml-samples/Export.xml -out result.xml
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>xmlaccess.bat/sh -user Portal_admin_user -password Portal_admin_password -url http://&lt;myhost&gt;:&lt;port&gt;/wps/config -in &lt;Portal home&gt;/doc/xml-samples/Export.xml -out result.xml
+</code></pre></div>
 </li>
 <li>
 <p>Upgrade the portal profile to the new CF level. Because many of the expected artifacts will not exist in an empty portal, you must define the <code>isEmptyPortal</code> property when performing this step:</p>
 <ul>
 <li>
 <p>Linux:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;profile_root&gt;/PortalServer/bin/applyCF.sh -DisEmptyPortal=true -DPortalAdminPwd=&lt;password&gt; -DWasPassword=&lt;password&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;profile_root&gt;/PortalServer/bin/applyCF.sh -DisEmptyPortal=true -DPortalAdminPwd=&lt;password&gt; -DWasPassword=&lt;password&gt;
+</code></pre></div>
 </li>
 <li>
 <p>Windows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;profile_root&gt;\PortalServer\bin\applyCF.bat -DisEmptyPortal=true -DPortalAdminPwd=&lt;password&gt; -DWasPassword=&lt;password&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;profile_root&gt;\PortalServer\bin\applyCF.bat -DisEmptyPortal=true -DPortalAdminPwd=&lt;password&gt; -DWasPassword=&lt;password&gt;
+</code></pre></div>
 </li>
 </ul>
 <div class="admonition important">
@@ -3143,20 +3142,20 @@ cf-create-profile-templates
 <ul>
 <li>
 <p>Linux:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;profile_root&gt;/ConfigEngine/ ./ConfigEngine.sh empty-portal -DWasPassword=&lt;password&gt; -DPortalAdminPwd=&lt;password&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;profile_root&gt;/ConfigEngine/ ./ConfigEngine.sh empty-portal -DWasPassword=&lt;password&gt; -DPortalAdminPwd=&lt;password&gt;
+</code></pre></div>
 </li>
 <li>
 <p>Windows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;profile_root&gt;/ConfigEngine/ ConfigEngine.bat empty-portal -DWasPassword=&lt;password&gt; -DPortalAdminPwd=&lt;password&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;profile_root&gt;/ConfigEngine/ ConfigEngine.bat empty-portal -DWasPassword=&lt;password&gt; -DPortalAdminPwd=&lt;password&gt;
+</code></pre></div>
 </li>
 </ul>
 </li>
 <li>
 <p>If you exported custom content in step #1 above, you can now use XMLAccess to re-import that content. From the wp_profile_root/PortalServer/bin directory run:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>xmlaccess.bat/sh -user &lt;Portal_admin_user&gt; -password &lt;Portal_admin_password&gt; -url http://&lt;myhost&gt;:&lt;port&gt;/wps/config -in result.xml -out importResults.xml
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>xmlaccess.bat/sh -user &lt;Portal_admin_user&gt; -password &lt;Portal_admin_password&gt; -url http://&lt;myhost&gt;:&lt;port&gt;/wps/config -in result.xml -out importResults.xml
+</code></pre></div>
 </li>
 </ul>
 <h2 id="post-installation-steps">Post installation steps</h2>
@@ -3196,11 +3195,11 @@ cf-create-profile-templates
 <p>Prior to CF07, it was recommended to set the DB2 database configuration parameter <code>"dft_queryopt"</code> to a value of 2 as this was tested to provide the best balance of query optimization time and query execution time for the SQL produced by the JCR. For CF07 or later, this recommendation has been changed to use a value of 5 in conjunction with the testing and changes made to the JCR and JCR schema. This setting is NOT updated automatically within your JCR Database Domain configuration as part of the CF07 (or later) upgrade. This can be done manually by customers by executing the following SQL against the JCR Domain Database:</p>
 </li>
 </ol>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>db2 update db cfg for JCRDBNAME using DFT_QUERYOPT 5
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>db2 update db cfg for JCRDBNAME using DFT_QUERYOPT 5
+</code></pre></div>
 <p>OR It can also be done by running the following Config Engine Task:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>configure-jcr-db2-dft-queryopt
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>configure-jcr-db2-dft-queryopt
+</code></pre></div>
 <h2 id="steps-for-rolling-back-the-cumulative-fix">Steps for rolling back the cumulative fix</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -3250,14 +3249,14 @@ cf-create-profile-templates
 </li>
 <li>
 <p>Edit the <wp_profile root>/ConfigEngine/properties/wkplc_comp.properties file and ensure the following values are set correctly:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>XmlAccessHost=&lt;your Portal hostname&gt; XmlAccessPort=&lt;the port you use to access Portal&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>XmlAccessHost=&lt;your Portal hostname&gt; XmlAccessPort=&lt;the port you use to access Portal&gt; 
+</code></pre></div>
 </li>
 </ol>
 <h2 id="update-process-for-cf-rollback-linux-and-windows">Update process for CF rollback (Linux and Windows)</h2>
 <p>The update process removes plain text passwords from the <code>wkplc*.properties</code> files. To keep these passwords in the properties files, include the following line in the <code>wkplc.properties</code> file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>PWordDelete=false
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>PWordDelete=false
+</code></pre></div>
 <p>There are several different methods to roll back the cumulative fix, and they are:</p>
 <ul>
 <li>Use a Graphical User Interface (GUI) to roll back</li>
@@ -3304,17 +3303,15 @@ cf-create-profile-templates
 <ul>
 <li>
 <p>For Linux:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>./imcl rollback com.ibm.websphere.PORTAL.SERVER.v85 
+<div class="language-text highlight"><pre><span></span><code>./imcl rollback com.ibm.websphere.PORTAL.SERVER.v85 
     -installationDirectory &lt;portal_server_root&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Windows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>imcl.exe rollback com.ibm.websphere.PORTAL.SERVER.v85
+<div class="language-text highlight"><pre><span></span><code>imcl.exe rollback com.ibm.websphere.PORTAL.SERVER.v85
     -installationDirectory &lt;portal_server_root&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 </li>
@@ -3342,8 +3339,8 @@ cf-create-profile-templates
 <li>Update the sample response file that is packaged with your cumulative fix level according to the comments in the file.</li>
 <li>
 <p>Run the following command to roll back in silent mode:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>imcl -input &lt;Full_path_to_your_response_file&gt; -log &lt;Full_Path_to_a_log_file&gt; -showProgress
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>imcl -input &lt;Full_path_to_your_response_file&gt; -log &lt;Full_Path_to_a_log_file&gt; -showProgress
+</code></pre></div>
 </li>
 <li>
 <p>After roll back completes, proceed with the <em>Post Rollback Steps</em>.</p>
@@ -3371,13 +3368,13 @@ cf-create-profile-templates
 <ul>
 <li>
 <p>For Linux:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./imcl  -c
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>./imcl  -c
+</code></pre></div>
 </li>
 <li>
 <p>For Windows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>imcl.exe -c
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>imcl.exe -c
+</code></pre></div>
 </li>
 </ul>
 </li>
@@ -3400,18 +3397,18 @@ cf-create-profile-templates
 <li>
 <p>On the Farm Master Server execute the following command from within the path of the profile to configure. Note: If you are rolling back the CF on an empty portal then many of the expected artifacts will not exist and the <code>rollbackCF</code> command will fail. In this case you must define the <code>isEmptyPortal</code> property on the command line.</p>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>rollbackCF.sh -DisEmptyPortal=true
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>rollbackCF.sh -DisEmptyPortal=true
+</code></pre></div>
 <ul>
 <li>
 <p>Linux:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>(profile_root/PortalServer/bin/rollbackCF.sh -DPortalAdminPwd=(password) -DWasPassword=(password)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>(profile_root/PortalServer/bin/rollbackCF.sh -DPortalAdminPwd=(password) -DWasPassword=(password)
+</code></pre></div>
 </li>
 <li>
 <p>Windows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>(profile_root)\PortalServer\bin\rollbackCF.bat -DPortalAdminPwd=(password) -DWasPassword=(password)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>(profile_root)\PortalServer\bin\rollbackCF.bat -DPortalAdminPwd=(password) -DWasPassword=(password)
+</code></pre></div>
 </li>
 </ul>
 <div class="admonition important">
@@ -3425,8 +3422,8 @@ cf-create-profile-templates
 <p class="admonition-title">Note</p>
 <p>If you are rolling back the CF on an empty portal then many of the expected artifacts will not exist and the <code>rollbackCF</code> command will fail. In this case you must define the <code>isEmptyPortal</code> property on the command line. Example:</p>
 </div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>rollbackCF.sh -DisEmptyPortal=true 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>rollbackCF.sh -DisEmptyPortal=true 
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If the Farm Support Server only has read-only access to the Portal Binaries use the <code>-DSharedBinaries=true</code> flag with the rollbackCF command.</p>
@@ -3434,13 +3431,13 @@ cf-create-profile-templates
 <ul>
 <li>
 <p>Linux:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>(profile_root)/PortalServer/bin/rollbackCF.sh -DPortalAdminPwd=(password) -DWasPassword=(password)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>(profile_root)/PortalServer/bin/rollbackCF.sh -DPortalAdminPwd=(password) -DWasPassword=(password)
+</code></pre></div>
 </li>
 <li>
 <p>Windows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>(profile_root)\PortalServer\bin\rollbackCF.bat -DPortalAdminPwd=(password) -DWasPassword=(password)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>(profile_root)\PortalServer\bin\rollbackCF.bat -DPortalAdminPwd=(password) -DWasPassword=(password)
+</code></pre></div>
 </li>
 </ul>
 <div class="admonition important">

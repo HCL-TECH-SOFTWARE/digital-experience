@@ -3108,22 +3108,12 @@
 <h1 id="implementing-custom-logging">Implementing custom logging</h1>
 <p>To implement custom logging, insert a CustomLog bean into your JSP.</p>
 <p>The following code provides an example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;jsp:useBean class=&quot;com.ibm.wcp.analysis.beans.CustomLog&quot; id=&quot;custom&quot; scope=&quot;session&quot; /&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;jsp:useBean class=&quot;com.ibm.wcp.analysis.beans.CustomLog&quot; id=&quot;custom&quot; scope=&quot;session&quot; /&gt;
 
 &lt;% custom.log( request, &quot;version&quot;, &quot;1.0&quot; ); %&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You can also log multiple values. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;jsp:useBean class=&quot;com.ibm.wcp.analysis.beans.CustomLog&quot; id=&quot;custom&quot; scope=&quot;session&quot; /&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;jsp:useBean class=&quot;com.ibm.wcp.analysis.beans.CustomLog&quot; id=&quot;custom&quot; scope=&quot;session&quot; /&gt;
 
 &lt;%
    Hashtable customInfo = new Hashtable();
@@ -3132,7 +3122,7 @@
    customInfo.put( &quot;custRegion&quot;, &quot;West&quot; );
    custom.log( request, customInfo );
 %&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

@@ -2756,100 +2756,98 @@
 <p>The script application push command in the DXClient tool requires a Script Application zip file or an extracted folder of the same (identified by the <code>prebuiltZip</code> or <code>contentRoot</code> attributes respectively). For more information on Script Applications, refer to the <a href="../../../../../guide_me/tutorials/scriptapps/common-setup/basic-scriptapp/basic_nowebpack_setup/">Build applications with the Script Application</a> topics in the HCL DX Help Center.</p>
 <p><strong>Command</strong></p>
 <p>This command invokes the <code>deploy-scriptapplication</code> command inside the DXClient tool to either push or pull a script application:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient deploy-scriptapplication
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient deploy-scriptapplication
+</code></pre></div>
 <p><strong>Subcommands</strong></p>
 <p>Use this command to create or update the content of a Script Application on the HCL DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>push [options]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>push [options]
+</code></pre></div>
 <p>Use this command to download the content of a Script Application from the HCL DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pull [options]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>pull [options]
+</code></pre></div>
 <p><strong>Help command</strong></p>
 <p>This command shows the help document on the <code>deploy-scriptapplication</code> command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient deploy-scriptapplication pull -h
+<div class="language-text highlight"><pre><span></span><code>dxclient deploy-scriptapplication pull -h
 
 dxclient deploy-scriptapplication push -h
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p><strong>Options for the <code>pull</code> subcommand</strong></p>
 <p>Use this attribute to specify the protocol with which to connect to the DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProtocol &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProtocol &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the hostname of the target DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port on which to connect to the DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the path to the content handler servlet on DX server (example: <code>/wps/mycontenthandler</code>):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-contenthandlerPath &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-contenthandlerPath &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the context of the virtual portal that contains the Script Application instance that you want to retrieve, if any:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-virtualPortalContext &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-virtualPortalContext &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the context of the portal project that manages the publication of changes to the Script Application instance, if any:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-projectContext &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-projectContext &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the username to authenticate with the DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password for the user in the <code>dxUsername</code> attribute:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the WCM content ID of the Script Application content item:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-wcmContentId &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-wcmContentId &lt;value&gt;
+</code></pre></div>
 <p><strong>Options for the <code>push</code> subcommand</strong></p>
 <p>Use this attribute to specify the protocol with which to connect to the DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProtocol &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProtocol &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the hostname of the target DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port on which to connect to the DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the path to the content handler servlet on the DX server (e.g. /wps/mycontenthandler):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-contenthandlerPath &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-contenthandlerPath &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the context of the virtual portal that should receive the Script Application instance being pushed, if any:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-virtualPortalContext &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-virtualPortalContext &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the context of the portal project that manages the publication of changes to the Script Application instance, if any:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-projectContext &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-projectContext &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the username to authenticate with the DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password for the user in the <code>dxUsername</code> attribute:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the WCM ID of the Script Application content item:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-wcmContentId &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-wcmContentId &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the <code>SiteArea</code> containing the Script Application content item:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-wcmSiteArea &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-wcmSiteArea &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the name of the Script Application content item to be created or updated:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-wcmContentName &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-wcmContentName &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the full WCM path of the Script Application content item to be created or updated:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-wcmContentPath &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-wcmContentPath &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to set or update the title of the Script Application content item:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-wcmContentTitle &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-wcmContentTitle &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the main HTML file name that is present within the Script Application:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-mainHtmlFile &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-mainHtmlFile &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the absolute or relative path to the Script Application's content as a ZIP file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-prebuiltZip &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-prebuiltZip &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the absolute or relative path to the Script Application's content in a directory:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>contentRoot &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>contentRoot &lt;value&gt;
+</code></pre></div>
 <p><strong>Notes:</strong></p>
 <ul>
 <li>At least one of (a) <code>wcmContentId</code>, (b) <code>wcmContentPath</code> or (c) both <code>wcmContentName</code> and <code>wcmSiteArea</code> must be specified. If multiple options are provided, then the priority order goes as follows: (a), then (b), and then (c).</li>
@@ -2862,119 +2860,118 @@ dxclient deploy-scriptapplication push -h
 <p>Command options passed through the command line will override values set in the config.json file.</p>
 <p><strong>Example:</strong></p>
 <p>For Script Application Pull:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient deploy-scriptapplication pull -wcmContentId &lt;wcmContentId&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient deploy-scriptapplication pull -wcmContentId &lt;wcmContentId&gt;
+</code></pre></div>
 <p>If all required options are configured in config.json of the DX Client tool, then execute:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient deploy-scriptapplication pull
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient deploy-scriptapplication pull
+</code></pre></div>
 <p>For Script Application Push, if the Script Application is extracted to a folder named temp at the root of the DXClient machine:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient deploy-scriptapplication push -contentRoot /temp -wcmSiteArea &quot;Script Application Library/Script Applications/&quot; -wcmContentName DemoScriptApplication
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient deploy-scriptapplication push -contentRoot /temp -wcmSiteArea &quot;Script Application Library/Script Applications/&quot; -wcmContentName DemoScriptApplication
+</code></pre></div>
 <p>If the Script Application is available as a .zip file in a folder named temp on the DXClient tool location, execute:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient deploy-scriptapplication push -prebuiltZip /temp/DemoScriptApplication.zip -wcmSiteArea &quot;Script Application Library/Script Applications/&quot; -wcmContentName DemoScriptApplication
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient deploy-scriptapplication push -prebuiltZip /temp/DemoScriptApplication.zip -wcmSiteArea &quot;Script Application Library/Script Applications/&quot; -wcmContentName DemoScriptApplication
+</code></pre></div>
 <p>If all required options are configured in the config.json at the /dist/src/configuration path of the DXClient tool, then execute:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient deploy-scriptapplication push
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient deploy-scriptapplication push
+</code></pre></div>
 <h2 id="undeploy-script-applications">Undeploy script applications</h2>
 <p>The <code>undeploy-scriptapplication</code> command is used to remove a script application from a target HCL DX 9.5 CF192 or later servers.</p>
 <p><strong>Required file</strong></p>
 <p>This command invokes the <code>undeploy-scriptapplication</code> tool inside the DXClient. The <code>undeploy-scriptapplication</code> dxtool uses the provided files and execute the <code>undeploy scriptapplication</code> task.</p>
 <p><strong>Command</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient undeploy-scriptapplication -wcmContentId &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient undeploy-scriptapplication -wcmContentId &lt;value&gt;
+</code></pre></div>
 <p><strong>Help command</strong></p>
 <p>This command shows the help information for <code>undeploy-scriptapplication</code> command usage:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient undeploy-scriptapplication -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient undeploy-scriptapplication -h
+</code></pre></div>
 <p><strong>Command options</strong></p>
 <p>Use this attribute to specify the protocol with which to connect to the DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProtocol &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProtocol &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the hostname of the target DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port on which to connect to the DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the path to the content handler servlet on DX server (example, <code>/wps/mycontenthandler</code>):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-contenthandlerPath &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-contenthandlerPath &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the context of the virtual portal that contains the Script Application instance that you want to retrieve, if any:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-virtualPortalContext &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-virtualPortalContext &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the context of the portal project that manages the publication of changes to the Script Application instance, if any:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-projectContext &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-projectContext &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the username to authenticate with the DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password for the user in the <code>dxUsername</code> attribute:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the WCM content ID of the Script Application content item:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-wcmContentId &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-wcmContentId &lt;value&gt;
+</code></pre></div>
 <p>Use this tag to forcefully delete the Script Application:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-f
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-f
+</code></pre></div>
 <p>Command options passed through the command line will override values set in the config.json file.</p>
 <p>Log files from command execution can be found in the logs directory of the DXClient installation.</p>
 <p><strong>Example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient undeploy-scriptapplication -wcmContentId &lt;wcm-content-id&gt;
+<div class="language-text highlight"><pre><span></span><code>dxclient undeploy-scriptapplication -wcmContentId &lt;wcm-content-id&gt;
 dxclient undeploy-scriptapplication -wcmContentId &lt;wcm-content-id&gt; -f
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="restore-script-application">Restore Script Application</h2>
 <p>The <code>restore-scriptapplication</code> command is used to restore a script application into one of its previous versions present in the target HCL DX 9.5 CF 19 or later servers.</p>
 <p><strong>Required file</strong></p>
 <p>This command invokes the restore-scriptapplication tool inside the DXClient. The restore-scriptapplication dxtool uses the provided files and execute the restore scriptapplication task.</p>
 <p><strong>Command</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient restore-scriptapplication -wcmContentId &lt;value&gt; -versionName &lt;version-name&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient restore-scriptapplication -wcmContentId &lt;value&gt; -versionName &lt;version-name&gt;
+</code></pre></div>
 <p><strong>Help command</strong></p>
 <p>This command shows the help information for <code>restore-scriptapplication</code> command usage:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient restore-scriptapplication -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient restore-scriptapplication -h
+</code></pre></div>
 <p><strong>Command options</strong></p>
 <p>Use this attribute to specify the protocol with which to connect to the DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProtocol &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProtocol &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the hostname of the target DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port on which to connect to the DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the path to the content handler servlet on DX server (example, <code>/wps/mycontenthandler</code>):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-contenthandlerPath &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-contenthandlerPath &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the context of the virtual portal that contains the Script Application instance that you want to retrieve, if any:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-virtualPortalContext &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-virtualPortalContext &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the context of the portal project that manages the publication of changes to the Script Application instance, if any:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-projectContext &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-projectContext &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the username to authenticate with the DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password for the user in the <code>dxUsername</code> attribute:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the WCM content ID of the Script Application content item:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-wcmContentId &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-wcmContentId &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the versionName for the Script Application:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-versionName &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-versionName &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the restore as a draft or replace the published version of Script Application:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-restoreAsPublished &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-restoreAsPublished &lt;value&gt;
+</code></pre></div>
 <p>Command options passed through the command line will override values set in the config.json file.</p>
 <p>Log files from command execution can be found in the logs directory of the DXClient installation.</p>
 <p><strong>Example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient restore-scriptapplication -wcmContentID &lt;wcm-content-id&gt; -versionName &lt;version-name&gt; -restoreAsPublished &lt;restore-as-published&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient restore-scriptapplication -wcmContentID &lt;wcm-content-id&gt; -versionName &lt;version-name&gt; -restoreAsPublished &lt;restore-as-published&gt;
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

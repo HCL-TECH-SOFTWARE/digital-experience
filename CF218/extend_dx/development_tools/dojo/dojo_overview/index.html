@@ -2250,47 +2250,18 @@ Support for multiple versions of Dojo at run time creates a more robust applicat
 <p>All portlets that use Dojo widgets must manually call the Dojo parser when they are loading. Setting djConfig.parseOnLoad has no effect. Otherwise, no widgets are parsed in the portlet.</p>
 <p>All portlets must pass a markup element to the parser. The markup element can exist only inside the DOM of the portlet. Otherwise, Dojo parses the entire document body every time the parser is called without a markup element. Other portlets might get parsed two or three times, which causes the Dojo parser to fail every time it hits a widget that is already parsed.</p>
 <p>Here is an example of correct usage:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;script&gt; dojo.addOnLoad( function () { dojo.parser.parse( &quot;&lt;%=namespace%&gt;portletWidgetContainer&quot; ); } ); &lt;/script&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;script&gt; dojo.addOnLoad( function () { dojo.parser.parse( &quot;&lt;%=namespace%&gt;portletWidgetContainer&quot; ); } ); &lt;/script&gt;
         &lt;div id=&quot;&lt;%=namespace%&gt;portletWidgetContainer&quot;&gt;
             &lt;div dojoType=&quot;some.Widget&quot;&gt;&lt;/div&gt;
         &lt;/div&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>The <code>lotusui30dojo</code> class is set on the body element in the modularized themes, and its corresponding CSS files are linked in as well. To use a different theme within a particular portlet, do not change the CSS classes of the body element from within the portlet. Because this action has consequences on all other portlets and theme components that use Dijits on the page. Instead, use a separate node within the portlet to contain all the widgets that are used by that portlet. Then, assign the different theme class name on the container node inside the portlet.</p>
 </li>
 <li>
 <p>It is important to note that the placement of the theme class (for example, <code>lotusui30dojo</code>, <code>soria</code>) is vital for the theme to display correctly in Dijit components. If a Dijit component creates any elements as direct children of the body element, instead of or in addition to the same place in the DOM where the Dijit component was attached, then it is important to explicitly assign the class name. The class name is assigned for the secondary theme to the DOM node that is a direct child of the body, in addition to the containing DOM node of the portlet's widgets. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;body class=&quot;tundra&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;body class=&quot;tundra&quot;&gt;
     ...
     &lt;!-- Portlet A --&gt;
     &lt;div class=&quot;wpsPortletBody&quot;&gt;
@@ -2317,7 +2288,7 @@ Support for multiple versions of Dojo at run time creates a more robust applicat
         ...
     &lt;/table&gt;
 &lt;/body&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>In this example, when Portlet A creates dijit.form.DropDownButton, the code to create that widget also creates a menu component and a new DOM node under the body. But the code does not assign a CSS class to that DOM node. If nothing else is done after the portlet creates the DropDownButton, then the DropDownButton uses the <code>soria</code> class. But the menu that pops up when the button is clicked uses the <code>tundra</code> class. In cases like this, it is important to explicitly set the <code>soria</code> class on the DOM node that contains the menu.</p>
 </li>
 <li>

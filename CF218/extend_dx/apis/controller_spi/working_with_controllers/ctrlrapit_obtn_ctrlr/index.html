@@ -2265,37 +2265,26 @@
 </ul>
 <p>The <strong>LayoutModelController</strong> cannot be obtained via a JNDI lookup. You obtain it through its associated <strong>ContentModelController</strong>.</p>
 <p>Example - Obtaining a content model controller:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>ContentModelController result = null;
+<div class="language-text highlight"><pre><span></span><code>ContentModelController result = null;
 final Context ctx = new InitialContext();
 final ContentModelControllerHome home = (ContentModelControllerHome) 
      ctx.lookup(ContentModelControllerHome.CONTENT_MODEL_CONTROLLER_JNDI_NAME);
 if (home != null) {
      result = home.getContentModelControllerProvider().createContentModelController(aContentModel);
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To obtain a <code>ContentModelController</code>, you must pass an existing content model to the <code>createContentModelController</code> method of the <code>ContentModelControllerProvider</code>.</p>
 </div>
 <p>Example 2 - Obtaining a layout model controller for a specific page:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>// locate the page for which you want to create a LayoutModelController
+<div class="language-text highlight"><pre><span></span><code>// locate the page for which you want to create a LayoutModelController
 final Locator locator = cmController.getLocator();
 final ContentPage page = (ContentPage) locator.findByUniqueName(&quot;MyPage&quot;);
 
 // create a LayoutModelController
 final LayoutModelController lmController = cmController.getLayoutModelController(page);
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

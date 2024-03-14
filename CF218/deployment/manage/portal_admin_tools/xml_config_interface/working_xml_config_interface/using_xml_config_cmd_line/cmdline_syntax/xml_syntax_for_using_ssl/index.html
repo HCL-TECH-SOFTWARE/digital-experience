@@ -3918,18 +3918,13 @@
 <h1 id="xml-syntax-for-using-a-secure-connection-with-ssl">XML Syntax for using a secure connection with SSL</h1>
 <p>You can also use the XML command line client with SSL over a secure HTTPS connection.</p>
 <p>In this case the command syntax is as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>   xmlaccess -user user_ID -password password 
+<div class="language-text highlight"><pre><span></span><code>   xmlaccess -user user_ID -password password 
              -url https://myhost:10035/wps/config/ 
              -in input_file.xml -out result_file.xml ** 
              -truststore trustStore -trustpwd trustPassword 
              -trusttype trustType [ -keystore keyStore 
              -keypwd keyPassword -keytype keyType ]**
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following rules apply:</p>
 <ol>
 <li>The <code>https://</code> prefix in the URL is required to allow the XML client to detect whether a secure HTTPS connection is required. The appropriate HTTPS port must be provided instead of the HTTP port.</li>
@@ -3941,16 +3936,12 @@
 <p class="admonition-title">Note</p>
 </div>
 <p>When your HCL Portal runs on the Oracle platform, the default protocol handler for the hybrid IBM JDK is the Sun handler. Therefore, in order to successfully connect by using the XML configuration interface and the IBM JSSE2 provider, you need to add an additional parameter to the file wp_profile_root/PortalServer/bin/xmlaccess.xml. Edit that file and add the parameter -Djava.protocol.handler.pkgs=com.ibm.net.ssl.www2.protocol as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>   . . . . .
+<div class="language-text highlight"><pre><span></span><code>   . . . . .
 ${JAVA}                                                              
 -Djava.protocol.handler.pkgs=com.ibm.net.ssl.www2.protocol           
 -classpath ${WPS_HOME}/. . . . .
    . . . . .
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 </details>

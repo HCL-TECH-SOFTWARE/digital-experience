@@ -4075,44 +4075,22 @@
 <p>The command prefnames is used to obtain a list of available preference names. Portlet preferences might have multiple values. The command getpref therefore accepts a numeric index attribute. The numeric index attribute denotes the number of the value to be obtained. For example, 0 means to return the first preference value, 1 means to return the second value. The total number of available preference values for a specific preference name is returned by the prefcount command.</p>
 <p>The addpref command is used to add a portlet preference value to the portlet preference list. You can set portlet preferences to read-only. You can control this setting with the commands spprof (Set Portlet Preference Read-only Flag) and gpprof (Get Portlet Preference Read-only Flag).</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>Portlet.prefnames(ID, piid)
+<div class="language-text highlight"><pre><span></span><code>Portlet.prefnames(ID, piid)
 Portlet.getpref(ID, piid, name, &quot;at&quot;, index)
 Portlet.addpref(ID, piid, name, value)
 Portlet.gpprof(ID, piid, name, [&quot;numeric&quot;])
 Portlet.spprof(ID, piid, name, readonly\_flag)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>$Portlet prefnames ID piid
+<div class="language-text highlight"><pre><span></span><code>$Portlet prefnames ID piid
 $Portlet getpref ID piid name at index
 $Portlet addpref ID piid name value
 $Portlet gpprof ID piid name [numeric] 
 $Portlet spprof ID piid name readonly\_flag
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The portlet is identified by two ID values: The ID of the portlet and the ID of the portlet entity. You can obtain the ID of the portlet entity by the command $Layout get piid or Layout.get("piid").</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code># example: set a portlet preference
+<div class="language-text highlight"><pre><span></span><code># example: set a portlet preference
 # 1. locate the control where the portlet resides
 # 2. obtain its portlet instance ID
 # 3. set the portlet preference accordingly
@@ -4127,24 +4105,9 @@ for ix in range($Portlet.prefcount(piid, &quot;MYKEY&quot;)):
 
 # example: drop all portlet preferences on a certain key
 Portlet.droppref(piid, &quot;MYKEY&quot;)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code># example: set a portlet preference
+<div class="language-text highlight"><pre><span></span><code># example: set a portlet preference
 # 1. locate the control where the portlet resides
 # 2. obtain its portlet instance ID
 # 3. set the portlet preference accordingly
@@ -4160,7 +4123,7 @@ for {set ix 0} {$ix &lt; [$Portlet prefcount $piid MYKEY]} {incr ix} {
 
 # example: drop all portlet preferences on a certain key
 $Portlet droppref $piid  MYKEY
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Dependent on the standard that the portlet complies with, there are differences in the handling of portlet preferences. You can set multiple preference values on a preference key with standard portlets, while IBM portlets support only single values on each portlet preference key.</p>
 
 

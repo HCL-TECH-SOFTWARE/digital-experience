@@ -2902,16 +2902,12 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Important</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>In previous HCL Portal versions, the proxy-config.xml file held the configuration of the Ajax proxy. Changes that you make to this file became effective when you restarted the web module. In contrast, the outbound HTTP connection infrastructure makes only the necessary updates to the proxy-config.xml file. Changes to this file do not become effective until one of the following events occur:
+<div class="language-text highlight"><pre><span></span><code>In previous HCL Portal versions, the proxy-config.xml file held the configuration of the Ajax proxy. Changes that you make to this file became effective when you restarted the web module. In contrast, the outbound HTTP connection infrastructure makes only the necessary updates to the proxy-config.xml file. Changes to this file do not become effective until one of the following events occur:
 
 -   For global or customized global configuration settings: The outbound HTTP connection service is started for the first time after the portal upgrade.
 -   For application-specific proxy configurations: The web module that contains the proxy-config.xml is deployed.
 -   One of the portal configuration tasks `create-outbound-http-connection-config` or `update-outbound-http-connection-config` is started.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 <details class="info" open="open">
 <summary>Related information</summary>

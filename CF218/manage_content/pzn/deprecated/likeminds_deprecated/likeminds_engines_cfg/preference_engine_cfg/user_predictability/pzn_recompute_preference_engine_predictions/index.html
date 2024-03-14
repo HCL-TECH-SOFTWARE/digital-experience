@@ -3302,8 +3302,8 @@
 <h1 id="recomputing-preference-engine-predictions">Recomputing Preference engine predictions</h1>
 <p>Learn how to configure your LikeMinds Preference engine to recompute user predictions.</p>
 <p>The <code>&lt;eng_instance_name&gt;.engine.titan.recomputation_bound</code> configuration parameter specifies the percentage change allowed in a user's ratings before the LikeMinds server recomputes the user's predictions. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>music_pref.engine.titan.recomputation_bound = 10.0
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>music_pref.engine.titan.recomputation_bound = 10.0
+</code></pre></div>
 <p>Ordinarily, the LikeMinds server generates predictions based on a user's mentors, which the <code>sifter</code> computes and makes available to the database. When a user has no mentors, perhaps because he or she has just arrived at the site, or when the user's ratings or transactions have changed beyond the percentage specified here, the LikeMinds server selects mentors from a reduced set of candidates and recomputes the user's predictions.</p>
 <p>Use this setting with caution, as selecting mentors is a relatively expensive operation: a low percentage setting can lead to excessive CPU load with little or no gain in prediction quality. A higher setting will improve performance, but predictions may be less accurate.</p>
 

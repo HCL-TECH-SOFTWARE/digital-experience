@@ -4067,23 +4067,17 @@
 <p>The skinid, modifiable, deletable, and width attributes are writable. The Boolean value of the flag attributes can be given as true/false, t/f, 1/0, or on/off. It is returned as true/false by the get command. The flag values are local values of the component. On derived pages, a component is modifiable or deletable only if the flag is also set on all base pages where that component is defined. The value of the width attribute can be given as a number of pixels, or as a numeric percentage followed by the percent sign.</p>
 <p>The skinname attribute is not writable, but the value depends on the skinid attribute. The position attribute is not writable either, but the value depends on the organization of the component tree. For more information, see <em>Organization</em>.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code># examples for setting attributes of the selected node
+<div class="language-text highlight"><pre><span></span><code># examples for setting attributes of the selected node
 Layout.set(&quot;modifiable&quot;, &quot;true&quot;)
 Layout.set(&quot;deletable&quot;, &quot;0&quot;)
 Layout.set(&quot;width&quot;, &quot;350&quot;)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code># examples for setting attributes of the selected node
+<div class="language-text highlight"><pre><span></span><code># examples for setting attributes of the selected node
 $Layout set modifiable true
 $Layout set deletable 0
 $Layout set width &quot;350&quot;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Containers have the following extra attributes:</p>
 <table>
 <thead>

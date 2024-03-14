@@ -4077,14 +4077,11 @@
 <p>A project's scope applies to each request, so that the request either completely executes within the scope of a particular project or completely outside the project's scope. For a given request, you cannot switch between projects during request processing.</p>
 <p>Because a request is associated with a thread, the project identifier is also associated with the thread. The project service <code>com.ibm.portal.services.project.ProjectIdentificationService</code> returns this thread-specific project identifier. Note that the service does not define how to associate a project identifier with a thread; this is handled during URL generation.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>InitialContext ctx = new InitialContext();
+<div class="language-text highlight"><pre><span></span><code>InitialContext ctx = new InitialContext();
 ProjectIdentificationService piService = (ProjectIdentificationService) 
                                          ctx.lookup(ProjectIdentificationService.JNDI_NAME);
 ObjectID projectID = piService.getProjectID();
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

@@ -2434,33 +2434,30 @@
 <p>The Personalization REST API explorer allows developers using the Digital Experience Personalization REST APIs to explore and test these APIs. The following topic presents the Personalization REST APIs available and how developers can use them working with the Personalization REST API explorer.</p>
 <h2 id="access-and-launch-the-personalization-rest-api-explorer">Access and launch the Personalization REST API Explorer</h2>
 <p>After installing HCL DX 9.5 CF or Container Update CF200 or later, access the Personalization REST API explorer located at:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http or https://host:port/dx/api/pzn/v1/explorer/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http or https://host:port/dx/api/pzn/v1/explorer/
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://localhost:10039/dx/api/pzn/v1/explorer/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>https://localhost:10039/dx/api/pzn/v1/explorer/
+</code></pre></div>
 </div>
 <p>For the Embedded WCM Selection Rules, use the following path and path format:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http or https://host:port/dx/api/wcm/v2/explorer/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http or https://host:port/dx/api/wcm/v2/explorer/
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://localhost:10039/dx/api/wcm/v2/explorer/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>https://localhost:10039/dx/api/wcm/v2/explorer/
+</code></pre></div>
 </div>
 <h2 id="limitation">Limitation</h2>
 <p>The detailed function of the above mentioned API for accessing Personalization Rules is documented <a href="pzn_rules_api/">Personalization Rules</a></p>
 <ul>
 <li>With HCL Digital Experience 9.5 CF206, the PZN Java API was extended to return the evaluated page metadata when using a custom application object. The method signature is: <br> <code>Interface com.ibm.websphere.personalization.PznPortletRequestObjectInterface:</code> <br> For example: <br> 
-    <div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>/* 
+    <div class="language-text highlight"><pre><span></span><code>/* 
  * Return the MetaData object of the evaluated page
  */
 public MetaData getEvaluatedPageMetaData();
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 <li>PZN endpoint to manage the personalization rules (/rules) does not support the creation of Embedded WCM Select Action rule yet. So use the WCM API to create the initial embedded PZN rule and then edit it with the PZN API.</li>
 </ul>
 

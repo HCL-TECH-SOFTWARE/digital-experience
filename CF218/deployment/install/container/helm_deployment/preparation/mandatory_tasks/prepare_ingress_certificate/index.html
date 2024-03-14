@@ -2155,10 +2155,9 @@
 <h2 id="generate-self-signed-certificate">Generate self-signed certificate</h2>
 <p><strong>It is recommended that you use a properly signed certificate for HAProxy</strong>. However, it is also possible to create and use a self-signed certificate, for example, for staging or testing environment.</p>
 <p>Creation of that certificate can be achieved using the following commands for OpenSSL:</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Creation of a private key and associated certificate</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># Creation of a private key and associated certificate</span>
 openssl<span class="w"> </span>req<span class="w"> </span>-x509<span class="w"> </span>-newkey<span class="w"> </span>rsa:2048<span class="w"> </span>-keyout<span class="w"> </span>my-key.pem<span class="w"> </span>-out<span class="w"> </span>my-cert.pem<span class="w"> </span>-days<span class="w"> </span><span class="m">365</span><span class="w"> </span>-subj<span class="w"> </span><span class="s2">&quot;/CN=my-cert&quot;</span><span class="w"> </span>-nodes
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This provides you with a key and cert file that can be used in the next step, creation of the certificate to your deployment.</p>
 <h2 id="use-certificate">Use certificate</h2>
 <p><strong>Create secret</strong></p>
@@ -2168,25 +2167,19 @@ openssl<span class="w"> </span>req<span class="w"> </span>-x509<span class="w"> 
 <p class="admonition-title">Note</p>
 <p>The secret name can be chosen by you and must be referenced in the next configuration step (the following example uses <code>dx-tls-cert</code>). The namespace is the Kubernetes namespace where you want to deploy HCL Digital Experience 9.5 to (the example uses <code>digital-experience</code>).</p>
 </div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code># Create secret with the name &quot;dx-tls-cert&quot;
+<div class="language-text highlight"><pre><span></span><code># Create secret with the name &quot;dx-tls-cert&quot;
 # Secret will be created in the namespace &quot;digital-experience&quot;
 # You can either reference the cert and key file created before, or a proper signed certificate e.g. from your CA
 kubectl create secret tls dx-tls-cert --cert=my-cert.pem --key=my-key.pem -n digital-experience 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="configure-secret-in-deployment">Configure secret in deployment</h2>
 <p>You need to make sure that the reference to the secret is set up correctly in your <code>custom-values.yaml</code> file. Otherwise, HAProxy cannot answer HTTPS requests due to a missing certificate.</p>
 <p>You can set the name of the certificate used with the following syntax, the default value is <code>dx-tls-cert</code>:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Networking specific configuration</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Networking specific configuration</span>
 <span class="nt">networking</span><span class="p">:</span>
 <span class="w"> </span><span class="c1"># TLS Certificate secret used for HAProxy</span>
 <span class="w"> </span><span class="nt">tlsCertSecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx-tls-cert&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Verify you have entered the correct name.</p>

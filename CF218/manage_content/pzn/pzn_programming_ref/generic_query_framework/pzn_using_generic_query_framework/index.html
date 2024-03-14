@@ -2711,16 +2711,16 @@
 </li>
 </ol>
 <p>Property resolution and query syntax conversion are handled in the callbacks. The developer can prepare a property mapping hash table and use it with one of the previous callbacks to build the executable query string. Here is the sample code for SQL query string generation:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>String s=q.buildString(new SqlSelectQueryCallback(h));
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>String s=q.buildString(new SqlSelectQueryCallback(h));
+</code></pre></div>
 <p>where q is a query object, and h is a property mapping hash table.</p>
 <p>For detailed information on these builder callbacks, see the Personalization API documentation.</p>
 </li>
 <li>
 <p>Develop and use a domain specific builder callback.</p>
 <p>If the system provided builder callbacks do not satisfy resource domain requirements, a domain specific builder callback can be created and used as long as it implements ISelectQueryCallback. The developer can decide the mechanisms to interpret properties and derive the proper query syntax in their own callbacks. The code would look like:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>String s=q.buildString(new MySelectQueryCallback(myParameter));
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>String s=q.buildString(new MySelectQueryCallback(myParameter));
+</code></pre></div>
 <p>where q is a query object, and MySelectQueryCallback is the custom builder callback that takes myParameter as parameter.</p>
 </li>
 </ol>

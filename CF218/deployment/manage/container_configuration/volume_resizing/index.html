@@ -2962,17 +2962,15 @@
 <ol>
 <li>
 <p>Edit the PVC resource.</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>edit<span class="w"> </span>pvc<span class="w"> </span>&lt;pvc-name&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-sh highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>edit<span class="w"> </span>pvc<span class="w"> </span>&lt;pvc-name&gt;
+</code></pre></div>
 </li>
 <li>
 <p>Increase the storage request according to your requirements.</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">resources</span><span class="p">:</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">resources</span><span class="p">:</span>
 <span class="w">   </span><span class="nt">requests</span><span class="p">:</span>
 <span class="w">   </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3Gi</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 </li>
@@ -2983,13 +2981,13 @@
 <p>Delete the StatefulSet that uses the PVC.</p>
 <p>Make sure to use the <a href="https://kubernetes.io/docs/tasks/administer-cluster/use-cascading-deletion/#set-orphan-deletion-policy"><code>--cascade=orphan</code></a> option to only delete the StatefulSet, but keep the Pods.</p>
 <p>This allows the Pods to be picked up again after the updated StatefulSet is created in the next step.</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>delete<span class="w"> </span>sts<span class="w"> </span>&lt;statefulset-name&gt;<span class="w"> </span>--cascade<span class="o">=</span>orphan
-</code></pre></div></td></tr></table></div>
+<div class="language-sh highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>delete<span class="w"> </span>sts<span class="w"> </span>&lt;statefulset-name&gt;<span class="w"> </span>--cascade<span class="o">=</span>orphan
+</code></pre></div>
 </li>
 <li>
 <p>Recreate the StatefulSet with the updated parameters from the values by running <code>helm upgrade</code>:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>helm<span class="w"> </span>upgrade<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>-f<span class="w"> </span>&lt;custom-values.yaml&gt;<span class="w"> </span>&lt;deployment<span class="w"> </span>name&gt;<span class="w"> </span>&lt;chart&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-sh highlight"><pre><span></span><code>helm<span class="w"> </span>upgrade<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>-f<span class="w"> </span>&lt;custom-values.yaml&gt;<span class="w"> </span>&lt;deployment<span class="w"> </span>name&gt;<span class="w"> </span>&lt;chart&gt;
+</code></pre></div>
 </li>
 </ol>
 <p>The previously deleted StatefulSet should have been recreated with the appropriate storage size while the previously resized PVCs should still have their updated storage size.</p>

@@ -2287,16 +2287,12 @@
 <p>File components or elements that have a video file that is stored in an HTML5 video format, which includes MP4, webM, or ogg, are stored in Brightcove and have a Brightcove ID.</p>
 <p>The video can be previewed in the content form and you can set starting and ending points for the video.</p>
 <p>The following code is an HTML5 video player sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;video class=&quot;videoPlayer&quot; controls=&quot;&quot; preload=&quot;metadata&quot; src=&#39;[Element context=&quot;current&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;video class=&quot;videoPlayer&quot; controls=&quot;&quot; preload=&quot;metadata&quot; src=&#39;[Element context=&quot;current&quot; 
 type=&quot;content&quot; key=&quot;file&quot; format=&quot;url&quot;]#t=[Element context=&quot;current&quot; type=&quot;content&quot; key=&quot;file&quot; 
 format=&quot;startTime_sec&quot;],[Element context=&quot;current&quot; type=&quot;content&quot; key=&quot;file&quot; format=&quot;endTime_sec&quot;]&#39;&gt;
          Your browser does not support the video tag.
    &lt;/video&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The starting and ending points can be retrieved with the component or element tag and the parameter format="startTime" or format="endTime", which return the time in seconds. startTime_msec and endTime_msec return the time in milliseconds.</p>
 <p>The starting point frame is also used to generate the thumbnail of the video. The thumbnail can be retrieved with the parameter rendition="thumbnail".</p>
 <h2 id="limitation">Limitation</h2>

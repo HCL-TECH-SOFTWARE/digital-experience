@@ -2307,32 +2307,7 @@
 <p>HCL Digital Experience 9.5 consists of multiple applications and services that can be deployed. Depending on your needs, it might not be necessary to have all applications deployed.</p>
 <h2 id="disabling-or-enabling-specific-applications">Disabling or enabling specific applications</h2>
 <p>You can easily enable or disable specific applications by adding the following parts to your custom-values.yaml file:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Controls which application is deployed and configured</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Controls which application is deployed and configured</span>
 <span class="nt">applications</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Deploys Content Composer</span>
 <span class="w">  </span><span class="nt">contentComposer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -2358,7 +2333,7 @@
 <span class="w">  </span><span class="nt">runtimeController</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="c1"># Deploy HAProxy</span>
 <span class="w">  </span><span class="nt">haproxy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You can set applications that you do not want to be deployed to <code>false</code>. As noted in the <a href="../../../../overview/">Deploy DX 9.5 to container platforms using Helm</a> Help Center topic, some DX applications are pre-requisites for others to be deployed. It can appear that you have disabled an application, but it still gets deployed. This is due to other applications requiring that one.</p>
 
 

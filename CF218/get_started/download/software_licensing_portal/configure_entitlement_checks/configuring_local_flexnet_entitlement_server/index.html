@@ -1860,16 +1860,7 @@
 <li>
 <p>In a command prompt, run <code>sudo systemctl -l status flexnetls-HCL</code>.</p>
 <p>The response should look similar to the following, which contains all information on the running service:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>flexnetls-HCL.service - FlexnetLS Local License Server for HCL.
+<div class="language-text highlight"><pre><span></span><code>flexnetls-HCL.service - FlexnetLS Local License Server for HCL.
 Loaded: loaded (/etc/systemd/system/flexnetls-HCL.service; enabled; vendor preset: disabled)
 Drop-In: /etc/systemd/system/flexnetls-HCL.service.d
 └─flexnetls.conf
@@ -1879,7 +1870,7 @@ CGroup: /system.slice/flexnetls-HCL.service
 └─7342 /bin/java -server -Xms2g -Xmx2g -XX:CompressedClassSpaceSize=64m -XX:MetaspaceSize=256m -XX:+UseG1GC -XX:NewRatio=3 -XX:MaxGCPauseMillis=75 -XX:G1HeapWastePercent=10 -XX:InitiatingHeapOccupancyPercent=75 -XX:+CMSScavengeBeforeRemark - XX:+ScavengeBeforeFullGC -Djava.security.egd=file:/dev/./urandom -Dbase.dir=/var/opt/flexnetls/HCL -jar flexnetls.jar --service
 Apr 10 14:58:54 Linux7.3 systemd[1]: Starting FlexnetLS Local License Server for HCL....
 Apr 10 14:58:55 Linux7.3 systemd[1]: Started FlexnetLS Local License Server for HCL..
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 </li>
@@ -1899,8 +1890,8 @@ Apr 10 14:58:55 Linux7.3 systemd[1]: Started FlexnetLS Local License Server for 
 <ol>
 <li>
 <p>Using the default user name and password, request a bearer token from the local license server.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>curl -k --header &quot;Content-Type: application/json&quot; --request POST --data &quot;{\&quot;user\&quot;:\&quot;admin\&quot;,\&quot;password\&quot;:\&quot;HCLDefault@\&quot;}&quot; https://&lt;license server hostname&gt;:&lt;port&gt;/api/1.0/instances/~/authorize
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>curl -k --header &quot;Content-Type: application/json&quot; --request POST --data &quot;{\&quot;user\&quot;:\&quot;admin\&quot;,\&quot;password\&quot;:\&quot;HCLDefault@\&quot;}&quot; https://&lt;license server hostname&gt;:&lt;port&gt;/api/1.0/instances/~/authorize
+</code></pre></div>
 <p>Where:</p>
 <ul>
 <li>
@@ -1914,8 +1905,8 @@ Apr 10 14:58:55 Linux7.3 systemd[1]: Started FlexnetLS Local License Server for 
 <li>
 <p>Extract the <strong>hostids</strong> value from the local license server.</p>
 <p>Using the token value obtained in the previous step, obtain the <strong>hostids</strong>.</p>
-<p><div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>curl -k -H &quot;Authorization: Bearer &lt;token value&gt;&quot; https://&lt;license server hostname&gt;:&lt;port&gt;/api/1.0/hostids
-</code></pre></div></td></tr></table></div>
+<p><div class="language-text highlight"><pre><span></span><code>curl -k -H &quot;Authorization: Bearer &lt;token value&gt;&quot; https://&lt;license server hostname&gt;:&lt;port&gt;/api/1.0/hostids
+</code></pre></div>
 Where:</p>
 <ul>
 <li><code>&lt;token value&gt;</code> is the token.</li>
@@ -1923,20 +1914,14 @@ Where:</p>
 <li><code>&lt;port&gt;</code> is the configured port number for the local license service.</li>
 </ul>
 <p>The value that you are looking for is the 12-character <strong>hostids</strong> value. For example,</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>...
+<div class="language-text highlight"><pre><span></span><code>...
 {
 &quot;hostids&quot; : [ {
     &quot;type&quot; : &quot;ETHERNET&quot;,
     &quot;value&quot; : &quot;DE32822D0EA&quot;
 }, {
 ...
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 </li>
@@ -2008,16 +1993,16 @@ Where:</p>
 </li>
 <li>
 <p>Upload the capability response (.bin) file into the server.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>curl -k -X POST -H &quot;Authorization: Bearer &lt;token value&gt;&quot; -H &quot;Cache-Control: no-cache&quot; --data-binary &quot;@&lt;Bin File Name.bin&gt;&quot; https://&lt;license server hostname&gt;:&lt;port&gt;/api/1.0/capability_response
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>curl -k -X POST -H &quot;Authorization: Bearer &lt;token value&gt;&quot; -H &quot;Cache-Control: no-cache&quot; --data-binary &quot;@&lt;Bin File Name.bin&gt;&quot; https://&lt;license server hostname&gt;:&lt;port&gt;/api/1.0/capability_response
+</code></pre></div>
 <p>Where:
 -   <code>&lt;token value&gt;</code> is the token.
 -   <code>&lt;Bin File Name.bin&gt;</code> is the capability response file.
 -   <code>&lt;license server hostname&gt;</code> is the hostname of the local license server.
 -   <code>&lt;port&gt;</code> is the configured port number for the local license service.</p>
 <p>The expected HTTP response is:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&quot;confirmationRequestNeeded&quot; : false
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&quot;confirmationRequestNeeded&quot; : false
+</code></pre></div>
 <p>You can also observe the update directly within your local license server logs.</p>
 </li>
 <li>
@@ -2048,10 +2033,9 @@ Where:</p>
 <ol>
 <li>
 <p>To configure optional use of a local Flexnet license server, a property is added to the DX 9.5 Kubernetes Helm configuration to map the local license server SSL certificate (stored in a Kubernetes secret) to an environment variable. This property is optional and the DX 9.5 license manager instance will then automatically run an import to the <code>cacerts truststore</code> script if the variable contains any value.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code># License Certificate secret used for Local license server
+<div class="language-text highlight"><pre><span></span><code># License Certificate secret used for Local license server
 licenseCertSecret: &quot;license-secret&quot;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>As detailed in the <a href="../">HCL Digital Experience Cloud Native 9.5 entitlement checks</a> topic, you need to configure the following items to your DX 9.5 Container Update CF207 or later Helm chart according to the DX Cloud Native 9.5 entitlement(s) (Tier 1 – 7) you are entitled to and have mapped to your Local License Server instance:</p>
@@ -2063,26 +2047,7 @@ licenseCertSecret: &quot;license-secret&quot;
 <p><code>licenseServer ID</code> – configure to your Local License Server ID. Note that the Server ID is not the Host ID that you have provided in Flexnet Portal but the Server ID of Local license server. To check, run a curl command to the license server health and server details will be shown:</p>
 </li>
 </ol>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code>curl -k https://yourhostname:port/api/1.0/health
+<div class="language-text highlight"><pre><span></span><code>curl -k https://yourhostname:port/api/1.0/health
 Sample server response:
 
 &quot;LLS&quot; : {
@@ -2102,7 +2067,7 @@ Sample server response:
     &quot;licensingSecurityJSON&quot; : &quot;enabled&quot;,
     &quot;diskspace&quot; : &quot;ok&quot;
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ol>
 <li>
 <p><code>licenseServer URL</code> – verify your connection to the Local License Server URL.</p>
@@ -2120,24 +2085,24 @@ Sample server response:
 </li>
 <li>
 <p>Manually import the generated SSL certificate for the local license server to the Kubernetes secret. As mentioned in Step 1, use the default secret name 'license-secret' or change the <code>licenseCertSecret</code> in the custom values according to your secret name. The key name in the secret must be set to <code>license-secret</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl -n &lt;namespace&gt; create secret generic license-secret --from-file=license-secret=hostname.certs 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; create secret generic license-secret --from-file=license-secret=hostname.certs 
+</code></pre></div>
 </li>
 <li>
 <p>Run a Helm upgrade and restart the DX license manager pod.</p>
 <p>To run helm upgrade:
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>helm upgrade -n &lt;namespace&gt; -f current.yaml &lt;deployment-name&gt; install-hcl-dx-deployment
-</code></pre></div></td></tr></table></div></p>
+<div class="language-text highlight"><pre><span></span><code>helm upgrade -n &lt;namespace&gt; -f current.yaml &lt;deployment-name&gt; install-hcl-dx-deployment
+</code></pre></div></p>
 <p>To restart the DX license manager pod:
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl -n &lt;namespace&gt; rollout restart sts &lt;deployment-name&gt;-license-manager
-</code></pre></div></td></tr></table></div></p>
+<div class="language-text highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; rollout restart sts &lt;deployment-name&gt;-license-manager
+</code></pre></div></p>
 </li>
 </ol>
 <h2 id="results">Results</h2>
 <p>Ensure that your connection to the local Flexnet license server is successful by viewing your HCL DX 9.5 Container Update Server License Manager pod logs.</p>
 <p>Use <code>kubectl</code> logs for the license manager pod. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl logs pod/dx-deployment-license-manager-0 -n &lt;namespace&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl logs pod/dx-deployment-license-manager-0 -n &lt;namespace&gt;
+</code></pre></div>
 <p>Additional reference from the HCL Software Support Knowledge Article resources: <a href="https://support.hcltechsw.com/csm?id=kb_article&amp;sysparm_article=KB0084616">How to check the license usage on flexnet using the flexnetadmin tool included with the local license server download</a>.</p>
 
 

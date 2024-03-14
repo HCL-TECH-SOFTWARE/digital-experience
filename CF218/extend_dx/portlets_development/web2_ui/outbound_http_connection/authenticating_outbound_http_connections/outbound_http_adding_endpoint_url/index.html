@@ -3313,14 +3313,7 @@
 <h2 id="url_transformationadd_request_query_param">url_transformation.add_request_query_param</h2>
 <p>This setting adds a request parameter to the remote URL. The metadata value contains one or multiple query parameter definitions that are added to the query parameter URL.</p>
 <p>For example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;policy url=&quot;http://mysite.com/test1*&quot; &gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;policy url=&quot;http://mysite.com/test1*&quot; &gt;
      &lt;actions&gt;&lt;method&gt;GET&lt;/method&gt;&lt;/actions&gt;
      &lt;!­­ Add a simple key­value pair to the query string ­­&gt;
      &lt;meta­data&gt;
@@ -3328,20 +3321,13 @@
           &lt;value&gt;k=123abc&lt;/value&gt;
      &lt;/meta­data&gt;
 &lt;/policy&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This transformation setting adds the query parameter <code>?k=123abc</code> to the remote URL.</p>
 <ul>
 <li>The URL <code>http://mysite.com/test1/</code> is changed to <code>http://mysite.com/test1/?k=123abc</code></li>
 <li>The URL <code>http://mysite.com/test1/?someKey=aValue</code> is changed to <code>http://mysite.com/test1/?someKey=aValue&amp;k=123abc</code></li>
 </ul>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;policy url=&quot;http://mysite.com/test2*&quot; &gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;policy url=&quot;http://mysite.com/test2*&quot; &gt;
      &lt;actions&gt;&lt;method&gt;GET&lt;/method&gt;&lt;/actions&gt;
      &lt;!­­ Append a query string that contains credential vault secrets­­&gt;
      &lt;meta­data&gt;
@@ -3349,21 +3335,14 @@
           &lt;value&gt;key={**my_slot_id}&lt;/value&gt;
      &lt;/meta­data&gt;
 &lt;/policy&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This transformation setting adds the query parameter <code>?k=the_secret</code> to the remote URL. This parameter represents the password that is stored in the credential vault with the slot ID <code>my_slot_id</code>.</p>
 <ul>
 <li>The URL <code>http://mysite.com/test2/</code> is transformed to <code>http://mysite.com/test2/?key=some_secret_phrase</code></li>
 </ul>
 <h2 id="url_transformationadd_post_body_form">url_transformation.add_post_body_form</h2>
 <p>This parameter adds some data to the POST body. The metadata value contains extra content that is added to the existing body content.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;policy url=&quot;http://mysite.com/test3*&quot; &gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;policy url=&quot;http://mysite.com/test3*&quot; &gt;
      &lt;actions&gt;&lt;method&gt;POST&lt;/method&gt;&lt;/actions&gt;
      &lt;!­­ Add a simple key­value pair to the postdata section ­­&gt;
      &lt;meta­data&gt;
@@ -3371,18 +3350,11 @@
           &lt;value&gt;name=JohnDoe&lt;/value&gt;
      &lt;/meta­data&gt;
 &lt;/policy&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The name-value pair <code>name=JohnDoe</code> is added to the POST content. It’s assumed that the post content is in the URL encoded format. The transformation of post content in a different format isn’t supported.</p>
 <h2 id="url_transformationadd_url_path">url_transformation.add_url_path</h2>
 <p>This parameter appends the path of the remote URL with the provided data. The metadata value contains one or multiple query path elements that are appended to the existing URL path.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;policy url=&quot;http://remoteportal.com/test4/portal*&quot; &gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;policy url=&quot;http://remoteportal.com/test4/portal*&quot; &gt;
      &lt;actions&gt;&lt;method&gt;GET&lt;/method&gt;&lt;/actions&gt;
      &lt;!­­ Add a simple key­value pair to the path ­­&gt;
      &lt;meta­data&gt;
@@ -3390,7 +3362,7 @@
           &lt;value&gt;my_vp&lt;/value&gt;
      &lt;/meta­data&gt;
 &lt;/policy&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li>The url path is appended with the path element <code>my_vp</code></li>
 <li>The URL <code>http://remoteportal.com/test4/portal/</code> is changed to <code>http://remoteportal.com/test4/portal/my_vp/</code></li>
@@ -3398,14 +3370,7 @@
 <h2 id="url_transformationmodify_request_query_param">url_transformation.modify_request_query_param</h2>
 <p>This parameter modifies the request parameters of the remote URL. The value of the metadata setting contains a replace string that uses the format <code>s/regex/replacement/g</code>, where <code>regex</code> is for a regular expression, and <code>replacement</code> is the value to be replaced. If the replace string contains the suffix <code>/g</code>, the transformation replaces all matches of <code>regex</code> in the URL query parameter. Otherwise, the transformation replaces the first <code>regex</code> match only.</p>
 <p>For example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;policy url=&quot;http://mysite.com/test5*&quot; &gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;policy url=&quot;http://mysite.com/test5*&quot; &gt;
      &lt;actions&gt;&lt;method&gt;GET&lt;/method&gt;&lt;/actions&gt;
      &lt;!­- Add a simple key­value pair to the query string ­­&gt;
      &lt;meta­data&gt;
@@ -3413,18 +3378,11 @@
           &lt;value&gt;s/old/new/g&lt;/value&gt;
      &lt;/meta­data&gt;
 &lt;/policy&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li>The URL <code>http://mysite.com/test5/something?key=the_old_old_man</code> is transformed to <code>http://mysite.com/test5/something?key=the_new_new_man</code></li>
 </ul>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;policy url=&quot;http://mysite.com/test6*&quot; &gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;policy url=&quot;http://mysite.com/test6*&quot; &gt;
      &lt;actions&gt;&lt;method&gt;GET&lt;/method&gt;&lt;/actions&gt;
      &lt;!­­ Add a simple key­value pair to the query string ­­&gt;
      &lt;meta­data&gt;
@@ -3432,20 +3390,13 @@
           &lt;value&gt;s/old/new/&lt;/value&gt;
      &lt;/meta­data&gt;
 &lt;/policy&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li>The URL <code>http://mysite.com/test6/something?key=the_old_old_man</code> is transformed to<code>http://mysite.com/test6/something?key=the_new_old_man</code></li>
 </ul>
 <h2 id="url_transformationmodify_post_body_form">url_transformation.modify_post_body_form</h2>
 <p>This parameter modifies the POST data form of the remote URL. The metadata setting can be used to replace parts of the post body content. The metadata value uses the format <code>s/regex/replacement/g</code>, where <code>regex</code> is for a regular expression, and <code>replacement</code> is the value to be replaced. If the replace string contains the suffix <code>/g</code>, the transformation replaces all matches of <code>regex</code> in the URL query parameter. Otherwise, the transformation replaces the first regex match only.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;policy url=&quot;http://mysite.com/test7*&quot; &gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;policy url=&quot;http://mysite.com/test7*&quot; &gt;
      &lt;actions&gt;&lt;method&gt;POST&lt;/method&gt;&lt;/actions&gt;
      &lt;!­­ Add a simple key­value pair to the query string ­­&gt;
      &lt;meta­data&gt;
@@ -3453,17 +3404,10 @@
           &lt;value&gt;s/old/new/g&lt;/value&gt;
      &lt;/meta­data&gt;
 &lt;/policy&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="url_transformationmodify_url_path">url_transformation.modify_url_path</h2>
 <p>This parameter modifies the path of the remote URL. The metadata value contains a replacement expression for the URL path that should be transformed. The replacement value uses the format <code>s/regex/replacement/g</code>, where <code>regex</code> is for a regular expression, and <code>replacement</code> is the value to be replaced. If the replace string contains the suffix <code>/g</code>, the transformation replaces all matches of <code>regex</code> in the URL query parameter. Otherwise, the transformation replaces the first regex match only.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;policy url=&quot;http://mysite.com/test8/portal*&quot; &gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;policy url=&quot;http://mysite.com/test8/portal*&quot; &gt;
      &lt;actions&gt;&lt;method&gt;GET&lt;/method&gt;&lt;/actions&gt;
      &lt;!­­ Add a simple key­value pair to the path ­­&gt;
      &lt;meta­data&gt;
@@ -3471,27 +3415,21 @@
           &lt;value&gt;s/production/test/&lt;/value&gt;
      &lt;/meta­data&gt;
 &lt;/policy&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li>The URL <code>http://mysite.com/test8/production/</code> is changed to <code>http://mysite.com/test8/test/</code></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The feature does not support the transformation of the parts of the URL, which are relevant for the cookie handling or URL pattern resolution. For example,</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;policy url=&quot;http://mysite.com/invalid_example*&quot; &gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;policy url=&quot;http://mysite.com/invalid_example*&quot; &gt;
      &lt;actions&gt;&lt;method&gt;GET&lt;/method&gt;&lt;/actions&gt;
      &lt;meta­data&gt;
           &lt;name&gt;url_transformation.modify_url_path&lt;/name&gt;
           &lt;value&gt;s/www.mysite.com/www.anothersite.com/&lt;/value&gt;
      &lt;/meta­data&gt;
 &lt;/policy&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 
 

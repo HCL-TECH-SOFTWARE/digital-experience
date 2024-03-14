@@ -3500,30 +3500,7 @@
 <li>The example includes the optional definition of a cookie handling rule store-in-session for the authentication tokens <code>LtpaToken</code> and <code>LtpaToken2</code>. This setting saves the authentication tokens of the remote connection in the cookie store. When a URL to the remote site is requested again, the Outbound HTTP connection service establishes an authenticated HTTP connection by using the saved authentication tokens. Reestablishing the SAML authentication procedure is therefore not needed.</li>
 </ul>
 </div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;proxy-rules xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
     xsi:noNamespaceSchemaLocation=&quot;http://www.ibm.com/xmlns/prod/sw/http/outbound/proxy-config/2.0&quot;&gt;
 
@@ -3547,7 +3524,7 @@
             &lt;/policy&gt;
         &lt;/mapping&gt;
 &lt;/proxy-rules&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>After you save the XML file, run the ConfigEngine task update-outbound-http-connection-config to apply the policy settings to the configuration profile:</p>

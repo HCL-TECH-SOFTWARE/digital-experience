@@ -3080,25 +3080,7 @@
 <p>In your <code>custom-values.yaml</code>, you can define the state of the maintenance mode on a per application basis. This allows you to limit the scope of your actions.</p>
 <p>Adjust the <code>maintenanceMode</code> section accordingly.</p>
 <p>Sample configuration:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Allows to start a Pod and its containers in maintenance mode.</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Allows to start a Pod and its containers in maintenance mode.</span>
 <span class="c1"># Pods will not perform a regular execute of the application but will remain idle</span>
 <span class="c1"># This allows for debugging inside the containers if required, e.g. if configuration fixes are required</span>
 <span class="nt">maintenanceMode</span><span class="p">:</span>
@@ -3117,31 +3099,14 @@
 <span class="w">    </span><span class="nt">haproxy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">    </span><span class="nt">licenseManager</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">    </span><span class="nt">damPluginKaltura</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You then need to apply the changes by using <code>helm upgrade</code>:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Using helm upgrade to apply the changes</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Using helm upgrade to apply the changes</span>
 <span class="c1"># Adjust release name, reference to the helm charts and path to your custom-values.yaml accordingly</span>
 helm<span class="w"> </span>upgrade<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>&lt;release-name&gt;<span class="w"> </span>-f<span class="w"> </span>custom-values.yaml<span class="w"> </span>./hcl-dx-deployment.tgz
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>After running the helm command, an explicit mention of your maintenance mode changes appears in the command response:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Using helm upgrade to apply the changes</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Using helm upgrade to apply the changes</span>
 <span class="c1"># Adjust release name, reference to the helm charts and path to your custom-values.yaml accordingly</span>
 helm<span class="w"> </span>upgrade<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>&lt;release-name&gt;<span class="w"> </span>-f<span class="w"> </span>custom-values.yaml<span class="w"> </span>./hcl-dx-deployment.tgz
 
@@ -3157,16 +3122,9 @@ helm<span class="w"> </span>upgrade<span class="w"> </span>-n<span class="w"> </
 
 <span class="c1"># See https://opensource.hcltechsw.com/digital-experience/latest/platform/kubernetes/overview/ for further information.</span>
 <span class="c1"># ATTENTION: Maintenance mode is enabled for Pods: Core</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If you check the logs of the affected application, there is also a message regarding the maintenance mode:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Checking the logs of a Pod using kubectl</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Checking the logs of a Pod using kubectl</span>
 <span class="c1"># Please adjust namespace and pod name to match your deployment</span>
 kubectl<span class="w"> </span>logs<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>&lt;release-name&gt;-core-0<span class="w"> </span>-c<span class="w"> </span>core
 
@@ -3174,17 +3132,14 @@ kubectl<span class="w"> </span>logs<span class="w"> </span>-n<span class="w"> </
 <span class="c1"># Maintenance mode is: true</span>
 <span class="c1"># Listening for SIGTERM</span>
 <span class="c1"># Maintenance mode is enabled. This mode solely starts the container without any processes within it.</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If you come from a state where the application that you want to set into maintenance mode is in an unhealthy state, you may need to delete the corresponding Pod for the changes to take effect. This is because Kubernetes does not apply a new configuration to Pods of a StatefulSet until the previous configuration has successfully started.</p>
 <p>In case you need to delete a Pod that is still in a broken state even though you have enabled the maintenance mode, use the following command as reference:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Delete the corresponding Pod using kubectl</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Delete the corresponding Pod using kubectl</span>
 <span class="c1"># Please adjust namespace and pod name to match your deployment</span>
 
 kubectl<span class="w"> </span>delete<span class="w"> </span>pod<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>&lt;release-name&gt;-core-0
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="usage-with-dx-core">Usage with DX Core</h2>
 <p>The DX Core application performs certain actions during its regular startup routine. These actions are not executed when maintenance mode is enabled.
 In order to start the DX Core JVM in maintenance mode, you must perform the following actions:</p>
@@ -3192,32 +3147,7 @@ In order to start the DX Core JVM in maintenance mode, you must perform the foll
 <p class="admonition-title">Important</p>
 <p>Make sure you are selecting the right profile that matches the currently installed version in the following commands.</p>
 </div>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Connect into the running container</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Connect into the running container</span>
 <span class="c1"># Please adjust namespace and pod name to match your deployment</span>
 kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>&lt;release-name&gt;-core-0<span class="w"> </span>-c<span class="w"> </span>core<span class="w"> </span>--<span class="w"> </span>/bin/bash
 
@@ -3243,7 +3173,7 @@ ln<span class="w"> </span>-s<span class="w"> </span>/opt/HCL/profiles/prof_95_CF
 <span class="c1"># ADMU3100I: Reading configuration for server: WebSphere_Portal</span>
 <span class="c1"># ADMU3200I: Server launched. Waiting for initialization status.</span>
 <span class="c1"># ADMU3000I: Server WebSphere_Portal open for e-business; process id is 2233</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Note that if the container is restarted by Kubernetes, this symlink disappears.</p>
 
 

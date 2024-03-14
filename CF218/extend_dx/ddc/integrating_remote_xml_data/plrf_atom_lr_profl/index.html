@@ -2201,14 +2201,11 @@
 <p>Digital Data Connector (DDC) for HCL Portal provides a list-rendering profile that is ready to use for access to feeds that comply with the Atom syndication format standard.</p>
 <p>This profile is named ibm.portal.atom. The profile is deployed as custom properties of the WP List Rendering Profile Service resource environment provider in the WebSphere® Integrated Solutions Console. To display the profile, open the Custom Properties view of that resource environment provider in the WebSphere Integrated Solutions Console and activate a key filter by specifying <code>atom.*</code>.</p>
 <p>To use this profile in your lists, set the profile attribute of the <code>ListRenderingContext</code> rendering plug-in tag to the value <code>ibm.portal.atom</code>. Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;set&quot; extension-id=&quot;ibm.portal.ddc.xml&quot; 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;set&quot; extension-id=&quot;ibm.portal.ddc.xml&quot; 
    profile=&quot;ibm.portal.atom&quot; 
    attribute=&quot;source=https://www.cntserv_exmp.com/connections/communities/service/atom/catalog/public&quot;
    compute=&quot;always&quot;]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The Atom list-rendering profile declares the following attributes:</p>
 <ul>
 <li>

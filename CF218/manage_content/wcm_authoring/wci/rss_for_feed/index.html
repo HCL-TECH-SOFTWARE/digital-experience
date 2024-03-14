@@ -2500,10 +2500,9 @@
 <h1 id="rss-namespace-extension-for-the-feed-service">RSS Namespace Extension for the Feed Service</h1>
 <p>The RSS namespace extension is used to exchange control information between the feed producer and consumer applications.</p>
 <p>To implement this namespace, specify the <code>&lt;rss&gt;</code> element as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;rss version=&quot;2.0&quot; xmlns:ibmwcm=&quot;http://purl.org/net/ibmfeedsvc/wcm/1.0&quot;
+<div class="language-text highlight"><pre><span></span><code>&lt;rss version=&quot;2.0&quot; xmlns:ibmwcm=&quot;http://purl.org/net/ibmfeedsvc/wcm/1.0&quot;
 xmlns:ibmfs=&quot;http://purl.org/net/ibmfeedsvc/feedsvc/1.0&quot; /&gt; 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The input feeds need to include this namespace only in certain scenarios where control information is going to be passed in the feed itself rather than in the HTTP headers.</p>
 <ul>
 <li><strong><a href="wci_ff_nse_rss_handshake/">The Handshake Protocol</a></strong><br />

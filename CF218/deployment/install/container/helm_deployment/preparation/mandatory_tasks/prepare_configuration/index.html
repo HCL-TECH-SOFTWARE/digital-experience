@@ -2233,10 +2233,9 @@
 <h2 id="the-default-hcl-dx-95-valuesyaml-file">The default HCL DX 9.5 <code>values.yaml</code> file</h2>
 <p>HCL DX 9.5 Helm Chart provides a default values.yaml, which contains all possible configuration parameters.</p>
 <p>To access this file, you may use the following command when you have the HCL DX 9.5 CF196 or later <a href="../../../../../../../get_started/plan_deployment/container_deployment/#helm-chart-contents">Helm Chart tar.gz</a> file on hand:</p>
-<div class="language-sh highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Command to extract values.ymal from Helm Chart</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Command to extract values.ymal from Helm Chart</span>
 helm<span class="w"> </span>show<span class="w"> </span>values<span class="w"> </span>hcl-dx-deployment.tar.gz<span class="w"> </span>&gt;<span class="w"> </span>values.yaml
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The file contains all configurable parameters and their default values. You may use this file as a blueprint to create your own <code>custom-values.yaml</code>. You may also just rename the extracted <code>values.yaml</code> to <code>custom-values.yaml</code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

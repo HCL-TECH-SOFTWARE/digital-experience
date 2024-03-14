@@ -2863,8 +2863,8 @@
 </ul>
 <p>The request is a standard HTTP GET command. The URL is formed by combining the seedlist servlet host name, port number, and path, followed by a collection of input parameters that are separated by ampersand (<code>&amp;</code>) characters. The input parameters are entered as name-value pairs.</p>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://host\_name:port\_number/wps/seedlist/myserver?SeedlistId=library\_list&amp;Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&amp;Action=action&amp;Range=number\_of\_entries
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://host\_name:port\_number/wps/seedlist/myserver?SeedlistId=library\_list&amp;Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&amp;Action=action&amp;Range=number\_of\_entries
+</code></pre></div>
 <ul>
 <li>
 <p><strong>library_list</strong></p>
@@ -2907,18 +2907,18 @@
 </li>
 <li>
 <p><strong>Retrieve a maximum of 100 items from a stand-alone server by using the path to the site area</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://host\_name:port\_number/wps/seedlist/myserver?SeedlistId=library/site\_area&amp;Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&amp;Action=GetDocuments
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://host\_name:port\_number/wps/seedlist/myserver?SeedlistId=library/site\_area&amp;Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&amp;Action=GetDocuments
+</code></pre></div>
 </li>
 <li>
 <p><strong>Retrieve a maximum of 200 items from a stand-alone server by using the ID of the site area</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://host\_name:port\_number/wps/seedlist/myserver?SeedlistId=site\_area\_id&amp;Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&amp;Action=GetDocuments&amp;Range=200
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://host\_name:port\_number/wps/seedlist/myserver?SeedlistId=site\_area\_id&amp;Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&amp;Action=GetDocuments&amp;Range=200
+</code></pre></div>
 </li>
 <li>
 <p><strong>Retrieve a maximum of 100 items from a specific library</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://host\_name:port\_number/wps/seedlist/myserver?SeedlistId=library&amp;Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&amp;Action=GetDocuments
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://host\_name:port\_number/wps/seedlist/myserver?SeedlistId=library&amp;Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&amp;Action=GetDocuments
+</code></pre></div>
 </li>
 <li>
 <p><strong>Retrieve a maximum of 100 items from all libraries</strong></p>
@@ -2926,13 +2926,13 @@
 <p class="admonition-title">Note</p>
 <p>To use all libraries, leave <code>SeedlistId</code> value empty.</p>
 </div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://host\_name:port\_number/wps/seedlist/myserver?SeedlistId=&amp;Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&amp;Action=GetDocuments
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://host\_name:port\_number/wps/seedlist/myserver?SeedlistId=&amp;Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&amp;Action=GetDocuments
+</code></pre></div>
 </li>
 <li>
 <p><strong>Retrieve a maximum of 100 items from a specified list of libraries</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://host\_name:port\_number/wps/seedlist/myserver?SeedlistId=library1,library2&amp;Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&amp;Action=GetDocuments
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://host\_name:port\_number/wps/seedlist/myserver?SeedlistId=library1,library2&amp;Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&amp;Action=GetDocuments
+</code></pre></div>
 </li>
 <li>
 <p><strong>Retrieve a maximum of 100 items from a cluster</strong></p>
@@ -2940,18 +2940,18 @@
 <p class="admonition-title">Note</p>
 <p>When referencing a cluster, specify the request with the host name and port number of the HTTP server.</p>
 </div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://http\_server:port\_number/wps/seedlist/myserver?SeedlistId=library/site\_area&amp;Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&amp;Action=GetDocuments
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://http\_server:port\_number/wps/seedlist/myserver?SeedlistId=library/site\_area&amp;Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&amp;Action=GetDocuments
+</code></pre></div>
 </li>
 <li>
 <p><strong>Retrieve a maximum of 100 items from a virtual portal that is configured to use the URL context as the access point</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://http\_server:port\_number/wps/seedlist/myserver/virtual\_portal\_context?SeedlistId=library/site\_area&amp;Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&amp;Action=GetDocuments
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://http\_server:port\_number/wps/seedlist/myserver/virtual\_portal\_context?SeedlistId=library/site\_area&amp;Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&amp;Action=GetDocuments
+</code></pre></div>
 </li>
 <li>
 <p><strong>Retrieve a maximum of 100 items from a virtual portal that is configured to use a different host name as the access point</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://virtual\_portal\_host\_name:port\_number/wps/seedlist/myserver?SeedlistId=library/site\_area&amp;Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&amp;Action=GetDocuments
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://virtual\_portal\_host\_name:port\_number/wps/seedlist/myserver?SeedlistId=library/site\_area&amp;Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&amp;Action=GetDocuments
+</code></pre></div>
 </li>
 </ul>
 <div class="admonition important">

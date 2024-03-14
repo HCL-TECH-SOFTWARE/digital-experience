@@ -3110,25 +3110,18 @@
 <p>As a Web site visitor navigates your Web pages, a Category bean logs the different categories viewed by the visitor during the session. For example, if a Web site visitor goes to your Web site and views information about the weather, the category "Weather" can be logged. Another Web site visitor might be more interested in sports, so you would log the "Sports" category for this user. Category beans maintain category information for the current session including the categories logged and their corresponding log counts. Category information is routed to all registered log listeners.</p>
 <p>All categories are logged to the Feedback schema and to the user session. Category information is not logged to the LikeMinds schema.</p>
 <p>You can create rules that access the category counts in the current session, for example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>News Interest is
+<div class="language-text highlight"><pre><span></span><code>News Interest is
     Weather when
       current Category Count.Weather &gt; 5
     Sports when
       current Category Count.Sports &gt; 5
    Otherwise Headlines
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You can also create rules that access the category names from the current session, for example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>Select content
+<div class="language-text highlight"><pre><span></span><code>Select content
     whose News.Topics is included in current CategoryNamesCategory Names.Category Names
     order as is
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li><strong><a href="../pzn_implement_category_logging/">Implementing category logging</a></strong><br />
 To implement category logging, insert a Category bean into your JSP.</li>

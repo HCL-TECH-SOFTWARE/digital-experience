@@ -3498,20 +3498,14 @@
 <h1 id="registering-portlet-filters">Registering portlet filters</h1>
 <p>Before you can use a portlet filter and assign it to a portlet, you must register it in the PortletFilterService.</p>
 <p>The following example code snippet shows the declaration of a filter:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>1: # Example:
+<div class="language-text highlight"><pre><span></span><code>1: # Example:
 2: filter.SampleFilter.class = com.example.SampleFilter
 3: filter.SampleFilter.configValue = some configuration value
 4: filter.SampleFilter.transcodeMarkup.1 = html-&gt;wml
 5: # methods to be filtered
 6: filter.SampleFilter.method.1 = service
 7: filter.SampleFilter.method.2 = doTitle
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>In this example, the portlet filter SampleFilter is defined as follows:</p>
 <ul>
 <li>Line 2 defines the filter name to be SampleFilter. This name is later used in the portlet settings to attach the filter to the portlet. Line 2 also defines the class that implements the filter interface.</li>

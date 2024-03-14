@@ -3797,10 +3797,10 @@
 <p>Web Content Manager items, such as workflow items, categories, or keywords, are not exported or imported by the XML configuration interface (XML Access). You need to use the XML configuration interface (XML Access) library export and import feature instead.</p>
 </div>
 <p>To run the xmlaccess command from within a project, specify the project either with the project name or with the object ID of the project. The command uses the following format, depending on how you identify the project:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>xmlaccess -in input_file -url http://hostname:port_number/wps/config/$project/project_name
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>xmlaccess -in input_file -url http://hostname:port_number/wps/config/$project/project_object_id
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>xmlaccess -in input_file -url http://hostname:port_number/wps/config/$project/project_name
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>xmlaccess -in input_file -url http://hostname:port_number/wps/config/$project/project_object_id
+</code></pre></div>
 <p>For example:</p>
 <ul>
 <li>xmlaccess -in Export.xml -url http://www.example.com:10039/wps/config/$project/myproject</li>
@@ -3815,8 +3815,8 @@
 <p class="admonition-title">Note</p>
 <p>AIX® and Linux™: You might have to precede the dollar sign (<code>$</code>) with a backslash (<code>\</code>) to prevent <code>$project</code> from being interpreted as an environment variable. For example:</p>
 </div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>xmlaccess -in Export.xml -url http://www.example.com:10039/wps/config/\$project/myproject
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>xmlaccess -in Export.xml -url http://www.example.com:10039/wps/config/\$project/myproject
+</code></pre></div>
 <h2 id="use-transaction-processing-with-the-xml-configuration-interface">Use transaction processing with the XML configuration interface</h2>
 <p>Because pages are stored in the Portal Site library in Web Content Manager, each page has corresponding objects in the JCR database. You must be aware of this relation when you create, update, or delete pages with the XML configuration interface. If xmlaccess processing is interrupted, it can result in a mismatch between the page state and database state.</p>
 <div class="admonition warning">
@@ -3825,16 +3825,12 @@
 </div>
 <p>To ensure that page and database information for a page remain synchronized, use the <code>transaction-level</code> attribute of the <code>request</code> element in the XML file. For more information about using the <code>transaction-level</code> attribute, go to <em>XML configuration reference.</em></p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;request 
+<div class="language-text highlight"><pre><span></span><code>&lt;request 
     type=&quot;update&quot; 
     xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
     xsi:noNamespaceSchemaLocation=&quot;PortalConfig_8.5.0.xsd&quot;
     transaction-level=&quot;resource&quot;&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="excluding-pages-from-being-managed-in-web-content-manager">Excluding pages from being managed in Web Content Manager</h2>
 <p>By default, you can manage all HCL Portal pages in Web Content Manager except for the portal administration pages. When an administrator creates or imports a page, the portal checks whether the parent page has a portal page site area in Web Content Manager. If it does, the portal creates a portal page site area for the new page in Web Content Manager as well.</p>
 <p>You can exclude pages from being managed in Web Content Manager. You can prevent the creation of the corresponding page item in Web Content Manager. The page is then not available to be managed in managed pages. It is good practice to exclude only pages on first-level nodes, for example the Search or Applications pages. To do so, run an XML configuration interface script and use the <code>content-mapping-info</code> element with the attribute <code>has-system-mapping</code>:</p>

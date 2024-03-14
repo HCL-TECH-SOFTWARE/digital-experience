@@ -4067,16 +4067,12 @@
 <p>The VMM is configured with a default attribute schema that might not be compatible with your LDAP server. Add attributes to extend the VMM attribute schema and then map them between HCL Digital Experience and your user registry.</p>
 <p>You can add multiple attributes at one time by creating an XML file that includes the properties and attributes for each property. The XML file is referred to as a deployment file. Create the XML file before you start this procedure.</p>
 <p>The following sample is an XML deployment file that is used to add three properties.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>    &lt;wplc-add-property&gt;
+<div class="language-text highlight"><pre><span></span><code>    &lt;wplc-add-property&gt;
         &lt;resource propertyName=&quot;attribute\_name\_1&quot; dataType=&quot;Int&quot; entityTypes=&quot;Group&quot; multiValued=&quot;true&quot; /&gt;
         &lt;resource propertyName=&quot;attribute\_name\_2&quot; dataType=&quot;String&quot; entityTypes=&quot;PersonAccount&quot; multiValued=&quot;true&quot; /&gt;
         &lt;resource propertyName=&quot;attribute\_name\_3&quot; dataType=&quot;Base64Binary&quot; entityTypes=&quot;Group,PersonAccount&quot; multiValued=&quot;false&quot; /&gt;
     &lt;/wplc-add-property&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The resource tag includes attributes that are specific for the property: propertyName, dataType, entityType, and multiValued.</p>
 <ol>
 <li>
@@ -4214,16 +4210,12 @@
 <p><strong>Description</strong></p>
 <p>Use this property when you want to create multiple properties by using a single ConfigEngine operation. Specify the path and name of the XML file that contains the properties that you want to add. You can specify a path that is relative to the ConfigEngine directory or the fully qualified file system path. If you specify a value for this property, do not specify a value for la.propertyName, la.dataType, or la.Multivalued.</p>
 <p>The following is a sample of an XML deploy file that is used to add three properties.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>                        &lt;wplc-add-property&gt;
+<div class="language-text highlight"><pre><span></span><code>                        &lt;wplc-add-property&gt;
                            &lt;resource propertyName=&quot;attribute_name_1&quot; dataType=&quot;Int&quot; entityTypes=&quot;Group&quot; multiValued=&quot;true&quot; /&gt;
                            &lt;resource propertyName=&quot;attribute_name_2&quot; dataType=&quot;String&quot; entityTypes=&quot;PersonAccount&quot; multiValued=&quot;true&quot; /&gt;
                            &lt;resource propertyName=&quot;attribute_name_3&quot; dataType=&quot;Base64Binary&quot; entityTypes=&quot;Group,PersonAccount&quot; multiValued=&quot;false&quot; /&gt;
                         &lt;/wplc-add-property&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The resource tag includes attributes that are specific for the property: propertyName, dataType, entityType, and multiValued.</p>
 </li>
 </ul>

@@ -2713,12 +2713,10 @@
 </li>
 </ul>
 <p>Since Personalization uses the Request Context to contain all the rule input, the Request Context must be set onto the content spot prior to rule execution. The code with the content spot’s useBean tag must be similar to:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;jsp:useBean id=&quot;gold_promo_bean&quot;
+<div class="language-text highlight"><pre><span></span><code>&lt;jsp:useBean id=&quot;gold_promo_bean&quot;
 class=&quot;yourco.goldpromo.BannerSpot&quot; /&gt;
 &lt;% gold_promo_bean.setRequest (request); %&gt; 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>In the previous section, the jsp:useBean tag constructs the yourco.goldpromo.BannerSpot class and stores an instance of that class into the local variable gold_promo_bean. The next line calls setRequest to put the HttpServletRequest or PortletRequest onto the newly constructed content spot bean. The content spot then implicitly constructs a Request Context which is backed by the given HttpServletRequest or PortletRequest. This Request Context then provides access to that request’s parameters and attributes and attributes of the session through the com.ibm.websphere.personalization.RequestContext interface.</p>
 <p>In some cases, it may be useful to call into a content spot without having access to an HttpServletRequest or PortletRequest. The interface com.ibm.websphere.personalization.PznRequestObjectInterface can be used in these situations. A implementation of this class called com.ibm.websphere.personalization.PznRequestObjectImplementor is provided for convenience.</p>
 

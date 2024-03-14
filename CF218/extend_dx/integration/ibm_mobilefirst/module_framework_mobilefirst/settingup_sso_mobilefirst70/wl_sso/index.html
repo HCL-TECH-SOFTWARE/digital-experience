@@ -2376,48 +2376,33 @@
 <ol>
 <li>
 <p>Find the <code>&lt;securityTests&gt;</code> element and add the mobile and web security tests from the following example.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;mobileSecurityTest name=&quot;mobileTests&quot;&gt; 
+<div class="language-text highlight"><pre><span></span><code>&lt;mobileSecurityTest name=&quot;mobileTests&quot;&gt; 
     &lt;testDeviceId provisioningType=&quot;none&quot; /&gt; 
     &lt;testUser realm=&quot;WASLTPARealm&quot; /&gt; 
 &lt;/mobileSecurityTest&gt; 
 &lt;webSecurityTest name=&quot;WASLTPARealmTests&quot;&gt; 
     &lt;testUser realm=&quot;WASLTPARealm&quot;/&gt; 
 &lt;/webSecurityTest&gt; 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Uncomment the security realm.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;!-- For websphere --&gt; 
+<div class="language-text highlight"><pre><span></span><code>&lt;!-- For websphere --&gt; 
 &lt;realm name=&quot;WASLTPARealm&quot; loginModule=&quot;WASLTPAModule&quot;&gt;
    &lt;className&gt;com.worklight.core.auth.ext.WebSphereFormBasedAuthenticator
        &lt;/className&gt; 
    &lt;parameter name=&quot;login-page&quot; value=&quot;/login.html&quot;/&gt; 
    &lt;parameter name=&quot;error-page&quot; value=&quot;/loginError.html&quot;/&gt; 
 &lt;/realm&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Uncomment the login module for WebSphere.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;!-- For websphere --&gt; 
+<div class="language-text highlight"><pre><span></span><code>&lt;!-- For websphere --&gt; 
 &lt;loginModule name=&quot;WASLTPAModule&quot;&gt; 
     &lt;className&gt;com.worklight.core.auth.ext.WebSphereLoginModule&lt;/className&gt; 
 &lt;/loginModule&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 </li>
@@ -2426,22 +2411,7 @@
 <ol>
 <li>
 <p>Create an login.html file with the following contents.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;html&gt; 
+<div class="language-text highlight"><pre><span></span><code>&lt;html&gt; 
     &lt;head&gt; 
         &lt;title&gt;Login&lt;/title&gt; 
     &lt;/head&gt; 
@@ -2457,22 +2427,17 @@
         &lt;/form&gt; 
     &lt;/body&gt; 
 &lt;/html&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Create a loginError.html file with the following contents.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;html&gt; 
+<div class="language-text highlight"><pre><span></span><code>&lt;html&gt; 
     &lt;head&gt;&lt;/head&gt; 
     &lt;body&gt; 
         Login Error 
     &lt;/body&gt; 
 &lt;/html&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Add the login.html and loginError.html files to the highest level directory of the WAR.</p>
@@ -2481,44 +2446,18 @@
 </li>
 <li>
 <p>Modify the MobileFirst project WAR that was updated in the previous step by editing the web.xml file in the WEB-INF directory.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;login-config&gt; 
+<div class="language-text highlight"><pre><span></span><code>&lt;login-config&gt; 
     &lt;auth-method&gt;FORM&lt;/auth-method&gt; 
     &lt;form-login-config&gt; 
         &lt;form-login-page&gt;/login.html&lt;/form-login-page&gt; 
         &lt;form-error-page&gt;/loginError.html&lt;/form-error-page&gt; 
     &lt;/form-login-config&gt; 
 &lt;/login-config&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Add a security constraint to protect the web resource by modifying web.xml in the updated MobileFirst project WAR</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;security-constraint id=&quot;SecurityConstraint_1&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;security-constraint id=&quot;SecurityConstraint_1&quot;&gt;
     &lt;web-resource-collection id=&quot;WebResourceCollection_1&quot;&gt;
         &lt;web-resource-name&gt;mobilefirst&lt;/web-resource-name&gt;
         &lt;description&gt;Protecting mobilefirst application&lt;/description&gt;
@@ -2539,7 +2478,7 @@
     &lt;description&gt;Only specific users&lt;/description&gt;
     &lt;role-name&gt;Administrator&lt;/role-name&gt;
 &lt;/security-role&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>When the MobileFirst project WAR is updated, deploy it to the MobileFirst server.</p>
@@ -2558,15 +2497,7 @@
 </li>
 <li>
 <p>Open MobileFirst Project/apps/mobilefirst app/application-descriptor.xml and add the <code>&lt;securityTests&gt;</code> element.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;securityTests&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;securityTests&gt;
     &lt;mobileSecurityTest name=&quot;mobileTests&quot;&gt; 
         &lt;testDeviceId provisioningType=&quot;none&quot; /&gt; 
         &lt;testUser realm=&quot;WASLTPARealm&quot; /&gt; 
@@ -2575,64 +2506,26 @@
         &lt;test realm=&quot;WASLTPARealm&quot; isInternalUserID=&quot;true&quot;/&gt; 
     &lt;/customSecurityTest&gt; 
 &lt;/securityTests&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Add the example <code>&lt;realm&gt;</code> for <code>WASLTPARealm</code>.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;realm loginModule=&quot;WASLTPAModule&quot; name=&quot;WASLTPARealm&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;realm loginModule=&quot;WASLTPAModule&quot; name=&quot;WASLTPARealm&quot;&gt;
             &lt;className&gt;com.worklight.core.auth.ext.FormBasedAuthenticator&lt;/className&gt;
         &lt;/realm&gt;
     &lt;/realms&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Add the example <code>&lt;loginModule&gt;</code> for <code>WASLTPAModule</code>.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;loginModule name=&quot;WASLTPAModule&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;loginModule name=&quot;WASLTPAModule&quot;&gt;
     &lt;className&gt;com.worklight.core.auth.ext.NonValidatingLoginModule&lt;/className&gt;
 &lt;/loginModule&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>After you create the server-side WAR, change the client side to allow authentication between the two servers. In an SSO demonstration application, modify the HTML of MobileFirst Project/apps/mobilefirst app/common/index.html to include a login form and JavaScript to handle the response. In a demonstration, index.html includes the code in the following example.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;!DOCTYPE HTML&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;!DOCTYPE HTML&gt;
 &lt;html&gt;
         &lt;head&gt;
             &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -2666,144 +2559,14 @@
             &lt;script src=&quot;js/challengeResponse.js&quot;&gt;&lt;/script&gt;
         &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Update the initialization options for MobileFirst to force the application to connect to the MobileFirst server on start by changing <code>connectOnStartup</code> from false to true in MobileFirst Project/apps/mobilefirst app/common/js/initOptions.js.</p>
 </li>
 <li>
 <p>Add JavaScript to handle the response from the MobileFirst and HCL Portal servers. In this SSO demonstration application, create a file that is called challengeResponse.js, in MobileFirst Project/apps/mobilefirst app/common/js. Add the following example to the contents of the file. Update the line <code>&lt;code&gt;location.href= "http://server:port/wps/myportal"&lt;/code&gt;</code> to point to your HCL Portal server.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
-<span class="normal">  2</span>
-<span class="normal">  3</span>
-<span class="normal">  4</span>
-<span class="normal">  5</span>
-<span class="normal">  6</span>
-<span class="normal">  7</span>
-<span class="normal">  8</span>
-<span class="normal">  9</span>
-<span class="normal"> 10</span>
-<span class="normal"> 11</span>
-<span class="normal"> 12</span>
-<span class="normal"> 13</span>
-<span class="normal"> 14</span>
-<span class="normal"> 15</span>
-<span class="normal"> 16</span>
-<span class="normal"> 17</span>
-<span class="normal"> 18</span>
-<span class="normal"> 19</span>
-<span class="normal"> 20</span>
-<span class="normal"> 21</span>
-<span class="normal"> 22</span>
-<span class="normal"> 23</span>
-<span class="normal"> 24</span>
-<span class="normal"> 25</span>
-<span class="normal"> 26</span>
-<span class="normal"> 27</span>
-<span class="normal"> 28</span>
-<span class="normal"> 29</span>
-<span class="normal"> 30</span>
-<span class="normal"> 31</span>
-<span class="normal"> 32</span>
-<span class="normal"> 33</span>
-<span class="normal"> 34</span>
-<span class="normal"> 35</span>
-<span class="normal"> 36</span>
-<span class="normal"> 37</span>
-<span class="normal"> 38</span>
-<span class="normal"> 39</span>
-<span class="normal"> 40</span>
-<span class="normal"> 41</span>
-<span class="normal"> 42</span>
-<span class="normal"> 43</span>
-<span class="normal"> 44</span>
-<span class="normal"> 45</span>
-<span class="normal"> 46</span>
-<span class="normal"> 47</span>
-<span class="normal"> 48</span>
-<span class="normal"> 49</span>
-<span class="normal"> 50</span>
-<span class="normal"> 51</span>
-<span class="normal"> 52</span>
-<span class="normal"> 53</span>
-<span class="normal"> 54</span>
-<span class="normal"> 55</span>
-<span class="normal"> 56</span>
-<span class="normal"> 57</span>
-<span class="normal"> 58</span>
-<span class="normal"> 59</span>
-<span class="normal"> 60</span>
-<span class="normal"> 61</span>
-<span class="normal"> 62</span>
-<span class="normal"> 63</span>
-<span class="normal"> 64</span>
-<span class="normal"> 65</span>
-<span class="normal"> 66</span>
-<span class="normal"> 67</span>
-<span class="normal"> 68</span>
-<span class="normal"> 69</span>
-<span class="normal"> 70</span>
-<span class="normal"> 71</span>
-<span class="normal"> 72</span>
-<span class="normal"> 73</span>
-<span class="normal"> 74</span>
-<span class="normal"> 75</span>
-<span class="normal"> 76</span>
-<span class="normal"> 77</span>
-<span class="normal"> 78</span>
-<span class="normal"> 79</span>
-<span class="normal"> 80</span>
-<span class="normal"> 81</span>
-<span class="normal"> 82</span>
-<span class="normal"> 83</span>
-<span class="normal"> 84</span>
-<span class="normal"> 85</span>
-<span class="normal"> 86</span>
-<span class="normal"> 87</span>
-<span class="normal"> 88</span>
-<span class="normal"> 89</span>
-<span class="normal"> 90</span>
-<span class="normal"> 91</span>
-<span class="normal"> 92</span>
-<span class="normal"> 93</span>
-<span class="normal"> 94</span>
-<span class="normal"> 95</span>
-<span class="normal"> 96</span>
-<span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span>
-<span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span>
-<span class="normal">113</span>
-<span class="normal">114</span>
-<span class="normal">115</span>
-<span class="normal">116</span>
-<span class="normal">117</span>
-<span class="normal">118</span>
-<span class="normal">119</span>
-<span class="normal">120</span>
-<span class="normal">121</span>
-<span class="normal">122</span>
-<span class="normal">123</span>
-<span class="normal">124</span>
-<span class="normal">125</span>
-<span class="normal">126</span>
-<span class="normal">127</span>
-<span class="normal">128</span>
-<span class="normal">129</span>
-<span class="normal">130</span>
-<span class="normal">131</span></pre></div></td><td class="code"><div><pre><span></span><code>/*
+<div class="language-text highlight"><pre><span></span><code>/*
 *  Licensed Materials - Property of IBM
 *  5725-G92 (C) Copyright HCL Technologies Limited 2006, 2012, 2019. All Rights Reserved.
 *  US Government Users Restricted Rights - Use, duplication or
@@ -2934,7 +2697,7 @@ function onReadOpen(status){
             alert(&quot;AN ERROR HAS OCCURED. STATUS :: &quot; + status);
     }
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>yes</p>
 </li>
 <li>

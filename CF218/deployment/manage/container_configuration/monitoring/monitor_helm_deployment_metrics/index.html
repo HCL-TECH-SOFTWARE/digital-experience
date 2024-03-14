@@ -3240,34 +3240,26 @@
 <ul>
 <li>
 <p><strong>Default configuration</strong>: Metrics are enabled for Core with the appropriate <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/"><code>annotation</code></a> for Prometheus:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">metrics</span><span class="p">:</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">metrics</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">core</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">scrape</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">prometheusDiscoveryType</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;annotation&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Create a <a href="https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/user-guides/getting-started.md#related-resources"><code>ServiceMonitor</code></a> for Prometheus Operator:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">metrics</span><span class="p">:</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">metrics</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">core</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">scrape</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">prometheusDiscoveryType</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;serviceMonitor&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Disable the metrics for Core:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">metrics</span><span class="p">:</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">metrics</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">core</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">scrape</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 </div>

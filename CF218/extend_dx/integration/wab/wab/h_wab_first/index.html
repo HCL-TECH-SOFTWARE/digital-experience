@@ -2386,17 +2386,15 @@
 <ul>
 <li>
 <p>AIX® and Linux™:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh deploy-wab-virtual-host -DVirtualHostName=virtualHostName -DVirtualHostAlias=virtualHostAlias -DPortalAdminPwd=password
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh deploy-wab-virtual-host -DVirtualHostName=virtualHostName -DVirtualHostAlias=virtualHostAlias -DPortalAdminPwd=password
 -DPortalAdminId=PortalAdminId -DWasUserid=WasUserid -DWasPassword=password
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Windows™:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>ConfigEngine.bat deploy-wab-virtual-host -DVirtualHostName=virtualHostName -DVirtualHostAlias=virtualHostAlias -DPortalAdminPwd=password
+<div class="language-text highlight"><pre><span></span><code>ConfigEngine.bat deploy-wab-virtual-host -DVirtualHostName=virtualHostName -DVirtualHostAlias=virtualHostAlias -DPortalAdminPwd=password
 -DPortalAdminId=PortalAdminId -DWasUserid=WasUserid -DWasPassword=password
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <p>virtualHostName is the name of the virtual host; for example, wab_host. virtualHostAlias is the DNS alias name that is used to access the applications on the virtual host; for example, wab.portal.com. If the virtualHostName and virtualHostAlias exist, the existing values are used. The task maps the virtualHostAlias on the same URI scheme (http or https) and port that the portal is deployed on.</p>
@@ -2483,8 +2481,8 @@
 <li>Open the plugin-cfg.xml file.</li>
 <li>
 <p>Add a line that is similar to the following example to the <code>UriGroup</code> for the cluster:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;Uri AffinityCookie=&quot;JSESSIONID&quot; AffinityURLIdentifier=&quot;jsessionid&quot; Name=&quot;/*&quot;/&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;Uri AffinityCookie=&quot;JSESSIONID&quot; AffinityURLIdentifier=&quot;jsessionid&quot; Name=&quot;/*&quot;/&gt;
+</code></pre></div>
 </li>
 <li>
 <p>Copy the updated plugin-cfg.xml file to the web server in the web server home directory.</p>

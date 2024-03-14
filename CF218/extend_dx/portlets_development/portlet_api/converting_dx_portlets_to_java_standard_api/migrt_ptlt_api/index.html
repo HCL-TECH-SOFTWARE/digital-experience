@@ -2498,8 +2498,8 @@
 <li>
 <p>Create a portlet conversion properties file that identifies both the HCL API portlet and the standard API portlet.</p>
 <p>To do this, create or update the following file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[AppServer\_root](../reference/wpsdirstr.md#was_root)/ConfigEngine/properties/portletconversion.properties
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[AppServer\_root](../reference/wpsdirstr.md#was_root)/ConfigEngine/properties/portletconversion.properties
+</code></pre></div>
 <p>Confirm that the following parameters are set as specified or modify them if necessary:</p>
 <ul>
 <li>
@@ -2594,26 +2594,18 @@
 </li>
 </ol>
 <p>Examples of <code>portletconversion.properties</code> files:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>ibmportlet.objectid=3_O4C9FI930GPE90IGU02QAR0006
+<div class="language-text highlight"><pre><span></span><code>ibmportlet.objectid=3_O4C9FI930GPE90IGU02QAR0006
 jsrportlet.objectid=3_O4C9FI930GPE90IGU02QAR00G3
 ibmwebapp.uid=DCE:472fb1b0-3d22-1211-0000-005da8cf7ayz:2
 jsrwebapp.uid=StdPortletDataTestPortlet.war.webmod
 converter=com.ibm.wps.pe.task.DefaultConverter
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>ibmportlet.portletname=An PortletData test portlet
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>ibmportlet.portletname=An PortletData test portlet
 jsrportlet.portletname=StdPortletDataTestPortlet
 ibmwebapp.uid=DCE:472fb1b0-3d22-1211-0000-005da8cf7ayz:2
 jsrwebapp.uid=StdPortletDataTestPortlet.war.webmod
 converter=com.ibm.wps.pe.task.DefaultConverter
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

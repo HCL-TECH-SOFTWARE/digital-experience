@@ -3383,17 +3383,7 @@
 <p>If you declare multiple <code>ipfilter</code> settings in the proxy configuration, the proxy processes them by the sequence in which you specify them. As a result, the last matching rule always takes effect, regardless of the previous rules.</p>
 </div>
 <p>The following example makes the policies in the <code>/myproxy</code> mapping accessible only to clients that have an IP address in the specified range:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;proxy-rules xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;    
+<div class="language-text highlight"><pre><span></span><code>&lt;proxy-rules xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;    
     xsi:noNamespaceSchemaLocation=&quot;http://www.ibm.com/xmlns/prod/sw/http/outbound/proxy-config/2.0&quot;&gt;
      &lt;mapping contextPath=&quot;/myproxy&quot; url=&quot;*&quot;&gt;
           &lt;policy name=&quot;SamplePolicy&quot; url=&quot;http://www.myremotehost.com/*&quot;&gt;
@@ -3404,7 +3394,7 @@
           &lt;/ipfilter&gt;
      &lt;/mapping&gt;
 &lt;/policy-rules&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

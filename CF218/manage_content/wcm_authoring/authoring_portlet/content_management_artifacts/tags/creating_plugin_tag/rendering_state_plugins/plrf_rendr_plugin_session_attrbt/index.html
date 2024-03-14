@@ -4109,8 +4109,8 @@
 <h1 id="the-session-attribute-plug-in">The session attribute plug-in</h1>
 <p>Use the SessionAttribute rendering plug-in to retrieve, set, or remove attributes from the portlet or servlet session. When you access the portlet session, you can also specify the scope of the session attributes as either application or portlet scope.</p>
 <p>The syntax for this plug-in is as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:SessionAttribute key=&quot;&quot; value=&quot;&quot; mode=&quot;&quot; scope=&quot;&quot; defaultValue=&quot;&quot; escape=&quot;&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:SessionAttribute key=&quot;&quot; value=&quot;&quot; mode=&quot;&quot; scope=&quot;&quot; defaultValue=&quot;&quot; escape=&quot;&quot;]
+</code></pre></div>
 <p>This plug-in uses the following attributes:</p>
 <ul>
 <li>
@@ -4174,39 +4174,36 @@
 <ul>
 <li>
 <p>To retrieve the attribute with the key <code>key1</code> from the portlet session in portlet scope, use either one of the following plug-in tags:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:SessionAttribute key=&quot;key1&quot;]
+<div class="language-text highlight"><pre><span></span><code>[Plugin:SessionAttribute key=&quot;key1&quot;]
 [Plugin:SessionAttribute scope=&quot;portlet&quot; key=&quot;key1&quot;]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>To retrieve the attribute with the key <code>key1</code> from the portlet session in portlet application scope, use the following plug-in tag:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:SessionAttribute scope=&quot;application&quot; key=&quot;key1&quot;] 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:SessionAttribute scope=&quot;application&quot; key=&quot;key1&quot;] 
+</code></pre></div>
 </li>
 <li>
 <p>To retrieve the attribute with the key <code>key1</code> from the servlet session and to return the value <code>defaultValue</code> if the attribute is not set or has a value of <code>null</code>, use the following plug-in tag:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:SessionAttribute scope=&quot;servlet&quot; key=&quot;key1&quot; defaultValue=&quot;defaultValue&quot;] 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:SessionAttribute scope=&quot;servlet&quot; key=&quot;key1&quot; defaultValue=&quot;defaultValue&quot;] 
+</code></pre></div>
 </li>
 <li>
 <p>To set the attribute with the key <code>key1</code> and the value <code>value1</code> to the portlet session in portlet session scope, use one of the following plug-in tags:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:SessionAttribute key=&quot;key1&quot; value=&quot;value1&quot;] 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:SessionAttribute key=&quot;key1&quot; value=&quot;value1&quot;] 
 [Plugin:SessionAttribute mode=&quot;set&quot; key=&quot;key1&quot; value=&quot;value1&quot;]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>To delete the attribute with the key <code>key1</code> from the portlet session in portlet application scope without returning the previous value, either use the <code>delete</code> mode or pass an empty value:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:SessionAttribute key=&quot;key1&quot; mode=&quot;delete&quot;]
+<div class="language-text highlight"><pre><span></span><code>[Plugin:SessionAttribute key=&quot;key1&quot; mode=&quot;delete&quot;]
 [Plugin:SessionAttribute key=&quot;key1&quot; value=&quot;&quot;]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>To remove the attribute with the key <code>key1</code> from the portlet session in portlet application scope and to return the previously set value, use the following plug-in tag:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:SessionAttribute scope=&quot;application&quot; key=&quot;key1&quot; mode=&quot;remove&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:SessionAttribute scope=&quot;application&quot; key=&quot;key1&quot; mode=&quot;remove&quot;]
+</code></pre></div>
 </li>
 </ul>
 <details class="info" open="open">

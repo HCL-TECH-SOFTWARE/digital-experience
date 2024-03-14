@@ -2900,8 +2900,8 @@
 <p>Use one of the following options to export the files stored there.</p>
 <h2 id="get-a-compressed-file-using-your-browser">Get a compressed file using your browser</h2>
 <p>You can obtain a compressed file of the content in the filestore using your browser. Enter the following url in your browser:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://&lt;server&gt;:&lt;port&gt;/wps/mycontenthandler/dav/fs-type1/&lt;folder-name&gt;/?mime-type=application/zip
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://&lt;server&gt;:&lt;port&gt;/wps/mycontenthandler/dav/fs-type1/&lt;folder-name&gt;/?mime-type=application/zip
+</code></pre></div>
 <p>Where:</p>
 <ul>
 <li>The &lt;server&gt; value is the host name of the portal.</li>
@@ -2914,25 +2914,20 @@
 </div>
 <p>The URL triggers a download of a compressed file. If you are prompted for a user and password enter the admin user ID and password for HCL DX. Store the file on the local file system.</p>
 <p>This following url downloads the complete content of the filestore:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://&lt;server&gt;:&lt;port&gt;/wps/mycontenthandler/dav/fs-type1/&lt;folder-name&gt;/?mime-type=application/zip 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://&lt;server&gt;:&lt;port&gt;/wps/mycontenthandler/dav/fs-type1/&lt;folder-name&gt;/?mime-type=application/zip 
+</code></pre></div>
 <p>The following url downloads the content of the themes folder:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://&lt;server&gt;:&lt;port&gt;/wps/mycontenthandler/dav/fs-type1/themes/?mime-type=application/zip
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://&lt;server&gt;:&lt;port&gt;/wps/mycontenthandler/dav/fs-type1/themes/?mime-type=application/zip
+</code></pre></div>
 <h2 id="automate-the-export-using-an-ant-task">Automate the export using an Ant task</h2>
 <p>If you want to automate the export, you can write an Ant task as depicted in the following example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;target name=&quot;export-mytheme&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;target name=&quot;export-mytheme&quot;&gt;
     &lt;get src=&quot;http://&lt;server&gt;:&lt;port&gt;/wps/mycontenthandler/dav/fs-type1/&lt;folder-name&gt;/?mime-type=application/zip&quot;
         username=&quot;PortalAdminID&quot;
         password=&quot;PortalAdminPwd&quot;
         dest=&quot;/tmp/mytheme.zip&quot; /&gt;
 &lt;/target&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Where:</p>
 <ul>
 <li>The &lt;server&gt; value is the host name of the portal.</li>

@@ -4152,20 +4152,18 @@
 <h1 id="uinavigationnode">uiNavigationNode</h1>
 <p>Provides access to a navigation node in a navigation model.</p>
 <p>To access the uiNavigationModel Bean, you must use the <a href="../">uiNavigationModel</a> tag and define the variable name that you want the bean to be available under. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portal-navigation:uiNavigationModel var=&quot;uiNavigationModel&quot;
+<div class="language-text highlight"><pre><span></span><code>&lt;portal-navigation:uiNavigationModel var=&quot;uiNavigationModel&quot;
     mobileDeviceClassTest=&quot;smartphone/tablet&quot;&gt;
 uiNavigationNode\_attribute&lt;/portal-navigation:uiNavigationModel&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Attributes:</p>
 <ul>
 <li>
 <p><strong>contentNode</strong></p>
 <p>Returns the content node that is associated with the navigation node.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${uiNavigationModel.selected.contentNode}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${uiNavigationModel.selected.contentNode}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="../../nav_model/themeopt_el_bean_content_node/">ContentNode</a>. Never null.</p>
 </li>
@@ -4173,8 +4171,8 @@ uiNavigationNode\_attribute&lt;/portal-navigation:uiNavigationModel&gt;
 <p><strong>description</strong></p>
 <p>The description of the navigation node.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${uiNavigationModel.selected.description}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${uiNavigationModel.selected.description}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="../../common_beans/themeopt_el_bean_description/">Description</a> object for the navigation node; it is never null. You can use the value of the title object to retrieve the description in current locale.</p>
 </li>
@@ -4182,8 +4180,8 @@ uiNavigationNode\_attribute&lt;/portal-navigation:uiNavigationModel&gt;
 <p><strong>isDraft</strong></p>
 <p>Returns whether the navigation node is part of a project or not.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${uiNavigationModel[wp.selectionModel.selected].isDraft}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${uiNavigationModel[wp.selectionModel.selected].isDraft}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: Boolean; true if the page is a draft page. False if it is not.</p>
 </li>
@@ -4191,8 +4189,8 @@ uiNavigationNode\_attribute&lt;/portal-navigation:uiNavigationModel&gt;
 <p><strong>isHidden</strong></p>
 <p>Returns whether the navigation node is hidden or not.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${uiNavigationModel[wp.selectionModel.selected].isHidden}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${uiNavigationModel[wp.selectionModel.selected].isHidden}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: Boolean; true if the page is hidden. False if it is not.</p>
 </li>
@@ -4200,8 +4198,8 @@ uiNavigationNode\_attribute&lt;/portal-navigation:uiNavigationModel&gt;
 <p><strong>isInSelectionPath</strong></p>
 <p>Returns whether the navigation node is part of the selection path. It returns whether a page is in the breadcrumb trail, but not necessarily the currently active page.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${uiNavigationModel[wp.selectionModel.selected].isInSelectionPath}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${uiNavigationModel[wp.selectionModel.selected].isInSelectionPath}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: Boolean; true if the page is part of the selection path. False if it is not.</p>
 </li>
@@ -4209,8 +4207,8 @@ uiNavigationNode\_attribute&lt;/portal-navigation:uiNavigationModel&gt;
 <p><strong>isPrivate</strong></p>
 <p>Determines if the current node is private.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${uiNavigationModel.selected.isPrivate}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${uiNavigationModel.selected.isPrivate}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: Boolean, true if the page is private, otherwise false.</p>
 </li>
@@ -4218,8 +4216,8 @@ uiNavigationNode\_attribute&lt;/portal-navigation:uiNavigationModel&gt;
 <p><strong>isSelected</strong></p>
 <p>Returns whether the navigation node is selected or the currently selected page.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${uiNavigationModel[wp.selectionModel.selected].isSelected}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${uiNavigationModel[wp.selectionModel.selected].isSelected}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: Boolean; true if the page is selected. False if it is not.</p>
 </li>
@@ -4227,8 +4225,8 @@ uiNavigationNode\_attribute&lt;/portal-navigation:uiNavigationModel&gt;
 <p><strong>metadata</strong></p>
 <p>The metadata map of this navigation node.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${uiNavigationModel.selected.metadata[&#39;com.ibm.portal.Hidden&#39;]}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${uiNavigationModel.selected.metadata[&#39;com.ibm.portal.Hidden&#39;]}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="../../common_beans/themeopt_el_bean_meta/">Metadata</a>, never null.</p>
 </li>
@@ -4236,12 +4234,10 @@ uiNavigationNode\_attribute&lt;/portal-navigation:uiNavigationModel&gt;
 <p><strong>moduleList</strong></p>
 <p>Returns the module list for the currently selected page and theme.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;c:forEach var=&quot;node&quot;items=&quot;${uiNavigationModel.selected.moduleList}&quot;&gt;   
+<div class="language-text highlight"><pre><span></span><code>&lt;c:forEach var=&quot;node&quot;items=&quot;${uiNavigationModel.selected.moduleList}&quot;&gt;   
     ${node.name}/${node.version},
 &lt;/c:forEach&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="../../module_list/current_module_list/themeopt_el_bean_mod_current_list/">CurrentModuleList</a>, never null.</p>
 </li>
@@ -4249,8 +4245,8 @@ uiNavigationNode\_attribute&lt;/portal-navigation:uiNavigationModel&gt;
 <p><strong>objectID</strong></p>
 <p>Returns the ObjectID associated with this navigation node.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${uiNavigationModel.selected.objectID}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${uiNavigationModel.selected.objectID}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: ObjectID. Never null.</p>
 </li>
@@ -4258,8 +4254,8 @@ uiNavigationNode\_attribute&lt;/portal-navigation:uiNavigationModel&gt;
 <p><strong>profileRef</strong></p>
 <p>Returns the profile reference for the page. If it is empty or null, the default theme profile reference is used.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.selectionModel.selected.profileRef}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.selectionModel.selected.profileRef}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: String, the profile reference within the theme. It can be null if you are using a non-modularized theme.</p>
 </li>
@@ -4267,8 +4263,8 @@ uiNavigationNode\_attribute&lt;/portal-navigation:uiNavigationModel&gt;
 <p><strong>projectID</strong></p>
 <p>Returns the project identifier that is associated with this navigation node, or null of no project is associated.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${uiNavigationModel.selected.projectID}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${uiNavigationModel.selected.projectID}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: String representing the associated project. It can be null if no project is associated.</p>
 </li>
@@ -4276,8 +4272,8 @@ uiNavigationNode\_attribute&lt;/portal-navigation:uiNavigationModel&gt;
 <p><strong>title</strong></p>
 <p>The title of this navigation node.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${uiNavigationModel.selected.title}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${uiNavigationModel.selected.title}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="../../common_beans/themeopt_el_bean_title/">Title</a> associated with the current object.</p>
 </li>
@@ -4285,8 +4281,8 @@ uiNavigationNode\_attribute&lt;/portal-navigation:uiNavigationModel&gt;
 <p><strong>themeID</strong></p>
 <p>Returns the set theme ID for the page. If it is not set for the page, this function returns the inherited theme or default system theme.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.selectionModel.selected.themeID}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.selectionModel.selected.themeID}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: ObjectID of the referenced theme. Never null.</p>
 </li>
@@ -4294,8 +4290,8 @@ uiNavigationNode\_attribute&lt;/portal-navigation:uiNavigationModel&gt;
 <p><strong>url</strong></p>
 <p>Short hand for urlGeneration that returns a string and cannot be manipulated any further.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.selectionModel.selected.url}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.selectionModel.selected.url}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: String; the URL pointing to this page.</p>
 </li>
@@ -4303,29 +4299,12 @@ uiNavigationNode\_attribute&lt;/portal-navigation:uiNavigationModel&gt;
 <p><strong>urlGeneration</strong></p>
 <p>Creates a portal URL you can control with attributes. The URL attributes can be set by using further methods on the UrlGeneration object as shown in the examples section.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.selectionModel.selected.urlGeneration}
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;a href=&quot;${node.urlGeneration.autoNavigationalState}&quot;&gt;NavState depends on configuration&lt;/a&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.selectionModel.selected.urlGeneration}
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;a href=&quot;${node.urlGeneration.autoNavigationalState}&quot;&gt;NavState depends on configuration&lt;/a&gt;
+</code></pre></div>
 <p>More examples:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;c:set var=&quot;node&quot; value=&quot;${wp.selectionModel.selected}&quot;/&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;c:set var=&quot;node&quot; value=&quot;${wp.selectionModel.selected}&quot;/&gt;
 &lt;a href=&quot;${node.url}&quot;&gt;Simple URL, no modifications possible&lt;/a&gt;
 &lt;a href=&quot;${node.urlGeneration}&quot;&gt;Simple URL&lt;/a&gt;
 &lt;a href=&quot;${node.urlGeneration.keepNavigationalState}&quot;&gt;With NavState&lt;/a&gt;
@@ -4343,7 +4322,7 @@ Complex URL&lt;/a&gt;
 &lt;a href=&quot;${node.urlGeneration.allowRelativeURL}&quot;&gt;Relative URL&lt;/a&gt;
 &lt;a href=&quot;${node.urlGeneration.disallowRelativeURL}&quot;&gt;Disallow Relative URL&lt;/a&gt;
 &lt;a href=&quot;${node.urlGeneration.forceAbsolute}&quot;&gt;Absolute URL&lt;/a&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="../../common_beans/url_generation/themeopt_el_bean_url_gen_page/">UrlGenerationPage</a>; the URL object pointing to this page</p>
 </li>

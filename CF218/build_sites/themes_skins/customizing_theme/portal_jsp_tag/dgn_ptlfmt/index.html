@@ -3781,17 +3781,7 @@
 <p>The following section provides detailed descriptions of the &lt;portal-fmt/&gt; JSP tags:</p>
 <h3 id="answer">Answer</h3>
 <p><strong>&lt;portal-fmt:answer bundle="bundle"&gt;</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>Returns the answer text for a key in the specified language. The following keys can be looked up in the resource bundle.
+<div class="language-text highlight"><pre><span></span><code>Returns the answer text for a key in the specified language. The following keys can be looked up in the resource bundle.
 
 -   content.not.available.answer
 -   login.invalid.answer
@@ -3802,60 +3792,10 @@
 -   portlet.not.available.answer
 -   portlet.title.not.available.answer
 Each key corresponds to a problem key \(without the `.answer` suffix\). See the [&lt;portal-fmt:problem\&gt;](#wps_problem) tag for a complete description of each problem and an example.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h3 id="bidirectional-languages">Bidirectional languages</h3>
 <p><strong>&lt;portal-fmt:bidi dir="rtl|ltr" attribute="portlet" locale="locale"&gt;</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span></pre></div></td><td class="code"><div><pre><span></span><code>This tag is used to support bidirectional languages. Bidirectional languages contain text that reads in both directions. For example, URLs, code samples, or directory and file names can be read in the opposite direction of the rest of the text.
+<div class="language-text highlight"><pre><span></span><code>This tag is used to support bidirectional languages. Bidirectional languages contain text that reads in both directions. For example, URLs, code samples, or directory and file names can be read in the opposite direction of the rest of the text.
 
 Attributes:
 
@@ -3906,32 +3846,10 @@ The following example shows how a directional image is invoked. The &lt;%=bidiIm
 
 
 ```
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h3 id="description">Description</h3>
 <p><strong>&lt;portal-fmt:description locale="locale" varname="scripting_variable" /&gt;</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code>Provides the description of the object that is specified by `varname` or of the navigation node that is set in the `&lt;portal-navigation:navigationLoop/&gt;` tag. This tag can be used in both theme and skin JSPs.
+<div class="language-text highlight"><pre><span></span><code>Provides the description of the object that is specified by `varname` or of the navigation node that is set in the `&lt;portal-navigation:navigationLoop/&gt;` tag. This tag can be used in both theme and skin JSPs.
 
 Attributes
 
@@ -3954,42 +3872,10 @@ Attributes
 
 
 ```
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h3 id="identification">Identification</h3>
 <p><strong>&lt;portal-fmt:identification action="setting" object="object_name" var="variable_name"/&gt;</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span></pre></div></td><td class="code"><div><pre><span></span><code>Transforms a String representation of the ObjectID into an ObjectID. Also transforms an ObjectID into a String representation of the ObjectID.
+<div class="language-text highlight"><pre><span></span><code>Transforms a String representation of the ObjectID into an ObjectID. Also transforms an ObjectID into a String representation of the ObjectID.
 
 Attributes:
 
@@ -4022,38 +3908,10 @@ The following example shows how this tag is used to set a unique name, which can
     &lt;% } %&gt;
 &lt;/portal-fmt:identification&gt;
 ```
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h3 id="problem">Problem</h3>
 <p><strong>&lt;portal-fmt:problem bundle="bundle"&gt;</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code>Returns the problem text for a given key in the specified language. The following keys can be looked up in the resource bundle.
+<div class="language-text highlight"><pre><span></span><code>Returns the problem text for a given key in the specified language. The following keys can be looked up in the resource bundle.
 
 -   content.not.available - Occurs if there is no page content that can be displayed. Used in the [&lt;portal-core:pageRender/\&gt;](dgn_ptlcore.md#pagerender) tag.
 -   login.invalid - Occurs when the user ID, password, or both are not valid. This is used in the Login screen.
@@ -4082,38 +3940,16 @@ For example:
 
 
 ```
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h3 id="text">Text</h3>
 <p><strong>&lt;portal-fmt:text key="key" bundle="bundle"&gt;</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>Returns the text for a key in the specified language. The key indicates a parameter in a resource bundle or properties file, indicated by bundle. Both attributes are required. See the description of [&lt;portal-fmt:textParam\&gt;](#textparam) for an example and further description of the attributes of &lt;portal-fmt:text/\&gt;.
+<div class="language-text highlight"><pre><span></span><code>Returns the text for a key in the specified language. The key indicates a parameter in a resource bundle or properties file, indicated by bundle. Both attributes are required. See the description of [&lt;portal-fmt:textParam\&gt;](#textparam) for an example and further description of the attributes of &lt;portal-fmt:text/\&gt;.
 
 Where possible, the `&lt;i18n:bundle/&gt;` and `&lt;i18n:message/&gt;` tags of the I18N tag library can be used instead of &lt;portal-fmt:text/\&gt;..
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h3 id="textparam">TextParam</h3>
 <p><strong>&lt;portal-fmt:textParam&gt;</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code>If the text that is retrieved contains placeholders in the form of &quot;\{0\}&quot;, &quot;\{1\}&quot;, &quot;\{2\}&quot;, these can be set with this tag. This tag can be used only in the body of the &lt;portal-fmt:text/\&gt; tag. The text to be substituted for the placeholders must be entered as content for this tag. It can even be an expression.
+<div class="language-text highlight"><pre><span></span><code>If the text that is retrieved contains placeholders in the form of &quot;\{0\}&quot;, &quot;\{1\}&quot;, &quot;\{2\}&quot;, these can be set with this tag. This tag can be used only in the body of the &lt;portal-fmt:text/\&gt; tag. The text to be substituted for the placeholders must be entered as content for this tag. It can even be an expression.
 
 Examples
 
@@ -4134,20 +3970,10 @@ In the following example, the value of the &lt;portal-fmt:textParam\&gt; tag is 
     &lt;/portal-fmt:text&gt;
 
 ```
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h3 id="title">Title</h3>
 <p><strong>&lt;portal-fmt:title locale="locale" varname="localized_object"/&gt;</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>Provides the title of the object that is specified in `varname`. The tag also implies the object if it is called inside of the &lt;portal-navigation:navigationLoop/\&gt; tag.
+<div class="language-text highlight"><pre><span></span><code>Provides the title of the object that is specified in `varname`. The tag also implies the object if it is called inside of the &lt;portal-navigation:navigationLoop/\&gt; tag.
 
 Attributes
 
@@ -4158,11 +3984,11 @@ Attributes
 -   **varname**
 
     Optional. Specifies the name of the scripting variable holding the object. The &lt;portal-navigation:navigation/\&gt; tag sets this object to &lt;%=wpsNavNode%\&gt;.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h3 id="user">User</h3>
 <p><strong>&lt;portal-fmt:user attribute="value"/&gt;</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>If the user is logged in, this tag returns one of the specified user attributes. value can be any user attribute that is defined to Member Manager.
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>If the user is logged in, this tag returns one of the specified user attributes. value can be any user attribute that is defined to Member Manager.
+</code></pre></div>
 
 
 

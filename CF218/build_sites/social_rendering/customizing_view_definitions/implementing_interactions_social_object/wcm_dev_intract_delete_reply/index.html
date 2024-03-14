@@ -2533,21 +2533,7 @@
 </li>
 </ul>
 <p>The following code snippet shows a sample form for deleting a reply. It uses the <code>AttributeResource</code> tag of Web Content Manager to set the ID and the entry link of the reply in the context of a social list that contains forum topic replies:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;form method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;form method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot; 
     action=&quot;[Plugin:ActionURL action=&quot;post&quot; 
     param=&quot;resultSessionAttribute=myResult&quot; 
     param=&quot;resultRenderParameter=myResult&quot; compute=“always“]&quot;&gt;    
@@ -2562,17 +2548,9 @@
     &lt;input type=&quot;text&quot; name=&quot;replyDeleteReason&quot;/&gt;&lt;br/&gt;    
     &lt;input type=&quot;submit&quot; value=&quot;Post&quot;/&gt;
 &lt;/form&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If the <code>deleteReply</code> action is successful, the forums data sink returns a JSON object. Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
   &quot;status&quot;:&quot;success&quot;,
    &quot;message&quot;:&quot;The reply has been deleted.&quot;,
    &quot;formData&quot;:{
@@ -2581,18 +2559,9 @@
       &quot;replyEntryLink&quot;:&quot;https://.../forums/atom/reply?replyUuid=815b1a6d-5a3c-4730-91d2-094075ff2e5d&quot;
   }
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If the <code>deleteReply</code> action fails, the forums data sink returns a JSON object as seen in the following sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
    &quot;status&quot;:&quot;error&quot;,  
    &quot;message&quot;:&quot;The reply could not be deleted. If the problem persists, contact the system administrator.&quot;, 
    &quot;formData&quot;:{
@@ -2602,7 +2571,7 @@
       &quot;replyDeleteReason&quot;:&quot;This is my reason for deleting the reply.&quot;
   }
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 </div>

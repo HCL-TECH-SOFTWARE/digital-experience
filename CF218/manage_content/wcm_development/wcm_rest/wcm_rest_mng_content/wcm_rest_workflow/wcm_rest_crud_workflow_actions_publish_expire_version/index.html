@@ -3443,71 +3443,16 @@
 <p>The properties of publish actions, expire actions and version actions are identical. Only the URI used to run the actions are different.</p>
 <h2 id="create">Create</h2>
 <p>A publish action can be created by sending a POST request to the following URI with an Atom entry that represents the action:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/PublishAction
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/PublishAction
+</code></pre></div>
 <p>An expire action can be created by sending a POST request to the following URI with an Atom entry that represents the action:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/ExpireAction
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/ExpireAction
+</code></pre></div>
 <p>A version action can be created by sending a POST request to the following URI with an Atom entry that represents the action:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/VersionAction
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/VersionAction
+</code></pre></div>
 <p>In this example, the type <code>PublishAction</code> can be replaced with <code>ExpireAction</code> or <code>VersionAction</code> when needed.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 POST /wps/mycontenthandler/wcmrest/PublishAction
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 POST /wps/mycontenthandler/wcmrest/PublishAction
 Content-Type: application/atom+xml
 
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
@@ -3563,63 +3508,19 @@ Content-Location: /wps/mycontenthandler/wcmrest/PublishAction/9c1d8e5b-0e0d-467b
     &lt;category scheme=&quot;wcmrest:workflowState&quot; term=&quot;PUBLISHED&quot; label=&quot;Published&quot; xml:lang=&quot;en&quot;/&gt;
     &lt;category scheme=&quot;wcmrest:favorite&quot; term=&quot;false&quot; xml:lang=&quot;en&quot;/&gt;
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="update">Update</h2>
 <p>A publish action can be updated by sending a PUT request to the following URI with an Atom entry that includes the fields on the item that need to be changed.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/PublishAction/action-id
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/PublishAction/action-id
+</code></pre></div>
 <p>An expire action can be updated by sending a PUT request to the following URI with an Atom entry that includes the fields on the item that need to be changed.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/ExpireAction/action-id
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/ExpireAction/action-id
+</code></pre></div>
 <p>A version action can be updated by sending a PUT request to the following URI with an Atom entry that includes the fields on the item that need to be changed.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/VersionAction/action-id
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/VersionAction/action-id
+</code></pre></div>
 <p>In this example, the type <code>PublishAction</code> can be replaced with <code>ExpireAction</code> or <code>VersionAction</code> when needed.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 PUT /wps/mycontenthandler/wcmrest/WorkflowStage/141793eb-afa7-428e-bb7b-070a25ee3d7c
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 PUT /wps/mycontenthandler/wcmrest/WorkflowStage/141793eb-afa7-428e-bb7b-070a25ee3d7c
 Content-Type: application/atom+xml
 
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
@@ -3664,63 +3565,19 @@ Content-Type: application/atom+xml
 &lt;/entry&gt;
 
 HTTP/1.1 200 OK
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="read">Read</h2>
 <p>A publish action can be read by sending a GET request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/PublishAction/action-id
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/PublishAction/action-id
+</code></pre></div>
 <p>An expire action can be read by sending a GET request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/ExpireAction/action-id
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/ExpireAction/action-id
+</code></pre></div>
 <p>A version action can be read by sending a GET request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/VersionAction/action-id
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/VersionAction/action-id
+</code></pre></div>
 <p>In this example, the type <code>PublishAction</code> can be replaced with <code>ExpireAction</code> or <code>VersionAction</code> when needed.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 GET /wps/mycontenthandler/wcmrest/PublishAction/9c1d8e5b-0e0d-467b-8f1d-58ed550f4236
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 GET /wps/mycontenthandler/wcmrest/PublishAction/9c1d8e5b-0e0d-467b-8f1d-58ed550f4236
 Accept: application/atom+xml
 
 HTTP/1.1 200 OK
@@ -3765,24 +3622,22 @@ Content-Type: application/atom+xml
     &lt;category scheme=&quot;wcmrest:workflowState&quot; term=&quot;PUBLISHED&quot; label=&quot;Published&quot; xml:lang=&quot;en&quot;/&gt;
     &lt;category scheme=&quot;wcmrest:favorite&quot; term=&quot;false&quot; xml:lang=&quot;en&quot;/&gt;
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="delete">Delete</h2>
 <p>A publish action can be deleted by sending a DELETE request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/PublishAction/action-id
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/PublishAction/action-id
+</code></pre></div>
 <p>A expire action can be deleted by sending a DELETE request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/ExpireAction/action-id
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/ExpireAction/action-id
+</code></pre></div>
 <p>A version action can be deleted by sending a DELETE request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/VersionAction/action-id
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/VersionAction/action-id
+</code></pre></div>
 <p>In this example, the type <code>PublishAction</code> can be replaced with <code>ExpireAction</code> or <code>VersionAction</code> when needed.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 DELETE /wps/mycontenthandler/wcmrest/PublishAction/7b40f5b6-bf52-4b9e-8062-b0755aaf1f80
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 DELETE /wps/mycontenthandler/wcmrest/PublishAction/7b40f5b6-bf52-4b9e-8062-b0755aaf1f80
 
 HTTP/1.1 200 OK
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

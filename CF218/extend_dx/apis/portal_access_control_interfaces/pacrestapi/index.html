@@ -2430,30 +2430,7 @@
 </table>
 <h2 id="common-response-elements">Common response elements</h2>
 <p>The following XML framework is returned for GET requests on each of the feeds. It contains the link to itself, the title of the feed, the ID of the feed, the feed URI, and the time stamp when the feed was created. For collection feeds, the top-level element is an <code>atom:feed</code> and <code>opensearch</code> elements are included. For the other feeds, the top-level element is an <code>atom:entry</code>.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;atom:feed xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
   xmlns:xhtml=&quot;http://www.w3.org/1999/xhtml&quot; 
   xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot;
@@ -2477,22 +2454,10 @@
   &lt;opensearch:totalResults&gt;0&lt;/opensearch:totalResults&gt;
   &lt;atom:updated&gt;2009-10-01T06:03:51.850Z&lt;/atom:updated&gt;
 &lt;/atom:feed&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="common-response-elements-for-collection-feeds">Common response elements for collection feeds</h2>
 <p>For collection feeds, the feed contains a list of <code>atom:entry</code> elements. Each entry includes the following additional information: the ID of the entry, the entry's URI, additional links, and a content element that contains the actual information.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;atom:entry&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;atom:entry&gt;
   &lt;atom:id&gt;ac:member:oid:8eAe13RO6G4CL3TGMIPDKBQ6MGHE53P02OTDI3T26M14LRSA6PDE@role:User@oid:
            6_CGAH47L00GN960I4GOF1G510I3&lt;/atom:id&gt;
   &lt;atom:title&gt;MemberCollection&lt;/atom:title&gt;
@@ -2505,7 +2470,7 @@
                ac:DN=&quot;all authenticated portal users&quot; ac:type=&quot;virtual&quot;/&gt;
   &lt;/atom:content&gt;
 &lt;/atom:entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="uri-variables-and-their-ranges">URI variables and their ranges</h2>
 <ul>
 <li>
@@ -2529,8 +2494,8 @@
 <li>Deletes the principal from the <code>RoleType</code> on given resource.</li>
 <li>
 <p>Equivalent Portal Access Control Java™ API</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>accessControlHome.getRoleDataController(resourceID)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>accessControlHome.getRoleDataController(resourceID)
+</code></pre></div>
 <p>.</p>
 </li>
 <li>
@@ -2569,23 +2534,7 @@
 <li>Returns 400 if <code>roleTypeName</code> is not applicable.</li>
 </ul>
 <p>The following code is the result of the <code>GET</code> method. Each entry element in the member collection contains a single member element that specifies the member identity. The edit link can be used to remove the member from the role (DELETE on member feed).</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;atom:entry ...&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;atom:entry ...&gt;
 ...
 &lt;atom:title&gt;MemberCollection&lt;/atom:title&gt;
 &lt;atom:entry&gt;
@@ -2602,7 +2551,7 @@
              ac:DN=&quot;all authenticated portal users&quot; ac:type=&quot;virtual&quot;/&gt;
  &lt;/atom:content&gt;
 &lt;/atom:entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="member-collection-feed-and-the-post-method">Member Collection feed and the POST method</h2>
 <p>URI: <code>ac:member: &lt;roleTypeName&gt;@oid:&lt;resourceID&gt;</code></p>
 <p>Parameters: None.</p>
@@ -2611,8 +2560,8 @@
 <li>Adds the principal specified in the payload to the <code>RoleType</code> on given resource.</li>
 <li>
 <p>Equivalent Portal Access Control Java API</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>accessControlHome.getRoleDataController(resourceID).addPrincipalsToRole(RoleType, Collection&lt;Principal&gt;)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>accessControlHome.getRoleDataController(resourceID).addPrincipalsToRole(RoleType, Collection&lt;Principal&gt;)
+</code></pre></div>
 </li>
 <li>
 <p>Returns 201 if successful.</p>
@@ -2636,18 +2585,13 @@
 <p>The <code>POST</code> payload for the Member Collection feed is as follows</p>
 <p>UID - <code>ac:member: &lt;roleTypeName&gt;@oid:&lt;resourceID&gt;</code></p>
 <p>The payload needs to include at least the following</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;atom:entry xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;atom:entry xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot;&gt;
   &lt;atom:content type=&quot;application/xml&quot;&gt;
     &lt;ac:member xmlns:ac=&quot;http://www.ibm.com/xmlns/prod/lotus/access-control/v1.0&quot; 
                     ac:id=&quot;9eAe6BD86PGCHPD6JMCCG1D8MMG63JD0JM4C3BDAJMK66BC46O&quot;/&gt;
   &lt;/atom:content&gt;
 &lt;/atom:entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>As an alternative to <code>ac:id</code>, which is used to identify a Principal by using the <code>ObjectID</code>, you can use the following alternative identifiers:</p>
 <ul>
 <li>
@@ -2686,25 +2630,7 @@
 </li>
 </ul>
 <p>The following is the result of the <code>GET</code> method:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;atom:entry ...&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;atom:entry ...&gt;
   ...
   &lt;atom:title&gt;Role&lt;/atom:title&gt;
   &lt;atom:id&gt;ac:role:User@oid:myPage&lt;/atom:id&gt;
@@ -2723,7 +2649,7 @@
   &lt;/ac:role&gt;
  &lt;/atom:content&gt;
 &lt;/atom:entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="role-collection-feed-and-the-get-method">Role Collection feed and the GET method</h2>
 <p>URI - <code>ac:role:oid:&lt;resourceID&gt;</code></p>
 <p>Parameters -</p>
@@ -2753,8 +2679,8 @@
 <li>A role is only available if at least one principal is mapped to it.</li>
 <li>
 <p>Equivalent Portal Access Control Java API</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>accessControlHome.getRoleData(resourceID).getRoles()
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>accessControlHome.getRoleData(resourceID).getRoles()
+</code></pre></div>
 </li>
 <li>
 <p>Returns 200 if successful.</p>
@@ -2763,31 +2689,7 @@
 <li>Returns 400 if the specified <code>roleTypeName</code> is not applicable.</li>
 </ul>
 <p>The following is the result of the <code>GET</code> method:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;atom:feed ...&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;atom:feed ...&gt;
   ...
   &lt;atom:title&gt;RoleCollection&lt;/atom:title&gt;
   &lt;atom:id&gt;ac:role:oid:myPage&lt;/atom:id&gt;
@@ -2812,7 +2714,7 @@
   &lt;/atom:content&gt;
  &lt;/atom:entry&gt;
 &lt;/atom:feed&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="resource-config-feed-and-the-get-method">Resource Config feed and the GET method</h2>
 <p>UID - <code>ac:resourceconfig:oid:&lt;resourceID&gt;</code></p>
 <p>Parameters - None.</p>
@@ -2826,8 +2728,8 @@
 </li>
 <li>
 <p>Equivalent Portal Access Control Java API</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>accessControlHome.getManagedProtectedResource(resourceID)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>accessControlHome.getManagedProtectedResource(resourceID)
+</code></pre></div>
 </li>
 <li>
 <p>Returns 200 if successful.</p>
@@ -2835,23 +2737,7 @@
 <li>Returns 404 if <code>resourceID</code> cannot be resolved.</li>
 </ul>
 <p>The following is the result of the <code>GET</code> method:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;atom:entry ...&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;atom:entry ...&gt;
  ...
  &lt;atom:title&gt;ResourceConfig&lt;/atom:title&gt;
  &lt;atom:id&gt;ac:resourceconfig:oid:myPage&lt;/atom:id&gt;
@@ -2868,7 +2754,7 @@
   &lt;/ac:resource-config&gt;
  &lt;/atom:content&gt;
 &lt;/atom:entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="resource-config-feed-and-the-put-method">Resource Config feed and the PUT method</h2>
 <p>UID: <code>ac:resourceconfig:oid:&lt;resourceID&gt;</code></p>
 <p>Parameters:</p>
@@ -2893,8 +2779,8 @@
 </li>
 <li>
 <p>Equivalent Portal Access Control Java API</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>accessControlHome.getManagedProtectedResource(resourceID)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>accessControlHome.getManagedProtectedResource(resourceID)
+</code></pre></div>
 </li>
 <li>
 <p>Returns 200 if successful.</p>
@@ -2905,17 +2791,7 @@
 <p>The <code>PUT</code> payload for the Resource Config feed is as follows</p>
 <p>URI: <code>ac:resourceconfig:oid:&lt;resourceID&gt;</code></p>
 <p>The payload must be as follows</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;atom:entry xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;atom:entry xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot; 
       xmlns:ac=&quot;http://www.ibm.com/xmlns/prod/lotus/access-control/v1.0&quot; &gt;
   &lt;atom:content type=&quot;application/xml&quot;&gt;
     &lt;ac:resource-config&gt;
@@ -2926,7 +2802,7 @@
     &lt;/ac:resource-config&gt;
   &lt;/atom:content&gt;
 &lt;/atom:entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The owner and role-block elements are optional.</p>
 <p>As an alternative to <code>ac:id</code>, which is used to identify the owner by using the <code>ObjectID</code>, use the following alternative identifiers:</p>
 <ul>
@@ -2947,8 +2823,8 @@
 <li>Provides runtime information on the resource for the current user as follows - All access levels that the current user has on the resource.</li>
 <li>
 <p>Equivalent Portal Access Control Java API - There is no 1:1 mapping to the Java API. However, the following API is called for all applicable <code>roleTypes</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>accessControlHome.getAccessControlRuntimeModel(resourceID).hasPermission(roleType)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>accessControlHome.getAccessControlRuntimeModel(resourceID).hasPermission(roleType)
+</code></pre></div>
 </li>
 <li>
 <p>Returns 200 if successful.</p>
@@ -2956,27 +2832,7 @@
 <li>Returns 404 if <code>resourceID</code> cannot be resolved.</li>
 </ul>
 <p>The following is the result of the <code>GET</code> method:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;atom:entry...&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;atom:entry...&gt;
  ...
  &lt;atom:title&gt;allowed-access&lt;/atom:title&gt;
  &lt;atom:id&gt;ac:access:oid:ibm.portal.Home&lt;/atom:id&gt;
@@ -2997,7 +2853,7 @@
   &lt;/ac:allowed-access&gt;
  &lt;/atom:content&gt;
 &lt;/atom:entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

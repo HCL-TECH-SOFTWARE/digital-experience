@@ -2634,15 +2634,7 @@
 </li>
 </ol>
 <p>Setting a theme for a content page (error handling omitted):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>final Modifiable modifiable = cmController.getModifiableNode(page);
+<div class="language-text highlight"><pre><span></span><code>final Modifiable modifiable = cmController.getModifiableNode(page);
 
 // obtain theme to set from com.ibm.portal.admin.ThemeList
 final Theme theme = ...
@@ -2651,7 +2643,7 @@ final Theme theme = ...
 if (modifiable instanceof ThemeSetter) {
     ((ThemeSetter) modifiable).setTheme(theme);
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

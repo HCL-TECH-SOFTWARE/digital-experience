@@ -4096,10 +4096,9 @@
 <h1 id="list-rendering-context">List-rendering context</h1>
 <p>Learn how to create a list-rendering context.</p>
 <p>In Digital Data Connector (DDC) for HCL Portal, the list-rendering context represents an aggregated data object. DDC plug-ins can use the data object to determine which data to load and how to filter and sort the data. You can create a list-rendering context by adding a <code>[Plugin:ListRenderingContext]</code> tag to your Web Content Manager designs. Parts of the context content are automatically completed by the DDC framework. These parts include the current portlet request and response, and the public Digital Data Connector render parameters. Other parts must be specified through parameters of the <code>Plugin:ListRenderingContext</code> tag. The general syntax of the tag is as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ListRenderingContext action=”” extension-id=”” profile=””attribute=”” 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ListRenderingContext action=”” extension-id=”” profile=””attribute=”” 
                              key=”” format=”” separator=”” escape=”” prefix]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The parameters are described in the following list:</p>
 <ul>
 <li>

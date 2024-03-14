@@ -2235,20 +2235,12 @@
 <p>In using HCL DX 9.5 CF19 and higher, the GoogleAnalyticsAggregator.js file is located in the PortalServer_root/doc/js-samples directory.</p>
 <ul>
 <li>If using a WebDAV-based theme, copy the GoogleAnalyticsAggregator.js file to mycontenthandler/dav/fs-type1/theme/{your-custom-theme}/js.</li>
-<li>If using a WAR-based theme, include the GoogleAnalyticsAggregator.js file in the static theme WAR file. For example, when using a WAR-based theme, the location of the GoogleAnalyticsAggregator.js file after installing to the <YourTheme> WAR file is deployed under wp_profile:<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wp\_profile/installedApps/&lt;cell\&gt;/&lt;YourTheme.ear\&gt;/&lt;YourTheme.war\&gt;/themes/&lt;YourTheme\&gt;/js
-</code></pre></div></td></tr></table></div>
+<li>If using a WAR-based theme, include the GoogleAnalyticsAggregator.js file in the static theme WAR file. For example, when using a WAR-based theme, the location of the GoogleAnalyticsAggregator.js file after installing to the <YourTheme> WAR file is deployed under wp_profile:<div class="language-text highlight"><pre><span></span><code>wp\_profile/installedApps/&lt;cell\&gt;/&lt;YourTheme.ear\&gt;/&lt;YourTheme.war\&gt;/themes/&lt;YourTheme\&gt;/js
+</code></pre></div>
 </li>
 </ul>
 <p>Refer to the following file tree that shows how the custom theme app is deployed:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>wp_profile
+<div class="language-text highlight"><pre><span></span><code>wp_profile
     ---&gt; installedApps
         ---&gt; &lt;cell&gt;
             ---&gt; &lt;YourTheme.ear&gt;
@@ -2257,7 +2249,7 @@
                         ---&gt; &lt;YourTheme&gt;
                             ---&gt; js
                                 ---&gt; GoogleAnalyticsAggregator.js
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Add the DX GoogleAnalyticsAggregator.js to the page configuration.</p>

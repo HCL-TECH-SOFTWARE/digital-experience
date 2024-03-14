@@ -3258,14 +3258,7 @@
    <img alt="WCM JSP Tags in View Files of Custom Portlet" src="../_img/wcm_jsp_tag_custom_portlet.png" /></li>
 <li>
 <p>Add the following piece of code in any of the view files where the Comments feature should be enabled.
-    <div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%@ taglib uri=&quot;/WEB-INF/tld/wcm.tld&quot; prefix=&quot;wcm&quot;%&gt;
+    <div class="language-text highlight"><pre><span></span><code>&lt;%@ taglib uri=&quot;/WEB-INF/tld/wcm.tld&quot; prefix=&quot;wcm&quot;%&gt;
 &lt;wcm:initworkspace&gt;login fail&lt;/wcm:initworkspace&gt;
 &lt;wcm:setExplicitContext path=&quot;WCM Comments 1.0/Page Components/New Comments&quot; &gt;
     Setting Explicit Context Failed
@@ -3273,7 +3266,7 @@
 &lt;wcm:content&gt;
     Content Rendering Failed
 &lt;/wcm:content&gt;
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 <p>For more information, see <a href="../../../../manage_content/wcm_development/wcm_dev_api/wcm_reference_wcm-jsp-tags/">Web Content Manager JSP tags</a>.</p>
 </li>
 <li>
@@ -3312,14 +3305,7 @@
 </li>
 <li>
 <p>Add the following code snippet in the <code>footer.jsp</code> view file to enable the comments for the new page component with pre-populated content UUID.</p>
-<p><div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%@ taglib uri=&quot;/WEB-INF/tld/wcm.tld&quot; prefix=&quot;wcm&quot;%&gt;
+<p><div class="language-text highlight"><pre><span></span><code>&lt;%@ taglib uri=&quot;/WEB-INF/tld/wcm.tld&quot; prefix=&quot;wcm&quot;%&gt;
 &lt;wcm:initworkspace&gt;login fail&lt;/wcm:initworkspace&gt;
 &lt;wcm:setExplicitContext path=&quot;Custom Library/Custom Comments/Copy of New Comments&quot; &gt;
     Setting Explicit Context Failed
@@ -3327,7 +3313,7 @@
 &lt;wcm:content&gt;
     Content Rendering Failed
 &lt;/wcm:content&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
  For more information, see <a href="../../../../manage_content/wcm_development/wcm_dev_api/wcm_reference_wcm-jsp-tags/">Web Content Manager JSP tags</a>.</p>
 </li>
 <li>
@@ -3373,14 +3359,7 @@ The API finds all comments based on the authoring template and site area <code>C
 <p><strong>Sample request:</strong></p>
 <p>{{host}}/{{WpsContextRoot}}/mycontenthandler/wcmrest/deleteComments?libraries=Web Content&amp;libraries=Demo Library​</p>
 <p><strong>Sample response body:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
     &quot;deletedCommentsStatus&quot;: {
         &quot;deletedCommentsList&quot;: [
             &quot;3346bd13-dfef-456c-bb94-ff4f829f626e&quot;,
@@ -3388,7 +3367,7 @@ The API finds all comments based on the authoring template and site area <code>C
         ]
     }
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p><img alt="Delete Orphaned Comments of the libraries" src="../_img/delete_comments_api.png" /></p>
 <p>For purging deleted comments, refer to <a href="../../../../manage_content/wcm_development/wcm_rest/wcm_rest_deleted_content/wcm_rest_crud_purge_deleted/">How to use REST with Web Content Manager to Purge Deleted Content Items</a>.</p>
 <details class="info" open="open">

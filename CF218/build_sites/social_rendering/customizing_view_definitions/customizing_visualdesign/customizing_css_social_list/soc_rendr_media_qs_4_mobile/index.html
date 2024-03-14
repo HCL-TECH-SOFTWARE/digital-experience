@@ -2666,12 +2666,10 @@
 <h1 id="using-media-queries-to-target-mobile-devices">Using media queries to target mobile devices</h1>
 <p>The default social list CSS styles use CSS3 media queries to target specific mobile devices and implement responsive web design. Learn more about media queries.</p>
 <p>The media query that social rendering uses has the following format:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>@media screen and (max-width: $valuepx) {
+<div class="language-text highlight"><pre><span></span><code>@media screen and (max-width: $valuepx) {
    ....
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>where <code>$value</code> is an integer value that defines the maximum screen width in pixels. The rules within this query block do not apply to screens with larger screen widths than specified. To define responsive styles, you can use multiple queries of this type with decreasing maximum screen widths. For example, you can start hiding elements within your markup on a tablet in portrait mode. You can then continue hiding even more elements on a smartphone in landscape mode, and show only a minimum data volume on smartphones in portrait mode.</p>
 <p>The default social list markup defines a social bar for each entry type, which takes up vertical space. To save vertical space on mobile devices, you can hide either the social bar View link or the complete social bar. In the following sample, you want to set up the following space arrangements for display on smartphones:</p>
 <ul>
@@ -2679,18 +2677,7 @@
 <li>In smartphone portrait mode, you want to hide the social bar. This way, you reserve the complete vertical space for showing only the title and summary of the social object.</li>
 </ul>
 <p>To achieve this reduction, you can use CSS3 media queries as shown herein the following code sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>   @media screen and (max-width: 480px) {
+<div class="language-text highlight"><pre><span></span><code>   @media screen and (max-width: 480px) {
        .lotusui30 .srComponent .srViewSocialObject {
            display: none;
            width: 0px;
@@ -2702,7 +2689,7 @@
            display: none;  
        }
    }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The media queries in this sample work as follows:</p>
 <ol>
 <li>The first media query makes sure that the View link in the social bar is hidden on displays that are 480 pixels or narrower.</li>

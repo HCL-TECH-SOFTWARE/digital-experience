@@ -4073,25 +4073,18 @@
 <h1 id="url-attributes-content-bean-content-hierarchy">URL attributes | Content bean content hierarchy</h1>
 <p>For a URL content node, the <code>urlget</code> command obtains the URLs. It requires the markup name as an argument. If an ID is given, the requested URL of that content URL node is returned. If the ID is omitted, the requested URL of the currently selected URL node is returned.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>Content.urlget(markup)
+<div class="language-text highlight"><pre><span></span><code>Content.urlget(markup)
 Content.urlget(ID, markup)
 # example: get WML URL of a specific content URL node
 Content.urlget(node_ID, &quot;wml&quot;)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>$Content urlget markup
+<div class="language-text highlight"><pre><span></span><code>$Content urlget markup
 $Content urlget ID markup
 
 # example: get WML URL of a specific content URL node
 $Content urlget node_ID wml
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

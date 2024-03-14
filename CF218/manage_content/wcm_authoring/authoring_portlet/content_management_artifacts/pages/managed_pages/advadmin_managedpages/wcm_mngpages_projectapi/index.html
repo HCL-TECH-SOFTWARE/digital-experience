@@ -3775,19 +3775,7 @@
 <li>The project-specific <code>ServerContext</code> object can then be used to retrieve a <code>URLFactory</code> object from the state manager service. All URLs generated with this factory contain the project ID.</li>
 </ul>
 <p>This example constructs a portal URL to the current navigational state for a new project:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>        // construct a server context for the project
+<div class="language-text highlight"><pre><span></span><code>        // construct a server context for the project
         final ServerContext projectCtx = projectService.createServerContext(
                 projectID, stateService.getServerContext());
 
@@ -3800,26 +3788,9 @@
 
         // done with URL generation
         urlFct.dispose();
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This example constructs a portal URL to a URI in a specific project:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code>        // construct a server context for the project
+<div class="language-text highlight"><pre><span></span><code>        // construct a server context for the project
         final PocServerContext projectCtx = projectService.createServerContext(
                 projectID, pocService.getServerContext());
 
@@ -3837,7 +3808,7 @@
 
         // done with URL generation
         urlFct.dispose();
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="rest-api">REST API</h2>
 <p>If your application uses the Representational State Transfer (REST) architecture, you can use the remote APIs provided with the portal to construct project-specific URLs.</p>
 <details class="info" open="open">

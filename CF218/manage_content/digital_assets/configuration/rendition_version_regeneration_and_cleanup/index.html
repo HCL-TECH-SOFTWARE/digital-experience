@@ -2072,29 +2072,7 @@
 <li><strong>Orphan Data and File Cleanup HeartBeat</strong> - This heartbeat runs once a day and deletes orphan directories/binaries and orphan media storage records.</li>
 </ul>
 <p>All of these heartbeats run on a configured interval. Heartbeat intervals and Threshold times can be configured in <code>values.yaml</code> under <code>incubator.configuration.digitalAssetManagement</code> section.</p>
-<div class="language-Yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span>
+<div class="language-Yaml highlight"><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span>
 <span class="w">    </span><span class="c1"># Digital asset management configurations</span>
 <span class="w">    </span><span class="nt">digitalAssetManagement</span><span class="p">:</span>
 <span class="w">      </span><span class="c1"># Enable or disable the heartbeats (validationHeartbeat, renditionOrVersionHeartbeat, cleanUpHeartbeat, orphanDataAndFileCleanupHeartbeat)</span>
@@ -2117,20 +2095,17 @@
 <span class="w">      </span><span class="nt">orphanMediaStorageCreationThresholdTimeInMinutes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1440</span>
 <span class="w">      </span><span class="c1"># Maximum number of items to be scanned on each validation heartbeat</span>
 <span class="w">      </span><span class="nt">maxValidationProcessingLimit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>enableCleanUpOrRenditionVersionHeartbeats is <code>false</code> by default. To enable all four heartbeats (validationHeartbeat, renditionOrVersionHeartbeat, cleanUpHeartbeat, orphanDataAndFileCleanupHeartbeat), set enableCleanUpOrRenditionVersionHeartbeats to <code>true</code>.</p>
 </div>
 <p>Starting from CF213, the following variable names are changed for consistency in variable naming. If these variables are used in a custom <code>values.yaml</code> file, make sure to update them accordingly.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>- enableCleanUpOrRenditionVersionHeartbeats
+<div class="language-text highlight"><pre><span></span><code>- enableCleanUpOrRenditionVersionHeartbeats
 - validationHeartbeatIntervalTimeInMinutes
 - cleanUpHeartBeatIntervalTimeInMinutes
 - orphanDataAndFileCleanupHeartBeatIntervalTimeInMinutes
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

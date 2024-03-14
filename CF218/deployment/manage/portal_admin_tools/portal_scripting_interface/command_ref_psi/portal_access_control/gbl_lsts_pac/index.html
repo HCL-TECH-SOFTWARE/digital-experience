@@ -4031,27 +4031,19 @@
 <h1 id="global-lists-portal-access-control">Global lists - Portal Access Control</h1>
 <p>A global list holds the names of the predefined action sets. The global list is accessed with the <code>listall</code> command in the Access bean. The command expects the list name as an argument. The only supported list name is actionsets. See the bean help for alternative list names.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code># example: list the names of all predefined action sets
+<div class="language-text highlight"><pre><span></span><code># example: list the names of all predefined action sets
 Access.listall(&quot;actionsets&quot;)
 
 # example output:
 Admin SecurityAdmin Delegator Manager Editor PrivilegedUser User
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code># example: list the names of all predefined action sets
+<div class="language-text highlight"><pre><span></span><code># example: list the names of all predefined action sets
 $Access listall actionsets
 
 # example output:
 Admin SecurityAdmin Delegator Manager Editor PrivilegedUser User
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

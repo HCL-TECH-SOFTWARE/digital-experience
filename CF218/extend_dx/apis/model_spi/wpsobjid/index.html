@@ -2221,25 +2221,7 @@
 <li>For HCL portlets, the portlet application ID is the UID attribute of the &lt;portlet-app/&gt; element. This attribute is required.</li>
 </ul>
 <p>The following example shows both ways to find an object ID.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>// initialization
+<div class="language-text highlight"><pre><span></span><code>// initialization
 Context ctx = new InitialContext();
 
 // portal:uniquename prefix is required for unique name lookup
@@ -2258,7 +2240,7 @@ portletName.add(appID);
 portletName.add(portletName);
 
 ObjectID portletDefOID = (ObjectID) ctx.lookup(portletName);
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The <code>Name</code> used for the lookup() method is created from a <code>CompositeName</code>, which is prepopulated with the required portal prefixes enclosed in quotation marks. This technique is used to avoid having to escape special characters in the prefix.</p>
 <p>For this example, the following packages are required at a minimum for the import statements:</p>
 <ul>

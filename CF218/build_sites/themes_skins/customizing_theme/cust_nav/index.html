@@ -3520,44 +3520,32 @@
 <li>
 <p><strong>Top - Item 1</strong></p>
 <p>Displays links for the pages directly under Content Root, such as Home, Administration, and Applications. Use the <code>dyn-cs:id:85theme_topNav</code> to display Top navigation:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>   &lt;div class=&quot;wpthemeHeader&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>   &lt;div class=&quot;wpthemeHeader&quot;&gt;
       ...
       &lt;a rel=&quot;dynamic-content&quot; href=&quot;dyn-cs:id:85theme_topNav&quot;&gt;&lt;/a&gt;
       ...
    &lt;/div&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Primary - Item 2</strong></p>
 <p>Displays links to the child pages of the currently selected top page, such as Getting Started and Features for Home. Use the <code>dyn-cs:id:85theme_primaryNav</code> to display Primary navigation:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>   &lt;div class=&quot;wpthemeBanner&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>   &lt;div class=&quot;wpthemeBanner&quot;&gt;
       ...
       &lt;a rel=&quot;dynamic-content&quot; href=&quot;dyn-cs:id:85theme_primaryNav&quot;&gt;&lt;/a&gt;
       ...
    &lt;/div&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Secondary - Item 3</strong></p>
 <p>Displays links to the child pages of the currently selected primary page. Use the <code>dyn-cs:id:85theme_secondaryNav</code> to display Primary navigation:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>   &lt;div class=&quot;wpthemeSecondaryBanner&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>   &lt;div class=&quot;wpthemeSecondaryBanner&quot;&gt;
       ...
       &lt;a rel=&quot;dynamic-content&quot; href=&quot;dyn-cs:id:85theme_secondaryNav&quot;&gt;&lt;/a&gt;
       ...
    &lt;/div&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Breadcrumb - Item 4</strong></p>
@@ -3566,39 +3554,28 @@
 <li>
 <p><strong>Side</strong></p>
 <p>Displays links for the child and grandchild pages of the currently selected top page. By default, this template is applied to the Administration section of your portal.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>   &lt;div class=&quot;wpthemeSideNavigation wpthemeLeft&quot; role=&quot;navigation&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>   &lt;div class=&quot;wpthemeSideNavigation wpthemeLeft&quot; role=&quot;navigation&quot;&gt;
       ...
       &lt;a rel=&quot;dynamic-content&quot; href=&quot;dyn-cs:id:85theme_sideNav&quot;&gt;&lt;/a&gt;
       ...
    &lt;/div&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Mobile</strong></p>
 <p>Displays links for the child and grandchild pages of the currently selected top page, on mobile devices only, such as smartphones and tablets. Each level of navigation is lazily loaded onto the page as the user clicks.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;div class=&quot;wpthemeBanner&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;div class=&quot;wpthemeBanner&quot;&gt;
       ...      
       &lt;a rel=&quot;dynamic-content&quot; href=&quot;dyn-cs:id:85theme_mobileNav&quot;&gt;&lt;/a&gt;      
       ...   
 &lt;/div&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To turn off lazy loading of mobile navigation, replace the 85theme_mobileNav dynamic content spot with the 85theme_mobileNav_static dynamic content spot.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;div class=&quot;wpthemeBanner&quot;&gt;      ...     
+<div class="language-text highlight"><pre><span></span><code>&lt;div class=&quot;wpthemeBanner&quot;&gt;      ...     
           &lt;a rel=&quot;dynamic-content&quot;
     href=&quot;dyn-cs:id:85theme_mobileNav_static&quot;&gt;&lt;/a&gt;            ...  
     &lt;/div&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="navigation-content-spots">Navigation content spots</h2>

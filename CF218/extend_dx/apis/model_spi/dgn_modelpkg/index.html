@@ -2401,25 +2401,7 @@
 <p>The metadata of individual content nodes are shown in XML Access scripts by using the <code>&lt;parameter&gt;</code> tag.</p>
 <h2 id="the-sub-package-comibmportalidentification">The sub package com.ibm.portal.identification</h2>
 <p>This package holds the Identification interface, which allows the conversion between ObjectID objects and their string representation. This Identification interface is required where an object ID is to be passed as a parameter that can be only a String (for inclusion into URLs, for example). An implementation of this interface can be retrieved by using a JNDI lookup, as in the following example.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>try
+<div class="language-text highlight"><pre><span></span><code>try
 {
    Context ctx = new InitialContext();
    Name ctxName = new CompositeName(&quot;portal:services/Identification&quot;);    
@@ -2438,7 +2420,7 @@ catch (NamingException nx)
 {
    // some error handling code here
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="the-sub-package-comibmportalnavigation">The sub package com.ibm.portal.navigation</h2>
 <p>This package defines the navigation model (NavigationModel) which represents a view on content model that is used for navigation. As described in section <em>The sub package com.ibm.portal.content</em>, the topology of the navigation model currently corresponds with the content model. Each node in the content model has an equivalent navigation node at the same hierarchical level.</p>
 <p>The elements of the navigation model are NavigationNodes. Each such node can reference a ContentNode. The navigation nodes have a title that is provided through the Localized interface. The following figure shows the connection between the navigation model and the content model.</p>

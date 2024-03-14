@@ -2789,18 +2789,13 @@
 <h2 id="export-content-associations">Export content associations</h2>
 <p>The content associations for a web content page are represented in an XML export file as nested content-mapping-info elements.</p>
 <p>The following example represents a web content page with two content associations:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;content-node action=&quot;update&quot; content-parentref=&quot;6_000000000000000000000000A0&quot; domain=&quot;rel&quot; objectid=&quot;someOID&quot; preserve-old-layout=&quot;true&quot; type=&quot;label&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;content-node action=&quot;update&quot; content-parentref=&quot;6_000000000000000000000000A0&quot; domain=&quot;rel&quot; objectid=&quot;someOID&quot; preserve-old-layout=&quot;true&quot; type=&quot;label&quot;&gt;
   &lt;content-mapping-info&gt;
     &lt;content-mapping content-id=&quot;74-11&quot; default=&quot;false&quot;/&gt;
     &lt;content-mapping content-id=&quot;007&quot; default=&quot;true&quot; delegated-access-level=&quot;User&quot;/&gt;
   &lt;/content-mapping-info&gt;
 &lt;/content-node&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 </div>
@@ -2808,18 +2803,13 @@
 <h2 id="import-content-associations">Import content associations</h2>
 <p>When importing content associations with an XML import file, associations for a web content page are represented in the content-mapping-info element for the web content page. Any content associations that are already defined for the web content page are removed when you perform the import process and replaced with the new associations.</p>
 <p>The following example updates a web content page to have two specific content associations:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;content-node action=&quot;update&quot; content-parentref=&quot;6_000000000000000000000000A0&quot; domain=&quot;rel&quot; objectid=&quot;someOID&quot; preserve-old-layout=&quot;true&quot; type=&quot;label&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;content-node action=&quot;update&quot; content-parentref=&quot;6_000000000000000000000000A0&quot; domain=&quot;rel&quot; objectid=&quot;someOID&quot; preserve-old-layout=&quot;true&quot; type=&quot;label&quot;&gt;
   &lt;content-mapping-info&gt;
     &lt;content-mapping content-id=&quot;74-11&quot; default=&quot;false&quot; /&gt;
     &lt;content-mapping content-id=&quot;007&quot; default=&quot;true&quot; delegated-access-level=&quot;User&quot;/&gt;
   &lt;/content-mapping-info&gt;
 &lt;/content-node&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 </div>
@@ -2827,12 +2817,10 @@
 <h2 id="delete-content-associations">Delete content associations</h2>
 <p>You can delete content associations by specifying an empty content-mapping-info element in the XML import file.</p>
 <p>The following example updates a web content page to delete any defined content associations:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;content-node action=&quot;update&quot; content-parentref=&quot;6_000000000000000000000000A0&quot; domain=&quot;rel&quot; objectid=&quot;someOID&quot; preserve-old-layout=&quot;true&quot; type=&quot;label&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;content-node action=&quot;update&quot; content-parentref=&quot;6_000000000000000000000000A0&quot; domain=&quot;rel&quot; objectid=&quot;someOID&quot; preserve-old-layout=&quot;true&quot; type=&quot;label&quot;&gt;
   &lt;content-mapping-info/&gt;
 &lt;/content-node&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

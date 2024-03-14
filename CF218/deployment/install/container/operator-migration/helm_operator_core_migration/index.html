@@ -1724,51 +1724,25 @@
 <h2 id="back-up-from-an-operator-based-deployment">Back up from an Operator-based deployment</h2>
 <h3 id="ensure-that-only-one-core-pod-is-running">Ensure that only one Core pod is running</h3>
 <p>Check how many pods are running with the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl -n &lt;namespace&gt; get pods
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; get pods
+</code></pre></div>
 <p>If more than one pod is running, scale down the Core pods so only one (1) pod is running. On the Operator deployment, adjust the <code>dxctl</code> property file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>dx.maxreplicas:1
+<div class="language-text highlight"><pre><span></span><code>dx.maxreplicas:1
 dx.minreplicas:1
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>then apply the changes in the updated property file using the <code>dxctl</code> tool:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./dxctl -–update -p deployment.properties
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>./dxctl -–update -p deployment.properties
+</code></pre></div>
 <p>Once the changes are applied, any replicas will be terminated.</p>
 <p>You may check the progress by running the <code>kubectl</code> command.</p>
 <h3 id="connect-to-the-core-pod">Connect to the Core pod</h3>
 <p>The following command opens a shell in the running Core pod:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl exec --stdin --tty pod/&lt;pod-name&gt; -n &lt;namespace&gt; -- /bin/bash
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl exec --stdin --tty pod/&lt;pod-name&gt; -n &lt;namespace&gt; -- /bin/bash
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl exec --stdin --tty pod/dx-deployment-0 -n dxns -- /bin/bash
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code>1.  **Stop the Core application before a backup from the wp\_profile is created.**
+<div class="language-text highlight"><pre><span></span><code>kubectl exec --stdin --tty pod/dx-deployment-0 -n dxns -- /bin/bash
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>1.  **Stop the Core application before a backup from the wp\_profile is created.**
 
     Navigate to the profile bin folder and run the `stopServer` command:
 
@@ -1794,50 +1768,43 @@ dx.minreplicas:1
     ```
     exit
     ```
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h3 id="download-the-backup-core-profile">Download the backup Core profile</h3>
 <p>Download the backup Core profile from the Core pod to your local system** by running the following command:
-    <div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl cp &lt;namespace&gt;/&lt;pod-name&gt;:&lt;source-file&gt; &lt;target-file&gt;
-</code></pre></div></td></tr></table></div></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>For example:
+    <div class="language-text highlight"><pre><span></span><code>kubectl cp &lt;namespace&gt;/&lt;pod-name&gt;:&lt;source-file&gt; &lt;target-file&gt;
+</code></pre></div></p>
+<div class="language-text highlight"><pre><span></span><code>For example:
 
 ```
 kubectl cp dxns/dx-deployment-0:opt/HCL/core_prof_95_CF199.tar.gz /tmp/core_prof_95_CF199.tar.gz 
 ```
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h3 id="optional-make-the-old-environment-unavailable">(Optional) Make the old environment unavailable</h3>
 <p>Kubernetes eventually brings the Core pod back online by restarting it (see the note on liveness probes in Step 2.a). If you want to keep the Operator-based deployment unavailable to users after backing up the profile, you can do the following steps:</p>
 <ul>
 <li>
 <p><strong>Adjust the <code>dxctl</code> property file</strong>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>dx.maxreplicas: 0
+<div class="language-text highlight"><pre><span></span><code>dx.maxreplicas: 0
 dx.minreplicas: 0
 dx.replicas: 0
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Apply it using the <code>dxctl</code> tool</strong>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./dxctl -–update -p deployment.properties
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>./dxctl -–update -p deployment.properties
+</code></pre></div>
 <p>The change is applied after a few seconds and all the additional Core pods are terminated. You can use <code>kubectl get pods</code> to check the progress. If the additional Core pods are not terminated after a few minutes, use the following command to force the changes to be applied:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl delete statefulset -n &lt;namespace&gt; dx-deployment
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl delete statefulset -n &lt;namespace&gt; dx-deployment
+</code></pre></div>
 </li>
 </ul>
 <p>If you want to enable the Operator-based deployment Core pod again, set the values of the <code>dxctl</code> property file to values greater than zero and apply the changes using the <code>dxctl</code> tool.</p>
 <h2 id="restore-your-back-up-to-the-helm-based-deployment">Restore your back up to the Helm-based deployment</h2>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>- Ensure to note the [Containerization requirements and limitations](../../../../get_started/plan_deployment/container_deployment/limitations_requirements.md).
+<div class="language-text highlight"><pre><span></span><code>- Ensure to note the [Containerization requirements and limitations](../../../../get_started/plan_deployment/container_deployment/limitations_requirements.md).
 - For the new Helm deployment, you must use a different Kubernetes namespace from the one used in the Operator-based deployment.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 <h3 id="ensure-correct-state">Ensure correct state</h3>
 <p>Ensure that the Helm-based deployment is in the correct state before restoring a backup.</p>
@@ -1845,26 +1812,14 @@ dx.replicas: 0
 <li><strong>Ensure that you have extracted the Kubernetes DX configuration from the Operator-based deployment to a valid custom-values.yaml file.</strong></li>
 <li>
 <p><strong>Enable <code>migration</code> mode for <code>operatorToHelm</code></strong> by adding or updating the following value in custom-values.yaml:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>migration:
+<div class="language-text highlight"><pre><span></span><code>migration:
     operatorToHelm:
     enabled: true
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Disable all the applications, except <code>runtimeController</code> and the <code>core</code></strong>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>applications:
+<div class="language-text highlight"><pre><span></span><code>applications:
     core: true
     runtimeController: true
     contentComposer: false
@@ -1875,23 +1830,23 @@ dx.replicas: 0
     remoteSearch: false
     ringApi: false
     haproxy: false
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Start the Helm deployment.</strong> If you are running the migration of the Core first, run the following command:</p>
 </li>
 </ul>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>helm install -n &lt;namespace&gt; --create-namespace -f &lt;custom-values.yaml&gt; &lt;prefix&gt; &lt;chart&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>helm install -n &lt;namespace&gt; --create-namespace -f &lt;custom-values.yaml&gt; &lt;prefix&gt; &lt;chart&gt;
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>helm install -n dxns-helm --create-namespace -f custom-values.yaml dx-deployment hcl-dx-deployment
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>helm install -n dxns-helm --create-namespace -f custom-values.yaml dx-deployment hcl-dx-deployment
+</code></pre></div>
 <p>If DAM migration is done first:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>helm upgrade -n &lt;namespace&gt; -f &lt;custom-values.yaml&gt; &lt;prefix&gt; &lt;chart&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>helm upgrade -n &lt;namespace&gt; -f &lt;custom-values.yaml&gt; &lt;prefix&gt; &lt;chart&gt;
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>helm upgrade -n dxns-helm -f custom-values.yaml dx-deployment hcl-dx-deployment
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>helm upgrade -n dxns-helm -f custom-values.yaml dx-deployment hcl-dx-deployment
+</code></pre></div>
 <div class="admonition success">
 <p class="admonition-title">Expected Outcome</p>
 <p>The following outcomes are expected:</p>
@@ -1903,38 +1858,19 @@ dx.replicas: 0
 </div>
 <h3 id="upload-the-backup-profile">Upload the backup profile</h3>
 <p>Use the following command to transfer the backup profile to the remote Core pod:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl cp &lt;source-file&gt; &lt;namespace&gt;/&lt;pod-name&gt;:&lt;target-file&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl cp &lt;source-file&gt; &lt;namespace&gt;/&lt;pod-name&gt;:&lt;target-file&gt;
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl cp /tmp/core_prof_95_CF199.tar.gz dxns-helm/dx-deployment-core-0:/tmp/core_prof_95_CF199.tar.gz
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl cp /tmp/core_prof_95_CF199.tar.gz dxns-helm/dx-deployment-core-0:/tmp/core_prof_95_CF199.tar.gz
+</code></pre></div>
 <h3 id="connect-to-the-core-pod_1">Connect to the Core pod</h3>
 <p>Use the following command to pine a shell in the running Core pod:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl exec --stdin --tty pod/&lt;pod-name&gt; -n &lt;namespace&gt; -- /bin/bash
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl exec --stdin --tty pod/&lt;pod-name&gt; -n &lt;namespace&gt; -- /bin/bash
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl exec --stdin --tty pod/dx-deployment-core-0 -n dxns-helm -- /bin/bash
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code>1.  **Extract the profile.** Move the core\_prof\_95\_CF199.tar.gz from the /temp folder to the profile folder /opt/HCL/profiles before extracting it:
+<div class="language-text highlight"><pre><span></span><code>kubectl exec --stdin --tty pod/dx-deployment-core-0 -n dxns-helm -- /bin/bash
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>1.  **Extract the profile.** Move the core\_prof\_95\_CF199.tar.gz from the /temp folder to the profile folder /opt/HCL/profiles before extracting it:
 
     ```
     tar -xf /tmp/core_prof_95_CF199.tar.gz --directory /opt/HCL/profiles
@@ -1954,7 +1890,7 @@ dx.replicas: 0
     ```
     exit
     ```
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h3 id="disable-the-migration-mode-and-the-deployment">Disable the migration mode and the deployment</h3>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
@@ -1963,23 +1899,21 @@ dx.replicas: 0
 <ol>
 <li>
 <p><strong>Disable the <code>migration</code> mode</strong> by updating the following value in custom-values.yaml</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>migration:
+<div class="language-text highlight"><pre><span></span><code>migration:
     operatorToHelm:
     enabled: false
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Enable all relevant applications.</strong></p>
 </li>
 <li>
 <p><strong>Upgrade the Helm deployment</strong> using the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>helm upgrade -n &lt;namespace&gt; --create-namespace -f &lt;custom-values.yaml&gt; &lt;prefix&gt; &lt;chart&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>helm upgrade -n &lt;namespace&gt; --create-namespace -f &lt;custom-values.yaml&gt; &lt;prefix&gt; &lt;chart&gt;
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>helm upgrade -n dxns-helm --create-namespace -f custom-values.yaml dx-deployment hcl-dx-deployment
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>helm upgrade -n dxns-helm --create-namespace -f custom-values.yaml dx-deployment hcl-dx-deployment
+</code></pre></div>
 </li>
 </ol>
 <h3 id="reconfigure-applications-to-use-relative-paths">Reconfigure applications to use relative paths</h3>
@@ -1992,13 +1926,13 @@ dx.replicas: 0
 <ul>
 <li>For Content Composer:</li>
 </ul>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl exec -n &lt;NAMESPACE&gt; dx-deployment-core-0 -- bash -c &#39;cd /opt/HCL/ConfigEngine/ &amp;&amp; ./ConfigEngine.sh action-deploy-headless-content-pages -Dcc.static.ui.url=/dx/ui/content/static -DWasPassword=&lt;YOUR_WAS_ADMIN_USER&gt; -DPortalAdminPwd=&lt;YOUR_WAS_ADMIN_PASSWORD&gt;&#39;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl exec -n &lt;NAMESPACE&gt; dx-deployment-core-0 -- bash -c &#39;cd /opt/HCL/ConfigEngine/ &amp;&amp; ./ConfigEngine.sh action-deploy-headless-content-pages -Dcc.static.ui.url=/dx/ui/content/static -DWasPassword=&lt;YOUR_WAS_ADMIN_USER&gt; -DPortalAdminPwd=&lt;YOUR_WAS_ADMIN_PASSWORD&gt;&#39;
+</code></pre></div>
 <ul>
 <li>For Digital Asset Management:</li>
 </ul>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl exec -n &lt;NAMESPACE&gt; dx-deployment-core-0 -- bash -c &#39;cd /opt/HCL/ConfigEngine/ &amp;&amp; ./ConfigEngine.sh action-deploy-media-library-pages -Ddam.static.ui.url=/dx/ui/dam/static -DWasPassword=&lt;YOUR_WAS_ADMIN_USER&gt; -DPortalAdminPwd=&lt;YOUR_WAS_ADMIN_PASSWORD&gt;&#39;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl exec -n &lt;NAMESPACE&gt; dx-deployment-core-0 -- bash -c &#39;cd /opt/HCL/ConfigEngine/ &amp;&amp; ./ConfigEngine.sh action-deploy-media-library-pages -Ddam.static.ui.url=/dx/ui/dam/static -DWasPassword=&lt;YOUR_WAS_ADMIN_USER&gt; -DPortalAdminPwd=&lt;YOUR_WAS_ADMIN_PASSWORD&gt;&#39;
+</code></pre></div>
 <h3 id="create-ingress-secret">Create Ingress Secret</h3>
 <p>Create the secret with your TLS certificate for the Ambassador Ingress in your Helm-based deployment.</p>
 <p>To make your migrated Helm deployment accessible, you need to configure the TLS certificate that is used by the Ambassador Ingress. See <a href="../../helm_deployment/preparation/mandatory_tasks/prepare_ingress_certificate/#use-certificate">Use certificate</a> for more information.</p>

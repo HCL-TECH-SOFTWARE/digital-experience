@@ -2494,18 +2494,13 @@
 <h2 id="unica-segments">Unica segments</h2>
 <p>Unica offers various REST APIs to manage and retrieve campaigns, segments, and real time personalization.
 For example, the API <code>/Campaign/api/campaign/rest/v3/segments/partitions/{partitionName}/{audienceName}</code> with a payload similar to the following:
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>[
+<div class="language-text highlight"><pre><span></span><code>[
   {
     &quot;name&quot;: &quot;CUSTOMERID&quot;,
     &quot;value&quot;: &quot;1&quot;
   }
 ]
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 <h2 id="exploring-unica-apis">Exploring Unica APIs</h2>
 <p>The Unica API explorer can be reached via <code>/Campaign/api/campaign/rest/v3/swagger-ui.html</code>.
 For example, https://unicasample.hcl.com/Campaign/api/campaign/rest/v3/swagger-ui.html.</p>
@@ -2515,20 +2510,14 @@ For example, https://unicasample.hcl.com/Campaign/api/campaign/rest/v3/swagger-u
 <p>The Out-of-box method provides automation to create the PZN Application object in order to set up Unica and access segments based on the properties created for the application object</p>
 <h3 id="configengine-task-to-create-the-application-object">ConfigEngine task to create the Application Object</h3>
 <p>In order to set up the OOB PZN Application Object for Unica, run the following task in the <code>wp_profile_root/ConfigEngine</code> directory:
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh<span class="w"> </span>setup-unica-default-application-object
+<div class="language-bash highlight"><pre><span></span><code>./ConfigEngine.sh<span class="w"> </span>setup-unica-default-application-object
 <span class="w">                  </span>-DWasPassword<span class="o">=</span>&lt;was-password&gt;
 <span class="w">                  </span>-DPortalAdminPwd<span class="o">=</span>&lt;portal-admin-password&gt;
 <span class="w">                  </span>-DUnicaHost<span class="o">=</span>&lt;unica-host&gt;
 <span class="w">                  </span>-DUnicaCookieName<span class="o">=</span>&lt;unica-cookiename&gt;
 <span class="w">                  </span>-DUnicaAuthUser<span class="o">=</span>&lt;unica-user-id&gt;
 <span class="w">                  </span>-DUnicaAuthPassword<span class="o">=</span>&lt;unica-user-password&gt;
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 <p>In the task list for the setup,</p>
 <ul>
 <li><strong>WasPassword</strong> is the Deployment Manager administrator password.</li>
@@ -2547,12 +2536,10 @@ For example, https://unicasample.hcl.com/Campaign/api/campaign/rest/v3/swagger-u
 <p>Refer to the section <a href="#unica-segments">here</a> for the sample code that gives more flexibility in defining what is sent to Unica and how the result is being interpreted. The <strong>partitionName</strong>, <strong>audienceName</strong> and example for <strong>audienceIdField</strong> here as <strong><em>CUSTOMERID</em></strong> can be used in the properties later. The value <strong><em>"1"</em></strong> is an example of the value for audienceId, which will be configured in the user cookie with the <strong>UnicaCookieName</strong>. The out of the box application object assumes that you create a cookie with that name to hold the ID of the user to be sent to Unica for segmentation. Values could range from an actual numeral to a string or some combination.</p>
 </div>
 <p>Alternatively, to remove the Unica setup and Application Object, run the following task in the <code>wp_profile_root/ConfigEngine</code> directory:
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh<span class="w"> </span>remove-unica-default-application-object
+<div class="language-bash highlight"><pre><span></span><code>./ConfigEngine.sh<span class="w"> </span>remove-unica-default-application-object
 <span class="w">                  </span>-DWasPassword<span class="o">=</span>&lt;was-password&gt;
 <span class="w">                  </span>-DPortalAdminPwd<span class="o">=</span>&lt;portal-admin-password&gt;
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 <h3 id="leveraging-the-application-object-in-a-rule">Leveraging the Application Object in a rule</h3>
 <ol>
 <li>

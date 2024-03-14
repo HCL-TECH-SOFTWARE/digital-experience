@@ -2204,8 +2204,8 @@
 <li>
 <p>Set the file descriptor limit to 10240.</p>
 <p>For example, run the following command to set the file descriptor limit:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ulimit -n 10240
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>ulimit -n 10240
+</code></pre></div>
 </li>
 <li>
 <p>If you are using IBM GPFS file sharing, set the file system inodes limit to 25000 or higher.</p>
@@ -2249,8 +2249,8 @@
 <p>A non-shared file system means /usr and /opt are private to this new WPAR.</p>
 </div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>mkwpar -r -l -n newhostname
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>mkwpar -r -l -n newhostname
+</code></pre></div>
 </li>
 <li>
 <p>Verify that the <code>mkwpar</code> task completed successfully.</p>

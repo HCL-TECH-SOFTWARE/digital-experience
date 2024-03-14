@@ -2134,10 +2134,10 @@
  CONNECTORCACHE=NONE</p>
 <p>|</p>
 <p><strong>Examples:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;CONNECT MOD=Web SRV=HTML ACTION=http://www.ibm.com CACHE=SITE &gt;
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://host:port/wps/wcm/connect/library/sitearea/content?cache=site&amp;contentcache=session
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;CONNECT MOD=Web SRV=HTML ACTION=http://www.ibm.com CACHE=SITE &gt;
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>http://host:port/wps/wcm/connect/library/sitearea/content?cache=site&amp;contentcache=session
+</code></pre></div>
 <h2 id="custom-caching-strategies">Custom caching strategies</h2>
 <ul>
 <li>When you apply custom caching to static content, you would mostly use <code>CACHE=SITE</code>, <code>CACHE=SESSION</code> or <code>CONTENTCACHE=USER</code>.</li>
@@ -2150,14 +2150,7 @@
 <p>The CacheKey parameter is used when caching content with the basic cache. A CacheKey is used as a key instead of a URL. This strategy is useful if you have multiple URLs for the same page but want it cached only once. This reduces the amount of memory that is used by the cache.</p>
 <p><strong>Example:</strong></p>
 <p>The following URLs use the same web page called news.html.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;CONNECT MOD=Web SRV=HTML ACTION=http://www.ibm.com/news.html 
+<div class="language-text highlight"><pre><span></span><code>&lt;CONNECT MOD=Web SRV=HTML ACTION=http://www.ibm.com/news.html 
 CACHE=SITE CACHEKEY=news &gt;
 
 &lt;CONNECT MOD=Web SRV=HTML ACTION=http://www.ibm.com.au/news.html 
@@ -2165,7 +2158,7 @@ CACHE=SITE CACHEKEY=news &gt;
 
 &lt;CONNECT MOD=Web SRV=HTML ACTION=http://www.lotus.com/news.html 
 CACHE=SITE CACHEKEY=news &gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>In this example, "news" is used as the CacheKey to store the value of the response from these connect tags. This means that news.html is cached only once instead of being cached three separate times.</p>
 <h2 id="caching-content-updates-and-syndication">Caching, content updates, and syndication</h2>
 <p>When an item is updated, either directly or as a result of syndication, no cache is updated. The rendered items are not updated until each configured cache is expired. It is important to choose cache timeout parameters that complement your syndication strategy.</p>

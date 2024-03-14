@@ -2682,16 +2682,7 @@
 <h2 id="concepts-of-the-java-portlet-specification-20">Concepts of the Java Portlet Specification 2.0</h2>
 <p>Programming details for public render parameters are defined in the Java Portlet Specification 2.0. They are read as request parameters and set in render URLs or on an ActionResponse. For most purposes, public render parameters behave exactly like "normal" or private render parameters. The only difference is that the parameter identifier is explicitly declared by the programmer in the <code>portlet.xml</code> deployment descriptor, along with one or more namespaced public names. As a result, a portal can decide which parameters of two portlets must map to the same information.</p>
 <p>Here is an example declaration in the deployment descriptor:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portlet-app xmlns:x=&quot;http://www.cntserv_exmp.com/portlet&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;portlet-app xmlns:x=&quot;http://www.cntserv_exmp.com/portlet&quot;&gt;
    &lt;portlet&gt;
       ...
       &lt;supported-public-render-parameter&gt;custID&lt;/supported-public-render-parameter&gt;
@@ -2701,10 +2692,10 @@
       &lt;qname&gt;x:customerID&lt;/qname&gt;
    &lt;/public-render-parameter&gt;
 &lt;/portlet-app&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This snippet declares a public render parameter that is accessed with the parameter key <code>custID</code>. Here is an example code snippet for reading the parameter:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>String customerID = renderRequest.getParameter(&quot;custID&quot;);
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>String customerID = renderRequest.getParameter(&quot;custID&quot;);
+</code></pre></div>
 <p>The parameter is shared with the global name, which consists of the namespace and the localname, and the <code>customerID</code> in the namespace <code>http://www.cntserv_exmp.com/portlet</code>. Therefore, if another portlet declares a parameter with the same global name - regardless of the local identifier that it uses - that parameter can be mapped to the same data by the portal.</p>
 <p>Portlets can declare globalized display names and descriptions for public render parameters in the application resource bundle. However, HCL Portal Version 8.5 does not have a user interface that requires this information for display.</p>
 <h2 id="how-to-control-parameter-sharing-in-the-portal">How to control parameter sharing in the portal</h2>
@@ -2718,21 +2709,7 @@
 <p>If you want to prevent all render parameters that are used on a page from being shared with other pages, you can set the parameter <code>param.sharing.scope</code> to the reserved value <code>ibm.portal.sharing.scope.page</code>. Specifying this value produces the same result as using the unique object ID of the page, as generated internally by the portal, for the value of the <code>param.sharing.scope</code> parameter.</p>
 <h2 id="how-to-set-the-scope-for-specific-public-render-parameters">How to set the scope for specific public render parameters</h2>
 <p>The setting <code>param.sharing.scope</code> mentioned earlier sets the scope for all public render parameters. In addition, it is also possible to set the scope for specific public render parameters. The HCL Portal template pages use this approach. For example, the Basic page template specifies the following parameters:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;parameter 
+<div class="language-text highlight"><pre><span></span><code>&lt;parameter 
    name=&quot;param.sharing.scope.{http://www.ibm.com/xmlns/prod/datatype/content/resource-collections}&quot; 
    type=&quot;string&quot; update=&quot;set&quot;&gt;&lt;![CDATA[ibm.portal.sharing.scope.page]]&gt;&lt;/parameter&gt;
 &lt;parameter 
@@ -2747,19 +2724,16 @@
 &lt;parameter 
    name=&quot;param.sharing.scope.{http://www.ibm.com/xmlns/prod/websphere/portal/publicparams}path-info&quot; 
    type=&quot;string&quot; update=&quot;set&quot;&gt;&lt;![CDATA[ibm.portal.sharing.scope.page]]&gt;&lt;/parameter&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This snippet from a template sets the page scope for all public render parameters that are contained in the following name spaces:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>http://www.ibm.com/xmlns/prod/datatype/content/resource-collections
+<div class="language-text highlight"><pre><span></span><code>http://www.ibm.com/xmlns/prod/datatype/content/resource-collections
 http://www.ibm.com/xmlns/prod/datatype/content
 http://www.ibm.com/xmlns/prod/websphere/portal/v7.0/portal-contextualportal
 http://www.ibm.com/xmlns/prod/websphere/portal/v8.0/portal-contextualportal
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>It also sets the scope for the <code>path-info</code> parameter that is defined in the namespace</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://www.ibm.com/xmlns/prod/websphere/portal/publicparams
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://www.ibm.com/xmlns/prod/websphere/portal/publicparams
+</code></pre></div>
 <h2 id="limitations">Limitations</h2>
 <p>The following are known limitations to public render parameters:</p>
 <ol>

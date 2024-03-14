@@ -2732,8 +2732,8 @@
 <p>Portal users can address resources that have been registered with the tagging and rating engine.</p>
 <p>Users can address resources, tags, tag spaces, ratings, and rating spaces. They can either address all entities part of these five models or start with an empty set of these models and add single entities by adding additional query parameters. For details refer to the topic about Adding query parameters.</p>
 <p>The URL that is to be used for addressing resources is as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://host:port/wps/mycontenthandler?uri=uri
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://host:port/wps/mycontenthandler?uri=uri
+</code></pre></div>
 <p>Valid URIs are given in the following sections.</p>
 <h2 id="addressing-resources">Addressing resources</h2>
 <p>To address resources, use the following URIs:</p>
@@ -2741,35 +2741,7 @@
 <li>
 <p><strong>rm:all</strong></p>
 <p>This returns a feed that contains all resources that are registered with the tagging and rating engine. A resource is registered with the tagging and rating engine when a user tags or rates it at least once. Note that using this operation can be rather expensive, depending on the amount of registered resources. Sample feed:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;atom:feed xmlns:thr=&quot;http://purl.org/syndication/thread/1.0&quot; 
    xmlns:xhtml=&quot;http://www.w3.org/1999/xhtml&quot; 
    xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot; 
@@ -2798,7 +2770,7 @@
              7_2QC68B1A086070IK5UQSRK20O4?mode=view&quot; 
              type=&quot;application/atom+xml&quot;/&gt;
 &lt;/atom:entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>rm:empty</strong></p>
@@ -2819,40 +2791,7 @@
 <li>
 <p><strong>tm:all</strong></p>
 <p>This returns a feed that contains all available tags. Note that using this operation can be rather expensive depending on the amount of registered tags. Sample feed:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;atom:feed xmlns:thr=&quot;http://purl.org/syndication/thread/1.0&quot; 
    xmlns:xhtml=&quot;http://www.w3.org/1999/xhtml&quot; 
    xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot; 
@@ -2886,7 +2825,7 @@
             href=&quot;/wps/mypoc/!ut/p/digest!YlBr3X0WY5DZfagM7Jz3_A/tm/oid:
             CI_2QC68B1A086070IK5UQSRK2040?mode=download&quot; type=&quot;application/atom+xml&quot;/&gt;
 &lt;/atom:entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>tm:empty</strong></p>
@@ -2907,46 +2846,7 @@
 <li>
 <p><strong>tm:ts:all</strong></p>
 <p>This returns a feed that contains all available tag spaces, that is all available tags and their names and counts. Sample feed:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;atom:feed xmlns:thr=&quot;http://purl.org/syndication/thread/1.0&quot; 
   xmlns:xhtml=&quot;http://www.w3.org/1999/xhtml&quot; 
   xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot; 
@@ -2986,7 +2886,7 @@
         href=&quot;/wps/mypoc/!ut/p/digest!vLQAhj2WCgHcg0_gV7N7XQ/tm/name:bread?mode=download&quot; 
         type=&quot;application/atom+xml&quot;/&gt;
 &lt;/atom:entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>tm:ts:empty</strong></p>
@@ -2999,40 +2899,7 @@
 <li>
 <p><strong>rtm:all</strong></p>
 <p>This returns a feed that contains all available ratings. Note that using this operation can be rather expensive depending on the amount of registered ratings. Sample feed:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;atom:feed xmlns:thr=&quot;http://purl.org/syndication/thread/1.0&quot; 
   xmlns:xhtml=&quot;http://www.w3.org/1999/xhtml&quot; 
   xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot; 
@@ -3066,7 +2933,7 @@
         href=&quot;/wps/mypoc/!ut/p/digest!vLQAhj2WCgHcg0_gV7N7XQ/rtm/oid:
         CJ_2QC68B1A086070IK5UQSRK20C4?mode=download&quot; type=&quot;application/atom+xml&quot;/&gt;
 &lt;/atom:entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>rtm:empty</strong></p>
@@ -3083,39 +2950,7 @@
 <li>
 <p><strong>rtm<img alt="🇷🇸" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f1f7-1f1f8.svg" title=":rs:" />all</strong></p>
 <p>This returns a feed that contains all available rating spaces, that is all available ratings and their values and counts. Sample feed:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;atom:feed xmlns:thr=&quot;http://purl.org/syndication/thread/1.0&quot; 
    xmlns:xhtml=&quot;http://www.w3.org/1999/xhtml&quot; 
    xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot; 
@@ -3148,7 +2983,7 @@
             href=&quot;/wps/mypoc/!ut/p/digest!vLQAhj2WCgHcg0_gV7N7XQ/rtm/value:4?mode=download&quot; 
             type=&quot;application/atom+xml&quot;/&gt;
 &lt;/atom:entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>rtm: rs :empty</strong></p>

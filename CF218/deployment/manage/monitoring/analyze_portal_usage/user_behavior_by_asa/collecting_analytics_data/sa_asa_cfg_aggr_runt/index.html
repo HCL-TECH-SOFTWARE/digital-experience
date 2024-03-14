@@ -3303,14 +3303,11 @@
 <li>
 <p>If the value starts with an equals sign ( <code>=</code> ), the value is interpreted as a JavaScript snippet. This evaluation starts with the first character after the equals sign.</p>
 <p>Example: If the key of a metadata is <code>&lt;code&gt;asa_js_foo&lt;/code&gt;</code> and its value is set to <code>&lt;code&gt;='foo' + 'bar'&lt;/code&gt;</code> , then the page meta data object <code>&lt;code&gt;ibm_page_metadata&lt;/code&gt;</code> defines an attribute <code>&lt;code&gt;foo&lt;/code&gt;</code> with a value of <code>&lt;code&gt;foobar&lt;/code&gt;</code> . Refer to the following code snippet:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;script language=&#39;JavaScript&#39;&gt;     
+<div class="language-text highlight"><pre><span></span><code>&lt;script language=&#39;JavaScript&#39;&gt;     
      var ibm_page_metadata = {         
           &#39;foo&#39; : &#39;foo&#39; + &#39;bar&#39;     }   
 &lt;/script&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The aggregator can then access the metadata by either of the following ways: <code>&lt;code&gt;ibm_page_metadata['foo']&lt;/code&gt;</code> or <code>&lt;code&gt;ibm_page_metadata.foo&lt;/code&gt;</code> . It will evaluate to <code>foobar</code> .</p>
 <p>The value part of page metadata is evaluated at run time in the client browser.</p>
 </li>
@@ -3320,14 +3317,11 @@
 <p class="admonition-title">Example</p>
 </div>
 <p>If the key of a piece of metadata is <code>&lt;code&gt;asa_js_bar&lt;/code&gt;</code> , and its value is set to <code>&lt;code&gt;foo&lt;/code&gt;</code> , then the page metadata object <code>&lt;code&gt;ibm_page_metadata&lt;/code&gt;</code> defines an attribute <code>&lt;code&gt;bar&lt;/code&gt;</code> with a value of <code>&lt;code&gt;foo&lt;/code&gt;</code>.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;script language=&#39;JavaScript&#39;&gt;     
+<div class="language-text highlight"><pre><span></span><code>&lt;script language=&#39;JavaScript&#39;&gt;     
      var ibm_page_metadata = {         
           &#39;bar&#39; : &#39;foo&#39;     }   
 &lt;/script&gt; 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The aggregator can then access the meta data by either of the following ways: <code>&lt;code&gt;ibm_page_metadata['bar']&lt;/code&gt;</code> or <code>&lt;code&gt;ibm_page_metadata.bar&lt;/code&gt;</code> .</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

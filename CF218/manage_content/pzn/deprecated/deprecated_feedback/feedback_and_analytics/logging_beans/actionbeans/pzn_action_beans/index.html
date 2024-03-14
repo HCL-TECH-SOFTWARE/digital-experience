@@ -3112,14 +3112,11 @@
 <p>If you have LikeMinds installed, only the predefined actions listed in <strong>Table 1</strong> are logged to the LikeMinds schema. These actions must be defined to LikeMinds in the lps_trx_type table. (You can also add to the list of predefined actions by adding items to the lps_trx_type table.) The actions logged through an Action bean provide the transaction data necessary for the LikeMinds Clickstream Engine. This set of actions may be accessed after deployment and configuration of a Web application.</p>
 <p>Actions can be logged with or without respect to a specific resource. For example, the "OrderCancel" predefined action does not apply to a specific resource whereas the "BrowseContent" predefined action applies to a specific content resource.</p>
 <p>You can create rules based on the activity of the current session, for example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>WebSite Visitor is
+<div class="language-text highlight"><pre><span></span><code>WebSite Visitor is
     Undecided when
        current Action Count.ShoppingCartDelete &gt; 0
      Otherwise Decided
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <table>
 <thead>
 <tr>

@@ -3491,16 +3491,12 @@
 <p>This enhancement, available with HCL DX 9.5 Container Update CF195 and higher, enables the configuration to be set inside the WP ConfigService <a href="https://www.ibm.com/docs/en/was-nd/9.0.5?topic=settings-resource-environment-entry">IBM WebSphere Application Server resource environment provider</a>. The change requires a restart of HCL DX Core. </p>
 <h2 id="sample">Sample</h2>
 <p>The sample below shows how to define the properties for two entries.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>com.ibm.portal.cors.domain.0.entry=http://
+<div class="language-text highlight"><pre><span></span><code>com.ibm.portal.cors.domain.0.entry=http://
 test.hcl.com com.ibm.portal.cors.domain.0.methods=PUT, GET 
 com.ibm.portal.cors.domain.0.allowheaders=* 
 com.ibm.portal.cors.domain.0.exposeheaders=MyHeader 
 com.ibm.portal.cors.domain.1.entry=http://test2.hcl.com
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="configuration-explanation">Configuration explanation</h2>
 <ul>
 <li>

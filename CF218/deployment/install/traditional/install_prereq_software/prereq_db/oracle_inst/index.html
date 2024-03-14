@@ -2185,13 +2185,13 @@
 </li>
 <li>
 <p><strong>Update your environment variables</strong>. For JDBC OCI Type 2 drivers only (AIX): Set the environment variable on the HCL Digital Experience server to point to the directory where you downloaded and extracted the compressed Oracle client files.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>LIBPATH=/u01/app/oracle/product/11.2.0/client_1;export LIBPATH
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>LIBPATH=/u01/app/oracle/product/11.2.0/client_1;export LIBPATH
+</code></pre></div>
 </li>
 <li>
 <p>JDBC OCI (Linux): Set the environment variable on the HCL Digital Experience server to point to the directory where you downloaded and extracted the compressed Oracle client files.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>LD_LIBRARY_PATH=/u01/app/oracle/product/11.2.0/client_1;export LD_LIBRARY_PATH
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>LD_LIBRARY_PATH=/u01/app/oracle/product/11.2.0/client_1;export LD_LIBRARY_PATH
+</code></pre></div>
 </li>
 <li>
 <p>Restart server1 to ensure that the Configuration Wizard uses the updated environment variables. Go to AppServer_home/profiles/cw_profile/bin and stop the server:</p>

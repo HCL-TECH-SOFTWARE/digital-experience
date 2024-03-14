@@ -3145,12 +3145,10 @@
 <p>The select content action shown here, <code>Get Bank News By Role</code>, queries all records within a content resource entitled News and returns those marked as being for the current user's role.</p>
 <p>The content resource YourCoNews represents news articles in the data store. Each record has several different fields (for example, Title, Abstract, Author, Body), including a field entitled <code>Role</code>. In the data store, this field is marked to indicate the role of the visitor to whom it applies.</p>
 <h2 id="simple-select-content-action">Simple select content action</h2>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>Select NewsArticle
+<div class="language-text highlight"><pre><span></span><code>Select NewsArticle
         whose Role is current User.Role
          order as is
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

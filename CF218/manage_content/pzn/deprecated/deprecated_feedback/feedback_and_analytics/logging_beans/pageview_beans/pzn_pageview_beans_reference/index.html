@@ -3108,8 +3108,8 @@
 <h1 id="pageview-beans-reference">PageView beans reference</h1>
 <p>Learn about the com.ibm.wcp.analysis.beans.PageView bean log method and instantiation of PageView beans.</p>
 <p>The <code>com.ibm.wcp.analysis.beans.PageView</code> bean log method signature is:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>public void log( HttpServletRequest request )
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>public void log( HttpServletRequest request )
+</code></pre></div>
 <p>The log method creates a new <code>PageViewEvent</code> with the request. The <code>PageViewEvent</code> is routed to all registered log listeners.</p>
 <p>PageView beans should be instantiated as session beans; however, they will not maintain any session data.</p>
 

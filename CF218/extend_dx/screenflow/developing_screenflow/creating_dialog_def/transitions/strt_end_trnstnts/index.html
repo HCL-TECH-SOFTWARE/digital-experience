@@ -2375,23 +2375,7 @@
 <h1 id="start-and-end-transitions">Start and end transitions</h1>
 <p>When the referenced transition endpoint and event matches the source of a start transition, dialogs are started. Start transitions differ from other transitions only in that they carry the attribute type, with the value start. Similarly, end transitions carry the attribute type, with the value end.</p>
 <p>To avoid transitions that can accidentally start or end a screen flow, dialog modelers need to define start and end transitions. Each dialog needs to define at least one start and at least one end transition.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>  &lt;transition type=&quot;start&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>  &lt;transition type=&quot;start&quot;&gt;
       &lt;source&gt;
           ...
       &lt;/source&gt;
@@ -2408,7 +2392,7 @@
           ...
       &lt;/target&gt;
   &lt;/transition&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

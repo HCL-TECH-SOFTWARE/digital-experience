@@ -2608,8 +2608,8 @@
 <p>In order to specify the extent and the contents of the requested feed, you may use additional query parameters. All additional query parameters are optional.</p>
 <h2 id="levels">Levels</h2>
 <p>You can request a feed of a resource that is maintained in a tree model. If you do this, you can parameterize the URL,by the number of levels that the response should contain as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>   [ &amp;levels = levelcount ] 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>   [ &amp;levels = levelcount ] 
+</code></pre></div>
 <p><code>levelcount</code> is an integer value that is greater than zero. Values have the following meaning:</p>
 <ul>
 <li>
@@ -2663,12 +2663,12 @@
 </ul>
 <p>The parameters level and mode are mutually exclusive if the value for mode is view.</p>
 <p><strong>Example:</strong> A URL that explicitly specifies that the node itself and all its direct children should be contained in the returned response:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>   /wps/mycontenthandler?uri=nm:oid:wps.content.root&amp;levels=2
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>   /wps/mycontenthandler?uri=nm:oid:wps.content.root&amp;levels=2
+</code></pre></div>
 <h2 id="representation-mode">Representation mode</h2>
 <p>If the feed always transports all available information, it will be large. Therefore there is a way to limit the size of the feed. You can use the query parameter rep to specify the volume of information that is transported. You use the parameter as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[ &amp;rep = compact | full | empty ]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[ &amp;rep = compact | full | empty ]
+</code></pre></div>
 <p>You can set the parameter to the following values:</p>
 <ul>
 <li>
@@ -2690,17 +2690,17 @@
 </ul>
 <h2 id="extension-parameter">Extension parameter</h2>
 <p>For special use cases, for example in the context of federation, there is a parameter that allows you to manipulate the ATOM alternate link, also known as the view link. The value specified for this parameter must be a URI. If you specify this parameter, the Remote Model SPI performs a Piece Of Content (POC) lookup through the interface <code>com.ibm.portal.resolver.LookupService</code> with the view mode and the given URI. At this time the Remote Model SPI uses the default lookup service. Use the parameter as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[ &amp;extension=uri ]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[ &amp;extension=uri ]
+</code></pre></div>
 <h2 id="explicit-metadata">Explicit MetaData</h2>
 <p>Some metadata names are hidden, as they are not exposed in the MetaData iterator; for example, this is the case for all names that start with <code>com.ibm.portal</code>. These names also do not show up in a feed.</p>
 <p>In the compact representation mode no metadata may be exposed, although some certain MetaData are required. Therefore, in order to expose them in a feed, you need to explicitly request them. To do this, use the &amp;mdname parameter as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[ &amp;mdname=string ]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[ &amp;mdname=string ]
+</code></pre></div>
 <p>You can use the parameter mdname multiple times in the same URL.</p>
 <p><strong>Example:</strong> This URL specifies explicitly that the otherwise hidden metadata com.ibm.portal.Hidden is exposed in the returned response:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/wps/mycontenthandler?uri=nm:oid:wps.content.root&amp;mdname=com.ibm.portal.Hidden
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/wps/mycontenthandler?uri=nm:oid:wps.content.root&amp;mdname=com.ibm.portal.Hidden
+</code></pre></div>
 
 
 

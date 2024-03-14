@@ -4035,14 +4035,7 @@
 <li>propagation - from the children to this node</li>
 </ul>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>PacList.show(actionset, flag)
+<div class="language-text highlight"><pre><span></span><code>PacList.show(actionset, flag)
 PacList.show(actionset, flag, &quot;numeric&quot;)
 
 # example: evaluate manager inheritance flag
@@ -4050,17 +4043,9 @@ if PacList.show(&quot;Manager&quot;, &quot;inheritance&quot;, &quot;numeric&quot
   print &quot;inheritance is permitted&quot;
 else:
   print &quot;inheritance is blocked&quot;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>$PacList show actionset flag
+<div class="language-text highlight"><pre><span></span><code>$PacList show actionset flag
 $PacList show actionset flag numeric
 
 # example: evaluate manager inheritance flag
@@ -4069,17 +4054,10 @@ if [$PacList show Manager inheritance numeric] then {
 } else {
   puts &quot;inheritance is blocked&quot;
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The commands block and unblock are used to change the flags that control distribution of permissions. They expect the name of the action set and the name of the flag as the first and second argument. The block command prevents the corresponding distribution of permissions, and the unblock command allows it. The commands return a success message if the flag value changed, or empty if the flag already had the required value.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>PacList.block(actionset, flag)
+<div class="language-text highlight"><pre><span></span><code>PacList.block(actionset, flag)
 PacList.unblock(actionset, flag)
 
 # example: prevent propagation of delegator permissions
@@ -4087,16 +4065,9 @@ PacList.block(&quot;Delegator&quot;, &quot;propagation&quot;);
 
 # example: allow inheritance of user permissions
 PacList.unblock(&quot;User&quot;, &quot;inheritance&quot;)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>$PacList block actionset flag
+<div class="language-text highlight"><pre><span></span><code>$PacList block actionset flag
 $PacList unblock actionset flag
 
 # example: prevent propagation of delegator permissions
@@ -4104,7 +4075,7 @@ $PacList block Delegator propagation
 
 # example: allow inheritance of user permissions
 $PacList unblock User inheritance
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

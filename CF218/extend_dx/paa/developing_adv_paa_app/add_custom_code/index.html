@@ -2009,23 +2009,7 @@
 <p>Add an &lt;scu&gt; element to your component level sdd.xml file to register your code with the ConfigEngine.</p>
 <h2 id="sample-custom-code">Sample custom code</h2>
 <p>The following sample code uses the &lt;scu&gt; element for the extension point create-ear. The code tells the Solution Installer to overwrite the create-ear functionality. The full name of the extension is create-ear-applySIFeaturePack. The create-ear part tells the ConfigEngine what type of installation functionality is used to group the tasks to run. The -applySIFeaturePack part allows the Solution Installer to invoke functionality of the ConfigEngine for components that conform to this naming scheme. Hence it reduces the likelihood that other components, for example core portal components, from being removed during uninstallation.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;SCU id=&quot;create-ear-applySIFeaturePack&quot; targetRef=&quot;OS&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;SCU id=&quot;create-ear-applySIFeaturePack&quot; targetRef=&quot;OS&quot;&gt;
     &lt;identity&gt;
         &lt;name&gt;create-ear-applySIFeaturePack&lt;/name&gt;
         &lt;version&gt;1.0.0&lt;/version&gt;
@@ -2042,10 +2026,10 @@
         &lt;/configArtifact&gt;
     &lt;/unit&gt;
 &lt;/SCU&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>After registering the extension point with the sdd.xml file, an implementation task must be created to overwrite the default functionality. The task should reside in the config/includes directory of the component. There is a specific naming convention required for the task so that it is directly associated with the &lt;scu&gt; element in the sdd.xml file. Use the following naming convention:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&#39;action;&#39; + extension point name = &#39;-&#39; = componentname  
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&#39;action;&#39; + extension point name = &#39;-&#39; = componentname  
+</code></pre></div>
 <p>For example: action-create-ear-applySIFeaturePack-components/componentN.</p>
 <p><strong>Tip:</strong> Use the full path of the component as the component name.</p>
 

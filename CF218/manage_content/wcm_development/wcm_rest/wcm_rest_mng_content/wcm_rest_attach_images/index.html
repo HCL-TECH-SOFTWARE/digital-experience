@@ -3352,24 +3352,18 @@
 <p>You must create the item and add a rich text or HTML element before you create the attachment.</p>
 </div>
 <h2 id="creating">Creating</h2>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>/ITEM-TYPE/ITEM-UUID/attachments
+<div class="language-text highlight"><pre><span></span><code>/ITEM-TYPE/ITEM-UUID/attachments
 Content-Type: image/*
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>When you create an attachment, the binary data, but not encoding, of an image is sent to the attachments collection of an item. The Content-Type header field is set to the appropriate image type. For example: <code>image/jpg, image/png</code></p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 POST 
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 POST 
 http://host:port/wps/mycontenthandler/wcmrest/LibraryHTMLComponent/ITEM-UUID/attachments
 Content-Type: image/jpg
 (… binary data … )
 
 201 Created
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="reading">Reading</h2>
 <p>Not supported.</p>
 <h2 id="updating">Updating</h2>
@@ -3377,27 +3371,19 @@ Content-Type: image/jpg
 <h2 id="deleting">Deleting</h2>
 <p>An attachment cannot be directly referenced through the REST service, which means it cannot be directly deleted. However, it can be deleted indirectly by running an update operation on the parent item.</p>
 <p>For example, this is some markup that is stored in an HTML component:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;h1&gt; Example Delete &lt;/h1&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;h1&gt; Example Delete &lt;/h1&gt;
 &lt;img src=&#39;/wps/wcm/myconnect/65132264-fd8b-461c-b6ec-ccdd22524ea6/image.jpg?MOD=AJPERES&#39;
  alt=&#39;&#39; title=&#39;&#39; border=&#39;0&#39;  /&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To remove the image, you would make the following update request:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 PUT 
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 PUT 
 http://host:port/wps/mycontenthandler/wcmrest/LibraryHTMLComponent/ITEM-UUID/
 Content-Type: text/html
 
 &lt;h1&gt; Example Delete &lt;/h1&gt;
 
 200 OK
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

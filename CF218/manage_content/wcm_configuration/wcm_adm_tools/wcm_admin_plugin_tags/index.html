@@ -2640,12 +2640,10 @@
 <p>To prevent your session timing out before the task has finished, you can append the option <code>-DsessionTimeOut=timeOut</code> to the command. This sets the number of seconds in which the task must complete before its session will timeout. The default session timeout is 14,440 seconds, which is 4 hours. For large repositories, you should increase this setting. For example: <code>-DsessionTimeOut=36000</code>, which is 10 hours.</p>
 <h2 id="examples">Examples</h2>
 <p>In this example, the plug-in tag <code>ifEqual</code> has been deprecated and replaced with the plug-in tag <code>Equals</code>. To up date all instances of the <code>ifEqual</code> tag in your site, run the following commands:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh/bat run-wcm-admin-task-tag-usage -Dfind=Plugin:ifEqual -DallLibraries=true -Dfix=true -DupdateParam=value1 -DupdateParamNewName=text1
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh/bat run-wcm-admin-task-tag-usage -Dfind=Plugin:ifEqual -DallLibraries=true -Dfix=true -DupdateParam=value1 -DupdateParamNewName=text1
 ./ConfigEngine.sh/bat run-wcm-admin-task-tag-usage -Dfind=Plugin:ifEqual -DallLibraries=true -Dfix=true -DupdateParam=value2 -DupdateParamNewName=text2
 ./ConfigEngine.sh/bat run-wcm-admin-task-tag-usage -Dfind=Plugin:ifEqual -DallLibraries=true -Dfix=true -Dreplace=Plugin:Equals
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>These commands replace the 'value1' and 'value2' parameters with 'text1' and 'text2' parameters, and then change the tag name to <code>Equals</code>.</p>
 
 

@@ -2585,34 +2585,12 @@
 <p><strong>Example:</strong></p>
 <p>A visibility rule is leveraged via HTML and JavaScript to show or hide a <code>div</code> tag via a button.</p>
 <p>HTML:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;div id=&#39;pzn&#39;&gt;Hello World&lt;/div&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;div id=&#39;pzn&#39;&gt;Hello World&lt;/div&gt;
 
 &lt;button type=&quot;button&quot; id=&quot;myBtn&quot;&gt;Check Visibility&lt;/button&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>JavaScript:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code>document.getElementById(&quot;myBtn&quot;).onclick = () =&gt; {
+<div class="language-text highlight"><pre><span></span><code>document.getElementById(&quot;myBtn&quot;).onclick = () =&gt; {
         fetch(&quot;http://localhost:10039/wps/contenthandler/pzn-rest/rules/d0487383-8f4c-4831-912a-86ff5d981fdb/invoke&quot;, {
         method: &#39;post&#39;,
         body: &#39;{}&#39;,
@@ -2633,7 +2611,7 @@
           console.log(err);
         })
       };
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Result:</strong></p>

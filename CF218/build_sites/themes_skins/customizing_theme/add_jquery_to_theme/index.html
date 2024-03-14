@@ -3419,14 +3419,11 @@
 </li>
 <li>
 <p>Copy the needed resource files from your extracted plug-in location into your head folder. The needed resource files in this case are:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>jquery.powertip.min.js
+<div class="language-text highlight"><pre><span></span><code>jquery.powertip.min.js
 jquery.powertip.js
 jquery.powertip.min.css
 jquery.powertip.css
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Copy both the min and non-min versions of the files. The min version is used automatically by default for performance and the non-min version is used automatically when debug mode is on.</p>
@@ -3434,15 +3431,14 @@ jquery.powertip.css
 <li>
 <p>This example uses the default color scheme for the tips. But, PowerTip comes with multiple color schemes as defined in separate css files in its CSS folder. You can change to one of the other color schemes or create one of your own by placing the different css files into your head folder.</p>
 <p>For example, to get the light color scheme, you can instead copy the css files into your head folder.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>jquery.powertip-light.min.css
+<div class="language-text highlight"><pre><span></span><code>jquery.powertip-light.min.css
 jquery.powertip-light.css
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Your jquery_powertip module <code>prereqs</code> the jQuery module, so create a file that is named prereqs.properties in your modules\jquery_powertip folder with the following content:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>jquery
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>jquery
+</code></pre></div>
 </li>
 <li>
 <p>If you have more plug-ins, similar module definition folders can be defined for them in your theme's modules folder. For each module definition, give the module a folder name that starts with jquery_, such as jquery_powertip in this example. Prereq the <code>jquery</code> module.</p>
@@ -3452,18 +3448,7 @@ jquery.powertip-light.css
 <li>
 <p>Add the module <code>jquery</code> to the module listings in one of your theme's profiles. Rather than modify one of the existing profile files, it is best to copy one of them and modify the copy. Copy the base profile file that you want to be similar to, such as profile_deferred.json, rename it to something such as profile_jquery_deferred.json and add the module <code>jquery</code>. When you create a profile file, adjust the titles and descriptions so that your profile has a unique and recognizable title and description.</p>
 <p>For example, change the titles and descriptions to</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>&quot;titles&quot;: [
+<div class="language-text highlight"><pre><span></span><code>&quot;titles&quot;: [
       {
          &quot;value&quot;: &quot;jQuery Deferred&quot;,
          &quot;lang&quot;: &quot;en&quot;
@@ -3475,7 +3460,7 @@ jquery.powertip-light.css
          &quot;lang&quot;: &quot;en&quot;
       }
    ]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Add the plug-in modules to the module listings in your profile, such as add the module <code>jquery_powertip</code> in this example.</p>

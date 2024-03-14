@@ -3247,17 +3247,7 @@
 <li>
 <p>Add theme metadata for each JSON file. The metadata keys are <code>ibm.portal.shelf.style.json.component</code> and <code>ibm.portal.shelf.layout.json.component</code>, for the style JSON files and layout JSON files, where component can be any string that uniquely identifies the contribution. The metadata values are URLs pointing to the JSON file location. Values that start with a forward slash ( <code>/</code> ) are treated as absolute URLs, and all other values are read relative to the theme root folder. By default, the theme root folder is in WebDAV at dav:fs-type1/themes/Portal8.5/</p>
 <p>The following example shows style and layout theme metadata for a component called <strong>myAdditions</strong>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;parameter name=&quot;ibm.portal.shelf.style.json.myAdditions&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;parameter name=&quot;ibm.portal.shelf.style.json.myAdditions&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;
 
      &lt;![CDATA[system/myNewStyles.json]]&amp;gt;&lt;/parameter&gt;
 
@@ -3268,28 +3258,11 @@
      &lt;![CDATA[/myContextRoot/layouts/myNewLayouts.json]]&amp;gt;&lt;/parameter&gt;
 
      &lt;!-- This is an absolute URL to a custom war file --&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ol>
 <li>
 <p>To create and run an XML access script, use the following example as a model.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;request build=&quot;wp85&quot; type=&quot;update&quot; version=&quot;8.5&quot;
     xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
     xsi:noNamespaceSchemaLocation=&quot;PortalConfig_8.5.0.xsd&quot;&gt;
@@ -3307,7 +3280,7 @@ type=&quot;string&quot; update=&quot;set&quot;&gt;
         &lt;/theme&gt;
     &lt;/portal&gt;
 &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Copy the script to <a href="../../../../../../guide_me/wpsdirstr/">PortalServer_root</a>/bin.</p>

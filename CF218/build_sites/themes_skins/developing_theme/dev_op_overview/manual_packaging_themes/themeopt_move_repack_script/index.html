@@ -2801,29 +2801,21 @@
 <ol>
 <li>
 <p>Open the theme file and adapt the following properties of the theme by changing the code dav:fs-type1 to war:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>      &lt;parameter name=&quot;com.ibm.portal.theme.template.ref&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>      &lt;parameter name=&quot;com.ibm.portal.theme.template.ref&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;
    &lt;![CDATA[war:&lt;context-root-static-war&gt;/&lt;customThemePath&gt;/]]&gt;
       &lt;/parameter&gt;
 
       &lt;parameter name=&quot;com.ibm.portal.layout.template.href&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;
    &lt;![CDATA[war:&lt;context-root-static-war&gt;/layout-templates/2ColumnEqual/]]&gt;
       &lt;/parameter&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Adapt the following properties for all the skins moved from the file store to an EAR file by changing the code dav:fs-type1 to war for the following parameters:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>   &lt;parameter name=&quot;com.ibm.portal.skin.template.ref&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>   &lt;parameter name=&quot;com.ibm.portal.skin.template.ref&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;
       &lt;![CDATA[war:&lt;context-root-static-war&gt;/&lt;customSkinPath&gt;/skins/Hidden/]]&gt;
    &lt;/parameter&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 <details class="info" open="open">

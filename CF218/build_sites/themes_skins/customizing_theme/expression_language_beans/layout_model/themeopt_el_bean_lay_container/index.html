@@ -4199,8 +4199,8 @@
 <p><strong>description</strong></p>
 <p>The description of the layout container.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.layoutModel[wp.selectionModel.selected].root.description}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.layoutModel[wp.selectionModel.selected].root.description}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="../../common_beans/themeopt_el_bean_description/">Description</a> object for the layout container; it is never null. You can use the value of the title object to retrieve the description in current locale.</p>
 </li>
@@ -4208,8 +4208,8 @@
 <p><strong>metadata</strong></p>
 <p>Metadata that is associated with this layout container.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.layoutModel[wp.selectionModel.selected].root.metadata}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.layoutModel[wp.selectionModel.selected].root.metadata}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="../../common_beans/themeopt_el_bean_meta/">Metadata</a>, never null.</p>
 </li>
@@ -4217,21 +4217,20 @@
 <p><strong>objectID</strong></p>
 <p>Returns the obect identifier for the current layour container.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.layoutModel[wp.selectionModel.selected].root.objectID}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.layoutModel[wp.selectionModel.selected].root.objectID}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: Object Identifier for the current control. The following displays an example of getting the layout model for the currently selected node from the selection model. The second line retrieves the children of the root node of the layout model. The children of the root node is represented as LayoutContainer.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;c:set var=&quot;layoutmodel&quot; value=&quot;${wp.layoutModel[wp.selectionModel.selected]}&quot;/&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;c:set var=&quot;layoutmodel&quot; value=&quot;${wp.layoutModel[wp.selectionModel.selected]}&quot;/&gt;
 &lt;c:set var=&quot;containers&quot; value=&quot;${layoutmodel.children[layoutmodel.root]}&quot;/&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>title</strong></p>
 <p>The title of this container.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${wp.layoutModel[wp.selectionModel.selected].root.title}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${wp.layoutModel[wp.selectionModel.selected].root.title}
+</code></pre></div>
 <p>Parameters: none</p>
 <p>Returns: <a href="../../common_beans/themeopt_el_bean_title/">Title</a> associated with the current layout container object.</p>
 </li>

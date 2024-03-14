@@ -3422,15 +3422,13 @@
 <p>Use Current Request Parameters to inspect data contained within the query string (the variables and values that appear after a question mark on a URL).</p>
 <p>To understand current Request parameters, consider the example URL <code>http://hostname/page.jsp?var1=rob&amp;var2=expert</code>. In this example, the request parameters are <code>var1</code> and <code>var2</code>. Typically these are passed by GET and POST methods associated with forms. You must know the name of the request parameter that is passed by the page to use it in a rule.</p>
 <p>Given the following &lt;jsp:forward&gt; command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;jsp:forward page=&quot;/servlet/login&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;jsp:forward page=&quot;/servlet/login&quot;&gt;
  &lt;jsp:param name=&quot;user&quot; value=&quot;rob&quot; /&gt;
 &lt;/jsp:forward&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>an example rule condition constructed to evaluate this example might be:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>when current Request.user is rob
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>when current Request.user is rob
+</code></pre></div>
 <p>Only data types Text and List are supported.</p>
 
 

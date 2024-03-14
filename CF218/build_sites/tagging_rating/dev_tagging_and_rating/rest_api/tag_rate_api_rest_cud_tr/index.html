@@ -2678,32 +2678,7 @@
 <p>You can create, update, and delete tags and ratings by using the REST API.</p>
 <h2 id="creating-and-deleting-tags-by-using-the-rest-api">Creating and deleting tags by using the REST API</h2>
 <p>To create a tag, send an HTTP POST against the URI <code>tm:ts:all</code> with the following payload:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#39;,
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#39;,
 &lt;atom:feed xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot; 
    xmlns:xhtml=&quot;http://www.w3.org/1999/xhtml&quot;   
    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
@@ -2729,37 +2704,12 @@
          &lt;atom:category term=&quot;${category}&quot; /&gt;
       &lt;/atom:entry&gt;
 &lt;/atom:feed&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Replace the variables isPrivate, tagname, resourceURI, and category (optional) by the appropriate values.</p>
 <p>To delete a tag, send an HTTP DELETE against the URI <code>uri tm:oid:oid_of_a_tag</code>.</p>
 <h2 id="creating-and-deleting-ratings-by-using-the-rest-api">Creating and deleting ratings by using the REST API</h2>
 <p>To create a rating, send an HTTP POST against the URI <code>rtm:rs:all</code> with the following payload:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#39;,
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#39;,
 &lt;atom:feed xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot; 
    xmlns:xhtml=&quot;http://www.w3.org/1999/xhtml&quot; 
    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
@@ -2785,7 +2735,7 @@
             &lt;atom:category term=&quot;${category}&quot; /&gt;
          &lt;/atom:entry&gt;
 &lt;/atom:feed&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Replace the variables isPrivate, rating, resourceURI, and category (optional) by the appropriate values.</p>
 <p>To update a rating, send an HTTP PUT that contains the same payload against the same URI.</p>
 <p>To delete a rating, send an HTTP DELETE against the URI <code>uri rtm:oid:oid_of_a_rating</code>.</p>

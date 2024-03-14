@@ -2334,16 +2334,12 @@
 <p>The <code>[Plugin:ConnectionsContext]</code> plug-in serves relevant HCL Connections context and configuration information. This includes the service base URLs, the UUID of the community that is associated to the current page, and the source URL of social Atom object entries that a user clicked. For more detailed information about this plug-in, read <em>The connection context rendering plug-in</em>.</p>
 <p>You can use the <code>[Plugin:ResourceURL]</code> to construct complex query URLs. You do so by adding one or more query parameters to an existing Connections service base URL. For more detailed information about this plug-in, read <em>The resource URL plug-in</em>.</p>
 <p>Example: To dynamically construct the query URL that serves the information about the members of the community that associated to the current page, you create an HTML component that contains the following markup:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ResourceURL param=&quot;role=all&quot; param=&quot;format=full&quot; 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ResourceURL param=&quot;role=all&quot; param=&quot;format=full&quot; 
    param=&quot;sortBy=created&quot; param=&quot;sortOrder=desc&quot; 
    url=&quot;[Plugin:ConnectionsContext type=&#39;service&#39; 
    key=&#39;communities&#39;]/service/atom/community/members&quot; 
    compute=&quot;always&quot;]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 </details>

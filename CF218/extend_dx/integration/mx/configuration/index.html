@@ -2195,17 +2195,7 @@
 <li>The <code>class</code> in this configuration refers to the class name of the deployed Ingress controller.</li>
 <li>
 <p>The <code>serverDomainName</code> must match the hostname that the Ingress is available at:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">ingress</span><span class="p">:</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">ingress</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https&quot;</span>
 <span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;443&quot;</span>
@@ -2216,7 +2206,7 @@
 <span class="w">      </span><span class="nt">cert</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;certs/your-ssl-cert.cer&quot;</span>
 <span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;certs/your-ssl-cert.key&quot;</span>
 <span class="nt">serverDomainName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;your-mx-and-dx-host.com&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <p>Refer to the <a href="https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmxfoundry_containers_helm/Content/Installing_Containers_With_Helm.html#configuration">HCL Volt MX Foundry Configuration documentation</a> for more details on the used values.</p>

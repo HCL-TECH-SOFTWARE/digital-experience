@@ -2475,8 +2475,8 @@ Use the -DinvalidDn=remove and -Dfix=true options.</li>
 <p>For this option, it is necessary to add member mappings in the custom mapping file: wp_profile_root/PortalServer/wcm/shared/app/config/wcmservices/MemberFixerModule.properties`</p>
 <p>The member mappings for one user or group to be replaced with another user or group use this format: <code>Old DN -&gt; New DN</code></p>
 <p>For example, to replace any instance of <code>cn=group1,dc=lotus,o=ibm</code> with <code>cn=group2,dc=rational,o=ibm</code>, use:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>cn=group1,dc=lotus,o=ibm -&gt; cn=group2,dc=rational,o=ibm
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>cn=group1,dc=lotus,o=ibm -&gt; cn=group2,dc=rational,o=ibm
+</code></pre></div>
 <p>Each member mapping corresponds to one user or group to be replaced. Once all the member mappings have been made, restart the portal server and execute the member fixer task:</p>
 <ul>
 <li>
@@ -2496,8 +2496,8 @@ Use the -DinvalidDn=remove and -Dfix=true options.</li>
 <p>For this option, it is necessary to add member mappings in the custom mapping file: wp_profile_root]/PortalServer/wcm/shared/app/config/wcmservices/MemberFixerModule.properties`</p>
 <p>Create member mappings for changing multiple users or groups DN with the exception of the common name portion. Once all the member mappings have been made, restart the portal server and execute the member fixer task.</p>
 <p>For example, To replace all DNs like <code>cn=[ID],dc=websphere,o=ibm</code> with <code>cn=[ID],dc=tivoli,o=ibm</code>, use:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>cn=[ID],dc=websphere,o=ibm -&gt; cn=[ID],dc=tivoli,o=ibm
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>cn=[ID],dc=websphere,o=ibm -&gt; cn=[ID],dc=tivoli,o=ibm
+</code></pre></div>
 <p>Each member mapping corresponds to one user or group to be replaced. Once all the member mappings have been made, restart the portal server and execute the member fixer task:</p>
 <ul>
 <li>

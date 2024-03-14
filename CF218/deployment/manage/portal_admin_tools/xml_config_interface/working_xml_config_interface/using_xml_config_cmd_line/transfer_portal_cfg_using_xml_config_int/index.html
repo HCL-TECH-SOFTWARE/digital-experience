@@ -3769,20 +3769,14 @@
 <h1 id="transferring-portal-configuration-data-by-using-the-xml-configuration-interface">Transferring portal configuration data by using the XML configuration interface</h1>
 <p>When you use the XML configuration interface to transfer HCL Portal configuration data, you export or import an XML script file. In most cases, you can use the result file from an XML export for an XML import. Sometimes you can use the export result file directly, sometimes you must modify it.</p>
 <p>An XML file that you process must always be in UTF-8 encoding. It must specify the root element and schema that is given in the following example code snippet.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>   &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>   &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
    &lt;request xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
             xsi:noNamespaceSchemaLocation=&quot;PortalConfig_8.5.0.xsd&quot;
 **            type=&quot;export\|update&quot;\&gt;**
          . . . configuration  . . .    
       &lt;/portal&gt;       
    &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For an XML export, specify export for the request type. For an XML import, specify a request type of update. The line where you specify either of these request types is highlighted in the example. For more information about the structure of an XML input script file, see the reference topics about the <em>XML input script file structure</em>.</p>
 <ol>
 <li>

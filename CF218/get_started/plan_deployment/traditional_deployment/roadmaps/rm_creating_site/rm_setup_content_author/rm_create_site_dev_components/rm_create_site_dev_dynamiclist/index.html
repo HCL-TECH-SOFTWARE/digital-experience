@@ -2757,8 +2757,8 @@
 </ol>
 </li>
 </ul>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Content context=&quot;autofill&quot; renderMode=&quot;summary&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Content context=&quot;autofill&quot; renderMode=&quot;summary&quot;]
+</code></pre></div>
 <p>This text renders the summary presentation template for each item in the list.</p>
 </li>
 <li>
@@ -2869,15 +2869,7 @@
 </li>
 <li>
 <p>Delete the default text in the <strong>Presentation Template Options</strong> text box. Then, enter the following information:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>[IfEditMode]
+<div class="language-text highlight"><pre><span></span><code>[IfEditMode]
 &lt;p&gt;&lt;strong&gt;Configure this list to show items in the path:&lt;/strong&gt;
 [EditableElement:list_path placeholder=&quot;Select context&quot; format=&quot;span&quot; callback=&quot;location.reload();&quot;]
 [Element:list_path format=&#39;titlepath&#39;]
@@ -2886,7 +2878,7 @@
 
 [RequestAttribute key=&quot;list_path&quot; value=&quot;[Element:list_path format=&#39;namepath&#39;]&quot;]
 [Component name=&quot;Greenwheels Design/list/list&quot;]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This text allows Krista to select the path where the list items are coming from. This selection is shown only in edit mode. It then passes this path into the menu component as a query parameter by using the <strong>RequestAttribute</strong> tag. Finally, it renders the menu component.</p>
 </li>
 <li>

@@ -4119,16 +4119,12 @@
 <p><strong>get(qname)</strong></p>
 <p>Reads the first string value of the public render parameter that is identified by the qualified name.</p>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;c:set var=&quot;pageModesQName&quot; value=&quot;{http://www.ibm.com/xmlns/prod/websphere/portal/publicparams}pageMode&quot; /&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;c:set var=&quot;pageModesQName&quot; value=&quot;{http://www.ibm.com/xmlns/prod/websphere/portal/publicparams}pageMode&quot; /&gt;
 &lt;c:set var=&quot;pageModes&quot; value=&quot;${wp.publicRenderParamValues[pageModesQName]}&quot; /&gt;
 &lt;c:forEach var=&quot;mode&quot; items=&quot;${pageModes}&quot;&gt;
     ...
 &lt;/c:forEach&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Parameters:</p>
 <ul>
 <li>

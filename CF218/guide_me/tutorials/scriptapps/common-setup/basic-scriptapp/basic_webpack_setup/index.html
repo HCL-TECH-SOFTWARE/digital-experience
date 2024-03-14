@@ -2158,65 +2158,7 @@
 <ol>
 <li>
 <p>Create a webpack.common.js file. Update the main entry section to point to the correct index js/ts file .
-   <div class="language-js highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">MiniCssExtractPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;mini-css-extract-plugin&quot;</span><span class="p">);</span>
+   <div class="language-js highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">MiniCssExtractPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;mini-css-extract-plugin&quot;</span><span class="p">);</span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">svgToMiniDataURI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mini-svg-data-uri&#39;</span><span class="p">);</span>
 
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -2275,35 +2217,11 @@
 
 <span class="w">    </span><span class="p">}</span>
 <span class="p">};</span><span class="w">      </span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 </li>
 <li>
 <p>Create a webpack.dev.js file. Update the template, filename, favicon and manifest in the HTMLWebPackPlugin section (you may remove filename, favicon and manifest if your project does not have them).
-   <div class="language-js highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">);</span>
+   <div class="language-js highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">);</span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">common</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./webpack.common&#39;</span><span class="p">);</span>
 <span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">merge</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;webpack-merge&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// New import based on the 5.0.3 changelog</span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">HTMLWebpackPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;html-webpack-plugin&#39;</span><span class="p">);</span>
@@ -2328,58 +2246,11 @@
 <span class="w">        </span><span class="p">]</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">});</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 </li>
 <li>
 <p>Create a webpack.dx-scriptapp.js file. Update the template in the HTMLWebPackPlugin section.
-   <div class="language-js highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;path&quot;</span><span class="p">);</span>
+   <div class="language-js highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;path&quot;</span><span class="p">);</span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">common</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;./webpack.common&quot;</span><span class="p">);</span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">webpack</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;webpack&#39;</span><span class="p">);</span>
 <span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">merge</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;webpack-merge&#39;</span><span class="p">);</span>
@@ -2427,31 +2298,16 @@
 <span class="w">        </span><span class="p">]</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="p">});</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 </li>
 <li>
 <p>Update your project's package.json file.</p>
 <ul>
 <li>If a homepage value is set in package.json, replace it with "./".
-<div class="language-js highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">  </span><span class="s2">&quot;homepage&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;./&quot;</span><span class="p">,</span>
-</code></pre></div></td></tr></table></div></li>
+<div class="language-js highlight"><pre><span></span><code><span class="w">  </span><span class="s2">&quot;homepage&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;./&quot;</span><span class="p">,</span>
+</code></pre></div></li>
 <li>Add the dxclient parameters as config. Double-check and update the config values as needed.
-<div class="language-json highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
+<div class="language-json highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">    </span><span class="err">...</span>
 <span class="w">    </span><span class="nt">&quot;config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">       </span><span class="nt">&quot;dxclient&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -2467,21 +2323,9 @@
 
 <span class="w">    </span><span class="err">...</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 <li>Modify the start and build scripts to use the webpack config files. Also, add the four(4) deploy-dx-app lines as-is among the scripts. The variables in the scripts will automatically pick up the values from environment variables and config.
-<div class="language-json highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
+<div class="language-json highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">    </span><span class="err">...</span>
 <span class="w">    </span><span class="nt">&quot;scripts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;webpack-dev-server --config  webpack.dev.js --open&quot;</span><span class="p">,</span>
@@ -2494,30 +2338,9 @@
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="err">...</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 <li>Add devDependencies required for the WebPack library and its plugins.
-<div class="language-json highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
+<div class="language-json highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">    </span><span class="err">...</span>
 <span class="w">   </span><span class="nt">&quot;devDependencies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">       </span><span class="nt">&quot;babel-loader&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^8.2.5&quot;</span><span class="p">,</span>
@@ -2539,26 +2362,22 @@
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="err">...</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div></li>
+</code></pre></div></li>
 </ul>
 </li>
 <li>
 <p>Test your React App in local browser:
-    <div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="nb">cd</span><span class="w"> </span>&lt;app-folder&gt;
+    <div class="language-bash highlight"><pre><span></span><code><span class="w">    </span><span class="nb">cd</span><span class="w"> </span>&lt;app-folder&gt;
 <span class="w">    </span>npm<span class="w"> </span>install
 <span class="w">    </span>npm<span class="w"> </span>start
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 </li>
 <li>
 <p>Build your application as-usual:
-    <div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="nb">cd</span><span class="w"> </span>&lt;app-folder&gt;
+    <div class="language-bash highlight"><pre><span></span><code><span class="w">    </span><span class="nb">cd</span><span class="w"> </span>&lt;app-folder&gt;
 <span class="w">    </span>npm<span class="w"> </span>install
 <span class="w">    </span>npm<span class="w"> </span>run<span class="w"> </span>build
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 </li>
 <li>
 <p>Execute the npm script dx-deploy-app, pre-set with the DX admin username and password.</p>
@@ -2567,34 +2386,16 @@
 <div class="tabbed-block"></div>
 </div>
 </div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nv">dxUsername</span><span class="o">=</span>&lt;username&gt;<span class="w"> </span><span class="nv">dxPassword</span><span class="o">=</span>&lt;password&gt;<span class="w"> </span>npm<span class="w"> </span>run<span class="w"> </span>dx-deploy-app
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code><span class="nv">dxUsername</span><span class="o">=</span>&lt;username&gt;<span class="w"> </span><span class="nv">dxPassword</span><span class="o">=</span>&lt;password&gt;<span class="w"> </span>npm<span class="w"> </span>run<span class="w"> </span>dx-deploy-app
+</code></pre></div>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block"></div>
 </div>
 </div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nv">dxUsername</span><span class="o">=</span>&lt;username&gt;<span class="w"> </span><span class="nv">dxPassword</span><span class="o">=</span>&lt;password&gt;<span class="w"> </span>npm<span class="w"> </span>run<span class="w"> </span>dx-deploy-app-win
-</code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span>&gt;<span class="w"> </span>sample-app@0.1.0<span class="w"> </span>dx-deploy-app
+<div class="language-bash highlight"><pre><span></span><code><span class="nv">dxUsername</span><span class="o">=</span>&lt;username&gt;<span class="w"> </span><span class="nv">dxPassword</span><span class="o">=</span>&lt;password&gt;<span class="w"> </span>npm<span class="w"> </span>run<span class="w"> </span>dx-deploy-app-win
+</code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span class="w">    </span>&gt;<span class="w"> </span>sample-app@0.1.0<span class="w"> </span>dx-deploy-app
 <span class="w">    </span>&gt;<span class="w"> </span>dxclient<span class="w"> </span>deploy-Script<span class="w"> </span>Applicationlication<span class="w"> </span>push<span class="w"> </span>-dxUsername<span class="w"> </span><span class="nv">$dxUsername</span><span class="w"> </span>-dxPassword<span class="w"> </span><span class="nv">$dxPassword</span><span class="w"> </span>-wcmContentName<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$npm_package_config_dxclient_wcmContentName</span><span class="s2">&quot;</span><span class="w"> </span>-wcmSiteArea<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$npm_package_config_dxclient_wcmSiteArea</span><span class="s2">&quot;</span><span class="w"> </span>-mainHtmlFile<span class="w"> </span><span class="nv">$npm_package_config_dxclient_mainHtmlFile</span><span class="w"> </span>-contentRoot<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$npm_package_config_dxclient_contentRoot</span><span class="s2">&quot;</span><span class="w"> </span>-dxProtocol<span class="w"> </span><span class="nv">$npm_package_config_dxclient_protocol</span><span class="w"> </span>-hostname<span class="w"> </span><span class="nv">$npm_package_config_dxclient_hostname</span><span class="w"> </span>-dxPort<span class="w"> </span><span class="nv">$npm_package_config_dxclient_port</span>
 <span class="w">    </span><span class="m">2022</span>-08-08<span class="w"> </span><span class="m">21</span>:13:36<span class="w"> </span>:<span class="w"> </span>Begin<span class="w"> </span>content<span class="w"> </span>push<span class="w"> </span>to<span class="w"> </span>Portal.
 <span class="w">    </span><span class="m">2022</span>-08-08<span class="w"> </span><span class="m">21</span>:13:36<span class="w"> </span>:<span class="w"> </span>WCM<span class="w"> </span>content<span class="w"> </span>ID:<span class="w"> </span>.
@@ -2613,7 +2414,7 @@
 <span class="w">    </span><span class="m">2022</span>-08-08<span class="w"> </span><span class="m">21</span>:13:39<span class="w"> </span>:<span class="w"> </span>Content<span class="w"> </span>push<span class="w"> </span>was<span class="w"> </span>successful.
 <span class="w">    </span><span class="m">2022</span>-08-08<span class="w"> </span><span class="m">21</span>:13:39<span class="w"> </span>:<span class="w"> </span>End<span class="w"> </span>content<span class="w"> </span>push<span class="w"> </span>to<span class="w"> </span>Portal.
 <span class="w">    </span><span class="m">2022</span>-08-08<span class="w"> </span><span class="m">21</span>:13:39<span class="w"> </span>:<span class="w"> </span>Body<span class="w"> </span>content:<span class="w"> </span><span class="o">{</span><span class="s2">&quot;results&quot;</span>:<span class="o">{</span><span class="s2">&quot;status&quot;</span>:<span class="s2">&quot;success&quot;</span>,<span class="s2">&quot;importedFiles&quot;</span>:<span class="o">{</span><span class="s2">&quot;file&quot;</span>:<span class="o">[{</span><span class="s2">&quot;filename&quot;</span>:<span class="s2">&quot;HTML/index.html&quot;</span><span class="o">}</span>,<span class="o">{</span><span class="s2">&quot;filename&quot;</span>:<span class="s2">&quot;JavaScript/main.269f6c0111b67c725c63.bundle.js&quot;</span><span class="o">}</span>,<span class="o">{</span><span class="s2">&quot;filename&quot;</span>:<span class="s2">&quot;JavaScript/131.d190506afae2cd09f1fd.bundle.js&quot;</span><span class="o">}</span>,<span class="o">{</span><span class="s2">&quot;filename&quot;</span>:<span class="s2">&quot;CSS/main.9a71fbc56a658baede15.css&quot;</span><span class="o">}]}</span>,<span class="s2">&quot;skippedFiles&quot;</span>:<span class="s2">&quot;&quot;</span>,<span class="s2">&quot;message&quot;</span>:<span class="s2">&quot;The file that you selected was imported successfully.&quot;</span>,<span class="s2">&quot;contentId&quot;</span>:<span class="s2">&quot;6fa0b659-7b18-499d-a8de-090a0e9f8987&quot;</span><span class="o">}}</span>.<span class="w">    </span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Check the DXClient logs in store/logs/logger.log file within your workspace.</p>

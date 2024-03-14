@@ -2278,17 +2278,7 @@
 <p><strong>portlets</strong></p>
 <p>Place any WAR files that contain JSR portlets into the portlets directory. Legacy portlets are not handled automatically by the installer. They require custom code to install and must not be placed in this directory. The reason for separating these WAR files from those files that contain servlets or other application types is due to the installation method required. Those files that contain JSR portlets are typically installed and deployed with an XML access script. Those files that need to be installed directly to the application server are deployed with a ConfigEngine Ant task or with a wsadmin script. The Solution Installer can then read the portlets directory and install the WAR files automatically and does not need to worry that it might encounter a non-portlet WAR. However, if there is extra configuration setup for a portlet, then overwrite the default installation task with an Ant task with a custom XMLAccess script to do the installation. Add a <code>&lt;SCU&gt;</code> element to the sdd.xml file for the deploy-portlets-applySIFeaturePack extension point and add an Ant task that implements this extension point in the config/includes directory. This Ant task must call the XMLAccess task to run any supplied XMLAccess script against the portal server.</p>
 <p>The automatic installation uses the unique ID from the <code>&lt;portlet-app&gt;</code> element that is found in the warfile/WEB-INF/portlet.xml file, and the location of the WAR file itself to enable the deployment. If the unique ID is not available, the name of the WAR file is used. The WAR file is automatically copied over to the <a href="../../../../../../guide_me/wpsdirstr/">wp_profile_root</a>/installableApps directory. The following is a sample XMLAccess script that shows how the information is used to drive the installation.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;request xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
         xsi:noNamespaceSchemaLocation=&quot;PortalConfig_8.5.0.0.xsd&quot; type=&quot;update&quot;
         create-oids=&quot;true&quot;&gt;
@@ -2299,22 +2289,9 @@
             &lt;/web-app&gt;
         &lt;/portal&gt;
 &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>WAR files that are placed at this location also have unique names that are automatically generated for the individual portlets during installation. The generation of unique name values is based on the scheme componentName.portletName. The following is a sample XMLAccess script that shows how the unique name values are specified:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;request xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
 xsi:noNamespaceSchemaLocation=&quot;PortalConfig_8.5.0.0.xsd&quot; type=&quot;update&quot; create-oids=&quot;true&quot;&gt;
         &lt;portal action=&quot;locate&quot;&gt;
@@ -2328,7 +2305,7 @@ uniquename=&quot;componentName.PortletName&quot;/&gt;
         &lt;/web-app&gt;
     &lt;/portal&gt;
 &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Prefix the component name to the WAR file name with the componentName.WARname.war scheme. Although not essential, it allows the user to easily track which WAR files were installed with the Solution Installer.</p>
 </li>
 <li>
@@ -2347,20 +2324,7 @@ uniquename=&quot;componentName.PortletName&quot;/&gt;
 <p>For globally available JAR files, place the JAR files into either the component/shared/app or component/shared/ext directories. These files are not copied to the equivalent directories under the <a href="../../../../../../guide_me/wpsdirstr/">PortalServer_root</a> directory. Instead, a task is run to register all the JAR files found in the shared/app and shared/ext directories of the components. When objects are found in these directories, they are registered directly with a Solution Installer-specific set of shared libraries that are inside the profile. This action makes the libraries profile-specific thus different versions of the same files might be installed to different profiles.</p>
 <p>JAR files that are registered in the component/shared/app directory are registered in the Solution Installer-specific shared.app.jar file. Similarly, for the .jar files in componentName/shared/ext directory, these files are registered with a profile-specific shared.ext.jar file. These files can be found under the <a href="../../../../../../guide_me/wpsdirstr/">wp_profile_root</a>/PortalServer/solutionInstaller directory sub tree. The specific library ‘SiSharedLib’ is registered at the cell or node level of the profile. A reference is then added to the class path of the application server to ensure that the files are available at run time. Only the shared.app.jar file is loaded automatically by the SiSharedLib library. When the registration of these files is finished, a server restart is required to reload the libraries and make the classes available on the class path. When complete, the library-specific classes are now available globally to that server for an application to access.</p>
 <p>To allow a library scope that is limited to a specific solution, place the relevant JAR files in the component/shared/common directory. Files in this directory are not copied to a location inside of the profile directory. Instead, a shared library for this component that points to this directory are added to the WebSphere® Application Server. This shared library then must be associated with either the application or made available on the server-wide class path so it is available to all applications. A properties file called shared-library.properties is in the component/shared/common directory. This file contains information on the scope to which the shared library must be registered. It also provides information on any required class loader properties, such as class loading precedence. The following properties are available in the shared-library.properties file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code># set whether the library should be at the server scope or application scope
+<div class="language-text highlight"><pre><span></span><code># set whether the library should be at the server scope or application scope
 # Can have the following values:
 # cell, cluster, node, server
 library-scope=server
@@ -2374,7 +2338,7 @@ applicationName=# your application name
 # Set class loading preference, options are either
 # &#39;PARENT_FIRST&#39; or &#39;PARENT_LAST&#39;.
 classLoadingMode=PARENT_FIRST
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If multiple applications are associated with the library, specify a comma-separated list of application name; for example: applicationName=AppName1,AppName2,AppName3, where AppName1,AppName2,AppName3 represent the applications to which the library is associated.</p>
 </li>
 <li>
@@ -2390,12 +2354,10 @@ classLoadingMode=PARENT_FIRST
 <li>
 <p><strong>version</strong></p>
 <p>The component/version directory contains a single .component file with the application version information. The file contains build date, build version, name, and spec-version. This file is what tells the ConfigEngine the version of the application. Knowledge of the version that is already installed is necessary to facilitate updates to an application. The following is an example of a .component file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE component PUBLIC &quot;componentId&quot; &quot;component.dtd&quot;&gt;
 &lt;component build-date=&quot;6/10/14&quot; build-version=&quot;20140610-1200&quot; name=&quot;components/sample1&quot; spec-version=&quot;5.0&quot;/&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 

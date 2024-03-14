@@ -2679,20 +2679,7 @@
 <h1 id="javascript-namespacing-observing-good-practice">JavaScript namespacing - observing good practice</h1>
 <p>The client side context of Web programming requires good namespacing.</p>
 <p>When using the client side programming model for your portlets you need to apply good namespacing practices in JavaScript. This helps to avoid collisions in the page which can be timely and expensive to track down. The namespace need must be balanced with the performance advantage of moving all JavaScript into external JavaScript files that can be cached. An additional benefit is that this makes portlet JSPs much smaller. Refer to the following code sample of writing JavaScript for a portlet by the client side programming model:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>htmlEditor.js:
+<div class="language-text highlight"><pre><span></span><code>htmlEditor.js:
 
 if ( typeof( HTMLEditorController ) == &quot;undefined&quot; ) {
      var HTMLEditorController = function( namespace ) {
@@ -2706,7 +2693,7 @@ if ( typeof( HTMLEditorController ) == &quot;undefined&quot; ) {
 htmlEditor.jsp:
 
 var &lt;%=namespace%&gt;htmlController = new HTMLEditorController( &quot;&lt;%=namespace%&gt;&quot; );
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

@@ -2450,46 +2450,7 @@
 <p>Currently, the configuration capability is quite limited. For more complex configurations, use the ConfigWizard instead.</p>
 <p><strong>Example Configuration</strong></p>
 <p>You can use the following syntax in your custom-values.yaml file to adjust LDAP settings:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Application configuration</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Application configuration</span>
 <span class="nt">configuration</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Application specific configuration for Core</span>
 <span class="w">  </span><span class="nt">core</span><span class="p">:</span>
@@ -2529,7 +2490,7 @@
 <span class="w">      </span><span class="nt">attributeNonSupported</span><span class="p">:</span><span class="w"> </span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;certificate&quot;</span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;members&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Refer to the following Help Center documentation for more information about LDAP and Configuration Wizard configuration:</p>
 <ul>
 <li><a href="../../../../../../manage/portal_admin_tools/cfg_wizard/">Configuration Wizard</a></li>
@@ -2540,14 +2501,7 @@
 <p>You can choose if the environment you deploy is configured as a WCM authoring or rendering type. This has implications on things like caching of Core.</p>
 <p>As default, this defaults to true. The deployment is configured as an authoring environment.</p>
 <p>If you want to adjust this to deploy a rendering environment, you can use the following syntax in your custom-values.yaml file:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Application configuration</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Application configuration</span>
 <span class="nt">configuration</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Application specific configuration for Core</span>
 <span class="w">  </span><span class="nt">core</span><span class="p">:</span>
@@ -2555,38 +2509,25 @@
 <span class="w">    </span><span class="nt">tuning</span><span class="p">:</span>
 <span class="w">      </span><span class="c1"># Configures if the environment should be configured for authoring or not</span>
 <span class="w">      </span><span class="nt">authoring</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h3 id="expose-ibm-websphere-application-server-solution-console">Expose IBM WebSphere Application Server Solution Console</h3>
 <p>Refer to the following code sample to configure the server and expose the port <code>10203</code>, which will be placed under <code>configuration.core.exposeConfigurationConsole</code>:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Application configuration</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Application configuration</span>
 <span class="nt">configuration</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Application specific configuration for Core</span>
 <span class="w">  </span><span class="nt">core</span><span class="p">:</span>
 <span class="w">    </span><span class="c1"># Defines if the configuration console for the IBM WebSphere Application Server of Core is exposed to the network</span>
 <span class="w">    </span><span class="nt">exposeConfigurationConsole</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>When <code>Admin Console</code> is enabled by setting its property to <code>true</code>, the IBM WebSphere Application Server Solution Console becomes available on port <code>10203</code>, as shown in the following example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://yourhost:10203/ibm/console/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>https://yourhost:10203/ibm/console/
+</code></pre></div>
 <p>Admin Console can be disabled by setting the property to <code>false</code>.</p>
 <h3 id="configuration-wizard-configuration">Configuration Wizard configuration</h3>
 <p>Although the Config Wizard is started together with the Core application by default, you can set the value to 'false' to change the default behavior
 If <code>configWizard</code> is set to <code>true</code>, then the Configuration Wizard, IBM WebSphere Application Server Solution Console, and DXConnect are also accessible on port <code>10203</code>.</p>
 <p>If you want to adjust this setting, you can use the following syntax in your file:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Application configuration</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Application configuration</span>
 <span class="nt">configuration</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Application specific configuration for Core</span>
 <span class="w">  </span><span class="nt">core</span><span class="p">:</span>
@@ -2595,7 +2536,7 @@ If <code>configWizard</code> is set to <code>true</code>, then the Configuration
 <span class="w">        </span><span class="c1"># Configures if the server for configWizard and dxconnect is started.</span>
 <span class="w">      </span><span class="c1"># If this is set to true, the WAS console for configWizard and dxconnect is also exposed on port 10203 at the path /ibm/console</span>
 <span class="w">      </span><span class="nt">configWizard</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h3 id="replacing-document-conversion-services-with-apache-tika">Replacing Document Conversion Services with Apache Tika</h3>
 <p>Beginning with HCL Digital Experience release 205,<a href="../../../../../../../manage_content/wcm_authoring/dcs/">Document Conversion Services</a>, which is used by <a href="../../../../../../../build_sites/search/portal_search/">HCL Digital Experience Portal Search</a> and <a href="../../../../../../manage/container_configuration/kubernetes_remote_search/">HCL Digital Experience Remote Search</a> is not distributed or supported by HCL. Oracle functionality is replaced by <a href="https://tika.apache.org/" target="_blank">Apache Tika</a>, which is included in the HCL DX CF205 and later offering. For additional information on DCS services available in CF205 and later, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&amp;sysparm_article=KB0096908" target="_blank">Replacement of Document Conversion Services component</a> knowledge article.</p>
 <div class="admonition important">
@@ -2639,14 +2580,7 @@ If <code>configWizard</code> is set to <code>true</code>, then the Configuration
 </tbody>
 </table>
 <p>By default, both parameters are set to <code>true</code> as given in the following example:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Application configuration</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Application configuration</span>
 <span class="nt">configuration</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Application specific configuration for Core</span>
 <span class="w">  </span><span class="nt">core</span><span class="p">:</span>
@@ -2654,20 +2588,11 @@ If <code>configWizard</code> is set to <code>true</code>, then the Configuration
 <span class="w">    </span><span class="nt">configureTika</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"> </span>
 <span class="w">    </span><span class="c1"># Settings for enabling/disabling Stellent</span>
 <span class="w">    </span><span class="nt">disableStellentDCS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="openldap-configuration">OpenLDAP configuration</h2>
 <p>If you choose to deploy the OpenLDAP container in your deployment, you can change country, organization and suffix, that may be configured in OpenLDAP for use.</p>
 <p>Use the following syntax in your custom-values.yaml file to adjust the configuration:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Application configuration</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Application configuration</span>
 <span class="nt">configuration</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Application specific configuration for Open LDAP</span>
 <span class="w">  </span><span class="nt">openLdap</span><span class="p">:</span>
@@ -2677,25 +2602,20 @@ If <code>configWizard</code> is set to <code>true</code>, then the Configuration
 <span class="w">    </span><span class="nt">org</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;DX&quot;</span>
 <span class="w">    </span><span class="c1"># Suffix configuration for Open LDAP</span>
 <span class="w">    </span><span class="nt">suffix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dc=dx,dc=com&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="remote-search-configuration">Remote Search configuration</h2>
 <p>You can configure whether the Remote Search configuration through the IBM WebSphere Application Server Solution Console is exposed as an additional port on HAProxy or not. This defaults to true.</p>
 <p>If set to true, you can access the Solution Console using:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://yourhost:9043/ibm/console
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>https://yourhost:9043/ibm/console
+</code></pre></div>
 <p>Use the following syntax in your custom-values.yaml file:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Application configuration</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Application configuration</span>
 <span class="nt">configuration</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Application specific configuration for Remote Search</span>
 <span class="w">  </span><span class="nt">remoteSearch</span><span class="p">:</span>
 <span class="w">    </span><span class="c1"># Should the configuration interface be exposed</span>
 <span class="w">    </span><span class="nt">exposeConfigurationConsole</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

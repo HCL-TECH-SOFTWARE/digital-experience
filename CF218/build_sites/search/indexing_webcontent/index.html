@@ -2711,35 +2711,31 @@
 <ul>
 <li>
 <p><strong>For a stand-alone server:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>http://hostname:port\_number/wps/seedlist/myserver?SeedlistId=library/sitearea1/childsitearea2
+<div class="language-text highlight"><pre><span></span><code>http://hostname:port\_number/wps/seedlist/myserver?SeedlistId=library/sitearea1/childsitearea2
 &amp;Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&amp;Action=GetDocuments
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You need to replace hostname, port_number, library, and site area with values appropriate for your site. If your library name or site area names contain spaces, you need to replace the spaces with a "+" symbol. For example, the path <code>library one/site area one</code> would instead be defined as <code>library+one/site+area+one</code></p>
 </li>
 <li>
 <p><strong>For a cluster:</strong></p>
 <p>In this case you to use the host and port of the HTTP server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>http://*httpserver:port\_number*/wps/seedlist/myserver?SeedlistId=*library/sitearea1/childsitearea2*
+<div class="language-text highlight"><pre><span></span><code>http://*httpserver:port\_number*/wps/seedlist/myserver?SeedlistId=*library/sitearea1/childsitearea2*
 &amp;Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&amp;Action=GetDocuments
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You need to replace httpserver, port_number, library, and site area with values appropriate for your site. If your library name or site area names contain spaces, you need to replace the spaces with a "+" symbol. For example, the path <code>library one/site area one</code> would instead be defined as <code>library+one/site+area+one</code></p>
 </li>
 <li>
 <p><strong>For a virtual portal configured to use the URL Context as its access point:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>http://httpserver:port\_number/wps/seedlist/myserver/virtualPortalContext?SeedlistId=library/sitearea1/childsitearea2
+<div class="language-text highlight"><pre><span></span><code>http://httpserver:port\_number/wps/seedlist/myserver/virtualPortalContext?SeedlistId=library/sitearea1/childsitearea2
 &amp;Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&amp;Action=GetDocuments
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You need to replace httpserver, port_number, virtualPortalContext, library, and site area with values appropriate for your site. If your library name or site area names contain spaces, you need to replace the spaces with a "+" symbol. For example, the path <code>library one/site area one</code> would instead be defined as <code>library+one/site+area+one</code></p>
 </li>
 <li>
 <p><strong>For a virtual portal configured to use a different hostname as its access point:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>http://vphostname:port\_number/wps/seedlist/myserver/?SeedlistId=library/sitearea1/childsitearea2
+<div class="language-text highlight"><pre><span></span><code>http://vphostname:port\_number/wps/seedlist/myserver/?SeedlistId=library/sitearea1/childsitearea2
 &amp;Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&amp;Action=GetDocuments
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You need to replace vphostname, port_number, library, and site area with values appropriate for your site. If your library name or site area names contain spaces, you need to replace the spaces with a "+" symbol. For example, the path <code>library one/site area one</code> would instead be defined as <code>library+one/site+area+one</code></p>
 </li>
 </ul>

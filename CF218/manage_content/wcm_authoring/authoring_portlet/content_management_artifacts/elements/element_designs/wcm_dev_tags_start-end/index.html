@@ -4968,18 +4968,13 @@
 <p>The main advantage to using start and end attributes are that the code you enter in the start and end attributes are only rendered when the component tag itself is rendered. For example, If a user does not have access to the content displayed by using a component tag, then neither the content nor the start and end code are displayed. This also applies when a component does not exist or does not contain any content.</p>
 <h2 id="example">Example:</h2>
 <p>In this example, start and end attributes are used to display a set of text components in a bullet list. This might be entered in a presentation template.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;ul&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;ul&gt;
 [component name=&quot;Component1&quot; start=&quot;&lt;li&gt;&quot; end=&quot;&lt;/li&gt;&quot; ]
 [component name=&quot;Component2&quot; start=&quot;&lt;li&gt;&quot; end=&quot;&lt;/li&gt;&quot; ]
 [component name=&quot;Component3&quot; start=&quot;&lt;li&gt;&quot; end=&quot;&lt;/li&gt;&quot; ]
 [component name=&quot;Component4&quot; start=&quot;&lt;li&gt;&quot; end=&quot;&lt;/li&gt;&quot; ]
 &lt;/ul&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The text components would look like this list when rendered:</p>
 <ul>
 <li>Component 1</li>
@@ -4994,18 +4989,13 @@
 <li>Component 4</li>
 </ul>
 <p>In contrast, you could also add this code to a presentation template:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;ul&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;ul&gt;
 &lt;li&gt;[component name=&quot;Component1&quot; ]&lt;/li&gt;
 &lt;li&gt;[component name=&quot;Component2&quot; ]&lt;/li&gt;
 &lt;li&gt;[component name=&quot;Component3&quot; ]&lt;/li&gt;
 &lt;li&gt;[component name=&quot;Component4&quot; ]&lt;/li&gt;
 &lt;/ul&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If a user did not have access to component 3, the rendered list would then look like this:</p>
 <ul>
 <li>Component 1</li>

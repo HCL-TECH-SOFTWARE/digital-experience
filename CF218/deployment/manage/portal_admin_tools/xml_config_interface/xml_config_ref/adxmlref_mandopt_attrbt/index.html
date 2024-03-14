@@ -3719,11 +3719,11 @@
 <p>When creating a new portal resource, some required attributes (depending on the type of resource) must be specified. Others can be omitted. They are then set to a default value.</p>
 <p>When you update an existing portal resource, all attributes are optional, except those required to locate the element. The omitted attributes remain unchanged. In a few cases of page layout attributes, there is the possibility of explicitly specifying an "undefined" value. This means that the attribute is not defined at the respective level, but inherited. For example, if the skin for a component is undefined, it will be inherited from the setting of its page.</p>
 <p>Note that there is a semantic difference between the following XML fragments:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>     &lt;content-node uniquename=&quot;MyPages&quot; action=&quot;update&quot; active =&quot;true&quot;/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>     &lt;content-node uniquename=&quot;MyPages&quot; action=&quot;update&quot; active =&quot;true&quot;/
+</code></pre></div>
 <p>and</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>     &lt;content-node uniquename=&quot;MyPages&quot; action=&quot;update&quot; active =&quot;true&quot; skinref=&quot;undefined&quot;/&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>     &lt;content-node uniquename=&quot;MyPages&quot; action=&quot;update&quot; active =&quot;true&quot; skinref=&quot;undefined&quot;/&gt;
+</code></pre></div>
 <p>The first fragment only modifies the active attribute of the page and leaves its skin setting unchanged; the second fragment additionally resets the skin to the undefined value (whatever the previous skin setting was), so that the page will always display in the portal default skin.</p>
 <details class="info" open="open">
 <summary>Related information</summary>

@@ -2645,20 +2645,14 @@
 <h1 id="redirecting-search-requests-from-a-custom-search-form-to-the-search-center">Redirecting search requests from a custom search form to the Search Center</h1>
 <p>If you plan to develop a custom search form, you might want to redirect search requests issued by the search form to the Search Center.</p>
 <p>The following example form implements a <strong>Search</strong> feature:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;form name=&quot;myQueryForm&quot; method=&quot;get&quot; action=&quot;.&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;form name=&quot;myQueryForm&quot; method=&quot;get&quot; action=&quot;.&quot;&gt;
      &lt;input type=&quot;hidden&quot; name=&quot;uri&quot; value=&quot;searchCenter:query&quot;&gt; 
      &lt;input type=&quot;hidden&quot; name=&quot;contentNode&quot; value=&quot;ibm.portal.Search Center&quot;&gt;
      &lt;input type=&quot;hidden&quot; name=&quot;layoutNode&quot; value=&quot;ibm.portal.Search Center Portlet Window&quot;&gt;
      &lt;input type=&quot;text&quot; name=&quot;query&quot;&gt; 
      &lt;input type=&quot;Submit&quot; name=&quot;SearchButton&quot; value=&quot;Search&quot;&gt;
 &lt;/form&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If a user selects <strong>Search</strong>, the form sends a request to the Portal server. The Portal server redirects the request to the Search Center by using the following parameters:</p>
 <ul>
 <li>

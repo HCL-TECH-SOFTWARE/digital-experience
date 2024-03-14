@@ -3035,19 +3035,15 @@
 <p>-m source_keytab_name&gt; destination_keytab_name.</p>
 <p>Where source_keytab_name is the name of the keytab file on the source system and destination_keytab_name&gt; is the name of the keytab file on the destination system.</p>
 <p>Step 1: merge the keytab file on Node A into the keytab file on the Deployment manager:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code># ./ktab -m /etc/krb5NodeA.keytab /etc/krb5.keytab
+<div class="language-text highlight"><pre><span></span><code># ./ktab -m /etc/krb5NodeA.keytab /etc/krb5.keytab
 Merging keytab files:   source=krb5NodeA.keytab   destination=krb5.keytab
 Done! 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Step 2: merge the keytab file on Node B into the keytab file on the deployment manager:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code> # ./ktab -m /etc/krb5NodeB.keytab /etc/krb5.keytab
+<div class="language-text highlight"><pre><span></span><code> # ./ktab -m /etc/krb5NodeB.keytab /etc/krb5.keytab
 Merging keytab files:   source=krb5NodeB.keytab   destination=krb5.keytab
 Done! 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For an example of how to manage Kerberos keys, see the article <a href="http://www-01.ibm.com/support/knowledgecenter/SS7K4U_8.5.5/com.ibm.websphere.zseries.doc/ae/rsec_SPNEGO_kerb.html">Using the ktab command to manage the Kerberos keytab file</a>.</p>
 </li>
 <li>

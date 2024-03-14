@@ -3915,33 +3915,20 @@
 </div>
 <p>Here is an example of a property file with no prefix.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>locales = en de
+<div class="language-text highlight"><pre><span></span><code>locales = en de
 
 en.title = English Title
 en.description = A description, in English.
 
 de.title = Deutscher Titel
 de.description = Eine Beschreibung auf Deutsch.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>At the core of the file, is the property <code>locales</code>, which holds a white space separated list of the locales for which attributes are defined in the file. Only the locales that are listed here are interpreted when the property file is loaded.</p>
 <p>The actual attribute values for each locale are defined as separate properties. The key for these properties is composed of the locale and the attribute name, which is separated by a dot. The attribute name is title or description, the locale must match the string that is listed in the locales property. Case is significant for property keys.</p>
 <p>There is no fallback algorithm when locale-specific attributes are loaded. If a property title.en is defined, it is not considered when the title for locale en_US is required.</p>
 <p>To combine different sets of local data into a single property file, prefixes can be used. All properties of a set must use the same prefix, which is separated from the property name by a dot. Here is an example of a property file with two sets, by using the prefixes leisure and finance.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>leisure.locales = en fr
+<div class="language-text highlight"><pre><span></span><code>leisure.locales = en fr
 leisure.en.title = Leisure Page
 leisure.fr.title = Page de Loisir
 
@@ -3949,7 +3936,7 @@ finance.locales = en de
 finance.en.title = Finance Page
 finance.en.description = Holds financial info portlets.
 finance.de.title = Finanzseite
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You can also load property files in the scripting format by using the XML configuration interface. To complete this step, specify the locale as part of the prefix in a localedata tag.</p>
 
 

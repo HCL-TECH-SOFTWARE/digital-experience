@@ -2815,30 +2815,22 @@
 <p>Fill out the selected element's default content. Make sure that you follow the field requirements as indicated below:</p>
 <p><img alt="" src="../../../../../../assets/HCL_Content_Composer_honoring_properties_fields.png" /></p>
 <p><strong>General Guidelines when filling in properties for </strong>Default Content**:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>1.  Setting both the Required and Hidden properties to true will make the element&#39;s default content a required field.
+<div class="language-text highlight"><pre><span></span><code>1.  Setting both the Required and Hidden properties to true will make the element&#39;s default content a required field.
 2.  Minimum property should always be less than or equal to the maximum property.
 3.  Maximum property should always be greater than or equal to the minimum property.
 4.  Dimension property such as Height and Width should always be greater than 1.
 5.  Numeric fields do not accept alphabet letters and special characters except for scientific notation (Example: *3.14e2*).
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p><strong>Specific Guidelines for Text Elements</strong>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>1.  When the Required property is set to true, the minimum and maximum for characters and words should be greater than 1. If not, it should be greater than 0.
+<div class="language-text highlight"><pre><span></span><code>1.  When the Required property is set to true, the minimum and maximum for characters and words should be greater than 1. If not, it should be greater than 0.
 2.  Minimum words must be less than half the maximum characters.
 3.  For ShortTextComponent, maximum characters must be 250 or less.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p><strong>Specific Guidelines for Numeric Element only</strong>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>1.  The Minimum and maximum value are ranging from -999999999999999999 to 999999999999999999.
+<div class="language-text highlight"><pre><span></span><code>1.  The Minimum and maximum value are ranging from -999999999999999999 to 999999999999999999.
 2.  When whole numbers only property is set to true, minimum and maximum value must not have a decimal.
 3.  The Maximum characters must be 250 or less.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 </li>

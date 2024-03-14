@@ -2299,10 +2299,9 @@
 <p><strong>AssociatedItemAttribute</strong></p>
 <p>This key declares an attribute that is available in all items in the list. You can access the attribute values accessed in your Web Content Manager design components in the same way as item attributes. They also appear in the same places in the Web Content Manager authoring user interface. The difference is that in XPath based profiles, you can use associated item attribute declarations to extract data not directly from the source XML document. Instead, you can extract data from a linked XML source document that is referenced by the source XML document. To define an associated item attribute, you must build the value for such an entry by combining a source URL with an XPath statement to select the attribute value from the linked document. You specify the source URL by using the name of the attribute that selects the source URL from the current bean list. You specify the <code>ItemAttribute</code> reference that provides the document URL by using the pattern <code>{$item-attribute-name}</code></p>
 <p>Example: To obtain the full product description from a list of products, specify as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>xyz.ItemAttribute.detailsLink=./atom:link[@rel=&quot;details&quot;]/@href 
+<div class="language-text highlight"><pre><span></span><code>xyz.ItemAttribute.detailsLink=./atom:link[@rel=&quot;details&quot;]/@href 
 xyz.AssociatedItemAttribute.productFullDescription={$detailsLink}//Attribute[@id=&quot;desc&quot;]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The DDC plug-in computes the values for this attribute in the following sequence:</p>
 <ol>
 <li>The DDC plug-in evaluates the value of the <code>detailsLink</code> item attribute.</li>
@@ -2311,12 +2310,10 @@ xyz.AssociatedItemAttribute.productFullDescription={$detailsLink}//Attribute[@id
 <li><strong>ConstructedItemAttribute</strong></li>
 </ol>
 <p>This key declares an attribute that is available in all items in the list. If you define such an attribute, you can access the attribute values in your Web Content Manager design components in the same way as item attributes. The attribute values also appear in the same places as item attributes in the Web Content Manager authoring user interface. The difference between the two attribute types is as follows: You can build the values for constructed item attributes by combining the values from one or more other item attributes that have a static string. To define a constructed item attribute, you must provide a template string that is used to build the actual attribute values. The template string can contain arbitrary text that is mixed with item attribute references. To specify the <code>ItemAttribute</code> references, you provide the document URL by using the pattern <code>{$item-attribute-name}</code>. Example: To construct an image URL from an image location and image file name item attribute, specify as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>xyz.ItemAttribute.imageLocation=./imageLocation 
+<div class="language-text highlight"><pre><span></span><code>xyz.ItemAttribute.imageLocation=./imageLocation 
 xyz.ItemAttribute.imageFileName=./imageName 
 xyz.ConstructedItemAttribute.imageURL={$imageLocation}/{$imageName}
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>ComputedItemAttribute</strong></p>
@@ -2332,15 +2329,15 @@ xyz.ConstructedItemAttribute.imageURL={$imageLocation}/{$imageName}
 Example: To define an attribute that represents a stateful portal resource URL that points to the current item, you can declare a computed item attribute such as this one: <code>xyz.ComputedItemAttribute.portalLink={default}</code>.</li>
 </ul>
 <p>During run time, the DDC framework then requests the actual values for this attribute. It does so by starting the following method on the specific DDC plug-in plug-in that associated with this list-rendering profile:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>com.ibm.portal.wcm.plr.ComputedAttributeValueProvider.getComputedItemAttributeValue()
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>com.ibm.portal.wcm.plr.ComputedAttributeValueProvider.getComputedItemAttributeValue()
+</code></pre></div>
 </li>
 <li>
 <p><strong>ListProperty</strong></p>
 <p>This key declares a property of the list. You can then access the attribute values in your Web Content Manager design components. You do so by using the <code>[Plugin:ListRenderingContext action="getListProperty" key=""]</code> tag and by setting the <code>key</code> to the name value of the corresponding <code>ListProperty</code> declaration. For example, to access the value of a list property that is declared with the key <code>xyz.ListProperty.myProperty</code>, you use the following Web Content Manager tag: <code>[Plugin:ListRenderingContext action="getListProperty" key="myProperty"]</code> The value for a list property declaration is an XPath statement that is used for extracting the declared attribute value from the XML source document. The plug-in evaluates the XPath statement relative to the root of the source XML document.</p>
 <p>Example: To get the link to the next feed page of an Atom feed, specify</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>xyz.ListProperty.nextLink=./atom:feed/atom:link[@rel=\&quot;next\&quot;]/@href
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>xyz.ListProperty.nextLink=./atom:feed/atom:link[@rel=\&quot;next\&quot;]/@href
+</code></pre></div>
 </li>
 <li>
 <p><strong>ComputedListProperty</strong></p>

@@ -2774,18 +2774,18 @@
 <p>This method will only change the exception handling scheme for rules running on that JSP.</p>
 <h2 id="global">Global</h2>
 <p>To set the same scheme for every rule running on a server, execute the following code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>RuntimeUtils.setRuntimeExceptionHandlingScheme(RuntimeUtils.HANDLING_SCHEME);
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>RuntimeUtils.setRuntimeExceptionHandlingScheme(RuntimeUtils.HANDLING_SCHEME);
+</code></pre></div>
 <p>To reset the global exception handling scheme, call:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>RuntimeUtils.resetRuntimeExceptionHandlingScheme();
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>RuntimeUtils.resetRuntimeExceptionHandlingScheme();
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Restarting the application server will automatically reset the exception handling scheme.</p>
 </div>
 <p>You can also change the global behavior of the server by changing the following value in PersonalizationService.properties:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>rulesEngine.exceptionHandling=logMessage_stdout
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>rulesEngine.exceptionHandling=logMessage_stdout
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To make any changes effective, you must restart the server.</p>

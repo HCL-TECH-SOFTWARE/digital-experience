@@ -3520,19 +3520,17 @@
 </li>
 <li>
 <p>Enter the URI value mvc:res:{war:context-root}/themes/html/dynamicSpots/navigation.jsp?type=tertiary,smartphone@,tablet@.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;sub-contribution type=&quot;markup&quot; ref-id=&quot;yourTheme_tertiaryNav&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;sub-contribution type=&quot;markup&quot; ref-id=&quot;yourTheme_tertiaryNav&quot;&gt;
 &lt;uri value=&quot;mvc:res:{war:context-root}/themes/html/dynamicSpots/navigation.jsp?type=tertiary,smartphone@,tablet@&quot;/&gt;
 &lt;/sub-contribution&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 </li>
 <li>
 <p>Modify the theme.html files for your theme and add a fourth, or tertiary, navigation dynamic content spot under the third, or secondary, navigation dynamic content spot, which is under the secondary banner block:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;a rel=&quot;dynamic-content&quot; href=&quot;dyn-cs:id:yourTheme_tertiaryNav&quot;&gt;&lt;/a&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;a rel=&quot;dynamic-content&quot; href=&quot;dyn-cs:id:yourTheme_tertiaryNav&quot;&gt;&lt;/a&gt;
+</code></pre></div>
 </li>
 <li>
 <p>Define the yourThemeTertiaryNav style class in one of the CSS files for your theme that gets loaded by one of the modules for your theme.</p>

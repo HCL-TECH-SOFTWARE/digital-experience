@@ -2727,56 +2727,56 @@
 <li>
 <p><strong>Command Description</strong></p>
 <p>This command invokes the shared library upload task inside the DXClient. This is used to upload jar files into the default shared library location.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient shared-library upload
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient shared-library upload
+</code></pre></div>
 <p>This command invokes the shared library delete task inside the DXClient. This is used to delete jar files from the default shared library location.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient shared-library delete
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient shared-library delete
+</code></pre></div>
 </li>
 <li>
 <p><strong>Help command</strong></p>
 <p>This command shows the help information for <code>shared-library upload</code> command usage:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient shared-library upload -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient shared-library upload -h
+</code></pre></div>
 <p>This command shows the help information for <code>shared-library delete</code> command usage:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient shared-library delete -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient shared-library delete -h
+</code></pre></div>
 </li>
 <li>
 <p><strong>Common Command options</strong></p>
 <p>Use this attribute to specify the username that is required for authenticating with the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt; 
+</code></pre></div>
 <p>Use this attribute to specify the password that is required for authenticating with the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the hostname of the target DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port number of the cw_profile (for Kubernetes Environment dxConnectPort is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the username that is required for authenticating to the cw_profile:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password that is required for authenticating to the cw_profile:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the profile name of the DX Core:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProfileName &lt;Name of the DX server profile&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProfileName &lt;Name of the DX server profile&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong>Command option for upload</strong></p>
 <p>Use this attribute to specify the path to a jar/zip file or folder containing jars in it:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-libFilePath &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-libFilePath &lt;value&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong>Command option for delete</strong></p>
 <p>Use this attribute to specify the names of the jar files present in the shared library location on the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-libFileNames &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-libFileNames &lt;value&gt;
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For upload, the folder or zip file should contain only jars files that are to be uploaded to the default shared library location:</p>
@@ -2786,8 +2786,8 @@
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>Use this attribute to specify the path to a jar/zip file or folder containing jars in it:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient shared-library upload -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -hostname &lt;hostname&gt; -dxConnectPort &lt;dxConnectPort&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -dxProfileName &lt;Profile name of the DX Server&gt; -libFilePath &lt;path to jar/zip/Folder&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient shared-library upload -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -hostname &lt;hostname&gt; -dxConnectPort &lt;dxConnectPort&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -dxProfileName &lt;Profile name of the DX Server&gt; -libFilePath &lt;path to jar/zip/Folder&gt; 
+</code></pre></div>
 <p><code>dxclient shared-library delete -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -hostname &lt;hostname&gt; -dxConnectPort &lt;dxConnectPort&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -dxProfileName &lt;Profile name of the DX Server&gt; -libFileNames &lt;file names&gt; -libFilePath &lt;value&gt;</code></p>
 </div>
 

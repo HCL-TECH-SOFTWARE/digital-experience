@@ -3482,18 +3482,18 @@
 </ul>
 <h2 id="root-theme-template">Root theme template</h2>
 <p>In a default HCL Digital Experience (DX) installation, the portal does not render the template file theme.html in the root directory of the theme. Instead, this file links to the templates, and the portal renders the appropriate template. The links to the templates are in the <code>&lt;head&gt;</code> section of the root template. They have the following form:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;link rel=&quot;alternate&quot; href=&quot;nls/theme_locale\_code.html&quot; hreflang=&quot;locale\_code&quot;&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;link rel=&quot;alternate&quot; href=&quot;nls/theme_locale\_code.html&quot; hreflang=&quot;locale\_code&quot;&gt;
+</code></pre></div>
 <p>An example of a link to the English template file is as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;link rel=&quot;alternate&quot; href=&quot;nls/theme_en.html&quot; hreflang=&quot;en&quot;&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;link rel=&quot;alternate&quot; href=&quot;nls/theme_en.html&quot; hreflang=&quot;en&quot;&gt;
+</code></pre></div>
 <p>If you do not want to use theme templates, you can remove these links from the theme.html template in the root directory. If you do this, the portal renders this root template.</p>
 <p>This theme template also includes Apache Ant scripting in the following form:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code> ${bundle\_name:bundle\_key:character\_encoding}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code> ${bundle\_name:bundle\_key:character\_encoding}
+</code></pre></div>
 <p>The <code>character encoding</code> replaces special characters with the escape sequence determined by the specified encoding. The available types of encoding are <code>xml</code> or <code>json</code>. You can chain multiple instances of encoding as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>${bundle:key:json:xml} or ${bundle:key:xml:json}
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>${bundle:key:json:xml} or ${bundle:key:xml:json}
+</code></pre></div>
 <p>You can use the Apache Ant build framework to generate templates that are based on this root template. This can be useful if you want to update one template during development and then generate the templates by using the Ant build process. If you want to use only the root template, replace the Ant scripting with the preferred text that you want to be rendered. You can learn more about the Ant build tool at <a href="http://ant.apache.org/">Apache Ant</a>.</p>
 <h2 id="theme-templates">Theme templates</h2>
 <p>In a default HCL DX installation, the theme architecture renders content by using the theme templates. These templates are in the nls sub-directory under the theme directory on WebDAV. These files have the locale code that is appended to the end of the template name, for example <code>theme_en.html</code> for English. These templates translate static text inline within the template.</p>
@@ -3517,8 +3517,8 @@
 <h2 id="adding-server-side-dynamic-content-to-the-themehtml">Adding server-side dynamic content to the theme.html</h2>
 <p>Dynamic content changes per user, or per page, or per some other server state. Therefore, you cannot define it statically in the theme file. Instead, you insert it into the response at run time. To do this, you edit the theme.html and identify these dynamic content spots. Then at run time, a server-side theme parser identifies and resolves dynamic content spots, and streams their output into the final response to the browser.</p>
 <p>The format of a dynamic content spot is as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;a rel=&quot;dynamic-content&quot; href=&quot;{path to dynamiccontent}&quot;&gt;&lt;/a&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;a rel=&quot;dynamic-content&quot; href=&quot;{path to dynamiccontent}&quot;&gt;&lt;/a&gt;
+</code></pre></div>
 <ul>
 <li>
 <p><strong><code>rel="dynamic-content"</code></strong></p>
@@ -3533,28 +3533,26 @@
 <ol>
 <li>
 <p>The following example is a special content spot that renders the referenced layout template and content of the current page:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;a rel=&quot;dynamic-content&quot; href=&quot;lm:template&quot;&gt;&lt;/a&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;a rel=&quot;dynamic-content&quot; href=&quot;lm:template&quot;&gt;&lt;/a&gt;
+</code></pre></div>
 </li>
 <li>
 <p>The following example includes a dynamic content spot from the mapping that is specified through the module <code>dyn-cs</code> contribution type, in the <code>WP_DynamicContentSpotMappings</code> Resource Environment Provider or theme metadata.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;a rel=&quot;dynamic-content&quot; href=&quot;dyn-cs:customSpot&quot;&gt;&lt;/a&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;a rel=&quot;dynamic-content&quot; href=&quot;dyn-cs:customSpot&quot;&gt;&lt;/a&gt;
+</code></pre></div>
 </li>
 <li>
 <p>The following example includes the output of a theme JSP with a resolver POC URL:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;a rel=&quot;dynamic-content&quot; href=&quot;res:/customContext/themes/html/customTheme/customSpot.jsp&quot;&gt;&lt;/a&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;a rel=&quot;dynamic-content&quot; href=&quot;res:/customContext/themes/html/customTheme/customSpot.jsp&quot;&gt;&lt;/a&gt; 
+</code></pre></div>
 </li>
 </ol>
 <h2 id="changing-the-theme-template-location">Changing the theme template location</h2>
 <p>You can change the location of the theme template. For this purpose, the theme contains a metadata parameter that stores the location of the theme template theme.html. The parameter name is <code>com.ibm.portal.theme.template.ref</code>. If required, you can point it to an external location. For example, you can specify a POC URI or the URL to an external server. You do not need to store the theme template on WebDAV. In a default portal installation, the metadata parameter for the theme is as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;parameter name=&quot;com.ibm.portal.theme.template.ref&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;parameter name=&quot;com.ibm.portal.theme.template.ref&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;
 &lt;![CDATA[dav:fs-type1/themes/theme\_folder/]]&gt;
 &lt;/parameter&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li><strong><a href="rwd_set_inherited_theme_template/">Setting inherited theme templates</a></strong><br />
 You can set a theme template to be used on a page and it automatically sets the template for all child pages that are associated with that page. The inherited metadata can be used when you want every page under a specific page to have the same theme template.</li>

@@ -3042,8 +3042,8 @@
 </li>
 <li>
 <p>To augment a deployment manager profile, run the following command from the AppServer_root/bin directory:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>manageprofiles.bat -augment -templatePath  c:/IBM/WebSphere/AppServer/profileTemplates/management.portal.augment -profileName Dmgr01
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>manageprofiles.bat -augment -templatePath  c:/IBM/WebSphere/AppServer/profileTemplates/management.portal.augment -profileName Dmgr01
+</code></pre></div>
 </li>
 <li>
 <p>Restart the deployment manager.</p>
@@ -3053,15 +3053,13 @@
 </li>
 <li>
 <p>Run the following command from the wp_profile_root/bin directory to federate the primary node:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>addNode.bat dmgr\_hostname dmgr\_port -includeapps -includebuses
+<div class="language-text highlight"><pre><span></span><code>addNode.bat dmgr\_hostname dmgr\_port -includeapps -includebuses
 -username was\_admin\_user
 -password was\_admin\_password
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>addNode.bat DMhost.cn.ibm.com 8879 -includeapps -includebuses -username adminuser -password adminpwd
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>addNode.bat DMhost.cn.ibm.com 8879 -includeapps -includebuses -username adminuser -password adminpwd
+</code></pre></div>
 </li>
 <li>
 <p>On the Portal server, run <code>syncNode.bat</code> and then restart the deployment manager and all node agents.</p>
@@ -3081,23 +3079,18 @@
 <ol>
 <li>
 <p>Create a default HCL Connections ACL to override the default WebSEAL ACL by running the following commands:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>acl create lc3-default-acl 
+<div class="language-text highlight"><pre><span></span><code>acl create lc3-default-acl 
 acl modify lc3-default-acl set user sec_master TcmdbsvaBRlrx
 acl modify lc3-default-acl set any-other Tmdrx
 acl modify lc3-default-acl set unauthenticated T
 acl modify lc3-default-acl set group iv-admin TcmdbsvaBRrxl
 acl modify lc3-default-acl set group webseal-servers Tgmdbsrxl
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Attach the default ACL to application root URLs:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>acl attach /WebSEAL/tam_server-WebSEAL_instance/app_root lc3-default-acl
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>acl attach /WebSEAL/tam_server-WebSEAL_instance/app_root lc3-default-acl
+</code></pre></div>
 <p>where:</p>
 <ul>
 <li>tam_server is the host name of the Security Access Manager server</li>

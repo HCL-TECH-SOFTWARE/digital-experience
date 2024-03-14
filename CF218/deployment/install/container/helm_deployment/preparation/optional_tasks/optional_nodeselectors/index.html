@@ -2335,43 +2335,27 @@
 <ul>
 <li>
 <p><strong>Kubectl:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code># Edit Node
+<div class="language-text highlight"><pre><span></span><code># Edit Node
 kubectl edit node k8s-node-4
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>OpenShift Client:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code># Edit Node
+<div class="language-text highlight"><pre><span></span><code># Edit Node
 kubectl edit node k8s-node-4
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <p>The following label is added using the Kubernetes syntax (and other configurations are changed):</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">metadata</span><span class="p">:</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">purpose</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">haproxy</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The node is now labeled with the desired target label:</p>
 <ul>
 <li>
 <p><strong>Kubectl:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code># Execute lookup via kubectl
+<div class="language-text highlight"><pre><span></span><code># Execute lookup via kubectl
 kubectl get node k8s-node-4 --show-labels
 
 # Command output
@@ -2384,29 +2368,20 @@ oc get node k8s-node-4 --show-labels
 NAME         STATUS   ROLES    AGE    VERSION   LABELS
 k8s-node-4   Ready    &lt;none&gt;   123d   v1.20.2   
 beta.kubernetes.io/arch=amd64,beta.kubernetes.io/os=linux,kubernetes.io/arch=amd64,kubernetes.io/hostname=k8s-node-4,kubernetes.io/os=linux,purpose=haproxy
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="configure-nodes">Configure nodes</h2>
 <p>You can assign all pods (deployed by the Helm Chart of HCL Digital Experience 9.5) to specific nodes by using <code>NodeSelectors</code>. Modify your custom-values.yaml file to include the <code>NodeSelector</code>configuration. Make sure to use the proper indentation as YAML is indent-sensitive.</p>
 <p>Example for HAProxy:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">nodeSelector</span><span class="p">:</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">nodeSelector</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">haproxy</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">purpose</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">haproxy</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This configuration directs HAProxy to run nodes with the label purpose: <code>haproxy</code>.</p>
 <p>Once install is completed, the pods are running on your desired node. For example <code>k8s-node-4</code>.</p>
 <p><strong>Kubectl:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code># Use this command to see running Pods incl. Nodes
+<div class="language-text highlight"><pre><span></span><code># Use this command to see running Pods incl. Nodes
 kubectl get pods -o wide -n my-deployment 
 
 # Command output
@@ -2414,16 +2389,9 @@ NAME                                   READY   STATUS    RESTARTS   AGE     IP  
 dx-haproxy-769b86f6ff-knhgt         1/1     Running   0          2m12s   10.244.4.111   k8s-node-4   &lt;none&gt;           &lt;none&gt;
 dx-haproxy-769b86f6ff-qtqmv         1/1     Running   0          2m12s   10.244.4.110   k8s-node-4   &lt;none&gt;           &lt;none&gt;
 dx-haproxy-769b86f6ff-whmw6         1/1     Running   0          2m12s   10.244.4.112   k8s-node-4   &lt;none&gt;           &lt;none&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p><strong>OpenShift Client:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code># Use this command to see running Pods incl. Nodes
+<div class="language-text highlight"><pre><span></span><code># Use this command to see running Pods incl. Nodes
 oc get pods -o wide -n my-deployment
 
 # Command output
@@ -2431,7 +2399,7 @@ NAME                                   READY   STATUS    RESTARTS   AGE     IP  
 dx-haproxy-769b86f6ff-knhgt         1/1     Running   0          2m12s   10.244.4.111   k8s-node-4   &lt;none&gt;
 dx-haproxy-769b86f6ff-qtqmv         1/1     Running   0          2m12s   10.244.4.110   k8s-node-4   &lt;none&gt;
 dx-haproxy-769b86f6ff-whmw6         1/1     Running   0          2m12s   10.244.4.112   k8s-node-4   &lt;none&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

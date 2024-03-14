@@ -4079,19 +4079,7 @@
 <p>The second argument is the keyword from and the third argument is the identifier of the page to derive from. The supported markups are the same as for the base page. The derive command returns the ID of the newly created node. If the keyword select is appended to the command, the created node becomes the current selection.</p>
 <p>Do not rely on the name that is set as the English title, since this behavior might change in the future. Set the English title explicitly if you plan to support the enlocale. However, the common name is computed from the name argument.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>Content.create(type, name, markup)
+<div class="language-text highlight"><pre><span></span><code>Content.create(type, name, markup)
 Content.create(type, name, markup, &quot;select&quot;)
 Content.create(type, name, markup, [shared_flag,]
 [private\_flag,] &quot;select&quot;)
@@ -4104,21 +4092,9 @@ Content.derive(name, &quot;from&quot;, ID, &quot;select&quot;)
 Content.select(&quot;the&quot;, &quot;root&quot;)
 Content.create(&quot;label&quot;, &quot;Leisure&quot;, &quot;html&quot;, &quot;select&quot;)
 Content.derive(&quot;Movies&quot;, &quot;from&quot;, node_ID)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>$Content create type name markup
+<div class="language-text highlight"><pre><span></span><code>$Content create type name markup
 $Content create type name markup select
 $Content create type name markup [shared_flag] [private_flag] 
 select
@@ -4131,45 +4107,45 @@ $Content derive name from ID select
 $Content select the root
 $Content create label &quot;Leisure&quot; html select
 $Content derive &quot;Movies&quot; from node_ID
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To create a static page, run the following command:</p>
 <p>Jython:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Content.create(staticpage, title, markup, zip\_file\_name, filename, displayoption, &quot;select&quot;)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>Content.create(staticpage, title, markup, zip\_file\_name, filename, displayoption, &quot;select&quot;)
+</code></pre></div>
 <p>For example, Content.create(staticpage, MyStaticPageTitle, html, c:/tmp/StaticContentPage.zip, index.html, inline, "select")</p>
 <p>Jacl:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$Content create staticpage title markup zip_file_name filename [displayoption] [select]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>$Content create staticpage title markup zip_file_name filename [displayoption] [select]
+</code></pre></div>
 <p>For example, $Content create staticpage MyStaticPageTitle html c:/tmp/StaticContentPage.zip index.html [inline] [select]</p>
 <p>The preceding example creates a static page beneath the currently selected content node for the HTML markup with the page title MyStaticPageTitle. The content of the page is read from c:/tmp/StaticContentPage.zip. The entry point for the page display is read from index.html, which must be contained in the ZIP archive. To specify the display method, you can use the optional parameter displayoption. This parameter takes one of the following values inline, iframe, or ajax. The default value is inline. To make the newly created static page the currently selected content node, use the optional parameter select.</p>
 <p>To get the static page content in the format of a ZIP archive, run the following command:</p>
 <p>Jython:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Content.pageget(oid, markup, zip\_file\_name)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>Content.pageget(oid, markup, zip\_file\_name)
+</code></pre></div>
 <p>For example, Content.pageget(6_CGAH47L00G2N802TJFV58Q3000, html, c:/tmp/MyStaticContentPage.zip)</p>
 <p>Jacl:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$Content pageget oid  markup  zip_file_name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>$Content pageget oid  markup  zip_file_name
+</code></pre></div>
 <p>For example, $Content pageget 6_CGAH47L00G2N802TJFV58Q3000 html c:/tmp/MyStaticContentPage.zip</p>
 <p>The preceding example writes the content of the specified static page to c:/tmp/MyStaticContentPage.zip.</p>
 <p>To set the static page content by specifying a ZIP file name, use the following command:</p>
 <p>Jython:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Content.pageset(oid, markup, zip_file_name, filename)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>Content.pageset(oid, markup, zip_file_name, filename)
+</code></pre></div>
 <p>For example, Content.pageset(6_CGAH47L00G2N802TJFV58Q3000, html, c:/tmp/NewStaticContentPage.zip, index.html)</p>
 <p>Jacl:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$Content pageset oid markup zip_file_name filename
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>$Content pageset oid markup zip_file_name filename
+</code></pre></div>
 <p>For example, $Content pageset 6_CGAH47L00G2N802TJFV58Q3000 html c:/tmp/NewStaticContentPage.zip index.html</p>
 <p>The preceding example updates the specified static page content with the content of c:/tmp/NewStaticContentPage.zip. The entry point for the page display is read from index.html, which must be contained in the ZIP archive.</p>
 <p>The command delete removes a content node that has no children. Nodes that have children cannot be deleted. To reduce the risk of accidental deletion, this command always requires the ID as an argument, even if the node to be deleted is selected.</p>
 <p>When you delete a page, all pages that are derived from that page are also deleted. This action also affects other users that have pages that are derived from that base page. If the currently selected node is deleted, either directly or by deleting a base page, the bean clears.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Content.delete(ID)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>Content.delete(ID)
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$Content delete ID
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>$Content delete ID
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

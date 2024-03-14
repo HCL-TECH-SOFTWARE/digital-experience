@@ -2752,46 +2752,45 @@
 </li>
 <li>
 <p><strong>Command</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient deploy-theme -xmlFile &lt;path&gt; -applicationFile &lt;path&gt; -applicationName &lt;application name&gt; 
+<div class="language-text highlight"><pre><span></span><code>dxclient deploy-theme -xmlFile &lt;path&gt; -applicationFile &lt;path&gt; -applicationName &lt;application name&gt; 
 -themeName &lt;theme collection name&gt; -themePath &lt;folder/zip path of theme collection&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Help command</strong></p>
 <p>This command shows the help document on the <code>deploy-theme</code> command usage:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient deploy-theme -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient deploy-theme -h
+</code></pre></div>
 </li>
 <li>
 <p><strong>Common Command options</strong></p>
 <p>Use this attribute to specify the protocol with which to connect to the DX server (<code>wp_profile</code>):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProtocol &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProtocol &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the hostname of the target DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port on which to connect to the DX server (<code>wp_profile</code>):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the username to authenticate with the DX server (<code>wp_profile</code>):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password for the user in the <code>dxUsername</code> attribute:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute and re-trigger the command to check the status of any previous request that was incomplete.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-requestId &lt;Unique ID of a previously triggered deploy theme request&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-requestId &lt;Unique ID of a previously triggered deploy theme request&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong>Required options for Theme Registration</strong></p>
 <p>Use this attribute to specify the local path to the theme registration XML file:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-xmlFile &lt;Absolute or relative path to theme registration xml input file&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-xmlFile &lt;Absolute or relative path to theme registration xml input file&gt;
+</code></pre></div>
 <p>Use this attribute to specify the path to DX configuration endpoint (for example, /wps/config):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-xmlConfigPath &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-xmlConfigPath &lt;value&gt;
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For theme registration, a backup of the complete DX configuration export (not including users) is taken and placed in <code>store/outputFiles/themes/backup/foldername</code> folder.</p>
@@ -2800,54 +2799,54 @@
 <li>
 <p><strong>Required options for Theme EAR deployment</strong></p>
 <p>Use this attribute to specify the Configuration Wizard Console port number:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the hostname of the target DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the Configuration Wizard Administrator username that is required for authenticating with the DXConnect application:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the Configuration Wizard Administrator password that is required for authenticating with the DXConnect application:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify Soap port of the DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxSoapPort &lt;Soap port of the DX server&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxSoapPort &lt;Soap port of the DX server&gt; 
+</code></pre></div>
 <p>Specify either the <code>dxProfileName</code> or <code>dxProfilePath</code> of the DX core server:</p>
 <ul>
 <li>
 <p>Use this attribute to specify the profile name of the DX core server (for example: <code>wp_profile</code>):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProfileName &lt;Profile name of the DX core server&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProfileName &lt;Profile name of the DX core server&gt;
+</code></pre></div>
 </li>
 </ul>
 <p><strong>OR</strong></p>
 <ul>
 <li>
 <p>Use this attribute to specify the profile path of the DX server (for example: <code>/opt/HCL/wp_profile</code>):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProfilePath &lt;Path of the DX core server profile&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProfilePath &lt;Path of the DX core server profile&gt; 
+</code></pre></div>
 </li>
 </ul>
 <p>Use this attribute to specify the theme EAR file path that is required while executing the deploy theme task:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>–applicationFile &lt;Absolute or relative path to deployable theme ear file&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>–applicationFile &lt;Absolute or relative path to deployable theme ear file&gt; 
+</code></pre></div>
 <p>Use this attribute to specify the theme application name:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-applicationName &lt;value&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-applicationName &lt;value&gt; 
+</code></pre></div>
 </li>
 <li>
 <p><strong>Required options for creating/updating WebDAV theme collection</strong></p>
 <p>Use this attribute to specify the theme name of the collection created under WebDAV server in DX:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-themeName &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-themeName &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the theme file path that contains all static files to be pushed into DX theme, it accepts either folder or zip file path of the WebDAV theme collection:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-themePath &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-themePath &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the path to the contenthandler servlet on the DX server (e.g. /wps/mycontenthandler):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-contenthandlerPath &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-contenthandlerPath &lt;value&gt;
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
@@ -2859,8 +2858,8 @@ Log files from command execution can be found in the logs directory of the DXCli
 </div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient deploy-theme -dxProtocol &lt;http/https&gt; -hostname &lt;host-name&gt; -dxPort &lt;dxPort&gt; -xmlConfigPath &lt;xmlConfigPath&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -dxSoapPort &lt;dxSoapPort&gt; -hostname &lt;hostname&gt; -dxConnectPort &lt;dxConnectPort&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -xmlFile &lt;xml-file-with-path&gt; -applicationFile &lt;application-file-with-path&gt; -applicationName &lt;application name&gt; -themeName &lt;theme-name&gt; -themePath &lt;theme-path&gt; -dxProfileName &lt;Profile name of the DX core server&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient deploy-theme -dxProtocol &lt;http/https&gt; -hostname &lt;host-name&gt; -dxPort &lt;dxPort&gt; -xmlConfigPath &lt;xmlConfigPath&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -dxSoapPort &lt;dxSoapPort&gt; -hostname &lt;hostname&gt; -dxConnectPort &lt;dxConnectPort&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -xmlFile &lt;xml-file-with-path&gt; -applicationFile &lt;application-file-with-path&gt; -applicationName &lt;application name&gt; -themeName &lt;theme-name&gt; -themePath &lt;theme-path&gt; -dxProfileName &lt;Profile name of the DX core server&gt; 
+</code></pre></div>
 </div>
 </li>
 </ul>
@@ -2881,14 +2880,14 @@ Log files from command execution can be found in the logs directory of the DXCli
 <p><strong>Command description</strong></p>
 <p>This command invokes the undeploy-theme tool inside the DXClient.</p>
 <p>This command uses the unregistered theme XML file, theme EAR application name and WebDAV theme collection name, and executes the undeploy theme task.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient undeploy-theme
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient undeploy-theme
+</code></pre></div>
 </li>
 <li>
 <p><strong>Help command</strong></p>
 <p>This command shows the help document on the <code>undeploy-theme</code> command usage:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient undeploy-theme -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient undeploy-theme -h
+</code></pre></div>
 </li>
 <li>
 <p><strong>Required files</strong></p>
@@ -2903,26 +2902,26 @@ Log files from command execution can be found in the logs directory of the DXCli
 <li>
 <p><strong>Common commands</strong></p>
 <p>Use this attribute to specify the hostname of the target server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the protocol with which to connect to the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProtocol &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProtocol &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port on which to connect to the server (for Kubernetes Environment, dxPort is <code>443</code>):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the username that is required for server authentication:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password that is required for server authentication:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the path to the contenthandler servlet on the DX server (e.g. /wps/mycontenthandler):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-contenthandlerPath &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-contenthandlerPath &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to take the backup before undeploying theme:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-enableBackup &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-enableBackup &lt;value&gt;
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>User can set the enableBackup parameter as true to take backup before undeploying theme. The value is set to false by default.</p>
@@ -2932,60 +2931,60 @@ Log files from command execution can be found in the logs directory of the DXCli
 <li>
 <p><strong>Required options for Theme Unregistration:</strong></p>
 <p>Use this attribute to specify the theme registration xml file that is used while executing the undeploy theme task. For example, see the Theme-registration.xml file in the directory dxclient/samples/:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-xmlFile &lt;xml file name with absolute path of the xmlaccess input file&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-xmlFile &lt;xml file name with absolute path of the xmlaccess input file&gt;
+</code></pre></div>
 <p>Use this attribute to specify the path to DX configuration endpoint:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-xmlConfigPath &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-xmlConfigPath &lt;value&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong>Required options for undeploying theme EAR application</strong></p>
 <p>Use this attribute to specify the hostname of the target DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port number of the cw_profile (for Kubernetes Environment dxConnectPort is 443):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the username that is required for authenticating to the cw_profile:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password that is required for authenticating to the cw_profile:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify Soap port of the DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxSoapPort &lt;Soap port of the DX server&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxSoapPort &lt;Soap port of the DX server&gt; 
+</code></pre></div>
 <p>Specify either the <code>dxProfileName</code> or <code>dxProfilePath</code> of the DX core server:</p>
 <ul>
 <li>
 <p>Use this attribute to specify the profile name of the DX core server (for example: <code>wp_profile</code>):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProfileName &lt;Profile name of the DX core server&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProfileName &lt;Profile name of the DX core server&gt;
+</code></pre></div>
 </li>
 </ul>
 <p><strong>OR</strong></p>
 <ul>
 <li>
 <p>Use this attribute to specify the profile path of the DX server (for example: <code>/opt/HCL/wp_profile</code>):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProfilePath &lt;Path of the DX core server profile&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProfilePath &lt;Path of the DX core server profile&gt; 
+</code></pre></div>
 </li>
 </ul>
 <p>Use this attribute to specify the EAR application name:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-applicationName &lt;value&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-applicationName &lt;value&gt; 
+</code></pre></div>
 </li>
 <li>
 <p><strong>Required options for undeploying WebDAV theme collection</strong></p>
 <p>Use this attribute to specify the theme name of the collection created under WebDAV:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-themeName &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-themeName &lt;value&gt;
+</code></pre></div>
 </li>
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient undeploy-theme -dxProtocol &lt;http/https&gt; -hostname &lt;host-name&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -dxSoapPort &lt;dxSoapPort&gt; -hostname &lt;hostname&gt; -dxConnectPort &lt;dxConnectPort&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -xmlFile &lt;xml-file-with-path&gt; -applicationName &lt;application name&gt; -themeName &lt;theme-name&gt; -enableBackup &lt;enable-backup&gt; -dxProfileName &lt;Profile name of the DX core server profile&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient undeploy-theme -dxProtocol &lt;http/https&gt; -hostname &lt;host-name&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -dxSoapPort &lt;dxSoapPort&gt; -hostname &lt;hostname&gt; -dxConnectPort &lt;dxConnectPort&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -xmlFile &lt;xml-file-with-path&gt; -applicationName &lt;application name&gt; -themeName &lt;theme-name&gt; -enableBackup &lt;enable-backup&gt; -dxProfileName &lt;Profile name of the DX core server profile&gt; 
+</code></pre></div>
 </div>
 <details class="info" open="open">
 <summary>Related information</summary>

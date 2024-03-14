@@ -2535,31 +2535,21 @@ This check computes the total consumed space against the total allocated space f
 <p>This check is specific to <code>core</code> pod and the <code>profiles</code> mounted volume only. This verifies the number of old profiles in the volume and the result is compared to the <a href="#threshold-values">threshold value</a>. This also checks if the system still has a healthy amount of space left for an upgrade, taking into account the size of the most recent profile version plus a headroom value. </p>
 <p>Because the Prereqs Checker is run automatically, you can check the logs of the prereqs-checker container and evaluate if it is possible to upgrade.</p>
 <p><em>Prereqs Checker Container Logs (Checks Passing)</em>
-<div class="language-console highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="go">[2023-06-22 07:47:05]: == Old profiles check for /mnt/prereqs-checks-volumes/profiles/ ==</span>
+<div class="language-console highlight"><pre><span></span><code><span class="go">[2023-06-22 07:47:05]: == Old profiles check for /mnt/prereqs-checks-volumes/profiles/ ==</span>
 <span class="go">[2023-06-22 07:47:05]: Test passed for the core profile check</span>
 <span class="go">[2023-06-22 07:47:05]: There are: 1 profile(s) in the directory which is less than the threshold value: 5.</span>
 <span class="go">[2023-06-22 07:47:05]: ConfigWizard Profile Size: 116.10 MiB</span>
 <span class="go">[2023-06-22 07:47:05]: Latest Profile Size: (95_CF213): 1.52 GiB</span>
 <span class="go">[2023-06-22 07:47:05]: 8.37 GiB of available space is more than the threshold 2.00 GiB for upgrade.</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 <p><em>Prereqs Checker Container Logs (Checks Failing)</em>
-<div class="language-console highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="go">[2023-06-22 08:08:41]: == Old profiles check for /mnt/prereqs-checks-volumes/profiles/ ==</span>
+<div class="language-console highlight"><pre><span></span><code><span class="go">[2023-06-22 08:08:41]: == Old profiles check for /mnt/prereqs-checks-volumes/profiles/ ==</span>
 <span class="go">[2023-06-22 08:08:41]: Test failed for the core profile check</span>
 <span class="go">[2023-06-22 08:08:41]: There are: 6 profile(s) in the directory which is more than the threshold value: 5. You might want to clean the old profile.</span>
 <span class="go">[2023-06-22 08:08:41]: ConfigWizard Profile Size: 116.18 MiB</span>
 <span class="go">[2023-06-22 08:08:41]: Latest Profile Size: (95_CF213): 1.52 GiB</span>
 <span class="go">[2023-06-22 08:08:41]: 811.50 MiB of available space is less than the threshold 2.00 GiB for upgrade. Upgrading will break things.</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 <p>You can also run the checks <a href="#how-to-manually-trigger-the-checks">manually</a> if you need the most recent run. </p>
 <h4 id="threshold-values">Threshold Values</h4>
 <p>The threshold values for <code>prereqs-checker</code> are used as a benchmark to evaluate the disk latency and random RW (read/write) efficiency of a file system. These values will be compared to the actual test results  of <a href="#latency-check-for-io">disk latency (ms)</a> and <a href="#random-readwrite-checks">random read/write (IOPS)</a>. From there the check can evaluate if the file system pass or fail the test.</p>
@@ -2576,14 +2566,7 @@ This check computes the total consumed space against the total allocated space f
 <h2 id="prereqs-checker-configuration-options">Prereqs Checker configuration options</h2>
 <p>The Prereqs Checker can be configured and enabled/disabled in the <code>custom-values.yaml</code> file.</p>
 <p>The checks are running periodically. The frequency can be configured using a value in cron syntax in <code>checkSchedule</code> which by default is set to <code>0 8 * * *</code> i.e the cron job is run at 8AM every day.</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Application configuration</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Application configuration</span>
 <span class="nt">configuration</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Prereqs Checker configurations</span>
 <span class="w">  </span><span class="nt">prereqsChecker</span><span class="p">:</span>
@@ -2591,38 +2574,29 @@ This check computes the total consumed space against the total allocated space f
 <span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="c1"># Cronjob expression to run the checks periodically</span>
 <span class="w">    </span><span class="nt">checkSchedule</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;0</span><span class="nv"> </span><span class="s">8</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="automatic-running-of-checks">Automatic Running of Checks</h2>
 <p>Prereqs Checker by default would be deployed as a sidecar container for each of the applications mentioned <a href="#how-to-manually-trigger-the-checks">below</a>, scaling the StatefulSet would also create a sidecar container per pod instance.</p>
 <p>Prereqs Checker would only run periodically in the first pod of the <code>StatefulSet</code> since it is not required that all pods (for the same application or <code>StatefulSet</code>) should perform the checks as all the pods would have similar configuration.</p>
 <p>Persistence Node for example will have the checks running periodically based on the <code>checkSchedule</code> on the <strong>first pod</strong> but not on the subsequent ones.</p>
 <p>First Pod (<code>dx-deployment-persistence-node-0</code>)
-<div class="language-console highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="gp">$ </span>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>logs<span class="w"> </span>dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>prereqs-checker
+<div class="language-console highlight"><pre><span></span><code><span class="gp">$ </span>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>logs<span class="w"> </span>dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>prereqs-checker
 <span class="go">Checks are scheduled */5 * * * *.</span>
 <span class="go">[2022-10-28 07:25:00]: == File permission check for /mnt/prereqs-checks-volumes/database/ ==</span>
 <span class="go">[2022-10-28 07:25:00]: dx_user is current user.</span>
 <span class="go">[2022-10-28 07:25:00]: dx_user has a write permission on /mnt/prereqs-checks-volumes/database/.</span>
 <span class="go">[2022-10-28 07:25:00]: dx_user has read permission on /mnt/prereqs-checks-volumes/database/.</span>
 <span class="go">...</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 Second Pod (<code>dx-deployment-persistence-node-1</code>)
-<div class="language-console highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="gp">$ </span>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>logs<span class="w"> </span>dx-deployment-persistence-node-1<span class="w"> </span>-c<span class="w"> </span>prereqs-checker
+<div class="language-console highlight"><pre><span></span><code><span class="gp">$ </span>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>logs<span class="w"> </span>dx-deployment-persistence-node-1<span class="w"> </span>-c<span class="w"> </span>prereqs-checker
 <span class="go">Prereqs checker will NOT run.</span>
 <span class="go">Hostname &quot;dx-deployment-persistence-node-1&quot; ends with a number greater than 0 so we assume this is a subsequent Pod in a Helm deployment. Checks are only scheduled on the first Pod.</span>
 <span class="go">If this is not a Helm deployment and you need to have the test running please change &quot;dx-deployment-persistence-node-1&quot; to something that ends with 0 or that doesn&#39;t end with a number.</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></p>
 <p>Subsequent pod(s) would still have the <code>prereqs-checker</code> container so you can still <a href="#how-to-manually-trigger-the-checks">trigger the checks</a> manually for the other pods.</p>
-<div class="language-console highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="gp">$ </span>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>--stdin<span class="w"> </span>--tty<span class="w"> </span>dx-deployment-persistence-node-1<span class="w"> </span>-c<span class="w"> </span>prereqs-checker<span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span>/usr/local/sbin/run_test.sh
-</code></pre></div></td></tr></table></div>
+<div class="language-console highlight"><pre><span></span><code><span class="gp">$ </span>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>--stdin<span class="w"> </span>--tty<span class="w"> </span>dx-deployment-persistence-node-1<span class="w"> </span>-c<span class="w"> </span>prereqs-checker<span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span>/usr/local/sbin/run_test.sh
+</code></pre></div>
 <h2 id="how-to-manually-trigger-the-checks">How to manually trigger the checks:</h2>
 <p>The following command can be triggered to run the checks manually, once all the checks will get performed, results will be available in the logs</p>
 <p>Replace the <code>&lt;application-name&gt;</code> with the following depending on which application you want to run the checks.
@@ -2630,11 +2604,11 @@ Second Pod (<code>dx-deployment-persistence-node-1</code>)
 - <code>digital-asset-management</code>
 - <code>remote-search</code>
 - <code>persistence-node</code></p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>&lt;my-namespace&gt;<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>--stdin<span class="w"> </span>--tty<span class="w"> </span>&lt;release-name&gt;-&lt;application-name&gt;-0<span class="w"> </span>-c<span class="w"> </span>prereqs-checker<span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span>/usr/local/sbin/run_test.sh
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>&lt;my-namespace&gt;<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>--stdin<span class="w"> </span>--tty<span class="w"> </span>&lt;release-name&gt;-&lt;application-name&gt;-0<span class="w"> </span>-c<span class="w"> </span>prereqs-checker<span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span>/usr/local/sbin/run_test.sh
+</code></pre></div>
 <p>The following command can be run to print the logs:</p>
-<div class="language-shell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>logs<span class="w"> </span>pod/&lt;release-name&gt;-&lt;application-name&gt;-0<span class="w"> </span>prereqs-checker
-</code></pre></div></td></tr></table></div>
+<div class="language-shell highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>logs<span class="w"> </span>pod/&lt;release-name&gt;-&lt;application-name&gt;-0<span class="w"> </span>prereqs-checker
+</code></pre></div>
 
 
 

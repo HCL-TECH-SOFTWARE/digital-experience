@@ -2145,29 +2145,17 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">On MacOS or Linux</label><label for="__tabbed_1_2">On Windows </label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./gradlew<span class="w"> </span>deployAll<span class="w"> </span>-DdxUsername<span class="o">={</span>username<span class="o">}</span><span class="w"> </span>-DdxPassword<span class="o">={</span>password<span class="o">}</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>./gradlew<span class="w"> </span>deployAll<span class="w"> </span>-DdxUsername<span class="o">={</span>username<span class="o">}</span><span class="w"> </span>-DdxPassword<span class="o">={</span>password<span class="o">}</span>
+</code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>gradlew.bat<span class="w"> </span>deployAll<span class="w"> </span>-DdxUsername<span class="o">={</span>username<span class="o">}</span><span class="w"> </span>-DdxPassword<span class="o">={</span>password<span class="o">}</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><pre><span></span><code>gradlew.bat<span class="w"> </span>deployAll<span class="w"> </span>-DdxUsername<span class="o">={</span>username<span class="o">}</span><span class="w"> </span>-DdxPassword<span class="o">={</span>password<span class="o">}</span>
+</code></pre></div>
 </div>
 </div>
 </div>
 <p>Sample successful <em>deployAll</em> log:</p>
-<p><div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w"> </span>...
+<p><div class="language-bash highlight"><pre><span></span><code><span class="w"> </span>...
 <span class="w"> </span>&gt;<span class="w"> </span>Task<span class="w"> </span>:deployDxModule
 <span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build/libs/
 <span class="w"> </span>dxclient<span class="w"> </span>deploy-application<span class="w"> </span>--dxUsername<span class="w"> </span>****<span class="w"> </span>--dxPassword<span class="w"> </span>****<span class="w"> </span>--dxConnectUsername<span class="w"> </span>****<span class="w"> </span>--dxConnectPassword<span class="w"> </span>****<span class="w"> </span>--applicationFile<span class="w"> </span>ReactNReactDOMv18r2.ear<span class="w"> </span>--applicationName<span class="w"> </span>ReactNReactDOMv18r2<span class="w"> </span>--dxProtocol<span class="w"> </span>https<span class="w"> </span>--hostname<span class="w"> </span>localhost<span class="w"> </span>--dxPort<span class="w"> </span><span class="m">10041</span><span class="w"> </span>--dxProfileName<span class="w"> </span>wp_profile
@@ -2180,14 +2168,12 @@
 <span class="w">  </span>Task<span class="w"> </span>deployAll<span class="w"> </span>Done
 
 <span class="w"> </span>BUILD<span class="w"> </span>SUCCESSFUL<span class="w"> </span><span class="k">in</span><span class="w"> </span>2m<span class="w"> </span>17s
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 2. In case of errors, check the details in the DXClient logs in the:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>- DX Module: DxModule/build/libs/store/logs/logger.log
+<div class="language-text highlight"><pre><span></span><code>- DX Module: DxModule/build/libs/store/logs/logger.log
 - 1st ScriptApp: &lt;ScriptApp01&gt;/store/logs/logger.log
 - 2nd ScriptApp: &lt;ScriptApp02&gt;/store/logs/logger.log
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Notes</p>
 <ul>

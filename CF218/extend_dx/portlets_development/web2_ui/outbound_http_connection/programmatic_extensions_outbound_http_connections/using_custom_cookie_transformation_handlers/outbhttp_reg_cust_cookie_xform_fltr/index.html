@@ -3072,20 +3072,14 @@
 <h1 id="registering-a-custom-cookie-transformation-filter">Registering a custom cookie transformation filter</h1>
 <p>For a custom cookie transformation filter to take effect, you must register it.</p>
 <p>You define custom cookie transformation handlers at a cookie rule. The following xml snippet shows how you register a custom cookie transformation filter:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;cookie-rule&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;cookie-rule&gt;
     &lt;cookie&gt;TransformationCookie&lt;/cookie&gt;
     &lt;handling&gt;store-in-session&lt;/handling&gt;
     &lt;transformation&gt;
         &lt;classname&gt;test.sample.SampleCookieXformerFactory&lt;/classname&gt;
     &lt;/transformation&gt;
 &lt;/cookie-rule&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The <code>transformation</code> section contains a class name that specifies the factory class for custom cookie transformation filters.</p>
 
 

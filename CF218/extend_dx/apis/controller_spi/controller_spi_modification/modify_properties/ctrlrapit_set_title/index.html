@@ -2636,16 +2636,7 @@
 </li>
 </ol>
 <p>Modifying titles and descriptions:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>// obtain modifiable instance of a model node
+<div class="language-text highlight"><pre><span></span><code>// obtain modifiable instance of a model node
 final Modifiable modifiable = controller.getModifiableNode(node); 
 
 // check if the resource implements ModifiableLocalized interface
@@ -2655,7 +2646,7 @@ if (modifiable instanceof ModifiableLocalized) {
     ((ModifiableLocalized) modifiable).setTitle(Locale.GERMAN, &quot;Titel&quot;);
     ((ModifiableLocalized) modifiable).setDescription(Locale.GERMAN, &quot;Beschreibung&quot;);
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

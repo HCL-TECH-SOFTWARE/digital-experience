@@ -3334,14 +3334,7 @@ For more information, see the <em>Quality of Protection</em> topic in the WebSph
 </li>
 <li>
 <p>Change the login-config tag to the client certificate authentication method.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;login-config id=&quot;LoginConfig_1&quot;&gt;   
+<div class="language-text highlight"><pre><span></span><code>&lt;login-config id=&quot;LoginConfig_1&quot;&gt;   
         &lt;auth-method&gt;CLIENT-CERT&lt;/auth-method&gt;  
         &lt;realm-name&gt;WPS&lt;/realm-name&gt;    
         &lt;!--&lt;form-login-config id=&quot;FormLoginConfig_1&quot;&gt;          
@@ -3349,28 +3342,11 @@ For more information, see the <em>Quality of Protection</em> topic in the WebSph
             &lt;form-error-page&gt;/error.html&lt;/form-error-page&gt;  
         &lt;/form-login-config&gt; --&gt;
 &lt;/login-config&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Change the transport guarantee setting in the security constraint for the protected area to CONFIDENTIAL:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;security-constraint id=&quot;SecurityConstraint_1&quot;&gt;  
+<div class="language-text highlight"><pre><span></span><code>&lt;security-constraint id=&quot;SecurityConstraint_1&quot;&gt;  
         &lt;web-resource-collection id=&quot;WebResourceCollection_1&quot;&gt;    
             &lt;web-resource-name/&gt;   
             &lt;url-pattern&gt;/myportal/*&lt;/url-pattern&gt;    
@@ -3388,7 +3364,7 @@ For more information, see the <em>Quality of Protection</em> topic in the WebSph
             &lt;transport-guarantee&gt;CONFIDENTIAL&lt;/transport-guarantee&gt;  
         &lt;/user-data-constraint&gt;
 &lt;/security-constraint&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Save and close web.xml.</p>
@@ -3418,16 +3394,7 @@ For more information, see the <em>Quality of Protection</em> topic in the WebSph
 <ul>
 <li>
 <p>For the login link, use an arbitrary protected page. The login link will then implicitly trigger the SSL handshake in WebSphere Application Server due to the security constraint. For example, you can generate the URL to point to the protected welcome page:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%-- Login button --%&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;%-- Login button --%&gt;
 &lt;%-- comment this to enable screen login --%&gt; 
 &lt;portal-logic:if loggedIn=&quot;no&quot;&gt;
 &lt;portal-navigation:urlGeneration 
@@ -3437,7 +3404,7 @@ wpsURL.write(escapeXmlWriter); %&gt;&#39;&gt;
                 &lt;portal-fmt:text key=&quot;link.login&quot; bundle=&quot;nls.engine&quot;/&gt;     
 &lt;/a&gt;&lt;/portal-navigation:urlGeneration&gt;
 &lt;/portal-logic:if&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>For the logout, you need to consider whether or not a logout should redirect you back to HTTP. If so, you need to set the property redirect.logout.ssl in the configuration service to true. Also, set the host.port.http in the same service to the correct port. If you want to stay in the HTTPS protocol after the logout, you do not need to complete any configuration steps here.</p>

@@ -3891,8 +3891,8 @@
 Both cases are described in the following sections.</li>
 </ul>
 <p>Exporting users and groups: A full portal export does not normally include user and group information, but only if you explicitly specify in your XML request that the user is to be exported. If you want to export all user and group information, set the export-users flag on the main request tag to true as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>      &lt;request . . . export-users=&quot;true&quot; . . .&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>      &lt;request . . . export-users=&quot;true&quot; . . .&gt;
+</code></pre></div>
 <p>If you want to export groups without the members, set the export-users flag to no-member.</p>
 <p><strong>Notes:</strong></p>
 <ol>
@@ -3931,20 +3931,7 @@ Both cases are described in the following sections.</li>
 </tbody>
 </table>
 <p>Example: You can define the first name of a user at creation by using either the attribute firstname or the parameter tag with the givenName attribute. If you use both and specify two different names, then the value that is specified by givenName is exported as the attribute firstname. Example XML export request:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!-- Description of this command file: Create 1 users --&gt;
 &lt;request xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
          xsi:noNamespaceSchemaLocation=&quot;PortalConfig\_8.5.0.xsd&quot; 
@@ -3958,14 +3945,14 @@ Both cases are described in the following sections.</li>
          &lt;/user&gt;
      &lt;/portal&gt;
 &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This request sets the value John_2 for the firstname attribute.</p>
 <p>On some LDAP servers, where the cn is part of the distinguished name, you might not be able to update the cn.</p>
 </li>
 </ol>
 <p><strong>Deregistering users and groups from the portal:</strong> If portal users or groups are removed from the user registry, but not from the portal database, or if users are muted, for example after too many wrong password attempts, you can export these users and groups for later removal. They can be removed later by using the cleanup-users attribute with the request tag. To export these users and groups, set the cleanup-users flag on the main request tag to true as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>      &lt;request . . . cleanup-users=&quot;true&quot; . . .&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>      &lt;request . . . cleanup-users=&quot;true&quot; . . .&gt;
+</code></pre></div>
 <p>If you set this property to true, all users and groups that no longer exist in the configured user repository, such as LDAP, are exported with their action set to delete. You also need to set the export-users attribute to true.</p>
 <p>Before you reimport the file, you need to review and edit the result file and remove all users and groups that you want to keep in the portal database. During XML import, all users and groups that remain listed in the file are removed from the portal database.</p>
 <div class="admonition note">
@@ -4012,12 +3999,10 @@ Both cases are described in the following sections.</li>
 <p>IBM API portlets are deprecated since HCL Portal Version 7.0, but are still supported.</p>
 </div>
 <p>For standard portlets, the uid attribute must be constructed by the id attribute of the portlet-app subelement and a .webmod suffix. If the id attribute is not specified, then the uid attribute is constructed by the WAR file name and a .webmod suffix. Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>    &lt;web-app action=&quot;update&quot; active=&quot;true&quot; removable=&quot;true&quot; uid=&quot;jsr_bookmarks_id001a.webmod&quot;&gt; 
+<div class="language-text highlight"><pre><span></span><code>    &lt;web-app action=&quot;update&quot; active=&quot;true&quot; removable=&quot;true&quot; uid=&quot;jsr_bookmarks_id001a.webmod&quot;&gt; 
          . . . . .
     &lt;portlet-app action=&quot;update&quot; active=&quot;true&quot; uid=&quot;jsr_bookmarks_id001a&quot;&gt;    
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Depending on the path location of your WAR files, previously exported WAR files might not be found during an XML import due to incorrect path information. For information about how to use the &lt;url&gt; subtag with the &lt;web-app&gt; tag see the topic about <em>Importing WAR files</em>.</p>
 </li>
 <li>

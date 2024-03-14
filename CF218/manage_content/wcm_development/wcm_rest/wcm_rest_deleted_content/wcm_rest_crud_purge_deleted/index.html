@@ -2763,21 +2763,19 @@
 <li>
 <p><strong>Endpoint</strong></p>
 <p>POST request to:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;http://host:port/wps/mycontenthandler/wcmrest/purgeItem/{UUID of deleted item to be purged}/&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;http://host:port/wps/mycontenthandler/wcmrest/purgeItem/{UUID of deleted item to be purged}/&gt;
+</code></pre></div>
 <p>Sample URL:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;http://localhost:10039/wps/mycontenthandler/wcmrest/purgeItem/0988c73c-38df-41bc-9fd4-0e20e8957600/&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;http://localhost:10039/wps/mycontenthandler/wcmrest/purgeItem/0988c73c-38df-41bc-9fd4-0e20e8957600/&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong>Expected Body</strong></p>
 <p>Body should consist of basic WCM structure:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>                    &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?/&gt;
+<div class="language-text highlight"><pre><span></span><code>                    &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?/&gt;
                     &lt;feed xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;/&gt;
                     &lt;/feed/&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Expected Headers</strong></p>
@@ -2787,29 +2785,15 @@
 <p><strong>Return body</strong></p>
 <p>On a success, the response code will be 201 and the body of the response will consist of a single json entry, purgeStatus, with fields containing the uuid of the purged item and the status of the purge to confirm that it has succeeded.</p>
 <p>Sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
     &quot;purgeStatus&quot;: {
         &quot;uuid&quot;: &quot;0988c73c-38df-41bc-9fd4-0e20e8957600&quot;,
         &quot;status&quot;: &quot;Successfully purged&quot;
     }
     }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If the purge fails because the deleted item was not found, the response code will be 404 and the body of the response will be a list of error messages in json.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
     &quot;errors&quot;: {
         &quot;message&quot;: [
             {
@@ -2819,7 +2803,7 @@
         ]
     }
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 

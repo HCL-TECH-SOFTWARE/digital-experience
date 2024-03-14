@@ -4109,8 +4109,8 @@
 <h1 id="the-request-attribute-plug-in">The request attribute plug-in</h1>
 <p>Use the RequestAttribute rendering plug-in to retrieve, set, or remove attributes on the underlying request.</p>
 <p>The syntax for this plug-in is as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:RequestAttribute key=&quot;&quot; value=&quot;&quot; defaultValue=&quot;&quot; escape=&quot;&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:RequestAttribute key=&quot;&quot; value=&quot;&quot; defaultValue=&quot;&quot; escape=&quot;&quot;]
+</code></pre></div>
 <p>This plug-in uses the following attributes:</p>
 <ul>
 <li>
@@ -4160,32 +4160,30 @@
 <ul>
 <li>
 <p>To write out the string representation of the request attribute with the name key1, use the following plug-in tag:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:RequestAttribute key=&quot;key1&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:RequestAttribute key=&quot;key1&quot;]
+</code></pre></div>
 </li>
 <li>
 <p>To write out value1 only when the key1 attribute does not exist on the request or the attribute value is null, use the following plug-in tag. Otherwise, the actual value of the key1 attribute is used.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:RequestAttribute key=&quot;key1&quot; defaultValue=&quot;value1&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:RequestAttribute key=&quot;key1&quot; defaultValue=&quot;value1&quot;]
+</code></pre></div>
 </li>
 <li>
 <p>To set the request attribute key1 to the value value1, use the following plug-in tag:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:RequestAttribute key=&quot;key1&quot; value=&quot;value1&quot;]
+<div class="language-text highlight"><pre><span></span><code>[Plugin:RequestAttribute key=&quot;key1&quot; value=&quot;value1&quot;]
 [Plugin:RequestAttribute mode=&quot;set&quot; key=&quot;key1&quot; value=&quot;value1&quot;]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>To remove the request attribute key1 by passing an empty value attribute, use the following plug-in tag:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:RequestAttribute key=&quot;key1&quot; mode=&quot;delete&quot;]
+<div class="language-text highlight"><pre><span></span><code>[Plugin:RequestAttribute key=&quot;key1&quot; mode=&quot;delete&quot;]
 [Plugin:RequestAttribute key=&quot;key1&quot; value=&quot;&quot;]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>To remove the attribute with the key <code>key1</code> from the portlet request, and to return the previously set value, use the following plug-in tag:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:RequestAttribute key=&quot;key1&quot; mode=&quot;remove&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:RequestAttribute key=&quot;key1&quot; mode=&quot;remove&quot;]
+</code></pre></div>
 </li>
 </ul>
 <details class="info" open="open">

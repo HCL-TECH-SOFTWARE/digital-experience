@@ -2761,59 +2761,59 @@
 <li><strong>Command description</strong></li>
 </ul>
 <p>This command invokes the restart-dx-core tool inside the DXClient and runs the DX Core restart action:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient restart-dx-core
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient restart-dx-core
+</code></pre></div>
 <ul>
 <li><strong>Help command</strong></li>
 </ul>
 <p>This command shows the help information for <code>restart-dx-core</code> command usage:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient restart-dx-core -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient restart-dx-core -h
+</code></pre></div>
 <ul>
 <li><strong>Command options</strong></li>
 </ul>
 <p>Use this attribute to specify the username that is required for authenticating with the DX Core:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password that is required for authenticating with the DX Core:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the hostname of the target DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port number of the <code>cw_profile</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the username that is required for authenticating to the <code>cw_profile</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password that is required for authenticating to the <code>cw_profile</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectPassword &lt;value&gt;
+</code></pre></div>
 <p>Specify either the <code>dxProfileName</code> or <code>dxProfilePath</code> of the DX core server:</p>
 <ul>
 <li>
 <p>Use this attribute to specify the profile name of the DX core server (for example: <code>wp_profile</code>):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProfileName &lt;Profile name of the DX core server&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProfileName &lt;Profile name of the DX core server&gt;
+</code></pre></div>
 </li>
 </ul>
 <p><strong>OR</strong></p>
 <ul>
 <li>
 <p>Use this attribute to specify the profile path of the DX server (for example: <code>/opt/HCL/wp_profile</code>):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProfilePath &lt;Path of the DX core server profile&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProfilePath &lt;Path of the DX core server profile&gt;
+</code></pre></div>
 </li>
 </ul>
 <p>The values that are passed through the command line override the default values.</p>
 <p>Use this attribute and retrigger the command to check the status of any previous request that was incomplete:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-requestId &lt;Unique ID of a previously triggered restart request&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-requestId &lt;Unique ID of a previously triggered restart request&gt;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient restart-dx-core -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -hostname &lt;hostname&gt; -dxConnectPort &lt;dxConnectPort&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -dxProfileName &lt;Profile name of the DX core server&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient restart-dx-core -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -hostname &lt;hostname&gt; -dxConnectPort &lt;dxConnectPort&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -dxProfileName &lt;Profile name of the DX core server&gt;
+</code></pre></div>
 </div>
 <h2 id="restart-dx-core-pods">Restart DX Core Pods</h2>
 <ul>
@@ -2826,36 +2826,36 @@
 <p>Only the user set as <code>wasAdmin</code> in the Helm values is authorized to trigger this command.</p>
 </div>
 <p><br>
-  <div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient restart-core-pods
-</code></pre></div></td></tr></table></div></p>
+  <div class="language-text highlight"><pre><span></span><code>dxclient restart-core-pods
+</code></pre></div></p>
 <ul>
 <li><strong>Help command</strong></li>
 </ul>
 <p>This command shows the help information for <code>restart-core-pods</code> command usage:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient restart-core-pods -h 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient restart-core-pods -h 
+</code></pre></div>
 <ul>
 <li><strong>Command options</strong></li>
 </ul>
 <p>Use this attribute to specify the username that is required for authenticating with the DX WAS Server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxWASUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxWASUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password that is required for authenticating with the DX WAS Server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxWASPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxWASPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the protocol to connect to the server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProtocol &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProtocol &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the hostname of the target DX deployment:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <h2 id="dx-core-server-configuration-report">DX Core server configuration report</h2>
 <ul>
 <li><strong>Command description</strong></li>
 </ul>
 <p>The <code>dx-core-configuration-reports</code> command shows the summary of the configurations of a single DX server or both source and target DX servers, which users can use to compare.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient dx-core-configuration-reports [OPTIONS]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient dx-core-configuration-reports [OPTIONS]
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The target server details are needed only when the user needs to generate the summary of the configurations of both source and target servers. If any one of the target server details is provided, it prompts you to add all the required target parameters.</p>
@@ -2864,45 +2864,45 @@
 <li><strong>Help command</strong></li>
 </ul>
 <p>This command shows the help information for <code>dx-core-configuration-reports</code> command usage:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient dx-core-configuration-reports summary-report -h
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient dx-core-configuration-reports summary-report -h
+</code></pre></div>
 <ul>
 <li><strong>Command options</strong></li>
 </ul>
 <p>Use this attribute to specify the hostname of the target DX server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-hostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-hostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port number of <code>cw_profile</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the user name that is required for authenticating to <code>cw_profile</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password that is required for authenticating to <code>cw_profile</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxConnectPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxConnectPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the profile name of the DX core server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-dxProfileName &lt;Profile name of the DX core server&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-dxProfileName &lt;Profile name of the DX core server&gt;
+</code></pre></div>
 <p>Use this attribute to specify the host name of the target DX core server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-targetHostname &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-targetHostname &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the port number of the target cw_profile server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-targetDxConnectPort &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-targetDxConnectPort &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the user name of the target server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-targetDxConnectUsername &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-targetDxConnectUsername &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the password of the target server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-targetDxConnectPassword &lt;value&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-targetDxConnectPassword &lt;value&gt;
+</code></pre></div>
 <p>Use this attribute to specify the profile name of the target server:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-targetDxProfileName &lt;Profile name of the DX core server&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-targetDxProfileName &lt;Profile name of the DX core server&gt;
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dxclient dx-core-configuration-reports summary-report -hostname &lt;hostname&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -dxConnectPort &lt;dxConnectPort&gt; -targetHostname &lt;targetHostname&gt; -targetDxConnectUsername &lt;targetDxConnectUsername&gt; -targetDxConnectPassword &lt;targetDxConnectPassword&gt; -targetDxConnectPort &lt;targetDxConnectPort&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>dxclient dx-core-configuration-reports summary-report -hostname &lt;hostname&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -dxConnectPort &lt;dxConnectPort&gt; -targetHostname &lt;targetHostname&gt; -targetDxConnectUsername &lt;targetDxConnectUsername&gt; -targetDxConnectPassword &lt;targetDxConnectPassword&gt; -targetDxConnectPort &lt;targetDxConnectPort&gt;
+</code></pre></div>
 </div>
 
 

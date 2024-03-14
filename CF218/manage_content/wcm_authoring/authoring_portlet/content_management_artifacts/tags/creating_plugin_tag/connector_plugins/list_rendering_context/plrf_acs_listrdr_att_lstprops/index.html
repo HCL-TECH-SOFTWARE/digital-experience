@@ -4098,33 +4098,25 @@
 
 <p>To generate your list designs with Digital Data Connector (DDC) for HCL Portal, you can access individual list-rendering context attributes and list properties.</p>
 <p>When you set a new list-rendering context, you can use the attribute parameter to add arbitrary name-value pairs to that list-rendering context. You can then extract these name-value pairs from the list-rendering context at other places by using the [Plugin:ListRenderingContext action="getAttribute"] tag. If you use this technique in nested contexts, it always addresses the currently active list-rendering context. For example, you can establish a list-rendering context such as the following one:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;set&quot; extension-id=&quot;ibm.portal.ddc.xml&quot;
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;set&quot; extension-id=&quot;ibm.portal.ddc.xml&quot;
    profile=&quot;ibm.portal.atom&quot;
    attribute=&quot;source=https://www.ibm.com/connections/communities/service/atom/catalog/public&quot;
    attribute=&quot;myKey=myValue&quot; compute=“always“]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If you do so, you can retrieve the values for the source and myValue properties later in the design as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;getAttribute&quot; key=&quot;source&quot;]
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;getAttribute&quot; key=&quot;source&quot;]
 [Plugin:ListRenderingContext action=&quot;getAttribute&quot; key=&quot;myKey&quot;]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You can use this mechanism to pass information from a parent list-rendering context into a nested list-rendering context. After a nested list-rendering context has been established, information from the parent list-rendering context is not available via the <code>[AttributeResource]</code> tag. Therefore, when you set a nested list-rendering context, you can make parent attributes available to the nested context as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;set&quot; extension-id=&quot;ibm.portal.ddc.xml&quot;
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;set&quot; extension-id=&quot;ibm.portal.ddc.xml&quot;
      profile=&quot;ibm.portal.atom&quot;
      attribute=&quot;source=[AttributeResource key=“catalogItemDetailsLink“]
      attribute=&quot;myKey=[AttributeResource key=“catalogItemFromParentContext“]“ 
      compute=“always“]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You can also use the <code>[Plugin:ListRenderingContext]</code> plug-in to access individual list properties that are based on the information that is loaded by the addressed DDC plug-in. You do so by specifying the value <code>getListProperty</code> for the <code>action</code> parameter. Example: To retrieve the list property <code>nextLink</code> from the bean list that is loaded for the current list-rendering context, use the following tag:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;getListProperty&quot; key=&quot;nextLink&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ListRenderingContext action=&quot;getListProperty&quot; key=&quot;nextLink&quot;]
+</code></pre></div>
 <p>When you write list-rendering context attributes or bean list properties to the markup, you can use the parameters <code>format</code>, <code>separator</code>, and <code>escape</code> to control the transformation into markup:</p>
 <ul>
 <li>The <code>format</code> and <code>separator</code> parameters work the same way as they do with the <code>[AttributeResource]</code> tag. For more information, read <em>Setting the list-rendering context</em>.</li>

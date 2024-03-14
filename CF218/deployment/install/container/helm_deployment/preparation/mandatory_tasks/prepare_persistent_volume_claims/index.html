@@ -2217,17 +2217,7 @@
 <h2 id="configuration-parameters">Configuration parameters</h2>
 <p>To access the PersistentVolumes (PVs) on your cluster, the HCL Digital Experience 9.5 Kubernetes or OpenShift deployment using Helm creates PersistentVolumeClaims (PVCs) that binds the PVs to the corresponding pods.</p>
 <p>Each PVC that applications require allows you to configure the following parameters, as shown below. For a PVC of the Core application:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Persistent Volume Setup</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Persistent Volume Setup</span>
 <span class="nt">volumes</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Persistent Volumes for Core</span>
 <span class="w">  </span><span class="nt">core</span><span class="p">:</span>
@@ -2238,7 +2228,7 @@
 <span class="w">        </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10Gi&quot;</span>
 <span class="w">      </span><span class="c1"># Optional volume name to specifically map to</span>
 <span class="w">      </span><span class="nt">volumeName</span><span class="p">:</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Make sure to properly define the PVC configuration in your custom-values.yaml file before running the deployment. This avoids issues when trying to get your deployment up and running.</p>
@@ -2277,45 +2267,7 @@
 <p>The following are some examples for configuration of the PersistentVolumeClaims (PVCs) using your custom-values.yaml:</p>
 <p><strong>Fallback to default <code>StorageClass</code> for all applications</strong></p>
 <p>Leaving an empty <code>StorageClassName</code> causes Kubernetes or OpenShift to fall back to the <code>StorageClass</code> that has been configured as the default one in your cluster:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Persistent Volume Setup</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Persistent Volume Setup</span>
 <span class="nt">volumes</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Persistent Volumes for Core</span>
 <span class="w">  </span><span class="nt">core</span><span class="p">:</span>
@@ -2354,48 +2306,10 @@
 <span class="w">    </span><span class="c1"># Remote Search profile PVC, one per Remote Search pod</span>
 <span class="w">    </span><span class="nt">prsprofile</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p><strong>Specific StorageClasses for all applications</strong></p>
 <p>Setting the <code>StorageClassName</code> to <code>mycloudstorage</code> causes Kubernetes or OpenShift to create PVCs that only accepts PVs with the <code>StorageClass</code> <code>mycloudstorage</code>:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Persistent Volume Setup</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Persistent Volume Setup</span>
 <span class="nt">volumes</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Persistent Volumes for Core</span>
 <span class="w">  </span><span class="nt">core</span><span class="p">:</span>
@@ -2434,18 +2348,10 @@
 <span class="w">    </span><span class="c1"># Remote Search profile PVC, one per Remote Search pod</span>
 <span class="w">    </span><span class="nt">prsprofile</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p><strong>Specific volumes using selectors and labels</strong></p>
 <p>In the custom-values.yaml file, set the selectors for a specific application. In this example, the <code>persistenceNode</code> is used.</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Persistent Volumes for Persistence Node</span>
 <span class="w">  </span><span class="nt">persistenceNode</span><span class="p">:</span>
 <span class="w">    </span><span class="c1"># Database PVC, one per persistence node</span>
@@ -2454,23 +2360,10 @@
 <span class="w">      </span><span class="nt">selector</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">matchLabels</span><span class="p">:</span>
 <span class="w">          </span><span class="nt">myVolumeLabel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">persistence-node</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>By default, 3 replicas of <code>persistenceNode</code> are created. To make sure all <code>PersistenceVolumeClaims</code> are satisfied, we need to create at least 3 <code>PersistentVolumes</code> with matching labels.</p>
 <p>Each <code>PersistentVolume</code> should look similar to the following example:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PersistentVolume</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">persistence-node-volume-0</span>
@@ -2484,25 +2377,9 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ReadWriteOnce</span>
 <span class="w">  </span><span class="nt">persistentVolumeReclaimPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Recycle</span>
 <span class="w">  </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mycloudstorage</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This will make sure that one of the <code>persistenceNode</code> Pods will pick up the Volume. To ensure an exact 1 to 1 match between Volume and Claim, refer to the <a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reserving-a-persistentvolume">"Reserving a PersistentVolume"</a> documentation for Kubernetes to set a <code>claimRef</code> in the <code>PersistentVolume</code> in addition to the selectors.</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PersistentVolume</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">persistence-node-volume-0</span>
@@ -2519,26 +2396,11 @@
 <span class="w">  </span><span class="nt">claimRef</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">database-dx-deployment-persistence-node-0</span>
 <span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myDXNamespace</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This will ensure that only the <code>dx-deployment-persistence-node-0</code> Pod and none of the other replicas will use this <code>PersistentVolume</code>.</p>
 <p><strong>Specific volume names</strong></p>
 <p>Specifying a name ensures that Kubernetes or OpenShift only assigns PVs with the matching name to the PVCs created for the applications:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Persistent Volume Setup</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Persistent Volume Setup</span>
 <span class="nt">volumes</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Persistent Volumes for Core</span>
 <span class="w">  </span><span class="nt">core</span><span class="p">:</span>
@@ -2554,28 +2416,10 @@
 <span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span>
 <span class="w">      </span><span class="c1"># Optional volume name to specifically map to</span>
 <span class="w">      </span><span class="nt">volumeName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dam-binaries&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p><strong>Adjusted volume size for Core PVCs</strong></p>
 <p>You may override the default sizes for PVCs by adjusting the storage requests:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Persistent Volume Setup</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Persistent Volume Setup</span>
 <span class="nt">volumes</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Persistent Volumes for Core</span>
 <span class="w">  </span><span class="nt">core</span><span class="p">:</span>
@@ -2594,51 +2438,23 @@
 <span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span>
 <span class="w">      </span><span class="nt">requests</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1Gi&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="sample-persistent-volume-definitions">Sample Persistent Volume definitions</h2>
 <p><strong>Sample <code>StorageClass</code></strong></p>
 <p>It is recommended to have a separate <code>StorageClass</code> for HCL Digital Experience 9.5 deployments in order to prevent other deployed applications in the same Kubernetes or OpenShift cluster to interfere with Persistent Volumes (PVs) that should only be used by HCL Digital Experience.</p>
 <p>The following example shows a <code>StorageClass</code> with the name <code>dx-deploy-stg</code> that can be created in your cluster for that purpose:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">StorageClass</span><span class="w"> </span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">StorageClass</span><span class="w"> </span>
 <span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">storage.k8s.io/v1</span><span class="w"> </span>
 <span class="nt">metadata</span><span class="p">:</span><span class="w"> </span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dx-deploy-stg</span><span class="w"> </span>
 <span class="nt">provisioner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kubernetes.io/no-provisioner</span><span class="w"> </span>
 <span class="nt">reclaimPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Retain</span><span class="w"> </span>
 <span class="nt">volumeBindingMode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WaitForFirstConsumer</span><span class="w"> </span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Applying this yaml on your Kubernetes or OpenShift cluster creates the <code>StorageClass</code> as a cluster-wide resource.</p>
 <p><strong>Sample Persistent Volume</strong></p>
 <p>To leverage the <code>StorageClass</code> you created, you can use the following Persistent Volume example, which connects to an NFS Server of your choice to provide a PV:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PersistentVolume</span><span class="w"> </span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PersistentVolume</span><span class="w"> </span>
 <span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wp-profile-volume</span><span class="w"> </span>
@@ -2661,7 +2477,7 @@
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">retrans=2</span><span class="w"> </span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">noresvport</span><span class="w"> </span>
 <span class="w">  </span><span class="nt">volumeMode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Filesystem</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="configuring-additional-core-persistent-volumes">Configuring additional core persistent volumes</h2>
 <p>A HCL Digital Experience Kubernetes deployment requires a number of persistent volumes as standard, such as for the Core profile and for digital asset storage. It is now also possible to connect additional persistent volumes to the Core stateful set and mount them in the main container of all Core pods. It is anticipated that this optional feature will be of use to customers running custom applications on DX that require additional persistent storage.</p>
 <p>This feature allows you to configure additional Persistent Volume Claims (PVCs) for the Core stateful set and specify the directories at which they will be mounted in the main containers of all Core pods. </p>
@@ -2670,35 +2486,7 @@
 <p>Core pods will remain "Pending" until all the new claims have been satisfied. Please ensure that you have created the necessary Persistent Volumes in advance or have suitable provisioners in your Kubernetes cluster to create the volumes on demand.</p>
 </div>
 <p>The following syntax can be used to configure additional Persistent Volume Claims (PVCs) in your <code>custom-values.yaml</code>:</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Persistent Volumes for Core</span>
 <span class="w">  </span><span class="nt">core</span><span class="p">:</span>
 <span class="w">    </span><span class="c1"># List of optional additional Core PVCs for customer applications</span>
@@ -2727,19 +2515,10 @@
 <span class="w">    </span><span class="c1">#             - test2</span>
 <span class="w">    </span><span class="c1">#     volumeName: &quot;test-pv&quot;</span>
 <span class="w">    </span><span class="nt">customPVCs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p><strong>Example</strong></p>
 <p>The following example creates a new PVC called <code>&lt;deployment-name&gt;-core-custom-test1</code> and mounts it in the main Core pod containers at <code>/opt/HCL/test1</code>. To be satisfied this claim requires a Persistent Volume with access mode <code>ReadWriteOnce</code>, storage class <code>manual</code> and at least 20Gb capacity. Since <code>volumeName</code> and <code>selector</code> are not specified, Kubernetes is free to choose any unbound volume that meets the above criteria.</p>
-<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">core</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">customPVCs</span><span class="p">:</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;test1&quot;</span>
@@ -2749,7 +2528,7 @@
 <span class="w">        </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;manual&quot;</span>
 <span class="w">        </span><span class="nt">requests</span><span class="p">:</span>
 <span class="w">          </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;20Gi&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

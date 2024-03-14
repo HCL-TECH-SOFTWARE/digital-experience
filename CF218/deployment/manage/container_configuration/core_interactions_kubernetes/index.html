@@ -3055,8 +3055,8 @@
 <p>The tranlog directory /opt/HCL/wp_profile/tranlog is symbolically linked to /opt/HCL/tranlog.</p>
 <h2 id="additional-information-about-profile-directories">Additional Information about profile directories</h2>
 <p>The profile persistent volume (and thus, the /opt/HCL/profiles directory) contains a directory per container version, named:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>prof_&lt; product-version &gt;_&lt; container-version &gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>prof_&lt; product-version &gt;_&lt; container-version &gt;
+</code></pre></div>
 <p>for example, <code>prof_95_CF199</code>. During the Core container startup process the latest version directory is symbolically linked from /opt/HCL/wp_profile.</p>
 <h2 id="core-container-version-to-version-upgrade">Core container Version-to-Version upgrade</h2>
 <p>When a new version (tag) of the DX 9.5 Core container is specified in your <a href="../../../install/container/helm_deployment/preparation/">custom values YAML file</a> and you run <code>helm upgrade</code>, Kubernetes recycles all the pods in your Core stateful set one by one. It starts with the highest numbered pod and work downwards, only recycling the next pod when the current pod reports that it is "ready".</p>

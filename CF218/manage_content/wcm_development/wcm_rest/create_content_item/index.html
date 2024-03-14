@@ -2616,8 +2616,8 @@
 
 <h1 id="creating-a-content-item">Creating a content item</h1>
 <p>A content item can be created by sending a POST request to the following URI with an Atom entry used to represent the content item:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/Content
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/Content
+</code></pre></div>
 <ul>
 <li>A library or parent link relation must be used to define the location of the hierarchical item that is being created. </li>
 <li>An authoring template must be specified to set what authoring template to use when the item is created.</li>
@@ -2626,19 +2626,7 @@
 <ul>
 <li>
 <p><strong>POST:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 POST 
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 POST 
 http://host:port/wps/mycontenthandler/wcmrest/Content/
 Content-Type: application/atom+xml
         &lt;atom:entry xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;wcm/namespace&quot;&gt;
@@ -2651,12 +2639,12 @@ Content-Type: application/atom+xml
             &lt;atom:link atom:rel=&quot;content-template&quot; atom:href=&quot;/wps/
             mycontenthandler/wcmrest/item/588127d0-a4f8-44b5-87a4-5fe3f7bd3da7&quot;/&gt;
         &lt;/atom:entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Response:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>201 Created
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>201 Created
+</code></pre></div>
 </li>
 </ul>
 

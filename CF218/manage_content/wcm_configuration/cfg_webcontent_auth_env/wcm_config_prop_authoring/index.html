@@ -2601,16 +2601,14 @@
 <p>If a version control strategy is not defined for an item type, then the version control strategy that is specified in by the <code>versioningStrategy.Default</code> property is used.</p>
 <h2 id="limiting-versioning-by-setting-the-number-of-active-versions">Limiting versioning by setting the number of active versions</h2>
 <p>There are properties that you can configure to remove the later versions when new versions are created. You can control the number of versions that you want to save by enabling the following property and by setting a threshold value for it in the <code>WCM WCMConfigService</code> resource environment provider.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>versioning.service.auto.crop.enabled = true
+<div class="language-text highlight"><pre><span></span><code>versioning.service.auto.crop.enabled = true
 versioning.service.auto.crop.threshold = 10
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The default value for <code>versioning.service.auto.crop.threshold</code> is 10.</p>
 <p>For example, if you want to keep only the active version of a content item, then enable the property and set the threshold value as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>versioning.service.auto.crop.enabled = true
+<div class="language-text highlight"><pre><span></span><code>versioning.service.auto.crop.enabled = true
 versioning.service.auto.crop.threshold = 1
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="inheritance-options">Inheritance options</h2>
 <p>By default, inheritance is automatically propagated down to each item. You can disable automatic inheritance by specifying the following property:</p>
 <ul>
@@ -2657,23 +2655,17 @@ versioning.service.auto.crop.threshold = 1
 <h2 id="active-content-filtering">Active content filtering</h2>
 <p>Active content filtering provides the ability to strip specified HTML fragments from HTML entered in elements. This includes rich text and HTML elements. Active content filtering is configured by using the <code>active.content.filtering.enable</code> property. By default, active content filtering is enabled. If enabled, this prevents a user from introducing malicious code into a website such as cross site scripting.</p>
 <p>For example, if a user entered this code into an HTML element:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>Welcome
+<div class="language-text highlight"><pre><span></span><code>Welcome
 &lt;a href=&quot;javascript:window.alert(&quot;boo!&quot;)&quot;&gt;my link&lt;/a&gt;
 &lt;script language=&quot;javascript&quot;&gt;window.alert(&quot;boo 2!&quot;)&lt;/script&gt;
 Click the link for a surprise.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>It would be changed to the following when saved:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>Welcome
+<div class="language-text highlight"><pre><span></span><code>Welcome
 &lt;a href=&quot;&lt;&quot;- active content removed --&gt;&quot;&gt;my link&lt;/a&gt;
 &lt;&quot;- active content removed --&gt;
 Click the link for a surprise.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="setting-the-default-child-placement-position">Setting the default child placement position</h2>
 <p>You can set the parameter <strong>wcm.authoringui.childPlacementDefault</strong> to specify the default placement of new content items.</p>
 <table>

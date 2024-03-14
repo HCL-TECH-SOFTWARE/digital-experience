@@ -2971,8 +2971,8 @@
 <p>Understand the syntax for creating a custom URI to access a piece of content.</p>
 <h2 id="poc-uri-syntax">POC URI Syntax</h2>
 <p>Construct a POC URI to address Connections content. The syntax has this form:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>connections:atom\_uri&amp;commID=community\_id&amp;service=service\_name&amp;type=content\_type
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>connections:atom\_uri&amp;commID=community\_id&amp;service=service\_name&amp;type=content\_type
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>commID, service, and type must be specified as parameters. Parameter names are case sensitive.</p>
@@ -3063,8 +3063,8 @@
 <p>|Opens the attachments listing page for the parent wiki page in the wikis portlet. The atom_uri might be the URI of any attachment on the page, obtained from the attachment Atom entry. The portlet lists all attachments for that wiki page.|</p>
 <h2 id="poc-servlet">POC Servlet</h2>
 <p>The piece of content (POC) servlet checks for authentication. The /poc mapping does not require authentication but recognizes if valid authentication or single sign on information is present. If that case, the resolver framework will redirect to /myportal; otherwise, it redirects to /portal. In many usage scenarios it is appropriate to address the /poc mapping, because it detects potential authentication information automatically. In any case, access control to the actual page and portlets to which the POC URI resolves is enforced by the portal. The POC servlet default path is</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://server:port/wps/poc?uri= 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://server:port/wps/poc?uri= 
+</code></pre></div>
 <p>Use the POC Servlet with the POC URI to access content as follows: POC URI:http://server:port/wps/poc?uri=connections:atom_uri&amp;commID=community_id&amp;service=service_name&amp;type=content_type</p>
 <h2 id="sample-uri">Sample URI</h2>
 <p>POC URI to address a forum topic: http://server:port/wps/poc?uri=connections:forums/atom/topic?topicUuid=da99c49f-d2d0-47d9-9f18-1f32cf9e108c&amp;type=topic&amp;service=forums&amp;commID=9425353dfea-484c-1234-1f2f7d51e517&amp;forumUuid=6864a28b-dfea-484c-9fd8-1f2f7d51e517</p>

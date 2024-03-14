@@ -3417,13 +3417,13 @@
 <h1 id="how-to-access-the-producer-wsdl">How to access the Producer WSDL</h1>
 <p>As a Producer you must provide the URL for the Producer WSDL service description document to the Consumer.</p>
 <p>The basic WSDL document is available under the following URL:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://producer\_portal\_host:producer\_port/WpsContextRoot/wsdl/wsrp_service.wsdl
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://producer\_portal\_host:producer\_port/WpsContextRoot/wsdl/wsrp_service.wsdl
+</code></pre></div>
 <p>where <code>WpsContextRoot</code> is the portal context root that was set at installation time. You can find its value in the file <code>wkplc.properties</code>.</p>
 <p>This URL refers to a WSDL file with the WSRP 2.0 services. When a Consumer portal administrator configures the Consumer portal to interact with the Producer, the Consumer administrator must specify the WSDL URL. The Consumer accesses this URL and reads the contents of the WSDL document, which provides the endpoint addresses of the WSRP 2.0 services. Consumers use these endpoint addresses to communicate with the Producer through the WSRP protocol.</p>
 <p>The URL format of the WSRP service endpoint addresses is as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>protocol://host\_name:port\_number/wsrp\_context\_root/wsrp\_port\_name
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>protocol://host\_name:port\_number/wsrp\_context\_root/wsrp\_port\_name
+</code></pre></div>
 <p>wsrp_context_root references the context root for the WSRP Producer facade servlet. The facade servlet is provided with the wps.ear enterprise application in the HCL Portal Server WSRP Facade web module wps_facade.war and controls access to the WSRP web service engine.</p>
 <p>You can change the context root for the WSRP Producer with the <code>modify-servlet-path</code> configuration task, as described in <em>Changing the portal URI</em></p>
 <p>In addition, you can configure and override various settings to manipulate the contents of the WSDL document. To do so, you specify the appropriate parameters in the URL for the WSDL service description document:</p>
@@ -3448,12 +3448,10 @@
 </ol>
 <h2 id="url-parameters">URL parameters</h2>
 <p>The administrator of the Consumer portal can request a modified WSDL service description document from the Producer. In this document, the Producer modifies the endpoint addresses of the WSRP web services according to URL parameters that the Consumer provided. These parameters that are listed and described in the following table. Here is an example of the supported URL syntax:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>http://producer_portal_host:producer_port/wp_contextRoot/wsdl/wsrp_service.wsdl
+<div class="language-text highlight"><pre><span></span><code>http://producer_portal_host:producer_port/wp_contextRoot/wsdl/wsrp_service.wsdl
        ?protocol=&lt;protocolValue&gt;&amp;port=&lt;httpPort&gt;&amp;securePort=&lt;httpsPort&gt;
        &amp;version=&lt;WSRPVersion&gt;&amp;hostname=&lt;hostname&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following table lists possible values for URL parameters:</p>
 <table>
 <thead>

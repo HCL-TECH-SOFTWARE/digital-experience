@@ -2641,18 +2641,17 @@
 <ol>
 <li>
 <p>Instantiate the bean. If the class name of your content spot was ProfilerSpot, you would instantiate the bean by using one of the following options:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>com.ibm.websphere.personalization.ContentSpot contentSpot = 
+<div class="language-text highlight"><pre><span></span><code>com.ibm.websphere.personalization.ContentSpot contentSpot = 
   new com.ibm.websphere.personalization.ContentSpot\(&quot;ProfilerSpot&quot;\);
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>or</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ProfilerSpot contentSpot = new ProfilerSpot();
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>ProfilerSpot contentSpot = new ProfilerSpot();
+</code></pre></div>
 </li>
 <li>
 <p>Call the method <code>setRequest()</code> and pass the HttpServletRequest object or an object that implements PznRequestObjectInterface. This action makes the current information that is stored in the request object to be known to the Personalization runtime Engine and the Resource Engine.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>contentSpot.setRequest(request); 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>contentSpot.setRequest(request); 
+</code></pre></div>
 </li>
 <li>
 <p>Trigger the rule and, if applicable, get the content from the rule. Use one of the following methods, depending on the type of rule:</p>

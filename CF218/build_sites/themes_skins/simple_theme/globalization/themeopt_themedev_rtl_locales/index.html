@@ -2856,34 +2856,30 @@
 <ol>
 <li>
 <p>If your theme.html file contains no translatable strings, create a new file that is named theme_rtl.html in the nls directory. Then, modify the head section of your theme.html file to include the following link tags for the RTL locales that point to the theme template:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;link rel=&quot;alternate&quot; href=&quot;nls/theme_rtl.html&quot; hreflang=&quot;ar&quot;&gt;
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;link rel=&quot;alternate&quot; href=&quot;nls/theme_rtl.html&quot; hreflang=&quot;iw&quot;&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;link rel=&quot;alternate&quot; href=&quot;nls/theme_rtl.html&quot; hreflang=&quot;ar&quot;&gt;
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;link rel=&quot;alternate&quot; href=&quot;nls/theme_rtl.html&quot; hreflang=&quot;iw&quot;&gt;
+</code></pre></div>
 <p>If your theme.html file does contain translatable strings, you need a theme template for each locale in the nls directory that includes the following link tags:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;link rel=&quot;alternate&quot; href=&quot;nls/theme_rtl.html&quot; hreflang=&quot;ar&quot;&gt;
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;link rel=&quot;alternate&quot; href=&quot;nls/theme_rtl.html&quot; hreflang=&quot;iw&quot;&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;link rel=&quot;alternate&quot; href=&quot;nls/theme_rtl.html&quot; hreflang=&quot;ar&quot;&gt;
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;link rel=&quot;alternate&quot; href=&quot;nls/theme_rtl.html&quot; hreflang=&quot;iw&quot;&gt;
+</code></pre></div>
 </li>
 <li>
 <p>Add the following attribute to the HTML tag in the alternative theme template: <code>dir="rtl"</code>.</p>
 </li>
 <li>
 <p>Generate RTL versions of styles in the CSS files that indicate direction, such as float, padding, and margins. The RTL versions of these classes override the direction. These classes are located in a separate CSS file or files. For example, the following class, which indicates float, needs to be overridden:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>.stLeft{
+<div class="language-text highlight"><pre><span></span><code>.stLeft{
 float: left;
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>In the RTL CSS file, you can override the direction by changing the float direction:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>.stLeft{
+<div class="language-text highlight"><pre><span></span><code>.stLeft{
 float: right;
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Repeat this step for any class that indicates direction. You can complete this step in a single RTL CSS file, or you can create individual files with names that match the files that you are overriding.</p>
 <p><strong>Note:</strong> Most of the context menu CSS files already have RTL versions.</p>
 </li>
@@ -2892,14 +2888,11 @@ float: right;
 </li>
 <li>
 <p>Add the following string to /contributions/theme.json:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>{
+<div class="language-text highlight"><pre><span></span><code>{
 &quot;value&quot;:&quot;/css/masterRTL.css&quot;,
 &quot;type&quot;:&quot;rtl&quot;
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 

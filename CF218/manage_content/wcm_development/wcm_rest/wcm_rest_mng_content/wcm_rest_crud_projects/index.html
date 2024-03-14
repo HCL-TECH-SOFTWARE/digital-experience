@@ -3486,44 +3486,10 @@
 <p>You can use the REST services for Web Content Manager to create and work with projects.</p>
 <h2 id="creating-a-project">Creating a project</h2>
 <p>To create a project, send a POST request that contains the appropriate data to the following URI.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/project/
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/project/
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code>POST /wps/mycontenthandler/wcmrest/Project HTTP/1.0
+<div class="language-text highlight"><pre><span></span><code>POST /wps/mycontenthandler/wcmrest/Project HTTP/1.0
 Content-type : application/atom+xml
 
 &lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;wcm/namespace&quot;&gt;
@@ -3558,47 +3524,19 @@ Content-location: /wps/mycontenthandler/!ut/p/wcmrest/Project/80d503aa-fec5-477c
     &lt;wcm:description&gt;SampleProjectDescription&lt;/wcm:description&gt;
     &lt;wcm:type&gt;Project&lt;/wcm:type&gt;
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="creating-a-project-from-a-project-template">Creating a project from a project template</h2>
 <p>From CF202 release, you can create a project based on a project template including access control and other settings.</p>
 <p>To use this feature add a parameter <code>?projectTemplate=</code>&lt;ID of the project template&gt; to the Post request.</p>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>POST /wps/mycontenthandler/wcmrest/Project?projectTemplate=22ebf62a-bd18-4cb9-ae2f-851c08fb8bbc
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>POST /wps/mycontenthandler/wcmrest/Project?projectTemplate=22ebf62a-bd18-4cb9-ae2f-851c08fb8bbc
+</code></pre></div>
 <h2 id="reading-a-project">Reading a project</h2>
 <p>To read a project, send a GET request that contains the appropriate data to the following URI.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/project/item-uuid
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/project/item-uuid
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code>GET /wps/mycontenthandler/wcmrest/Project/80d503aa-fec5-477c-a8b2-372897982afe HTTP/1.1
+<div class="language-text highlight"><pre><span></span><code>GET /wps/mycontenthandler/wcmrest/Project/80d503aa-fec5-477c-a8b2-372897982afe HTTP/1.1
 
 
 HTTP/1.0 200 OK
@@ -3627,52 +3565,32 @@ Content-type: application/atom+xml; type=entry
     &lt;wcm:description&gt;SampleProjectDescription&lt;/wcm:description&gt;
     &lt;wcm:type&gt;Project&lt;/wcm:type&gt;
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="deleting-a-project">Deleting a project</h2>
 <p>To delete a project, send a DELETE request that contains the appropriate data to the following URI.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/project/item-uuid
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/project/item-uuid
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 DELETE
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 DELETE
 http://host:port/wps/mycontenthandler/wcmrest/Project/35b9120a-17d0-4dcb-b0ba-b034e34b50a6
 Accept-Type: application/atom+xml
 
 200 OK
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="updating-a-project">Updating a project</h2>
 <p>To update a project, send a PUT request that contains the appropriate data to the following URI.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/project/item-uuid
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/project/item-uuid
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 PUT
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 PUT
 http://host:port/wps/mycontenthandler/wcmrest/Project/35b9120a-17d0-4dcb-b0ba-b034e34b50a6
 Accept-Type: application/atom+xml
 
 200 OK
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="adding-an-item-to-a-project">Adding an item to a project</h2>
 <p>To add an item to a project, update the item by using a PUT request that specifies a link with relation "project" specifying the project to add the item to. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 PUT
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 PUT
 http://host:port/wps/mycontenthandler/!ut/p/digest!MetYLHV_M5sJbvslxI8twA/
 wcmrest/LibraryTextComponent/fd34a8bf-7ca1-499c-80ab-acdc2f33cf3e&lt;/a&gt;
 Accept-Type: application/atom+xml
@@ -3685,103 +3603,78 @@ Accept-Type: application/atom+xml
 &lt;/entry&gt;
 
 200 OK
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you use REST inside a Portal project context, posting to the create-draft link relation creates the draft in a project.</p>
 </div>
 <h2 id="removing-an-item-from-a-project">Removing an item from a project</h2>
 <p>To remove an item from a project, update the item by using a PUT request without specifying the project link relation. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 PUT
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 PUT
 http://host:port/wps/mycontenthandler/!ut/p/digest!MetYLHV_M5sJbvslxI8twA/
 wcmrest/LibraryTextComponent/fd34a8bf-7ca1-499c-80ab-acdc2f33cf3e&lt;/a&gt;
 Accept-Type: application/atom+xml
 
 200 OK
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="submitting-a-project-for-review">Submitting a project for review</h2>
 <p>Editors of a project can submit a project for review by sending a POST request that contains the appropriate data to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/item/project-uuid/submit-for-review
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/item/project-uuid/submit-for-review
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 POST 
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 POST 
 http://host:port/wps/mycontenthandler/wcmrest/item/project-uuid/submit-for-review
 Accept-Type: application/atom+xml
 
 201 Created
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="withdrawing-a-project-from-review">Withdrawing a project from review</h2>
 <p>Editors of a project can withdraw a project from review by sending a POST request that contains the appropriate data to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/item/project-uuid/withdraw-from-review
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/item/project-uuid/withdraw-from-review
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 POST 
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 POST 
 http://host:port/wps/mycontenthandler/wcmrest/item/project-uuid/withdraw-from-review
 Accept-Type: application/atom+xml
 
 201 Created
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>When withdrawn, the project returns to an active state.</p>
 <h2 id="approving-a-project">Approving a project</h2>
 <p>Approvers of a project can approve a project by sending a POST request that contains the appropriate data to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/item/project-uuid/approve
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/item/project-uuid/approve
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 POST 
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 POST 
 http://host:port/wps/mycontenthandler/wcmrest/item/project-uuid/approve
 Accept-Type: application/atom+xml
 
 201 Created
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>When approved, the project is ready to be published.</p>
 <h2 id="rejecting-a-project">Rejecting a project</h2>
 <p>Approvers of a project can reject project approval by sending a POST request that contains the appropriate data to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/project/project-uuid/reject
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/project/project-uuid/reject
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 POST 
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 POST 
 http://host:port/wps/mycontenthandler/wcmrest/Project/PROJECT-UUID/reject
 Accept-Type: application/atom+xml
 
 201 Created
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>When rejected, the project returns to an active state.</p>
 <h2 id="withdrawing-approval-for-a-project">Withdrawing approval for a project</h2>
 <p>Approvers of a project can withdraw approval for a project by sending a POST request that contains the appropriate data to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/project/project-uuid/withdraw-approval
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/project/project-uuid/withdraw-approval
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 POST 
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 POST 
 http://host:port/wps/mycontenthandler/wcmrest/Project/PROJECT-UUID/withdraw-approval
 Accept-Type: application/atom+xml
 
 201 Created
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Withdrawing approval does not change the state of the project, which remains in review.</p>
 
 

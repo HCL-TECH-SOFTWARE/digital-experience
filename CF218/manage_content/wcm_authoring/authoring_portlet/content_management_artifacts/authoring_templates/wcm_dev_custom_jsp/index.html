@@ -3798,29 +3798,7 @@
 </li>
 </ul>
 <h2 id="text-element-example">Text element example</h2>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%@ taglib uri=&quot;/WEB-INF/tld/portlet.tld&quot; prefix=&quot;portletAPI&quot; %&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;%@ taglib uri=&quot;/WEB-INF/tld/portlet.tld&quot; prefix=&quot;portletAPI&quot; %&gt;
 &lt;%@ page import=&quot;com.ibm.workplace.wcm.api.authoring.CustomItemBean&quot; %&gt;
 
 &lt;portletAPI:init /&gt;
@@ -3843,44 +3821,9 @@ document.getElementById(&#39;&lt;%=customItem.getFieldName()%&gt;_mycustomoption
 &lt;/script&gt;
 
 &lt;INPUT id=&#39;&lt;%=customItem.getFieldName()%&gt;_mycustomoption&#39; value=&quot;&lt;%=fvalue%&gt;&quot;&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="rich-text-element-example">Rich Text element example</h2>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%@ page import=&quot;com.ibm.workplace.wcm.app.ui.portlet.widget.EditorBean&quot;%&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;%@ page import=&quot;com.ibm.workplace.wcm.app.ui.portlet.widget.EditorBean&quot;%&gt;
 &lt;%@ taglib uri=&quot;/WEB-INF/tld/wcm.tld&quot; prefix=&quot;wcm&quot; %&gt;
 
 &lt;% 
@@ -3916,63 +3859,10 @@ function setRichTextValue(theText)
       initialisedRTEs = initialisedRTEs + 1;
    }
 &lt;/script&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="custom-option-selection-element-example-with-validation">Custom option selection element example with validation</h2>
 <p>This example is used to create a selection list of predefined options.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%@ taglib uri=&quot;/WEB-INF/tld/portlet.tld&quot; prefix=&quot;portletAPI&quot; %&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;%@ taglib uri=&quot;/WEB-INF/tld/portlet.tld&quot; prefix=&quot;portletAPI&quot; %&gt;
 &lt;%@ page import=&quot;com.ibm.workplace.wcm.api.authoring.CustomItemBean&quot; %&gt;
 
 &lt;portletAPI:init /&gt;
@@ -4026,62 +3916,14 @@ function mysubmit()
     }
 }
 &lt;/script&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="date-element-example">Date element example</h2>
 <p>This example is used to create a selection list of predefined dates.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Only dates can be selected, not times.</p>
 </div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%@ taglib uri=&quot;/WEB-INF/tld/portlet.tld&quot; prefix=&quot;portletAPI&quot; %&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;%@ taglib uri=&quot;/WEB-INF/tld/portlet.tld&quot; prefix=&quot;portletAPI&quot; %&gt;
 &lt;%@ page import=&quot;com.ibm.workplace.wcm.api.authoring.CustomItemBean&quot; %&gt;
 
 &lt;portletAPI:init /&gt;
@@ -4130,59 +3972,10 @@ document.getElementById(&quot;&lt;%=customItem.getFieldName()%&gt;&quot;).value 
 document.getElementById(&#39;&lt;%=customItem.getFieldName()%&gt;_mycustomdate&#39;).options[selIndex].text;
 }
 &lt;/script&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="number-element-example">Number element example</h2>
 <p>This example is used to create a selection list of predefined numbers.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%@ taglib uri=&quot;/WEB-INF/tld/portlet.tld&quot; prefix=&quot;portletAPI&quot; %&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;%@ taglib uri=&quot;/WEB-INF/tld/portlet.tld&quot; prefix=&quot;portletAPI&quot; %&gt;
 &lt;%@ page import=&quot;com.ibm.workplace.wcm.api.authoring.CustomItemBean&quot; %&gt;
 
 &lt;portletAPI:init /&gt;
@@ -4232,31 +4025,10 @@ document.getElementById(&quot;&lt;%=customItem.getFieldName()%&gt;&quot;).value 
 document.getElementById(&#39;&lt;%=customItem.getFieldName()%&gt;_mycustomnumber&#39;).options[selIndex].text;
 }
 &lt;/script&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="user-selection-element-example">User selection element example</h2>
 <p>This example is used to create a field to enter a user name.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%@ taglib uri=&quot;/WEB-INF/tld/portlet.tld&quot; prefix=&quot;portletAPI&quot; %&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;%@ taglib uri=&quot;/WEB-INF/tld/portlet.tld&quot; prefix=&quot;portletAPI&quot; %&gt;
 &lt;%@ page import=&quot;com.ibm.workplace.wcm.api.authoring.CustomItemBean&quot; %&gt;
 
 &lt;portletAPI:init /&gt;
@@ -4278,7 +4050,7 @@ document.getElementById(&#39;&lt;%=customItem.getFieldName()%&gt;_mycustomuser&#
 &lt;/script&gt;
 
 &lt;INPUT id=&#39;&lt;%=customItem.getFieldName()%&gt;_mycustomuser&#39; value=&quot;&lt;%=fvalue%&gt;&quot;&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

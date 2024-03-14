@@ -2337,16 +2337,12 @@
 <li>Component references to the query URL HTML component and the appearance component. For example, they can be elements named <code>sourceref</code> and <code>design</code>.</li>
 </ul>
 <p>You can now create individual list definition content items from this authoring template for your HCL Connections queries. To set up the query-specific list-rendering context and to render the query-specific appearance component, you can use a generic presentation template for all those queries as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ListRenderingContext compute=&quot;always&quot; 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ListRenderingContext compute=&quot;always&quot; 
    extension-id=&quot;[Element context=&#39;current&#39; type=&#39;content&#39; key=&#39;provider&#39;]&quot; 
    profile=&quot;[Element context=&#39;current&#39; type=&#39;content&#39; key=&#39;profile&#39;]&quot; 
    attribute=&quot;source=[Element context=&#39;current&#39; type=&#39;content&#39; key=&#39;sourceref&#39;]&quot;]
    [Element context=&quot;current&quot; type=&quot;content&quot; key=&quot;design&quot; compute=&quot;always&quot;]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For example, a list definition content item for the query that was defined in <em>Dynamic HCL Connections source URL Construction</em> specifies the following settings:</p>
 <ul>
 <li>It sets the <code>provider</code> field to <code>ibm.portal.ddc.sr</code>.</li>

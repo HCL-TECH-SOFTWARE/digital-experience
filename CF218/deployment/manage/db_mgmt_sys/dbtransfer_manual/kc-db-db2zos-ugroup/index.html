@@ -3480,18 +3480,7 @@
 <li>
 <p>Run the RACF commands on z/OS in the order that is listed in the script.</p>
 <p>Example of the script that the Configuration Wizard generates.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>//*  RACF setup for database user IDs and schemas:
+<div class="language-text highlight"><pre><span></span><code>//*  RACF setup for database user IDs and schemas:
 ADDGROUP WPBASRT;
 ADDGROUP WPJCRRT;
 ADDGROUP WPPZNRT;
@@ -3503,7 +3492,7 @@ CONNECT runtime\_ID GROUP(WPPZNRT)
 ADDGROUP jcr SUPGROUP(group)
 CONNECT dbconfig\_ID GROUP(jcr)
 CONNECT runtime\_ID GROUP(jcr)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 

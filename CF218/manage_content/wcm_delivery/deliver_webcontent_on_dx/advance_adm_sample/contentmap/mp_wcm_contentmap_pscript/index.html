@@ -2813,31 +2813,22 @@
 <ul>
 <li>
 <p><strong>Jacl example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>$set the_page [$Content find page uniquename &quot;my.test.page&quot;]
+<div class="language-text highlight"><pre><span></span><code>$set the_page [$Content find page uniquename &quot;my.test.page&quot;]
 $ContentMapping select $the_page
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Jython example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>the_page = Content.find(&#39;page&#39;,&#39;uniquename&#39;,&#39;my.test.page&#39;)
+<div class="language-text highlight"><pre><span></span><code>the_page = Content.find(&#39;page&#39;,&#39;uniquename&#39;,&#39;my.test.page&#39;)
 ContentMapping.select(the_page)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <p>After you have the object ID of the web content page, you can use the list method and the get methods to access the content associations. The list method returns a list of content association IDs. The IDs can identify either the resource ID of a folder or the content path of the folder, depending on how the page is mapped. You can use the content association IDs returned by the list method as arguments for the get method.</p>
 <ul>
 <li>
 <p><strong>Jacl example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>$set the_page [$Content find page uniquename &quot;my.test.page&quot;]
+<div class="language-text highlight"><pre><span></span><code>$set the_page [$Content find page uniquename &quot;my.test.page&quot;]
 $ContentMapping select $the_page
 foreach mid [$ContentMapping list mappings] {
   puts &quot;  Mapping $mid info:&quot;
@@ -2845,53 +2836,39 @@ foreach mid [$ContentMapping list mappings] {
   puts &quot;  default? [$ContentMapping get isdefault $mid]&quot;
   puts &quot;  scope: [$ContentMapping get scope $mid]&quot;
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Jython example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>var the_page = Content.find(&#39;page&#39;,&#39;uniquename&#39;,&#39;my.test.page&#39;)
+<div class="language-text highlight"><pre><span></span><code>var the_page = Content.find(&#39;page&#39;,&#39;uniquename&#39;,&#39;my.test.page&#39;)
 ContentMapping.select(the_page)
 for mid in ContentMapping.list(&#39;mappings&#39;).split():
   print &quot;  Mapping &quot;+mid+&quot; info:&quot;
   print &quot;  content id: &quot;+ContentMapping.get(&#39;content-id&#39;, mid)
   print &quot;  default? &quot;+ContentMapping.get(&#39;isdefault&#39;, mid)
   print &quot;  scope: &quot;+ContentMapping.get(&#39;scope&#39;, mid)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <p>The get method can return the default association for the selected web content page. The list method can retrieve a list of scopes that are defined for the associations of the web content page.</p>
 <ul>
 <li>
 <p><strong>Jacl example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>$set the_page [$Content find page uniquename &quot;my.test.page&quot;]
+<div class="language-text highlight"><pre><span></span><code>$set the_page [$Content find page uniquename &quot;my.test.page&quot;]
 $ContentMapping select $the_page
 puts &quot;available scopes: [$ContentMapping list scopes]&quot;
 puts &quot;default mapping: [$ContentMapping get defaultmapping]&quot;
 puts &quot;portal resource OID: [$ContentMapping get oid]&quot;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Jython example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>var the_page = Content.find(&#39;page&#39;,&#39;uniquename&#39;,&#39;my.test.page&#39;)
+<div class="language-text highlight"><pre><span></span><code>var the_page = Content.find(&#39;page&#39;,&#39;uniquename&#39;,&#39;my.test.page&#39;)
 ContentMapping.select(the_page)
 print &quot;available scopes: &quot;+ContentMapping.list(&#39;scopes&#39;)
 print &quot;default mapping: &quot;+ContentMapping.get(&#39;defaultmapping&#39;)
 print &quot;portal resource OID: &quot;+ContentMapping.get(&#39;oid&#39;)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="add-content-associations">Add content associations</h2>
@@ -2899,25 +2876,19 @@ print &quot;portal resource OID: &quot;+ContentMapping.get(&#39;oid&#39;)
 <ul>
 <li>
 <p><strong>Jacl example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>$ContentMapping select [$ContentNode find page uniquename &quot;my.sample.page&quot;]
+<div class="language-text highlight"><pre><span></span><code>$ContentMapping select [$ContentNode find page uniquename &quot;my.sample.page&quot;]
 $ContentMapping add content-path &quot;/test1/mapping&quot; 
 set the_content_id  .... ## obtain ID of content to be mapped 
 $ContentMapping add id $the_content_id
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Jython example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>ContentMapping.select(Content.find(&#39;all&#39;,&#39;un&#39;,&#39;my.sample.page&#39;))
+<div class="language-text highlight"><pre><span></span><code>ContentMapping.select(Content.find(&#39;all&#39;,&#39;un&#39;,&#39;my.sample.page&#39;))
 ContentMapping.add(&#39;content-path&#39;,&#39;/test1/mapping&#39;) 
 var the_content_id = ... ## obtain ID of content to be mapped 
 ContentMapping.add(&#39;id&#39;,the_content_id) 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="remove-content-associations">Remove content associations</h2>
@@ -2936,15 +2907,7 @@ ContentMapping.add(&#39;id&#39;,the_content_id)
 <ul>
 <li>
 <p><strong>Jacl example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>$set the_first_page [$Content find page uniquename &quot;my.test.page&quot;]
+<div class="language-text highlight"><pre><span></span><code>$set the_first_page [$Content find page uniquename &quot;my.test.page&quot;]
 $ContentMapping select $the_first_page
 foreach mid [$ContentMapping list mappings] {
   $ContentMapping remove $mid
@@ -2953,18 +2916,11 @@ foreach mid [$ContentMapping list mappings] {
 $set another_page [$Content find page uniquename &quot;my.second.test.page&quot;]
 $ContentMapping select $another_page
 $ContentMapping delete
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Jython example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>var the_page = Content.find(&#39;page&#39;,&#39;uniquename&#39;,&#39;my.test.page&#39;)
+<div class="language-text highlight"><pre><span></span><code>var the_page = Content.find(&#39;page&#39;,&#39;uniquename&#39;,&#39;my.test.page&#39;)
 ContentMapping.select(the_first_page)
 for mid in ContentMapping.list(&#39;mappings&#39;).split():
   ContentMapping.remove(mid)
@@ -2972,7 +2928,7 @@ for mid in ContentMapping.list(&#39;mappings&#39;).split():
 var another_page = Content.find(&#39;page&#39;,&#39;uniquename&#39;,&#39;my.second.test.page&#39;)
 ContentMapping.select(another_page)
 ContentMapping.delete()
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <h2 id="modify-content-associations">Modify content associations</h2>
@@ -2993,37 +2949,25 @@ ContentMapping.delete()
 <ul>
 <li>
 <p><strong>Jacl example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>$ContentMapping select [$ContentNode find page uniquename &quot;my.sample.page&quot;]
+<div class="language-text highlight"><pre><span></span><code>$ContentMapping select [$ContentNode find page uniquename &quot;my.sample.page&quot;]
 set first_m_id [lindex [$ContentMapping list mappings] 0] 
 $ContentMapping set scope $first_m_id &quot;_scp_&quot;
 $ContentMapping set default $first_m_id true
 $ContentMapping set delegation $first_m_id false
 set second_m_id [lindex [$ContentMapping list mappings] 1] 
 $ContentMapping set scope $second_m_id &quot;&quot;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Jython example:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>ContentMapping.select(Content.find(&#39;all&#39;,&#39;un&#39;,&#39;my.sample.page&#39;))
+<div class="language-text highlight"><pre><span></span><code>ContentMapping.select(Content.find(&#39;all&#39;,&#39;un&#39;,&#39;my.sample.page&#39;))
 var first_m_id = ContentMapping.list(&#39;mappings&#39;).split()[0]
 ContentMapping.set(&#39;scope&#39;,first_m_id,&#39;_scp_&#39;)
 ContentMapping.set(&#39;default&#39;,first_m_id,&#39;true&#39;)
 ContentMapping.set(&#39;delegation&#39;,first_m_id,&#39;false&#39;)
 var second_m_id = ContentMapping.list(&#39;mappings&#39;).split()[1]
 ContentMapping.set(&#39;scope&#39;,second_m_id,&#39;&#39;)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <details class="info" open="open">

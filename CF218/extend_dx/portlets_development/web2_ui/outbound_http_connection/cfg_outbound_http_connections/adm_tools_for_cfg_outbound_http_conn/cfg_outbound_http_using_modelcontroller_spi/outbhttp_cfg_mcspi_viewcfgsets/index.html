@@ -3386,17 +3386,7 @@
 <h1 id="viewing-the-configuration-settings-of-the-outbound-http-connection">Viewing the configuration settings of the outbound HTTP connection</h1>
 <p>HCL Portal provides several interfaces that you can use to retrieve configuration settings: OutboundConnectionProfile, PolicyMapping, <code>PolicyRule</code>, <code>CookieRule</code>, and PolicyVariable.</p>
 <p>For a complete reference of the functions that these interfaces provide, read the Javadoc API. The following code example shows how you can retrieve configuration settings of a policy variable:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>PolicyVariable pvar;// refer to previous examples, how to instantiate this policy variable
+<div class="language-text highlight"><pre><span></span><code>PolicyVariable pvar;// refer to previous examples, how to instantiate this policy variable
 
 System.out.println (&quot;The policy variable is &quot;+pvar.getName()+&quot;, the type is &quot;+pvar.getType());
 if (pvar.getType() == VariableType.Endpoint) {
@@ -3407,7 +3397,7 @@ if (pvar.getType() == VariableType.Endpoint) {
        System.out.println(svalue);
    }
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

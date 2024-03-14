@@ -2764,20 +2764,14 @@ If you notice HCL Web Content Manager performance issues with a large amount of 
 </li>
 <li>
 <p>Create an XML file with the following code as an example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;request
     xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
     xsi:noNamespaceSchemaLocation=&quot;PacOptimization.xsd&quot;
     report-only=&quot;false|true&quot;
     rootResource=&quot;root_resource_ID_or_blank&quot;&gt;
 &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Consider the following setting options before you save your XML file:</p>
 <ul>
 <li><code>report-only</code>: Set the value to true to have the optimizer return the number of changes that are required to the PAC tables. Set the value to false to have the optimizer update the PAC table.</li>

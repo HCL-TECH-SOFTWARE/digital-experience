@@ -3356,25 +3356,19 @@
 <h1 id="oracle-disabling-the-auto-space-advisor-background-task">Oracle: Disabling the auto space advisor background task</h1>
 <p>To prevent deadlocks during migration, you must complete a task to disable the Oracle background task called "Auto Space Advisor" before your run the upgrade-profile task during migration using the Configuration Wizard. After you complete migration, you can enable "Auto Space Advisor" as a post-migration task.</p>
 <p>You can check if the "Auto Space Advisor" task is enabled or disabled by entering the following command from SQL Plus:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>SQL&gt; select status from dba_autotask_client where client_name = &#39;auto space advisor&#39;;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>SQL&gt; select status from dba_autotask_client where client_name = &#39;auto space advisor&#39;;
+</code></pre></div>
 <ol>
 <li>
 <p>Enter the following SQL:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>BEGIN
+<div class="language-text highlight"><pre><span></span><code>BEGIN
     dbms_auto_task_admin.disable(
         client_name =&gt; &#39;auto space advisor&#39;,
         operation  =&gt; NULL,
         window_name =&gt; NULL);
 END;
 /
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you do not turn off the "Auto Space Advisor," it is possible for the migration to fail with the following Oracle error: ORA-00060: deadlock detected while waiting for resource.</p>

@@ -1787,14 +1787,13 @@
 <p>To remove your HCL Digital Experience 9.5 deployment from your Cluster deployed using Helm, it is recommended that you use Helm uninstall.</p>
 <h2 id="uninstall-command">Uninstall command</h2>
 <p>To run the uninstall, use the following command as shown in this example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>    # Helm uninstall command
+<div class="language-text highlight"><pre><span></span><code>    # Helm uninstall command
     helm uninstall your-release-name -n my-namespace
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>where <code>my-namespace</code> is the namespace where your HCL Digital Experience 9.5 deployment is installed to and <code>your-release-name</code> is the Helm release name you selected during installation.</p>
 <p>After a successful deployment, Helm responds with the following message:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    release &quot;your-release-name&quot; uninstalled
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>    release &quot;your-release-name&quot; uninstalled
+</code></pre></div>
 
 
 

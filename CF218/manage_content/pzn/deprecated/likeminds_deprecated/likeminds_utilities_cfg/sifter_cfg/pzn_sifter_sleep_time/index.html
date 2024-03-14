@@ -3137,8 +3137,8 @@
 <h1 id="sifter-sleep-time-when-the-lps_user_data-sift_pri-field-is-0">Sifter sleep time when the Lps_User_Data sift_pri field Is 0</h1>
 <p>The Lps_User_Data sift_pri field values must be greater than 0 in order for the sifter to get useful data (that is, updated mentors) for users.</p>
 <p>If set to <code>true</code>, the following setting causes the <code>sifter</code> to sleep for the specified number of seconds by <code>&lt;mentor_set_name&gt;.pri_check_interval</code> if the sift_pri field values in the Lps_User_Data table are 0. If you set the parameter to <code>false</code>, the <code>sifter</code> sifts random users when there are no users with sift_pri greater than 0.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;mentor_set_name&gt;.sleep_on_no_sift_pri = true
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;mentor_set_name&gt;.sleep_on_no_sift_pri = true
+</code></pre></div>
 
 
 

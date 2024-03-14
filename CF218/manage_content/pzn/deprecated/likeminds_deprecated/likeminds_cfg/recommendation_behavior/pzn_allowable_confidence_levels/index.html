@@ -3011,10 +3011,9 @@
 <h1 id="allowable-confidence-levels">Allowable confidence levels</h1>
 <p>The LikeMinds server assigns a confidence level to each recommendation based on how many users have rated the recommended item and how similar the ratings are to each other. "Confidence" refers to the accuracy of the prediction. Learn how to set allowable confidence levels.</p>
 <p>You can specify the range of confidence values by setting <code>db.applic.param.lowestconfidence</code> (default is 1) to the lowest confidence level and <code>db.applic.param.numberconfidenceLevels</code> (default is 4) to the number of confidence levels. You can set confidence levels for all of the Recommendation engines.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>db.applic.param.lowestconfidence = 1
+<div class="language-text highlight"><pre><span></span><code>db.applic.param.lowestconfidence = 1
 db.applic.param.numberconfidencelevels = 4
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

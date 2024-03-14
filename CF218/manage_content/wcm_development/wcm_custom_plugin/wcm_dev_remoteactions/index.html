@@ -2576,10 +2576,9 @@
 <h1 id="using-remote-action-plug-ins">Using remote action plug-ins</h1>
 <p>Remote action plug-ins are used to trigger actions from the HCL Web Content Manager application.</p>
 <p>You can reference remote action plug-ins by using plug-in tags that use the following format:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>[plugin:RemoteAction action=&quot; &quot; docid=&quot; &quot; 
+<div class="language-text highlight"><pre><span></span><code>[plugin:RemoteAction action=&quot; &quot; docid=&quot; &quot; 
 dialog=&quot; &quot; dialogSize=&quot; &quot; dialogTitle=&quot; &quot; useCurrentContext=&quot; &quot; showInfoMsg=&quot; &quot; ]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li>
 <p><strong><code>action</code></strong></p>
@@ -2611,8 +2610,8 @@ dialog=&quot; &quot; dialogSize=&quot; &quot; dialogTitle=&quot; &quot; useCurre
 </li>
 </ul>
 <p>Remote action plug-ins can also be appended to the URL of an authoring portlet. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://[host]/wps/myportal/wcmAuthoring?wcmAuthoringAction=action
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>http://[host]/wps/myportal/wcmAuthoring?wcmAuthoringAction=action
+</code></pre></div>
 <p>You can also append remote action plug-ins to the URL of a local web Content Viewer portlet. This can be useful in sites that feature inline editing of content items.</p>
 <p><strong>Custom authoring interfaces:</strong> Remote action plug-ins are not intended to be used to create a custom authoring interface. There are limitations to the functionality delivered using remote action plug-ins. For example, remote action plug-ins only support plain text. You cannot use remote action plug-ins to add markup into elements such as HTML elements. You instead use the Web Content Manager API to create custom authoring interfaces.</p>
 <div class="admonition note">
@@ -2972,10 +2971,9 @@ When copying items you can create a new parent item by using the autoCreatePare
 <h2 id="adding-comments-to-the-item-history">Adding comments to the item history</h2>
 <p>When creating items that use a workflow with "Enter comment on approval" set to true, you can add a comment to the item history by adding <code>comment="comment text"</code> to the URL.</p>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>`[plugin:RemoteAction action=&quot;edit&quot; docid=&quot;com.ibm.workplace.wcm.api.WCM_Content/ID1&quot; 
+<div class="language-text highlight"><pre><span></span><code>`[plugin:RemoteAction action=&quot;edit&quot; docid=&quot;com.ibm.workplace.wcm.api.WCM_Content/ID1&quot; 
 createDraft=&quot;true&quot; comment=&quot;comment text&quot;]`
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="examples">Examples</h2>
 <p>Open the versions view for an item:</p>
 <ul>

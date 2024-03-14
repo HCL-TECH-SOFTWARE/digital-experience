@@ -3039,14 +3039,11 @@
 </li>
 <li>
 <p>Edit the proxy-config.xml file that is at wp_profile\installedApps\&lt;cell_name&gt;\PA_icWEFPtlts.ear\snor.pf.portlets.war\WEB-INF. Remove the following cookie settings from the policy definition for the HCL Connections server to prevent the outbound requests to the HCL Connections server from being authenticated with the LTPA token:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>            &lt;cookie&gt;LTPA&lt;/cookie&gt;
+<div class="language-text highlight"><pre><span></span><code>            &lt;cookie&gt;LTPA&lt;/cookie&gt;
             &lt;cookie&gt;LTPA2&lt;/cookie&gt;
             &lt;cookie&gt;LtpaToken&lt;/cookie&gt;
             &lt;cookie&gt;LtpaToken2&lt;/cookie&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>If you change deployed applications, save the file, then restart the portlets application or the application server.</p>

@@ -2736,24 +2736,19 @@
 </ul>
 <h2 id="example">Example</h2>
 <p>This is an example of the HTML you might enter in a presentation template to set default properties for a presentation template.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;html&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;html&gt;
 &lt;head&gt;&lt;/head&gt;
 &lt;body bgcolor=&quot;#CC0000&quot; text=&quot;#000000&quot; link=&quot;#6666FF&quot; 
 vlink=&quot;#9999FF&quot; alink=&quot;#FF33CC&quot;leftmargin=&quot;5&quot; topmargin=&quot;5&quot;&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If the same page properties are used in more than one presentation template, they can be stored in a single text component that is itself referenced within the presentation template:</p>
 </div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;body &lt;component name=&quot;TextComponentName&quot;/&gt;&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;body &lt;component name=&quot;TextComponentName&quot;/&gt;&gt;
+</code></pre></div>
 <p>This means that by editing a single text component, the page properties of multiple presentation templates can quickly be updated.</p>
 <h2 id="cascading-stylesheets">Cascading stylesheets</h2>
 <p>Default style properties cannot be set for components. The default page properties override any page properties set in a component.</p>

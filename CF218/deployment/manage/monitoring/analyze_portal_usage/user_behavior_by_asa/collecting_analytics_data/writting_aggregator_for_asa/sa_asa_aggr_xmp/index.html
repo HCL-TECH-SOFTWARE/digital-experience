@@ -3491,74 +3491,7 @@
 <p>The aggregator patterns and samples section provides common aggregator patterns and samples that you might want to adopt to implement your own aggregator.</p>
 <h2 id="javascript-module-pattern-template">JavaScript module pattern template</h2>
 <p>You can use the following JavaScript module pattern as a general template:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span></pre></div></td><td class="code"><div><pre><span></span><code>/**
+<div class="language-text highlight"><pre><span></span><code>/**
  * Check if the aggregator module is already defined.
  */
 if (typeof(ibm_analytics_MyAggregator) === &quot;undefined&quot;) {
@@ -3626,7 +3559,7 @@ ibm_analytics_MyAggregator = function(/* Arguments needed internally */) {
 };
 
 };
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>By using this pattern, the aggregator module exports two functions:</p>
 <ol>
 <li>The <code>parse()</code> function is responsible for handling the DOM notifications that are sent by the SiteAnalyticsMediator. It complies with the function signature that is defined by the Active Site Analytics Mediator SPI as discussed in the topic about <em>The Active Site Analytics Mediator SPI</em>. Use this function to parse the DOM to find the analytics-specific microformats that interest you. Typically, the parse function stores the found microformats in an internal bucket, for example a JSON object, that is transmitted to the external analytics service later on. In the JavaScript module pattern template, you can also see how the aggregator can distinguish between page notifications and page element notifications (a page element can either be a portlet or an Ajax component).</li>
@@ -3638,43 +3571,18 @@ ibm_analytics_MyAggregator = function(/* Arguments needed internally */) {
 <p>The registration aspect and the logic that triggers the data transmission are not part of the aggregator module. These aspects need to be handled outside of the aggregator module.</p>
 <h2 id="registering-with-the-site-analytics-mediator">Registering with the Site Analytics Mediator</h2>
 <p>Register your <code>parse()</code> function with the Site Analytics Mediator immediately after the definition of the aggregator module:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>// instantiate and initialize the aggregator
+<div class="language-text highlight"><pre><span></span><code>// instantiate and initialize the aggregator
 var ibm_analytics_aggregator = new ibm_analytics_MyAggregator(/* arguments as needed...*/);
 // register the parse function of the aggregator with the mediator
 com.ibm.portal.analytics.SiteAnalyticsMediator.register(function() {
   ibm_analytics_aggregator.parse.apply(ibm_analytics_aggregator, arguments);
 });
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="submitting-the-analytics-data">Submitting the analytics data</h2>
 <p>You can submit the data in various ways. You can submit the data internally by using the aggregator. For example, you can submit data upon receiving a notification or based on the internal state of the aggregator. Or you can trigger data submission from outside based on an external event. This decision can depend on the business model of your external analytics service provider. For more information, see <em>Guidelines for implementing an aggregator</em>.</p>
 <p>To trigger the data submission that is based on an external event, you can either use the DOM <code>beforeunload</code> event of the browser or a time-based solution. The time-based solution sends the data periodically. You can also combine the two approaches.</p>
 <p>To use the DOM <code>beforeunload</code> event of the browser, subscribe to the <code>beforeunload</code> event by using the <code>submit()</code> function of your aggregator as shown by the following sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code>// instantiate and initialize the aggregator
+<div class="language-text highlight"><pre><span></span><code>// instantiate and initialize the aggregator
 var ibm_analytics_aggregator = new ibm_analytics_MyAggregator(/* arguments...*/);
 
 // register the parse function of the aggregator with the mediator
@@ -3695,37 +3603,9 @@ if (window.addEventListener) {
   // Microsoft
   window.attachEvent(&quot;onbeforeunload&quot;, ibm_analytics_MyAggregator_submit);
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If you use client-side aggregation rendering for your portal pages, full page refreshes and therefore DOM unload events do not occur often. In this case and with this approach, the aggregator collects data for a long time without sending the collected data to the external analytics service. To avoid this behavior, you can combine the unload approach with a time-based approach. For example, you can submit the collected data periodically, in addition to sending it off upon receiving a <code>beforeunload</code> event. To implement the periodic data submission, use the <code>setInterval()</code> JavaScript API that all major browsers provide. In this case, you register the <code>submit()</code> function as the interval handler within your onload handler. The following code sample uses a time interval of 30 seconds. This action means that the data is submitted every 30 seconds at the latest if no <code>beforeunload</code> event is received.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code>// instantiate and initialize the aggregator
+<div class="language-text highlight"><pre><span></span><code>// instantiate and initialize the aggregator
 var ibm_analytics_aggregator = new ibm_analytics_MyAggregator(/* arguments...*/);
 
 // register the parse function of the aggregator with the mediator
@@ -3754,14 +3634,12 @@ if (window.addEventListener) {
   window.attachEvent(&quot;onload&quot;, ibm_analytics_MyAggregator_init);
   window.attachEvent(&quot;onbeforeunload&quot;, ibm_analytics_MyAggregator_submit);
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If you have Ajax applications on your portal sites that change markup dynamically by using JavaScript, you need to notify the SiteAnalyitcsMediator framework manually. You can notify by calling the <code>notify()</code> function that is provided by the SiteAnalyticsMediator object.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>// determine the root nodes of the DOM subtrees that have changed
+<div class="language-text highlight"><pre><span></span><code>// determine the root nodes of the DOM subtrees that have changed
 var nodes = ...;  
 com.ibm.portal.analytics.SiteAnalyticsMediator.notify(nodes, callback);
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="aggregator-samples">Aggregator samples</h2>
 <p>HCL Portal provides several sample aggregators. They are in the <code>[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/js-samples</code> directory of your portal installation. Although the provided sample code does not require any special JavaScript library, you might want to use the JavaScript framework of your choice. With the JavaScript framework, you can reduce the size and complexity of your aggregator implementations. And the JavaScript framework might support you in achieving a good performance. To explain the concepts that are discussed in the previous topics, the sample aggregators are simplified with regards to the data that is evaluated. You can install each of the provided sample aggregators on HCL Portal as described in the topic about <em>Adding an Active Site Analytics aggregator to a portal page</em>. HCL Portal provides the following sample aggregators:</p>
 <ul>

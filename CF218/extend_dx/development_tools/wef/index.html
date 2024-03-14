@@ -2228,8 +2228,8 @@
 <li>
 <p>For Linux Platforms: From the terminal run the <code>sh run.sh</code> command. </p>
 <p>If successful, it prints the following message: </p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>The above tasks are completed.
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>The above tasks are completed.
+</code></pre></div>
 </li>
 </ul>
 </li>
@@ -2238,14 +2238,14 @@
 <ul>
 <li>
 <p>For Windows platforms: Navigate to <code>WEF-8.5.1/win/eclipse</code>. Add the following as shown below:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>-vm jre8-path\bin\javaw.exe
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>-vm jre8-path\bin\javaw.exe
+</code></pre></div>
 <p><img alt="Update eclipse.ini file" src="_img/Update_eclipse.ini.png" /></p>
 </li>
 <li>
 <p>For Linux Platforms: Navigate to <code>WEF-8.5.1/linux/eclipse</code>. Add the following as shown below:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Copied to clipboard-vm jre8-path/bin
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>Copied to clipboard-vm jre8-path/bin
+</code></pre></div>
 <p><img alt="Update eclipse.ini file - Linux" src="_img/update_eclipse.ini_linux.png" /></p>
 </li>
 </ul>
@@ -2297,8 +2297,8 @@
 </li>
 <li>
 <p>Enter the existing workspace path. It displays throw an alert message:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&quot;Workspace &#39;&lt;old-workspace-path&gt;&#39; was written with an older version of the product and will be updated. Updating the workspace can make it incompatiable with older versions of the product. Are you sure you want to continue with this workspace?&quot;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&quot;Workspace &#39;&lt;old-workspace-path&gt;&#39; was written with an older version of the product and will be updated. Updating the workspace can make it incompatiable with older versions of the product. Are you sure you want to continue with this workspace?&quot;
+</code></pre></div>
 </li>
 </ol>
 <p>The alert message is displayed because the Eclipse version is upgraded during the HCL Web Experience Factory 8.5.1 installation. It does not corrupt your workspace. Click OK to continue. This opens all the applications in the latest WEF v8.5.1 perspective but with errors thrown for the project version.</p>
@@ -2330,19 +2330,19 @@
 <ul>
 <li>
 <p>For Windows platforms:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>keytool.exe -import -trustcacerts -alias &lt;alias-name&gt; -file &lt;path-to-the-certificate-file&gt; -keystore &lt;keystore&gt; -storepass &lt;password&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>keytool.exe -import -trustcacerts -alias &lt;alias-name&gt; -file &lt;path-to-the-certificate-file&gt; -keystore &lt;keystore&gt; -storepass &lt;password&gt;
+</code></pre></div>
 <p>Example:
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>keytool.exe -import -trustcacerts -alias default -file C:\Downloads\mylocal.der -keystore cacerts -storepass changeit
-</code></pre></div></td></tr></table></div></p>
+<div class="language-text highlight"><pre><span></span><code>keytool.exe -import -trustcacerts -alias default -file C:\Downloads\mylocal.der -keystore cacerts -storepass changeit
+</code></pre></div></p>
 </li>
 <li>
 <p>For Linux platforms:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>keytool -import -trustcacerts -alias &lt;alias-name&gt; -file &lt;path-to-the-certificate-file&gt; -keystore &lt;keystore&gt; -storepass &lt;password&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>keytool -import -trustcacerts -alias &lt;alias-name&gt; -file &lt;path-to-the-certificate-file&gt; -keystore &lt;keystore&gt; -storepass &lt;password&gt;
+</code></pre></div>
 <p>Example:
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>keytool -import -trustcacerts -alias default -file /home/centos/Downloads/mylocal.der -keystore cacerts -storepass changeit
-</code></pre></div></td></tr></table></div></p>
+<div class="language-text highlight"><pre><span></span><code>keytool -import -trustcacerts -alias default -file /home/centos/Downloads/mylocal.der -keystore cacerts -storepass changeit
+</code></pre></div></p>
 </li>
 </ul>
 </li>
@@ -2373,8 +2373,8 @@
 <li>
 <p>Click Finish to create the project according to the details and features you have specified. </p>
 <p>The following message displays: 
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Would you like to publish your project now? 
-</code></pre></div></td></tr></table></div></p>
+<div class="language-text highlight"><pre><span></span><code>Would you like to publish your project now? 
+</code></pre></div></p>
 <p>Click <strong>Yes</strong> to continue.</p>
 </li>
 </ol>

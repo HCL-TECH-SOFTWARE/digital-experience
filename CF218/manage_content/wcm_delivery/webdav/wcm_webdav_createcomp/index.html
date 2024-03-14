@@ -2336,48 +2336,7 @@
 <h1 id="creating-components-with-webdav">Creating components with WebDAV</h1>
 <p>Components are used to store elements in your web content system, and you can use WebDAV to create and manage components. Each component type is represented as a folder in WebDAV, with individual components represented as files in the appropriate component folder.</p>
 <p>All components for a library are listed as folders under the <code>components</code> folder for that library. Within the <code>components</code> folder, you can also create custom folders that you can use to organize your components. Like the root <code>components</code> folder, custom folders contain folders for each type of component.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span></pre></div></td><td class="code"><div><pre><span></span><code> libraries
+<div class="language-text highlight"><pre><span></span><code> libraries
    - wcm.library.my_library
        - components
            - CustomComponentFolder1 
@@ -2419,38 +2378,9 @@
           - wcm.comps.user.name
           - wcm.comps.user.selection
           access-control.xml
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Components are data-oriented items and represented as files and metadata folders.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code> libraries
+<div class="language-text highlight"><pre><span></span><code> libraries
    - wcm.library.my_library
        - components
           - wcm.comps.authoring.tools
@@ -2480,7 +2410,7 @@
           .
            - wcm.comps.user.selection
           access-control.xml    
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Although displayed in WebDAV, the following components cannot be created or modified through WebDAV and are represented by empty files:</p>

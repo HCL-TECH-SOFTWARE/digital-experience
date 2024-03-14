@@ -2476,10 +2476,9 @@
 <li>The page indicated by the <code>setDefaultRedirectPage()</code> method of the DynamicUIManagementFactoryService interface.</li>
 <li>
 <p>If <code>setDefaultRedirectPage()</code> is not used, the user is redirected to the page indicated by the <code>defaultRedirectPage</code> property in the <code>DynamicUIManagerFactoryServiceImpl</code>. This property is prefixed by the unique name of the extension node for the dynamic UI configuration. For example, two dynamic UI configurations could set this property as follows.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>my.dynui.config.test1.defaultRedirectPage=page1.unique.name
+<div class="language-text highlight"><pre><span></span><code>my.dynui.config.test1.defaultRedirectPage=page1.unique.name
 my.dynui.config.test2.defaultRedirectPage=page2.unique.name
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>If the <code>defaultRedirectPage</code> property is not set, the user is redirected to the extension node for the configuration.</p>

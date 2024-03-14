@@ -4073,20 +4073,7 @@
 <h1 id="portlet-metadata">Portlet metadata</h1>
 <p>Portlet nodes can own metadata, which are name-value pairs of data that is associated with the content node. Metadata are used by the portal, for example, to set display attributes, or by the user. The Portal bean allows read-only access on portlet metadata. Metadata can be assigned only with portlet-type or application-type repository objects.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>Portlet.parmget(ID, name)
+<div class="language-text highlight"><pre><span></span><code>Portlet.parmget(ID, name)
 Portlet.list(ID, &quot;parm&quot;)
 
 # only for beans with a current selection
@@ -4100,22 +4087,9 @@ print Portlet.parmget(&quot;MyPortletConfig&quot;)
 # example: list all metadata names for the selected portlet
 for pname in Portlet.list(&quot;parm&quot;).split():
     print pname
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>$Portlet parmget ID name
+<div class="language-text highlight"><pre><span></span><code>$Portlet parmget ID name
 $Portlet list ID parm
 
 # only for beans with a current selection
@@ -4129,7 +4103,7 @@ puts &quot;[$Portlet parmget MyPortletConfig]&quot;
 foreach pname [$Portlet list parm] {
 puts &quot;$pname&quot; 
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

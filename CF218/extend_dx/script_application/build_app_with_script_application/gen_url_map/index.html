@@ -2179,35 +2179,17 @@
 <li>
 <p>If you have JavaScript that must load a dynamically constructed path at run time, pass the local path to <code>__SPNS_spHelper.getElementURL</code>, with the local path as a prefix. Use the results of that function to determine the runtime path.</p>
 <p>For example, instead of this code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$.get(localpathURL);
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>$.get(localpathURL);
+</code></pre></div>
 <p>use the following code instead:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>var runtimeURL = __SPNS__spHelper.getElementURL( localPathURL ) ;
+<div class="language-text highlight"><pre><span></span><code>var runtimeURL = __SPNS__spHelper.getElementURL( localPathURL ) ;
 $.get( runtimeURL  );
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>To test your application outside your portal and the Script Application where <code>spHelper</code> does not exist, you must add extra code. Wrap the sample code in the previous step with the following extra protective statements.</p>
 <p>For example, in the following code, you can add an if-statement and a <code>try-and-catch</code> block. This code replaces the local URL if the namespaced <code>spHelper</code> exists and has the optional <code>getElementURL</code> method available. That method returns a runtime URL for the specified local URL. With these additional statements that wrap the lookup, when run locally, the original local path-based URL is used for testing purposes, as <code>spHelper</code> does not exist.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code>// Start with the local URL (eg, htmlFragments/viewDetails.html )
+<div class="language-text highlight"><pre><span></span><code>// Start with the local URL (eg, htmlFragments/viewDetails.html )
 var runtimeURL = localpathURL;    
 
   try { 
@@ -2225,7 +2207,7 @@ var runtimeURL = localpathURL;
   } catch(error) { 
   }
   $.get(runtimeURL);
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ol>
 <p>If the results are not what you expected, consider the following issues.</p>

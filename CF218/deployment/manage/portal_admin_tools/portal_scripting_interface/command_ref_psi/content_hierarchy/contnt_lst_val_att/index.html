@@ -4076,22 +4076,7 @@
 <p>The markups list holds the markups that are supported by the content node. The commands list, add, and drop are available for markups. At least one markup must be supported.</p>
 <p>The allowedportlets list holds the portlets that are registered as allowed portlets for that page. The total list of portlets that can be used for the page is this allowedportlets list, plus the lists of allowed portlets of all parent pages.</p>
 <p>Jython example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code># example for manipulating locales of a content node:
+<div class="language-text highlight"><pre><span></span><code># example for manipulating locales of a content node:
 # select node, list locales, remove and re-create a locale
 # &quot;locale&quot; is an alternative name for the &quot;locales&quot; list
 Content.select(ID)
@@ -4107,24 +4092,9 @@ Content.list(&quot;markups&quot;)
 Content.add(&quot;markup&quot;, &quot;chtml&quot;)
 Content.drop(&quot;markup&quot;, &quot;wml&quot;)
 Content.list(&quot;allowedportlets&quot;)
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Jacl example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code># example for manipulating locales of a content node:
+<div class="language-text highlight"><pre><span></span><code># example for manipulating locales of a content node:
 # select node, list locales, remove and re-create a locale
 # &quot;locale&quot; is an alternative name for the &quot;locales&quot; list
 $Content select ID
@@ -4140,7 +4110,7 @@ $Content list markups
 $Content add markup chtml
 $Content drop markup wml
 $Content list allowedportlets
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

@@ -2848,8 +2848,8 @@
 </tbody>
 </table>
 <p>Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;ibmwcm:library&gt;LibraryName&lt;/ibmwcm:library&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:library&gt;LibraryName&lt;/ibmwcm:library&gt;
+</code></pre></div>
 <h2 id="path">path</h2>
 <p>The path element is used to indicate the hierarchical path to the web content item. For site areas and content items, this element contains the parent site area path. For categories, the value is the parent category path.</p>
 <p>Site areas and categories can only have a single path element. If more than one path element is specified, only the first is used. Content items can have multiple parents, so multiple path elements can be used. The first path element is used as the main content item and the following path elements are treated as content links. An optional "library" parameter can be specified for path elements referring to linked content in a different library from the main content item.</p>
@@ -2894,16 +2894,12 @@
 </tbody>
 </table>
 <p>Examples:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;ibmwcm:path&gt;/&lt;/ibmwcm:path&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:path&gt;/&lt;/ibmwcm:path&gt;
 
 &lt;ibmwcm:path&gt;/IBM/Products&lt;/ibmwcm:path&gt;
 
 &lt;ibmwcm:path library=&quot;en_US&quot;&gt;/Intranet/Home/News&lt;/ibmwcm:path&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="createlinks">createLinks</h2>
 <p>This is used to specify which parent items to link to when creating content items.</p>
 <table>
@@ -2945,12 +2941,10 @@
 </tbody>
 </table>
 <p>Examples:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;ibmwcm:createLinks&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:createLinks&gt;
     &lt;ibmwcm:parentGuid&gt;8234ad23fb29&lt;/ibmwcm:parentGuid&gt;
 &lt;/ibmwcm:createLinks&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="the-orphan-container">The Orphan Container</h2>
 <p>If no valid parents or paths are specified in the feed, then the item is placed into an orphan container until it is able to be updated with a valid path. The Web Content Integrator will automatically create an orphans container in each Web content library as it is needed. For site areas and content items, the orphan container is a site area path name WCI/Orphans. For categories, the orphan container is a taxonomy and category path with the name WCI/Orphans. The name of the orphan containers can be controlled through a setting in the WCMConsumerPlugin.properties file.</p>
 <h2 id="children">children</h2>
@@ -2999,12 +2993,10 @@
 </tbody>
 </table>
 <p>Examples:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;ibmwcm:children action=&quot;add&quot; position=&quot;start&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:children action=&quot;add&quot; position=&quot;start&quot;&gt;
     &lt;ibmwcm:childGuid&gt;8234cb51df43&lt;/ibmwcm:childGuid&gt;
 &lt;/ibmwcm:children&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="defaultcontent">defaultContent</h2>
 <p>The defaultContent element only applies to site areas. It allows the feed producer to specify which content item is used as the default content for a site area. If this element is missing, has a blank value, or cannot be resolved, then the default content of the site area is cleared.</p>
 <table>
@@ -3046,8 +3038,8 @@
 </tbody>
 </table>
 <p>Examples:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;ibmwcm:defaultContent&gt;8234cb5&lt;/ibmwcm:defaultContent&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:defaultContent&gt;8234cb5&lt;/ibmwcm:defaultContent&gt;
+</code></pre></div>
 <h2 id="templatemap">templateMap</h2>
 <p>The templateMap element only applies to site areas. It allows the feed producer to specify the template maps to be used when rendering content that is contained within the designated site area. Use multiple instances of the templateMap element to create multiple template mappings on a site area.</p>
 <p>When performing an update of an existing site area, the following steps are executed for each <code>&lt;ibmwcm:templateMap /&gt;</code> element that is specified in the feed:</p>
@@ -3120,10 +3112,9 @@
 </tbody>
 </table>
 <p>Examples:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;ibmwcm:templateMap authoring=&quot;AT News&quot; presentation=&quot;PT News&quot; /&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:templateMap authoring=&quot;AT News&quot; presentation=&quot;PT News&quot; /&gt;
 &lt;ibmwcm:templateMap authoring=&quot;AT Announcement&quot; presentation=&quot;PT Announcement&quot; /&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

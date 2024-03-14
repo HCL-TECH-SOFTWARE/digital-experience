@@ -2616,15 +2616,7 @@
 <li>
 <p>When creating your xmlaccess command, specify your page parameters as you would for a standard DX page.</p>
 <p>The following block of code is an example of specified page parameters:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;content-node action=&quot;update&quot; content-parentref=&quot;parentOID&quot; domain=&quot;rel&quot; objectid=&quot;someOID&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;content-node action=&quot;update&quot; content-parentref=&quot;parentOID&quot; domain=&quot;rel&quot; objectid=&quot;someOID&quot; 
 preserve-old-layout=&quot;true&quot; type=&quot;page&quot;&gt;
   &lt;content-mapping-info&gt;
     &lt;content-mapping content-id=&quot;/mylibrary2/sitearea2&quot; default=&quot;true&quot; 
@@ -2633,7 +2625,7 @@ delegated-access-level=&quot;User&quot;/&gt;
 default=&quot;false&quot;/&gt;
   &lt;/content-mapping-info&gt;
 &lt;/content-node&gt; 
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 </div>
@@ -2642,44 +2634,19 @@ default=&quot;false&quot;/&gt;
 <li>
 <p>Because the web content viewer uses public render parameters to identify the content to render, include the page parameter param.sharing.scope when creating your xmlaccess command. Set the value for the parameter to ibm.portal.sharing.scope.page.</p>
 <p>The following block of code is an example parameter definition for web content pages when using the XML configuration interface:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>   &lt;parameter name=&quot;com.ibm.portal.wcm.contentroot&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>   &lt;parameter name=&quot;com.ibm.portal.wcm.contentroot&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;
       &lt;![CDATA[/mylib/mysite/mysitearea]]&gt;
    &lt;/parameter&gt;
    &lt;parameter name=&quot;param.sharing.scope&quot; type=&quot;string&quot; update=&quot;set&quot;&gt;
       &lt;![CDATA[ibm.portal.sharing.scope.page]]&gt;
    &lt;/parameter&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>When creating your xmlaccess command, add at least one web content viewer that is configured to listen to other portlets and make dynamic broadcasts.</p>
 <p>Adding the viewer ensures that content selected for this page is rendered correctly and that links between pages work properly.</p>
 <p>The following block of code is an example of how to add the web content viewer using the XML configuration interface:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;component action=&quot;update&quot; active=&quot;true&quot; deletable=&quot;undefined&quot; domain=&quot;rel&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;component action=&quot;update&quot; active=&quot;true&quot; deletable=&quot;undefined&quot; domain=&quot;rel&quot; 
 modifiable=&quot;undefined&quot; objectid=&quot;7_U796BB1A0OS250IOS7F1BP3081&quot; ordinal=&quot;100&quot; 
 orientation=&quot;H&quot; skinref=&quot;undefined&quot; type=&quot;container&quot; width=&quot;undefined&quot;&gt;
   &lt;component action=&quot;update&quot; active=&quot;true&quot; deletable=&quot;undefined&quot; domain=&quot;rel&quot; 
@@ -2700,7 +2667,7 @@ orientation=&quot;H&quot; skinref=&quot;undefined&quot; type=&quot;container&quo
     &lt;/component&gt;
   &lt;/component&gt;
 &lt;/component&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Migration note</p>
 </div>

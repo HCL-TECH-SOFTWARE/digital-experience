@@ -3558,39 +3558,10 @@
 </ul>
 <h2 id="update">Update</h2>
 <p>You can update the default properties of a content template by sending a PUT request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/ContentTemplate/item-uuid/Prototype/properties
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/ContentTemplate/item-uuid/Prototype/properties
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code>PUT /wps/mycontenthandler/wcmrest/ContentTemplate/d19db2ce-87dc-484f-937a-203139818fbd/Prototype/properties
+<div class="language-text highlight"><pre><span></span><code>PUT /wps/mycontenthandler/wcmrest/ContentTemplate/d19db2ce-87dc-484f-937a-203139818fbd/Prototype/properties
 Content-Type: application/vnd.ibm.wcm+xml
 
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
@@ -3620,27 +3591,13 @@ Content-type: application/atom+xml
     &lt;placement&gt;FIRST_CHILD&lt;/placement&gt;
     &lt;location-options allowedLocation=&quot;ALL_AVAILABLE&quot; contentLink=&quot;NONE&quot;/&gt;
 &lt;/content-properties&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="read">Read</h2>
 <p>The default properties of a content template can be read by sending a GET request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/ContentTemplate/item-uuid/Prototype/properties
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/ContentTemplate/item-uuid/Prototype/properties
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>GET /wps/mycontenthandler/wcmrest/ContentTemplate/d19db2ce-87dc-484f-937a-203139818fbd/Prototype/properties
+<div class="language-text highlight"><pre><span></span><code>GET /wps/mycontenthandler/wcmrest/ContentTemplate/d19db2ce-87dc-484f-937a-203139818fbd/Prototype/properties
 
 HTTP/1.0 200 OK
 Content-type: application/vnd.ibm.wcm+xml
@@ -3655,39 +3612,34 @@ Content-type: application/vnd.ibm.wcm+xml
     &lt;placement&gt;LAST_CHILD&lt;/placement&gt;
     &lt;location-options allowedLocation=&quot;ALL_AVAILABLE&quot; contentLink=&quot;NONE&quot;/&gt;
 &lt;/content-properties&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="format-of-properties-values">Format of properties values</h2>
 <ul>
 <li>
 <p><strong>Workflow options:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;workflow-control&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;workflow-control&gt;
          &lt;option name=&quot;ENABLE_WORKFLOW&quot; enabled=&quot;false&quot;/&gt;
          &lt;option name=&quot;HIDE_WORKFLOW_SECTION&quot; enabled=&quot;true&quot;/&gt;
 &lt;/workflow-control&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Default presentation template:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;link rel=&quot;default-presentation&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;link rel=&quot;default-presentation&quot; 
 href=&quot;/wps/mycontenthandler/wcmrest/PresentationTemplate/&lt;item-uuid&gt;&quot;  
 label=&quot;Default Presentation&quot;/&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Create content under a new site area:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;createNewParent&gt;true&lt;/createNewParent&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;createNewParent&gt;true&lt;/createNewParent&gt;
+</code></pre></div>
 <p>Valid values: true, false.</p>
 </li>
 <li>
 <p><strong>Default placement of new item:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;placement&gt;FIRST_CHILD&lt;/placement&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;placement&gt;FIRST_CHILD&lt;/placement&gt;
+</code></pre></div>
 <p>Valid values: FIRST_CHILD, LAST_CHILD.</p>
 </li>
 <li>
@@ -3695,19 +3647,16 @@ label=&quot;Default Presentation&quot;/&gt;
 <ul>
 <li>
 <p><strong>When all available locations are allowed:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;location-options allowedLocation=&quot;ALL_AVAILABLE&quot; contentLink=&quot;NONE&quot;/&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;location-options allowedLocation=&quot;ALL_AVAILABLE&quot; contentLink=&quot;NONE&quot;/&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong>When only selected locations are allowed:</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;location-options allowedLocation=&quot;SELECTED&quot; contentLink=&quot;NONE&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;location-options allowedLocation=&quot;SELECTED&quot; contentLink=&quot;NONE&quot;&gt;
              &lt;location href=&quot;/wps/mycontenthandler/!ut/p/wcmrest/SiteArea/&lt;item-uuid&gt;&quot;/&gt;
              &lt;location href=&quot;/wps/mycontenthandler/!ut/p/wcmrest/SiteArea/&lt;item-uuid&gt;&quot;/&gt;
 &lt;/location-options&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <p>Valid values for <code>allowedLocation</code>: ALL_AVAILABLE, SELECTED.</p>

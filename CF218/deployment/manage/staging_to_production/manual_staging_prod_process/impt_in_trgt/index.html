@@ -3155,12 +3155,10 @@
 </li>
 <li>
 <p>Confirm completion of Task.xml in <code>/opt/IBM/WebSphere/wp_profile/log/HCL Portal and HCL Web Content Manager/SystemOut.log</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[10/9/15 11:05:07:777 EDT] 000000d9 SchedulerTask I com.ibm.wps.datastore.ejb.cleanup.SchedulerTaskNotificationSinkBean handleEvent() EJPDE0005I: Task WPS_RUN_ONCE_TASK_com.ibm.portal.datastore.task.ResourceCleanup with ID 254 was started.
+<div class="language-text highlight"><pre><span></span><code>[10/9/15 11:05:07:777 EDT] 000000d9 SchedulerTask I com.ibm.wps.datastore.ejb.cleanup.SchedulerTaskNotificationSinkBean handleEvent() EJPDE0005I: Task WPS_RUN_ONCE_TASK_com.ibm.portal.datastore.task.ResourceCleanup with ID 254 was started.
  [10/9/15 11:05:07:823 EDT] 000000d9 SchedulerTask I com.ibm.wps.datastore.ejb.cleanup.SchedulerTaskNotificationSinkBean handleEvent() EJPDE0007I: Task WPS_RUN_ONCE_TASK_com.ibm.portal.datastore.task.ResourceCleanup with ID 254 has finished. 
 [10/9/15 11:05:07:827 EDT] 000000d9 SchedulerTask I com.ibm.wps.datastore.ejb.cleanup.SchedulerTaskNotificationSinkBean handleEvent() EJPDE0006I: RUN ONCE Task WPS_RUN_ONCE_TASK_com.ibm.portal.datastore.task.ResourceCleanup with ID 254 has completed.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Copy /opt/IBM/WebSphere/wp_profile/PortalServer/deployed/archive from source to target.</p>
@@ -3174,30 +3172,13 @@
 </li>
 <li>
 <p>Use XMLAccess to import base Export.XML into the base virtual Portal of the target system:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>./xmlaccess.sh -user wpsadmin -passowrd wpsadmin -in /tmp/baseExport.xml -out 
+<div class="language-text highlight"><pre><span></span><code>./xmlaccess.sh -user wpsadmin -passowrd wpsadmin -in /tmp/baseExport.xml -out 
 /tmp/baseExport_result.xml -url http://cntserv_exmp.com:10039/wps/config
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Confirm successful run in results:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>./xmlaccess.sh  -user wpsadmin -password wpsadmin -in /tmp/baseExport.xml -out
+<div class="language-text highlight"><pre><span></span><code>./xmlaccess.sh  -user wpsadmin -password wpsadmin -in /tmp/baseExport.xml -out
 /tmp/baseExport_result.xml  -url http://cntserv_exmp.com:10039/wps/config
 
 Licensed  Materials - Property of IBM,5724-E76, 5724-E77, 5724-I29 and  5655-Y16, (C) 
@@ -3214,7 +3195,7 @@ EJPXB0002I:  Reading input file /tmp/baseExport.xml
  from cntserv_exmp.com/127.0.0.1  virtual portal: none (default virtual portal) --&gt;
 
 EJPXB0020I:  The request was processed successfully on the server.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Go to the portal profile ConfigEngine directory cd /opt/IBM/WebSphere/wp_profile/ConfigEngine.</p>

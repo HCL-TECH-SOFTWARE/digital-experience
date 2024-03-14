@@ -3157,29 +3157,29 @@
 <p><strong><code>ibm.portal.toolbar.reloadOnResize = true | false</code></strong></p>
 <p>This page parameter indicates whether you want your toolbar tab to be reloaded automatically if a resize event occurs in your browser window. Depending on how your content is rendered, it might be useful to set this parameter to true. Defaults are set to false.</p>
 <p>If you are using the XML configuration interface, you can set the parameter as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;parameter name=“ibm.portal.toolbar.reloadOnResize“ type=“string“ update=“set“&gt;true&lt;/parameter&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;parameter name=“ibm.portal.toolbar.reloadOnResize“ type=“string“ update=“set“&gt;true&lt;/parameter&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong><code>com.ibm.portal.Hidden = true | false</code></strong></p>
 <p>This page parameter shows or hides the toolbar page in the toolbar navigation. If you want to hide the toolbar page, you need to set the value to true. Defaults are set to false.</p>
 <p>If you are using the XML configuration interface, you can set the parameter as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;parameter name=“com.ibm.portal.Hidden“ type=“string“ update=“set“&gt;true&lt;/parameter&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;parameter name=“com.ibm.portal.Hidden“ type=“string“ update=“set“&gt;true&lt;/parameter&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong><code>ibm.portal.toolbar.target = "primary" | "secondary"</code></strong></p>
 <p>This page parameter specifies the target toolbar frame that your toolbar page should be displayed in. By default, toolbar pages are displayed in the secondary toolbar frame that overlays the main page. The Site Manager is displayed in the primary frame. This setting might be set for only the first-level toolbar pages, which are direct children of the toolbar content root.</p>
 <p>If you are using the XML configuration interface, you can set the parameter as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;parameter name=“ibm.portal.toolbar.target“ type=“string“ update=“set“&gt;primary&lt;/parameter&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;parameter name=“ibm.portal.toolbar.target“ type=“string“ update=“set“&gt;primary&lt;/parameter&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong><code>ibm.portal.toolbar.disableStateSynchronization = true | false</code></strong></p>
 <p>The special setting that disables the context synchronization feature for a toolbar tab. If this feature is unavailable, your toolbar page is not reloaded in case of context or navigational state changes in the view frame. Typically, toolbar pages depend on the context, for example on the page that is displayed in the view frame. If your toolbar page displays content that is independent of the current context, you can set the value of this parameter to true to prevent the reloading in case of context changes. Defaults are set to false, which means that the context synchronization feature is enabled.</p>
 <p>If you are using the XML configuration interface, you can set these parameters as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;parameter name=“ibm.portal.toolbar.disableStateSynchronization“ type=“string“ update=“set“&gt;true&lt;/parameter&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;parameter name=“ibm.portal.toolbar.disableStateSynchronization“ type=“string“ update=“set“&gt;true&lt;/parameter&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong><code>ibm.portal.toolbar.width = value</code></strong></p>
@@ -3190,8 +3190,8 @@
 <li>ibm.portal.toolbar.minWidth = 360px</li>
 </ul>
 <p>If you are using the XML configuration interface, you can set these parameters as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;parameter name=“ibm.portal.toolbar.width“ type=“string“ update=“set“&gt;30%&lt;/parameter&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;parameter name=“ibm.portal.toolbar.width“ type=“string“ update=“set“&gt;30%&lt;/parameter&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong><code>ibm.portal.toolbar.minWidth = value</code></strong></p>
@@ -3202,8 +3202,8 @@
 <li>ibm.portal.toolbar.minWidth = 360px</li>
 </ul>
 <p>If you are using the XML configuration interface, you can set these parameters as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;parameter name=“ibm.portal.toolbar.minWidth“ type=“string“ update=“set“&gt;320px&lt;/parameter&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;parameter name=“ibm.portal.toolbar.minWidth“ type=“string“ update=“set“&gt;320px&lt;/parameter&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong><code>ibm.portal.toolbar.maxWidth = value</code></strong></p>
@@ -3214,8 +3214,8 @@
 <li>ibm.portal.toolbar.minWidth = 360px</li>
 </ul>
 <p>If you are using the XML configuration interface, you can set these parameters as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;parameter name=“ibm.portal.toolbar.maxWidth“ type=“string“ update=“set“&gt;1024px&lt;/parameter&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;parameter name=“ibm.portal.toolbar.maxWidth“ type=“string“ update=“set“&gt;1024px&lt;/parameter&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong><code>ibm.portal.toolbar.height = value</code></strong></p>
@@ -3226,8 +3226,8 @@
 <li>ibm.portal.toolbar.minHeight = 300px</li>
 </ul>
 <p>If you are using the XML configuration interface, you can set these parameters as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;parameter name=“ibm.portal.toolbar.height“ type=“string“ update=“set“&gt;80%&lt;/parameter&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;parameter name=“ibm.portal.toolbar.height“ type=“string“ update=“set“&gt;80%&lt;/parameter&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong><code>ibm.portal.toolbar.minHeight = value</code></strong></p>
@@ -3238,8 +3238,8 @@
 <li>ibm.portal.toolbar.minHeight = 300px</li>
 </ul>
 <p>If you are using the XML configuration interface, you can set these parameters as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;parameter name=“ibm.portal.toolbar.minHeight“ type=“string“ update=“set“&gt;320px&lt;/parameter&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;parameter name=“ibm.portal.toolbar.minHeight“ type=“string“ update=“set“&gt;320px&lt;/parameter&gt;
+</code></pre></div>
 </li>
 <li>
 <p><strong><code>ibm.portal.toolbar.maxHeight = value</code></strong></p>
@@ -3250,8 +3250,8 @@
 <li>ibm.portal.toolbar.minHeight = 300px</li>
 </ul>
 <p>If you are using the XML configuration interface, you can set these parameters as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;parameter name=“ibm.portal.toolbar.maxHeight“ type=“string“ update=“set“&gt;800px&lt;/parameter&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;parameter name=“ibm.portal.toolbar.maxHeight“ type=“string“ update=“set“&gt;800px&lt;/parameter&gt;
+</code></pre></div>
 </li>
 </ul>
 <div class="admonition note">

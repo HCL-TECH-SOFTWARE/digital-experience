@@ -3035,26 +3035,26 @@ However, other tasks such as database migration are performed using a Config Eng
 <li>
 <p>Open a shell on a DX Core pod.</p>
 <p>The following example instructions use pod ‘0’ as it should always be available:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl exec -it -n &lt;namespace&gt; &lt;deployment-name&gt;-core-0 -c core -- /bin/bash
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl exec -it -n &lt;namespace&gt; &lt;deployment-name&gt;-core-0 -c core -- /bin/bash
+</code></pre></div>
 </li>
 <li>
 <p>Run the config engine command using the <code>containerConfigEngine.sh</code> wrapper script.</p>
 <p>This script pauses the Kubernetes probes when a Configuration task is in progress. This prevents any unintended restarts of the Pod.</p>
 <p>On the Core pod, use the following command to run the config engine command:</p>
 <p>Follow the instructions for the particular configuration task that you need to perform. See <a href="https://help.hcltechsw.com/digital-experience/9.5/config/cw_db_transfer-db2.html">DB Transfer Config Engine task</a><!-- (../config/cw_db_transfer-db2.md) --> for an example.
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/containerConfigEngine.sh &lt;Config Engine Task Command&gt;
-</code></pre></div></td></tr></table></div></p>
+<div class="language-text highlight"><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/containerConfigEngine.sh &lt;Config Engine Task Command&gt;
+</code></pre></div></p>
 <p>After the Config Engine task is completed, you can close the shell on the Core pod:
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>exit
-</code></pre></div></td></tr></table></div></p>
+<div class="language-text highlight"><pre><span></span><code>exit
+</code></pre></div></p>
 </li>
 <li>
 <p>(Optional) Restart other Core pods.</p>
 <p>If you have multiple Core pods running and if the configuration task you performed requires a server restart, you must restart all the Core pods for the changes to take full effect. </p>
 <p>To do this, run the following command: 
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl -n &lt;namespace&gt; rollout restart sts &lt;deployment-name&gt;-core
-</code></pre></div></td></tr></table></div></p>
+<div class="language-text highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; rollout restart sts &lt;deployment-name&gt;-core
+</code></pre></div></p>
 <p>Or you can execute the <a href="../../../../extend_dx/development_tools/dxclient/dxclient_artifact_types/dxcoreserver/#restart-dx-core-pods">DXClient <code>restart-core-pods</code> command</a>.</p>
 </li>
 </ol>
@@ -3064,18 +3064,18 @@ However, other tasks such as database migration are performed using a Config Eng
 <li>
 <p>Open a shell on a DX Core pod.</p>
 <p>The following example instructions use pod ‘0’ as it should always be available:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>kubectl exec -it -n &lt;namespace&gt; &lt;deployment-name&gt;-core-0 -c core -- /bin/bash
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>kubectl exec -it -n &lt;namespace&gt; &lt;deployment-name&gt;-core-0 -c core -- /bin/bash
+</code></pre></div>
 </li>
 <li>
 <p>Create the semaphore file. This pauses the Kubernetes probes. 
-    <div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>touch /opt/app/configInProgress
-</code></pre></div></td></tr></table></div></p>
+    <div class="language-text highlight"><pre><span></span><code>touch /opt/app/configInProgress
+</code></pre></div></p>
 </li>
 <li>
 <p>To resume the Kubernetes probes, remove the semaphore file. 
-    <div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>rm -f /opt/app/configInProgress
-</code></pre></div></td></tr></table></div></p>
+    <div class="language-text highlight"><pre><span></span><code>rm -f /opt/app/configInProgress
+</code></pre></div></p>
 </li>
 </ol>
 

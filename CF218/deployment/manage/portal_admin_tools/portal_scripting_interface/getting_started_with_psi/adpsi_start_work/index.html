@@ -3421,66 +3421,43 @@
 <li>
 <p><strong>Searching for a portal page:</strong></p>
 <p>Search for the <strong>Getting Started</strong> page. Enter the following command and specify the page by its unique name:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;Content.find(&quot;page&quot;, &quot;un&quot;, &quot;ibm.portal.Home.Getting Started&quot;)
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;Content.find(&quot;page&quot;, &quot;un&quot;, &quot;ibm.portal.Home.Getting Started&quot;)
+</code></pre></div>
 <p>If a page with the specified unique name exists, the Portal Scripting Interface returns the object ID of the page as follows:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;Content.find(&quot;page&quot;, &quot;un&quot;, &quot;ibm.portal.Home.Getting Started&quot;)
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;Content.find(&quot;page&quot;, &quot;un&quot;, &quot;ibm.portal.Home.Getting Started&quot;)
    &#39;Z6_CGAH47L00OJCC0I6U1NESJ2GK0&#39;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If you are not sure whether the resource is a page or a label you can specify the type any instead of page. In this case, you get the following response:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;Content.find(&quot;any&quot;, &quot;un&quot;, &quot;ibm.portal.Home.Getting Started&quot;)
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;Content.find(&quot;any&quot;, &quot;un&quot;, &quot;ibm.portal.Home.Getting Started&quot;)
    &#39;Z6_CGAH47L00OJCC0I6U1NESJ2GK0&#39;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To find out more about the different ways of searching for portal resources, use the command <code>help()</code> that the Portal Scripting Interface provides for each command. For an example, see the section about Getting help for a command.</p>
 </li>
 <li>
 <p><strong>Finding out information about a portal page:</strong></p>
 <p>To display some standard information about a portal resource, use the details() command. You need to specify for which resource you want more detailed information. The following example can be the portal page Getting Started:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;Content.find(&quot;page&quot;, &quot;un&quot;, &quot;ibm.portal.Home.Getting Started&quot;, &quot;select&quot;)
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;Content.find(&quot;page&quot;, &quot;un&quot;, &quot;ibm.portal.Home.Getting Started&quot;, &quot;select&quot;)
 &#39;Z6_CGAH47L00OJCC0I6U1NESJ2GK0&#39;
 wsadmin&gt;Content.details()
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This returns the following response:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;Content.find(&quot;page&quot;, &quot;un&quot;, &quot;ibm.portal.Home.Getting Started&quot;, &quot;select&quot;)
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;Content.find(&quot;page&quot;, &quot;un&quot;, &quot;ibm.portal.Home.Getting Started&quot;, &quot;select&quot;)
 &#39;Z6_CGAH47L00OJCC0I6U1NESJ2GK0&#39;
 wsadmin&gt;Content.details()
 name: ibm.portal.Home.Getting_Started
 id  :Z6_CGAH47L00OJCC0I6U1NESJ2GK0
 type: staticpage      
       no children
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To find information about a portal resource, you need to specify the resource. If you do not specify the resource, for example, by entering only <code>wsadmin&gt;Content.details()</code>, you get a response such as the following one:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>WASX7015E: Exception running command: &quot;Content.details()&quot;; exception information: 
+<div class="language-text highlight"><pre><span></span><code>WASX7015E: Exception running command: &quot;Content.details()&quot;; exception information: 
    com.ibm.bsf.BSFException: exception from Jython:
 Traceback (innermost last):  
    File &quot;&lt;input&gt;&quot;, line 1, in ?
 EJPXD0020W: No object has been selected.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Here are some more examples for requesting information about a portal page:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;Content.get(&quot;type&quot;)
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;Content.get(&quot;type&quot;)
    &#39;staticpage&#39;
 wsadmin&gt;Content.get(&quot;uniquename&quot;)
    &#39;ibm.portal.Home.Getting Started&#39;
@@ -3490,47 +3467,37 @@ wsadmin&gt;Content.nlsget(&quot;title&quot;, &quot;en&quot;)
    &#39;Getting Started&#39;
 wsadmin&gt;Content.parmget(&quot;com.ibm.portal.bookmarkable&quot;)
    &#39;Yes&#39;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following example shows the hierarchy of a page:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;Content.path()&#39;Z6_000000000000000000000000A0 Z6_CGAH47L00GS790I6U1M1F020A3 Z6_CGAH47L00OJCC0I6U1NESJ2GK0&#39;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;Content.path()&#39;Z6_000000000000000000000000A0 Z6_CGAH47L00GS790I6U1M1F020A3 Z6_CGAH47L00OJCC0I6U1NESJ2GK0&#39;
+</code></pre></div>
 <p>This command returns a 'list' of object IDs of the nodes from the root node to your currently selected node. As you can see, it is not a 'true' list in the Jython sense, it is rather a string with entries separated by blanks. To get a list that is better readable, the command split () as shown in the following example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;for id in Content.path().split():
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;for id in Content.path().split():
 wsadmin&gt;  Content.get(id, &quot;un&quot;)
 wsadmin&gt;
 &#39;wps.content.root&#39;
 &#39;ibm.portal.Home&#39;
 &#39;ibm.portal.Home.Getting Started&#39;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>With this simple loop you can print out the whole hierarchy of nodes up to our currently selected 'Getting Started' page.</p>
 </li>
 <li>
 <p><strong>Creating a page:</strong></p>
 <p>To create a page as a child page to the currently selected page, use the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt;Content.create(&quot;page&quot;, &quot;Title of my first page&quot;, &quot;html&quot;, &quot;select&quot;)&#39;
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt;Content.create(&quot;page&quot;, &quot;Title of my first page&quot;, &quot;html&quot;, &quot;select&quot;)&#39;
 Z6_CGAH47L0082M00I6T9E0NL3001&#39;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This command creates a page for HTML markup and returns its portal object ID. You can now start adding attributes or metadata to the page.</p>
 </li>
 <li>
 <p><strong>Adding a portlet to a page:</strong></p>
 <p>To add a portlet to the page that you created previously, use a the following command, for example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>wsadmin&gt; myportlet = Portlet.find(&quot;portlet&quot;, &quot;un&quot;, &quot;wps.p.Information&quot;)
+<div class="language-text highlight"><pre><span></span><code>wsadmin&gt; myportlet = Portlet.find(&quot;portlet&quot;, &quot;un&quot;, &quot;wps.p.Information&quot;)
 wsadmin&gt; Layout.create(&quot;container&quot;, &quot;horizontal&quot;, &quot;select&quot;)&#39;
 Z7_CGAH47L008C970I6NA7U4300G2&#39;
 wsadmin&gt; Layout.create(&quot;portlet&quot;, myportlet)&#39;
 Z7_CGAH47L008C970I6NA7U4300G1&#39;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This adds the Information portlet to the page and places it in a horizontal container.</p>
 </li>
 </ul>

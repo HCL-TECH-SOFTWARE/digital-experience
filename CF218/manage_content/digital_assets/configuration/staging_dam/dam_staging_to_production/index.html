@@ -2218,36 +2218,28 @@
 <li>Configure single sign-on (SSO) between the HCL Digital Experience 9.5 deployments that shares the Digital Asset Management media assets. See <a href="../../configure_dam_sso/">Configure SSO for Digital Asset Management</a> topic.</li>
 <li>
 <p>Ensure the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" target="_blank">Cross Origin Resource Sharing (CORS)</a> property is configured in the deployment config map. Add the following values to your helm chart on the DX installation to deploy DAM. Then run helm upgrade.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>addon:
+<div class="language-text highlight"><pre><span></span><code>addon:
   digitalAssetManagement:
     corsOrigin: [&quot;&lt;target-loadbalancer-url&gt;&quot;]
   ringApi:
     corsOrigin: [&quot;&lt;target-loadbalancer-url&gt;&quot;]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <!---
     1. Add the target host name in `networking` in values.yaml for Core:
 
-        <div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="nt">networking</span><span class="p">:</span>
+        <div class="language-yaml highlight"><pre><span></span><code><span class="w">    </span><span class="nt">networking</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">core</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;loadbalancer</span><span class="nv"> </span><span class="s">Target</span><span class="nv"> </span><span class="s">url&gt;&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
     2. Add the target host name in `networking` in values.yaml for Digital Asset Management:
 
-        <div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="nt">networking</span><span class="p">:</span>
+        <div class="language-yaml highlight"><pre><span></span><code><span class="w">    </span><span class="nt">networking</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">addon</span><span class="p">:</span>
 <span class="w">            </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;loadbalancer</span><span class="nv"> </span><span class="s">Target</span><span class="nv"> </span><span class="s">url&gt;&quot;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
     These [settings](../../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md) allow Digital Asset Management to communicate with other HCL DX 9.5 deployment servers.
 -->

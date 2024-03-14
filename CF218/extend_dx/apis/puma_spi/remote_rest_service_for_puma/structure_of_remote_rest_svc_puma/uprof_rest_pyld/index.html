@@ -2475,17 +2475,7 @@
 <p>The following sections describe the particular parts of the XML schema in detail.</p>
 <h2 id="attributes-and-attribute-values">Attributes and attribute values</h2>
 <p>The <code>attribute</code> element is used to represent either an attribute definition when it is used alone, or an instance of the attribute that includes one or more values when it is used inside a user or group profile. The attribute is identified by the mandatory <code>name</code> attribute and can optionally define its type and a flag that specifies whether multiple values are allowed. By convention, the values for the type attribute must be those data types that are defined in the XSD data types specification. For more information, see the section about data types. The attribute values are represented as separate elements called <code>attributeValue</code> that can contain arbitrary character data.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;xs:element name=&quot;attribute&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;xs:element name=&quot;attribute&quot;&gt;
       &lt;xs:complexType&gt;
          &lt;xs:sequence&gt;
             &lt;xs:element ref=&quot;attributeValue&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;/&gt; 
@@ -2496,28 +2486,14 @@
       &lt;/xs:complexType&gt;
    &lt;/xs:element&gt;
 &lt;xs:element name=&quot;attributeValue&quot; type=&quot;xs:string&quot;&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following is an example of a stand-alone attribute definition that is represented in plain XML:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;um:attribute xmlns:um=&quot;um&quot; name=&quot;ibm-hobby&quot; type=&quot;xs:string&quot; multiValued=&quot;true&quot;/&gt; 
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;um:attribute xmlns:um=&quot;um&quot; name=&quot;ibm-hobby&quot; type=&quot;xs:string&quot; multiValued=&quot;true&quot;/&gt; 
+</code></pre></div>
 <p>The usage of the <code>attribute</code> element for representing attribute values is shown in the next section.</p>
 <h2 id="profile-data">Profile data</h2>
 <p>Profiles are represented in a <code>profile</code> element that needs to define the type of the profile as restricted to the values <code>user</code> or <code>group</code> in an attribute. Wrapped inside the <code>profile</code> element there can be a sequence of arbitrary length of <code>attribute</code> elements. In this case, these <code>attribute</code> elements must contain attribute value elements.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;xs:element name=&quot;profile&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;xs:element name=&quot;profile&quot;&gt;
     &lt;xs:complexType&gt;
         &lt;xs:sequence&gt;
             &lt;xs:element ref=&quot;attribute&quot; maxOccurs=&quot;unbounded&quot;/&gt;
@@ -2532,20 +2508,9 @@
         &lt;xs:enumeration value=&quot;group&quot;/&gt;
     &lt;/xs:restriction&gt;
 &lt;/xs:simpleType&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following is an example of a user profile according to this schema:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;um:profile type=&quot;user&quot; identifier=&quot;uid=bob,o=defaultWIMFileBasedRealm&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;um:profile type=&quot;user&quot; identifier=&quot;uid=bob,o=defaultWIMFileBasedRealm&quot;&gt;
     &lt;um:attribute name=&quot;uid&quot; type=&quot;xs:string&quot; multiValued=&quot;false&quot;&gt;
         &lt;um:attributeValue&gt;bob&lt;/um:attributeValue&gt;
     &lt;/um:attribute&gt;
@@ -2557,24 +2522,10 @@
         &lt;um:attributeValue&gt;Baseball&lt;/um:attributeValue&gt;
     &lt;/um:attribute&gt;
 &lt;/um:profile&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="group-membership-list">Group membership list</h2>
 <p>The groups membership list lists all groups of which a particular user or group is a member. The representation of the group membership list uses a special element <code>profileRef</code> that is used to represent a reference to a profile. This element contains a reference to the resource that is described by the profile; it can optionally also contain the complete profile element itself. This action is done by the mandatory <code>uri</code> attribute, which must contain the URL path of the profile, for example <code>/um/secure/groups/profiles/myGroupId</code>. The profile reference elements are then aggregated to a list within the <code>groupMembershipList</code> element. The list points to those groups of which the user or group that is defined by the resource URL is a member.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;xs:element name=&quot;profileRef&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;xs:element name=&quot;profileRef&quot;&gt;
     &lt;xs:complexType&gt;
         &lt;xs:sequence&gt;
             &lt;xs:element ref=&quot;profile&quot; minOccurs=&quot;0∾&quot; maxOccurs=&quot;1&quot;/&gt;
@@ -2589,16 +2540,13 @@
         &lt;/xs:sequence&gt;
     &lt;/xs:complexType&gt;
 &lt;/xs:element&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The following listing shows an example of a group membership list XML representation that is based on the schema:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;um:groupMembershipList&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;um:groupMembershipList&gt;
     &lt;um:profileRef uri=&quot;/wps/um/secure/groups/profiles/8eAeK . . . . . BQIMK5D1&quot;/&gt;
     &lt;um:profileRef uri=&quot;/wps/um/secure/groups/profiles/8eAeK . . . . . FADFJABC&quot;/&gt;
 &lt;/um:groupMembershipList&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

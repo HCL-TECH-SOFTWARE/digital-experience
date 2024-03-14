@@ -2877,14 +2877,11 @@
 <p>Example: “find all status reports from 2014”
 query: "status reports" #creation_date::&gt;=2014-01-01&lt;2015-01-01</p>
 <p>The following parameters on the search service are used:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>- dateFieldPattern
+<div class="language-text highlight"><pre><span></span><code>- dateFieldPattern
 - specifies a regular exp that is used to check if a field name is a date field
 - default: .*date$
 - dateFormat
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <ul>
 <li>
 <p>A date format specified using the ICU SimpleDateFormat pattern</p>

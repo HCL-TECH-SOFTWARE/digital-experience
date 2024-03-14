@@ -2220,22 +2220,7 @@
 <li>
 <p><strong>JNDI lookup</strong></p>
 <p>A JNDI lookup can be done for code that is in a request/response cycle of the portal, for example in a JSP. The lookup results in a home interface from which a model provider can be obtained. Interfaces for the models that are mentioned previously can be found in <code>com.ibm.portal.model</code>. To avoid calling the JNDI lookup too often, store the provider object. The following example, which is only applicable to non-portlet code that runs inside of a portal, shows how the content model is obtained by using a JNDI lookup.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>try
+<div class="language-text highlight"><pre><span></span><code>try
 {
    Context ctx = new InitialContext();
 b   ContentModelHome home = (ContentModelHome)
@@ -2251,30 +2236,12 @@ catch (NamingException nx)
 {
     // some error handling code here
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Portlet service (standard portlet API)</strong></p>
 <p>Standard portlets can access models through specific portlet services. These portlet services are in <code>com.ibm.portal.portlet.service.model</code>. The following example shows how the navigation model is obtained by a standard portlet.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>PortletServiceHome psh;
+<div class="language-text highlight"><pre><span></span><code>PortletServiceHome psh;
 javax.naming.Context ctx = new javax.naming.InitialContext();
 boolean serviceAvailable = false;
 try {
@@ -2293,7 +2260,7 @@ if (serviceAvailable) {
    NavigationModel model = provider.getNavigationModel(aRequest, aResponse);
    ...
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <div class="admonition note">

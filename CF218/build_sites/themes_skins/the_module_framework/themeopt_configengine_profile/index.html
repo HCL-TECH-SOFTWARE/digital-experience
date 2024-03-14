@@ -3096,8 +3096,8 @@
 </li>
 </ul>
 <p>Use the following command to create profile with the name profile_new_deferred.json in the theme with the unique name ibm.portal.85Theme, which is based on the template that exists on your local hard drive in /opt/WebSphere/profile_new_template.json. Once it is created in WebDAV, it has the list of modules from the profile_deferred.json profile, which already exists. The example assumes that the WebSphere Application Server and HCL DX credentials are defined in the wkplc.properties file.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./ConfigEngine.sh create-profile-based-on-template -DThemeUniqueName=ibm.portal.85Theme -DTemplateProfileFilePath=/opt/WebSphere/profile_new_template.json -DTargetProfileFileName=profile_new_deferred.json -DTemplateModuleListProfileFileName=profile_deferred.json -DOverwriteProfile=true
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh create-profile-based-on-template -DThemeUniqueName=ibm.portal.85Theme -DTemplateProfileFilePath=/opt/WebSphere/profile_new_template.json -DTargetProfileFileName=profile_new_deferred.json -DTemplateModuleListProfileFileName=profile_deferred.json -DOverwriteProfile=true
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

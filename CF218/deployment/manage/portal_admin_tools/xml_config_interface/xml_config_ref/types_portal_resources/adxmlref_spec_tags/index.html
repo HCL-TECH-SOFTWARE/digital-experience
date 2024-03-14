@@ -3846,15 +3846,7 @@
 <p class="admonition-title">Note</p>
 <p>When you create a nested element, for example a component, with a uniquename attribute, the whole hierarchy upward from that element must also have uniquename attributes. Example XML export request snippet:</p>
 </div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>     &lt;content-node ...
+<div class="language-text highlight"><pre><span></span><code>     &lt;content-node ...
           &lt;component uniquename=&quot;component_1&quot;...
                &lt;component uniquename&quot;component_2&quot;...
                     &lt;component uniquename&quot;component_3&quot;...
@@ -3863,10 +3855,10 @@
                &lt;/component&gt;
           &lt;/component&gt;                       
      &lt;/content-node&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Failing to do so might result in the following error message:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>        XMLC0142E: Unique name unique\_name is already used in the portal.
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>        XMLC0142E: Unique name unique\_name is already used in the portal.
+</code></pre></div>
 </li>
 <li>
 <p><strong>ordinal</strong></p>
@@ -3911,16 +3903,12 @@ An XML export response file always contains the literal ordinal values as they a
 <li>
 <p><strong>global-target-settings</strong></p>
 <p>Contains those property broker actions that are defined as global targets. By using this tag, portlet instances can make Communication Targets available to Click-To-Action menus or for cross-page wiring. A <code>portletinstance</code> tag section can contain <code>target</code> elements that define a Communication Target that has been defined as global. The <code>target</code> definition specifies the communication target that is to be exported. Example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;portletinstance ...&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;portletinstance ...&gt;
    &lt;global-target-settings&gt; 
       &lt;target actionref=&quot;orderDetails&quot; update=&quot;set&quot;/&gt;
    &lt;/global-target-settings&gt;
 &lt;/portletinstance&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 </ul>
 <p>You can find additional information on the meaning and possible values for configuration elements and attributes in the schema annotations.</p>

@@ -2340,14 +2340,7 @@
 <p>The Controller SPI allows you to modify portal resources, the topology of your portal, and properties.</p>
 <p>The following topics describe how you use the Controller SPI for different types of modifications. Some topics provide example code snippets. For these snippets to work, they need to be completed with preceding and subsequent code. Examples are shown in the following.</p>
 <p>Preceding code: Each snippet must be preceded at least by the following code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>ContentModelController cmController= null;
+<div class="language-text highlight"><pre><span></span><code>ContentModelController cmController= null;
 final Context ctx = new InitialContext();
 final ContentModelControllerHome home = (ContentModelControllerHome) 
       ctx.lookup(ContentModelControllerHome.CONTENT_MODEL_CONTROLLER_JNDI_NAME);
@@ -2355,21 +2348,16 @@ if (home != null) {
       cmController = home.getContentModelControllerProvider().
            createContentModelController(aContentModel);
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Depending on the modification that you want to make, you might require additional preceding code statements. For more details refer to <a href="../working_with_controllers/ctrlrapit_obtn_ctrlr/">Obtaining a controller for working with resources</a>.</p>
 <p>Subsequent code: After you have completed your modifications, you commit the controller so that the modification take effect. After that you cannot use or commit the controller any more, but you dispose it. To commit your modifications and dispose the controller, add the following statements to your code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>// commit the controller
+<div class="language-text highlight"><pre><span></span><code>// commit the controller
 try {
     controller.commit();
 } finally {
     controller.dispose();
 }
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>For more details about this refer to <a href="../working_with_controllers/ctrlrapit_comit/">Committing and persisting your modifications</a>.</p>
 <ul>
 <li><strong><a href="modify_portal_resources/">Modifying portal resources and topologies</a></strong><br />

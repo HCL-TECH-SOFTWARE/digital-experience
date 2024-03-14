@@ -2525,29 +2525,28 @@
 <ol>
 <li>
 <p>Connect to your Docker container using the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>docker ps
+<div class="language-text highlight"><pre><span></span><code>docker ps
 docker exec -it &lt;id from docker ps&gt; bash
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Run the following Config tasks:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh enable-headless-content -Dstatic.ui.url=... -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh enable-headless-content -Dstatic.ui.url=... -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin
+</code></pre></div>
 <p>Sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh enable-headless-content -Dstatic.ui.url=http://us-latest.team-q-dev.com:5000/dx/ui/content/static -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh enable-headless-content -Dstatic.ui.url=http://us-latest.team-q-dev.com:5000/dx/ui/content/static -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin
+</code></pre></div>
 </li>
 </ol>
 <p>Next, install content rendering in the virtual Portal by following the steps below:</p>
 <ol>
 <li>
 <p>Run the Config tasks:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh enable-headless-content-vp -Dstatic.ui.url=... -DVirtualPortalContext=... -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh enable-headless-content-vp -Dstatic.ui.url=... -DVirtualPortalContext=... -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin
+</code></pre></div>
 <p>Sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh enable-headless-content-vp -Dstatic.ui.url=http://us-latest.team-q-dev.com:5000/dx/ui/content/static -DVirtualPortalContext=demo -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh enable-headless-content-vp -Dstatic.ui.url=http://us-latest.team-q-dev.com:5000/dx/ui/content/static -DVirtualPortalContext=demo -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin
+</code></pre></div>
 </li>
 </ol>
 <h2 id="remove-and-disable-content-rendering-from-the-virtual-portal">Remove and disable content rendering from the virtual Portal</h2>
@@ -2555,26 +2554,25 @@ docker exec -it &lt;id from docker ps&gt; bash
 <ol>
 <li>
 <p>Run the following Config tasks:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh disable-headless-content-vp -DVirtualPortalContext=... -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh disable-headless-content-vp -DVirtualPortalContext=... -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin
+</code></pre></div>
 <p>Sample:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh disable-headless-content-vp -DVirtualPortalContext=dam -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh disable-headless-content-vp -DVirtualPortalContext=dam -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin
+</code></pre></div>
 </li>
 <li>
 <p>Follow these steps to disable content rendering:</p>
 <ol>
 <li>
 <p>Connect to your Docker container using the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>docker ps
+<div class="language-text highlight"><pre><span></span><code>docker ps
 docker exec -it &lt;id from docker ps&gt; bash
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Run the following Config tasks:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh disable-headless-content -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh disable-headless-content -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin
+</code></pre></div>
 </li>
 </ol>
 </li>
@@ -2589,20 +2587,19 @@ docker exec -it &lt;id from docker ps&gt; bash
 <ol>
 <li>
 <p>Connect to your Docker container using the following command:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>docker ps
+<div class="language-text highlight"><pre><span></span><code>docker ps
 docker exec -it &lt;id from docker ps&gt; bash
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Run the following Config task to grant permission:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh grant-access-headless-content -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh grant-access-headless-content -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin
+</code></pre></div>
 </li>
 <li>
 <p>To remove the permissions that were granted in the previous steps, run the following Config task:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh remove-access-headless-content -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh remove-access-headless-content -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin
+</code></pre></div>
 </li>
 </ol>
 

@@ -4099,14 +4099,11 @@
 <li>
 <p>Locate and delete the propertySchema definition for the attributes that you deleted from the LAPROP table.</p>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>    &lt;wim:propertySchema nsURI=&quot;http://www.ibm.com/websphere/wim&quot; dataType=&quot;String&quot;
+<div class="language-text highlight"><pre><span></span><code>    &lt;wim:propertySchema nsURI=&quot;http://www.ibm.com/websphere/wim&quot; dataType=&quot;String&quot;
         multiValued=&quot;true&quot; propertyName=&quot;attribute\_name&quot;&gt;
       &lt;wim:applicableEntityTypeNames&gt;PersonAccount&lt;/wim:applicableEntityTypeNames&gt;
     &lt;/wim:propertySchema&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Save your changes to the wimxmlextension.xml file.</p>
@@ -4117,17 +4114,14 @@
 <li>
 <p>Locate and delete the attributes or propertiesNotSupported definitions for the attributes that you deleted from the LAPROP table.</p>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;config:attributes name=&quot;attribute_name&quot; propertyName=&quot;attribute\_name&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;config:attributes name=&quot;attribute_name&quot; propertyName=&quot;attribute\_name&quot;&gt;
 &lt;config:entityTypes&gt; PersonAccount &lt;/config:entityTypes&gt;
 &lt;config:entityTypes&gt; Group &lt;/config:entityTypes&gt;
 &lt;/config:attributes&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>or</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;config:propertiesNotSupported name=&quot;attribute\_name&quot;&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;config:propertiesNotSupported name=&quot;attribute\_name&quot;&gt;
+</code></pre></div>
 </li>
 <li>
 <p>Save your changes to the wimconfig.xml file.</p>
@@ -4146,14 +4140,11 @@
 <li>
 <p>Locate and delete the propertySchema definition for the attributes you previously added.</p>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;wim:propertySchema nsURI=&quot;http://www.ibm.com/websphere/wim&quot; dataType=&quot;String&quot;
+<div class="language-text highlight"><pre><span></span><code>&lt;wim:propertySchema nsURI=&quot;http://www.ibm.com/websphere/wim&quot; dataType=&quot;String&quot;
         multiValued=&quot;true&quot; propertyName=&quot;attribute\_name&quot;&gt;
    &lt;wim:applicableEntityTypeNames&gt;PersonAccount&lt;/wim:applicableEntityTypeNames&gt;
     &lt;/wim:propertySchema&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Save your changes to the wimxmlextension.xml file.</p>
@@ -4164,12 +4155,10 @@
 <li>
 <p>Locate and delete the stanza that corresponds to the custom attribute you deleted from the wimextension.xml file.</p>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;config:attributes name=&quot;attribute_name&quot; propertyName=&quot;property_name&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;config:attributes name=&quot;attribute_name&quot; propertyName=&quot;property_name&quot;&gt;
                 &lt;config:entityTypes&gt;PersonAccount&lt;/config:entityTypes&gt;
     &lt;/config:attributes&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Save your changes to the wimconfig.xml file.</p>

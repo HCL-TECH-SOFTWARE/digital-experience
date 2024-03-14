@@ -3769,16 +3769,7 @@
 <ol>
 <li>
 <p>In <a href="../../../../../../../guide_me/wpsdirstr/">PortalServer_root</a>\bin, create the file input.xml with the following contents:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;request xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;  
    xsi:noNamespaceSchemaLocation=&quot;PortalConfig\_8.5.0.xsd&quot; 
    type=&quot;export&quot;  
@@ -3788,37 +3779,33 @@
 &lt;theme action=&quot;export&quot; objectid=&quot;*&quot; /&gt;
 &lt;/portal&gt;
 &lt;/request&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>From a command line, change to the <a href="../../../../../../../guide_me/wpsdirstr/">PortalServer_root</a>\bin directory and run the following xmlaccess command to export all skin and theme definitions to a file called output.xml:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>xmlaccess -user admin userid -password admin password -url hostname:10039/wps/config -in input.xml -out output.xml
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>xmlaccess -user admin userid -password admin password -url hostname:10039/wps/config -in input.xml -out output.xml
+</code></pre></div>
 </li>
 <li>
 <p>Edit the output.xml file. Search for the title of your theme, such as Custom Theme. Scroll up to the line with the surrounding <code>&lt;theme&gt;</code> tag. It is likely the last <code>&lt;theme&gt;</code> tag in the file. Modify it from:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;theme action=&quot;update&quot; active=&quot;true&quot; context-root=&quot;/wps/themeModules&quot; default=&quot;false&quot; domain=&quot;rel&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;theme action=&quot;update&quot; active=&quot;true&quot; context-root=&quot;/wps/themeModules&quot; default=&quot;false&quot; domain=&quot;rel&quot; 
   objectid=&quot;ZJ_MLSU3F54089F00IP6G7P3F10S5&quot; resourceroot=&quot;dynamicSpots&quot;&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>to:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;theme action=&quot;update&quot; active=&quot;true&quot; context-root=&quot;/customTheme&quot; default=&quot;false&quot; domain=&quot;rel&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;theme action=&quot;update&quot; active=&quot;true&quot; context-root=&quot;/customTheme&quot; default=&quot;false&quot; domain=&quot;rel&quot; 
   objectid=&quot;ZJ_MLSU3F54089F00IP6G7P3F10S5&quot; resourceroot=&quot;dynamicSpots&quot; uniquename=&quot;customTheme&quot;&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Set the correct context-root and uniquename for your theme.</p>
 </li>
 <li>
 <p>Search for the title of your skin. Scroll up to the line with the surrounding <code>&lt;skin&gt;</code> tag; it is likely the last <code>&lt;skin&gt;</code> tag in the file. Modify it from:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;skin action=&quot;update&quot; active=&quot;true&quot; context-root=&quot;/wps/themeModules&quot; default=&quot;false&quot; domain=&quot;rel&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;skin action=&quot;update&quot; active=&quot;true&quot; context-root=&quot;/wps/themeModules&quot; default=&quot;false&quot; domain=&quot;rel&quot; 
   objectid=&quot;ZK_73OKBB1A088IE0I5O7IP2J0G77&quot; resourceroot=&quot;Hidden&quot; type=&quot;default&quot;&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>to:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;skin action=&quot;update&quot; active=&quot;true&quot; context-root=&quot;/customTheme&quot; default=&quot;false&quot; domain=&quot;rel&quot; 
+<div class="language-text highlight"><pre><span></span><code>&lt;skin action=&quot;update&quot; active=&quot;true&quot; context-root=&quot;/customTheme&quot; default=&quot;false&quot; domain=&quot;rel&quot; 
   objectid=&quot;ZK_73OKBB1A088IE0I5O7IP2J0G77&quot; resourceroot=&quot;customSkin&quot; type=&quot;default&quot; uniquename=&quot;customSkin&quot;&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>Set the correct context-root, resourceroot, and uniquename for your skin.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -3827,21 +3814,21 @@
 </li>
 <li>
 <p>Find the <code>&lt;theme&gt;</code> tag for the Portal 8.5 theme. It is likely the first <code>&lt;theme&gt;</code> tag in the file. Find and copy one of the <code>&lt;allowed-skin&gt;</code> tag lines, such as:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;allowed-skin skin=&quot;ZK_CGAH47L00GJJ40IDC03MS13OS2&quot; update=&quot;set&quot;/&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;allowed-skin skin=&quot;ZK_CGAH47L00GJJ40IDC03MS13OS2&quot; update=&quot;set&quot;/&gt;
+</code></pre></div>
 <p>Find the <code>&lt;theme&gt;</code> tag for your customTheme theme; it is likely the last <code>&lt;theme&gt;</code> tag in the file. Paste the <code>&lt;allowed-skin&gt;</code> tag line in just before the <code>&lt;parameter&gt;</code> tags. Modify the skin parameter value identifier to be the unique name of your customSkin skin, which can be found in the uniquename parameter of the <code>&lt;skin&gt;</code> tag of your customSkin skin. It is likely the last <code>&lt;skin&gt;</code> tag in the file, such as:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;allowed-skin skin=&quot;customSkin&quot; update=&quot;set&quot;/&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;allowed-skin skin=&quot;customSkin&quot; update=&quot;set&quot;/&gt;
+</code></pre></div>
 </li>
 <li>
 <p>From the command line, run the following xmlaccess command to update the skin and theme definitions according to your change:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>xmlaccess -user admin userid -password admin password -url hostname:10039/wps/config -in output.xml -out output2.xml
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>xmlaccess -user admin userid -password admin password -url hostname:10039/wps/config -in output.xml -out output2.xml
+</code></pre></div>
 </li>
 <li>
 <p>From the command line, run the following xmlaccess command to export all skin and theme definitions again to a file called output3.xml.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>xmlaccess -user admin userid -password admin password -url hostname:10039/wps/config -in input.xml -out output3.xml
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>xmlaccess -user admin userid -password admin password -url hostname:10039/wps/config -in input.xml -out output3.xml
+</code></pre></div>
 </li>
 <li>
 <p>Edit the output3.xml file to verify that the result works, and then delete the input.xml, output.xml, output2.xml, and output3.xml files.</p>

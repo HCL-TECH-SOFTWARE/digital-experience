@@ -3992,105 +3992,83 @@ Although the body of the <code>Plugin</code> tag is printed if an acceptable loc
 <ul>
 <li>
 <p>When you add the <code>Locale</code> plug-in without defining more attributes, the preferred supported locale in the current context is inserted into your web content. The default format of <code>{language}-{country}-{variant}</code> is used (for example, <code>es-ES-WIN</code>):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:Locale]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:Locale]
+</code></pre></div>
 </li>
 <li>
 <p>The pattern attribute defines the output format of the preferred supported locale. The following sample renders the locale with a custom format and omits the variant element (for example, <code>es_ES</code>):</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:Locale pattern=&quot;{language}_{country}&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:Locale pattern=&quot;{language}_{country}&quot;]
+</code></pre></div>
 </li>
 <li>
 <p>The following sample renders the language code of the preferred supported locale in the current context (for example, <code>da</code>). Only languages of Nordic countries are accepted as a result. If none of the specified locales is supported in the current context, nothing is printed to your web content. For example, if the user configures the web browser or the portal user profile to use only the English language (<code>en</code>), the <code>Locale</code> plug-in does not return any locale.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:Locale acceptLanguage=&quot;da,fo;q=0.8,fi;q=0.6,is;q=0.4,no;q=0.2,sv;q=0.2&quot; 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:Locale acceptLanguage=&quot;da,fo;q=0.8,fi;q=0.6,is;q=0.4,no;q=0.2,sv;q=0.2&quot; 
 pattern=&quot;{language}&quot;]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>You can prevent the preferred supported locale from being rendered with the printLocale attribute. This sample inserts the body of the <code>Plugin</code> tag into the web content only if the preferred supported locale matches one of the specified Nordic languages. The determined locale is not added to the web content.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:Locale acceptLanguage=&quot;da,fo;q=0.8,fi;q=0.6,is;q=0.4,no;q=0.2,sv;q=0.2&quot; 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:Locale acceptLanguage=&quot;da,fo;q=0.8,fi;q=0.6,is;q=0.4,no;q=0.2,sv;q=0.2&quot; 
 printLocale=&quot;false&quot;]
      &lt;div&gt;This markup is displayed only if the current context supports a locale 
      that represents one of the specified Nordic languages.&lt;/div&gt;
  [/Plugin:Locale]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>You can also combine the <code>Locale</code> plug-in with other plug-ins. The following example shows how you can use the <code>Matches</code> plug-in with the <code>Locale</code> plug-in. The markup in the body of the <code>Matches</code> plug-in is rendered in your content only if the preferred supported locale represents a Spanish language.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:Matches pattern=&quot;es(.*)&quot; text=&quot;[Plugin:Locale]&quot;] 
+<div class="language-text highlight"><pre><span></span><code>[Plugin:Matches pattern=&quot;es(.*)&quot; text=&quot;[Plugin:Locale]&quot;] 
     &lt;div&gt;This markup appears only if the preferred supported locale in the 
     current context represents a Spanish language. Neither the country code 
     nor the variant are important as long as the language code of the 
     locale is &quot;es&quot;.&lt;/div&gt;
 [/Plugin:Matches]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>To write the base text direction for the preferred supported locale of the request to your web content, such as "ltr", use the key attribute with the value direction:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:Locale key=&quot;direction&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:Locale key=&quot;direction&quot;]
+</code></pre></div>
 </li>
 <li>
 <p>To write the the string representation of the preferred supported locale of the request as defined by IETF BCP 47 to your web content, such as "en", use the key attribute with the value xmlLocale:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:Locale key=&quot;xmlLocale&quot;]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[Plugin:Locale key=&quot;xmlLocale&quot;]
+</code></pre></div>
 </li>
 </ul>
 <h2 id="if-device-and-if-not-device-plug-ins"><code>If Device</code> and <code>If Not Device</code> plug-ins</h2>
 <p>Use the <code>If Device</code> and <code>If Not Device</code> plug-ins to render content selectively, based on a user’s Portal device class. You can use these plug-ins for switching to mobile components, such as a slideshow or carousel that are optimized for mobile devices, when a user goes to the site through a smartphone or tablet.</p>
 <p>The class attribute is defined by the device classifications for supported clients in HCL Digital Experience. Log in to HCL as an administrator and click the <strong>Administration menu</strong> icon in the toolbar. Then, click <strong>Portal settings</strong> &gt; <strong>Supported clients</strong>. Edit a selected client to see the classes that are already associated with it. You can add or remove classes through this page.</p>
 <p>You can check that a specific device is in use with the following format:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ifDevice class=&quot;DEVICE1&quot; class=&quot;DEVICE2&quot;]
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ifDevice class=&quot;DEVICE1&quot; class=&quot;DEVICE2&quot;]
 Text to render if current device is DEVICE1 or DEVICE2.
 [/Plugin:ifDevice]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You can check that a specific device is not in use with the following format:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ifNotDevice class=&quot;DEVICE1&quot; class=&quot;DEVICE2&quot;]
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ifNotDevice class=&quot;DEVICE1&quot; class=&quot;DEVICE2&quot;]
 Text to render if current device is not DEVICE1 or DEVICE2.
 [/Plugin:ifDevice]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>This is used to render text if no device is set:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ifDevice class=&quot;&quot;]
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ifDevice class=&quot;&quot;]
 Text to render if the device is not set.
 [/Plugin:ifDevice]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To specify either one device or another device, use this syntax:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ifDevice class=&quot;DEVICE1|DEVICE2&quot;]
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ifDevice class=&quot;DEVICE1|DEVICE2&quot;]
 Text to render if current device is DEVICE1 or DEVICE2.
 [/Plugin:ifDevice]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To specify one device and another device, use this syntax:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ifDevice class=&quot;DEVICE1+DEVICE2&quot;]
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ifDevice class=&quot;DEVICE1+DEVICE2&quot;]
 Text to render if current device is DEVICE1 and DEVICE2.
 [/Plugin:ifDevice]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To specify one device but not another device, use this syntax:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[Plugin:ifDevice class=&quot;DEVICE1+!DEVICE2&quot;]
+<div class="language-text highlight"><pre><span></span><code>[Plugin:ifDevice class=&quot;DEVICE1+!DEVICE2&quot;]
 Text to render if current device is DEVICE1 but not DEVICE2.
 [/Plugin:ifDevice]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>

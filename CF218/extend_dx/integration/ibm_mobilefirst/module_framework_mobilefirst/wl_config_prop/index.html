@@ -2319,19 +2319,7 @@
 <ol>
 <li>
 <p>Use the <code>wl_config</code> module to load the MobileFirst® configuration properties.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>    &lt;extension point=&quot;com.ibm.portal.resourceaggregator.module&quot; id=&quot;wl_portal_config&quot; &gt;
+<div class="language-text highlight"><pre><span></span><code>    &lt;extension point=&quot;com.ibm.portal.resourceaggregator.module&quot; id=&quot;wl_portal_config&quot; &gt;
         &lt;module id=&quot;wl_config&quot;&gt;
             &lt;runtimeActivation&gt;
                 &lt;condition deviceClass=&quot;worklight&quot;/&gt;
@@ -2344,24 +2332,12 @@
             &lt;/contribution&gt;
         &lt;/module&gt;
     &lt;/extension&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>To activate the MobileFirst configuration properties, add the "?uri=wl<img alt="🆔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f194.svg" title=":id:" />appid" parameter to the URL from the hybrid application, where the appid is replaced with the actual application ID in MobileFirst.</p>
 <p>After it is activated, the MobileFirst configuration properties are dynamically injected from the application HTML file to the portal page. For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;script&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;script&gt;
   // Define WL namespace.
   var WL = WL ? WL : {};
   /**  * WLClient configuration variables.  * Values are injected by the deployer that packs the gadget.  */  
@@ -2374,25 +2350,18 @@
                            &quot;WORKLIGHT_ROOT_URL&quot;: &quot;\/apps\/services\/api\/DemoApp\/iphone\/&quot; 
                       };
 &lt;/script&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Configure the MobileFirst configuration properties through JavaScript.</p>
 <p>For example, use this code:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>WL.StaticAppProps.ENVIRONMENT
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>WL.StaticAppProps.ENVIRONMENT
+</code></pre></div>
 </li>
 <li>
 <p>If your application needs configuration properties in addition to the base ones provided, you can easily mix them into this WL.StaticAppProps object with JavaScript.</p>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;script type=&quot;text/javascript&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;script type=&quot;text/javascript&quot;&gt;
 i$.bindDomEvt(window, &quot;onload&quot;, function(evt) {
     if (window.WL &amp;&amp; window.WL.StaticAppProps) {
         window.WL.StaticAppProps.APP_VERSION = &quot;1.0&quot;;
@@ -2400,7 +2369,7 @@ i$.bindDomEvt(window, &quot;onload&quot;, function(evt) {
     }
 });
 &lt;/script&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Inject the JavaScript code that you created onto your page from your theme. You can add the code that you just created to one of your existing dynamic content spot .jsps or create a new dynamic content spot. Or, you can add the JavaScript to an HTML file in an existing or new module.</p>

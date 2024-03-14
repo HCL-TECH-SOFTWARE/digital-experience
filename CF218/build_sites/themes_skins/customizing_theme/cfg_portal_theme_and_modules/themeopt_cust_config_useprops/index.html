@@ -3518,34 +3518,18 @@
 <p>Configuration properties can be loaded either statically, <code>type="config_static"</code>, or dynamically, <code>type="config_dynamic"</code>. You can use one or the other or both depending on your needs. Static is intended for property values that do not commonly change after they are loaded initially, and is better for performance because the values are cached. Dynamic is intended for property values that change more frequently.</p>
 <p>All configuration properties that your module must reference on the client side are merged together into a single convenient global config object. They are merged whether they are theme metadata properties or resource environment provider custom properties. You can then easily reference any property within the yourcoCfg.themesConfig object, such as yourcoCfg.themesConfig.yourTheme_yourRepProperty.</p>
 <p>The theme and the modules that are provided with HCL Digital Experience merge their configuration properties into the ibmCfg global variable. You can run this variable in a browser console and inspect what the property names and values are. Changes to values in the WP GlobalThemeConfig REP are global to all themes. You can override certain values on the client side if you need the values to be different in only your themes that include your module. You can do so with syntax similar to the following example in one of the config*.jsp files for your module:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>i$.merge({&lt;%--
+<div class="language-text highlight"><pre><span></span><code>i$.merge({&lt;%--
   --%&gt;ibmCfg: {&lt;%--
   --%&gt;themeConfig: {&lt;%--
   --%&gt;loadingImage: &quot;css/images/yourloading.gif&quot;&lt;%--
   --%&gt;}}});
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If your module requires the module,wp_portal then the portal configuration loads before the configuration for your module, ensuring that your override is merged in last.</p>
 <p>Replace occurrences of your* in italics with the actual names of your items.</p>
 <ol>
 <li>
 <p>Create an extension point (module definition) in the plugin.xml file for your theme with subcontributions for the configuration of the module.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;extension point=&quot;com.ibm.portal.resourceaggregator.module&quot; id=&quot;yourprefix_yourmodule_config&quot;&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;extension point=&quot;com.ibm.portal.resourceaggregator.module&quot; id=&quot;yourprefix_yourmodule_config&quot;&gt;
  &lt;module id=&quot;yourprefix_yourmodule&quot;&gt;
   &lt;prereq id=&quot;wp_portal&quot;/&gt;
   &lt;contribution type=&quot;config&quot;&gt;
@@ -3558,7 +3542,7 @@
   &lt;/contribution&gt;
  &lt;/module&gt; 
 &lt;/extension&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Add yourmoduleID to the profile file for your theme so that your module loads.</p>
@@ -3574,10 +3558,9 @@
 </li>
 <li>
 <p>Modify the local copy of the file and add your moduleID at the end of the list:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>,
+<div class="language-text highlight"><pre><span></span><code>,
 &quot;yourprefix_yourmodule&quot;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Copy your custom profile JSON file into the profiles folder in the folder for your theme in fs-type1 on the portal server.</p>
@@ -3587,18 +3570,7 @@
 <li>
 <p>Create the config_global.jsp file, config.jsp file, or both in your modules web application in the \yourmodule\markup folder.</p>
 <p>The following example of config.jsp file loads dynamically. A config_global.jsp file (static) would look similar, only without any theme metadata properties in it.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;%@ page session=&quot;false&quot; contentType=&quot;text/javascript;charset=ISO-8859-1&quot; buffer=&quot;none&quot; %&gt;
+<div class="language-text highlight"><pre><span></span><code>&lt;%@ page session=&quot;false&quot; contentType=&quot;text/javascript;charset=ISO-8859-1&quot; buffer=&quot;none&quot; %&gt;
 &lt;%@ page trimDirectiveWhitespaces=&quot;true&quot; %&gt;
 &lt;%@ taglib uri=&quot;http://www.ibm.com/xmlns/prod/websphere/portal/v8.5/portal-fmt&quot; prefix=&quot;portal-fmt&quot; %&gt;
 i$.merge({&lt;%--
@@ -3610,7 +3582,7 @@ i$.merge({&lt;%--
       --%&gt;yourTheme_yourMetadataProperty: &quot;&lt;portal-fmt:out escape=&quot;json&quot;&gt;${wp.themeConfig[&quot;yourTheme.yourMetadataProperty&quot;]}&lt;/portal-fmt:out&gt;&quot;&lt;%--
       --%&gt;yourModule_yourRepProperty: &quot;&lt;portal-fmt:out escape=&quot;json&quot;&gt;${wp.rep[&quot;REP.YourPrefix ThemesConfig&quot;][&quot;yourModule.yourRepProperty&quot;]}&lt;/portal-fmt:out&gt;&quot;,&lt;%--
 --%&gt;}}});
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>If the yourcoCfg global variable and themesConfig child property do not exist, the merge automatically creates them. You can also mix in your properties with any other properties that might already be present if the yourcoCfg object exists.</p>
 </li>
 <li>

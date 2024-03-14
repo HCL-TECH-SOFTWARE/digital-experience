@@ -3360,49 +3360,10 @@
 <p>You can use the Web Content Manager REST service to create, read, update, and delete folders. You can also use the Web Content Manager REST service to query for the preset folders in a library.</p>
 <h2 id="query-for-preset-folders">Query For Preset Folders</h2>
 <p>A list of the preset folders in a library can be obtained by sending a GET request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/Library/library-id/preset-folders
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/Library/library-id/preset-folders
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 /wps/mycontenthandler/wcmrest/Library/
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 /wps/mycontenthandler/wcmrest/Library/
 Accept: application/atom+xml
 
 HTTP/1.1 200 OK
@@ -3442,51 +3403,13 @@ Content-Type: application/atom+xml
     &lt;/entry&gt;
     ... some entries elided ...
 &lt;/feed&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="create">Create</h2>
 <p>A folder can be created by sending a POST request to the following URI with an Atom entry that represents the folder:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/Folder
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/Folder
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 POST /wps/mycontenthandler/wcmrest/Folder
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 POST /wps/mycontenthandler/wcmrest/Folder
 Content-Type: application/atom+xml
 
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
@@ -3525,23 +3448,13 @@ HTTP/1.1 200 OK
     &lt;link rel=&quot;versions&quot; href=&quot;/wps/mycontenthandler/wcmrest/item/5def4f6f-0dd9-49ca-b954-706f8ceb7373/versions&quot; xml:lang=&quot;en&quot; label=&quot;Versions&quot;/&gt;
     &lt;category scheme=&quot;wcmrest:favorite&quot; term=&quot;false&quot; xml:lang=&quot;en&quot;/&gt;
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="update">Update</h2>
 <p>A folder can be updated by sending a PUT request to the following URI with an Atom entry that includes the fields on the item that need to be changed:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/Folder/folder-id
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/Folder/folder-id
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 PUT /wps/mycontenthandler/wcmrest/Folder/5def4f6f-0dd9-49ca-b954-706f8ceb7373
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 PUT /wps/mycontenthandler/wcmrest/Folder/5def4f6f-0dd9-49ca-b954-706f8ceb7373
 Content-Type: application/atom+xml
 
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
@@ -3552,45 +3465,13 @@ Content-Type: application/atom+xml
     &lt;link rel=&quot;parent&quot; href=&quot;/wps/mycontenthandler/wcmrest/Folder/aceaf85a-48a8-45f7-a6cc-343ace84f337&quot; xml:lang=&quot;en&quot; label=&quot;Parent&quot;/&gt;
     ... some content elided ...
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="read">Read</h2>
 <p>A folder can be read by sending a GET request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/Folder/folder-id
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>/Folder/folder-id
+</code></pre></div>
 <p>For example:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 GET /wps/mycontenthandler/wcmrest/Folder/5def4f6f-0dd9-49ca-b954-706f8ceb7373
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 GET /wps/mycontenthandler/wcmrest/Folder/5def4f6f-0dd9-49ca-b954-706f8ceb7373
 Accept: application/atom+xml
 
 HTTP/1.1 200 OK
@@ -3623,17 +3504,15 @@ HTTP/1.1 200 OK
     &lt;link rel=&quot;versions&quot; href=&quot;/wps/mycontenthandler/wcmrest/item/5def4f6f-0dd9-49ca-b954-706f8ceb7373/versions&quot; xml:lang=&quot;en&quot; label=&quot;Versions&quot;/&gt;
     &lt;category scheme=&quot;wcmrest:favorite&quot; term=&quot;false&quot; xml:lang=&quot;en&quot;/&gt;
 &lt;/entry&gt;
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h2 id="delete">Delete</h2>
 <p>A folder can be deleted by sending a DELETE request to the following URI:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/Folder/folder-id
-</code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP/1.1 DELETE /wps/mycontenthandler/wcmrest/Folder/5def4f6f-0dd9-49ca-b954-706f8ceb7373
+<div class="language-text highlight"><pre><span></span><code>/Folder/folder-id
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>HTTP/1.1 DELETE /wps/mycontenthandler/wcmrest/Folder/5def4f6f-0dd9-49ca-b954-706f8ceb7373
 
 HTTP/1.1 200 OK
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

@@ -3576,8 +3576,8 @@
 <p>The users that are assigned to the Reviewer role and Draft Creator role should be reviewed post migration because not all users need to be assigned to both roles. Enabling inheritance for these roles is also recommended, not just to reduce the effort of maintaining permissions on individual items, but to also improve overall system performance due to the reduction of explicit role assignments. The simplest way to enable inheritance is to assign users to the Reviewer role and Draft Creator role at the library level.</p>
 <h2 id="restart-workflow">Restart workflow</h2>
 <p>The minimum resource access that is required for the restart workflow function has been raised from edit access to the library, to manager access to the library. If you need to maintain the old access level, then you can change the following property in the <code>WCM WCMConfigService</code> service to "false" in the WebSphere® Integrated Solutions Console:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>workflowrestart.requires.manager=false
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>workflowrestart.requires.manager=false
+</code></pre></div>
 <h2 id="web-content-configuration-changes">Web content configuration changes</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -3591,11 +3591,11 @@
 </div>
 <p>Web content tags now use brackets. This allows you to add web content tags directly into rich text fields.</p>
 <p>For example, in previous versions the component tag was written as:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;component name=&quot;componentname&quot; /&gt;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>&lt;component name=&quot;componentname&quot; /&gt;
+</code></pre></div>
 <p>The component tag now uses brackets:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[component name=&quot;componentname&quot; ]
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>[component name=&quot;componentname&quot; ]
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Notes</p>
 <ul>
@@ -3609,12 +3609,10 @@
 <p>This was new in Web Content Manager version 8.0. No action is required if migrating from Web Content Manager version 8.0 or higher.</p>
 </div>
 <p>The <code>IDCmpnt</code>, <code>HistoryCmpnt</code>, <code>ProfileCmpnt</code>, <code>WorkflowCmpnt</code>, and <code>SecurityCmpnt</code> tags are no longer supported. These features are retained and consolidated into a new property tag.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[Property field=&quot; &quot; context=&quot; &quot; type=&quot; &quot; name=&quot; &quot; key=&quot; &quot; format=&quot; &quot; link=&quot; &quot; separator=&quot; &quot; 
+<div class="language-text highlight"><pre><span></span><code>[Property field=&quot; &quot; context=&quot; &quot; type=&quot; &quot; name=&quot; &quot; key=&quot; &quot; format=&quot; &quot; link=&quot; &quot; separator=&quot; &quot; 
 htmlencode=&quot; &quot; awareness=&quot; &quot; ifEmpty=&quot; &quot; include=&quot; &quot; restrict=&quot; &quot; resolve=&quot; &quot;
 start=&quot; &quot; end=&quot; &quot; ]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Notes</p>
 <ul>
@@ -3629,8 +3627,8 @@ start=&quot; &quot; end=&quot; &quot; ]
 </div>
 <p>The behavior of the autofill parameter that is used in some web content tags is updated. If used in an item where autofill is not applicable, the tag instead uses the context of the current item.</p>
 <p>If you do not want this behavior to be used, you can add the following property in the <code>WCM WCMConfigService</code> service in the WebSphere Integrated Solutions Console</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>renderAutoFillTagsAsCurrent=false
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>renderAutoFillTagsAsCurrent=false
+</code></pre></div>
 <h2 id="federated-content-component-and-element">Federated content component and element</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -3644,8 +3642,8 @@ start=&quot; &quot; end=&quot; &quot; ]
 </ul>
 <p>Federated content components and elements are migrated from previous versions and are visible in the authoring portlet. These items can still be rendered in web pages, but you cannot create new federated content components or elements unless you enable this function.</p>
 <p>To maintain older systems, enable federated content components and elements in your new system by adding the following property in the <code>WCM WCMConfigService</code> service in the WebSphere Integrated Solutions Console:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>federatedcontent.enabled=true
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>federatedcontent.enabled=true
+</code></pre></div>
 <h2 id="web-content-viewer-portlet-display-title-options">Web content viewer portlet display title options</h2>
 <p>The standard Web Content Viewer portlet supports extra portlet and page display title options. You can now configure web content viewers to use the value of an element of the displayed content item as portlet and page display title.</p>
 <h2 id="links-and-metadata-for-remote-content">Links and metadata for remote content</h2>

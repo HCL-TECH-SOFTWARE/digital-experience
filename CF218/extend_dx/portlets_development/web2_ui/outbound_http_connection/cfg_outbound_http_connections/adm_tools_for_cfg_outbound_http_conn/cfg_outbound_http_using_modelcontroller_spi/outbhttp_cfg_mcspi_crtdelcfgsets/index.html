@@ -3387,22 +3387,7 @@
 <p>The controller object also provides methods for creating or deleting configuration settings.</p>
 <p>You can create new items by using the <code>CreationContext</code> interface. This interface provides the controller with the mandatory initialization data. The following creation contexts are available: <code>OutboundConnectionProfileCreationContext</code>, <code>PolicyMappingCreationContext</code>, <code>PolicyRuleCreationContext</code>, <code>CookieRuleCreationContext</code>, and <code>PolicyVariableCreationContext</code>. You can implement the creation contexts either by a custom application or by the singleton class <code>OutboundConnectionCreationContextBuidlerFactory</code>.</p>
 <p>The following code example shows how you create a new policy rule, and how you delete another policy rule:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>OutboundConnectionModel model; // Refer to previous examples, how to instantiate this model. 
+<div class="language-text highlight"><pre><span></span><code>OutboundConnectionModel model; // Refer to previous examples, how to instantiate this model. 
 OutboundConnectionModelController ctrl; // Refer to previous example, how to instantiate this.
 PolicyRule rule;// Refer to previous examples, how to instantiate this policy rule.
 
@@ -3418,7 +3403,7 @@ ModifiablePolicyRule mrule2 = (ModifiablePolicyRule) ctrl.create(ModifiablePolic
 ctrl.delete(rule);
 
 ctrl.commit(); // Apply the changes.
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

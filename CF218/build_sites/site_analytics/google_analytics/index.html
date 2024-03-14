@@ -2232,15 +2232,7 @@ For example, when using a WAR-based theme, the location of the GoogleAnalyticsAg
 </ul>
 <p>wp_profile/installedApps/&lt;cell&gt;/&lt;YourTheme.ear&gt;/&lt;YourTheme.war&gt;/themes/&lt;YourTheme&gt;/js</p>
 <p>Refer to the file tree below how the custom theme app will be deployed:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>wp_profile
+<div class="language-text highlight"><pre><span></span><code>wp_profile
     ---&gt; installedApps
         ---&gt; &lt;cell&gt;
             ---&gt; &lt;YourTheme.ear&gt;
@@ -2249,7 +2241,7 @@ For example, when using a WAR-based theme, the location of the GoogleAnalyticsAg
                         ---&gt; &lt;YourTheme&gt;
                             ---&gt; js
                                 ---&gt; GoogleAnalyticsAggregator.js
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p>Add the DX GoogleAnalyticsAggregator.js to the <strong>HCL DX theme profile</strong>.</p>
@@ -2336,11 +2328,11 @@ Example:</li>
 </div>
 <h2 id="configuration-options-for-the-hcl-dx-google-analytics-aggregator">Configuration options for the HCL DX Google Analytics Aggregator</h2>
 <p>HCL DX administrators, content authors and site owners may optionally discontinue Google Analytics tracking of HCL DX pages, without removing the page metadata (<code>asa_dependency</code>) by adding the following ‘opt-out’ metadata in to the DX page(s) properties:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>asa_js_ga.optout: true
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>asa_js_ga.optout: true
+</code></pre></div>
 <p>This step will programmatically set the following window property:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>window[&#39;ga-disable-GA_MEASUREMENT_ID&#39;]  = true
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>window[&#39;ga-disable-GA_MEASUREMENT_ID&#39;]  = true
+</code></pre></div>
 <p>See <a href="https://developers.google.com/analytics/devguides/collection/gtagjs/user-opt-out">Disable Google Analytics measurement</a> for additional information.</p>
 
 

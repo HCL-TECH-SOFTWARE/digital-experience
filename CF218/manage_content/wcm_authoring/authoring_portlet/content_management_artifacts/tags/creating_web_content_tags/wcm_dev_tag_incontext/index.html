@@ -4011,12 +4011,10 @@
 <h1 id="in-context-tag">In Context tag</h1>
 <p>The InContext tag renders a tag body within a specified rendering context. The new rendering context can be specified as a predefined context by using a UUID, or by path.</p>
 <p>The format of an <code>InContext</code> tag:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[InContext context=&quot; &quot;]
+<div class="language-text highlight"><pre><span></span><code>[InContext context=&quot; &quot;]
 
 [/InContext]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>To create an <code>InContext</code> tag:</p>
 <ol>
 <li>
@@ -4063,33 +4061,25 @@
 <h2 id="usage-examples">Usage examples</h2>
 <p>Extra text, HTML, or tags must be added between the <code>[InContext]</code> and <code>[/InContext]</code> tags. The text and tags added here is what is rendered in the specified context.</p>
 <p>For example, setting a context with a specified UUID to render <code>MyElement</code> in the context of the site area or content that is linked to by <code>MyLinkElement</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[InContext uuid=&quot;[Element context=&#39;current&#39; type=&#39;content&#39; key=&#39;MyLinkElement&#39; format=&#39;id&#39;]&quot;]
+<div class="language-text highlight"><pre><span></span><code>[InContext uuid=&quot;[Element context=&#39;current&#39; type=&#39;content&#39; key=&#39;MyLinkElement&#39; format=&#39;id&#39;]&quot;]
 [Element context=&quot;current&quot; type=&quot;auto&quot; key=&quot;MyElement&quot;]
 [/InContext]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>You can render the tag body in a predefined context. This context can be <code>portalContext</code>, <code>portletContext</code>, <code>portalMapping</code>, or <code>autofill</code>:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[InContext context=&quot;portalContext&quot;]
+<div class="language-text highlight"><pre><span></span><code>[InContext context=&quot;portalContext&quot;]
 [Element context=&quot;current&quot; type=&quot;auto&quot; key=&quot;MyElement&quot;]
 [/InContext]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The new context can be specified by using the name path. For example, to render MyElement in the context of /Web Content/My Site Area/My Content:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[InContext path=&quot;/Web Content/My Site Area/My Content&quot;]
+<div class="language-text highlight"><pre><span></span><code>[InContext path=&quot;/Web Content/My Site Area/My Content&quot;]
 [Element context=&quot;current&quot; type=&quot;content&quot; key=&quot;MyElement&quot;]
 [/InContext]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <p>The new context can be specified relative to the name path of the current context:</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>[InContext path=&quot;./My Content&quot;]
+<div class="language-text highlight"><pre><span></span><code>[InContext path=&quot;./My Content&quot;]
 [Element context=&quot;current&quot; type=&quot;content&quot; key=&quot;MyElement&quot;]
 [/InContext]
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 
 

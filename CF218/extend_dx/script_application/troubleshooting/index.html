@@ -1861,17 +1861,15 @@
 </li>
 <li>
 <p><strong>You gave a user Editor access to the Script Application library, but the editor does not open correctly.You might see the following error message: “Error 401: EJCBD0006E: The resolution of a URI failed. Refer to the SystemOut.log for more detailed information.”</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>Make sure that you also granted the user or group User access to the Script Application Editor portlet.
+<div class="language-text highlight"><pre><span></span><code>Make sure that you also granted the user or group User access to the Script Application Editor portlet.
 
 If you saw the EJCBD0006E error message, you might also see one of the following messages when you check the SystemOut.log: “EJPRD0601E: The current user is not authorized to access the Script Application Import Dialog portlet” or “EJPRF0007E: The current user is not authorized to access the Script Application Editor portlet.”
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </li>
 <li>
 <p><strong>You gave a user User access to the Script Application Editor, but the Edit option does not show for the Script Application when the user puts the portal page in Edit mode.</strong></p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Make sure to also grant the user or group Editor and Reviewer access to the Web Content Manager library and site area where that Script Application instance is stored. For example, for a Script Application that is stored in the default Script Application Library or Script Application site area, the developer needs Edit and Review access to that library and site area. For a Script Application stored with the page in the Portal Site library, the developer needs Edit and Review access to that page in the Portal Site library.
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><pre><span></span><code>Make sure to also grant the user or group Editor and Reviewer access to the Web Content Manager library and site area where that Script Application instance is stored. For example, for a Script Application that is stored in the default Script Application Library or Script Application site area, the developer needs Edit and Review access to that library and site area. For a Script Application stored with the page in the Portal Site library, the developer needs Edit and Review access to that page in the Portal Site library.
+</code></pre></div>
 <p>For more information about assigning access rights to Script Application users, read <a href="../script_application_security/">Script Application security overview</a> and <a href="../script_application_security/sp_security_upgrade/">User access to Script Applications</a>.</p>
 </li>
 <li>
