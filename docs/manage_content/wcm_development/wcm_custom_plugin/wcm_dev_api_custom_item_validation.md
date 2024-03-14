@@ -15,9 +15,9 @@ Possibly usages of this extension point include:
     -   `DocumentId<? extends AbstractAuthoringTemplate>[]validationScope()`
     -   `ItemValidationResult validate(ItemContext context)`
     !!! note
-      The validate method returns a ItemValidationResult that reports back any errors to be shown to the current user.
+         The validate method returns a ItemValidationResult that reports back any errors to be shown to the current user.
 
-2.  Within the validate method any field of the item can be modified. After all validation plug-ins are started the standard item and template validation is performed. See the Web Content Manager Javadoc for further information.
+2.  Within the validate method, you can modify any field of the item. After all validation plug-ins are started, the standard item and template validation is performed. See the Web Content Manager Javadoc for further information.
 
     For example:
 
@@ -269,8 +269,11 @@ Possibly usages of this extension point include:
     
     ```
 
+!!!important
+      Some validator actions may require a save and refresh for the actions to be visible in the validated object.
 
-## Create a plugin.xml file
+
+## Creating a plugin.xml file
 
 A plugin.xml file is needed whether the deployment is done by using a WAR or EAR, or by using a loose jar. If you deploy using an application in a WAR or EAR, include the plugin.xml file in the application's WEB-INF folder. When you use a jar, include the plugin.xml in the root of the jar.
 
