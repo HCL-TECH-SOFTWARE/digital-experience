@@ -45,7 +45,7 @@ nodeSelector:
 
 ## Affinity and anti-affinity
 
-Node affinity and `nodeSelector` are used to limit the nodes where Pods can be scheduled based on node labels. You can refer to [find constraints/use cases](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity) and apply them to your services.
+Node affinity and `nodeSelector` are used to limit the nodes where Pods can be scheduled based on node labels. You can refer to [Affinity and anti-affinity](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity) for more information about node selection constraints and apply them to your services.
 
 Specify `affinity` constraints to your services in the custom values file:
 
@@ -97,7 +97,7 @@ affinity:
 
 ## nodeName
 
-NodeName is a simpler and more direct way of selecting a node for a pod than `nodeSelector` or `affinity` rules. In the Pod specification, you can use the nodeName field to specify the name of the node where the pod should run. When nodeName is used, any `nodeSelector` or affinity/anti-affinity rules are ignored, and the kubelet on the specified node tries to place the pod on that node. You can refer to [find constraints/use cases](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#nodename) and apply them to your services.
+NodeName is a simpler and more direct way of selecting a node for a pod than `nodeSelector` or `affinity` rules. In the Pod specification, you can use the nodeName field to specify the name of the node where the pod should run. When nodeName is used, any `nodeSelector` or affinity/anti-affinity rules are ignored, and the kubelet on the specified node tries to place the pod on that node. You can refer to [nodeName](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#nodename) for more information about node selection constraints and apply them to your services.
 
 Specify the `nodeName` constraints to your services in the custom values file:
 
@@ -128,7 +128,7 @@ nodeName:
 
 ## Pod topology spread constraints
 
-You can use topology spread constraints to manage the distribution of Pods across different failure domains within your cluster, including regions, zones, nodes, and other custom-defined topology domains. This approach can help to ensure high availability and to optimize your resource usage. You can refer to [find constraints/use cases](https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/) and apply them to your services.
+You can use topology spread constraints to manage the distribution of Pods across different failure domains within your cluster, including regions, zones, nodes, and other custom-defined topology domains. This approach can help to ensure high availability and to optimize your resource usage. You can refer to [Pod Topology Spread Constraints](https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/) for more information about node selection constraints and apply them to your services.
 
 Specify `topologySpreadConstraints` constraints to your services in the custom values file:
 
@@ -165,7 +165,7 @@ topologySpreadConstraints:
 
 ## Taints and tolerations
 
-Taints and tolerations are used together to prevent pods from being scheduled on unsuitable nodes. One or more taints are applied to a node, which indicates that the node should not accept any pods that cannot tolerate the taints. You can refer to [find constraints/use cases](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/) and apply them to your services.
+Taints and tolerations are used together to prevent pods from being scheduled on unsuitable nodes. One or more taints are applied to a node, which indicates that the node should not accept any pods that cannot tolerate the taints. You can refer to [Taints and Tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/) for more information about node selection constraints and apply them to your services.
 
 Specify `tolerations` constraints to your services in the custom values file:
 
