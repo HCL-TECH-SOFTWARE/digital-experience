@@ -50,12 +50,15 @@ With WCM REST V2 API explorer, developers using the Digital Experience WCM REST 
 
 Access the WCM REST V2 API explorer located at:
 
-`http or https://host:port/dx/api/wcm/v2/explorer/`
-
+```
+http or https://host:port/dx/api/wcm/v2/explorer/
+```
 
 !!! example
 
-    `https://localhost:10039/dx/api/wcm/v2/explorer/`
+    ```
+    https://localhost:10039/dx/api/wcm/v2/explorer/
+    ```
 
 ???+ info "Related information"
     - [REST API Explorers](../../../extend_dx/apis/hcl_experience_api/api_explorers.md)
