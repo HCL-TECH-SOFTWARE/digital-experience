@@ -1,7 +1,7 @@
 nav:
     - optional_internal_networking.md
     - optional_imagepullsecrets.md
-    - optional_nodeselectors.md
+    - optional_options_spread_pods_across_nodes.md
     - optional_disable_apps.md
     - optional_configure_apps.md
     - optional_configure_scaling.md
