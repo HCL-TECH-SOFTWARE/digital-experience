@@ -58,6 +58,6 @@ Example:
 
 ## Limitation
 
-The refresh-page-layout-template task does not update pages and theme artifacts within a WCM Project. 
+The refresh-page-layout-template task does not update pages and theme artifacts within a WCM Project unless the Project is published. If the Project is in a draft state, the pages are not updated.
 
 
