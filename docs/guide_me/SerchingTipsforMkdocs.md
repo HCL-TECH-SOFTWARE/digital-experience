@@ -1,21 +1,24 @@
 # Tips for searching in Mkdocs
 
-## Introduction:
+## Introduction
 
-In this document we have listed out the keywords/tips which will help you to simplify the search result.
+In this document you will find the list of the tips which will help you to minimize the search result.
 
-## Tipss for searching in Mkdocs
+## Tips for searching in Mkdocs
 
 Refer to the following tips to help you find better search results:                                                              
 
-- **fo*** : Use this to find every keyword beginning with "fo".
-- **f*o** : Use this to find every keyword that starts with 'f' and ends with 'o'.
-- ***oo** : Use this to find every keyword ending with 'oo'.
-- **fo bar** : Use this to find any one of the keyword beginning 'fo' OR 'bar'.
-- **+foo** : The search must contain the keyword 'foo'.
-- **+foo +bar** : The search contains both the keywords'foo' and 'bar'.
-- **-bar** : The search cannot contain keyword 'bar'.
-- **+foo -bar** : Use this to find every page with the keyword 'foo' but not 'bar'.
-- **+foo -*ar** : Use this to find every page with the keyword 'foo' that does not have a keyword ending with 'ar'.
-- **title:markdown** : Use this to find the page title which contains keyword 'markdown'.
-- **title:Markdown -extension** : Use this to find all pages with the title 'Markdown' that do not have a keyword 'extension'.
+- **fo**: Use this to find all the words beginning with "fo".
+- **f*o**: Use this to find all the word that starts with 'f' and ends with 'o'.
+- ***oo**: Use this to find all the words ending with 'oo'.
+- **fo bar**: Use this to find either of the words beginning with 'fo' or 'bar'.
+- **+foo**: The search page must contain the 'foo' words.
+- **-bar**: The search page cannot contain 'bar' words.
+
+### Other option
+
+- **+foo +bar**: The search page contains both the 'foo' and 'bar' words.
+- **+foo -bar**: Use this to find every page with the words 'foo' but not 'bar'.
+- **+foo -*ar**: Use this to find every page with the words 'foo' that does not have words ending with 'ar'.
+- **title:markdown**: Use this to find the page title which contains words 'markdown'.
+- **title:Markdown -extension**: Use this to find all pages with the title 'Markdown' that do not have a words 'extension'.
