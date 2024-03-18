@@ -166,7 +166,7 @@ Make sure the server is stopped before doing the following steps.
     |Offering| Required repository|
     |---------|------------|
     |Enable Offering|Server and Enable|
-    |xpress Offering|Express|
+    |Express Offering|Express|
     |Extend Offering|Extend and Server|
     |Server Offering|Server|
     |Web Content Manager Offering|HCL Web Content Manager Server|
