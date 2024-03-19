@@ -24,10 +24,10 @@ Additional guidance is available here: [Step-by-step guide on downloading HCL Di
 
 1. Sign in to the HCL Software Licensing Portal.
 
-2. Identify the Portal 9.5 offering you want to install.
+2. Identify the HCL DX (Portal and or WCM) 8.5 offering you currently have so you can obtain the correct corresponding HCL DX 9.5 offering package.
 
     !!! note
-        There are several different Portal 9.5 offerings. Your license determines which offerings you will see listed as available to download.
+        There are several different HCL Digital Experience 9.5 offerings. Your purchased entitlements license determines which offerings are listed as available to download.
 
     Example package names for the different Portal 9.5 offerings are:
     
@@ -45,11 +45,11 @@ Additional guidance is available here: [Step-by-step guide on downloading HCL Di
     
     - HCL Digital Experience Cloud Native v9.5.x
     
-    In this example, we will use HCL Portal Enable v9.5 Multiplatform.
+    In this example, we are using the HCL Portal Enable v9.5 Multiplatform.
 
 3. Click on the HCL Portal Enable v9.5 Multiplatform package.
 
-4. On the package page, you will see a long list of parts/components but you only need to download the following four files:
+4. On the package page, there is a long list of parts/components but you only need to download the following four files:
 
     - HCL-Portal-95_Enable_SETUP-01-SL.zip
     
@@ -62,7 +62,7 @@ Additional guidance is available here: [Step-by-step guide on downloading HCL Di
     !!! note 
         The listed zip files contain all the software required to upgrade Portal 8.5 to Portal 9.5 following Portal 8.5 upgrade to [the latest available cumulative fix](../../../../whatsnew/cf20/).
 
-### Preparing the files for install
+### Preparing the files for installation
 
 1. After downloading the parts, create a parent folder where the files are to be extracted. You can name it as "portal95binaries" as shown in the following example:
 
@@ -84,9 +84,7 @@ There are several different methods to install the CF as stated in [Combined Cum
 
 HCL DX offerings such as Portal Enable, Portal Server, and Web Content Manager must be upgraded to the latest available CF to support the installation of HCL Portal Server or other DX offerings to v9.5.
 
-The following upgrade example uses CF217 and has been extracted into the products directory of the HCL DX v9.5 repository:
-
-![Products directory of HCL DX v9.5](../../../../images/portal_upgrade_extracted.png)
+The following upgrade example uses CF217 and has been extracted into the products directory of the HCL DX v9.5 repository.
 
 ### Prerequisites
 
