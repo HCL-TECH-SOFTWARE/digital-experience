@@ -152,4 +152,4 @@ The first server where HCL Digital Experience is installed is the basis for the 
     -   [Setting up farm instances as unique installations](../../../../../deployment/manage/portalfarm_cfg/choose_portalfarm/settingup_as_unique_install/index.md)
     -   [Configuring a shared file system](../../../../../deployment/manage/portalfarm_cfg/choose_portalfarm/settingup_with_sharedconfig/set_portal_farm_gpfs.md)
     -   [How to manage syndicators and subscribers](../../../../../manage_content/wcm_delivery/syndication/manage_synd_subs/index.md)
-    -   [Configuring search in a cluster](../../../../../build_sites/search/cfg_search_cluster/index.md)
+    -   [Configuring search in a cluster](../../../../../build_sites/search/cfg_dx_search/cfg_search_cluster/index.md)

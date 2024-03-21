@@ -17,9 +17,9 @@ When you migrate multiple tier environments, you have two options for completing
 -   **[Multiple cluster environments](mig_plan_clusters.md)**  
 If you are migrating an environment with multiple clusters, you can run the create-alias-multiple-cluster task to support multiple clusters that use different credentials.
 -   **[Migrating from Portal 8.0.0.1 on WebSphere Application Server 8.5.5.2](../migration_consideration/migrating_portal8001_WAS8552/index.md)**  
-If you are migrating from HCL Digital Experience Version 8.0.0.1 on WebSphere® Application Server Version 8.5.5.2 to HCL Digital ExperienceVersion 8.5, you must follow a different migration process.
--   **[Migration from Portal Server Offering 7.0 to Portal 8.5](mig_consider_7serveronly.md)**  
-You can migrate from a Portal Server Offering 7.0 to Portal 8.5. For more information about Portal Server Offering, see the Overview topic from the related links section. When you migrate from a 7.0 Server Offering-only installation to HCL Portal Version 8.5, you must complete steps that are not covered in the Configuration Wizard migration options. Instead of using the wizard to complete the final upgrade the Portal profile step, you must complete this step manually.
+If you are migrating from HCL Digital Experience Version 8.0.0.1 on WebSphere® Application Server Version 8.5.5.2 to HCL Digital ExperienceVersion 8.5/9.5, you must follow a different migration process.
+-   **[Migration from Portal Server Offering 7.0 to Portal 8.5/9.5](mig_consider_7serveronly.md)**  
+You can migrate from a Portal Server Offering 7.0 to Portal 8.5/9.5. For more information about Portal Server Offering, see the Overview topic from the related links section. When you migrate from a 7.0 Server Offering-only installation to HCL Portal Version 8.5/9.5, you must complete steps that are not covered in the Configuration Wizard migration options. Instead of using the wizard to complete the final upgrade the Portal profile step, you must complete this step manually.
 -   **[Migrating from Web Content Manager version 7.0 or 8.0](../migration_consideration/migrating_wcm_70_80/index.md)**  
 These are the migration options available when migrating from Web Content Manager version 7.0.x or 8.0.x.
 -   **[Port conflicts](mig_plan_port_conflicts.md#)**  

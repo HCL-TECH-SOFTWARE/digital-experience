@@ -3,7 +3,6 @@ nav:
     - index.md
     - kubernetes
     - traditional
-    - docker
     - disclaimer.md
     - glossary.md
   

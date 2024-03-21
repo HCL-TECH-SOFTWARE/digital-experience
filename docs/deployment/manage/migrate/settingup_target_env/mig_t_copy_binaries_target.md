@@ -2,7 +2,7 @@
 
 Complete this task if the deployment manager is not sharing application binary files with a Portal install.
 
-1.  Copy the required files \(including the migration plug-in\) from the HCL Digital Experience Version 8.5 binary installation to the target deployment manager system:
+1.  Copy the required files \(including the migration plug-in\) from the HCL Digital Experience Version 8.5/9.5 binary installation to the target deployment manager system:
 
     1.  Copy the filesForDmgr.zip file to the remote deployment manager system.
 

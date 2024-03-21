@@ -1,13 +1,18 @@
-# Content Reporting Bulk Update
+# Performing a bulk update in Content Reporting
 
-Currently Content Reporting Bulk Update supports the following actions: 
+Currently, Content Reporting Bulk Update feature supports the following actions: 
 
 - Update expiration date
 - Add an owner or author
 - Remove an owner or author
 - Replace an owner or author
 
-These actions can be executed on content items returned in a report generated through HCL Content Reporting search.
+You can execute these actions on content items returned in a report generated through HCL Content Reporting search.
+
+!!!note
+    Bulk updates for owners or authors can only be applied to content items, site areas, authoring templates, components, categories, folders, projects, segments, workflow actions, portal pages and items to which you have edit access. To date, adding up to 100 users and updating up to 7000 items have been tested successfully.
+
+Starting CF218, if a bulk update process is running and the server restarts, the system pauses the update process. When the server is available again, you can resume the paused bulk update process through the **Updates** page. For more information, see [Resuming a paused bulk update process](#resuming-a-paused-bulk-update-process).
 
 ## Prerequisite
 
@@ -62,24 +67,29 @@ Content managers can trigger bulk updates to update the owners and/or authors of
 
     ![](../../../../assets/HCL_Content_Reporting_Update_Button_OwnersAuthors.png)
 
-2. In the **Update items** dialog box, there are three options: **Property**, **Action**, and **User**. In the **Property** field, select the property to be updated, either **Author** or **Owner**. In the **Action** field, select the action to be taken on the selected items, either **Add**, **Remove**, or **Replace**. In the **User** field, enter the name of the user to be involved in the selected action. This field is a type-ahead input field that displays a list of suggested users according to the input. Only suggested users are considered valid. After filling out all the fields, click the **Update** button.
+2. In the **Update items** dialog box, there are six options: **Property**, **Action**, **User attribute**, **Users**, **Group attribute** and **Groups**.
+    - In the **Property** field, select the property to be updated, either **Author** or **Owner**. 
+    - In the **Action** field, select the action to be taken on the selected items, either **Add**, **Remove**, or **Replace**. 
+            ![](../../../../assets/HCL_Content_Reporting_Update_Items_OwnersAuthors.png)
 
-    ![](../../../../assets/HCL_Content_Reporting_Update_Items_OwnersAuthors.png)
-
-    !!!note
-        For the **Replace** action, there are two fields for the users involved in the action: **Add User** and **Remove User**. In the **Add User** field, enter the name of the user you want to add. In the **Remove User** field, enter the name of the user you want to replace with the name you added in the **Add User** field. 
+        !!!note
+            For the **Replace** action, there are two fields each for users and groups involved in the action: **Remove users** and **Remove groups**, **Add users** and **Add groups**. In the **Remove users** or **Remove groups** field, enter a value according to the selected attribute of the user or group you want to replace with the value you will add in the **Add users** or **Add groups** field.
+            
         ![](../../../../assets/HCL_Content_Reporting_Update_Items_ReplaceOwnersAuthors.png)
+        
+    - In the **User attribute** field, select a user attribute to enable the **Users** field. In the **Users** field, enter a corresponding value for the selected attribute. For example, if you selected the **Job Title** attribute, enter a job title in the **Users** field and all users with that job title appear in the dropdown. Note that this field is a type-ahead input field that displays a list of suggested users according to the input and selected user attribute. Only suggested users are valid.
+    - You can also select a **Group attribute** to enable the **Groups** field. In the **Groups** field, enter a corresponding value for the selected attribute. For example, if you selected the **Display Name** attribute, enter a display name in the **Groups** field and all groups with that display name appear in the dropdown. Note that this field is a type-ahead input field that displays a list of suggested groups according to the input and selected group attribute. Only suggested groups are valid.
 
-3. After clicking the **Update** button, a confirmation dialog appears. Verify the number of items you want to update and that you entered the correct user information. If the values are correct, click the **Update** button. Otherwise, you can click **Cancel** and return to the previous dialog where you can change the incorrect values.
+3. After filling out the fields, click the **Update** button.
+    A confirmation dialog box appears. 
+    
+4. Note the number of items to be affected by the update and check if you entered the correct values for properties to update. If the values are correct, click the **Update** button. Otherwise, you can click **Cancel** and return to the previous dialog box where you can change the incorrect values.
 
     ![](../../../../assets/HCL_Content_Reporting_Update_Confirmation_Dialog_OwnersAuthors.png)
 
     There are also **Cancel** and **Clear** buttons in the dialog box. Click **Cancel** to close the dialog box. Click **Clear** to remove all selected options.
 
 You can [track the bulk update](#tracking-bulk-updates-and-viewing-bulk-update-results) through the snackbar or through the **Updates** page.
-
-!!!note
-    Bulk updates for owners or authors can only be applied to content items, site areas, authoring templates, components, categories, folders, projects, segments, workflow actions, portal pages and items to which you have edit access. To date, adding up to 100 users and updating up to 7000 items have been tested successfully.
 
 ## Tracking Bulk Updates and viewing Bulk Update results
 
@@ -126,7 +136,7 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
 
     ![](../../../../assets/HCL_Content_Reporting_Updates_Button.png)
 
-2. On the **Updates** page, there is a table showing the bulk updates that were triggered. This table has five columns:
+2. In the **Updates** page, there is a table showing the bulk updates that were triggered. This table has five columns:
 
     - **Update** - This column indicates whether the bulk update is ongoing or completed. Once complete, there is a summary of items that have been processed. This summary shows how many items were updated and how many failed. This column also contains a button to show the report dialog where you can check the details of each item that has been processed.
     - **Action** - This column shows actions that were taken during the bulk update.
@@ -138,7 +148,7 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
 
     To return to the **Content Reporting** landing page, click the back button found on the upper left corner of the **Updates** page.
 
-3. On the **Updates** page table, hover over a row of a completed bulk update to display the view action button. Click this button to display the dialog for the list of items processed and their details.
+3. In the **Updates** page table, hover over a row of a completed bulk update to display the view action button. Click this button to display the dialog for the list of items processed and their details.
 
     ![](../../../../assets/HCL_Content_Reporting_Updates_View_Report_Button.png)
 
@@ -150,3 +160,30 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
     - **Created by** - This column shows the creator of the item.
 
     ![](../../../../assets/HCL_Content_Reporting_Reports_Dialog.png)
+    
+#### Resuming a paused bulk update process
+
+If a bulk update process is running and the server restarts, the system pauses the update process. When the server is available again, you can resume the paused bulk update process.
+
+!!!note
+    You can only resume a paused bulk update process for owners and authors if the update involves a limited number of users and groups. Currently, there is a size limitation in the database column that stores the action string that specifies the owners or authors used in an update. If the action string exceeds 255 characters, you cannot resume the paused bulk update process. The operation fails and you must start the bulk update process again.
+    
+    If the bulk update process for owners and authors involves a large number of users, it is recommended to create a user group instead. Add all of the users to the group and then select the new group when initiating the bulk update operation. For more information, see [Managing users and groups](../../../../deployment/manage/security/people/authorization/controlling_access/managing_users_groups/index.md).
+
+To continue a paused bulk update process, refer to the following steps:
+
+1. Access the **Updates** page through the button on the application header. Click the **Updates** button to go to the **Updates** page.
+
+    ![](../../../../assets/HCL_Content_Reporting_Updates_Button.png)
+
+2. In the **Updates** page table, hover over a row of a paused update process to display the resume update button. Click this button to display the confirmation dialog box to resume the bulk update process.
+
+    ![](../../../../assets/HCL_Content_Reporting_Updates_Resume_Update_Button.png)
+
+3. The **Confirm resume update** dialog box appears. Verify the items you want to update and click **Resume** to continue. Otherwise, you can click **Cancel**.
+
+    ![](../../../../assets/HCL_Content_Reporting_Update_Confirmation_Dialog_Resume.png)
+
+After resuming the update, you can track the progress in the **Updates** page.
+
+

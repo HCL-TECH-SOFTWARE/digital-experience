@@ -81,7 +81,7 @@ By having the offline version of the HCL FlexNet Embedded License Server, a loca
     1.  Using the default user name and password, request a bearer token from the local license server.
 
         ```
-        curl -k --header "Content-Type: application/json" --request POST --data "{\"user\":\"admin\",\"password\":\HCLDefault@\"}" https://<license server hostname>:<port>/api/1.0/instances/~/authorize
+        curl -k --header "Content-Type: application/json" --request POST --data "{\"user\":\"admin\",\"password\":\"HCLDefault@\"}" https://<license server hostname>:<port>/api/1.0/instances/~/authorize
         ```
 
         Where:
