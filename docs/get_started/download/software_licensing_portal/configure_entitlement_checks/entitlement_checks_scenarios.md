@@ -77,7 +77,7 @@ Access the Reports section of the HCL Software License and Download Portal (Flex
 
         ![](../../software_licensing_portal/_img/select_account_entitlements.png)
 
-The Usage report will show the following information:
+The Usage report shows the following information:
 
 -   **Period**: The period for the report results.
 -   **Usage**: The number of user sessions that ran on your Digital Experience 9.5 Container Update deployment that is mapped to this entitlement and that has the **ProductionEnvironment** variable enabled and set to `True`. See the user session details in the [HCL Digital Experience Cloud Native 9.5 license](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad) on the [HCL Software License Agreements](https://www.hcltechsw.com/resources/license-agreements) site.
