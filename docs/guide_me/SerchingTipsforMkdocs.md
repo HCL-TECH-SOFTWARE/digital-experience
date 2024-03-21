@@ -2,7 +2,7 @@
 
 This topic contains tips on how to improve your search results and find the information you need in the HCL Digital Experience (DX) Help Center.
 
-Refer to the following sample search queries to help you can find the required search results:                                                              
+Refer to the following sample search queries and how to use them:                        
 
 - **fo***: Use this to find all the keywords beginning with 'fo'.
 - **f*o**: Use this to find all the keywords that start with 'f' and end with 'o'.
@@ -14,12 +14,13 @@ Refer to the following sample search queries to help you can find the required s
 
 ## Combining queries to refine search results
 
-You can combine the search queries to further refine the search results. For example:
+You can combine search queries to further refine search results. For example:
 
 - **+far +bar**: The search contains both 'far' and 'bar'.
 - **+far -bar**: Use this to find every page with 'far' but not 'bar'.
 - **+far -*er**: Use this to find every page with 'far' that does not have words ending with 'er'.
 - **title:navigation -extension**: Use this to find all pages with the page title 'navigation' that do not have the word 'extension'.
 
-In the following example "+far -*er", you can see how to use the search queries to refine the search results.
-![Example of +far -*er](../images/Sample_search_results.png)
+<!--
+The following image uses the search query "+far -*er", to refine the search results.
+![Example of +far -*er](../images/Sample_search_results.png)-->
