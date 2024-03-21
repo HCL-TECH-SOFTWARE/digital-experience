@@ -135,7 +135,7 @@ By having the offline version of the HCL FlexNet Embedded License Server, a loca
         
         4. Click **Save**. The device is created.
 
-    2. Map your  HCL Digital Experience Cloud Native 9.5 entitlements to the local license server. Refer to the following table: [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7 parts and FlexNet License Server Feature Name](index.md) for details.
+    2. Map your HCL Digital Experience Cloud Native 9.5 entitlements to the local license server. Refer to the following table: [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7 parts and FlexNet License Server Feature Name](index.md) for details.
         
         1. On the device page, select **Action > Map Entitlements**.
         
