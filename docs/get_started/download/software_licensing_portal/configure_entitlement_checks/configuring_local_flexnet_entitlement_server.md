@@ -257,8 +257,6 @@ The License Manager component communicates with the local license server to vali
     kubectl -n <namespace> rollout restart sts <deployment-name>-license-manager
     ```
 
-## Results
-<!-- The following text is more of a next step than a result. -->
 Ensure that your connection to the local FlexNet license server is successful by viewing your HCL DX 9.5 Container Update Server License Manager pod logs.
 
 Use `kubectl` logs for the license manager pod. For example:
