@@ -2,9 +2,30 @@
 
 This section describes how to move from an existing HCL Portal environment to a containerized Digital Experience environment.
 
+## Overall approach
+
+A similar approach as staging to another DX environment is the recommended path to move from a non containerized deployment to a containerized deployment.
+
+The Kubernetes containerized deployment is different from the non containerized deployment:
+1. No http server in front of your DX deployment - instead HAProxy is used for routing to the different pods and JVMs:
+You can configured your own ingress controller or deploy a proxy to customize cache headers or server static files or other customizations you had configured before at your http server.
+2. No WebSphere cluster: 
+Distributed Enterprise Java Beans or JMS distribution or cache replication of custom Dynacaches is not possible with containerized deployments as we are using a farm like deployment of DX Core. 
+Any product based caches will be cache replicated so any changes will be distributed all Core pods.
+In case you have custom Dynacaches that needs to be replicated we would recommend external cache solutions like Redis or Hazelcast.
+In case you use session replication via in memory you need to switch to session persistence via the database instead.
+
+## Moving multiple environments
+
+Typically an overall solution of DX consists of multiple environments like development, staging, production authoring and production rendering.
+While it is possible to move each environment to a new containerized deployment our recommendation is to move one environment to containers, test and validate and then use that environment as source for the other environments. In case WCM is used likely the Authoring environment is a good choice to use as initial environment to stage to containers.
+
 ## Prerequisite
 
 The target environment that is existing in a customer-owned Kubernetes environment requires HCL Digital Experience 9.5 and IBM WebSphere Application Server 9.0.5. The HCL Digital Experience and IBM WebSphere Application Server product versions for the source and target environment must be at the same level, though it is sufficient to be on IBM WebSphere Application Server 8.5.5.x with JDK 8.
+If you do not have the 9.5 UI features enabled in your source non container environment you should either enable it or if not possible disable on the container environment. For details on enabling and disabling see: 
+[Enabling 9.5 UI features](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md)
+[Disabling 9.5 UI features](../../../build_sites/practitioner_studio/working_with_ps/disable_prac_studio.md)
 
 ## Export the source HCL Portal server
 
@@ -45,6 +66,10 @@ Follow these steps to export the source HCL Portal server.
 
 10. When applicable, save all custom files (application and theme EAR files, WAR files) to an external or shared drive, for use later when importing to the target environment.
 
+11. Validate if you have any custom Dynacaches, URLs, JVM Environment Parameters or other custom WebSphere configuration.
+If you are not sure what customizations were applied you can leverage the comparison tool WebSphere Configuration Comparison Tool.
+For more details see [WebSphere Configuration Comparison Tool](https://github.com/IBM/websphere-cct)
+
 ## Import the source HCL Portal server
 
 1.  Log in to the machine from where you will access your HCL Portal Container.
@@ -68,11 +93,10 @@ Follow these steps to export the source HCL Portal server.
     ```
     /opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh empty-portal –DWasPassword=<your WAS admin user password> –DPortalAdminPwd=<your DX admin user password>
     ```
-    []()
     
     The output displays a **BUILD SUCCESSFUL** message. If not, check the /opt/HCL/wp\_profile/ConfigEngine/log/ConfigTrace.log for errors.
 
-5.  Clean up the remaining content in the target server by using XML Access:
+5.  Clean up the deleted pages in the target server by using XML Access:
 
     ```
     /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config -user <your DX admin user> –password <your DX admin user password> –in /opt/HCL/PortalServer/doc/xml-samples/Task.xml -out /tmp/task_result.xml
@@ -120,6 +144,9 @@ Follow these steps to export the source HCL Portal server.
 10. Configure any required syndication properties in the WCM ConfigService. For example, enabling memberfixer to run during syndication.
 
 11. Create any required configuration items. For example, URLs, namespace bindings, etc.
+This is a good time to run a comparison report via the WebSphere Configuration Comparison Tool.
+For more details see [WebSphere Configuration Comparison Tool](https://github.com/IBM/websphere-cct).
+For more details on possible configuration settings in the Resource Environment Providers see the section Resource Environment Providers below.
 
 12. Import the source server base content into the HCL Portal server in the container.
 
@@ -222,7 +249,33 @@ Follow these steps to syndicate the source and target environments.
 
     You do not need to disable Practitioner Studio to do this syndication.
 
+### Syndicating very large libraries
 
+Syndicating large libraries, especially when syndicating all items (in case you need all versions and projects on the containerized environment) can be a slow process. For those scenarios you can consider copying the JCR database from the non container to the container system and reconnecting the container to the copied database. More details on this can be found here (though they are somewhat specific to DB2 the same can be done for MS SQL Server and Oracle):
+[Manual staging to production process](../../../deployment/manage/staging_to_production/manual_staging_prod_process)
+
+## Resource Environment Providers
+
+HCL Portal comprises a framework of configuration services to accommodate the different scenarios that portals of today need to address. You can configure some of these services.
+
+The configuration for each service is stored in and accessible for configuration through the WebSphere® Integrated Solutions Console. In the WebSphere Integrated Solutions Console, the portal configuration services are spelled as one word, for some services abbreviated, and preceded by the letters WP. Example: In the WebSphere Integrated Solutions Console, the portal Configuration Service is listed as WP ConfigService.
+
+More information on each service can be found at: [Service configuration](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg)
+
+If you cannot recall all the configuration settings you usually change and also have not automated the setting via CI/CD a good way to compare them is using the  [WebSphere Configuration Comparison Tool](https://github.com/IBM/websphere-cct).
+
+When comparing the configuration settings you might identify some differences of settings DX configures in containers. The following below is a summary of changes we perform for Resource Environment Providers for containers / Kubernetes:
+- WCM WCMConfigService: Tuning changes as documented in the tuning task: ()[../../../deployment/manage/tune_servers/wp_tune_tool.md]
+- WP ConfigService: ```use.db.cache.invalidation.table``` and ```db.cache.invalidation.read.freq``` for cache replication. ```digitalAssets.useSSLDAM``` for DAM integration.
+-  WCM DigitalAssetManagerService: ```enabled``` if using DAM.
+- WP CacheManagerService: Tuning changes as documented in the tuning task: ()[../../../deployment/manage/tune_servers/wp_tune_tool.md]
+
+
+### Configuration tasks changing Resource Environment Providers
+
+Configuration tasks like changing the context root, enabling features like social publishing from WCM or others can make changes to the resource environment providers. Some of the these configurations have been moved to the helm chart - changing the context root, admin password, performance tuning, WCM Artificial Intelligence, remote search should be triggered from there. All other configurations would still be performed via the tasks. 
+Also a few features are enabled out of the box on containers that are not enabled by default for non containers: DAM integration, WCM Multilingual.
+If you are not sure any more what was performed on your non container environment check the ConfigTrace.log file.
 
 ???+ info "Related information"
     -   [Database Management Systems](../../../deployment/manage/db_mgmt_sys/index.md)
