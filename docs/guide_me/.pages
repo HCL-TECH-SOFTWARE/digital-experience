@@ -4,4 +4,5 @@ nav:
     - wpsdirstr.md
     - SecurityHardeningGuide
     - Performance_Tuning.md
+    - SerchingTipsforMkdocs.md
     - glossary.md
