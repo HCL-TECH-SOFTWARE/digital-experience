@@ -10,10 +10,10 @@ The Kubernetes containerized deployment is different from the non containerized 
 1. No http server in front of your DX deployment - instead HAProxy is used for routing to the different pods and JVMs:
 You can configured your own ingress controller or deploy a proxy to customize cache headers or server static files or other customizations you had configured before at your http server.
 2. No WebSphere cluster: 
-Distributed Enterprise Java Beans or JMS distribution or cache replication of custom Dynacaches is not possible with containerized deployments as we are using a farm like deployment of DX Core. 
-Any product based caches will be cache replicated so any changes will be distributed all Core pods.
-In case you have custom Dynacaches that needs to be replicated we would recommend external cache solutions like Redis or Hazelcast.
-In case you use session replication via in memory you need to switch to session persistence via the database instead.
+    - Distributed Enterprise Java Beans or JMS distribution or cache replication of custom Dynacaches is not possible with containerized deployments as we are using a farm like deployment of DX Core. 
+    - Any product based caches will be cache replicated so any changes will be distributed all Core pods.
+    - In case you have custom Dynacaches that needs to be replicated we would recommend external cache solutions like Redis or Hazelcast.
+    - In case you use session replication via in memory you need to switch to session persistence via the database instead.
 
 ## Moving multiple environments
 
@@ -47,7 +47,7 @@ Follow these steps to export the source HCL Portal server.
     /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://mysource.machine.fqdn:10039/wps/config -user <your DX admin user> –password <your DX admin user password> –in /opt/HCL/PortalServer/doc/xml-samples/ExportRelease.xml -out /tmp/ExportReleaseResults.xml
     ```
 
-5.  Save the output XML file (ExportReleaseResults.xml) to an external or shared drive, for use later when importing to the target environment.
+5.  Save the output XML file (ExportReleaseResults.xml) to an external or shared drive, for later use when importing to the target environment.
 6.  Export the content for each Virtual Portal that exists in the source environment, renaming each file uniquely for easy identification.
 
     ```
@@ -58,21 +58,21 @@ Follow these steps to export the source HCL Portal server.
 
 8.  Save the /opt/HCL/wp_profile/PortalServer/deployed/archive directory files to an external or shared drive, for later use when importing to the target environment.
 
-9.  If you are using PZN rules, export the PZN rules using the Personalization Administration Portlet functions and save the generated Workspace.nodes file to an external or shared drive, for later use when importing to the target environment.
+9.  If you are using PZN rules, export the PZN rules using the Personalization Administration Portlet functions and save the generated Workspace.nodes file to an external or shared drive, for later use when importing to the target environment:
 
     1.  Log in to the HCL Portal Home Page.
     2.  Navigate to **Personalization > Business Rules* > Extra Actions > Export**.
     3.  Save the output file.
 
-10. When applicable, save all custom files (application and theme EAR files, WAR files) to an external or shared drive, for use later when importing to the target environment.
+10. When applicable, save all custom files (application and theme EAR files, WAR files) to an external or shared drive, for later use when importing to the target environment.
 
 11. Validate if you have any custom Dynacaches, URLs, JVM Environment Parameters or other custom WebSphere configuration.
 If you are not sure what customizations were applied you can leverage the comparison tool WebSphere Configuration Comparison Tool.
-For more details see [WebSphere Configuration Comparison Tool](https://github.com/IBM/websphere-cct)
+For more details, see [WebSphere Configuration Comparison Tool](https://github.com/IBM/websphere-cct).
 
 ## Import the source HCL Portal server
 
-1.  Log in to the machine from where you will access your HCL Portal Container.
+1.  Log in to the machine to access your HCL Portal Container.
 
 2.  Download, install, and log in to the command line client for your Kubernetes environment according to the client instructions. For OpenShift, that is Red Hat OpenShift Command Line Client. For Non OpenShift, that is the Kubectl command line tool.
 
@@ -104,7 +104,7 @@ For more details see [WebSphere Configuration Comparison Tool](https://github.co
 
     The output displays a **BUILD SUCCESSFUL** message. If not, check the /opt/HCL/wp\_profile/logs/WebSphere\_Portal/SystemOut.log for errors.
 
-6.  Copy the output XML files, custom EAR and WAR files, Workspace.nodes file, and the ../deployed/archive directory files to a location on this local machine, making sure to preserve the file names and structure from the external or shared drive and then into the DX container.
+6.  Copy the output XML files, custom EAR and WAR files, Workspace.nodes file, and the ../deployed/archive directory files to a location on the local machine, making sure to preserve the file names and structure from the external or shared drive and then into the DX container.
     1.  ```
         cp /drive/* /tmp/
         ```
@@ -131,11 +131,11 @@ For more details see [WebSphere Configuration Comparison Tool](https://github.co
         In any containerized environment, all custom code and shared libraries need to exist under the persisted profile volume.
 
 8.  Move the copied files to the appropriate locations in the container.
-    1.  ```
+    -   ```
         mv /tmp/custom.ear /opt/HCL/wp_profile/customApps/
         ```
 
-      ```
+    -   ```
         mv /tmp/deployed/archive/* /opt/HCL/wp_profile/PortalServer/deployed/archive/
         ```
 
@@ -143,12 +143,12 @@ For more details see [WebSphere Configuration Comparison Tool](https://github.co
 
 10. Configure any required syndication properties in the WCM ConfigService. For example, enabling memberfixer to run during syndication.
 
-11. Create any required configuration items. For example, URLs, namespace bindings, etc.
+11. Create any required configuration items. For example, URLs, namespace bindings, and so on.
 This is a good time to run a comparison report via the WebSphere Configuration Comparison Tool.
-For more details see [WebSphere Configuration Comparison Tool](https://github.com/IBM/websphere-cct).
+For more details, see [WebSphere Configuration Comparison Tool](https://github.com/IBM/websphere-cct).
 For more details on possible configuration settings in the Resource Environment Providers see the section Resource Environment Providers below.
 
-12. Import the source server base content into the HCL Portal server in the container.
+12. Import the source server base content into the HCL Portal server in the container:
 
     -   OpenShift:
 
@@ -177,7 +177,7 @@ For more details on possible configuration settings in the Resource Environment 
 
     The output displays a **BUILD SUCCESSFUL** message. If not, check the /opt/HCL/wp\_profile/ConfigEngine/log/ConfigTrace.log for errors.
 
-14. If you are using PZN rules, import the PZN rules by using the Personalization Administration Portlet functions.
+14. If you are using PZN rules, import the PZN rules by using the Personalization Administration Portlet functions:
 
     1.  Log in to the HCL Portal home page.
     2.  Navigate to **Personalization > Business Rules > Extra Actions > Import**.
@@ -191,13 +191,13 @@ For more details on possible configuration settings in the Resource Environment 
 
     Check the /opt/HCL/wp\_profile/logs/WebSphere\_Portal/SystemOut.log to ensure that there are no startup errors.
 
-16. Create all of your Virtual Portals.
+16. Create all of your Virtual Portals:
 
     ```
     /opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh create-virtual-portal -DWasPassword=<your WAS admin user password> -DPortalAdminPwd=<your DX admin user password> -DVirtualPortalTitle=VirtualPortal1 -DVirtualPortalRealm=VirtualPortal1Realm -DVirtualPortalContext=VirtualPortal1
     ```
 
-17. For each Virtual Portal, import the content using XML Access. Make sure that the context root and the Virtual Portal name both match in the XML Access command.
+17. For each Virtual Portal, import the content using XML Access. Make sure that the context root and the Virtual Portal name both match in the XML Access command:
 
     ```
     /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config/VirtualPortal1 -user <your DX admin user> -password <your DX admin user password> -in /tmp/ExportVP1Results.xml -out /tmp/ExportVP1Results_ImportResults.xml
@@ -207,7 +207,7 @@ For more details on possible configuration settings in the Resource Environment 
 
 ## Syndicate the source and target environments
 
-Follow these steps to syndicate the source and target environments.
+Follow these steps to syndicate the source and target environments:
 
 !!!note
     If you have larger libraries, the default database must be transferred to any of the supported databases. For information about supported databases, see [Database Management Systems](../../../deployment/manage/db_mgmt_sys/index.md). If you want to know more about transferring the default database of the DX 9.5 Container to IBM DB2, see [Transfer HCL Digital Experience 9.5 container default database to IBM DB2](https://help.hcltechsw.com/digital-experience/9.5/containerization/cw_containerdbtransfer_ibm_db2.html).
@@ -220,9 +220,9 @@ Follow these steps to syndicate the source and target environments.
 
 3.  Log in to HCL Portal instance to configure syndication: http://my.target.fqdn/wps/portal.
 
-    Navigate to **Administration > Security > Credential Vault > Add a Vault Slot**.
+4.  Navigate to **Administration > Security > Credential Vault > Add a Vault Slot**.
 
-4.  On the **Credential Vault** page, select **New** and provide the following:
+5.  On the **Credential Vault** page, select **New** and provide the following:
 
     1.  **Name** - enter the name for the vault slot.
     2.  **Vault resource associated with vault slot** - select **new** and enter the vault resource name.
@@ -262,20 +262,20 @@ The configuration for each service is stored in and accessible for configuration
 
 More information on each service can be found at: [Service configuration](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg)
 
-If you cannot recall all the configuration settings you usually change and also have not automated the setting via CI/CD a good way to compare them is using the  [WebSphere Configuration Comparison Tool](https://github.com/IBM/websphere-cct).
+If you cannot recall all the configuration settings you usually change and also have not automated the setting via CI/CD a good way to compare them is using the [WebSphere Configuration Comparison Tool](https://github.com/IBM/websphere-cct).
 
-When comparing the configuration settings you might identify some differences of settings DX configures in containers. The following below is a summary of changes we perform for Resource Environment Providers for containers / Kubernetes:
-- WCM WCMConfigService: Tuning changes as documented in the tuning task: ()[../../../deployment/manage/tune_servers/wp_tune_tool.md]
+When comparing the configuration settings you might identify some differences of settings DX configures in containers. The following is a summary of changes we perform for Resource Environment Providers for containers / Kubernetes:
+- WCM WCMConfigService: Tuning changes as documented in the tuning task: (Portal server performance tuning tool)[../../../deployment/manage/tune_servers/wp_tune_tool.md]
 - WP ConfigService: ```use.db.cache.invalidation.table``` and ```db.cache.invalidation.read.freq``` for cache replication. ```digitalAssets.useSSLDAM``` for DAM integration.
 -  WCM DigitalAssetManagerService: ```enabled``` if using DAM.
-- WP CacheManagerService: Tuning changes as documented in the tuning task: ()[../../../deployment/manage/tune_servers/wp_tune_tool.md]
+- WP CacheManagerService: Tuning changes as documented in the tuning task: (Portal server performance tuning tool)[../../../deployment/manage/tune_servers/wp_tune_tool.md]
 
 
 ### Configuration tasks changing Resource Environment Providers
 
-Configuration tasks like changing the context root, enabling features like social publishing from WCM or others can make changes to the resource environment providers. Some of the these configurations have been moved to the helm chart - changing the context root, admin password, performance tuning, WCM Artificial Intelligence, remote search should be triggered from there. All other configurations would still be performed via the tasks. 
-Also a few features are enabled out of the box on containers that are not enabled by default for non containers: DAM integration, WCM Multilingual.
-If you are not sure any more what was performed on your non container environment check the ConfigTrace.log file.
+Configuration tasks like changing the context root, enabling features like social publishing from WCM or others can make changes to the resource environment providers. Some of the these configurations have been moved to the helm chart - changing the context root, admin password, performance tuning, WCM Artificial Intelligence, and remote search should be triggered from there. All other configurations are performed via the tasks. 
+Also a few features are enabled out of the box on containers that are not enabled by default for non containers: DAM integration and WCM Multilingual.
+If you are not sure what was performed on your non container environment check the ConfigTrace.log file.
 
 ???+ info "Related information"
     -   [Database Management Systems](../../../deployment/manage/db_mgmt_sys/index.md)
