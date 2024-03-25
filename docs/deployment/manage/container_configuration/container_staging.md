@@ -8,7 +8,7 @@ To move from a non-containerized deployment to a containerized deployment, it is
 
 The Kubernetes containerized deployment is different from the non-containerized deployment in the following ways:
 1. There is no http server in front of your DX deployment. Instead, HAProxy is used for routing to the different pods and JVMs.
-You can configured your own ingress controller or deploy a proxy to customize cache headers or server static files or other customizations you had configured before at your http server.
+You can configure your own ingress controller or deploy a proxy to customize cache headers, server static files, or other customizations you configured at your http server.
 2. No WebSphere cluster: 
     - Distributed Enterprise Java Beans or JMS distribution or cache replication of custom Dynacaches is not possible with containerized deployments as we are using a farm like deployment of DX Core. 
     - Any product based caches will be cache replicated so any changes will be distributed all Core pods.
