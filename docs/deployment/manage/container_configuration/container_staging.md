@@ -267,7 +267,7 @@ The configuration for each service is stored in and accessible for configuration
 
 More information on each service can be found at: [Service configuration](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg)
 
-If you cannot recall all the configuration settings you usually change and also have not automated the setting via CI/CD a good way to compare them is using the [WebSphere Configuration Comparison Tool](https://github.com/IBM/websphere-cct).
+If you cannot recall all the configuration settings you usually change and also have not automated the setting using CI/CD, you can compare the configurations using the [WebSphere Configuration Comparison Tool](https://github.com/IBM/websphere-cct).
 
 When comparing configuration settings, you might notice differences in the settings that DX configures in containers. The following is a list of changes performed for Resource Environment Providers for containers/Kubernetes:
 - WCM WCMConfigService: Tuning changes as documented in the tuning task: (Portal server performance tuning tool)[../../../deployment/manage/tune_servers/wp_tune_tool.md]
