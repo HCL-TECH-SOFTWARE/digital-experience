@@ -270,7 +270,7 @@ More information on each service can be found at: [Service configuration](../../
 
 If you cannot recall all the configuration settings you usually change and also have not automated the setting via CI/CD a good way to compare them is using the [WebSphere Configuration Comparison Tool](https://github.com/IBM/websphere-cct).
 
-When comparing the configuration settings you might identify some differences of settings DX configures in containers. The following is a summary of changes we perform for Resource Environment Providers for containers / Kubernetes:
+When comparing configuration settings, you might notice differences in the settings that DX configures in containers. The following is a list of changes performed for Resource Environment Providers for containers/Kubernetes:
 - WCM WCMConfigService: Tuning changes as documented in the tuning task: (Portal server performance tuning tool)[../../../deployment/manage/tune_servers/wp_tune_tool.md]
 - WP ConfigService: ```use.db.cache.invalidation.table``` and ```db.cache.invalidation.read.freq``` for cache replication. ```digitalAssets.useSSLDAM``` for DAM integration.
 - WCM DigitalAssetManagerService: ```enabled``` if using DAM.
