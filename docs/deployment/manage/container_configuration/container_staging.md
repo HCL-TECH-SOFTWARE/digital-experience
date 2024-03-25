@@ -23,6 +23,9 @@ While it is possible to move each environment to a new containerized deployment 
 ## Prerequisite
 
 The target environment that is existing in a customer-owned Kubernetes environment requires HCL Digital Experience 9.5 and IBM WebSphere Application Server 9.0.5. The HCL Digital Experience and IBM WebSphere Application Server product versions for the source and target environment must be at the same level, though it is sufficient to be on IBM WebSphere Application Server 8.5.5.x with JDK 8.
+
+Ensure the context root for DX Core and the security setup is the same as for the source system - e.g. connection to the same LDAP(s).
+
 If you do not have the 9.5 UI features enabled in your source non container environment you should either enable it or if not possible disable on the container environment. For details on enabling and disabling see: 
 - [Enabling 9.5 UI features](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md)
 - [Disabling 9.5 UI features](../../../build_sites/practitioner_studio/working_with_ps/disable_prac_studio.md)
@@ -70,7 +73,9 @@ Follow these steps to export the source HCL Portal server.
     
     If you are not sure what customizations were applied, you can use the [WebSphere Configuration Comparison Tool](https://github.com/IBM/websphere-cct).
 
-## Import the source HCL Portal server
+## Import into the container HCL Portal target server
+
+0. The Kubernetes deployment should be completed with the right CF level and any prerequisites configured, ensuring that the context root matches to the previous deployment, the security being configured (e.g. connected to LDAP).
 
 1.  Log in to the machine to access your HCL Portal Container.
 
@@ -143,7 +148,8 @@ Follow these steps to export the source HCL Portal server.
 
 10. Configure any required syndication properties in the WCM ConfigService. For example, enabling memberfixer to run during syndication.
 
-11. Create any required configuration items. For example, URLs, namespace bindings, and so on.
+11. Create any required configuration items. For example, URLs, namespace bindings, and so on. 
+You can use WebSphere Application Server UI or deploy via dxclient or wsadmin commands. It could be a good time to write a deployment script as you will need to perform the same on your other environments too.
 This is a good time to run a comparison report via the WebSphere Configuration Comparison Tool.
 For more details, see [WebSphere Configuration Comparison Tool](https://github.com/IBM/websphere-cct).
 For more details on possible configuration settings in the Resource Environment Providers see the section Resource Environment Providers below.
