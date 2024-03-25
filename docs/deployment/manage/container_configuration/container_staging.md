@@ -6,7 +6,7 @@ This section describes how to move from an existing HCL Portal environment to a 
 
 To move from a non-containerized deployment to a containerized deployment, it is recommended to take a similar approach as staging to another DX environment.
 
-The Kubernetes containerized deployment is different from the non containerized deployment:
+The Kubernetes containerized deployment is different from the non-containerized deployment in the following ways:
 1. No http server in front of your DX deployment - instead HAProxy is used for routing to the different pods and JVMs:
 You can configured your own ingress controller or deploy a proxy to customize cache headers or server static files or other customizations you had configured before at your http server.
 2. No WebSphere cluster: 
