@@ -281,7 +281,7 @@ When comparing the configuration settings you might identify some differences of
 
 Configuration tasks like changing the context root, enabling features like social publishing from WCM or others can make changes to the resource environment providers. Some of the these configurations have been moved to the helm chart - changing the context root, admin password, performance tuning, WCM Artificial Intelligence, and remote search should be triggered from there. All other configurations are performed via the tasks. 
 Also a few features are enabled out of the box on containers that are not enabled by default for non containers: DAM integration and WCM Multilingual.
-If you are not sure what was performed on your non container environment check the ConfigTrace.log file.
+If you are unsure what was performed on your non-container environment, check the `ConfigTrace.log` file.
 
 ???+ info "Related information"
     -   [Database Management Systems](../../../deployment/manage/db_mgmt_sys/index.md)
