@@ -273,7 +273,7 @@ If you cannot recall all the configuration settings you usually change and also 
 When comparing the configuration settings you might identify some differences of settings DX configures in containers. The following is a summary of changes we perform for Resource Environment Providers for containers / Kubernetes:
 - WCM WCMConfigService: Tuning changes as documented in the tuning task: (Portal server performance tuning tool)[../../../deployment/manage/tune_servers/wp_tune_tool.md]
 - WP ConfigService: ```use.db.cache.invalidation.table``` and ```db.cache.invalidation.read.freq``` for cache replication. ```digitalAssets.useSSLDAM``` for DAM integration.
--  WCM DigitalAssetManagerService: ```enabled``` if using DAM.
+- WCM DigitalAssetManagerService: ```enabled``` if using DAM.
 - WP CacheManagerService: Tuning changes as documented in the tuning task: (Portal server performance tuning tool)[../../../deployment/manage/tune_servers/wp_tune_tool.md]
 
 
