@@ -24,8 +24,8 @@ While it is possible to move each environment to a new containerized deployment 
 
 The target environment that is existing in a customer-owned Kubernetes environment requires HCL Digital Experience 9.5 and IBM WebSphere Application Server 9.0.5. The HCL Digital Experience and IBM WebSphere Application Server product versions for the source and target environment must be at the same level, though it is sufficient to be on IBM WebSphere Application Server 8.5.5.x with JDK 8.
 If you do not have the 9.5 UI features enabled in your source non container environment you should either enable it or if not possible disable on the container environment. For details on enabling and disabling see: 
-[Enabling 9.5 UI features](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md)
-[Disabling 9.5 UI features](../../../build_sites/practitioner_studio/working_with_ps/disable_prac_studio.md)
+- [Enabling 9.5 UI features](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md)
+- [Disabling 9.5 UI features](../../../build_sites/practitioner_studio/working_with_ps/disable_prac_studio.md)
 
 ## Export the source HCL Portal server
 
@@ -66,9 +66,9 @@ Follow these steps to export the source HCL Portal server.
 
 10. When applicable, save all custom files (application and theme EAR files, WAR files) to an external or shared drive, for later use when importing to the target environment.
 
-11. Validate if you have any custom Dynacaches, URLs, JVM Environment Parameters or other custom WebSphere configuration.
-If you are not sure what customizations were applied you can leverage the comparison tool WebSphere Configuration Comparison Tool.
-For more details, see [WebSphere Configuration Comparison Tool](https://github.com/IBM/websphere-cct).
+11. Validate if you have any custom DynaCaches, URLs, JVM Environment Parameters, or other custom WebSphere configuration.
+    
+    If you are not sure what customizations were applied, you can use the [WebSphere Configuration Comparison Tool](https://github.com/IBM/websphere-cct).
 
 ## Import the source HCL Portal server
 
