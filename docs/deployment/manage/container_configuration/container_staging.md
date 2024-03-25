@@ -10,15 +10,15 @@ The Kubernetes containerized deployment is different from the non-containerized 
 1. There is no http server in front of your DX deployment. Instead, HAProxy is used for routing to the different pods and JVMs.
 You can configure your own ingress controller or deploy a proxy to customize cache headers, server static files, or other customizations you configured at your http server.
 2. No WebSphere cluster: 
-    - Distributed Enterprise Java Beans or JMS distribution or cache replication of custom Dynacaches is not possible with containerized deployments as we are using a farm like deployment of DX Core. 
-    - Any product based caches will be cache replicated so any changes will be distributed all Core pods.
-    - In case you have custom Dynacaches that needs to be replicated we would recommend external cache solutions like Redis or Hazelcast.
-    - In case you use session replication via in memory you need to switch to session persistence via the database instead.
+    - Distributed Enterprise Java Beans, JMS distribution, or cache replication of custom DynaCaches is not possible with containerized deployments because the system is using a farm-like deployment of DX Core. 
+    - Any product-based caches are cache-replicated so any changes are distributed to all Core pods.
+    - If you have custom DynaCaches that must be replicated, it is recommended to use external cache solutions such as Redis or Hazelcast.
+    - If you use session replication through in memory, you must switch to session persistence using the database instead.
 
 ## Moving multiple environments
 
-Typically an overall solution of DX consists of multiple environments like development, staging, production authoring and production rendering.
-While it is possible to move each environment to a new containerized deployment our recommendation is to move one environment to containers, test and validate and then use that environment as source for the other environments. In case WCM is used likely the Authoring environment is a good choice to use as initial environment to stage to containers.
+Typically, an overall DX solution consists of multiple environments like development, staging, production authoring, and production rendering.
+While it is possible to move each environment to a new containerized deployment, it is recommended to move one environment to containers, test and validate, and then use that environment as source for the other environments. In case WCM is used, the Authoring environment is a good choice to use as the initial environment to stage to containers.
 
 ## Prerequisite
 
@@ -26,7 +26,7 @@ The target environment that is existing in a customer-owned Kubernetes environme
 
 Ensure the context root for DX Core and the security setup is the same as for the source system - e.g. connection to the same LDAP(s).
 
-If you do not have the 9.5 UI features enabled in your source non container environment you should either enable it or if not possible disable on the container environment. For details on enabling and disabling see: 
+If you do not have the 9.5 UI features enabled in your source non-container environment, you should either enable it or disable it on the container environment. For information about enabling and disabling 9.5 UI features, refer to the following: 
 - [Enabling 9.5 UI features](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md)
 - [Disabling 9.5 UI features](../../../build_sites/practitioner_studio/working_with_ps/disable_prac_studio.md)
 
@@ -152,7 +152,7 @@ Follow these steps to export the source HCL Portal server.
 You can use WebSphere Application Server UI or deploy via dxclient or wsadmin commands. It could be a good time to write a deployment script as you will need to perform the same on your other environments too.
 This is a good time to run a comparison report via the WebSphere Configuration Comparison Tool.
 For more details, see [WebSphere Configuration Comparison Tool](https://github.com/IBM/websphere-cct).
-For more details on possible configuration settings in the Resource Environment Providers see the section Resource Environment Providers below.
+For information on possible configuration settings in Resource Environment Providers, refer to the [Resource Environment Providers](#resource-environment-providers) section.
 
 12. Import the source server base content into the HCL Portal server in the container:
 
@@ -255,16 +255,15 @@ Follow these steps to syndicate the source and target environments:
 
     You do not need to disable Practitioner Studio to do this syndication.
 
-### Syndicating very large libraries
+### Syndicating large libraries
 
-Syndicating large libraries, especially when syndicating all items (in case you need all versions and projects on the containerized environment) can be a slow process. For those scenarios you can consider copying the JCR database from the non container to the container system and reconnecting the container to the copied database. More details on this can be found here (though they are somewhat specific to DB2 the same can be done for MS SQL Server and Oracle):
-[Manual staging to production process](../../../deployment/manage/staging_to_production/manual_staging_prod_process)
+Syndicating large libraries, especially when syndicating all items if you need all versions and projects on the containerized environment, can be a slow process. For these scenarios, you can consider copying the JCR database from the non-container to the container system and reconnecting the container to the copied database. For details, see [Manual staging to production process](../../../deployment/manage/staging_to_production/manual_staging_prod_process). Note that these instructions are specific to DB2, but you can also apply them to MS SQL Server and Oracle.
 
 ## Resource Environment Providers
 
-HCL Portal comprises a framework of configuration services to accommodate the different scenarios that portals of today need to address. You can configure some of these services.
+HCL Portal comprises a framework of configuration services to accommodate different scenarios that portals must address. You can configure some of these services.
 
-The configuration for each service is stored in and accessible for configuration through the WebSphere® Integrated Solutions Console. In the WebSphere Integrated Solutions Console, the portal configuration services are spelled as one word, for some services abbreviated, and preceded by the letters WP. Example: In the WebSphere Integrated Solutions Console, the portal Configuration Service is listed as WP ConfigService.
+The configuration for each service is stored in and accessible for configuration through the WebSphere® Integrated Solutions Console. In the WebSphere Integrated Solutions Console, most of the portal configuration services are spelled as one word. Some services are abbreviated and preceded by the letters WP. For example, in the WebSphere Integrated Solutions Console, the portal Configuration Service is listed as WP ConfigService.
 
 More information on each service can be found at: [Service configuration](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg)
 
