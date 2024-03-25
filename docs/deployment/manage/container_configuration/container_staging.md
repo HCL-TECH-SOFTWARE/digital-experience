@@ -2,7 +2,7 @@
 
 This section describes how to move from an existing HCL Portal environment to a containerized Digital Experience environment.
 
-## Overall approach
+## Overview of the approach
 
 A similar approach as staging to another DX environment is the recommended path to move from a non containerized deployment to a containerized deployment.
 
