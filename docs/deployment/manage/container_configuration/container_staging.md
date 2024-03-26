@@ -74,7 +74,7 @@ Follow these steps to export the source HCL Portal server.
 
 ## Importing into the container HCL Portal target server
 
-0. The Kubernetes deployment should be completed with the right CF level and any prerequisites configured, ensuring that the context root matches to the previous deployment, the security being configured (e.g. connected to LDAP).
+Before starting the import, complete the Kubernetes deployment with the right CF level and configure the prerequisites. Ensure that the context root matches the previous deployment, and the security is configured (for example, connected to LDAP).
 
 1.  Log in to the machine to access your HCL Portal Container.
 
