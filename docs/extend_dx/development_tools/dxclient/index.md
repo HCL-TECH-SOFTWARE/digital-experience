@@ -232,13 +232,13 @@ In addition, the package includes scripts for all operating systems that make it
             node bin/dxclient
             ```
 
-7. A folder named `store` will be created in your working directory. This is the shared volume location of your container. If you require to create a new volume directory for a different configuration, set the `VOLUME_DIR` to the desired directory name and run your task. For example:
+7. A folder named `store` is created in your working directory. This is the shared volume location of your container. If you require to create a new volume directory for a different configuration, set the `VOLUME_DIR` to the desired directory name and run your task. For example:
 
     === "Linux and Apple macOS"
         ```bash
         export VOLUME_DIR=storeForScriptApplication
 
-        # or if you want spaces in its value, enclosed it in double quotes ("")
+        # or if you want spaces in its value, enclose it in double quotes ("")
         export VOLUME_DIR="store for script application"
         ```
 
@@ -251,9 +251,9 @@ In addition, the package includes scripts for all operating systems that make it
         ```
 
         !!!warning
-            Do not enclose the value of `VOLUME_DIR` in double quotes ("") in Windows. This will produce unwanted errors when executing dxclient commands.
+            Do not enclose the value of `VOLUME_DIR` in double quotes ("") in Windows. This produces unwanted errors when executing DXClient commands.
 
-     The `VOLUME_DIR` will require read and write access permissions. Set appropriate permissions for the `VOLUME_DIR` as per user/group/owner.
+     The `VOLUME_DIR` requires read and write access permissions. Set appropriate permissions for the `VOLUME_DIR` as per user/group/owner.
 
     === "Linux and Apple macOS"
         ```bash
@@ -269,7 +269,7 @@ In addition, the package includes scripts for all operating systems that make it
 
 8. You can find the configuration, logger, output, and sample files under location  `<working-directory>/<VOLUME_DIR>`.
 
-    Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/<VOLUME_DIR>` folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/samples/sample-configurations for reference. If you want to override any of the parameters in the config.json, add them in your command line.           
+    Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/<VOLUME_DIR>` folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json), or Kubernetes (default-config-kube.json) platforms is also available under <working-directory>/samples/sample-configurations for reference. If you want to override any of the parameters in the config.json, add them in your command line.           
 
 ## Uninstalling DXClient using the source code package
 
