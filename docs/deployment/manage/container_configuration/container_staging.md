@@ -7,9 +7,8 @@ This section describes how to move from an existing HCL Portal environment to a 
 To move from a non-containerized deployment to a containerized deployment, it is recommended to take a similar approach as staging to another DX environment.
 
 The Kubernetes containerized deployment is different from the non-containerized deployment in the following ways:
-1. There is no http server in front of your DX deployment. Instead, HAProxy is used for routing to the different pods and JVMs.
-You can configure your own ingress controller or deploy a proxy to customize cache headers, server static files, or other customizations you configured at your http server.
-2. No WebSphere cluster: 
+1. There is no http server in front of your DX deployment. Instead, HAProxy is used for routing to the different pods and JVMs. You can configure your own ingress controller or deploy a proxy to customize cache headers, server static files, or other customizations you configured at your http server.
+2. There is no WebSphere cluster.
     - Distributed Enterprise Java Beans, JMS distribution, or cache replication of custom DynaCaches is not possible with containerized deployments because the system is using a farm-like deployment of DX Core. 
     - Any product-based caches are cache-replicated so any changes are distributed to all Core pods.
     - If you have custom DynaCaches that must be replicated, it is recommended to use external cache solutions such as Redis or Hazelcast.
@@ -149,10 +148,12 @@ Follow these steps to export the source HCL Portal server.
 10. Configure any required syndication properties in the WCM ConfigService. For example, enabling memberfixer to run during syndication.
 
 11. Create any required configuration items. For example, URLs, namespace bindings, and so on. 
-You can use WebSphere Application Server UI or deploy via dxclient or wsadmin commands. It could be a good time to write a deployment script as you will need to perform the same on your other environments too.
-This is a good time to run a comparison report via the WebSphere Configuration Comparison Tool.
-For more details, see [WebSphere Configuration Comparison Tool](https://github.com/IBM/websphere-cct).
-For information on possible configuration settings in Resource Environment Providers, refer to the [Resource Environment Providers](#resource-environment-providers) section.
+
+    You can use the WebSphere Application Server UI or deploy using DXClient or wsadmin commands. It is recommended that you write a deployment script because you must perform the same on your other environments.
+
+    It is also recommended to run a comparison report using the [WebSphere Configuration Comparison Tool](https://github.com/IBM/websphere-cct).
+    
+    For information about possible configuration settings in Resource Environment Providers, refer to the [Resource Environment Providers](#resource-environment-providers) section.
 
 12. Import the source server base content into the HCL Portal server in the container:
 
