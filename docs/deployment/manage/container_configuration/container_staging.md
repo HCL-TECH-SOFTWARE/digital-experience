@@ -60,7 +60,7 @@ Follow these steps to export the source HCL Portal server.
 
 8.  Save the /opt/HCL/wp_profile/PortalServer/deployed/archive directory files to an external or shared drive, for later use when importing to the target environment.
 
-9.  If you are using PZN rules, export the PZN rules using the Personalization Administration Portlet functions and save the generated Workspace.nodes file to an external or shared drive, for later use when importing to the target environment:
+9.  If you are using PZN rules, export the PZN rules using the Personalization Administration Portlet functions and save the generated Workspace.nodes file to an external or shared drive, for later use when importing to the target environment.
 
     1.  Log in to the HCL Portal Home Page.
     2.  Navigate to **Personalization > Business Rules* > Extra Actions > Export**.
@@ -155,7 +155,7 @@ Follow these steps to export the source HCL Portal server.
     
     For information about possible configuration settings in Resource Environment Providers, refer to the [Resource Environment Providers](#resource-environment-providers) section.
 
-12. Import the source server base content into the HCL Portal server in the container:
+12. Import the source server base content into the HCL Portal server in the container.
 
     -   OpenShift:
 
@@ -184,7 +184,7 @@ Follow these steps to export the source HCL Portal server.
 
     The output displays a **BUILD SUCCESSFUL** message. If not, check the /opt/HCL/wp\_profile/ConfigEngine/log/ConfigTrace.log for errors.
 
-14. If you are using PZN rules, import the PZN rules by using the Personalization Administration Portlet functions:
+14. If you are using PZN rules, import the PZN rules by using the Personalization Administration Portlet functions.
 
     1.  Log in to the HCL Portal home page.
     2.  Navigate to **Personalization > Business Rules > Extra Actions > Import**.
