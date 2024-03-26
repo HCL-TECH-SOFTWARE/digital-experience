@@ -13,17 +13,24 @@ Follow the tasks to execute this configuration:
 7. [Updating the DX Logout flow for OIDC](#updating-the-dx-logout-flow-for-oidc)
 8. [Configuring DX VMM to match OIDC identities](#configuring-dx-vmm-to-match-oidc-identities)
 
-## Installing the OIDC RP TAI
+## Installing the OpenID Connect application
 
-1. Install the OIDC RP TAI. For more information, see [Configuring an OpenID Connect Relying Party](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=users-configuring-openid-connect-relying-party).
+1. Make sure that your OIDC runtime is up to date.
+    - If an interim fix is available for your fix pack, install the OIDC interim fix for the latest OIDC runtime. See [Obtaining WebSphere OpenID Connect (OIDC) latest version](https://www.ibm.com/support/pages/node/290565).
+
+2. Install the OpenID Connect application by using the python script.
+    - Navigate to the app_server_root/bin directory.
+    - Run the script installOIDCRP.py for each profile on which the OpenID Connect RP is to be installed.
+    - For more information, see [Configuring an OpenID Connect Relying Party](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=users-configuring-openid-connect-relying-party).
 
     ```sh
     kubectl exec -it dx-deployment-core-0 bash -n dxns
 
     cd /opt/HCL/AppServer/bin
+    ./wsadmin.sh -f installOIDCRP.py install NodeName ServerName
+
+    For example:
     ./wsadmin.sh -f installOIDCRP.py install dockerNode WebSphere_Portal
-    Username: wpsadmin
-    Password: wpsadmin
 
     ...
     ADMA5013I: Application WebSphereOIDCRP installed successfully.
@@ -64,19 +71,16 @@ The interceptor is configured in the ISC under **Security > Global Security > We
     | provider_1.clientSecret | &lt;CLIENT_SECRET&gt; |
     | provider_1.discoveryEndpointUrl | https://&lt;IDP_HOSTNAME&gt;/auth/realms/hcl/.well-known/openid-configuration |
     | provider_1.interceptedPathFilter | /wps/myportal |
-    | provider_1.excludedPathFilter | /ibm/console,/ibm/console.* |
     | provider_1.issuerIdentifier | https://&lt;IDP_HOSTNAME&gt;/auth/realms/hcl |
-    | provider_1.signatureAlgorithm | RS256 |
     | provider_1.userIdentifier | username (**Note**: Could also use `email` here as well.) |
-    | provider_1.useDefaultIdentifierFirst | false |
     | provider_1.scope | openid |
     | provider_1.signVerifyAlias | hcl-dx-oidc-cert |
-    | provider_1.useJwtFromRequest | IfPresent |
+    | provider_1.useJwtFromRequest | ifPresent |
     | provider_1.createSession | true |
     | provider_1.verifyIssuerInIat | true |
     | provider_1.audiences | ALL_AUDIENCES |
     | provider_1.setLtpaCookie | true |
-    | provider_1.callbackServletContext | /oidcclient |
+    | provider_1.useRealm | WAS_DEFAULT |
     | provider_1.mapIdentityToRegistryUser | true |
 
     !!!note
@@ -117,20 +121,6 @@ In the ISC, navigate to **Security > SSL certificate and key management > Key st
 1. Click **Retrieve signer information**, to load the certificate details.
 
 1. Click **OK** and **Save** to save the master configuration.
-
-## Adding the trusted authentication realm
-
-In the ISC, navigate to **Security > Global Security > Configure > Trusted authentication realms - inbound**:
-
-1. Add the following value for your environment `https://<IDS_HOSTNAME>/auth/realms/hcl`.
-
-1. Click **OK** and **Save**  the save changes to the master configuration.
-
-## Security role to user or group mapping
-
-In the ISC, navigate to **Enterprise Applications > wps > Security role to user/group mapping**:
-
-1. Check the box next to **All Role** and under the dropdown **Map Special Subjects** select the `All Authenticated in Application's Realm` option.
 
 ## Updating the DX Logout flow for OIDC
 
