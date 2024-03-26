@@ -83,7 +83,7 @@ Follow the configuration steps outlined in the Procedure section below before yo
     5. `licenseManagerUser` – Configure this variable with the user name of the administrator authenticated to manage your HCL Software License Portal entitlements. 
     6. `licenseManagerPassword` – Configure this variable with the password associated with the user name of the administrator to manage your HCL Software License Portal entitlements defined in the previous step.
 
-6. (Optional) [Create and upload a public/private key pair](#securing-license-server-communication-for-license-manager-application). The License Manager uses a default key when no custom key is configured.
+6. (Optional) [Create and upload a public/private key pair](#secure-license-server-communication-for-license-manager-application). The License Manager uses a default key when no custom key is configured.
 
 **HCL DX Cloud Native 9.5 Tier 1 – 7 parts and HCL Flexnet License Server Feature Name**
 
