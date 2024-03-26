@@ -19,17 +19,17 @@ The Kubernetes containerized deployment is different from the non-containerized 
 Typically, an overall DX solution consists of multiple environments like development, staging, production authoring, and production rendering.
 While it is possible to move each environment to a new containerized deployment, it is recommended to move one environment to containers, test and validate, and then use that environment as source for the other environments. In case WCM is used, the Authoring environment is a good choice to use as the initial environment to stage to containers.
 
-## Prerequisite
+## Prerequisites
 
 The target environment that is existing in a customer-owned Kubernetes environment requires HCL Digital Experience 9.5 and IBM WebSphere Application Server 9.0.5. The HCL Digital Experience and IBM WebSphere Application Server product versions for the source and target environment must be at the same level, though it is sufficient to be on IBM WebSphere Application Server 8.5.5.x with JDK 8.
 
-Ensure the context root for DX Core and the security setup is the same as for the source system - e.g. connection to the same LDAP(s).
+Ensure the context root for DX Core and the security setup is the same as for the source system (for example, connection to the same LDAP).
 
 If you do not have the 9.5 UI features enabled in your source non-container environment, you should either enable it or disable it on the container environment. For information about enabling and disabling 9.5 UI features, refer to the following: 
 - [Enabling 9.5 UI features](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md)
 - [Disabling 9.5 UI features](../../../build_sites/practitioner_studio/working_with_ps/disable_prac_studio.md)
 
-## Export the source HCL Portal server
+## Exporting the source HCL Portal server
 
 Follow these steps to export the source HCL Portal server.
 
@@ -72,7 +72,7 @@ Follow these steps to export the source HCL Portal server.
     
     If you are not sure what customizations were applied, you can use the [WebSphere Configuration Comparison Tool](https://github.com/IBM/websphere-cct).
 
-## Import into the container HCL Portal target server
+## Importing into the container HCL Portal target server
 
 0. The Kubernetes deployment should be completed with the right CF level and any prerequisites configured, ensuring that the context root matches to the previous deployment, the security being configured (e.g. connected to LDAP).
 
@@ -212,7 +212,7 @@ Follow these steps to export the source HCL Portal server.
 
 18. Restart the HCL Portal server and check /opt/HCL/wp\_profile/logs/WebSphere\_Portal/SystemOut.log to ensure no startup errors.
 
-## Syndicate the source and target environments
+## Syndicating the source and target environments
 
 Follow these steps to syndicate the source and target environments:
 
