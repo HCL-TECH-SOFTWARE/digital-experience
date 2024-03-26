@@ -279,7 +279,7 @@ When comparing configuration settings, you might notice differences in the setti
 
 ### Configuration tasks changing Resource Environment Providers
 
-Configuration tasks like changing the context root, enabling features like social publishing from WCM or others can make changes to the resource environment providers. Some of the these configurations have been moved to the helm chart - changing the context root, admin password, performance tuning, WCM Artificial Intelligence, and remote search should be triggered from there. All other configurations are performed via the tasks. 
+Configuration tasks such as changing the context root, enabling features like social publishing from WCM or others can make changes to the resource environment providers. Some of the these configurations have been moved to the Helm chart. If you are performing remote search, changing the context root or admin password, doing performance tuning, or enabling WCM Artificial Intelligence, you must trigger these configuration tasks from the Helm chart. All other configurations are performed using tasks. 
 Also, a few features are enabled out-of-the-box on containers that are not enabled by default for non-containers (for example, DAM integration and WCM Multilingual).
 Additionally on containers we have disabled anonymous sign up via access control - it can be re-enabled via the config task or changing access control: [Registration/Edit My Profile and Login portlets](../../../deployment/manage/security/people/authorization/users_and_groups/sec_subman)
 If you are unsure what was performed on your non-container environment, check the `ConfigTrace.log` file.
