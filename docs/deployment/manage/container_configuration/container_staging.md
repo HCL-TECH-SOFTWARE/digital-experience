@@ -149,7 +149,7 @@ Before starting the import, complete the Kubernetes deployment with the right CF
 
 11. Create any required configuration items. For example, URLs, namespace bindings, and so on. 
 
-    You can use the WebSphere Application Server UI or deploy using DXClient or wsadmin commands. It is recommended that you write a deployment script because you must perform the same on your other environments.
+    You can use the WebSphere Application Server UI or deploy using DXClient or wsadmin commands. It is recommended that you write a deployment script because you must perform the same deployment operation on your other environments.
 
     It is also recommended to run a comparison report using the [WebSphere Configuration Comparison Tool](https://github.com/IBM/websphere-cct).
     
