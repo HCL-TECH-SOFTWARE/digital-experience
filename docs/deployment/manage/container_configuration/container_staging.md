@@ -266,7 +266,7 @@ HCL Portal comprises a framework of configuration services to accommodate differ
 
 The configuration for each service is stored in and accessible for configuration through the WebSphere® Integrated Solutions Console. In the WebSphere Integrated Solutions Console, most of the portal configuration services are spelled as one word. Some services are abbreviated and preceded by the letters WP. For example, in the WebSphere Integrated Solutions Console, the portal Configuration Service is listed as WP ConfigService.
 
-More information on each service can be found at: [Service configuration](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg)
+For more information about each service, see [Service configuration](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg).
 
 If you cannot recall all the configuration settings you usually change and also have not automated the setting using CI/CD, you can compare the configurations using the [WebSphere Configuration Comparison Tool](https://github.com/IBM/websphere-cct).
 
