@@ -10,6 +10,9 @@ The following features and updates are available to customers installing HCL Dig
 - Updated Container Staging documentation
 - Updated documentation for installation and upgrade for customers running on Portal 8.5 on WAS 8.5/9.0
 - Notice of deprecation of Textbox.io Rich Text Editor
+=== "On-Premises"
+- Improved installation of Digital Experience V9.5 with upgrade to CF219  
+Refer to [Apply Combined Cumulative Fix](../../deployment/install/traditional/cf_install/index.md) for information.
 
 **Digital Experience 8.5 and 9.0 Versions**
 

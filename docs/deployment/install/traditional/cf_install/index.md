@@ -10,6 +10,35 @@ Refer to [Installing the HCL Digital Experience software](../../../../deployment
 
 ## About Version 9.5 Cumulative Fixes
 
+Beginning with Digital Experience Cumulative Fix 219, in order to make it easier for our customers to transition to Digital Experience v9.5, HCL has modified the upgrade process to include the installation of v9.5
+
+At this time the installation of DX v9.5 with a CF upgrade is opt-in.  At some point in the future, this installation will be automatic.
+
+To opt-in and install DX v9.5:
+
+!!!note
+    Installation Manager should not be running when installing Digital Experience v9.5 with the cumulative fix upgrade.
+
+**For Unix/Linux:** pass the install_95 parameter to the command to upgrade the Portal profile.
+From the <profile_root>/PortalServer/bin/ directory
+```
+	install_95=true ./applyCF.sh -DPortalAdminPwd=<password> -DWasPassword=<password>
+```
+
+**For Windows:** set the install_95 environment variable in the command prompt window where you will upgrade the Portal profile.
+```
+	set install_95=true
+```
+From the <profile_root>/PortalServer/bin/ directory
+```
+	applyCF.bat -DPortalAdminPwd=<password> -DWasPassword=<password>
+```
+
+With this v9.5 installation, your WebSphere_Portal server will be at version 9.5CF219, but 9.5 UI features have not been enabled. To enable 9.5 UI features, see [How to enable Practitioner Studio](../../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md)
+
+To opt-out and upgrade to CF219 without installing v9.5, run the applyCF script as you normally would without setting the install_95 parameter.
+
+
 The following instruction links are for HCL Digital Experience 9.5 CF17 and higher.
 
 These instructions can be applied on an HCL Digital Experience system running either 8.5 or 9.0. CF17 is used as a prerequisite fix in order for users to move up to 9.5 level.
