@@ -10,7 +10,7 @@ Refer to [Installing the HCL Digital Experience software](../../../../deployment
 
 ## About Version 9.5 Cumulative Fixes
 
-Beginning with Digital Experience Cumulative Fix 219, in order to make it easier for our customers to transition to Digital Experience v9.5, HCL has modified the upgrade process to include the installation of v9.5
+Beginning with Digital Experience Cumulative Fix 219, in order to make it easier for our customers to transition to Digital Experience v9.5, HCL has modified the upgrade process to include the installation of v9.5.
 
 At this time the installation of DX v9.5 with a CF upgrade is opt-in.  At some point in the future, this installation will be automatic.
 
