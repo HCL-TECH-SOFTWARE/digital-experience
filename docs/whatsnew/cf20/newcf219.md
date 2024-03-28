@@ -19,6 +19,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Web Content Manager - Content Reporting
 - Web Content Manager - Added support to WCM search API to replace filtering in Content Reporting
+- Practitioner Studio - Providing a React 16, 17 and 18 theme profile
 
 **Digital Experience 9.5 Container Version**
 
