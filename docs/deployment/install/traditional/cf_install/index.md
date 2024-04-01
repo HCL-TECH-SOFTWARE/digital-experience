@@ -17,7 +17,7 @@ Currently, the installation of DX v9.5 with a CF upgrade is optional.
 To opt in and install DX v9.5, refer to the following instructions:
 
 !!!note
-    Installation Manager should not be running when installing DX v9.5 with the CF upgrade.
+    Make sure that Installation Manager is not running when installing DX v9.5 with the CF upgrade.
 
 - **For Unix/Linux:** Pass the install_95 parameter to the command to upgrade the Portal profile.
 	From the <profile_root>/PortalServer/bin/ directory
