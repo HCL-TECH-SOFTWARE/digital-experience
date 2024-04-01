@@ -1,6 +1,6 @@
 # Apply Combined Cumulative Fix
 
-The Combined Cumulative Fix is a package of HCL Digital Experience (DX) fixes. Cumulative fixes (CF) are applied only to an existing functional version of HCL Portal Version or an HCL Portal Version with a previous cumulative fix applied.
+The Combined Cumulative Fix is a package of HCL Digital Experience (DX) fixes. Apply Cumulative fixes (CF) only to an existing functional version of the HCL Portal Version or an HCL Portal Version with a previous cumulative fix applied.
 
 To apply the cumulative fix is a multi-step process. You must first update the product files using IBM Installation Manager, and then use the Portal ConfigEngine tool to apply the changes to each profile in your system. The update is not complete until you have performed both steps.
 
