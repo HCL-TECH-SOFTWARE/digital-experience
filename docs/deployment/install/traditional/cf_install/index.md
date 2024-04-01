@@ -19,13 +19,13 @@ To opt-in and install DX v9.5:
 !!!note
     Installation Manager should not be running when installing DX v9.5 with the CF upgrade.
 
-- **For Unix/Linux:** pass the install_95 parameter to the command to upgrade the Portal profile.
+- **For Unix/Linux:** Pass the install_95 parameter to the command to upgrade the Portal profile.
 	From the <profile_root>/PortalServer/bin/ directory
 	```
 		install_95=true ./applyCF.sh -DPortalAdminPwd=<password> -DWasPassword=<password>
 	```
 
-- **For Windows:** set the install_95 environment variable in the command prompt window where you will upgrade the Portal profile.
+- **For Windows:** Set the install_95 environment variable in the command prompt window where you will upgrade the Portal profile.
 	```
 		set install_95=true
 	```
@@ -34,14 +34,13 @@ To opt-in and install DX v9.5:
 		applyCF.bat -DPortalAdminPwd=<password> -DWasPassword=<password>
 	```
 
-With the v9.5 installation, your WebSphere_Portal server will be at v9.5 CF219, but v9.5 UI features have not been enabled. To enable 9.5 UI features, see [How to enable Practitioner Studio](../../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md)
+After the v9.5 installation, your WebSphere_Portal server is at v9.5 CF219 but v9.5 UI features are not yet enabled. To enable 9.5 UI features, refer to [How to enable Practitioner Studio](../../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md).
 
-To opt-out and upgrade to CF219 without installing v9.5, run the apply CF script without setting the install_95 parameter.
+To opt out and upgrade to CF219 without installing v9.5, run the applyCF script without setting the install_95 parameter.
 
+The following video resource is for HCL DX 9.5 CF17 and higher.
 
-The following instruction links are for HCL DX 9.5 CF17 and higher.
-
-Apply these instructions on an HCL Digital Experience system running either 8.5 or 9.0. CF17 is used as a prerequisite fix in order for users to move up to 9.5 level.
+Apply these instructions on an HCL DX system running either 8.5 or 9.0. CF17 is used as a prerequisite fix for users to move up to 9.5 level.
 
 **Video**: [HCL Digital Experience - Installing HCL Portal 9.5 CF18](https://youtu.be/RUjDkVAR_zM)
 
