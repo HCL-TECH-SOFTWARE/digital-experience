@@ -10,12 +10,10 @@ The following features and updates are available to customers installing HCL Dig
 - Updated Container Staging documentation
 - Updated documentation for installation and upgrade for customers running on Portal 8.5 on WAS 8.5/9.0
 - Notice of deprecation of Textbox.io Rich Text Editor
-=== "On-Premises"
-- Improved installation of Digital Experience V9.5 with upgrade to CF219  
-Refer to [Apply Combined Cumulative Fix](../../deployment/install/traditional/cf_install/index.md) for information.
 
 **Digital Experience 8.5 and 9.0 Versions**
 
+- Improved installation of Digital Experience V9.5 with upgrade to CF219 
 - End of Support Announced for Digital Experience v8.5 and 9
 
 **Digital Experience 9.5 Version**
@@ -43,7 +41,12 @@ Refer to [Apply Combined Cumulative Fix](../../deployment/install/traditional/cf
 === "On-Premises"
     The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
 
-### Digital Experience 8.5 and 9.0 Versions
+## Digital Experience 8.5 and 9.0 Versions
+
+### Improved installation of Digital Experience V9.5 with upgrade to CF219
+
+=== "On-Premises"
+    Refer to [Apply Combined Cumulative Fix](../../deployment/install/traditional/cf_install/index.md) for information.
 
 ### End of Support Announced for Digital Experience v8.5 and 9
 
