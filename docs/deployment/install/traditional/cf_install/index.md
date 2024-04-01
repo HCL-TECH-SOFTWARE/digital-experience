@@ -12,7 +12,7 @@ Refer to [Installing the HCL Digital Experience software](../../../../deployment
 
 Beginning with HCL DX CF219, the upgrade process is modified to include the installation of v9.5 for easier to transition to DX v9.5.
 
-At this time the installation of DX v9.5 with a CF upgrade is opt-in.  At some point in the future, this installation will be automatic.
+Currently, the installation of DX v9.5 with a CF upgrade is optional.
 
 To opt-in and install DX v9.5:
 
