@@ -260,7 +260,7 @@ Follow these steps to syndicate the source and target environments:
 
 Syndicating large libraries, especially when syndicating all items if you need all versions and projects on the containerized environment, can be a slow process. For these scenarios, you can consider copying the JCR database from the non-container to the container system and reconnecting the container to the copied database. For details, see [Manual staging to production process](../../../deployment/manage/staging_to_production/manual_staging_prod_process). Note that these instructions are specific to DB2, but you can also apply them to MS SQL Server and Oracle.
 
-## Resource Environment Providers
+## Resource environment providers
 
 HCL Portal comprises a framework of configuration services to accommodate different scenarios that portals must address. You can configure some of these services.
 
@@ -276,8 +276,7 @@ When comparing configuration settings, you might notice differences in the setti
 - WCM DigitalAssetManagerService: ```enabled``` if using DAM.
 - WP CacheManagerService: Tuning changes as documented in the tuning task: (Portal server performance tuning tool)[../../../deployment/manage/tune_servers/wp_tune_tool.md]
 
-
-### Configuration tasks changing Resource Environment Providers
+### Configuration tasks changing resource environment providers
 
 Configuration tasks such as changing the context root, enabling features like social publishing from WCM or others can make changes to the resource environment providers. Some of the these configurations have been moved to the Helm chart. If you are performing remote search, changing the context root or admin password, doing performance tuning, or enabling WCM Artificial Intelligence, you must trigger these configuration tasks from the Helm chart. All other configurations are performed using tasks. 
 Also, a few features are enabled out-of-the-box on containers that are not enabled by default for non-containers (for example, DAM integration and WCM Multilingual).
