@@ -1,6 +1,6 @@
 # Container resource management
 
-The default Helm values included in the HCL Digital Experience 9.5 Helm Chart offer a minimal supported configuration for CPU and Memory resources. You can adjust the values in the `custom-values.yaml` for a deployment according to the [Kubernetes Resource Management](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/).
+The default Helm values included in the HCL Digital Experience 9.5 Helm Chart offer minimal supported configuration for CPU and Memory resources. You can adjust the values in the `custom-values.yaml` for a deployment according to the [Kubernetes Resource Management](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/).
 
 ```yaml
 # Resource allocation settings, definition per pod
