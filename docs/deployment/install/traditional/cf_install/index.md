@@ -14,7 +14,7 @@ Beginning with HCL DX CF219, the upgrade process is modified to include the inst
 
 Currently, the installation of DX v9.5 with a CF upgrade is optional.
 
-To opt-in and install DX v9.5:
+To opt in and install DX v9.5, refer to the following instructions:
 
 !!!note
     Installation Manager should not be running when installing DX v9.5 with the CF upgrade.
