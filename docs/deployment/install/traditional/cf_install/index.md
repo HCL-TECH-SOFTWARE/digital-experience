@@ -10,7 +10,7 @@ Refer to [Installing the HCL Digital Experience software](../../../../deployment
 
 ## About Version 9.5 Cumulative Fixes
 
-Beginning with HCL DX CF219, the upgrade process is modified to include the installation of v9.5 for easier to transition to DX v9.5.
+Beginning with HCL DX CF219, the upgrade process is modified to include the installation of v9.5 for easier transition to DX v9.5.
 
 Currently, the installation of DX v9.5 with a CF upgrade is optional.
 
