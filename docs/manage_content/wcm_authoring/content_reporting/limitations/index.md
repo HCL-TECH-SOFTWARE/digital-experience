@@ -1,4 +1,4 @@
-# Limitations
+# Content Reporting limitations
 
 Take note of the following limitations when using HCL Content Reporting:
 
