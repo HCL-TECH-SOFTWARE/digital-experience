@@ -109,10 +109,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.
 ### Web Content Manager - New query parameters for Content Reporting
 
 === "Containers"
-    New query parameters `notauthor` and `notowner` are available to support WCM search API. For more information, see [](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md).
+    New query parameters `notauthor` and `notowner` are available to support WCM search API. For more information, see [Query parameters](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md).
 
 === "On-Premises"
-    New query parameters `notauthor` and `notowner` are available to support WCM search API. For more information, see [](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md).
+    New query parameters `notauthor` and `notowner` are available to support WCM search API. For more information, see [Query parameters](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md).
 
 ## Digital Experience 9.5 Container Version
 
