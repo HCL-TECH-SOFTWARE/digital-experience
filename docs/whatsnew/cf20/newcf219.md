@@ -6,7 +6,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Updated Container Staging documentation
 - Updated documentation for installation and upgrade for customers running on Portal 8.5 on WAS 8.5/9.0
-- User Management REST API - Searching special characters
+- User and Groups REST API - Searching special characters
 - DXClient - Update on required access roles
 - DXClient - Multiple environment configuration option in node version
 - New documentation about searching the DX Help Center
@@ -48,13 +48,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.
 === "On-Premises"
     The topic [Installation and upgrade for customers running on Portal 8.5 on WAS 8.5/9.0](../../deployment/install/traditional/install_upgrade_plan_supported_paths/Install_upgrade_customers_Portal_85_Java_SDK7.md) is updated. This topic provides information about upgrading your HCL DX Portal or Web Content Manager 8.5 environment to HCL DX Portal or Web Content Manager 9.5. Information on how to either stay at IBM WebSphere Application Server ND 8.5.x or migrate the WAS layer to IBM WebSphere Application Server ND Version 9.0.5.x is also available.
 
-### User Management REST API - Searching special characters
+### User and Groups REST API - Searching special characters
 
 === "Containers"
-    You can now search special characters for User Management REST API. 
+    You can now search special characters when using the User and Groups REST API (for example, cn=ümlaut). 
 
 === "On-Premises"
-    You can now search special characters for User Management REST API. 
+    You can now search special characters when using the User and Groups REST API (for example, cn=ümlaut). 
 
 ### DXClient - Update on required access roles
 
