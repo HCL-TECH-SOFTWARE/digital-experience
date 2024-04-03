@@ -51,10 +51,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.
 ### User Management REST API - Searching special characters
 
 === "Containers"
-    You can now for search special characters for User Management REST API. 
+    You can now search special characters for User Management REST API. 
 
 === "On-Premises"
-    You can now for search special characters for User Management REST API. 
+    You can now search special characters for User Management REST API. 
 
 ### DXClient - Update on required access roles
 
