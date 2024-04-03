@@ -16,25 +16,30 @@ Follow the tasks to execute this configuration:
 ## Installing the OpenID Connect application
 
 1. Make sure that your OIDC runtime is up to date.
-    - If an interim fix is available for your fix pack, install the OIDC interim fix for the latest OIDC runtime. See [Obtaining WebSphere OpenID Connect (OIDC) latest version](https://www.ibm.com/support/pages/node/290565).
+   
+   If an interim fix is available for your fix pack, install the OIDC interim fix for the latest OIDC runtime. See [Obtaining WebSphere OpenID Connect (OIDC) latest version](https://www.ibm.com/support/pages/node/290565).
 
 2. Install the OpenID Connect application by using the python script.
-    - Navigate to the app_server_root/bin directory.
-    - Run the script installOIDCRP.py for each profile on which the OpenID Connect RP is to be installed.
-    - For more information, see [Configuring an OpenID Connect Relying Party](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=users-configuring-openid-connect-relying-party).
+   
+   1. Navigate to the `app_server_root/bin` directory.
+   2. Run the script `installOIDCRP.py` for each profile on which the OpenID Connect RP is to be installed.
 
     ```sh
     kubectl exec -it dx-deployment-core-0 bash -n dxns
 
     cd /opt/HCL/AppServer/bin
     ./wsadmin.sh -f installOIDCRP.py install NodeName ServerName
+    ```
 
     For example:
+    ```sh
     ./wsadmin.sh -f installOIDCRP.py install dockerNode WebSphere_Portal
 
     ...
     ADMA5013I: Application WebSphereOIDCRP installed successfully.
     ```
+    
+    For more information, see [Configuring an OpenID Connect Relying Party](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=users-configuring-openid-connect-relying-party).
 
 2. Open the ISC and go to **Applications > Application types > Enterprise Applications > WebsphereOIDCRP >  Manage modules**.
 
