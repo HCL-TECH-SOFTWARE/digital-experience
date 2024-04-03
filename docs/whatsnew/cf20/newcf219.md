@@ -6,6 +6,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Updated Container Staging documentation
 - Updated documentation for installation and upgrade for customers running on Portal 8.5 on WAS 8.5/9.0
+- User Management REST API - Searching special characters
 - DXClient - Update on required access roles
 - DXClient - Multiple environment configuration option in node version
 - New documentation about searching the DX Help Center
@@ -27,10 +28,6 @@ The following features and updates are available to customers installing HCL Dig
 - Helm options to spread pods across nodes
 - Digital Asset Management - damUser credential limitation
 
-**Digital Experience Early Access Program**
-
-- (Placeholder for Open Liberty)
-
 Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases.
 
 ## All Digital Experience Versions (8.5, 9.0, 9.5)
@@ -50,6 +47,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.
 
 === "On-Premises"
     The topic [Installation and upgrade for customers running on Portal 8.5 on WAS 8.5/9.0](../../deployment/install/traditional/install_upgrade_plan_supported_paths/Install_upgrade_customers_Portal_85_Java_SDK7.md) is updated. This topic provides information about upgrading your HCL DX Portal or Web Content Manager 8.5 environment to HCL DX Portal or Web Content Manager 9.5. Information on how to either stay at IBM WebSphere Application Server ND 8.5.x or migrate the WAS layer to IBM WebSphere Application Server ND Version 9.0.5.x is also available.
+
+### User Management REST API - Searching special characters
+
+=== "Containers"
+    You can now search special characters for User Management REST API. 
+
+=== "On-Premises"
+    You can now search special characters for User Management REST API. 
 
 ### DXClient - Update on required access roles
 
@@ -131,9 +136,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.
 === "Containers"
     `Persistence DAM User Credential secret` has a username limitation. The username can begin with lowercase letters or an underscore and can contain only lowercase letters, numbers, underscore, or a dollar sign. The maximum length is 63 characters. For more information, see [Configure Credentials](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_credentials.md).
 
-## Digital Experience Early Access Program
-
-### (Placeholder for Open Liberty)
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
