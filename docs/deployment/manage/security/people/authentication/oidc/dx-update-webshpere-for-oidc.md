@@ -13,7 +13,7 @@ Follow the tasks to execute this configuration:
 7. [Updating the DX Logout flow for OIDC](#updating-the-dx-logout-flow-for-oidc)
 8. [Configuring DX VMM to match OIDC identities](#configuring-dx-vmm-to-match-oidc-identities)
 
-## Installing the OpenID Connect application
+## Installing OpenID Connect
 
 1. Make sure that your OIDC runtime is up to date.
    
