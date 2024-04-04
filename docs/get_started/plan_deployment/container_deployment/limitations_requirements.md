@@ -11,7 +11,7 @@ Consult the [HCL Digital Experience 9.5 Support Statements](https://support.hclt
 
 In a single deployment, all container images must come from the same CF release version. Mixing container images from multiple releases in a single deployment is an unsupported configuration.
 
-Exceptions are permissible only in cases where HCL requests a customer to use a specially provided container image or request the customer to try a version of an image from a different release, to diagnose or temporarily address a specific issue.
+Exceptions are permissible only when HCL requests customers to use a specially provided container image or to try an image version from a different release to diagnose or temporarily resolve a specific issue.
 
 ## Requirements for supported file systems
 
