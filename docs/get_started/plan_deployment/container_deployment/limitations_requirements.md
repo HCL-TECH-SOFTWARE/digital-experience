@@ -11,7 +11,7 @@ Consult the [HCL Digital Experience 9.5 Support Statements](https://support.hclt
 
 In a single deployment, all container images must come from the same CF release version. Mixing container images from multiple releases in a single deployment is an unsupported configuration.
 
-Exceptions are permissible only in cases where HCL has requested a customer to use a specially provided container image or has requested the customer do so, to diagnose or temporarily address a specific issue.
+Exceptions are permissible only in cases where HCL requests a customer to use a specially provided container image or request the customer to try a version of an image from a different release, to diagnose or temporarily address a specific issue.
 
 ## Requirements for supported file systems
 
@@ -58,7 +58,7 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 
    To use the minimal configuration, adjust the resource requests in your `custom-values.yaml` file accordingly. You can use alternatives to these numbers. Increasing any number is not an issue. In fact, for best results in a production environment, increase these numbers to scale to your specific needs. You can also decrease some of these numbers and still be able to start DX (for example, for deployment environments), but this action is not officially supported.
 
-   All the following CPU sizing relate to an environment with 2nd generation Intel Xeon scalable processors (Cascade Lake 8223CL) or 1st generation Intel Xeon Platinum 8000 series (Skylake 8124M) processors.
+   All the following CPU sizings relate to an environment with 2nd generation Intel Xeon scalable processors (Cascade Lake 8223CL) or 1st generation Intel Xeon Platinum 8000 series (Skylake 8124M) processors.
 
 !!!note
     Every Kubernetes node requires some memory for Kubernetes-specific services. Ensure that your Kubernetes Node has enough capacity to host both the Kubernetes services and HCL DX. The overall requested amount of resources might vary based on disabled and enabled applications.
