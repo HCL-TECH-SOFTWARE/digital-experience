@@ -145,7 +145,7 @@ resources:
       memory: "64Mi"
 ```
 
-In addition, a [Performance Sizing Guidance for Rendering with a Small Configuration](../../../../../../get_started/plan_deployment/container_deployment/rm_container/dx_performance_small_cfg.md) is available.
+For recommended values for a small configuration, refer to [Performance Sizing Guidance for Rendering with a Small Configuration](../../../../../../get_started/plan_deployment/container_deployment/rm_container/dx_performance_small_cfg.md).
 
 ## Unlimited resource `limits`
 
