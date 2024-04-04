@@ -1,14 +1,17 @@
 # Container Staging
 
-This section describes how to move from an existing HCL Portal environment to a containerized Digital Experience environment.
+This section describes how to move from an existing HCL Digital Experience (DX) environment to a containerized DX environment.
 
 ## Overview of the approach
 
 To move from a non-containerized deployment to a containerized deployment, it is recommended to take a similar approach as staging to another DX environment.
 
 The Kubernetes containerized deployment is different from the non-containerized deployment in the following ways:
+
 1. There is no http server in front of your DX deployment. Instead, HAProxy is used for routing to the different pods and JVMs. You can configure your own ingress controller or deploy a proxy to customize cache headers, server static files, or other customizations you configured at your http server.
+
 2. There is no WebSphere cluster.
+
     - Distributed Enterprise Java Beans, JMS distribution, or cache replication of custom DynaCaches is not possible with containerized deployments because the system is using a farm-like deployment of DX Core. 
     - Any product-based caches are cache-replicated so any changes are distributed to all Core pods.
     - If you have custom DynaCaches that must be replicated, it is recommended to use external cache solutions such as Redis or Hazelcast.
@@ -29,9 +32,9 @@ If you do not have the 9.5 UI features enabled in your source non-container envi
 - [Enabling 9.5 UI features](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md)
 - [Disabling 9.5 UI features](../../../build_sites/practitioner_studio/working_with_ps/disable_prac_studio.md)
 
-## Exporting the source HCL Portal server
+## Exporting the source HCL DX server
 
-Follow these steps to export the source HCL Portal server.
+Follow these steps to export the source HCL DX server.
 
 1.  Upgrade the source environment.
 
@@ -72,7 +75,7 @@ Follow these steps to export the source HCL Portal server.
     
     If you are not sure what customizations were applied, you can use the [WebSphere Configuration Comparison Tool](https://github.com/IBM/websphere-cct).
 
-## Importing into the container HCL Portal target server
+## Importing into the container HCL DX target server
 
 Before starting the import, complete the Kubernetes deployment with the right CF level and configure the prerequisites. Ensure that the context root matches the previous deployment, and the security is configured (for example, connected to LDAP).
 
@@ -271,10 +274,10 @@ For more information about each service, see [Service configuration](../../../de
 If you cannot recall all the configuration settings you usually change and also have not automated the setting using CI/CD, you can compare the configurations using the [WebSphere Configuration Comparison Tool](https://github.com/IBM/websphere-cct).
 
 When comparing configuration settings, you might notice differences in the settings that DX configures in containers. The following is a list of changes performed for Resource Environment Providers for containers/Kubernetes:
-- WCM WCMConfigService: Tuning changes as documented in the tuning task: (Portal server performance tuning tool)[../../../deployment/manage/tune_servers/wp_tune_tool.md]
+- WCM WCMConfigService: Tuning changes as documented in the tuning task: [Portal server performance tuning tool](../../../deployment/manage/tune_servers/wp_tune_tool.md)
 - WP ConfigService: ```use.db.cache.invalidation.table``` and ```db.cache.invalidation.read.freq``` for cache replication. ```digitalAssets.useSSLDAM``` for DAM integration.
 - WCM DigitalAssetManagerService: ```enabled``` if using DAM.
-- WP CacheManagerService: Tuning changes as documented in the tuning task: (Portal server performance tuning tool)[../../../deployment/manage/tune_servers/wp_tune_tool.md]
+- WP CacheManagerService: Tuning changes as documented in the tuning task: [Portal server performance tuning tool](../../../deployment/manage/tune_servers/wp_tune_tool.md)
 
 ### Configuration tasks changing resource environment providers
 

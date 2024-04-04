@@ -35,34 +35,34 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.
 ### Updated Container Staging documentation
 
 === "Containers"
-    Documentation for [Container Staging](../../deployment/manage/container_configuration/container_staging.md) is updated to contain information about [transitioning from non-containerized deployment to a containerized deployment](../../deployment/manage/container_configuration/container_staging.md#overview-of-the-approach), [moving multiple environments](../../deployment/manage/container_configuration/container_staging.md#moving-multiple-environments), [importing into the container HCL Portal target server](../../deployment/manage/container_configuration/container_staging.md#importing-into-the-container-hcl-portal-target-server), [syndicating large libraries](../../deployment/manage/container_configuration/container_staging.md#syndicating-large-libraries), and [using resource environment providers](../../deployment/manage/container_configuration/container_staging.md).
+    Documentation for [Container Staging](../../deployment/manage/container_configuration/container_staging.md) is updated to contain information about [transitioning from non-containerized deployment to a containerized deployment](../../deployment/manage/container_configuration/container_staging.md#overview-of-the-approach), [moving multiple environments](../../deployment/manage/container_configuration/container_staging.md#moving-multiple-environments), [importing into the container HCL DX target server](../../deployment/manage/container_configuration/container_staging.md#importing-into-the-container-hcl-dx-target-server), [syndicating large libraries](../../deployment/manage/container_configuration/container_staging.md#syndicating-large-libraries), and [using resource environment providers](../../deployment/manage/container_configuration/container_staging.md#resource-environment-providers).
 
 === "On-Premises"
-    Documentation for [Container Staging](../../deployment/manage/container_configuration/container_staging.md) is updated to contain information about [transitioning from non-containerized deployment to a containerized deployment](../../deployment/manage/container_configuration/container_staging.md#overview-of-the-approach), [moving multiple environments](../../deployment/manage/container_configuration/container_staging.md#moving-multiple-environments), [importing into the container HCL Portal target server](../../deployment/manage/container_configuration/container_staging.md#importing-into-the-container-hcl-portal-target-server), [syndicating large libraries](../../deployment/manage/container_configuration/container_staging.md#syndicating-large-libraries), and [using resource environment providers](../../deployment/manage/container_configuration/container_staging.md).
+    Documentation for [Container Staging](../../deployment/manage/container_configuration/container_staging.md) is updated to contain information about [transitioning from non-containerized deployment to a containerized deployment](../../deployment/manage/container_configuration/container_staging.md#overview-of-the-approach), [moving multiple environments](../../deployment/manage/container_configuration/container_staging.md#moving-multiple-environments), [importing into the container HCL DX target server](../../deployment/manage/container_configuration/container_staging.md#importing-into-the-container-hcl-dx-target-server), [syndicating large libraries](../../deployment/manage/container_configuration/container_staging.md#syndicating-large-libraries), and [using resource environment providers](../../deployment/manage/container_configuration/container_staging.md).
 
 ### Updated documentation for installation and upgrade for customers running on Portal 8.5 on WAS 8.5/9.0
 
 === "Containers"
-    The topic [Installation and upgrade for customers running on Portal 8.5 on WAS 8.5/9.0](../../deployment/install/traditional/install_upgrade_plan_supported_paths/Install_upgrade_customers_Portal_85_Java_SDK7.md) is updated. This topic provides information about upgrading your HCL DX Portal or Web Content Manager 8.5 environment to HCL DX Portal or Web Content Manager 9.5. Information on how to either stay at IBM WebSphere Application Server ND 8.5.x or migrate the WAS layer to IBM WebSphere Application Server ND Version 9.0.5.x is also available.
+    The topic [Installation and upgrade for customers running on Portal 8.5 on WAS 8.5/9.0](../../deployment/install/traditional/install_upgrade_plan_supported_paths/Install_upgrade_customers_Portal_85_Java_SDK7.md) contains updated instructions on how to upgrade to the latest available Combined Cumulative Fix. Example package names for Portal 9.5 offerings and the table containing the required repository for each offering are also updated.
 
 === "On-Premises"
-    The topic [Installation and upgrade for customers running on Portal 8.5 on WAS 8.5/9.0](../../deployment/install/traditional/install_upgrade_plan_supported_paths/Install_upgrade_customers_Portal_85_Java_SDK7.md) is updated. This topic provides information about upgrading your HCL DX Portal or Web Content Manager 8.5 environment to HCL DX Portal or Web Content Manager 9.5. Information on how to either stay at IBM WebSphere Application Server ND 8.5.x or migrate the WAS layer to IBM WebSphere Application Server ND Version 9.0.5.x is also available.
+    The topic [Installation and upgrade for customers running on Portal 8.5 on WAS 8.5/9.0](../../deployment/install/traditional/install_upgrade_plan_supported_paths/Install_upgrade_customers_Portal_85_Java_SDK7.md) contains updated instructions on how to upgrade to the latest available Combined Cumulative Fix. Example package names for Portal 9.5 offerings and the table containing the required repository for each offering are also updated.
 
 ### User and Groups REST API - Searching special characters
 
 === "Containers"
-    You can now search special characters when using the User and Groups REST API (for example, cn=ümlaut). 
+    You can now search special characters when using the [User and Groups REST API](../../extend_dx/apis/puma_spi/remote_rest_service_for_puma/user_and_groups_rest_api_explorer.md) (for example, cn=ümlaut). 
 
 === "On-Premises"
-    You can now search special characters when using the User and Groups REST API (for example, cn=ümlaut). 
+    You can now search special characters when using the [User and Groups REST API](../../extend_dx/apis/puma_spi/remote_rest_service_for_puma/user_and_groups_rest_api_explorer.md) (for example, cn=ümlaut). 
 
 ### DXClient - Update on required access roles
 
 === "Containers"
-    Required access roles for deploying portlets and script applications have been updated. For more information, see [Portlets](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/portlets.md) and [Script applications](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/scriptapplications.md).
+    Required access roles for deploying portlets and script applications have been updated. For more information, see [Portlets](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/portlets.md) and [Script Applications](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/scriptapplications.md).
 
 === "On-Premises"
-    Required access roles for deploying portlets and script applications have been updated. For more information, see [Portlets](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/portlets.md) and [Script applications](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/scriptapplications.md).
+    Required access roles for deploying portlets and script applications have been updated. For more information, see [Portlets](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/portlets.md) and [Script Applications](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/scriptapplications.md).
 
 
 ### DXClient - Multiple environment configuration option in node version
