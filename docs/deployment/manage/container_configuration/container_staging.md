@@ -24,7 +24,7 @@ While it is possible to move each environment to a new containerized deployment,
 
 ## Prerequisites
 
-The target environment that is existing in a customer-owned Kubernetes environment requires HCL Digital Experience 9.5 and IBM WebSphere Application Server 9.0.5. The HCL Digital Experience and IBM WebSphere Application Server product versions for the source and target environment must be at the same level, though it is sufficient to be on IBM WebSphere Application Server 8.5.5.x with JDK 8.
+The target environment that is existing in a customer-owned Kubernetes environment requires HCL DX 9.5 and IBM WebSphere Application Server 9.0.5. The HCL Digital Experience and IBM WebSphere Application Server product versions for the source and target environment must be at the same level, though it is sufficient to be on IBM WebSphere Application Server 8.5.5.x with JDK 8.
 
 Ensure the context root for DX Core and the security setup is the same as for the source system (for example, connection to the same LDAP).
 
@@ -38,13 +38,13 @@ Follow these steps to export the source HCL DX server.
 
 1.  Upgrade the source environment.
 
-    Using the IBM Installation Manager, upgrade the HCL Portal product to CF17 or later and HCL Portal 9.5.
+    Using the IBM Installation Manager, upgrade the HCL DX product to CF17 or later and HCL DX 9.5.
 
 2.  Log in to the machine where the source environment is located and set the `ulimit -n` to **24000**.
 
     For example, `ulimit - n 24000`.
 
-3.  Verify that the HCL Portal server is started.
+3.  Verify that the HCL DX server is started.
 
 4.  Navigate to the PortalServer/bin directory to export the base server.
 
@@ -65,7 +65,7 @@ Follow these steps to export the source HCL DX server.
 
 9.  If you are using PZN rules, export the PZN rules using the Personalization Administration Portlet functions and save the generated Workspace.nodes file to an external or shared drive, for later use when importing to the target environment.
 
-    1.  Log in to the HCL Portal Home Page.
+    1.  Log in to the HCL DX Home Page.
     2.  Navigate to **Personalization > Business Rules* > Extra Actions > Export**.
     3.  Save the output file.
 
@@ -79,13 +79,13 @@ Follow these steps to export the source HCL DX server.
 
 Before starting the import, complete the Kubernetes deployment with the right CF level and configure the prerequisites. Ensure that the context root matches the previous deployment, and the security is configured (for example, connected to LDAP).
 
-1.  Log in to the machine to access your HCL Portal Container.
+1.  Log in to the machine to access your HCL DX Container.
 
 2.  Download, install, and log in to the command line client for your Kubernetes environment according to the client instructions. For OpenShift, that is Red Hat OpenShift Command Line Client. For Non OpenShift, that is the Kubectl command line tool.
 
-3.  With only a single instance of an HCL Portal container running, exec in, and ensure the `ulimit -n` value is at least **24000**.
+3.  With only a single instance of an HCL DX container running, exec in, and ensure the `ulimit -n` value is at least **24000**.
 
-4.  Empty the base HCL Portal server.
+4.  Empty the base HCL DX server.
 
     1.  OpenShift:
       ```
@@ -158,7 +158,7 @@ Before starting the import, complete the Kubernetes deployment with the right CF
     
     For information about possible configuration settings in Resource Environment Providers, refer to the [Resource Environment Providers](#resource-environment-providers) section.
 
-12. Import the source server base content into the HCL Portal server in the container.
+12. Import the source server base content into the HCL DX server in the container.
 
     -   OpenShift:
 
@@ -179,7 +179,7 @@ Before starting the import, complete the Kubernetes deployment with the right CF
 
     The output displays a successful execution. If not, check /tmp/ExportReleaseResults_ImportResult.xml for errors.
 
-13. Update the WCM content in the HCL Portal server instance:
+13. Update the WCM content in the HCL DX server instance:
 
     ```
     /opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh update-wcm -DWasPassword=<your WAS admin user password> -DPortalAdminPwd=<your DX admin user password>
@@ -189,11 +189,11 @@ Before starting the import, complete the Kubernetes deployment with the right CF
 
 14. If you are using PZN rules, import the PZN rules by using the Personalization Administration Portlet functions.
 
-    1.  Log in to the HCL Portal home page.
+    1.  Log in to the HCL DX home page.
     2.  Navigate to **Personalization > Business Rules > Extra Actions > Import**.
     3.  Browse to the /tmp/Workspace.nodes file and click **Import**.
 
-15. Log in to the HCL Portal home page and verify that the base server is functioning correctly:
+15. Log in to the HCL DX home page and verify that the base server is functioning correctly:
 
     ```
     http://my.target.fqdn/wps/portal
@@ -213,7 +213,7 @@ Before starting the import, complete the Kubernetes deployment with the right CF
     /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config/VirtualPortal1 -user <your DX admin user> -password <your DX admin user password> -in /tmp/ExportVP1Results.xml -out /tmp/ExportVP1Results_ImportResults.xml
     ```
 
-18. Restart the HCL Portal server and check /opt/HCL/wp\_profile/logs/WebSphere\_Portal/SystemOut.log to ensure no startup errors.
+18. Restart the HCL DX server and check /opt/HCL/wp\_profile/logs/WebSphere\_Portal/SystemOut.log to ensure no startup errors.
 
 ## Syndicating the source and target environments
 
@@ -228,7 +228,7 @@ Follow these steps to syndicate the source and target environments:
 
 2.  Select **Retrieve from port** and create the signer certificate, and then save the certificate.
 
-3.  Log in to HCL Portal instance to configure syndication: http://my.target.fqdn/wps/portal.
+3.  Log in to HCL DX instance to configure syndication: http://my.target.fqdn/wps/portal.
 
 4.  Navigate to **Administration > Security > Credential Vault > Add a Vault Slot**.
 
@@ -265,7 +265,7 @@ Syndicating large libraries, especially when syndicating all items if you need a
 
 ## Resource environment providers
 
-HCL Portal comprises a framework of configuration services to accommodate different scenarios that portals must address. You can configure some of these services.
+HCL DX comprises a framework of configuration services to accommodate different scenarios that portals must address. You can configure some of these services.
 
 The configuration for each service is stored in and accessible for configuration through the WebSphere® Integrated Solutions Console. In the WebSphere Integrated Solutions Console, most of the portal configuration services are spelled as one word. Some services are abbreviated and preceded by the letters WP. For example, in the WebSphere Integrated Solutions Console, the portal Configuration Service is listed as WP ConfigService.
 
