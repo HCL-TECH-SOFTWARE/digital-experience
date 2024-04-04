@@ -16,6 +16,20 @@ Currently, the installation of DX v9.5 with a CF upgrade is optional.
 
 To opt in and install DX v9.5, refer to the following instructions:
 
+- **Provide the ConfigWizard administrator name and password values to the ConfigEngine.**
+
+	Add the following two parameters to the <profile_root>/ConfigEngine/properties/wkplc.properties file.
+	```
+	config.wizard.profile.name=<config_wizard_administrator_name>
+	config.wizard.profile.password=<config_wizard_administrator_password>
+	```
+
+	Alternatively you can add them to the command line when running the applyCF command below using the -D format.
+	```
+	-Dconfig.wizard.profile.name=<config_wizard_administrator_name>
+	-Dconfig.wizard.profile.password=<config_wizard_administrator_password>
+	```
+
 !!!note
     Make sure that Installation Manager is not running when installing DX v9.5 with the CF upgrade.
 
