@@ -16,7 +16,10 @@ Currently, the installation of DX v9.5 with a CF upgrade is optional.
 
 To opt in and install DX v9.5, refer to the following instructions:
 
-- **1 Provide the ConfigWizard administrator name and password values to the ConfigEngine.**
+!!!note
+    Make sure that Installation Manager is not running when installing DX v9.5 with the CF upgrade.
+
+1. Provide the ConfigWizard administrator name and password values to the ConfigEngine.
 
 	Add the following two parameters to the <profile_root>/ConfigEngine/properties/wkplc.properties file.
 	```
@@ -30,10 +33,7 @@ To opt in and install DX v9.5, refer to the following instructions:
 	-Dconfig.wizard.profile.password=<config_wizard_administrator_password>
 	```
 
-!!!note
-    Make sure that Installation Manager is not running when installing DX v9.5 with the CF upgrade.
-
-- **2 Run the applyCF script with the install_95 flag.**
+2. Run the applyCF script with the install_95 flag.
 
 	**For Unix/Linux:** Pass the install_95 parameter to the command to upgrade the Portal profile.
 	From the <profile_root>/PortalServer/bin/ directory
