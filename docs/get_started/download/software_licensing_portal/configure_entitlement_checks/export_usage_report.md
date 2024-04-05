@@ -30,7 +30,7 @@ If no unique DX Kubernetes deployment identity is set in the helm value, the dep
 
 ## Exporting the user session usage report in human readable format
 
-To export the user session usage report, use the following command and include the start date and end date:
+To export the user session usage report, use the following command and include the start date, end date and `--pretty`:
 
 ```
 kubectl exec -it <release name>-license-manager-0 -n <namespace> sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD> --pretty
