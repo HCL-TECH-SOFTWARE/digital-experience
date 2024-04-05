@@ -25,7 +25,7 @@ These commands are different from the previous approach with the non-OCI-based r
     ```
 
     !!!note
-        Running the pull command without the version parameter downloads the latest Helm chart version.
+        Running the pull command without the version parameter downloads the latest Helm chart version. To see the available Helm chart versions, refer to [Listing available Helm Chart versions](#listing-available-helm-chart-versions).
     
 3. After running the pull command, you can check if the Helm Chart has been downloaded to your local machine:
 
