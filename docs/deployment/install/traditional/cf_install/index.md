@@ -24,7 +24,7 @@ To opt in and install DX v9.5, refer to the following instructions:
 	config.wizard.profile.password=<config_wizard_administrator_password>
 	```
 
-	Alternatively you can add these parameters to the command line when running applyCF using the -D format.
+	Alternatively, you can add these parameters to the command line when running applyCF using the -D format.
 	```
 	-Dconfig.wizard.profile.name=<config_wizard_administrator_name>
 	-Dconfig.wizard.profile.password=<config_wizard_administrator_password>
