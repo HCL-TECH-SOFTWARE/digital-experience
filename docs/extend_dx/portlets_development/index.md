@@ -2,11 +2,11 @@
 
 Get an overview of the process of creating portlets, learn about the concepts of the APIs used to develop portlets, and view the samples to get you started. Also, learn about integrating features such as single sign-on, cooperative sharing of information using the property broker, and migrating Struts applications to the portlet environment.
 
-HCL Digital Experience supports portlets written to the standard portlet API.
+HCL Digital Experience (DX) supports portlets written to the standard portlet API.
 
 -   If you are not an experienced Java™ developer...
 
-    you can quickly integrate many of your existing resources into HCL Portal without developing your own portlets.
+    you can quickly integrate many of your existing resources into HCL DX without developing your own portlets.
 
 -   If you have Java and servlet development experience but are new to portlet development...
 
@@ -17,7 +17,11 @@ HCL Digital Experience supports portlets written to the standard portlet API.
     -   See [Collaborative Services API and the person tag](../portlets_development/collaborative_services_api_person_tag/index.md) for more information how you can integrate collaborative functionality into your portlets, such as online status, chat, and email.
 -   See [JavaServer Faces implementation](../../deployment/manage/migrate/next_steps/post_mig_activities/addon_integration_task/mig_post_jsf.md) for HCL's support statement about JSF 2.2 Support with HCL DX Portlet Bridge.
 
-Rational® Application Developer includes tools designed to help you develop portlet applications for HCL Digital Experience.
+Rational® Application Developer includes tools designed to help you develop portlet applications for HCL DX.
+
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to use Java portlets, go to [Java Portlet Development](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D2784). To try it out yourself, refer to [DX JSP Portlet Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-300_DX_JSP_Portlet_Development_Lab.pdf).
 
 
 ???+ info "Related information"

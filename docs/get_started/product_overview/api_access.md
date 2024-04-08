@@ -8,7 +8,7 @@ hide: tags
 
 # API access
 
-HCL DX provides a rich set of APIs that address tasks such as remote access, management and administration, application development, and product extension.
+HCL Digital Experience (DX) provides a rich set of APIs that address tasks such as remote access, management and administration, application development, and product extension.
 
 HCL DX provides a range of APIs that address most scenarios, from headless content access to system management. The following table lists some of the available REST APIs. For the latest information, refer to the linked documentation.
 
@@ -35,10 +35,14 @@ A large set of server-side APIs are also available for providing extensions to t
 | [**Portal v8.5 API Specifications**](https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/api_docs/index.html) | Reference copy of the Portal Version 8.5.0. API, javadocs, and other specifications. | 
 | [**Portal v8.5 SPI Specifications**](https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/spi_docs/index.html) | Reference copy of the Portal Version 8.5.0. SPI, javadocs, and other specifications. | 
 
-## DX Client
+## DXClient
 
-HCL Digital Experience includes DXClient, which is a consolidated application and system management utility. With the DXClient tool, developers and administrators can deploy changes or improvements to the DX platform, and automate the development and delivery process.
+HCL DX includes DXClient, which is a consolidated application and system management utility. With the DXClient tool, developers and administrators can deploy changes or improvements to the DX platform, and automate the development and delivery process.
 
 With DXClient, developers and administrators can manage tasks, such as uploading portlets or script applications and managing the DX server. This tool can take artifacts developed locally and deploy them to DX 9.5 servers deployed to supported on-premises platforms in standalone, cluster, and Kubernetes deployments.
 
 Sample pipelines are provided to enable customers to easily integrate DXClient into their CI/CD processes.
+
+## HCLSoftware U learning materials
+
+For an introduction and a demo on using DX for developers, go to [DX for Developers (Advanced)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1777). To try it out yourself, refer to [DX Setup Local Java Development Environment Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-300_DX_Setup_a_Java_Development_Environment_Lab.pdf).
