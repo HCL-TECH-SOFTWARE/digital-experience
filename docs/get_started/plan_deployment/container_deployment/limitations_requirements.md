@@ -16,14 +16,19 @@ Exceptions are permissible only when HCL requests customers to use a specially p
 ## Requirements for supported file systems
 
 Your environment must meet the following file-system requirements:
+
 -   DX requires two `ReadWriteMany` volumes:
+
     -   One volume for Core.
+
     -   One volume for Digital Asset Management.
+
 -   All the other pods require `ReadWriteOnce` volumes.
 -   DX is input-output (I/O) intensive and requires a high-performance file system for optimization.
 -   A `persistence-node` relies on PostgreSQL, which requires the use of hard links. Storage systems \(like Azure Files\) that do not support hard links cannot be used. For more information, see the [Microsoft documentation for features not supported by the Azure File service](https://docs.microsoft.com/en-us/rest/api/storageservices/features-not-supported-by-the-azure-file-service).
 -   All DX applications require the use of symbolic links and soft links. Storage systems must support the use of symbolic links and soft links. If you use Azure Files, you must enable `mountOptions` settings of the StorageClass by using `mfsymlinks`. For more information, see the [Microsoft documentation on troubleshooting Azure Files on Linux \(SMB\)](https://docs.microsoft.com/en-us/azure/storage/files/storage-troubleshoot-linux-file-connection-problems#cannot-create-symbolic-links---ln-failed-to-create-symbolic-link-t-operation-not-supported).
 -   You can configure volume sizes individually per volume and these depend on the respective usage. For more information, see the following Help Center topics:
+
     -   [Configuring PVCs in a Helm deployment](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_persistent_volume_claims.md)
     -   [Customizing the container for Operator-based deployments](https://help.hcltechsw.com/digital-experience/9.5/containerization/customizing_container_deployment.html)
 
