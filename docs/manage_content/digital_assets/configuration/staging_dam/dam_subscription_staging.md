@@ -49,7 +49,7 @@ DAM staging works with environments that use a different LDAP. An LDAP user wit
 ### Credentials used during staging
 
 **Registration and file transfer:** <br>
-You must use the portal admin user credentials for staging registration. These credentials are then stored as kube secrets. The user credentials in the secret on the transferring server and the subscriber can be same or different.
+You must use the portal admin user credentials for staging registration. These credentials are then stored as Kubernetes secrets. The user credentials in the secret on the transferring server and the subscriber can be same or different.
 The credentials used in the registration are used for authentication and authorization during DXClient registration and for transferring files during staging.
 
 **To update staging secret**:<br>
@@ -159,7 +159,10 @@ Use the `manage-dam-staging trigger-staging` command to trigger DAM staging.
 
 ## Registering or deregistering for DAM staging
 
-Use the `manage-dam-staging **register**-dam-subscriber` command to register or the `manage-dam-staging **deregister**-dam-subscriber` command to deregister the subscriber for DAM staging.
+!!! note
+    For Hybrid deployments, please refer to the ["Set up staging for Hybrid deployments"](#set-up-staging-for-hybrid-deployments) section. 
+
+Use the `manage-dam-staging register-dam-subscriber` command to register or the `manage-dam-staging deregister-dam-subscriber` command to deregister the subscriber for DAM staging.
 
 -   **Command description**
 
@@ -177,13 +180,13 @@ Use the `manage-dam-staging **register**-dam-subscriber` command to register or 
 
 -   **Help command**
 
-    The following command shows the help information for `manage-dam-staging **register**-dam-subscriber` command usage:
+    The following command shows the help information for `manage-dam-staging register-dam-subscriber` command usage:
 
     ```
     dxclient manage-dam-staging register-dam-subscriber -h
     ```
 
-    The following command shows the help information for `manage-dam-staging **deregister**-dam-subscriber` command usage:
+    The following command shows the help information for `manage-dam-staging deregister-dam-subscriber` command usage:
 
     ```
     dxclient manage-dam-staging deregister-dam-subscriber -h
@@ -614,4 +617,39 @@ If the properties are in place when using the REST API or WCM Admin UI or WCM AP
 !!! example 
     If a content item is moved from the staging environment to production, and production has the relative URL option enabled, then all DAM references are returned relatively. <br>For instance, `/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true` even if we received the following from syndication: `staging.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true`.
 
+## Set up staging for Hybrid deployments
 
+The following sections do also apply for Hybrid deployments:
+
+- [Configure staging hostname](#configure-staging-hostname)
+- [Configure LTPA Token Refresh Time](#configure-ltpa-token-refresh-time)
+- [ Configure LDAP](#configure-ldap)
+
+### Create the Kubernetes secrets containing the portal admin user credentials 
+
+Run the following command on each environment to make the credentials known for staging:
+
+```sh
+kubectl -n <namespace> create secret generic <helm release name>-dam-staging \
+--from-literal='username-<hostname1>'='<base64 encoded username from hostname1>' \
+--from-literal='password-<hostname1>'='<base64 encoded password from hostname1>' \
+--from-literal='username-<hostname2>'='<base64 encoded username from hostname2>' \
+--from-literal='password-<hostname2>'='<base64 encoded username from hostname2>'
+```
+
+The secrets consist of the username and password for each environment. They can be create for two or more hostnames depending on the number of subscribers.
+
+All credentials must be manually Base64 encoded when creating the secrets.
+
+### Register the subscriber using the REST API
+
+1. Use the [RingAPI `POST /auth/login` endpoint](https://opensource.hcltechsw.com/experience-api-documentation/ring-api/#operation/authLogin) on the Publisher to login and get an LTPA token.
+2. Use the [DAM API `POST /staging/subscriber` endpoint](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/StagingController.create) on the Publisher with the LTPA token from 1. and register the subscriber. For example: 
+    ```json
+    {
+      "targetHost": "<kube-dam-subscriber-host-name>",
+      "cycleLength": 2,
+      "status": true
+    }
+    ```
+3. Optional: use the [DAM API `GET /staging/subscriber` endpoint](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/StagingController.findAll) to verify the registration.
