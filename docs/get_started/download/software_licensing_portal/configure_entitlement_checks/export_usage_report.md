@@ -28,6 +28,51 @@ configuration:
 
 If no unique DX Kubernetes deployment identity is set in the helm value, the deployment uses the release name and namespace combination by default. See [Kubernetes Overview](../../../../get_started/plan_deployment/container_deployment/index.md) for deployment and configuration guidance. 
 
+## Exporting the user session usage report in csv format
+
+This is the default option to export the usage report to the data table. It contains the following details:
+
+- `month` columns show the usage of each month.
+- `sessions` columns show the total usage of that particular month.
+- `gaps` columns represent the gaps between the dates, with an underscore. If there are multiple gaps, they are separated by semicolons.
+- `environment` column indicates the identity of the environment where the usage occurred.
+
+To export the user session usage report, use the following command and include the start date and end date:
+
+```
+kubectl exec -it <release name>-license-manager-0 -n <namespace> sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD>
+```
+
+The result can be sent to a file using the following command:
+
+```
+kubectl exec -it <release name>-license-manager-0 -n <namespace> sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD> > /tmp/output.csv
+```
+!!!note
+    The timestamps provided indicate the time in UTC format.
+
+### Expected result
+
+```
+month,sessions,gaps,environment
+2023-01,3685341,,UAT-ENV
+2023-02,3368446,,UAT-ENV
+2023-03,2451073,,UAT-ENV
+2023-04,10052,2023-04-01_2023-04-13;2023-04-13_2023-04-30,UAT-ENV
+2023-05,2864619,,UAT-ENV
+2023-06,3567305,,UAT-ENV
+2023-07,3652716,,UAT-ENV
+2023-08,2064732,2023-08-01_2023-08-14,UAT-ENV
+2023-09,3556301,,UAT-ENV
+2023-10,2809467,,UAT-ENV
+2023-11,1237243,,UAT-ENV
+2023-12,3733002,,UAT-ENV
+2024-01,,2024-01-01_2024-01-31,UAT-ENV
+2024-02,,2024-02-01_2024-02-29,UAT-ENV
+2024-03,1739367,2024-03-15_2024-03-31,UAT-ENV
+2024-04,,2024-04-01_2024-04-02,UAT-ENV
+```
+
 ## Exporting the user session usage report in human readable format
 
 To export the user session usage report, use the following command and include the start date, end date and `--pretty`:
@@ -76,43 +121,6 @@ Total session usage: 34739664
 ############################################################
 ```
 
-## Exporting the user session usage report in csv format
-
-To export the user session usage report, use the following command and include the start date and end date:
-
-```
-kubectl exec -it <release name>-license-manager-0 -n <namespace> sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD>
-```
-
-The result can be sent to a file using the following command:
-
-```
-kubectl exec -it <release name>-license-manager-0 -n <namespace> sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD> > /tmp/output.csv
-```
-!!!note
-    The timestamps provided indicate the time in UTC format.
-
-### Expected result
-
-```
-month,sessions,gaps,environment
-2023-01,3685341,,UAT-ENV
-2023-02,3368446,,UAT-ENV
-2023-03,2451073,,UAT-ENV
-2023-04,10052,2023-04-01_2023-04-13;2023-04-13_2023-04-30,UAT-ENV
-2023-05,2864619,,UAT-ENV
-2023-06,3567305,,UAT-ENV
-2023-07,3652716,,UAT-ENV
-2023-08,2064732,2023-08-01_2023-08-14,UAT-ENV
-2023-09,3556301,,UAT-ENV
-2023-10,2809467,,UAT-ENV
-2023-11,1237243,,UAT-ENV
-2023-12,3733002,,UAT-ENV
-2024-01,,2024-01-01_2024-01-31,UAT-ENV
-2024-02,,2024-02-01_2024-02-29,UAT-ENV
-2024-03,1739367,2024-03-15_2024-03-31,UAT-ENV
-2024-04,,2024-04-01_2024-04-02,UAT-ENV
-```
 
 Optionally, you can import the local .txt/.csv file to a spreadsheet or other reporting tools for viewing and further analysis.
 
