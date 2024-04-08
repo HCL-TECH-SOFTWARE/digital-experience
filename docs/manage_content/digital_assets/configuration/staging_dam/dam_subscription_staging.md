@@ -49,7 +49,7 @@ DAM staging works with environments that use a different LDAP. An LDAP user wit
 ### Credentials used during staging
 
 **Registration and file transfer:** <br>
-You must use the portal admin user credentials for staging registration. These credentials are then stored as Kubernetes secrets. The user credentials in the secret on the transferring server and the subscriber can be same or different.
+You must use the portal admin user credentials for staging registration. These credentials are then stored as Kubernetes secrets. The user credentials, in the secret, on the transferring server and the subscriber can be the same or different.
 The credentials used in the registration are used for authentication and authorization during DXClient registration and for transferring files during staging.
 
 **To update staging secret**:<br>
@@ -637,7 +637,7 @@ kubectl -n <namespace> create secret generic <helm release name>-dam-staging \
 --from-literal='password-<hostname2>'='<base64 encoded username from hostname2>'
 ```
 
-The secrets consist of the username and password for each environment. They can be create for two or more hostnames depending on the number of subscribers.
+The secrets consist of the username and password for each environment. They can be created for two or more hostnames depending on the number of subscribers.
 
 All credentials must be manually Base64 encoded when creating the secrets.
 
