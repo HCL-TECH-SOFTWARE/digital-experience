@@ -1,10 +1,10 @@
-# Script applications
+# Script Applications
 
-This topic provides information about the deployment, undeployment, and restoration of script applications.
+This topic provides information about the deployment, undeployment, and restoration of Script Applications.
 
-## Deploy script applications
+## Deploy Script Applications
 
-The `deploy-scriptapplication` command is used with the DXClient tool to push or pull Script Applications between a local development workstation or automation server and DX 9.5 CF19 or later servers. The command will push or pull the files that make up a script application to or from a Script Application instance stored in a Web Content Manager library on the server.
+The `deploy-scriptapplication` command is used with the DXClient tool to push or pull Script Applications between a local development workstation or automation server and DX 9.5 CF19 or later servers. The command will push or pull the files that make up a Script Application to or from a Script Application instance stored in a Web Content Manager library on the server.
 
 
 !!! note
@@ -12,11 +12,11 @@ The `deploy-scriptapplication` command is used with the DXClient tool to push or
 
 **Required Files**:
 
-The script application push command in the DXClient tool requires a Script Application zip file or an extracted folder of the same (identified by the `prebuiltZip` or `contentRoot` attributes respectively). For more information on Script Applications, refer to the [Build applications with the Script Application](../../../../guide_me/tutorials/scriptapps/common-setup/basic-scriptapp/basic_nowebpack_setup.md) topics in the HCL DX Help Center.
+The Script Application push command in the DXClient tool requires a Script Application zip file or an extracted folder of the same (identified by the `prebuiltZip` or `contentRoot` attributes respectively). For more information on Script Applications, refer to the [Build applications with the Script Application](../../../../guide_me/tutorials/scriptapps/common-setup/basic-scriptapp/basic_nowebpack_setup.md) topics in the HCL DX Help Center.
 
 **Command**
 
-This command invokes the `deploy-scriptapplication` command inside the DXClient tool to either push or pull a script application:
+This command invokes the `deploy-scriptapplication` command inside the DXClient tool to either push or pull a Script Application:
 
 ```
 dxclient deploy-scriptapplication
@@ -242,9 +242,9 @@ If all required options are configured in the config.json at the /dist/src/co
 dxclient deploy-scriptapplication push
 ```
 
-## Undeploy script applications
+## Undeploy Script Applications
 
-The `undeploy-scriptapplication` command is used to remove a script application from a target HCL DX 9.5 CF192 or later servers.
+The `undeploy-scriptapplication` command is used to remove a Script Application from a target HCL DX 9.5 CF192 or later servers.
 
 **Required file**
 
@@ -339,7 +339,7 @@ dxclient undeploy-scriptapplication -wcmContentId <wcm-content-id> -f
 
 ## Restore Script Application
 
-The `restore-scriptapplication` command is used to restore a script application into one of its previous versions present in the target HCL DX 9.5 CF 19 or later servers.
+The `restore-scriptapplication` command is used to restore a Script Application into one of its previous versions present in the target HCL DX 9.5 CF 19 or later servers.
 
 **Required file**
 

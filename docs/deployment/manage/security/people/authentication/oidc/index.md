@@ -2,7 +2,7 @@
 
 ## What is this about?
 
-An increasing number of enterprises are leveraging IdPs to manage the identities, access rights, and authentication flows of their customers, employees, and partners towards their applications and IT landscape. Common IdP solutions and services include Microsoft Azure Active Directory, Okta, Auth0, or Keycloak. Each of the available solutions has unique takes and capabilities that make them a good choice or fit over another, but all of them focus on common and standardized authentication strategies - most notably OIDC.
+An increasing number of enterprises are leveraging IdPs to manage the identities, access rights, and authentication flows of their customers, employees, and partners towards their applications and IT landscape. Common IdP solutions and services include Microsoft Entra ID, Okta, Auth0, or Keycloak. Each of the available solutions has unique takes and capabilities that make them a good choice or fit over another, but all of them focus on common and standardized authentication strategies - most notably OIDC.
 
 OIDC serves as a modern authentication and authorization protocol designed to enhance digital security and user experience, particularly in the realm of Identity and Access Management (IAM). Operating as an extension of the OAuth 2.0 framework, OIDC merges the strengths of OAuth's access delegation capabilities with identity verification, resulting in a comprehensive solution.
 
