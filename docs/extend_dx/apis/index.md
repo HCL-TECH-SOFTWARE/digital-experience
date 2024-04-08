@@ -54,6 +54,10 @@ Reference copy of the Portal Version 8.5.0. API, javadocs, and other specificati
 **[Portal v8.5 SPI Specifications](https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/spi_docs/index.html)**
 Reference copy of the Portal Version 8.5.0. SPI, javadocs, and other specifications.
 
+## HCLSoftware U learning materials
+
+For an introduction and a demo on using DX for developers, go to [DX for Developers (Advanced)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1777). To try it out yourself, refer to [DX Setup Local Java Development Environment Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-300_DX_Setup_a_Java_Development_Environment_Lab.pdf).
+
 ???+ info "Related Information"
     - **[Developing themes and skins](../../build_sites/themes_skins/index.md)**  
     You can create themes using modules to contribute to separate areas of pages to provide flexibility, enhance the user experience, and maximize performance. To optimize themes on your website, use the theme optimization module framework. The framework separates feature-specific logic and capabilities from the theme code.
