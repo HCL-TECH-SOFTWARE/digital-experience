@@ -23,7 +23,7 @@ You can enhance and extend the tagging and rating features of the portal by usin
 
 You can use Personalization APIs to allow Rational Application Developer and the Personalization runtime environment access to user and content data in customer data stores.
 
-# List of APIs
+## List of APIs
 
 **[HCL Experience API](../apis/hcl_experience_api/index.md)**  
 The HCL Experience API is a set of OpenAPI-compliant REST APIs you can use to deploy HCL Digital Experience 9.5 containers on supported Kubernetes platforms. It supports the integration and management of HCL Digital Experience content and functionality to any digital channel using any front-end development framework. The HCL Experience API includes REST APIs that serve as a wrapper around previously published HCL Digital Experience HTTP-based APIs.
