@@ -40,13 +40,13 @@ This is the default option to export the usage report to the data table. It cont
 To export the user session usage report, use the following command and include the start date and end date:
 
 ```
-kubectl exec -it <release name>-license-manager-0 -n <namespace> sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD>
+kubectl exec -it <release name>-license-manager-0 -n <namespace> -- sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD>
 ```
 
 The result can be sent to a file using the following command:
 
 ```
-kubectl exec -it <release name>-license-manager-0 -n <namespace> sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD> > /tmp/output.csv
+kubectl exec -it <release name>-license-manager-0 -n <namespace> -- sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD> > /tmp/output.csv
 ```
 !!!note
     The timestamps provided indicate the time in UTC format.
@@ -78,13 +78,13 @@ month,sessions,gaps,environment
 To export the user session usage report, use the following command and include the start date, end date and `--pretty`:
 
 ```
-kubectl exec -it <release name>-license-manager-0 -n <namespace> sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD> --pretty
+kubectl exec -it <release name>-license-manager-0 -n <namespace> -- sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD> --pretty
 ```
 
 The result can be sent to a file using the following command:
 
 ```
-kubectl exec -it <release name>-license-manager-0 -n <namespace> sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD> --pretty > /tmp/output.txt
+kubectl exec -it <release name>-license-manager-0 -n <namespace> -- sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD> --pretty > /tmp/output.txt
 ```
 !!!note
     The timestamps provided indicate the time in UTC format.
