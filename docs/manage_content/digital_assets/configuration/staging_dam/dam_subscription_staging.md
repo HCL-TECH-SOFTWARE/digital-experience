@@ -31,7 +31,7 @@ The hostname configuration for the DAM staging publisher and subscriber must be 
 !!! note
         In values.yaml, the host, port, and ssl settings can be configured under `networking.addon.digitalAssetManagement.staging`.
      
-### Configure LTPA Token Refresh Time
+### Configuring LTPA Token Refresh Time
 LTPA token stored in cache refreshes every `5 minutes` by default.`ltpaTokenRefreshTimeInMinutes` can be configured in `values.yaml` under the `configurations` section of `digitalAssetManagement`.
 
 ```yaml
@@ -41,7 +41,7 @@ configuration:
 ```
 `ltpaTokenRefreshTimeInMinutes` is a token refresh time configuration in minutes, which is passed to DAM as an environment variable.
 
-### Configure LDAP
+### Configuring LDAP
 
 **DAM staging supports different LDAP for publisher and subscriber**: <br>
 DAM staging works with environments that use a different LDAP. An LDAP user with portal admin rights can be used for stage registration.
@@ -55,7 +55,7 @@ The credentials used in the registration are used for authentication and authori
 **To update staging secret**:<br>
 The `manage-dam-staging update-secrets` command can be used to update the publisher and subscriber staging secrets.
 
-## Manage DAM staging
+## Managing DAM staging
 
 Use the `manage-dam-staging trigger-staging` command to trigger DAM staging.
 
@@ -160,7 +160,7 @@ Use the `manage-dam-staging trigger-staging` command to trigger DAM staging.
 ## Registering or deregistering for DAM staging
 
 !!! note
-    For Hybrid deployments, please refer to the ["Set up staging for Hybrid deployments"](#set-up-staging-for-hybrid-deployments) section. 
+    For Hybrid deployments, refer to the ["Set up staging for Hybrid deployments"](#setting-up-staging-for-hybrid-deployments) section. 
 
 Use the `manage-dam-staging register-dam-subscriber` command to register or the `manage-dam-staging deregister-dam-subscriber` command to deregister the subscriber for DAM staging.
 
@@ -329,7 +329,7 @@ Use the `manage-dam-staging register-dam-subscriber` command to register or the 
         dxclient manage-dam-staging deregister-dam-subscriber -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -subscriberId d7e5e014-12a0-4dc5-a5d7-971fd4fa86f3
         ```
 
-## Update secrets for DAM staging
+## Updating secrets for DAM staging
 
 Use the `manage-dam-staging update-secrets` command to update secrets of the publisher and subscriber for DAM staging.
 
@@ -459,7 +459,7 @@ Use the `manage-dam-staging update-secrets` command to update secrets of the pub
         dxclient manage-dam-staging update-secrets -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -dxWASUsername xxxx -dxWASPassword xxxx -targetServerWASUsername xxxx -targetServerWASPassword xxxx -targetServerUsername xxxx -targetServerPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -targetHostname native-kube-dam-production.team-q-dev.com
         ```
 
-## Get all subscribers details for DAM staging
+## Getting all subscribers details for DAM staging
 
 
 Use the `manage-dam-staging get-all-subscribers` command to get all the registered subscribers details for DAM staging.
@@ -596,7 +596,7 @@ If the properties are in place when using the REST API or WCM Admin UI or WCM AP
     If a content item is moved from the staging environment to production, and production has the host overwrite set to `production.hcl.com`, then all DAM references are returned with `production.hcl.com`. <br>For instance, `production.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true` even if we received the following from syndication: `staging.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true`.
 
 
-**(Optional)** Starting with release 210 you can configure WCM `WCMConfigService` in the WAS Admin Console to use relative URLs for DAM references in WCM using the following:
+**(Optional)** Starting with release 210, you can configure WCM `WCMConfigService` in the WAS Admin Console to use relative URLs for DAM references in WCM using the following:
 
 ```
 dam.host.relative=true
@@ -617,15 +617,15 @@ If the properties are in place when using the REST API or WCM Admin UI or WCM AP
 !!! example 
     If a content item is moved from the staging environment to production, and production has the relative URL option enabled, then all DAM references are returned relatively. <br>For instance, `/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true` even if we received the following from syndication: `staging.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true`.
 
-## Set up staging for Hybrid deployments
+## Setting up staging for Hybrid deployments
 
-The following sections do also apply for Hybrid deployments:
+The following sections also apply for Hybrid deployments:
 
-- [Configure staging hostname](#configure-staging-hostname)
-- [Configure LTPA Token Refresh Time](#configure-ltpa-token-refresh-time)
-- [ Configure LDAP](#configure-ldap)
+- [Configuring staging hostname](#configuring-staging-hostname)
+- [Configuring LTPA Token Refresh Time](#configuring-ltpa-token-refresh-time)
+- [Configuring LDAP](#configuring-ldap)
 
-### Create the Kubernetes secrets containing the portal admin user credentials 
+### Creating the Kubernetes secrets containing the portal admin user credentials 
 
 Run the following command on each environment to make the credentials known for staging:
 
@@ -637,14 +637,16 @@ kubectl -n <namespace> create secret generic <helm release name>-dam-staging \
 --from-literal='password-<hostname2>'='<base64 encoded username from hostname2>'
 ```
 
-The secrets consist of the username and password for each environment. They can be created for two or more hostnames depending on the number of subscribers.
+The secrets consist of the username and password for each environment. Secrets can be created for two or more hostnames depending on the number of subscribers.
 
 All credentials must be manually Base64 encoded when creating the secrets.
 
-### Register the subscriber using the REST API
+### Registering the subscriber using the REST API
 
-1. Use the [RingAPI `POST /auth/login` endpoint](https://opensource.hcltechsw.com/experience-api-documentation/ring-api/#operation/authLogin) on the Publisher to login and get an LTPA token.
-2. Use the [DAM API `POST /staging/subscriber` endpoint](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/StagingController.create) on the Publisher with the LTPA token from 1. and register the subscriber. For example: 
+1. Log in and get an LTPA token by using the [RingAPI `POST /auth/login` endpoint](https://opensource.hcltechsw.com/experience-api-documentation/ring-api/#operation/authLogin).
+
+2. Use the [DAM API `POST /staging/subscriber` endpoint](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/StagingController.create) on the Publisher with the LTPA token from Step 1 and register the subscriber. For example: 
+
     ```json
     {
       "targetHost": "<kube-dam-subscriber-host-name>",
@@ -652,4 +654,5 @@ All credentials must be manually Base64 encoded when creating the secrets.
       "status": true
     }
     ```
-3. Optional: use the [DAM API `GET /staging/subscriber` endpoint](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/StagingController.findAll) to verify the registration.
+    
+3. (Optional) Verify the registration by using the [DAM API `GET /staging/subscriber` endpoint](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/StagingController.findAll).
