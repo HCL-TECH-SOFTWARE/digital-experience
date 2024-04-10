@@ -21,6 +21,8 @@ The following features and updates are available to customers installing HCL Dig
 
 - Web Content Manager - Content Reporting limitation for owners and authors
 - Web Content Manager - New query parameters for Content Reporting
+- Practitioner Studio - React 16, 17, and 18 theme profiles now available
+- Experience Framework - New React 17 and 18 modules
 
 **Digital Experience 9.5 Container Version**
 
