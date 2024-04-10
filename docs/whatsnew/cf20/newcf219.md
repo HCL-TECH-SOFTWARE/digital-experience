@@ -6,6 +6,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Updated Container Staging documentation
 - Updated documentation for installation and upgrade for customers running on Portal 8.5 on WAS 8.5/9.0
+- New documentation for staging hybrid deployments
 - User and Groups REST API - Searching special characters
 - DXClient - Update on required access roles
 - DXClient - Multiple environment configuration option in node version
@@ -47,6 +48,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.
 
 === "On-Premises"
     The topic [Installation and upgrade for customers running on Portal 8.5 on WAS 8.5/9.0](../../deployment/install/traditional/install_upgrade_plan_supported_paths/Install_upgrade_customers_Portal_85_Java_SDK7.md) contains updated instructions on how to upgrade to the latest available Combined Cumulative Fix. Example package names for Portal 9.5 offerings and the table containing the required repository for each offering are also updated.
+
+### New documentation for staging hybrid deployments
+
+=== "Containers"
+    [Staging DAM to rendering environments](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md) is updated to include instructions on [setting up staging for hybrid deployments](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md#setting-up-staging-for-hybrid-deployments). 
+
+=== "On-Premises"
+    [Staging DAM to rendering environments](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md) is updated to include instructions on [setting up staging for hybrid deployments](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md#setting-up-staging-for-hybrid-deployments). 
 
 ### User and Groups REST API - Searching special characters
 
