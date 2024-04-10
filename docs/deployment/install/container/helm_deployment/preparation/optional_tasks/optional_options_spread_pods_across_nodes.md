@@ -1,4 +1,5 @@
 # Options to spread pods across nodes
+
 This topic provides several options for distributing pods across nodes. It is possible to restrict a pod to specific nodes or prioritize it to run on certain nodes.
 
 You can use any of the following methods to choose where Kubernetes schedules specific Pods:
@@ -93,6 +94,22 @@ affinity:
                   values:
                     - dx-deployment-core-0
             topologyKey: topology.kubernetes.io/zone
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: topology.kubernetes.io/zone
+                operator: In
+                values:
+                  - us-east-1a
+      preferredDuringSchedulingIgnoredDuringExecution:
+        - weight: 1
+          preference:
+            matchExpressions:
+              - key: topology.kubernetes.io/zone
+                operator: In
+                values:
+                  - us-east-1f
 ```
 
 ## nodeName

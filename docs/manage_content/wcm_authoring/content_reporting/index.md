@@ -20,5 +20,5 @@ This section provides the steps on how to access the HCL Content Reporting portl
 - **[Usage of HCL Content Reporting](../content_reporting/usage/index.md)**<br>
 Create and export reports on content items using HCL Content Reporting. Users can also update the reported content items in bulk.
 
-- **[Limitations](../content_reporting/limitations/index.md)**<br>
+- **[Content Reporting limitations](../content_reporting/limitations/index.md)**<br>
 This section lists the current limitations when using HCL Content Reporting.
