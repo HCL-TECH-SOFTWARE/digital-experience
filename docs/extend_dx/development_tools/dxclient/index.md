@@ -232,7 +232,7 @@ In addition, the package includes scripts for all operating systems that make it
             node bin/dxclient
             ```
 
-7. A folder named `store` is created in your working directory. This is the default location for configuration, logger, and output files. If you require to create a new volume directory for a different configuration, set the `VOLUME_DIR` to the desired directory name and run your task. For example:
+7. A folder named `store` is created in your working directory. This is the default location for configuration, logger, and output files. If you require to create a new configuration, set the environment variable `VOLUME_DIR` to the desired directory name and run your task. For example:
 
     === "Linux and Apple macOS"
         ```bash
@@ -310,7 +310,7 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
     Refer to the list of features that were released in the following HCL DX 9.5 Container releases:
 
     -   HCL DX 9.5 CF219 release: **V1.28.0
-        -   [Enabled Multiple Environment Configuration in Node version](<TBD>)
+        -   [Enabled multiple environment configuration in node version](#configuring-multiple-environments-in-DXClient)
     
     -   HCL DX 9.5 CF216 release: **V1.25.0
         -   Shows version compatibility details between DX Core and DXClient.
@@ -476,7 +476,7 @@ Common command arguments can be pre-configured inside the `config.json` file ava
 ```
 ### Configuring multiple environments in DXClient
 
-A folder named `store` is created in your working directory. This is the default location for configuration, logger, and output files. If you require to create a new configuration set a new volume directory, set the `VOLUME_DIR` to the desired directory name and run your task. For example:
+A folder named `store` is created in your working directory. This is the default location for configuration, logger, and output files. If you require to create a new configuration, set the environment variable VOLUME_DIR to the desired directory name and run your task. For example:
 
     === "Linux and Apple macOS"
         ```bash
@@ -753,9 +753,9 @@ dxclient help [command]
     
 ## Limitations
 
-1. For hybrid deployments in which two different hostnames are used for the on-premises DX Core and Kubernetes DX Services, there are no options to enter both the hostnames. You must consider the DXClient function being used and enter the appropriate hostname. For example, for DAM tasks such as `manage-dam-staging`, you must enter the Kubernetes hostname. For DX Core tasks such as `deploy-portlet` you must enter the on-premises DX Core hostname.
+- For hybrid deployments in which two different hostnames are used for the on-premises DX Core and Kubernetes DX Services, there are no options to enter both the hostnames. You must consider the DXClient function being used and enter the appropriate hostname. For example, for DAM tasks such as `manage-dam-staging`, you must enter the Kubernetes hostname. For DX Core tasks such as `deploy-portlet` you must enter the on-premises DX Core hostname.
 
-2. For v1.26.0 and above, it is required to set full access to the bin folder to execute DXClient commands.
+- Starting CF217 (DXClient v1.26.0 and above), it is required to set full access to the bin folder to execute DXClient commands.
 
 ## HCLSoftware U learning materials
 
