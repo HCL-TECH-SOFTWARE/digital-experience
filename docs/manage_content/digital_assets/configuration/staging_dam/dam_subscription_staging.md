@@ -160,7 +160,7 @@ Use the `manage-dam-staging trigger-staging` command to trigger DAM staging.
 ## Registering or deregistering for DAM staging
 
 !!! note
-    For Hybrid deployments, refer to the ["Set up staging for Hybrid deployments"](#setting-up-staging-for-hybrid-deployments) section. 
+    For Hybrid deployments, refer to the ["Setting up staging for Hybrid deployments"](#setting-up-staging-for-hybrid-deployments) section. 
 
 Use the `manage-dam-staging register-dam-subscriber` command to register or the `manage-dam-staging deregister-dam-subscriber` command to deregister the subscriber for DAM staging.
 
@@ -596,7 +596,7 @@ If the properties are in place when using the REST API or WCM Admin UI or WCM AP
     If a content item is moved from the staging environment to production, and production has the host overwrite set to `production.hcl.com`, then all DAM references are returned with `production.hcl.com`. <br>For instance, `production.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true` even if we received the following from syndication: `staging.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true`.
 
 
-**(Optional)** Starting with release 210, you can configure WCM `WCMConfigService` in the WAS Admin Console to use relative URLs for DAM references in WCM using the following:
+**(Optional)** Starting CF210, you can configure WCM `WCMConfigService` in the WAS Admin Console to use relative URLs for DAM references in WCM using the following:
 
 ```
 dam.host.relative=true
@@ -637,7 +637,7 @@ kubectl -n <namespace> create secret generic <helm release name>-dam-staging \
 --from-literal='password-<hostname2>'='<base64 encoded username from hostname2>'
 ```
 
-The secrets consist of the username and password for each environment. Secrets can be created for two or more hostnames depending on the number of subscribers.
+The secrets consist of the username and password for each environment. You can create secrets for two or more hostnames depending on the number of subscribers.
 
 All credentials must be manually Base64 encoded when creating the secrets.
 
