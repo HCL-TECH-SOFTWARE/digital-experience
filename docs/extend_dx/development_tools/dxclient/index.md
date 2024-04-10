@@ -495,7 +495,8 @@ A folder named `store` is created in your working directory. This is the default
         ```
 
         !!!important
-            Do not enclose the value of `VOLUME_DIR` in double quotes ("") in Windows. This produces errors when executing DXClient commands. Do not provide a path to set as `VOLUME_DIR`. Instead, provide a folder name.
+            - Do not enclose the value of `VOLUME_DIR` in double quotes ("") in Windows. This produces errors when executing DXClient commands. 
+            - Do not provide a path to set as `VOLUME_DIR`. Instead, provide a folder name.
 
     The `VOLUME_DIR` requires read and write access permissions. Set appropriate permissions for the `VOLUME_DIR` as per user/group/owner.
 
@@ -749,6 +750,12 @@ Use the following command to display the detailed help for a specific command:
 ```bash
 dxclient help [command]
 ```
+    
+## Limitations
+
+1. For hybrid deployments in which two different hostnames are used for the on-premises DX Core and Kubernetes DX Services, there are no options to enter both the hostnames. You must consider the DXClient function being used and enter the appropriate hostname. For example, for DAM tasks such as `manage-dam-staging`, you must enter the Kubernetes hostname. For DX Core tasks such as `deploy-portlet` you must enter the on-premises DX Core hostname.
+
+2. For v1.26.0 and above, it is required to set full access to the bin folder to execute DXClient commands.
 
 ## HCLSoftware U learning materials
 
@@ -767,9 +774,3 @@ For an introduction and a demo on how to use DXClient, go to [Staging](https://h
     - [Themes](../dxclient/dxclient_artifact_types/themes.md)
     - [Script applications](../dxclient/dxclient_artifact_types/scriptapplications.md)
     - [Resource environment provider](../dxclient/dxclient_artifact_types/resourceenvironments.md)
-
-## Limitations
-
-1. For hybrid deployments in which two different hostnames are used for the on-premises DX Core and Kubernetes DX Services, there are no options to enter both the hostnames. You must consider the DXClient function being used and enter the appropriate hostname. For example, for DAM tasks such as `manage-dam-staging`, you must enter the Kubernetes hostname. For DX Core tasks such as `deploy-portlet` you must enter the on-premises DX Core hostname.
-
-2. For v1.26.0 and above, it is required to set full access to the bin folder to execute DXClient commands.
