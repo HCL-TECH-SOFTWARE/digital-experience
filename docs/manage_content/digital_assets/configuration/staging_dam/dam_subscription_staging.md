@@ -160,7 +160,7 @@ Use the `manage-dam-staging trigger-staging` command to trigger DAM staging.
 ## Registering or deregistering for DAM staging
 
 !!! note
-    For Hybrid deployments, refer to the ["Setting up staging for Hybrid deployments"](#setting-up-staging-for-hybrid-deployments) section. 
+    For hybrid deployments, refer to the ["Setting up staging for hybrid deployments"](#setting-up-staging-for-hybrid-deployments) section. 
 
 Use the `manage-dam-staging register-dam-subscriber` command to register or the `manage-dam-staging deregister-dam-subscriber` command to deregister the subscriber for DAM staging.
 
@@ -617,15 +617,15 @@ If the properties are in place when using the REST API or WCM Admin UI or WCM AP
 !!! example 
     If a content item is moved from the staging environment to production, and production has the relative URL option enabled, then all DAM references are returned relatively. <br>For instance, `/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true` even if we received the following from syndication: `staging.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true`.
 
-## Setting up staging for Hybrid deployments
+## Setting up staging for hybrid deployments
 
-The following sections also apply for Hybrid deployments:
+The following sections also apply for hybrid deployments:
 
 - [Configuring staging hostname](#configuring-staging-hostname)
 - [Configuring LTPA Token Refresh Time](#configuring-ltpa-token-refresh-time)
 - [Configuring LDAP](#configuring-ldap)
 
-### Creating the Kubernetes secrets containing the portal admin user credentials 
+### Creating Kubernetes secrets containing the portal admin user credentials 
 
 Run the following command on each environment to make the credentials known for staging:
 
