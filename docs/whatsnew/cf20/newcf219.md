@@ -119,6 +119,22 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.
 === "On-Premises"
     New query parameters `notauthor` and `notowner` are available to support WCM search API. For more information, see [Query parameters](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md).
 
+### Practitioner Studio - React 16, 17, and 18 theme profiles now available
+
+=== "Containers"
+    When creating a new page using [Practitioner Studio](../../build_sites/practitioner_studio/index.md), you can now select React 16, 17, or 18 for the theme profile. 
+
+=== "On-Premises"
+    When creating a new page using [Practitioner Studio](../../build_sites/practitioner_studio/index.md), you can now select React 16, 17, or 18 for the theme profile. 
+
+### Experience Framework - New React 17 and 18 modules
+
+=== "Containers"
+    You can now use new React 17 and 18 modules in your own theme. For information about adding or removing modules, see [Adding or removing a module from a profile](../../build_sites/themes_skins/the_module_framework/add_remove_oob_modules/index.md).
+
+=== "On-Premises"
+    You can now use new React 17 and 18 modules in your own theme. For information about adding or removing modules, see [Adding or removing a module from a profile](../../build_sites/themes_skins/the_module_framework/add_remove_oob_modules/index.md).
+
 ## Digital Experience 9.5 Container Version
 
 ### Container resource management

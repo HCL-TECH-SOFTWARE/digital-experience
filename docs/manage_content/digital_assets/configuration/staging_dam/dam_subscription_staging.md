@@ -641,7 +641,7 @@ The secrets consist of the username and password for each environment. You can c
 
 When creating secrets, you must manually encode all credentials in Base64.
 
-### Registering the subscriber using the REST API
+### Registering the subscriber using REST API
 
 1. Log in and get an LTPA token by using the [RingAPI `POST /auth/login` endpoint](https://opensource.hcltechsw.com/experience-api-documentation/ring-api/#operation/authLogin).
 
