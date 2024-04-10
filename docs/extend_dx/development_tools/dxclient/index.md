@@ -478,46 +478,46 @@ Common command arguments can be pre-configured inside the `config.json` file ava
 
 A folder named `store` is created in your working directory. This is the default location for configuration, logger, and output files. If you require to create a new configuration, set the environment variable VOLUME_DIR to the desired directory name and run your task. For example:
 
-    === "Linux and Apple macOS"
-        ```bash
-        export VOLUME_DIR=storeForScriptApplication
+=== "Linux and Apple macOS"
+    ```bash
+    export VOLUME_DIR=storeForScriptApplication
 
-        # or if you want spaces in its value, enclose it in double quotes ("")
-        export VOLUME_DIR="store for script application"
-        ```
+    # or if you want spaces in its value, enclose it in double quotes ("")
+    export VOLUME_DIR="store for script application"
+    ```
 
-    === "Microsoft Windows"
-        ```batch
-        set VOLUME_DIR=storeForScriptApplication
+=== "Microsoft Windows"
+    ```batch
+    set VOLUME_DIR=storeForScriptApplication
 
-        :: or if you want spaces in its value
-        set VOLUME_DIR=store for script application
-        ```
+    :: or if you want spaces in its value
+    set VOLUME_DIR=store for script application
+    ```
 
-        !!!important
-            - Do not enclose the value of `VOLUME_DIR` in double quotes ("") in Windows. This produces errors when executing DXClient commands. 
-            - Do not provide a path to set as `VOLUME_DIR`. Instead, provide a folder name.
+    !!!important
+        - Do not enclose the value of `VOLUME_DIR` in double quotes ("") in Windows. This produces errors when executing DXClient commands. 
+        - Do not provide a path to set as `VOLUME_DIR`. Instead, provide a folder name.
 
-    The `VOLUME_DIR` requires read and write access permissions. Set appropriate permissions for the `VOLUME_DIR` as per user/group/owner.
+The `VOLUME_DIR` requires read and write access permissions. Set appropriate permissions for the `VOLUME_DIR` as per user/group/owner.
 
-    === "Linux and Apple macOS"
-        ```bash
-        chmod xxx <working-directory>/<VOLUME_DIR>
+=== "Linux and Apple macOS"
+    ```bash
+    chmod xxx <working-directory>/<VOLUME_DIR>
 
-        # where xxx is a 3-digit number where each digit can be anything from 0 to 7.
-        # Ref: https://wiki.archlinux.org/title/File_permissions_and_attributes#Numeric_method
-        ```
+    # where xxx is a 3-digit number where each digit can be anything from 0 to 7.
+    # Ref: https://wiki.archlinux.org/title/File_permissions_and_attributes#Numeric_method
+    ```
 
-    === "Microsoft Windows"
-        1. Right click `<working-directory>/<VOLUME_DIR>` directory > "Properties" > "Security" Tab.
-        2. Set the appropriate permission for the folder.
+=== "Microsoft Windows"
+    1. Right click `<working-directory>/<VOLUME_DIR>` directory > "Properties" > "Security" Tab.
+    2. Set the appropriate permission for the folder.
 
-    You can find the configuration, logger, and output under `<working-directory>/<VOLUME_DIR>`.
+You can find the configuration, logger, and output under `<working-directory>/<VOLUME_DIR>`.
 
-    Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/<VOLUME_DIR>` folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json), or Kubernetes (default-config-kube.json) platforms is also available under `<working-directory>/samples/sample-configurations` for reference. If you want to override any of the parameters in the config.json, add them in your command line.  
+Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/<VOLUME_DIR>` folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json), or Kubernetes (default-config-kube.json) platforms is also available under `<working-directory>/samples/sample-configurations` for reference. If you want to override any of the parameters in the config.json, add them in your command line.  
 
-    !!!note
-        You must create the config.json in each `<VOLUME_DIR>` folder to set up multiple configurations. Otherwise, the system picks up the configurations specified in the default config.json available under `dist/configuration` in node version.
+!!!note
+    You must create the config.json in each `<VOLUME_DIR>` folder to set up multiple configurations. Otherwise, the system picks up the configurations specified in the default config.json available under `dist/configuration` in node version.
 
 ## DXClient commands
 
