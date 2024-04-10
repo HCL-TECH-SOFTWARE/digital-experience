@@ -232,7 +232,7 @@ In addition, the package includes scripts for all operating systems that make it
             node bin/dxclient
             ```
 
-7. A folder named `store` is created in your working directory. This is the default location for configuration, logger and output files. If you require to create a new volume directory for a different configuration, set the `VOLUME_DIR` to the desired directory name and run your task. For example:
+7. A folder named `store` is created in your working directory. This is the default location for configuration, logger, and output files. If you require to create a new volume directory for a different configuration, set the `VOLUME_DIR` to the desired directory name and run your task. For example:
 
     === "Linux and Apple macOS"
         ```bash
@@ -250,8 +250,8 @@ In addition, the package includes scripts for all operating systems that make it
         set VOLUME_DIR=store for script application
         ```
 
-        !!!warning
-            Do not enclose the value of `VOLUME_DIR` in double quotes ("") in Windows. This produces unwanted errors when executing DXClient commands.
+        !!!important
+            Do not enclose the value of `VOLUME_DIR` in double quotes ("") in Windows. This produces errors when executing DXClient commands.
 
      The `VOLUME_DIR` requires read and write access permissions. Set appropriate permissions for the `VOLUME_DIR` as per user/group/owner.
 
@@ -267,7 +267,7 @@ In addition, the package includes scripts for all operating systems that make it
         1. Right click `<working-directory>/<VOLUME_DIR>` directory > "Properties" > "Security" Tab.
         2. Set the appropriate permission for the folder.
 
-8. You can find the configuration, logger & output files under location  `<working-directory>/<VOLUME_DIR>`.
+8. You can find the configuration, logger, and output files under `<working-directory>/<VOLUME_DIR>`.
 
     Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/<VOLUME_DIR>` folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json), or Kubernetes (default-config-kube.json) platforms is also available under <working-directory>/samples/sample-configurations for reference. If you want to override any of the parameters in the config.json, add them in your command line.           
 
@@ -311,6 +311,7 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
 
     -   HCL DX 9.5 CF219 release: **V1.28.0
         -   [Enabled Multiple Environment Configuration in Node version](<TBD>)
+    
     -   HCL DX 9.5 CF216 release: **V1.25.0
         -   Shows version compatibility details between DX Core and DXClient.
         -   [Resync DAM Staging environments](../../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md)
@@ -473,9 +474,9 @@ Common command arguments can be pre-configured inside the `config.json` file ava
 }
 
 ```
-### How to configure multiple environments in DXClient
+### Configuring multiple environments in DXClient
 
-A folder named `store` is created in your working directory. This is the default location for configuration, logger and output files. If you require to create a new configuration set a new volume directory, set the `VOLUME_DIR` to the desired directory name and run your task.For example:
+A folder named `store` is created in your working directory. This is the default location for configuration, logger, and output files. If you require to create a new configuration set a new volume directory, set the `VOLUME_DIR` to the desired directory name and run your task. For example:
 
     === "Linux and Apple macOS"
         ```bash
@@ -493,9 +494,8 @@ A folder named `store` is created in your working directory. This is the default
         set VOLUME_DIR=store for script application
         ```
 
-        !!!warning
-            Do not enclose the value of `VOLUME_DIR` in double quotes ("") in Windows. This produces unwanted errors when executing DXClient commands.
-            Do not provide a path to set as VOLUME_DIR, provide a folder name.
+        !!!important
+            Do not enclose the value of `VOLUME_DIR` in double quotes ("") in Windows. This produces errors when executing DXClient commands. Do not provide a path to set as `VOLUME_DIR`. Instead, provide a folder name.
 
     The `VOLUME_DIR` requires read and write access permissions. Set appropriate permissions for the `VOLUME_DIR` as per user/group/owner.
 
@@ -511,12 +511,12 @@ A folder named `store` is created in your working directory. This is the default
         1. Right click `<working-directory>/<VOLUME_DIR>` directory > "Properties" > "Security" Tab.
         2. Set the appropriate permission for the folder.
 
-    You can find the configuration, logger & output under location  `<working-directory>/<VOLUME_DIR>`.
+    You can find the configuration, logger, and output under `<working-directory>/<VOLUME_DIR>`.
 
-    Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/<VOLUME_DIR>` folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json), or Kubernetes (default-config-kube.json) platforms is also available under <working-directory>/samples/sample-configurations for reference. If you want to override any of the parameters in the config.json, add them in your command line.  
+    Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/<VOLUME_DIR>` folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json), or Kubernetes (default-config-kube.json) platforms is also available under `<working-directory>/samples/sample-configurations` for reference. If you want to override any of the parameters in the config.json, add them in your command line.  
 
     !!!note
-        You need to create the config.json in each <VOLUME_DIR> folder to set up multiple configuration , else it will pick up the configurations specified in the default config.json availble under dist/configuration in node version.
+        You must create the config.json in each `<VOLUME_DIR>` folder to set up multiple configurations. Otherwise, the system picks up the configurations specified in the default config.json available under `dist/configuration` in node version.
 
 ## DXClient commands
 
@@ -770,6 +770,6 @@ For an introduction and a demo on how to use DXClient, go to [Staging](https://h
 
 ## Limitations
 
-1. For hybrid deployments in which two different hostnames are used for the on-prem DX Core and kubernetes DX Services, we do not have options to input both the hostnames. The user will need to take judicious call based on the DXClient function used and input the appropriate hostname. For example, For example, for DAM tasks like manage-dam-staging the user should input the Kubernetes hostname and for DX Core tasks like deploy-portlet the user should input the on-prem DX Core hostname.
+1. For hybrid deployments in which two different hostnames are used for the on-premises DX Core and Kubernetes DX Services, there are no options to enter both the hostnames. You must consider the DXClient function being used and enter the appropriate hostname. For example, for DAM tasks such as `manage-dam-staging`, you must enter the Kubernetes hostname. For DX Core tasks such as `deploy-portlet` you must enter the on-premises DX Core hostname.
 
-2. For v1.26.0 and above, the user need to set full access to the bin folder to execute dxclient commands.
+2. For v1.26.0 and above, it is required to set full access to the bin folder to execute DXClient commands.
