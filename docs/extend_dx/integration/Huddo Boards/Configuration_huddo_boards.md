@@ -1,6 +1,6 @@
 # Configuring Huddo Boards
 
-In this section, learn how to configure Hubbo Boards in HCL Digital Experience.
+In this section, learn how to configure Hubbo Boards in HCL Digital Experience environment.
 
 ## Registering an OAuth Application
 
@@ -8,7 +8,7 @@ For Huddo Boards to authenticate with your DX environment, define a new OAuth ap
 
 ## SSO for Huddo Boards
 
-Run the Huddo Boards on a different HCL DX domain. For more information, see [Allow SSO for Boards](https://docs.huddo.com/boards/dx/auth/sso/).
+Refer to the [Allow SSO for Boards](https://docs.huddo.com/boards/dx/auth/sso/) setup steps, if the Huddo Boards deployment is hosted on a different domain than the HCL DX deployment.
 
 ## Integrating API Huddo Boards
 
