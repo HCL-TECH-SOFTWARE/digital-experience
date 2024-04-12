@@ -1,6 +1,6 @@
 # Configuring Huddo Boards
 
-In this section, learn how to configure Hubbo Boards in HCL Digital Experience environment.
+In this section, learn how to configure Huddo Boards in HCL Digital Experience environment.
 
 ## Registering an OAuth Application
 
