@@ -11,6 +11,7 @@ You can log in to either of the following portals using your HCLSoftware ID:
     - File description for the HCL DX Early Access Program Milestone 2 Open Liberty portlet container: **HCL DX EAP M2 LPC image**
     - File name: **dx-lpc-kubernetes-CF218.zip**
 
+
     **Milestone 1**
 
     - File description for the HCL DX Early Access Program Milestone 1 Open Liberty portlet container: **HCL DX EAP M1 LPC image**
@@ -20,8 +21,9 @@ You can log in to either of the following portals using your HCLSoftware ID:
 
     **Milestone 2**
 
-    - File description for the HCL DX Early Access Program Milestone 1 Open Liberty portlet container: **HCL DX EAP M2 LPC image**
+    - File description for the HCL DX Early Access Program Milestone 2 Open Liberty portlet container: **HCL DX EAP M2 LPC image**
     - File name: **dx-lpc-kubernetes-CF218.zip**
+    - File name: **hcl-lpc-kubernetes-CF219.zip**
 
     **Milestone 1**
 
