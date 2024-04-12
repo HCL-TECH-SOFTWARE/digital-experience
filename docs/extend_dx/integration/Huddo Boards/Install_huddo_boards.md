@@ -4,7 +4,7 @@ Learn how to install Huddo Boards in an HCL Digital Experience (DX) environment.
 
 ## Prerequisites
 
-Prerequisites for installing Huddo Boards:
+Make sure the following prerequisites are met before installing Huddo Boards:
 
 - HCL DX environment
 
