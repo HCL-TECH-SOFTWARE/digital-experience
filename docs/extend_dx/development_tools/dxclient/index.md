@@ -309,8 +309,8 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
 !!!note
     Refer to the list of features that were released in the following HCL DX 9.5 Container releases:
 
-    -   HCL DX 9.5 CF219 release: **V1.28.0
-        -   [Enabled multiple environment configuration in node version](#configuring-multiple-environments-in-DXClient)
+    -   HCL DX 9.5 CF219 release: **V1.28.0 
+        - [Enabled multiple environment configuration in node version](#configuring-multiple-environments-in-dxclient)
     
     -   HCL DX 9.5 CF216 release: **V1.25.0
         -   Shows version compatibility details between DX Core and DXClient.
