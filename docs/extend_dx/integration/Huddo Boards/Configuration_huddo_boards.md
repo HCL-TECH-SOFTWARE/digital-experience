@@ -8,7 +8,7 @@ For Huddo Boards to authenticate with your DX environment, define a new OAuth ap
 
 ## SSO for Huddo Boards
 
-If the Huddo Boards deployment is hosted on a different domain from the HCL DX deployment, you must refer [allow SSO for Boards](https://docs.huddo.com/boards/dx/auth/sso/) for extra setup steps.
+If the Huddo Boards deployment is hosted on a different domain from the HCL DX deployment, refer to [Allow SSO for Boards](https://docs.huddo.com/boards/dx/auth/sso/) for additional setup steps.
 
 ## Integrating API Huddo Boards
 
