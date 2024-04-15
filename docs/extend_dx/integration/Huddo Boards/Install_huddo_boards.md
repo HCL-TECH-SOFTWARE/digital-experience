@@ -31,18 +31,17 @@ Follow the steps to uninstall Huddo Boards application from your DX deployment:
 
 1. On your Kubernetes master node, determine what services are currently installed using the following command:
 
-    ```
+    ``` bash
     helm list
     ```
 
 2. Uninstall Huddo Boards using the following command:
 
-    ```
+    ``` bash
     helm uninstall <release_name> --purge
-
-    ```
+    ``` 
     Where <release_name> is `huddo-boards`, for example:
 
-    ```
+    ``` bash
     helm uninstall huddo-boards --purge
     ```
