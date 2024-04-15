@@ -1,4 +1,4 @@
-# Installing Huddo Board in HCL DX
+# Installing Huddo Boards in HCL DX
 
 Learn how to install Huddo Boards in an HCL Digital Experience (DX) environment.
 
@@ -29,7 +29,7 @@ Install Huddo Boards Portlet as an application in DX. For more information, see 
 
 Follow the steps to uninstall Huddo Boards application from your DX deployment:
 
-1. On your Kubernetes master node, to determine what services are currently installed, use the following command:
+1. On your Kubernetes master node, determine what services are currently installed using the following command:
 
     ```
     helm list
