@@ -61,10 +61,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.
 ### DXClient - Update on required access roles
 
 === "Containers"
-    Required access roles for deploying portlets and script applications have been updated. For more information, see [Portlets](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/portlets.md) and [Script Applications](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/scriptapplications.md).
+    Required access roles for deploying portlets and Script Applications have been updated. For more information, see [Portlets](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/portlets.md) and [Script Applications](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/scriptapplications.md).
 
 === "On-Premises"
-    Required access roles for deploying portlets and script applications have been updated. For more information, see [Portlets](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/portlets.md) and [Script Applications](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/scriptapplications.md).
+    Required access roles for deploying portlets and Script Applications have been updated. For more information, see [Portlets](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/portlets.md) and [Script Applications](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/scriptapplications.md).
 
 
 ### DXClient - Multiple environment configuration option in node version
