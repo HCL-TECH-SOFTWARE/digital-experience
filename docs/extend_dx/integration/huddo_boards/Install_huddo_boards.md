@@ -14,7 +14,7 @@ Make sure that you have the following before installing Huddo Boards:
 
     - Docker
 
-- **License Key**: Huddo Boards is a free entitlement for HCL DX customers, but it requires to obtain a license key from [Huddo Store](https://store.huddo.com). 
+- **License Key**: Huddo Boards is a free entitlement for HCL DX customers, but it requires to obtain a license key from the [Huddo Store](https://store.huddo.com). 
 
 
 ## Deploying Huddo Boards using Helm
