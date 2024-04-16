@@ -1,12 +1,12 @@
 # Installing Huddo Boards in HCL DX
 
-Learn how to install Huddo Boards in an HCL Digital Experience (DX) environment.
+Learn how to install [Huddo Boards](https://www.huddo.com/boards) in an HCL Digital Experience (DX) environment.
 
 ## Prerequisites
 
 Make sure that you have the following before installing Huddo Boards:
 
-- HCL DX environment
+- HCL DX environment deployed to a supported K8s platform
 
 - Container runtime to host Boards, either:
 
@@ -14,7 +14,7 @@ Make sure that you have the following before installing Huddo Boards:
 
     - Docker
 
-- **License Key**: Huddo Boards is a free entitlement for HCL DX customers, but it requires to obtain a license key from the [Huddo Store](https://store.huddo.com). 
+- **License Key**: Huddo Boards is a free entitlement for HCL DX customers, but it requires customers to obtain a license key from the [Huddo Store](https://store.huddo.com). 
 
 
 ## Deploying Huddo Boards using Helm
