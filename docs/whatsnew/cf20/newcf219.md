@@ -21,8 +21,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Web Content Manager - Content Reporting limitation for owners and authors
 - Web Content Manager - New query parameters for Content Reporting
-- Practitioner Studio - React 16, 17, and 18 theme profiles now available
-- Experience Framework - New React 17 and 18 modules
+- New React 16, 17, and 18 theme profiles and React 17 and 18 modules now available
 
 **Digital Experience 9.5 Container Version**
 
@@ -121,21 +120,17 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.
 === "On-Premises"
     New query parameters `notauthor` and `notowner` are available to support WCM search API. For more information, see [Query parameters](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md).
 
-### Practitioner Studio - React 16, 17, and 18 theme profiles now available
+### New React 16, 17, and 18 theme profiles and React 17 and 18 modules now available
 
 === "Containers"
-    When creating a new page using [Practitioner Studio](../../build_sites/practitioner_studio/index.md), you can now select React 16, 17, or 18 for the theme profile. 
+    When creating a new page using [Practitioner Studio](../../build_sites/practitioner_studio/index.md), you can now select React 16, 17, or 18 for the theme profile. You can also now use React 17 and 18 modules in your own theme. For information about adding or removing modules, see [Adding or removing a module from a profile](../../build_sites/themes_skins/the_module_framework/add_remove_oob_modules/index.md).
+
+    With these new theme profiles and modules, developers can integrate React [Script Applications](../../guide_me/tutorials/scriptapps/index.md) into DX pages that are developed with recent React versions. However, note that you must not use portlets with different React versions on the same page. For information on how to manage DX modules manually, see [Dependencies as DX Modules](../../guide_me/tutorials/scriptapps/common-setup/optimized-scriptapps/dependencies_as_module.md). 
 
 === "On-Premises"
-    When creating a new page using [Practitioner Studio](../../build_sites/practitioner_studio/index.md), you can now select React 16, 17, or 18 for the theme profile. 
+    When creating a new page using [Practitioner Studio](../../build_sites/practitioner_studio/index.md), you can now select React 16, 17, or 18 for the theme profile. You can also now use React 17 and 18 modules in your own theme. For information about adding or removing modules, see [Adding or removing a module from a profile](../../build_sites/themes_skins/the_module_framework/add_remove_oob_modules/index.md).
 
-### Experience Framework - New React 17 and 18 modules
-
-=== "Containers"
-    You can now use new React 17 and 18 modules in your own theme. For information about adding or removing modules, see [Adding or removing a module from a profile](../../build_sites/themes_skins/the_module_framework/add_remove_oob_modules/index.md).
-
-=== "On-Premises"
-    You can now use new React 17 and 18 modules in your own theme. For information about adding or removing modules, see [Adding or removing a module from a profile](../../build_sites/themes_skins/the_module_framework/add_remove_oob_modules/index.md).
+    With these new theme profiles and modules, developers can integrate React [Script Applications](../../guide_me/tutorials/scriptapps/index.md) into DX pages that are developed with recent React versions. However, note that you must not use portlets with different React versions on the same page. For information on how to manage DX modules manually, see [Dependencies as DX Modules](../../guide_me/tutorials/scriptapps/common-setup/optimized-scriptapps/dependencies_as_module.md).
 
 ## Digital Experience 9.5 Container Version
 
