@@ -70,11 +70,6 @@ git switch -c $branch FETCH_HEAD
 if [ "$publish" == true ]; then
     echo "Perform GH pages deploy"
 
-    if [ "$version" == "in-progress" ]; then
-        version="${version} latest"
-        echo "version=${version}"
-    fi
-
     git config --global user.name hcl-digital-experience
     git config --global user.email notarealemail@hcl.dx
     mike set-default latest

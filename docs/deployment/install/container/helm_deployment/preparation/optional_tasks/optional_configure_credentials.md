@@ -1,4 +1,5 @@
 # Configure Credentials
+
 HCL Digital Experience 9.5 uses several credentials in its deployment to manage access between applications and from outside the container deployment.
 
 ## Adjusting default credentials
@@ -202,7 +203,9 @@ Once the secret is created inside the cluster, you can now reference them in the
 
 #### 3. Check the Required Attributes in Secrets
 
-There are multiple credentials being used in HCL Digital Experience 9.5. Each application has different required attributes for their credential. If you intend to use a secret to configure credentials for a specific application, always check the data attributes of the secret that you will be using in order for the Helm chart to map those values and be passed/cascaded accordingly to each application.
+There are multiple credentials used in HCL Digital Experience 9.5. Each application has different required attributes for credentials. If you want to use a secret to configure credentials for a specific application, check the data attributes of the secret that you are using. This is for the Helm chart to map and have those values passed or cascaded accordingly to each application. 
+
+`Persistence DAM User Credential secret` has a username limitation. The username can begin with lowercase letters or an underscore and can contain only lowercase letters, numbers, underscore, or a dollar sign. The maximum length is 63 characters.
 
 !!! note
     Helm validates the inputs and the deployment will not be applied if required attributes are not set properly in the custom secrets.
@@ -383,7 +386,7 @@ type: "Opaque"
 apiVersion: "v1"
 kind: "Secret"
 data:
-  # Required attribute
+  # Required attribute. The username can begin with lowercase letters or an underscore and can contain only lowercase letters, numbers, underscore, or a dollar sign. The maximum length is 63 characters.
   username: <username>
   # Required attribute
   password: <password>
