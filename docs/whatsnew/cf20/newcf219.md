@@ -125,12 +125,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.
 === "Containers"
     When creating a new page using [Practitioner Studio](../../build_sites/practitioner_studio/index.md), you can now select React 16, 17, or 18 for the theme profile. You can also now use React 17 and 18 modules in your own theme. For information about adding or removing modules, see [Adding or removing a module from a profile](../../build_sites/themes_skins/the_module_framework/add_remove_oob_modules/index.md).
 
-    With these new theme profiles and modules, developers can integrate React Script Applications into DX pages that are developed with recent React versions. Developers can also combine different React versions on the same page. For information on how to manage DX modules manually, see [Dependencies as DX Modules](../../guide_me/tutorials/scriptapps/common-setup/optimized-scriptapps/dependencies_as_module.md). 
+    With these new theme profiles and modules, developers can integrate React [Script Applications](../../guide_me/tutorials/scriptapps/index.md) into DX pages that are developed with recent React versions. For information on how to manage DX modules manually, see [Dependencies as DX Modules](../../guide_me/tutorials/scriptapps/common-setup/optimized-scriptapps/dependencies_as_module.md). 
 
 === "On-Premises"
     When creating a new page using [Practitioner Studio](../../build_sites/practitioner_studio/index.md), you can now select React 16, 17, or 18 for the theme profile. You can also now use React 17 and 18 modules in your own theme. For information about adding or removing modules, see [Adding or removing a module from a profile](../../build_sites/themes_skins/the_module_framework/add_remove_oob_modules/index.md).
 
-    With these new theme profiles and modules, developers can integrate React [Script Applications](../../guide_me/tutorials/scriptapps/index.md) into DX pages that are developed with recent React versions. Developers can also combine different React versions on the same page. For information on how to manage DX modules manually, see [Dependencies as DX Modules](../../guide_me/tutorials/scriptapps/common-setup/optimized-scriptapps/dependencies_as_module.md). 
+    With these new theme profiles and modules, developers can integrate React [Script Applications](../../guide_me/tutorials/scriptapps/index.md) into DX pages that are developed with recent React versions. For information on how to manage DX modules manually, see [Dependencies as DX Modules](../../guide_me/tutorials/scriptapps/common-setup/optimized-scriptapps/dependencies_as_module.md). 
 
 ## Digital Experience 9.5 Container Version
 
