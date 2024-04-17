@@ -118,7 +118,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.
     New query parameters `notauthor`, `notowner`, and `has-workflow` are now available. To add more filters to an author or owner search, you can use the parameters `notauthor` or `notowner`. To search only for items that have a workflow, use the parameter `has-workflow`. For more information, see [Query parameters](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md).
 
 === "On-Premises"
-    New query parameters `notauthor`, `notowner`, and `options=has-workflow` are now available. To add more filters to an author or owner search, you can use the parameters `notauthor` or `notowner`. To search only for items that have a workflow, use the parameter `options=has-workflow`. For more information, see [Query parameters](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md).
+    New query parameters `notauthor`, `notowner`, and `has-workflow` are now available. To add more filters to an author or owner search, you can use the parameters `notauthor` or `notowner`. To search only for items that have a workflow, use the parameter `has-workflow`. For more information, see [Query parameters](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md).
 
 ### New React 16, 17, and 18 theme profiles and React 17 and 18 modules now available
 
