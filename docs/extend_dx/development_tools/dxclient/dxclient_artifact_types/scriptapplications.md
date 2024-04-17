@@ -1,18 +1,22 @@
-# Script applications
+# Script Applications
 
-This topic provides information about the deployment, undeployment, and restoration of script applications.
+This topic provides information about the deployment, undeployment, and restoration of Script Applications.
 
-## Deploy script applications
+## Deploy Script Applications
 
-The `deploy-scriptapplication` command is used with the DXClient tool to push or pull Script Applications between a local development workstation or automation server and DX 9.5 CF19 or later servers. The command will push or pull the files that make up a script application to or from a Script Application instance stored in a Web Content Manager library on the server.
+The `deploy-scriptapplication` command is used with the DXClient tool to push or pull Script Applications between a local development workstation or automation server and DX 9.5 CF19 or later servers. The command will push or pull the files that make up a Script Application to or from a Script Application instance stored in a Web Content Manager library on the server.
+
+
+!!! note
+    You must assign both Editor and Reviewer access to the Script Application Library for the user to deploy Script Applications using DXClient. For more details, refer to [Granting access to the Script Application Library](../../../script_application/script_application_security/access_to_script_app_lib_sitearea/acc_lib.md). 
 
 **Required Files**:
 
-The script application push command in the DXClient tool requires a Script Application zip file or an extracted folder of the same (identified by the `prebuiltZip` or `contentRoot` attributes respectively). For more information on Script Applications, refer to the [Build applications with the Script Application](../../../../guide_me/tutorials/scriptapps/common-setup/basic-scriptapp/basic_nowebpack_setup.md) topics in the HCL DX Help Center.
+The Script Application push command in the DXClient tool requires a Script Application zip file or an extracted folder of the same (identified by the `prebuiltZip` or `contentRoot` attributes respectively). For more information on Script Applications, refer to the [Build applications with the Script Application](../../../../guide_me/tutorials/scriptapps/common-setup/basic-scriptapp/basic_nowebpack_setup.md) topics in the HCL DX Help Center.
 
 **Command**
 
-This command invokes the `deploy-scriptapplication` command inside the DXClient tool to either push or pull a script application:
+This command invokes the `deploy-scriptapplication` command inside the DXClient tool to either push or pull a Script Application:
 
 ```
 dxclient deploy-scriptapplication
@@ -41,6 +45,14 @@ dxclient deploy-scriptapplication pull -h
 
 dxclient deploy-scriptapplication push -h
 ```
+
+!!! notes
+    1. At least one of (a) `wcmContentId`, (b) `wcmContentPath` or (c) both `wcmContentName` and `wcmSiteArea` must be specified. If multiple options are provided, then the priority order goes as follows: (a), then (b), and then (c).
+    2. Use `wcmContentId` only if you are updating an existing Script Application instance. For new Script Applications, specify either (a) `wcmContentPath` or (b) both `wcmContentName` and `wcmSiteArea`.
+    3. `mainHtmlFile` is mandatory.
+    4. The outputfile for pull is generated inside store/outputFiles/sp-pull-output.
+    5. When `prebuiltZip` is specified, the main HTML file path must be relative to the top-level directory in the compressed file.
+    6. Use `wcmContentId` to add or update an existing Script Application into an active project. If you are adding a new Script Application to the project, use either (a) `wcmContentPath` or (b) both `wcmContentName` and `wcmSiteArea` along with `projectContext`.
 
 **Options for the `pull` subcommand**
 
@@ -196,15 +208,6 @@ Use this attribute to specify the absolute or relative path to the Script Applic
 contentRoot <value>
 ```
 
-**Notes:**
-
--   At least one of \(a\) `wcmContentId`, \(b\) `wcmContentPath` or \(c\) both `wcmContentName` and `wcmSiteArea` must be specified. If multiple options are provided, then the priority order goes as follows: \(a\), then \(b\), and then \(c\).
--   Use `wcmContentId` only if you are updating an existing Script Application instance - for new Script Applications specify either \(a\) `wcmContentPath` or \(b\) both `wcmContentName` and `wcmSiteArea`.
--   `mainHtmlFile` is mandatory.
--   The outputfile for pull will be generated inside store/outputFiles/sp-pull-output.
--   When prebuiltZip is specified, the main HTML file path must be relative to the top-level directory in the compressed file.
--   Use `wcmContentId` to add or update an existing Script Application into an active project. If you are adding a new script application to the project, use either \(a\) `wcmContentPath` or \(b\) both `wcmContentName` and `wcmSiteArea` along with `projectContext`.
-
 Command options passed through the command line will override values set in the config.json file.
 
 **Example:**
@@ -239,9 +242,9 @@ If all required options are configured in the config.json at the /dist/src/co
 dxclient deploy-scriptapplication push
 ```
 
-## Undeploy script applications
+## Undeploy Script Applications
 
-The `undeploy-scriptapplication` command is used to remove a script application from a target HCL DX 9.5 CF192 or later servers.
+The `undeploy-scriptapplication` command is used to remove a Script Application from a target HCL DX 9.5 CF192 or later servers.
 
 **Required file**
 
@@ -336,7 +339,7 @@ dxclient undeploy-scriptapplication -wcmContentId <wcm-content-id> -f
 
 ## Restore Script Application
 
-The `restore-scriptapplication` command is used to restore a script application into one of its previous versions present in the target HCL DX 9.5 CF 19 or later servers.
+The `restore-scriptapplication` command is used to restore a Script Application into one of its previous versions present in the target HCL DX 9.5 CF 19 or later servers.
 
 **Required file**
 

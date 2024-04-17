@@ -12,9 +12,9 @@ A local FlexNet entitlement server can also be configured to function without ou
 During the grace period, errors are displayed in the DX Kubernetes deployment server logs. If you encounter these errors, contact HCL Support to resolve the issue. For more information about FlexNet user and device management, see the [What is the HCL License & Delivery Portal (FlexNet Portal?)](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344) knowledge article on the HCL Customer Support portal.
 
 !!!note
-    Entitlement checking is not implemented in HCL DX Cloud Native v9.5 software that is deployed to supported specified operating systems (for example, Windows, Linux, and IBM AIX). Customers who deploy HCL DX Cloud Native v9.5 software to these platforms should plan to measure and report the total number of user sessions to be consumed per contract year, in accordance with the terms of the [HCL DX Cloud Native v9.5 license](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-ofP.t-Y).  
+    Entitlement checking is not implemented in HCL DX Cloud Native v9.5 software that is deployed to supported specified Operating Systems (for example, Windows, Linux or IBM AIX). Customers deploying HCL DX Cloud Native v9.5 software to these platforms should plan to measure and report the total number of User Sessions consumed per contract year, in accordance with the terms of the [HCL DX Cloud Native v9.5 license](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-ofP.t-Y).  
 
-Customers can use web analytics reporting software such as Google Analytics to track user session consumption in their DX v9.5 production deployments. See [Integrate Google Analytics with HCL Digital Experience topic](../../../../build_sites/site_analytics/google_analytics/index.md) for more information.
+Customers can use web analytics reporting software such as Google Analytics to track user session consumption in their DX v9.5 production deployments. For more information, see [Integrate Google Analytics with HCL Digital Experience](../../../../build_sites/site_analytics/google_analytics/index.md). In addition, customers that have deployed DX 9.5 to supported Kubernetes platforms can use the HCL DX 9.5 user session tracking and reporting to monitor user sessions over a specified time period. For more information, see [Tracking user session consumption and exporting usage reports](export_usage_report.md).
 
 ## Prerequisites
 The following elements are the prerequisites for configuring the DX Cloud Native V9.5 entitlements to be deployed to supported Kubernetes platforms on your HCL FlexNet License and Delivery Portal instance for entitlement checking:  
@@ -76,14 +76,15 @@ You must configure these properties to your entitlements to the applicable **DX 
     By using entitlements and device properties that you defined through the mapping process, you will configure those properties to your Helm chart to validate the entitlement period for your software. After completion, your DX 9.5 Container Update 207 and higher deployments verifies the entitlement period is valid for your [HCL DX Cloud Native 9.5 Tier 1 – 7](../../../../get_started/product_overview/offerings.md#hcl-digital-experience-cloud-native) subscription entitlements.
 
 5. Configure the following items of your DX 9.5 Container Update CF207 or later Helm chart according to the DX Cloud Native 9.5 entitlements (Tier 1 – 7) that you are entitled to and have mapped to your HCL FlexNet Server instance:
-- `productionEnvironment:true` - Configure this variable to true if this deployment will be used to support a Production deployment. See the [HCL DX 9.5 license document](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad) for the definitions of production and non-production deployments. 
-- `licenseServer ID` – Set to your HCL FlexNet Software licenseServer ID.
-- `licenseServer URL` – Verify your connection to the HCL FlexNet Server URL. Ensure that your system and network firewalls allow outbound connections to hclsoftware.compliance.flexnetoperations.com.
-- `licenseFeatureNameWithVersion` – Configure this variable according to the [HCL DX Cloud Native 9.5 Tier 1 – 7](../../../../get_started/product_overview/offerings.md#hcl-digital-experience-cloud-native) offering part your organization has acquired and that is mapped to your HCL FlexNet server instances. See HCL DX Cloud Native 9.5 Tier 1 – 7 parts and FlexNet License Server Feature Name table that follows.
-- `licenseManagerUser` – Configure this variable with the user name of the administrator who is authenticated to manage your HCL Software License Portal entitlements. 
-- `licenseManagerPassword` – Configure this variable with the password associated with the user name of the administrator to manage your HCL Software License Portal entitlements that you defined in the previous step.
 
-6. (Optional) [Create and upload a public/private key pair](#secure-license-server-communication-for-license-manager-application). The License Manager uses a default key when no custom key is configured.
+    - `productionEnvironment:true` - Configure this variable to true if this deployment will be used to support a Production deployment. See the [HCL DX 9.5 license document](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad) for the definitions of production and non-production deployments. 
+    - `licenseServer ID` – Set to your HCL FlexNet Software licenseServer ID.
+    - `licenseServer URL` – Verify your connection to the HCL FlexNet Server URL. Ensure that your system and network firewalls allow outbound connections to hclsoftware.compliance.flexnetoperations.com.
+    - `licenseFeatureNameWithVersion` – Configure this variable according to the [HCL DX Cloud Native 9.5 Tier 1 – 7](../../../../get_started/product_overview/offerings.md#hcl-digital-experience-cloud-native) offering part your organization has acquired and that is mapped to your HCL FlexNet server instances. See HCL DX Cloud Native 9.5 Tier 1 – 7 parts and FlexNet License Server Feature Name table that follows.
+    - `licenseManagerUser` – Configure this variable with the user name of the administrator who is authenticated to manage your HCL Software License Portal entitlements. 
+    - `licenseManagerPassword` – Configure this variable with the password associated with the user name of the administrator to manage your HCL Software License Portal entitlements that you defined in the previous step.
+
+6. (Optional) [Create and upload a public/private key pair](#securing-license-server-communication-for-the-license-manager-application). The License Manager uses a default key when no custom key is configured.
 
 **HCL DX Cloud Native 9.5 Tier 1 – 7 parts and HCL FlexNet License Server Feature Name**
 
@@ -135,7 +136,7 @@ See the HCL DX Cloud Native 9.5 entitlement check scenarios for success and erro
 
 Entitlement checking to ensure that the entitlement period for the DX Cloud Native 9.5 part is valid for the purchased term is initiated at deployment start, upgrade, or configuration-change processes. Entitlement checking also occurs once per day for active deployments. 
 
-For more configurations required to enable connectivity to a local license server, see [HCL Digital Experience Cloud Native 9.5 Support for Local License Manager](local_license_server_manager.md).
+Refer to [Configuring a local HCL Flexnet entitlement server](configuring_local_flexnet_entitlement_server.md) topic for additional configurations needed to enable connectivity to a local license server.
 
 ## Securing License Server communication for the License Manager application
 
