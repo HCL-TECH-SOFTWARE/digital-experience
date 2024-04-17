@@ -20,7 +20,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Version**
 
 - Web Content Manager - Content Reporting limitation for owners and authors
-- Web Content Manager - New query parameters for Content Reporting
+- Web Content Manager - New query parameters in WCM Query API
 - Practitioner Studio - React 16, 17, and 18 theme profiles now available
 - Experience Framework - New React 17 and 18 modules
 
@@ -113,10 +113,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.
 === "On-Premises"
     For the **Owner** and  **Author** criteria, user and group attributes only display attributes that can be searched through text input or whose data type is string. For more information, see [Content Reporting limitations](../../manage_content/wcm_authoring/content_reporting/limitations/index.md).
 
-### Web Content Manager - New query parameters for Content Reporting
+### Web Content Manager - New query parameters in WCM Query API
 
 === "Containers"
-    New query parameters `notauthor` and `notowner` are available to support WCM search API. For more information, see [Query parameters](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md).
+    New query parameters `notauthor`, `notowner`, and `options=has-workflow` are now available. For more information, see [Query parameters](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md).
 
 === "On-Premises"
     New query parameters `notauthor` and `notowner` are available to support WCM search API. For more information, see [Query parameters](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md).
