@@ -4,6 +4,7 @@ nav:
     - Integrate HCL Connections: connections
     - Integrate HCL Leap: leap
     - Integrate HCL Volt MX Foundry: mx
+    - Integrate Huddo Boards: huddo_boards
     - Unified Task List Portlet: unified_task_list
     - Web Application Bridge: wab
     - Java Connector Architecture: fea_ai
