@@ -158,7 +158,7 @@
   You're not viewing the latest version.
   <a href="../../../../../../../../latest/deployment/manage/security/people/authentication/oidc/dx-update-webshpere-for-oidc/">
     <strong>Click here to go to latest.</strong>
-  </a>
+  </a> 
 
             </div>
             <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
@@ -4023,18 +4023,16 @@
 </ol>
 <h2 id="installing-openid-connect">Installing OpenID Connect</h2>
 <ol>
-<li>Make sure that your OIDC runtime is up to date.</li>
-</ol>
+<li>
+<p>Make sure that your OIDC runtime is up to date.</p>
 <p>If an interim fix is available for your fix pack, install the OIDC interim fix for the latest OIDC runtime. See <a href="https://www.ibm.com/support/pages/node/290565">Obtaining WebSphere OpenID Connect (OIDC) latest version</a>.</p>
-<ol>
+</li>
 <li>
 <p>Install the OpenID Connect application by using the python script.</p>
-</li>
-<li>
-<p>Navigate to the <code>app_server_root/bin</code> directory.</p>
-</li>
-<li>
-<p>Run the script <code>installOIDCRP.py</code> for each profile on which the OpenID Connect RP is to be installed.</p>
+<ol>
+<li>Navigate to the <code>app_server_root/bin</code> directory.</li>
+<li>Run the script <code>installOIDCRP.py</code> for each profile on which the OpenID Connect RP is to be installed.</li>
+</ol>
 <div class="language-sh highlight"><pre><span></span><code>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>dx-deployment-core-0<span class="w"> </span>bash<span class="w"> </span>-n<span class="w"> </span>dxns
 
 <span class="nb">cd</span><span class="w"> </span>/opt/HCL/AppServer/bin
@@ -4340,7 +4338,7 @@ vi<span class="w"> </span>wimconfig.xml
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 3, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 19, 2024</span>
   </span>
 
     
