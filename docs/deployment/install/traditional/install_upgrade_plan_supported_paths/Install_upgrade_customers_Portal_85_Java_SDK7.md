@@ -1,4 +1,4 @@
-# Installation and upgrade for customers running on Portal 8.5 on WAS 8.5/9.0
+# Installation and upgrade for customers running on DX 8.5 on WAS 8.5/9.0
 
 This guide shows how to upgrade your HCL Digital Experience (DX) Portal or Web Content Manager 8.5 environment to HCL DX Portal or Web Content Manager 9.5. Information on how to either stay at IBM WebSphere Application Server ND 8.5.x or migrate the WAS layer to IBM WebSphere Application Server ND Version 9.0.5.x is also available.
 

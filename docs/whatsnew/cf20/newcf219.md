@@ -5,8 +5,10 @@ The following features and updates are available to customers installing HCL Dig
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Updated Container Staging documentation
-- Updated documentation for installation and upgrade for customers running on Portal 8.5 on WAS 8.5/9.0
+- Improved installation and documentation of Digital Experience V9.5 with CF upgrade
 - User and Groups REST API - Searching special characters
+- Web Content Manager - New query parameters in WCM Query API
+- New React 17 and 18 modules now available
 - DXClient - Update on required access roles
 - DXClient - Multiple environment configuration option in node version
 - New documentation about searching the DX Help Center
@@ -14,14 +16,12 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 8.5 and 9.0 Versions**
 
-- Improved installation of Digital Experience V9.5 with CF upgrade
 - End of Support Announced for Digital Experience v8.5 and 9
 
 **Digital Experience 9.5 Version**
 
 - Web Content Manager - Content Reporting limitation for owners and authors
-- Web Content Manager - New query parameters in WCM Query API
-- New React 16, 17, and 18 theme profiles and React 17 and 18 modules now available
+- New React 16, 17, and 18 theme profiles available
 
 **Digital Experience 9.5 Container Version**
 
@@ -41,13 +41,17 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.
 === "On-Premises"
     Documentation for [Container Staging](../../deployment/manage/container_configuration/container_staging.md) is updated to contain information about [transitioning from non-containerized deployment to a containerized deployment](../../deployment/manage/container_configuration/container_staging.md#overview-of-the-approach), [moving multiple environments](../../deployment/manage/container_configuration/container_staging.md#moving-multiple-environments), [importing into the container HCL DX target server](../../deployment/manage/container_configuration/container_staging.md#importing-into-the-container-hcl-dx-target-server), [syndicating large libraries](../../deployment/manage/container_configuration/container_staging.md#syndicating-large-libraries), and [using resource environment providers](../../deployment/manage/container_configuration/container_staging.md).
 
-### Updated documentation for installation and upgrade for customers running on Portal 8.5 on WAS 8.5/9.0
+### Improved installation and documentation of Digital Experience V9.5 with CF upgrade
 
 === "Containers"
-    The topic [Installation and upgrade for customers running on Portal 8.5 on WAS 8.5/9.0](../../deployment/install/traditional/install_upgrade_plan_supported_paths/Install_upgrade_customers_Portal_85_Java_SDK7.md) contains updated instructions on how to upgrade to the latest available Combined Cumulative Fix. Example package names for Portal 9.5 offerings and the table containing the required repository for each offering are also updated.
+    The topic [Installation and upgrade for customers running on Digital Experience 8.5 on WAS 8.5/9.0](../../deployment/install/traditional/install_upgrade_plan_supported_paths/Install_upgrade_customers_Portal_85_Java_SDK7.md) contains updated instructions on how to upgrade to the latest available Combined Cumulative Fix. Digital Experience offering names and required repositories to upgrade each offering are updated.
+
+    Starting CF219, the upgrade process to a higher cumulative fix includes the installation of v9.5. Refer to [Apply Combined Cumulative Fix](../../deployment/install/traditional/cf_install/index.md) for more information.
 
 === "On-Premises"
-    The topic [Installation and upgrade for customers running on Portal 8.5 on WAS 8.5/9.0](../../deployment/install/traditional/install_upgrade_plan_supported_paths/Install_upgrade_customers_Portal_85_Java_SDK7.md) contains updated instructions on how to upgrade to the latest available Combined Cumulative Fix. Example package names for Portal 9.5 offerings and the table containing the required repository for each offering are also updated.
+    The topic [Installation and upgrade for customers running on Digital Experience 8.5 on WAS 8.5/9.0](../../deployment/install/traditional/install_upgrade_plan_supported_paths/Install_upgrade_customers_Portal_85_Java_SDK7.md) contains updated instructions on how to upgrade to the latest available Combined Cumulative Fix. Digital Experience offering names and required repositories to upgrade each offering are updated.
+
+    Starting CF219, the upgrade process to a higher cumulative fix includes the installation of v9.5. Refer to [Apply Combined Cumulative Fix](../../deployment/install/traditional/cf_install/index.md) for more information.
 
 ### User and Groups REST API - Searching special characters
 
@@ -56,6 +60,26 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.
 
 === "On-Premises"
     You can now search special characters when using the [User and Groups REST API](../../extend_dx/apis/puma_spi/remote_rest_service_for_puma/user_and_groups_rest_api_explorer.md) (for example, cn=ümlaut). 
+
+### Web Content Manager - New query parameters in WCM Query API
+
+=== "Containers"
+    New query parameters `notauthor`, `notowner`, and `has-workflow` are now available. To add more filters to an author or owner search, you can use the parameters `notauthor` or `notowner`. To search only for items that have a workflow, use the parameter `has-workflow`. For more information, see [Query parameters](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md).
+
+=== "On-Premises"
+    New query parameters `notauthor`, `notowner`, and `has-workflow` are now available. To add more filters to an author or owner search, you can use the parameters `notauthor` or `notowner`. To search only for items that have a workflow, use the parameter `has-workflow`. For more information, see [Query parameters](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md).
+
+### New React 17 and 18 modules now available
+
+=== "Containers"
+    You can now use React 17 and 18 modules in your own theme. For information about adding or removing modules, see [Adding or removing a module from a profile](../../build_sites/themes_skins/the_module_framework/add_remove_oob_modules/index.md).
+
+    Developers can integrate React [Script Applications](../../extend_dx/script_application/index.md) and [portlets](../../extend_dx/portlets_development/index.md) into DX pages that are developed with recent React versions. <!-- However, note that you must not use portlets with different React versions on the same page.-->For information on how to manage DX modules manually, see [Dependencies as DX Modules](../../guide_me/tutorials/scriptapps/common-setup/optimized-scriptapps/dependencies_as_module.md).
+
+=== "On-Premises"
+    You can now use React 17 and 18 modules in your own theme. For information about adding or removing modules, see [Adding or removing a module from a profile](../../build_sites/themes_skins/the_module_framework/add_remove_oob_modules/index.md).
+
+    Developers can integrate React [Script Applications](../../extend_dx/script_application/index.md) and [portlets](../../extend_dx/portlets_development/index.md) into DX pages that are developed with recent React versions. <!-- However, note that you must not use portlets with different React versions on the same page.-->For information on how to manage DX modules manually, see [Dependencies as DX Modules](../../guide_me/tutorials/scriptapps/common-setup/optimized-scriptapps/dependencies_as_module.md). 
 
 ### DXClient - Update on required access roles
 
@@ -82,7 +106,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.
 === "On-Premises"
     A new topic containing tips on how to improve your search and find the information you need in the HCL DX Help Center is now available. For more information, see [Tips for searching the Help Center](../../guide_me/search_tips.md).
 
-### Notice of deprecation of Textbox.io Rich Text Editor
+### Notice of deprecation of Textbox.io Rich Text Editor 
 
 === "Containers"
     The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
@@ -91,11 +115,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.
     The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
 
 ## Digital Experience 8.5 and 9.0 Versions
-
-### Improved installation of Digital Experience v9.5 with CF upgrade
-
-=== "On-Premises"
-    Starting CF219, the upgrade process to a higher cumulative fix includes the installation of v9.5. Refer to [Apply Combined Cumulative Fix](../../deployment/install/traditional/cf_install/index.md) for more information.
 
 ### End of Support Announced for Digital Experience v8.5 and 9
 
@@ -112,25 +131,17 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.
 === "On-Premises"
     For the **Owner** and  **Author** criteria, user and group attributes only display attributes that can be searched through text input or whose data type is string. For more information, see [Content Reporting limitations](../../manage_content/wcm_authoring/content_reporting/limitations/index.md).
 
-### Web Content Manager - New query parameters in WCM Query API
+### New React 16, 17, and 18 theme profiles available
 
 === "Containers"
-    New query parameters `notauthor`, `notowner`, and `has-workflow` are now available. To add more filters to an author or owner search, you can use the parameters `notauthor` or `notowner`. To search only for items that have a workflow, use the parameter `has-workflow`. For more information, see [Query parameters](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md).
+    When creating a new page, you can now select React 16, 17, or 18 for the theme profile.
+
+    Developers can integrate React [Script Applications](../../extend_dx/script_application/index.md) and [portlets](../../extend_dx/portlets_development/index.md) into DX pages that are developed with recent React versions. 
 
 === "On-Premises"
-    New query parameters `notauthor`, `notowner`, and `has-workflow` are now available. To add more filters to an author or owner search, you can use the parameters `notauthor` or `notowner`. To search only for items that have a workflow, use the parameter `has-workflow`. For more information, see [Query parameters](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md).
+    When creating a new page, you can now select React 16, 17, or 18 for the theme profile.
 
-### New React 16, 17, and 18 theme profiles and React 17 and 18 modules now available
-
-=== "Containers"
-    When creating a new page using [Practitioner Studio](../../build_sites/practitioner_studio/index.md), you can now select React 16, 17, or 18 for the theme profile. You can also now use React 17 and 18 modules in your own theme. For information about adding or removing modules, see [Adding or removing a module from a profile](../../build_sites/themes_skins/the_module_framework/add_remove_oob_modules/index.md).
-
-    With these new theme profiles and modules, developers can integrate React [Script Applications](../../guide_me/tutorials/scriptapps/index.md) into DX pages that are developed with recent React versions. However, note that you must not use portlets with different React versions on the same page. For information on how to manage DX modules manually, see [Dependencies as DX Modules](../../guide_me/tutorials/scriptapps/common-setup/optimized-scriptapps/dependencies_as_module.md). 
-
-=== "On-Premises"
-    When creating a new page using [Practitioner Studio](../../build_sites/practitioner_studio/index.md), you can now select React 16, 17, or 18 for the theme profile. You can also now use React 17 and 18 modules in your own theme. For information about adding or removing modules, see [Adding or removing a module from a profile](../../build_sites/themes_skins/the_module_framework/add_remove_oob_modules/index.md).
-
-    With these new theme profiles and modules, developers can integrate React [Script Applications](../../guide_me/tutorials/scriptapps/index.md) into DX pages that are developed with recent React versions. However, note that you must not use portlets with different React versions on the same page. For information on how to manage DX modules manually, see [Dependencies as DX Modules](../../guide_me/tutorials/scriptapps/common-setup/optimized-scriptapps/dependencies_as_module.md).
+    Developers can integrate React [Script Applications](../../extend_dx/script_application/index.md) and [portlets](../../extend_dx/portlets_development/index.md) into DX pages that are developed with recent React versions. 
 
 ## Digital Experience 9.5 Container Version
 

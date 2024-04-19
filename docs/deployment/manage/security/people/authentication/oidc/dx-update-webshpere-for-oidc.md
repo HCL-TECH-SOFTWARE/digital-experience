@@ -17,12 +17,12 @@ Follow the tasks to execute this configuration:
 
 1. Make sure that your OIDC runtime is up to date.
    
-   If an interim fix is available for your fix pack, install the OIDC interim fix for the latest OIDC runtime. See [Obtaining WebSphere OpenID Connect (OIDC) latest version](https://www.ibm.com/support/pages/node/290565).
+    If an interim fix is available for your fix pack, install the OIDC interim fix for the latest OIDC runtime. See [Obtaining WebSphere OpenID Connect (OIDC) latest version](https://www.ibm.com/support/pages/node/290565).
 
 2. Install the OpenID Connect application by using the python script.
    
-   1. Navigate to the `app_server_root/bin` directory.
-   2. Run the script `installOIDCRP.py` for each profile on which the OpenID Connect RP is to be installed.
+    1. Navigate to the `app_server_root/bin` directory.
+    2. Run the script `installOIDCRP.py` for each profile on which the OpenID Connect RP is to be installed.
 
     ```sh
     kubectl exec -it dx-deployment-core-0 bash -n dxns
@@ -41,9 +41,9 @@ Follow the tasks to execute this configuration:
     
     For more information, see [Configuring an OpenID Connect Relying Party](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=users-configuring-openid-connect-relying-party).
 
-2. Open the ISC and go to **Applications > Application types > Enterprise Applications > WebsphereOIDCRP >  Manage modules**.
+3. Open the ISC and go to **Applications > Application types > Enterprise Applications > WebsphereOIDCRP >  Manage modules**.
 
-3. Select the available module and click “Apply” then “OK”.
+4. Select the available module and click “Apply” then “OK”.
 
     ![OIDCRP WAS Server Mapping](../../../../../../images/OIDCRP_WAS_SERVER_MAPPING.png)
 
@@ -67,7 +67,7 @@ The interceptor is configured in the ISC under **Security > Global Security > We
     !!!note
         If the interceptor already exists, click on it to access the configuration properties instead of creating it again.
 
-1. Add the following custom properties:
+2. Add the following custom properties:
 
     | Name | Value |
     | --- | --- |
@@ -92,7 +92,7 @@ The interceptor is configured in the ISC under **Security > Global Security > We
         - Make sure to replace the `<IDP_HOSTNAME>` and `<CLIENT_SECRET>` placeholders with your respective details. The client secret is available through your IdP client configuration. Also ensure other properties match your environment configuration, for example, the path filter matches your DX context, the OIDC URLs match your IdP endpoint structure, and the right client id is used.
         - Set the `interceptedPathFilter` property to `/wps/myportal`, so that TAI protects any request to this resource. The value is subject to change and is completely dependent on how you have configured the context root while setting up DX. This property allows you to specify a comma-separated list of regular expression URI patterns. To protect any additional requests to the resources can be specified using this property.
 
-1. Click **Apply** and **OK**.  Click **Save** to save the changes directly to the master configuration in the alert message.
+3. Click **Apply** and **OK**.  Click **Save** to save the changes directly to the master configuration in the alert message.
 
 ## Updating WAS security properties
 
@@ -100,14 +100,14 @@ To update the custom properties to match the OIDC TAI config and its expected be
 
 1. Delete the property `com.ibm.websphere.security.DeferTAItoSSO` if it exists.
 
-1. Add or update the following properties:
+2. Add or update the following properties:
 
     | Name                                                    | Value            |
     | ------------------------------------------------------- | ---------------- |
     | com.ibm.websphere.security.customSSOCookieName          | LtpaToken2       |
     | com.ibm.websphere.security.disableGetTokenFromMBean     | false            |
 
-1. Click **Save**, to save the changes.
+3. Click **Save**, to save the changes.
 
 ## Adding the hostname or server certificate to the WAS trust store
 
@@ -123,15 +123,15 @@ In the ISC, navigate to **Security > SSL certificate and key management > Key st
     | Port | 443 |
     | Alias | hcl-dx-oidc-cert (**Note**: This is the same value that is provided in the interceptor property `signVerifyAlias`) |
 
-1. Click **Retrieve signer information**, to load the certificate details.
+2. Click **Retrieve signer information**, to load the certificate details.
 
-1. Click **OK** and **Save** to save the master configuration.
+3. Click **OK** and **Save** to save the master configuration.
 
 ## Updating the DX Logout flow for OIDC
 
 1. In the IBM WebSphere Application Server Integrated Solutions Console, navigate to **Resources > Resource Environment > Resource Environment Providers > WP ConfigService > Custom properties**:
 
-1. Add or update the following properties:
+2. Add or update the following properties:
 
     | Name | Value |
     |---|---|
@@ -147,11 +147,11 @@ Follow the steps, to set the log in property to `mail` to match the identity att
 
 1. Go to the IBM WebSphere Application Server Integrated Solutions Console.
 
-1. Navigate to **Security > Global security > User account repository > Configure > <LDAP_ID>**
+2. Navigate to **Security > Global security > User account repository > Configure > <LDAP_ID>**
 
-1. Set the field for **Federated repository properties for login** to `mail`.
+3. Set the field for **Federated repository properties for login** to `mail`.
 
-1. Click **OK** and **Save** to save the master configuration.
+4. Click **OK** and **Save** to save the master configuration.
 
 ### Updating IBM WebSphere Application Server sub-component Virtual Member Manager (VMM) to map user attributes
 
@@ -172,7 +172,7 @@ Follow the steps, to set the log in property to `mail` to match the identity att
 
     ```
 
-1. Find the `userSecurityNameMapping` config attribute in the realmConfiguration and change the value of the property `propertyForOutput` to `uniqueName`:
+2. Find the `userSecurityNameMapping` config attribute in the realmConfiguration and change the value of the property `propertyForOutput` to `uniqueName`:
 
     ```xml
     # before
@@ -182,7 +182,7 @@ Follow the steps, to set the log in property to `mail` to match the identity att
     <config:userSecurityNameMapping propertyForInput="principalName" propertyForOutput="uniqueName"/>
     ```
 
-1. Make sure to save the changes.
+3. Make sure to save the changes.
 
 ### Restarting the server / DX core to apply all changes
 
