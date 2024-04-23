@@ -25,9 +25,6 @@ To use the Web Content Manager API, you have 2 options:
     -   /opt/WebSphere/PortalServer/base/wp.base/shared/app/wp.base.jar
     This code can then be used in your Web Content Manager content by using custom plug-ins. See [How to create custom plug-ins](../wcm_custom_plugin/index.md) for further information.
 
-## HCLSoftware U learning materials
-
-For an introduction and a demo on using DX for developers, go to [DX for Developers (Advanced)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1777). To try it out yourself, refer to [DX Setup Local Java Development Environment Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-300_DX_Setup_a_Java_Development_Environment_Lab.pdf).
 
 -   **[How to use the Web Content Manager API](wcm_dev_api_using.md)**  
 The workspace is the heart of the HCL Web Content Manager API. Items are created, saved, deleted and searched for in the workspace item. A workspace is basically an interface to Web Content Manager that is associated with a user. Using a workspace item, the user can perform operations as that user.
@@ -42,4 +39,6 @@ You can run various syndication functions by using the web content API.
 -   **[Web Content Manager Multilingual Solution API](wcm_mls_api.md)**  
 This set of APIs allow you to retrieve information about the configured Multilingual Solution (MLS) libraries and also to retrieve the translated content items for a given default language content ID (for example, from English content find translated French and Spanish strings).
 
+## HCLSoftware U learning materials
 
+For an introduction and a demo on using DX for developers, go to [DX for Developers (Advanced)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1777). To try it out yourself, refer to [DX Setup Local Java Development Environment Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-300_DX_Setup_a_Java_Development_Environment_Lab.pdf).
