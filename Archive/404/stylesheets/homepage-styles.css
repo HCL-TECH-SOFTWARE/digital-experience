@@ -1,0 +1,291 @@
+
+.md-grid {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 72rem;
+}
+
+.md-banner {
+    background-color: black;
+    color: var(--md-footer-fg-color);
+    overflow: auto;
+}
+/*Resource dropdown button styles*/
+
+.dropbtn {
+  color: white;
+  font-size: 16px;
+  border: none;
+  z-index: 9999;
+}
+
+.dropdown {
+  float: right;
+  z-index: 9999;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #212121;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 9999;
+  font-size: 14px;
+  
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 2px 6px;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+/*Body part style*/
+
+.section-flexbox-row {
+    color: var(--md-primary-bg-color);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 65rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.align-top {
+    align-items: top;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.flex-start {
+    justify-content: flex-start;
+}
+
+.flex-break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.nowrap {
+    flex-wrap: nowrap;
+}
+
+
+/* Hero section styles */
+.dx-hero-container {
+    padding-top: 0rem;
+    background: url(../assets/CNX_hero.jpg) no-repeat;
+    background-position: left bottom;
+    background-size: cover;
+    height: 20rem;
+	min-height: 90vh;
+}
+
+
+.dx-hero__content h3 {
+    color: white;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 700;
+}
+
+.dx-hero__content h1 {
+    color: white;
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 500;
+}
+
+.dx-hero__content {
+    width: 40%;
+}
+
+
+.section {
+	width: 100%;
+}
+
+.container {
+	width:100%;
+	display: block;
+	margin:auto;
+	margin-top:5%;
+}
+	
+.content-section {
+
+   float: left;
+   width:100%;
+   color: white;
+   min-width:520px; 
+}
+
+.content-section a {
+	color: lightgreen;
+}
+
+
+@media screen and (max-width: 768px) {
+	.section-flexbox-row {
+    color: var(--md-primary-bg-color);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 30rem;
+    margin-right: auto;
+    margin-left: auto;
+    flex-wrap: wrap;
+}
+
+.container {
+	width:100%;
+	display: block;
+	margin:auto;
+}
+	
+.content-section {
+
+   float: none;
+   width:100%;
+   color: white;
+   min-width:120px;
+   justify-content: center;
+}
+
+.content-section a {
+	color: lightgreen;
+}
+
+
+
+@media screen and (max-width:30em) {
+
+    .section-flexbox-row {
+        color: var(--md-primary-bg-color);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .align-top {
+        justify-content: flex-start;
+    }
+    
+    .align-center {
+        justify-content: space-around;
+    }
+    
+    .space-around {
+        align-items: center;
+    }
+    
+    .flex-start {
+        align-items: top;    
+    }
+
+    .dx-hero-container {
+        height: auto;
+    }
+
+    .dx-hero__content {
+        width: 100%;
+        min-width: 200px
+    }
+
+    .section-designedforyou {
+        height: auto
+    }
+
+    .dx-dfu__image {
+        display: none
+    }
+
+    .dx-dfu__content {
+        width: 100%;
+        margin-left: 0
+    }
+
+    .academy-hero__content {
+        width: 100%;
+    }
+
+    .academy-hero__image {
+        display: none;
+    }
+
+    .section-personas {
+        height: auto;
+    }
+    
+    .section-academy {
+        height: auto;
+    }
+
+    .persona-item {
+        width: 100%
+    }
+
+    .link-item {
+        width: 100%
+    }
+}
+
+
+@media only screen and (max-width:64em) and (min-width:30em),
+        only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+    .dx-hero-container {
+        height: auto;
+    }
+
+    .dx-hero__content {
+        width: 100%;
+    }
+
+    .section-designedforyou {
+        height: auto
+    }
+
+    .dx-dfu__image {
+        display: none
+    }
+
+    .dx-dfu__content {
+        width: 100%;
+        margin-left: 0
+    }
+
+    .academy-hero__content {
+        width: 100%;
+    }
+
+    .academy-hero__image {
+        display: none;
+    }
+
+    .section-personas {
+        height: auto;
+    }
+    
+    .section-academy {
+        height: auto;
+    }
+
+}
+

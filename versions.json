@@ -35,5 +35,12 @@
     "version": "CF213",
     "title": "CF213",
     "aliases": []
+  },
+  {
+    "version": "Archive",
+    "title": "Archive",
+    "aliases": [
+      "push"
+    ]
   }
 ]
