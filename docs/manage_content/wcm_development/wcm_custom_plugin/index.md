@@ -1,4 +1,4 @@
-# Create a custom plug-ins
+# Creating custom plug-ins
 
 A custom plug-in is a reusable Java class that you create to run a task. You can create custom plug-ins such as custom workflow actions, plug-ins to run when a page is rendered, plug-ins to store multi-locale text strings and plug-ins to run when a file is uploaded.
 
