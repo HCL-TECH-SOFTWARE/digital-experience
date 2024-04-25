@@ -2,6 +2,7 @@ title: Integrate Applications
 nav:
     - index.md
     - Integrate HCL Connections: connections
+    - HCL Commerce: commerce.md
     - Integrate HCL Leap: leap
     - Integrate HCL Volt MX Foundry: mx
     - Integrate Huddo Boards: huddo_boards

@@ -8,6 +8,8 @@ Integrate HCL Connections with HCL Digital Experience.
 Integrate HCL Volt MX Foundry with HCL Digital Experience.
 -   **[HCL Leap](leap/index.md)**  
 Integrate HCL Leap with HCL Digital Experience.
+-   **[HCL Commerce](commerce.md)**  
+Integrate HCL Commerce with HCL Digital Experience.
 -   **[Huddo Boards](../integration/huddo_boards/index.md)**<br>
 Integrate Huddo Boards with HCL Digital Experience.
 -   **[Unified Task List](unified_task_list/index.md)**  
