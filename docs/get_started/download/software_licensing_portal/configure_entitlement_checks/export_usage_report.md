@@ -32,9 +32,9 @@ If no unique DX Kubernetes deployment identity is set in the helm value, the dep
 
 Exporting the report in CSV format is the default option when exporting the usage report to the data table. The report contains the following details:
 
-- `month` columns show the usage of each month.
-- `sessions` columns show the total usage of that particular month.
-- `gaps` columns represent the gaps between the dates, with an underscore. If there are multiple gaps, they are separated by semicolons.
+- `month` column shows the usage of each month.
+- `sessions` column shows the total usage of that specific month.
+- `gaps` column shows the gaps between the dates, represented by an underscore. If there are multiple gaps, they are separated by semicolons (;).
 - `environment` column indicates the identity of the environment where the usage occurred.
 
 To export the user session usage report, use the following command and include the start date and end date:
@@ -49,7 +49,7 @@ You can send the result to a file using the following command:
 kubectl exec -it <release name>-license-manager-0 -n <namespace> -- sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD> > /tmp/output.csv
 ```
 !!!note
-    The timestamps provided indicate the time in UTC format.
+    The timestamps indicate the time in UTC format.
 
 ### Expected result
 
@@ -75,7 +75,7 @@ month,sessions,gaps,environment
 
 ## Exporting the user session usage report in human readable format
 
-To export the user session usage report, use the following command and include the start date, end date and `--pretty`:
+To export the user session usage report, use the following command and include the start date, end date, and `--pretty`:
 
 ```
 kubectl exec -it <release name>-license-manager-0 -n <namespace> -- sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD> --pretty
