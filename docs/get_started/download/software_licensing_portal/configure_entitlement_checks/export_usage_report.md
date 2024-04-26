@@ -28,7 +28,7 @@ configuration:
 
 If no unique DX Kubernetes deployment identity is set in the helm value, the deployment uses the release name and namespace combination by default. See [Kubernetes Overview](../../../../get_started/plan_deployment/container_deployment/index.md) for deployment and configuration guidance. 
 
-## Exporting the user session usage report in csv format
+## Exporting the user session usage report in CSV format
 
 This is the default option to export the usage report to the data table. It contains the following details:
 
@@ -43,7 +43,7 @@ To export the user session usage report, use the following command and include t
 kubectl exec -it <release name>-license-manager-0 -n <namespace> -- sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD>
 ```
 
-The result can be sent to a file using the following command:
+You can send the result to a file using the following command:
 
 ```
 kubectl exec -it <release name>-license-manager-0 -n <namespace> -- sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD> > /tmp/output.csv
@@ -122,5 +122,5 @@ Total session usage: 34739664
 ```
 
 
-Optionally, you can import the local .txt/.csv file to a spreadsheet or other reporting tools for viewing and further analysis.
+Optionally, you can import the local .txt or .csv file to a spreadsheet or other reporting tools for viewing and further analysis.
 
