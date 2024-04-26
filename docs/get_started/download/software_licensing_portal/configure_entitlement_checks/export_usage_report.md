@@ -30,7 +30,7 @@ If no unique DX Kubernetes deployment identity is set in the helm value, the dep
 
 ## Exporting the user session usage report in CSV format
 
-This is the default option to export the usage report to the data table. It contains the following details:
+Exporting the report in CSV format is the default option when exporting the usage report to the data table. The report contains the following details:
 
 - `month` columns show the usage of each month.
 - `sessions` columns show the total usage of that particular month.
