@@ -13,12 +13,12 @@ This sizing work started with rendering scenarios of Web Content Management (WCM
 
 ## Conclusion
 
-This performance guidance aims to understand how  adjustments to the core tuning, the scaling of pods and ratios of key pod limits can improve the rendering response time in a single-node cluster AWS instance (c5.9xlarge).
+This performance guidance aims to understand how adjustments to the core tuning, the scaling of pods and ratios of key pod limits can improve the rendering response time in a single-node cluster AWS instance (c5.9xlarge).
 
 
 - Changes to the number and limits for the following pods significantly improve the responsiveness of the setup and enable the system to handle 2500 concurrent users with comfortable response time in rendering scenarios. 
 
-- Core tuning steps mentioned in this section ( [coreTuning](#DX core tuning and enhancements after 10k concurrent user runs) )
+- Also core tuning steps mentioned in this section [DX core tuning and enhancements after 10k concurrent user runs](#core-tuning)
 
 | Pod name                    | number of pods | Container                   | Container image             | Container CPU request and limit | Container memory request and limit |
 | --------------------------- | -------------- | --------------------------- | --------------------------- | ------------------------------- | ---------------------------------- |
