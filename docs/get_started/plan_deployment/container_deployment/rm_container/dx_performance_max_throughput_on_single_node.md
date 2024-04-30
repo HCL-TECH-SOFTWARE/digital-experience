@@ -180,7 +180,7 @@ As part of authoring, pages and portlets were added manually. The following list
 
 After users completed the authoring steps, the anonymous portal user and authenticated users (added to openLDAP) must render the pages. Every page request uses a `/GET API` call (for example, `/wps/portal/portletsperf/page1`) and there is a response assertion in a sampler to validate the content html in the response body. 
 
-### Combined DX rendering of WCM, DAM, and pages and portlets
+## Combined DX rendering of WCM, DAM, and pages and portlets
 
 For rendering sizing, all rendering JMeter scripts of WCM, DAM, and pages and portlets are combined. See the following section for details of load distribution.
 
@@ -190,7 +190,7 @@ For rendering sizing, all rendering JMeter scripts of WCM, DAM, and pages and po
 - DAM - 30 %
 - Pages and Portlets - 30 %
 
-### Result Summary
+## Result Summary
 
 - Following were stages in which the performance test has been conducted starting with config DX kube configuration on c5.4xlarge instance
 
@@ -252,7 +252,7 @@ For rendering sizing, all rendering JMeter scripts of WCM, DAM, and pages and po
 |  | Get image - jpeg 155 kb custom url - curljpg155kb - (13744.08) | Get image - jpeg 155 kb custom url - curljpg155kb - (21449.53) |
 |  | Get video - mp4 15mb - idmp415mb - (7650.36)                   | Get video - webm 2mb - friendly url - furlwebm2mb - (11830.96) |
 
-*Observations:*
+### Observations
 
 - For 3000 concurrent users observed total high response time and in particular for WCM APIs.
 
@@ -268,7 +268,7 @@ For rendering sizing, all rendering JMeter scripts of WCM, DAM, and pages and po
 
 
 
-## stage-2 Helm Values
+### stage-2 Helm Values
 
                                         Requests                Limits 
 | Component                  | No of pods | cpu(m)   | memory(Mi) | cpu(m)   | memory(Mi) |
@@ -377,7 +377,7 @@ As we observed very high response time for individual API requests, we started t
 
 
 
-## stage-3 Helm Values
+### stage-3 Helm Values
 
                                         Requests                Limits 
 | Component                     | No of pods | cpu(m)    | memory(Mi) | cpu(m)    | memory(Mi) |
@@ -396,7 +396,7 @@ As we observed very high response time for individual API requests, we started t
 | **Total**                     |            | **33700** | **54956**  | **33700** | **54956**  |
 
 
-## Details of Pods in native-kube deployment
+### Details of Pods in native-kube deployment
 
 ![](../../../../images/pods_single-node_c5_9xlarge_config.png)
 
