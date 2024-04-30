@@ -396,7 +396,7 @@ As we observed very high response time for individual API requests, we started t
 | **Total**                     |            | **33700** | **54956**  | **33700** | **54956**  |
 
 
-## Pods in native-kube deployment are multiple pods in single node cluster
+## Details of Pods in native-kube deployment
 
 ![](../../../../images/pods_single-node_c5_9xlarge_config.png)
 
