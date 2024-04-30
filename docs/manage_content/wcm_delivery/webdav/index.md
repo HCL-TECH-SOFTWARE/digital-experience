@@ -38,7 +38,7 @@ When using WebDAV with web content, be aware of the following considerations.
 -   **Drafts**
 
     Starting CF220, drafts are not exposed with WebDAV for WCM. This is to avoid issues with drafts having the same name as the live or expired items.
-    To re-enable the support for Drafts, go to the WebSphere® Integrated Solutions Console. In the **WCM WCMConfigService** service, change the following configuration parameter to `false`. If the setting does not exist, it can be added.
+    To re-enable the support for Drafts, go to the WebSphere® Integrated Solutions Console. In the **WCM WCMConfigService** service, change the following configuration parameter to `false`. If the setting does not exist, you can add it.
 
     ```
     wcm.webdav.filterdrafts=false
