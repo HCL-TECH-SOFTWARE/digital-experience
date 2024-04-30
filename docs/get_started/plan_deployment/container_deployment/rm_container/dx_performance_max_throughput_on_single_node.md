@@ -17,7 +17,7 @@ This performance guidance aims to understand how adjustments to the core tuning,
 
 - Core tuning details are mentioned in this section [DX core tuning](#dx-core-tuning-and-enhancements-after-10k-concurrent-user-run)
 
-- Changes to the number and limits for the following pods significantly improve the responsiveness of the setup and enable the system to handle 2500 concurrent users with comfortable average and 90th percentile response times in range of ~4 to 5 secs.
+- Changes to the number and limits for the following pods significantly improve the responsiveness of the setup and enable the system to handle 2500 concurrent users with comfortable average and 90th percentile(pct) response times in range of ~4 to 5 secs.
 
 
 | Pod name                    | number of pods | Container                   | Container image             | Container CPU request and limit | Container memory request and limit |
