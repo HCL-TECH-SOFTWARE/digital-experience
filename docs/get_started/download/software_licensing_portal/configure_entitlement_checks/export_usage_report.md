@@ -34,7 +34,7 @@ Exporting the report in CSV format is the default option when exporting the usag
 
 - `month` column shows the usage of each month.
 - `sessions` column shows the total usage of that specific month.
-- `gaps` column shows the gaps between the dates, represented by an underscore. If there are multiple gaps, they are separated by semicolons (;).
+- `gaps` column shows the gaps between the dates, represented by an underscore (_). If there are multiple gaps, they are separated by semicolons (;).
 - `environment` column indicates the identity of the environment where the usage occurred.
 
 To export the user session usage report, use the following command and include the start date and end date:
