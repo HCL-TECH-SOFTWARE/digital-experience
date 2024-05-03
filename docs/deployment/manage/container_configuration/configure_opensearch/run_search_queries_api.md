@@ -35,14 +35,7 @@ The following example shows the basic structure of a search query:
 
 The filter section of the query will always be enriched during processing with a filter for the users ACLs. This ensures a search result will only contain allowed fields.
 
-## Limiting scope
-
-If you want to limit the scope of a search query to only a specific Content Source, your can use the `scope` property in your query.
-This accepts the UUIDs of Content Sources and will limit your search query to the selected Content Sources
-
-## Using aggregations
-
-## Page and page size
+Please be aware that a search query is currently limited to 10000 results.
 
 ## Example queries
 
@@ -153,4 +146,4 @@ This will return all documents containing the word `Product` in their `title` fi
 
 This will return all documents containing the word `Product` in their `title` field but only the ones with the `locale` being `fr`. The filter has no influence on scoring and is purely binary.
 
-### 
+### Using aggregations

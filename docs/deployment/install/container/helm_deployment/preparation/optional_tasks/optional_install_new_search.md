@@ -1,0 +1,129 @@
+# Installing OpenSearch
+
+If you want to leverage the capabilities of the OpenSearch based search, you can follow the steps described on this page to get the search configured.
+
+## Prerequisites
+
+To leverage the new search deployment, you need to have a DX deployment running inside Kubernetes. That deployment must at least contain DX Core, as it contains WCM and is used for ACL lookup.
+
+## Offered features
+
+At this current stage, the search provides the following functionality:
+
+- WCM Crawling
+- Push API for use with WCM Content Sources
+- Search via REST API
+
+## Preparing your Kubernetes Cluster
+
+Before you can run OpenSearch in your Kubernetes cluster, you will need to ensure that your Kubernetes Nodes meet the requirements.
+
+This includes the configuration of both the maximum number of open files as well as the maximum memory allocation capabilities.
+
+Ensure that you have at least configured `nofile 65536` and `vm.max_map_count=262144` on your Kubernetes nodes. Configuration may depend on your nodes setup. Please regard the documentation of your cloud provider for additional information on how to adjust these values.
+
+If you want to know more about these important settings for OpenSearch, you can also refer to [Important Settings](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/index/#important-settings) in the official OpenSearch documentation.
+
+## Load container images
+
+## Prepare certificates for inter-service communication
+
+The search used certificate authentication for the communication between OpenSearch Nodes and the Search Middleware. To get this communication established, you will need to create certificates and store them in their respective secrets.
+
+The following commands will configure the secrets that will then be consumed by the applications.
+
+```sh
+# Root CA for certificates
+openssl genrsa -out root-ca-key.pem 2048
+openssl req -new -x509 -sha256 -key root-ca-key.pem -subj "/C=US/O=ORG/OU=UNIT/CN=opensearch" -out root-ca.pem -days 730
+
+# Admin cert for OpenSearch configuration
+openssl genrsa -out admin-key-temp.pem 2048
+openssl pkcs8 -inform PEM -outform PEM -in admin-key-temp.pem -topk8 -nocrypt -v1 PBE-SHA1-3DES -out admin-key.pem
+openssl req -new -key admin-key.pem -subj "/C=US/O=ORG/OU=UNIT/CN=A" -out admin.csr
+openssl x509 -req -in admin.csr -CA root-ca.pem -CAkey root-ca-key.pem -CAcreateserial -sha256 -out admin.pem -days 730
+
+# Node cert for inter node communication
+openssl genrsa -out node-key-temp.pem 2048
+openssl pkcs8 -inform PEM -outform PEM -in node-key-temp.pem -topk8 -nocrypt -v1 PBE-SHA1-3DES -out node-key.pem
+openssl req -new -key node-key.pem -subj "/C=US/O=ORG/OU=UNIT/CN=opensearch-node" -out node.csr
+openssl x509 -req -in node.csr -CA root-ca.pem -CAkey root-ca-key.pem -CAcreateserial -sha256 -out node.pem -days 730
+
+# Client cert for application authentication
+openssl genrsa -out client-key-temp.pem 2048
+openssl pkcs8 -inform PEM -outform PEM -in client-key-temp.pem -topk8 -nocrypt -v1 PBE-SHA1-3DES -out client-key.pem
+openssl req -new -key client-key.pem -subj "/C=US/O=ORG/OU=UNIT/CN=opensearch-client" -out client.csr
+openssl x509 -req -in client.csr -CA root-ca.pem -CAkey root-ca-key.pem -CAcreateserial -sha256 -out client.pem -days 730
+
+# Create kubernetes secrets
+kubectl create secret generic search-admin-cert --from-file=admin.pem --from-file=admin-key.pem --from-file=root-ca.pem -n YOUR_NAMESPACE
+kubectl create secret generic search-node-cert --from-file=node.pem --from-file=node-key.pem --from-file=root-ca.pem -n YOUR_NAMESPACE
+kubectl create secret generic search-client-cert --from-file=client.pem --from-file=client-key.pem --from-file=root-ca.pem -n YOUR_NAMESPACE
+```
+
+Please adjust the `YOUR_NAMESPACE` placeholder in accordance with your Kubernetes Namespace in which you have DX and Search deployed.
+If you do not perform this step, the OpenSearch Nodes will not get initialized and the Search Middleware can not communicate with them.
+
+## Prepare custom-search-values.yaml
+
+## Run Helm install
+
+## Configure DX install to pass through Search
+
+To reach the search REST API endpoints, you will have to configure the routing inside the DX helm chart. In the `custom-values.yaml`, set the following value:
+
+```yaml
+configuration:
+  networking:
+    # Search middlerware service name
+    searchMiddlewareService: "SEARCH_DEPLOYMENT_NAME-search-middleware-query"
+```
+
+Replace the `SEARCH_DEPLOYMENT_NAME` placeholder with the deployment name that you have used during the Helm install section. This will allow haproxy to pass through traffic to the Search Middleware.
+
+After you have adjusted the `custom-values.yaml`, use Helm upgrade to apply the changes.
+
+```sh
+helm upgrade DX_DEPLOYMENT_NAME -n YOUR_NAMESPACE -f custom-values.yaml path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz
+```
+
+Replace the `YOUR_NAMESPACE` placeholder with your deployment namespace and the `DX_DEPLOYMENT_NAME` with the name that you have chosen during the DX install.
+
+
+## Validate setup
+
+You can now validate the setup using the following methods:
+
+### Check running Pods
+
+You can run a kubectl command to validate that all Search related pods are running:
+
+```sh
+kubectl get pods -n YOUR_NAMESPACE
+```
+
+Replace the `YOUR_NAMESPACE` placeholder with your deployment namespace.
+
+The result should look similar to this, with your Pods entering the `Running` and ready state after a short while.
+
+```text
+NAME                                                         READY   STATUS              RESTARTS        AGE
+dx-deployment-core-0                                         3/3     Running             0               12m
+dx-deployment-digital-asset-management-0                     1/1     Running             0               7m13s
+dx-deployment-haproxy-7f487c4d8-4kx9r                        1/1     Running             0               12m
+dx-deployment-image-processor-7774d99448-rqfd2               1/1     Running             0               12m
+dx-deployment-persistence-connection-pool-69584cd8f5-7hd76   1/1     Running             1 (9m48s ago)   12m
+dx-deployment-persistence-node-0                             3/3     Running             0               12m
+dx-deployment-ring-api-5c4c75b7c7-85qpk                      1/1     Running             0               12m
+dx-deployment-runtime-controller-657fbbf7c7-4kbdk            1/1     Running             0               12m
+dx-search-open-search-manager-0                              1/1     Running             0               32s
+dx-search-search-middleware-query-5f7fb4798f-gglvj           1/1     Running             0               32s
+```
+
+### Validate access to API explorer
+
+You can access the Search REST API through the following URL:
+
+`https://your_dx_host/dx/api/search/v2/explorer`
+
+Replace the `your_dx_host` with the hostname under which your DX deployment is available.

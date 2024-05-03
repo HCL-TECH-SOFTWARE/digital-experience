@@ -71,7 +71,7 @@ To create a new Content Source for WCM, call the `/dx/api/search/v2/contentsourc
 {
   "name": "mytest",
   "type": "wcm",
-  "aclLookupHost": "https://dx-deployment-core:10042"
+  "aclLookupHost": "https://dx-core:10042"
 }
 ```
 
@@ -94,7 +94,7 @@ The response of the API call looks like this:
   "type": "wcm",
   "created": 1712661954517,
   "updated": 1712661954517,
-  "aclLookupHost": "https://dx-deployment-core:10042"
+  "aclLookupHost": "https://dx-core:10042"
 }
 ```
 
