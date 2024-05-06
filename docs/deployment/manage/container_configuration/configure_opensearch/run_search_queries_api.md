@@ -145,5 +145,3 @@ This will return all documents containing the word `Product` in their `title` fi
 ```
 
 This will return all documents containing the word `Product` in their `title` field but only the ones with the `locale` being `fr`. The filter has no influence on scoring and is purely binary.
-
-### Using aggregations
