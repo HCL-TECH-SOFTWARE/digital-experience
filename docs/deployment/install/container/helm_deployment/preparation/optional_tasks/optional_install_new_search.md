@@ -1,18 +1,20 @@
-# Installing OpenSearch
+# Installing new Search
 
-If you want to leverage the capabilities of the OpenSearch based search, you can follow the steps described on this page to get the search configured.
+If you want to leverage the capabilities of the OpenSearch based Search, you can follow the steps described on this page to get the Search configured.
 
 ## Prerequisites
 
-To leverage the new search deployment, you need to have a DX deployment running inside Kubernetes. That deployment must at least contain DX Core, as it contains WCM and is used for ACL lookup.
+To leverage the new Search deployment, you need to have a DX deployment running inside Kubernetes. That deployment must at least contain DX Core, as it contains WCM and is used for ACL lookup.
 
-## Offered features
+## Offered features / Limitations
 
-At this current stage, the search provides the following functionality:
+At this current stage, the Search provides the following functionality and limitations:
 
 - WCM Crawling
 - Push API for use with WCM Content Sources
 - Search via REST API
+- The REST API request body size is limited to `5MB`
+- A search result is limited to 10,000 results
 
 ## Preparing your Kubernetes Cluster
 
@@ -20,13 +22,13 @@ Before you can run OpenSearch in your Kubernetes cluster, you will need to ensur
 
 This includes the configuration of both the maximum number of open files as well as the maximum memory allocation capabilities.
 
-Ensure that you have at least configured `nofile 65536` and `vm.max_map_count=262144` on your Kubernetes nodes. Configuration may depend on your nodes setup. Please regard the documentation of your cloud provider for additional information on how to adjust these values.
+Ensure that you have at least configured `nofile 65536` and `vm.max_map_count=262144` on your Kubernetes nodes. The configuration depend on your Kubernetes node setup. Please refer to the documentation of your cloud provider for additional information on how to adjust these values.
 
 If you want to know more about these important settings for OpenSearch, you can also refer to [Important Settings](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/index/#important-settings) in the official OpenSearch documentation.
 
 ## Prepare certificates for inter-service communication
 
-The search used certificate authentication for the communication between OpenSearch Nodes and the Search Middleware. To get this communication established, you will need to create certificates and store them in their respective secrets.
+The Search used certificate authentication for the communication between OpenSearch Nodes and the Search Middleware. To get this communication established, you will need to create certificates and store them in their respective secrets.
 
 The following commands will configure the secrets that will then be consumed by the applications.
 
@@ -64,7 +66,7 @@ If you do not perform this step, the OpenSearch Nodes will not get initialized a
 
 ## Prepare custom-search-values.yaml
 
-To configure your search deployment, you will need to prepare your `custom-search-values.yaml` which contains all configurable settings.
+To configure your Search deployment, you will need to prepare your `custom-search-values.yaml` which contains all configurable settings.
 
 This custom values file only needs to contain the parameters that you want to overwrite with your preferred settings.
 
@@ -77,16 +79,23 @@ helm show values hcl-dx-search.tar.gz > values.yaml
 
 This can be used as a blueprint for your `custom-search-values.yaml`.
 
-Ensure to adjust the image repository to the repository where you have put the DX container images to:
+Ensure to adjust the image repository, tags and paths to the repository where you have put the DX container images to:
 
 ```yaml
 # Fill in the values fitting to your configuration
 # Ensure to use the correct image version tags
 images:
-    repository: "my/test/repository"
+  repository: "my/test/repository"
+  tags:
+    openSearch: "IMAGE_TAG_FROM_LOADED_IMAGES"
+    searchMiddleware: "IMAGE_TAG_FROM_LOADED_IMAGES"
+  # Image name for each application
+  names:
+    openSearch: "path/in/your/repository/dx-opensearch"
+    searchMiddleware: "path/in/your/repository/dx-search-middleware"
 ```
 
-Configure other parameters of the search deployment based on your requirements.
+Configure other parameters inside the `custom-search-values.yaml` of the Search deployment based on your requirements.
 The default out-of-the-box deployment is a minimal deployment with one replica per service.
 
 ## Run Helm install
@@ -108,7 +117,7 @@ helm install -n my-namespace -f path/to/your/custom-search-values.yaml your-rele
 
 ## Configure DX install to pass through Search
 
-To reach the search REST API endpoints, you will have to configure the routing inside the DX helm chart. In the `custom-values.yaml`, set the following value:
+To reach the Search REST API endpoints, you will have to configure the routing inside the DX helm chart. In the `custom-values.yaml`, set the following value:
 
 ```yaml
 configuration:
