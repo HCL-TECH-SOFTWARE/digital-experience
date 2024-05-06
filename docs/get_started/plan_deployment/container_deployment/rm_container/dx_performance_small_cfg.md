@@ -720,6 +720,9 @@ As we observed very high response time for individual API requests, we started t
 
  ![](../../../../images/Core_Tuning_Log_Level_Details.png)
 
+ !!!note
+       Please restart all core pods after executing all the tunings steps mentioned above.
+
  - Also DB2 tuning performed by executing DB2 Reorg and Runstats.
 
 
