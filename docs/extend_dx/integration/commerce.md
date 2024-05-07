@@ -9,6 +9,8 @@ With the [HCL Commerce integration with HCL DX](https://help.hcltechsw.com/comme
 
 The HCL Commerce integration provides a Reference Store application that retrieves specific content from HCL DX and renders presentation in the form of static and video ad e-Marketing Spots.
 
+In addition, you can also use HCL Commerce as a headless commerce solution and integrate this solution into DX sites using REST APIs, namely [HCL Commerce REST API](https://help.hcltechsw.com/commerce/9.1.0/restapi/refs/restview_openapi3.html) and [Storefront REST API](https://help.hcltechsw.com/commerce/9.1.0/restapi/concepts/cwvrestapi_store.html). With this integration, business users (for example, Marketing Managers) can manage sites and landing pages easily with DX's What You See Is What You Get (WYSIWYG) editing. Users can also add commerce capabilities to DX sites using drag and drop, accessible on all devices.
+
 For more information about integrating HCL Commerce, see the following topics:
 
 - [Integration architecture overview](https://help.hcltechsw.com/commerce/9.1.0/integration/concepts/dx_architecture.html)
@@ -20,3 +22,5 @@ For more information about integrating HCL Commerce, see the following topics:
 ## HCLSoftware U learning materials
 
 For an introduction and a demo on integrating HCL Commerce with HCL DX, go to [DX Integration with HCL Commerce](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D955). To try it out yourself, refer to [Integrate HCL Commerce in DX Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Introduction/Woodburn_Stores_Demo_Lab.pdf), [Integrate DX in HCL Commerce Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Integration/HDX-INT-BU_DX_integration_with_HCL_Commerce_lab_for_Business_Users_.pdf), and corresponding [Integrate HCL Commerce in DX Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Introduction/Woodburn_Stores_Demo_Lab_Resources.zip).
+
+For courses on how to integrate HCL Commerce with HCL DX as a business user, developer, and administrator, go to [HCL Commerce Cloud Integration with HCL DX](https://hclsoftwareu.hcltechsw.com/courses/course/hce-int-hdx-hcl-commerce-cloud-integration-with-hcl-digital-experience).
