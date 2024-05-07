@@ -13,8 +13,8 @@ At this current stage, the Search provides the following functionality and limit
 - WCM Crawling
 - Push API for use with WCM Content Sources
 - Search via REST API
-- The REST API request body size is limited to `5MB`
-- A search result is limited to 10,000 results
+- The REST API request body size is limited to 5 MB.
+- A search result is limited to 10,000 results.
 
 ## Preparing your Kubernetes Cluster
 
@@ -22,15 +22,15 @@ Before you can run OpenSearch in your Kubernetes cluster, you will need to ensur
 
 This includes the configuration of both the maximum number of open files as well as the maximum memory allocation capabilities.
 
-Ensure that you have at least configured `nofile 65536` and `vm.max_map_count=262144` on your Kubernetes nodes. The configuration depend on your Kubernetes node setup. Please refer to the documentation of your cloud provider for additional information on how to adjust these values.
+Ensure that you have at least configured `nofile 65536` and `vm.max_map_count=262144` on your Kubernetes nodes. The configuration depends on your Kubernetes node setup. Refer to the documentation of your cloud provider for information on how to adjust these values.
 
-If you want to know more about these important settings for OpenSearch, you can also refer to [Important Settings](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/index/#important-settings) in the official OpenSearch documentation.
+If you want to know more about settings for OpenSearch, you can also refer to [Important Settings](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/index/#important-settings) in the official OpenSearch documentation.
 
-## Prepare certificates for inter-service communication
+## Preparing certificates for inter-service communication
 
-The Search used certificate authentication for the communication between OpenSearch Nodes and the Search Middleware. To get this communication established, you will need to create certificates and store them in their respective secrets.
+The search uses certificate authentication for the communication between OpenSearch Nodes and the Search Middleware. To get this communication established, you must create certificates and store them in their respective secrets.
 
-The following commands will configure the secrets that will then be consumed by the applications.
+The following commands configure the secrets consumed by the applications:
 
 ```sh
 # Root CA for certificates
@@ -61,25 +61,22 @@ kubectl create secret generic search-node-cert --from-file=node.pem --from-file=
 kubectl create secret generic search-client-cert --from-file=client.pem --from-file=client-key.pem --from-file=root-ca.pem -n YOUR_NAMESPACE
 ```
 
-Please adjust the `YOUR_NAMESPACE` placeholder in accordance with your Kubernetes Namespace in which you have DX and Search deployed.
-If you do not perform this step, the OpenSearch Nodes will not get initialized and the Search Middleware can not communicate with them.
+Adjust the `YOUR_NAMESPACE` placeholder in accordance with your Kubernetes Namespace in which you have DX and search deployed. If you do not perform this step, the OpenSearch nodes are not initialized and the Search Middleware cannot communicate with them.
 
-## Prepare custom-search-values.yaml
+## Preparing the `custom-search-values.yaml`
 
-To configure your Search deployment, you will need to prepare your `custom-search-values.yaml` which contains all configurable settings.
+To configure your search deployment, you have to prepare your `custom-search-values.yaml` which contains all configurable settings. This custom values file only needs to contain the parameters that you want to overwrite with your preferred settings.
 
-This custom values file only needs to contain the parameters that you want to overwrite with your preferred settings.
-
-You can get a file with the default configuration you can use the following command:
+You can get a file with the default configuration using the following command:
 
 ``` sh
 # Command to extract values.ymal from Helm Chart
 helm show values hcl-dx-search.tar.gz > values.yaml
 ```
 
-This can be used as a blueprint for your `custom-search-values.yaml`.
+You can use this file as a blueprint for your `custom-search-values.yaml`.
 
-Ensure to adjust the image repository, tags and paths to the repository where you have put the DX container images to:
+Adjust the image repository, tags, and paths to the repository where you put the DX container images. Refer to the following values:
 
 ```yaml
 # Fill in the values fitting to your configuration
@@ -95,54 +92,57 @@ images:
     searchMiddleware: "path/in/your/repository/dx-search-middleware"
 ```
 
-Configure other parameters inside the `custom-search-values.yaml` of the Search deployment based on your requirements.
-The default out-of-the-box deployment is a minimal deployment with one replica per service.
+Configure other parameters inside the `custom-search-values.yaml` of the Search deployment based on your requirements. The default out-of-the-box deployment is a minimal deployment with one replica per service.
 
-## Run Helm install
+## Running Helm install
 
 !!!important
-    Modification to any files (chart.yaml, templates, crds) in hcl-dx-search-vX.X.X\_XXXXXXXX-XXXX.tar.gz, except custom-values.yaml or values.yaml, is not supported.
+    Modification to any files (for example, chart.yaml, templates, crds) in `hcl-dx-search-vX.X.X\_XXXXXXXX-XXXX.tar.gz`, except `custom-values.yaml` or `values.yaml`, is not supported.
 
-To run the installation of your prepared configurations using Helm, use the following command:
+Run the installation of your prepared configurations using Helm with the following command:
 
 ```sh
 # Helm install command
 helm install -n my-namespace -f path/to/your/custom-search-values.yaml your-release-name path/to/hcl-dx-search-vX.X.X_XXXXXXXX-XXXX.tar.gz
 ```
+Where:
 
-- The `my-namespace` is the namespace where your HCL Digital Experience 9.5 deployment is installed to.
-- The `-f path/to/your/custom-search-values.yaml` must point to the custom-search-values.yaml you have created, which contains all deployment configuration.
-- `your-release-name` is the Helm release name and prefixes all resources created in that installation, such as Pods, Services, and others.
-- path/to/hcl-dx-search-vX.X.X_XXXXXXXX-XXXX.tar.gz is the HCL Digital Experience 9.5 Search Helm Chart that you have extracted as described earlier in the planning and preparation steps.
+- The `my-namespace` is the namespace where your HCL DX 9.5 deployment is installed to.
+- The `-f path/to/your/custom-search-values.yaml` must point to the custom-search-values.yaml you created, which contains all deployment configuration.
+- `your-release-name` is the Helm release name and prefixes all resources created in that installation such as Pods, Services, and others.
+- `path/to/hcl-dx-search-vX.X.X_XXXXXXXX-XXXX.tar.gz` is the HCL DX 9.5 Search Helm Chart that you extracted as described in the planning and preparation steps.
 
-## Configure DX install to pass through Search
+## Configuring DX install to pass through Search
 
-To reach the Search REST API endpoints, you will have to configure the routing inside the DX helm chart. In the `custom-values.yaml`, set the following value:
+1. Reach the Search REST API endpoints by configuring the routing inside the DX helm chart. In the `custom-values.yaml`, set the following value:
 
-```yaml
-configuration:
-  networking:
-    # Search middlerware service name
-    searchMiddlewareService: "SEARCH_DEPLOYMENT_NAME-search-middleware-query"
-```
+    ```yaml
+    configuration:
+      networking:
+        # Search middlerware service name
+        searchMiddlewareService: "SEARCH_DEPLOYMENT_NAME-search-middleware-query"
+    ```
 
-Replace the `SEARCH_DEPLOYMENT_NAME` placeholder with the deployment name that you have used during the Helm install section. This will allow haproxy to pass through traffic to the Search Middleware.
+2. Replace the `SEARCH_DEPLOYMENT_NAME` placeholder with the deployment name that you used during the Helm install section. Replacing the placeholder allows haproxy to pass through traffic to the Search Middleware.
 
-After you have adjusted the `custom-values.yaml`, use Helm upgrade to apply the changes.
+3. After adjusting the `custom-values.yaml`, use Helm upgrade to apply the changes:
 
-```sh
-helm upgrade DX_DEPLOYMENT_NAME -n YOUR_NAMESPACE -f custom-values.yaml path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz
-```
+  ```sh
+  helm upgrade DX_DEPLOYMENT_NAME -n YOUR_NAMESPACE -f custom-values.yaml path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz
+  ```
 
-Replace the `YOUR_NAMESPACE` placeholder with your deployment namespace and the `DX_DEPLOYMENT_NAME` with the name that you have chosen during the DX install.
+  Replace the `YOUR_NAMESPACE` placeholder with your deployment namespace and the `DX_DEPLOYMENT_NAME` with the name that you chose during the DX install.
 
-## Validate setup
+## Validating the setup
 
-You can now validate the setup using the following methods:
+You can validate the setup using the following methods:
 
-### Check running Pods
+- [Checking the running Pods](#checking-the-running-pods)
+- [Validating access to API explorer](#validating-access-to-api-explorer)
 
-You can run a kubectl command to validate that all Search related pods are running:
+### Checking the running Pods
+
+Run a kubectl command to validate that all search-related pods are running:
 
 ```sh
 kubectl get pods -n YOUR_NAMESPACE
@@ -166,7 +166,7 @@ dx-search-open-search-manager-0                              1/1     Running    
 dx-search-search-middleware-query-5f7fb4798f-gglvj           1/1     Running             0               32s
 ```
 
-### Validate access to API explorer
+### Validating access to API explorer
 
 You can access the Search REST API through the following URL:
 
