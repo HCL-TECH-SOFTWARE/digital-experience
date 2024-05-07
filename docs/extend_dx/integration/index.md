@@ -2,14 +2,14 @@
 
 HCL Digital Experience offers multiple methods and services to integrate with many solutions.
 
+-   **[HCL Commerce](commerce.md)**  
+Integrate HCL Commerce with HCL Digital Experience.
 -   **[HCL Connections](connections/index.md)**  
 Integrate HCL Connections with HCL Digital Experience.
 -   **[HCL Volt MX Foundry](mx/index.md)**  
 Integrate HCL Volt MX Foundry with HCL Digital Experience.
 -   **[HCL Leap](leap/index.md)**  
 Integrate HCL Leap with HCL Digital Experience.
--   **[HCL Commerce](commerce.md)**  
-Integrate HCL Commerce with HCL Digital Experience.
 -   **[Huddo Boards](../integration/huddo_boards/index.md)**<br>
 Integrate Huddo Boards with HCL Digital Experience.
 -   **[Unified Task List](unified_task_list/index.md)**  
