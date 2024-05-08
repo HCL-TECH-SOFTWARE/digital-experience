@@ -5,7 +5,7 @@ title: Performance Sizing Guidance for Rendering with a Small Configuration
 
 # Performance-sizing guidance for rendering with a small configuration
 
-## DX rendering sizing-performance tests overview
+## Overview of DX rendering sizing-performance tests
 
 DX sizing is one of the goals of DX performance tests. DX sizing aims to identify the reliable Kubernetes environment for small, medium, and large DX configurations. This topic presents the important KPIs (for example, number of concurrent users, average response time, and throughput) in small configurations. A similar approach will be applied for medium and large configurations. This topic also discusses how adjustments to the pod configuration can make significant improvements in system responsiveness.
 
@@ -89,7 +89,7 @@ To see the `small-config-values.yaml` file in the hcl-dx-deployment Helm chart, 
 ### JMeter agents
 
 - JMeter instance - [t2.xlarge]
-- To run the tests, a distributed AWS/JMeter agents setup consisting of one primary and two subordinate was used.<!-- never use "master" and "slave." -->
+- To run the tests, a distributed AWS/JMeter agents setup consisting of one primary and two subordinates was used.<!-- never use "master" and "slave." -->
 
 ![](../../../../images/Header-3-AWS.png)
 
@@ -115,7 +115,7 @@ To see the `small-config-values.yaml` file in the hcl-dx-deployment Helm chart, 
 
 ## Authoring details for small config in rendering sizing
 
-- To perform rendering tests, the systems must be set up first. This section provides details of WCM, DAM, and portlets authoring.
+Set up the systems before performing rendering tests. This section provides details for WCM, DAM, and portlets authoring.
 
 
 ## WCM Default Test Data - 20 pages
@@ -164,7 +164,7 @@ To see the `small-config-values.yaml` file in the hcl-dx-deployment Helm chart, 
 
 ## Pages and portlets default test data: 8 pages
 
-Customers typically use a total of eight pages with portlets. To complete authoring and rendering both anonymous and authenticated users received access. The same users were added in openLDAP for WCM rendering. All authenticated users are assigned the User role.
+Customers typically use a total of eight pages with portlets. To complete authoring and rendering, both anonymous and authenticated users received access. The same users were added in openLDAP for WCM rendering. All authenticated users are assigned the User role.
  
 As part of authoring, pages and portlets were added manually. The following list shows the details of portlets for authoring on every page:
 
@@ -200,7 +200,7 @@ The following stages were conducted, starting with the default Kubernetes config
 
 - The DX combined rendering ran with default minimal deployments as mentioned in the following Helm values. 
 - No issues were found with a user load of up to 500. 
-- Errors occured at a user load of 600. This total number of errors is around five percent.<!-- five percent of what? -->
+- Errors occurred at a user load of 600. This total number of errors is around five percent.<!-- five percent of what? -->
 
 
 ##### stage-1 Helm values
@@ -254,9 +254,9 @@ The following stages were conducted, starting with the default Kubernetes config
 
 - All errors are from WCM and pages and portlets, not from DAM.
 
-- Total average response time increases exponentially with vload.
+- Total average response time increases exponentially with load.
 
-- Event loop lag for the Ring API pod is also on the higher end ( approximately 400 ms for a user load of 500).
+- Event loop lag for the Ring API pod is also on the higher end (approximately 400 ms for a user load of 500).
 
 - No pod restarts were observed.
 
@@ -346,19 +346,19 @@ See the following section for the tuned Helm values.
 
 
 
-## Performance Sizing Guidance for Rendering with maximum throughput on single node
+## Performance-sizing guidance for rendering with maximum throughput on a single node
 
-### DX rendering sizing-performance tests overview
+### Overview of DX rendering sizing-performance tests
 
-DX sizing is one of the goals of DX performance tests. DX sizing aims to identify the reliable Kubernetes environment for small, medium, and large DX configurations. This topic presents the important KPIs (for example, number of concurrent users, average response time, and throughput) for upper limit in single node configuration. This topic also discusses how adjustments to the core tuning, scaling of pods and its configuration can make significant improvements in system responsiveness.
+DX sizing is one of the goals of DX performance tests. DX sizing aims to identify the reliable Kubernetes environment for small, medium, and large DX configurations. This topic presents the important KPIs (for example, number of concurrent users, average response time, and throughput) for the upper limit in a single node configuration. This topic also discusses how adjustments to the core tuning, scaling of pods, and pod configuration can make significant improvements in system responsiveness.
 
 This sizing work started with rendering scenarios of Web Content Management (WCM), portlets, and Digital Asset Management (DAM) with a rendering setup enabled in AWS/Native-Kubernetes. The Apache JMeter tool was used for performance tests.
 
 ### Conclusion
 
-This performance guidance work below shows the upper limit on single-node k8s cluster AWS instance (c5.9xlarge).  We suggest for single node (c5.9x arge) in rendering scenarios of DAM, WCM and pages&portlets the comfortable load is 2500 concurrent users with good average and 90th percentile response times. The top five response time of rendering APIs are all in range of ~4 to 5 secs.
+This performance guidance work shows the upper limit on a single-node K8s cluster AWS instance (c5.9xlarge). We suggest for single node (c5.9x arge) in rendering scenarios of DAM, WCM and pages&portlets the comfortable load is 2500 concurrent users with good average and 90th percentile response times. The top five response times of rendering APIs are all in the range of 4 to 5 seconds.
 
-- Core tuning details are mentioned in this section [DX core tuning](#dx-core-tuning-and-enhancements-after-10k-concurrent-user-run)
+- Core tuning details are available in [DX core tuning](#dx-core-tuning-and-enhancements-after-10k-concurrent-user-run).
 
 - Below details on number and limits for the following pods significantly improve the responsiveness of the setup and enable the system to handle 2500 concurrent users with comfortable average and 90th percentile(pct) response times in range of ~4 to 5 secs.
 
@@ -387,79 +387,78 @@ This performance guidance work below shows the upper limit on single-node k8s cl
 
 - An AWS Elastic Compute Cloud (EC2) instance is running on a native Kubernetes platform with the DX images installed and configured.
 
-- In AWS/Native Kubernetes, the tests are executed EC2 instance (c5.9xlarge)
+- In AWS/Native Kubernetes, the tests are executed in EC2 instance (c5.9xlarge).
 
 - The tests used a remote DB2 instance.
 
-[Single node Configuration]  - [c5.9xlarge] 
+      [Single node Configuration]  - [c5.9xlarge] 
 
-- We started tests with c5.2xlarge then to c5.4xlarge and then to c5.9xlarge instance by our analysis of test results and observations.
+- The tests started with c5.2xlarge, then c5.4xlarge, and then c5.9xlarge instance by analysis of test results and observations.
 
-![](../../../../images/Header-1-AWS-Med.png)
+      ![](../../../../images/Header-1-AWS-Med.png)
 
-![](../../../../images/C5.4x_9xlarge.png)
+      ![](../../../../images/C5.4x_9xlarge.png)
 
 
 - Processor details
 
-![](../../../../images/Processor_Info_Native-Kube-9x.png)
+      ![](../../../../images/Processor_Info_Native-Kube-9x.png)
 
 - Volume details
 
-![](../../../../images/AWS-Native-Kube-Volume-Info-9x.png)
+      ![](../../../../images/AWS-Native-Kube-Volume-Info-9x.png)
 
 #### DB2 instance
 
 - Remote DB2 - [c5.2xlarge]
 
-![](../../../../images/Header-1-AWS-Med.png)
+      ![](../../../../images/Header-1-AWS-Med.png)
 
-![](../../../../images/C5.2xlarge.png)
+      ![](../../../../images/C5.2xlarge.png)
 
 - Processor details
 
-![](../../../../images/Processor_Info_RemoteDB2_Med.png)
+      ![](../../../../images/Processor_Info_RemoteDB2_Med.png)
 
 
 - Volume details
 
-![](../../../../images/Remote-DB2-Volume-Info-Med.png)
+      ![](../../../../images/Remote-DB2-Volume-Info-Med.png)
 
 
 #### JMeter agents
 
 - JMeter instance - [c5.2xlarge]
 
-- We have a distributed AWS/JMeter agents setup consisting of one primary and eight subordinate was used.
+- To run the tests, a distributed AWS/JMeter agents setup consisting of one primary and eight subordinates was used.
 
-![](../../../../images/Header-1-AWS-Med.png)
+      ![](../../../../images/Header-1-AWS-Med.png)
 
-![](../../../../images/C5.2xlarge.png)
-
-
-- Processor details
-
-![](../../../../images/Processor_Info_RemoteDB2_Med.png)
-
-
-- Volume details
-
-![](../../../../images/Remote-DB2-Volume-Info-Med.png)
+      ![](../../../../images/C5.2xlarge.png)
 
 
 - Processor details
 
-![](../../../../../images/Processor_Info_Native-Kube.png)
+      ![](../../../../images/Processor_Info_RemoteDB2_Med.png)
+
 
 - Volume details
 
-![](../../../../../images/AWS-Native-Kube-Volume-Info.png)
+      ![](../../../../images/Remote-DB2-Volume-Info-Med.png)
 
+
+- Processor details
+
+      ![](../../../../../images/Processor_Info_Native-Kube.png)
+
+- Volume details
+
+      ![](../../../../../images/AWS-Native-Kube-Volume-Info.png)
 
 
 ### Authoring details
 
-- To perform rendering tests, the systems must be set up first. This section provides details of WCM, DAM, and portlets authoring.
+Set up the systems before performing rendering tests. This section provides details for WCM, DAM, and portlets authoring.
 
 
 ### WCM Default Test Data - 200 pages
@@ -467,17 +466,18 @@ This performance guidance work below shows the upper limit on single-node k8s cl
 #### WCM test data characteristics
 
 - The default test data has a WCM design library called "PerformanceTestDesign" and five content libraries named "PerformanceTestContent01" to "PerformanceTestContent05".
+      
 - Each content library contains four levels of site areas, with four site areas per level. Only the 256 "leaf" site areas contain content.
 
 - Each leaf site area contains ten content items, for a total of 12,800 content items across the libraries.
 
 - Half of the content items are visible to "Anonymous" and "All Authenticated" users.
 
-- The other half are visible only to members of ten groups per content item. These ten groups are spread out among the 500 groups assumed to exist in the test LDAP (and assumed to be called "Group0000" through "Group0499").
+- The other half is visible only to members of ten groups per content item. These ten groups are spread out among the 500 groups assumed to exist in the test LDAP, and assumed to be called "Group0000" through "Group0499".
 
 - Half of the content items (spread evenly over each type described previously) are profiled with the keyword "MENU."
 
-- There are 20 test-portal pages created under the "PerformanceTest" label. Each has a URL in the form "<context-root>/perf/page-xx".
+- There are 20 test-portal pages created under the "PerformanceTest" label. Each page has a URL in the form "<context-root>/perf/page-xx".
 
 - Each page contains 6 WCM viewer portlets that show content below one of the 20 top-level site areas. For example, Pages 01 to 04 show content from site areas "SA01" through "SA04" in the "PerformanceTestContent01" library, and pages 05 to 08 show content from site areas "SA01" through "SA04" in the "PerformanceTestContent02"  library, and so on.
 
@@ -497,18 +497,18 @@ This performance guidance work below shows the upper limit on single-node k8s cl
       
 - There are 19 URLs in total, three of which are custom URLs, 8 are uuid URLs, and 8 are short URLs, which are combinations of original, tablet, smartphone, and desktop renditions.
 
-| Asset    | Type          | Size                                      |
-| -------- | ------------- |-----------------------------------------  |
-| Image    | .jpg/png/tif  | 155kb, 2mb,5mb, 500kb, 100 kb, 2 mb,300 kb|
-| Video    | mp4/webm      | 5 mb, 199kb,200kb , 2 mb,199kb            |
-| Document | docx/xlsx/pptx| mp4- 1mb, 15mb, 100mb, webm- 2 mb         |
+      | Asset    | Type          | Size                                      |
+      | -------- | ------------- |-----------------------------------------  |
+      | Image    | .jpg/png/tif  | 155kb, 2mb,5mb, 500kb, 100 kb, 2 mb,300 kb|
+      | Video    | mp4/webm      | 5 mb, 199kb,200kb , 2 mb,199kb            |
+      | Document | docx/xlsx/pptx| mp4- 1mb, 15mb, 100mb, webm- 2 mb         |
 
 !!!note
       For DAM, only anonymous rendering is available.
 
 ### Pages and portlets default test data: 80 pages
 
-Customers typically use a total of eight pages with portlets. To complete authoring and rendering both anonymous and authenticated users received access. The same users were added in openLDAP for WCM rendering. All authenticated users are assigned the User role.
+Customers typically use a total of eight pages with portlets. To complete authoring and rendering, both anonymous and authenticated users received access. The same users were added in openLDAP for WCM rendering. All authenticated users are assigned the User role.
  
 As part of authoring, pages and portlets were added manually. The following list shows the details of portlets for authoring on every page:
 
@@ -517,7 +517,7 @@ As part of authoring, pages and portlets were added manually. The following list
 - Page 3 - Login portlet
 - Page 4 - Information Portlet(JSR) - JSP file -  jsp/oob/welcome.jsp 
 - Page 5 - Search Centre portlet
-- Page 6 - Custom JSF portlet with simple form [disabled in JMeter script as there are few errors]
+- Page 6 - Custom JSF portlet with simple form (disabled in JMeter script because there are some errors)
 - Page 7 - Script Application portlet --> Added JavaScript Functions, Date and Time object examples
 - Page 8 - Added all above portlets in this page except JSF portlet
 
@@ -533,24 +533,24 @@ For rendering sizing, all rendering JMeter scripts of WCM, DAM, and pages and po
 - DAM - 30 %
 - Pages and Portlets - 30 %
 
-### Result Summary
+### Results summary
 
-- Following were stages in which the performance test has been conducted starting with config DX kube configuration on c5.4xlarge instance
+The following stages were conducted, starting with config DX kube configuration on a c5.4xlarge instance.
 
-#### Stage-1
+#### Stage 1
 
-- DX combined run executed with config deployments as mentioned in below helm values. 
+- The DX combined run executed with config deployments as mentioned in the following Helm values. 
 
-- For 1000 concurrent users tests are executed successfully with no erros.
+- For 1000 concurrent users, tests are executed successfully with no erros.
 
-- Errors were seen at 2000 users load. Total Error is around ~1%.
+- Errors occurred at a user load of 2000. Total error is around 1%.
 
-- Helm Values were modified for core, dam, persistenceNode and haproxy as below mentioned in table.
+- Helm values were modified for core, DAM, persistenceNode, and haproxy as seen in the following table.
 
-- With this set up we are able to run till 3000 concurrent users.
+- With this setup, the tests were able to run until 3000 concurrent users.
 
  
-##### stage-1 Helm Values of single node Configuration
+##### stage-1 Helm values of a single node configuration
 
                                         Requests                Limits 
 | Component                  | No of pods | cpu(m)   | memory(Mi) | cpu(m)   | memory(Mi) |
@@ -597,23 +597,22 @@ For rendering sizing, all rendering JMeter scripts of WCM, DAM, and pages and po
 
 ##### Observations
 
-- For 3000 concurrent users observed total high response time and in particular for WCM APIs.
+- For 3000 concurrent users, there is a total high response time, particularly for WCM APIs.
 
-- For 6000 users load observed http response code - 503 service unavailable errors in the test.
+- For a user load of 6000, there is an http response code: `503 service unavailable errors in the test.`
 
 - All errors were from WCM and Pages&Portlets not from DAM.
 
-- Total Average response time increasing exponentially with load.
+- Total average response time increases exponentially with load.
 
 - No pod restarts observed.
 
-- Our goal is to have our average and 90th pct response times in ~4 to 5 secs range, so we decided to move to next instance c5.9xlarge from c5.4xlarge.
+- The goal is to have average and 90th pct response times in the range of 4 to 5 seconds. The tests were then moved to the next instance, from c5.4xlarge to c5.9xlarge.
 
 
+#### Stage 2 
 
-#### Stage-2 
-
-##### Helm Values
+##### Helm values
 
                                         Requests                Limits 
 | Component                  | No of pods | cpu(m)   | memory(Mi) | cpu(m)   | memory(Mi) |
@@ -665,69 +664,69 @@ For rendering sizing, all rendering JMeter scripts of WCM, DAM, and pages and po
 
 ##### Observations 
 
-- For 6000 concurrent users (WCM - 2400, DAM - 1800, P&P - 1800) and 6 JMeter subordinates, we scaled the core to 3 pods, DAM, Persistence Node, Ring API, and HAProxy to 2 each.
+- For 6000 concurrent users (WCM - 2400, DAM - 1800, P&P - 1800) and 6 JMeter subordinates, the core was scaled to 3 pods, and DAM, Persistence Node, Ring API, and HAProxy were scaled to 2 each.
 
-- Also Horizontal Pod Autoscaling (HPA) enabled for core, dam, haproxy and ringAPI Pods with thresholds of 50% for CPU utilization and 80% for memory utilization. HPA test run was executed successfully with no errors.
+- Horizontal Pod Autoscaling (HPA) was enabled for core, DAM, haproxy, and ringAPI Pods with thresholds of 50% for CPU utilization and 80% for memory utilization. HPA test run was executed successfully with no errors.
 
-- Through Horizontal Pod Autoscaling (HPA) tests we understand that 4 pods of core, dam, haproxy and 3 pods of ringAPI need to get successful run for 6000 concurrent users.
+- Through HPA tests, it was observed that 4 pods of core, DAM, haproxy, and 3 pods of ringAPI must have a successful run for 6000 concurrent users.
 
 - With this set up proceeded for 10000 Vusers Test. Test was executed successfully till 10000 concurrent ramp up. At steady state of 10000 concurrent users, we observed few failures due to ringAPI pod going down intermittently. Then we scaled ringAPI pods to 4.
 
-- Finally the test run was successfull with 10000 concurrent users with 4 pods of core, dam, haproxy, ringAPI each.
+- The test run was successful with 10000 concurrent users with 4 pods of core, DAM, haproxy, and ringAPI each.
 
-#### Stage-3
+#### Stage 3
 
 ##### Improved response times of individual APIs and conclusion on load for comfortable rendering
 
-As we observed very high response time for individual API requests, we started tuning core and code improvements in dam in CF219 release.
+As there is a high response time for individual API requests, tuning of core and code improvements in DAM began in CF219.
 
 ##### DX core tuning and enhancements after 10k concurrent user run
 
-- LTPA token timeout increased from 120 mins to 480 mins for rendering tests excution
+- LTPA token timeout increased from 120 minutes to 480 minutes for rendering tests excution.
 
  ![](../../../../images/Core_Tuning_LTPA.png)
 
-- WCM object cache for rendering updated as per DX performance tuning guide
+- WCM object cache for rendering updated as per DX performance tuning guide.
 
  ![](../../../../images/Core_WCM_Object_Cache_list.png)
 
 
  ![](../../../../images/WCM_Object_Cache_Instances.png)
 
-- We also updated the abspath, abspathreverse, processing, session, strategy, summary values WCM rendering values as per tuning guide.
+- Updated abspath, abspathreverse, processing, session, strategy, summary values WCM rendering values as per tuning guide.
 
-- Add new custom property under Resource environment providers > WP CacheManagerService > Custom properties > cacheinstance.com.ibm.wps.resolver.friendly.cache.size
+- Add new custom property under **Resource environment providers > WP CacheManagerService > Custom properties > cacheinstance.com.ibm.wps.resolver.friendly.cache.size**.
 
  ![](../../../../images/Core_Friendly_Url_Cache.png)
 
-- JVM Heap size from 3584 -> 4096 ( path - application server -> websphere_portal -> process_definition -> Java Virtual Machine )
+- Adjust JVM Heap size from 3584 to 4096 under **Application servers > WebSphere_Portal > Process_definition > Java Virtual Machine**.
 
  ![](../../../../images/Core_JVM_Tuning.png)
 
-- LDAP user cache attributes and search to 10000
+- Set LDAP user cache attributes and search to 10000.
 
  ![](../../../../images/Core_DX_LDAP_User_Cache.png)
 
-- jcr.text.search to disable here [As we are not having any search functionality]
+- Disable jcr.text.search under **Resource environment providers > JCR ConfigService Portal Content > Custom properties** because there is no search functionality.
 
  ![](../../../../images/Core_Tuning_JCR_Text_Search_Disable.png)
 
-- Also delete search collections in Portal -> Administration -> Search -> Search collections ( both JCRCollection1 and Default Search Collection )
+- Delete search collections in **Portal > Administration > Search > Search collections** (both JCRCollection1 and Default Search Collection).
 
  ![](../../../../images/Core_Tuning_Delete_Search_Collections.png)
 
-- Log level changes from info to severe in WAS for in both configuration and run time
+- Log level changes from info to severe in WAS for in both configuration and run time.
 
  ![](../../../../images/Core_Tuning_Log_Level_Details.png)
 
  !!!note
-       Please restart all core pods after executing all the tunings steps mentioned above.
+       Restart all core pods after executing all the tunings steps mentioned above.
 
- - Also DB2 tuning performed by executing DB2 Reorg and Runstats.
+ - DB2 tuning performed by executing DB2 Reorg and Runstats.
 
 
 
-#### Stage-3 Helm Values
+#### Stage-3 Helm values
 
                                         Requests                Limits 
 | Component                     | No of pods | cpu(m)    | memory(Mi) | cpu(m)    | memory(Mi) |
@@ -781,11 +780,11 @@ As we observed very high response time for individual API requests, we started t
 
 ##### Observations 
 
-- Very few 400 bad requests observed only in DAM APIs, which is very negligible.
+- Very few 400 bad requests observed only in DAM APIs, which is negligible.
 
-- We observed the CPU usage of node reached avg 80% in 10k concurrent users tests. We checked the saturation of this by reducing number of users to 5k, 3k, 2.5k users, interestingly node CPU usage avg is close to ~70% and max is 80% in all 5k, 3k, 2.5k users load test results.
+- The CPU usage of a node reached an average of 80% in 10000 concurrent users tests. The saturation was checked by reducing the number of users to 5000, 3000, and 2500 users. Node CPU average usage is then close to 70% and maximum is 80% in all 5000, 3000, and 2500 users load test results.
 
-- For 5k and 3k concurrent users results of avg and 90th pct response time of APIs are exceeding ~5 secs.
+- For 5000 and 3000 concurrent users, results of average and 90th pct response time of APIs exceed 5 seconds.
 
 -  We suggest for single node (c5.9x arge) in rendering scenarios of DAM, WCM and pages&portlets the comfortable load is 2500 concurrent users with good average and 90th pct response times. The top five response time of rendering APIs are all in range of ~4 to 5 secs.
 
