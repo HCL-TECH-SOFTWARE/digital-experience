@@ -8,7 +8,7 @@ The new search for DX has been designed with the weaknesses of the existing sear
 
 - Scalability: Since Remove Search was a single instance, the only way to scale was vertically. This is a fairly limited approach, since a single instance can not use an infinite amount of hardware resources. The new OpenSearch based implementation allows to deploy multiple nodes which enables load balancing for heave search related workloads. Furthermore it is possible to have separate nodes for data ingress and querying, allowing for further scaling flexibility.
 
-- Kubernetes native deployment: The new search uses existing proven Kubernetes patterns and technologies that work well in such an environment.
+- Kubernetes native deployment: The OpenSearch-based implementation uses existing proven Kubernetes patterns and technologies that work well in such an environment.
 
 ## Main components
 
@@ -16,49 +16,47 @@ The new search for DX has been designed with the weaknesses of the existing sear
 
 ### OpenSearch nodes
 
-In a search deployment the OpenSearch nodes form the back-bone of the new implementation. The OpenSearch Nodes are part of a StatefulSet that will store the search indexes and all contained data. OpenSearch performs replication of data between the nodes, allowing for high availability of the search index.
+In a search deployment, the OpenSearch nodes form the backbone of the implementation. The OpenSearch nodes are part of a StatefulSet that store the search indexes and all contained data. OpenSearch performs replication of data between the nodes, allowing for high availability of the search index.
 
-### Search Middleware nodes
+### Search middleware nodes
 
-To provide a usable REST API and perform additional logic on top of search indexes, a search middleware has been established that will act as a mediator between the Data Sources and OpenSearch.
+To provide a usable REST API and perform additional logic on top of search indexes, a search middleware is established to act as a mediator between the data sources and OpenSearch.
 
 The search middleware performs the following functions:
 
 - ACL lookup and access control for search results
-- Crawlers for Data Sources
-- REST API for Document Management, Configuration and Search Queries
+- Crawlers for data sources
+- REST API for document management, configuration, and search queries
 
-## The Concept of Content Sources
+## Content sources
 
-A Content Source represents a search index that contains data from a specific Data Source e.g., WCM. Under the covers, each Content Source has its own independent search index inside OpenSearch. This ensures that indexing documents from different Data Sources will not cause conflicts with duplicate IDs or similar. OpenSearch still allows to perform search queries over all existing indexes, which enables a separation of indexed data while still retaining all search capabilities.
+A content source represents a search index that contains data from a specific data source (for example, WCM). Each content source has its own independent search index inside OpenSearch. This ensures that indexing documents from different data sources does not cause conflicts with duplicate IDs. With OpenSearch, you can still perform search queries over all existing indexes, which enables a separation of indexed data while retaining all search capabilities.
 
 ![Content Sources](./content-source.png)
 
-Having multiple Content Sources also enables easy scoping of search queries. If only the data of a particular Data Source should be considered during a search, the scope for that query can be limited to the ID of the corresponding Content Source inside the search and thereby limiting the search query to that single search index.
+Having multiple content sources also enables easy scoping of search queries. If only the data of a particular data source should be considered during a search, the scope for that query can be limited to the ID of the corresponding content source inside the search. This limits the search query to that single search index.
 
 ### Crawlers
 
-Depending on the type of Content Source it might be required to pull data from the Data Source. In this case, the search provides capabilities to crawl the target Data Source using a built in Crawler. Those Crawlers can be configured on a per Content Source basis and will automatically store the pulled documents inside the search index of the associated Content Source.
+Depending on the type of content source, it might be required to pull data from the data source. In this case, the search provides capabilities to crawl the target data source using a built-in crawler. You can configure crawlers per content source basis and they will automatically store the pulled documents inside the search index of the associated content source.
 
 ### Push API
 
-Every Content Source provides access to the stored documents via the Push API. This allows to:
+Every content source provides access to the stored documents through the Push API. With the Push API, you can:
 
-- retrieve single documents by ID
-- partially or fully update single documents by ID
-- partially or fully update multiple documents in bulk by IDs
-- delete single documents by ID
-- delete multiple documents in bulk by IDs
-- create new single documents
-- create new documents in bulk
+- Retrieve single documents by ID
+- Partially or fully update single documents by ID
+- Partially or fully update multiple documents in bulk by IDs
+- Delete single documents by ID
+- Delete multiple documents in bulk by IDs
+- Create new single documents
+- Create new documents in bulk
 
-This API enables application developers and search administrators to manipulate the stored data inside the search without actual access to the real search indexes inside OpenSearch.
+In addition, developers and search administrators can manipulate the stored data inside the search without access to the search indexes inside OpenSearch. It also enables the push of content that might not be possible to crawl.
 
-It also enables the push of content that might not be possible to crawl.
+## Indexed documents
 
-## Indexed Documents
-
-Documents that are stored inside a Content Source contain a defined set of metadata and the document data itself. The general schema for a document looks like this:
+Documents that are stored inside a content source contain a defined set of metadata and the document data itself. The general schema for a document looks like this:
 
 ```json
 {
@@ -73,19 +71,21 @@ Documents that are stored inside a Content Source contain a defined set of metad
 }
 ```
 
-The `documentObject` contains the documents real data and its properties will vary on the type of Content Source and the fields that are indexed.
+- The `documentObject` contains the document's real data. Its properties vary depending on the type of content source and the fields that are indexed.
 
-The `lastIndexed` and `firstIndexed` fields are maintained by the Search and will reflect the corresponding timestamps of first indexing and last indexing. The fields `created` and `updated` are provided by the data source, which is true for the `acls` field too.
+- The `lastIndexed` and `firstIndexed` fields are maintained by the search. These fields display the corresponding timestamps of last indexing and first indexing, respectively. 
+
+- The fields `acls`, `created`, and `updated` are provided by the data source.
 
 A document that does not contain any ACLs will be considered public and do not have any visibility restrictions.
 
 ## Search queries
 
-The new search implementation allows for queries that are using the existing OpenSearch syntax. Each query will be enriched with an ACL check and a possible scoping to a or many Content Sources.
+The OpenSearch-based implementation allows for queries using the existing OpenSearch syntax. Each query is enriched with an ACL check and a possible scoping to content sources.
 
-A search query can be limited to a list of Content Sources or cover all Content Sources. The result will be a mixed results matching your query from all scoped Content Sources.
+You can limit a search query to a list of content sources or cover all content sources. The result will match your query from all scoped content sources.
 
-An example search query would look like this:
+Refer to the following sample search query:
 
 ```json
 {
@@ -108,28 +108,28 @@ An example search query would look like this:
 
 ## Deployment structures
 
-Deployments can vary in size and structure, based on the use-case.
+Deployments can vary in size and structure, based on the use case.
 
 ### Non-split - single node
 
-The smallest deployment of the new Search consists of a single OpenSearch Node and a single Search Middleware Node. This provides a slim, bare minimum deployment that can be handy for development, testing and small footprint deployments. This deployment has no high availability or no scalability and therefore is not recommended for production use.
+The smallest deployment of the search consists of a single OpenSearch node and a single search middleware Node. This provides a slim, bare minimum deployment that can be used for development, testing, and small footprint deployments. This deployment has no high availability and no scalability and is not recommended for production use.
 
 ### Non-split - multi node
 
-To achieve high availability, the non-split multi node deployment can be chosen. Both OpenSearch and the Search Middleware run with multiple Pods, with the count of Pods configurable.
+To achieve high availability, you can opt for the non-split multi-node deployment. Both OpenSearch and the search middleware run with multiple Pods, with the number of Pods configurable.
 
 ### Split - multi node
 
-The most granular deployment is the split multi node deployment. There are dedicated types of nodes for OpenSearch and Search Middleware.
+The most granular deployment is the split multi-node deployment. There are dedicated types of nodes for OpenSearch and search middleware.
 
 OpenSearch:
 
 - Index Manager
 - Data
 
-Search Middleware:
+Search middleware:
 
 - Data
 - Query
 
-Each type of Node can be scaled individually, which allows to scale based on the workload that is coming in.
+You can individually scale each type of node, enabling you to scale according to the incoming workload.
