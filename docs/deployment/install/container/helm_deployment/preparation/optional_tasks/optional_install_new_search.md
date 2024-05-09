@@ -1,4 +1,4 @@
-# Installing new Search
+# Installing search based on OpenSearch
 
 If you want to leverage the capabilities of the OpenSearch based Search, you can follow the steps described on this page to get the Search configured.
 
