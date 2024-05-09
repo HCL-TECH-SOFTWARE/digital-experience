@@ -129,7 +129,7 @@ Set up the systems before performing rendering tests. This section provides deta
 
 - Half of the content items are visible to "Anonymous" and "All Authenticated" users.
 
-- The other half are visible only to members of ten groups per content item. These ten groups are spread out among the 500 groups assumed to exist in the test LDAP (and assumed to be called "Group0000" through "Group0499").
+- The other half is visible only to members of ten groups per content item. These ten groups are spread out among the 500 groups assumed to exist in the test LDAP (and assumed to be called "Group0000" through "Group0499").
 
 - Half of the content items (spread evenly over each type described previously) are profiled with the keyword "MENU."
 
@@ -350,15 +350,15 @@ See the following section for the tuned Helm values.
 
 ### Overview of DX rendering sizing-performance tests
 
-DX sizing is one of the goals of DX performance tests. DX sizing aims to identify the reliable Kubernetes environment for small, medium, and large DX configurations. This topic presents the important KPIs (for example, number of concurrent users, average response time, and throughput) for the upper limit in a single node configuration. This topic also discusses how adjustments to the core tuning, scaling of pods, and pod configuration can make significant improvements in system responsiveness.
+DX sizing is one of the goals of DX performance tests. DX sizing aims to identify the reliable Kubernetes environment for small, medium, and large DX configurations. This topic presents the important KPIs (for example, number of concurrent users, average response time, and throughput) for the upper limit in a single-node configuration. This topic also discusses how adjustments to the core tuning, scaling of pods, and pod configuration can make significant improvements in system responsiveness.
 
 This sizing work started with rendering scenarios of Web Content Management (WCM), portlets, and Digital Asset Management (DAM) with a rendering setup enabled in AWS/Native-Kubernetes. The Apache JMeter tool was used for performance tests.
 
 ### Conclusion
 
-This performance guidance shows the upper limit on a single-node K8s cluster AWS instance (c5.9xlarge). It is suggested that for a single node (c5.9xlarge) rendering scenarios for DAM, WCM, and pages&portlets, the comfortable load is 2500 concurrent users with good average and 90th percentile (pct) response times. The top five response times of rendering APIs are all in the range of 4 to 5 seconds.
+This performance guidance shows the upper limit on a single-node K8s cluster AWS instance (c5.9xlarge). It is suggested that for single-node (c5.9xlarge) rendering scenarios for DAM, WCM, and pages&portlets, the comfortable load is 2500 concurrent users with good average and 90th percentile (pct) response times. The top five response times of rendering APIs are all in the range of 4 to 5 seconds.
 
-- Core tuning details are available in [DX core tuning](#dx-core-tuning-and-enhancements-after-10k-concurrent-user-run).
+- Core tuning details are available in [DX core tuning](#dx-core-tuning-and-enhancements-after-10000-concurrent-user-run).
 
 - The following table contains the number and limits for each pod. Using these values significantly improves the responsiveness of the setup and enables the system to handle 2500 concurrent users with average and 90th percentile (pct) response times in the range of 4 to 5 seconds.
 
@@ -393,7 +393,7 @@ This performance guidance shows the upper limit on a single-node K8s cluster AWS
 
       [Single node Configuration]  - [c5.9xlarge] 
 
-- The tests started with c5.2xlarge, then c5.4xlarge, and then c5.9xlarge instance by analysis of test results and observations.
+- The tests started with c5.2xlarge, then c5.4xlarge, and then c5.9xlarge instance after an analysis of test results and observations.
 
       ![](../../../../images/Header-1-AWS-Med.png)
 
@@ -495,7 +495,7 @@ Set up the systems before performing rendering tests. This section provides deta
 
 - Details of 15 assets were uploaded for rendering.
       
-- There are 19 URLs in total, three of which are custom URLs, 8 are uuid URLs, and 8 are short URLs, which are combinations of original, tablet, smartphone, and desktop renditions.
+- There are 19 URLs in total, three of which are custom URLs, eight are uuid URLs, and eight are short URLs, which are combinations of original, tablet, smartphone, and desktop renditions.
 
       | Asset    | Type          | Size                                      |
       | -------- | ------------- |-----------------------------------------  |
@@ -518,10 +518,10 @@ As part of authoring, pages and portlets were added manually. The following list
 - Page 4 - Information Portlet(JSR) - JSP file -  jsp/oob/welcome.jsp 
 - Page 5 - Search Centre portlet
 - Page 6 - Custom JSF portlet with simple form (disabled in JMeter script because there are some errors)
-- Page 7 - Script Application portlet --> Added JavaScript Functions, Date and Time object examples
+- Page 7 - Script Application portlet (Added JavaScript Functions, Date and Time object examples)
 - Page 8 - Added all above portlets in this page except JSF portlet
 
-After users completed the authoring steps, the anonymous portal user and authenticated users (added to openLDAP) must render the pages. Every page request uses a `/GET API` call (for example, `/wps/portal/portletsperf/page1`) and there is a response assertion in a sampler to validate the content html in the response body. 
+After completing the authoring steps, the anonymous portal user and authenticated users (added to openLDAP) must render the pages. Every page request uses a `/GET API` call (for example, `/wps/portal/portletsperf/page1`) and there is a response assertion in a sampler to validate the content html in the response body. 
 
 ### Combined DX rendering of WCM, DAM, and pages and portlets
 
@@ -550,7 +550,7 @@ The following stages were conducted, starting with config DX kube configuration 
 - With this setup, the tests were able to run until 3000 concurrent users.
 
  
-##### stage-1 Helm values of a single node configuration
+##### stage-1 Helm values of a single-node configuration
 
                                         Requests                Limits 
 | Component                  | No of pods | cpu(m)   | memory(Mi) | cpu(m)   | memory(Mi) |
@@ -680,9 +680,11 @@ The following stages were conducted, starting with config DX kube configuration 
 
 As there is a high response time for individual API requests, tuning of core and code improvements in DAM began in CF219.
 
-##### DX core tuning and enhancements after 10k concurrent user run
+##### DX core tuning and enhancements after 10000 concurrent user run
+      
+The following list contains details of tuning and enhancements done to DX core during testing:
 
-- LTPA token timeout increased from 120 minutes to 480 minutes for rendering tests excution.
+- LTPA token timeout increased from 120 minutes to 480 minutes for rendering tests execution.
 
  ![](../../../../images/Core_Tuning_LTPA.png)
 
@@ -695,11 +697,11 @@ As there is a high response time for individual API requests, tuning of core and
 
 - Updated abspath, abspathreverse, processing, session, strategy, summary values WCM rendering values as per tuning guide.
 
-- Add new custom property under **Resource environment providers > WP CacheManagerService > Custom properties > cacheinstance.com.ibm.wps.resolver.friendly.cache.size**.
+- Added new custom property under **Resource environment providers > WP CacheManagerService > Custom properties > cacheinstance.com.ibm.wps.resolver.friendly.cache.size**.
 
  ![](../../../../images/Core_Friendly_Url_Cache.png)
 
-- Adjust JVM Heap size from 3584 to 4096 under **Application servers > WebSphere_Portal > Process_definition > Java Virtual Machine**.
+- Adjusted JVM Heap size from 3584 to 4096 under **Application servers > WebSphere_Portal > Process_definition > Java Virtual Machine**.
 
  ![](../../../../images/Core_JVM_Tuning.png)
 
@@ -707,20 +709,20 @@ As there is a high response time for individual API requests, tuning of core and
 
  ![](../../../../images/Core_DX_LDAP_User_Cache.png)
 
-- Disable jcr.text.search under **Resource environment providers > JCR ConfigService Portal Content > Custom properties** because there is no search functionality.
+- Disabled jcr.text.search under **Resource environment providers > JCR ConfigService Portal Content > Custom properties** because there is no search functionality.
 
  ![](../../../../images/Core_Tuning_JCR_Text_Search_Disable.png)
 
-- Delete search collections in **Portal > Administration > Search > Search collections** (both JCRCollection1 and Default Search Collection).
+- Deleted search collections in **Portal > Administration > Search > Search collections** (both JCRCollection1 and Default Search Collection).
 
  ![](../../../../images/Core_Tuning_Delete_Search_Collections.png)
 
-- Log level changes from info to severe in WAS for in both configuration and run time.
+- Logged level changes from info to severe in WAS for in both configuration and run time.
 
  ![](../../../../images/Core_Tuning_Log_Level_Details.png)
 
  !!!note
-       Restart all core pods after executing all the tunings steps mentioned above.
+       Restart all core pods after performing all the tunings steps mentioned.
 
  - DB2 tuning performed by executing DB2 Reorg and Runstats.
 
@@ -779,9 +781,9 @@ As there is a high response time for individual API requests, tuning of core and
 
 ##### Observations 
 
-- 76 bad requests out of 6647702 samples (contributing to 0% error rate) from JMeter results observed only in DAM APIs, which is very negligible.
+- 76 bad requests out of 6647702 samples (contributing to 0% error rate) from JMeter results observed only in DAM APIs, which is negligible.
 
-- The CPU usage of a node reached an average of 80% in 10000 concurrent users tests. The saturation was checked by reducing the number of users to 5000, 3000, and 2500 users. Node CPU average usage is then close to 70% and maximum is 80% in all 5000, 3000, and 2500 users load test results.
+- The CPU usage of a node reached an average of 80% in tests with 10000 concurrent users. The saturation was checked by reducing the number of users to 5000, 3000, and 2500 users. Node CPU average usage is then close to 70% and maximum is 80% in all 5000, 3000, and 2500 users load test results.
 
 - For 5000 and 3000 concurrent users, results of average and 90th pct response time of APIs exceed 5 seconds.
 
