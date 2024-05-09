@@ -4,7 +4,7 @@ If you want to leverage the capabilities of the OpenSearch based Search, you can
 
 ## Prerequisites
 
-To leverage the new Search deployment, you need to have a DX deployment running inside Kubernetes. That deployment must at least contain DX Core, as it contains WCM and is used for ACL lookup.
+To use the capabilities of OpenSearch, it is required to have a DX deployment running inside Kubernetes. This DX deployment must at least contain DX Core because it contains the Web Content Manager (WCM) and is used for ACL lookup.
 
 ## Offered features / Limitations
 
