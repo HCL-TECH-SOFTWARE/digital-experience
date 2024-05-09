@@ -174,7 +174,7 @@ As part of authoring, pages and portlets were added manually. The following list
 - Page 4 - Information Portlet(JSR) - JSP file -  jsp/oob/welcome.jsp 
 - Page 5 - Search Centre portlet
 - Page 6 - Custom JSF portlet with simple form
-- Page 7 - Script Application portlet --> Added JavaScript Functions, Date and Time object examples
+- Page 7 - Script Application portlet (Added JavaScript Functions, Date and Time object examples)
 - Page 8 - Added all above 7 portlets in this page
 
 After users completed the authoring steps, the anonymous portal user and authenticated users (added to openLDAP) must render the pages. Every page request uses a `/GET API` call (for example, `/wps/portal/portletsperf/page1`) and there is a response assertion in a sampler to validate the content html in the response body. 
@@ -356,11 +356,11 @@ This sizing work started with rendering scenarios of Web Content Management (WCM
 
 ### Conclusion
 
-This performance guidance work shows the upper limit on a single-node K8s cluster AWS instance (c5.9xlarge). We suggest for single node (c5.9x arge) in rendering scenarios of DAM, WCM and pages&portlets the comfortable load is 2500 concurrent users with good average and 90th percentile response times. The top five response times of rendering APIs are all in the range of 4 to 5 seconds.
+This performance guidance shows the upper limit on a single-node K8s cluster AWS instance (c5.9xlarge). It is suggested that for a single node (c5.9xlarge) rendering scenarios for DAM, WCM, and pages&portlets, the comfortable load is 2500 concurrent users with good average and 90th percentile (pct) response times. The top five response times of rendering APIs are all in the range of 4 to 5 seconds.
 
 - Core tuning details are available in [DX core tuning](#dx-core-tuning-and-enhancements-after-10k-concurrent-user-run).
 
-- Below details on number and limits for the following pods significantly improve the responsiveness of the setup and enable the system to handle 2500 concurrent users with comfortable average and 90th percentile(pct) response times in range of ~4 to 5 secs.
+- The following table contains the number and limits for each pod. Using these values significantly improves the responsiveness of the setup and enables the system to handle 2500 concurrent users with average and 90th percentile (pct) response times in the range of 4 to 5 seconds.
 
 
 | Pod name                    | number of pods | Container                   | Container image             | Container CPU request and limit | Container memory request and limit |
@@ -670,7 +670,7 @@ The following stages were conducted, starting with config DX kube configuration 
 
 - Through HPA tests, it was observed that 4 pods of core, DAM, haproxy, and 3 pods of ringAPI must have a successful run for 6000 concurrent users.
 
-- With this set up proceeded for 10000 Vusers Test. Test was executed successfully till 10000 concurrent ramp up. At steady state of 10000 concurrent users, we observed few failures due to ringAPI pod going down intermittently. Then we scaled ringAPI pods to 4.
+-  With this setup, the test was executed for 10000 concurrent users. Test was executed successfully until 10000 concurrent ramp up. At a steady state of 10000 concurrent users, there are a few failures due to the ringAPI pod going down intermittently. RingAPI pods are then scaled to 4.
 
 - The test run was successful with 10000 concurrent users with 4 pods of core, DAM, haproxy, and ringAPI each.
 
@@ -785,6 +785,6 @@ As there is a high response time for individual API requests, tuning of core and
 
 - For 5000 and 3000 concurrent users, results of average and 90th pct response time of APIs exceed 5 seconds.
 
--  We suggest for single node (c5.9x arge) in rendering scenarios of DAM, WCM and pages&portlets the comfortable load is 2500 concurrent users with good average and 90th pct response times. The top five response time of rendering APIs are all in range of ~4 to 5 secs.
+-  It is suggested that for a single node (c5.9xlarge) rendering scenarios for DAM, WCM, and pages&portlets, the comfortable load is 2500 concurrent users with good average and 90th percentile (pct) response times. The top five response times of rendering APIs are all in the range of 4 to 5 seconds.
 
 
