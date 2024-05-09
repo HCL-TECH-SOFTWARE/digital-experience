@@ -18,7 +18,7 @@ At this current stage, the Search provides the following functionality and limit
 
 ## Preparing your Kubernetes Cluster
 
-Before you can run OpenSearch in your Kubernetes cluster, you will need to ensure that your Kubernetes Nodes meet the requirements.
+Make sure that your Kubernetes nodes meet the requirements before running OpenSearch in your Kubernetes cluster. Set the configuration of both the maximum number of open files and the maximum memory allocation capabilities.
 
 This includes the configuration of both the maximum number of open files as well as the maximum memory allocation capabilities.
 
