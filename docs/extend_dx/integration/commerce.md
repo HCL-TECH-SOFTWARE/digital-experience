@@ -2,6 +2,21 @@
 
 [HCL Commerce](https://help.hcltechsw.com/commerce/9.1.0/landing/wc_welcome.html) is a customizable e-commerce platform. It provides tools for business users to centrally manage a cross-channel strategy. With HCL Commerce, business users can create and manage marketing campaigns, promotions, catalog, and merchandising across all sales channels. 
 
+## Integration patterns
+
+Common Integration patterns are:
+1. Side by side deployment of HCL DX and HCL Commerce
+2. Headless Commerce with HCL DX providing the user interface and consuming HCL Commerce APIs
+3. Headless content with HCL Commerce providing the user interface and consuming DAM and WCM APIs
+
+1. Side by side deployment of HCL DX and HCL Commerce
+In this deployment pattern HCL DX is used for displaying information, providing transactions, store data up to ordering and then redirect to Commerce via single sign on and letting the user check out in HCL Commerce. In this pattern both solutions are focused on their main functions but require some styling to make the overall solution seamless and looking consistent.
+
+2. Headless Commerce with HCL DX providing the user interface and consuming HCL Commerce APIs
+You can also use HCL Commerce as a headless commerce solution and integrate this solution into DX sites using REST APIs, namely [HCL Commerce REST API](https://help.hcltechsw.com/commerce/9.1.0/restapi/refs/restview_openapi3.html) and [Storefront REST API](https://help.hcltechsw.com/commerce/9.1.0/restapi/concepts/cwvrestapi_store.html). With this integration, business users (for example, Marketing Managers) can manage sites and landing pages easily with DX's What You See Is What You Get (WYSIWYG) editing. Users can also add commerce capabilities to DX sites using drag and drop, accessible on all devices.
+DDC (Digital Data Connector) is a great HCL DX solution to allow customizing the user interface as business user in HCL DX while consuming the HCL Commerce REST APIs.
+
+3. Headless content with HCL Commerce providing the user interface and consuming DAM and WCM APIs
 With the [HCL Commerce integration with HCL Digital Experience (DX)](https://help.hcltechsw.com/commerce/9.1.0/integration/concepts/dx_introduction.html), you can utilize content and digital assets managed within HCL DX at any store. The integration provides the following HCL Commerce UI capabilities:
 
 - Product Managers can work within the context of their merchandising tasks and are able to select digital assets for their products or categories.
@@ -9,7 +24,7 @@ With the [HCL Commerce integration with HCL Digital Experience (DX)](https://hel
 
 The HCL Commerce integration provides a Reference Store application that retrieves specific content from HCL DX and renders presentation in the form of static and video ad e-Marketing Spots.
 
-In addition, you can also use HCL Commerce as a headless commerce solution and integrate this solution into DX sites using REST APIs, namely [HCL Commerce REST API](https://help.hcltechsw.com/commerce/9.1.0/restapi/refs/restview_openapi3.html) and [Storefront REST API](https://help.hcltechsw.com/commerce/9.1.0/restapi/concepts/cwvrestapi_store.html). With this integration, business users (for example, Marketing Managers) can manage sites and landing pages easily with DX's What You See Is What You Get (WYSIWYG) editing. Users can also add commerce capabilities to DX sites using drag and drop, accessible on all devices.
+## More Information
 
 For more information about integrating HCL Commerce, see the following topics:
 
