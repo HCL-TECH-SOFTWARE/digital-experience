@@ -6,7 +6,7 @@ Know more about the different components of the DX search based on OpenSearch an
 
 The DX search based on OpenSearch is designed with the weaknesses of the existing search in mind. The following properties are considered:
 
-- High Availability: The existing search solution using Remote Search in clustered environments does not provide any high availability features. The Remote Search server is a singleton instance that and thus represents a single point of failure. The new OpenSearch based implementation allows to have multiple nodes running at the same time and is resilient against single node outages.
+- **High Availability**: The existing search solution using Remote Search in clustered environments does not provide any high availability features. The Remote Search server is a singleton instance that represents a single point of failure. The new OpenSearch-based implementation allows to have multiple nodes running at the same time and is resilient against single node outages.
 
 - **Scalability**: Since Remote Search is a single instance, the only way to scale is vertically. This is a limited approach because a single instance cannot use an infinite amount of hardware resources. The new OpenSearch-based implementation allows to deploy multiple nodes which enables load balancing for heavy, search-related workloads. It is also possible to have separate nodes for data ingress and querying, allowing for further scaling flexibility.
 
