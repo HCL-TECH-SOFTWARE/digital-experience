@@ -1,5 +1,7 @@
 # Architectural Overview
 
+Know more about the different components of the DX search based on OpenSearch and how they are used.
+
 ## Key goals
 
 The DX search based on OpenSearch is designed with the weaknesses of the existing search in mind. The following properties are considered:

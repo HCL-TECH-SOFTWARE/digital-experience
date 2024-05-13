@@ -2,17 +2,20 @@
 
 This topic provides information on how to configure search based on OpenSearch for your DX deployment.
 
-## Prerequisites
-
-To use the capabilities of OpenSearch, it is required to have a DX deployment running inside Kubernetes. This DX deployment must at least contain DX Core because it contains the Web Content Manager (WCM) and is used for ACL lookup.
-
-## Offered features / Limitations
-
-At this current stage, the search provides the following functionality and limitations:
+The search currently provides the following capabilities:
 
 - WCM Crawling
 - Push API for use with WCM Content Sources
 - Search via REST API
+
+## Prerequisites
+
+To use the capabilities of OpenSearch, it is required to have a DX deployment running inside Kubernetes. This DX deployment must at least contain DX Core because it contains the Web Content Manager (WCM) and is used for ACL lookup.
+
+## Limitations
+
+The search currently has the following limitations:
+
 - The REST API request body size is limited to 5 MB.
 - A search result is limited to 10,000 results.
 
