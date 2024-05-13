@@ -471,7 +471,7 @@ Set up the systems before performing the rendering tests. This section provides 
 
 - Each leaf site area contains ten content items, for a total of 12,800 content items across the libraries.
 
-- Half of the content items are visible to "Anonymous" and "All Authenticated" users, are profiled with the keyword "MENU.
+- Half of the content items are visible to "Anonymous" and "All Authenticated" users. This portion of the content items are evenly distributed between these two types of users and are profiled with the keyword "MENU".
 
 - The other half is visible only to members of ten groups per content item. These ten groups are spread out among the 500 groups assumed to exist in the test LDAP, and assumed to be called "Group0000" through "Group0499".
 
@@ -537,9 +537,9 @@ The following stages were conducted, starting with config DX kube configuration 
 
 #### Stage 1
 
-- The DX combined run executed with config deployments as mentioned in the following Helm values. 
+- The DX combined rendering ran with config deployments mentioned in the following Helm values.
 
-- For 1000 concurrent users, tests are executed successfully with no erros.
+- For 1000 concurrent users, tests finished successfully with no errors.
 
 - Errors occurred at a user load of 2000. Total error is around 1%.
 
