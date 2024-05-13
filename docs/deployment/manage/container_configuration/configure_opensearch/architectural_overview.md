@@ -2,7 +2,7 @@
 
 ## Key goals
 
-The new search for DX has been designed with the weaknesses of the existing search in mind. The focus was set on the following properties:
+The DX search based on OpenSearch is designed with the weaknesses of the existing search in mind. The following properties are considered:
 
 - High Availability: The existing search solution using Remote Search in clustered environments does not provide any high availability features. The Remote Search server is a singleton instance that and thus represents a single point of failure. The new OpenSearch based implementation allows to have multiple nodes running at the same time and is resilient against single node outages.
 
