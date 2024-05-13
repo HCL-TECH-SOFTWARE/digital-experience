@@ -12,6 +12,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 8.5 and 9.0 Versions**
 
 - End of Support Announced for Digital Experience v8.5 and 9
+- With CF219 we added a new feature to auto apply 9.5 to a 8/5 or 9.0 installation if the configuration setting install_95=true is set. Starting with version 221 we are planning to change the default to apply 9.5 unless install_95=false is set.
 
 **Digital Experience 9.5 Version**
 
@@ -20,6 +21,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Exporting a user session usage report in CSV format
 - New search configuration using OpenSearch
+- Nested access control for Digital Asset Manager
 - New guidance for performance sizing for rendering with maximum throughput on a single node
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
