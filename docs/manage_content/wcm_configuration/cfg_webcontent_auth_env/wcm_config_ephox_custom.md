@@ -1,23 +1,24 @@
 # Rich text editor toolbar configuration options
 
-## Using TinyMCE editor in the HCL Web Content Manager Authoring portlet
-The TinyMCE editor is available for use in HCL's Digital Experience Authoring Portlet and also for [inline editing](wcm_config_prop_authoring.md#default-in-place-editing-mode).  To configure TinyMCE for use in the Authoring Porlet navigate to the 'Edit Shared Settings' link in the 'Preferences' dropdown menu on the Web Content Authoring Portlet page.
+The TinyMCE Editor requires a minimum supported Java level of 1.8. If you are unable to move to Java 8, it is recommended that you use the out-of-the-box, default CKEditor provided with HCL Digital Experience (DX).
+
+## Using TinyMCE editor in the WCM authoring portlet
+
+You can use the TinyMCE editor in the Web Content Manager (WCM) authoring portlet and in [inline editing](wcm_config_prop_authoring.md#default-in-place-editing-mode). To use TinyMCE in the Authoring Porlet, go to **Preferences > Edit Shared Settings** in the authoring portlet page.
 
 **Web Content Authoring (Library Explorer)** > **Preferences** > **Configure**
 
-On the 'Edit Shared Settings' page, open the 'Editor Options' dropdown menu, open the 'Select the rich text editor to use in rich text fields' dropdown menu and choose 'Enhanced Editor'. Click OK.
+On the **Edit Shared Settings** page, click the **Editor Options** dropdown menu, open the 'Select the rich text editor to use in rich text fields' dropdown menu and choose 'Enhanced Editor'. Click **OK**.
 
 **Configure** > **Editor Options** > **Select the rich text editor to use in rich test fields** > **Enhanced Editor**
 
 Create a new piece of content with rich text using the TinyMCE Editor.
 
-## Using a custom configuration with TinyMCE editor in the HCL Web Content Manager Authoring portlet
+## Using a custom configuration with TinyMCE editor in the WCM authoring portlet
 
-!!!note
-    These customization steps only apply to the Enhanced editor used in the HCL Web Content Manager authoring portlet.
-
-!!!note
-    If working in a clustered deployment, run these steps on the primary node only.  Re-sync the cluster when steps are complete.
+!!!note "Notes"
+    - These customization steps only apply to the Enhanced editor used in the HCL Web Content Manager authoring portlet.
+    - If working in a clustered deployment, run these steps on the primary node only.  Re-sync the cluster when steps are complete.
 
 1. The TinyMCE editor uses a custom configuration file that is named tiny_config.jsp to set custom parameters for the toolbar. Copy your custom configuration file to wp_profile_root\PortalServer\wcm\shared\app\config\tinymce.
 
@@ -86,5 +87,3 @@ Create a new piece of content with rich text using the TinyMCE Editor.
 
 ???+ info "Related information"
     - [WebSphere® Integrated Solutions Console](../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
-
-The TinyMCE Editor requires a minimum supported Java level of 1.8. If you are unable to move to Java 8, it is recommended that you use the out-of-the-box, default CKEditor provided with HCL Digital Experience.
