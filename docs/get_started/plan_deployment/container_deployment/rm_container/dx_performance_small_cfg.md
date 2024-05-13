@@ -185,9 +185,9 @@ For rendering sizing, all rendering JMeter scripts of WCM, DAM, and pages and po
 
 **Load distribution**
 
-- WCM - 40 %
-- DAM - 30 %
-- Pages and Portlets - 30 %
+- WCM - 40%
+- DAM - 30%
+- Pages and Portlets - 30%
 
 ## Pods in a native-Kubernetes deployment are 1:1 in small config
 ![](../../../../images/small-config-pods.png)
@@ -356,14 +356,14 @@ This sizing work started with rendering scenarios of Web Content Management (WCM
 
 ### Conclusion
 
-This performance guidance shows the upper limit on a single-node K8s cluster AWS instance (c5.9xlarge). It is suggested that for single-node (c5.9xlarge) rendering scenarios for DAM, WCM, and pages&portlets, the comfortable load is 2500 concurrent users with good average and 90th percentile (pct) response times. The top five response times of rendering APIs are all in the range of 4 to 5 seconds.
+This performance guidance shows the upper limit on a single-node K8s cluster AWS instance (c5.9xlarge). It is suggested that for single-node (c5.9xlarge) rendering scenarios for DAM, WCM, and pages with portlets, the recommended load is 2500 concurrent users with good average and 90th percentile (pct) response times. The top five response times of rendering APIs are all in the range of 4 to 5 seconds.
 
 - Core tuning details are available in [DX core tuning](#dx-core-tuning-and-enhancements-after-10000-concurrent-user-run).
 
 - The following table contains the number and limits for each pod. Using these values significantly improves the responsiveness of the setup and enables the system to handle 2500 concurrent users with average and 90th percentile (pct) response times in the range of 4 to 5 seconds.
 
 
-| Pod name                    | number of pods | Container                   | Container image             | Container CPU request and limit | Container memory request and limit |
+| Pod name                    | Number of pods | Container                   | Container image             | Container CPU request and limit | Container memory request and limit |
 | --------------------------- | -------------- | --------------------------- | --------------------------- | ------------------------------- | ---------------------------------- |
 | core                        | 4              | core                        | core                        | 5000m                           | 8000Mi                             |
 | ringApi                     | 4              | ringApi                     | ringApi                     | 800m                            | 512Mi                              |
@@ -375,11 +375,11 @@ This performance guidance shows the upper limit on a single-node K8s cluster AWS
 
 ### Customer rendering scenario details
 
-| Concurrent users      | Existing WCM pages | Existing DAM content | Page&Portlets |
-| --------------------  | ------------------ | -------------------- | ------------- |
-| Small  – 1000 users   | 20                 | 2k                   | 80            |
-| Medium – 10000 users  | 200                | 10k                  | 800           |
-| Large  – 100000 users | 2000               | 50 - 100k            | 8000          | 
+| Concurrent users      | Existing WCM pages | Existing DAM content | Pages with portlets |
+| --------------------  | ------------------ | -------------------- | ------------------- |
+| Small  – 1000 users   | 20                 | 2k                   | 80                  |
+| Medium – 10000 users  | 200                | 10k                  | 800                 |
+| Large  – 100000 users | 2000               | 50 - 100k            | 8000                | 
 
 ### Environment
 
@@ -393,7 +393,7 @@ This performance guidance shows the upper limit on a single-node K8s cluster AWS
 
       [Single node Configuration]  - [c5.9xlarge] 
 
-- The tests started with c5.2xlarge, then c5.4xlarge, and then c5.9xlarge instance after an analysis of test results and observations.
+- The tests started with c5.2xlarge, then c5.4xlarge, and then a c5.9xlarge instance after analyzing test results and observations.
 
       ![](../../../../images/Header-1-AWS-Med.png)
 
@@ -458,7 +458,7 @@ This performance guidance shows the upper limit on a single-node K8s cluster AWS
 
 ### Authoring details
 
-Set up the systems before performing rendering tests. This section provides details for WCM, DAM, and portlets authoring.
+Set up the systems before performing the rendering tests. This section provides details for WCM, DAM, and portlets authoring.
 
 
 ### WCM Default Test Data - 200 pages
@@ -479,7 +479,7 @@ Set up the systems before performing rendering tests. This section provides deta
 
 - Each page contains 6 WCM viewer portlets that show content below one of the 20 top-level site areas. For example, Pages 01 to 04 show content from site areas "SA01" through "SA04" in the "PerformanceTestContent01" library, and pages 05 to 08 show content from site areas "SA01" through "SA04" in the "PerformanceTestContent02"  library, and so on.
 
-- Four of the portlets on each page show single-content items. For page 01, these are the first content items in site areas "SA01.01.01.01", "SA01.02.01.01", "SA01.03.01.01", and "SA01.04.01.01" respectively. Other pages follow the same pattern.
+- Four of the portlets on each page show single-content items. For page 01, these are the first content items in site areas: "SA01.01.01.01", "SA01.02.01.01", "SA01.03.01.01", and "SA01.04.01.01" respectively. Other pages follow the same pattern.
 
 - Another portlet on each page shows a navigator of site areas and content items below the same top-level area.
 
@@ -506,9 +506,9 @@ Set up the systems before performing rendering tests. This section provides deta
 
 ### Pages and portlets default test data: 80 pages
 
-Customers typically use a total of eight pages with portlets. To complete authoring and rendering, both anonymous and authenticated users received access. The same users were added in openLDAP for WCM rendering. All authenticated users are assigned the User role. Below 8 are duplicated 10 times with diffeent page numbers to have 80 pages.
+Customers typically use a total of eight pages with portlets. To complete authoring and rendering, both anonymous and authenticated users received access. The same users were added in openLDAP for WCM rendering. All authenticated users are assigned the User role. The pages in the following list are duplicated 10 times with different page numbers, resulting to 80 pages.
  
-As part of authoring, pages and portlets were added manually. The following list shows the details of portlets for authoring on every page:
+As part of authoring, pages and portlets were added manually. The list shows the details of portlets for authoring on every page.
 
 - Page 1 - 2 Articles
 - Page 2 - 2 Rich text
@@ -517,7 +517,7 @@ As part of authoring, pages and portlets were added manually. The following list
 - Page 5 - Search Centre portlet
 - Page 6 - Custom JSF portlet with simple form (disabled in JMeter script because there are some errors)
 - Page 7 - Script Application portlet (Added JavaScript Functions, Date and Time object examples)
-- Page 8 - Added all above portlets in this page except JSF portlet
+- Page 8 - Added all mentioned portlets except JSF portlet
 
 After completing the authoring steps, the anonymous portal user and authenticated users (added to openLDAP) must render the pages. Every page request uses a `/GET API` call (for example, `/wps/portal/portletsperf/page1`) and there is a response assertion in a sampler to validate the content html in the response body. 
 
@@ -527,9 +527,9 @@ For rendering sizing, all rendering JMeter scripts of WCM, DAM, and pages and po
 
 **Load distribution**
 
-- WCM - 40 %
-- DAM - 30 %
-- Pages and Portlets - 30 %
+- WCM - 40%
+- DAM - 30%
+- Pages and Portlets - 30%
 
 ### Results summary
 
@@ -551,20 +551,20 @@ The following stages were conducted, starting with config DX kube configuration 
 ##### stage-1 Helm values of a single-node configuration
 
                                         Requests                Limits 
-| Component                  | No of pods | cpu(m)   | memory(Mi) | cpu(m)   | memory(Mi) |
-|----------------------------|------------|----------|------------|----------|------------|
-| contentComposer            | 1          | 100      | 128        | 100      | 128        |
-| **core**                   | **1**      | **5000** | **8000**   | **5000** | **8000**   |
-| **digitalAssetManagement** | **1**      | **1000** | **2048**   | **1000** | **2048**   |
-| imageProcessor             | 1          | 200      | 2048       | 200      | 2048       |
-| openLdap                   | 1          | 200      | 768        | 200      | 768        |
-| **persistenceNode**        | **1**      | **1000** | **2048**   | **1000** | **2048**   |
-| persistenceConnectionPool  | 1          | 500      | 512        | 500      | 512        |
-| **ringApi**                | **1**      | **500**  | **512**    | 500      | **512**    |
-| runtimeController          | 1          | 100      | 256        | 100      | 256        |
-| **haproxy**                | **1**      | **1000** | **1024**   | **1000** | **1024**   |
-| licenseManager             | 1          | 100      | 300        | 100      | 300        |
-| **Total**                  |            | **9700** | **17644**  | **9700** | **17644**  |
+| Component                  | No. of pods | cpu(m)   | memory(Mi) | cpu(m)   | memory(Mi) |
+|----------------------------|-------------|----------|------------|----------|------------|
+| contentComposer            | 1           | 100      | 128        | 100      | 128        |
+| **core**                   | **1**       | **5000** | **8000**   | **5000** | **8000**   |
+| **digitalAssetManagement** | **1**       | **1000** | **2048**   | **1000** | **2048**   |
+| imageProcessor             | 1           | 200      | 2048       | 200      | 2048       |
+| openLdap                   | 1           | 200      | 768        | 200      | 768        |
+| **persistenceNode**        | **1**       | **1000** | **2048**   | **1000** | **2048**   |
+| persistenceConnectionPool  | 1           | 500      | 512        | 500      | 512        |
+| **ringApi**                | **1**       | **500**  | **512**    | 500      | **512**    |
+| runtimeController          | 1           | 100      | 256        | 100      | 256        |
+| **haproxy**                | **1**       | **1000** | **1024**   | **1000** | **1024**   |
+| licenseManager             | 1           | 100      | 300        | 100      | 300        |
+| **Total**                  |             | **9700** | **17644**  | **9700** | **17644**  |
 
 
 
@@ -573,11 +573,11 @@ The following stages were conducted, starting with config DX kube configuration 
 | Medium Config Sizing                                           | Run1                                                           | Run2                                          |
 | -------------------------------------------------------------- | -------------------------------------------------------------- | --------------------------------------------- |
 | Environment                                                    | AWS/Native Kube                                                | AWS/Native Kube                               |
-| Test Time(IST)                                                 | 2023-10-11T08:05:00 - 10:28:00                                 | 2023-10-11T17:15:00 - 20:25:00                |
-| Total samples                                                  | 2611885                                                        | 3416582                                       |
+| Test Time (IST)                                                 | 2023-10-11T08:05:00 - 10:28:00                                 | 2023-10-11T17:15:00 - 20:25:00                |
+| Total Samples                                                  | 2611885                                                        | 3416582                                       |
 | Concurent Users                                                | 2000(WCM - 800 DAM - 600 Page&Portlet - 600)                   | 3000(WCM - 1200 DAM - 900 Page&Portlet - 900) |
 | Total Throughput (transactions/sec)                            | 303.33                                                         | 307.33                                        |
-| Total Avg response time (in milli seconds)                     | 4656.72                                                        | 7138.92                                       |
+| Total Avg Response Time (in milli seconds)                     | 4656.72                                                        | 7138.92                                       |
 | CPU Usage(%)                                                   | 42.42                                                          | 44.04                                         |
 | Memory Usage(%)                                                | 35.52                                                          | 36.35                                         |
 | Disk Read IO(io/sec)                                           | 0.08                                                           | 0.12                                          |
@@ -599,7 +599,7 @@ The following stages were conducted, starting with config DX kube configuration 
 
 - For a user load of 6000, there is an http response code: `503 service unavailable errors in the test.`
 
-- All errors were from WCM and Pages&Portlets not from DAM.
+- All errors were from WCM and pages with portlets, not from DAM.
 
 - Total average response time increases exponentially with load.
 
@@ -613,20 +613,20 @@ The following stages were conducted, starting with config DX kube configuration 
 ##### Helm values
 
                                         Requests                Limits 
-| Component                  | No of pods | cpu(m)   | memory(Mi) | cpu(m)   | memory(Mi) |
-|----------------------------|------------|----------|------------|----------|------------|
-| contentComposer            | 1          | 100      | 128        | 100      | 128        |
-| **core**                   | **4**      | **5000** | **8000**   | **5000** | **8000**   |
-| **digitalAssetManagement** | **4**      | **1000** | **2048**   | **1000** | **2048**   |
-| imageProcessor             | 1          | 200      | 2048       | 200      | 2048       |
-| openLdap                   | 1          | 200      | 768        | 200      | 768        |
-| **persistenceNode**        | **2**      | **1000** | **2048**   | **1000** | **2048**   |
-| persistenceConnectionPool  | 1          | 500      | 512        | 500      | 512        |
-| **ringApi**                | **4**      | **500**  | **512**    | 500      | **512**    |
-| runtimeController          | 1          | 100      | 256        | 100      | 256        |
-| **haproxy**                | **4**      | **1000** | **1024**   | **1000** | **1024**   |
-| licenseManager             | 1          | 100      | 300        | 100      | 300        |
-| **Total**                  |            | **33200**| **54444**  | **33200**| **54444**  |
+| Component                  | No. of pods | cpu(m)   | memory(Mi) | cpu(m)   | memory(Mi) |
+|----------------------------|-------------|----------|------------|----------|------------|
+| contentComposer            | 1           | 100      | 128        | 100      | 128        |
+| **core**                   | **4**       | **5000** | **8000**   | **5000** | **8000**   |
+| **digitalAssetManagement** | **4**       | **1000** | **2048**   | **1000** | **2048**   |
+| imageProcessor             | 1           | 200      | 2048       | 200      | 2048       |
+| openLdap                   | 1           | 200      | 768        | 200      | 768        |
+| **persistenceNode**        | **2**       | **1000** | **2048**   | **1000** | **2048**   |
+| persistenceConnectionPool  | 1           | 500      | 512        | 500      | 512        |
+| **ringApi**                | **4**       | **500**  | **512**    | 500      | **512**    |
+| runtimeController          | 1           | 100      | 256        | 100      | 256        |
+| **haproxy**                | **4**       | **1000** | **1024**   | **1000** | **1024**   |
+| licenseManager             | 1           | 100      | 300        | 100      | 300        |
+| **Total**                  |             | **33200**| **54444**  | **33200**| **54444**  |
 
 
 
@@ -639,11 +639,11 @@ The following stages were conducted, starting with config DX kube configuration 
 | Medium Config Sizing                       | Run1                                                           | Run2                                                          |
 | ------------------------------------------ | -------------------------------------------------------------- | -------------------------------------------------------------- |
 | Environment                                | AWS/Native Kube                                                | AWS/Native Kube                                                |
-| Test Time(IST)                             | 2023-10-17T12:10:00 - 15:40:00                                 | 2023-10-19T06:43:00 - 11:53:00                                 |
-| Total samples                              | 10288912                                                       | 15602157                                                       |
+| Test Time (IST)                             | 2023-10-17T12:10:00 - 15:40:00                                 | 2023-10-19T06:43:00 - 11:53:00                                 |
+| Total Samples                              | 10288912                                                       | 15602157                                                       |
 | Concurent Users                            | 6000(WCM - 2400 DAM - 1800 Page&Portlet - 1800)                | 10000(WCM - 4000 DAM - 3000 Page&Portlet - 3000)               |
 | Total Throughput (transactions/sec)        | 815.05                                                         | 837.06                                                         |
-| Total Avg response time (in milli seconds) | 4813.22                                                        | 8130.75                                                        |
+| Total Avg Response Time (in milli seconds) | 4813.22                                                        | 8130.75                                                        |
 | CPU Usage(%)                               | 64.09                                                          | 65.63                                                          |
 | Memory Usage(%)                            | 30.69                                                          | 45.9                                                           |
 | Disk Read IO(io/sec)                       | 1.24                                                           | 1.5                                                            |
@@ -662,13 +662,13 @@ The following stages were conducted, starting with config DX kube configuration 
 
 ##### Observations 
 
-- For 6000 concurrent users (WCM - 2400, DAM - 1800, P&P - 1800) and 6 JMeter subordinates, the core was scaled to 3 pods, and DAM, Persistence Node, Ring API, and HAProxy were scaled to 2 each.
+- For 6000 concurrent users (WCM - 2400, DAM - 1800, Pages and portlets - 1800) and 6 JMeter subordinates, the core was scaled to 3 pods, and DAM, Persistence Node, Ring API, and HAProxy were scaled to 2 each.
 
-- Horizontal Pod Autoscaling (HPA) was enabled for core, DAM, haproxy, and ringAPI Pods with thresholds of 50% for CPU utilization and 80% for memory utilization. HPA test run was executed successfully with no errors.
+- Horizontal Pod Autoscaling (HPA) was enabled for core, DAM, haproxy, and ringAPI Pods with thresholds of 50% for CPU utilization and 80% for memory utilization. HPA test run executed successfully with no errors.
 
 - Through HPA tests, it was observed that 4 pods of core, DAM, haproxy, and 3 pods of ringAPI must have a successful run for 6000 concurrent users.
 
--  With this setup, the test was executed for 10000 concurrent users. Test was executed successfully until 10000 concurrent ramp up. At a steady state of 10000 concurrent users, there are a few failures due to the ringAPI pod going down intermittently. RingAPI pods are then scaled to 4.
+-  With this setup, the test was run for 10000 concurrent users. Test was executed successfully until 10000 concurrent ramp up. At a steady state of 10000 concurrent users, there are a few failures due to the ringAPI pod going down intermittently. RingAPI pods are then scaled to 4.
 
 - The test run was successful with 10000 concurrent users with 4 pods of core, DAM, haproxy, and ringAPI each.
 
@@ -729,20 +729,20 @@ The following list contains details of tuning and enhancements done to DX core d
 #### Stage-3 Helm values
 
                                         Requests                Limits 
-| Component                     | No of pods | cpu(m)    | memory(Mi) | cpu(m)    | memory(Mi) |
-|-------------------------------|------------|-----------|------------|-----------|------------|
-| contentComposer               | 1          | 100       | 128        | 100       | 128        |
-| **core**                      | **4**      | **5000**  | **8000**   | **5000**  | **8000**   |
-| **digitalAssetManagement**    | **4**      | **1000**  | **2048**   | **1000**  | **2048**   |
-| imageProcessor                | 1          | 200       | 2048       | 200       | 2048       |
-| openLdap                      | 1          | 200       | 768        | 200       | 768        |
-| **persistenceNode**           | **2**      | **1000**  | **2048**   | **1000**  | **2048**   |
-| **persistenceConnectionPool** | **2**      | 500       | 512        | 500       | 512        |
-| **ringApi**                   | **4**      | **800**   | **512**    | 500       | **512**    |
-| runtimeController             | 1          | 100       | 256        | 100       | 256        |
-| **haproxy**                   | **4**      | **700**   | **1024**   | **1000**  | **1024**   |
-| licenseManager                | 1          | 100       | 300        | 100       | 300        |
-| **Total**                     |            | **33700** | **54956**  | **33700** | **54956**  |
+| Component                     | No. of pods | cpu(m)    | memory(Mi) | cpu(m)    | memory(Mi) |
+|-------------------------------|-------------|-----------|------------|-----------|------------|
+| contentComposer               | 1           | 100       | 128        | 100       | 128        |
+| **core**                      | **4**       | **5000**  | **8000**   | **5000**  | **8000**   |
+| **digitalAssetManagement**    | **4**       | **1000**  | **2048**   | **1000**  | **2048**   |
+| imageProcessor                | 1           | 200       | 2048       | 200       | 2048       |
+| openLdap                      | 1           | 200       | 768        | 200       | 768        |
+| **persistenceNode**           | **2**       | **1000**  | **2048**   | **1000**  | **2048**   |
+| **persistenceConnectionPool** | **2**       | 500       | 512        | 500       | 512        |
+| **ringApi**                   | **4**       | **800**   | **512**    | 500       | **512**    |
+| runtimeController             | 1           | 100       | 256        | 100       | 256        |
+| **haproxy**                   | **4**       | **700**   | **1024**   | **1000**  | **1024**   |
+| licenseManager                | 1           | 100       | 300        | 100       | 300        |
+| **Total**                     |             | **33700** | **54956**  | **33700** | **54956**  |
 
 
 ##### Details of Pods in native-kube deployment
@@ -755,11 +755,11 @@ The following list contains details of tuning and enhancements done to DX core d
 | DX Single node Config Sizing               | Run1                                                                   | Run2                                                                  | Run3                                                                  | Run4                                                                 |
 | ------------------------------------------ | ---------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | Environment                                | AWS/Native Kube                                                        | AWS/Native Kube                                                       | AWS/Native Kube                                                       | AWS/Native Kube                                                      |
-| Test Time(IST)                             | 2024-03-15T13:30:00 - 18:30:00                                         | 2024-04-17T22:49:00 - 2024-04-18T1:54:00                              | 2024-04-18T8:36:00 - 10:51:00                                         | 2024-04-18T12:32:00 - 14:35:00                                       |
+| Test Time (IST)                             | 2024-03-15T13:30:00 - 18:30:00                                         | 2024-04-17T22:49:00 - 2024-04-18T1:54:00                              | 2024-04-18T8:36:00 - 10:51:00                                         | 2024-04-18T12:32:00 - 14:35:00                                       |
 | Total samples                              | 19715730                                                               | 10927343                                                              | 7596758                                                               | 6781806                                                              |
 | Concurrent Users                           | 10000(WCM - 4000 DAM - 3000 Page&Portlet - 3000)                       | 5000(WCM - 2000 DAM - 1500 Page&Portlet - 1500)                       | 3016(WCM - 1200 DAM - 904 Page&Portlet - 912)                         | 2504(WCM - 1008 DAM - 744 Page&Portlet - 752)                        |
 | Total Throughput (transactions/sec)        | 1058.66                                                                | 983.73                                                                | 937.44                                                                | 922.4                                                                |
-| Total Avg response time (in milli seconds) | 5572.72                                                                | 2526.04                                                               | 1203.10                                                               | 845.84                                                               |
+| Total Avg Response Time (in milli seconds) | 5572.72                                                                | 2526.04                                                               | 1203.10                                                               | 845.84                                                               |
 | CPU Usage(%)                               | 80.2                                                                   | 70.90 ( max-80.9)                                                     | 69.46 (max -80.5)                                                     | 69.29(max-82.74)                                                     |
 | Memory Usage(%)                            | 44.56                                                                  | 42.63                                                                 | 40.96                                                                 | 34.3                                                                 |
 | Disk Read IO(io/sec)                       | 0.5                                                                    | 0.14                                                                  | 0.05                                                                  | 0.1                                                                  |
@@ -785,6 +785,6 @@ The following list contains details of tuning and enhancements done to DX core d
 
 - For 5000 and 3000 concurrent users, results of average and 90th pct response time of APIs exceed 5 seconds.
 
--  It is suggested that for a single node (c5.9xlarge) rendering scenarios for DAM, WCM, and pages&portlets, the comfortable load is 2500 concurrent users with good average and 90th percentile (pct) response times. The top five response times of rendering APIs are all in the range of 4 to 5 seconds.
+-  It is suggested that for a single node (c5.9xlarge) rendering scenarios for DAM, WCM, and pages with portlets, the recommended load is 2500 concurrent users with good average and 90th percentile (pct) response times. The top five response times of rendering APIs are all in the range of 4 to 5 seconds.
 
 
