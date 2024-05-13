@@ -1,6 +1,6 @@
 # Installing search based on OpenSearch
 
-If you want to leverage the capabilities of the OpenSearch based Search, you can follow the steps described on this page to get the Search configured.
+This topic provides information on how to configure search based on OpenSearch for your DX deployment.
 
 ## Prerequisites
 
