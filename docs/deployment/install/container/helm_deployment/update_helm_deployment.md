@@ -12,7 +12,7 @@ The recommended approach for configuration changes is to update the custom-valu
 
 ## Prerequisites
 
-Make sure that the `wkplc.properties` files are correct. The HCL DX upgrade runs several ConfigEngine scripts. These scripts depend on the `wkplc.properties` being up-to-date and accurate, especially with the password properties. If you are using multiple profiles, verify that the information in each profile is correct.
+Make sure that the `wkplc.*` files are correct. The HCL DX upgrade runs several ConfigEngine scripts. These scripts depend on the `wkplc.*` being up-to-date and accurate, especially with the password properties. If you are using multiple profiles, verify that the information in each profile is correct.
 
 1.  Edit the `(wp_profile root)/ConfigEngine/properties/wkplc.properties` file and ensure the following values are set correctly:
     -   `WasRemoteHostName=(the hostname of your WAS instance)`
