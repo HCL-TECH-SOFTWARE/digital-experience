@@ -471,13 +471,11 @@ Set up the systems before performing rendering tests. This section provides deta
 
 - Each leaf site area contains ten content items, for a total of 12,800 content items across the libraries.
 
-- Half of the content items are visible to "Anonymous" and "All Authenticated" users.
+- Half of the content items are visible to "Anonymous" and "All Authenticated" users, are profiled with the keyword "MENU.
 
 - The other half is visible only to members of ten groups per content item. These ten groups are spread out among the 500 groups assumed to exist in the test LDAP, and assumed to be called "Group0000" through "Group0499".
 
-- Half of the content items (spread evenly over each type described previously) are profiled with the keyword "MENU."
-
-- There are 20 test-portal pages created under the "PerformanceTest" label. Each page has a URL in the form "<context-root>/perf/page-xx".
+- There are 20 test-portal pages created under the "PerformanceTest" label. Each page has a URL in the form "<context-root>/perf/page-xx". 20 pages are duplicated to 200 pages.
 
 - Each page contains 6 WCM viewer portlets that show content below one of the 20 top-level site areas. For example, Pages 01 to 04 show content from site areas "SA01" through "SA04" in the "PerformanceTestContent01" library, and pages 05 to 08 show content from site areas "SA01" through "SA04" in the "PerformanceTestContent02"  library, and so on.
 
@@ -508,7 +506,7 @@ Set up the systems before performing rendering tests. This section provides deta
 
 ### Pages and portlets default test data: 80 pages
 
-Customers typically use a total of eight pages with portlets. To complete authoring and rendering, both anonymous and authenticated users received access. The same users were added in openLDAP for WCM rendering. All authenticated users are assigned the User role.
+Customers typically use a total of eight pages with portlets. To complete authoring and rendering, both anonymous and authenticated users received access. The same users were added in openLDAP for WCM rendering. All authenticated users are assigned the User role. Below 8 are duplicated 10 times with diffeent page numbers to have 80 pages.
  
 As part of authoring, pages and portlets were added manually. The following list shows the details of portlets for authoring on every page:
 
