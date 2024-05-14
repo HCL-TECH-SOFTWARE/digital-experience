@@ -31,9 +31,9 @@ Before you can perform administrative tasks, you need to authenticate your user 
   | --- | --- |
   | `Authorization` | `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9....` |
 
-## Listing existing Content Sources
+## Listing existing content sources
 
-To see which Content Sources are configured, call the `/dx/api/search/v2/contentsources` endpoint with a `GET` request:
+To see which content sources are configured, call the `/dx/api/search/v2/contentsources` endpoint with a `GET` request:
 
 **Response:**
 
@@ -43,7 +43,7 @@ To see which Content Sources are configured, call the `/dx/api/search/v2/content
 }
 ```
 
-If you have Content Sources configured, the response looks similar to the following example:
+If you have content sources configured, the response looks similar to the following example:
 
 **Response:**
 
@@ -62,9 +62,9 @@ If you have Content Sources configured, the response looks similar to the follow
 }
 ```
 
-## Creating a new Content Source
+## Creating a new content source
 
-To create a new Content Source for WCM, call the `/dx/api/search/v2/contentsources` endpoint with the following payload:
+To create a new content source for WCM, call the `/dx/api/search/v2/contentsources` endpoint with the following payload:
 
 **Payload:**
 
@@ -80,8 +80,8 @@ Provide the following properties:
 
 | Property | Optional | Description |
 | --- | --- |
-| `name` | no | A speaking identifier for your Content Source. |
-| `type` | no | The type of Content Source you want to create (for example, `wcm`). |
+| `name` | no | A speaking identifier for your content source. |
+| `type` | no | The type of content source you want to create (for example, `wcm`). |
 | `aclLookupHost` | no | The host where the ACL lookup for search requests is being made. It can directly point to your HCL DX Core Service inside your Kubernetes deployment. The name consists of the release name used during the helm install and the suffix `-core:10042`. |
 
 The response of the API call looks similar to the following sample:
@@ -99,7 +99,7 @@ The response of the API call looks similar to the following sample:
 }
 ```
 
-The response contains the `id` of the Content Source, which is required when you [configure a crawler](#configuring-the-crawler).
+The response contains the `id` of the content source, which is required when you [configure a crawler](#configuring-the-crawler).
 
 ## Configuring the crawler
 
@@ -129,7 +129,7 @@ Provide the following properties:
 
 | Property | Optional | Description |
 | --- | --- | --- |
-| `contentSource` | no | The `id` of the Content Source you want the Crawler to be configured for. |
+| `contentSource` | no | The `id` of the content source you want the crawler to be configured for. |
 | `type` | no | The type of crawler (for example, `wcm`) |
 | `configuration.targetDataSource` | no | The WCM seedlist URL. You can use the internal HCL DX Core hostname for direct communication to it. The name consists of the release name used during the helm install (for example, `dx`). |
 | `configuration.schedule` | yes | A cron type notation controlling the automated execution of the crawler. You can omit this for no schedule. |
@@ -201,7 +201,7 @@ The following response is returned after a crawl is triggered:
 
 ## Verifying the crawler status
 
-After triggering a crawler, you can check the crawler status by calling the `/dx/api/search/v2/crawlers/{crawler_id}` endpoint with a `GET` request. This returns complete Crawler object to you, including the status.
+After triggering a crawler, you can check the crawler status by calling the `/dx/api/search/v2/crawlers/{crawler_id}` endpoint with a `GET` request. This returns complete crawler object to you, including the status.
 
 **Response:**
 
