@@ -27,6 +27,8 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## All Digital Experience Versions (8.5, 9.0, 9.5)
 
+## Web Content Manager - Drafts not exposed with WebDAV for WCM
+
 ### Huddo Boards integration with HCL DX
 
 === "Containers"
@@ -34,6 +36,8 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     [Huddo Boards](https://www.huddo.com/boards) is a team collaboration tool that you can now use in an HCL DX environment. For installation and configuration instructions, see [Integrating Huddo Boards with HCL DX](../../extend_dx/integration/huddo_boards/index.md).
+
+### HCL Commerce integration with HCL DX
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
@@ -53,6 +57,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ## Digital Experience 9.5 Version
 
 ## Digital Experience 9.5 Container Version
+
+### Exporting a user session usage report in CSV format
+
+### New search configuration using OpenSearch
+
+### New guidance for performance sizing for rendering with maximum throughput on a single node
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
