@@ -1,10 +1,10 @@
-# Run search queries via REST API
+# Running search queries via REST API
 
-Search queries follow the capabilities that OpenSearch provides. However the request schema is different from the one that OpenSearch uses.
+Search queries follow the capabilities that OpenSearch provides. However, the request schema is different from the one that OpenSearch uses.
 
 ## Basic query structure
 
-The search REST API provides an OpenSearch compatible search syntax with some adjustments. This allows developers to leverage the capabilities of OpenSearch.
+The search REST API provides an OpenSearch-compatible search syntax with some adjustments. This allows developers to use the capabilities of OpenSearch.
 
 The following example shows the basic structure of a search query:
 
@@ -24,20 +24,24 @@ The following example shows the basic structure of a search query:
 }
 ```
 
+The following table provides more information about each property in the search query:
+
 | Property | Description |
 | -- | -- |
-| query | Same syntax as a [OpenSearch Boolean Compound Query](https://opensearch.org/docs/latest/query-dsl/compound/bool/) |
-| aggregations | Same syntax as [OpenSearch Aggregations](https://opensearch.org/docs/latest/aggregations/) |
-| page | pagination index, default is 0 |
-| pageSize | results per page, default is 100 |
-| scope | A list of Content Source IDs, to which the search request will be limited to. If omitted or empty, all Content Sources will be searched. |
-| sort | Same syntax as [OpenSearch Sort](https://opensearch.org/docs/latest/search-plugins/searching-data/sort/) |
+| query | Same syntax as an [OpenSearch Boolean Compound Query](https://opensearch.org/docs/latest/query-dsl/compound/bool/). |
+| aggregations | Same syntax as [OpenSearch Aggregations](https://opensearch.org/docs/latest/aggregations/). |
+| page | Pagination index. Default is 0. |
+| pageSize | Results per page. Default is 100. |
+| scope | A list of content source IDs, to which the search request is limited to. If omitted or empty, all content sources are searched. |
+| sort | Same syntax as [OpenSearch Sort](https://opensearch.org/docs/latest/search-plugins/searching-data/sort/). |
 
-The filter section of the query will always be enriched during processing with a filter for the users ACLs. This ensures a search result will only contain allowed fields.
+The filter section of the query is always enriched during processing with a filter for the user's ACLs. This ensures a search result only contains the allowed fields.
 
-Please be aware that a search query is currently limited to 10000 results.
+Note that a search query is currently limited to 10000 results.
 
 ## Example queries
+
+This section provides sample search queries for several scenarios. 
 
 ### Search for a title in WCM
 
@@ -55,7 +59,7 @@ Please be aware that a search query is currently limited to 10000 results.
 }
 ```
 
-This will return all documents containing the word `Product` in their `title` field.
+This search query returns all documents containing the word `Product` in their `title` field.
 
 ### Search using a query string
 
@@ -73,9 +77,9 @@ This will return all documents containing the word `Product` in their `title` fi
 }
 ```
 
-You can use query strings to define a search query. This will result in all documents containing the word `Products` and the number `01` or `03`.
+You can use query strings to define a search query. This search query returns all documents containing the word `Products` and the number `01` or `03`.
 
-### Limiting scope to one Content Source
+### Limiting scope to one content source
 
 ```json
 {
@@ -94,7 +98,7 @@ You can use query strings to define a search query. This will result in all docu
 }
 ```
 
-This will return all documents containing the word `Product` in their `title` field but only for the Content Source with ID `619b9540-b2aa-45e6-a69b-0a0ab6799a78`.
+This returns all documents containing the word `Product` in their `title` field but only for the content source with ID `619b9540-b2aa-45e6-a69b-0a0ab6799a78`.
 
 ### Sorting results by a field
 
@@ -119,7 +123,7 @@ This will return all documents containing the word `Product` in their `title` fi
 }
 ```
 
-This will return all documents containing the word `Product` in their `title` field but sort them by their published date in `descending` order.
+This returns all documents containing the word `Product` in their `title` field but they are sorted by their published date in `descending` order.
 
 ### Using filters
 
@@ -144,4 +148,4 @@ This will return all documents containing the word `Product` in their `title` fi
 }
 ```
 
-This will return all documents containing the word `Product` in their `title` field but only the ones with the `locale` being `fr`. The filter has no influence on scoring and is purely binary.
+This returns all documents containing the word `Product` in their `title` field but only the ones with the `locale` being `fr`. The filter has no influence on scoring and is purely binary.
