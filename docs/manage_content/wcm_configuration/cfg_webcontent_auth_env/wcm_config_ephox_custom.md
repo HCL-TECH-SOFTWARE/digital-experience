@@ -12,7 +12,7 @@ On the **Edit Shared Settings** page, click the **Editor Options** dropdown menu
 
 **Configure** > **Editor Options** > **Select the rich text editor to use in rich test fields** > **Enhanced Editor**
 
-Create a new piece of content with rich text using the TinyMCE Editor.
+After configuring your authoring portlet to use TinyMCE, you can create a new piece of content with rich text using the TinyMCE Editor.
 
 ## Using a custom configuration with TinyMCE editor in the WCM authoring portlet
 
