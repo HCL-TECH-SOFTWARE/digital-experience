@@ -21,7 +21,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Exporting a user session usage report in CSV format
 - New search configuration using OpenSearch
-- Nested access control for Digital Asset Manager
+- Digital Asset Management - Access control for nested collections
 - New guidance for performance sizing for rendering with maximum throughput on a single node
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
@@ -86,6 +86,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     There is a new search configuration for DX that is based on OpenSearch. The search currently provides the following capabilities: WCM crawling, push API for use with WCM Content Sources, and searching using REST API. For more information, see [](). 
+
+### Digital Asset Management - Access control for nested collections
+
+(Doc not yet available)
 
 ### New guidance for performance sizing for rendering with maximum throughput on a single node
 
