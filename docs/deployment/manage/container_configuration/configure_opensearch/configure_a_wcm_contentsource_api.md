@@ -1,36 +1,37 @@
-# Configure a WCM Content Source via REST API
+# Configuring a WCM Content Source using REST API
 
-This chapter explains the use of the Content Source REST API to create a WCM Content Source. This can later be used to crawl WCM in your HCL DX instance and run search queries on.
+This topic explains the use of the Content Source REST API to create a WCM Content Source. This can later be used to crawl WCM in your HCL DX instance and run search queries on.
 
 ## Authenticating as a search administrator
 
-Before you can perform administrative tasks, you need to authenticate as a search administrator.
-To do that, send a `POST` request to the `/dx/api/search/v2/admin/authenticate` endpoint using the following payload:
+Before you can perform administrative tasks, you need to authenticate your user role as a search administrator.
 
-**Payload:**
+1. To authenticate, send a `POST` request to the `/dx/api/search/v2/admin/authenticate` endpoint using the following payload:
 
-```json
-{
-  "username": "searchadmin",
-  "password": "yourconfiguredpassword"
-}
-```
+  **Payload:**
 
-**Response:**
+  ```json
+  {
+    "username": "searchadmin",
+    "password": "yourconfiguredpassword"
+  }
+  ```
 
-```json
-{
-  "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9....."
-}
-```
+  **Response:**
 
-You need to add the returned JWT in the following requests in the `Authorization` header, using the `Bearer` prefix:
+  ```json
+  {
+    "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9....."
+  }
+  ```
 
-| Header | Value |
-| --- | --- |
-| `Authorization` | `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9....` |
+2. Add the returned JWT in the following requests in the `Authorization` header using the `Bearer` prefix:
 
-## List existing Content Sources
+  | Header | Value |
+  | --- | --- |
+  | `Authorization` | `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9....` |
+
+## Listing existing Content Sources
 
 To see which Content Sources are configured, call the `/dx/api/search/v2/contentsources` endpoint with a `GET` request:
 
@@ -42,7 +43,7 @@ To see which Content Sources are configured, call the `/dx/api/search/v2/content
 }
 ```
 
-If you have Content Sources configured, the response will look like in the following example:
+If you have Content Sources configured, the response looks similar to the following example:
 
 **Response:**
 
@@ -61,7 +62,7 @@ If you have Content Sources configured, the response will look like in the follo
 }
 ```
 
-## Create a new Content Source
+## Creating a new Content Source
 
 To create a new Content Source for WCM, call the `/dx/api/search/v2/contentsources` endpoint with the following payload:
 
@@ -75,15 +76,15 @@ To create a new Content Source for WCM, call the `/dx/api/search/v2/contentsourc
 }
 ```
 
-The following properties need to be provided:
+Provide the following properties:
 
 | Property | Optional | Description |
 | --- | --- |
-| `name` | no | A speaking identifier for your Content Source |
-| `type` | no | The type of Content Source you want to create, in this example `wcm` |
+| `name` | no | A speaking identifier for your Content Source. |
+| `type` | no | The type of Content Source you want to create (for example, `wcm`). |
 | `aclLookupHost` | no | The host where the ACL lookup for search requests is being made. It can directly point to your HCL DX Core Service inside your Kubernetes deployment. The name consists of the release name used during the helm install and the suffix `-core:10042`. |
 
-The response of the API call looks like this:
+The response of the API call looks similar to the following sample:
 
 **Response:**
 
@@ -98,11 +99,11 @@ The response of the API call looks like this:
 }
 ```
 
-The response contains the `id` of the Content Source, which you will need later to configure a Crawler.
+The response contains the `id` of the Content Source, which is required when you [configure a crawler](#configuring-the-crawler).
 
-## Configure the Crawler
+## Configuring the crawler
 
-To configure a Crawler, call the `/dx/api/search/v2/crawlers` endpoint with a `POST` request and the following payload:
+To configure a crawler, call the `/dx/api/search/v2/crawlers` endpoint with a `POST` request and the following payload:
 
 **Payload:**
 
@@ -124,21 +125,21 @@ To configure a Crawler, call the `/dx/api/search/v2/crawlers` endpoint with a `P
 }
 ```
 
-The following properties need to be provided:
+Provide the following properties:
 
 | Property | Optional | Description |
 | --- | --- | --- |
-| `contentSource` | no | The `id` of the Content Source you want the Crawler to be configured for |
-| `type` | no | The type of Crawler, in this case `wcm` |
-| `configuration.targetDataSource` | no | The WCM seedlist URL, you can use the internal HCL DX Core hostname for direct communication to it. The name consists of the release name used during the helm install, in this example `dx`. |
-| `configuration.schedule` | yes | A cron type notation controlling the automated execution of the Crawler, can be omitted for no schedule |
-| `configuration.security.type` | no | The type of authentication to use. In this example it is `basic`. |
-| `configuration.security.username` | no | The username of an user that has access to crawl the WCM seedlist |
-| `configuration.security.password` | no | The password of an user that has access to crawl the WCM seedlist |
-| `configuration.maxCrawlTime` | yes | Time limit in seconds for the overall Crawler execution, useful to prevent stuck crawlers. |
-| `configuration.maxRequestTime` | yes | Maximum request time per Crawler request. This limits how long the Crawler will wait for an answer from the seedlist provider. |
+| `contentSource` | no | The `id` of the Content Source you want the Crawler to be configured for. |
+| `type` | no | The type of crawler (for example, `wcm`) |
+| `configuration.targetDataSource` | no | The WCM seedlist URL. You can use the internal HCL DX Core hostname for direct communication to it. The name consists of the release name used during the helm install (for example, `dx`). |
+| `configuration.schedule` | yes | A cron type notation controlling the automated execution of the crawler. You can omit this for no schedule. |
+| `configuration.security.type` | no | The type of authentication to use (for example, `basic`). |
+| `configuration.security.username` | no | The username of a user that has access to crawl the WCM seedlist. |
+| `configuration.security.password` | no | The password of a user that has access to crawl the WCM seedlist. |
+| `configuration.maxCrawlTime` | yes | Time limit in seconds for the overall crawler execution. This is useful to prevent stuck crawlers. |
+| `configuration.maxRequestTime` | yes | Maximum request time per crawler request. This limits how long the crawler will wait for an answer from the seedlist provider. |
 
-The response will contain the created Crawler object.
+The response contains the created crawler object:
 
 **Response:**
 
@@ -166,29 +167,29 @@ The response will contain the created Crawler object.
 }
 ```
 
-The following returned properties will be populated once the Crawler has run:
+The following returned properties are populated after the crawleer has run:
 
 | Property | Description |
 | --- | --- |
-| `crawlingInstance` | The actual search-middleware node that will perform the crawls. Will state the actual Pod name in Kubernetes. |
-| `lastCrawled` | UNIX Timestamp of the last time the Crawler has run. |
-| `lastCrawlDuration` | Last runtime in milliseconds of the Crawler. |
-| `status` | Last known status of the Crawler. |
-| `incrementalTimestamp` | The stored timestamp of the Crawler that is being used in the next crawl iteration. |
+| `crawlingInstance` | The actual search-middleware node that performs the crawls. Will state the actual Pod name in Kubernetes. |
+| `lastCrawled` | UNIX Timestamp of the last time the crawler ran. |
+| `lastCrawlDuration` | Last runtime in milliseconds of the crawler. |
+| `status` | Last known status of the crawler. |
+| `incrementalTimestamp` | The stored timestamp of the crawler that is used in the next crawl iteration. |
 
-## Test the Crawler configuration
+## Testing the crawler configuration
 
-To test that your Crawler configuration is correct, call the `/dx/api/search/v2/crawlers/{crawler_id}/test` endpoint with a `POST` request. It will try to retrieve the first page of the seedlist without actually performing a crawl. This ensures the URL as well as credentials are correct and search is able to contact the seedlist provider.
+To test if your crawler configuration is correct, call the `/dx/api/search/v2/crawlers/{crawler_id}/test` endpoint with a `POST` request. The system then tries to retrieve the first page of the seedlist without actually performing a crawl. This ensures the URL and credentials are correct and search is able to contact the seedlist provider.
 
-It will respond with a fitting HTTP status code after execution. A `200 OK` will be returned if the configuration is working.
+Calling the endpoint responds with a fitting HTTP status code after execution. A `200 OK` is returned if the configuration is working.
 
-## Manually trigger the Crawler
+## Triggering the crawler manually
 
-In case you don't want to wait for the Crawler to run by schedule or you have not configured a schedule, you can manually trigger the Crawler.
+If you do not want to wait for the crawler to run by schedule or you have not configured a schedule, you can manually trigger the crawler.
 
 Call the `/dx/api/search/v2/crawlers/{crawler_id}/trigger` endpoint with a `POST` request.
 
-It will respond once the crawl has been triggered:
+The following response is returned after a crawl is triggered:
 
 **Response:**
 
@@ -198,9 +199,9 @@ It will respond once the crawl has been triggered:
 }
 ```
 
-## Verify the Crawler status
+## Verifying the crawler status
 
-After you have triggered a Crawler, you can easily check the Crawler status by calling the `/dx/api/search/v2/crawlers/{crawler_id}` endpoint with a `GET` request. It will return the complete Crawler object to you including the status.
+After triggering a crawler, you can check the crawler status by calling the `/dx/api/search/v2/crawlers/{crawler_id}` endpoint with a `GET` request. This returns complete Crawler object to you, including the status.
 
 **Response:**
 
