@@ -43,6 +43,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
 
+### Postgres version upgrade
+=== "Containers"
+    Postgres version 11 is no more supported and hence the postgres version in Persistence node is upgraded from 11 to 16. Its highly recommended to back up your database dump before upgrading to this CF versions. For more details, see [Postgres version upgrade](../../get_started/plan_deployment/container_deployment/dam_persistence_architecture.md#postgres-version-upgrade).
+
+=== "On-Premises"
+    Postgres version 11 is no more supported and hence the postgres version in Persistence node is upgraded from 11 to 16. Its highly recommended to back up your database dump before upgrading to this CF versions. For more details, see [Postgres version upgrade](../../get_started/plan_deployment/container_deployment/dam_persistence_architecture.md#postgres-version-upgrade).
+
 ## Digital Experience 8.5 and 9.0 Versions
 
 ### End of Support Announced for Digital Experience v8.5 and 9
