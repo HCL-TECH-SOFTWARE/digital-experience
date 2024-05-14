@@ -6,9 +6,9 @@ The TinyMCE Editor requires a minimum supported Java level of 1.8. If you are un
 
 You can use the TinyMCE editor in the Web Content Manager (WCM) authoring portlet and in [inline editing](wcm_config_prop_authoring.md#default-in-place-editing-mode). To use TinyMCE in the Authoring Porlet, go to **Preferences > Edit Shared Settings** in the authoring portlet page.
 
-**Web Content Authoring (Library Explorer)** > **Preferences** > **Configure**
+**Web Content Authoring (Library Explorer)** > **Preferences** > **Edit Shared Settings**
 
-On the **Edit Shared Settings** page, click the **Editor Options** dropdown menu, open the 'Select the rich text editor to use in rich text fields' dropdown menu and choose 'Enhanced Editor'. Click **OK**.
+On the **Edit Shared Settings** page, click the **Editor Options** twistie menu, open the 'Select the rich text editor to use in rich text fields' dropdown menu and choose 'Enhanced Editor'. Click **OK**.
 
 **Configure** > **Editor Options** > **Select the rich text editor to use in rich test fields** > **Enhanced Editor**
 
