@@ -12,7 +12,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 8.5 and 9.0 Versions**
 
 - End of Support Announced for Digital Experience v8.5 and 9
-- With CF219 we added a new feature to auto apply 9.5 to a 8/5 or 9.0 installation if the configuration setting install_95=true is set. Starting with version 221 we are planning to change the default to apply 9.5 unless install_95=false is set.
+- Change in the application of 9.5 during 8.5/9.0 installation for CF221
 
 **Digital Experience 9.5 Version**
 
@@ -51,6 +51,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     On June 30, 2023, HCL Software announced end of support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
+    
+### Change in the application of 9.5 during 8.5/9.0 installation for CF221
+
+=== "On-Premises"
+    In CF219, a feature was introduced where 9.5 is automatically applied to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that starting CF221, 9.5 is applied by default unless you set `install_95=false`.
 
 ## Digital Experience 9.5 Version
 
