@@ -4,15 +4,15 @@
 
 ## Integration patterns
 
-There are three patterns you can use when integrating HCL Commerce with HCL DX. 
+There are three patterns you can use when integrating HCL Commerce with HCL DX:
 
-### Side-by-side deployment of HCL DX and HCL Commerce
-
-In this deployment pattern, HCL DX is used for displaying information, providing transactions, storing data up to ordering, and then redirecting to HCL Commerce using a single sign-on and letting the user check out in HCL Commerce. In a side-by-side deployment, both solutions are focused on their main functions but require some styling to make the overall solution seamless and looking consistent.
+- [Headless Commerce with HCL DX providing the user interface and consuming HCL Commerce APIs](#headless-commerce-with-hcl-dx-providing-the-user-interface-and-consuming-hcl-commerce-apis)
+- [Headless content with HCL Commerce providing the user interface and consuming DAM and WCM APIs](#headless-content-with-hcl-commerce-providing-the-user-interface-and-consuming-dam-and-wcm-apis)
+- [Side-by-side deployment of HCL DX and HCL Commerce](#side-by-side-deployment-of-hcl-dx-and-hcl-commerce)
 
 ### Headless Commerce with HCL DX providing the user interface and consuming HCL Commerce APIs
 
-You can also use HCL Commerce as a headless commerce solution and integrate this solution into DX sites using REST APIs, namely [HCL Commerce REST API](https://help.hcltechsw.com/commerce/9.1.0/restapi/refs/restview_openapi3.html) and [Storefront REST API](https://help.hcltechsw.com/commerce/9.1.0/restapi/concepts/cwvrestapi_store.html). With this integration, business users (for example, Marketing Managers) can manage sites and landing pages easily with DX's What You See Is What You Get (WYSIWYG) editing. Users can also add commerce capabilities to DX sites using drag and drop, accessible on all devices. DDC (Digital Data Connector) is an HCL DX solution that you can use to customize the user interface as a business user in HCL DX while consuming the HCL Commerce REST APIs.
+Use HCL Commerce as a headless commerce solution and integrate this solution into DX sites using REST APIs, namely [HCL Commerce REST API](https://help.hcltechsw.com/commerce/9.1.0/restapi/refs/restview_openapi3.html) and [Storefront REST API](https://help.hcltechsw.com/commerce/9.1.0/restapi/concepts/cwvrestapi_store.html). With this integration, business users (for example, Marketing Managers) can manage sites and landing pages easily with DX's What You See Is What You Get (WYSIWYG) editing. Users can also add commerce capabilities to DX sites using drag and drop, accessible on all devices. DDC (Digital Data Connector) is an HCL DX solution that you can use to customize the user interface as a business user in HCL DX while consuming the HCL Commerce REST APIs.
 
 ### Headless content with HCL Commerce providing the user interface and consuming DAM and WCM APIs
 
@@ -31,6 +31,9 @@ For more information, see the following topics:
 - [Managing digital assets in HCL DX](https://help.hcltechsw.com/commerce/9.1.0/integration/concepts/dx_managingassets.html)
 - [Push to Live](https://help.hcltechsw.com/commerce/9.1.0/integration/refs/dx_pushtolive.html)
 
+### Side-by-side deployment of HCL DX and HCL Commerce
+
+In this deployment pattern, HCL DX is used for displaying information, providing transactions, storing data up to ordering, and then redirecting to HCL Commerce using a single sign-on and letting the user check out in HCL Commerce. In a side-by-side deployment, both solutions are focused on their main functions but require some styling to make the overall solution seamless and looking consistent.
 
 ## HCLSoftware U learning materials
 
