@@ -69,19 +69,24 @@ The following example shows a persistence cluster in a successful deployment.
 
 ## `Postgres Version Upgrade`
 
-Postgres version 11 is no more supported. Hence from CF 220, the persistence node containing postgres DB will be upgraded from version 11 to 16. Along with the Postgres, the repmgr also gets updated to version. 5.2.1. The Postgres version pre CF 220 is 11 and hence before upgrading from Pre CF 220 to CF 220 or later, ensure to back up the database dump. Refer to this [link](../../../manage_content/digital_assets/dam_backup_restore_image.md#backup-persistence) on exporting the dump.
+Postgres version 11 is no longer supported. Starting from CF 220, the persistence node containing the Postgres DB will be upgraded from version 11 to 16. Along with Postgres, repmgr will also be updated to version 5.2.1. Before upgrading from Pre CF 220 to CF 220 or later, make sure to back up the database dump. Refer to this [link](../../../manage_content/digital_assets/dam_backup_restore_image.md#backup-persistence) for instructions on exporting the dump.
 
 In case of Upgrade failure, rollback to previous CF version. Also during the upgrade, the data directory of PG 11 is not removed. Hence in order to remove the data directory, execute the below for all the persistence pods
 
-1. Navigate into the persistence pod
+1. Navigate into the persistence pod. 
 ```
   kubectl -n dxns exec -it dx-deployment-persistence-node-0 bash
 ```
 
-2. Execute the command to remove the PG 11 data directory
+2. Execute the below command to remove the PG 11 data directory
 ```
  /tmp/delete_old_cluster.sh
 ```
+
+!!! note
+
+    Change the Pod name accordingly and execute the above for all the pods
+
 
 ???+ info "Related information"
     - [HCL Digital Asset Management](../../../manage_content/digital_assets/index.md)
