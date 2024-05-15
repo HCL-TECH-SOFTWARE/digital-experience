@@ -39,6 +39,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     Starting CF220, drafts are not exposed with WebDAV for WCM. This is to avoid issues with drafts having the same name as the live or expired items. For more information, see [WebDAV](../../manage_content/wcm_delivery/webdav/index.md).
 
 ### Postgres version upgrade
+
 === "Containers"
     Postgres version 11 is no longer supported. The Postgres version in the persistence node is upgraded from version 11 to version 16. It is recommended to back up your database dump before upgrading to CF220 and later versions. For more details, see [Postgres version upgrade](../../get_started/plan_deployment/container_deployment/dam_persistence_architecture.md#postgres-version-upgrade).
 
