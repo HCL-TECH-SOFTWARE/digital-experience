@@ -22,7 +22,7 @@ Edit the `(wp_profile root)/ConfigEngine/properties/wkplc_dbdomain.properties` f
     -   `likeminds.DbPassword=(your database user password)`
     -   `feedback.DbPassword=(your database user password)`
 
-If you do not want those removed after every run make sure PWordDelete=false is set in `(wp_profile root)/ConfigEngine/properties/wkplc.properties`.
+If you do not want these password values removed after every run, make sure `PWordDelete=false` is set in `(wp_profile root)/ConfigEngine/properties/wkplc.properties`.
 
 !!!note
         If your server is configured with database runtime users, for example, `feedback.DbRuntimeUser=(your feedback database runtime user)`, make sure to set their password values correctly (for example, in `feedback.DbRuntimePassword=(your feedback database runtime user password)`).
