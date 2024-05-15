@@ -5,7 +5,7 @@ This topic describes the details of DAM access control, its features and limitat
 ## Overview on DX Portal Access Control for DAM
 
 DX Portal Access Control follows an inheritance based tree structure. DAM is part of that tree just like WCM or Portal Pages. 
-At the top of the tree is the virtual Resource Portal, below it is the virtual Resource DIGITAL ASSET MANAGEMENT and below that, are the resource instances (the collections) you are registering with its children. By assigning a role on a resource to a user, the user gets permission for the resource and its children. There is a way to block the inheritance with role blocks but it is not exposed in the initial configuration for collections, only for the virtual resource.
+At the top of the tree is the virtual Resource Portal, below it is the virtual Resource DIGITAL ASSET MANAGEMENT and below that, are the resource instances (the collections) you are registering with its children. By assigning a role on a resource to a user, the user gets permission for the resource and its children.
 
 For DAM, only a subset of the roles is exposed. Possible role types are User (view only), Editor (view, edit, create), and Administrator (view, edit, create, delete, set/remove access). Other roles existing in Portal Access Control like Manager or Privileged User are not exposed.
 
@@ -19,11 +19,11 @@ For DAM, only a subset of the roles is exposed. Possible role types are User (vi
 DAM collection is accessible by the currently logged in user based on his role and the access is managed by DX Portal Access Control as mentioned. 
 
 !!! note
-    Currently, only Administrator, Editor, and User roles are exposed in DAM UI. The user creating the collection gets explicitly assigned the Administrator role on the collection. All child-level collections under that created collection always have the same permissions as the root collection.
+    Currently, only Administrator, Editor, and User roles are exposed in DAM UI. The user creating the collection gets explicitly assigned the Administrator role on the collection. All nested collections by default will inherit the permission from root collection but permission can be modified.
 
 ### DAM Access Control in detail
 
-From the DAM perspective, each individual root level collection is a resource instance that can be administered. Child collections cannot be administered separately and always have the same permissions as the root collection.
+From the DAM perspective, each individual root level collection and child collection is a resource instance that can be administered.
 
 - User role: The user can view items in the collection and the collection itself as well as child collections.
 - Editor role: All permissions of the User role plus the user can edit collection details as well as upload items.
@@ -54,9 +54,41 @@ In DAM, the user can assign permission to a collection tree at the root level if
 
 # Nested Collection Permissions
 
-DAM does not support assigning permissions at the nested collection level. We need to navigate to the root collection and assign permission to the users for the entire collection hierarchy if needed as you can see below.
+Nested collection will inherit the permission from it's root collection by default. Below editor permission is inherited from root collection.
 
-![DAM Nested Collection Permissions](../../../../images/access_nested_collection.png)
+![DAM Inherit Permission for User](../../../../images/dam_inherited_permission_for_user.png)
+
+In DAM, the user can assign permission to a nested collection if user has administrator permission for the root collection.
+
+![DAM Assign Permission to Users for a nested Collection](../../../../images/dam_assign_permission_for_nested_collection.png)
+
+Permissions are inherited from root to nested collection since inheritance checkbox is selected by default.
+
+![DAM Access Panel for Nested Collection](../../../../images/dam_access_panel_for_nested_collection.png)
+
+If inheritance checkbox is unchecked from administrator, then inherited permission for the nested collection will get removed and user will not be able to view the nested collection.
+
+![DAM Remove Inherited Permission for User](../../../../images/dam_uncheck_inherit_checkbox.png)
+
+# Access Control Traversal for Nested Collections (ACL Traversal)
+
+In nested access control If user has access to the child collection but not parent then the parent collection will not be visible to the user. Hence user cannot navigate to the child collection to perform any operations. In order to overcome this a new configuration (i.e aclTraversal) has been introduced which will allow all users to view all the collections across DAM, but user will not be able to modify, view access panel or any media items unless user has access to that collection. In this case user will be able to only navigate by clicking the collection to reach to the sub collection for which the user has access to. This configuration is an application level configuration which can be enabled or disabled through helm.
+
+```
+# Configuration for dam
+    digitalAssetManagement:
+    aclTraversal: false 
+```
+With ACL traversal enabled, user can traverse to all the collection/ nested collection for which user does not have permission but user will not be able to view the media items under the collection/ nested collection. By default, ACL traversal will be disabled.
+
+![DAM Collection without permission with ACL traversal enabled￼￼](../../../../images/dam_nested_collection_visible_acl_traversal_enabled.png)
+
+When user uncheck inheritance checkbox, User and editor role block will be applied on the resource. If the checkbox is selected then there are no user/ editor role blocks on the resource.
+
+Inherit uncheck implies Editor and User roles block for inheritance. Below API endpoint is used to achieve the role block.
+
+!!! note       
+    The below endpoint is used to set or remove role blocks. The default mode for the endpoint is set to update. [Update Resource Config API](https://opensource.hcltechsw.com/experience-api-documentation/ring-api/#operation/accessUpdateResourceConfig)
 
 ## Changing Permissions on the collection tree for the users
 
@@ -70,6 +102,4 @@ Downgrading self permission from Administrator to Editor or User will remove aut
 
 ![DAM Downgrade Self Permission](../../../../images/access_downgrade_self.png)
 
-![DAM Upgrade Self Permission](../../../../images/access_upgrade_self_role_back_to_admin.png)
-
-![DAM Upgrade Self Permission Warning](../../../../images/access_upgrade_self_role_back_admin_warning.png)
+![DAM Upgrade Self Permission](../../../../images/access_upgrade_self_role_back_to_admin_disabled.png)
