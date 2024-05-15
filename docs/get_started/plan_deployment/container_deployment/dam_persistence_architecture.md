@@ -85,7 +85,7 @@ During the upgrade, note that the data directory of PG 11 is not removed. To rem
      /tmp/delete_old_cluster.sh
     ```   
 
-In case of upgrade failure, rollback to the previous CF version, and reach out to support for help
+In case of upgrade failure, rollback to the previous CF version, and reach out to [HCL Service and Support Team](https://support.hcltechsw.com/csm?id=csm_index) for help
 
 ???+ info "Related information"
     - [HCL Digital Asset Management](../../../manage_content/digital_assets/index.md)
