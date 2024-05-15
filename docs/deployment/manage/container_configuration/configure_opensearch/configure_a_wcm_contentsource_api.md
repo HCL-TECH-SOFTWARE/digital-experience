@@ -4,7 +4,7 @@ This topic explains the use of the Content Source REST API to create a WCM Conte
 
 ## Authenticating as a search administrator
 
-Before you can perform administrative tasks, you need to authenticate your user role as a search administrator.
+Before you can perform administrative tasks, you need to authenticate as a search administrator.
 
 1. To authenticate, send a `POST` request to the `/dx/api/search/v2/admin/authenticate` endpoint using the following payload:
 
