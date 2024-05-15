@@ -16,6 +16,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Version**
 
+- Web Content Manager - Cherry picking items for bulk update 
 
 **Digital Experience 9.5 Container Version**
 
@@ -75,6 +76,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Version
 
+### Web Content Manager - Cherry picking items for bulk update 
+
+(Doc in progress)
+
 ## Digital Experience 9.5 Container Version
 
 ### Exporting a user session usage report in CSV format
@@ -85,7 +90,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New search configuration using OpenSearch
 
 === "Containers"
-    There is a new search configuration for DX that is based on OpenSearch. The search currently provides the following capabilities: WCM crawling, push API for use with WCM Content Sources, and searching using REST API. For more information, see [](). 
+    There is a new search configuration for DX that is based on OpenSearch. The search currently provides the following capabilities: WCM crawling, push API for use with WCM Content Sources, and searching using REST API. For more information, see (Doc in progress). 
 
 ### Digital Asset Management - Access control for nested collections
 
