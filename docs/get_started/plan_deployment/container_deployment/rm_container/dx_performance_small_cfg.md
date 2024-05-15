@@ -449,11 +449,11 @@ This performance guidance shows the upper limit on a single-node K8s cluster AWS
 
 - Processor details
 
-      ![](../../../../../images/Processor_Info_Native-Kube.png)
+      ![](../../../../images/Processor_Info_Native-Kube.png)
 
 - Volume details
 
-      ![](../../../../../images/AWS-Native-Kube-Volume-Info.png)
+      ![](../../../../images/AWS-Native-Kube-Volume-Info.png)
 
 
 ### Authoring details
@@ -578,12 +578,12 @@ The following stages were conducted, starting with config DX kube configuration 
 | Concurent Users                                                | 2000(WCM - 800 DAM - 600 Page&Portlet - 600)                   | 3000(WCM - 1200 DAM - 900 Page&Portlet - 900) |
 | Total Throughput (transactions/sec)                            | 303.33                                                         | 307.33                                        |
 | Total Avg Response Time (in milli seconds)                     | 4656.72                                                        | 7138.92                                       |
-| CPU Usage(%)                                                   | 42.42                                                          | 44.04                                         |
-| Memory Usage(%)                                                | 35.52                                                          | 36.35                                         |
-| Disk Read IO(io/sec)                                           | 0.08                                                           | 0.12                                          |
-| Disk Write IO(io/sec)                                          | 15.33                                                          | 15.73                                         |
-| DAM EventLoop lag(ms)                                          | 8.19                                                           | 10.6                                          |
-| Ring EventLoop lag(ms)                                         | 16.8                                                           | 23.4                                          |
+| CPU Usage (%)                                                   | 42.42                                                          | 44.04                                         |
+| Memory Usage (%)                                                | 35.52                                                          | 36.35                                         |
+| Disk Read IO (io/sec)                                           | 0.08                                                           | 0.12                                          |
+| Disk Write IO (io/sec)                                          | 15.33                                                          | 15.73                                         |
+| DAM EventLoop lag (ms)                                          | 8.19                                                           | 10.6                                          |
+| Ring EventLoop lag (ms)                                         | 16.8                                                           | 23.4                                          |
 | Error(%)                                                       | 0                                                              | 0                                             |
 | Test Duration(sec)                                             | 8600                                                           | 11100                                         |
 |  | Top 5 Requests (Avg Response Time in ms)                       | Top 5 Requests (Avg Response Time in ms)                       |
@@ -644,14 +644,14 @@ The following stages were conducted, starting with config DX kube configuration 
 | Concurent Users                            | 6000(WCM - 2400 DAM - 1800 Page&Portlet - 1800)                | 10000(WCM - 4000 DAM - 3000 Page&Portlet - 3000)               |
 | Total Throughput (transactions/sec)        | 815.05                                                         | 837.06                                                         |
 | Total Avg Response Time (in milli seconds) | 4813.22                                                        | 8130.75                                                        |
-| CPU Usage(%)                               | 64.09                                                          | 65.63                                                          |
-| Memory Usage(%)                            | 30.69                                                          | 45.9                                                           |
-| Disk Read IO(io/sec)                       | 1.24                                                           | 1.5                                                            |
-| Disk Write IO(io/sec)                      | 27.5                                                           | 24.73                                                          |
-| DAM EventLoop lag(ms)                      | 8.36                                                           | 15.5                                                           |
-| Ring EventLoop lag(ms)                     | 9.31                                                           | 17.6                                                           |
-| Error(%)                                   | 0                                                              | 0                                                              |
-| Test Duration(sec)                         | 12600                                                          | 18600                                                          |
+| CPU Usage (%)                               | 64.09                                                          | 65.63                                                          |
+| Memory Usage (%)                            | 30.69                                                          | 45.9                                                           |
+| Disk Read IO (io/sec)                       | 1.24                                                           | 1.5                                                            |
+| Disk Write IO (io/sec)                      | 27.5                                                           | 24.73                                                          |
+| DAM EventLoop lag (ms)                      | 8.36                                                           | 15.5                                                           |
+| Ring EventLoop lag (ms)                     | 9.31                                                           | 17.6                                                           |
+| Error (%)                                   | 0                                                              | 0                                                              |
+| Test Duration (sec)                         | 12600                                                          | 18600                                                          |
 |                                            | Top 5 Requests (Avg Response Time in ms)                       | Top 5 Requests (Avg Response Time in ms)                        |
 |                                            | Get video - mp4 1.1 mb custom url - curlmp41.1mb - (26663.91)  | Get video - mp4 1.1 mb custom url - curlmp41.1mb - (43301.53)  |
 |                                            | Get doc - pdf 171 kb  custom url - curlpdf171kb - (26463.77)   | Get doc - pdf 171 kb  custom url - curlpdf171kb - (42721.38)   |
@@ -760,14 +760,14 @@ The following list contains details of tuning and enhancements done to DX core d
 | Concurrent Users                           | 10000(WCM - 4000 DAM - 3000 Page&Portlet - 3000)                       | 5000(WCM - 2000 DAM - 1500 Page&Portlet - 1500)                       | 3016(WCM - 1200 DAM - 904 Page&Portlet - 912)                         | 2504(WCM - 1008 DAM - 744 Page&Portlet - 752)                        |
 | Total Throughput (transactions/sec)        | 1058.66                                                                | 983.73                                                                | 937.44                                                                | 922.4                                                                |
 | Total Avg Response Time (in milli seconds) | 5572.72                                                                | 2526.04                                                               | 1203.10                                                               | 845.84                                                               |
-| CPU Usage(%)                               | 80.2                                                                   | 70.90 ( max-80.9)                                                     | 69.46 (max -80.5)                                                     | 69.29(max-82.74)                                                     |
-| Memory Usage(%)                            | 44.56                                                                  | 42.63                                                                 | 40.96                                                                 | 34.3                                                                 |
-| Disk Read IO(io/sec)                       | 0.5                                                                    | 0.14                                                                  | 0.05                                                                  | 0.1                                                                  |
-| Disk Write IO(io/sec)                      | 23.1                                                                   | 16.17                                                                 | 15.41                                                                 | 14.71                                                                |
-| DAM EventLoop lag(ms)                      | 16.3                                                                   | 11.40                                                                 | 10.80                                                                 | 8.16                                                                 |
-| Ring EventLoop lag(ms)                     | 7.26                                                                   | 26.30                                                                 | 26.30                                                                 | 6.73                                                                 |
-| Error(%)                                   | 0                                                                      | 0.00                                                                  | 0.01                                                                  | 0                                                                    |
-| Test Duration(sec)                         | 18600                                                                  | 11100                                                                 | 8100.00                                                               | 7350                                                                 |
+| CPU Usage (%)                               | 80.2                                                                   | 70.90 ( max-80.9)                                                     | 69.46 (max -80.5)                                                     | 69.29(max-82.74)                                                     |
+| Memory Usage (%)                            | 44.56                                                                  | 42.63                                                                 | 40.96                                                                 | 34.3                                                                 |
+| Disk Read IO (io/sec)                       | 0.5                                                                    | 0.14                                                                  | 0.05                                                                  | 0.1                                                                  |
+| Disk Write IO (io/sec)                      | 23.1                                                                   | 16.17                                                                 | 15.41                                                                 | 14.71                                                                |
+| DAM EventLoop lag (ms)                      | 16.3                                                                   | 11.40                                                                 | 10.80                                                                 | 8.16                                                                 |
+| Ring EventLoop lag (ms)                     | 7.26                                                                   | 26.30                                                                 | 26.30                                                                 | 6.73                                                                 |
+| Error (%)                                   | 0                                                                      | 0.00                                                                  | 0.01                                                                  | 0                                                                    |
+| Test Duration (sec)                         | 18600                                                                  | 11100                                                                 | 8100.00                                                               | 7350                                                                 |
 |                                            | Top 5 Requests (Avg Respone Time in ms)                                | Top 5 Requests (Avg Respone Time in ms)                               | Top 5 Requests (Avg Respone Time in ms)                               | Top 5 Requests (Avg Respone Time in ms)                              |
 |                                            | Get video - mp4 1.1 mb custom url - curlmp41.1mb - (24315.91)          | Get video - mp4 1.1 mb custom url - curlmp41.1mb - (10053.67)         | Get video - mp4 1.1 mb custom url - curlmp41.1mb - (4381.84)          | Get video - mp4 1.1 mb custom url - curlmp41.1mb - (2913.21)         |
 |                                            | Get doc - pdf 171 kb  custom url - curlpdf171kb - (24228.67)           | Get doc - pdf 171 kb  custom url - curlpdf171kb - (10023.32)          | Get doc - pdf 171 kb  custom url - curlpdf171kb - (4340.01)           | Get doc - pdf 171 kb  custom url - curlpdf171kb - (2856.73)          |
