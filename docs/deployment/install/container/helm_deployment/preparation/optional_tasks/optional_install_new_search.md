@@ -4,9 +4,9 @@ This topic provides information on how to configure search based on OpenSearch f
 
 The search currently provides the following capabilities:
 
-- WCM Crawling
-- Push API for use with WCM Content Sources
-- Search via REST API
+- WCM crawling
+- Pushing API for use with WCM Content Sources
+- Search through REST API
 
 ## Prerequisites
 
