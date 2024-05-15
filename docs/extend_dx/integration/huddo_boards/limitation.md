@@ -1,8 +1,7 @@
 # Limitations
-Currently, there are some limitations with the Huddo boards and DX.
+Currently, there are some limitations with the Huddo boards and DX. The Huddo and DX teams are working on improvements in upcoming releases.
 
-- The application will not function properly if the context root is changed. 
-- The application cannot function with virtual portals. 
+- The application will not function properly if the Core context root is changed from /wps to something else or removed. 
+- The application cannot function in virtual portals. It will only work in the base virtual portal.
 - The application is designed to use 'cn' and 'sn' attributes for users and 'cn' attribute for groups from LDAP. If non-standard attributes are used, it may cause issues. Also, note that the application may not work with OIDC flow. 
-- The application may have some side effects when used with the Huddo boards on a private page. 
-- The application reuses the access control of the page where it is embedded to assign access to the board itself.
+- The application may have some side effects when using Huddo boards with a private page due to access control checking. 
