@@ -4,3 +4,4 @@ nav:
     - Exporting a report: export_content_report.md
     - Performing a bulk update: bulk_update_report.md
     - Bookmarking: bookmarking_content_report.md
+    - Cherry Picking: cherry_picking_report.md
