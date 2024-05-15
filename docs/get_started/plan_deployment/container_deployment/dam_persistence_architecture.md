@@ -69,7 +69,7 @@ The following example shows a persistence cluster in a successful deployment.
 
 ## Postgres version upgrade
 
-Postgres version 11 (PG 11) is no longer supported. Starting CF220, the persistence node containing the Postgres DB is upgraded from version 11 to 16. Along with Postgres, `repmgr` is also updated to version 5.2.1. Before upgrading from pre-CF220 to CF220 or later, make sure to back up the database dump. Refer to this [Backup Persistence](../../../manage_content/digital_assets/dam_backup_restore_image.md#backup-persistence) for instructions on exporting the dump.
+Postgres version 11 (PG 11) is no longer supported. Starting CF220, the persistence node containing the Postgres DB is upgraded from version 11 to 16. Along with Postgres, `repmgr` is also updated to version 5.2.1. Before upgrading from pre-CF220 to CF220 or later, make sure to back up the database dump. Refer to [Backup Persistence](../../../manage_content/digital_assets/dam_backup_restore_image.md#backup-persistence) for instructions on exporting the dump.
 
 In case of upgrade failure, rollback to the previous CF version. During the upgrade, note that the data directory of PG 11 is not removed. To remove the data directory, refer to the following instructions. Make sure to change the pod name accordingly and execute the commands for all persistence pods.
 
