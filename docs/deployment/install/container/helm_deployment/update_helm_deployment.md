@@ -12,7 +12,7 @@ The recommended approach for configuration changes is to update the custom-valu
 
 ## Prerequisites
 
-Make sure that the `wkplc.*` files are correct. The HCL DX upgrade runs several ConfigEngine scripts. These scripts depend on the `wkplc.*` being up-to-date and accurate, especially with the password properties. 
+Make sure that the `wkplc_dbdomain.properties` file is correct. The HCL DX upgrade runs several ConfigEngine scripts. These scripts depend on the `wkplc_dbdomain.properties` being up-to-date and accurate, especially with the password properties. 
 
 Edit the `(wp_profile root)/ConfigEngine/properties/wkplc_dbdomain.properties` file and ensure the following values are set correctly:
     -   `release.DbPassword=(your database user password)`
