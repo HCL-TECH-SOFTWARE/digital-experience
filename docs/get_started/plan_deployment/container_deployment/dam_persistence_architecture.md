@@ -75,15 +75,15 @@ In case of upgrade failure, rollback to the previous CF version. During the upgr
 
 1. Navigate to the persistence pod using the following command:
 
-```
-  kubectl -n dxns exec -it dx-deployment-persistence-node-0 bash
-```
+    ```
+      kubectl -n dxns exec -it dx-deployment-persistence-node-0 bash
+    ```
 
 2. Remove the PG 11 data directory by running the following command:
 
-```
- /tmp/delete_old_cluster.sh
-```   
+    ```
+     /tmp/delete_old_cluster.sh
+    ```   
 
 
 ???+ info "Related information"
