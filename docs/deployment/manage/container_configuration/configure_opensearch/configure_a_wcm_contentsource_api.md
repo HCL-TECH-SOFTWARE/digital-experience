@@ -1,6 +1,6 @@
 # Configuring a WCM Content Source using REST API
 
-This topic explains the use of the Content Source REST API to create a WCM Content Source. This can later be used to crawl WCM in your HCL DX instance and run search queries on.
+This topic explains the use of the Content Source REST API to create a WCM Content Source. This can later be used to crawl WCM in your HCL DX instance and will contain the WCM items that you can find by using search queries.
 
 ## Authenticating as a search administrator
 
@@ -25,7 +25,7 @@ Before you can perform administrative tasks, you need to authenticate your user 
   }
   ```
 
-2. Add the returned JWT in the following requests in the `Authorization` header using the `Bearer` prefix:
+2. Add the returned JWT in all upcoming HTTP requests in the `Authorization` header using the `Bearer` prefix:
 
   | Header | Value |
   | --- | --- |

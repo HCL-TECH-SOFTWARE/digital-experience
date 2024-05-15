@@ -83,7 +83,7 @@ A document that does not contain any ACLs will be considered public and do not h
 
 ## Search queries
 
-The OpenSearch-based implementation allows for queries using the existing OpenSearch syntax. Each query is enriched with an ACL check and a possible scoping to content sources.
+The OpenSearch-based implementation allows for queries using the existing [OpenSearch syntax](https://opensearch.org/docs/latest/query-dsl/). Each query is enriched with an ACL check and a possible scoping to content sources.
 
 You can limit a search query to a list of content sources or cover all content sources. The result will match your query from all scoped content sources.
 
