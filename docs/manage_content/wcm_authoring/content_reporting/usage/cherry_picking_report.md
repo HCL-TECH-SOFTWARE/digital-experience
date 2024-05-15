@@ -1,4 +1,4 @@
-# Performing a Cherry picking items for bulk update
+# Cherry picking items for bulk update
 
 Content Reporting Bulk Update added the cherry picking items. You can now pick all or selected items for bulk updating in a report generated through HCL Content Reporting search.
 
