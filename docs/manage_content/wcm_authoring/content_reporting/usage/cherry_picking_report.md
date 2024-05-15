@@ -1,6 +1,6 @@
 # Cherry picking items for bulk update
 
-Content Reporting Bulk Update added the cherry picking items. You can now pick all or selected items for bulk updating in a report generated through HCL Content Reporting search.
+After generating a report through HCL Content Reporting, you can select all or just a number of items when performing a bulk update operation.
 
 !!!note
     Bulk updates for owners or authors can only be applied to content items, site areas, authoring templates, components, categories, folders, projects, segments, workflow actions, portal pages and items to which you have edit access. To date, adding up to 100 users and updating up to 7000 items have been tested successfully.
