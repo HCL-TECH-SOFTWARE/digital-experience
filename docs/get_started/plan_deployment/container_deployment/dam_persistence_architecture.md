@@ -67,5 +67,25 @@ The following example shows a persistence cluster in a successful deployment.
 
 ![](../../../images/cluster_status_example.png "Persistence cluster in a successful deployment")
 
+## Postgres version upgrade
+
+Postgres version 11 (PG 11) is no longer supported. Starting CF220, the persistence node containing the Postgres DB is upgraded from version 11 to 16. Along with Postgres, `repmgr` is also updated to version 5.2.1. Before upgrading from pre-CF220 to CF220 or later, make sure to back up the database dump. Refer to [Backup Persistence](../../../manage_content/digital_assets/dam_backup_restore_image.md#backup-persistence) for instructions on exporting the dump.
+
+During the upgrade, note that the data directory of PG 11 is not removed. To remove the data directory, refer to the following instructions. Make sure to change the pod name accordingly and execute the commands for all persistence pods.
+
+1. Navigate to the persistence pod using the following command:
+
+    ```
+      kubectl -n dxns exec -it dx-deployment-persistence-node-0 bash
+    ```
+
+2. Remove the PG 11 data directory by running the following command:
+
+    ```
+     /tmp/delete_old_cluster.sh
+    ```   
+
+In case of upgrade failure, rollback to the previous CF version and reach out to [HCL Software Customer Support](https://support.hcltechsw.com/csm?id=csm_index) for assistance.
+
 ???+ info "Related information"
     - [HCL Digital Asset Management](../../../manage_content/digital_assets/index.md)
