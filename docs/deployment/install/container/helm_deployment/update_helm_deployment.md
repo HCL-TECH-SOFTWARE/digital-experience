@@ -12,34 +12,20 @@ The recommended approach for configuration changes is to update the custom-valu
 
 ## Prerequisites
 
-Make sure that the `wkplc.*` files are correct. The HCL DX upgrade runs several ConfigEngine scripts. These scripts depend on the `wkplc.*` being up-to-date and accurate, especially with the password properties. If you are using multiple profiles, verify that the information in each profile is correct.
+Make sure that the `wkplc.*` files are correct. The HCL DX upgrade runs several ConfigEngine scripts. These scripts depend on the `wkplc.*` being up-to-date and accurate, especially with the password properties. 
 
-1.  Edit the `(wp_profile root)/ConfigEngine/properties/wkplc.properties` file and ensure the following values are set correctly:
-    -   `WasRemoteHostName=(the hostname of your WAS instance)`
-    -   `WasSoapPort=(the soap port of your WAS instance)`
-    -   `WasUserid=(your WAS admin user)`
-    -   `WasPassword=(your WAS admin pwd)`
-    -   `PortalAdminId=(your Portal Admin ID)`
-    -   `PortalAdminPwd=(your Portal Admin password)`
-    -   `WpsHostName=(Your Portal hostname)`
-    -   `WpsHostPort=(The port you use to access Portal)`
-    -   `WpsContextRoot=(your Portal context root)`
-    -   (For HCL DX 9.5 CF19 and later releases): `CwUserPwd=xxxxxx (your Config wizard password)`
-    -   (Optional, For HCL DX 9.5 CF202 and later releases): `skipWoodburnUpdate=true`
-2.  Edit the `(wp_profile root)/ConfigEngine/properties/wkplc_dbdomain.properties` file and ensure the following values are set correctly:
+Edit the `(wp_profile root)/ConfigEngine/properties/wkplc_dbdomain.properties` file and ensure the following values are set correctly:
     -   `release.DbPassword=(your database user password)`
     -   `community.DbPassword=(your database user password)`
     -   `customization.DbPassword=(your database user password)`
     -   `jcr.DbPassword=(your database user password)`
     -   `likeminds.DbPassword=(your database user password)`
     -   `feedback.DbPassword=(your database user password)`
-3.  Edit the `(wp_profile root)/ConfigEngine/properties/wkplc_comp.properties` file and ensure the following values are set correctly:
-    -   `XmlAccessHost=(your Portal hostname)`
-    -   XmlAccessPort=(the port you use to access Portal)
-    
-    !!!note
-        If your server is configured with database runtime users, for example, `feedback.DbRuntimeUser=(your feedback database runtime user)`, make sure to set their password values correctly (for example, in `feedback.DbRuntimePassword=(your feedback database runtime user password)`).
 
+If you do not want those removed after every run make sure PWordDelete=false is set in `(wp_profile root)/ConfigEngine/properties/wkplc.properties`.
+
+!!!note
+        If your server is configured with database runtime users, for example, `feedback.DbRuntimeUser=(your feedback database runtime user)`, make sure to set their password values correctly (for example, in `feedback.DbRuntimePassword=(your feedback database runtime user password)`).
 
 ## Helm Upgrade configuration command
 
