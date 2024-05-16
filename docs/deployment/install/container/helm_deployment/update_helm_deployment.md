@@ -27,6 +27,15 @@ If you do not want these password values removed after every run, make sure `PWo
 !!!note
         If your server is configured with database runtime users, for example, `feedback.DbRuntimeUser=(your feedback database runtime user)`, make sure to set their password values correctly (for example, in `feedback.DbRuntimePassword=(your feedback database runtime user password)`).
 
+## Cumulative Fix update
+
+In a helm based deployment moving from one cumulative fix to another one is also handled via helm upgrade.
+In addition to the Prerequisites mentioned above we recommend the following actions for applying cumulative fixes:
+ 1. Take a backup of the file system of the persistent volumes associated with the namespace. Also take a matching backup of the database associated with the Core pod.
+ 2. In case you are running a 24/7 environment we recommend setting up a blue/green deployment before applying a CF to ensure high availability. While DX Core will stay available with multiple pods, DAM is not high available during CF application. See [Difference and Similarities Between Traditional and Kubernetes DX Deployments](../../deployment/manage/container_configuration/deploy_container_artifact_updates.md#difference-and-similarities-between-traditional-and-kubernetes-dx-deployments) showing how a DX solution could be deployed for high availability and blue/green deployments in a single Kubernetes cluster.
+ 3. Disable DAM staging from and to the environment while it is not matching the source or target CF level.
+ 4. Consider disabling WCM Syndication from and to the environment - this is not required but recommended.
+
 ## Helm Upgrade configuration command
 
 After making the needed changes to your custom-values.yaml file, use the following command:
