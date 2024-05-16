@@ -12,6 +12,10 @@ The DX search based on OpenSearch is designed with the weaknesses of the existin
 
 - **Kubernetes native deployment**: The OpenSearch-based implementation uses existing proven Kubernetes patterns and technologies that work well in such an environment.
 
+## Current capabilties
+
+The DX search based on OpenSearch in its first version is not yet integrated in any of the search UIs inside DX. It provides a REST API that allows you to index WCM content based on the WCM Seedlist and to perform queries using the powerful [OpenSearch Query Syntax](https://opensearch.org/docs/latest/query-dsl/). If you only need search capabilities inside the DX search UIs, you do not need to deploy OpenSearch.
+
 ## Main components
 
 ![Overall overview](./overview.png)
