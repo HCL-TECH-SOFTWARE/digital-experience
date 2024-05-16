@@ -103,7 +103,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ### Digital Asset Management - Access control for nested collections
 
-(Doc not yet available)
+(Doc in progress)
 
 ### New guidance for performance sizing for rendering with maximum throughput on a single node
 
