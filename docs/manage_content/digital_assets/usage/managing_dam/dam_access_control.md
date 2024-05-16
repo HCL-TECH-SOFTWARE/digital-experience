@@ -5,7 +5,7 @@ This topic describes the details of DAM access control, its features and limitat
 ## Overview on DX Portal Access Control for DAM
 
 DX Portal Access Control follows an inheritance based tree structure. DAM is part of that tree just like WCM or Portal Pages. 
-At the top of the tree is the virtual Resource Portal, below it is the virtual Resource DIGITAL ASSET MANAGEMENT and below that, are the resource instances (the collections) you are registering with its children. By assigning a role on a resource to a user, the user gets permission for the resource and its children.
+At the top of the tree is the virtual Resource Portal, and below it is the virtual resource Digital Asset Management. Below DAM are the resource instances (the collections) you are registering with its children. By assigning a role on a resource to a user, the user gets permission for the resource and its children.
 
 For DAM, only a subset of the roles is exposed. Possible role types are User (view only), Editor (view, edit, create), and Administrator (view, edit, create, delete, set/remove access). Other roles existing in Portal Access Control like Manager or Privileged User are not exposed.
 
@@ -19,7 +19,7 @@ For DAM, only a subset of the roles is exposed. Possible role types are User (vi
 DAM collection is accessible by the currently logged in user based on his role and the access is managed by DX Portal Access Control as mentioned. 
 
 !!! note
-    Currently, only Administrator, Editor, and User roles are exposed in DAM UI. The user creating the collection gets explicitly assigned the Administrator role on the collection. All nested collections by default will inherit the permission from root collection but permission can be modified.
+    Currently, only Administrator, Editor, and User roles are exposed in DAM UI. The user creating the collection gets explicitly assigned the Administrator role on the collection. By default, all nested collections inherit the permissions from the root collection. However, you can modify these permissions.
 
 ### DAM Access Control in detail
 
@@ -72,7 +72,9 @@ If the **Inherit access from parent collection** checkbox is cleared by the Admi
 
 ## Access Control Traversal for nested collections (ACL Traversal)
 
-In nested access control If user has access to the child collection but not parent then the parent collection will not be visible to the user. Hence user cannot navigate to the child collection to perform any operations. In order to overcome this a new configuration (i.e aclTraversal) has been introduced which will allow all users to view all the collections across DAM, but user will not be able to modify, view access panel or any media items unless user has access to that collection. In this case user will be able to only navigate by clicking the collection to reach to the sub collection for which the user has access to. This configuration is an application level configuration which can be enabled or disabled through helm.
+For access control in nested collections, if the user has access to the child collection but not the parent, then the parent collection is not visible to the user. Hence, user cannot navigate to the child collection to perform any operations. In order to overcome this, a new configuration called Access Control (ACL) Traversal is introduced.
+
+ACL Traversal allows users to view collections across DAM, but they cannot modify or view media items and the access panel unless they have access to that collection. Users can only navigate by clicking the parent collection to reach the child collection for which the user has access to. This configuration is an application level configuration that you can enable or disable through Helm:
 
 ```
 # Application Configuration
@@ -80,11 +82,11 @@ configuration:
   digitalAssetManagement:
     aclTraversal: false
 ```
-With ACL traversal enabled, user can traverse across all the root collections and nested collection for which user does not have permission but user will not be able to view the media items under the collection/ nested collection. By default, ACL traversal will be disabled.
+With ACL Traversal enabled, users can traverse across all the root collections and nested collections even if they do not have the required permission for the collections. However, they cannot  view the media items under these collections. By default, ACL traversal is disabled.
 
 ![DAM Collection without permission with ACL traversal enabled￼￼](../../../../images/dam_nested_collection_visible_acl_traversal_enabled.png)
 
-When user uncheck inheritance checkbox, User and editor role block will be applied on the resource. If the checkbox is selected then there are no user/ editor role blocks on the resource.
+When user with administrator permission unchecks inheritance checkbox, User and editor role block will be applied on the resource. If the checkbox is selected then there are no user/ editor role blocks on the resource.
 
 Inherit uncheck implies Editor and User roles block for inheritance. Below API endpoint is used to achieve the role block.
 
