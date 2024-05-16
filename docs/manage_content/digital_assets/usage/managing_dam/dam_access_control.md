@@ -66,7 +66,7 @@ Permissions are inherited from root to the nested collection because the **Inher
 
 ![DAM Access Panel for Nested Collection](../../../../images/dam_access_panel_for_nested_collection.png)
 
-If the **Inherit access from parent collection** checkbox is not selected by the Administrator, then the inherited permission for the nested collection is removed and users are not able to view the nested collection.
+If the **Inherit access from parent collection** checkbox is cleared by the Administrator, then the inherited permission for the nested collection is removed and users are not able to view the nested collection.
 
 ![DAM Remove Inherited Permission for User](../../../../images/dam_uncheck_inherit_checkbox.png)
 
