@@ -23,7 +23,7 @@ DAM collection is accessible by the currently logged in user based on his role a
 
 ### DAM Access Control in detail
 
-From the DAM perspective, each individual root level collection and child collection is a resource instance that can be administered.
+From the DAM perspective, each individual root-level collection and child collection is a resource instance that can be administered.
 
 - User role: The user can view items in the collection and the collection itself as well as child collections.
 - Editor role: All permissions of the User role plus the user can edit collection details as well as upload items.
@@ -42,35 +42,35 @@ Also, note that if the user has given a User/Editor role to any collection which
 
 ![DAM Access Control Roles](../../../../images/access_roles_dam.png)
 
-## Out of the box access
+## Out-of-the-box access
 
 After installation, all Authenticated User Group is assigned to the Manager role of the virtual resource DIGITAL ASSET MANAGEMENT and propagation is blocked. With that, every authenticated user can create a root collection (and when doing that gets the Administrator role for that collection) but does not have access to other collections he did not create. You can change this as desired on the virtual resource.
 
-## Assigning Permission to User
+## Assigning permission to user
 
 In DAM, the user can assign permission to a collection tree at the root level if he has administrator permission for the root collection as below.
 
 ![DAM Assign Permission to Users for a Root Collection](../../../../images/access_assign_to_user.png)
 
-# Nested Collection Permissions
+## Nested collection permissions
 
-Nested collection will inherit the permission from it's root collection by default. Below editor permission is inherited from root collection.
+A nested collection inherits the permission from its root collection by default. In the following screenshot, the Editor permission is inherited from the root collection.
 
 ![DAM Inherit Permission for User](../../../../images/dam_inherited_permission_for_user.png)
 
-In DAM, the user can assign permission to a nested collection if user has administrator permission for the root collection.
+In DAM, users can assign permission to a nested collection if they have Administrator permission for the root collection.
 
 ![DAM Assign Permission to Users for a nested Collection](../../../../images/dam_assign_permission_for_nested_collection.png)
 
-Permissions are inherited from root to nested collection since inheritance checkbox is selected by default.
+Permissions are inherited from root to the nested collection because the **Inherit access from parent collection** checkbox is selected by default.
 
 ![DAM Access Panel for Nested Collection](../../../../images/dam_access_panel_for_nested_collection.png)
 
-If inheritance checkbox is unchecked from administrator, then inherited permission for the nested collection will get removed and user will not be able to view the nested collection.
+If the **Inherit access from parent collection** checkbox is not selected by the Administrator, then the inherited permission for the nested collection is removed and users are not able to view the nested collection.
 
 ![DAM Remove Inherited Permission for User](../../../../images/dam_uncheck_inherit_checkbox.png)
 
-# Access Control Traversal for Nested Collections (ACL Traversal)
+## Access Control Traversal for nested collections (ACL Traversal)
 
 In nested access control If user has access to the child collection but not parent then the parent collection will not be visible to the user. Hence user cannot navigate to the child collection to perform any operations. In order to overcome this a new configuration (i.e aclTraversal) has been introduced which will allow all users to view all the collections across DAM, but user will not be able to modify, view access panel or any media items unless user has access to that collection. In this case user will be able to only navigate by clicking the collection to reach to the sub collection for which the user has access to. This configuration is an application level configuration which can be enabled or disabled through helm.
 
