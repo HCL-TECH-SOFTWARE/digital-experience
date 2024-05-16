@@ -75,11 +75,12 @@ If inheritance checkbox is unchecked from administrator, then inherited permissi
 In nested access control If user has access to the child collection but not parent then the parent collection will not be visible to the user. Hence user cannot navigate to the child collection to perform any operations. In order to overcome this a new configuration (i.e aclTraversal) has been introduced which will allow all users to view all the collections across DAM, but user will not be able to modify, view access panel or any media items unless user has access to that collection. In this case user will be able to only navigate by clicking the collection to reach to the sub collection for which the user has access to. This configuration is an application level configuration which can be enabled or disabled through helm.
 
 ```
-# Configuration for dam
-    digitalAssetManagement:
-    aclTraversal: false 
+# Application Configuration
+configuration:
+  digitalAssetManagement:
+    aclTraversal: false
 ```
-With ACL traversal enabled, user can traverse to all the collection/ nested collection for which user does not have permission but user will not be able to view the media items under the collection/ nested collection. By default, ACL traversal will be disabled.
+With ACL traversal enabled, user can traverse across all the root collections and nested collection for which user does not have permission but user will not be able to view the media items under the collection/ nested collection. By default, ACL traversal will be disabled.
 
 ![DAM Collection without permission with ACL traversal enabled￼￼](../../../../images/dam_nested_collection_visible_acl_traversal_enabled.png)
 
