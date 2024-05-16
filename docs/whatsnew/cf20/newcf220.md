@@ -6,6 +6,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Web Content Manager - Drafts not exposed with WebDAV for WCM
 - Postgres version upgrade
+- Web Content Manager - New query parameter in WCM Multilingual Solution API
 - Huddo Boards integration with HCL DX
 - HCL Commerce integration with HCL DX
 - Notice of deprecation of Textbox.io Rich Text Editor
@@ -46,6 +47,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     Postgres version 11 is no longer supported. The Postgres version in the persistence node is upgraded from version 11 to version 16. It is recommended to back up your database dump before upgrading to CF220 and later versions. For more details, see [Postgres version upgrade](../../get_started/plan_deployment/container_deployment/dam_persistence_architecture.md#postgres-version-upgrade).
+
+### Web Content Manager - New query parameter in WCM Multilingual Solution API
+
+(Doc in progress)
 
 ### Huddo Boards integration with HCL DX
 
@@ -99,11 +104,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New search configuration using OpenSearch
 
 === "Containers"
-    There is a new search configuration for DX that is based on OpenSearch. The search currently provides the following capabilities: WCM crawling, push API for use with WCM Content Sources, and searching using REST API. For more information, see (Doc in progress). 
+    There is a new search configuration for DX that is based on OpenSearch. The search currently provides the following capabilities: WCM crawling, push API for use with WCM Content Sources, and searching using REST API. For more information, see [Installing search based on OpenSearch](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md) and [Configuring OpenSearch](../../deployment/manage/container_configuration/configure_opensearch/index.md). 
 
 ### Digital Asset Management - Access control for nested collections
 
-(Doc not yet available)
+(Doc in progress)
 
 ### New guidance for performance sizing for rendering with maximum throughput on a single node
 
