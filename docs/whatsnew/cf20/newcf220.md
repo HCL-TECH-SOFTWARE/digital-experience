@@ -99,7 +99,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New search configuration using OpenSearch
 
 === "Containers"
-    There is a new search configuration for DX that is based on OpenSearch. The search currently provides the following capabilities: WCM crawling, push API for use with WCM Content Sources, and searching using REST API. For more information, see (Doc in progress). 
+    There is a new search configuration for DX that is based on OpenSearch. The search currently provides the following capabilities: WCM crawling, push API for use with WCM Content Sources, and searching using REST API. For more information, see [Installing search based on OpenSearch](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md) and [Configuring OpenSearch](../../deployment/manage/container_configuration/configure_opensearch/index.md). 
 
 ### Digital Asset Management - Access control for nested collections
 
