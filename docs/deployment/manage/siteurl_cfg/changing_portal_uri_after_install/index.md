@@ -161,6 +161,21 @@ HCL Digital Experience and Web Services for Remote Portlets are installed with a
     |Dynamic cluster|Complete the following steps if you have a dynamic cluster:  <br>  1.  Open the deployment manager WebSphere Integrated Solutions Console.<br> 2.  Click **System Administration > Nodes**, select the primary node from the list, and click **Full Resynchronize**. <br> 3.  Click **Servers > Dynamic Clusters**.<br> 4.  Click the dynamic cluster that you want to stop and restart. <br> 5.  Click **Dynamic cluster members**. <br>
     6.  Select the member name that you want to stop and then click **Stop**. <br> 7.  Select the member name that you want to start and then click **Start**.|
 
+8.  Hybrid Deployment only
+
+    1. After adjusting the context root of the Digital Experience URI, you will need to adjust the Kubernetes deployment to align. To do this, adjust the `custom-values.yaml` that you are using for your Helm deployment. See [Custom value files](../../../install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md).
+
+Inside your `custom-values.yaml` you can configure the following section:
+```yaml
+core:
+  contextRoot: wps
+  home: portal   
+  personalizedHome: myportal 
+```
+
+
+Now, perform a helm upgrade to apply these new values. See [Overview of Helm Configuration Updates](../../../install/container/helm_deployment/update_helm_deployment.md) for details.
+
 ???+ info "Related information" 
     -   [Accessing the Configuration Wizard](../../../manage/portal_admin_tools/cfg_wizard/configuration/cw_run.md)<br>
     -   [Starting and stopping servers, deployment managers, and node agents](../../stopstart.md)<br>
