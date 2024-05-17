@@ -1,6 +1,6 @@
 # Integrating HCL Commerce with HCL Digital Experience
 
-[HCL Commerce](https://help.hcltechsw.com/commerce/9.1.0/landing/wc_welcome.html) is a customizable e-commerce platform. It provides tools for business users to centrally manage a cross-channel strategy. With HCL Commerce, business users can create and manage marketing campaigns, promotions, catalog, and merchandising across all sales channels. 
+[HCL Commerce](https://help.hcltechsw.com/commerce/9.1.0/landing/wc_welcome.html) is a customizable e-commerce platform that is [available separately](https://help.hcltechsw.com/commerce/9.0.0/admin/concepts/covoverall.html). It provides tools for business users to centrally manage a cross-channel strategy. With HCL Commerce, business users can create and manage marketing campaigns, promotions, catalog, and merchandising across all sales channels. 
 
 ## Integration patterns
 
