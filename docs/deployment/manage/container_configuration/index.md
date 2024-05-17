@@ -12,11 +12,11 @@ Configuration changes are automatically processed by the HCL Digital Experience 
 
 **DX 9.5 Container Upgrades Via Helm Operations Details**
 
-Beginning with HCL DX 9.5 Container Upgrade CF196, Helm deployment is supported on the Google Kubernetes Engine platform \(GKE\). As Helm deployment methods are supported on the additional DX 9.5 supported OpenShift or Kubernetes platform of choice, it is recommended that administrators use Helm deployment to manage upgrade processes. Note that use of [dxctl](../../../extend_dx/development_tools/dxclient/index.md) to manage these operations is also supported, but will be deprecated over time in favor of Helm. When supported on the additional DX 9.5 container platforms, the recommended way to change the configuration of a running deployment is via a Helm upgrade. Once the upgrade command is executed, it calculates and apply all changes that derive from the changes that have been made to the values definitions.
+As Helm deployment methods are supported on the additional DX 9.5 supported Kubernetes platforms of choice, administrators must use Helm  to manage upgrade processes. When supported on the additional DX 9.5 container platforms, the recommended way to change the configuration of a running deployment is via a Helm upgrade. Once the upgrade command is executed, it calculates and apply all changes that derive from the changes that have been made to the values definitions.
 
 The DX Helm deployment uses annotations on each application to share the checksum of the last ConfigMap. This checksum is updated as soon as Helm upgrade is performed and that there has been a change to the configuration of an application. When the checksum is updated, OpenShift or Kubernetes proceeds to roll out the new configuration. Based on the count of Pods per application that you are running, this may cause a downtime in operations.
 
-To minimize the impact of operations to configuration changes processing, consider running at least a quorum of 3 Pods per application. This allows OpenShift and Kubernetes to properly roll out the new configurations and maintain availability of the applications operations throughout the entire upgrade processing cycle.
+To minimize the impact of operations to configuration changes processing, consider running at least a quorum of 3 Pods per application. This allows Kubernetes to properly roll out the new configurations and maintain availability of the applications operations throughout the entire upgrade processing cycle.
 
 **Direct Configuration changes in Kubernetes or OpenShift**
 
@@ -25,7 +25,7 @@ The Runtime Controller triggering Pod restarts for manual changes to the ConfigM
 If any changes are made to the ConfigMaps for testing configurations, the appropriate Pods must be restarted manually to apply the changes. This can be triggered using the [`kubectl rollout restart`](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_rollout/kubectl_rollout_restart/) command.
 
 !!! note
-        It is recommended that administrators use Helm upgrade for configuration changes, as the DX 9.5 Helm chart contains logic to calculate certain values. If you choose to edit ConfigMaps directly in the Kubernetes or OpenShift console, do note that running a Helm upgrade overwrites the settings you inserted directly/manually in your deployment. It is recommended to apply configuration changes directly on an as-needed basis and only for development and testing purposes.
+        Always use Helm upgrade for configuration changes, as the DX 9.5 Helm chart contains logic to calculate certain values. If you choose to edit ConfigMaps directly in Kubernetes, do note that you can end up in and unsupported state and running a `helm upgrade` overwrites all entries you inserted or changed directly/manually in your deployment. It is recommended to apply configuration changes directly on an as-needed basis and only for development and testing purposes.
 
 ## List of HCL DX 9.5 ConfigMaps
 
