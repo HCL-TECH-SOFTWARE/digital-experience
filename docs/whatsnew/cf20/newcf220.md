@@ -5,7 +5,6 @@ The following features and updates are available to customers installing HCL Dig
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Web Content Manager - Drafts not exposed with WebDAV for WCM
-- Postgres version upgrade
 - Web Content Manager - New query parameter in WCM Multilingual Solution API
 - Huddo Boards integration with HCL DX
 - HCL Commerce integration with HCL DX
@@ -25,6 +24,7 @@ The following features and updates are available to customers installing HCL Dig
 - Exporting a user session usage report in CSV format
 - New search configuration using OpenSearch
 - Digital Asset Management - Access control for nested collections
+- Digital Asset Management - Postgres version upgrade
 - New guidance for performance sizing for rendering with maximum throughput on a single node
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
@@ -32,21 +32,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## All Digital Experience Versions (8.5, 9.0, 9.5)
 
-## Web Content Manager - Drafts not exposed with WebDAV for WCM
+### Web Content Manager - Drafts not exposed with WebDAV for WCM
 
 === "Containers"
-    Starting CF220, drafts are not exposed with WebDAV for WCM. This is to avoid issues with drafts having the same name as the live or expired items. For more information, see [WebDAV](../../manage_content/wcm_delivery/webdav/index.md).
+    In previous versions, drafts are exposed by default. Starting CF220, drafts are not exposed with WebDAV for WCM. This is to avoid issues with drafts having the same name as the live or expired items. For more information, see [WebDAV](../../manage_content/wcm_delivery/webdav/index.md).
 
 === "On-Premises"
-    Starting CF220, drafts are not exposed with WebDAV for WCM. This is to avoid issues with drafts having the same name as the live or expired items. For more information, see [WebDAV](../../manage_content/wcm_delivery/webdav/index.md).
-
-### Postgres version upgrade
-
-=== "Containers"
-    Postgres version 11 is no longer supported. The Postgres version in the persistence node is upgraded from version 11 to version 16. It is recommended to back up your database dump before upgrading to CF220 and later versions. For more details, see [Postgres version upgrade](../../get_started/plan_deployment/container_deployment/dam_persistence_architecture.md#postgres-version-upgrade).
-
-=== "On-Premises"
-    Postgres version 11 is no longer supported. The Postgres version in the persistence node is upgraded from version 11 to version 16. It is recommended to back up your database dump before upgrading to CF220 and later versions. For more details, see [Postgres version upgrade](../../get_started/plan_deployment/container_deployment/dam_persistence_architecture.md#postgres-version-upgrade).
+    In previous versions, drafts are exposed by default. Starting CF220, drafts are not exposed with WebDAV for WCM. This is to avoid issues with drafts having the same name as the live or expired items. For more information, see [WebDAV](../../manage_content/wcm_delivery/webdav/index.md).
 
 ### Web Content Manager - New query parameter in WCM Multilingual Solution API
 
@@ -83,10 +75,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     On June 30, 2023, HCL Software announced end of support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
     
-### Change in the application of 9.5 during 8.5/9.0 installation for CF221
+### DX upgrades starting CF221 automatically applies 9.5 to an 8.5/9.0 installation
 
 === "On-Premises"
-    In CF219, a feature was introduced where 9.5 is automatically applied to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that starting CF221, 9.5 is applied by default unless you set `install_95=false`.
+    In CF219, a feature was introduced where [9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that starting CF221, 9.5 is applied by default unless you set `install_95=false`.
 
 ## Digital Experience 9.5 Version
 
@@ -109,6 +101,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Digital Asset Management - Access control for nested collections
 
 (Doc in progress)
+
+### Digital Asset Management - Postgres version upgrade
+
+=== "Containers"
+    Postgres version 11 is no longer supported. The Postgres version in the persistence node is upgraded from version 11 to version 16. It is recommended to back up your database dump before upgrading to CF220 and later versions. For more details, see [Postgres version upgrade](../../get_started/plan_deployment/container_deployment/dam_persistence_architecture.md#postgres-version-upgrade).
+
+=== "On-Premises"
+    Postgres version 11 is no longer supported. The Postgres version in the persistence node is upgraded from version 11 to version 16. It is recommended to back up your database dump before upgrading to CF220 and later versions. For more details, see [Postgres version upgrade](../../get_started/plan_deployment/container_deployment/dam_persistence_architecture.md#postgres-version-upgrade).
 
 ### New guidance for performance sizing for rendering with maximum throughput on a single node
 
