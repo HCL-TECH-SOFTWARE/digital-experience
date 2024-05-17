@@ -54,6 +54,9 @@ In DAM, the user can assign permission to a collection tree at the root level if
 
 ## Nested collection permissions
 
+!!! note
+    While upgrading to CF220, resources will be created for all the nested collections, which can cause subscriber and publisher environments to become out of sync. Hence, it is highly recommended to deregister DAM Staging by following the [Register/Deregister Subscriber](https://opensource.hcltechsw.com/digital-experience/CF219/manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging/#registering-or-deregistering-for-dam-staging) procedure before upgrading the environments. Once the upgrade is complete, DAM Staging can be re-enabled.
+
 A nested collection inherits the permission from its root collection by default. In the following screenshot, the Editor permission is inherited from the root collection.
 
 ![DAM Inherit Permission for User](../../../../images/dam_inherited_permission_for_user.png)
