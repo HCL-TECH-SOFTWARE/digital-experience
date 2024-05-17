@@ -27,6 +27,7 @@ The following features and updates are available to customers installing HCL Dig
 - Digital Asset Management - Postgres version upgrade
 - New guidance for performance sizing for rendering with maximum throughput on a single node
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
+- Notice of deprecation of automated Pod restart on ConfigMap updates
 
 Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases.
 
@@ -119,7 +120,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
 === "Containers"
-    Starting CF216, the Harbor repository is updated with an OCI-based registry and the Helm chart command is updated to be OCI-compliant. Instructions on how to pull Helm charts using OCI commands are now available. For more information, see the Help Center topics [Configure Harbor Helm Repository](../../deployment/install/container/helm_deployment/preparation/get_the_code/configure_harbor_helm_repo.md) and [Download and Deploy from HCL Harbor Repository](../../get_started/download/harbor_container_registry.md).
+    Starting CF216, the Harbor repository is updated with an OCI-based registry and the Helm chart command is updated to be OCI-compliant. Instructions on how to pull Helm charts using OCI commands are now available. For more information, see the Help Center topics [Configure Harbor Helm Repository](../../deployment/install/container/helm_deployment/preparation/get_the_code/configure_harbor_helm_repo.md) and [Download and Deploy from HCL Harbor Repository](../../get_started/download/harbor_container_registry.md).### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
+
+###  Notice of deprecation of automated Pod restart on ConfigMap updates
+
+=== "Containers"
+     Beginning with HCL Digital Experience 9.5 Container Update CF221, Pods will not be restarted automatically anymore by Runtime Controller when a ConfigMap is changed manually. For production deployments always use the Helm custom values and `helm upgrade` to change configuration. This will trigger the appropriate restarts. For development and testing when a ConfigMap is changed, the appropriate Pod will have to be restarted manually. For more information, see the Help Center topics [Container Configuration](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes)
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
