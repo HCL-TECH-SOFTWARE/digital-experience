@@ -104,10 +104,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Digital Asset Management - Access control for nested collections
 
 === "Containers"
-    Access control for DAM Nested collections has been enabled in DAM. For more details, see [DAM Access Control](../../manage_content/digital_assets/usage/managing_dam/dam_access_control#nested-collection-permissions). Ensure to disable DAM Staging during upgrade and enable DAM Staging once both publisher (source) and the subscriber (target) are on same CF version.
+    Access control for nested collections is enabled in DAM. For more details, see [Nested collection permissions](../../manage_content/digital_assets/usage/managing_dam/dam_access_control#nested-collection-permissions). Ensure to disable DAM Staging during upgrade and enable DAM Staging after both the publisher (source) and the subscriber (target) are on the same CF version.
     
 === "On-Premises"
-    Access control for DAM Nested collections has been enabled in DAM. For more details, see [DAM Access Control](../../manage_content/digital_assets/usage/managing_dam/dam_access_control#nested-collection-permissions). Ensure to disable DAM Staging during upgrade and enable DAM Staging once both publisher (source) and the subscriber (target) are on same CF version.
+    Access control for nested collections is enabled in DAM. For more details, see [Nested collection permissions](../../manage_content/digital_assets/usage/managing_dam/dam_access_control#nested-collection-permissions). Ensure to disable DAM Staging during upgrade and enable DAM Staging after both the publisher (source) and the subscriber (target) are on the same CF version.
 
 ### New guidance for performance sizing for rendering with maximum throughput on a single node
 
