@@ -70,7 +70,7 @@ If the **Inherit access from parent collection** checkbox is cleared by the Admi
 
 ![DAM Remove Inherited Permission for User](../../../../images/dam_uncheck_inherit_checkbox.png)
 
-## Access Control Traversal for nested collections
+### Access Control Traversal for nested collections
 
 For access control in nested collections, if the user has access to the child collection but not the parent, then the parent collection is not visible to the user. Hence, user cannot navigate to the child collection to perform any operations. To overcome this, a new configuration called Access Control (ACL) Traversal is introduced.
 
