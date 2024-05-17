@@ -87,12 +87,12 @@ To enable, set `aclTraversal` to `true`. With ACL Traversal enabled, users can t
 
 ![DAM Collection without permission with ACL traversal enabled￼￼](../../../../images/dam_nested_collection_visible_acl_traversal_enabled.png)
 
-When user with administrator permission unchecks inheritance checkbox, User and editor role block will be applied on the resource. If the checkbox is selected then there are no user/ editor role blocks on the resource.
+When an Administrator clears the **Inherit access from parent collection** checkbox, user and editor permissions are blocked for the collection and items within that collection. If the **Inherit access from parent collection** checkbox is selected, user and editor permissions for the collection are granted.
 
-Inherit uncheck implies Editor and User roles block for inheritance. Below API endpoint is used to achieve the role block.
+Below API endpoint is used to achieve the role block.
 
 !!! note       
-    The below endpoint is used to set or remove role blocks. The default mode for the endpoint is set to update. [Update Resource Config API](https://opensource.hcltechsw.com/experience-api-documentation/ring-api/#operation/accessUpdateResourceConfig)
+    You can use the [Update Resource Config API](https://opensource.hcltechsw.com/experience-api-documentation/ring-api/#operation/accessUpdateResourceConfig) to set or remove permissions for the collections. The default mode for the endpoint is set to update.
 
 ## Changing Permissions on the collection tree for the users
 
