@@ -87,20 +87,19 @@ To enable, set `aclTraversal` to `true`. With ACL Traversal enabled, users can t
 
 ![DAM Collection without permission with ACL traversal enabled￼￼](../../../../images/dam_nested_collection_visible_acl_traversal_enabled.png)
 
-When an Administrator clears the **Inherit access from parent collection** checkbox, user and editor permissions are blocked for the collection and items within that collection. If the **Inherit access from parent collection** checkbox is selected, user and editor permissions for the collection are granted.
+When an Administrator clears the **Inherit access from parent collection** checkbox, User and Editor permissions are blocked for the collection and items within that collection. If the **Inherit access from parent collection** checkbox is selected, User and editor Permissions for the collection are granted.
 
-!!! note       
-    You can use the [Update Resource Config API](https://opensource.hcltechsw.com/experience-api-documentation/ring-api/#operation/accessUpdateResourceConfig) to set or remove permissions for the collections. The default mode for the endpoint is set to update.
+You can use the [Update Resource Config API](https://opensource.hcltechsw.com/experience-api-documentation/ring-api/#operation/accessUpdateResourceConfig) to set or remove permissions for the collections. The default mode for the endpoint is set to update.
 
-## Changing Permissions on the collection tree for the users
+## Changing permissions on the collection tree for the users
 
 You can change collection permissions for any user from Administrator to Editor or User or vice versa.
 
 ![DAM Changing Permission of Other Users for a Root Collection](../../../../images/access_change_for_other_user.png)
 
-## Downgrading Self Permission
+## Downgrading self-permission
 
-Downgrading self permission from Administrator to Editor or User will remove authority to upgrade back to Administrator as you can see below. In this case, the Administrator or Super Admin should add you back as Administrator if needed.
+Downgrading self-permission from Administrator to Editor or User removes the authority to upgrade back to Administrator. In this case, the Administrator or Super Admin should add you back as Administrator if needed.
 
 ![DAM Downgrade Self Permission](../../../../images/access_downgrade_self.png)
 
