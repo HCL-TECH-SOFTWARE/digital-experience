@@ -7,7 +7,7 @@ Currently, Content Reporting Bulk Update feature supports the following actions:
 - Remove an owner or author
 - Replace an owner or author
 
-After generating a report through HCL Content Reporting, you can select all or just a number of items when performing a bulk update operation.
+Starting CF220, you can select all or just a number of items when performing a bulk update operation.
 
 !!!note
     Bulk updates for owners or authors can only be applied to content items, site areas, authoring templates, components, categories, folders, projects, segments, workflow actions, portal pages and items to which you have edit access. To date, adding up to 100 users and updating up to 7000 items have been tested successfully.
