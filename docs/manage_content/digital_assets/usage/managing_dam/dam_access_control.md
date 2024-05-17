@@ -74,7 +74,7 @@ If the **Inherit access from parent collection** checkbox is cleared by the Admi
 
 For access control in nested collections, if the user has access to the child collection but not the parent, then the parent collection is not visible to the user. Hence, user cannot navigate to the child collection to perform any operations. To overcome this, a new configuration called Access Control (ACL) Traversal is introduced.
 
-ACL Traversal allows users to view collections across DAM, but they cannot modify or view media items and the access panel unless they have access to that collection. Users can only navigate by clicking the parent collection to reach the child collection for which the user has access to. This configuration is an application-level configuration that you can enable or disable through Helm. By default, ACL traversal is disabled:
+ACL Traversal allows users to view collections across DAM, but they cannot modify or view media items and the access panel unless they have access to that collection. Users can only navigate by clicking the parent collection to reach the child collection for which the user has access to. This configuration is an application-level configuration that you can enable or disable through Helm. By default, ACL Traversal is disabled:
 
 ```
 # Application Configuration
@@ -88,8 +88,6 @@ To enable, set `aclTraversal` to `true`. With ACL Traversal enabled, users can t
 ![DAM Collection without permission with ACL traversal enabled￼￼](../../../../images/dam_nested_collection_visible_acl_traversal_enabled.png)
 
 When an Administrator clears the **Inherit access from parent collection** checkbox, user and editor permissions are blocked for the collection and items within that collection. If the **Inherit access from parent collection** checkbox is selected, user and editor permissions for the collection are granted.
-
-Below API endpoint is used to achieve the role block.
 
 !!! note       
     You can use the [Update Resource Config API](https://opensource.hcltechsw.com/experience-api-documentation/ring-api/#operation/accessUpdateResourceConfig) to set or remove permissions for the collections. The default mode for the endpoint is set to update.
