@@ -19,7 +19,7 @@ Make sure that you have the following before installing Huddo Boards:
 
 ## Deploying Huddo Boards using Helm
 
-Deploy Huddo Boards into Kubernetes for on-premises environments. For more information, see [Huddo Boards for Kubernetes and IBM Cloud Private](https://docs.huddo.com/boards/kubernetes/).
+Deploy Huddo Boards into Kubernetes for on-premises environments. For more information, see [Boards for HCL DX](https://docs.huddo.com/boards/dx/).
 
 ## Installing Huddo Boards Portlet
 
