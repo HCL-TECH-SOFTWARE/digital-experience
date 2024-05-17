@@ -5,7 +5,7 @@ This topic describes the details of Digital Access Management (DAM) access contr
 ## Overview on DX Portal Access Control for DAM
 
 DX Portal Access Control follows an inheritance based tree structure. DAM is part of that tree just like WCM or Portal Pages. 
-At the top of the tree is the virtual Resource Portal, and below it is the virtual resource DAM. Below DAM are the resource instances (the collections) you are registering with its children. By assigning a role on a resource to a user, the user gets permission for the resource and its children.
+At the top of the tree is the virtual Resource Portal, and below it is the virtual resource DIGITAL ASSET MANAGEMENT. Below DIGITAL ASSET MANAGEMENT are the resource instances (the collections) you are registering with its children. By assigning a role on a resource to a user, the user gets permission for the resource and its children.
 
 For DAM, only a subset of the roles is exposed. Possible role types are User (view only), Editor (view, edit, create), and Administrator (view, edit, create, delete, set/remove access). Other roles existing in Portal Access Control like Manager or Privileged User are not exposed.
 
@@ -55,7 +55,7 @@ In DAM, the user can assign permission to a collection tree at the root level if
 ## Nested collection permissions
 
 !!! note
-    While upgrading to CF220, resources will be created for all the nested collections, which can cause subscriber and publisher environments to become out of sync. Hence, it is highly recommended to deregister DAM Staging by following the [Register/Deregister Subscriber](https://opensource.hcltechsw.com/digital-experience/CF219/manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging/#registering-or-deregistering-for-dam-staging) procedure before upgrading the environments. Once the upgrade is complete, DAM Staging can be re-enabled.
+    While upgrading from Pre CF220 to CF220 or later, resources will be created for all the existing nested collections via migration during the upgrade. Hence, it is highly recommended to deregister DAM Staging before upgrading the environments. Once the upgrade is complete, DAM Staging can be re-enabled. Refer [Register/Deregister Subscriber](https://opensource.hcltechsw.com/digital-experience/CF219/manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging/#registering-or-deregistering-for-dam-staging).
 
 A nested collection inherits the permission from its root collection by default. In the following screenshot, the Editor permission is inherited from the root collection.
 
