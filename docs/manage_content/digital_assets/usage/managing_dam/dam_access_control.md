@@ -1,11 +1,11 @@
 # DAM Access Control Management
 
-This topic describes the details of DAM access control, its features and limitations and also on how to assign permission to Users through the DAM user interface.
+This topic describes the details of Digital Access Management (DAM) access control, its features and limitations and also on how to assign permission to Users through the DAM user interface.
 
 ## Overview on DX Portal Access Control for DAM
 
 DX Portal Access Control follows an inheritance based tree structure. DAM is part of that tree just like WCM or Portal Pages. 
-At the top of the tree is the virtual Resource Portal, and below it is the virtual resource Digital Asset Management. Below DAM are the resource instances (the collections) you are registering with its children. By assigning a role on a resource to a user, the user gets permission for the resource and its children.
+At the top of the tree is the virtual Resource Portal, and below it is the virtual resource DAM. Below DAM are the resource instances (the collections) you are registering with its children. By assigning a role on a resource to a user, the user gets permission for the resource and its children.
 
 For DAM, only a subset of the roles is exposed. Possible role types are User (view only), Editor (view, edit, create), and Administrator (view, edit, create, delete, set/remove access). Other roles existing in Portal Access Control like Manager or Privileged User are not exposed.
 
@@ -70,11 +70,11 @@ If the **Inherit access from parent collection** checkbox is cleared by the Admi
 
 ![DAM Remove Inherited Permission for User](../../../../images/dam_uncheck_inherit_checkbox.png)
 
-## Access Control Traversal for nested collections (ACL Traversal)
+## Access Control Traversal for nested collections
 
-For access control in nested collections, if the user has access to the child collection but not the parent, then the parent collection is not visible to the user. Hence, user cannot navigate to the child collection to perform any operations. In order to overcome this, a new configuration called Access Control (ACL) Traversal is introduced.
+For access control in nested collections, if the user has access to the child collection but not the parent, then the parent collection is not visible to the user. Hence, user cannot navigate to the child collection to perform any operations. To overcome this, a new configuration called Access Control (ACL) Traversal is introduced.
 
-ACL Traversal allows users to view collections across DAM, but they cannot modify or view media items and the access panel unless they have access to that collection. Users can only navigate by clicking the parent collection to reach the child collection for which the user has access to. This configuration is an application level configuration that you can enable or disable through Helm:
+ACL Traversal allows users to view collections across DAM, but they cannot modify or view media items and the access panel unless they have access to that collection. Users can only navigate by clicking the parent collection to reach the child collection for which the user has access to. This configuration is an application-level configuration that you can enable or disable through Helm. By default, ACL traversal is disabled:
 
 ```
 # Application Configuration
@@ -82,7 +82,8 @@ configuration:
   digitalAssetManagement:
     aclTraversal: false
 ```
-With ACL Traversal enabled, users can traverse across all the root collections and nested collections even if they do not have the required permission for the collections. However, they cannot  view the media items under these collections. By default, ACL traversal is disabled.
+
+To enable, set `aclTraversal` to `true`. With ACL Traversal enabled, users can traverse across all the root collections and nested collections even if they do not have the required permission for the collections. However, they cannot view the media items under these collections.
 
 ![DAM Collection without permission with ACL traversal enabled￼￼](../../../../images/dam_nested_collection_visible_acl_traversal_enabled.png)
 
