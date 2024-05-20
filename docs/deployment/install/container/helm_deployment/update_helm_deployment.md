@@ -29,7 +29,7 @@ If you do not want these password values removed after every run, make sure `PWo
 
 ## Recommended actions during a CF upgrade
 
-In a helm based deployment moving from one cumulative fix to another one is also handled via helm upgrade.
+In a Helm-based deployment, moving from one cumulative fix (CF) to another one is also handled through Helm upgrade. In addition to the [Prerequisites](#prerequisites) mentioned, the following actions are recommended when applying cumulative fixes:
 In addition to the Prerequisites mentioned above we recommend the following actions for applying cumulative fixes:
  1. Take a backup of the file system of the persistent volumes associated with the namespace. Also take a matching backup of the database associated with the Core pod.
  2. In case you are running a 24/7 environment we recommend setting up a blue/green deployment before applying a CF to ensure high availability. While DX Core will stay available with multiple pods, DAM is not high available during CF application. See [Difference and Similarities Between Traditional and Kubernetes DX Deployments](../../deployment/manage/container_configuration/deploy_container_artifact_updates.md#difference-and-similarities-between-traditional-and-kubernetes-dx-deployments) showing how a DX solution could be deployed for high availability and blue/green deployments in a single Kubernetes cluster.
