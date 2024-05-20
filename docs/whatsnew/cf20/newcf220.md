@@ -101,10 +101,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Digital Asset Management - Access control for nested collections
 
 === "Containers"
-    Access control for nested collections is enabled in DAM. For more details, see [Nested collection permissions](../../manage_content/digital_assets/usage/managing_dam/dam_access_control#nested-collection-permissions). While upgrading to CF220, resources will be created for all the nested collections. Hence, it is highly recommended to disable DAM Staging during the upgrade and re-enable DAM Staging after both the publisher (source) and the subscriber (target) are on the same CF version.
+    Access control for nested collections is enabled in DAM. For more details, see [Nested collection permissions](../../manage_content/digital_assets/usage/managing_dam/dam_access_control#nested-collection-permissions). While upgrading to CF220, resources are created for all nested collections. It is recommended to disable DAM Staging during the upgrade and re-enable DAM Staging after both the publisher (source) and the subscriber (target) are on the same CF version.
     
 === "On-Premises"
-    Access control for nested collections is enabled in DAM. For more details, see [Nested collection permissions](../../manage_content/digital_assets/usage/managing_dam/dam_access_control#nested-collection-permissions). While upgrading to CF220, resources will be created for all the nested collections. Hence, it is highly recommended to disable DAM Staging during the upgrade and re-enable DAM Staging after both the publisher (source) and the subscriber (target) are on the same CF version.
+    Access control for nested collections is enabled in DAM. For more details, see [Nested collection permissions](../../manage_content/digital_assets/usage/managing_dam/dam_access_control#nested-collection-permissions). While upgrading to CF220, resources are created for all nested collections. It is recommended to disable DAM Staging during the upgrade and re-enable DAM Staging after both the publisher (source) and the subscriber (target) are on the same CF version.
 
 ### Digital Asset Management - Postgres version upgrade
 
