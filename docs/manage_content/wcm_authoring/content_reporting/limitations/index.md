@@ -2,6 +2,9 @@
 
 Take note of the following limitations when using HCL Content Reporting:
 
+!!! note
+    Content Reporting cannot be enabled in a Virtual Portal.
+
 ## Generating a report
 
 - For the **Expiry date** criteria, no results are returned if the same date is used in the **From** and **To** fields.

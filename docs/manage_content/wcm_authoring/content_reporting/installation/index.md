@@ -16,6 +16,9 @@ This section describes how to enable and disable Content Reporting manually.
 !!! important
     Before enabling Content Reporting, it is required to enable Practitioner Studio. For more information on how to enable Practitioner Studio, refer to [How to enable Practitioner Studio](../../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md). After enabling Content Reporting, it can then be used with other themes.
 
+!!! note
+    Content Reporting cannot be enabled in a Virtual Portal.
+
 ### Enabling Content Reporting
 
 To enable Content Reporting, run the **enable-content-reporting** config task. It is not required to stop or restart the Portal when running these configuration tasks.
