@@ -25,6 +25,7 @@ The following features and updates are available to customers installing HCL Dig
 - New search configuration using OpenSearch
 - Digital Asset Management - Access control for nested collections
 - Digital Asset Management - Postgres version upgrade
+- Added guidance for cumulative fix update for Kubernetes
 - New guidance for performance sizing for rendering with maximum throughput on a single node
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
@@ -106,17 +107,18 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Access control for nested collections is enabled in DAM. For more details, see [Nested collection permissions](../../manage_content/digital_assets/usage/managing_dam/dam_access_control.md#nested-collection-permissions). While upgrading to CF220, resources are created for all nested collections. It is recommended to disable DAM Staging during the upgrade and re-enable DAM Staging after both the publisher (source) and the subscriber (target) are on the same CF version.
-    
-=== "On-Premises"
-    Access control for nested collections is enabled in DAM. For more details, see [Nested collection permissions](../../manage_content/digital_assets/usage/managing_dam/dam_access_control.md#nested-collection-permissions). While upgrading to CF220, resources are created for all nested collections. It is recommended to disable DAM Staging during the upgrade and re-enable DAM Staging after both the publisher (source) and the subscriber (target) are on the same CF version.
+
 
 ### Digital Asset Management - Postgres version upgrade
 
 === "Containers"
     Postgres version 11 is no longer supported. The Postgres version in the persistence node is upgraded from version 11 to version 16. It is recommended to back up your database dump before upgrading to CF220 and later versions. For more details, see [Postgres version upgrade](../../get_started/plan_deployment/container_deployment/dam_persistence_architecture.md#postgres-version-upgrade).
 
-=== "On-Premises"
-    Postgres version 11 is no longer supported. The Postgres version in the persistence node is upgraded from version 11 to version 16. It is recommended to back up your database dump before upgrading to CF220 and later versions. For more details, see [Postgres version upgrade](../../get_started/plan_deployment/container_deployment/dam_persistence_architecture.md#postgres-version-upgrade).
+
+### Added guidance for upgrading a Helm deployment
+
+=== "Containers"
+    Information about the [prerequisites](../../deployment/install/container/helm_deployment/update_helm_deployment.md#prerequisites) when upgrading a Helm deployment and the [recommended actions during a CF upgrade](../../deployment/install/container/helm_deployment/update_helm_deployment.md#recommended-actions-during-a-cf-upgrade) are now available. 
 
 ### New guidance for performance sizing for rendering with maximum throughput on a single node
 
