@@ -62,7 +62,7 @@ Content managers can trigger bulk updates to update the expiration dates of all 
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_result.png)
 
-5. Displaying the confirmation update dialog.
+5. The confirmation update dialog is displayed and details can be reviewed prior to update.
     - The confirmation dialog will contain the number of items to be updated and the update action.
     - Click "Update" to send the bulk update request.
 
