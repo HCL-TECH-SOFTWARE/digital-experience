@@ -28,17 +28,13 @@ To start cherry picking process, you must need to follow the process of
 
     ![](../../../../assets/HCL_Content_Reporting_Landing_Page.png)
 
-2. Choose a criteria (Expiry Date, Author, Owner) to be generated.
-
-    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_author_criteria.png)
-
-3. Generate a report on items you want to update. See [Generating a content report](../usage/generate_content_report.md) for instructions.
+2. Generate a report on items you want to update. See [Generating a content report](../usage/generate_content_report.md) for instructions.
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_button.png)
 
-4. [Export the report](./export_content_report) or execute one of the following supported bulk update operations: [UpdateExpiry](#using-the-content-reporting-bulk-update-updateexpiry-feature) or [Update Owners/Authors](#using-the-content-reporting-bulk-update-ownersauthors-feature).
+3. [Export the report](./export_content_report) or execute one of the following supported bulk update operations: [UpdateExpiry](#using-the-content-reporting-bulk-update-updateexpiry-feature) or [Update Owners/Authors](#using-the-content-reporting-bulk-update-ownersauthors-feature).
 
-## Using the Content Reporting Cherry Picking for Bulk Update UpdateExpiry feature
+## Using the Content Reporting Bulk Update UpdateExpiry feature
 
 Content managers can trigger bulk updates to update the expiration dates of all queried items. This section provides steps on how to update the expiration date of content items in a report generated through HCL Content Reporting.
 
@@ -56,13 +52,19 @@ Content managers can trigger bulk updates to update the expiration dates of all 
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_action.png)
 
-4. The results based on the update action are displayed and can be updated.
-    - User may proceed to update all from the list or specifically select the items for update.
-    - Click the "Apply updates" button to open the confirmation dialog.
+4. Displaying the results based on the update action and applying the update.
+
+    (1) User may proceed to update all from the list.
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_result.png)
 
-5. The confirmation update dialog is displayed and details can be reviewed prior to update.
+    (2) User may proceed to specifically select the items for update.
+
+    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_checkbox.png)
+
+    - Click the "Apply updates" button to open the confirmation dialog.
+
+5. Displaying the confirmation update dialog.
     - The confirmation dialog will contain the number of items to be updated and the update action.
     - Click "Update" to send the bulk update request.
 
@@ -110,7 +112,7 @@ Content managers can trigger bulk updates to update the owners and/or authors of
 
 1. After you have generated a report and if there are results, the **Bulk Update** button appears in the application header. Click the **Bulk Update** button.
 
- In the **Update items** dialog box, there are six options: **Property**, **Action**, **User attribute**, **Users**, **Group attribute** and **Groups**.
+2.  In the **Update items** dialog box, there are six options: **Property**, **Action**, **User attribute**, **Users**, **Group attribute** and **Groups**.
     - In the **Property** field, select the property to be updated, either **Author** or **Owner**. 
     - In the **Action** field, select the action to be taken on the selected items, either **Add**, **Remove**, or **Replace**. 
 
@@ -120,12 +122,12 @@ Content managers can trigger bulk updates to update the owners and/or authors of
     - In the **User attribute** field, select a user attribute to enable the **Users** field. In the **Users** field, enter a corresponding value for the selected attribute. For example, if you selected the **Job Title** attribute, enter a job title in the **Users** field and all users with that job title appear in the dropdown. Note that this field is a type-ahead input field that displays a list of suggested users according to the input and selected user attribute. Only suggested users are valid.
     - You can also select a **Group attribute** to enable the **Groups** field. In the **Groups** field, enter a corresponding value for the selected attribute. For example, if you selected the **Display Name** attribute, enter a display name in the **Groups** field and all groups with that display name appear in the dropdown. Note that this field is a type-ahead input field that displays a list of suggested groups according to the input and selected group attribute. Only suggested groups are valid.
 
-2. After filling out the fields, click the **View item list** button.
+3. After filling out the fields, click the **View item list** button.
     A confirmation dialog box appears. 
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_update_criteria.png)
 
-3. Note the number of items to be affected by the update and check if you entered the correct values for properties to update. If the values are correct, click the **Update** button. Otherwise, you can click **Cancel** and return to the previous dialog box where you can change the incorrect values.
+4. Note the number of items to be affected by the update and check if you entered the correct values for properties to update. If the values are correct, click the **Update** button. Otherwise, you can click **Cancel** and return to the previous dialog box where you can change the incorrect values.
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_confirm_author.png)
 
