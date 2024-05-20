@@ -51,7 +51,7 @@ Content managers can trigger bulk updates to update the expiration dates of all 
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_dialog.png)
 
-3. Defining action properties for the update.
+3. Select action properties for the update.
     - Click the "View item list" button to start searching valid items.
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_action.png)
