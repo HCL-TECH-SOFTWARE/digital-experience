@@ -34,7 +34,7 @@ In addition to the Prerequisites mentioned above we recommend the following acti
 - Back up the file system of the persistent volumes associated with the namespace. Also, take a matching backup of the database associated with the Core pod.
 - If you are running a 24/7 environment, it is recommended to set up a blue/green deployment before applying a CF to ensure high availability. While DX Core stays available with multiple pods, DAM is not highly available during CF application. See the topic [Difference and Similarities Between Traditional and Kubernetes DX Deployments](../../deployment/manage/container_configuration/deploy_container_artifact_updates.md#difference-and-similarities-between-traditional-and-kubernetes-dx-deployments) that shows how a DX solution could be deployed for high availability and blue/green deployments in a single Kubernetes cluster.
  3. Disable DAM staging from and to the environment while it is not matching the source or target CF level.
- 4. Consider disabling WCM Syndication from and to the environment - this is not required but recommended.
+- (Optional) Consider disabling WCM Syndication from and to the environment.
 
 ## Helm Upgrade configuration command
 
