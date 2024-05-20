@@ -354,6 +354,8 @@ DX sizing is one of the goals of DX performance tests. DX sizing aims to identif
 
 This sizing work started with rendering scenarios of Web Content Management (WCM), portlets, and Digital Asset Management (DAM) with a rendering setup enabled in AWS/Native-Kubernetes. The Apache JMeter tool was used for performance tests.
 
+[DX Performance Rendering in Small Configuration](../rm_container/dx_performance_small_cfg.md).
+
 ### Conclusion
 
 This performance guidance shows the upper limit on a single-node K8s cluster AWS instance (c5.9xlarge). It is suggested that for single-node (c5.9xlarge) rendering scenarios for DAM, WCM, and pages with portlets, the recommended load is 2500 concurrent users with good average and 90th percentile (pct) response times. The top five response times of rendering APIs are all in the range of 4 to 5 seconds.
@@ -537,6 +539,8 @@ The following stages were conducted, starting with config DX kube configuration 
 
 #### Stage 1
 
+- Scope is to tune the DX rendering set up in single node c5.4xlarge to check support for 10k concurrent users with avg response time equal to ~4 secs if not upgrade to next instance type c5.9xlarge.
+
 - The DX combined rendering ran with config deployments as mentioned in the following Helm values.
 
 - For 1000 concurrent users, tests finished successfully with no errors.
@@ -610,6 +614,8 @@ The following stages were conducted, starting with config DX kube configuration 
 
 #### Stage 2 
 
+- Scope is to tune the DX rendering set up in single node c5.9xlarge to check support for 10k concurrent users with avg response time equal to ~4 secs 
+
 ##### Helm values
 
                                         Requests                Limits 
@@ -673,6 +679,8 @@ The following stages were conducted, starting with config DX kube configuration 
 - The test run was successful with 10000 concurrent users with 4 pods of core, DAM, haproxy, and ringAPI each.
 
 #### Stage 3
+
+- Scope is to tune the DX rendering set up in single node c5.9xlarge to check support for 10k concurrent users with avg response time equal to ~4 secs  and ensure error percentage in results is 0%
 
 ##### Improved response times of individual APIs and conclusion on load for comfortable rendering
 
