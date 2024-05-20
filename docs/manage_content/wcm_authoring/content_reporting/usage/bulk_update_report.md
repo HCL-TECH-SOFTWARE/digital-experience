@@ -87,7 +87,7 @@ Content managers can trigger bulk updates to update the expiration dates of all 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_sendrequest.png)
 
 
-### Viewing / changing actions
+### Viewing or changing the bulk update action
 
 1. Viewing the update action thru the bulk update dialog.
     - Click the "View action" button to access the buld update dialog.
