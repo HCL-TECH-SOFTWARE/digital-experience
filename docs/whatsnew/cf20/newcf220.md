@@ -42,7 +42,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ### Web Content Manager - New query parameter in WCM Multilingual Solution API
 
-(Doc in progress)
+=== "Containers"
+    The query parameter `updateSource=true` is now available for the [Translated Content API](../../manage_content/wcm_development/wcm_dev_api/wcm_mls_api.md#translated-content-api).
+
+=== "On-Premises"
+    The query parameter `updateSource=true` is now available for the [Translated Content API](../../manage_content/wcm_development/wcm_dev_api/wcm_mls_api.md#translated-content-api).
 
 ### Huddo Boards integration with HCL DX
 
