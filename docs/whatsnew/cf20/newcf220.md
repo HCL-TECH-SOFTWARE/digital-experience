@@ -25,7 +25,7 @@ The following features and updates are available to customers installing HCL Dig
 - New search configuration using OpenSearch
 - Digital Asset Management - Access control for nested collections
 - Digital Asset Management - Postgres version upgrade
-- Added guidance for cumulative fix update for Kubernetes
+- Added guidance for upgrading a Helm deployment
 - New guidance for performance sizing for rendering with maximum throughput on a single node
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
