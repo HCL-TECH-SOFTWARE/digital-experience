@@ -70,7 +70,7 @@ Content managers can trigger bulk updates to update the expiration dates of all 
 
 ## Updating selected items
 
-1. Selecting items to be updated manually.
+1. The results based on the update action are displayed and can be cherry picked or manually selected per item before proceeding with the update.
     - Items for update can be manually selected via the checkbox that appears on hover over a list item.
     - Click on the "Apply updates" button to proceed with the request.
 
