@@ -680,7 +680,7 @@ The following stages were conducted, starting with config DX kube configuration 
 
 #### Stage 3
 
-- Scope is to tune the DX rendering set up in single node c5.9xlarge to check support for 10k concurrent users with avg response time equal to ~4 secs  and ensure error percentage in results is 0%
+- Scope is to tune the DX rendering set up in single node c5.9xlarge to find the upper limit with avg response time equal to ~4 secs and ensure error percentage in results is 0%
 
 ##### Improved response times of individual APIs and conclusion on load for comfortable rendering
 
