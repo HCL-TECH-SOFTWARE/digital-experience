@@ -207,5 +207,5 @@ After resuming the update, you can track the progress in the **Update history** 
 
 ## Limitation
 
-Bookmarking the Cherry-picking route so that user may save current selections is not possible as of now because the selections and records will be huge and storing them in URL hash wouldn’t be feasible.
+It is not possible to bookmark the selected items and save your current selections because the selections and records are extensive and storing them in URL hash is not feasible.
 
