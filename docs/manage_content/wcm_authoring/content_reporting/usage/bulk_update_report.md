@@ -32,39 +32,36 @@ To update items in bulk, you must have edit access to the content items selected
 
 3. [Export the report](./export_content_report) or execute one of the following supported bulk update operations: [UpdateExpiry](#using-the-content-reporting-bulk-update-updateexpiry-feature) or [Update Owners/Authors](#using-the-content-reporting-bulk-update-ownersauthors-feature).
 
-## Using the Content Reporting Bulk Update UpdateExpiry feature
+## Using the Content Reporting Bulk Update Update Expiry feature
 
 Content managers can trigger bulk updates to update the expiration dates of all queried items. This section provides steps on how to update the expiration date of content items in a report generated through HCL Content Reporting.
 
-1. After you have generated a report and if there are results, the **Bulk Update** button appears in the application header. Click the **Bulk Update** button.
+1. After you have generated a report and if there are results, the **Bulk update** button appears in the application header. Click the **Bulk update** button.
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_button.png)
 
-2. Bulk update dialog box will appear.
-    - Select action properties for the update.
-    - The results based on the action selected are displayed.
+2. In the **Update items** dialog box, there are two fields: **Property**, and **Change to**. In the **Property** field, choose **Expiry date**. In the **Change to** field, enter the new expiry date of the selected items.
     
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_action.png)
 
-3. Displaying the results based on the update action and applying the update.
+3. Click the **View item list** button to search for valid items.
 
-    (1) User may proceed to update all from the list.
+    The results based on the action selected are displayed.
+    
+4. In the page listing the results, you can select all items or you can choose only the items you want to update.
 
-    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_result.png)
+    - To update all items, select the checkbox in the first column of the table header. 
+        ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_result.png)
+    - To update only a number of items, hover over an item you want to select and check the box that appears.
+        ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_checkbox.png)
 
-    (2) User may proceed to specifically select the items for update.
+5. Click the **Apply updates** button.
 
-    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_checkbox.png)
+    A confirmation dialog box appears.
 
-    - Click the "Apply updates" button to open the confirmation dialog.
-
-4. Displaying the confirmation update dialog.
+6. In the confirmation dialog box, verify the number of items you want to update and if you entered the correct expiration date. If the values are correct, click the **Update** button to start the bulk update operation.
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_confirmation.png)
-
-5. Send request and display progress bar while still on the bulk update page.
-
-    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_sendrequest.png)
 
 !!!note
     For CF213, there are three fields: **Action**, **Property**, and **Change to**. The **Action** and **Property** fields each have one option: **Update** and **Expiry date** respectively. Bulk updates for expiry dates can only be applied to content items, site areas, authoring templates, components, categories, and items to which you have edit access. Only items with a workflow are included.
@@ -73,14 +70,14 @@ Content managers can trigger bulk updates to update the expiration dates of all 
 
 Content managers can trigger bulk updates to update the owners and/or authors of all queried items. This section provides steps on how to update the owners or authors of content items in a report generated through HCL Content Reporting.
 
-1. After you have generated a report and if there are results, the **Bulk Update** button appears in the application header. Click the **Bulk Update** button.
+1. After you have generated a report and if there are results, the **Bulk update** button appears in the application header. Click the **Bulk update** button.
 
-2.  In the **Update items** dialog box, there are six options: **Property**, **Action**, **User attribute**, **Users**, **Group attribute** and **Groups**.
+2. In the **Update items** dialog box, there are six options: **Property**, **Action**, **User attribute**, **Users**, **Group attribute**, and **Groups**.
     - In the **Property** field, select the property to be updated, either **Author** or **Owner**. 
     - In the **Action** field, select the action to be taken on the selected items, either **Add**, **Remove**, or **Replace**. 
 
-            !!!note
-            For the **Replace** action, there are two fields each for users and groups involved in the action: **Remove users** and **Remove groups**, **Add users** and **Add groups**. In the **Remove users** or **Remove groups** field, enter a value according to the selected attribute of the user or group you want to replace with the value you will add in the **Add users** or **Add groups** field.
+      !!!note
+         For the **Replace** action, there are two fields each for users and groups involved in the action: **Remove users** and **Remove groups**, **Add users** and **Add groups**. In the **Remove users** or **Remove groups** field, enter a value according to the selected attribute of the user or group you want to replace with the value you will add in the **Add users** or **Add groups** field.
 
     - In the **User attribute** field, select a user attribute to enable the **Users** field. In the **Users** field, enter a corresponding value for the selected attribute. For example, if you selected the **Job Title** attribute, enter a job title in the **Users** field and all users with that job title appear in the dropdown. Note that this field is a type-ahead input field that displays a list of suggested users according to the input and selected user attribute. Only suggested users are valid.
     - You can also select a **Group attribute** to enable the **Groups** field. In the **Groups** field, enter a corresponding value for the selected attribute. For example, if you selected the **Display Name** attribute, enter a display name in the **Groups** field and all groups with that display name appear in the dropdown. Note that this field is a type-ahead input field that displays a list of suggested groups according to the input and selected group attribute. Only suggested groups are valid.
@@ -96,11 +93,9 @@ Content managers can trigger bulk updates to update the owners and/or authors of
 
 You can track the bulk update through the snackbar or through the **Update History** page.
 
-   ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_sendrequest.png)
-
 ### Viewing or changing the bulk update action
 
-After processing the of [Bulk Update UpdateExpiry feature](#using-the-content-reporting-bulk-update-updateExpiry-feature), we can view or change the bulk update action
+After kicking off the update operation, processing the of [Bulk Update UpdateExpiry feature](#using-the-content-reporting-bulk-update-updateExpiry-feature), we can view or change the bulk update action
 
 1. Viewing the update action through the bulk update dialog.
     - Click the "View action" button to access the buld update dialog.
