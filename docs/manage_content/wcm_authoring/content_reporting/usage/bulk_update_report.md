@@ -200,8 +200,3 @@ To continue a paused bulk update process, refer to the following steps:
     ![](../../../../assets/HCL_Content_Reporting_Update_Confirmation_Dialog_Resume.png)
 
 After resuming the update, you can track the progress in the **Update history** page.
-
-## Limitation
-
-It is not possible to bookmark the selected items and save your current selections because the selections and records are extensive and storing them in URL hash is not feasible.
-
