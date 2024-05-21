@@ -52,7 +52,7 @@ There is also a **Cancel** button in the dialog box. Click **Cancel** to close t
     
 3. In the list, select all items or choose only the items you want to update.
 
-    - To update all items, select the checkbox in the first column of the table header. 
+    - All items are selected by default and you can proceed to apply the update in Step 5. You can also check the **Select items from all pages** checkbox in the header. 
         ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_result.png)
     - To update only a number of items, hover over an item you want to select and check the box that appears.
         ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_checkbox.png)
