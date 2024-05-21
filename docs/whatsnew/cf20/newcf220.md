@@ -135,7 +135,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ###  Notice of deprecation of automated Pod restart on ConfigMap updates
 
 === "Containers"
-     Beginning with CF221, Runtime Controller will not restart Pods automatically when a ConfigMap is changed manually. For production deployments, always use the Helm custom values and `helm upgrade` to change configuration. Using Helm upgrade for configuration changes triggers the appropriate restart processes. For development and testing when a ConfigMap is changed, you have to restart the appropriate Pod manually. For more information, see the Help Center topic [Container Configuration](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes).
+    Beginning with CF221, Runtime Controller will not restart Pods automatically when a ConfigMap is changed manually. For production deployments, always use the Helm custom values and `helm upgrade` to change configuration. Using Helm upgrade for configuration changes triggers the appropriate restart processes. For development and testing when a ConfigMap is changed, you have to restart the appropriate Pod manually. For more information, see [Container configuration](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes) and [Deprecated features](../deprecated_features.md).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
