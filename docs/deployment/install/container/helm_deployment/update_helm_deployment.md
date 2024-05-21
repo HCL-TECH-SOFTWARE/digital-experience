@@ -27,7 +27,7 @@ If you do not want these password values removed after every run, make sure `PWo
 !!!note
         If your server is configured with database runtime users, for example, `feedback.DbRuntimeUser=(your feedback database runtime user)`, make sure to set their password values correctly (for example, in `feedback.DbRuntimePassword=(your feedback database runtime user password)`).
 
-## Recommended actions during a CF upgrade
+## Recommended actions before a CF upgrade
 
 In a Helm-based deployment, moving from one cumulative fix (CF) to another one is also handled through Helm upgrade. In addition to the [Prerequisites](#prerequisites) mentioned, the following actions are recommended when applying cumulative fixes:
 

@@ -119,7 +119,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Added guidance for upgrading a Helm deployment
 
 === "Containers"
-    Information about the [prerequisites](../../deployment/install/container/helm_deployment/update_helm_deployment.md#prerequisites) when upgrading a Helm deployment and the [recommended actions during a CF upgrade for Kubernetes](../../deployment/install/container/helm_deployment/update_helm_deployment.md#recommended-actions-during-a-cf-upgrade) are now available. 
+    Information about the [prerequisites](../../deployment/install/container/helm_deployment/update_helm_deployment.md#prerequisites) when upgrading a Helm deployment and the [recommended actions before a CF upgrade for Kubernetes](../../deployment/install/container/helm_deployment/update_helm_deployment.md#recommended-actions-during-a-cf-upgrade) are now available. 
 
 ### New guidance for performance sizing for rendering with maximum throughput on a single node
 
