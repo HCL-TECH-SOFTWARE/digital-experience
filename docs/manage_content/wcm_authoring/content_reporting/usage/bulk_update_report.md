@@ -63,24 +63,9 @@ Content managers can trigger bulk updates to update the expiration dates of all 
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_confirmation.png)
 
-## Updating selected items
-
-1. The results based on the update action are displayed and can be cherry picked or manually selected per item before proceeding with the update.
-    - Items for update can be manually selected via the checkbox that appears on hover over a list item.
-    - Click on the "Apply updates" button to proceed with the request.
-
-    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_checkbox.png)
-
-2. The confirmation update dialog is displayed and details can be reviewed prior to update.
-    - The confirmation dialog will contain the number of items to be updated and the update action.
-    - Cick "Update" to send the bulk update request.
-
-    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_confirmation.png)
-
-3. Send request and display progress bar while still on the bulk update page.
+6. Send request and display progress bar while still on the bulk update page.
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_sendrequest.png)
-
 
 ### Viewing or changing the bulk update action
 
