@@ -71,7 +71,7 @@ Content managers can trigger bulk updates to update the expiration dates of all 
 
 ### Viewing or changing the bulk update action
 
-After processing the ,[Using the Content Reporting Bulk Update UpdateExpiry feature](#Using the Content Reporting Bulk Update UpdateExpiry feature), we can view or change the bulk update action
+After processing the of [Bulk Update UpdateExpiry feature](#using-the-content-reporting-bulk-update-updateExpiry-feature), we can view or change the bulk update action
 
 1. Viewing the update action through the bulk update dialog.
     - Click the "View action" button to access the buld update dialog.
