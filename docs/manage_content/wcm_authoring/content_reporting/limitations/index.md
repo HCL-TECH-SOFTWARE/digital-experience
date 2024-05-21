@@ -2,8 +2,9 @@
 
 Take note of the following limitations when using HCL Content Reporting:
 
-!!! note
-    Content Reporting cannot be enabled in a Virtual Portal.
+## Enabling HCL Content Reporting
+
+- You cannot enable Content Reporting in a Virtual Portal.
 
 ## Generating a report
 
