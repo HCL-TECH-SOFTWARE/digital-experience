@@ -145,7 +145,7 @@ After kicking off the update operation, processing the of [Bulk Update UpdateExp
 2. Upon display, the dialog has the current action displayed and the user can change the properties or action as needed. Click the "View item list" to trigger the search of valid items.
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_actions.png)
-    
+
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_action.png)
 
 3. The result of valid items are displayed.
@@ -168,7 +168,7 @@ After kicking off the update operation, processing the of [Bulk Update UpdateExp
     - **Updated on** - This column shows when the bulk update was triggered.
     - **Polling ID** - This column shows a unique identifier for the bulk process.
 
-    ![](../../../../assets/HCL_Content_Reporting_Updates_Resume_Update_Button.png)
+    ![](../../../../assets/HCL_Content_Reporting_Updates_Resume_history_loading.png)
 
     To return to the **Content Reporting** landing page, click the back button found on the upper left corner of the **Update history** page.
 
