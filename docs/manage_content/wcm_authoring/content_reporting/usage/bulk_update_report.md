@@ -40,7 +40,7 @@ Content managers can trigger bulk updates to update the expiration dates of all 
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_button.png)
 
-2. Bulk update dialog box will appear.
+2. In the **Update items** dialog box, there are two fields: **Property**, and **Change to**. In the **Property** field, choose **Expiry date**. In the **Change to** field, enter the new expiry date of the selected items. 
 
 3. Select action properties for the update.
     - Click the "View item list" button to start searching valid items.
