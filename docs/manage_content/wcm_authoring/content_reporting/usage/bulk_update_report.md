@@ -186,6 +186,30 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_snackbar_view_page.png)
 
+#### Resuming a paused bulk update process
+If a bulk update process is running and the server restarts, the system pauses the update process. When the server is available again, you can resume the paused bulk update process.
+
+!!!note
+    You can only resume a paused bulk update process for owners and authors if the update involves a limited number of users and groups. Currently, there is a size limitation in the database column that stores the action string that specifies the owners or authors used in an update. If the action string exceeds 255 characters, you cannot resume the paused bulk update process. The operation fails and you must start the bulk update process again.
+
+    If the bulk update process for owners and authors involves a large number of users, it is recommended to create a user group instead. Add all of the users to the group and then select the new group when initiating the bulk update operation. For more information, see [Managing users and groups](../../../../deployment/manage/security/people/authorization/controlling_access/managing_users_groups/index.md).
+
+To continue a paused bulk update process, refer to the following steps:
+
+1. Access the **Update history** page through the button on the application header. Click the **Update history** button to go to the **Update history** page.
+
+    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_sendrequest.png)
+
+2. In the **Update history** page table, hover over a row of a paused update process to display the resume update button. Click this button to display the confirmation dialog box to resume the bulk update process.
+
+    ![](../../../../assets/HCL_Content_Reporting_Updates_Resume_Update_Button.png)
+
+3. The **Confirm resume update** dialog box appears. Verify the items you want to update and click **Resume** to continue. Otherwise, you can click **Cancel**.
+
+    ![](../../../../assets/HCL_Content_Reporting_Update_Confirmation_Dialog_Resume.png)
+
+After resuming the update, you can track the progress in the **Update history** page.
+
 ## Limitation
 
 Bookmarking the Cherry-picking route so that user may save current selections is not possible as of now because the selections and records will be huge and storing them in URL hash wouldn’t be feasible.
