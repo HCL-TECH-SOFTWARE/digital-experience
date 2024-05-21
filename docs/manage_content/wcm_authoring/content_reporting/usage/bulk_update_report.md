@@ -144,15 +144,15 @@ After kicking off the update operation, processing the of [Bulk Update UpdateExp
 
 2. Upon display, the dialog has the current action displayed and the user can change the properties or action as needed. Click the "View item list" to trigger the search of valid items.
 
+    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_actions.png)
+    
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_action.png)
 
 3. The result of valid items are displayed.
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_displayvalid.png)
 
-    - The page will display the message "No items were found" if there is no valid items.
-
-    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_empty_result.png)
+    - If there are no valid items, the page displays the message "No items were found".
 
 ### Viewing the Update History page
 
