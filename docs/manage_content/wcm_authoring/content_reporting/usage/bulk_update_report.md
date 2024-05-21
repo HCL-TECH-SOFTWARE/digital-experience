@@ -30,7 +30,7 @@ To update items in bulk, you must have edit access to the content items selected
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_button.png)
 
-3. [Export the report](./export_content_report) or execute one of the following supported bulk update operations: [UpdateExpiry](#using-the-content-reporting-bulk-update-updateexpiry-feature) or [Update Owners/Authors](#using-the-content-reporting-bulk-update-ownersauthors-feature).
+3. Execute one of the following supported bulk update operations: [UpdateExpiry](#using-the-content-reporting-bulk-update-updateexpiry-feature) or [Update Owners/Authors](#using-the-content-reporting-bulk-update-ownersauthors-feature).
 
 ## Using the Content Reporting Bulk Update Update Expiry feature
 
