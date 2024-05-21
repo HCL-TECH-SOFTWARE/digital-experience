@@ -354,7 +354,7 @@ DX sizing is one of the goals of DX performance tests. DX sizing aims to identif
 
 This sizing work started with rendering scenarios of Web Content Management (WCM), portlets, and Digital Asset Management (DAM) with a rendering setup enabled in AWS/Native-Kubernetes. The Apache JMeter tool was used for performance tests.
 
-[DX Performance Rendering in Small Configuration](../rm_container/dx_performance_small_cfg.md).
+For guidance when rendering with a small configuration, see [Performance-sizing guidance for rendering with a small configuration](../rm_container/dx_performance_small_cfg.md).
 
 ### Conclusion
 
@@ -539,7 +539,10 @@ The following stages were conducted, starting with config DX kube configuration 
 
 #### Stage 1
 
-- Scope is to tune the DX rendering set up in single node c5.4xlarge to check support for 10k concurrent users with avg response time equal to ~4 secs if not upgrade to next instance type c5.9xlarge.
+- Stage 1 has the following objectives:
+      
+      - To tune the DX rendering setup in a single node on a c5.4xlarge instance
+      - To check support for 10000 concurrent users with the average response time equal to 4 seconds
 
 - The DX combined rendering ran with config deployments as mentioned in the following Helm values.
 
@@ -613,8 +616,11 @@ The following stages were conducted, starting with config DX kube configuration 
 
 
 #### Stage 2 
-
-- Scope is to tune the DX rendering set up in single node c5.9xlarge to check support for 10k concurrent users with avg response time equal to ~4 secs 
+    
+Stage 2 has the following objectives:
+      
+- To tune the DX rendering setup in a single node on a c5.9xlarge instance
+- To check support for 10000 concurrent users with the average response time equal to 4 seconds
 
 ##### Helm values
 
@@ -680,7 +686,11 @@ The following stages were conducted, starting with config DX kube configuration 
 
 #### Stage 3
 
-- Scope is to tune the DX rendering set up in single node c5.9xlarge to find the upper limit with avg response time equal to ~4 secs and ensure error percentage in results is 0%
+Stage 3 has the following objectives:
+      
+- To tune the DX rendering setup in a single node on a c5.4xlarge instance
+- To determine the upper limit with the average response time equal to 4 seconds
+- To ensure error percentage in results is 0%
 
 ##### Improved response times of individual APIs and conclusion on load for comfortable rendering
 
