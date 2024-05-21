@@ -20,8 +20,6 @@ Beginning with HCL Digital Experience 9.5 release update CF214, Content Reportin
 
 To update items in bulk, you must have edit access to the content items selected. If you kick off the bulk update operation without having the required access to the items, the update will fail with the error message `Unauthorized access`. 
 
-To start cherry picking process, you must need to follow the process of 
-
 ## Using the Content Reporting Bulk Update feature
 
 1.  Log in to your HCL Digital Experience 9.5 platform and select **Web Content**. Select **Content Reporting** from the Practitioner Studio navigator. The following image shows the Content Reporting landing page.
