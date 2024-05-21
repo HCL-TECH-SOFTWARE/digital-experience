@@ -79,7 +79,7 @@ To create a new content source for WCM, call the `/dx/api/search/v2/contentsourc
 Provide the following properties:
 
 | Property | Optional | Description |
-| --- | --- |
+| --- | --- | --- |
 | `name` | no | A speaking identifier for your content source. |
 | `type` | no | The type of content source you want to create (for example, `wcm`). |
 | `aclLookupHost` | no | The host where the ACL lookup for search requests is being made. It can directly point to your HCL DX Core Service inside your Kubernetes deployment. The name consists of the release name used during the helm install and the suffix `-core:10042`. |
