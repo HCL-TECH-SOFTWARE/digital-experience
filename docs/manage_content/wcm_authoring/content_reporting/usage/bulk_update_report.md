@@ -12,7 +12,7 @@ Starting CF220, you can select all or just a number of items when performing a b
 !!!note
     Bulk updates for owners or authors can only be applied to content items, site areas, authoring templates, components, categories, folders, projects, segments, workflow actions, portal pages and items to which you have edit access. To date, adding up to 100 users and updating up to 7000 items have been tested successfully.
 
-Starting CF218, if a bulk update process is running and the server restarts, the system pauses the update process. When the server is available again, you can resume the paused bulk update process through the **Updates** page. For more information, see [Resuming a paused bulk update process](#resuming-a-paused-bulk-update-process).
+Starting CF218, if a bulk update process is running and the server restarts, the system pauses the update process. When the server is available again, you can resume the paused bulk update process through the **Update history** page. For more information, see [Resuming a paused bulk update process](#resuming-a-paused-bulk-update-process).
 
 ## Prerequisite
 
@@ -70,6 +70,8 @@ Content managers can trigger bulk updates to update the expiration dates of all 
     For CF213, there are three fields: **Action**, **Property**, and **Change to**. The **Action** and **Property** fields each have one option: **Update** and **Expiry date** respectively. Bulk updates for expiry dates can only be applied to content items, site areas, authoring templates, components, categories, and items to which you have edit access. Only items with a workflow are included.
 
 ### Viewing or changing the bulk update action
+
+After processing the ,[Using the Content Reporting Bulk Update UpdateExpiry feature](#Using the Content Reporting Bulk Update UpdateExpiry feature), we can view or change the bulk update action
 
 1. Viewing the update action through the bulk update dialog.
     - Click the "View action" button to access the buld update dialog.
@@ -151,15 +153,15 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
 
 ### Viewing the Update History page
 
-1. You can access the **Updates** page through the button on the application header. Click the **Updates** button to go to the **Updates** page. The **Updates** button also contains the total number of bulk update operations triggered.
+1. You can access the **Update history** page through the button on the application header. Click the **Update history** button to go to the **Update history** page. The **Update history** button also contains the total number of bulk update operations triggered.
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_sendrequest.png)
 
-2. In the **Updates** page, there is a table showing the bulk updates that were triggered. This table has five columns:
+2. In the **Update history** page, there is a table showing the bulk updates that were triggered. This table has five columns:
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_history_loading.png)
 
-    To return to the **Content Reporting** landing page, click the back button found on the upper left corner of the **Updates** page.
+    To return to the **Content Reporting** landing page, click the back button found on the upper left corner of the **Update history** page.
 
 3. In the **Update history** page, there is a table showing the bulk updates that were triggered. This table has five columns:
 
@@ -171,7 +173,7 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
 
     To return to the **Content Reporting** landing page, click the back button found on the upper left corner of the **Update history** page.
 
-4. In the **Updates** page table, hover over a row of a completed bulk update to display the view action button. Click this button to display the dialog for the list of items processed and their details.
+4. In the **Update history** page table, hover over a row of a completed bulk update to display the view action button. Click this button to display the dialog for the list of items processed and their details.
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_sendrequest.png)
 
