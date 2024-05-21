@@ -101,7 +101,7 @@ You can [track the bulk update](#tracking-bulk-updates-and-viewing-bulk-update-r
 
 When a bulk update is triggered, a snackbar appears in the bottom right corner of the screen. The snackbar displays the status of the update. If the process is still ongoing, it shows how many items have already been processed against the total number of items. If the process has been completed, it shows how many items were updated and how many items were not.
 
-    ![](../../../../assets/HCL_Content_Reporting_Bulk_Update_Snackbar.png)
+   ![](../../../../assets/HCL_Content_Reporting_Bulk_Update_Snackbar.png)
 
 There are two ways to track the bulk update: through the snackbar and through the **Update history** page.
 
