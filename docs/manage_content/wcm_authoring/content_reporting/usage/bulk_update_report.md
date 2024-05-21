@@ -84,6 +84,11 @@ Content managers can trigger bulk updates to update the expiration dates of all 
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_displayvalid.png)
 
+4. Displaying empty results.
+    - The page will display the message "No items were found" if there is no valid items.
+
+    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_empty_result.png)
+
 ## Using the Content Reporting Bulk Update Owners/Authors feature
 
 Content managers can trigger bulk updates to update the owners and/or authors of all queried items. This section provides steps on how to update the owners or authors of content items in a report generated through HCL Content Reporting.
@@ -178,13 +183,6 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
     - **Item type** - This column shows the type of item processed.
     - **Update Status** - This column tells whether the item was successfully updated (shown as **OK**) or not (an error message containing why the update failed is displayed).
     - **Created by** - This column shows the creator of the item.
-    
-### Empty results
-
-1. Displaying empty results.
-    - The page will display the message "No items were found".
-
-    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_empty_result.png)
 
 ## Limitation
 
