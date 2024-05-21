@@ -41,13 +41,12 @@ Content managers can trigger bulk updates to update the expiration dates of all 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_button.png)
 
 2. Bulk update dialog box will appear.
-
-3. Select action properties for the update.
-   - The results based on the action selected are displayed.
+    - Select action properties for the update.
+    - The results based on the action selected are displayed.
     
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_action.png)
 
-4. Displaying the results based on the update action and applying the update.
+3. Displaying the results based on the update action and applying the update.
 
     (1) User may proceed to update all from the list.
 
@@ -59,13 +58,16 @@ Content managers can trigger bulk updates to update the expiration dates of all 
 
     - Click the "Apply updates" button to open the confirmation dialog.
 
-5. Displaying the confirmation update dialog.
+4. Displaying the confirmation update dialog.
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_confirmation.png)
 
-6. Send request and display progress bar while still on the bulk update page.
+5. Send request and display progress bar while still on the bulk update page.
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_sendrequest.png)
+
+!!!note
+    For CF213, there are three fields: **Action**, **Property**, and **Change to**. The **Action** and **Property** fields each have one option: **Update** and **Expiry date** respectively. Bulk updates for expiry dates can only be applied to content items, site areas, authoring templates, components, categories, and items to which you have edit access. Only items with a workflow are included.
 
 ### Viewing or changing the bulk update action
 
@@ -149,21 +151,17 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
 
 ### Viewing the Update History page
 
-1. Viewing the updates thru the update history page.
-    - Click the "Update history" button to go to the update history page.
-    - A counter indicator at the button to show ongoing update that is processing at the moment.
+1. You can access the **Updates** page through the button on the application header. Click the **Updates** button to go to the **Updates** page. The **Updates** button also contains the total number of bulk update operations triggered.
 
-    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_update_history.png)
+    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_sendrequest.png)
 
-2. Loading the update history page.
-    - The activity page will display all updates whether it is a successful update, failed update or an ongoing update.
-    - Click the "Back" button to go back to previous page.
+2. In the **Updates** page, there is a table showing the bulk updates that were triggered. This table has five columns:
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_history_loading.png)
 
-    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_update history_page.png)
+    To return to the **Content Reporting** landing page, click the back button found on the upper left corner of the **Updates** page.
 
-2. In the **Update history** page, there is a table showing the bulk updates that were triggered. This table has five columns:
+3. In the **Update history** page, there is a table showing the bulk updates that were triggered. This table has five columns:
 
     - **Update** - This column indicates whether the bulk update is ongoing or completed. Once complete, there is a summary of items that have been processed. This summary shows how many items were updated and how many failed. This column also contains a button to show the report dialog where you can check the details of each item that has been processed.
     - **Action** - This column shows actions that were taken during the bulk update.
@@ -173,16 +171,18 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
 
     To return to the **Content Reporting** landing page, click the back button found on the upper left corner of the **Update history** page.
 
-3. In the **Snackbar View Page** page, there is a table showing the bulk updates that were triggered. This table has five columns:
+4. In the **Updates** page table, hover over a row of a completed bulk update to display the view action button. Click this button to display the dialog for the list of items processed and their details.
 
-    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_snackbar_view_page.png)
+    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_sendrequest.png)
 
-     In the header of the dialog box, the number of updated items and the number of failed items are displayed. There are four columns on the dialog box:
+5. In the header of the dialog box, the number of updated items and the number of failed items are displayed. There are four columns on the dialog box:
 
     - **Title** - This column shows the title of the item processed.
     - **Item type** - This column shows the type of item processed.
     - **Update Status** - This column tells whether the item was successfully updated (shown as **OK**) or not (an error message containing why the update failed is displayed).
     - **Created by** - This column shows the creator of the item.
+
+    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_snackbar_view_page.png)
 
 ## Limitation
 
