@@ -33,7 +33,7 @@ Take note of the following limitations when using HCL Content Reporting:
 
 -  The bookmarked URL from HCL Content Reporting does not function in a non-authenticated user session. You must log in first to your Digital Experience account before you can access the bookmarked URL.
 -   When you go to a bookmarked report and then change the language using the language switcher, the system fails to retain the report and redirects you to the HCL Content Reporting landing page.
-- Bookmarking the Cherry-picking route so that user may save current selections is not possible as of now because the selections and records will be huge and storing them in URL hash wouldn’t be feasible.
+- You can only bookmark search results on the search page.  You cannot bookmark filtered results from the bulk update page because the selections and records will be huge and storing them in URL wouldn’t be feasible.
 
 ## User interface
 
