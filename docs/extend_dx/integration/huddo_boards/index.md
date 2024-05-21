@@ -7,4 +7,4 @@ Install Huddo Boards in HCL Digital Experience.
 -   **[Configuring Huddo Boards in HCL DX](Configuration_huddo_boards.md)**  
 Configure Huddo Boards in HCL Digital Experience.
 -   **[Limitations](limitations.md)**  
-Add limitations for the Huddo boards and HCL Digital Experience.
+Limitations with the Huddo boards and DX
