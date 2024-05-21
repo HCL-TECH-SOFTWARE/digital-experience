@@ -189,8 +189,6 @@ To continue a paused bulk update process, refer to the following steps:
 
 1. Access the **Update history** page through the button on the application header. Click the **Update history** button to go to the **Update history** page.
 
-    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_sendrequest.png)
-
 2. In the **Update history** page table, hover over a row of a paused update process to display the resume update button. Click this button to display the confirmation dialog box to resume the bulk update process.
 
     ![](../../../../assets/HCL_Content_Reporting_Updates_Resume_Update_Button.png)
