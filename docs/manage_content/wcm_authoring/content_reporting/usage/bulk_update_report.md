@@ -154,25 +154,21 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
 
 2. In the **Update history** page, there is a table showing the bulk updates that were triggered. This table has five columns:
 
-    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_history_loading.png)
-
-    To return to the **Content Reporting** landing page, click the back button found on the upper left corner of the **Update history** page.
-
-3. In the **Update history** page, there is a table showing the bulk updates that were triggered. This table has five columns:
-
     - **Update** - This column indicates whether the bulk update is ongoing or completed. Once complete, there is a summary of items that have been processed. This summary shows how many items were updated and how many failed. This column also contains a button to show the report dialog where you can check the details of each item that has been processed.
     - **Action** - This column shows actions that were taken during the bulk update.
     - **Requested by** - This column shows who triggered the bulk update process.
     - **Updated on** - This column shows when the bulk update was triggered.
     - **Polling ID** - This column shows a unique identifier for the bulk process.
 
+    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_history_loading.png)
+
     To return to the **Content Reporting** landing page, click the back button found on the upper left corner of the **Update history** page.
 
-4. In the **Update history** page table, hover over a row of a completed bulk update to display the view action button. Click this button to display the dialog for the list of items processed and their details.
+3. In the **Update history** page table, hover over a row of a completed bulk update to display the view action button. Click this button to display the dialog for the list of items processed and their details.
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_sendrequest.png)
 
-5. In the header of the dialog box, the number of updated items and the number of failed items are displayed. There are four columns on the dialog box:
+4. In the header of the dialog box, the number of updated items and the number of failed items are displayed. There are four columns on the dialog box:
 
     - **Title** - This column shows the title of the item processed.
     - **Item type** - This column shows the type of item processed.
