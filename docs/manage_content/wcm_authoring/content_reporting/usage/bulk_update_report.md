@@ -69,30 +69,6 @@ Content managers can trigger bulk updates to update the expiration dates of all 
 !!!note
     For CF213, there are three fields: **Action**, **Property**, and **Change to**. The **Action** and **Property** fields each have one option: **Update** and **Expiry date** respectively. Bulk updates for expiry dates can only be applied to content items, site areas, authoring templates, components, categories, and items to which you have edit access. Only items with a workflow are included.
 
-### Viewing or changing the bulk update action
-
-After processing the of [Bulk Update UpdateExpiry feature](#using-the-content-reporting-bulk-update-updateExpiry-feature), we can view or change the bulk update action
-
-1. Viewing the update action through the bulk update dialog.
-    - Click the "View action" button to access the buld update dialog.
-
-    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_displayvalid.png)
-
-2. Displaying the bulk update dialog.
-    - Upon display, the dialog has the current action displayed and the user can change the properties or action as needed.
-    - Click the "View item list" to trigger the search of valid items.
-
-    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_action.png)
-
-3. Displaying the valid items to be updated.
-
-    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_displayvalid.png)
-
-4. Displaying empty results.
-    - The page will display the message "No items were found" if there is no valid items.
-
-    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_empty_result.png)
-
 ## Using the Content Reporting Bulk Update Owners/Authors feature
 
 Content managers can trigger bulk updates to update the owners and/or authors of all queried items. This section provides steps on how to update the owners or authors of content items in a report generated through HCL Content Reporting.
@@ -121,6 +97,30 @@ Content managers can trigger bulk updates to update the owners and/or authors of
 You can track the bulk update through the snackbar or through the **Update History** page.
 
    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_sendrequest.png)
+
+### Viewing or changing the bulk update action
+
+After processing the of [Bulk Update UpdateExpiry feature](#using-the-content-reporting-bulk-update-updateExpiry-feature), we can view or change the bulk update action
+
+1. Viewing the update action through the bulk update dialog.
+    - Click the "View action" button to access the buld update dialog.
+
+    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_displayvalid.png)
+
+2. Displaying the bulk update dialog.
+    - Upon display, the dialog has the current action displayed and the user can change the properties or action as needed.
+    - Click the "View item list" to trigger the search of valid items.
+
+    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_action.png)
+
+3. Displaying the valid items to be updated.
+
+    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_displayvalid.png)
+
+4. Displaying empty results.
+    - The page will display the message "No items were found" if there is no valid items.
+
+    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_empty_result.png)
 
 ### Using the snackbar
 
