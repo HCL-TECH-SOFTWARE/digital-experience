@@ -9,9 +9,6 @@ Currently, Content Reporting Bulk Update feature supports the following actions:
 
 You can execute these actions on content items returned in a report generated through HCL Content Reporting search.
 
-!!!note
-    Bulk updates for owners or authors can only be applied to content items, site areas, authoring templates, components, categories, folders, projects, segments, workflow actions, portal pages and items to which you have edit access. To date, adding up to 100 users and updating up to 7000 items have been tested successfully.
-
 Starting CF218, if a bulk update process is running and the server restarts, the system pauses the update process. When the server is available again, you can resume the paused bulk update process through the **Update history** page. For more information, see [Resuming a paused bulk update process](#resuming-a-paused-bulk-update-process).
 
 Starting CF220, you can select all or just a number of items when performing a bulk update operation.
@@ -82,6 +79,9 @@ Content managers can trigger bulk updates to update the owners and/or authors of
         ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_bulkupdate_updateitem.png)
 
         !!!note
+            Bulk updates for owners or authors can only be applied to content items, site areas, authoring templates, components, categories, folders, projects, segments, workflow actions, portal pages and items to which you have edit access. To date, adding up to 100 users and updating up to 7000 items have been tested successfully.
+
+        !!!note
             For the **Replace** action, there are two fields each for users and groups involved in the action: **Remove users** and **Remove groups**, **Add users** and **Add groups**. In the **Remove users** or **Remove groups** field, enter a value according to the selected attribute of the user or group you want to replace with the value you will add in the **Add users** or **Add groups** field.
 
         ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_update_criteria.png)
@@ -107,6 +107,24 @@ Content managers can trigger bulk updates to update the owners and/or authors of
     To close the dialog box, click **Cancel**.
 
 You can [track the bulk update](#tracking-bulk-updates-and-viewing-bulk-update-results) through the snackbar or through the **Update history** page. Reports are automatically updated after the bulk update process is complete.
+
+### Changing the bulk update action
+
+After kicking off a previous update operation, (for example, [updating the expiration date](#updating-the-expiration-date-using-content-reporting)), you can view then change the bulk update action to get a different set of filtered results to update next.
+
+1. In the **Bulk update** page, click the **View action** button.
+
+    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_displayvalid.png)
+
+2. In the **Update items** dialog box, you can change the action and properties as needed. Click the **View item list** to search for valid items. 
+
+    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_actions.png)
+
+    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_action.png)
+
+3. Select the items you want to update.
+
+    If there are no valid items, the page displays the message "No items were found".
 
 ## Tracking Bulk Updates and viewing Bulk Update results
 
@@ -146,26 +164,6 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
     - **Created by** - This column shows the creator of the item.
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_snackbar_view_page.png)
-
-### Changing the bulk update action
-
-After kicking off a previous update operation, (for example, [updating the expiration date](#updating-the-expiration-date-using-content-reporting)), you can view then change the bulk update action to get a different set of filtered results to update next.
-
-1. In the **Bulk update** page, click the **View action** button.
-
-    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_displayvalid.png)
-
-2. In the **Update items** dialog box, you can change the action and properties as needed. Click the **View item list** to search for valid items. 
-
-    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_actions.png)
-
-    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_action.png)
-
-3. Select the items you want to update.
-
-    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_displayvalid.png)
-
-    If there are no valid items, the page displays the message "No items were found".
 
 ### Viewing the Update History page
 
