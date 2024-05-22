@@ -67,9 +67,9 @@ The following example shows a persistence cluster in a successful deployment.
 
 ![](../../../images/cluster_status_example.png "Persistence cluster in a successful deployment")
 
-## Postgres version upgrade
+## PostgreSQL version upgrade
 
-Postgres version 11 (PG 11) is no longer supported. Starting CF220, the persistence node containing the Postgres DB is upgraded from version 11 to 16. This happens automatically as soon as CF220 or later versions deploy for the first time. Along with Postgres, `repmgr` is also updated to version 5.2.1. Before upgrading from pre-CF220 to CF220 or later, make sure to back up the database dump. Refer to [Backup Persistence](../../../manage_content/digital_assets/dam_backup_restore_image.md#backup-persistence) for instructions on exporting the dump.
+PostgreSQL version 11 (PG 11) is no longer supported. Starting CF220, the persistence node containing the PostgreSQL DB is upgraded from version 11 to 16. This happens automatically as soon as CF220 or later versions deploy for the first time. Along with PostgreSQL, `repmgr` is also updated to version 5.2.1. Before upgrading from pre-CF220 to CF220 or later, make sure to back up the database dump. Refer to [Backup Persistence](../../../manage_content/digital_assets/dam_backup_restore_image.md#backup-persistence) for instructions on exporting the dump.
 
 During the upgrade, note that the data directory of PG 11 is not removed. To remove the data directory after upgrading to the latest CF, refer to the following instructions. Make sure to change the pod name accordingly and execute the commands for all persistence pods.
 
@@ -82,8 +82,12 @@ During the upgrade, note that the data directory of PG 11 is not removed. To rem
 2. Remove the PG 11 data directory by running the following command:
 
     ```
-     /tmp/delete_old_cluster.sh
+     rm -rf '/var/lib/pgsql/11/data/dx'
     ```   
+
+!!! note
+
+    Be cautious while executing the above remove command. The mount path for PostgreSQL is /var/lib/pgsql/11/data. Hence the PG 16 data folder will be available in parallel to dx. Hence please take utmost care while deleting the Pg 11 data directory, as wrongful deletion could cause deleting of entire data.
 
 In case of upgrade failure, rollback to the previous CF version and reach out to [HCL Software Customer Support](https://support.hcltechsw.com/csm?id=csm_index) for assistance.
 
