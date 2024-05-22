@@ -136,7 +136,7 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
 
 ### Viewing or changing the bulk update action
 
-After kicking off the update operation, processing the of [Bulk Update UpdateExpiry feature](#using-the-content-reporting-bulk-update-updateExpiry-feature), we can view or change the bulk update action
+After kicking off a previous update operation, for example, doing a [Bulk Update UpdateExpiry](#using-the-content-reporting-bulk-update-updateExpiry-feature), we can view then change the bulk update action to get a different set of filtered results to update next.
 
 1. Click the "View action" button to access the buld update dialog.
 
