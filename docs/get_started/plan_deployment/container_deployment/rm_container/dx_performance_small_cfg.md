@@ -354,6 +354,8 @@ DX sizing is one of the goals of DX performance tests. DX sizing aims to identif
 
 This sizing work started with rendering scenarios of Web Content Management (WCM), portlets, and Digital Asset Management (DAM) with a rendering setup enabled in AWS/Native-Kubernetes. The Apache JMeter tool was used for performance tests.
 
+For guidance when rendering with a small configuration, see [Performance-sizing guidance for rendering with a small configuration](../rm_container/dx_performance_small_cfg.md).
+
 ### Conclusion
 
 This performance guidance shows the upper limit on a single-node K8s cluster AWS instance (c5.9xlarge). It is suggested that for single-node (c5.9xlarge) rendering scenarios for DAM, WCM, and pages with portlets, the recommended load is 2500 concurrent users with good average and 90th percentile (pct) response times. The top five response times of rendering APIs are all in the range of 4 to 5 seconds.
@@ -537,6 +539,11 @@ The following stages were conducted, starting with config DX kube configuration 
 
 #### Stage 1
 
+- Stage 1 has the following objectives:
+      
+      - To tune the DX rendering setup in a single node on a c5.4xlarge instance
+      - To check support for 10000 concurrent users with the average response time equal to 4 seconds
+
 - The DX combined rendering ran with config deployments as mentioned in the following Helm values.
 
 - For 1000 concurrent users, tests finished successfully with no errors.
@@ -609,6 +616,11 @@ The following stages were conducted, starting with config DX kube configuration 
 
 
 #### Stage 2 
+    
+Stage 2 has the following objectives:
+      
+- To tune the DX rendering setup in a single node on a c5.9xlarge instance
+- To check support for 10000 concurrent users with the average response time equal to 4 seconds
 
 ##### Helm values
 
@@ -673,6 +685,12 @@ The following stages were conducted, starting with config DX kube configuration 
 - The test run was successful with 10000 concurrent users with 4 pods of core, DAM, haproxy, and ringAPI each.
 
 #### Stage 3
+
+Stage 3 has the following objectives:
+      
+- To tune the DX rendering setup in a single node on a c5.4xlarge instance
+- To determine the upper limit with the average response time equal to 4 seconds
+- To ensure error percentage in results is 0%
 
 ##### Improved response times of individual APIs and conclusion on load for comfortable rendering
 
