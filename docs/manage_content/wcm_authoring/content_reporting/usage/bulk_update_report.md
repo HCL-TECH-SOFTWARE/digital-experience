@@ -52,10 +52,12 @@ To close the dialog box, click **Cancel**.
     
 3. In the list, select all items or choose only the items you want to update.
 
-    - All items are selected by default and you can proceed to apply the update in Step 5. You can also check the **Select items from all pages** checkbox in the header. 
-        ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_result.png)
-    - To update only a number of items, hover over an item you want to select and check the box that appears.
-        ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_checkbox.png)
+    - To update only a number of items or **Cherry pick**, hover over an item you want to select and check the box that appears.
+        ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_select_some.png)
+    - To update all items on the current page only, click the first checkbox on the row of the table column headers.
+        ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_select_current_page.png)
+    - To update all items on all pages, check the **Select items from all pages** checkbox in the main header to select all items from all pages instead.
+        ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_select_all_pages.png)
 
 4. Click the **Apply updates** button.
 
@@ -89,7 +91,16 @@ Content managers can trigger bulk updates to update the owners and/or authors of
 
 3. After filling out the fields, click the **View item list** button.
 
-4. Note the number of items to be affected by the update and check if you entered the correct values for properties to update. If the values are correct, click the **Update** button. Otherwise, you can click **Cancel** and return to the previous dialog box where you can change the incorrect values.
+4. In the list, select all items or choose only the items you want to update.
+
+    - To update only a number of items or **Cherry pick**, hover over an item you want to select and check the box that appears.
+        ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_select_some_authors.png)
+    - To update all items on the current page only, click the first checkbox on the row of the table column headers.
+        ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_select_current_page_authors.png)
+    - To update all items on all pages, check the **Select items from all pages** checkbox in the main header to select all items from all pages instead.
+        ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_select_all_pages_authors.png)
+
+5. Note the number of items to be affected by the update and check if you entered the correct values for properties to update. If the values are correct, click the **Update** button. Otherwise, you can click **Cancel** and return to the previous dialog box where you can change the incorrect values.
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_confirm_author.png)
 
@@ -156,7 +167,7 @@ After kicking off a previous update operation, for example, doing a [Bulk Update
 
 ### Viewing the Update History page
 
-1. To access the update history, click the **Update history** button in the application header. The **Update history** button also contains the total number of bulk update operations triggered.
+1. To access the update history, click the **Update history** button in the application header. The **Update history** button also shows the number of ongoing bulk update operations triggered.
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_history_button.png)
 
