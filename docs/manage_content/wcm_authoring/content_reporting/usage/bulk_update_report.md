@@ -134,15 +134,15 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_snackbar_view_page.png)
 
-### Viewing or changing the bulk update action
+### Changing the bulk update action
 
 After kicking off a previous update operation, for example, doing a [Bulk Update UpdateExpiry](#using-the-content-reporting-bulk-update-updateExpiry-feature), we can view then change the bulk update action to get a different set of filtered results to update next.
 
-1. Click the "View action" button to access the buld update dialog.
+1. In the **Bulk update** page, click the "View action" button.
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_displayvalid.png)
 
-2. Upon display, the dialog has the current action displayed and the user can change the properties or action as needed. Click the "View item list" to trigger the search of valid items.
+2. In the **Update items** dialog box, you can change the action and properties as needed. Click the **View item list** to search for valid items. 
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_actions.png)
 
