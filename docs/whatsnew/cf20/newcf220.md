@@ -17,7 +17,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Version**
 
-- Web Content Manager - Cherry picking items for bulk update 
+- Web Content Manager - Manually selecting items for bulk update in Content Reporting
 
 **Digital Experience 9.5 Container Version**
 
@@ -88,9 +88,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Version
 
-### Web Content Manager - Cherry picking items for bulk update 
+### Web Content Manager - Manually selecting items for bulk update in Content Reporting
 
-(Doc in progress)
+=== "Containers"
+    In previous versions, when performing a bulk update process, all items in the generated report are selected for update. Starting CF220, you have the option to either select all items or manually pick items that you want to update for your bulk update operation. For more information, see [Performing a bulk update in Content Reporting](../../manage_content/wcm_authoring/content_reporting/usage/bulk_update_report.md).
+
+=== "On-Premises"
+    In previous versions, when performing a bulk update process, all items in the generated report are selected for update. Starting CF220, you have the option to either select all items or manually pick items that you want to update for your bulk update operation. For more information, see [Performing a bulk update in Content Reporting](../../manage_content/wcm_authoring/content_reporting/usage/bulk_update_report.md).
 
 ## Digital Experience 9.5 Container Version
 
