@@ -97,7 +97,7 @@ Content managers can trigger bulk updates to update the owners and/or authors of
         ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_select_some_authors.png)
     - To update all items on the current page only, click the first checkbox on the row of the table column headers.
         ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_select_current_page_authors.png)
-    - To update all items on all pages, check the **Select items from all pages** checkbox in the main header to select all items from all pages instead.
+    - To update all items on all pages, check the **Select items from all pages** checkbox in the main header to select all items from all pages.
         ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_select_all_pages_authors.png)
 
 5. Note the number of items to be affected by the update and check if you entered the correct values for properties to update. If the values are correct, click the **Update** button. Otherwise, you can click **Cancel** and return to the previous dialog box where you can change the incorrect values.
