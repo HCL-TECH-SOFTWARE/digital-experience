@@ -31,7 +31,7 @@ To update items in bulk, you must have edit access to the content items selected
 2. Generate a report on items you want to update. See [Generating a content report](../usage/generate_content_report.md) for instructions.
 
 
-3. Execute one of the following supported bulk update operations: [UpdateExpiry](#using-the-content-reporting-bulk-update-updateexpiry-feature) or [Update Owners/Authors](#using-the-content-reporting-bulk-update-ownersauthors-feature).
+3. Execute one of the following supported bulk update operations: [UpdateExpiry](#updating-the-expiration-date-using-content-reporting) or [Update Owners/Authors](#updating-the-owners-or-authors-using-content-reporting).
 
 ## Updating the expiration date using Content Reporting
 
@@ -147,7 +147,7 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
 
 ### Changing the bulk update action
 
-After kicking off a previous update operation, for example, doing a [Bulk Update UpdateExpiry](#using-the-content-reporting-bulk-update-updateExpiry-feature), we can view then change the bulk update action to get a different set of filtered results to update next.
+After kicking off a previous update operation, for example, doing a [Bulk Update - Update Expiry](#updating-the-expiration-date-using-content-reporting), we can view then change the bulk update action to get a different set of filtered results to update next.
 
 1. In the **Bulk update** page, click the "View action" button.
 
