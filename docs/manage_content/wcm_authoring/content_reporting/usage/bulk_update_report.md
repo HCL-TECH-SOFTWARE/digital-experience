@@ -93,7 +93,7 @@ Content managers can trigger bulk updates to update the owners and/or authors of
 
 4. In the list, select all items or choose only the items you want to update.
 
-    - To update only a number of items or **Cherry pick**, hover over an item you want to select and check the box that appears.
+    - To cherry pick the items you want to update, hover over an item you want to select and check the box that appears.
         ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_select_some_authors.png)
     - To update all items on the current page only, click the first checkbox on the row of the table column headers.
         ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_select_current_page_authors.png)
