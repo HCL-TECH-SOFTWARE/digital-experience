@@ -1,6 +1,6 @@
 # Digital Asset Management persistence
 
-This topic describes the components of the Digital Asset Management (DAM) persistence. The updated DAM persistence feature is available with HCL Digital Experience 9.5 Container Update CF198 and later.
+This topic describes the components of the Digital Asset Management (DAM) persistence. The updated DAM persistence feature is available with HCL Digital Experience (DX) 9.5 Container Update CF198 and later.
 
 ![Digital Asset Management persistence component architecture](../../../images/dam_persistence_components.png "DAM persistence components")
 
@@ -85,9 +85,8 @@ During the upgrade, note that the data directory of PG 11 is not removed. To rem
      rm -rf '/var/lib/pgsql/11/data/dx'
     ```   
 
-!!! note
-
-    Be cautious while executing the above remove command. The mount path for PostgreSQL is /var/lib/pgsql/11/data. Hence the PG 16 data folder will be available in parallel to dx. Hence please take utmost care while deleting the Pg 11 data directory, as wrongful deletion could cause deleting of entire data.
+    !!! note
+         Be cautious when deleting the PG 11 data directory. The mount path for PostgreSQL is `/var/lib/pgsql/11/data`; the PG 16 data folder is available in parallel to DX. Wrongful deletion could cause the entire data to be removed.
 
 In case of upgrade failure, rollback to the previous CF version and reach out to [HCL Software Customer Support](https://support.hcltechsw.com/csm?id=csm_index) for assistance.
 
