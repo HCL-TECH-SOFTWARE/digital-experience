@@ -159,7 +159,7 @@ After kicking off a previous update operation, for example, doing a [Bulk Update
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_action.png)
 
-3. The result of valid items are displayed.
+3. The result of valid items are displayed and user may choose to start selecting items again for update.
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_displayvalid.png)
 
