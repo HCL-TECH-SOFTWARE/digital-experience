@@ -11,7 +11,7 @@ You can execute these actions on content items returned in a report generated th
 
 Starting CF218, if a bulk update process is running and the server restarts, the system pauses the update process. When the server is available again, you can resume the paused bulk update process through the **Update history** page. For more information, see [Resuming a paused bulk update process](#resuming-a-paused-bulk-update-process).
 
-Starting CF220, you can select all or just a number of items when performing a bulk update operation.
+Starting CF220, you have the option to select all items or manually pick items that you want to update for your bulk update operation.
 
 ## Prerequisite
 
