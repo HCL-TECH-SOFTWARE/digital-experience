@@ -16,6 +16,9 @@ Make sure that you have the following before installing Huddo Boards:
 
 - **License Key**: Huddo Boards is a free entitlement for HCL DX customers, but it requires customers to obtain a license key from the [Huddo Store](https://store.huddo.com). 
 
+!!! note
+    Please contact your HCL seller if you are interested in purchasing the unlimited Huddo Boards version.
+
 
 ## Deploying Huddo Boards using Helm
 
