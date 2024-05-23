@@ -11,7 +11,7 @@ You can execute these actions on content items returned in a report generated th
 
 Starting CF218, if a bulk update process is running and the server restarts, the system pauses the update process. When the server is available again, you can resume the paused bulk update process through the **Update history** page. For more information, see [Resuming a paused bulk update process](#resuming-a-paused-bulk-update-process).
 
-Starting CF220, you can select all or just a number of items when performing a bulk update operation.
+Starting CF220, you have the option to select all items or manually pick items that you want to update for your bulk update operation.
 
 ## Prerequisite
 
@@ -49,7 +49,7 @@ Content managers can trigger bulk updates to update the expiration dates of all 
     
 3. In the list, select all items or choose only the items you want to update.
 
-    - To cherry pick items you want to update, hover over an item you want to select and check the box that appears.
+    - To manually pick items you want to update, hover over an item you want to select and check the box that appears.
         ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_select_some.png)
     - To update all items on the current page only, click the first checkbox on the row of the table column headers.
         ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_select_current_page.png)
@@ -93,7 +93,7 @@ Content managers can trigger bulk updates to update the owners and/or authors of
 
 4. In the list, select all items or choose only the items you want to update.
 
-    - To cherry pick the items you want to update, hover over an item you want to select and check the box that appears.
+    - To manually pick the items you want to update, hover over an item you want to select and check the box that appears.
         ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_select_some_authors.png)
     - To update all items on the current page only, click the first checkbox on the row of the table column headers.
         ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_select_current_page_authors.png)
