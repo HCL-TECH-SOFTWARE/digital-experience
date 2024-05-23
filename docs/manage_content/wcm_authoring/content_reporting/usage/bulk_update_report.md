@@ -100,7 +100,11 @@ Content managers can trigger bulk updates to update the owners and/or authors of
     - To update all items on all pages, check the **Select items from all pages** checkbox in the main header to select all items from all pages.
         ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_select_all_pages_authors.png)
 
-5. Note the number of items to be affected by the update and check if you entered the correct values for properties to update. If the values are correct, click the **Update** button. Otherwise, you can click **Cancel** and return to the previous dialog box where you can change the incorrect values.
+5. Click the **Apply updates** button.
+
+    A confirmation dialog box appears.
+
+6. Note the number of items to be affected by the update and check if you entered the correct values for properties to update. If the values are correct, click the **Update** button. Otherwise, you can click **Cancel** and return to the previous dialog box where you can change the incorrect values.
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_confirm_author.png)
 
@@ -125,6 +129,12 @@ After kicking off a previous update operation, (for example, [updating the expir
 3. Select the items you want to update.
 
     If there are no valid items, the page displays the message "No items were found".
+
+4. Click the **Apply updates** button.
+
+    A confirmation dialog box appears.
+
+5. In the dialog box, confirm the values for the properties you want to update. Click **Update**.
 
 ## Tracking Bulk Updates and viewing Bulk Update results
 
