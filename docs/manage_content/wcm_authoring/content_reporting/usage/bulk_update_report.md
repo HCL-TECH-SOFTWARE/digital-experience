@@ -35,7 +35,7 @@ To update items in bulk, you must have edit access to the content items selected
 Content managers can trigger bulk updates to update the expiration dates of all queried items. This section provides steps on how to update the expiration date of content items in a report generated through HCL Content Reporting.
 
 !!!note
-   Bulk updates for expiry dates can only be applied to content items, site areas, authoring templates, components, categories, and items to which you have edit access. Only items with a workflow are included.
+    Bulk updates for expiry dates can only be applied to content items, site areas, authoring templates, components, categories, and items to which you have edit access. Only items with a workflow are included.
 
 1. After you have generated a report and if there are results, the **Bulk update** button appears in the application header. Click the **Bulk update** button.
 

@@ -117,7 +117,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Digital Asset Management - PostgreSQL version upgrade
 
 === "Containers"
-    PostgreSQL version 11 is no longer supported. The PostgreSQL version in the persistence node is upgraded from version 11 to version 16. It is recommended to back up your database dump before upgrading to CF220 and later versions. For more details, see [PostgreSQL version upgrade](../../get_started/plan_deployment/container_deployment/dam_persistence_architecture.md#postgres-version-upgrade).
+    PostgreSQL version 11 is no longer supported. The PostgreSQL version in the persistence node is upgraded from version 11 to version 16. It is recommended to back up your database dump before upgrading to CF220 and later versions. For more details, see [PostgreSQL version upgrade](../../get_started/plan_deployment/container_deployment/dam_persistence_architecture.md#postgresql-version-upgrade).
 
 
 ### Added guidance for upgrading a Helm deployment
@@ -139,7 +139,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ###  Notice of deprecation of automated Pod restart on ConfigMap updates
 
 === "Containers"
-    Beginning with CF221, Runtime Controller will not restart Pods automatically when a ConfigMap is changed manually. For production deployments, always use the Helm custom values and `helm upgrade` to change configuration. Using Helm upgrade for configuration changes triggers the appropriate restart processes. For development and testing when a ConfigMap is changed, you have to restart the appropriate Pod manually. For more information, see [Container configuration](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes) and [Deprecated features](../deprecated_features.md).
+    Starting with the next DX release, CF221, Runtime Controller will not restart Pods automatically when a ConfigMap is changed manually. For production deployments, always use the Helm custom values and `helm upgrade` to change configuration. Using Helm upgrade for configuration changes triggers the appropriate restart processes. For development and testing when a ConfigMap is changed, you have to restart the appropriate Pod manually. For more information, see [Container configuration](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes) and [Deprecated features](../deprecated_features.md).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
