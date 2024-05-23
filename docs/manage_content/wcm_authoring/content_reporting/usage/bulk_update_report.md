@@ -189,13 +189,13 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
     - **Updated on** - This column shows when the bulk update was triggered.
     - **Polling ID** - This column shows a unique identifier for the bulk process.
 
-    ![](../../../../assets/HCL_Content_Reporting_Updates_Resume_history_loading.png)
+    ![](../../../../assets/HCL_Content_Reporting_Updates_Page.png)
 
     To return to the **Content Reporting** landing page, click the back button found on the upper left corner of the **Update history** page.
 
 3. In the **Update history** page table, hover over a row of a completed bulk update to display the view action button. Click this button to display the dialog for the list of items processed and their details.
 
-    ![](../../../../assets/HCL_Content_Reporting_Updates_Resume_Update_Button.png)
+    ![](../../../../assets/HCL_Content_Reporting_Updates_View_Report_Button.png)
 
 4. In the header of the dialog box, the number of updated items and the number of failed items are displayed. There are four columns on the dialog box:
 
@@ -204,7 +204,7 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
     - **Update Status** - This column tells whether the item was successfully updated (shown as **OK**) or not (an error message containing why the update failed is displayed).
     - **Created by** - This column shows the creator of the item.
 
-    ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_snackbar_view_page.png)
+    ![](../../../../assets/HCL_Content_Reporting_Updates_View_Operation.png)
 
 #### Resuming a paused bulk update process
 If a bulk update process is running and the server restarts, the system pauses the update process. When the server is available again, you can resume the paused bulk update process.
