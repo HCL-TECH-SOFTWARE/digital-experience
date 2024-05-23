@@ -34,6 +34,9 @@ To update items in bulk, you must have edit access to the content items selected
 
 Content managers can trigger bulk updates to update the expiration dates of all queried items. This section provides steps on how to update the expiration date of content items in a report generated through HCL Content Reporting.
 
+!!!note
+   Bulk updates for expiry dates can only be applied to content items, site areas, authoring templates, components, categories, and items to which you have edit access. Only items with a workflow are included.
+
 1. After you have generated a report and if there are results, the **Bulk update** button appears in the application header. Click the **Bulk update** button.
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_button.png)
@@ -43,9 +46,6 @@ Content managers can trigger bulk updates to update the expiration dates of all 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_action.png)
 
     To close the dialog box, click **Cancel**.
-
-!!!note
-    Bulk updates for expiry dates can only be applied to content items, site areas, authoring templates, components, categories, and items to which you have edit access. Only items with a workflow are included.
     
 3. In the list, select all items or choose only the items you want to update.
 
@@ -68,6 +68,9 @@ Content managers can trigger bulk updates to update the expiration dates of all 
 
 Content managers can trigger bulk updates to update the owners and/or authors of all queried items. This section provides steps on how to update the owners or authors of content items in a report generated through HCL Content Reporting.
 
+!!!note
+    Bulk updates for owners or authors can only be applied to content items, site areas, authoring templates, components, categories, folders, projects, segments, workflow actions, portal pages and items to which you have edit access. To date, adding up to 100 users and updating up to 7000 items have been tested successfully.
+
 1. After you have generated a report and if there are results, the **Bulk update** button appears in the application header. Click the **Bulk update** button.
 
     ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_bulkupdate_button.png)
@@ -77,9 +80,6 @@ Content managers can trigger bulk updates to update the owners and/or authors of
     - In the **Action** field, select the action to be taken on the selected items, either **Add**, **Remove**, or **Replace**. 
 
         ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_bulkupdate_updateitem.png)
-
-        !!!note
-            Bulk updates for owners or authors can only be applied to content items, site areas, authoring templates, components, categories, folders, projects, segments, workflow actions, portal pages and items to which you have edit access. To date, adding up to 100 users and updating up to 7000 items have been tested successfully.
 
         !!!note
             For the **Replace** action, there are two fields each for users and groups involved in the action: **Remove users** and **Remove groups**, **Add users** and **Add groups**. In the **Remove users** or **Remove groups** field, enter a value according to the selected attribute of the user or group you want to replace with the value you will add in the **Add users** or **Add groups** field.
