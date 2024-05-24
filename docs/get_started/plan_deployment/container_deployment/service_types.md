@@ -14,7 +14,9 @@ A headless Service allows a client to connect directly to whichever Pod it prefe
 Further details can be found in [Headless Services](https://kubernetes.io/docs/concepts/services-networking/service/#headless-services)
 
 ## unready-pod-0
-This service always forwards traffic to the first Core Pod (core-0), even if its status is not ready. It is primarily used for the Config Wizard, which may restart the Portal server and render the Pod unready. Despite the Portal not running, the Config Wizard will still be able to connect to the Pod.
-
 !!! note
       unready-pod-0 is a special type of service for DX and isn't a common service in Kubernetes.
+
+This service always forwards traffic to the first Core Pod (core-0), even if its status is not ready. It is primarily used for the Config Wizard, which may restart the Portal server and render the Pod unready. Despite the Portal not running, the Config Wizard will still be able to connect to the Pod.
+
+
