@@ -6,7 +6,7 @@ HCL Digital Experience 9.5 uses several credentials in its deployment to manage 
 
 Upon initial deployment, passwords in HCL Digital Experience 9.5 are randomized and stored in secrets. Retrieve the randomized credentials using the following commands:
 
-Use kubectl command to get the credentials for HCL Digital Experience Core administrative access:
+To get the credentials for HCL Digital Experience Core administrative access, use:
 ```bash
 kubectl get secret <release-name>-core-wps --namespace <namespace> -o=jsonpath="{.data.username}" | base64 --decode | base64 --decode && echo
 kubectl get secret <release-name>-core-wps --namespace <namespace> -o=jsonpath="{.data.password}" | base64 --decode | base64 --decode && echo
