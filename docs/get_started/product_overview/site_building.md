@@ -32,10 +32,17 @@ With HCL DX, site designers can define profiles to control which modules get loa
 
 The platform’s included Theme Optimization Analyzer can create validation reports to analyze theme and theme components for known issues and reports the number of errors, warnings and informational messages. It also provides guidance to resolve errors that occur.
 
-## Mobile access
+## Mobile and Omnichannel access
 
-The platform provides mobile-enabled themes, providing site designers immediately with support to deliver mobile ready, responsive sites .
+HCL Digital Experience provides a wide range of mobile and omnichannel capabilities. 
+
+As outlined in the chart below one can choose different paths depending on the requirements for a given site.
+![Omnichannel delivery](assets/omnichannel.png)
+
+The platform provides mobile-enabled themes, providing site designers immediately with support to deliver mobile ready, responsive sites.
 
 HCL DX has built-in device detection capability designed to recognize mobile devices and adapt to layout presentation requirements for optimal rendering. The device classes included with the product define common properties for the device of a mobile client and can be updated as need. Device detection works with the modular theme framework to dynamically ensure that only relevant theme modules are delivered to mobile devices, optimizing download size.
 
 Mobile preview is built in and provides a real-time preview of HCL DX sites on a variety of mobile devices.
+
+Find more information at [Mobile](../../build_sites/mobile/index.md)
