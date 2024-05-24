@@ -2,6 +2,34 @@
 
 HCL Digital Experience 9.5 uses several credentials in its deployment to manage access between applications and from outside the container deployment.
 
+## Randomized passwords
+
+Upon initial deployment, passwords in HCL Digital Experience 9.5 are randomized and stored in secrets. Retrieve the randomized credentials using the following commands:
+
+Use kubectl command to get the credentials for HCL Digital Experience Core administrative access:
+```bash
+kubectl get secret <release-name>-core-wps --namespace <namespace> -o=jsonpath="{.data.username}" | base64 --decode | base64 --decode && echo
+kubectl get secret <release-name>-core-wps --namespace <namespace> -o=jsonpath="{.data.password}" | base64 --decode | base64 --decode && echo
+```
+
+Use kubectl command to get the credentials for IBM WebSphere Application Server administrative access:
+```bash
+kubectl get secret <release-name>-core-was --namespace <namespace> -o=jsonpath="{.data.username}" | base64 --decode | base64 --decode && echo
+kubectl get secret <release-name>-core-was --namespace <namespace> -o=jsonpath="{.data.password}" | base64 --decode | base64 --decode && echo
+```
+
+Use kubectl command to get the credentials for Config Wizard administrative access:
+```bash
+kubectl get secret <release-name>-core-configwizard --namespace <namespace> -o=jsonpath="{.data.username}" | base64 --decode | base64 --decode && echo
+kubectl get secret <release-name>-core-configwizard --namespace <namespace> -o=jsonpath="{.data.password}" | base64 --decode | base64 --decode && echo
+```
+
+Use kubectl command to get the Remote Search credentials for IBM WebSphere Application Server administrative access:
+```bash
+kubectl get secret <release-name>-remote-search-was --namespace <namespace> -o=jsonpath="{.data.username}" | base64 --decode | base64 --decode && echo
+kubectl get secret <release-name>-remote-search-was --namespace <namespace> -o=jsonpath="{.data.password}" | base64 --decode | base64 --decode && echo
+```
+
 ## Adjusting default credentials
 
 You can adjust the default credentials that HCL Digital Experience 9.5 is using by adding the following syntax to your custom-values.yaml file and changing the values you need:
@@ -16,19 +44,19 @@ security:
     # - If the WAS admin credentials were changed by any other means than through the helm values, the currently active credentials need to be entered as the values for wasUser and wasPassword.
     # - If LDAP is configured as the user repository, the WebSphere Application Server admin user won't be applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wasUser and wasPassword need to be manually updated accordingly.
     wasUser: "wpsadmin"
-    wasPassword: "wpsadmin"
+    wasPassword: ""
     # Credentials used for HCL Digital Experience Core administrative access.
     # The credentials defined in these values define the HCL Digital Experience Core administrative user. The user gets created if necessary and/or the password is set to the current value.
     # - If LDAP is configured as the user repository, the WebSphere Application Server admin user won't be applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wpsUser and wpsPassword need to be manually updated accordingly.
     wpsUser: "wpsadmin"
-    wpsPassword: "wpsadmin"
+    wpsPassword: ""
     # Credentials used for Config Wizard administrative access. This only takes effect when "configuration.core.tuning.configWizard" is enabled.
     # The credentials defined in these values define the WebSphere Application Server primary administrative user. The user gets created if necessary and/or the password is set to the current value.
     # This will also map the user as the user for Config Wizard and dxconnect (for dxclient)
     # - If the Config Wizard admin credentials were changed by any other means than through the helm values, the currently active credentials need to be entered as the values for configWizardUser and configWizardPassword.
     # - If LDAP is configured as the user repository, the WebSphere Application Server admin user won't be applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for configWizardUser and configWizardPassword need to be manually updated accordingly.
     configWizardUser: "wpsadmin"
-    configWizardPassword: "wpsadmin"
+    configWizardPassword: ""
   # Security configuration for Digital Asset Management
   digitalAssetManagement:
     # Credentials used by Digital Asset Management to access the persistence database.
@@ -50,16 +78,23 @@ security:
     # - If the WAS admin credentials were changed by any other means than through the helm values, the currently active credentials need to be entered as the values for wasUser and wasPassword.
     # - If LDAP is configured as the user repository, the WebSphere Application Server admin user won't be applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wasUser and wasPassword need to be manually updated accordingly.
     wasUser: "wpsadmin"
-    wasPassword: "wpsadmin"
+    wasPassword: ""
 ```
 
+## Updating credentials
+
+If the user credentials were changed manually and not through the Helm values, you must update the values for Core, ConfigWizard and Remote Search credentials in Helm must be updated (See the above table for reference). If you are using the [custom secret](#guidelines-for-configuring-credentials-from-secrets), you must also set the credentials in the secret to the current credentials. Then, execute a `helm upgrade` with those values. You can use the Helm values to change the credentials. 
+
+If an LDAP is configured as the user registry, you must manually set the security credentials to the credentials of the administrator user from LDAP. If the users are changed in the LDAP, you must manually update the security credentials in the Helm chart. The credentials are used in several startup and configuration scripts. Changes in the Helm values will not cause any changes to the LDAP users.
+
+## Upgrading credentials
+Before upgrading, ensure that the current credentials are [set properly](#updating-credentials) in the Helm values.
 
 ## Core security credentials
 The security credentials defined in the `security` section of the Helm values are necessary to pass the user credentials to the IBM Websphere Application Server and HCL Digital Experience Core startup scripts. The behavior slightly differs depending on the user registry that is configured for HCL Digital Experience. See [Registry Types](#registry-types).
 
 ## Remote Search security credentials
 Same as Core, when Remote Search is enabled, WAS admin credentials can be configured from the Helm chart. The behavior slightly differs depending on the user registry that is configured for HCL Digital Experience. See [Registry Types](#registry-types).
-
 
 ## Config Wizard security credentials
 The following only takes effect when [Config Wizard is enabled](./optional_configure_apps.md#configuration-wizard-configuration).
@@ -109,16 +144,6 @@ If no LDAP is configured in the Helm values, HCL Digital Experience is configure
 | `security.core.configWizardPassword` | Sets the password of the `configWizardUser` to this value. |
 | `security.remoteSearch.wasUser` | Creates a user with this name if it does not exist already. Then make that user the Websphere primary admin user for Remote Search. |
 | `security.remoteSearch.wasPassword` | Sets the password of the Remote Search `wasUser` to this value. |
-
-
-## Updating Credentials
-
-If the user credentials were, at any time, changed manually and not through the Helm values, the values for Core, ConfigWizard and Remote Search credentials in Helm must be updated (See the above table for reference). If you are using the [custom secret](#guidelines-for-configuring-credentials-from-secrets), the credentials in the secret must also be set to the current credentials. Then, a `helm upgrade` with those values must be executed. Afterward, the Helm values can be used to change the credentials.
-
-If an LDAP is configured as the user registry, you must manually set the security credentials to the credentials of the administrator user from LDAP. If the users are changed in the LDAP, you must manually update the security credentials in the Helm chart. The credentials are used in several startup and configuration scripts. Changes in the Helm values will not cause any changes to the LDAP users.
-
-## Upgrading
-Ensure that the current credentials are [set properly](#updating-credentials) in the Helm Values before doing the upgrade.
 
 ## Configuring Credentials from Secrets
 
