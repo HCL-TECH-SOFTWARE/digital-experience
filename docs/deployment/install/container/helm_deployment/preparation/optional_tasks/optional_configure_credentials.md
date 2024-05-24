@@ -12,19 +12,19 @@ kubectl get secret <release-name>-core-wps --namespace <namespace> -o=jsonpath="
 kubectl get secret <release-name>-core-wps --namespace <namespace> -o=jsonpath="{.data.password}" | base64 --decode | base64 --decode && echo
 ```
 
-Use kubectl command to get the credentials for IBM WebSphere Application Server administrative access:
+To get the credentials for IBM WebSphere Application Server administrative access, use:
 ```bash
 kubectl get secret <release-name>-core-was --namespace <namespace> -o=jsonpath="{.data.username}" | base64 --decode | base64 --decode && echo
 kubectl get secret <release-name>-core-was --namespace <namespace> -o=jsonpath="{.data.password}" | base64 --decode | base64 --decode && echo
 ```
 
-Use kubectl command to get the credentials for Config Wizard administrative access:
+To get the credentials for Config Wizard administrative access, use:
 ```bash
 kubectl get secret <release-name>-core-configwizard --namespace <namespace> -o=jsonpath="{.data.username}" | base64 --decode | base64 --decode && echo
 kubectl get secret <release-name>-core-configwizard --namespace <namespace> -o=jsonpath="{.data.password}" | base64 --decode | base64 --decode && echo
 ```
 
-Use kubectl command to get the Remote Search credentials for IBM WebSphere Application Server administrative access:
+To get the Remote Search credentials for IBM WebSphere Application Server administrative access, use:
 ```bash
 kubectl get secret <release-name>-remote-search-was --namespace <namespace> -o=jsonpath="{.data.username}" | base64 --decode | base64 --decode && echo
 kubectl get secret <release-name>-remote-search-was --namespace <namespace> -o=jsonpath="{.data.password}" | base64 --decode | base64 --decode && echo
@@ -83,11 +83,12 @@ security:
 
 ## Updating credentials
 
-If the user credentials were changed manually and not through the Helm values, you must update the values for Core, ConfigWizard and Remote Search credentials in Helm must be updated (See the above table for reference). If you are using the [custom secret](#guidelines-for-configuring-credentials-from-secrets), you must also set the credentials in the secret to the current credentials. Then, execute a `helm upgrade` with those values. You can use the Helm values to change the credentials. 
+If the user credentials were changed manually and not through the Helm values, you must update the values for Core, ConfigWizard, and Remote Search credentials in Helm. Refer to [Adjusting default credentials](#adjusting-default-credentials) for reference. If you are using the [custom secret](#guidelines-for-configuring-credentials-from-secrets), you must also set the credentials in the secret to the current credentials. Then, execute a `helm upgrade` with those values. You can use the Helm values to change the credentials. 
 
 If an LDAP is configured as the user registry, you must manually set the security credentials to the credentials of the administrator user from LDAP. If the users are changed in the LDAP, you must manually update the security credentials in the Helm chart. The credentials are used in several startup and configuration scripts. Changes in the Helm values will not cause any changes to the LDAP users.
 
 ## Upgrading credentials
+
 Before upgrading, ensure that the current credentials are [set properly](#updating-credentials) in the Helm values.
 
 ## Core security credentials
