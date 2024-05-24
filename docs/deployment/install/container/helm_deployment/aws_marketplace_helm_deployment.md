@@ -4,7 +4,9 @@ title: AWS Marketplace Helm Deployment
 
 # AWS Marketplace Helm deployment option
 
-The latest DX 9.5 container images and Helm charts available for HCL Digital Experience (DX) 9.5 will be available shortly through the [AWS Marketplace](https://aws.amazon.com/marketplace/search/results?searchTerms=hcl) for customers who purchase through the Marketplace as a containerized product offering. Upon subscription, you can utilize the Helm-based fulfillment option presented for selection, enabling the deployment of DX on a Kubernetes cluster of their preference.
+This topic provides information on how to deploy HCL Digital Experience (DX) on both Amazon-managed Kubernetes and self-managed Kubernetes for on-premise deployments. 
+
+The latest DX 9.5 container images and Helm charts available for HCL DX 9.5 will be available shortly through the [AWS Marketplace](https://aws.amazon.com/marketplace/search/results?searchTerms=hcl) for customers who purchase through the Marketplace as a containerized product offering. Upon subscription, you can utilize the Helm-based fulfillment option presented for selection, enabling the deployment of DX on a Kubernetes cluster of their preference.
 
 ## Prerequisites
 
@@ -20,7 +22,7 @@ However, to use the full functionality and to scale all Pods, it is recommended 
 
 ## Launching with Helm Deployment
 
-Following your subscription, you are now entitled to a HCL Digital Experience Cloud Native license and are eligible to configure the `Helm chart fulfillment option` within your preferred Kubernetes environment. Initially, there are only two options: Amazon-managed Kubernetes and self-managed Kubernetes for on-premise deployments.
+Following your subscription, you are now entitled to a HCL DX Cloud Native license and are eligible to configure the `Helm chart fulfillment option` within your preferred Kubernetes environment. Initially, there are only two options: Amazon-managed Kubernetes and self-managed Kubernetes for on-premise deployments.
 
 Refer to the `Launch Instructions` found in the configuration section of the HCL DX Cloud Native Product page in AWS. The `Launch Instructions` include the necessary instructions and commands for launching DX on an Amazon-managed Kubernetes or self-managed Kubernetes. The following steps are intended solely as launch guidelines.
 
