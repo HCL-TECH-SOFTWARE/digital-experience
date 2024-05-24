@@ -12,7 +12,7 @@ The latest DX 9.5 container images and Helm charts available for HCL Digital Exp
 
 The default setting for HAProxy is SSL enabled. Make sure that the secret containing the certificate is correctly created within the cluster. Refer to [Use certificate](../preparation/mandatory_tasks/prepare_configure_networking/#use-certificate) for more information.
 
-### Configuring Volumes
+### Configuring volumes
 
 Curently, the Helm chart is configured with the `gp3` storage class, which is the default storage class provided by AWS. 
 
@@ -87,9 +87,9 @@ After configuring the service account and assuming IAM roles to the service acco
            --set configuration.licenseManager.serviceAccountName=hcl-digital-experience-service-account 
        ```
 
-       !!! note
-              - Explicitly set "configuration.licenseManager.serviceAccountName" with the service account previously set for entitlement checking.
-              - For any `helm upgrade`, make sure to either keep the `--set` parameters from the `helm install` command or create and reuse a custom values file using `helm get values`.
+       
+      - Explicitly set "configuration.licenseManager.serviceAccountName" with the service account previously set for entitlement checking.
+      - For any `helm upgrade`, make sure to either keep the `--set` parameters from the `helm install` command or create and reuse a custom values file using `helm get values`.
 
 
 ### Deploying in self-managed Kubernetes
@@ -192,8 +192,8 @@ After configuring the service account and defining the ENVs and pull secrets, pu
            --set configuration.licenseManager.licenseConfigSecret=awsmp-license-token-secret  
        ```
 
-       - Explicitly set "configuration.licenseManager.serviceAccountName" and "configuration.licenseManager.licenseConfigSecret=awsmp-license-token-secret" with the service account previously set for entitlement checking.
-       - For any `helm upgrade`, make sure to either keep the `--set` parameters from the `helm install` command or create and reuse a custom values file using `helm get values`.
+      - Explicitly set "configuration.licenseManager.serviceAccountName" and "configuration.licenseManager.licenseConfigSecret=awsmp-license-token-secret" with the service account previously set for entitlement checking.
+      - For any `helm upgrade`, make sure to either keep the `--set` parameters from the `helm install` command or create and reuse a custom values file using `helm get values`.
 
 
 ## Additional configurations
