@@ -15,6 +15,7 @@ If you are deploying the HCL DX 9.5 CF220 Container update release, the package 
 ```shell
 hcl-dxclient-image-v95_CF220_20240522-1932.zip
 hcl-dxclient-v95_CF220_20240522-1932.zip
+```
 
 ### hcl-dx-kubernetes-v95-CF220.zip
 
