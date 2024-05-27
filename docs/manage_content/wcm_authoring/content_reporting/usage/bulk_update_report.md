@@ -136,7 +136,7 @@ After kicking off a previous update operation, (for example, [updating the expir
 
 5. In the dialog box, confirm the values for the properties you want to update. Click **Update**.
 
-## Tracking Bulk Updates and viewing Bulk Update results
+## Tracking bulk updates and viewing bulk update results
 
 When a bulk update is triggered, a snackbar appears in the bottom right corner of the screen. The snackbar displays the status of the update. If the process is still ongoing, it shows how many items have already been processed against the total number of items. If the process is complete, it shows how many items were updated and how many items were not.
 
@@ -207,6 +207,7 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
     ![](../../../../assets/HCL_Content_Reporting_Updates_View_Operation.png)
 
 #### Resuming a paused bulk update process
+
 If a bulk update process is running and the server restarts, the system pauses the update process. When the server is available again, you can resume the paused bulk update process.
 
 !!!note
