@@ -82,7 +82,7 @@ Content managers can trigger bulk updates to update the owners and/or authors of
         ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_bulkupdate_updateitem.png)
 
         !!!note
-            For the **Replace** action, there are two fields each for users and groups involved in the action: **Remove users** and **Remove groups**, **Add users** and **Add groups**. In the **Remove users** or **Remove groups** field, enter a value according to the selected attribute of the user or group you want to replace with the value you will add in the **Add users** or **Add groups** field. There must be at least one user or group for each of the **Remove**  and **Add**  sections.
+            For the **Replace** action, there are two fields each for users and groups involved in the action: **Remove users** and **Remove groups**, **Add users** and **Add groups**. In the **Remove users** or **Remove groups** field, enter a value according to the selected attribute of the user or group you want to replace with the value you will add in the **Add users** or **Add groups** field. There must be at least one user or group for each of the **Remove** and **Add** fields.
 
         ![](../../../../assets/HCL_Content_Reporting_Cherry_Picking_update_criteria.png)
 
