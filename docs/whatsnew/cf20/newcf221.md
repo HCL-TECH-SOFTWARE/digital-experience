@@ -1,4 +1,4 @@
-# What's new in CF220
+# What's new in CF221
 
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF221 on supported platforms:
 
