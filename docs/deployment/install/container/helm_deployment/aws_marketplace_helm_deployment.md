@@ -2,7 +2,7 @@
 title: AWS Marketplace Helm Deployment
 ---
 
-# AWS Marketplace Helm deployment option
+# AWS Marketplace Helm deployment 
 
 This topic provides information on how to deploy HCL Digital Experience (DX) acquired from the AWS Marketplace on both Amazon-managed Kubernetes and self-managed Kubernetes for on-premise deployments. 
 
@@ -28,10 +28,10 @@ Refer to the `Launch Instructions` found in the configuration section of the HCL
 
 ### Deploying in Amazon-managed Kubernetes
 
-If your cluster is prepared and your AWS CLI is configured, see [Set up the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html). Deploying HCL DX 9.5 on an Amazon-managed Kubernetes cluster involves two steps:
+If your cluster is prepared and your AWS CLI is configured, see [Set up the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html). To deploy HCL DX 9.5 on an Amazon-managed Kubernetes cluster, refer to the following steps:
 
 1. [Create an AWS IAM role and Kubernetes service account.](#creating-an-aws-iam-role-and-kubernetes-service-account)
-2. [Launch the software.](#launching-the-software)
+2. [Launch the software.](#launching-the-software-on-an-amazon-managed-kubernetes-cluster)
 
 #### Creating an AWS IAM role and Kubernetes service account
 
@@ -58,7 +58,7 @@ eksctl create iamserviceaccount \
     --override-existing-serviceaccounts
 ```
 
-#### Launching the software
+#### Launching the software on an Amazon-managed Kubernetes cluster
 
 After configuring the service account and assuming IAM roles to the service account, pull the Helm chart from the Elastic Container Registry (ECR) and launch the application using the Helm CLI.
 
@@ -81,7 +81,7 @@ After configuring the service account and assuming IAM roles to the service acco
        tar xf $(pwd)/* && find $(pwd) -maxdepth 1 -type f -delete
        ```
 
-3. Install the helm chart using Helm CLI.
+3. Install the Helm chart using Helm CLI.
 
        ```bash
        helm install <release-name> \
@@ -90,7 +90,7 @@ After configuring the service account and assuming IAM roles to the service acco
        ```
 
        
-      - Explicitly set "configuration.licenseManager.serviceAccountName" with the service account previously set for entitlement checking.
+      - Explicitly set `configuration.licenseManager.serviceAccountName` with the service account previously set for entitlement checking.
       - For any `helm upgrade`, make sure to either keep the `--set` parameters from the `helm install` command or create and reuse a custom values file using `helm get values`.
 
 
@@ -98,9 +98,9 @@ After configuring the service account and assuming IAM roles to the service acco
 
 To launch on an on-premise cluster that is outside of Amazon, refer to the following steps:
 
-1. [Create a license token and IAM role.](#creating-alicense-token-and-iam-role)
+1. [Create a license token and IAM role.](#creating-a-license-token-and-iam-role)
 2. [Save the token and IAM role as a Kubernetes secret.](#saving-the-token-and-iam-role-as-a-kubernetes-secret)
-3. [Launch the software.](#launching-the-software)
+3. [Launch the software.](#launching-the-software-an-on-premise-cluster-outside-of-amazon)
 
 #### Creating a license token and IAM role
 
@@ -129,7 +129,7 @@ To generate a license token, click **Create token** on the launch page. This act
        --namespace <namespace>
        ```
 
-   The token is then used to define other environment variables needed for access and authentication.
+    The token is then used to define other environment variables needed for access and authentication.
 
        ```bash
        AWSMP_ACCESS_TOKEN=$(aws license-manager get-access-token \
@@ -162,7 +162,7 @@ To generate a license token, click **Create token** on the launch page. This act
        -p '{"imagePullSecrets": [{"name": "awsmp-image-pull-secret"}]}'
        ```
 
-#### Launching the software
+#### Launching the software an on-premise cluster outside of Amazon
 
 After configuring the service account and defining the ENVs and pull secrets, pull the Helm chart from the ECR and launch the application using the Helm CLI.
 
@@ -185,7 +185,7 @@ After configuring the service account and defining the ENVs and pull secrets, pu
        tar xf $(pwd)/* && find $(pwd) -maxdepth 1 -type f -delete
        ```
 
-3. Install the helm chart using Helm CLI.
+3. Install the Helm chart using Helm CLI.
 
        ```bash
        helm install <release-name> \
@@ -194,7 +194,7 @@ After configuring the service account and defining the ENVs and pull secrets, pu
            --set configuration.licenseManager.licenseConfigSecret=awsmp-license-token-secret  
        ```
 
-      - Explicitly set "configuration.licenseManager.serviceAccountName" and "configuration.licenseManager.licenseConfigSecret=awsmp-license-token-secret" with the service account previously set for entitlement checking.
+      - Explicitly set `configuration.licenseManager.serviceAccountName` and `configuration.licenseManager.licenseConfigSecret=awsmp-license-token-secret` with the service account previously set for entitlement checking.
       - For any `helm upgrade`, make sure to either keep the `--set` parameters from the `helm install` command or create and reuse a custom values file using `helm get values`.
 
 
