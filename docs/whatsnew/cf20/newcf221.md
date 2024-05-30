@@ -22,12 +22,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
-### Exporting a user session usage report in CSV format
+### Removal of automated Pod restart on ConfigMap updates
 
 === "Containers"
-    [Exporting the report in CSV format](../../get_started/download/software_licensing_portal/configure_entitlement_checks/export_usage_report.md#exporting-the-user-session-usage-report-in-csv-format) is the default option when exporting the usage report to the data table. In addition, you can also [export the usage report in human readable format](../../get_started/download/software_licensing_portal/configure_entitlement_checks/export_usage_report.md#exporting-the-user-session-usage-report-in-human-readable-format).
+    Runtime Controller triggering Pod restarts for [Direct Configuration changes](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes) in ConfigMaps is removed. Appropriate Pods must be restarted manually to apply the changes made to the ConfigMaps for testing configurations.
 
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx) section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.
+The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx) section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.ang 
