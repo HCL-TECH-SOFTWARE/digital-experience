@@ -64,37 +64,36 @@ Log in to HCL Digital Experience to verify that your portal works:
 ```
 http://<hostname.example.com>:<10039>/wps/portal
 ```
-where:
+Where:
+
 - *hostname.example.com* is the fully qualified host name of the server. 
 - The portal is running and *10039* is the default transport port that the DX® Application Server created. The port number might be different
 for your environment.
 
+[]()
+
 1.  To get the latest updates for the wizard, apply the most recent CF. For more information about applying the latest fix pack, see [Apply Combined Cumulative Fix](../../../../../../deployment/install/traditional/cf_install/index.md) for more topic information.
 
-If you have the most recent fix pack applied, skip the following step,.
+    If you have the most recent fix pack applied, skip the following step,.
 
 2.  Access the Configuration wizard. Go to http://your_server:10200/hcl/wizard.
 
-    !!!note
-        If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your_server:10200/hcl/wizard.
+    If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your_server:10200/hcl/wizard.
 
     !!!restriction
         There is a known issue with Chrome version 45.x and the Configuration Wizard. If you are experiencing difficulties, use a different browser when you access the wizard.
 
 3.  Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw\_profile.
 
-    !!!note
-        If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Language support](../../../../../../deployment/manage/portal_admin_tools/language_support/index.md).
+    If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Language support](../../../../../../deployment/manage/portal_admin_tools/language_support/index.md).
 
 4.  Select **Set Up a Cluster > Database Transfer**.
 
-    !!!note
-        The **Database Transfer** configuration option in the Configuration Wizard assigns users and permissions, creates databases, obtains support for database collation, and transfers your database.
+    The **Database Transfer** configuration option in the Configuration Wizard assigns users and permissions, creates databases, obtains support for database collation, and transfers your database.
 
 5.  Provide information about your environment.
 
-    !!!attention
-        Record your database settings so that you can use the same information when you create Portal B. If cluster A exists, upgrade it to match Portal B.
+    Record your database settings so that you can use the same information when you create Portal B. If cluster A exists, upgrade it to match Portal B.
 
     !!!important
         Maintain the same number of data sources with identical names to the Cluster A data sources. Then, the data source bindings in the applications can be resolved on every cluster. If you share databases across the clusters, this statement refers to both the shared and non-shared domains. All domains must use the same names. For example, if Cluster A uses relDS comDS custDS jcrDS fbkDS lmDS, then Cluster B must also use six data sources with the same names. Cluster B cannot be configured to use a single data source. An enterprise application that is shared between cluster contains only a single binding to a single data source name. An application cannot contain a binding to multiple data source names. If the data source names are the same and the user ID and password are the same, then the extra aliases are not required. The binding in the application resolves to the data source for both clusters because the name is the same and the user ID and password is the same.
@@ -161,8 +160,7 @@ If you have the most recent fix pack applied, skip the following step,.
 
 27. **Set Up a Cluster > Create an Additional Cluster Node**.
 
-    !!!note
-        If you are setting up a vertical cluster, manual instructions are available for dynamic and static cluster configurations.
+    If you are setting up a vertical cluster, manual instructions are available for dynamic and static cluster configurations.
 
 28. Provide information about your environment.
 
@@ -182,27 +180,26 @@ Install HCL Digital Experience. Then, use the Configuration Wizard to deploy a s
 Log in to HCL Digital Experience to verify that you have a working portal:
 
 ```
-http://hostname.example.com:10039/wps/portal,
-where hostname.example.com is the fully qualified host name of the server where
-Portal is running and 10039 is the default transport port that is created by DX Application Server. The port number might be different
-for your environment.
+http://hostname.example.com:10039/wps/portal
 ```
+
+Where hostname.example.com is the fully qualified host name of the server where Portal is running and 10039 is the default transport port that is created by DX Application Server. The port number might be different for your environment.
 
 1.  Access the Configuration Wizard. Go to http://your_server:10200/hcl/wizard.
 
     !!!notes
-- If you are working with HCL Digital Experience V8.5 or 9 at a software level prior to CF18, the wizard address is: http://your_server:10200/ibm/wizard. After you install CF18, the configuration wizard automatically is adjusted to http://your_server:10200/hcl/wizard.
-- A known issue exists with Chrome version 45 and later and the Configuration wizard. If you experience difficulties, use a different browser when you access the wizard.
+        - If you are working with HCL Digital Experience V8.5 or 9 at a software level prior to CF18, the wizard address is: http://your_server:10200/ibm/wizard. After you install CF18, the configuration wizard automatically is adjusted to http://your_server:10200/hcl/wizard.
+        - A known issue exists with Chrome version 45 and later and the Configuration wizard. If you experience difficulties, use a different browser when you access the wizard.
 
 2.  Log in to the Configuration wizard with the administrative ID for the configuration wizard profile, cw\_profile.
 
-If the language is not currently supported for the user interface, you might see the English version. For details about supported languages and the language codes for all the HCL Digital Experience user interfaces, see [Language support](../../../../../../deployment/manage/portal_admin_tools/language_support/index.md).
+    If the language is not currently supported for the user interface, you might see the English version. For details about supported languages and the language codes for all the HCL Digital Experience user interfaces, see [Language support](../../../../../../deployment/manage/portal_admin_tools/language_support/index.md).
 
 3.  Select **Set Up a Stand-alone Server > Database Transfer**.
 
 4.  Provide information about your environment.
 
-Maintain the same number of data sources with identical names to the Cluster A data sources. Thereby, the data source bindings in the applications can be resolved on every cluster. If you share databases among the clusters, this statement refers to both the shared and non-shared domains. All domains must use the same names.
+    Maintain the same number of data sources with identical names to the Cluster A data sources. Thereby, the data source bindings in the applications can be resolved on every cluster. If you share databases among the clusters, this statement refers to both the shared and non-shared domains. All domains must use the same names.
 
 5.  Save your configuration settings.
 
@@ -215,7 +212,7 @@ Maintain the same number of data sources with identical names to the Cluster A d
 
 8.  Select **Set Up a Stand-alone Server > Enable Federated Security**.
 
-If you set **Use Administrator IDs stored in your LDAP user registry** to ``yes``, WebSphere Application Server and HCL Digital Experience user IDs and passwords are changed to the LDAP user ID and password. To prevent changing both user IDs and passwords to match the LDAP user ID and password, set this value to ``no``. After you configure your LDAP user registry, you can manually change the user IDs and passwords.
+    If you set **Use Administrator IDs stored in your LDAP user registry** to ``yes``, WebSphere Application Server and HCL Digital Experience user IDs and passwords are changed to the LDAP user ID and password. To prevent changing both user IDs and passwords to match the LDAP user ID and password, set this value to ``no``. After you configure your LDAP user registry, you can manually change the user IDs and passwords.
 
 9.  Provide information about your environment.
 
@@ -235,7 +232,7 @@ After you create cluster A and portal B, run various tasks to create multiple cl
 
 1.  Complete the following steps on the primary node of Cluster A:
 
-Use the same database user ID and password for each identically named domain or data source. By using the same IDs and passwords, the existing JAAS Authentication Aliases remain functional. If a unique database user ID and password are required, more manual configuration is required to create and map JAAS Authentication Aliases for each data source.
+    Use the same database user ID and password for each identically named domain or data source. By using the same IDs and passwords, the existing JAAS Authentication Aliases remain functional. If a unique database user ID and password are required, more manual configuration is required to create and map JAAS Authentication Aliases for each data source.
 
     1.  Open a command prompt.
 
@@ -246,8 +243,7 @@ Use the same database user ID and password for each identically named domain or 
         -   AIX® and Linux™: `./ConfigEngine.sh create-alias-multiple-cluster -DauthDomainList=release,jcr -DWasPassword=dmgr_password`
         -   Windows™: `ConfigEngine.bat create-alias-multiple-cluster -DauthDomainList=release,jcr -DWasPassword=dmgr_password`
 
-where,
-*DauthDomainList* is set to a list of domains that use unique database user IDs and passwords. The domain properties are set correctly in the ``wkplc_dbdomain.properties`` file, including user IDs and passwords.
+    Where *DauthDomainList* is set to a list of domains that use unique database user IDs and passwords. The domain properties are set correctly in the ``wkplc_dbdomain.properties`` file, including user IDs and passwords.
 
 2.  If required, upgrade Portal B to the current fix pack.
 
@@ -276,31 +272,32 @@ where,
     	-password was_admin_password
     ```
 
-Where:
+    Where:
 
--   *dmgr_hostname* is the TCP/IP host name of the Deployment Manager server
--   *dmgr_port* is the SOAP port number of the Deployment Manager server
--   *was_admin_user* and <was_admin_password> are the user ID and password for the Deployment Manager administrator
-    
-    If the WebSphere Application Server administrator user ID and password are different from the Deployment Manager values, add the following parameters to the addNode task:
+    -   *dmgr_hostname* is the TCP/IP host name of the Deployment Manager server
+    -   *dmgr_port* is the SOAP port number of the Deployment Manager server
+    -   *was_admin_user* and <was_admin_password> are the user ID and password for the Deployment Manager administrator
+        
+        If the WebSphere Application Server administrator user ID and password are different from the Deployment Manager values, add the following parameters to the addNode task:
 
-- ``localusername local_was_admin_user``
-- ``localpassword local_was_admin_password``
+    - ``localusername local_was_admin_user``
+    - ``localpassword local_was_admin_password``
 
-For information about the addNode command and other optional parameters, see [addNode command](http://publib.boulder.ibm.com/infocenter/wasinfo/v8r0/index.jsp?topic=/com.ibm.websphere.nd.multiplatform.doc/info/ae/ae/rxml_addnode.html).
+    For information about the addNode command and other optional parameters, see [addNode command](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=tools-addnode-command).
 
     !!!Important
+
         If the addNode task fails for any reason, you must complete the following steps before you rerun the task:
 
-    1.  If the AddNode task created the node, remove the node.
-    2.  If the items exist, log on to the deployment manager and complete the following steps:
+        1.  If the AddNode task created the node, remove the node.
+        2.  If the items exist, log on to the deployment manager and complete the following steps:
 
-        1.  Remove the HCL Portal server definition.
-        2.  Remove the HCL Portal JDBC Provider.
+            1.  Remove the HCL Portal server definition.
+            2.  Remove the HCL Portal JDBC Provider.
 
 5.  Stop the HCL Portal server on the primary node of Cluster B and ensure that the following parameters are set correctly in the ``wkplc.properties`` file:
 
-You can add these parameters (particularly passwords) directly to any task. However, consider adding them temporarily to the properties file. You can then remove them when you are finished to keep your environment secure.
+    You can add these parameters (particularly passwords) directly to any task. However, consider adding them temporarily to the properties file. You can then remove them when you are finished to keep your environment secure.
 
     1.  Set the ``WasSoapPort`` address to the port used to connect remotely to the deployment manager.
 
@@ -332,6 +329,7 @@ You can add these parameters (particularly passwords) directly to any task. Howe
 
     -   Add the existing administrative user ID and group to the Deployment Manager security configuration.
     -   Complete the following steps to change the values in the HCL Portal configuration to match the Deployment Manager values:
+
         1.  If necessary, start the HCL Portal server.
 
         2.  Verify that the required HCL Digital Experience administrative user ID and group ID are defined in the Deployment Manager user registry that provides security.
@@ -373,46 +371,46 @@ You can add these parameters (particularly passwords) directly to any task. Howe
 
     -   Complete the following steps to define a static cluster:
 
-        -   Run one of the following commands:
+        1.   Run one of the following commands:
 
             -   AIX and Linux: `./ConfigEngine.sh cluster-node-config-cluster-setup -DWasPassword=dmgr_password`
             -   Windows: `ConfigEngine.bat cluster-node-config-cluster-setup -DWasPassword=dmgr_password`
 
-        -   Configure the cluster to use an external web server to take advantage of features such as workload management. Go to [Configuring a web server and an application server on separate machines (remote)](http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.base.doc/ae/tins_webplugins_remotesa.html) for information.
+        2.   Configure the cluster to use an external web server to take advantage of features such as workload management. Go to [Configuring a web server and an application server on separate machines (remote)](http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.base.doc/ae/tins_webplugins_remotesa.html) for information.
 
             !!!note
                 Start with the step about starting the plug-ins installation wizard.
 
     -   Complete the following steps to define a dynamic cluster:
 
-        -   Log on to the deployment manager WebSphere Integrated Solutions Console.
-        -   Complete the following steps to create a node group:
+        1.   Log on to the deployment manager WebSphere Integrated Solutions Console.
+        2.   Complete the following steps to create a node group:
 
-            -   Click **System administration > Node groups**.
-            -   Click **New**.
-            -   Type the node group **Name**.
-            -   Type any information about the node group in the **Description** text box.
-            -   Click **OK**.
-            -   Click the **Save** link to save your changes to the master configuration.
+            1.   Click **System administration > Node groups**.
+            2.   Click **New**.
+            3.   Type the node group **Name**.
+            4.   Type any information about the node group in the **Description** text box.
+            5.   Click **OK**.
+            6.   Click the **Save** link to save your changes to the master configuration.
 
-        -   Complete the following steps to add members to the node group:
+        3.   Complete the following steps to add members to the node group:
 
-            -   Click **System administration > Node groups**.
-            -   Click the name of the node group to add members to.
-            -   Click **Node group members** under Additional Properties.
-            -   Click **Add**.
-            -   Select the primary node and then click **Add**.
-            -   Click the **Save** link to save your changes to the master configuration.
+            1.   Click **System administration > Node groups**.
+            2.   Click the name of the node group to add members to.
+            3.   Click **Node group members** under Additional Properties.
+            4.   Click **Add**.
+            5.   Select the primary node and then click **Add**.
+            6.   Click the **Save** link to save your changes to the master configuration.
 
-        -   Complete the following steps to create a dynamic cluster in the node group:
+        4.   Complete the following steps to create a dynamic cluster in the node group:
 
-            -   Click **Servers > Clusters > Dynamic clusters**.
-            -   Click **New**.
-            -   Select WebSphere Application Server from the **Server Type** menu and then click **Next**.
-            -   Select **Automatically define cluster members with rules**.
-            -   Type the cluster name in the **Dynamic cluster name** text box. Then, click **Next**. Type the same value that you provided for the cluster name parameter in the ``wkplc.properties`` file of your primary node.
-            -   Remove all default membership policies and then click **Subexpression builder**.
-            -   Enter the following information in the Subexpression builder window:
+            1.   Click **Servers > Clusters > Dynamic clusters**.
+            2.   Click **New**.
+            3.   Select WebSphere Application Server from the **Server Type** menu and then click **Next**.
+            4.   Select **Automatically define cluster members with rules**.
+            5.   Type the cluster name in the **Dynamic cluster name** text box. Then, click **Next**. Type the same value that you provided for the cluster name parameter in the ``wkplc.properties`` file of your primary node.
+            6.   Remove all default membership policies and then click **Subexpression builder**.
+            7.   Enter the following information in the Subexpression builder window:
 
                 -   Select **and** from the **Logical operator** menu.
                 -   Select **Nodegroup** from the **Select operand** menu.
@@ -421,12 +419,12 @@ You can add these parameters (particularly passwords) directly to any task. Howe
                 -   Click **Generate subexpression**.
                 -   Click **Append**.
 
-            -   Click **Preview membership** to verify that all nodes included in the node group display and then click **Next**.
-            -   Click **Create the cluster member using an existing server as a template** and then select the primary node HCL Digital Experience server.
-            -   Click **Next**.
-            -   Specify the dynamic cluster properties for the minimum and maximum number of server instances.
-            -   Review the summary page to verify your actions and then click **Finish**.
-            -   Run one of the following commands to create the dynamic cluster:
+            8.   Click **Preview membership** to verify that all nodes included in the node group display and then click **Next**.
+            9.   Click **Create the cluster member using an existing server as a template** and then select the primary node HCL Digital Experience server.
+            10.  Click **Next**.
+            11.  Specify the dynamic cluster properties for the minimum and maximum number of server instances.
+            12.  Review the summary page to verify your actions and then click **Finish**.
+            13.  Run one of the following commands to create the dynamic cluster:
 
                 -   AIX and Linux: `./ConfigEngine.sh cluster-node-config-dynamic-cluster-setup -DWasPassword=dmgr_password`
                 -   Windows: `ConfigEngine.bat cluster-node-config-dynamic-cluster-setup -DWasPassword=dmgr_password`
@@ -455,8 +453,9 @@ You can add these parameters (particularly passwords) directly to any task. Howe
 
 18. After you set the multiple clusters, complete the following extra tasks to ensure a balanced workload and failover support:
 
-    -   Update the web server configuration to enable user requests to be routed to the new cluster. Refer to your web server documentation for information about using a web server with multiple clusters in a cell.
-    -   Update your database configuration to share database domains between clusters.
+    1.   Update the web server configuration to enable user requests to be routed to the new cluster. Refer to your web server documentation for information about using a web server with multiple clusters in a cell.
+    2.   Update your database configuration to share database domains between clusters.
+
 19. If you entered passwords in any of the properties files when you created your cluster, remove them for security purposes.
 
 
