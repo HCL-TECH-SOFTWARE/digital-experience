@@ -4,6 +4,10 @@ Learn how to show Practitioner Studio and Woodburn Studio themes, and Administra
 
 Administrator users can configure the Virtual Portal Manager portlet so Practitioner Studio and Woodburn Studio themes and Administration changes show in newly created virtual Portals.
 
+## CF221 on newly deployed containers: Virtual Portal Manager configured so that newly created virtual Portals contain Practitioner Studio
+
+Starting with version CF221 on newly deployed containers the virtual Portal Manager is configured to use the file `WebSphere:assetname=VirtualPortal.zip:InitVirtualContentPortalV9.5NoWoodburn.xml`. For upgrades from older versions the default is not changed to allow continued use of virtual Portals as configured before.
+
 ## Configuring Virtual Portal Manager so that newly created virtual Portals contain Practitioner Studio and Woodburn Studio
 
 !!! note
@@ -17,6 +21,8 @@ Administrator users can configure the Virtual Portal Manager portlet so Practiti
 
 !!! note
     This does not create the two Woodburn Studio libraries in the virtual portal. You will need to syndicate these libraries to your virtual portal.
+
+Alteratively to skip Woodburn Studio you can leverage `WebSphere:assetname=VirtualPortal.zip:InitVirtualContentPortalV9.5NoWoodburn.xml` starting with version CF221.
 
 ## Removing Practitioner Studio or Woodburn Studio from a virtual portal that was created by modifying the Virtual Portal Manager configuration
 
