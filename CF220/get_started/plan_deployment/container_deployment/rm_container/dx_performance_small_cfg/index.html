@@ -1,0 +1,5127 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A next-gen documentation site for HCL Digital Experience.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/get_started/plan_deployment/container_deployment/rm_container/dx_performance_small_cfg/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../rm_container_deployment/">
+      
+      
+      <link rel="icon" href="../../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Performance Sizing Guidance for Rendering with a Small Configuration - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#performance-sizing-guidance-for-rendering-with-a-small-configuration" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../../latest/get_started/plan_deployment/container_deployment/rm_container/dx_performance_small_cfg/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Performance Sizing Guidance for Rendering with a Small Configuration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../whatsnew/cf20/newcf220/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../deployment/" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../build_sites/" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Get Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Product Overview
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../architecture_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Architecture overview
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Plan Your Deployment
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Plan Your Deployment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_1" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Kubernetes Deployment
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3_1" id="__nav_2_3_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes Deployment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../limitations_requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Containerization requirements and limitations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_1_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Roadmap for Kubernetes Deployment
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3_1_3" id="__nav_2_3_1_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_3_1_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Roadmap for Kubernetes Deployment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Performance Sizing Guidance for Rendering with a Small Configuration
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Performance Sizing Guidance for Rendering with a Small Configuration
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-dx-rendering-sizing-performance-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview of DX rendering sizing-performance tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dx-small-configuration-helm-values-in-hcl-dx-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      DX small configuration helm values in hcl-dx-deployment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customer-rendering-scenario-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customer rendering scenario details
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#awsnative-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS/Native Kubernetes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#db2-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      DB2 instance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jmeter-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      JMeter agents
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authoring-details-for-small-config-in-rendering-sizing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authoring details for small config in rendering sizing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wcm-default-test-data-20-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      WCM Default Test Data - 20 pages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WCM Default Test Data - 20 pages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wcm-test-data-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      WCM test data characteristics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dam-default-test-data-2500-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      DAM default test data: 2,500 assets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pages-and-portlets-default-test-data-8-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pages and portlets default test data: 8 pages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pages and portlets default test data: 8 pages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#combined-dx-rendering-of-wcm-dam-and-pages-and-portlets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combined DX rendering of WCM, DAM, and pages and portlets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pods-in-a-native-kubernetes-deployment-are-11-in-small-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pods in a native-Kubernetes deployment are 1:1 in small config
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pods in a native-Kubernetes deployment are 1:1 in small config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#results-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results summary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Results summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stage-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stage-1-helm-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      stage-1 Helm values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stage-2-helm-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      stage-2 Helm values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results-overview_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observations_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-sizing-guidance-for-rendering-with-maximum-throughput-on-a-single-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance-sizing guidance for rendering with maximum throughput on a single node
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance-sizing guidance for rendering with maximum throughput on a single node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview-of-dx-rendering-sizing-performance-tests_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview of DX rendering sizing-performance tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customer-rendering-scenario-details_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customer rendering scenario details
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#awsnative-kubernetes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS/Native Kubernetes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#db2-instance_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      DB2 instance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jmeter-agents_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      JMeter agents
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authoring-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authoring details
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wcm-default-test-data-200-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      WCM Default Test Data - 200 pages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WCM Default Test Data - 200 pages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wcm-test-data-characteristics_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      WCM test data characteristics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dam-default-test-data-25000-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      DAM default test data: 25,000 assets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pages-and-portlets-default-test-data-80-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pages and portlets default test data: 80 pages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combined-dx-rendering-of-wcm-dam-and-pages-and-portlets_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combined DX rendering of WCM, DAM, and pages and portlets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results-summary_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results summary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Results summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stage-1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stage-1-helm-values-of-a-single-node-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      stage-1 Helm values of a single-node configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results-overview_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observations_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#helm-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Helm values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pods-in-native-kube-deployment-in-stage-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pods in native-kube deployment in stage-2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results-overview_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observations_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage 3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#improved-response-times-of-individual-apis-and-conclusion-on-load-for-comfortable-rendering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improved response times of individual APIs and conclusion on load for comfortable rendering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dx-core-tuning-and-enhancements-after-10000-concurrent-user-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      DX core tuning and enhancements after 10000 concurrent user run
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-3-helm-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage-3 Helm values
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage-3 Helm values">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#details-of-pods-in-native-kube-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details of Pods in native-kube deployment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results-overview_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observations_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rm_container_deployment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HCL Digital Experience 9.5 roadmap: Container deployment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../application_architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DX applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dam_persistence_architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digital Asset Management persistence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../persistent_volumes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Persistent volumes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wcm_content_ai_analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WCM Content AI Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../traditional_deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Traditional Deployment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../deployment/install/hybrid" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hybrid Deployment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../docker/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Development Deployment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software_support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Program Requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../system_requirements/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    System Requirements
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../download/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Download Software
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../hc_limitation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Help Center Limitation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../notices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../whatsnew/cf20/newcf220/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../build_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-dx-rendering-sizing-performance-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview of DX rendering sizing-performance tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dx-small-configuration-helm-values-in-hcl-dx-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      DX small configuration helm values in hcl-dx-deployment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customer-rendering-scenario-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customer rendering scenario details
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#awsnative-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS/Native Kubernetes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#db2-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      DB2 instance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jmeter-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      JMeter agents
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authoring-details-for-small-config-in-rendering-sizing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authoring details for small config in rendering sizing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wcm-default-test-data-20-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      WCM Default Test Data - 20 pages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WCM Default Test Data - 20 pages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wcm-test-data-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      WCM test data characteristics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dam-default-test-data-2500-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      DAM default test data: 2,500 assets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pages-and-portlets-default-test-data-8-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pages and portlets default test data: 8 pages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pages and portlets default test data: 8 pages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#combined-dx-rendering-of-wcm-dam-and-pages-and-portlets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combined DX rendering of WCM, DAM, and pages and portlets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pods-in-a-native-kubernetes-deployment-are-11-in-small-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pods in a native-Kubernetes deployment are 1:1 in small config
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pods in a native-Kubernetes deployment are 1:1 in small config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#results-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results summary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Results summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stage-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stage-1-helm-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      stage-1 Helm values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stage-2-helm-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      stage-2 Helm values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results-overview_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observations_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-sizing-guidance-for-rendering-with-maximum-throughput-on-a-single-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance-sizing guidance for rendering with maximum throughput on a single node
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance-sizing guidance for rendering with maximum throughput on a single node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview-of-dx-rendering-sizing-performance-tests_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview of DX rendering sizing-performance tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customer-rendering-scenario-details_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customer rendering scenario details
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#awsnative-kubernetes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS/Native Kubernetes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#db2-instance_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      DB2 instance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jmeter-agents_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      JMeter agents
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authoring-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authoring details
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wcm-default-test-data-200-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      WCM Default Test Data - 200 pages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WCM Default Test Data - 200 pages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wcm-test-data-characteristics_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      WCM test data characteristics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dam-default-test-data-25000-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      DAM default test data: 25,000 assets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pages-and-portlets-default-test-data-80-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pages and portlets default test data: 80 pages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combined-dx-rendering-of-wcm-dam-and-pages-and-portlets_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combined DX rendering of WCM, DAM, and pages and portlets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results-summary_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results summary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Results summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stage-1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stage-1-helm-values-of-a-single-node-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      stage-1 Helm values of a single-node configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results-overview_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observations_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#helm-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Helm values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pods-in-native-kube-deployment-in-stage-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pods in native-kube deployment in stage-2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results-overview_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observations_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage 3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage 3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#improved-response-times-of-individual-apis-and-conclusion-on-load-for-comfortable-rendering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improved response times of individual APIs and conclusion on load for comfortable rendering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dx-core-tuning-and-enhancements-after-10000-concurrent-user-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      DX core tuning and enhancements after 10000 concurrent user run
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-3-helm-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage-3 Helm values
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage-3 Helm values">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#details-of-pods-in-native-kube-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details of Pods in native-kube deployment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#results-overview_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observations_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="performance-sizing-guidance-for-rendering-with-a-small-configuration">Performance-sizing guidance for rendering with a small configuration</h1>
+<h2 id="overview-of-dx-rendering-sizing-performance-tests">Overview of DX rendering sizing-performance tests</h2>
+<p>DX sizing is one of the goals of DX performance tests. DX sizing aims to identify the reliable Kubernetes environment for small, medium, and large DX configurations. This topic presents the important KPIs (for example, number of concurrent users, average response time, and throughput) in small configurations. A similar approach will be applied for medium and large configurations. This topic also discusses how adjustments to the pod configuration can make significant improvements in system responsiveness.</p>
+<p>This sizing work started with rendering scenarios of Web Content Management (WCM), portlets, and Digital Asset Management (DAM) with a rendering setup enabled in AWS/Native-Kubernetes. The Apache JMeter tool was used for performance tests.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This initial performance guidance aims to understand how the ratios of key pod limits can improve the rendering response time in a simple single-pod system. Understanding these limits is an important step to do before you attempt to illustrate the impact of scaling pods.</p>
+<ul>
+<li>Changes to the pod limits for the following pods significantly improve the responsiveness of the setup and enable the system to handle more users.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pod name</th>
+<th>Minimum number of pods</th>
+<th>Container</th>
+<th>Container image</th>
+<th>Container CPU request and limit</th>
+<th>Container memory request and limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>core</td>
+<td>1</td>
+<td>core</td>
+<td>core</td>
+<td>3000m</td>
+<td>5000Mi</td>
+</tr>
+<tr>
+<td>ringApi</td>
+<td>1</td>
+<td>ringApi</td>
+<td>ringApi</td>
+<td>500m</td>
+<td>512Mi</td>
+</tr>
+<tr>
+<td>haproxy</td>
+<td>1</td>
+<td>haproxy</td>
+<td>haproxy</td>
+<td>700m</td>
+<td>1024Mi</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>These modifications resulted in better response time and throughput by 50 percent. Detailed data are shown in the next sections.</li>
+</ul>
+<h2 id="dx-small-configuration-helm-values-in-hcl-dx-deployment">DX small configuration helm values in hcl-dx-deployment</h2>
+<p>To see the <code>small-config-values.yaml</code> file in the hcl-dx-deployment Helm chart, complete the following steps:</p>
+<ol>
+<li>
+<p>Download the Helm chart from FlexNet or Harbor.</p>
+</li>
+<li>
+<p>Extract the <code>TGZ</code> file (<code>hcl-dx-deployment-XXX.tgz</code>).</p>
+</li>
+<li>
+<p>In the extracted folder, navigate to the following structure to go to the <code>small-config-values.yaml</code> file: <code>hcl-dx-deployment/value-samples/small-config-values.yaml</code>.</p>
+</li>
+</ol>
+<h2 id="customer-rendering-scenario-details">Customer rendering scenario details</h2>
+<table>
+<thead>
+<tr>
+<th>Concurrent users</th>
+<th>Existing WCM pages</th>
+<th>Existing DAM content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Small  – 1000 users</td>
+<td>20</td>
+<td>2k</td>
+</tr>
+<tr>
+<td>Medium – 10000 users</td>
+<td>200</td>
+<td>10k</td>
+</tr>
+<tr>
+<td>Large  – 100000 users</td>
+<td>2000</td>
+<td>50 - 100k</td>
+</tr>
+</tbody>
+</table>
+<h2 id="environment">Environment</h2>
+<h3 id="awsnative-kubernetes">AWS/Native Kubernetes</h3>
+<ul>
+<li>An AWS Elastic Compute Cloud (EC2) instance is running on a native Kubernetes platform with the DX images installed and configured.</li>
+<li>In AWS/Native Kubernetes, the test started with the minimal EC2 instance with a single node.</li>
+<li>The tests used a remote DB2 instance.</li>
+</ul>
+<p>[Small Configuration]  - [c5.2xlarge] </p>
+<p><img alt="" src="../../../../../images/Header-1-AWS.png" /></p>
+<p><img alt="" src="../../../../../images/C5.2xlarge.png" /></p>
+<ul>
+<li>Processor details</li>
+</ul>
+<p><img alt="" src="../../../../../images/Processor_Info_Native-Kube.png" /></p>
+<ul>
+<li>Volume details</li>
+</ul>
+<p><img alt="" src="../../../../../images/AWS-Native-Kube-Volume-Info.png" /></p>
+<h3 id="db2-instance">DB2 instance</h3>
+<ul>
+<li>Remote DB2 - [t3a.large]</li>
+</ul>
+<p><img alt="" src="../../../../../images/Header-2-AWS.png" /></p>
+<p><img alt="" src="../../../../../images/t3a.large.png" /></p>
+<ul>
+<li>Processor details</li>
+</ul>
+<p><img alt="" src="../../../../../images/Processor_Info_RemoteDB2.png" /></p>
+<ul>
+<li>Volume details</li>
+</ul>
+<p><img alt="" src="../../../../../images/Remote-DB2-Volume-Info.png" /></p>
+<h3 id="jmeter-agents">JMeter agents</h3>
+<ul>
+<li>JMeter instance - [t2.xlarge]</li>
+<li>To run the tests, a distributed AWS/JMeter agents setup consisting of one primary and two subordinates was used.<!-- never use "master" and "slave." --></li>
+</ul>
+<p><img alt="" src="../../../../../images/Header-3-AWS.png" /></p>
+<p><img alt="" src="../../../../../images/t2.xlarge.png" /></p>
+<ul>
+<li>Processor details</li>
+</ul>
+<p><img alt="" src="../../../../../images/Processor_Info_JMeterAgent.png" /></p>
+<ul>
+<li>Network details</li>
+</ul>
+<p><img alt="" src="../../../../../images/JMeter_Agent_Network_Details.png" /></p>
+<ul>
+<li>Volume details</li>
+</ul>
+<p><img alt="" src="../../../../../images/JMeter-Agent-Volume-Info.png" /></p>
+<h2 id="authoring-details-for-small-config-in-rendering-sizing">Authoring details for small config in rendering sizing</h2>
+<p>Set up the systems before performing rendering tests. This section provides details for WCM, DAM, and portlets authoring.</p>
+<h2 id="wcm-default-test-data-20-pages">WCM Default Test Data - 20 pages</h2>
+<h3 id="wcm-test-data-characteristics">WCM test data characteristics</h3>
+<ul>
+<li>The default test data has a WCM design library called "PerformanceTestDesign" and five content libraries named "PerformanceTestContent01" to "PerformanceTestContent05".</li>
+<li>
+<p>Each content library contains four levels of site areas, with four site areas per level. Only the 256 "leaf" site areas contain content.</p>
+</li>
+<li>
+<p>Each leaf site area contains ten content items, for a total of 12,800 content items across the libraries.</p>
+</li>
+<li>
+<p>Half of the content items are visible to "Anonymous" and "All Authenticated" users.</p>
+</li>
+<li>
+<p>The other half is visible only to members of ten groups per content item. These ten groups are spread out among the 500 groups assumed to exist in the test LDAP (and assumed to be called "Group0000" through "Group0499").</p>
+</li>
+<li>
+<p>Half of the content items (spread evenly over each type described previously) are profiled with the keyword "MENU."</p>
+</li>
+<li>
+<p>There are 20 test-portal pages created under the "PerformanceTest" label. Each has a URL in the form "<context-root>/perf/page-xx".</p>
+</li>
+<li>
+<p>Each page contains 6 WCM viewer portlets that show content below one of the 20 top-level site areas. For example, Pages 01 to 04 show content from site areas "SA01" through "SA04" in the "PerformanceTestContent01" library, and pages 05 to 08 show content from site areas "SA01" through "SA04" in the "PerformanceTestContent02"  library, and so on.</p>
+</li>
+<li>
+<p>Four of the portlets on each page show single-content items. For page 01, these are the first content items in site areas "SA01.01.01.01", "SA01.02.01.01", "SA01.03.01.01", and "SA01.04.01.01" respectively. Other pages follow the same pattern.</p>
+</li>
+<li>
+<p>Another portlet on each page shows a navigator of site areas and content items below the same top-level area.</p>
+</li>
+<li>
+<p>The final portlet on each page shows a menu of items and is scoped to the top-level site area. It also selects only those items profiled with the "MENU" keyword.</p>
+</li>
+<li>
+<p>A total of 99,999 users were added to openLDAP as authenticated users.</p>
+</li>
+</ul>
+<h2 id="dam-default-test-data-2500-assets">DAM default test data: 2,500 assets</h2>
+<ul>
+<li>
+<p>Testers uploaded 2,500 assets. These assets include images (136kb, .jpg), documents (199kb, .docx), and videos (1.1mb, .mp4) to preheat. After preloading 2,500 assets, 15 assets were uploaded and rendered for 1 hour.</p>
+</li>
+<li>
+<p>Details of 15 assets were uploaded for rendering.</p>
+</li>
+<li>
+<p>There are 19 URLs in total, three of which are custom URLs, 8 are uuid URLs, and 8 are short URLs, which are combinations of original, tablet, smartphone, and desktop renditions.</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Type</th>
+<th>Size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image</td>
+<td>.jpg/png/tif</td>
+<td>155kb, 2mb,5mb, 500kb, 100 kb, 2 mb,300 kb</td>
+</tr>
+<tr>
+<td>Video</td>
+<td>mp4/webm</td>
+<td>5 mb, 199kb,200kb , 2 mb,199kb</td>
+</tr>
+<tr>
+<td>Document</td>
+<td>docx/xlsx/pptx</td>
+<td>mp4- 1mb, 15mb, 100mb, webm- 2 mb</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For DAM, only anonymous rendering is available.</p>
+</div>
+<h2 id="pages-and-portlets-default-test-data-8-pages">Pages and portlets default test data: 8 pages</h2>
+<p>Customers typically use a total of eight pages with portlets. To complete authoring and rendering, both anonymous and authenticated users received access. The same users were added in openLDAP for WCM rendering. All authenticated users are assigned the User role.</p>
+<p>As part of authoring, pages and portlets were added manually. The following list shows the details of portlets for authoring on every page:</p>
+<ul>
+<li>Page 1 - 2 Articles</li>
+<li>Page 2 - 2 Rich text</li>
+<li>Page 3 - Login portlet</li>
+<li>Page 4 - Information Portlet(JSR) - JSP file -  jsp/oob/welcome.jsp </li>
+<li>Page 5 - Search Centre portlet</li>
+<li>Page 6 - Custom JSF portlet with simple form</li>
+<li>Page 7 - Script Application portlet (Added JavaScript Functions, Date and Time object examples)</li>
+<li>Page 8 - Added all above 7 portlets in this page</li>
+</ul>
+<p>After users completed the authoring steps, the anonymous portal user and authenticated users (added to openLDAP) must render the pages. Every page request uses a <code>/GET API</code> call (for example, <code>/wps/portal/portletsperf/page1</code>) and there is a response assertion in a sampler to validate the content html in the response body. </p>
+<h3 id="combined-dx-rendering-of-wcm-dam-and-pages-and-portlets">Combined DX rendering of WCM, DAM, and pages and portlets</h3>
+<p>For rendering sizing, all rendering JMeter scripts of WCM, DAM, and pages and portlets are combined. See the following section for details of load distribution.</p>
+<p><strong>Load distribution</strong></p>
+<ul>
+<li>WCM - 40%</li>
+<li>DAM - 30%</li>
+<li>Pages and Portlets - 30%</li>
+</ul>
+<h2 id="pods-in-a-native-kubernetes-deployment-are-11-in-small-config">Pods in a native-Kubernetes deployment are 1:1 in small config</h2>
+<p><img alt="" src="../../../../../images/small-config-pods.png" /></p>
+<h3 id="results-summary">Results summary</h3>
+<p>The following stages were conducted, starting with the default Kubernetes configuration.</p>
+<h4 id="stage-1">Stage 1</h4>
+<ul>
+<li>The DX combined rendering ran with default minimal deployments as mentioned in the following Helm values. </li>
+<li>No issues were found with a user load of up to 500. </li>
+<li>Errors occurred at a user load of 600. This total number of errors is around five percent.<!-- five percent of what? --></li>
+</ul>
+<h5 id="stage-1-helm-values">stage-1 Helm values</h5>
+<div class="language-text highlight"><pre><span></span><code>                             Requests                 Limits
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>cpu(m)</th>
+<th>memory(Mi)</th>
+<th>cpu(m)</th>
+<th>memory(Mi)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>contentComposer</td>
+<td>100</td>
+<td>128</td>
+<td>100</td>
+<td>128</td>
+</tr>
+<tr>
+<td>core</td>
+<td>2000</td>
+<td>4096</td>
+<td>4000</td>
+<td>6144</td>
+</tr>
+<tr>
+<td>digitalAssetManagement</td>
+<td>500</td>
+<td>1536</td>
+<td>500</td>
+<td>1536</td>
+</tr>
+<tr>
+<td>imageProcessor</td>
+<td>200</td>
+<td>2048</td>
+<td>200</td>
+<td>2048</td>
+</tr>
+<tr>
+<td>openLdap</td>
+<td>200</td>
+<td>768</td>
+<td>200</td>
+<td>768</td>
+</tr>
+<tr>
+<td>persistenceNode</td>
+<td>500</td>
+<td>1024</td>
+<td>500</td>
+<td>1024</td>
+</tr>
+<tr>
+<td>persistenceConnectionPool</td>
+<td>500</td>
+<td>512</td>
+<td>500</td>
+<td>512</td>
+</tr>
+<tr>
+<td>ringApi</td>
+<td>100</td>
+<td>256</td>
+<td>100</td>
+<td>256</td>
+</tr>
+<tr>
+<td>runtimeController</td>
+<td>100</td>
+<td>256</td>
+<td>100</td>
+<td>256</td>
+</tr>
+<tr>
+<td>haproxy</td>
+<td>200</td>
+<td>300</td>
+<td>200</td>
+<td>300</td>
+</tr>
+<tr>
+<td>licenseManager</td>
+<td>100</td>
+<td>300</td>
+<td>100</td>
+<td>300</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>4500</td>
+<td>11224</td>
+<td>6500</td>
+<td>13272</td>
+</tr>
+</tbody>
+</table>
+<h5 id="results-overview">Results overview</h5>
+<table>
+<thead>
+<tr>
+<th>AWS/Native-Kubernetes</th>
+<th>Test-6</th>
+<th>Test-7 (after tuning - core, ring api, haproxy)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Test time</td>
+<td>July 21st IST 12:30 am - 1:30 am</td>
+<td>July 27th IST 14:08 pm - 15:12 pm</td>
+</tr>
+<tr>
+<td>Total samples</td>
+<td>66959</td>
+<td>918415</td>
+</tr>
+<tr>
+<td>Concurent Users</td>
+<td>600(WCM=240+DAM=180+PNP=180)</td>
+<td>600(WCM=240+DAM=180+PNP=180)</td>
+</tr>
+<tr>
+<td>Total throughput (transactions/sec)</td>
+<td><strong>110.3</strong></td>
+<td><strong>238.18</strong></td>
+</tr>
+<tr>
+<td>Total avg response time (in milli seconds)</td>
+<td><strong>4671</strong></td>
+<td><strong>994.89</strong></td>
+</tr>
+<tr>
+<td>CPU usage</td>
+<td>25%</td>
+<td>52.36%</td>
+</tr>
+<tr>
+<td>Memory usage</td>
+<td>56%</td>
+<td>62.23%</td>
+</tr>
+<tr>
+<td>Disk reads I/O</td>
+<td></td>
+<td>0 B/s</td>
+</tr>
+<tr>
+<td>Disk writes I/O</td>
+<td></td>
+<td>13.65 io/s</td>
+</tr>
+<tr>
+<td>DAM EventLoop lag (in milli seconds)</td>
+<td></td>
+<td>16.14</td>
+</tr>
+<tr>
+<td>Ring EventLoop lag (in milli seconds)</td>
+<td><strong>450</strong></td>
+<td><strong>5.19</strong></td>
+</tr>
+<tr>
+<td>Errors</td>
+<td>4.87%</td>
+<td>0</td>
+</tr>
+<tr>
+<td>TimeDuration</td>
+<td>3600</td>
+<td>3850</td>
+</tr>
+<tr>
+<td></td>
+<td>Top 5 request samples (avg response time in ms)</td>
+<td>Top 5 request samples (avg response time in ms)</td>
+</tr>
+<tr>
+<td></td>
+<td>Get video - mp4 1.1 mb custom url - curlmp41.1mb.    (25044)</td>
+<td>Get video - mp4 15mb - idmp415mb (6253.29)</td>
+</tr>
+<tr>
+<td></td>
+<td>Get image - jpeg 155 kb custom url - curljpg155kb   (23851)</td>
+<td>Get video - mp4 1.1 mb custom url - curlmp41.1mb (5512.89)</td>
+</tr>
+<tr>
+<td></td>
+<td>Get video - mp4 15mb - idmp415mb -      (23620)</td>
+<td>Get doc - pdf - 5mb - short url - Desktop - furlpdf5mb (5296.89)</td>
+</tr>
+<tr>
+<td></td>
+<td>Get doc - pdf 171 kb custom url - curlpdf171kb.   (23011)</td>
+<td>Get image - jpeg 155 kb custom url - curljpg155kb (5128.01)</td>
+</tr>
+<tr>
+<td></td>
+<td>Initial Page Request (21145)</td>
+<td>Get video - webm 2mb - friendly url - furlwebm2mb (4895.61)</td>
+</tr>
+</tbody>
+</table>
+<h5 id="observations">Observations</h5>
+<ul>
+<li>
+<p>For a user load of 600, there is an http response code: <code>503 service unavailable errors in test.</code></p>
+</li>
+<li>
+<p>All errors are from WCM and pages and portlets, not from DAM.</p>
+</li>
+<li>
+<p>Total average response time increases exponentially with load.</p>
+</li>
+<li>
+<p>Event loop lag for the Ring API pod is also on the higher end (approximately 400 ms for a user load of 500).</p>
+</li>
+<li>
+<p>No pod restarts were observed.</p>
+</li>
+</ul>
+<h4 id="stage-2">Stage 2</h4>
+<p>From stage-1 observations, limits of core, ring API, and HA proxy pods were tuned one by one to see whether no errors occurred during a user load of 600.</p>
+<p>See the following section for the tuned Helm values.</p>
+<h5 id="stage-2-helm-values">stage-2 Helm values</h5>
+<div class="language-text highlight"><pre><span></span><code>                             Requests                 Limits
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>cpu(m)</th>
+<th>memory(Mi)</th>
+<th>cpu(m)</th>
+<th>memory(Mi)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>contentComposer</td>
+<td>100</td>
+<td>128</td>
+<td>100</td>
+<td>128</td>
+</tr>
+<tr>
+<td><strong>core</strong></td>
+<td><strong>3000</strong></td>
+<td><strong>5000</strong></td>
+<td><strong>3000</strong></td>
+<td><strong>5000</strong></td>
+</tr>
+<tr>
+<td>digitalAssetManagement</td>
+<td>500</td>
+<td>1536</td>
+<td>500</td>
+<td>1536</td>
+</tr>
+<tr>
+<td>imageProcessor</td>
+<td>200</td>
+<td>2048</td>
+<td>200</td>
+<td>2048</td>
+</tr>
+<tr>
+<td>openLdap</td>
+<td>200</td>
+<td>768</td>
+<td>200</td>
+<td>768</td>
+</tr>
+<tr>
+<td>persistenceNode</td>
+<td>500</td>
+<td>1024</td>
+<td>500</td>
+<td>1024</td>
+</tr>
+<tr>
+<td>persistenceConnectionPool</td>
+<td>500</td>
+<td>512</td>
+<td>500</td>
+<td>512</td>
+</tr>
+<tr>
+<td><strong>ringApi</strong></td>
+<td><strong>500</strong></td>
+<td><strong>512</strong></td>
+<td><strong>500</strong></td>
+<td><strong>512</strong></td>
+</tr>
+<tr>
+<td>runtimeController</td>
+<td>100</td>
+<td>256</td>
+<td>100</td>
+<td>256</td>
+</tr>
+<tr>
+<td><strong>haproxy</strong></td>
+<td><strong>700</strong></td>
+<td><strong>1024</strong></td>
+<td><strong>700</strong></td>
+<td><strong>1024</strong></td>
+</tr>
+<tr>
+<td>licenseManager</td>
+<td>100</td>
+<td>300</td>
+<td>100</td>
+<td>300</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>6400</td>
+<td>13108</td>
+<td>6400</td>
+<td>13108</td>
+</tr>
+</tbody>
+</table>
+<h5 id="results-overview_1">Results overview</h5>
+<table>
+<thead>
+<tr>
+<th>AWS/Native-Kubernet</th>
+<th>Test-6</th>
+<th>Test-11 (after tuning - core, ring api, haproxy)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Test time</td>
+<td>July 21st IST 12:30 am - 1:30 am</td>
+<td>July 28th IST 12:12 pm to 13:17 pm</td>
+</tr>
+<tr>
+<td>Total samples</td>
+<td>66959</td>
+<td>692505</td>
+</tr>
+<tr>
+<td>Concurent users</td>
+<td>600(WCM=240+DAM=180+PNP=180)</td>
+<td>600(WCM=240+DAM=180+PNP=180)</td>
+</tr>
+<tr>
+<td>Total throughput (transactions/sec)</td>
+<td>110.3</td>
+<td>179.63 ± 16.59</td>
+</tr>
+<tr>
+<td>Total avg response time (in milli seconds)</td>
+<td>4671</td>
+<td>2063.32 ± 308.33</td>
+</tr>
+<tr>
+<td>CPU usage</td>
+<td>25%</td>
+<td>39.72%</td>
+</tr>
+<tr>
+<td>Memory usage</td>
+<td>56%</td>
+<td>61.70%</td>
+</tr>
+<tr>
+<td>Disk reads I/O</td>
+<td></td>
+<td>0 io/s</td>
+</tr>
+<tr>
+<td>Disk writes I/O</td>
+<td></td>
+<td>13.04 io/s</td>
+</tr>
+<tr>
+<td>DAM EventLoop lag (in milli seconds)</td>
+<td></td>
+<td>16.1</td>
+</tr>
+<tr>
+<td>Ring EventLoop lag (in milli seconds)</td>
+<td>450</td>
+<td>4.57</td>
+</tr>
+<tr>
+<td>Errors</td>
+<td>4.87%</td>
+<td>0</td>
+</tr>
+<tr>
+<td>TimeDuration</td>
+<td>3600</td>
+<td>3850</td>
+</tr>
+<tr>
+<td></td>
+<td>Top 5 request samples (avg response time in ms)</td>
+<td>Top 5 request samples (avg response time in ms)</td>
+</tr>
+<tr>
+<td></td>
+<td>Get video - mp4 1.1 mb custom url - curlmp41.1mb.    (25044)</td>
+<td>Initial Page Request (11235.13)</td>
+</tr>
+<tr>
+<td></td>
+<td>Get image - jpeg 155 kb custom url - curljpg155kb   (23851)</td>
+<td>Get video - mp4 1.1 mb custom url - curlmp41.1mb (6791.20)</td>
+</tr>
+<tr>
+<td></td>
+<td>Get video - mp4 15mb - idmp415mb -      (23620)</td>
+<td>Get image - jpeg 155 kb custom url - curljpg155kb (6123.23)</td>
+</tr>
+<tr>
+<td></td>
+<td>Get doc - pdf 171 kb custom url - curlpdf171kb.   (23011)</td>
+<td>Get doc - pdf 171 kb custom url - curlpdf171kb (6037.59)</td>
+</tr>
+<tr>
+<td></td>
+<td>Initial Page Request (21145)</td>
+<td>Get video - mp4 15mb - idmp415mb (5931.95)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>AWS/Native-Kubernetes</th>
+<th>Test-10 (after tuning - core, ring api, haproxy)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Test time</td>
+<td>July 27th IST 19:58 pm to 20:58 pm</td>
+</tr>
+<tr>
+<td>Total samples</td>
+<td>610496</td>
+</tr>
+<tr>
+<td>Concurent users</td>
+<td>1000(WCM=400+DAM=300+PNP=300)</td>
+</tr>
+<tr>
+<td>Total throughput (transactions/sec)</td>
+<td><strong>169.19 ± 0.68</strong></td>
+</tr>
+<tr>
+<td>Total avg response time (in milli seconds)</td>
+<td><strong>5578.84 ± 32.01</strong></td>
+</tr>
+<tr>
+<td>CPU usage</td>
+<td>39%</td>
+</tr>
+<tr>
+<td>Memory usage</td>
+<td>64%</td>
+</tr>
+<tr>
+<td>Disk reads I/O</td>
+<td>0 io/s</td>
+</tr>
+<tr>
+<td>Disk writes I/O</td>
+<td>14.45 io/s</td>
+</tr>
+<tr>
+<td>DAM EventLoop lag (in milli seconds)</td>
+<td>20.4</td>
+</tr>
+<tr>
+<td>Ring EventLoop lag (in milli seconds)</td>
+<td>6.6</td>
+</tr>
+<tr>
+<td>Errors</td>
+<td>0</td>
+</tr>
+<tr>
+<td>TimeDuration</td>
+<td>3600</td>
+</tr>
+<tr>
+<td></td>
+<td>Top 5 request samples (avg respone time in ms)</td>
+</tr>
+<tr>
+<td></td>
+<td>Initial Page Request (30396.43)</td>
+</tr>
+<tr>
+<td></td>
+<td>Get video - mp4 1.1 mb custom url - curlmp41.1mb (14561.34)</td>
+</tr>
+<tr>
+<td></td>
+<td>Get image - jpeg 155 kb custom url - curljpg155kb (14448.63)</td>
+</tr>
+<tr>
+<td></td>
+<td>Get doc - pdf 171 kb custom url - curlpdf171kb (14370.48)</td>
+</tr>
+<tr>
+<td></td>
+<td>Get video - mp4 15mb - idmp415mb (10716.05)</td>
+</tr>
+</tbody>
+</table>
+<h5 id="observations_1">Observations</h5>
+<ul>
+<li>
+<p>No errors were observed and no pods restarted during the test.</p>
+</li>
+<li>
+<p>The total average response time, total throughput, and event loop lag for the Ring API pod improved significantly.</p>
+</li>
+<li>
+<p>The top five requests with higher response times are from DAM rendering and WCM inital page requests.</p>
+</li>
+</ul>
+<h2 id="performance-sizing-guidance-for-rendering-with-maximum-throughput-on-a-single-node">Performance-sizing guidance for rendering with maximum throughput on a single node</h2>
+<h3 id="overview-of-dx-rendering-sizing-performance-tests_1">Overview of DX rendering sizing-performance tests</h3>
+<p>DX sizing is one of the goals of DX performance tests. DX sizing aims to identify the reliable Kubernetes environment for small, medium, and large DX configurations. This topic presents the important KPIs (for example, number of concurrent users, average response time, and throughput) for the upper limit in a single-node configuration. This topic also discusses how adjustments to the core tuning, scaling of pods, and pod configuration can make significant improvements in system responsiveness.</p>
+<p>This sizing work started with rendering scenarios of Web Content Management (WCM), portlets, and Digital Asset Management (DAM) with a rendering setup enabled in AWS/Native-Kubernetes. The Apache JMeter tool was used for performance tests.</p>
+<p>For guidance when rendering with a small configuration, see <a href="./">Performance-sizing guidance for rendering with a small configuration</a>.</p>
+<h3 id="conclusion_1">Conclusion</h3>
+<p>This performance guidance shows the upper limit on a single-node K8s cluster AWS instance (c5.9xlarge). It is suggested that for single-node (c5.9xlarge) rendering scenarios for DAM, WCM, and pages with portlets, the recommended load is 2500 concurrent users with good average and 90th percentile (pct) response times. The top five response times of rendering APIs are all in the range of 4 to 5 seconds.</p>
+<ul>
+<li>
+<p>Core tuning details are available in <a href="#dx-core-tuning-and-enhancements-after-10000-concurrent-user-run">DX core tuning</a>.</p>
+</li>
+<li>
+<p>The following table contains the number and limits for each pod. Using these values significantly improves the responsiveness of the setup and enables the system to handle 2500 concurrent users with average and 90th percentile (pct) response times in the range of 4 to 5 seconds.</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pod name</th>
+<th>Number of pods</th>
+<th>Container</th>
+<th>Container image</th>
+<th>Container CPU request and limit</th>
+<th>Container memory request and limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>core</td>
+<td>4</td>
+<td>core</td>
+<td>core</td>
+<td>5000m</td>
+<td>8000Mi</td>
+</tr>
+<tr>
+<td>ringApi</td>
+<td>4</td>
+<td>ringApi</td>
+<td>ringApi</td>
+<td>800m</td>
+<td>512Mi</td>
+</tr>
+<tr>
+<td>haproxy</td>
+<td>4</td>
+<td>haproxy</td>
+<td>haproxy</td>
+<td>700m</td>
+<td>1024Mi</td>
+</tr>
+<tr>
+<td>digitalAssetManagement</td>
+<td>4</td>
+<td>digitalAssetManagement</td>
+<td>digitalAssetManagement</td>
+<td>1000m</td>
+<td>2048Mi</td>
+</tr>
+<tr>
+<td>persistence-connection-pool</td>
+<td>2</td>
+<td>persistence-connection-pool</td>
+<td>persistence-connection-pool</td>
+<td>500m</td>
+<td>512Mi</td>
+</tr>
+<tr>
+<td>persistence-node</td>
+<td>2</td>
+<td>persistence-node</td>
+<td>persistence-node</td>
+<td>1000m</td>
+<td>2048Mi</td>
+</tr>
+</tbody>
+</table>
+<h3 id="customer-rendering-scenario-details_1">Customer rendering scenario details</h3>
+<table>
+<thead>
+<tr>
+<th>Concurrent users</th>
+<th>Existing WCM pages</th>
+<th>Existing DAM content</th>
+<th>Pages with portlets</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Small  – 1000 users</td>
+<td>20</td>
+<td>2k</td>
+<td>80</td>
+</tr>
+<tr>
+<td>Medium – 10000 users</td>
+<td>200</td>
+<td>10k</td>
+<td>800</td>
+</tr>
+<tr>
+<td>Large  – 100000 users</td>
+<td>2000</td>
+<td>50 - 100k</td>
+<td>8000</td>
+</tr>
+</tbody>
+</table>
+<h3 id="environment_1">Environment</h3>
+<h4 id="awsnative-kubernetes_1">AWS/Native Kubernetes</h4>
+<ul>
+<li>
+<p>An AWS Elastic Compute Cloud (EC2) instance is running on a native Kubernetes platform with the DX images installed and configured.</p>
+</li>
+<li>
+<p>In AWS/Native Kubernetes, the tests are executed in EC2 instance (c5.9xlarge).</p>
+</li>
+<li>
+<p>The tests used a remote DB2 instance.</p>
+<p>[Single node Configuration]  - [c5.9xlarge] </p>
+</li>
+<li>
+<p>The tests started with c5.2xlarge, then c5.4xlarge, and then a c5.9xlarge instance after analyzing test results and observations.</p>
+<p><img alt="" src="../../../../../images/Header-1-AWS-Med.png" /></p>
+<p><img alt="" src="../../../../../images/C5.4x_9xlarge.png" /></p>
+</li>
+<li>
+<p>Processor details</p>
+<p><img alt="" src="../../../../../images/Processor_Info_Native-Kube-9x.png" /></p>
+</li>
+<li>
+<p>Volume details</p>
+<p><img alt="" src="../../../../../images/AWS-Native-Kube-Volume-Info-9x.png" /></p>
+</li>
+</ul>
+<h4 id="db2-instance_1">DB2 instance</h4>
+<ul>
+<li>
+<p>Remote DB2 - [c5.2xlarge]</p>
+<p><img alt="" src="../../../../../images/Header-1-AWS-Med.png" /></p>
+<p><img alt="" src="../../../../../images/C5.2xlarge.png" /></p>
+</li>
+<li>
+<p>Processor details</p>
+<p><img alt="" src="../../../../../images/Processor_Info_RemoteDB2_Med.png" /></p>
+</li>
+<li>
+<p>Volume details</p>
+<p><img alt="" src="../../../../../images/Remote-DB2-Volume-Info-Med.png" /></p>
+</li>
+</ul>
+<h4 id="jmeter-agents_1">JMeter agents</h4>
+<ul>
+<li>
+<p>JMeter instance - [c5.2xlarge]</p>
+</li>
+<li>
+<p>To run the tests, a distributed AWS/JMeter agents setup consisting of one primary and eight subordinates was used.</p>
+<p><img alt="" src="../../../../../images/Header-1-AWS-Med.png" /></p>
+<p><img alt="" src="../../../../../images/C5.2xlarge.png" /></p>
+</li>
+<li>
+<p>Processor details</p>
+<p><img alt="" src="../../../../../images/Processor_Info_RemoteDB2_Med.png" /></p>
+</li>
+<li>
+<p>Volume details</p>
+<p><img alt="" src="../../../../../images/Remote-DB2-Volume-Info-Med.png" /></p>
+</li>
+<li>
+<p>Processor details</p>
+<p><img alt="" src="../../../../../images/Processor_Info_Native-Kube.png" /></p>
+</li>
+<li>
+<p>Volume details</p>
+<p><img alt="" src="../../../../../images/AWS-Native-Kube-Volume-Info.png" /></p>
+</li>
+</ul>
+<h3 id="authoring-details">Authoring details</h3>
+<p>Set up the systems before performing the rendering tests. This section provides details for WCM, DAM, and portlets authoring.</p>
+<h3 id="wcm-default-test-data-200-pages">WCM Default Test Data - 200 pages</h3>
+<h4 id="wcm-test-data-characteristics_1">WCM test data characteristics</h4>
+<ul>
+<li>
+<p>The default test data has a WCM design library called "PerformanceTestDesign" and five content libraries named "PerformanceTestContent01" to "PerformanceTestContent05".</p>
+</li>
+<li>
+<p>Each content library contains four levels of site areas, with four site areas per level. Only the 256 "leaf" site areas contain content.</p>
+</li>
+<li>
+<p>Each leaf site area contains ten content items, for a total of 12,800 content items across the libraries.</p>
+</li>
+<li>
+<p>Half of the content items are visible to "Anonymous" and "All Authenticated" users. This portion of the content items is evenly distributed between these two types of users and is profiled with the keyword "MENU".</p>
+</li>
+<li>
+<p>The other half is visible only to members of ten groups per content item. These ten groups are spread out among the 500 groups assumed to exist in the test LDAP, and assumed to be called "Group0000" through "Group0499".</p>
+</li>
+<li>
+<p>There are 20 test-portal pages created under the "PerformanceTest" label. Each page has a URL in the form "<context-root>/perf/page-xx". 20 pages are duplicated to 200 pages.</p>
+</li>
+<li>
+<p>Each page contains 6 WCM viewer portlets that show content below one of the 20 top-level site areas. For example, Pages 01 to 04 show content from site areas "SA01" through "SA04" in the "PerformanceTestContent01" library, and pages 05 to 08 show content from site areas "SA01" through "SA04" in the "PerformanceTestContent02"  library, and so on.</p>
+</li>
+<li>
+<p>Four of the portlets on each page show single-content items. For page 01, these are the first content items in site areas: "SA01.01.01.01", "SA01.02.01.01", "SA01.03.01.01", and "SA01.04.01.01" respectively. Other pages follow the same pattern.</p>
+</li>
+<li>
+<p>Another portlet on each page shows a navigator of site areas and content items below the same top-level area.</p>
+</li>
+<li>
+<p>The final portlet on each page shows a menu of items and is scoped to the top-level site area. It also selects only those items profiled with the "MENU" keyword.</p>
+</li>
+<li>
+<p>A total of 99,999 users were added to openLDAP as authenticated users.</p>
+</li>
+</ul>
+<h3 id="dam-default-test-data-25000-assets">DAM default test data: 25,000 assets</h3>
+<ul>
+<li>
+<p>Testers uploaded 2,500 assets. These assets include images (136kb, .jpg), documents (199kb, .docx), and videos (1.1mb, .mp4) to preheat. After preloading 2,500 assets, 15 assets were uploaded and rendered for 1 hour.</p>
+</li>
+<li>
+<p>Details of 15 assets were uploaded for rendering.</p>
+</li>
+<li>
+<p>There are 19 URLs in total, three of which are custom URLs, eight are uuid URLs, and eight are short URLs, which are combinations of original, tablet, smartphone, and desktop renditions.</p>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Type</th>
+<th>Size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image</td>
+<td>.jpg/png/tif</td>
+<td>155kb, 2mb,5mb, 500kb, 100 kb, 2 mb,300 kb</td>
+</tr>
+<tr>
+<td>Video</td>
+<td>mp4/webm</td>
+<td>5 mb, 199kb,200kb , 2 mb,199kb</td>
+</tr>
+<tr>
+<td>Document</td>
+<td>docx/xlsx/pptx</td>
+<td>mp4- 1mb, 15mb, 100mb, webm- 2 mb</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For DAM, only anonymous rendering is available.</p>
+</div>
+<h3 id="pages-and-portlets-default-test-data-80-pages">Pages and portlets default test data: 80 pages</h3>
+<p>Customers typically use a total of eight pages with portlets. To complete authoring and rendering, both anonymous and authenticated users received access. The same users were added in openLDAP for WCM rendering. All authenticated users are assigned the User role. The pages in the following list are duplicated 10 times with different page numbers, resulting to 80 pages.</p>
+<p>As part of authoring, pages and portlets were added manually. The list shows the details of portlets for authoring on every page.</p>
+<ul>
+<li>Page 1 - 2 Articles</li>
+<li>Page 2 - 2 Rich text</li>
+<li>Page 3 - Login portlet</li>
+<li>Page 4 - Information Portlet(JSR) - JSP file -  jsp/oob/welcome.jsp </li>
+<li>Page 5 - Search Centre portlet</li>
+<li>Page 6 - Custom JSF portlet with simple form (disabled in JMeter script because there are some errors)</li>
+<li>Page 7 - Script Application portlet (Added JavaScript Functions, Date and Time object examples)</li>
+<li>Page 8 - Added all mentioned portlets except JSF portlet</li>
+</ul>
+<p>After completing the authoring steps, the anonymous portal user and authenticated users (added to openLDAP) must render the pages. Every page request uses a <code>/GET API</code> call (for example, <code>/wps/portal/portletsperf/page1</code>) and there is a response assertion in a sampler to validate the content html in the response body. </p>
+<h3 id="combined-dx-rendering-of-wcm-dam-and-pages-and-portlets_1">Combined DX rendering of WCM, DAM, and pages and portlets</h3>
+<p>For rendering sizing, all rendering JMeter scripts of WCM, DAM, and pages and portlets are combined. See the following section for details of load distribution.</p>
+<p><strong>Load distribution</strong></p>
+<ul>
+<li>WCM - 40%</li>
+<li>DAM - 30%</li>
+<li>Pages and Portlets - 30%</li>
+</ul>
+<h3 id="results-summary_1">Results summary</h3>
+<p>The following stages were conducted, starting with config DX kube configuration on a c5.4xlarge instance.</p>
+<h4 id="stage-1_1">Stage 1</h4>
+<ul>
+<li>
+<p>Stage 1 has the following objectives:</p>
+<ul>
+<li>To tune the DX rendering setup in a single node on a c5.4xlarge instance</li>
+<li>To check support for 10000 concurrent users with the average response time equal to 4 seconds</li>
+</ul>
+</li>
+<li>
+<p>The DX combined rendering ran with config deployments as mentioned in the following Helm values.</p>
+</li>
+<li>
+<p>For 1000 concurrent users, tests finished successfully with no errors.</p>
+</li>
+<li>
+<p>Errors occurred at a user load of 2000. Total error is around 1%.</p>
+</li>
+<li>
+<p>Helm values were modified for core, DAM, persistenceNode, and haproxy as seen in the following table.</p>
+</li>
+<li>
+<p>With this setup, the tests were able to run until 3000 concurrent users.</p>
+</li>
+</ul>
+<h5 id="stage-1-helm-values-of-a-single-node-configuration">stage-1 Helm values of a single-node configuration</h5>
+<div class="language-text highlight"><pre><span></span><code>                                    Requests                Limits
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>No. of pods</th>
+<th>cpu(m)</th>
+<th>memory(Mi)</th>
+<th>cpu(m)</th>
+<th>memory(Mi)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>contentComposer</td>
+<td>1</td>
+<td>100</td>
+<td>128</td>
+<td>100</td>
+<td>128</td>
+</tr>
+<tr>
+<td><strong>core</strong></td>
+<td><strong>1</strong></td>
+<td><strong>5000</strong></td>
+<td><strong>8000</strong></td>
+<td><strong>5000</strong></td>
+<td><strong>8000</strong></td>
+</tr>
+<tr>
+<td><strong>digitalAssetManagement</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1000</strong></td>
+<td><strong>2048</strong></td>
+<td><strong>1000</strong></td>
+<td><strong>2048</strong></td>
+</tr>
+<tr>
+<td>imageProcessor</td>
+<td>1</td>
+<td>200</td>
+<td>2048</td>
+<td>200</td>
+<td>2048</td>
+</tr>
+<tr>
+<td>openLdap</td>
+<td>1</td>
+<td>200</td>
+<td>768</td>
+<td>200</td>
+<td>768</td>
+</tr>
+<tr>
+<td><strong>persistenceNode</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1000</strong></td>
+<td><strong>2048</strong></td>
+<td><strong>1000</strong></td>
+<td><strong>2048</strong></td>
+</tr>
+<tr>
+<td>persistenceConnectionPool</td>
+<td>1</td>
+<td>500</td>
+<td>512</td>
+<td>500</td>
+<td>512</td>
+</tr>
+<tr>
+<td><strong>ringApi</strong></td>
+<td><strong>1</strong></td>
+<td><strong>500</strong></td>
+<td><strong>512</strong></td>
+<td>500</td>
+<td><strong>512</strong></td>
+</tr>
+<tr>
+<td>runtimeController</td>
+<td>1</td>
+<td>100</td>
+<td>256</td>
+<td>100</td>
+<td>256</td>
+</tr>
+<tr>
+<td><strong>haproxy</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1000</strong></td>
+<td><strong>1024</strong></td>
+<td><strong>1000</strong></td>
+<td><strong>1024</strong></td>
+</tr>
+<tr>
+<td>licenseManager</td>
+<td>1</td>
+<td>100</td>
+<td>300</td>
+<td>100</td>
+<td>300</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>9700</strong></td>
+<td><strong>17644</strong></td>
+<td><strong>9700</strong></td>
+<td><strong>17644</strong></td>
+</tr>
+</tbody>
+</table>
+<h5 id="results-overview_2">Results overview</h5>
+<table>
+<thead>
+<tr>
+<th>Medium Config Sizing</th>
+<th>Run1</th>
+<th>Run2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Environment</td>
+<td>AWS/Native Kube</td>
+<td>AWS/Native Kube</td>
+</tr>
+<tr>
+<td>Test Time (IST)</td>
+<td>2023-10-11T08:05:00 - 10:28:00</td>
+<td>2023-10-11T17:15:00 - 20:25:00</td>
+</tr>
+<tr>
+<td>Total Samples</td>
+<td>2611885</td>
+<td>3416582</td>
+</tr>
+<tr>
+<td>Concurent Users</td>
+<td>2000(WCM - 800 DAM - 600 Page&amp;Portlet - 600)</td>
+<td>3000(WCM - 1200 DAM - 900 Page&amp;Portlet - 900)</td>
+</tr>
+<tr>
+<td>Total Throughput (transactions/sec)</td>
+<td>303.33</td>
+<td>307.33</td>
+</tr>
+<tr>
+<td>Total Avg Response Time (in milli seconds)</td>
+<td>4656.72</td>
+<td>7138.92</td>
+</tr>
+<tr>
+<td>CPU Usage (%)</td>
+<td>42.42</td>
+<td>44.04</td>
+</tr>
+<tr>
+<td>Memory Usage (%)</td>
+<td>35.52</td>
+<td>36.35</td>
+</tr>
+<tr>
+<td>Disk Read IO (io/sec)</td>
+<td>0.08</td>
+<td>0.12</td>
+</tr>
+<tr>
+<td>Disk Write IO (io/sec)</td>
+<td>15.33</td>
+<td>15.73</td>
+</tr>
+<tr>
+<td>DAM EventLoop lag (ms)</td>
+<td>8.19</td>
+<td>10.6</td>
+</tr>
+<tr>
+<td>Ring EventLoop lag (ms)</td>
+<td>16.8</td>
+<td>23.4</td>
+</tr>
+<tr>
+<td>Error(%)</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Test Duration(sec)</td>
+<td>8600</td>
+<td>11100</td>
+</tr>
+<tr>
+<td></td>
+<td>Top 5 Requests (Avg Response Time in ms)</td>
+<td>Top 5 Requests (Avg Response Time in ms)</td>
+</tr>
+<tr>
+<td></td>
+<td>Initial Page Request - (26850.86)</td>
+<td>Initial Page Request - (41396.12)</td>
+</tr>
+<tr>
+<td></td>
+<td>Get video - mp4 1.1 mb custom url - curlmp41.1mb - (13922.89)</td>
+<td>Get video - mp4 1.1 mb custom url - curlmp41.1mb - (21806.35)</td>
+</tr>
+<tr>
+<td></td>
+<td>Get doc - pdf 171 kb  custom url - curlpdf171kb - (13752.72)</td>
+<td>Get doc - pdf 171 kb  custom url - curlpdf171kb - (21481.04)</td>
+</tr>
+<tr>
+<td></td>
+<td>Get image - jpeg 155 kb custom url - curljpg155kb - (13744.08)</td>
+<td>Get image - jpeg 155 kb custom url - curljpg155kb - (21449.53)</td>
+</tr>
+<tr>
+<td></td>
+<td>Get video - mp4 15mb - idmp415mb - (7650.36)</td>
+<td>Get video - webm 2mb - friendly url - furlwebm2mb - (11830.96)</td>
+</tr>
+</tbody>
+</table>
+<h5 id="observations_2">Observations</h5>
+<ul>
+<li>
+<p>For 3000 concurrent users, there is a total high response time, particularly for WCM APIs.</p>
+</li>
+<li>
+<p>For a user load of 6000, there is an http response code: <code>503 service unavailable errors in the test.</code></p>
+</li>
+<li>
+<p>All errors were from WCM and pages with portlets, not from DAM.</p>
+</li>
+<li>
+<p>Total average response time increases exponentially with load.</p>
+</li>
+<li>
+<p>No pod restarts observed.</p>
+</li>
+<li>
+<p>The goal is to have average and 90th pct response times in the range of 4 to 5 seconds. The tests were then moved to the next instance, from c5.4xlarge to c5.9xlarge.</p>
+</li>
+</ul>
+<h4 id="stage-2_1">Stage 2</h4>
+<p>Stage 2 has the following objectives:</p>
+<ul>
+<li>To tune the DX rendering setup in a single node on a c5.9xlarge instance</li>
+<li>To check support for 10000 concurrent users with the average response time equal to 4 seconds</li>
+</ul>
+<h5 id="helm-values">Helm values</h5>
+<div class="language-text highlight"><pre><span></span><code>                                    Requests                Limits
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>No. of pods</th>
+<th>cpu(m)</th>
+<th>memory(Mi)</th>
+<th>cpu(m)</th>
+<th>memory(Mi)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>contentComposer</td>
+<td>1</td>
+<td>100</td>
+<td>128</td>
+<td>100</td>
+<td>128</td>
+</tr>
+<tr>
+<td><strong>core</strong></td>
+<td><strong>4</strong></td>
+<td><strong>5000</strong></td>
+<td><strong>8000</strong></td>
+<td><strong>5000</strong></td>
+<td><strong>8000</strong></td>
+</tr>
+<tr>
+<td><strong>digitalAssetManagement</strong></td>
+<td><strong>4</strong></td>
+<td><strong>1000</strong></td>
+<td><strong>2048</strong></td>
+<td><strong>1000</strong></td>
+<td><strong>2048</strong></td>
+</tr>
+<tr>
+<td>imageProcessor</td>
+<td>1</td>
+<td>200</td>
+<td>2048</td>
+<td>200</td>
+<td>2048</td>
+</tr>
+<tr>
+<td>openLdap</td>
+<td>1</td>
+<td>200</td>
+<td>768</td>
+<td>200</td>
+<td>768</td>
+</tr>
+<tr>
+<td><strong>persistenceNode</strong></td>
+<td><strong>2</strong></td>
+<td><strong>1000</strong></td>
+<td><strong>2048</strong></td>
+<td><strong>1000</strong></td>
+<td><strong>2048</strong></td>
+</tr>
+<tr>
+<td>persistenceConnectionPool</td>
+<td>1</td>
+<td>500</td>
+<td>512</td>
+<td>500</td>
+<td>512</td>
+</tr>
+<tr>
+<td><strong>ringApi</strong></td>
+<td><strong>4</strong></td>
+<td><strong>500</strong></td>
+<td><strong>512</strong></td>
+<td>500</td>
+<td><strong>512</strong></td>
+</tr>
+<tr>
+<td>runtimeController</td>
+<td>1</td>
+<td>100</td>
+<td>256</td>
+<td>100</td>
+<td>256</td>
+</tr>
+<tr>
+<td><strong>haproxy</strong></td>
+<td><strong>4</strong></td>
+<td><strong>1000</strong></td>
+<td><strong>1024</strong></td>
+<td><strong>1000</strong></td>
+<td><strong>1024</strong></td>
+</tr>
+<tr>
+<td>licenseManager</td>
+<td>1</td>
+<td>100</td>
+<td>300</td>
+<td>100</td>
+<td>300</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>33200</strong></td>
+<td><strong>54444</strong></td>
+<td><strong>33200</strong></td>
+<td><strong>54444</strong></td>
+</tr>
+</tbody>
+</table>
+<h5 id="pods-in-native-kube-deployment-in-stage-2">Pods in native-kube deployment in stage-2</h5>
+<p><img alt="" src="../../../../../images/medium-config-pods.png" /></p>
+<h5 id="results-overview_3">Results overview</h5>
+<table>
+<thead>
+<tr>
+<th>Medium Config Sizing</th>
+<th>Run1</th>
+<th>Run2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Environment</td>
+<td>AWS/Native Kube</td>
+<td>AWS/Native Kube</td>
+</tr>
+<tr>
+<td>Test Time (IST)</td>
+<td>2023-10-17T12:10:00 - 15:40:00</td>
+<td>2023-10-19T06:43:00 - 11:53:00</td>
+</tr>
+<tr>
+<td>Total Samples</td>
+<td>10288912</td>
+<td>15602157</td>
+</tr>
+<tr>
+<td>Concurent Users</td>
+<td>6000(WCM - 2400 DAM - 1800 Page&amp;Portlet - 1800)</td>
+<td>10000(WCM - 4000 DAM - 3000 Page&amp;Portlet - 3000)</td>
+</tr>
+<tr>
+<td>Total Throughput (transactions/sec)</td>
+<td>815.05</td>
+<td>837.06</td>
+</tr>
+<tr>
+<td>Total Avg Response Time (in milli seconds)</td>
+<td>4813.22</td>
+<td>8130.75</td>
+</tr>
+<tr>
+<td>CPU Usage (%)</td>
+<td>64.09</td>
+<td>65.63</td>
+</tr>
+<tr>
+<td>Memory Usage (%)</td>
+<td>30.69</td>
+<td>45.9</td>
+</tr>
+<tr>
+<td>Disk Read IO (io/sec)</td>
+<td>1.24</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td>Disk Write IO (io/sec)</td>
+<td>27.5</td>
+<td>24.73</td>
+</tr>
+<tr>
+<td>DAM EventLoop lag (ms)</td>
+<td>8.36</td>
+<td>15.5</td>
+</tr>
+<tr>
+<td>Ring EventLoop lag (ms)</td>
+<td>9.31</td>
+<td>17.6</td>
+</tr>
+<tr>
+<td>Error (%)</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Test Duration (sec)</td>
+<td>12600</td>
+<td>18600</td>
+</tr>
+<tr>
+<td></td>
+<td>Top 5 Requests (Avg Response Time in ms)</td>
+<td>Top 5 Requests (Avg Response Time in ms)</td>
+</tr>
+<tr>
+<td></td>
+<td>Get video - mp4 1.1 mb custom url - curlmp41.1mb - (26663.91)</td>
+<td>Get video - mp4 1.1 mb custom url - curlmp41.1mb - (43301.53)</td>
+</tr>
+<tr>
+<td></td>
+<td>Get doc - pdf 171 kb  custom url - curlpdf171kb - (26463.77)</td>
+<td>Get doc - pdf 171 kb  custom url - curlpdf171kb - (42721.38)</td>
+</tr>
+<tr>
+<td></td>
+<td>Get image - jpeg 155 kb custom url - curljpg155kb - (26244.08)</td>
+<td>Initial Page Request - (42702.96)</td>
+</tr>
+<tr>
+<td></td>
+<td>Initial Page Request - (24795.62)</td>
+<td>Get image - jpeg 155 kb custom url - curljpg155kb - (42464.43)</td>
+</tr>
+<tr>
+<td></td>
+<td>Get image - png - 500kb - Desktop - idpng500kbD -(16446.86)</td>
+<td>Get video - webm 2mb - friendly url - furlwebm2mb - (26543.91)</td>
+</tr>
+</tbody>
+</table>
+<h5 id="observations_3">Observations</h5>
+<ul>
+<li>
+<p>For 6000 concurrent users (WCM - 2400, DAM - 1800, Pages and portlets - 1800) and 6 JMeter subordinates, the core was scaled to 3 pods, and DAM, Persistence Node, Ring API, and HAProxy were scaled to 2 each.</p>
+</li>
+<li>
+<p>Horizontal Pod Autoscaling (HPA) was enabled for core, DAM, haproxy, and ringAPI Pods with thresholds of 50% for CPU utilization and 80% for memory utilization. HPA test run executed successfully with no errors.</p>
+</li>
+<li>
+<p>Through HPA tests, it was observed that 4 pods of core, DAM, haproxy, and 3 pods of ringAPI must have a successful run for 6000 concurrent users.</p>
+</li>
+<li>
+<p>With this setup, the test was run for 10000 concurrent users. Test was executed successfully until 10000 concurrent ramp up. At a steady state of 10000 concurrent users, there are a few failures due to the ringAPI pod going down intermittently. RingAPI pods are then scaled to 4.</p>
+</li>
+<li>
+<p>The test run was successful with 10000 concurrent users with 4 pods of core, DAM, haproxy, and ringAPI each.</p>
+</li>
+</ul>
+<h4 id="stage-3">Stage 3</h4>
+<p>Stage 3 has the following objectives:</p>
+<ul>
+<li>To tune the DX rendering setup in a single node on a c5.4xlarge instance</li>
+<li>To determine the upper limit with the average response time equal to 4 seconds</li>
+<li>To ensure error percentage in results is 0%</li>
+</ul>
+<h5 id="improved-response-times-of-individual-apis-and-conclusion-on-load-for-comfortable-rendering">Improved response times of individual APIs and conclusion on load for comfortable rendering</h5>
+<p>As there is a high response time for individual API requests, tuning of core and code improvements in DAM began in CF219.</p>
+<h5 id="dx-core-tuning-and-enhancements-after-10000-concurrent-user-run">DX core tuning and enhancements after 10000 concurrent user run</h5>
+<p>The following list contains details of tuning and enhancements done to DX core during testing:</p>
+<ul>
+<li>LTPA token timeout increased from 120 minutes to 480 minutes for rendering tests execution.</li>
+</ul>
+<p><img alt="" src="../../../../../images/Core_Tuning_LTPA.png" /></p>
+<ul>
+<li>WCM object cache for rendering updated as per DX performance tuning guide.</li>
+</ul>
+<p><img alt="" src="../../../../../images/Core_WCM_Object_Cache_list.png" /></p>
+<p><img alt="" src="../../../../../images/WCM_Object_Cache_Instances.png" /></p>
+<ul>
+<li>
+<p>Updated abspath, abspathreverse, processing, session, strategy, summary values WCM rendering values as per tuning guide.</p>
+</li>
+<li>
+<p>Added new custom property under <strong>Resource environment providers &gt; WP CacheManagerService &gt; Custom properties &gt; cacheinstance.com.ibm.wps.resolver.friendly.cache.size</strong>.</p>
+</li>
+</ul>
+<p><img alt="" src="../../../../../images/Core_Friendly_Url_Cache.png" /></p>
+<ul>
+<li>Adjusted JVM Heap size from 3584 to 4096 under <strong>Application servers &gt; WebSphere_Portal &gt; Process_definition &gt; Java Virtual Machine</strong>.</li>
+</ul>
+<p><img alt="" src="../../../../../images/Core_JVM_Tuning.png" /></p>
+<ul>
+<li>Set LDAP user cache attributes and search to 10000.</li>
+</ul>
+<p><img alt="" src="../../../../../images/Core_DX_LDAP_User_Cache.png" /></p>
+<ul>
+<li>Disabled jcr.text.search under <strong>Resource environment providers &gt; JCR ConfigService Portal Content &gt; Custom properties</strong> because there is no search functionality.</li>
+</ul>
+<p><img alt="" src="../../../../../images/Core_Tuning_JCR_Text_Search_Disable.png" /></p>
+<ul>
+<li>Deleted search collections in <strong>Portal &gt; Administration &gt; Search &gt; Search collections</strong> (both JCRCollection1 and Default Search Collection).</li>
+</ul>
+<p><img alt="" src="../../../../../images/Core_Tuning_Delete_Search_Collections.png" /></p>
+<ul>
+<li>Logged level changes from info to severe in WAS for in both configuration and run time.</li>
+</ul>
+<p><img alt="" src="../../../../../images/Core_Tuning_Log_Level_Details.png" /></p>
+<p>!!!note
+       Restart all core pods after performing all the tunings steps mentioned.</p>
+<ul>
+<li>DB2 tuning performed by executing DB2 Reorg and Runstats.</li>
+</ul>
+<h4 id="stage-3-helm-values">Stage-3 Helm values</h4>
+<div class="language-text highlight"><pre><span></span><code>                                    Requests                Limits
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>No. of pods</th>
+<th>cpu(m)</th>
+<th>memory(Mi)</th>
+<th>cpu(m)</th>
+<th>memory(Mi)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>contentComposer</td>
+<td>1</td>
+<td>100</td>
+<td>128</td>
+<td>100</td>
+<td>128</td>
+</tr>
+<tr>
+<td><strong>core</strong></td>
+<td><strong>4</strong></td>
+<td><strong>5000</strong></td>
+<td><strong>8000</strong></td>
+<td><strong>5000</strong></td>
+<td><strong>8000</strong></td>
+</tr>
+<tr>
+<td><strong>digitalAssetManagement</strong></td>
+<td><strong>4</strong></td>
+<td><strong>1000</strong></td>
+<td><strong>2048</strong></td>
+<td><strong>1000</strong></td>
+<td><strong>2048</strong></td>
+</tr>
+<tr>
+<td>imageProcessor</td>
+<td>1</td>
+<td>200</td>
+<td>2048</td>
+<td>200</td>
+<td>2048</td>
+</tr>
+<tr>
+<td>openLdap</td>
+<td>1</td>
+<td>200</td>
+<td>768</td>
+<td>200</td>
+<td>768</td>
+</tr>
+<tr>
+<td><strong>persistenceNode</strong></td>
+<td><strong>2</strong></td>
+<td><strong>1000</strong></td>
+<td><strong>2048</strong></td>
+<td><strong>1000</strong></td>
+<td><strong>2048</strong></td>
+</tr>
+<tr>
+<td><strong>persistenceConnectionPool</strong></td>
+<td><strong>2</strong></td>
+<td>500</td>
+<td>512</td>
+<td>500</td>
+<td>512</td>
+</tr>
+<tr>
+<td><strong>ringApi</strong></td>
+<td><strong>4</strong></td>
+<td><strong>800</strong></td>
+<td><strong>512</strong></td>
+<td>500</td>
+<td><strong>512</strong></td>
+</tr>
+<tr>
+<td>runtimeController</td>
+<td>1</td>
+<td>100</td>
+<td>256</td>
+<td>100</td>
+<td>256</td>
+</tr>
+<tr>
+<td><strong>haproxy</strong></td>
+<td><strong>4</strong></td>
+<td><strong>700</strong></td>
+<td><strong>1024</strong></td>
+<td><strong>1000</strong></td>
+<td><strong>1024</strong></td>
+</tr>
+<tr>
+<td>licenseManager</td>
+<td>1</td>
+<td>100</td>
+<td>300</td>
+<td>100</td>
+<td>300</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>33700</strong></td>
+<td><strong>54956</strong></td>
+<td><strong>33700</strong></td>
+<td><strong>54956</strong></td>
+</tr>
+</tbody>
+</table>
+<h5 id="details-of-pods-in-native-kube-deployment">Details of Pods in native-kube deployment</h5>
+<p><img alt="" src="../../../../../images/pods_single-node_c5_9xlarge_config.png" /></p>
+<h5 id="results-overview_4">Results overview</h5>
+<table>
+<thead>
+<tr>
+<th>DX Single node Config Sizing</th>
+<th>Run1</th>
+<th>Run2</th>
+<th>Run3</th>
+<th>Run4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Environment</td>
+<td>AWS/Native Kube</td>
+<td>AWS/Native Kube</td>
+<td>AWS/Native Kube</td>
+<td>AWS/Native Kube</td>
+</tr>
+<tr>
+<td>Test Time (IST)</td>
+<td>2024-03-15T13:30:00 - 18:30:00</td>
+<td>2024-04-17T22:49:00 - 2024-04-18T1:54:00</td>
+<td>2024-04-18T8:36:00 - 10:51:00</td>
+<td>2024-04-18T12:32:00 - 14:35:00</td>
+</tr>
+<tr>
+<td>Total samples</td>
+<td>19715730</td>
+<td>10927343</td>
+<td>7596758</td>
+<td>6781806</td>
+</tr>
+<tr>
+<td>Concurrent Users</td>
+<td>10000(WCM - 4000 DAM - 3000 Page&amp;Portlet - 3000)</td>
+<td>5000(WCM - 2000 DAM - 1500 Page&amp;Portlet - 1500)</td>
+<td>3016(WCM - 1200 DAM - 904 Page&amp;Portlet - 912)</td>
+<td>2504(WCM - 1008 DAM - 744 Page&amp;Portlet - 752)</td>
+</tr>
+<tr>
+<td>Total Throughput (transactions/sec)</td>
+<td>1058.66</td>
+<td>983.73</td>
+<td>937.44</td>
+<td>922.4</td>
+</tr>
+<tr>
+<td>Total Avg Response Time (in milli seconds)</td>
+<td>5572.72</td>
+<td>2526.04</td>
+<td>1203.10</td>
+<td>845.84</td>
+</tr>
+<tr>
+<td>CPU Usage (%)</td>
+<td>80.2</td>
+<td>70.90 ( max-80.9)</td>
+<td>69.46 (max -80.5)</td>
+<td>69.29(max-82.74)</td>
+</tr>
+<tr>
+<td>Memory Usage (%)</td>
+<td>44.56</td>
+<td>42.63</td>
+<td>40.96</td>
+<td>34.3</td>
+</tr>
+<tr>
+<td>Disk Read IO (io/sec)</td>
+<td>0.5</td>
+<td>0.14</td>
+<td>0.05</td>
+<td>0.1</td>
+</tr>
+<tr>
+<td>Disk Write IO (io/sec)</td>
+<td>23.1</td>
+<td>16.17</td>
+<td>15.41</td>
+<td>14.71</td>
+</tr>
+<tr>
+<td>DAM EventLoop lag (ms)</td>
+<td>16.3</td>
+<td>11.40</td>
+<td>10.80</td>
+<td>8.16</td>
+</tr>
+<tr>
+<td>Ring EventLoop lag (ms)</td>
+<td>7.26</td>
+<td>26.30</td>
+<td>26.30</td>
+<td>6.73</td>
+</tr>
+<tr>
+<td>Error (%)</td>
+<td>0</td>
+<td>0.00</td>
+<td>0.01</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Test Duration (sec)</td>
+<td>18600</td>
+<td>11100</td>
+<td>8100.00</td>
+<td>7350</td>
+</tr>
+<tr>
+<td></td>
+<td>Top 5 Requests (Avg Respone Time in ms)</td>
+<td>Top 5 Requests (Avg Respone Time in ms)</td>
+<td>Top 5 Requests (Avg Respone Time in ms)</td>
+<td>Top 5 Requests (Avg Respone Time in ms)</td>
+</tr>
+<tr>
+<td></td>
+<td>Get video - mp4 1.1 mb custom url - curlmp41.1mb - (24315.91)</td>
+<td>Get video - mp4 1.1 mb custom url - curlmp41.1mb - (10053.67)</td>
+<td>Get video - mp4 1.1 mb custom url - curlmp41.1mb - (4381.84)</td>
+<td>Get video - mp4 1.1 mb custom url - curlmp41.1mb - (2913.21)</td>
+</tr>
+<tr>
+<td></td>
+<td>Get doc - pdf 171 kb  custom url - curlpdf171kb - (24228.67)</td>
+<td>Get doc - pdf 171 kb  custom url - curlpdf171kb - (10023.32)</td>
+<td>Get doc - pdf 171 kb  custom url - curlpdf171kb - (4340.01)</td>
+<td>Get doc - pdf 171 kb  custom url - curlpdf171kb - (2856.73)</td>
+</tr>
+<tr>
+<td></td>
+<td>Get image - jpeg 155 kb custom url - curljpg155kb - (24194.05)</td>
+<td>Get image - jpeg 155 kb custom url - curljpg155kb - (9979.99)</td>
+<td>Get image - jpeg 155 kb custom url - curljpg155kb - (4331.49)</td>
+<td>Get image - jpeg 155 kb custom url - curljpg155kb - (2845.83)</td>
+</tr>
+<tr>
+<td></td>
+<td>Get video - mp4 15mb - idmp415mb - (13017.10)</td>
+<td>Get video - mp4 15mb - idmp415mb - (5777.50)</td>
+<td>Get video - mp4 15mb - idmp415mb - (3029.90)</td>
+<td>Get video - mp4 15mb - idmp415mb - (2326.63)</td>
+</tr>
+<tr>
+<td></td>
+<td>Get doc - pdf - 5mb - friendly url - Desktop - furlpdf5mb - (12745.02)</td>
+<td>Get doc - pdf - 5mb - friendly url - Desktop - furlpdf5mb - (5550.00)</td>
+<td>Get doc - pdf - 5mb - friendly url - Desktop - furlpdf5mb - (2807.16)</td>
+<td>Get doc - pdf - 5mb - friendly url - Desktop - furlpdf5mb- (2029.32)</td>
+</tr>
+</tbody>
+</table>
+<h5 id="observations_4">Observations</h5>
+<ul>
+<li>
+<p>76 bad requests out of 6647702 samples (contributing to 0% error rate) from JMeter results observed only in DAM APIs, which is negligible.</p>
+</li>
+<li>
+<p>The CPU usage of a node reached an average of 80% in tests with 10000 concurrent users. The saturation was checked by reducing the number of users to 5000, 3000, and 2500 users. Node CPU average usage is then close to 70% and maximum is 80% in all 5000, 3000, and 2500 users load test results.</p>
+</li>
+<li>
+<p>For 5000 and 3000 concurrent users, results of average and 90th pct response time of APIs exceed 5 seconds.</p>
+</li>
+<li>
+<p>It is suggested that for a single node (c5.9xlarge) rendering scenarios for DAM, WCM, and pages with portlets, the recommended load is 2500 concurrent users with good average and 90th percentile (pct) response times. The top five response times of rendering APIs are all in the range of 4 to 5 seconds.</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 21, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>
