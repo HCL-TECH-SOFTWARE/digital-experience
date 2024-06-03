@@ -6,7 +6,7 @@ The search currently provides the following capabilities:
 
 - WCM crawling
 - Pushing API for use with WCM Content Sources
-- Search through REST API
+- Searching using REST API
 
 ## Prerequisites
 
