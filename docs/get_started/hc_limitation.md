@@ -1,4 +1,4 @@
-# Help Center limitation
+# Help Center Limitation
 
 This topic lists the existing limitations of the HCL Digital Experience (DX) Help Center.
 
