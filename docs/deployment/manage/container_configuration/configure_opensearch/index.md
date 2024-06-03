@@ -1,3 +1,7 @@
+---
+title: Configuring OpenSearch
+---
+
 # Configuring OpenSearch
 
 This section gives you an introduction into the configuration of the search based on OpenSearch for HCL Digital Experience (DX).
