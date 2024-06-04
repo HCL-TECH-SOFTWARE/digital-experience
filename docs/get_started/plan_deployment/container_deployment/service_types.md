@@ -13,12 +13,6 @@ Headless Services are used to interface with other service discovery mechanisms 
 A headless Service allows a client to connect directly to whichever Pod it prefers. Unlike normal Services, headless Services do not configure routes and packet forwarding using virtual IP addresses and proxies. Instead, they report the endpoint IP addresses of the individual Pods via internal DNS records, served through the cluster's DNS services.
 Further details can be found in [Headless Services](https://kubernetes.io/docs/concepts/services-networking/service/#headless-services)
 
-Few examples of the services used in DX are:
-- **core-headless** for HAProxy to handle load balancing for Core by identifying each Pod individually to determine the correct routing destination.
-- **core-unready-headless** for remote search auto configuration (RS) to communicate with each Pod individually. This configuration also routes to non-Ready Services because it is established before Core is started.
-- **haproxy-headless** for the license manager to collect and aggregate session data from each HAProxy instance.
-- **persistence-headless-svc** for enabling the persistence nodes to communicate with each other directly.
-
 ## unready-pod-0
 !!! note
       unready-pod-0 is a special type of service for DX and isn't a common service in Kubernetes.
