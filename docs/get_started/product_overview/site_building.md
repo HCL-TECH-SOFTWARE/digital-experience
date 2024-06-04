@@ -8,7 +8,7 @@ hide: tags
 ---
 # Site building
 
-With HCL DX, you can combine [applications](application_integration.md), [content](content_management.md), and [assets](asset_management.md) into websites. You can use [personalization](personalization.md) and [role based access control](role_based_access.md) to ensure that your users receive an experience that is tailored to their needs and to your organization's security policies.
+With HCL Digital Experience (DX), you can combine [applications](application_integration.md), [content](content_management.md), and [assets](asset_management.md) into websites. You can use [personalization](personalization.md) and [role based access control](role_based_access.md) to ensure that your users receive an experience that is tailored to their needs and to your organization's security policies.
 
 ## Site building and editing
 
@@ -34,12 +34,12 @@ The platform’s included Theme Optimization Analyzer can create validation repo
 
 ## Mobile and Omnichannel access
 
-HCL Digital Experience provides a wide range of mobile and omnichannel capabilities. 
+HCL DX provides a wide range of mobile and omnichannel capabilities. 
 
-As outlined in the chart below one can choose different paths depending on the requirements for a given site.
+The following image shows how you can choose different paths depending on the requirements for a given site.
 ![Omnichannel delivery](assets/omnichannel.png)
 
-The platform provides mobile-enabled themes, providing site designers immediately with support to deliver mobile ready, responsive sites.
+The platform provides mobile-enabled themes, enabling site designers to deliver mobile-ready, responsive sites.
 
 HCL DX has built-in device detection capability designed to recognize mobile devices and adapt to layout presentation requirements for optimal rendering. The device classes included with the product define common properties for the device of a mobile client and can be updated as need. Device detection works with the modular theme framework to dynamically ensure that only relevant theme modules are delivered to mobile devices, optimizing download size.
 
