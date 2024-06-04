@@ -238,7 +238,7 @@ The following examples demonstrate the different ways of specifying portlet pref
     <meta name=”DC.publisher” content=”IBM”/>
     ```
 
--   Beginning with CF221, support for the Open Graph protocol has been added. This allows you to set the `property` attribute value in the meta tag. Here, the meta tag value is set with the title of the rendered content:
+-   Beginning with CF221, support for Open Graph protocol is added. This protocol allows you to set the `property` attribute value in the meta tag. In the following example, the meta tag value is set with the title of the rendered content:
 
     ```
     meta.tag.name.1=og:title 
