@@ -45,4 +45,4 @@ HCL DX has built-in device detection capability designed to recognize mobile dev
 
 Mobile preview is built in and provides a real-time preview of HCL DX sites on a variety of mobile devices.
 
-Find more information at [Mobile](../../build_sites/mobile/index.md)
+For more information, see [Mobile](../../build_sites/mobile/index.md).
