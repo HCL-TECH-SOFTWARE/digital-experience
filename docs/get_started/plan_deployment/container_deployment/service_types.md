@@ -29,5 +29,5 @@ For more information, see [Headless Services](https://kubernetes.io/docs/concept
 !!! note
       unready-pod-0 is a special type of Service for DX and is not a common service in Kubernetes.
 
-The unready-pod-0 Service forwards traffic to the first Core Pod (core-0) even if its status is `not ready`. It is primarily used for the Config Wizard, which may restart the Portal server and render the Pod unready. Despite the Portal not running, the Config Wizard can still connect to the Pod.
+The unready-pod-0 Service forwards traffic to the first Core Pod (core-0) even if its status is `not ready`. It is primarily used for the Config Wizard, which might restart the Portal server and render the Pod unready. Despite the Portal not running, the Config Wizard can still connect to the Pod.
 
