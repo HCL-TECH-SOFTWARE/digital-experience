@@ -5,7 +5,7 @@ You can enable AI analysis for Web Content Management (WCM) content in a Kuberne
 !!!note
 	OpenAI ChatGPT is the supported content AI provider for CF213 and later. Custom AI implementation is supported for CF214 and later.
 
-Starting CF221, the AI model is switched to ```gpt-4o``` as the newest and most capable model with up to date information.
+Starting CF221, the AI model is switched to ```gpt-4o```. This model is the newest and the most capable model with up-to-date information.
 
 ## Content AI provider overview
 
