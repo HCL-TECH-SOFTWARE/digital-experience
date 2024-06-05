@@ -39,8 +39,10 @@ The following topics mention several sample files suitable for different purpose
 
 ## XMLAccess progress logging
 
-Starting with version CF 221 one can enable progress logging to see how far XMLAccess is along in updating items contained in the xmlaccess input script. To use that new function turn on tracing for: ```com.ibm.wps.command.xml.Progress=all```
-The trace.log file will contain entries like the following:
+Starting CF221, you can enable progress logging to see the progress of XMLAccess in updating items contained in the xmlaccess input script. To use this new function, turn on tracing for: ```com.ibm.wps.command.xml.Progress=all```
+
+The trace.log file contain entries like the following:
+
 ```
 [6/3/24 12:49:18:113 UTC] 000001e2 UpdateEngine  I com.ibm.wps.command.xml.UpdateEngine logProgress XMLAccess progress - started updating skin with name: [skin ZK_00000000000000AQ78VEJK2001 uniquename=ibm.portal.SimpleStandard] overall item: 0
 [6/3/24 12:49:18:234 UTC] 000001e2 UpdateEngine  I com.ibm.wps.command.xml.UpdateEngine logProgress XMLAccess progress - finished updating skin with name: [skin ZK_00000000000000AQ78VEJK2001 uniquename=ibm.portal.SimpleStandard] overall item: 1
@@ -54,7 +56,14 @@ The trace.log file will contain entries like the following:
 [6/3/24 12:49:19:448 UTC] 000001e2 UpdateEngine  I com.ibm.wps.command.xml.UpdateEngine logProgress XMLAccess progress - started updating page with name: [content-node Z6_000000000000000000000000A0 uniquename=wps.content.root] overall item: 339
 [6/3/24 12:49:24:658 UTC] 000001e2 UpdateEngine  I com.ibm.wps.command.xml.UpdateEngine logProgress XMLAccess progress - finished updating page with name: [content-node Z6_000000000000000000000000A0 uniquename=wps.content.root] overall item: 341
 ```
-The artifacts we log the start and stop for are skins, themes, web applications, pages, users, and groups.
+The system logs the start and end times for the following artifacts: 
+
+- Skins
+- Themes
+- Web applications
+- Pages
+- Users
+- Groups
 
 ???+ info "Related information"  
     -   [Scheduling scope synchronization](../../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tagrate_managing/syn_scope/wcm_tagrate_syncscope_sched.md)
