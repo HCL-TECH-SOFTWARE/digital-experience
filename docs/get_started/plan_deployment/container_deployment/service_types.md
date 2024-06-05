@@ -1,4 +1,4 @@
-# Types of Services
+# Types of Services used in DX
 
 In Kubernetes, a [Service](https://kubernetes.io/docs/concepts/services-networking/service/) is a method for exposing a network application that is running as one or more Pods in your cluster. You can run code in Pods and use a Service to make that set of Pods available on the network, allowing clients to interact with it.
 
