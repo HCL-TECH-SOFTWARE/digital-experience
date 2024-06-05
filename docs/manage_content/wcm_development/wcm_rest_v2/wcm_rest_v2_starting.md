@@ -60,11 +60,12 @@ http or https://host:port/dx/api/wcm/v2/explorer/
     https://localhost:10039/dx/api/wcm/v2/explorer/
     ```
 
-## Cache headers for WCM REST v2
-Starting with version CF221 it is possible to configure a cache header for GET requests for the unauthenticated user for better performance and cachability. To enable the new feature set the property to a value for expiry:```public.rest.cache.expiry=86400s```. 86400s is just a sample representing 24 hours.
+## Cache headers for WCM REST V2
 
-You define and manage the cache options in the `WCM WCMConfigService` service by using the WebSphere® Integrated Solutions Console.
-Go to **Resources** \> **Resource Environment** \> **Resource Environment Providers** \> **WCM WCMConfigService** \> **Custom Properties**.
+Starting CF221, you can configure a cache header for GET requests for unauthenticated users. Configuring cache headers result to better performance and cachability. To enable this feature, set the property to a value for expiry: ```public.rest.cache.expiry=86400s```. 86400s is an example representing 24 hours.
+
+Define and manage the cache options in the `WCM WCMConfigService` service by using the WebSphere® Integrated Solutions Console.
+Go to **Resources** > **Resource Environment** > **Resource Environment Providers** > **WCM WCMConfigService** > **Custom Properties**.
 
 
 ???+ info "Related information"
