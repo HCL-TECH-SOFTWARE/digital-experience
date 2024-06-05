@@ -34,10 +34,12 @@ From time to time items fail to syndicate. You use the failed items view to revi
     
 4.  After you identified and fixed the issues, you can click **Retry** to initiate syndication for individual items, or use the **Retry All** in the Important Items tab to try to syndicate all failed items. You can also choose to update or rebuild a syndication relationship.
 
-## Syndication Progress logging
+## Syndication progress logging
 
-New with CF 221 HCL DX allows to log syndication progress on the subscriber. The progress logging can be enabled by setting ```show_subscriber_progress=true``` in the **WCM WCMConfigService** service by using the WebSphere® Integrated Solutions Console.
-If enabled information like the following can be seen in the SystemOut.log file:
+Starting CF221, you can log the syndication progress on the subscriber. To enable progress logging, set ```show_subscriber_progress=true``` in the **WCM WCMConfigService** service by using the WebSphere® Integrated Solutions Console.
+
+When enabled, information similar to the following example is seen in the SystemOut.log file:
+
 ```
 [5/29/24 16:12:35:258 UTC] 00000225 PackageProces I   Subscriber "TestSubscriber" items to be updated = 2
 [5/29/24 16:12:35:259 UTC] 00000225 PackageProces I   Subscriber: Processing Item number 1 of 2
