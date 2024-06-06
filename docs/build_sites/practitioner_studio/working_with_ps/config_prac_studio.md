@@ -20,7 +20,7 @@ Starting CF221, the virtual Portal Manager is configured to use the file `WebSph
 !!! note
     This does not create the two Woodburn Studio libraries in the virtual portal. You will need to syndicate these libraries to your virtual portal.
 
-Alteratively, to skip Woodburn Studio, you can use the file `WebSphere:assetname=VirtualPortal.zip:InitVirtualContentPortalV9.5NoWoodburn.xml` starting CF221.
+Alternatively, to skip Woodburn Studio, you can use the file `WebSphere:assetname=VirtualPortal.zip:InitVirtualContentPortalV9.5NoWoodburn.xml` starting CF221.
 
 ## Removing Practitioner Studio or Woodburn Studio from a virtual portal that was created by modifying the Virtual Portal Manager configuration
 
