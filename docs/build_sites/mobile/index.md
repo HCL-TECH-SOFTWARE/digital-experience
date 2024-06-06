@@ -3,7 +3,7 @@
 The HCL Digital Experience (DX) platform presents mobile-enabled services support that enables you to deliver consistent, personalized cross-channel experiences quickly.
 
 The following image shows how you can choose different paths depending on the requirements for a given site.
-![Omnichannel delivery](../../get_started/assets/omnichannel.png)
+![Omnichannel delivery](../../get_started/product_overview/assets/omnichannel.png)
 
 
 ## Limitation
