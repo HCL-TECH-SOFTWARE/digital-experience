@@ -193,7 +193,6 @@ All LDAP Servers that support the LDAP V3 Specification are supported.
 |Android default browser|Newer levels are supported|8.5|
 |Apple Safari|Newer levels are supported|8.5|
 |Google Chrome|Newer levels are supported|8.5|
-|Microsoft Edge|Newer levels are supported|8.5|
 |Microsoft Edge Chromium-Based|Newer levels are supported|8.5|
 |Mozilla Firefox|Newer levels are supported|8.5|
 |Mozilla Firefox ESR|Newer levels are supported|8.5|
