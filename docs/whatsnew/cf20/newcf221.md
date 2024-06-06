@@ -1,6 +1,6 @@
-# What's new in CF220
+# What's new in CF221
 
-The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF220 on supported platforms:
+The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF221 on supported platforms:
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
@@ -24,7 +24,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Virtual Portal Manager configured so that newly created virtual Portals contain Practitioner Studio
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
-- Notice of deprecation of automated Pod restart on ConfigMap updates
+- Removal of automated Pod restart on ConfigMap updates
 
 Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases.
 
@@ -88,10 +88,10 @@ Starting with CF221 additional inline edit menu options have been added when usi
 === "Containers"
     Starting CF216, the Harbor repository is updated with an OCI-based registry and the Helm chart command is updated to be OCI-compliant. Instructions on how to pull Helm charts using OCI commands are now available. For more information, see the Help Center topics [Configure Harbor Helm Repository](../../deployment/install/container/helm_deployment/preparation/get_the_code/configure_harbor_helm_repo.md) and [Download and Deploy from HCL Harbor Repository](../../get_started/download/harbor_container_registry.md).
 
-###  Notice of deprecation of automated Pod restart on ConfigMap updates
+### Removal of automated Pod restart on ConfigMap updates
 
 === "Containers"
-    Starting with the next DX release, CF221, Runtime Controller will not restart Pods automatically when a ConfigMap is changed manually. For production deployments, always use the Helm custom values and `helm upgrade` to change configuration. Using Helm upgrade for configuration changes triggers the appropriate restart processes. For development and testing when a ConfigMap is changed, you have to restart the appropriate Pod manually. For more information, see [Container configuration](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes) and [Deprecated features](../deprecated_features.md).
+    Runtime Controller triggering Pod restarts for [direct configuration changes](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes) in ConfigMaps is removed. You must restart the appropriate Pods manually to apply the changes made to the ConfigMaps for testing configurations. For more information, see [Deprecated features](../deprecated_features.md).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 

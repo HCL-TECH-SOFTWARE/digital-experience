@@ -50,6 +50,9 @@ With the **Page Display Title** field in the portlet settings for the viewer, yo
         meta.tag.name.suffix=name
         ```
 
+        !!! note
+                  Beginning with CF221, if the `meta.tag.name.suffix` value starts with `og:`, it is treated as an Open Graph protocol and the attribute key is set to `property` instead of `name` by default.
+
         If you want to specify an attribute other than the name attribute, you can define the attribute name with the following format:
 
         ```
@@ -233,6 +236,19 @@ The following examples demonstrate the different ways of specifying portlet pref
 
     ```
     <meta name=”DC.publisher” content=”IBM”/>
+    ```
+
+-   Beginning with CF221, support for Open Graph protocol is added. This protocol allows you to set the `property` attribute value in the meta tag. In the following example, the meta tag value is set with the title of the rendered content:
+
+    ```
+    meta.tag.name.1=og:title 
+    meta.tag.content.property.1=Title
+    ```
+
+    Result:
+
+    ```
+    <meta property=”og:title” content="Sample Title"/>
     ```
 
 -   Setting multiple meta tag values with the default value for the author and the value of the text element `descelement` in the rendered content:
