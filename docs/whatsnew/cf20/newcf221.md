@@ -4,18 +4,18 @@ The following features and updates are available to customers installing HCL Dig
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
-- Progress Indication for XMLAccess
-- Progress Indication for Syndication
-- Ability to set cache header for WCM GET REST APIs
-- Update OpenAI Chatgpt to latest powerful model gpt-4o
-- Search Engine Optimization tag configuration for Open Graph compatibility
-- Tiny Inline edit additional menu options
+- Progress indication for XMLAccess
+- Progress indication for syndication
+- Web Content Manager REST API V2 - Ability to set cache header for WCM GET REST APIs
+- Web Content Manager REST API V2 - Update OpenAI ChatGPT to latest model gpt-4o
+- SEO tag configuration for Open Graph compatibility
+- TinyMCE - New menu options for inline editing
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
 
 - End of Support Announced for Digital Experience v8.5 and 9
-- Change in the application of 9.5 during 8.5/9.0 installation for CF221
+- DX upgrades starting CF221 automatically applies 9.5 to an 8.5/9.0 installation
 
 **Digital Experience 9.5 Version**
 
@@ -30,33 +30,53 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## All Digital Experience Versions (8.5, 9.0, 9.5)
 
-### Progress Indication for XMLAccess
+### Progress indication for XMLAccess
 
-Starting with version CF 221 one can enable progress logging to see how far XMLAccess is along in updating items contained in the xmlaccess input script.
-For more information see: [Working with the XML configuration interface](../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
+=== "Containers"
+    You can enable progress logging to see the progress of XMLAccess in updating items contained in the `xmlaccess` input script. For more information, see [Working with the XML configuration interface](../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md).
+    
+=== "On-Premises"
+    You can enable progress logging to see the progress of XMLAccess in updating items contained in the `xmlaccess` input script. For more information, see [Working with the XML configuration interface](../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md).
 
-### Progress Indication for Syndication
+### Progress indication for syndication
 
-New with CF 221 HCL DX allows to log syndication progress on the subscriber. 
-For more information see: [Syndication troubleshooting](../../manage_content/wcm_delivery/syndication/wcm_syndication_troubleshooting.md)
+=== "Containers"
+    You can log the syndication progress on the subscriber. For more information see [Syndication progress logging](../../manage_content/wcm_delivery/syndication/wcm_syndication_troubleshooting.md#syndication-progress-logging).
+    
+=== "On-Premises"
+    You can log the syndication progress on the subscriber. For more information see [Syndication progress logging](../../manage_content/wcm_delivery/syndication/wcm_syndication_troubleshooting.md#syndication-progress-logging).
 
-### Ability to set cache header for WCM GET REST APIs
+### Web Content Manager REST API V2 - Ability to set cache header for WCM GET REST APIs
 
-Starting with version CF221 it is possible to configure a cache header for GET requests for the unauthenticated user for better performance.
-For more information see: [Getting started with the REST service for Web Content Manager V2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md)
+=== "Containers"
+    You can configure a cache header for GET requests for unauthenticated users. Configuring cache headers result to better performance and cachability. For more information, see [Cache headers for WCM REST V2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md#cache-headers-for-wcm-rest-v2).
+    
+=== "On-Premises"
+    You can configure a cache header for GET requests for unauthenticated users. Configuring cache headers result to better performance and cachability. For more information, see [Cache headers for WCM REST V2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md#cache-headers-for-wcm-rest-v2).
 
-### Update OpenAI Chatgpt to latest powerful model gpt-4o
+### Web Content Manager REST API V2 - Update OpenAI ChatGPT to latest model gpt-4o
 
-Starting CF221, the AI model is switched to ```gpt-4o``` as the newest and most capable model with up to date information.
-For more information see: [Getting started with the REST service for Web Content Manager V2](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md)
+=== "Containers"
+    Starting CF221, the AI model is switched to ```gpt-4o```. This model is the newest and the most capable model with up-to-date information. For more information, see [Getting started with the REST service for Web Content Manager V2] (../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md).
+    
+=== "On-Premises"
+    Starting CF221, the AI model is switched to ```gpt-4o```. This model is the newest and the most capable model with up-to-date information. For more information, see [Getting started with the REST service for Web Content Manager V2] (../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md).
 
-### Search Engine Optimization tag configuration for Open Graph compatibility
+### SEO tag configuration for Open Graph compatibility
 
-With CF221 a new configuration option was added to generate [Open Graph](https://ogp.me/) compatible tags when rendering DX to be better parsable by social networks or search engines.
+=== "Containers"
+    A new configuration option is added to generate [Open Graph](https://ogp.me/) compatible tags when rendering DX to be better parsable by social networks or search engines. For more information, see [Adding HTML meta tags for Search Engine Optimization (SEO)](../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/wcm_config_wcmviewer_seo.md).
+    
+=== "On-Premises"
+    A new configuration option is added to generate [Open Graph](https://ogp.me/) compatible tags when rendering DX to be better parsable by social networks or search engines. For more information, see [Adding HTML meta tags for Search Engine Optimization (SEO)](../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/wcm_config_wcmviewer_seo.md).
 
-### Tiny Inline edit additional menu options
+### TinyMCE - New menu options for inline editing
 
-Starting with CF221 additional inline edit menu options have been added when using the Tiny rich text editor.
+=== "Containers"
+    New menu options are available in the TinyMCE rich text editor.
+    
+=== "On-Premises"
+    New menu options are available in the TinyMCE rich text editor.
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
