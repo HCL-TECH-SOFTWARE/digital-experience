@@ -121,4 +121,4 @@ Users need different roles to perform the following actions:
 
 Generally, the page layout that is stored and leveraged on a page is staged as part of the page, therefore, using syndication of the managed pages or `xmlaccess`, the data is transferred.
 
-However, if you are storing the layout as a new layout and want to leverage it on the target server in an Edit mode, then the layout is saved as a system layout. In this case, you must manually stage the `webdav system layouts.json` file [https://myserver.hcl.com/wps/mycontenthandler/dav/fs-type1/system/layouts.json](https://myserver.hcl.com/wps/mycontenthandler/dav/fs-type1/system/layouts.json).
+However, if you are storing the layout as a new layout and want to leverage it on the target server in an Edit mode, then the layout is saved as a system layout. In this case, you must manually stage the `webdav system layouts.json` file (for example, [https://myserver.hcl.com/wps/mycontenthandler/dav/fs-type1/system/layouts.json](https://myserver.hcl.com/wps/mycontenthandler/dav/fs-type1/system/layouts.json)).
