@@ -57,10 +57,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Web Content Manager REST API V2 - Update OpenAI ChatGPT to latest model gpt-4o
 
 === "Containers"
-    Starting CF221, the AI model is switched to ```gpt-4o```. This model is the newest and the most capable model with up-to-date information. For more information, see [Getting started with the REST service for Web Content Manager V2] (../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md).
+    Starting CF221, the AI model is switched to ```gpt-4o```. This model is the newest and the most capable model with up-to-date information. For more information, see [Getting started with the REST service for Web Content Manager V2](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md).
     
 === "On-Premises"
-    Starting CF221, the AI model is switched to ```gpt-4o```. This model is the newest and the most capable model with up-to-date information. For more information, see [Getting started with the REST service for Web Content Manager V2] (../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md).
+    Starting CF221, the AI model is switched to ```gpt-4o```. This model is the newest and the most capable model with up-to-date information. For more information, see [Getting started with the REST service for Web Content Manager V2](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md).
 
 ### SEO tag configuration for Open Graph compatibility
 
