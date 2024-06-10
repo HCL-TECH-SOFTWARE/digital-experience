@@ -5,11 +5,10 @@ In Kubernetes, a [Service](https://kubernetes.io/docs/concepts/services-networki
 The Service API is an abstraction that helps you expose groups of Pods over a network. Each Service object defines a logical set of endpoints (usually these endpoints are Pods) along with a policy about how to make those Pods accessible.
 
 The following types of Services are used in DX:
-
-- [Types of Services used in DX](#types-of-services-used-in-dx)
-  - [Normal Services](#normal-services)
-  - [Headless Services](#headless-services)
-  - [unready-pod-0](#unready-pod-0)
+ 
+- [Normal Services](#normal-services)
+- [Headless Services](#headless-services)
+- [unready-pod-0](#unready-pod-0)
 
 ## Normal Services
 
