@@ -6,9 +6,10 @@ The Service API is an abstraction that helps you expose groups of Pods over a ne
 
 The following types of Services are used in DX:
 
-- [Normal Services](#normal-services)
-- [Headless Services](#headless-services)
-- [unready-pod-0](#unready-pod-0)
+- [Types of Services used in DX](#types-of-services-used-in-dx)
+  - [Normal Services](#normal-services)
+  - [Headless Services](#headless-services)
+  - [unready-pod-0](#unready-pod-0)
 
 ## Normal Services
 
@@ -20,7 +21,7 @@ For more information, see [Service type](https://kubernetes.io/docs/concepts/ser
 
 Headless Services are used to interface with other service discovery mechanisms without being tied to Kubernetes' implementation. 
 
-A headless Service allows a client to connect directly to whichever Pod it prefers. Unlike normal Services, headless Services do not configure routes and packet forwarding using virtual IP addresses and proxies. Instead, they report the endpoint IP addresses of the individual Pods through internal DNS records, served through the cluster's DNS services.
+A Headless Service allows a client to connect directly to whichever Pod it prefers. Unlike Normal Services, Headless Services do not configure routes and packet forwarding using virtual IP addresses and proxies. Instead, they report the endpoint IP addresses of the individual Pods through internal DNS records, served through the cluster's DNS services.
 
 For more information, see [Headless Services](https://kubernetes.io/docs/concepts/services-networking/service/#headless-services).
 
