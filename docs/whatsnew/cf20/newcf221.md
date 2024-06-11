@@ -8,7 +8,7 @@ The following features and updates are available to customers installing HCL Dig
 - Progress indication for syndication
 - Web Content Manager REST API V2 - Ability to set cache header for WCM GET REST APIs
 - Web Content Manager REST API V2 - Update OpenAI ChatGPT to latest model gpt-4o
-- Web Content Manager REST API V2 - Retrieving multiple content items in one REST call through a list of uuid's
+- Web Content Manager REST API V2 - Retrieving multiple content items in one REST call through a list of UUIDs
 - SEO tag configuration for Open Graph compatibility
 - TinyMCE - New menu options for inline editing
 - Notice of deprecation of Textbox.io Rich Text Editor
