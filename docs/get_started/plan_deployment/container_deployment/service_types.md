@@ -4,11 +4,10 @@ In Kubernetes, a [Service](https://kubernetes.io/docs/concepts/services-networki
 
 The Service API is an abstraction that helps you expose groups of Pods over a network. Each Service object defines a logical set of endpoints (usually these endpoints are Pods) along with a policy about how to make those Pods accessible.
 
-The following types of Services are used in DX:
- 
-- [Normal Services](#normal-services)
-- [Headless Services](#headless-services)
-- [unready-pod-0](#unready-pod-0)
+To list all Services used by HCL Digital Experience the following command can be used. The `SELECTOR` column includes the `app` that the Service is connected to:
+```
+kubectl -n <namespace> get services -o wide
+```
 
 ## Normal Services
 
@@ -24,10 +23,28 @@ A Headless Service allows a client to connect directly to whichever Pod it prefe
 
 For more information, see [Headless Services](https://kubernetes.io/docs/concepts/services-networking/service/#headless-services).
 
-## unready-pod-0
+To list all Headless Services that are used by HCL Digital Experience the following command can be used:
+
+```
+kubectl -n <namespace> get services -o jsonpath='{range .items[?(@.spec.clusterIP=="None")]}{.metadata.name}{"\n"}{end}'
+```
+
+## Services using `publishNotReadyAddresses`
+
+The Services that have `publishNotReadyAddresses` enabled will make the addresses of connected Pods discoverable disregarding the ready/not-ready state.
+
+For more information, see [Kubernetes ServiceSpec](https://kubernetes.io/docs/reference/kubernetes-api/service-resources/service-v1/#ServiceSpec)
+
+To list all Services using `publishNotReadyAddresses` that are used by HCL Digital Experience the following command can be used:
+
+```
+kubectl -n <namespace> get services -o jsonpath='{range .items[?(@.spec.publishNotReadyAddresses==true)]}{.metadata.name}{"\n"}{end}'
+```
+
+## Core `unready-pod-0` Service
 
 !!! note
-      unready-pod-0 is a special type of Service for DX and is not a common service in Kubernetes.
+      This is a special type of Service for DX and is not a common service in Kubernetes.
 
-The unready-pod-0 Service forwards traffic to the first Core Pod (core-0) even if its status is `not ready`. It is primarily used for the Config Wizard, which might restart the Portal server and render the Pod unready. Despite the Portal not running, the Config Wizard can still connect to the Pod.
+The `unready-pod-0` Service always forwards traffic to the first Core Pod (`core-0`) even if its status is `not ready`. It is primarily used for the Config Wizard, which might restart the Portal server and render the Pod unready. Despite the Portal not running, the Config Wizard can still connect to the Pod.
 
