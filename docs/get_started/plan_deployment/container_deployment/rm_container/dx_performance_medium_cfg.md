@@ -269,7 +269,7 @@ The following list contains details of tuning and enhancements done to DX core d
 
 - With the goal in mind for DX rendering medium config, performance tests started with AWS distributed K8s set up having one master (c5.xlarge) and three worker nodes (c5.4xlarge).
 
-- Load started with 1000 concurrent users and gradually increased 2500, 4000 and 5000. We could see the set up could suppport till 5000 concurrent users with average response time of ~345 ms with 18 errors out of 13613873 requests which is very negligible. Through out the gradual increase we keep monitor the resource usage of pods and performed the tuning accordigly to improve the response time.
+- Load started with 1000 concurrent users and gradually increased 2500, 4000 and 5000. We could see the set up could suppport till 5000 concurrent users with average response time of ~27.61 ms with 11 errors out of 16908116 requests which is very negligible. We monitored the resource usage of pods and performed the tuning accordigly to improve the response time of rendering APIs.
 
 - Three worker node set up could not support 8000 concurrent users and got many errors in tests because all our core pods are fully utilized and no scope to increase resources for core pods. So we moved to four worker node set up and then started with 8000 concurrent users.
 
