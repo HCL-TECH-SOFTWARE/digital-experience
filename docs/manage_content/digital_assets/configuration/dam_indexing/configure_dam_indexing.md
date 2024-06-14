@@ -6,7 +6,7 @@ This page contains instructions for configuring the indexing processes available
 
 - The OpenSearch Middleware must be enabled.
 
-Here's the helm values for configuring search middleware which is present in `values.yaml`.
+Here's the helm values for configuring Search middleware which is present in `values.yaml`.
 
 ```yaml
 configuration:
@@ -28,4 +28,14 @@ configuration:
         customPushAdminSecret: ""
         # Content Source ID of DAM
         damContentSourceId: ""
+```
+
+The `damContentSourceId` can be created by using the `POST` `/contentsources` endpoint from the Search middleware service.
+
+```json
+{
+    "type": "dam",
+    "name": "dam",
+    "aclLookupHost": "http://your-domain.com"
+}
 ```
