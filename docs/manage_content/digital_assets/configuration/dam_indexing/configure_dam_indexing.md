@@ -6,7 +6,7 @@ This page contains instructions for configuring the indexing processes available
 
 - The OpenSearch Middleware must be enabled.
 
-Here's the helm values to configuring search middleware present in `values.yaml`.
+Here's the helm values for configuring search middleware which is present in `values.yaml`.
 
 ```yaml
 configuration:

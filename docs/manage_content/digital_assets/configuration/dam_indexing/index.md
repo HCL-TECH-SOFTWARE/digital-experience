@@ -15,3 +15,6 @@ This section provides instruction on how to enable and configure DAM Indexing.
 - **[Using DAM Indexing](./using_dam_indexing.md)**  
 This section provides instruction on how to use DAM Indexing.
 
+- **[DAM Indexing limitations](../../limitations/index.md)**  
+This section states the current limitations of DAM Indexing.
+
