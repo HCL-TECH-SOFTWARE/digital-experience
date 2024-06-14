@@ -1,9 +1,10 @@
 title: Guide Me
 nav:
+    - index.md
     - Tutorials: tutorials
-    - wpsdirstr.md
+    - How-to: howto
     - SecurityHardeningGuide
+    - wpsdirstr.md    
     - Performance_Tuning.md
     - search_tips.md
     - glossary.md
-    - How-to: howto
