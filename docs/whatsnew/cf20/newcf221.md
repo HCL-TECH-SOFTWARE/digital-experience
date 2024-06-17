@@ -8,6 +8,7 @@ The following features and updates are available to customers installing HCL Dig
 - Progress indication for syndication
 - Web Content Manager REST API V2 - Ability to set cache header for WCM GET REST APIs
 - Web Content Manager REST API V2 - Update OpenAI ChatGPT to latest model gpt-4o
+- Web Content Manager REST API V2 - Retrieving multiple content items in one REST call through a list of UUIDs
 - SEO tag configuration for Open Graph compatibility
 - TinyMCE - New menu options for inline editing
 - Notice of deprecation of Textbox.io Rich Text Editor
@@ -57,10 +58,18 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Web Content Manager REST API V2 - Update OpenAI ChatGPT to latest model gpt-4o
 
 === "Containers"
-    Starting CF221, the AI model is switched to ```gpt-4o```. This model is the newest and the most capable model with up-to-date information. For more information, see [Getting started with the REST service for Web Content Manager V2] (../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md).
+    Starting CF221, the AI model is switched to ```gpt-4o```. This model is the newest and the most capable model with up-to-date information. For more information, see [Getting started with the REST service for Web Content Manager V2](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md).
     
 === "On-Premises"
-    Starting CF221, the AI model is switched to ```gpt-4o```. This model is the newest and the most capable model with up-to-date information. For more information, see [Getting started with the REST service for Web Content Manager V2] (../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md).
+    Starting CF221, the AI model is switched to ```gpt-4o```. This model is the newest and the most capable model with up-to-date information. For more information, see [Getting started with the REST service for Web Content Manager V2](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md).
+
+## Web Content Manager REST API V2 - Retrieving multiple content items in one REST call through a list of UUIDs   
+
+=== "Containers"
+    You can retrieve multiple content items in one REST call through a list of Universally Unique Identifiers (UUIDs). For more information, see [WCM REST V2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md).
+    
+=== "On-Premises"
+    You can retrieve multiple content items in one REST call through a list of Universally Unique Identifiers (UUIDs). For more information, see [WCM REST V2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md).
 
 ### SEO tag configuration for Open Graph compatibility
 
