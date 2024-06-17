@@ -21,7 +21,8 @@ This performance guidance shows the medium configuration on K8s cluster with AWS
 
 - It is suggested that for DX medium configuration rendering scenarios with 10000 concurrent user load, to have distributed K8s setup with  1 master of type (c5.large) and 4 worker nodes of type c5.4xlarge. With below mentioned tuned helm values the performance results in average response time ~720 ms, 95th pct response time less than ~4 secs. Top 5 APIs average response times are also less than ~4 secs.
 
-- Core tuning details are available in this section [DX core tuning](#DX core tuning and enhancements for 10000 concurrent user run).
+- Core tuning details are available in this section [DX core tuning](#dx-core-tuning-and-enhancements-for-10000-concurrent-user-run).
+
 
 - The following table contains the number and limits for each pod. Using these values significantly improves the responsiveness of the setup and enables the system to handle 10000 concurrent users with overall average response time of ~1 second. Average 95th pct response times around ~4 secs.
 
@@ -179,7 +180,7 @@ Set up the systems before performing the rendering tests. This section provides 
 
 ### DAM default test data: 25,000 assets
 
-- Testers uploaded 2,500 assets. These assets include images (136kb, .jpg), documents (199kb, .docx), and videos (1.1mb, .mp4) to preheat. After preloading 2,500 assets, 15 assets were uploaded and rendered for 1 hour.
+- Testers uploaded 25,000 assets. These assets include images (136kb, .jpg), documents (199kb, .docx), and videos (1.1mb, .mp4) to preheat. After preloading 25,000 assets, 15 assets were uploaded and rendered for 1 hour.
 
 - Details of 15 assets were uploaded for rendering.
       
