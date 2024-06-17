@@ -350,7 +350,7 @@ The following list contains details of tuning and enhancements done to DX core d
 
 ##### Observations 
 
-- Erros ~270 out of 35892379 requests (contributing to 0% error rate) from JMeter results which was negligible.
+- Total errors are ~270 out of 35892379 requests (i.e, 0% error rate) from JMeter results which was very negligible.
 
 - The CPU usage of a three worker nodes reached 80% during our tests with 10000 concurrent user but not exceeded more than 90%. Memory usage of all worker nodes less than 50%.
 
