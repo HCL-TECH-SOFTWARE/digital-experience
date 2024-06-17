@@ -19,24 +19,23 @@ For guidance when rendering with a small configuration, see [Performance-sizing 
 
 This performance guidance shows the medium configuration on K8s cluster with AWS instances having one master (c5.xlarge) and four worker nodes (c5.4xlarge).
 
-- Core tuning details are available in [DX core tuning](#DX core tuning and enhancements for 10000 concurrent user run).
+- It is suggested that for DX medium configuration rendering scenarios with 10000 concurrent user load, to have distributed K8s setup with  1 master of type (c5.large) and 4 worker nodes of type c5.4xlarge. With below mentioned tuned helm values the performance results in average response time ~720 ms, 95th pct response time less than ~4 secs. Top 5 APIs average response times are also less than ~4 secs.
 
-- It is suggested that for DX medium configuration rendering scenarios with 10000 concurrent user load, to have distributed K8s setup with  1 master of type (c5.large) and 4 worker nodes od type c5.4xlarge. With below mentioned tuned helm values the performance results in average response time ~890 ms, 95th pct response time less than ~4 secs. Top 5 APIs average response times are also less than ~4 secs.
+- Core tuning details are available in this section [DX core tuning](#DX core tuning and enhancements for 10000 concurrent user run).
 
-- The following table contains the number and limits for each pod. Using these values significantly improves the responsiveness of the setup and enables the system to handle 10000 concurrent users with an average response times of ~1 second. Average 95th pct response times around ~6 secs.
+- The following table contains the number and limits for each pod. Using these values significantly improves the responsiveness of the setup and enables the system to handle 10000 concurrent users with overall average response time of ~1 second. Average 95th pct response times around ~4 secs.
 
 
 | Pod name                    | number of pods | Container                   | Container CPU request and limit(m) | Container memory request and limit(Mi) |
 | --------------------------- | -------------- | --------------------------- | ---------------------------------- | -------------------------------------- |
-| core                        | 7              | core                        | 5200                               | 8192                                   |
-| ringApi                     | 2              | ringApi                     | 2000                               | 512                                    |
+| core                        | 7              | core                        | 5600                               | 8192                                   |
+| ring-api                    | 2              | ring-api                    | 2000                               | 512                                    |
 | haproxy                     | 2              | haproxy                     | 2000                               | 1024                                   |
-| digitalAssetManagement      | 4              | digitalAssetManagement      | 1000                               | 2048                                   |
+| digital-asset-management    | 4              | digital-asset-management    | 1000                               | 2048                                   |
 | persistence-connection-pool | 2              | persistence-connection-pool | 700                                | 1024                                   |
-| persistence-node            | 2              | persistence-node            | 1000                               | 2048                                   |
-| openLDAP                    | 1              | openLDAP                    | 500                                | 2048                                   |
-|                             |                |                             | 52300                              | 76800                                  |
-
+| persistence-node            | 2              | persistence-node            | 1200                               | 2048                                   |
+| open-ldap                   | 1              | open-ldap                   | 500                                | 2048                                   |
+| Total                       |                |                             | 55500                              | 76800                                  |
 
 
 ### Customer rendering scenario details
@@ -46,6 +45,7 @@ This performance guidance shows the medium configuration on K8s cluster with AWS
 | Small  – 1000 users   | 20                 | 2k                   | 80                  |
 | Medium – 10000 users  | 200                | 10k                  | 800                 |
 | Large  – 100000 users | 2000               | 50 - 100k            | 8000                | 
+
 
 ### Environment
 
@@ -61,35 +61,37 @@ This performance guidance shows the medium configuration on K8s cluster with AWS
 - The tests started with worker node type c5.2xlarge, then we moved to c5.4xlarge after analyzing test results and observations.
 
 - c5.4xlarge
+
       - Info
 
-            ![](../../../../images/Header-1-AWS-Med.png)
+      ![](../../../../images/Header-1-AWS-Med.png)
 
-            ![](../../../../images/ec2_c5_4xlarge_info.png)
+      ![](../../../../images/ec2_c5_4xlarge_info.png)
 
 
       - Processor details
 
-            ![](../../../../images/c5_4xlarge_cpu_info.png)
+      ![](../../../../images/C5_4xlarge_cpu_info.png)
 
       - Volume details
 
-            ![](../../../../images/c5_4xlarge_volume_info.png)
+      ![](../../../../images/c5_4xlarge_volume_info.png)
+
 - c5.large
 
       - Info
 
-            ![](../../../../images/Header-1-AWS-Med.png)
+      ![](../../../../images/Header-1-AWS-Med.png)
 
-            ![](../../../../images/ec2_c5_large_info.png)
+      ![](../../../../images/ec2_c5_large_info.png)
 
       - Processor details
 
-            ![](../../../../images/c5_large_cpu_info.png)
+      ![](../../../../images/c5_large_cpu_info.png)
 
       - Volume details
 
-            ![](../../../../images/c5_large_volume_info.png)
+      ![](../../../../images/c5_large_volume_info.png)
 
 
 #### DB2 instance
@@ -140,6 +142,10 @@ This performance guidance shows the medium configuration on K8s cluster with AWS
       ![](../../../../images/AWS-Native-Kube-Volume-Info.png)
 
 
+!!!note
+      Ramp up time is 1.5 sec per user. Test duration is addition of rampmup time and one hour with peak load of concurrent users.
+
+
 ### Authoring details
 
 Set up the systems before performing the rendering tests. This section provides details for WCM, DAM, and portlets authoring.
@@ -184,6 +190,15 @@ Set up the systems before performing the rendering tests. This section provides 
       | Image    | .jpg/png/tif  | 155kb, 2mb,5mb, 500kb, 100 kb, 2 mb,300 kb|
       | Video    | mp4/webm      | 5 mb, 199kb,200kb , 2 mb,199kb            |
       | Document | docx/xlsx/pptx| mp4- 1mb, 15mb, 100mb, webm- 2 mb         |
+
+- DAM asset rendeing APIs examples of UUID, Custom Url and Friendly are as below
+
+- `https://<host-name>/dx/api/dam/v1/collections/f5764415-afd3-4b18-90ab-5c933e9965a8/items/b2204c8f-bd26-4f9b-865f-1fc1f8e26a13/renditions/09d278d6-1ae7-4a2a-950d-c1fa7f0bacde?binary=true`
+
+-  `https://<host-name>/dx/api/dam/custom/customURL2-1715776542673?binary=true`
+
+-  `https://<host-name>/dx/api/dam/v1/assets/Jmeter.11667/wcm-sample-content.png?rendition=Tablet?binary=true`
+
 
 !!!note
       For DAM, only anonymous rendering is available.
@@ -269,13 +284,15 @@ The following list contains details of tuning and enhancements done to DX core d
 
 - With the goal in mind for DX rendering medium config, performance tests started with AWS distributed K8s set up having one master (c5.xlarge) and three worker nodes (c5.4xlarge).
 
-- Load started with 1000 concurrent users and gradually increased 2500, 4000 and 5000. We could see the set up could suppport till 5000 concurrent users with average response time of ~27.61 ms with 11 errors out of 16908116 requests which is very negligible. We monitored the resource usage of pods and performed the tuning accordigly to improve the response time of rendering APIs.
+- Load started with 1000 concurrent users and gradually increased 2500, 4000 and 5000. We could see the set up could suppport till 5000 concurrent users with average response time of ~27.61 ms with 0% errors, 11 out of 16908116 requests which was very negligible. 
 
-- Three worker node set up could not support 8000 concurrent users and got many errors in tests because all our core pods are fully utilized and no scope to increase resources for core pods. So we moved to four worker node set up and then started with 8000 concurrent users.
+- We also updated our JMeter script to have realistic API throughput. Also, we monitored the resource usage of pods and performed the tuning accordigly to improve the response time of rendering APIs.
+
+- Three worker node set up with 8000 concurrent users resulted in very high response tine, observed many errors because all our core pods are fully utilized and no scope to increase resources for core pods. So we moved to four worker node set up and then started with 8000 concurrent users.
 
 - In four worker node set up for 8000 concurrent user load with results on average response time ~455 ms and less errors around ~67 errors out of 28451772 requests, then further we started for 10000 concurrent user load.
 
-- Final tuned helm values are below with which 10000 users concurrent load performance tests could achieve our goal of very comfortable average and 95th percentile response times with negligible errors around ~250 out of 35869608 requests
+- Final tuned helm values are below with which 10000 users concurrent load performance tests could achieve our goal of very comfortable average and 95th percentile response times with negligible errors around ~280 out of 35869608 requests
 
 
 
@@ -285,17 +302,17 @@ The following list contains details of tuning and enhancements done to DX core d
 | Component                     | No. of pods | cpu(m)    | memory(Mi) | cpu(m)    | memory(Mi) |
 |-------------------------------|-------------|-----------|------------|-----------|------------|
 | contentComposer               | 1           | 100       | 128        | 100       | 128        |
-| **core**                      | **7**       | **5200**  | **8192**   | **5200**  | **8192**   |
+| **core**                      | **7**       | **5600**  | **8192**   | **5200**  | **8192**   |
 | **digitalAssetManagement**    | **4**       | **1000**  | **2048**   | **1000**  | **2048**   |
 | imageProcessor                | 1           | 200       | 2048       | 200       | 2048       |
 | **openLdap**                  | **1**       | **500**   | **2048**   | **500**   | **2048**   |
-| **persistenceNode**           | **2**       | **1000**  | **2048**   | **1000**  | **2048**   |
+| **persistenceNode**           | **2**       | **1200**  | **2048**   | **1000**  | **2048**   |
 | **persistenceConnectionPool** | **2**       | **700**   | **1024**   | **700**   | **1024**   |
 | **ringApi**                   | **2**       | **2000**  | **512**    | **2000**  | **512**    |
 | runtimeController             | 1           | 100       | 256        | 100       | 256        |
 | **haproxy**                   | **2**       | **2000**  | **1024**   | **2000**  | **1024**   |
 | licenseManager                | 1           | 100       | 300        | 100       | 300        |
-| **Total**                     |             | **52300** | **76800**  | **52300** | **76800**  |
+| **Total**                     |             | **60000** | **79532**  | **60000** | **79532**  |
 
 
 #### Details of Pods in native-kube deployment
@@ -305,38 +322,37 @@ The following list contains details of tuning and enhancements done to DX core d
 
 #### Summary of results
 
+| Medium Config Sizing                       | Distributed-Run(1Master-4Worker Nodes)                                                                    | Distributed-Run(1Master-4Worker Nodes)                                                                                                                                                                              | Distributed-Run(Master-4Worker Nodes)                                                                                                                                                                                                                                                                                         |
+| ------------------------------------------ | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Environment                                | AWS/Native Kube                                                                                           | AWS/Native Kube                                                                                                                                                                                                     | AWS/Native Kube                                                                                                                                                                                                                                                                                                               |
+| Test Time(IST)                             | "5/21/24, 1:07 PM" - "5/21/24, 4:12 PM" IST                                                               | "5/31/24, 01:11 PM-"5/31/24, 05:31 PM" IST                                                                                                                                                                          | 6/14/24, 9:12 AM" - "6/14/24, 2:22 PM" IST                                                                                                                                                                                                                                                                                    |
+| Total samples                              | 16908116                                                                                                  | 28451772                                                                                                                                                                                                            | 37612181                                                                                                                                                                                                                                                                                                                      |
+| Concurent Users                            | 5000(WCM - 1008 DAM - 744 Page&Portlet - 752)                                                             | 8000(WCM - 1008 DAM - 744 Page&Portlet - 752)                                                                                                                                                                       | 10000(WCM - 4000 DAM - 3000 Page&Portlet - 3000)                                                                                                                                                                                                                                                                              |
+| Total Throughput (transactions/sec)        | 1523.02                                                                                                   | 1823.47                                                                                                                                                                                                             | 2021.37                                                                                                                                                                                                                                                                                                                       |
+| Total Avg response time (in milli seconds) | 27.61                                                                                                     | 454.97                                                                                                                                                                                                              | 722.16                                                                                                                                                                                                                                                                                                                        |
+| CPU Usage(%)                               | Master- 9.22, Worker1-57.49,Worker2-65.20,Worker3-71.64,Worker4-69.56,                                    | Master- 5.91, Worker1-73.54, Worker2-69.72, Worker3-80.23, Worker4-71.47                                                                                                                                            | M- 11.03, W1-89.82, W2-86.24, W3-81.51, W4-73.09                                                                                                                                                                                                                                                                              |
+| Memory Usage(%)                            | Master-42.17, Worker1-22.59,Worker2-42.70,Worker3\-45.52, Worker4\-47.23                                  | Master-43.75, Worker1-37.30,Worker2-43.16,Worker3-41.56, Worker4-28.57                                                                                                                                              | M-44.14, W1-47.92,W2-40.96,W3-40.72, W4-29.71                                                                                                                                                                                                                                                                                 |
+| Error(%)                                   | 0                                                                                                         | 0                                                                                                                                                                                                                   | 0                                                                                                                                                                                                                                                                                                                             |
+| Test Duration(sec)                         | 11100                                                                                                     | 15600                                                                                                                                                                                                               | 18600                                                                                                                                                                                                                                                                                                                         |
+|                                            | Top Requests (Avg Respone Time in ms)                                                                     | Top Requests (Avg Respone Time in ms)                                                                                                                                                                               | Top Requests (Avg Respone Time in ms)                                                                                                                                                                                                                                                                                         |
+|                                            | Get video - mp4 100 mb - friendly url - furlmp4100mb - (1318.63)                                          | Get video - mp4 1.1 mb custom url - curlmp41.1mb - (1859.08)                                                                                                                                                        | Get video - mp4 1.1 mb custom url - curlmp41.1mb - 3388.46, 95th pct - 8104.00                                                                                                                                                                                                                                                |
+|                                            | Get video - mp4 15mb - idmp415mb - (224.27)                                                               | Get doc - pdf 171 kb custom url - curlpdf171kb - (1849.21)                                                                                                                                                          | Get doc - pdf 171 kb custom url - curlpdf171kb - 3363.31, 95th pct - 8013.00                                                                                                                                                                                                                                                  |
+| Top requests in ms                         | Get doc - pdf - 5mb - friendly url - Desktop - furlpdf5mb- (180.53)                                       | Get image - jpeg 155 kb custom url - curljpg155kb - (1834.95)                                                                                                                                                       | Get image - jpeg 155 kb custom url - curljpg155kb - 3343.60, 95th pct - 8011.95                                                                                                                                                                                                                                               |
+|                                            | Get video - webm 2mb - friendly url - furlwebm2mb - (142.03)                                              | Get video - mp4 15mb - idmp415mb -(1246.14)                                                                                                                                                                         | Get video - mp4 15mb - idmp415mb - 2340.82, 95th pct - 7006.95                                                                                                                                                                                                                                                                |
+|                                            | Get image - pptx - friendly url - 2.7mb - furlpptx2.7mb - (137.96)                                        | Get video - mp4 100 mb - friendly url - furlmp4100mb - (1242.38)                                                                                                                                                    | Get doc - pdf - 5mb - friendly url - Desktop - furlpdf5mb - 2169.33, 95th pct - 6468.00                                                                                                                                                                                                                                       |
+|                                            | WCM Intial page request - 40.71, 95th pct - 102.00                                                        | WCM Intial page request - 630.20, 95th pct - 1781                                                                                                                                                                   | WCM Intial page request - 991.84, 95th pct - 2754.90                                                                                                                                                                                                                                                                          |
+| Error Details                              | 0% (11 requests failed ) [error code:400 - 11]                                                            | 0% (67 requests failed ) [error code:400 -57,502-4]                                                                                                                                                                 | Total - 298 (400/Bad Request - 88, 504 -4,502 - 7, 503 -4 and error codes - java.net.SocketTimeoutExceptions - 44)                                                                                                                                                                                                            |
+| Remarks                                    | Test done on distributed set up ( 1 master and 3 worker nodes of type C5.4x large) ,CF220 release images. | Test done on distributed set up ( 1 master and 4 worker nodes of type C5.4x large) ,CF220 release images.2 haproxy pods with 2000m each, 7 core pods 5200m,2 ring pods with 2000m and jcr.binarycache.enabled=false | Test done on distributed set up ( 1 master and 4 worker nodes of type C5.4x large) ,CF220 release images.ThinkTime of DAM increased to 1000ms and WCM nav requests to 1000ms and PNP unauthenticated to 1500ms, 2 haproxy pods with 2000m each, 7 core pods 5600m, 2 ring api pods 2000m and node - 1200m and enabled toplogy |
 
-| Medium Config Sizing                       | Distributed-Run5(1Master-4Worker Nodes)                                                                   | Distributed-Run(1Master-4Worker Nodes)                                                                                                                                                                              | Distributed-Run7(Master-4Worker Nodes)                                                                                                                                                                                                    |
-| ------------------------------------------ | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Environment                                | AWS/Native Kube                                                                                           | AWS/Native Kube                                                                                                                                                                                                     | AWS/Native Kube                                                                                                                                                                                                                           |
-| Test Time(IST)                             | "5/21/24, 1:07 PM" - "5/21/24, 4:12 PM" IST                                                               | "5/31/24, 01:11 PM-"5/31/24, 05:31 PM" IST                                                                                                                                                                          | "06/11/24, 11:01 AM" - "06/11/24, 16:11 PM"                                                                                                                                                                                               |
-| Total samples                              | 16908116                                                                                                  | 28451772                                                                                                                                                                                                            | 35892379                                                                                                                                                                                                                                  |
-| Concurent Users                            | 5000(WCM - 1008 DAM - 744 Page&Portlet - 752)                                                             | 8000(WCM - 1008 DAM - 744 Page&Portlet - 752)                                                                                                                                                                       | 10000(WCM - 4000 DAM - 3000 Page&Portlet - 3000)                                                                                                                                                                                          |
-| Total Throughput (transactions/sec)        | 1523.02                                                                                                   | 1823.47                                                                                                                                                                                                             | 1929.2                                                                                                                                                                                                                                    |
-| Total Avg response time (in milli seconds) | 27.61                                                                                                     | 454.97                                                                                                                                                                                                              | 872.94                                                                                                                                                                                                                                    |
-| CPU Usage(%)                               | Master- 9.22, Worker1-57.49,Worker2-65.20,Worker3-71.64,Worker4-69.56,                                    | Master- 5.91, Worker1-73.54, Worker2-69.72, Worker3-80.23, Worker4-71.47                                                                                                                                            | M- 11.62, W1-82.27, W2-68.97, W3-75.98, W4-81.17                                                                                                                                                                                          |
-| Memory Usage(%)                            | Master-42.17, Worker1-22.59,Worker2-42.70,Worker3\-45.52, Worker4\-47.23                                  | Master-43.75, Worker1-37.30,Worker2-43.16,Worker3-41.56, Worker4-28.57                                                                                                                                              | M-42.78, W1-38.00,W2-26.14,W3-45.61, W4-41.13                                                                                                                                                                                             |
-| Error(%)                                   | 0                                                                                                         | 0                                                                                                                                                                                                                   | 0                                                                                                                                                                                                                                         |
-| Test Duration(sec)                         | 11100                                                                                                     | 15600                                                                                                                                                                                                               | 18600                                                                                                                                                                                                                                     |
-|                                            | Top 5 Requests (Avg Respone Time in ms)                                                                   | Top 5 Requests (Avg Respone Time in ms)                                                                                                                                                                             | Top 5 Requests (Avg Respone Time in ms)                                                                                                                                                                                                   |
-|                                            | Get video - mp4 100 mb - friendly url - furlmp4100mb - (1318.63)                                          | Get video - mp4 1.1 mb custom url - curlmp41.1mb - (1859.08)                                                                                                                                                        | Get video - mp4 1.1 mb custom url - curlmp41.1mb - 4108.77, 95th pct - 9501.95                                                                                                                                                            |
-|                                            | Get video - mp4 15mb - idmp415mb - (224.27)                                                               | Get doc - pdf 171 kb custom url - curlpdf171kb - (1849.21)                                                                                                                                                          | Get doc - pdf 171 kb custom url - curlpdf171kb - 4101.14, 95th pct -9441.00                                                                                                                                                               |
-| Top 5 requests in ms                       | Get doc - pdf - 5mb - friendly url - Desktop - furlpdf5mb- (180.53)                                       | Get image - jpeg 155 kb custom url - curljpg155kb - (1834.95)                                                                                                                                                       | Get image - jpeg 155 kb custom url - curljpg155kb - 4076.82, 95th pct - 9437.00                                                                                                                                                           |
-|                                            | Get video - webm 2mb - friendly url - furlwebm2mb - (142.03)                                              | Get video - mp4 15mb - idmp415mb -(1246.14)                                                                                                                                                                         | Get video - mp4 15mb - idmp415mb- 2460.86, 95th pct - 5862.00                                                                                                                                                                             |
-|                                            | Get image - pptx - friendly url - 2.7mb - furlpptx2.7mb - (137.96)                                        | Get video - mp4 100 mb - friendly url - furlmp4100mb - (1242.38)                                                                                                                                                    | Get video - mp4 100 mb - friendly url - furlmp4100mb - 2355.50, 95th pct - 2941.00                                                                                                                                                        |
-| Error Details                              | 0% (11 requests failed ) [error code:400 - 11]                                                            | 0% (67 requests failed ) [error code:400 -57,502-4]                                                                                                                                                                 | Total - 264 (400/Bad Request - 85, 504 -4,502 - 2and error codes - java.net.SocketTimeoutExceptions - 40)                                                                                                                                 |
-| Remarks                                    | Test done on distributed set up ( 1 master and 3 worker nodes of type C5.4x large) ,CF220 release images. | Test done on distributed set up ( 1 master and 4 worker nodes of type C5.4x large) ,CF220 release images.2 haproxy pods with 2000m each, 7 core pods 5200m,2 ring pods with 2000m and jcr.binarycache.enabled=false | Test done on distributed set up ( 1 master and 4 worker nodes of type C5.4x large) ,CF219 release images. 2 haproxy pods with 2000m each, 7 core pods 5200m, 2 ring api pods 2000m and node - 1500m and enabled topologySpreadConstraints |
-| WCM Intial page request (in ms)            | Avg -40.71, 95th pct - 102.00                                                                             | Avg - 630.20, 95th pct - 1781                                                                                                                                                                                       | Avg - 1236.17, 95th pct - 3188.95                                                                                                                                                                                                         |
 
-                                                                                                      |
 
 
 ##### Observations 
 
-- 264 bad requests out of 35892379 samples (contributing to 0% error rate) from JMeter results observed only in DAM APIs, which is negligible.
+- Erros ~270 out of 35892379 requests (contributing to 0% error rate) from JMeter results which was negligible.
 
-- The CPU usage of a two worker nodes reached 80% during our tests with 10000 concurrent user but not exceeded more than 80%. Memory usage of all worker nodes less than 50%.
+- The CPU usage of a three worker nodes reached 80% during our tests with 10000 concurrent user but not exceeded more than 90%. Memory usage of all worker nodes less than 50%.
 
--  It is suggested that for DX medium configuration rendering scenarios with 10000 concurrent user load, to have distributed K8s setup with  1 master of type (c5.large) and 4 worker nodes od type c5.4xlarge. With above mentioned tuned helm values the performance results in average response time ~890 ms, 95th pct response time less than ~4 secs. Top 5 APIs average response times are also less than ~4 secs.
+-  It is suggested that for DX medium configuration rendering scenarios with 10000 concurrent user load, to have distributed K8s setup with  1 master of type (c5.large) and 4 worker nodes of type c5.4xlarge. With below mentioned tuned helm values the performance results in average response time ~720 ms, 95th pct response time less than ~4 secs. Top 5 APIs average response times are also less than ~4 secs.
 
 
