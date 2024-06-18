@@ -14,7 +14,7 @@ Learn how to log in to the portal server instance where you want to work with th
 Learn how to work with portal resources such as pages and portlets, search for resources and information about them, and add a portlet to a page.
 -   **[Getting help for a command](adpsi_start_help.md)**  
 Learn how to get help information about the Portal Scripting Interface commands.
--   **[Working with portal pages and other resources](adpsi_start_logout.md)**  
+-   **[Logging out of the portal](adpsi_start_logout.md)**  
 Learn how to log out and exit the interactive scripting console.
 
 
