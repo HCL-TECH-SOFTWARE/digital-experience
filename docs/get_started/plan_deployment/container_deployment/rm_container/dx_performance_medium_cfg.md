@@ -182,9 +182,7 @@ Set up the systems before performing the rendering tests. This section provides 
 
 - Testers uploaded 25,000 assets. These assets include images (136kb, .jpg), documents (199kb, .docx), and videos (1.1mb, .mp4) to preheat. After preloading 25,000 assets, 15 assets were uploaded and rendered for 1 hour.
 
-- Details of 15 assets were uploaded for rendering.
-      
-- There are 19 URLs in total, three of which are custom URLs, eight are uuid URLs, and eight are short URLs, which are combinations of original, tablet, smartphone, and desktop renditions.
+- Details of 15 assets were uploaded for rendering are 19 URLs in total, three of which are custom URLs, eight are uuid URLs, and eight are short URLs, which are combinations of original, tablet, smartphone, and desktop renditions.
 
       | Asset    | Type          | Size                                      |
       | -------- | ------------- |-----------------------------------------  |
