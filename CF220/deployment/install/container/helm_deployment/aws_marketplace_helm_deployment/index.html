@@ -2129,7 +2129,7 @@
 <h3 id="configuring-tls-certificate">Configuring TLS certificate</h3>
 <p>The default setting for HAProxy is SSL enabled. Make sure that the secret containing the certificate is correctly created within the cluster. Refer to <a href="../preparation/mandatory_tasks/prepare_configure_networking/#use-certificate">Use certificate</a> for more information.</p>
 <h3 id="configuring-volumes">Configuring volumes</h3>
-<p>Curently, the Helm chart is configured with the <code>gp3</code> storage class, which is the default storage class provided by AWS. </p>
+<p>Currently, the Helm chart is configured with the <code>gp3</code> storage class, which is the default storage class provided by AWS. </p>
 <p>However, to use the full functionality and to scale all Pods, it is recommended to specify a different value for <code>ReadWriteMany</code> volumes. For self-managed clusters, you must specify all volumes according to the storage in your cluster in the <code>custom-values.yaml</code> file. See <a href="../preparation/mandatory_tasks/prepare_persistent_volume_claims/">Prepare persistent volume</a> for more information.</p>
 <h2 id="launching-with-helm-deployment">Launching with Helm Deployment</h2>
 <p>Following your subscription, you are now entitled to a HCL DX Cloud Native license and are eligible to configure the <code>Helm chart fulfillment option</code> within your preferred Kubernetes environment. Initially, there are only two options: Amazon-managed Kubernetes and self-managed Kubernetes for on-premise deployments.</p>
@@ -2175,15 +2175,16 @@ aws<span class="w"> </span>ecr<span class="w"> </span>get-login-password<span cl
 </li>
 <li>
 <p>Pull the chart.</p>
-<div class="language-bash highlight"><pre><span></span><code>mkdir<span class="w"> </span>awsmp-chart<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>awsmp-chart
-helm<span class="w"> </span>pull<span class="w"> </span>oci://709825985650.dkr.ecr.us-east-1.amazonaws.com/hcl-america/hcl-dx-deployment<span class="w"> </span>--version<span class="w"> </span>&lt;helm-chart-version&gt;
-tar<span class="w"> </span>xf<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/*<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>find<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="w"> </span>-maxdepth<span class="w"> </span><span class="m">1</span><span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-delete
+<div class="language-bash highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">DX_CHART_VERSION</span><span class="o">=</span>&lt;helm-chart-version&gt;
+mkdir<span class="w"> </span>hcl-dx-deployment<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>hcl-dx-deployment
+helm<span class="w"> </span>pull<span class="w"> </span>oci://709825985650.dkr.ecr.us-east-1.amazonaws.com/hcl-america/hcl-dx-deployment<span class="w"> </span>--version<span class="w"> </span><span class="nv">$DX_CHART_VERSION</span>
+tar<span class="w"> </span>xf<span class="w"> </span><span class="s2">&quot;hcl-dx-deployment-</span><span class="nv">$DX_CHART_VERSION</span><span class="s2">.tgz&quot;</span>
 </code></pre></div>
 </li>
 <li>
 <p>Install the Helm chart using Helm CLI.</p>
 <div class="language-bash highlight"><pre><span></span><code>helm<span class="w"> </span>install<span class="w"> </span>&lt;release-name&gt;<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--namespace<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>./*<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--namespace<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>./hcl-dx-deployment<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--set<span class="w"> </span>configuration.licenseManager.serviceAccountName<span class="o">=</span>hcl-digital-experience-service-account<span class="w"> </span>
 </code></pre></div>
 <ul>
@@ -2238,7 +2239,7 @@ kubectl<span class="w"> </span>create<span class="w"> </span>secret<span class="
 </code></pre></div>
 </li>
 <li>
-<p>Create an image pull secret and patch it to the serfvice account to validate the image pull from the ECR.</p>
+<p>Create an image pull secret and patch it to the service account to validate the image pull from the ECR.</p>
 <div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>docker-registry<span class="w"> </span>awsmp-image-pull-secret<span class="w"> </span><span class="se">\</span>
 --docker-server<span class="o">=</span><span class="m">709825985650</span>.dkr.ecr.us-east-1.amazonaws.com<span class="w"> </span><span class="se">\</span>
 --docker-username<span class="o">=</span>AWS<span class="w"> </span><span class="se">\</span>
@@ -2266,15 +2267,16 @@ aws<span class="w"> </span>ecr<span class="w"> </span>get-login-password<span cl
 </li>
 <li>
 <p>Pull the Helm chart.</p>
-<div class="language-bash highlight"><pre><span></span><code>mkdir<span class="w"> </span>awsmp-chart<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>awsmp-chart
-helm<span class="w"> </span>pull<span class="w"> </span>oci://709825985650.dkr.ecr.us-east-1.amazonaws.com/hcl-america/hcl-dx-deployment<span class="w"> </span>--version<span class="w"> </span>&lt;helm-chart-version&gt;
-tar<span class="w"> </span>xf<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/*<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>find<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="w"> </span>-maxdepth<span class="w"> </span><span class="m">1</span><span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-delete
+<div class="language-bash highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">DX_CHART_VERSION</span><span class="o">=</span>&lt;helm-chart-version&gt;
+mkdir<span class="w"> </span>hcl-dx-deployment<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>hcl-dx-deployment
+helm<span class="w"> </span>pull<span class="w"> </span>oci://709825985650.dkr.ecr.us-east-1.amazonaws.com/hcl-america/hcl-dx-deployment<span class="w"> </span>--version<span class="w"> </span><span class="nv">$DX_CHART_VERSION</span>
+tar<span class="w"> </span>xf<span class="w"> </span><span class="s2">&quot;hcl-dx-deployment-</span><span class="nv">$DX_CHART_VERSION</span><span class="s2">.tgz&quot;</span>
 </code></pre></div>
 </li>
 <li>
 <p>Install the Helm chart using Helm CLI.</p>
 <div class="language-bash highlight"><pre><span></span><code>helm<span class="w"> </span>install<span class="w"> </span>&lt;release-name&gt;<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--namespace<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>./*<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--namespace<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>./hcl-dx-deployment<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--set<span class="w"> </span>configuration.licenseManager.serviceAccountName<span class="o">=</span>hcl-digital-experience-service-account<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--set<span class="w"> </span>configuration.licenseManager.licenseConfigSecret<span class="o">=</span>awsmp-license-token-secret<span class="w">  </span>
 </code></pre></div>
@@ -2328,7 +2330,7 @@ tar<span class="w"> </span>xf<span class="w"> </span><span class="k">$(</span><s
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 28, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 14, 2024</span>
   </span>
 
     
