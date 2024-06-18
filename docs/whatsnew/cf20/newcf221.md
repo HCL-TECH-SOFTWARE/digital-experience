@@ -20,10 +20,13 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Version**
 
-
 **Digital Experience 9.5 Container Version**
 
 - Virtual Portal Manager configured so that newly created virtual Portals contain Practitioner Studio
+- HCL DX on AWS Marketplace now available
+- New parameter for configuring HAProxy networking
+- DAM Indexing
+- New guidance for performance sizing for rendering in medium configuration
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Removal of automated Pod restart on ConfigMap updates
 
@@ -42,10 +45,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Progress indication for syndication
 
 === "Containers"
-    You can log the syndication progress on the subscriber. For more information see [Syndication progress logging](../../manage_content/wcm_delivery/syndication/wcm_syndication_troubleshooting.md#syndication-progress-logging).
+    You can log the syndication progress on the subscriber. For more information, see [Syndication progress logging](../../manage_content/wcm_delivery/syndication/wcm_syndication_troubleshooting.md#syndication-progress-logging).
     
 === "On-Premises"
-    You can log the syndication progress on the subscriber. For more information see [Syndication progress logging](../../manage_content/wcm_delivery/syndication/wcm_syndication_troubleshooting.md#syndication-progress-logging).
+    You can log the syndication progress on the subscriber. For more information, see [Syndication progress logging](../../manage_content/wcm_delivery/syndication/wcm_syndication_troubleshooting.md#syndication-progress-logging).
 
 ### Web Content Manager REST API V2 - Ability to set cache header for WCM GET REST APIs
 
@@ -82,25 +85,25 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### TinyMCE - New menu options for inline editing
 
 === "Containers"
-    New menu options are available in the TinyMCE rich text editor.
+    New menu options are available in the TinyMCE rich text editor. (Doc in progress)
     
 === "On-Premises"
-    New menu options are available in the TinyMCE rich text editor.
+    New menu options are available in the TinyMCE rich text editor. (Doc in progress)
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
 === "Containers"
-    The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
+    The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and End of Support (EOS) is on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
 
 === "On-Premises"
-    The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
+    The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and End of Support (EOS) is on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
 
 ## Digital Experience 8.5 and 9.0 Versions
 
 ### End of Support Announced for Digital Experience v8.5 and 9
 
 === "On-Premises"
-    On June 30, 2023, HCL Software announced end of support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
+    On June 30, 2023, HCL Software announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
     
 ### DX upgrades starting CF221 automatically applies 9.5 to an 8.5/9.0 installation
 
@@ -112,11 +115,39 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
+### Virtual Portal Manager configured so that newly created virtual Portals contain Practitioner Studio
+
+=== "Containers"
+    Starting CF221, the virtual Portal Manager is configured to use the file `WebSphere:assetname=VirtualPortal.zip:InitVirtualContentPortalV9.5NoWoodburn.xml` on newly deployed containers so that newly created virtual Portals contain Practitioner Studio.
+
+### HCL DX on AWS Marketplace now available
+
+=== "Containers"
+    The latest DX 9.5 container images and Helm charts available for HCL DX 9.5 are in the AWS Marketplace for customers who purchase through the Marketplace as a containerized product offering. For instructions on how to deploy HCL DX acquired from the AWS Marketplace, see [AWS Marketplace Helm deployment](../../deployment/install/container/helm_deployment/aws_marketplace_helm_deployment.md).
+
+### New parameter for configuring HAProxy networking
+
+=== "Containers"
+    New parameter `sessionCookieName` is now available when you configure HAProxy networking. There is also additional information added for the `strictTransportSecurity.enabled` parameter. For more information, see [Configure Networking](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md#configure-haproxy-networking).
+
+### New documentation about the types of Services used in DX
+
+=== "Containers"
+    In Kubernetes, a Service is a method for exposing a network application that is running as one or more Pods in your cluster The topic [Types of Services used in DX](../../get_started/plan_deployment/container_deployment/service_types.md) provides more information about the Services used in DX, namely, Normal Services, Headless Services, and unready-pod-0.
+
+### DAM Indexing
+
+(Doc in progress)
+
+### New guidance for performance sizing for rendering in medium configuration
+
+(Doc in progress)
+
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
 === "Containers"
     Starting CF216, the Harbor repository is updated with an OCI-based registry and the Helm chart command is updated to be OCI-compliant. Instructions on how to pull Helm charts using OCI commands are now available. For more information, see the Help Center topics [Configure Harbor Helm Repository](../../deployment/install/container/helm_deployment/preparation/get_the_code/configure_harbor_helm_repo.md) and [Download and Deploy from HCL Harbor Repository](../../get_started/download/harbor_container_registry.md).
-
+    
 ### Removal of automated Pod restart on ConfigMap updates
 
 === "Containers"
