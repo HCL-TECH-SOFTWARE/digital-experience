@@ -12,7 +12,7 @@ You can edit the following search options to manage how the search service works
 
     -   **SearchService.DateFormatString**
 
-        This parameter is used to set the date format when dates are entered in search forms. Enter a supported Java date format string. If this property is not set, then the default format is MMM dd yyyy HH:mm:ss z.
+        This parameter is used to set the date format when dates are entered in search forms. Enter a supported Java date format string. If this property is not set, then the default format is `MMM dd yyyy HH:mm:ss z`.
 
     -   **SearchService.RecrawlInterval**
 
