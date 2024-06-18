@@ -16,7 +16,7 @@ The default setting for HAProxy is SSL enabled. Make sure that the secret contai
 
 ### Configuring volumes
 
-Curently, the Helm chart is configured with the `gp3` storage class, which is the default storage class provided by AWS. 
+Currently, the Helm chart is configured with the `gp3` storage class, which is the default storage class provided by AWS. 
 
 However, to use the full functionality and to scale all Pods, it is recommended to specify a different value for `ReadWriteMany` volumes. For self-managed clusters, you must specify all volumes according to the storage in your cluster in the `custom-values.yaml` file. See [Prepare persistent volume](../preparation/mandatory_tasks/prepare_persistent_volume_claims/) for more information.
 
@@ -76,16 +76,17 @@ After configuring the service account and assuming IAM roles to the service acco
 2. Pull the chart.
 
        ```bash
-       mkdir awsmp-chart && cd awsmp-chart
-       helm pull oci://709825985650.dkr.ecr.us-east-1.amazonaws.com/hcl-america/hcl-dx-deployment --version <helm-chart-version>
-       tar xf $(pwd)/* && find $(pwd) -maxdepth 1 -type f -delete
+       export DX_CHART_VERSION=<helm-chart-version>
+       mkdir hcl-dx-deployment && cd hcl-dx-deployment
+       helm pull oci://709825985650.dkr.ecr.us-east-1.amazonaws.com/hcl-america/hcl-dx-deployment --version $DX_CHART_VERSION
+       tar xf "hcl-dx-deployment-$DX_CHART_VERSION.tgz"
        ```
 
 3. Install the Helm chart using Helm CLI.
 
        ```bash
        helm install <release-name> \
-           --namespace <namespace> ./* \
+           --namespace <namespace> ./hcl-dx-deployment \
            --set configuration.licenseManager.serviceAccountName=hcl-digital-experience-service-account 
        ```
 
@@ -148,7 +149,7 @@ To generate a license token, click **Create token** on the launch page. This act
        export AWS_SESSION_TOKEN=$(echo $AWSMP_ROLE_CREDENTIALS | awk '{print $4}' | xargs)
        ```
 
-3. Create an image pull secret and patch it to the serfvice account to validate the image pull from the ECR.
+3. Create an image pull secret and patch it to the service account to validate the image pull from the ECR.
 
        ```bash
        kubectl create secret docker-registry awsmp-image-pull-secret \
@@ -180,16 +181,17 @@ After configuring the service account and defining the ENVs and pull secrets, pu
 2. Pull the Helm chart.
 
        ```bash
-       mkdir awsmp-chart && cd awsmp-chart
-       helm pull oci://709825985650.dkr.ecr.us-east-1.amazonaws.com/hcl-america/hcl-dx-deployment --version <helm-chart-version>
-       tar xf $(pwd)/* && find $(pwd) -maxdepth 1 -type f -delete
+       export DX_CHART_VERSION=<helm-chart-version>
+       mkdir hcl-dx-deployment && cd hcl-dx-deployment
+       helm pull oci://709825985650.dkr.ecr.us-east-1.amazonaws.com/hcl-america/hcl-dx-deployment --version $DX_CHART_VERSION
+       tar xf "hcl-dx-deployment-$DX_CHART_VERSION.tgz"
        ```
 
 3. Install the Helm chart using Helm CLI.
 
        ```bash
        helm install <release-name> \
-           --namespace <namespace> ./* \
+           --namespace <namespace> ./hcl-dx-deployment \
            --set configuration.licenseManager.serviceAccountName=hcl-digital-experience-service-account \
            --set configuration.licenseManager.licenseConfigSecret=awsmp-license-token-secret  
        ```
