@@ -14,7 +14,7 @@ To assign portlets to these categories, you must point the external URL to a fee
 
 4.  Add a title and description for the new category. Click **OK**.
 
-5.  In the **Advanced Options** section, select **HTML** as supported markup. Specify a URL pointing to a feed that returns a list of portlet definitions or portlet entities.
+5.  In the **Advanced Options** section, select **HTML** as supported markup. Specify a URL pointing to a feed that returns a list of portlet definitions or portlet entities. For more information on how to define a portlet entity, see [Syntax for Addressing Portal Resources](../../../../../extend_dx/apis/model_spi/model-spi_rest_service/feeds_rest_svc/syntax_for_portal_resource/index.md). The URL (Example: https://hostname/wps/mycontenthandler/rm/empty?tmparam=tm:name:CustomAppCategory) will return all resources tagged with "CustomAppCategory". To add CustomAppCategory, use XMLAccess. For more information, see [How to batch add applications to the Application Palette](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0086851).
 
 6.  Click **OK**.
 
