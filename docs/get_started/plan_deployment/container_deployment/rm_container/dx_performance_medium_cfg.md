@@ -192,7 +192,7 @@ Set up the systems before performing the rendering tests. This section provides 
 
 ### DAM default test data: 25,000 assets
 
-- Testers uploaded 25,000 assets. These assets include images (136kb, .jpg), documents (199kb, .docx), and videos (1.1mb, .mp4) to preheat. After preloading 25,000 assets, 15 assets were uploaded and rendered for 1 hour.
+- Testers uploaded 25,000 assets. These assets include images (136kb, .jpg), documents (199kb, .docx), and videos (1.1mb, .mp4) to preheat. After preloading 25,000 assets, 15 assets were uploaded and rendered for 1 hour at peak load after ramp up time.
 
 - After initial population of the database, a load of 15 assets containing a mix of original images and renditions were uploaded.  The test then rendered those assets by way of 3 custom URLs, 8 UUID URLs and 8 short URLs for an hour, further details provided in the results summary below.
 
