@@ -245,7 +245,7 @@ Use the `manage-dam-staging get-staging-mismatch-report` command to download the
     -reportPath <value>
     ```
 
-    Set this attribute to `true` to download the mismatch report even if find mismatch process is not completed:
+    Set this attribute to `true` to download the mismatch report even if find mismatch process is not complete:
 
     ```
     -forceDownload <value>
