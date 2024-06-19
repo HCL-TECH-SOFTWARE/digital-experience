@@ -6,6 +6,7 @@ You can use Digital Asset Management (DAM) as a datasource of the Search service
 - **Reindexing**: Indexes all existing assets while revalidating stale indexes. You can trigger this process manually through DXClient or DAM API.
 - **Live indexing**: Indexes changes made in DAM in near real-time. This allows DAM indexes to be up-to-date.
 
+For limitations of the DAM Indexing feature, see [DAM Limitations](../../limitations/index.md).
 
 Refer to the following topics for instructions on how to configure and use DAM Indexing.
 
@@ -14,5 +15,5 @@ Learn how to enable and configure DAM Indexing.
 
 - **[Using DAM Indexing](./using_dam_indexing.md)**  
 Know how to use DAM Indexing.
-For limitations of the DAM Indexing feature, see [DAM Indexing limitations](../../limitations/index.md)
+
 
