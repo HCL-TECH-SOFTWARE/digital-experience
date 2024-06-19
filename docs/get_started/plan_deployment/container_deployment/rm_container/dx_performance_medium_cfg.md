@@ -38,6 +38,18 @@ This performance guidance shows the medium configuration on K8s cluster with AWS
 | open-ldap                   | 1              | open-ldap                   | 500                                | 2048                                   |
 | Total                       |                |                             | 55500                              | 76800                                  |
 
+## DX rendering medium configuration helm values in hcl-dx-deployment
+
+To see the `medium-config-values.yaml` file in the hcl-dx-deployment Helm chart, complete the following steps:
+
+1. Download the Helm chart from FlexNet or Harbor.
+
+2. Extract the `TGZ` file (`hcl-dx-deployment-XXX.tgz`).
+
+3. In the extracted folder, navigate to the following structure to go to the `medium-config-values.yaml` file: `hcl-dx-deployment/value-samples/medium-config-values.yaml`.
+
+!!!note
+      pod resources limits can be increased based on the available resources in the cluster.
 
 ### Customer rendering scenario details
 
