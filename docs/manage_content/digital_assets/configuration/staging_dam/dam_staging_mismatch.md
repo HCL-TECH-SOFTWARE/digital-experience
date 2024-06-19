@@ -245,7 +245,7 @@ Use the `manage-dam-staging get-staging-mismatch-report` command to download the
     -reportPath <value>
     ```
 
-    Set this attribute to true to download the mismatch report even if find mismatch process is not completed:
+    Set this attribute to `true` to download the mismatch report even if find mismatch process is not completed:
 
     ```
     -forceDownload <value>
@@ -254,11 +254,11 @@ Use the `manage-dam-staging get-staging-mismatch-report` command to download the
     !!! note 
         `recordType`, `recordAction`, `reportPath` and `forceDownload`  are optional parameters.
 
-    The report cannot be downloaded for below scenarios.
-    1. If resyncStatus is 'FIND_MISMATCH_START' or 'DYNAMIC_STATUS_COMPUTATION_REQUIRED', then `Report cannot be downloaded as Find staging mismatch is still in progress.` message will be shown.
-    2. If resyncStatus is 'FIND_MISMATCH_FAILED', then `Report cannot be downloaded as Find staging mismatch process failed. Try to execute find-staging-mismatch again to trigger the mismatch generation process and download report once it is done` message will be shown.
-    3. If resyncStatus is 'RESYNC_TRIGGER_START' or 'RESYNC_TRIGGER_COMPLETED' or 'RESYNC_TRIGGER_FAILED', then `Please run find mismatch first before generating report logs` message will be shown.
-    4. If subscriberId is not passed in command, and all subscribers are not in resyncStatus 'FIND_MISMATCH_COMPLETED', then `Find mismatch is not completed for one or more subscribers. Please check the resync status for all subscribers before generating report logs` message will be shown.
+    You cannot download the report during the following scenarios:
+    - If resyncStatus is 'FIND_MISMATCH_START' or 'DYNAMIC_STATUS_COMPUTATION_REQUIRED', the message `Report cannot be downloaded as Find staging mismatch is still in progress.` is displayed.
+    - If resyncStatus is 'FIND_MISMATCH_FAILED', the message `Report cannot be downloaded as Find staging mismatch process failed. Try to execute find-staging-mismatch again to trigger the mismatch generation process and download report once it is done` is displayed.
+    - If resyncStatus is 'RESYNC_TRIGGER_START' or 'RESYNC_TRIGGER_COMPLETED' or 'RESYNC_TRIGGER_FAILED', the message `Please run find mismatch first before generating report logs` is displayed.
+    - If subscriberId is not passed in command and all subscribers are not in resyncStatus 'FIND_MISMATCH_COMPLETED', the message `Find mismatch is not completed for one or more subscribers. Please check the resync status for all subscribers before generating report logs` is displayed.
 
 -   **Commands:**
 
