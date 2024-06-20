@@ -2,9 +2,13 @@
 
 This page contains instructions on how to configure the indexing processes available in DAM.
 
-## Prerequisites
+## Prerequisite
 
-The OpenSearch middleware must be enabled. Go to the `values.yaml` file and refer to the following Helm values to configure OpenSearch middleware:
+OpenSearch must be enabled.
+
+## Adding OpenSearch Middleware Configurations to Enable DAM Indexing
+
+Go to the `values.yaml` file and refer to the following Helm values to add configurations of OpenSearch middleware:
 
 ```yaml
 configuration:
