@@ -1,6 +1,6 @@
 # Configuring DAM Indexing
 
-This page contains instructions on how to configure the indexing processes available in DAM.
+This page contains instructions on how to add configurations of the OpenSearch middleware and enable DAM indexing.
 
 ## Prerequisite
 
