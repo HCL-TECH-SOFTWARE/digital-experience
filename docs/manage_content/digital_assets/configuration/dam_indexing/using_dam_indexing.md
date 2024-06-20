@@ -20,20 +20,20 @@ This process indexes all existing assets while revalidating stale indexes. There
         dxclient trigger-dam-reindex [options]
         ```
 
-        The following options are available:
+    The following options are available:
 
-        - `dxProtocol` - Protocol of the DX Core server.
-        - `hostname` - Host name of the DX Core server.
-        - `dxPort` - Port number of the DX Core server.
-        - `dxUsername` - Username of the DX Core server.
-        - `dxPassword` - Password of the DX Core server.
-        - `damAPIPort` - Port number of the DAM API server.
-        - `damAPIVersion` - API Version number of DAM.
-        - `ringAPIPort` - Port number of the Ring API server.
-        - `ringAPIVersion` - API Version number of Ring.
-        - `ltpaTokenRefreshTime (optional)` - LTPA Token refresh time in minutes.
-        - `reportPath (optional)` - Location of the file path to download report.
-        - `help (optional)`
+    - `dxProtocol` - Protocol of the DX Core server.
+    - `hostname` - Host name of the DX Core server.
+    - `dxPort` - Port number of the DX Core server.
+    - `dxUsername` - Username of the DX Core server.
+    - `dxPassword` - Password of the DX Core server.
+    - `damAPIPort` - Port number of the DAM API server.
+    - `damAPIVersion` - API Version number of DAM.
+    - `ringAPIPort` - Port number of the Ring API server.
+    - `ringAPIVersion` - API Version number of Ring.
+    - `ltpaTokenRefreshTime (optional)` - LTPA Token refresh time in minutes.
+    - `reportPath (optional)` - Location of the file path to download report.
+    - `help (optional)`
 
 ## Live indexing
 

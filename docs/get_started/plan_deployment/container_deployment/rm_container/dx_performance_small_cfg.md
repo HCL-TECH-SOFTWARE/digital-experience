@@ -60,30 +60,30 @@ To see the `small-config-values.yaml` file in the hcl-dx-deployment Helm chart, 
 
 - Processor details
 
-![](../../../../images/Processor_Info_Native-Kube.png)
+      ![](../../../../images/Processor_Info_Native-Kube.png)
 
 - Volume details
 
-![](../../../../images/AWS-Native-Kube-Volume-Info.png)
+      ![](../../../../images/AWS-Native-Kube-Volume-Info.png)
 
 
 ### DB2 instance
 
 - Remote DB2 - [t3a.large]
 
-![](../../../../images/Header-2-AWS.png)
+      ![](../../../../images/Header-2-AWS.png)
 
-![](../../../../images/t3a.large.png)
+      ![](../../../../images/t3a.large.png)
 
 
 - Processor details
 
-![](../../../../images/Processor_Info_RemoteDB2.png)
+      ![](../../../../images/Processor_Info_RemoteDB2.png)
 
 
 - Volume details
 
-![](../../../../images/Remote-DB2-Volume-Info.png)
+      ![](../../../../images/Remote-DB2-Volume-Info.png)
 
 
 ### JMeter agents
@@ -91,24 +91,24 @@ To see the `small-config-values.yaml` file in the hcl-dx-deployment Helm chart, 
 - JMeter instance - [t2.xlarge]
 - To run the tests, a distributed AWS/JMeter agents setup consisting of one primary and two subordinates was used.<!-- never use "master" and "slave." -->
 
-![](../../../../images/Header-3-AWS.png)
+      ![](../../../../images/Header-3-AWS.png)
 
-![](../../../../images/t2.xlarge.png)
+      ![](../../../../images/t2.xlarge.png)
 
 
 - Processor details
 
-![](../../../../images/Processor_Info_JMeterAgent.png)
+      ![](../../../../images/Processor_Info_JMeterAgent.png)
 
 
 - Network details
 
-![](../../../../images/JMeter_Agent_Network_Details.png)
+      ![](../../../../images/JMeter_Agent_Network_Details.png)
 
 
 - Volume details
 
-![](../../../../images/JMeter-Agent-Volume-Info.png)
+      ![](../../../../images/JMeter-Agent-Volume-Info.png)
 
 
 
@@ -702,43 +702,43 @@ The following list contains details of tuning and enhancements done to DX core d
 
 - LTPA token timeout increased from 120 minutes to 480 minutes for rendering tests execution.
 
- ![](../../../../images/Core_Tuning_LTPA.png)
+      ![](../../../../images/Core_Tuning_LTPA.png)
 
 - WCM object cache for rendering updated as per DX performance tuning guide.
 
- ![](../../../../images/Core_WCM_Object_Cache_list.png)
+      ![](../../../../images/Core_WCM_Object_Cache_list.png)
 
 
- ![](../../../../images/WCM_Object_Cache_Instances.png)
+      ![](../../../../images/WCM_Object_Cache_Instances.png)
 
 - Updated abspath, abspathreverse, processing, session, strategy, summary values WCM rendering values as per tuning guide.
 
 - Added new custom property under **Resource environment providers > WP CacheManagerService > Custom properties > cacheinstance.com.ibm.wps.resolver.friendly.cache.size**.
 
- ![](../../../../images/Core_Friendly_Url_Cache.png)
+      ![](../../../../images/Core_Friendly_Url_Cache.png)
 
 - Adjusted JVM Heap size from 3584 to 4096 under **Application servers > WebSphere_Portal > Process_definition > Java Virtual Machine**.
 
- ![](../../../../images/Core_JVM_Tuning.png)
+      ![](../../../../images/Core_JVM_Tuning.png)
 
 - Set LDAP user cache attributes and search to 10000.
 
- ![](../../../../images/Core_DX_LDAP_User_Cache.png)
+      ![](../../../../images/Core_DX_LDAP_User_Cache.png)
 
 - Disabled jcr.text.search under **Resource environment providers > JCR ConfigService Portal Content > Custom properties** because there is no search functionality.
 
- ![](../../../../images/Core_Tuning_JCR_Text_Search_Disable.png)
+      ![](../../../../images/Core_Tuning_JCR_Text_Search_Disable.png)
 
 - Deleted search collections in **Portal > Administration > Search > Search collections** (both JCRCollection1 and Default Search Collection).
 
- ![](../../../../images/Core_Tuning_Delete_Search_Collections.png)
+      ![](../../../../images/Core_Tuning_Delete_Search_Collections.png)
 
 - Logged level changes from info to severe in WAS for in both configuration and run time.
 
- ![](../../../../images/Core_Tuning_Log_Level_Details.png)
+      ![](../../../../images/Core_Tuning_Log_Level_Details.png)
 
- !!!note
-       Restart all core pods after performing all the tunings steps mentioned.
+!!!note
+      Restart all core pods after performing all the tunings steps mentioned.
 
  - DB2 tuning performed by executing DB2 Reorg and Runstats.
 
