@@ -1,12 +1,12 @@
 # Configuring DAM Indexing
 
-This page contains instructions on how to add configurations of the OpenSearch middleware and enable DAM indexing.
+This page contains instructions on how to add configurations of the OpenSearch middleware and enable Digital Asset Management (DAM) indexing.
 
 ## Prerequisite
 
 OpenSearch must be enabled.
 
-## Adding OpenSearch Middleware Configurations to Enable DAM Indexing
+## Adding OpenSearch middleware configurations to enable DAM indexing
 
 Go to the `values.yaml` file and refer to the following Helm values to add configurations of OpenSearch middleware:
 
