@@ -25,7 +25,7 @@ The following features and updates are available to customers installing HCL Dig
 - Virtual Portal Manager configured so that newly created virtual Portals contain Practitioner Studio
 - HCL DX on AWS Marketplace now available
 - New parameter for configuring HAProxy networking
-- DAM Indexing
+- Digital Asset Management - Indexing
 - New guidance for performance sizing for rendering in medium configuration
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Removal of automated Pod restart on ConfigMap updates
@@ -135,9 +135,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     In Kubernetes, a Service is a method for exposing a network application that is running as one or more Pods in your cluster The topic [Types of Services used in DX](../../get_started/plan_deployment/container_deployment/service_types.md) provides more information about the Services used in DX, namely, Normal Services, Headless Services, and unready-pod-0.
 
-### DAM Indexing
+### Digital Asset Management - Indexing
 
-(Doc in progress)
+=== "Containers"
+    You can use Digital Asset Management (DAM) as a datasource of the Search service for you to search DAM assets and images more efficiently. For instructions on how to configure and use indexing in DAM, see [DAM Indexing](../../manage_content/digital_assets/configuration/dam_indexing/index.md).
 
 ### New guidance for performance sizing for rendering in medium configuration
 
