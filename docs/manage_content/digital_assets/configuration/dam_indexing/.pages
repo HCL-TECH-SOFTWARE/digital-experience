@@ -1,0 +1,5 @@
+title: DAM indexing
+nav:
+    - index.md
+    - configure_dam_indexing.md
+    - using_dam_indexing.md
