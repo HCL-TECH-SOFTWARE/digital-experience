@@ -41,7 +41,7 @@ You can create the `damContentSourceId` by using the `POST` `/contentsources` en
 
 ## Enabling DAM indexing
 
-After configuring the OpenSearch middleware, run the following `helm upgrade` command and to enable indexing in DAM:
+After configuring the OpenSearch middleware, run the following `helm upgrade` command to enable indexing in DAM:
 
 ```
 helm -n dxns upgrade -f ./install-deploy-values.yaml dx-deployment ./install-hcl-dx-deployment
