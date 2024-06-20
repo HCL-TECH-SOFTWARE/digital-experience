@@ -1,6 +1,8 @@
 # Configuring DAM Indexing
 
-This page contains instructions for configuring the indexing processes available in DAM.
+This page contains instructions on how to configure the indexing processes available in DAM.
+
+## Prerequisites
 
 The OpenSearch middleware must be enabled. Go to the `values.yaml` file and refer to the following Helm values to configure OpenSearch middleware:
 
@@ -37,7 +39,10 @@ You can create the `damContentSourceId` by using the `POST` `/contentsources` en
 }
 ```
 
-Once the configuration is updated, run the `helm upgrade` command and it will enable indexing in DAM.
+## Enabling DAM indexing
+
+After configuring the OpenSearch middleware, run the following `helm upgrade` command to enable indexing in DAM:
+
 ```
 helm -n dxns upgrade -f ./install-deploy-values.yaml dx-deployment ./install-hcl-dx-deployment
 ```
