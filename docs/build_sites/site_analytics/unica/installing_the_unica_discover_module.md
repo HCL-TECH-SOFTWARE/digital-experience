@@ -20,23 +20,6 @@ You can configure your HCL Digital Experience site theme integration with HCL Di
     For this option, a proxy between the HCL Digital Experience and Discover servers is established. This uses the HCL DX Discover.ear as well as the additional theme module. You also need to set up a proxy in HCL Digital Experience, follow the instructions in the HCL Digital Experience Help Center topic: [Outbound HTTP connection](https://help.hcltechsw.com/digital-experience/9.5/dev-portlet/outbound_http.html).
 
 
-## Install the HCL Discover.ear file
-
-You would install the HCL DX Discover.ear only if you want to set up a proxy between HCL DX and Discover. Follow these steps to install the HCL Discover.ear file.
-
-1.  From an HCL Digital Experience 9.5 Container Update CF192 and later, get the Discover.ear file from the PortalServer/doc/discover folder and install it using the HCL Digital Experience WebSphere Application Server console. The Discover.ear file contains the application that installs the DiscoverUIPost.JSP file required by Discover for the proxy architecture.
-2.  After getting the Discover.ear file, upload the file and install it using the WebSphere Application Server console:
-    1.  Navigate to the WebSphere Application Server console.
-    2.  Navigate to **Applications** \> **Application Types** \> **WebSphere Enterprise Applications**.
-    3.  Click install, and select and open the Discover.ear file. Follow the prompts to complete the installation.
-
-        ![Select and start the Discover module from the administration panel](../../../images/Select%20and%20start%20the%20Discover%20module%20from%20the%20administration%20panel.png)
-
-3.  When completed, select the **Discover** module and start it from the WebSphere Application Server console.
-
-    ![Upload the HCL DX Discover.ear file and install using WebSphere Enterprise Applications](../../../images/WebSphere%20Enterprise%20Applications.png "Select and start the Discover module from the administration panel")
-
-
 ## Enable HCL Discover integration in the Digital Experience Theme
 
 Follow these steps to enable HCL Discover integration with HCL Digital Experience Theme.
@@ -100,6 +83,23 @@ You can configure HCL Discover with HCL Digital Experience with theme modules. T
 [](../../../images/Discover_4.png)
 
 You have successfully deployed the Discover theme modules and added them to your profile used by your pages.
+
+## Install the HCL Discover.ear file
+
+You would install the HCL DX Discover.ear only if you want to set up a proxy between HCL DX and Discover. Follow these steps to install the HCL Discover.ear file.
+
+1.  From an HCL Digital Experience 9.5 Container Update CF192 and later, get the Discover.ear file from the PortalServer/doc/discover folder and install it using the HCL Digital Experience WebSphere Application Server console. The Discover.ear file contains the application that installs the DiscoverUIPost.JSP file required by Discover for the proxy architecture.
+2.  After getting the Discover.ear file, upload the file and install it using the WebSphere Application Server console:
+    1.  Navigate to the WebSphere Application Server console.
+    2.  Navigate to **Applications** \> **Application Types** \> **WebSphere Enterprise Applications**.
+    3.  Click install, and select and open the Discover.ear file. Follow the prompts to complete the installation.
+
+        ![Select and start the Discover module from the administration panel](../../../images/Select%20and%20start%20the%20Discover%20module%20from%20the%20administration%20panel.png)
+
+3.  When completed, select the **Discover** module and start it from the WebSphere Application Server console.
+
+    ![Upload the HCL DX Discover.ear file and install using WebSphere Enterprise Applications](../../../images/WebSphere%20Enterprise%20Applications.png "Select and start the Discover module from the administration panel")
+
 
 ## Troubleshooting
 
