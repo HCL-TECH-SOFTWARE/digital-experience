@@ -66,7 +66,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     Starting CF221, the AI model is switched to ```gpt-4o```. This model is the newest and the most capable model with up-to-date information. For more information, see [Getting started with the REST service for Web Content Manager V2](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md).
 
-## Web Content Manager REST API V2 - Retrieving multiple content items in one REST call through a list of UUIDs   
+### Web Content Manager REST API V2 - Retrieving multiple content items in one REST call through a list of UUIDs   
 
 === "Containers"
     You can retrieve multiple content items in one REST call through a list of Universally Unique Identifiers (UUIDs). For more information, see [WCM REST V2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md).

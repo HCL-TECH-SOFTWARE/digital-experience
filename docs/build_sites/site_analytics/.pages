@@ -5,6 +5,6 @@ nav:
     - Integrating Google Universal Analytics with HCL DX: google_analytics
     - Instrumenting web content for Active Site Analytics: instrumenting_webcontent_asa
     - Portlet load monitoring for HCL Portal: portlet_load_monitoring
-    - Integrate HCL Discover with HCL Digital Experience: unica
+    - Integrating HCL Discover with HCL DX: unica
 
 

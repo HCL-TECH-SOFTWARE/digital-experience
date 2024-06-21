@@ -1,4 +1,4 @@
-# Integrate HCL Discover with HCL DX
+# Integrating HCL Discover with HCL DX
 
 This section includes information to set up integration of Digital Experience (DX) 9.5 Container Update CF192 and later sites with HCL Discover to access deep insight analytics and session replay services to assess the effectiveness of your DX site pages with end user audiences.
 
