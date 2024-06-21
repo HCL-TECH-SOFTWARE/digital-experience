@@ -123,7 +123,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### HCL DX on AWS Marketplace now available
 
 === "Containers"
-    The latest DX 9.5 container images and Helm charts available for HCL DX 9.5 are in the AWS Marketplace for customers who purchase through the Marketplace as a containerized product offering. For instructions on how to deploy HCL DX acquired from the AWS Marketplace, see [AWS Marketplace Helm deployment](../../deployment/install/container/helm_deployment/aws_marketplace_helm_deployment.md).
+    The latest DX 9.5 container images and Helm charts available for HCL DX 9.5 are in the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-xxxuhyr7adj3a) for customers who purchase through the Marketplace as a containerized product offering. For instructions on how to deploy HCL DX acquired from the AWS Marketplace, see [AWS Marketplace Helm deployment](../../deployment/install/container/helm_deployment/aws_marketplace_helm_deployment.md).
 
 ### New parameter for configuring HAProxy networking
 
