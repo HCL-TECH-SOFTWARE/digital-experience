@@ -118,12 +118,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Virtual Portal Manager configured so that newly created virtual Portals contain Practitioner Studio
 
 === "Containers"
-    Starting CF221, the virtual Portal Manager is configured to use the file `WebSphere:assetname=VirtualPortal.zip:InitVirtualContentPortalV9.5NoWoodburn.xml` on newly deployed containers so that newly created virtual Portals contain Practitioner Studio.
+    Starting CF221, the virtual Portal Manager is configured to use the file `WebSphere:assetname=VirtualPortal.zip:InitVirtualContentPortalV9.5NoWoodburn.xml` on newly deployed containers so that newly created virtual Portals contain Practitioner Studio. For more information, see [Configuring Practitioner Studio](../../build_sites/practitioner_studio/working_with_ps/config_prac_studio.md).
 
 ### HCL DX on AWS Marketplace now available
 
 === "Containers"
-    The latest DX 9.5 container images and Helm charts available for HCL DX 9.5 are in the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-xxxuhyr7adj3a) for customers who purchase through the Marketplace as a containerized product offering. For instructions on how to deploy HCL DX acquired from the AWS Marketplace, see [AWS Marketplace Helm deployment](../../deployment/install/container/helm_deployment/aws_marketplace_helm_deployment.md).
+    HCL DX Cloud Native is now live and listed the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-xxxuhyr7adj3a). For customers who purchase through the Marketplace as a containerized product offering, you can download the latest DX 9.5 container images and Helm charts available for HCL DX 9.5. For instructions on how to deploy HCL DX acquired from the AWS Marketplace, see [AWS Marketplace Helm deployment](../../deployment/install/container/helm_deployment/aws_marketplace_helm_deployment.md).
 
 ### New parameter for configuring HAProxy networking
 
