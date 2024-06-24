@@ -56,7 +56,7 @@ Starting CF220, WCM REST V2 Swagger API Explorer introduces additional APIs:
 Starting CF221, WCM REST V2 Swagger API Explorer introduces additional APIs:
 
 - Retrieve multiple content items in one REST call through a list of Universally Unique Identifiers (UUIDs)
-- Set cache header for WCM GET REST APIs
+- [Set cache header for WCM GET REST APIs](#cache-headers-for-wcm-rest-v2)
 
 ## WCM REST V2 API explorer
 
