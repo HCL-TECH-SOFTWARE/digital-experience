@@ -4,10 +4,13 @@ In Kubernetes, a [Service](https://kubernetes.io/docs/concepts/services-networki
 
 The Service API is an abstraction that helps you expose groups of Pods over a network. Each Service object defines a logical set of endpoints (usually these endpoints are Pods) along with a policy about how to make those Pods accessible.
 
-To list all Services used by HCL Digital Experience the following command can be used. The `SELECTOR` column includes the `app` that the Service is connected to:
-```
+To list all Services used by HCL Digital Experience, use the following command:
+
+```bash
 kubectl -n <namespace> get services -o wide
 ```
+
+The `SELECTOR` column includes the `app` that the Service is connected to.
 
 ## Normal Services
 
@@ -23,21 +26,21 @@ A Headless Service allows a client to connect directly to whichever Pod it prefe
 
 For more information, see [Headless Services](https://kubernetes.io/docs/concepts/services-networking/service/#headless-services).
 
-To list all Headless Services that are used by HCL Digital Experience the following command can be used:
+To list all Headless Services that are used by HCL DX, use the following command:
 
-```
+```bash
 kubectl -n <namespace> get services -o jsonpath='{range .items[?(@.spec.clusterIP=="None")]}{.metadata.name}{"\n"}{end}'
 ```
 
 ## Services using `publishNotReadyAddresses`
 
-The Services that have `publishNotReadyAddresses` enabled will make the addresses of connected Pods discoverable disregarding the ready/not-ready state.
+Services that have `publishNotReadyAddresses` enabled make the addresses of connected Pods discoverable while disregarding the ready/not-ready state.
 
-For more information, see [Kubernetes ServiceSpec](https://kubernetes.io/docs/reference/kubernetes-api/service-resources/service-v1/#ServiceSpec)
+For more information, see [Kubernetes ServiceSpec](https://kubernetes.io/docs/reference/kubernetes-api/service-resources/service-v1/#ServiceSpec).
 
-To list all Services using `publishNotReadyAddresses` that are used by HCL Digital Experience the following command can be used:
+To list all Services with `publishNotReadyAddresses` enabled that are used by HCL DX, use the following command:
 
-```
+```bash
 kubectl -n <namespace> get services -o jsonpath='{range .items[?(@.spec.publishNotReadyAddresses==true)]}{.metadata.name}{"\n"}{end}'
 ```
 
