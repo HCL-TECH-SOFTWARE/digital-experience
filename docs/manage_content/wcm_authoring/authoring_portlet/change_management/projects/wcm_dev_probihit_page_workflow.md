@@ -18,17 +18,48 @@ Create a project to for creating the page template. This project is specifically
 !!! note
     Because you can set a workflow only on draft items, you must create the template as a draft in the context of a project. After you add your custom workflow to the draft, publish the draft to make the page template available.
 
-1. Create a new project for associating the workflow to the page template or to change the used workflow. ![](../../../../../images/Workflow_new_project.png)
-2. Open the applications menu and select **Administration**. ![](../../../../../images/Workflow_Administration.png)
-3. Make sure you are in the appropriate project. ![](../../../../../images/Workflow_Select_project.png)
-4. Go to **Administration > Site Management > Page Templates**. ![](../../../../../images/Workflow_Page_template.png)
-5. On the page templates page, show the site toolbar and ensure you are in edit mode. ![](../../../../../images/Workflow_edit_mode.png)
-6. Click on the template you want to add a workflow on or create a new page template and access **Open Page Settings**. ![](../../../../../images/Workflow_page_setting.png)
-7. Click on **Edit Page Properties**. ![](../../../../../images/Workflow_page_properties.png)
-8. Select the **Security** tab and select the appropriate workflow. ![](../../../../../images/Workflow_Security.png)
-9. Publish and approve the page template and project. 
+1. Create a new project for associating the workflow to the page template or to change the used workflow.
+
+    ![](../../../../../images/Workflow_new_project.png)
+
+2. Open the applications menu and select **Administration**.
+
+    ![](../../../../../images/Workflow_Administration.png)
+
+3. Make sure you are in the appropriate project.
+
+    ![](../../../../../images/Workflow_Select_project.png)
+
+4. Go to **Administration > Site Management > Page Templates**.
+
+    ![](../../../../../images/Workflow_Page_template.png)
+
+5. On the page templates page, show the site toolbar and ensure you are in edit mode.
+
+    ![](../../../../../images/Workflow_edit_mode.png)
+
+6. Click on the template you want to add a workflow on or create a new page template and access **Open Page Settings**.
+
+    ![](../../../../../images/Workflow_page_setting.png)
+
+7. Click on **Edit Page Properties**.
+
+    ![](../../../../../images/Workflow_page_properties.png)
+
+8. Select the **Security** tab and select the appropriate workflow.
+
+    ![](../../../../../images/Workflow_Security.png)
+
+9. Publish and approve the page template and project.
+
     ![](../../../../../images/Workflow_publish1.png)
+
     ![](../../../../../images/Workflow_publish2.png)
+
     ![](../../../../../images/Workflow_publish3.png)
+
     ![](../../../../../images/Workflow_publish4.png)
-10. Now if someone tries to use the template to create a new page outside a project, the system will block the page creation and show a warning. ![](../../../../../images/Workflow_Output.png)
+    
+10. Now if someone tries to use the template to create a new page outside a project, the system will block the page creation and show a warning.
+
+    ![](../../../../../images/Workflow_Output.png)
