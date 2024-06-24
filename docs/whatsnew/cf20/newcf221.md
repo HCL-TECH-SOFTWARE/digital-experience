@@ -6,9 +6,9 @@ The following features and updates are available to customers installing HCL Dig
 
 - Progress indication for XMLAccess
 - Progress indication for syndication
-- Web Content Manager REST API V2 - Ability to set cache header for WCM GET REST APIs
-- Web Content Manager REST API V2 - Update OpenAI ChatGPT to latest model gpt-4o
+- Web Content Manager REST API V2 - Setting a cache header for WCM GET REST APIs
 - Web Content Manager REST API V2 - Retrieving multiple content items in one REST call through a list of UUIDs
+- Web Content Manager REST API V2 - Update OpenAI ChatGPT to latest model gpt-4o
 - SEO tag configuration for Open Graph compatibility
 - TinyMCE - New menu options for inline editing
 - Notice of deprecation of Textbox.io Rich Text Editor
@@ -22,7 +22,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
-- Virtual Portal Manager configured so that newly created virtual Portals contain Practitioner Studio
+- Newly created virtual Portals now contain Practitioner Studio
 - HCL DX on AWS Marketplace now available
 - New parameter for configuring HAProxy networking
 - Digital Asset Management - Indexing
@@ -37,34 +37,26 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Progress indication for XMLAccess
 
 === "Containers"
-    You can enable progress logging to see the progress of XMLAccess in updating items contained in the `xmlaccess` input script. For more information, see [Working with the XML configuration interface](../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md).
+    You can enable progress logging to see the progress of XMLAccess in updating items contained in the xmlaccess input script. With this feature, you can monitor the progress of your xmlaccess imports which is helpful for larger imports. For more information, see [Working with the XML configuration interface](../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md).
     
 === "On-Premises"
-    You can enable progress logging to see the progress of XMLAccess in updating items contained in the `xmlaccess` input script. For more information, see [Working with the XML configuration interface](../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md).
+    You can enable progress logging to see the progress of XMLAccess in updating items contained in the xmlaccess input script. With this feature, you can monitor the progress of your xmlaccess imports which is helpful for larger imports. For more information, see [Working with the XML configuration interface](../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md).
 
 ### Progress indication for syndication
 
 === "Containers"
-    You can log the syndication progress on the subscriber. For more information, see [Syndication progress logging](../../manage_content/wcm_delivery/syndication/wcm_syndication_troubleshooting.md#syndication-progress-logging).
+    You can log the syndication progress on the subscriber. With this feature, you can track the status of the syndication process. For more information, see [Syndication progress logging](../../manage_content/wcm_delivery/syndication/wcm_syndication_troubleshooting.md#syndication-progress-logging).
     
 === "On-Premises"
-    You can log the syndication progress on the subscriber. For more information, see [Syndication progress logging](../../manage_content/wcm_delivery/syndication/wcm_syndication_troubleshooting.md#syndication-progress-logging).
+    You can log the syndication progress on the subscriber. With this feature, you can track the status of the syndication process. For more information, see [Syndication progress logging](../../manage_content/wcm_delivery/syndication/wcm_syndication_troubleshooting.md#syndication-progress-logging).
 
-### Web Content Manager REST API V2 - Ability to set cache header for WCM GET REST APIs
+### Web Content Manager REST API V2 - Setting a cache header for WCM GET REST APIs
 
 === "Containers"
     You can configure a cache header for GET requests for unauthenticated users. Configuring cache headers result to better performance and cachability. For more information, see [Cache headers for WCM REST V2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md#cache-headers-for-wcm-rest-v2).
     
 === "On-Premises"
     You can configure a cache header for GET requests for unauthenticated users. Configuring cache headers result to better performance and cachability. For more information, see [Cache headers for WCM REST V2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md#cache-headers-for-wcm-rest-v2).
-
-### Web Content Manager REST API V2 - Update OpenAI ChatGPT to latest model gpt-4o
-
-=== "Containers"
-    Starting CF221, the AI model is switched to ```gpt-4o```. This model is the newest and the most capable model with up-to-date information. For more information, see [Getting started with the REST service for Web Content Manager V2](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md).
-    
-=== "On-Premises"
-    Starting CF221, the AI model is switched to ```gpt-4o```. This model is the newest and the most capable model with up-to-date information. For more information, see [Getting started with the REST service for Web Content Manager V2](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md).
 
 ### Web Content Manager REST API V2 - Retrieving multiple content items in one REST call through a list of UUIDs   
 
@@ -74,13 +66,22 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     You can retrieve multiple content items in one REST call through a list of Universally Unique Identifiers (UUIDs). For more information, see [WCM REST V2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md).
 
+### Web Content Manager REST API V2 - Update OpenAI ChatGPT to latest model gpt-4o
+
+=== "Containers"
+    Starting CF221, the AI model is switched to ```gpt-4o```. This model is the newest and the most capable model with up-to-date information. For more information, see [Getting started with the REST service for Web Content Manager V2](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md).
+    
+=== "On-Premises"
+    Starting CF221, the AI model is switched to ```gpt-4o```. This model is the newest and the most capable model with up-to-date information. For more information, see [Getting started with the REST service for Web Content Manager V2](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md).
+
+
 ### SEO tag configuration for Open Graph compatibility
 
 === "Containers"
-    A new configuration option is added to generate [Open Graph](https://ogp.me/) compatible tags when rendering DX to be better parsable by social networks or search engines. For more information, see [Adding HTML meta tags for Search Engine Optimization (SEO)](../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/wcm_config_wcmviewer_seo.md).
+    A new configuration option is added to generate [Open Graph](https://ogp.me/) compatible tags when rendering DX. The Open Graph protocol allows you to set the `property` attribute value in the meta tag, improving the parsing of your website's content by social networks or search engines. For more information, see [Adding HTML meta tags for Search Engine Optimization (SEO)](../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/wcm_config_wcmviewer_seo.md).
     
 === "On-Premises"
-    A new configuration option is added to generate [Open Graph](https://ogp.me/) compatible tags when rendering DX to be better parsable by social networks or search engines. For more information, see [Adding HTML meta tags for Search Engine Optimization (SEO)](../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/wcm_config_wcmviewer_seo.md).
+    A new configuration option is added to generate [Open Graph](https://ogp.me/) compatible tags when rendering DX. The Open Graph protocol allows you to set the `property` attribute value in the meta tag, improving the parsing of your website's content by social networks or search engines. For more information, see [Adding HTML meta tags for Search Engine Optimization (SEO)](../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/wcm_config_wcmviewer_seo.md).
 
 ### TinyMCE - New menu options for inline editing
 
@@ -115,7 +116,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
-### Virtual Portal Manager configured so that newly created virtual Portals contain Practitioner Studio
+### Newly created virtual Portals now contain Practitioner Studio
 
 === "Containers"
     Starting CF221, the virtual Portal Manager is configured to use the file `WebSphere:assetname=VirtualPortal.zip:InitVirtualContentPortalV9.5NoWoodburn.xml` on newly deployed containers so that newly created virtual Portals contain Practitioner Studio. For more information, see [Configuring Practitioner Studio](../../build_sites/practitioner_studio/working_with_ps/config_prac_studio.md).
@@ -123,7 +124,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### HCL DX on AWS Marketplace now available
 
 === "Containers"
-    HCL DX Cloud Native is now live and listed the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-xxxuhyr7adj3a). For customers who purchase through the Marketplace as a containerized product offering, you can download the latest DX 9.5 container images and Helm charts available for HCL DX 9.5. For instructions on how to deploy HCL DX acquired from the AWS Marketplace, see [AWS Marketplace Helm deployment](../../deployment/install/container/helm_deployment/aws_marketplace_helm_deployment.md).
+    HCL DX Cloud Native is live and listed in the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-xxxuhyr7adj3a). This simplifies procurement and allows you to manage your software through one centralized account. For customers who purchase DX through the Marketplace as a containerized product offering, you can download the latest DX 9.5 container images and Helm charts. For instructions on how to deploy HCL DX acquired from the AWS Marketplace, see [AWS Marketplace Helm deployment](../../deployment/install/container/helm_deployment/aws_marketplace_helm_deployment.md).
 
 ### New parameter for configuring HAProxy networking
 
