@@ -774,3 +774,4 @@ For an introduction and a demo on how to use DXClient, go to [Staging](https://h
     - [Themes](../dxclient/dxclient_artifact_types/themes.md)
     - [Script applications](../dxclient/dxclient_artifact_types/scriptapplications.md)
     - [Resource environment provider](../dxclient/dxclient_artifact_types/resourceenvironments.md)
+    - [DAM Indexing](../../../manage_content/digital_assets/configuration/dam_indexing/index.md)

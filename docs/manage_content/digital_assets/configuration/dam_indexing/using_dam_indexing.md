@@ -10,10 +10,10 @@ This process indexes all existing assets when the DAM server starts and if there
 
 This process indexes all existing assets while revalidating stale indexes. There are two ways to trigger the reindexing process:
 
-- DAM API endpoint  
+- [DAM API endpoint](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/)
     To start the reindexing process, trigger the `POST` endpoint named `/reindex`.
 
-- DXClient  
+- [DXClient](../../../../extend_dx/development_tools/dxclient/index.md)  
     The following script is added in DXClient that triggers the reindexing process:
     
         ```bash

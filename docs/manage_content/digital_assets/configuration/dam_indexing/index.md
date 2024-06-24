@@ -3,10 +3,12 @@
 You can use Digital Asset Management (DAM) as a datasource of the Search service. Using DAM as a datasource enables you to search DAM assets and images more efficiently with the help of OpenSearch. To make DAM a proper datasource for Search, the following indexing processes are introduced:
 
 - **Initial indexing**: Indexes all existing assets during the startup of the DAM server.
-- **Reindexing**: Indexes all existing assets while revalidating stale indexes. You can trigger this process manually through DXClient or DAM API.
+- **Reindexing**: Indexes all existing assets while revalidating stale indexes. You can trigger this process manually through [DXClient](../../../../extend_dx/development_tools/dxclient/index.md) or [DAM API](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/).
 - **Live indexing**: Indexes changes made in DAM in near real-time. This allows DAM indexes to be up-to-date.
 
-For limitations of the DAM Indexing feature, see [DAM Limitations](../../limitations/index.md).
+## Limitation
+
+The contents of the assets are not considered during indexing. For example, text content of a document is not part of the indexing process.
 
 Refer to the following topics for instructions on how to configure and use DAM Indexing.
 

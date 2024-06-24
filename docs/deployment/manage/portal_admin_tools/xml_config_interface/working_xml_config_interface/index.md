@@ -23,6 +23,7 @@ These topics use the following terminology in the context of the XML configurati
 
     -   In the administrative context: a human administrative task, for example exporting a portal configuration or a part of it
     -   In the context of the XML configuration interface: an XML request and action, for example to export the data of a portal configuration or a part of it.
+    
 -   **import**
 
     This term represents only the human task in the administrative context, for example importing a portal configuration or a part of it. It has no corresponding XML request type. In the context of the XML configuration interface, an import is performed by specifying the update request type, together with the create or update action for the resources that are to be imported.
