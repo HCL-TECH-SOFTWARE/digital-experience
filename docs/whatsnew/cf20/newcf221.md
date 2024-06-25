@@ -10,15 +10,13 @@ The following features and updates are available to customers installing HCL Dig
 - Web Content Manager REST API V2 - Retrieving multiple content items in one REST call through a list of UUIDs
 - Web Content Manager REST API V2 - Update OpenAI ChatGPT to latest model gpt-4o
 - SEO tag configuration for Open Graph compatibility
-- TinyMCE - New menu options for inline editing
+- TinyMCE - New menu options for inplace editing
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
 
 - End of Support Announced for Digital Experience v8.5 and 9
 - DX upgrades starting CF221 automatically applies 9.5 to an 8.5/9.0 installation
-
-**Digital Experience 9.5 Version**
 
 **Digital Experience 9.5 Container Version**
 
@@ -37,10 +35,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Progress indication for XMLAccess
 
 === "Containers"
-    You can enable progress logging to see the progress of XMLAccess in updating items contained in the xmlaccess input script. With this feature, you can monitor the progress of your xmlaccess imports which is helpful for larger imports. For more information, see [Working with the XML configuration interface](../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md).
+    You can enable progress logging to see the progress of XMLAccess in updating items contained in the xmlaccess input script. This feature is helpful when monitoring larger xmlaccess imports. For more information, see [Working with the XML configuration interface](../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md).
     
 === "On-Premises"
-    You can enable progress logging to see the progress of XMLAccess in updating items contained in the xmlaccess input script. With this feature, you can monitor the progress of your xmlaccess imports which is helpful for larger imports. For more information, see [Working with the XML configuration interface](../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md).
+    You can enable progress logging to see the progress of XMLAccess in updating items contained in the xmlaccess input script. This feature is helpful when monitoring larger xmlaccess imports. For more information, see [Working with the XML configuration interface](../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md).
 
 ### Progress indication for syndication
 
@@ -61,10 +59,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Web Content Manager REST API V2 - Retrieving multiple content items in one REST call through a list of UUIDs   
 
 === "Containers"
-    You can retrieve multiple content items in one REST call through a list of Universally Unique Identifiers (UUIDs). For more information, see [WCM REST V2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md).
+    You can retrieve multiple content items in one REST call through a list of Universally Unique Identifiers (UUIDs). For more information, see [WCM REST V2 API documentation](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
     
 === "On-Premises"
-    You can retrieve multiple content items in one REST call through a list of Universally Unique Identifiers (UUIDs). For more information, see [WCM REST V2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md).
+    You can retrieve multiple content items in one REST call through a list of Universally Unique Identifiers (UUIDs). For more information, see [WCM REST V2 API documentation](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
 
 ### Web Content Manager REST API V2 - Update OpenAI ChatGPT to latest model gpt-4o
 
@@ -83,7 +81,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new configuration option is added to generate [Open Graph](https://ogp.me/) compatible tags when rendering DX. The Open Graph protocol allows you to set the `property` attribute value in the meta tag, improving the parsing of your website's content by social networks or search engines. For more information, see [Adding HTML meta tags for Search Engine Optimization (SEO)](../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/wcm_config_wcmviewer_seo.md).
 
-### TinyMCE - New menu options for inline editing
+### TinyMCE - New menu options for inplace editing
 
 === "Containers"
     New menu options are available in the TinyMCE rich text editor. (Doc in progress)
@@ -111,15 +109,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that starting with the next DX release, CF221, 9.5 is applied by default unless you set `install_95=false`.
 
-## Digital Experience 9.5 Version
-
-
 ## Digital Experience 9.5 Container Version
 
 ### Newly created virtual Portals now contain Practitioner Studio
 
 === "Containers"
-    Starting CF221, the virtual Portal Manager is configured to use the file `WebSphere:assetname=VirtualPortal.zip:InitVirtualContentPortalV9.5NoWoodburn.xml` on newly deployed containers so that newly created virtual Portals contain Practitioner Studio. For more information, see [Configuring Practitioner Studio](../../build_sites/practitioner_studio/working_with_ps/config_prac_studio.md).
+    Starting CF221, the Virtual Portal Manager is configured to use the file `WebSphere:assetname=VirtualPortal.zip:InitVirtualContentPortalV9.5NoWoodburn.xml` on newly deployed containers so that newly created virtual Portals contain Practitioner Studio. For more information, see [Configuring Practitioner Studio](../../build_sites/practitioner_studio/working_with_ps/config_prac_studio.md).
 
 ### HCL DX on AWS Marketplace now available
 
