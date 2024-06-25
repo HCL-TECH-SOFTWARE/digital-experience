@@ -362,7 +362,7 @@ The following list contains details of tuning and enhancements done to DX core d
 
 - Total errors are ~270 out of 35892379 requests (i.e, 0% error rate) from JMeter results which was very negligible.
 
-- The CPU usage of a three worker nodes reached 80% during our tests with 10000 concurrent user but not exceeded more than 90%. Memory usage of all worker nodes less than 50%.
+- The CPU usage of a three secondary node setup reached 80% during our tests with 10000 concurrent users but did not exceed more than 90%. Memory usage of all secondary nodes was less than 50%.
 
 - For DX medium configuration rendering scenarios with a user load of 10000 concurrent users, it is suggested to have a distributed K8s setup with 1 primary node of type c5.xlarge and 4 secondary nodes of type c5.4xlarge. With the mentioned tuned Helm values, the performance results in an average response time of 720 ms and 95th pct response time is less than 4 seconds. The top 5 APIs average response times are also less than 4 seconds.
 
