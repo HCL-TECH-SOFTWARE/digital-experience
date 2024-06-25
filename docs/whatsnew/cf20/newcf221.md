@@ -10,7 +10,7 @@ The following features and updates are available to customers installing HCL Dig
 - Web Content Manager REST API V2 - Retrieving multiple content items in one REST call through a list of UUIDs
 - Web Content Manager REST API V2 - Update OpenAI ChatGPT to latest model gpt-4o
 - SEO tag configuration for Open Graph compatibility
-- TinyMCE - New menu options for inplace editing
+- TinyMCE - Menu options for inplace editing now similar to WCM authoring
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -81,13 +81,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new configuration option is added to generate [Open Graph](https://ogp.me/) compatible tags when rendering DX. The Open Graph protocol allows you to set the `property` attribute value in the meta tag, improving the parsing of your website's content by social networks or search engines. For more information, see [Adding HTML meta tags for Search Engine Optimization (SEO)](../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/wcm_config_wcmviewer_seo.md).
 
-### TinyMCE - New menu options for inplace editing
+### TinyMCE - Menu options for inplace editing now similar to WCM authoring
 
 === "Containers"
-    New menu options are available in the TinyMCE rich text editor. (Doc in progress)
+    The menu options for inplace editing using TinyMCE are now similar to the menu for TinyMCE in WCM authoring. For information about TinyMCE Editor, see [Rich text editor toolbar configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md). 
     
-=== "On-Premises"
-    New menu options are available in the TinyMCE rich text editor. (Doc in progress)
+=== "Containers"
+    The menu options for inplace editing using TinyMCE are now similar to the menu for TinyMCE in WCM authoring. For information about TinyMCE Editor, see [Rich text editor toolbar configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md). 
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
