@@ -16,7 +16,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 8.5 and 9.0 Versions**
 
 - End of Support Announced for Digital Experience v8.5 and 9
-- DX upgrades starting CF221 automatically applies 9.5 to an 8.5/9.0 installation
+- DX upgrades starting CF222 automatically applies 9.5 to an 8.5/9.0 installation
 
 **Digital Experience 9.5 Container Version**
 
@@ -119,7 +119,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### HCL DX on AWS Marketplace now available
 
 === "Containers"
-    HCL DX Cloud Native is live and listed in the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-xxxuhyr7adj3a). This simplifies procurement and allows you to manage your software through one centralized account. For customers who purchase DX through the Marketplace as a containerized product offering, you can download the latest DX 9.5 container images and Helm charts. For instructions on how to deploy HCL DX acquired from the AWS Marketplace, see [AWS Marketplace Helm deployment](../../deployment/install/container/helm_deployment/aws_marketplace_helm_deployment.md).
+    HCL DX Cloud Native is live and listed in the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-xxxuhyr7adj3a). This allows customers with AWS agreements to simplify procurement and manage their software through one centralized account. For customers who purchase DX through the Marketplace as a containerized product offering, you can download the latest DX 9.5 container images and Helm charts. For instructions on how to deploy HCL DX acquired from the AWS Marketplace, see [AWS Marketplace Helm deployment](../../deployment/install/container/helm_deployment/aws_marketplace_helm_deployment.md).
 
 ### New parameter for configuring HAProxy networking
 

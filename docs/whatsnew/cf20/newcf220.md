@@ -13,7 +13,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 8.5 and 9.0 Versions**
 
 - End of Support Announced for Digital Experience v8.5 and 9
-- Change in the application of 9.5 during 8.5/9.0 installation for CF222
+- DX upgrades starting CF222 automatically applies 9.5 to an 8.5/9.0 installation
 
 **Digital Experience 9.5 Version**
 
