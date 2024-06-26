@@ -86,7 +86,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     The menu options for inplace editing using TinyMCE are now similar to the menu for TinyMCE in WCM authoring. For information about TinyMCE Editor, see [Rich text editor toolbar configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md). 
     
-=== "Containers"
+=== "On-Premises"
     The menu options for inplace editing using TinyMCE are now similar to the menu for TinyMCE in WCM authoring. For information about TinyMCE Editor, see [Rich text editor toolbar configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md). 
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
