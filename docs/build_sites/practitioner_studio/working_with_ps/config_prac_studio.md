@@ -14,7 +14,7 @@ Enable the HCL DX 9.5 features on the base Portal. Optionally, you can configure
 
 ### Steps
 
-1.  From **Site Management**, navigate to **Virtual Portal > Virtual Portal Manager > **Create New Virtual Portal**.
+1.  From **Site Management**, navigate to **Virtual Portal > Virtual Portal Manager > Create New Virtual Portal**.
 
 2.  Go to the overlay menu and click **Configure**.
 

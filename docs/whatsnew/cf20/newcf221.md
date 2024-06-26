@@ -16,7 +16,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 8.5 and 9.0 Versions**
 
 - End of Support Announced for Digital Experience v8.5 and 9
-- DX upgrades starting CF221 automatically applies 9.5 to an 8.5/9.0 installation
+- DX upgrades starting CF222 automatically applies 9.5 to an 8.5/9.0 installation
 
 **Digital Experience 9.5 Container Version**
 
@@ -86,7 +86,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     The menu options for inplace editing using TinyMCE are now similar to the menu for TinyMCE in WCM authoring. For information about TinyMCE Editor, see [Rich text editor toolbar configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md). 
     
-=== "Containers"
+=== "On-Premises"
     The menu options for inplace editing using TinyMCE are now similar to the menu for TinyMCE in WCM authoring. For information about TinyMCE Editor, see [Rich text editor toolbar configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md). 
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
@@ -119,7 +119,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### HCL DX on AWS Marketplace now available
 
 === "Containers"
-    HCL DX Cloud Native is live and listed in the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-xxxuhyr7adj3a). This simplifies procurement and allows you to manage your software through one centralized account. For customers who purchase DX through the Marketplace as a containerized product offering, you can download the latest DX 9.5 container images and Helm charts. For instructions on how to deploy HCL DX acquired from the AWS Marketplace, see [AWS Marketplace Helm deployment](../../deployment/install/container/helm_deployment/aws_marketplace_helm_deployment.md).
+    HCL DX Cloud Native is live and listed in the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-xxxuhyr7adj3a). This allows customers with AWS agreements to simplify procurement and manage their software through one centralized account. For customers who purchase DX through the Marketplace as a containerized product offering, you can download the latest DX 9.5 container images and Helm charts. For instructions on how to deploy HCL DX acquired from the AWS Marketplace, see [AWS Marketplace Helm deployment](../../deployment/install/container/helm_deployment/aws_marketplace_helm_deployment.md).
 
 ### New parameter for configuring HAProxy networking
 
@@ -129,7 +129,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New documentation about the types of Services used in DX
 
 === "Containers"
-    In Kubernetes, a Service is a method for exposing a network application that is running as one or more Pods in your cluster The topic [Types of Services used in DX](../../get_started/plan_deployment/container_deployment/service_types.md) provides more information about these Services.
+    In Kubernetes, a Service is a method for exposing a network application that is running as one or more Pods in your cluster. The topic [Types of Services used in DX](../../get_started/plan_deployment/container_deployment/service_types.md) provides more information about these Services.
 
 ### Digital Asset Management - Indexing
 
