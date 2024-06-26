@@ -21,7 +21,8 @@ Projects are included in syndication, the method that is used by HCL Web Content
 -   **[Projects and custom workflow actions](wcm_dev_projects_workflow.md)**  
 Each workflow stage contains default actions, but you can also create custom workflow actions by creating a custom workflow plug-in.
 -   **[Way to Publish Onesite Page Workflow](wcm_dev_probihit_page_workflow.md)**
-Create a workflow to show a warning and block the page creation, when you create a template to create a new page outside a project.
+Learn how to create a workflow to show a warning and block the page creation, when you try to use the page template to create a new page outside a project.
+
 -   **[Best practices for projects](wcm_proj_bestpractice.md)**  
 Use these tips and guidelines to develop and publish projects more effectively.
 
