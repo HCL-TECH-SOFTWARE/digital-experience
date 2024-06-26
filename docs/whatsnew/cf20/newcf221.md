@@ -129,7 +129,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New documentation about the types of Services used in DX
 
 === "Containers"
-    In Kubernetes, a Service is a method for exposing a network application that is running as one or more Pods in your cluster The topic [Types of Services used in DX](../../get_started/plan_deployment/container_deployment/service_types.md) provides more information about these Services.
+    In Kubernetes, a Service is a method for exposing a network application that is running as one or more Pods in your cluster. The topic [Types of Services used in DX](../../get_started/plan_deployment/container_deployment/service_types.md) provides more information about these Services.
 
 ### Digital Asset Management - Indexing
 
