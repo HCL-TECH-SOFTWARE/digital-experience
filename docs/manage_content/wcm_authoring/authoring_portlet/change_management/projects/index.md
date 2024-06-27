@@ -20,8 +20,8 @@ An outline of the validation process.
 Projects are included in syndication, the method that is used by HCL Web Content Manager to replicate data from a web content library on a syndicator server to a web content library on a subscriber server. Although projects are syndicated with other items in a library that is being syndicated, you cannot use the subscriber copy of the project to update or publish your project. Work with projects on the syndicator server only.
 -   **[Projects and custom workflow actions](wcm_dev_projects_workflow.md)**  
 Each workflow stage contains default actions, but you can also create custom workflow actions by creating a custom workflow plug-in.
--   **[Way to Publish Onesite Page Workflow](wcm_dev_probihit_page_workflow.md)**
-Learn how to create a workflow to show a warning and block the page creation, when you try to use the page template to create a new page outside a project.
+-   **[How to prohibit a page from being created outside of a WCM project using page templates](wcm_dev_probihit_page_workflow.md)**
+Learn how to prohibit a page from being created outside a WCM project using page templates.
 
 -   **[Best practices for projects](wcm_proj_bestpractice.md)**  
 Use these tips and guidelines to develop and publish projects more effectively.

@@ -1,9 +1,6 @@
-#  Create a Workflow to Show a Warning When you try to Use a Page Template Outside a Project
+#  How to prohibit a page from being created outside of a WCM project using page templates
 
 
-Learn how to create a project for creating the page template. This project is specifically needed to assign the workflow to the page template inside the CMS. It will be published and new pages do not need to be a part of this initial project.
-
-The Onesite Page Workflow is used in combination with page templates to ensure pages are created within a project.
 In HCL DX (Digital Experience), if a page template is used with an associated workflow that is not the default, then any page created from that template must be part of a project. For a new page, create or use an existing workflow. Different workflows are used with different page templates. For example, the approval process for a page used to deploy applications are different from a pure content based page.
 
 
@@ -11,9 +8,8 @@ In HCL DX (Digital Experience), if a page template is used with an associated wo
     Users with Privileged User access can personalize a page by adding content or by making other customizations to the page. Because Privileged User access is inherited by pages by default, your custom workflow can be bypassed by users with this access. If you want to ensure that users can update the page only through the workflow, disable the inheritance of Privileged User access for the page.
 
 
-
-!!! note
-    Because you can set a workflow only on draft items, you must create the template as a draft in the context of a project. After you add your custom workflow to the draft, publish the draft to make the page template available.
+To create a new page use an existing workflow or create a new workflow. Different workflows are used with different page templates. For example, the approval process for a page used to deploy applications are different from a content based page.
+Because you can set a workflow only on draft items, you must create the template as a draft in the context of a project. After you add your custom workflow to the draft, publish the draft to make the page template available.
 
 1. Create a new project for associating the workflow to the page template or to change the used workflow.
 
@@ -63,6 +59,6 @@ In HCL DX (Digital Experience), if a page template is used with an associated wo
 
     ![](../../../../../images/Workflow_publish4.png)
     
-Now if someone tries to use the template to create a new page outside a project, the system will block the page creation and show a warning.
+Now if someone tries to use the template to create a new page outside a project, the system will block the page creation and shows a warning.
 
-    ![](../../../../../images/Workflow_Output.png)
+![](../../../../../images/Workflow_Output.png)
