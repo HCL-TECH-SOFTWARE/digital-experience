@@ -50,6 +50,16 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     The query parameter `updateSource=true` is now available for the [Translated Content API](../../manage_content/wcm_development/wcm_dev_api/wcm_mls_api.md#translated-content-api).
 
+### Web Content Manager REST API V2 - New APIs
+
+=== "Containers"
+    APIs for searching for items with no owner or no author and specifying item options for search results are now available. 
+    You can retrieve multiple content items in one REST call through a list of Universally Unique Identifiers (UUIDs). For more information, see [WCM REST V2 API documentation](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
+
+=== "On-Premises"
+    APIs for searching for items with no owner or no author and specifying item options for search results are now available. 
+    You can retrieve multiple content items in one REST call through a list of Universally Unique Identifiers (UUIDs). For more information, see [WCM REST V2 API documentation](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
+
 ### Huddo Boards integration with HCL DX
 
 === "Containers"
