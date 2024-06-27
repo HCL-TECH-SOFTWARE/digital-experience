@@ -19,9 +19,9 @@ For guidance when rendering with upper limit on a single node, see [Performance-
 
 ### Conclusion
 
-This performance guidance shows the medium configuration on a Kubernetes (K8s) cluster with AWS instances having one master (c5.xlarge) and four worker nodes (c5.4xlarge).
+This performance guidance shows the medium configuration on a Kubernetes (K8s) cluster with AWS instances having one master (c5.large) and four worker nodes (c5.4xlarge).
 
-- For DX medium configuration rendering scenarios with 10000 concurrent user load, it is suggested to have a distributed K8s setup with one master of type c5.xlarge and four worker nodes of type c5.4xlarge. With the Helm values in the following table, the performance results in an average response time of 720 milliseconds and the 95th percentile (pct) response time is less than 4 seconds. Top 5 APIs average response times are also less than 4 seconds.
+- For DX medium configuration rendering scenarios with 10000 concurrent user load, it is suggested to have a distributed K8s setup with one master of type c5.large and four worker nodes of type c5.4xlarge. With the Helm values in the following table, the performance results in an average response time of 720 milliseconds and the 95th percentile (pct) response time is less than 4 seconds. Top 5 APIs average response times are also less than 4 seconds.
 
 - Core tuning details are available in [DX core tuning](#dx-core-tuning-and-enhancements-for-10000-concurrent-user-run).
 
@@ -68,7 +68,7 @@ To see the `medium-config-values.yaml` file in the hcl-dx-deployment Helm chart,
 
 - An AWS Elastic Compute Cloud (EC2) instance is running on a native Kubernetes platform with the DX images installed and configured.
 
-- In AWS/Native Kubernetes, the tests are executed in EC2 instances with one master (c5.xlarge) and four worker nodes (c5.4xlarge).
+- In AWS/Native Kubernetes, the tests are executed in EC2 instances with one master (c5.large) and four worker nodes (c5.4xlarge).
 
 - The tests used a remote DB2 instance (c5.2xlarge).
 
@@ -294,7 +294,7 @@ The following list contains details of tuning and enhancements done to DX core d
 
 - The goal is to have a K8s multi-node setup to support a load of 10000 concurrent users with a comfortable average and 95th percentile response times.
 
-- For rendering in a medium configuration, performance tests started with an AWS-distributed K8s setup having one master (c5.xlarge) and three worker nodes (c5.4xlarge).
+- For rendering in a medium configuration, performance tests started with an AWS-distributed K8s setup having one master (c5.large) and three worker nodes (c5.4xlarge).
 
 - The load started with 1000 concurrent users and gradually increased to 2500, 4000, and 5000 users. The setup could support up to 5000 concurrent users with an average response time of 27.61 ms with 0% errors (11 out of 16908116 requests which is negligible). 
 
@@ -365,6 +365,6 @@ The following list contains details of tuning and enhancements done to DX core d
 
 - The CPU usage of a three worker node setup reached 80% during the tests with 10000 concurrent users but did not exceed more than 90%. Memory usage of all worker nodes was less than 50%.
 
-- For DX medium configuration rendering scenarios with a user load of 10000 concurrent users, it is suggested to have a distributed K8s setup with one master node of type c5.xlarge and four worker nodes of type c5.4xlarge. With the tuned [Helm values](#helm-values), the performance results in an average response time of 720 ms and 95th pct response time is less than 4 seconds. The top 5 APIs average response times are also less than 4 seconds.
+- For DX medium configuration rendering scenarios with a user load of 10000 concurrent users, it is suggested to have a distributed K8s setup with one master node of type c5.large and four worker nodes of type c5.4xlarge. With the tuned [Helm values](#helm-values), the performance results in an average response time of 720 ms and 95th pct response time is less than 4 seconds. The top 5 APIs average response times are also less than 4 seconds.
 
 
