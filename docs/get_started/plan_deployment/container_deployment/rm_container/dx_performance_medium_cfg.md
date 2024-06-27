@@ -4,9 +4,9 @@ title: Performance Sizing Guidance for Rendering with a Medium Configuration
 ---
 
 
-## Performance-sizing guidance for rendering in medium configuration
+# Performance-sizing guidance for rendering with a medium configuration
 
-### Overview of DX rendering sizing-performance tests
+## Overview of DX rendering sizing-performance tests
 
 DX sizing is one of the goals of DX performance tests. DX sizing aims to identify the reliable Kubernetes environment for small, medium, and large DX configurations. This topic presents the important KPIs (for example, number of concurrent users, average response time, and throughput) for DX rendering medium configuration. This topic also discusses how adjustments to the core tuning, scaling of pods, and pod configuration can make significant improvements in system responsiveness.
 
@@ -17,7 +17,7 @@ For guidance when rendering with a small configuration, see [Performance-sizing 
 For guidance when rendering with upper limit on a single node, see [Performance-sizing guidance for rendering with maximum throughput on a single node](../rm_container/dx_performance_small_cfg.md/#performance-sizing-guidance-for-rendering-with-maximum-throughput-on-a-single-node).
 
 
-### Conclusion
+## Conclusion
 
 This performance guidance shows the medium configuration on a Kubernetes (K8s) cluster with AWS instances having one master (c5.large) and four worker nodes (c5.4xlarge).
 
@@ -53,7 +53,7 @@ To see the `medium-config-values.yaml` file in the hcl-dx-deployment Helm chart,
 !!!note
       You can increase the pod resources limits based on the available resources in the cluster.
 
-### Customer rendering scenario details
+## Customer rendering scenario details
 
 | Concurrent users      | Existing WCM pages | Existing DAM content | Pages with portlets |
 | --------------------  | ------------------ | -------------------- | ------------------- |
@@ -62,9 +62,9 @@ To see the `medium-config-values.yaml` file in the hcl-dx-deployment Helm chart,
 | Large  – 100000 users | 2000               | 50 - 100k            | 8000                | 
 
 
-### Environment
+## Environment
 
-#### AWS/Native Kubernetes
+### AWS/Native Kubernetes
 
 - An AWS Elastic Compute Cloud (EC2) instance is running on a native Kubernetes platform with the DX images installed and configured.
 
@@ -108,7 +108,7 @@ To see the `medium-config-values.yaml` file in the hcl-dx-deployment Helm chart,
       ![](../../../../images/c5_large_volume_info.png)
 
 
-#### DB2 instance
+### DB2 instance
 
 - Remote DB2 - [c5.2xlarge]
 
@@ -126,7 +126,7 @@ To see the `medium-config-values.yaml` file in the hcl-dx-deployment Helm chart,
       ![](../../../../images/Remote-DB2-Volume-Info-Med.png)
 
 
-#### JMeter agents
+### JMeter agents
 
 - JMeter instance - [c5.2xlarge]
 
@@ -160,14 +160,14 @@ To see the `medium-config-values.yaml` file in the hcl-dx-deployment Helm chart,
       Ramp-up time is 1.5 seconds per user. Test duration is the total of ramp-up time and 1 hour with peak load of concurrent users.
 
 
-### Authoring details
+## Authoring details
 
 Set up the systems before performing the rendering tests. This section provides details for WCM, DAM, and portlets authoring.
 
 
-### WCM Default Test Data - 200 pages
+## WCM Default Test Data - 200 pages
 
-#### WCM test data characteristics
+### WCM test data characteristics
 
 - The default test data has a WCM design library called "PerformanceTestDesign" and five content libraries named "PerformanceTestContent01" to "PerformanceTestContent05".
       
@@ -191,7 +191,7 @@ Set up the systems before performing the rendering tests. This section provides 
 
 - A total of 99,999 users were added to openLDAP as authenticated users.
 
-### DAM default test data: 25,000 assets
+## DAM default test data: 25,000 assets
 
 - Testers uploaded 25,000 assets. These assets include images (136 KB, .jpg), documents (199 KB, .docx), and videos (1.1 MB, .mp4) to preheat. After preloading 25,000 assets, 15 assets were uploaded and rendered for 1 hour at peak load after ramp-up time.
 
@@ -215,7 +215,7 @@ Set up the systems before performing the rendering tests. This section provides 
 !!!note
       For DAM, only anonymous rendering is available.
 
-### Pages and portlets default test data: 80 pages
+## Pages and portlets default test data: 80 pages
 
 Customers typically use a total of eight pages with portlets. To complete authoring and rendering, both anonymous and authenticated users received access. The same users were added in openLDAP for WCM rendering. All authenticated users are assigned the User role. The pages in the following list are duplicated 10 times with different page numbers, resulting to 80 pages.
  
@@ -232,7 +232,7 @@ As part of authoring, pages and portlets were added manually. The list shows the
 
 After completing the authoring steps, the anonymous portal user and authenticated users (added to openLDAP) must render the pages. Every page request uses a `/GET API` call (for example, `/wps/portal/portletsperf/page1`) and there is a response assertion in a sampler to validate the content html in the response body. 
 
-### Combined DX rendering of WCM, DAM, and pages and portlets
+## Combined DX rendering of WCM, DAM, and pages and portlets
 
 For rendering sizing, all rendering JMeter scripts of WCM, DAM, and pages and portlets are combined. See the following section for details of load distribution.
 
@@ -243,7 +243,7 @@ For rendering sizing, all rendering JMeter scripts of WCM, DAM, and pages and po
 - Pages and Portlets - 30%
 
 
-### DX core tuning and enhancements for 10000 concurrent user run
+## DX core tuning and enhancements for 10000 concurrent user run
       
 The following list contains details of tuning and enhancements done to DX core during testing:
 
@@ -290,7 +290,7 @@ The following list contains details of tuning and enhancements done to DX core d
  - DB2 tuning performed by executing DB2 Reorg and Runstats.
 
 
-### Results overview
+## Results overview
 
 - The goal is to have a K8s multi-node setup to support a load of 10000 concurrent users with a comfortable average and 95th percentile response times.
 
@@ -308,7 +308,7 @@ The following list contains details of tuning and enhancements done to DX core d
 
 
 
-#### Helm values
+### Helm values
 
                                         Requests                Limits 
 | Component                     | No. of pods | cpu (m)   | memory (Mi)| cpu (m)   | memory (Mi)|
@@ -327,12 +327,12 @@ The following list contains details of tuning and enhancements done to DX core d
 | **Total**                     |             | **60000** | **79532**  | **60000** | **79532**  |
 
 
-#### Details of Pods in native-kube deployment
+### Details of Pods in native-kube deployment
 
 ![](../../../../images/DX_Rendering_Medium_Config_Pods.png)
 
 
-#### Summary of results
+### Summary of results
 
 
 | Medium Config Sizing                      | Distributed-Run (1Master-4Worker Nodes)                                                                 | Distributed-Run (1Master-4Worker Nodes)                                                                                                                                                                             | Distributed-Run (Master-4Worker Nodes)                                                                                                                                                                                                                                                                                                               |
@@ -359,7 +359,7 @@ The following list contains details of tuning and enhancements done to DX core d
 
 
 
-##### Observations 
+#### Observations 
 
 - Total errors are 270 out of 35892379 requests (that is, 0% error rate) from JMeter results which is negligible.
 
