@@ -8,7 +8,7 @@ OpenSearch must be enabled.
 
 ## Adding OpenSearch middleware configurations to enable DAM Indexing
 
-Go to the `values.yaml` file and refer to the following Helm values to add configurations of OpenSearch middleware:
+Go to the `values.yaml` file and refer to the following sample Helm values to add configurations of OpenSearch middleware:
 
 ```yaml
 configuration:
@@ -16,17 +16,18 @@ configuration:
         # Enable/Disable Search Middleware
         enabled: true
         # Host of Search Middleware
-        host: ""
+        host: your-domain.com
         # Port of Search Middleware
-        port:
+        port: 443
         # Setting if SSL is enabled for Search Middleware
-        ssl: false
+        ssl: true
         # Username of the push administrator
         pushAdminUser: "pushadmin"
         # Password of the push administrator
         pushAdminPassword: "adminpush"
         # Provide a custom secret that will be used to set credentials for push administration
         # If customPushAdminSecret is provided then pushAdminUser & pushAdminPassword values are ignored
+        # This can be removed if there is no custom secret
         customPushAdminSecret: ""
         # Content Source ID of DAM
         # This is needed for indexing to work in DAM
@@ -39,7 +40,7 @@ You can create the `damContentSourceId` by using the `POST` `/contentsources` en
 {
     "type": "dam",
     "name": "dam",
-    "aclLookupHost": "http://your-domain.com"
+    "aclLookupHost": "https://your-domain.com"
 }
 ```
 
