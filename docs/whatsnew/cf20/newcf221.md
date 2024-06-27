@@ -138,7 +138,8 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ### New guidance for performance sizing for rendering in medium configuration
 
-(Doc in progress)
+=== "Containers"    
+    Results of DX sizing tests for rendering with a medium configuration are now available. This guidance presents the important KPIs and discusses how adjustments to the pod configuration can make significant improvements in the responsiveness of the system. For more information, see the topic [Performance-sizing guidance for rendering with a medium configuration](../../get_started/plan_deployment/container_deployment/rm_container/dx_performance_medium_cfg.md).
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
