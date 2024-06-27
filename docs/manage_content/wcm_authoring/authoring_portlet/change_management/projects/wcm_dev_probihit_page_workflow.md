@@ -5,7 +5,7 @@ In HCL DX (Digital Experience), if a page template is used with an associated wo
 
 
 !!! Important
-    Users with Privileged User access can personalize a page by adding content or by making other customizations to the page. Because Privileged User access is inherited by pages by default, your custom workflow can be bypassed by users with this access. If you want to ensure that users can update the page only through the workflow, disable the inheritance of Privileged User access for the page.
+    The users with Privileged User access can personalize a page by adding content or by making other customizations to the page. Because Privileged User access is inherited by pages by default, your custom workflow can be bypassed by users with this access. If you want to ensure that users can update the page only through the workflow, disable the inheritance of Privileged User access for the page.
 
 
 To create a new page use an existing workflow or create a new workflow. Different workflows are used with different page templates. For example, the approval process for a page used to deploy applications are different from a content based page.
