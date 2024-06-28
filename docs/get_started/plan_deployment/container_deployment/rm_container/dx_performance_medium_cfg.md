@@ -78,9 +78,9 @@ To see the `medium-config-values.yaml` file in the hcl-dx-deployment Helm chart,
 
       - Info
 
-      ![](../../../../images/Header-1-AWS-Med.png){ width="600" }
+      ![](../../../../images/Header-1-AWS-Med.png)
 
-      ![](../../../../images/ec2_c5_4xlarge_info.png){ width="600" }
+      ![](../../../../images/ec2_c5_4xlarge_info.png)
 
 
       - Processor details
@@ -95,9 +95,9 @@ To see the `medium-config-values.yaml` file in the hcl-dx-deployment Helm chart,
 
       - Info
 
-      ![](../../../../images/Header-1-AWS-Med.png){ width="600" }
+      ![](../../../../images/Header-1-AWS-Med.png)
 
-      ![](../../../../images/ec2_c5_large_info.png){ width="600" }
+      ![](../../../../images/ec2_c5_large_info.png)
 
       - Processor details
 
@@ -112,9 +112,9 @@ To see the `medium-config-values.yaml` file in the hcl-dx-deployment Helm chart,
 
 - Remote DB2 - [c5.2xlarge]
 
-      ![](../../../../images/Header-1-AWS-Med.png){ width="600" }
+      ![](../../../../images/Header-1-AWS-Med.png)
 
-      ![](../../../../images/C5.2xlarge.png){ width="600" }
+      ![](../../../../images/C5.2xlarge.png)
 
 - Processor details
 
@@ -132,9 +132,9 @@ To see the `medium-config-values.yaml` file in the hcl-dx-deployment Helm chart,
 
 - To run the tests, a distributed AWS/JMeter agents setup consisting of one primary and eight subordinates was used.
 
-      ![](../../../../images/Header-1-AWS-Med.png){ width="600" }
+      ![](../../../../images/Header-1-AWS-Med.png)
 
-      ![](../../../../images/C5.2xlarge.png){ width="600" }
+      ![](../../../../images/C5.2xlarge.png)
 
 
 - Processor details
