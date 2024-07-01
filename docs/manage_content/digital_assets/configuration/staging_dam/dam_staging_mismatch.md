@@ -255,6 +255,7 @@ Use the `manage-dam-staging get-staging-mismatch-report` command to download the
         `recordType`, `recordAction`, `reportPath` and `forceDownload`  are optional parameters.
 
     You cannot download the report during the following scenarios:
+    
     - If resyncStatus is 'FIND_MISMATCH_START' or 'DYNAMIC_STATUS_COMPUTATION_REQUIRED', the message `Report cannot be downloaded as Find staging mismatch is still in progress.` is displayed.
     - If resyncStatus is 'FIND_MISMATCH_FAILED', the message `Report cannot be downloaded as Find staging mismatch process failed. Try to execute find-staging-mismatch again to trigger the mismatch generation process and download report once it is done.` is displayed.
     - If resyncStatus is 'RESYNC_TRIGGER_START' or 'RESYNC_TRIGGER_COMPLETED' or 'RESYNC_TRIGGER_FAILED', the message `Please run find mismatch first before generating report logs.` is displayed.
