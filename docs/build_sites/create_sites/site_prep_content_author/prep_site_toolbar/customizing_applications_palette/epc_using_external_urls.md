@@ -25,12 +25,12 @@ To assign portlets to these categories, you must point the external URL to a fee
 
     Use this format to create a tag if it does not exist, and you can assign as many tags as you want to as many portlets. This way, you can see the custom portlets displayed under just one category or multiple different categories.
 
-    After adding tags to portlet resources, you can now get a portlet entity feed of all portlets tagged with a custom tag by using the following URL:
+    After adding tags to portlet resources, you can get a portlet entity feed of all portlets tagged with a custom tag by using the following URL:
 
     https://your_dx_hostname/wps/mycontenthandler?uri=rm:empty?tmparam=tm%3aname%3aCustomAppCategory
 
 
-2. Click the **Administration** menu icon. Then, click **Portal User Interface > Manage Pages**, to open the **Manage Pages** portlet.
+2.  Open the **Manage Pages** portlet. To open the portlet, click the **Administration** menu icon then go to **Portal User Interface > Manage Pages**.
 
 3. Locate the category root label.
 
@@ -38,9 +38,9 @@ To assign portlets to these categories, you must point the external URL to a fee
 
 4. Under the application category root label, click **New URL** to create a new URL.
 
-5. Add title and description in Title and Description field respectively for the new category. Click **OK**.
+5. Add a title and description in **Title** and **Description** field respectively for the new category. Click **OK**.
 
-6. In the Advanced Options section, select **HTML** as supported markup. Specify a URI pointing to a feed that returns a list of portlet definitions or portlet entities.
+6. In the Advanced Options section, select **HTML** as supported markup. Specify a Uniform Resource Identifier (URI) pointing to a feed that returns a list of portlet definitions or portlet entities.
 
     For example, the URL from step 1 has the following URI: `rm:empty?tmparam=tm%3aname%3aCustomAppCategory`
 
