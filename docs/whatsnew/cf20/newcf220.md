@@ -54,12 +54,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Web Content Manager REST API V2 - New APIs
 
 === "Containers"
-    APIs for searching for items with no owner or no author and specifying item options for search results are now available. 
-    You can retrieve multiple content items in one REST call through a list of Universally Unique Identifiers (UUIDs). For more information, see [WCM REST V2 API documentation](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
+    APIs for searching for items with no owner or no author and specifying item options for search results are now available. For more information, see [WCM REST V2 API documentation](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
 
 === "On-Premises"
-    APIs for searching for items with no owner or no author and specifying item options for search results are now available. 
-    You can retrieve multiple content items in one REST call through a list of Universally Unique Identifiers (UUIDs). For more information, see [WCM REST V2 API documentation](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
+    APIs for searching for items with no owner or no author and specifying item options for search results are now available. For more information, see [WCM REST V2 API documentation](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
 
 ### Huddo Boards integration with HCL DX
 
