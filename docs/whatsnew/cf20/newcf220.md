@@ -6,6 +6,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Web Content Manager - Drafts not exposed with WebDAV for WCM
 - Web Content Manager - New query parameter in WCM Multilingual Solution API
+- Web Content Manager REST API V2 - New APIs
 - Huddo Boards integration with HCL DX
 - HCL Commerce integration with HCL DX
 - Notice of deprecation of Textbox.io Rich Text Editor
@@ -49,6 +50,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     The query parameter `updateSource=true` is now available for the [Translated Content API](../../manage_content/wcm_development/wcm_dev_api/wcm_mls_api.md#translated-content-api).
+
+### Web Content Manager REST API V2 - New APIs
+
+=== "Containers"
+    APIs for searching for items with no owner or no author and specifying item options for search results are now available. For more information, see [WCM REST V2 API documentation](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
+
+=== "On-Premises"
+    APIs for searching for items with no owner or no author and specifying item options for search results are now available. For more information, see [WCM REST V2 API documentation](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
 
 ### Huddo Boards integration with HCL DX
 
