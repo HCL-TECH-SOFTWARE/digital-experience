@@ -136,6 +136,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     You can use Digital Asset Management (DAM) as a datasource of the Search service for you to search DAM assets and images more efficiently. For instructions on how to configure and use indexing in DAM, see [DAM Indexing](../../manage_content/digital_assets/configuration/dam_indexing/index.md).
 
+### Digital Asset Management - Downloading a mismatch report even if find mismatch process is not complete
+
+=== "Containers" 
+    You can use the `-forceDownload <value>` attribute to download a mismatch report even if the find mismatch process is not complete. Documentation is also updated to list the scenarios where you cannot download a mismatch report. For more information, see [DAM Staging Mismatch and Resync](../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md#download-mismatch-report).
+
 ### New guidance for performance sizing for rendering in medium configuration
 
 === "Containers"    
