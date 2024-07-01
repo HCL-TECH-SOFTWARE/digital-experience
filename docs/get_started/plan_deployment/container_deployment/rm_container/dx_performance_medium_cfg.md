@@ -85,11 +85,11 @@ To see the `medium-config-values.yaml` file in the hcl-dx-deployment Helm chart,
 
       - Processor details
 
-      ![](../../../../images/C5_4xlarge_cpu_info.png)
+      ![](../../../../images/c5_4xlarge_cpu_info.png)
 
       - Volume details
 
-      ![](../../../../images/c5_4xlarge_volume_info.png)
+      ![](../../../../images/c5_4xlarge_volume_info.png){ width="600" }
 
 - c5.large
 
@@ -105,7 +105,7 @@ To see the `medium-config-values.yaml` file in the hcl-dx-deployment Helm chart,
 
       - Volume details
 
-      ![](../../../../images/c5_large_volume_info.png)
+      ![](../../../../images/c5_large_volume_info.png){ width="600" }
 
 
 ### DB2 instance
@@ -118,12 +118,12 @@ To see the `medium-config-values.yaml` file in the hcl-dx-deployment Helm chart,
 
 - Processor details
 
-      ![](../../../../images/Processor_Info_RemoteDB2_Med.png)
+      ![](../../../../images/Processor_Info_RemoteDB2_Med.png){ width="600" }
 
 
 - Volume details
 
-      ![](../../../../images/Remote-DB2-Volume-Info-Med.png)
+      ![](../../../../images/Remote-DB2-Volume-Info-Med.png){ width="600" }
 
 
 ### JMeter agents
@@ -139,21 +139,21 @@ To see the `medium-config-values.yaml` file in the hcl-dx-deployment Helm chart,
 
 - Processor details
 
-      ![](../../../../images/Processor_Info_RemoteDB2_Med.png)
+      ![](../../../../images/Processor_Info_RemoteDB2_Med.png){ width="600" }
 
 
 - Volume details
 
-      ![](../../../../images/Remote-DB2-Volume-Info-Med.png)
+      ![](../../../../images/Remote-DB2-Volume-Info-Med.png){ width="600" }
 
 
 - Processor details
 
-      ![](../../../../images/Processor_Info_Native-Kube.png)
+      ![](../../../../images/Processor_Info_Native-Kube.png){ width="600" }
 
 - Volume details
 
-      ![](../../../../images/AWS-Native-Kube-Volume-Info.png)
+      ![](../../../../images/AWS-Native-Kube-Volume-Info.png){ width="600" }
 
 
 !!!note
@@ -284,8 +284,8 @@ The following list contains details of tuning and enhancements done to DX core d
 
  ![](../../../../images/Core_Tuning_Log_Level_Details.png)
 
- !!!note
-       Restart all core pods after performing all the tunings steps mentioned.
+!!!note
+      Restart all core pods after performing all the tunings steps mentioned.
 
  - DB2 tuning performed by executing DB2 Reorg and Runstats.
 
@@ -310,26 +310,31 @@ The following list contains details of tuning and enhancements done to DX core d
 
 ### Helm values
 
-                                        Requests                Limits 
-| Component                     | No. of pods | cpu (m)   | memory (Mi)| cpu (m)   | memory (Mi)|
-|-------------------------------|-------------|-----------|------------|-----------|------------|
-| contentComposer               | 1           | 100       | 128        | 100       | 128        |
-| **core**                      | **7**       | **5600**  | **8192**   | **5200**  | **8192**   |
-| **digitalAssetManagement**    | **4**       | **1000**  | **2048**   | **1000**  | **2048**   |
-| imageProcessor                | 1           | 200       | 2048       | 200       | 2048       |
-| **openLdap**                  | **1**       | **500**   | **2048**   | **500**   | **2048**   |
-| **persistenceNode**           | **2**       | **1200**  | **2048**   | **1000**  | **2048**   |
-| **persistenceConnectionPool** | **2**       | **700**   | **1024**   | **700**   | **1024**   |
-| **ringApi**                   | **2**       | **2000**  | **512**    | **2000**  | **512**    |
-| runtimeController             | 1           | 100       | 256        | 100       | 256        |
-| **haproxy**                   | **2**       | **2000**  | **1024**   | **2000**  | **1024**   |
-| licenseManager                | 1           | 100       | 300        | 100       | 300        |
-| **Total**                     |             | **60000** | **79532**  | **60000** | **79532**  |
 
+|  |  | Request | Request | Limit | Limit |
+|---|---|---:|---|---|---|
+| **Component** | **No. of pods** | **cpu (m)<br>** | **memory (Mi)<br>** | **cpu (m)<br>** | **memory (Mi)<br>** |
+| contentComposer | 1 | 100 | 128 | 100 | 128 |
+| **core** | **7** | 5600 | **8192** | **5200** | **8192** |
+| **digitalAssetManagement** | **4** | **1000** | **2048** | **1000** | **2048** |
+| imageProcessor | 1 | 200 | 2048 | 200 | 2048 |
+| **openLdap** | **1** | **500** | **2048** | **500** | **2048** |
+| **persistenceNode** | **2** | **1200** | **2048** | **1000** | **2048** |
+| **persistenceConnectionPool** | **2** | **700** | **1024** | **700** | **1024** |
+| **ringApi** | **2** | **2000** | **512** | **2000** | **512** |
+| runtimeController | 1 | 100 | 256 | 100 | 256 |
+| **haproxy** | **2** | **2000** | **1024** | **2000** | **1024** |
+| licenseManager | 1 | 100 | 300 | 100 | 300 |
+| **Total** | | **60000** | **79532** | **60000** | **79532** |
+
+
+
+!!!note
+      Bolded values are tuned helm values and other values are default minimal values.
 
 ### Details of Pods in native-kube deployment
 
-![](../../../../images/DX_Rendering_Medium_Config_Pods.png)
+![](../../../../images/DX_Rendering_Medium_Config_Pods.png){ width="600" }
 
 
 ### Summary of results
