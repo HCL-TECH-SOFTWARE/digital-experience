@@ -25,7 +25,7 @@ The following features and updates are available to customers installing HCL Dig
 - New parameter for configuring HAProxy networking
 - Digital Asset Management - Indexing
 - Digital Asset Management - Downloading a mismatch report even if find mismatch process is not complete
-- New guidance for performance sizing for rendering in medium configuration
+<!--- New guidance for performance sizing for rendering in medium configuration-->
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Removal of automated Pod restart on ConfigMap updates
 
