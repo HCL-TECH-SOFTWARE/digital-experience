@@ -45,7 +45,6 @@ Because you can set a workflow only on draft items, you must create the template
 
 9. Publish and approve the page template and project.
 
-
     1. Select the created page template.
 
         ![](../../../../../images/Workflow_publish1.png)
