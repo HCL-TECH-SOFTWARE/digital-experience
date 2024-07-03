@@ -4,17 +4,44 @@
 }
 
 .md-grid {
-    max-width: 75rem;
+    max-width: 100%;
+}
+
+.md-main__inner {
+    margin-top: 0;
 }
 
 .md-tabs__link {
     opacity: 1;
-	
 }
 
 .md-typeset h1 {
-    font-weight: 500;
+    font-weight: 900;
+    color: var(--md-typeset-fg-color);
 }
+
+.md-typeset h2 {
+    font-weight: 500;
+    color: var(--md-typeset-fg-color);
+}
+
+.md-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-left: 1px solid silver;
+    border-right: 1px solid silver;
+}
+
+.md-nav--lifted>.md-nav__list>.md-nav__item--active>.md-nav__link {
+    box-shadow: none;
+    background: none;
+}
+
+.md-sidebar__scrollwrap {
+    margin: 0;
+    background-color: #EFEFEF;
+}
+
 
 [dir=ltr] .md-header__title {
 	margin-left: 0;
@@ -126,6 +153,10 @@ text-align: center;
 
 .md-banner--warning {
     background: var(--md-typeset-mark-color) !important;
+}
+
+:root {
+    --md-primary-light-grey: #EFEFEF;
 }
 
 /*Alignment is done for language selector for desktop view*/
