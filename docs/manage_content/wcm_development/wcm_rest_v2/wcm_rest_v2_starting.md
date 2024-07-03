@@ -44,6 +44,20 @@ Starting CF218, WCM REST V2 Swagger API Explorer introduces additional APIs. Som
 - Page References 
 - Rendering Content
 
+## APIs added or modified in CF220
+
+Starting CF220, WCM REST V2 Swagger API Explorer introduces additional APIs:
+
+- Search for items with no owner or no author
+- Specify item options for search results
+
+## APIs added or modified in CF221
+
+Starting CF221, WCM REST V2 Swagger API Explorer introduces additional APIs:
+
+- Retrieve multiple content items in one REST call through a list of Universally Unique Identifiers (UUIDs)
+- Set cache header for WCM GET REST APIs
+
 ## WCM REST V2 API explorer
 
 With WCM REST V2 API explorer, developers using the Digital Experience WCM REST APIs can explore and test all the WCM V2 APIs. 
@@ -69,6 +83,7 @@ Go to **Resources** > **Resource Environment** > **Resource Environment Provider
 
 
 ???+ info "Related information"
+    - [WCM REST V2 API documentation](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
     - [REST API Explorers](../../../extend_dx/apis/hcl_experience_api/api_explorers.md)
     - [HCL Experience API](../../../extend_dx/apis/hcl_experience_api/index.md)
 
