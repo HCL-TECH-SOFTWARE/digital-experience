@@ -27,7 +27,7 @@ The following features and updates are available to customers installing HCL Dig
 - Digital Asset Management - Downloading a mismatch report even if find mismatch process is not complete
 - New guidance for performance sizing for rendering in medium configuration
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
-- Notice of deprecation of customized OpenLDAP container
+- Notice of deprecation of customized OpenLDAP container starting CF223
 - Removal of automated Pod restart on ConfigMap updates
 
 Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases.
