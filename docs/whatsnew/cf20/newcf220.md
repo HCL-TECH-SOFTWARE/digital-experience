@@ -26,7 +26,6 @@ The following features and updates are available to customers installing HCL Dig
 - Digital Asset Management - Access control for nested collections
 - Digital Asset Management - PostgreSQL version upgrade
 - Added guidance for upgrading a Helm deployment
-- New guidance for performance sizing for rendering with maximum throughput on a single node
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Notice of deprecation of automated Pod restart on ConfigMap updates
 
@@ -124,12 +123,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Information about the [prerequisites](../../deployment/install/container/helm_deployment/update_helm_deployment.md#prerequisites) when upgrading a Helm deployment and the [recommended actions before a CF upgrade for Kubernetes](../../deployment/install/container/helm_deployment/update_helm_deployment.md#recommended-actions-before-a-cf-upgrade) are now available. 
-
-### New guidance for performance sizing for rendering with maximum throughput on a single node
-
-=== "Containers"
-    Results of DX sizing tests for rendering with maximum throughput on a single node are now available. This guidance presents the important KPIs and discusses how adjustments to the pod configuration can make significant improvements in the responsiveness of the system. For more information, see the topic [Performance-sizing guidance for rendering with maximum throughput on a single node](../../get_started/plan_deployment/container_deployment/rm_container/dx_performance_small_cfg.md#performance-sizing-guidance-for-rendering-with-maximum-throughput-on-a-single-node).
-
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
