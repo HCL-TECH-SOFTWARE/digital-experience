@@ -156,7 +156,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Notice of deprecation of customized OpenLDAP container starting CF223
 
 === "Containers"
-    Starting with CF223, we will no longer be building and shipping our custom OpenLDAP container and will instead be using an open source container. By leveraging the robust and well-maintained Bitnami OpenLDAP image, we can focus on delivering enhanced features and support without the overhead of maintaining our own container. This shift allows us to provide you with more reliable and up-to-date solutions for your test environments. The new alternative, Bitnami, will be provided but will not ship with the release. We will provide the necessary sample LDIF files for your OpenLDAP configuration.
+    Starting CF223, HCL DX will no longer build and ship its custom OpenLDAP container and will instead use an open source container. By using the robust and well-maintained Bitnami OpenLDAP image, HCL DX can focus on delivering enhanced features and support without the overhead of maintaining its customized container. This shift is to provide you with more reliable and up-to-date solutions for your test environments. The new alternative, Bitnami, will be provided but will not ship with the release. Sample LDIF files for your OpenLDAP configuration will also be available.
     
 ### Removal of automated Pod restart on ConfigMap updates
 
