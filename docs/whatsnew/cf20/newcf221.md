@@ -51,7 +51,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     You can log the syndication progress on the subscriber. With this feature, you can track the status of the syndication process. For more information, see [Syndication progress logging](../../manage_content/wcm_delivery/syndication/wcm_syndication_troubleshooting.md#syndication-progress-logging).
 
-### Web Content Manager REST API V2 - Setting a cache header for WCM GET REST APIs
+### Setting a cache header for WCM GET REST APIs
 
 === "Containers"
     You can configure a cache header for GET requests for unauthenticated users. Configuring cache headers result to better performance and cachability. For more information, see [Cache headers for WCM REST V2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md#cache-headers-for-wcm-rest-v2).
@@ -59,7 +59,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     You can configure a cache header for GET requests for unauthenticated users. Configuring cache headers result to better performance and cachability. For more information, see [Cache headers for WCM REST V2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md#cache-headers-for-wcm-rest-v2).
 
-### Web Content Manager REST API V2 - Retrieving multiple content items in one REST call through a list of UUIDs   
+### Retrieving multiple content items in one REST call through a list of UUIDs   
 
 === "Containers"
     You can retrieve multiple content items in one REST call through a list of Universally Unique Identifiers (UUIDs). For more information, see [WCM REST V2 API documentation](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
@@ -67,7 +67,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     You can retrieve multiple content items in one REST call through a list of Universally Unique Identifiers (UUIDs). For more information, see [WCM REST V2 API documentation](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
 
-### Web Content Manager REST API V2 - Updated OpenAI ChatGPT to latest model `gpt-4o`
+### Updated OpenAI ChatGPT to latest model `gpt-4o`
 
 === "Containers"
     Starting CF221, the AI model is switched to ```gpt-4o```. This model is the newest and the most capable model with up-to-date information. For more information, see [Getting started with the REST service for Web Content Manager V2](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md).
@@ -84,7 +84,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new configuration option is added to generate [Open Graph](https://ogp.me/) compatible tags when rendering DX. The Open Graph protocol allows you to set the `property` attribute value in the meta tag, improving the parsing of your website's content by social networks or search engines. For more information, see [Adding HTML meta tags for Search Engine Optimization (SEO)](../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/wcm_config_wcmviewer_seo.md).
 
-### TinyMCE - Menu options for inplace editing now similar to WCM authoring
+### TinyMCE - Improved menu options for inplace editing
 
 === "Containers"
     The menu options for inplace editing using TinyMCE are now similar to the menu for TinyMCE in WCM authoring. For information about TinyMCE Editor, see [Rich text editor toolbar configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md). 
@@ -111,7 +111,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     On June 30, 2023, HCL Software announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
     
-### DX upgrades starting CF222 automatically applies 9.5 to an 8.5/9.0 installation
+### Automatically apply 9.5 from CF222 installation
 
 === "On-Premises"
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that starting with the next DX release, CF222, 9.5 is applied by default unless you set `install_95=false`.
