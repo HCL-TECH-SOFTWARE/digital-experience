@@ -11,6 +11,7 @@ The following features and updates are available to customers installing HCL Dig
 - Web Content Manager REST API V2 - Update OpenAI ChatGPT to latest model gpt-4o
 - SEO tag configuration for Open Graph compatibility
 - TinyMCE - Menu options for inplace editing now similar to WCM authoring
+- DXClient - Installing DXClient as an NPM module
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -88,7 +89,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     The menu options for inplace editing using TinyMCE are now similar to the menu for TinyMCE in WCM authoring. For information about TinyMCE Editor, see [Rich text editor toolbar configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md). 
     
 === "On-Premises"
-    The menu options for inplace editing using TinyMCE are now similar to the menu for TinyMCE in WCM authoring. For information about TinyMCE Editor, see [Rich text editor toolbar configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md). 
+    The menu options for inplace editing using TinyMCE are now similar to the menu for TinyMCE in WCM authoring. For information about TinyMCE Editor, see [Rich text editor toolbar configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md).
+
+### DXClient - Installing DXClient as an NPM module
+
+(Doc in progress)
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
