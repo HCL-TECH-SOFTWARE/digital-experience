@@ -142,10 +142,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers" 
     You can use the `-forceDownload <value>` attribute to download a mismatch report even if the find mismatch process is not complete. Documentation is also updated to list the scenarios where you cannot download a mismatch report. For more information, see [DAM Staging Mismatch and Resync](../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md#download-mismatch-report).
 
-### New guidance for performance sizing for rendering in medium configuration
+<!--### New guidance for performance sizing for rendering in medium configuration
 
 === "Containers"    
-    Results of DX sizing tests for rendering with a medium configuration are now available. This guidance presents the important KPIs and discusses how adjustments to the pod configuration can make significant improvements in the responsiveness of the system. For more information, see the topic [Performance-sizing guidance for rendering with a medium configuration](../../get_started/plan_deployment/container_deployment/rm_container/dx_performance_medium_cfg.md).
+    Results of DX sizing tests for rendering with a medium configuration are now available. This guidance presents the important KPIs and discusses how adjustments to the pod configuration can make significant improvements in the responsiveness of the system. For more information, see the topic [Performance-sizing guidance for rendering with a medium configuration](../../get_started/plan_deployment/container_deployment/rm_container/dx_performance_medium_cfg.md).-->
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
