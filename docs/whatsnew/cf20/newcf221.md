@@ -8,7 +8,7 @@ The following features and updates are available to customers installing HCL Dig
 - Progress indication for syndication
 - Web Content Manager REST API V2 - Setting a cache header for WCM GET REST APIs
 - Web Content Manager REST API V2 - Retrieving multiple content items in one REST call through a list of UUIDs
-- Web Content Manager REST API V2 - Updated OpenAI ChatGPT to latest model gpt-4o
+- Web Content Manager REST API V2 - Updated OpenAI ChatGPT to latest model `gpt-4o`
 - SEO tag configuration for Open Graph compatibility
 - TinyMCE - Menu options for inplace editing now similar to WCM authoring
 - DXClient - Installing DXClient as an NPM module
@@ -66,7 +66,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     You can retrieve multiple content items in one REST call through a list of Universally Unique Identifiers (UUIDs). For more information, see [WCM REST V2 API documentation](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
 
-### Web Content Manager REST API V2 - Updated OpenAI ChatGPT to latest model gpt-4o
+### Web Content Manager REST API V2 - Updated OpenAI ChatGPT to latest model `gpt-4o`
 
 === "Containers"
     Starting CF221, the AI model is switched to ```gpt-4o```. This model is the newest and the most capable model with up-to-date information. For more information, see [Getting started with the REST service for Web Content Manager V2](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md).
