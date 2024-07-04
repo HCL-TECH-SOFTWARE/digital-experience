@@ -3,7 +3,7 @@
 }
 
 .md-grid {
-    max-width: 70rem;
+    max-width: 100%;
 }
 
 .md-banner--warning {
@@ -33,7 +33,13 @@
 }
 
 .md-typeset h1 {
+    font-weight: 900;
+    color: var(--md-typeset-fg-color);
+}
+
+.md-typeset h2 {
     font-weight: 500;
+    color: var(--md-typeset-fg-color);
 }
 
 [dir=ltr] .md-header__title {
