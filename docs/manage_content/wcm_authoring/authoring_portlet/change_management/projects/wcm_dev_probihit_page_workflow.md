@@ -49,11 +49,11 @@ You can set a workflow only on draft items, you must create the template as a dr
 
         ![](../../../../../images/Workflow_publish1.png)
 
-    2. Click on the menu bar and select "Submit for Review".
+    2. Click on the menu bar and select **Submit for Review**.
 
         ![](../../../../../images/Workflow_publish2.png)
 
-    3. Click on the menu bar and select "Publish".
+    3. Click on the menu bar and select **Publish**.
         
         ![](../../../../../images/Workflow_publish3.png)
 
