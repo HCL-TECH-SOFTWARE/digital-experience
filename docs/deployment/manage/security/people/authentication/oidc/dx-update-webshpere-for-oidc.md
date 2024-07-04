@@ -184,7 +184,7 @@ Follow the steps, to set the log in property to `mail` to match the identity att
 
 3. Make sure to save the changes.
 
-### Restarting the server / DX core to apply all changes
+### Restarting the server/DX core to apply all changes
 
 Restart the DX environment (specifically, the DX core JVM) for the changes to take effect. Restarting the server can be done in various ways, for example, through the ConfigEngine:
 
