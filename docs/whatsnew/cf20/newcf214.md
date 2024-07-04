@@ -127,7 +127,6 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     The topics [Managing Content Items](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/manage_content_items.md) and [Author Content Items](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/author_content_items.md) have been updated to replace instances of "site area" with "location". The location can either be a site area or a page.
 
-
 ###  Support for DAM staging on different users for subscribers and publishers
 
 === "Containers"
