@@ -22,7 +22,6 @@ The following features and updates are available to customers installing HCL Dig
 
 - Content Composer – AI-assisted content analysis supports custom content AI providers
 - Content Composer - Create content in Managed Pages
-- New guidance for performance sizing for rendering with a small configuration
 - Support for DAM staging on different users for subscribers and publishers
 - Scaffolding framework for picker plugins and Picker Basic Version
 
@@ -127,11 +126,6 @@ The following features and updates are available to customers installing HCL Dig
 
 === "Containers"
     The topics [Managing Content Items](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/manage_content_items.md) and [Author Content Items](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/author_content_items.md) have been updated to replace instances of "site area" with "location". The location can either be a site area or a page.
-
-### New guidance for performance sizing for rendering with a small configuration
-
-=== "Containers"
-    Results of DX Sizing Tests for rendering with a small configuration are now available. This guidance presents the important KPIs and discusses how adjustments to the pod configuration can make significant improvements in the responsiveness of the system. For more information, see the topic [Performance Sizing Guidance for Rendering with a Small Configuration](../../get_started/plan_deployment/container_deployment/rm_container/dx_performance_small_cfg.md).
 
 
 ###  Support for DAM staging on different users for subscribers and publishers
