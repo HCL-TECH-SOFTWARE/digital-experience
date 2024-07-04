@@ -9,4 +9,8 @@ You use workflows to control the access to, verification and eventual approval o
 -   **[Adding workflow to managed pages](wcm_mngpages_addworkflow.md)**  
 The default workflow that is used for published pages has only a draft and approved state. However, if the default workflow is not sufficient, you can define custom workflows and use them with published pages.
 
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to use Web Content Workflow, go to [Web Content Workflow](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D2787). To try it out yourself, refer to [Web Content Workflow Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-200_Web_Content_Workflow_Lab.pdf) and corresponding [Web Content Workflow Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-200_Web_Content_Workflow_Lab_Resources.zip).
+
 

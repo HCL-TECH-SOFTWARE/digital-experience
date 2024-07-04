@@ -7,7 +7,8 @@ This topic provides information about the deployment and undeployment of portlet
 The `deploy-portlet` command is used to deploy one or more new or updated portlets from a source client or server environment to target HCL DX 9.5 CF19 or later server using a provided input XMLAccess file and deployable Portlet WAR file.
 
 !!! note
-    The synchronization mode of all nodes in a clustered DX environment must be consistently set for a newly deployed portlet to be automatically started; otherwise redeployment or a manual start is required.
+    1. For a newly deployed portlet to automatically start, you must set the synchronization mode of all nodes in a clustered DX environment. Otherwise, redeployment or a manual start is required.
+    2. You need a user with Administrator access role to deploy portlets using DXClient.
 
 **Required files**
 
@@ -249,6 +250,9 @@ The values that are passed through the command line override the default values.
 dxclient undeploy-portlet -dxProtocol <dxProtocol> -hostname <host-name> -dxPort <dxPort> -xmlConfigPath <xmlConfigPath> -dxUsername <dxUsername> -dxPassword <dxPassword> -xmlFile <xml-file-with-path> -enableBackup true -dxSoapPort <dxSoapPort> -hostname <hostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxProfileName <Profile name of the DX core server profile>
 ```
 
+## HCLSoftware U learning materials
+
+For an introduction and a demo on developing Java portlets, go to [Java Portlet Development](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D2784). To try it out yourself, refer to [DX JSP Portlet Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-300_DX_JSP_Portlet_Development_Lab.pdf).
 
 ???+ info "Related information"
     - [DXClient](../index.md)

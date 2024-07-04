@@ -232,10 +232,6 @@ The default in-place editing mode can be overridden in EditableElement tags by u
 
 ## Defining the editor used for in-place editing
 
-From CF12 onwards, the Textbox.io editor is used as the embedded editor, and the CK editor is used as the in-place editor. To use Textbox.io as the in-place editor, add this setting:
-
--   `inplaceEdit.defaultRichTextEditor=Textbox.io`
-
 From CF208 onwards, the TinyMCE editor can be used as the embedded editor, and the CK editor is used as the in-place editor. To use TinyMCE as the in-place editor, add this setting:
 
 -   `inplaceEdit.defaultRichTextEditor=TinyMCE`

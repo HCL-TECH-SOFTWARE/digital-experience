@@ -1,13 +1,17 @@
-# Limitations
+# Content Reporting limitations
 
 Take note of the following limitations when using HCL Content Reporting:
+
+## Enabling HCL Content Reporting
+
+- You cannot enable Content Reporting in a Virtual Portal.
 
 ## Generating a report
 
 - For the **Expiry date** criteria, no results are returned if the same date is used in the **From** and **To** fields.
 - For the **Word** criteria, a dash (-) is considered a delimiter for splitting the text entered. For example, if you search for "AT-Product-Item", results are returned for three different words: AT, Product, and Item.
 - After generating a report, there is no option to sort using certain fields such as **Location**, **Status**, **Type**, **Expires on**, **Owners**, and **Authors**.
-- For the **Owner** and  **Author** criteria, user and group attributes currently show all attributes. For more information about adding attributes, see [Adding attributes](../../../../deployment/manage/security/people/authentication/user_registry/vmm_atts/add_attributes.md).
+- For the **Owner** and  **Author** criteria, user and group attributes only display attributes that can be searched through text input or whose data type is string. For more information about adding more attributes with data type string, see [Adding attributes](../../../../deployment/manage/security/people/authentication/user_registry/vmm_atts/add_attributes.md).
 
 ## Using the Bulk Updates feature
 
@@ -31,8 +35,8 @@ Take note of the following limitations when using HCL Content Reporting:
 
 ## Bookmarking reports
 
--  The bookmarked URL from HCL Content Reporting does not function in a non-authenticated user session. You must log in first to your Digital Experience account before you can access the bookmarked URL.
 -   When you go to a bookmarked report and then change the language using the language switcher, the system fails to retain the report and redirects you to the HCL Content Reporting landing page.
+- You cannot bookmark filtered results from the Bulk Update page because the selections and records are huge and storing them in URL is not feasible.
 
 ## User interface
 
