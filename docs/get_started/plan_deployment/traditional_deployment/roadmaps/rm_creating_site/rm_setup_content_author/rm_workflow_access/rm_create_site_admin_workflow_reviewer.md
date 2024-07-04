@@ -1,15 +1,15 @@
-# Reviewer access per workflow stage
+# Reviewer access by workflow stage
 
-Content reviewers do not need to create or edit content. Set up access for content reviewers in your workflow.
+Content reviewers do not create or edit content. Set up access for content reviewers in your workflow.
 
 
-# Background information for the administrator: Identify the goals of content reviewers
+# Background information for the administrator: Identify content reviewers' goals
 
-![The image details the goals for content reviewers during various workflow stages, along with the required user access. The goals for content reviewers in the draft stage are to view draft content that content authors in the content authors group create. They do not plan on creating or revising site content. User access must be granted during this stage to let content authors view draft content that content authors create. During the review stage, content reviewers can approve or reject the content sent to them for review by content authors. Reviewer access must be granted to enable content reviewers to review content and move it to the publish stage. During the Publish stage, content reviewers need access to view published content. Grant content reviewers User access to enable them to see published content.](../_img/rm-workflow-reviewer2.jpeg)
+![The image details the goals for content reviewers during various workflow stages and the required user access. The goals for content reviewers in the draft stage are to view draft content that content authors in the content authors group create. They do not plan to create or revise site content. User access must be granted during this stage to let content reviewers view draft content that content authors create. During the review stage, content reviewers can approve or reject the content that content authors sent to them. Reviewer access must be granted to enable to move approved content to the publish stage. During the Publish stage, content reviewers require access to view published content. Grant content reviewers User access to enable them to see published content.](../_img/rm-workflow-reviewer2.jpeg)
 
-# Assign access to your Content Reviewer Group for the Draft, Review, and Publish stages of the workflow
+# Assign access to the Content Reviewer Group for the Draft, Review, and Publish stages of the workflow
 
-You created a workflow named Landing Page Workflow in an earlier roadmap. Now, you plan to assign access to the Content Reviewer group for each stage of this workflow.
+You created a workflow named Landing Page Workflow in an earlier roadmap. You plan to assign access to the Content Reviewer group for each stage of this workflow.
 
 1.  Log in to the authoring server as SiteAdmin.
 
@@ -19,9 +19,9 @@ You created a workflow named Landing Page Workflow in an earlier roadmap. Now, y
 
 4.  Click **Web Content** \> **Workflow Items** \> **Workflow Stages**.
 
-5.  For the Draft workflow stage, assign access to your Content Reviewer Group.
+5.  For the Draft workflow stage, assign access to the Content Reviewer Group.
 
-    With **Grant User Access**, content reviewers can view draft content created by content authors.
+    With user access, content reviewers can view draft content the content authors create.
 
     1.  Click the **Draft** workflow stage.
 
@@ -31,7 +31,7 @@ You created a workflow named Landing Page Workflow in an earlier roadmap. Now, y
 
     4.  Click **Grant User Access**.
 
-    5.  Type Co in the search field and click **Search**.
+    5.  Type ``Co`` in the search field and click **Search**.
 
     6.  Select **Content Reviewers Group** and click **Add**. Then click **OK**.
 
@@ -39,7 +39,7 @@ You created a workflow named Landing Page Workflow in an earlier roadmap. Now, y
 
 6.  For the Review workflow stage, assign access to your Content Reviewer Group.
 
-    With **Grant Reviewer Access**, content reviewers can approve or reject content for publishing. Once approved, content moves to the Publish stage.
+    With reviewer access, content reviewers can approve or reject content for publishing. Once approved, content moves to the Publish stage.
 
     1.  Click the **Review** workflow stage.
 
@@ -49,7 +49,7 @@ You created a workflow named Landing Page Workflow in an earlier roadmap. Now, y
 
     4.  Click **Grant Reviewer Access**.
 
-    5.  Type Co in the search field and click **Search**.
+    5.  Type ``Co`` in the search field and click **Search**.
 
     6.  Select **Content Reviewers Group** and click **Add**. Then click **OK**.
 
@@ -57,7 +57,7 @@ You created a workflow named Landing Page Workflow in an earlier roadmap. Now, y
 
 7.  For the Publish workflow stage, assign your Content Reviewer Group **Grant User Access** access.
 
-    With **Grant User Access**, content reviewers can view drafts of published content.
+    With user access, content reviewers can view drafts of published content.
 
     1.  Click the **Publish** workflow stage.
 
@@ -67,7 +67,7 @@ You created a workflow named Landing Page Workflow in an earlier roadmap. Now, y
 
     4.  Click **Grant User Access**.
 
-    5.  Type Co in the search field and click **Search**.
+    5.  Type ``Co`` in the search field and click **Search**.
 
     6.  Select **Content Reviewers Group** and click **Add**. Then click **OK**.
 

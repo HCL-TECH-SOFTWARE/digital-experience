@@ -169,6 +169,7 @@ The following MLS APIs are available (as of HCL Digital Experience 9.5 Container
     -   `allAvailableLang=true`- to return all languages
     -   `lang=... - e.g. lang=en` - to return only a specific language
     -   `allElements=true|false` - to return elements that are not text \(like images\)
+    -   `updateSource=true` (New with CF220) - to update the source language as well. You can also globally enable this by changing the `mls.update.source.item.rest` configuration parameter to "true" in the **WCM WCMConfigService** of the WebSphere® Integrated Solutions Console. If the setting does not exist, you can add the parameter `mls.update.source.item.rest`.
 
 -   **Limitations**
 
@@ -263,6 +264,6 @@ The following MLS APIs are available (as of HCL Digital Experience 9.5 Container
 
 
 
-??+ info "Related information"
+???+ info "Related information"
     - [HCL Web Content Manager Multilingual Solution](../../wcm_authoring/multi_lingual/index.md)
 

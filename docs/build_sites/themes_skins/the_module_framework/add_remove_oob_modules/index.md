@@ -2,7 +2,7 @@
 
 To add or remove a module, update the profile that is used to render a page for the theme.
 
-Read the topics on profiles and modules *Working with profiles* and *Writing modules*.
+Read the topics on profiles and modules *Working with profiles* and [Writing modules](../writing_module/index.md).
 
 1.  Open the profile file in the /profiles directory.
 
@@ -12,7 +12,7 @@ Read the topics on profiles and modules *Working with profiles* and *Writing mod
 
 4.  Copy the profile that you created to the /profiles directory.
 
-5.  Invalidate the resource aggregator cache to integrate your changes. Click the **Administration menu** icon. Then, click **Portal Analysis** \> **Theme Analyzer**. Then, click **Utilities** \> **Control Center** \> **Invalidate cache**. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see [Utilities](../themeopt_analyzer/utilities/index.md).
+5.  Invalidate the resource aggregator cache to integrate your changes. Click the **Administration menu** icon. Then, click **Portal Analysis** \> **Theme Analyzer**. Then, click **Utilities** \> **Control Center** \> **Invalidate cache**. Auto-invalidation recognizes your changes automatically for WebDAV-based themes. No further action is required. For more information, see [Utilities](../themeopt_analyzer/utilities/index.md).
 
 
 <!--

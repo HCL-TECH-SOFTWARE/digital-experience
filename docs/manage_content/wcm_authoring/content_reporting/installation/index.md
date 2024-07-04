@@ -10,15 +10,15 @@ Content Reporting is an instance of a react integration portlet configured to po
 
 This section describes how to enable and disable Content Reporting manually.
 
-!!! note
-    Beginning with HCL Digital Experience 9.5 CF214, Content Reporting is installed and deployed as part of the CF update process. In this CF version, the **enable-content-reporting** config task is automatically executed. However, you can still manually enable Content Reporting by running the **enable-content-reporting** config task if the feature was disabled previously.
+Beginning with HCL Digital Experience 9.5 CF214, Content Reporting is installed and deployed as part of the CF update process. The **enable-content-reporting** config task is automatically executed. However, you can still manually enable Content Reporting by running the **enable-content-reporting** config task if the feature was disabled previously. Note that you cannot enable Content Reporting in a Virtual Portal.
 
 !!! important
-    Before enabling Content Reporting, it is required to enable Practitioner Studio. For more information on how to enable Practitioner Studio, refer to [How to enable Practitioner Studio](../../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md). After enabling Content Reporting, it can then be used with other themes.
+    Before manually enabling Content Reporting, it is required to enable Practitioner Studio. For more information on how to enable Practitioner Studio, refer to [How to enable Practitioner Studio](../../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md). After enabling Content Reporting, it can then be used with other themes.
+
 
 ### Enabling Content Reporting
 
-To enable Content Reporting, run the **enable-content-reporting** config task. It is not required to stop or restart the Portal when running these configuration tasks.
+To enable Content Reporting manually, run the **enable-content-reporting** config task. It is not required to stop or restart the Portal when running these configuration tasks.
 
 -   AIX: `./ConfigEngine.sh enable-content-reporting -Dcontentreporting.static.ui.url="/dx/ui/content-reporting/" -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
 -   Linux: `./ConfigEngine.sh enable-content-reporting -Dcontentreporting.static.ui.url="/dx/ui/content-reporting/" -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
@@ -43,5 +43,4 @@ To disable Content Reporting, run the **disable-content-reporting** config task.
 
 For information on how to run the ConfigEngine tasks on container deployments, refer to [Running DX Core configuration tasks](../../../../deployment/manage/container_configuration/run_core_config_engine.md).
 
-!!! note
-    After Content Reporting is disabled by running the **disable-content-reporting** config task, the Content Reporting page is removed. To enable Content Reporting again, the **enable-content-reporting** config task must be executed manually.
+After Content Reporting is disabled by running the **disable-content-reporting** config task, the Content Reporting page is removed. To enable Content Reporting again, the **enable-content-reporting** config task must be executed manually.

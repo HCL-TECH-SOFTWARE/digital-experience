@@ -2,7 +2,7 @@
 
 ## What is this about?
 
-An increasing number of enterprises are leveraging IdPs to manage the identities, access rights, and authentication flows of their customers, employees, and partners towards their applications and IT landscape. Common IdP solutions and services include Microsoft Azure Active Directory, Okta, Auth0, or Keycloak. Each of the available solutions has unique takes and capabilities that make them a good choice or fit over another, but all of them focus on common and standardized authentication strategies - most notably OIDC.
+An increasing number of enterprises are leveraging IdPs to manage the identities, access rights, and authentication flows of their customers, employees, and partners towards their applications and IT landscape. Common IdP solutions and services include Microsoft Entra ID, Okta, Auth0, or Keycloak. Each of the available solutions has unique takes and capabilities that make them a good choice or fit over another, but all of them focus on common and standardized authentication strategies - most notably OIDC.
 
 OIDC serves as a modern authentication and authorization protocol designed to enhance digital security and user experience, particularly in the realm of Identity and Access Management (IAM). Operating as an extension of the OAuth 2.0 framework, OIDC merges the strengths of OAuth's access delegation capabilities with identity verification, resulting in a comprehensive solution.
 
@@ -44,15 +44,24 @@ Use this procedure as a general reference and make adjustments to accommodate th
 
 ## Setting up OIDC for DX
 
+This section details the steps required in setting up OIDC for DX and the additional configuration options for setting up transient users.
+Alternatively, you can refer to [Automating OIDC configuration for HCL Digital Experience](./automation/dx-oidc-automation.md) which provides guidance on using automated configuration tasks via the HCL DX ConfigEngine to ease OIDC deployments. 
+
+### Updating WebSphere to support OIDC Authentication for DX
+
 Setting up OIDC for DX consists of two sides, the first is [Updating WebSphere to support OIDC Authentication for DX](dx-update-webshpere-for-oidc.md) for configuring WebSphere Application Server to act as an OpenID Connect Relying Party. And second being [Adjusting the DX Login flow for OIDC](./dx-integration.md) to redirect the user to an IdP login page for authentication.
 
 Additionally, you can further extend this for Transient Users. For more information, see [Additional configuration options](#additional-configuration-options) section.
 
-## Additional configuration options
+### Additional configuration options
 
 - [Updating WebSphere to support OIDC Authentication for DX with Transient Users](./transient-users/dx-update-webshpere-for-oidc-transient-users.md)
 
     This provides information on how you can configure OIDC Authentication for DX using Transient Users, who are trusted and verified by an IdP. These trusted and verified users do not require a local, registered Portal user account.
+
+## Troubleshooting
+
+For guidance on how to troubleshoot issues in OIDC, refer to [Troubleshooting OIDC Configuration](oidc-troubleshooting.md).
 
 ## References
 

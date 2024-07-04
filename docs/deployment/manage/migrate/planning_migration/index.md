@@ -26,7 +26,7 @@ There are a number of ways in which you can migrate HCL Digital Experience to a 
 -   **[Development considerations](dev_consideration/index.md)**  
 The goal of the migration process is to ensure that the target environment works similarly to the source environment. However, there are deprecated and unsupported features and changes in supported technical specifications that can prevent this transition from being seamless. Review the following topics for guidance on the development work that is required to maintain the functionality of the source environment and also begin preparation for enabling new features and functionality.
 -   **[What to expect after you complete migration](mig_plan_expectations/index.md)**  
-During the migration process, your portal applications, portlets, and databases are updated to the HCL Digital Experience 8.5 versions. However, not all of the new HCL Digital Experience 8.5 functionality and features are enabled by default. The following sections provide information on how various components are handled during migration, and what you can expect after the migration is complete.
+During the migration process, your portal applications, portlets, and databases are updated to the HCL Digital Experience 8.5/9.5 versions. However, not all of the new HCL Digital Experience 8.5/9.5 functionality and features are enabled by default. The following sections provide information on how various components are handled during migration, and what you can expect after the migration is complete.
 
 
 <!-- ???+ info "Related information" 

@@ -1,6 +1,7 @@
-# System Requirements
+# System requirements
 
-This document provides minimum system requirements for version 9.5 of HCL Digital Experience. Higher maintenance levels, such as fix packs and service packs, may be supported as they become available and will be updated in this document, and some may be made available through HCL channels.
+This document provides minimum system requirements for HCL Digital Experience version 9.5. Later maintenance levels, such as fix packs and service packs, might be supported if they become available.
+<!-- Never write definitely about future plans of HCL. -->
 
 Detailed system requirements are the complete lists of hardware requirements, supported operating systems, prerequisites and optional supported software, with component-level details and operating system restrictions.
 
@@ -12,7 +13,3 @@ Detailed system requirements are the complete lists of hardware requirements, su
     - [Supported Configuration](traditional/supported_config.md)  
     - [Unsupported Configuration](traditional/unsupported_config.md)  
     - [Other Configuration](traditional/other_config.md)
-
-- Docker
-    - [Docker](docker/index.md)
-    
