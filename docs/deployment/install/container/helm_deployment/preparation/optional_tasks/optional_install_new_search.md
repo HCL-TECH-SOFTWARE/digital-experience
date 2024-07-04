@@ -7,6 +7,7 @@ The search currently provides the following capabilities:
 - WCM crawling
 - Pushing API for use with WCM Content Sources
 - Searching using REST API
+- Searching [Digital Asset Management (DAM) indexes](../../../../../../manage_content/digital_assets/configuration/dam_indexing/index.md)
 
 ## Prerequisites
 
