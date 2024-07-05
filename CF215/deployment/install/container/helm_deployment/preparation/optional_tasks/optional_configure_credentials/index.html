@@ -1397,7 +1397,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#for-CF212-and-below-upgrading-to-cf213-and-beyond" class="md-nav__link">
+  <a href="#for-cf212-and-below-upgrading-to-cf213-and-beyond" class="md-nav__link">
     <span class="md-ellipsis">
       For CF212 and below upgrading to CF213 and beyond:
     </span>
@@ -2481,7 +2481,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#for-CF212-and-below-upgrading-to-cf213-and-beyond" class="md-nav__link">
+  <a href="#for-cf212-and-below-upgrading-to-cf213-and-beyond" class="md-nav__link">
     <span class="md-ellipsis">
       For CF212 and below upgrading to CF213 and beyond:
     </span>
@@ -2675,7 +2675,7 @@
 <p>Same as Core, when Remote Search is enabled, WAS admin credentials can be configured from the Helm chart. The behavior slightly differs depending on the user registry that is configured for HCL Digital Experience. See <a href="#registry-types">Registry Types</a>.</p>
 <h2 id="config-wizard-security-credentials">Config Wizard security credentials</h2>
 <p>The following only takes effect when <a href="../optional_configure_apps/#configuration-wizard-configuration">Config Wizard is enabled</a>.</p>
-<h3 id="for-CF212-and-below-upgrading-to-cf213-and-beyond">For CF212 and below upgrading to CF213 and beyond:</h3>
+<h3 id="for-cf212-and-below-upgrading-to-cf213-and-beyond">For CF212 and below upgrading to CF213 and beyond:</h3>
 <ul>
 <li>When upgrading to CF213 or higher, the <code>configWizardUser</code> and <code>configWizardPassword</code> under <code>security.core</code> in your <code>custom-values.yaml</code> file must be updated to the current credentials of the <code>wpsadmin</code> user in the file-based user registry of Core <strong>once</strong>, followed by a Helm upgrade. This is required because the file-based user registry of Core is copied to and reused by Config Wizard and Config Wizard is initially using <code>wpsadmin</code> as the primary admin user. For more information see: <a href="../../../../../../manage/portal_admin_tools/cfg_wizard/configuration/persist_cw_profile/">Persisted Config Wizard Profile</a>.</li>
 <li>After the Helm upgrade, the Config Wizard credentials can now be updated if needed, separately from the Core. </li>
@@ -2693,7 +2693,7 @@
 <blockquote>
 <p>Neither the new nor previous Config Wizard Admin credentials in the Kubernetes secrets are valid. Please supply the correct credentials and restart.</p>
 </blockquote>
-<p>Please follow <a href="#for-CF212-and-below-upgrading-to-cf213-and-beyond">the steps above</a> to resolve the error for the initial startup.</p>
+<p>Please follow <a href="#for-cf212-and-below-upgrading-to-cf213-and-beyond">the steps above</a> to resolve the error for the initial startup.</p>
 </div>
 <p>Similar to Core and Remote Search, you can configure the Config Wizard admin credentials from the Helm chart. The behavior slightly differs depending on the user registry that is configured for HCL Digital Experience. See <a href="#registry-types">Registry Types</a>.</p>
 <h2 id="registry-types">Registry Types</h2>
