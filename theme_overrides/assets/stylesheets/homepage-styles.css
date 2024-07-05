@@ -87,10 +87,9 @@
     border-color: var(--md-accent-fg-color)
 }
 
-/* Hide the mkdocs tabbed menu */
-/*.md-main {
+.md-main {
 	display: none;
-}*/
+}
 
 
 /* Section by section styles */

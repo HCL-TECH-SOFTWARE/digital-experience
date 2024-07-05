@@ -246,7 +246,3 @@ The undeploy-application command is used to undeploy the EAR file from the WebSp
     ```
     dxclient undeploy-application -dxProtocol <http/https> -hostname <host-name> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -dxSoapPort <dxSoapPort> -hostname <hostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -applicationName <application name> -dxProfileName <Profile name of the DX core server>
     ```
-
-## HCLSoftware U learning materials
-
-For an introduction and a demo on using DX for developers, go to [DX for Developers (Advanced)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1777). To try it out yourself, refer to [DX Setup Local Java Development Environment Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-300_DX_Setup_a_Java_Development_Environment_Lab.pdf).

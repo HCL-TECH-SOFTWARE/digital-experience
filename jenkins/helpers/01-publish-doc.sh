@@ -70,17 +70,10 @@ git switch -c $branch FETCH_HEAD
 if [ "$publish" == true ]; then
     echo "Perform GH pages deploy"
 
-    if [ "$version" == "in-progress" ]; then
-        version="${version} latest"
-        echo "version=${version}"
-    fi
-
     git config --global user.name hcl-digital-experience
     git config --global user.email notarealemail@hcl.dx
     mike set-default latest
-    # For the internal build (on jenkins) we use the redirect alias_type. 
-    # This is necessary because symlinks are not supported in GitHub pages of our internal GitHub.
-    mike deploy --alias-type=redirect -u $version --push
+    mike deploy -u $version --push
 
 elif [ "$publish" == false ]; then
 

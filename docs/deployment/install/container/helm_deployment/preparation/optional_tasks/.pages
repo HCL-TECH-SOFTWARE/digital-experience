@@ -11,5 +11,4 @@ nav:
     - optional_rs_sidecar_log.md
     - optional_labels_annotations.md
     - optional_experimental_features.md
-    - optional_install_new_search.md
     - ...

@@ -1,8 +1,8 @@
 ---
-title: Configure HCL DX Cloud Native 9.5 entitlement-check scenarios
+title: Entitlement-check scenarios
 ---
 
-# Configure HCL DX Cloud Native 9.5 entitlement-check scenarios
+# HCL Digital Experience Cloud Native 9.5 entitlement-check scenarios
 
 Review the following [HCL Digital Experience Cloud Native 9.5](../../../product_overview/offerings.md#hcl-digital-experience-cloud-native) entitlement validation check scenarios to use to formulate responses when entitlement-validation attempts fail.
 

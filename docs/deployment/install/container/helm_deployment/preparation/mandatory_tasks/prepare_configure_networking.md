@@ -14,14 +14,14 @@ It is recommended to configure the host before you run the deployment. This is o
 
 If that is the case, define the host using the following syntax:
 
-```yaml
-# Networking specific configuration
-networking:
-  # Networking configuration specific to Core
-  core:
-    # Host of Core
-    host: "your-dx-instance.whateverdomain.com"
-```
+   ```
+   # Networking specific configuration
+   networking:
+   # Networking configuration specific to Core
+   core:
+   # Host of Core
+   host: "your-dx-instance.whateverdomain.com"
+  ```
 
 If you do not know the hostname beforehand, you can leave it blank and run an additional step later in the installation, which would retrieve the assigned hostname from HAProxy and configure all applications accordingly.
 
@@ -31,16 +31,16 @@ The HCL Digital Experience 9.5 Helm Chart allows you to configure CORS configura
 
 You can define a list of allowed hosts for a specific application using the following syntax in your `custom-values.yaml`:
 
-```yaml
-# Networking specific configuration
-networking:
-  # Networking configurations specific to all addon applications
-  addon:
-    contentComposer:
-      # CORS Origin configuration for Content Composer, array of elements
-      corsOrigin: 
-      - "https://my-different-application.net"
-      - "https://the-other-application.com"
+```
+   # Networking specific configuration
+   networking:
+     # Networking configurations specific to all addon applications
+     addon:
+       contentComposer:
+         # CORS Origin configuration for Content Composer, array of elements
+         corsOrigin: 
+          - "https://my-different-application.net"
+          - "https://the-other-application.com"
 ```
 
 Refer to the HCL DX 9.5 `values.yaml` detail for all possible applications that can be configured.
@@ -136,12 +136,12 @@ This configuration is helpful for those who want to use a custom `Ingress Contro
 
 Creation of that certificate can be achieved using the following commands for OpenSSL:
 
-```sh
-# Creation of a private key
-openssl genrsa -out my-key.pem 2048
-                  
-# Creation of a certificate signed by the private key created before
-openssl req -x509 -key my-key.pem -out my-cert.pem -days 365 -subj '/CN=my-cert'
+```
+  # Creation of a private key
+  openssl genrsa -out my-key.pem 2048
+                    
+  # Creation of a certificate signed by the private key created before
+  openssl req -x509 -key my-key.pem -out my-cert.pem -days 365 -subj '/CN=my-cert'
 ```
 
 This provides you with a key and cert file that can be used in the next step, creation of the certificate to your deployment.
@@ -157,11 +157,11 @@ The secret can be created using the following commands:
 !!!note
     The secret name can be chosen by you and must be referenced in the next configuration step (the following example uses `dx-tls-cert`). The namespace is the Kubernetes namespace where you want to deploy HCL Digital Experience 9.5 to (the example uses `digital-experience`).
 
-```sh
-# Create secret with the name "dx-tls-cert"
-# Secret will be created in the namespace "digital-experience"
-# You can either reference the cert and key file created before, or a proper signed certificate e.g. from your CA
-kubectl create secret tls dx-tls-cert --cert=my-cert.pem --key=my-key.pem -n digital-experience 
+```
+  # Create secret with the name "dx-tls-cert"
+  # Secret will be created in the namespace "digital-experience"
+  # You can either reference the cert and key file created before, or a proper signed certificate e.g. from your CA
+  kubectl create secret tls dx-tls-cert --cert=my-cert.pem --key=my-key.pem -n digital-experience 
 ```
 
 ## Configure secret in deployment
@@ -171,8 +171,8 @@ You need to make sure that the reference to the secret is set up correctly in yo
 You can set the name of the certificate used with the following syntax, the default value is `dx-tls-cert`:
 
 ```yaml
-# Networking specific configuration
-networking:
+  # Networking specific configuration
+  networking:
   # TLS Certificate secret used for haproxy
   tlsCertSecret: "dx-tls-cert"
 ```

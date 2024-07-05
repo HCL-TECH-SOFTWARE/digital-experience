@@ -7,7 +7,7 @@ Beginning with [HCL DX 9.5 Container Update CF207](../../../../whatsnew/cf20/ne
 
 Optionally, you can [configure a local FlexNet entitlement server](./configuring_local_flexnet_entitlement_server.md) for enhanced control over the security of entitlement checks in your environments. With this option, you can dedicate a computer to act as a local FlexNet entitlement server. You can remain in entitlement compliance without the need for outbound connections to the HCL-hosted FlexNet entitlement service from your HCL DX Cloud Native 9.5 Kubernetes installations.
 
-A local FlexNet entitlement server can also be configured to function without outbound connections. You can accomplish this configuration by using the offline version of the HCL FlexNet Embedded License Server. With outbound connections disabled, however, a member of your development team must manually update the entitlement server periodically, to verify entitlement with HCL. See [Configuring a local FlexNet License Server](configuring_local_flexnet_entitlement_server.md) for more information.
+A local FlexNet entitlement server can also be configured to function without outbound connections. You can accomplish this configuration by using the offline version of the HCL FlexNet Embedded License Server. With outbound connections disabled, however, a member of your development team must manually update the entitlement server periodically, to verify entitlement with HCL. See "Configuring a local FlexNet License Server" for more information.
 
 During the grace period, errors are displayed in the DX Kubernetes deployment server logs. If you encounter these errors, contact HCL Support to resolve the issue. For more information about FlexNet user and device management, see the [What is the HCL License & Delivery Portal (FlexNet Portal?)](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344) knowledge article on the HCL Customer Support portal.
 
@@ -37,7 +37,6 @@ Follow the configuration steps in the following procedure before you deploy a ne
 
 ## Procedure
 1. Obtain access to the [HCL License and Delivery Portal](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/startPage.do) for your organization. There, you can download the Flexnex entitlement server software and manage your FlexNet entitlement user names, passwords, and device IDs. Entitlement verification is performed against the HCL-hosted FlexNet entitlement server.
-
     !!!important
         For remote entitlement checks to succeed, ensure that your system and network firewalls allow for outbound connections to `hclsoftware.compliance.flexnetoperations.com`.
 

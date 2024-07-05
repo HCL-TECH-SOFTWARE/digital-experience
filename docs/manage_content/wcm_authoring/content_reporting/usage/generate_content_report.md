@@ -101,6 +101,8 @@ A report is a list of items that matches a set or combined sets of criteria. Con
 
 - To sort the search results, hover over the column header of the field with which you want to sort. An Arrow icon appears with a tooltip indicating that this icon is used to sort the results. Click the Arrow icon to sort the search results according to your preference. This icon remains visible to indicate the last sort used.
     
+    ![](../../../../assets/HCL_Content_Reporting_Search_Results_PreSort.png)
+
     ![](../../../../assets/HCL_Content_Reporting_Search_Results_PostSort.png)
 
 - To change the number of rows per page of the search results, select from the options in the **Show rows:** dropdown menu.
@@ -119,6 +121,6 @@ A report is a list of items that matches a set or combined sets of criteria. Con
     
     ![](../../../../assets/HCL_Content_Reporting_Remove_Criteria.png)
 
-- To remove all selected criteria, click the **Clear** button.
+- To remove multiple selected criteria, click the **Clear** button.
     
     ![](../../../../assets/HCL_Content_Reporting_Clear_Criteria_Options.png)

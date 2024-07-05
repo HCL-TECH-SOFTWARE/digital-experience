@@ -94,10 +94,8 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 |  |  | prereqs-checker | prereqs-checker | 100m | 64Mi |
 | ring-api | 1 | ring-api | ringapi | 100m | 256Mi |
 | runtime-controller | 1 | runtime-controller | runtime-controller | 100m | 256Mi |
-| open-search-data/manager | 1 | open-search | dx-opensearch |1000m | 1536Mi |
-| search-middleware-query/data | 1 | search-middleware | dx-search-middlware | 500m | 512Mi |
 |  |  |  |  |  |  |
-| **Overall** |  |  |  | **9700m** | **18560Mi** |
+| **Overall** |  |  |  | **8200m** | **16512Mi** |
 
 !!!important
     For the recommended disk storage per PersistentVolume, refer to the `values.yaml` file. The relevant values can be found in the `volumes` section of the `values.yaml file` in the `requests.storage` parameter of each Volume. Note that the required size increases with every core upgrade from one cumulative fix to another. For best results, clean up your previous profiles after you confirm that the new profile is working. See related [Core Profile Check](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-core-prereqs-checker.md#core-profile-check) and [Storage Space Check](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-core-prereqs-checker.md#storage-space-check).

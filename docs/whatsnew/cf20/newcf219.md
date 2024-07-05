@@ -29,7 +29,7 @@ The following features and updates are available to customers installing HCL Dig
 - Helm options to spread pods across nodes
 - Digital Asset Management - damUser credential limitation
 
-Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases.
+Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases.
 
 ## All Digital Experience Versions (8.5, 9.0, 9.5)
 
@@ -164,3 +164,5 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
 The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx) section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.
+
+

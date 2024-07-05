@@ -8,7 +8,7 @@ For the deployment and installation of DX, refer to [Deploy Container Platforms 
 
 ## Deploy HCL Leap using Helm
 
-1. Update the custom values file to set Leap image name, tags, and repository name. The procedure is similar to the instructions in the topic [Prepare Configuration page for DX](../../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md). The value options for Leap are documented [in the Leap documentation](https://opensource.hcltechsw.com/leap-doc/9.3.5/deploy_container_kubernetes_openliberty.html).
+1. Update the custom values file to set Leap image name, tags, and repository name. The procedure is similar to the instructions in the topic [Prepare Configuration page for DX](../../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration/). The value options for Leap are documented [in the Leap documentation](https://help.hcltechsw.com/Leap/9.3.2/deploy_container_kubernetes_openliberty.html).
 
 2. Deploy HCL Leap. For more information, refer to the [Deploying to a Container (Kubernetes) Platform - Open Liberty](https://help.hcltechsw.com/Leap/9.3.2/deploy_container_kubernetes_openliberty.html) section of the HCL Leap product documentation.
 

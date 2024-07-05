@@ -54,17 +54,15 @@ To use the DX Picker, you must have the DX Picker Web Component imported in your
     ```html
       <html>
         <head>
-          <script>
-            function toggleDxPicker() {
-              const dxPicker = document.getElementById('dx-picker-id')
+          function toggleDxPicker() {
+            const dxPicker = document.getElementById('dx-picker-id')
 
-              if (dxPicker) {
-                const isOpen = dxPicker.getAttribute('open') === String(true);
+            if (dxPicker) {
+              const isOpen = dxPicker.getAttribute('open') === String(true);
 
-                dxPicker.setAttribute('open', !isOpen)
-              }
+              dxPicker.setAttribute('open', !isOpen)
             }
-          </script>
+          }
         </head>
         <body>
           // Add toggleDxPicker to the button
