@@ -2,7 +2,7 @@
 
 The portal administrator collects information about the content provider and its applications and then follows basic configuration steps to enable the Web Application Bridge.
 
-1.  The steps that are needed to enable the Web Application Bridge depends on whether the portal context root is removed or not. For information about how to remove the portal context root, go to [Configuration Wizard instructions: Modify site URLs for search engine optimization](../../../../deployment/manage/siteurl_cfg/changing_siteurl/cw_shorten_url/index.md).
+1.  The steps that are needed to enable the Web Application Bridge depends on whether the portal context root is removed or not. For information about how to remove the portal context root, go to [Configuration Wizard instructions: Modify site URLs for search engine optimization](https://hclpnpsupport.hcltech.com/csm?id=kb_category&kb_category=c0ef98b71bb0778083cb86e9cd4bcbf2).
 
     -   If the portal context root is removed, complete the following steps:
         1.  Run the following task to create a virtual host for the Web Application Bridge. This task automatically deploys the Reverse Proxy servlet (RPS) on the newly created virtual host and sets the RPS context root to /.

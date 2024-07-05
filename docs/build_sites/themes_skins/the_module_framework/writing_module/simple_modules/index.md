@@ -17,13 +17,13 @@ WebDAV Root
 +-- module Z
 ```
 
-The getting\_started\_module is predefined so you can start quickly. Add your JavaScript, CSS, or markup file to one of the subfolders, and your resources are integrated into HCL Digital Experience (DX).
+The getting\_started\_module is predefined so you can start quickly. Add your JavaScript, CSS, or markup file to one of the subfolders, and your resources are integrated into HCL Portal.
 
 You must invalidate the resource aggregator cache before your changes are integrated. Click the **Administration menu** icon. Then, click **Portal Analysis** \> **Theme Analyzer**. Then, click **Utilities** \> **Control Center** \> **Invalidate cache** to invalidate the cache. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see [Utilities](../../themeopt_analyzer/utilities/index.md).
 
 ## Module directory
 
-After you create your own module by creating a new directory in the modules directory, you must make sure that the module is integrated with HCL DX. Add it to the profile currently set on your page. To verify the profile for any page, you can use the Theme Analyzer Page Explorer. Click the **Administration menu** icon. Then, click **Portal Analysis** \> **Theme Analyzer**. Then, click **Examine page profile information**.
+After you create your own module by creating a new directory in the modules directory, you must make sure that the module is integrated with HCL Portal. Add it to the profile currently set on your page. To verify the profile for any page, you can use the Theme Analyzer Page Explorer. Click the **Administration menu** icon. Then, click **Portal Analysis** \> **Theme Analyzer**. Then, click **Examine page profile information**.
 
 Simple contributions can be of three contribution types, `head`, `config`, `menu`.
 

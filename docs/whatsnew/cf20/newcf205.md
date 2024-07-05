@@ -16,7 +16,7 @@ The HCL Digital Experience 9.5 Container Update and CF205 release includes the f
 
 Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases. 
 
-For the HCL DX 9.5 Container Update CF205 image list, see the [Container Image listings](../../deployment/install/container/image_list.md) topic. 
+For the HCL DX 9.5 Container Update CF205 image list, see the [Container Image listings](../../deployment/install/docker/index.md) topic. 
 
 The following features and updates are available to customers installing HCL Digital Experience Container Update CF205 on [supported container platforms](../../get_started/system_requirements/index.md):
 

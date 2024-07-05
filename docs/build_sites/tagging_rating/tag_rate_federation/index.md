@@ -1,17 +1,17 @@
 # Federating tags
 
-HCL Digital Experience (DX) allows the federation of remote tagging systems, such as HCL Connections.
+HCL Portal allows the federation of remote tagging systems, such as HCL Connections.
 
-Tags from remote tagging systems can be integrated in the HCL DX Tag Cloud. When a tag from a remote system is selected in the Tag Cloud, the Tag Results portlet lists all federated resources to which users have applied the tag. The title of the remote resource, and the description if available, are displayed. The title is preceded by an icon that symbolizes the resource type of the resource. For details about how you can specify an icon for a federated resource type see *Administration of tag federation*.
+Tags from remote tagging systems can be integrated in the HCL Portal Tag Cloud. When a tag from a remote system is selected in the Tag Cloud, the Tag Results portlet lists all federated resources to which users have applied the tag. The title of the remote resource, and the description if available, are displayed. The title is preceded by an icon that symbolizes the resource type of the resource. For details about how you can specify an icon for a federated resource type see *Administration of tag federation*.
 
 If a federated resource is selected two different kinds of behavior are supported:
 
 1.  Redirect to an external website where the resource is displayed. This external redirection is always possible.
-2.  Redirect to a page with a portlet that can display this resource. This internal redirection requires a portlet that can integrate a remote resource in HCL DX.
+2.  Redirect to a page with a portlet that can display this resource. This internal redirection requires a portlet that can integrate a remote resource in HCL Portal.
 
 For details about how you can define a portlet as a target of an internal redirection see *Administration of tag federation*.
 
-Configuration settings for the HCL DX tagging and rating features such as normalization, black- and white lists are also applied to the federated tags. That allows for example the scenario that remote tags are not visible in HCL DX because they do not fit to the configured settings.
+Configuration settings for the HCL Portal tagging and rating features such as normalization, black- and white lists are also applied to the federated tags. That allows for example the scenario that remote tags are not visible in HCL Portal because they do not fit to the configured settings.
 
 ## Federation of HCL Connections tags
 
@@ -22,11 +22,11 @@ For Blogs, Forums, Wikis and Profiles, the selected resource is rendered in a Co
 If you do not want to have a connections resource rendered in a Connections portlet, you can set a Connections Site as target of a redirect for a particular Connections feature. For details see *Administration of tag federation*.
 
 !!! note
-    The HCL Connections portlets must be deployed into HCL DX and configured accordingly.
+    The HCL Connections portlets must be deployed into HCL Portal and configured accordingly.
 
 The following specifics regarding HCL Connections need to be mentioned:
 
-HCL Connections does not distinguish between private and public tags like HCL DX does. Therefore, the HCL Connections tags are available in the HCL Connections tags view in the tag cloud for HCL DX. The **All tags** view can be configured to include HCL Connections tags. These tags are not integrated in the **Others' tags**, **My public tags**, or **My private tags** views.
+HCL Connections does not distinguish between private and public tags like HCL Portal does. Therefore, the HCL Connections tags are available in the HCL Connections tags view in the tag cloud for HCL Portal. The **All tags** view can be configured to include HCL Connections tags. These tags are not integrated in the **Others' tags**, **My public tags**, or **My private tags** views.
 
 The most frequently used tags are retrieved through the HCL Connections feature. A limit of 100 tags is provided by HCL Connections.
 

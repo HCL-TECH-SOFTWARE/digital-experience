@@ -1,6 +1,6 @@
 # Type-ahead feature for the deprecated tag widget
 
-The deprecated tag widget from earlier HCL Digital Experience (DX) versions provided a type-ahead feature. The type-ahead feature makes it easier for users to find suitable tags. Type-ahead supports users when they work with tags. For example, when users apply tags using the tag widget, or when they search for tags, for example by using the open search functionality, type-ahead provides users suggestions for tags that other users have applied already before. Type-ahead can also help reduce the number of variants of tags.
+The deprecated tag widget from earlier HCL Portal versions provided a type-ahead feature. The type-ahead feature makes it easier for users to find suitable tags. Type-ahead supports users when they work with tags. For example, when users apply tags using the tag widget, or when they search for tags, for example by using the open search functionality, type-ahead provides users suggestions for tags that other users have applied already before. Type-ahead can also help reduce the number of variants of tags.
 
 !!! note
     The type-ahead feature works only with the deprecated dialog tag widget of the default tagging user interface of portal versions earlier than V 8.5. 

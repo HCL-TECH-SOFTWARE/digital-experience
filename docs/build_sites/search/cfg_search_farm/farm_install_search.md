@@ -36,7 +36,7 @@ JCR-based content includes content that is created with Web Content Manager or P
 
 8.  Complete the following steps to delete the default search collections from the Manage Search portlet:
 
-    1.  Log on to HCL Digital Experience (DX) as an administrator.
+    1.  Log on to HCL Portal as an administrator.
 
     2.  To open the **Manage Search** portlet, click the **Administration menu** icon. Then, click **Search Administration** \> **Manage Search**.
 
@@ -46,7 +46,7 @@ JCR-based content includes content that is created with Web Content Manager or P
 
     5.  Click **OK**.
 
-    6.  Restart the HCL DX server.
+    6.  Restart the HCL Portal server.
 
     7.  Go to the Manage Search portlet and confirm that the **Portal Content** search collection was deleted.
 

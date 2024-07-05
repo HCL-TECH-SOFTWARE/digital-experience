@@ -11,10 +11,7 @@ The following information applies to HCL Digital Experience Version 8.5 with CF0
 
 ## Language-specific titles and descriptions
 
-The title and description of your page are associated with the language of the page. After you create a page, you can set up language-specific titles and descriptions. To set up language-specific titles and descriptions, after you create your page, click the context menu for that page in site manager. Then, select **Open Page Settings** > **Edit Page Properties** > **Localization**.
-
-!!!note
-    When renaming a page through the Rename Page dialog box in Site Manager, the page name is changed to the default language (for example, English) if the page is not localized. If the page is localized, the page name is changed to the current selected language.
+The title and description of your page are associated with the language of the page. After you create a page, you can set up language-specific titles and descriptions. To set up language-specific titles and descriptions, after you create your page, click the context menu for that page in site manager. Then, select **Open Page Settings** \> **Edit Page Properties** \> **Localization**.
 
 
 -   **[Friendly URL name](toolbar_friendlyurl.md)**  

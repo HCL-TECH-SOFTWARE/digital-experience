@@ -40,7 +40,7 @@ HCL Digital Experience provides two distinct search capabilities. You can use bo
 18. [Configuring search in a portal farm](../search/cfg_search_farm/index.md)  
 HCL Digital Experience provides two distinct search capabilities. You can use both types of search capabilities in a portal farm environment.
 19. [Configuring search collections for a virtual portal](advp_tsk_cgf_srchcoll.md)  
-Configuring JCR search collections for a virtual portal might require additional administration, depending on how you set up the virtual portal.
+Configuring JCR search collections for a virtual portal might require additional administration, depending on how you set up the virtual portal. -->
 
 ???+ info "Related information"
     -   [Search REST API specification](../search/search-rest-api/index.md)

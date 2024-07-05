@@ -6,7 +6,7 @@ Configuration properties can be loaded either statically, `type="config_static"`
 
 All configuration properties that your module must reference on the client side are merged together into a single convenient global config object. They are merged whether they are theme metadata properties or resource environment provider custom properties. You can then easily reference any property within the yourcoCfg.themesConfig object, such as yourcoCfg.themesConfig.yourTheme\_yourRepProperty.
 
-The theme and the modules that are provided with HCL Digital Experience merge their configuration properties into the ibmCfg global variable. You can run this variable in a browser console and inspect what the property names and values are. Changes to values in the WP GlobalThemeConfig REP are global to all themes. You can override certain values on the client side if you need the values to be different in only your themes that include your module. You can do so with syntax similar to the following example in one of the config\*.jsp files for your module:
+The theme and the modules that are provided with HCL Portal merge their configuration properties into the ibmCfg global variable. You can run this variable in a browser console and inspect what the property names and values are. Changes to values in the WP GlobalThemeConfig REP are global to all themes. You can override certain values on the client side if you need the values to be different in only your themes that include your module. You can do so with syntax similar to the following example in one of the config\*.jsp files for your module:
 
 ```
 i$.merge({<%--

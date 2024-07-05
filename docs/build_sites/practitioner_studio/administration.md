@@ -6,7 +6,7 @@ Use the Portal administration portlets that are provided with HCL Digital Experi
 -   **[Manage pages portlets](../admin-system/mp_manage_pages.md)**  
 Use Manage Pages to create, edit, activate, order, and delete pages and external web pages and labels.
 -   **[Administering virtual portals](../admin-system/advp_adm.md)**  
-View information to help you scope your HCL DX to have multiple virtual portals.
+View information to help you scope your HCL Portal to have multiple virtual portals.
 -   **[Customizing page templates in the Create Page dialog](../admin-system/epc_custom_page_dialog.md)**  
 The hierarchy tree control makes it possible for HCL Digital Experience users to create new child and sibling pages based on predefined page templates.
 -   **[Customizing Site Manager](../admin-system/epc_custom_sm.md)**  

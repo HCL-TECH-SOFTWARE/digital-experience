@@ -70,7 +70,7 @@ The images directory contains the following common images:
 -   blank.gif: A blank gif file that is used for spacing.
 -   loading.gif: The image that is shown when the page or other resource is loading.
 -   loadingDark.gif: A darker version of the loading.gif image.
--   master.png: A sprite file with common images that are used in the theme. Some of the images in the sprite include the HCL and HCL Digital Experience (DX) logos, search icon, the pencil icon for the edit/view mode toggle, and various sized arrow images.
+-   master.png: A sprite file with common images that are used in the theme. Some of the images in the sprite include the HCL and HCL Portal logos, search icon, the pencil icon for the edit/view mode toggle, and various sized arrow images.
 
 ## Images
 
@@ -130,7 +130,7 @@ fs-type1:\\themes\\Portal8.5\\skins
 
 Directories: Hidden, NoSkin, and Standard.
 
-These directories contain the ready-to-use skins that are available with the HCL DX 8.5 theme: Hidden, NoSkin, and Standard. Each directory has a skin.html file, which defines the markup for the skin.
+These directories contain the ready-to-use skins that are available with the HCL Portal 8.5 theme: Hidden, NoSkin, and Standard. Each directory has a skin.html file, which defines the markup for the skin.
 
 Localized files:
 

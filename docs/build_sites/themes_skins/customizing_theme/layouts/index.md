@@ -7,7 +7,7 @@ You can add new layout templates so that they can be assigned to portal pages or
 -   **[Adding a layout to the toolbar](themeopt_cust_scopelay.md)**  
 You can add your own custom layout to the theme that can be selected on the site toolbar.
 -   **[Default layouts](themeopt_cust_layoutdefault.md)**  
-The Simple Theme and the HCL Digital Experience 8.5 theme ship with predefined layouts that can be used as a basis for creating custom layouts.
+The Simple Theme and the HCL Portal 8.5 theme ship with predefined layouts that can be used as a basis for creating custom layouts.
 
 
 ???+ info "Related information"

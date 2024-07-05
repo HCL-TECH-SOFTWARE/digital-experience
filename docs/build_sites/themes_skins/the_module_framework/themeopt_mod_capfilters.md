@@ -56,11 +56,11 @@ In this version, `capability.sequence-number.minValue` is optional. If you do no
 
 There is not always a capability that is defined for every module. Many modules are not part of any capability. Every module automatically surfaces itself as an implicit capability, or a capability with the same name and version number as the module. If there is no capability or you only know the name of the module, you can specify the module name for the value of `capability.sequence-number.id`.
 
-For the list of available capabilities, see *Modules provided with the HCL Digital Experience (DX) theme*.
+For the list of available capabilities, see *Modules provided with the HCL Portal theme*.
 
 ## Self managed
 
-In addition to the definition of the capabilities, the portlet must define a `capabilities.selfManaged` preference that describes whether the portlet handles the error case of missing capabilities itself or not. To delegate the handling of the error case to HCL DX, the preference `capabilities.selfManaged` must be set to `false`.
+In addition to the definition of the capabilities, the portlet must define a `capabilities.selfManaged` preference that describes whether the portlet handles the error case of missing capabilities itself or not. To delegate the handling of the error case to HCL Portal, the preference `capabilities.selfManaged` must be set to `false`.
 
 !!! note
     A portlet can either handle all capability dependencies or none.
@@ -69,9 +69,9 @@ If this preference is not set, the framework expects that the portlet itself man
 
 ## Non-self managed error handling
 
-When `capabilities.selfManaged` is set to `false`, HCL DX handles the error case of missing capability dependencies. It displays error messages. One set of error messages, error codes: EJPNK0022E, EJPNK0023E, and EJPNK0024E, can display at the beginning of the page when you try to add a portlet to a page. The other set of error messages, error codes: EJPNK0026E, EJPNK0027E, andEJPNK0028E can display within the portlet when a portlet is already on a page and the page is rendered. The messages contain detailed information for each portlet about which capabilities are missing entirely or do not meet the minimum version required.
+When `capabilities.selfManaged` is set to `false`, HCL Portal handles the error case of missing capability dependencies. It displays error messages. One set of error messages, error codes: EJPNK0022E, EJPNK0023E, and EJPNK0024E, can display at the beginning of the page when you try to add a portlet to a page. The other set of error messages, error codes: EJPNK0026E, EJPNK0027E, andEJPNK0028E can display within the portlet when a portlet is already on a page and the page is rendered. The messages contain detailed information for each portlet about which capabilities are missing entirely or do not meet the minimum version required.
 
-The non-self managed error handling can also be turned off for certain situations, such as for maximum performance on a production system or in the remote rendering use case \(WSRP\) where the consumer is not of type HCL DX. For more information, see *Configuration settings for capability filters*.
+The non-self managed error handling can also be turned off for certain situations, such as for maximum performance on a production system or in the remote rendering use case \(WSRP\) where the consumer is not of type HCL Portal. For more information, see *Configuration settings for capability filters*.
 
 ## Loading the capabilities
 

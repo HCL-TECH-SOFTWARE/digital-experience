@@ -16,7 +16,7 @@ You can invalidate the cache using the Theme Analyzer to update the profile or m
 
 6.  Save the changes.
 
-7.  Restart the HCL Digital Experience server.
+7.  Restart the HCL Portal server.
 
 
 

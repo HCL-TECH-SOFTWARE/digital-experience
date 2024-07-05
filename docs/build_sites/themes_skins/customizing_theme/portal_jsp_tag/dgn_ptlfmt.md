@@ -59,7 +59,7 @@ The following section provides detailed descriptions of the <portal-fmt/\> JSP t
 
         The tag content is written only if the language belongs to the bidirectional languages that are defined by the portal. If attribute is specified, locale is ignored.
 
-    HCL Digital Experience (DX) JSPs use this tag in a `BidiInclude.jsp` that creates the following scripting variables, which, in many cases, are easier to use than the `<portal-fmt:bidi/>` tag.
+    HCL Portal JSPs use this tag in a `BidiInclude.jsp` that creates the following scripting variables, which, in many cases, are easier to use than the `<portal-fmt:bidi/>` tag.
 
     -   **<%=bidiAlignRight%\>**
 
@@ -172,7 +172,7 @@ The following section provides detailed descriptions of the <portal-fmt/\> JSP t
     -   userid.invalid - Occurs when the user ID field is empty during login. This is used in the Login screen.
     There is a corresponding answer key for each problem \(see the [<portal-fmt:answer/\>](#answer) tag\).
 
-    The resource bundle must be in a directory that is on the class path of the HCL DX enterprise application. It is recommended that you create a new directory to separate your custom code from the base code. Add the new directory to the Portal application class path. For details, refer to the WebSphere® Application Server documentation. The following sample retrieves the problem text from `/nls/problem_locale.properties`. The text is displayed only when an error is encountered rendering the page.
+    The resource bundle must be in a directory that is on the class path of the HCL Portal enterprise application. It is recommended that you create a new directory to separate your custom code from the base code. Add the new directory to the Portal application class path. For details, refer to the WebSphere® Application Server documentation. The following sample retrieves the problem text from `/nls/problem_locale.properties`. The text is displayed only when an error is encountered rendering the page.
 
     For example:
 

@@ -9,9 +9,8 @@ Scoping of resources works as follows:
 
 Scoping works for some portal resources, but not for others:
 
--   HCL Digital Experience (DX) scopes some portal resources for virtual portals. This means that these resources exist separately for each virtual portal.
+-   HCL Portal scopes some portal resources for virtual portals. This means that these resources exist separately for each virtual portal.
 -   Other resources are common for all virtual portals in a portal installation. However, you can scope some of these resources:
-
     -   You can scope some resources by using portal administration and Portal Access Control.
     -   There are some portal resources that cannot be scoped at all.
 
@@ -21,7 +20,7 @@ The differences in scoping portal resources are described in the following secti
 
 ## Portal resources that are scoped for virtual portals
 
-HCL DX has the following portal resources scoped internally for virtual portals:
+HCL Portal has the following portal resources scoped internally for virtual portals:
 
 -   Portal pages
 -   Portlet instances
@@ -36,7 +35,7 @@ The following rules apply:
 -   An administrator can give access permissions to users who are members of the user population of a virtual portal only on the scoped resources of that same virtual portal. This implies that, vice versa, you can give access permissions on the resources of a virtual portal only to those users who are members of the user population of that virtual portal.
 -   Users can only use these access permissions when they access the specific virtual portal under which they have the access permissions on the scoped resources. The same users cannot access the resources when logging in to a different virtual portal.
 
-**Note for HCL Web Content Manager web content libraries:** HCL Web Content Manager web content libraries are scoped to virtual portals if Managed Pages are enabled as by the default HCL DX installation. If you want to make HCL Web Content Manager web content libraries available between your virtual portals, you can do so by disabling Managed Pages and restarting your portal. HCL Web Content Manager web content libraries of the base portal are then also available to the virtual portals.
+**Note for HCL Web Content Manager web content libraries:** HCL Web Content Manager web content libraries are scoped to virtual portals if Managed Pages are enabled as by the default HCL Portal installation. If you want to make HCL Web Content Manager web content libraries available between your virtual portals, you can do so by disabling Managed Pages and restarting your portal. HCL Web Content Manager web content libraries of the base portal are then also available to the virtual portals.
 
 ## Portal resources that you can separate for virtual portals by using Portal Access Control
 

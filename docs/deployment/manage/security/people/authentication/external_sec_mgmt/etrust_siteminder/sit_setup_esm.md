@@ -100,7 +100,7 @@ Complete the following steps to configure eTrust SiteMinder for authorization:
     **Clustered environments:** Complete this step on all nodes.
 
 9.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](../../../../../stopstart.md).
-
+>>>>>>> feature/DXQ-26605b
 
 10. If users other than the administrator are allowed to externalize resources, add those users to the eTrust SiteMinder realm representing the Administrator of EXTERNAL\_ACCESS\_CONTROL.
 

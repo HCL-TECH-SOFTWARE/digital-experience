@@ -8,7 +8,7 @@ A modular theme is a HCL Digital Experience theme that uses the Resource Aggrega
 
 This portlet visualizes all parts of the theme optimization framework. With this portlet, you can see how the profiles are applied to specific themes or pages and see the defined resources for modules. This portlet features a validation report and the ability to export and import profiles to replicate another environment.
 
-The portlet is included with the current version of HCL Digital Experience. Click the **Administration menu** icon. Then, click **Portal Analysis** \> **Theme Analyzer**.
+The portlet is included with the current version of HCL Portal. Click the **Administration menu** icon. Then, click **Portal Analysis** \> **Theme Analyzer**.
 
 ## Client console and debugging tools
 

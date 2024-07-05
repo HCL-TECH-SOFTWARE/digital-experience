@@ -4,7 +4,7 @@ You use a presentation template define the layout of your web content. Use tags 
 
 ## Defining presentation for Web Content Viewer portlets
 
-When you display content with HCL Digital Experience (DX), the presentation template defines only the layout of content that is displayed in a Web Content Viewer portlet. The overall page design is determined by which page layout is selected, which portlets are added to the page, and the selected theme.
+When you display content with HCL Portal, the presentation template defines only the layout of content that is displayed in a Web Content Viewer portlet. The overall page design is determined by which page layout is selected, which portlets are added to the page, and the selected theme.
 
 ## Defining presentation for servlet rendered content
 

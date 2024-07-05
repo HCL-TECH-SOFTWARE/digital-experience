@@ -105,9 +105,6 @@ The export command is used to export the DAM assets in the file system to defaul
         dxclient manage-dam-assets export-assets -dxProtocol https -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -exportPath <exportPath> -exportBinary <exportBinary>
         ```
 
-!!!important
-    A new folder is created every time you run the `manage-dam-assets export-assets` command. If the specified `-exportPath` exists, the system throws the error `EBUSY: resource busy or locked,rmdir '/dxclient/store/<exportPath>`. Make sure to delete the existing `exportPath` before each run to export successfully.
-
 
 ## Validate exported DAM assets
 

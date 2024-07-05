@@ -4,9 +4,9 @@ When tags from remote systems, such as HCL Connections are integrated into your 
 
 <!---
 -   **[Importing federated tags and resources](../admin-system/tag_fed_admin_import.md)**  
-When tags from remote systems, such as HCL Connections are integrated into HCL Digital Experience (DX), you need to schedule a task to retrieve the tags and related data from the remote system.
+When tags from remote systems, such as HCL Connections are integrated into HCL Portal, you need to schedule a task to retrieve the tags and related data from the remote system.
 -   **[Cleaning up federated tags and resources](../admin-system/tag_fed_admin_cleanup.md)**  
-When federated tags are no longer integrated in HCL DX, you invoke the task com.ibm.wps.cp.tagging.federation.taskhandler.FederationDeletionTaskHandler to remove unnecessary data.
+When federated tags are no longer integrated in HCL Portal, you invoke the task com.ibm.wps.cp.tagging.federation.taskhandler.FederationDeletionTaskHandler to remove unnecessary data.
 -   **[Redirecting to an HCL Connections site](../admin-system/tag_fed_admin_redirect.md)**  
 When a user clicks an HCL Connections resource in the result list portlet, this resource is rendered within an HCL Connections portlet, if that portlet exists and can handle this resource.
 -   **[Specifying an icon for a federated resource](../admin-system/tag_fed_admin_spec_icon.md)**  

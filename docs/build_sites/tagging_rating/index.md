@@ -6,7 +6,7 @@ Get an overview of the administrative tasks related to tagging and rating.
 
 Portal administrators can do the following tasks:
 
--   Enable or disable tagging and rating for portal users. Tagging and rating are enabled in the HCL Digital Experience (DX) 8.5 theme. You can disable and enable tagging and rating globally for the portal as a whole. To do so, use the following configuration properties:
+-   Enable or disable tagging and rating for portal users. Tagging and rating are enabled in the HCL Portal 8.5 theme. You can disable and enable tagging and rating globally for the portal as a whole. To do so, use the following configuration properties:
 
     -   To disable and enable tagging portal wide, use the property `com.ibm.wps.cp.tagging.isTaggingEnabled`.
     -   To disable and enable rating portal wide, use the property `com.ibm.wps.cp.rating.isRatingEnabled`.
@@ -35,7 +35,7 @@ Portal administrators can do the following tasks:
 -   **[Introduction to tagging and rating](../admin-system/tag_rate_defn.md)**  
 Tagging and rating are features that support collaboration and interaction between users when using Web content.
 -   **[What is new in tagging and rating](../admin-system/tag_rate_whatsnew.md)**  
-With HCL DX Version 9.5, the tag and rating widgets have been replaced by new enhanced versions of these widgets.
+With HCL Portal Version 9.5, the tag and rating widgets have been replaced by new enhanced versions of these widgets.
 -   **[How tagging and rating works in the portal](../admin-system/tag_rate_adm_gen.md)**  
 Use these topics for general administrative information about tagging and rating in the portal.
 -   **[The tagging and rating user interface](../admin-system/tag_rate_ui.md)**  
@@ -45,7 +45,7 @@ Tagging or rating for static pages works only with the dialog widgets of earlier
 -   **[Enabling your own custom content for tagging and rating](../admin-system/tag_rate_custom_content.md)**  
 Enabling your own custom content for tagging and rating works only with the dialog widgets of earlier portal versions.
 -   **[Federating tags](../admin-system/tag_rate_federation.md)**  
-HCL DX allows the federation of remote tagging systems, such as HCL Connections.
+HCL Portal allows the federation of remote tagging systems, such as HCL Connections.
 -   **[Configuration reference for tagging and rating](../admin-system/tag_rate_adm_ref.md)**  
 Developers can customize the tagging and rating user interfaces. The parameter reference lists and explains all available configuration parameters and their values. The topic about CSS provides information about how to change the design of the user interfaces.
 -   **[Security for tagging and rating](../admin-system/tag_rate_secy.md)**  

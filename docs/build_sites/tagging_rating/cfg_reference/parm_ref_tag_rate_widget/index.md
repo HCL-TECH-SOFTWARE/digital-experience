@@ -25,7 +25,7 @@ For details about the parameters in the CP configuration service and how to set 
 **Usage notes for the parameter lists in the following topics:**
 
 -   The lists show the parameters with their default if they have one. In these cases the parameters are shown with an equal sign between the parameter and the value. This is how you specify the setting when you include the widget declaratively. If you include the widget programmatically, use a colon instead of the equal sign.
--   The parameters listed here are specific to the inline tag and rating widgets that were introduced with HCL Digital Experience (DX) Version 8.5. The dialog and inline widgets of earlier portal versions were deprecated with portal V 8.5. For information about the earlier widgets and their parameters, read the appropriate topics in the HCL DX Version 8.0 product documentation.
+-   The parameters listed here are specific to the inline tag and rating widgets that were introduced with HCL Portal Version 8.5. The dialog and inline widgets of earlier portal versions were deprecated with portal V 8.5. For information about the earlier widgets and their parameters, read the appropriate topics in the HCL Portal Version 8.0 product documentation.
 
 <!---
 -   **[Tag widget parameter reference](../admin-system/tag_rate_parm_ref_inl_tag_lite.md)**  

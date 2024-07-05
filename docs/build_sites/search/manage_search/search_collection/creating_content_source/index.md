@@ -28,7 +28,7 @@ When you create a new content source for a search collection, that content sourc
 
     Your selection determines some of the entry fields and options that are available for creating the content source. For example, the option Obeyrobots.text in the Advanced Parameters tab is available only if you select **Web site** as the content source type.
 
-    For some content sources, you might need to enter sensitive data, such as a user ID and password. For example, this action applies to secured HCL Digital Experience (DX) sites. To ensure encryption of this sensitive data when it is stored, update and run the file searchsecret.xml by using the XML configuration interface before you create the content source
+    For some content sources, you might need to enter sensitive data, such as a user ID and password. For example, this action applies to secured HCL Portal sites. To ensure encryption of this sensitive data when it is stored, update and run the file searchsecret.xml by using the XML configuration interface before you create the content source
 
 3.  Set the parameters and configure the content source from the tabs.
 

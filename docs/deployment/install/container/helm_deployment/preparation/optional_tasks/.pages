@@ -1,5 +1,6 @@
 nav:
     - optional_internal_networking.md
+    - optional_configure_harbor_helm_repo.md
     - optional_imagepullsecrets.md
     - optional_nodeselectors.md
     - optional_disable_apps.md

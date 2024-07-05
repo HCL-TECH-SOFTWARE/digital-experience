@@ -1,58 +1,28 @@
-# Deploying using Helm
+# Deploy Container Platforms Using Helm
 
-!!!important "Before deployment, see the following resources first."
-    * [Kubernetes deployment](../../../../get_started/plan_deployment/container_deployment/index.md) for an understanding of the capabilities, deployment structures, configuration and scaling options available for HCL DX 9.5 CF196 and later deployments.
-    * [Containerization requirements and limitations](../../../../get_started/plan_deployment/container_deployment/limitations_requirements.md) for an understanding of the requirements, including capacity planning, and current limitations for an HCL Digital Experience 9.5 and later deployment using Helm.
+Learn to deploy HCL Digital Experience 9.5 CF196 and later release containers to Kubernetes using [Helm](../helm_deployment/overview.md) on the following as verified in [Google Kubernetes Engine (GKE)](https://console.cloud.google.com/marketplace/details/google-cloud-platform/container-engine){:target="_blank"}. 
 
-HCL DX V9.5 is designed to run on any Certified Kubernetes platform with some conditions. See the [system requirements for Kubernetes platforms](../../../../get_started/system_requirements/kubernetes/kubernetes-runtime.md) for more information.
+Beginning with HCL Digital Experience CF197 and later releases, the Helm deployment pattern is supported for new deployments to [Red Hat Open Shift](https://www.redhat.com/en/technologies/cloud-computing/openshift){:target="_blank"}, [Amazon Elastic Kubernetes Service (EKS)](https://aws.amazon.com/eks/?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc&eks-blogs.sort-by=item.additionalFields.createdDate&eks-blogs.sort-order=desc){:target="_blank"}, and [Microsoft Azure Kubernetes Service (AKS)](https://azure.microsoft.com/en-us/services/kubernetes-service/){:target="_blank"}.
 
-This section provides administrators with instructions to deploy HCL Digital Experience to supported Kubernetes platforms. This includes preparation, installation, and uninstallation of the deployments using Helm.
+!!! note
+        For more information, you can also refer to deploy HCL DX 9.5 CF197 on [Azure AKS using the Helm Chart](https://support.hcltechsw.com/sys_attachment.do?sys_id=876b1adf1bb97490a67e9759bc4bcb03){:target="_blank"}.
 
-Older versions of HCL DX shipped with an operator instead of helm charts, and shipped Ambassador for use as an ingress controller. These have been removed is CF 200 and CF 202 respectively. Please refer to documentation of prior product versions for [Operator](https://opensource.hcltechsw.com/digital-experience/CF216/deployment/install/container/operator-migration/operator_migration_preparation/) and [Ambassador](https://opensource.hcltechsw.com/digital-experience/CF216/deployment/install/container/haproxy-migration/haproxy-introduction/) migration steps. 
+!!! note
+    
+    HCL DX V9.5 V200 and later is designed to run on any Certified Kubernetes platform with some conditions, documented in [Container platform support matrix](../../../../get_started/system_requirements/kubernetes/kubernetes-runtime.md).
 
-**Before you begin:** Refer to the latest HCL DX 9.5 Update image files list provided in the [Container image list](../image_list.md) topic.
+Refer to the following videos for more information:
 
-``` mermaid
-flowchart TD
-  accTitle: Steps in DX Helm installation.
-  accDescr: Flowchart showing the mandatory and optional steps in DX Helm installation.
+-   [Deploy HCL DX 9.5 Container using Helm](https://www.youtube.com/watch?v=pFKpMImqOQE){:target="_blank"}
+-   [Update HCL DX 9.5 Container to a later version using Helm](https://www.youtube.com/watch?v=TwZuNOeWdT4){:target="_blank"}
 
-  A([Start])
-  B1[Configure Helm Repository];
-  B2[Load the Images];
-  C[/Mandatory or Optional Tasks/];
-  D[Prepare Namespace];
-  E[Setup Custom Configuration];
-  F[Setup Persistent Volumes];
-  G[Configure Networking];
-  H[Configure Certificate];
-  I[Optional tasks];
-  J[Install DX]
+## About this task
 
-  A --> B1;
-  B1 --> B2;
-  B2 --> C;
-  C --> |Mandatory| D;
-  D --> E;
-  E --> F;
-  F --> G;
-  G --> H;
-  H --> J;
-  C ----> |Optional| I;
-  I --> J;
+This section provides administrators with all Helm-based deployment tasks to deploy HCL Digital Experience CF196 and later releases to supported Kubernetes platforms. This includes preparation, installation, and uninstallation of the deployments using Helm.
 
-  click B1 "../preparation/get_the_code/configure_harbor_helm_repo/"
-  click B2 "../preparation/get_the_code/prepare_load_images/"
-  click D "../preparation/mandatory_tasks/prepare_namespace/"
-  click E "../preparation/mandatory_tasks/prepare_configuration/"
-  click F "../preparation/mandatory_tasks/prepare_persistent_volume_claims/"
-  click G "../preparation/mandatory_tasks/prepare_configure_networking/"
-  click H "../preparation/mandatory_tasks/prepare_ingress_certificate/"
-  click I "../preparation/optional_tasks/optional_internal_networking/"
-  click J "../helm_install_commands/"
+!!! important
+    Beginning with HCL Digital Experience 9.5 Container Update CF199, migration from an Operator (dxctl) based deployment to a Helm deployment of Container Update CF199 or higher is supported. Reference the Help Center topic [Migration from Operator (dxctl) to Helm deployment.](../operator-migration/operator_migration_preparation.md)for more information. Migration from earlier HCL Digital Experience 9.5 Container Update CF196 - CF198 Operator based deployments to Helm deployments is not supported.
 
+Follow these steps to prepare for and deploy HCL Digital Experience 9.5 CF196 and later release to Kubernetes using Helm, as verified in [Google Kubernetes Engine (GKE)](https://console.cloud.google.com/marketplace/details/google-cloud-platform/container-engine){:target="_blank"}, and with HCL Digital Experience CF197 and later releases, the Helm deployment pattern is supported for new deployments to [Red Hat Open Shift](https://www.redhat.com/en/technologies/cloud-computing/openshift){:target="_blank"}, [Amazon Elastic Kubernetes Service \(EKS\)](https://aws.amazon.com/eks/?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc&eks-blogs.sort-by=item.additionalFields.createdDate&eks-blogs.sort-order=desc){:target="_blank"}, and [Microsoft Azure Kubernetes Service (AKS)](https://azure.microsoft.com/en-us/services/kubernetes-service/){:target="_blank"}.
 
-
-
-
-``` 
+**Before you begin:** Refer to the latest HCL DX 9.5 Container Update image files list given in the [Container image list](../image_list.md) topic.

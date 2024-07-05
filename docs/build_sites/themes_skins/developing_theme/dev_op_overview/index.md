@@ -28,7 +28,7 @@ The components of a portal theme include:
 
 -   **Dynamic content**
 
-    Generated based on the data model of HCL Digital Experience (DX) with technologies such as JavaServer Pages or Java code.
+    Generated based on the data model of HCL Portal with technologies such as JavaServer Pages or Java code.
 
 -   **Configuration**
 
@@ -49,7 +49,7 @@ There are several ways to develop a custom theme.
 
 -   **Developing on the live server**
 
-    This method of developing a theme was introduced recently and is driven through the WebDAV entry point to the file store. You can copy a theme to start with the existing content from one of the ready-to-use HCL DX themes or create a folder to start. Add your custom HTML, CSS, and JavaScript files and export these files to create your theme component package. For more information about exporting files, see Exporting content from the file store.
+    This method of developing a theme was introduced recently and is driven through the WebDAV entry point to the file store. You can copy a theme to start with the existing content from one of the ready-to-use HCL Portal themes or create a folder to start. Add your custom HTML, CSS, and JavaScript files and export these files to create your theme component package. For more information about exporting files, see Exporting content from the file store.
 
 
 ## Packaging theme Components
@@ -60,7 +60,7 @@ All packages must contain an XML Access script to deploy the theme and a list of
 
 The following description shows the options available when all files are packaged together. If the files are separated, the number of files changes but the options are identical.
 
--   If you only created static resources, but used dynamic spots that are included within HCL DX or custom dynamic spots that are generally available, the following options exist:
+-   If you only created static resources, but used dynamic spots that are included within HCL Portal or custom dynamic spots that are generally available, the following options exist:
     -   Create a package that contains a compressed file that contains the static resources that can be deployed to the file store.
     -   Create a package that contains an EAR file that contains a WAR file with the static resources that can be deployed to the application server.
 -   If you created custom dynamic spots, like components that are based on JSP technology, that are to be packaged with the theme, the following options exist:

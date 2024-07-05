@@ -4,9 +4,19 @@ title: Harbor Container Registry
 
 # Download and Deploy from HCL Harbor Repository
 
-The HCL Digital Experience 9.5 container images and Helm charts can be accessed from the [HCL Harbor container repository](https://hclcr.io/){:target="_blank"}. Customers with credentials to access entitled software in the HCL Software Licensing Portal may apply those credentials to optionally access these components of Digital Experience v9.5. 
+Beginning with HCL Digital Experience 9.5 Container Update CF205, the [Docker images](../../deployment/install/docker/index.md) for deployment to Kubernetes environments can be accessed via Helm charts in the [HCL Harbor repository](https://hclcr.io/account/sign-in?redirect_url=/harbor/projects){:target="_blank"}. Customers with credentials to access entitled software in the HCL Software Licensing Portal may apply those credentials to access the Docker components of Digital Experience v9.5 Container Update CF205 or later releases. 
 
-As of the CF216 release (November 2023), the Harbor repository provides an OCI-based registry. The Helm chart command is updated to be OCI-compliant. However, older versions of the Helm chart are still utilized in the non-OCI approach. On this page, both approaches are described.
+!!! note
+
+    The Harbor repository structure does not support storage and access of binary zip files.  Specifically, all Docker images except for the DX Client and Ring API sample zip files may be accessed via the HCL Harbor repository. 
+    
+Harbor is an open-source Container Image and Helm Chart registry.  It can be accessed through the  CLI tools, such as Docker and HELM, using a CLI Secret. For more information about Harbor capabilities, refer to the Harbor documentation at [https://goharbor.io](https://goharbor.io){:target="_blank"}.
+
+Refer to the following procedures to access and deploy the components of HCL DX 9.5 Container Update CF205 or later releases from the HCL Harbor repository.
+
+!!! note
+
+    As of the CF216 release, the Harbor repository is updated with an OCI-based registry. The Helm chart command is updated to be OCI-compliant. However, older versions of the Helm chart are still utilized in the non-OCI approach. On this page, both approaches are described.
 
 ## OCI-based registry
 Note that Helm Charts pushed and managed through OCI are not part of the `Helm Charts` category in Harbor anymore. Therefore, the `Helm Charts` section does not reflect the newer version of helm charts which are pushed using OCI commands. OCI assets such as container images and helm charts are now in the same category and both are listed as an OCI repository.
@@ -112,7 +122,7 @@ ls -lah
 
 You have now downloaded your DX 9.5 Container Update Helm Chart from the HCL Harbor repository and can continue with your deployment. 
 
-After the Helm charts are downloaded, the next step is [Re-tagging images](../../deployment/install/container/helm_deployment/preparation/get_the_code/prepare_load_images.md#re-tag-images).
+After the Helm charts are downloaded, the next step is [Re-tagging images](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_load_images.md#re-tag-images).
 
 ???+ info "Related information"
     -   [Deploying container platforms using Helm](../../deployment/install/container/helm_deployment/overview.md)

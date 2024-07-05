@@ -2,7 +2,7 @@
 
 You can change the auto-loading of portlet capabilities with XMLAccess.
 
-1.  Export the theme. You can export all themes that are defined for HCL Digital Experience (DX) with the following script, or insert the specific theme object ID you want to export.
+1.  Export the theme. You can export all themes that are defined for HCL Portal with the following script, or insert the specific theme object ID you want to export.
 
     ```
     <?xml version="1.0" encoding="UTF-8"?>
@@ -26,6 +26,6 @@ You can change the auto-loading of portlet capabilities with XMLAccess.
 
 3.  Import the XML file with the command line or Import XML.
 
-4.  Restart HCL DX.
+4.  Restart HCL Portal.
 
 

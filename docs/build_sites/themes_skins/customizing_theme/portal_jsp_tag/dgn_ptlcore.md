@@ -9,7 +9,7 @@ The following table provides a brief description of each tag.
 
 |Tag|Description|
 |---|-----------|
-|[<portal-core:cacheProxyUrl/\>](#detailed-descriptions-of-the-portal-core-jsp-tags)|Creates a URL to the caching proxy servlet.**Note:** This tag is deprecated for HCL Digital Experience (DX) 8.0.|
+|[<portal-core:cacheProxyUrl/\>](#detailed-descriptions-of-the-portal-core-jsp-tags)|Creates a URL to the caching proxy servlet.**Note:** This tag is deprecated for HCL Portal 8.0.|
 |[<portal-core:constants/\>](#portal-coreconstants)|Makes the <%= wpsBaseURL %\> and <%= wpsDocURL %\> constants available to the page.|
 |[<portal-core:defineObjects/\>](#portal-coredefineobjects)|Defines a set of objects which can be used later on \(for example, `escapeXmlWriter`\).|
 |[<portal-core:init-lazy-set/\>](#portal-coredefineobjects)|This tag initializes the lazy set functionality and is required to be called in the outer most JSP. For example in your theme it would be the default.jsp. It must not be placed in a dynamic content spot JSP.|
@@ -53,7 +53,7 @@ The following section provides detailed descriptions of the <portal-core/\> JSP 
 
     -   <%= wpsDocURL %\>
 
-        Provides the URL to the product documentation located in the HCL DX Web application directory, including the Javadoc information, and portal help. The URL returned includes the locale of the client, for example, `/wps/doc/locale/`. For example, the following code would generate a URL to the portal help:
+        Provides the URL to the product documentation located in the HCL Portal Web application directory, including the Javadoc information, and portal help. The URL returned includes the locale of the client, for example, `/wps/doc/locale/`. For example, the following code would generate a URL to the portal help:
 
         ```
                 <%= wpsDocURL %>/help/index.html             

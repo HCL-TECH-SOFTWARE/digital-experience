@@ -15,14 +15,12 @@ In addition to the HTML file that describes the page, static pages can contain r
 
     -   If the attribute contains an absolute URL, the URL is rewritten to point to the Ajax proxy server.
     -   If the attribute contains a relative URL, the URL is rewritten to point to an access point that serves the resource out of the static page container for the page.
-    
     In the following example, assume that the page contains the following resources:
 
     -   index.html
     -   images/logo.gif
     -   css/styles.css
     -   script/script.js
-
     The following source code would enable the use of these resources:
 
     ```

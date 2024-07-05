@@ -1,6 +1,6 @@
 # Default layouts
 
-The Simple Theme and the HCL Digital Experience 8.5 theme ship with predefined layouts that can be used as a basis for creating custom layouts.
+The Simple Theme and the HCL Portal 8.5 theme ship with predefined layouts that can be used as a basis for creating custom layouts.
 
 The Simple Theme includes the following layouts:
 

@@ -322,5 +322,5 @@ If you are using a content delivery network (CDN) such as [Akamai](https://www.a
 ???+ info "Related information"  
     - [HCL Digital Asset Management](../../../digital_assets/index.md)
     - [How to enable Practitioner Studio](../../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md)
-    - [Docker image deployment](../../../../deployment/install/container/helm_deployment/overview.md)
+    - [Docker image deployment](../../../../deployment/install/docker/docker_image_deployment.md)
     - [Digital Asset Management persistence architecture](../../../../get_started/plan_deployment/container_deployment/dam_persistence_architecture.md)

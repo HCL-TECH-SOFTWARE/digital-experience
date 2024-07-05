@@ -1,60 +1,12 @@
-# Container and Supported OS File listings
+# Container and Supported OS File listings 
 
-This section presents the latest available HCL Digital Experience (DX) 9.5 Container images. 
+This section presents the latest available HCL Digital Experience (DX) 9.5 Container images.
 
-You can obtain the HCL DX 9.5 container update and supported OS releases from your HCL Digital Experience entitlements in the [HCL Software License Portal](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do), in the **HCL_Portal_8.5_9.0_9.5_CFs** download package entry and in the **HCL_DX_9.5_Container_Updates** download package entry for HCL Digital Experience Cloud Native 9.5 entitlements.
+You can obtain the HCL DX 9.5 container update releases from your HCL Digital Experience entitlements in the [HCL Software License Portal](https://www.hcltech.com/software/support/release){:target="_blank"}, in the **HCL_Portal_8.5_9.0_9.5_CFs** download package entry, and the **HCL_DX_9.5_Container_Updates** download package entry for HCL Digital Experience Cloud Native 9.5 entitlements.
 
-Video: [How to upload HCL Digital Experience 9.5 CF container images to a private repository](https://youtu.be/XJONRdpgCuo)
+Video: [How to upload HCL Digital Experience 9.5 CF container images to a private repository](https://youtu.be/XJONRdpgCuo){:target="_blank"}
 
-## HCL DX 9.5 CF217
 
-If you are deploying the HCL DX 9.5 CF217 Container update release, the package name and images are as follows.
-
-### HCL DX 9.5 CF217 DXClient files
-
-```shell
-hcl-dxclient-image-v95_CF217_20240118-0009.zip
-hcl-dxclient-v95_CF217_20240118-0010.zip
-```
-
-### hcl-dx-kubernetes-v95-CF217.zip
-
-```shell
-HCL DX notices V9.5 CF217.txt
-hcl-dx-content-composer-image-v1.30.0_20240117-2348.tar.gz
-hcl-dx-core-image-v95_CF217_20240117-2359.tar.gz
-hcl-dx-dam-plugin-google-vision-image-v0.1.0_20240117-2350.tar.gz
-hcl-dx-dam-plugin-kaltura-image-v0.1.0_20240117-2349.tar.gz
-hcl-dx-deployment-v2.26.0_20240123-1320.tgz
-hcl-dx-digital-asset-manager-image-v1.29.0_20240118-0006.tar.gz
-hcl-dx-experience-api-sample-ui-v0.2.0.20240117-2355.zip
-hcl-dx-haproxy-image-v1.13.0_20240118-0002.tar.gz
-hcl-dx-image-processor-image-v1.30.0_20240118-0002.tar.gz
-hcl-dx-license-manager-image-v95_CF217_20240117-2354.tar.gz
-hcl-dx-logging-sidecar-image-v1.0.0_20240117-2354.tar.gz
-hcl-dx-openldap-image-v1.2.0_20240117-2348.tar.gz
-hcl-dx-persistence-connection-pool-image-v1.29.0_20240118-2135.tar.gz
-hcl-dx-persistence-metrics-exporter-image-v1.27.0_20240118-2135.tar.gz
-hcl-dx-persistence-node-image-v1.19_20240118-2133.tar.gz
-hcl-dx-prereqs-checker-image-v1.0.0_20240117-2354.tar.gz
-hcl-dx-remote-search-image-v95_CF217_20240117-2359.tar.gz
-hcl-dx-ringapi-image-v1.30.0_20240117-2357.tar.gz
-hcl-dx-runtime-controller-image-v95_CF217_20240117-2354.tar.gz
-```
-
-### HCL Digital Experience File package listings (supported OS platforms)
-
-This section presents the latest available HCL DX File package listings for supported OS platforms.
-
-|File name| Folder name|
-|---------|------------|
-|HCL-DX-CF217_Express_Update|HCL-DX-CF217_Express_Update.zip|
-|HCL-DX-CF217_RemoteSearch_Update|HCL-DX-CF217_RemoteSearch_Update.zip|
-|HCL-DX-CF217_Server_Update|HCL-DX-CF217_Server_Update.zip|
-
-See the [System Requirements](../../../get_started/system_requirements/index.md) section for more information about the supported Container and Operating Systems.
-
-<!--
 ## HCL DX 9.5 CF216
 
 If you are deploying the HCL DX 9.5 CF216 Container update release, the package name and images are as follows.
@@ -1212,8 +1164,8 @@ hcl-dx-cloud-operator-image-v95_CF18_xxxxxxxx-xxxx.tar.gz
 hcl-dx-cloud-scripts-v95_CF18_xxxxxxxx-xxxx.zip
 hcl-dx-ambassador-image-xxxx.tar.gz
 ```
--->
 
-???+ info "Related information"
-    - [Download the HCL Digital Experience software](../../../get_started/download/index.md)
-    - [Locating and Downloading DX Products](../../../guide_me/tutorials/access-software/locating-downloads.md)
+- See the following sections for additional information:
+  - [Docker image deployment](../docker/docker_image_deployment.md)
+  - [System requirements](../../../get_started/system_requirements/index.md)
+  - [Customizing the container deployment](https://help.hcltechsw.com/digital-experience/9.5/containerization/customizing_container_deployment.html){:target="_blank"}

@@ -6,7 +6,7 @@ Progressive Web Applications \(PWAs\) offer a delivery pattern that can transfor
 
 For additional information please consult [Introduction to Progressive Web Applications](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Introduction) at the developer.mozilla.org site.
 
-**Video**: [Progressive Web Applications with HCL Digital Experience (DX) 9.5](https://www.youtube.com/watch?v=JP1cWlM1s2k)
+**Video**: [Progressive Web Applications with HCL Digital Experience 9.5](https://www.youtube.com/watch?v=JP1cWlM1s2k)
 
 ## Progressive Web Application requirements
 
@@ -83,7 +83,6 @@ By default, the manifest.json file does not provide any localization information
 -   names
 -   short\_names
 -   shortcuts:
-
     -   names
     -   descriptions
 
@@ -142,7 +141,6 @@ Hidden pages are implemented via CSS included in the theme. There are two places
     The use of friendly URLs can also be configured by doing the following steps:
 
     -   Set the following `WP_ConfigService` resource environment variables as follows:
-
         -   stateless.urls.enabled=true
         -   generate.stateless.urls=true
         -   generate.stateless.redirect.urls=true
@@ -161,7 +159,6 @@ Hidden pages are implemented via CSS included in the theme. There are two places
     All further steps apply to custom themes and/or to custom sites.
 
 2.  **Create a pwas directory in the root of the theme static files**. This directory will contain all of the PWA configurations. Each sub-directory under pwas represents a single configuration. For example, in the updated Woodburn Studio theme \( in CF19 and higher releases\), these directories/files exist:
-
     -   pwas \(folder\)
         -   woodburn \(folder\)
             -   images \(folder\)
@@ -238,7 +235,6 @@ Hidden pages are implemented via CSS included in the theme. There are two places
 
 9.  **Depending on how the theme is deployed, the theme caches may need to be cleared** using the Theme Analyzer. See the [Theme Analyzer](../themes_skins/the_module_framework/themeopt_analyzer/index.md) Help Center topic for instructions to analyze and clear theme caches.
 10. **Add any necessary metadata values** to the pages:
-
     -   **Required: `com.hcl.dx.pwa.configuration`** - Set on the root label or page of the site to identify the PWA configuration located in the theme pwas directory that will apply. For example, this page metadata parameter is set to `woodburn` on the Woodburn Studio theme root label \(`Woodburn Studio`\).
     -   **Optional: `com.hcl.dx.pwa.app.protected`** - Set on the root label or page of the site to identify whether or not the application will apply to authenticated \(true\) or anonymous \(false\) parts of the site. The value of this parameter will default to false.
     -   **Optional: `com.hcl.dx.pwa.serviceworker.scope`** - Set on the root label or page of the site to override the service worker scope that will be used to register the service worker with the browser \(typically the URL for the root page of the site, for example, /wps/myportal/site1\). The service worker scope can also be set to auto which will cause the service worker scope to be set to the friendly path of the PWA configuration node. See the *Authenticated versus Unauthenticated* section for further explanation of how this parameter is affected by the `com.hcl.dx.pwa.app.protected` metadata parameter. The value of this parameter will default to auto.

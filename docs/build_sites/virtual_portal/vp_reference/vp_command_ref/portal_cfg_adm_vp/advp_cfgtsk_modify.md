@@ -30,7 +30,7 @@ Use this task to modify a virtual portal by using its object ID. To determine th
 
     For more information about the NLS file and its format, see the *Command reference for the Portal Scripting Interface* and then under the section *Property File Format*.
 
-    For a list of the languages that are available with HCL Digital Experience (DX) and their language codes refer to *Language support*.
+    For a list of the languages that are available with HCL Portal and their language codes refer to *Language support*.
 
 
 ## Syntax

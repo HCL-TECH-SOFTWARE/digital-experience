@@ -1,8 +1,7 @@
 title: Site Analytics
 nav:
     - index.md
-    - Integrating Google Analytics 4 with HCL DX: google_analytics4
-    - Integrating Google Universal Analytics with HCL DX: google_analytics
+    - Integrate Google Analytics with HCL Digital Experience: google_analytics
     - Instrumenting web content for Active Site Analytics: instrumenting_webcontent_asa
     - Portlet load monitoring for HCL Portal: portlet_load_monitoring
     - Integrate HCL Unica Discover with HCL Digital Experience: unica

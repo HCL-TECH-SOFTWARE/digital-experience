@@ -21,13 +21,13 @@ http://<server>:<port>/wps/mycontenthandler/dav/fs-type1/<folder-name>/?mime-typ
 Where:
 
 -   The <server\> value is the host name of the portal.
--   The <port\> value is the port number for HCL Digital Experience (DX).
+-   The <port\> value is the port number for HCL Portal.
 -   The <folder-name\> value is the folder to be compressed. This value is optional.
 
 !!! note
     A / must follow the folder name.
 
-The URL triggers a download of a compressed file. If you are prompted for a user and password enter the admin user ID and password for HCL DX. Store the file on the local file system.
+The URL triggers a download of a compressed file. If you are prompted for a user and password enter the admin user ID and password for HCL Portal. Store the file on the local file system.
 
 This following url downloads the complete content of the filestore:
 
@@ -57,7 +57,7 @@ If you want to automate the export, you can write an Ant task as depicted in the
 Where:
 
 -   The <server\> value is the host name of the portal.
--   The <port\> value is the port number for HCL DX.
+-   The <port\> value is the port number for HCL Portal.
 -   The <folder-name\> value is the folder to be compressed. This value is optional.
 
 !!! note

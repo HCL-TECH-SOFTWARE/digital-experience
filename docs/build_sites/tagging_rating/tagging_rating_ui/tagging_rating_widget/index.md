@@ -2,9 +2,9 @@
 
 The portal provides one widget each for tags and for ratings.
 
-With HCL Digital Experience (DX) Version 8.5, both the dialog and inline tag and rating widgets of previous portal versions are deprecated. They are replaced by a single pair of new enhanced inline widgets. They provide the functionality of both types of the old widgets. Users view them as part of the portal resource.
+With HCL Portal Version 8.5, both the dialog and inline tag and rating widgets of previous portal versions are deprecated. They are replaced by a single pair of new enhanced inline widgets. They provide the functionality of both types of the old widgets. Users view them as part of the portal resource.
 
-The new inline tag and rating widgets can tag or rate content items on portal pages or in portlets, Article Template content items, blogs, wikis, or your custom content items. These content items can be on a portal page or inside a portlet. If you add the tag or rating widget to such a portal resource, the widget is integrated into that portal resource. The user views the user interface for tagging or rating as part of the portal resource. If you want to enable users to tag or rate a portal page or portlet, you need to use the old dialog widgets. Read the HCL DX Version 8.0 documentation.
+The new inline tag and rating widgets can tag or rate content items on portal pages or in portlets, Article Template content items, blogs, wikis, or your custom content items. These content items can be on a portal page or inside a portlet. If you add the tag or rating widget to such a portal resource, the widget is integrated into that portal resource. The user views the user interface for tagging or rating as part of the portal resource. If you want to enable users to tag or rate a portal page or portlet, you need to use the old dialog widgets. Read the HCL Portal Version 8.0 documentation.
 
 <!--
 -   **[The tag widget](../admin-system/tag_rate_inline_tag_wdgt_lite.md)**  

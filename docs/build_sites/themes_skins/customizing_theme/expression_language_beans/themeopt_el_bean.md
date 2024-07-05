@@ -4,7 +4,7 @@ Expression language \(EL\) beans are available for accessing WebSphere Programmi
 
 ## PortalBean
 
-The PortalBean provides access to EL Beans that represent some of the HCL Digital Experience models. You can use these models to access resource information in your JSPs.
+The PortalBean provides access to EL Beans that represent some of the HCL Portal models. You can use these models to access resource information in your JSPs.
 
 You can access the PortalBean \(wp\) with the following items. Append the following beans to `wp.` to create a bean in your JSP. For example, `wp.themeList.current` gets the current element and returns [Theme](themeopt_el_bean.md).
 

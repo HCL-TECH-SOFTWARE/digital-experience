@@ -14,8 +14,8 @@ You are welcome to report bugs or provide feedback on the **product documentatio
 Perform the following steps to install mkdocs and clone the git repository to update the markdown files.
 
 - Follow the [MkDocs Installation guide](https://www.mkdocs.org/user-guide/installation/) to install [`MkDocs`](https://www.mkdocs.org/) and `pip`
-- Install the required `mkdocs` plugins:  
-  - `pip install -r requirements.txt`
+- Install the following `mkdocs` plugins:  
+  - `pip install mkdocs-material mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin`
 - Clone the [digital-experience repository](https://github.com/HCL-TECH-SOFTWARE/digital-experience)
 - Update the markdown files in the `docs` folder
 - Verify the changes by building the project locally [mkdocs serve](https://www.mkdocs.org/getting-started/#creating-a-new-project)

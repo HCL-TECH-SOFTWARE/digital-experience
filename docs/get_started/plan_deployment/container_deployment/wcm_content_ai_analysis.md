@@ -1,28 +1,27 @@
 # WCM Content AI Analysis
 
-You can enable AI analysis for Web Content Management (WCM) content in a Kubernetes deployment. You can also configure a content AI provider to be used for AI analysis. The AI analysis for a WCM content feature is available from HCL Digital Experience 9.5 Container Update CF213 and higher.
+This topic describes how to enable AI analysis for a WCM Content in Kubernetes Deployment. This also discusses steps on how to configure a content AI provider to be used for AI analysis. The AI analysis for a WCM Content feature is available from HCL Digital Experience 9.5 Container Update CF213 and higher.
 
 !!!note
-	OpenAI ChatGPT is the supported content AI provider for CF213 and later. Custom AI implementation is supported for CF214 and later.
+	OpenAI ChatGPT is the supported content AI provider from CF213 and higher. Custom AI implementation is supported from CF214 and higher.
+  Starting with CF216 the default model will be switched to ```gpt-3.5-turbo``` as ```text-davinci-003``` is no longer supported by OpenAI from the beginning of 2024.
 
-Starting CF216, the default model is switched to ```gpt-3.5-turbo``` because ```text-davinci-003``` is no longer supported by OpenAI from the beginning of 2024.
+## Content AI Provider Overview
 
-## Content AI provider overview
+### OpenAI ChatGPT Overview
 
-### OpenAI ChatGPT overview
-
-OpenAI is the AI research and deployment company behind ChatGPT. When you sign up with ChatGPT, it provides API access through an API key. After signing up at [https://platform.openai.com/playground](https://platform.openai.com/playground), you can create a personal account with limited access or a corporate account. You can use the playground to experiment with the API too. A highlight of the API is that it accepts natural language commands similar to the ChatGPT chatbot. 
+OpenAI is the AI research and deployment company behind ChatGPT. When you sign up with ChatGPT, it provides API access via an API key. After signing up at [https://platform.openai.com/playground](https://platform.openai.com/playground), you can create a personal account with limited access or a corporate account. The playground can be used to experiment with the API as well. A highlight of the API is that it accepts natural language commands similar to the ChatGPT chatbot. 
 
 For privacy and API availability and other conditions, see the [OpenAI](https://openai.com) website or contact the OpenAI team.
 
-## Enabling AI Analysis in Helm chart
+## Enabling AI Analysis in Helm Chart
 
-The `content-ai` configurations are available in the Helm chart [values.yaml](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md) file as `contentAI`.
+The `content-ai` configurations are available in the Helm Chart [values.yaml](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md) file as `contentAI`.
 
 The administrator can enable AI analysis for content in the `configuration` section of the ```core``` as shown in the following example.
 
 !!!note
-    When you upgrade from older CF versions (for example, CF212) to CF213 or later to enable AI analysis, you can complete the configuration during the `helm upgrade`.
+    When upgrading from older CF versions (for example, CF212) to CF213 or higher to enable AI analysis, the following configuration can be done during `helm upgrade`.
 
 ```yaml
 # Application configuration
@@ -39,23 +38,21 @@ configuration:
       className: "com.ai.sample.CustomerAI"
 ```
 
-For enabling AI analysis for content, set ```enabled``` as ```true``` inside the contentAI section. You must specify the content AI provider to be used in the ```provider``` property. Possible values for the provider are ```OPEN_AI``` or ```CUSTOM```.
+For enabling AI analysis for content, set ```enabled``` as ```true``` inside the contentAI section. It is mandatory to specify the content AI provider to be used in the ```provider``` property. Possible values for the provider are ```OPEN_AI``` or ```CUSTOM```.
 
-### Configuring an AI class for a custom content AI provider
+### Configuring AI Class for Custom Content AI Provider
 
 Only administrators can configure an AI class to use a custom content AI provider.
 
-To configure a custom AI class:
+1. Write the Custom Content AI Provider class by implementing the ```com.hcl.workplace.wcm.restv2.ai.IAIGeneration``` interface.
 
-1. Write the custom content AI provider class by implementing the ```com.hcl.workplace.wcm.restv2.ai.IAIGeneration``` interface.
+    1. Create the JAR file.
 
-    1. Create the `JAR` file.
+	  2. Put the JAR file either at a custom-shared library or in ```/opt/HCL/wp_profile/PortalServer/sharedLibrary```.
 
-	  2. Put the JAR file either in a custom-shared library or in ```/opt/HCL/wp_profile/PortalServer/sharedLibrary```.
+	  3. Restart JVM.
 
-	  3. Restart the JVM.
-
-    The following example of a custom content AI provider class can be used to call custom AI services for AI analysis. 
+    The following example of a Custom Content AI Provider class can be used to call Custom AI services for AI analysis. 
 
     ```
     package com.ai.sample;
@@ -90,12 +87,11 @@ To configure a custom AI class:
     }
     ```
 
-2. Configure the content AI provider class in the Helm chart and run ```helm upgrade```.
-<!-- Did the preceding steps take the admin through configuring. It looks a though the actual configuring happens after the last step. -->
+2. Configure the Content AI Provider class in the helm chart and run ```helm upgrade```.
 
-### Configuring a custom cecret or API Key for the content AI provider
+### Configuring Custom Secret or API Key of Content AI Provider
 
-The API key or custom secret of a content AI provider can be configured in the `security` section of the ```core```, as shown in the following example.
+The API key or custom secret of a content AI provider can be configured in the `security` section of the ```core``` as shown in the following example.
 
 ```yaml
 # Security related configuration, e.g. default credentials
@@ -110,17 +106,17 @@ security:
 ```
 
 !!!important
-    After AI analysis is enabled, the administrator must specify the content AI provider's API key in the ```contentAIProviderAPIKey``` property. 
+    Once AI analysis is enabled, it is mandatory for the administrator to specify the content AI provider's API key in ```contentAIProviderAPIKey``` property. 
 
-    If a custom secret is used instead of an API key directly in the `values.yaml` file, then the custom secret must be created by using the content AI provider's API key. You must then refer to the secret name in the ```customContentAISecret``` property and you can leave the ```contentAIProviderAPIKey``` blank. 
+    If a custom secret is used instead of an API key directly in the `values.yaml` file, then the custom secret must be created using the content AI provider's API key. You must then reference the secret name in ```customContentAISecret``` property and you can leave the ```contentAIProviderAPIKey``` blank. 
 
 For more information, see [Guidelines for Configuring Credentials from Secrets](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_credentials.md#guidelines-for-configuring-credentials-from-secrets).
 
-## Disabling AI analysis in the Helm chart
+## Disabling AI Analysis in Helm Chart
 
-The `content-ai` configurations are available in the Helm chart [values.yaml](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md) file as `contentAI`.
+The `content-ai` configurations are available in the Helm Chart [values.yaml](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md) file as `contentAI`.
 
-The administrator can disable AI analysis for content in the `configuration` section of the ```core```, as shown in the following example.
+The administrator can disable AI analysis for content in the `configuration` section of the ```core``` as shown in the following example.
 
 ```yaml
 # Application configuration
@@ -137,9 +133,9 @@ configuration:
 
 For disbaling AI analysis for content, set ```enabled``` as ```false``` inside the contentAI section. Specifying the provider is not required to disable AI analysis.
 
-## Custom configurations for AI analysis
+## Custom Configurations for AI Analysis
 
-To customize AI analysis-related configurations, log in to the WebSphere Application Server console for customizing any of the custom properties in the WCM config service. Click **Resource > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom Properties**.
+To customize AI analysis-related configurations, log in to WAS console for customizing any of the custom properties in the WCM Config Service (**Resource > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom Properties**).
 
 ### OpenAI ChatGPT specific custom configurations
 

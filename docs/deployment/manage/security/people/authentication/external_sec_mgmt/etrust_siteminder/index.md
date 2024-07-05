@@ -13,7 +13,7 @@ Before you configure eTrust SiteMinder for authentication or authorization, you 
 4.  Install the eTrust SiteMinder Application Server Agent. Configure the eTrust SiteMinder Trust Association Interceptor (TAI). Follow the instructions in the eTrust SiteMinder documentation
 
     !!!note
-        Copy the smagent.properties file from the eTrust SiteMinder application server agent installation directory to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md)/ConfigEngine/properties directory. By default, the Application Server Agent installation enables agents other than the one used for authentication. These agents are not tested with HCL Digital Experience and should be disabled. Modify the following files in the eTrust SiteMinder installation directory to set EnableWebAgent=no:
+        Copy the smagent.properties file from the eTrust SiteMinder application server agent installation directory to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_rootwp)/ConfigEngine/properties directory. By default, the Application Server Agent installation enables agents other than the one used for authentication. These agents are not tested with HCL Digital Experience and should be disabled. Modify the following files in the eTrust SiteMinder installation directory to set EnableWebAgent=no:
 
     By default, the Application Server Agent installation enables agents other than the one used for authentication. These agents are not tested with HCL Digital Experience and must be disabled. Modify the following files in the eTrust SiteMinder installation directory to set EnableWebAgent=no:
 

@@ -2,7 +2,7 @@
 
 If you need help with a theme issue, you can export your system data. Support personnel can then import and view your data as a simulated system to troubleshoot problems.
 
-The import and export features are compatible with later versions, so if you have a recent version of HCL Digital Experience (DX) you can themes from previous versions. For example, an exported Portal 7002 theme can be viewed on a HCL DX 8.0 system.
+The import and export features are compatible with later versions, so if you have a recent version of HCL Portal you can themes from previous versions. For example, an exported Portal 7002 theme can be viewed on a HCL Portal 8.0 system.
 
 -   **Export**
 
@@ -41,7 +41,7 @@ The import and export features are compatible with later versions, so if you hav
 
     -   **Development Mode**
 
-        Disables all caches of the theme optimization framework. It is equivalent to setting the `resourceaggregation.development.mode` property to true within the HCL DX ConfigService resource environment provider.
+        Disables all caches of the theme optimization framework. It is equivalent to setting the `resourceaggregation.development.mode` property to true within the HCL Portal ConfigService resource environment provider.
 
     -   **Reports**
 

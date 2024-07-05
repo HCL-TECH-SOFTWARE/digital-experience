@@ -3,4 +3,4 @@ nav:
     - Kubernetes Deployment: container
     - traditional
     - Hybrid Deployment: hybrid
-    - docker-compose.md
+    - docker

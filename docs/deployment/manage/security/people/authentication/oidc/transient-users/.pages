@@ -1,9 +1,0 @@
-# This is the title of the folder that will be listed in the side bar
-
-title: Transient users
-
-## This section defines the navigation structure for this directory
-
-nav:
-    - Updating WebSphere to support OIDC Authentication for DX with Transient Users: dx-update-webshpere-for-oidc-transient-users.md
-    - ...

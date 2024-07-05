@@ -2,7 +2,7 @@
 
 Enabling your own custom content for tagging and rating works only with the dialog widgets of earlier portal versions.
 
-Starting with HCL Digital Experience (DX) Version 8.5, you can enable your own custom content for tagging and rating only by using the dialog widgets of earlier portal versions. For information about how to do this, read the HCL DX Version 8.0 documentation.
+Starting with HCL Portal Version 8.5, you can enable your own custom content for tagging and rating only by using the dialog widgets of earlier portal versions. For information about how to do this, read the HCL Portal Version 8.0 documentation.
 
 !!! note
     Tagging or rating for your own custom content works only with the dialog widgets, but not with the inline widgets of earlier portal versions.

@@ -2,7 +2,7 @@
 
 If you want to add dynamic elements such as portal navigation to your static pages, you can use portlets that the portal provides.
 
-HCL Digital Experience (DX) provides the following portlets for static pages. These portlets are included in a default portal installation. You can address them by using their unique names.
+HCL Portal provides the following portlets for static pages. These portlets are included in a default portal installation. You can address them by using their unique names.
 
 -   **Navigation portlet**
 

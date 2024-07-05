@@ -30,7 +30,7 @@ Perform the following steps to edit a client:
         !!! note
             After deleting a markup, the client still references the original markup name. However, if you edit the client, the Manage Client portlet displays a warning message to indicate that a deleted markup is referenced and a supported markup should be selected if the deleted markup will not be recreated.
 
-    -   **Markup Version:** Optional. Indicate more specific information about the markup supported by the client. This markup version is used to identify deviations of a standard markup. For example, HCL Digital Experience (DX) includes the markup version ie in the registry to correctly handle HTML deviations of the MicroSoft Internet Explorer.
+    -   **Markup Version:** Optional. Indicate more specific information about the markup supported by the client. This markup version is used to identify deviations of a standard markup. For example, HCL Portal includes the markup version ie in the registry to correctly handle HTML deviations of the MicroSoft Internet Explorer.
     -   **Manufacturer:** Optional. Enter the name of the company that manufactured the client.
     -   **Model:** Optional. Indicate the model number or name of the client.
     -   **Version:** Optional. Indicate any version associated with the model.

@@ -16,7 +16,7 @@ You can customize this default directory location under which search collections
 
 The specified value determines the default directory location for the search collections that you create. When you create a search collection and specify only a relative path \(not a full path location\), the default value that is set by this parameter and the relative path that you specify are combined. These values form the full directory path under which the search collection is created. If you do not specify a value for `DefaultCollectionsDirectory`, the default directory for search collections remains as set by the installation as described previously.
 
-Refer to the following steps to configure a different default search collection location:
+To configure a different default search collection location, proceed by the following steps:
 
 1.  To open the **Manage Search** portlet, click the **Administration menu** icon. Then, click **Search Administration > **Manage Search**.
 

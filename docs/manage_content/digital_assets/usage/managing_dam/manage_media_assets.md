@@ -108,8 +108,6 @@ Use the HCL Digital Experience 9.5 DAM editor to delete a media asset, including
 
 ## Copying a media asset
 
-When copying a media asset, only the latest version of the source assets is copied.
-
 Refer to the following steps if you want to copy a media asset from one collection to another.
 
 1. Click the **more menu** option of the asset. 
@@ -122,7 +120,7 @@ Refer to the following steps if you want to copy a media asset from one collecti
 
 3. (Optional) Check the **Add new keywords to existing** box if you want newly generated keywords to be added to existing keywords. This is available only when Plugin is enabled.
 
-4. Navigate to the collection where you want to copy the asset to and click **Copy**.
+4. Select a collection you want to copy the asset to and click **Copy**.
 
     If you copied an asset to the same collection, a dialogue box to rename the asset appears. 
 
@@ -146,7 +144,7 @@ Refer to the following steps if you want to move a media asset from one collecti
 
     ![Move a media asset](../../../../images/Move_Media_Asset.png)
 
-3. Navigate to the collection where you want to move the item and click **Check for references and move**.
+3. Select the collection in which you want to move the item and click **Check for references and move**.
 
     The confirmation dialogue appears if the asset is referenced in WCM. If an asset with same name exists in the target collection, a dialogue box to rename the asset appears. 
 

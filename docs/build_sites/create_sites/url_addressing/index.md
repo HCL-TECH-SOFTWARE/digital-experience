@@ -9,7 +9,7 @@ addressing the different artifacts with URLs. You can also customize the URLs pr
 
 When developing a site, different APIs allow you to generate URLs to address the different artifacts. When accessing APIs remotely, different URLs can be used to explore the REST-based APIs using API explorers.
 
-This document outlines on a high level the different ways you can use and customize URLs with HCL Digital Experience (DX). This page has links to more detailed documents for more in-depth information.
+This document outlines on a high level the different ways you can use and customize URLs with HCL Digital Experience. This page has links to more detailed documents for more in-depth information.
 
 URLs control how you access different sites, pages, components, and content that make up your site. There are various configuration options to tailor URLs to your needs and achieve a good Search Engine Optimization.
 
@@ -43,13 +43,13 @@ For more information, see [Properties File: wkplc_comp.properties](../../../depl
 
 ## Generating Portal URLs
 
-Generating Portal URLs correctly is one of the most important tasks in programming an HCL DX based application. There are several programming tools and techniques available for generating HCL DX URLs in custom code.
+Generating Portal URLs correctly is one of the most important tasks in programming an HCL Portal based application. There are several programming tools and techniques available for generating HCL Portal URLs in custom code.
 
 For more information, see [Generating Portal URLs](../../../extend_dx/apis/url_generation/index.md).
 
 ### Virtual Portals
 
-Virtual portals are beneficial if you want to serve multiple user groups by separate virtual portals for different purposes, but you still want to keep your environment simple and limited to a single HCL DX installation. Virtual portals allow a large extent of scoping and separating portal resources, user groups, and administration.
+Virtual portals are beneficial if you want to serve multiple user groups by separate virtual portals for different purposes, but you still want to keep your environment simple and limited to a single HCL Portal installation. Virtual portals allow a large extent of scoping and separating portal resources, user groups, and administration.
 
 Virtual Portals can be addressed either with a context root or a hostname to avoid the context root in the URL.
 
@@ -143,7 +143,7 @@ DAM assets and collections can be accessed via the API and in the API with diffe
 
 ### POC URLs
 
-A Piece-of-content URL or PoC URL is a late binding mechanism that targets content instead of DX artifacts such as pages. PoC URLs use a different URL entry point into HCL DX (typically `mypoc` or `mycontenthandler` instead of `myportal`). A programming API is available for working with Piece-of-Content URLs.
+A Piece-of-content URL or PoC URL is a late binding mechanism that targets content instead of DX artifacts such as pages. PoC URLs use a different URL entry point into HCL Portal (typically `mypoc` or `mycontenthandler` instead of `myportal`). A programming API is available for working with Piece-of-Content URLs.
 
 ### API Explorers
 

@@ -5,7 +5,7 @@ Before you decide on a portal installation with multiple virtual portals, you ne
 
 -   **[Scenarios with multiple portals for your business requirements](advpuscn_pln.md)**  
 Before you decide on a portal installation with multiple virtual portals, you need to determine your specific business requirements and the purpose of your portal. This can help you decide whether virtual portals are a valid solution for your requirements, or whether it is better for you to use multiple real portals. Consider and answer the questions in the following sections.
--   **[Alternative concepts for virtual portals on HCL Digital Experience](advpuscn_alt.md)**  
+-   **[Alternative concepts for virtual portals on HCL Portal](advpuscn_alt.md)**  
 Besides virtual portals, another possible configuration may be an alternative for you, depending on your business needs. This setup is referred to as true portals.
 -   **[Usage scenarios for virtual portals](advpuscn_usage.md)**  
 Learn about three typical usage scenarios for virtual portals.

@@ -44,16 +44,10 @@ To use the email workflow action, you must configure Web Content Manager to use 
 
         -   Property name: `connect.connector.mailconnector.defaultpassword`
         -   Value: `password`
-          
-5. If your SMTP server requires tls encryption, set this property:
-   
-    - **STARTTLS**
-        - Property name: `connect.connector.mailconnector.enablestarttls`
-        - Value: `true`
 
-6.  Save your changes.
+5.  Save your changes.
 
-7.  Restart the portal for the new settings to take effect.
+6.  Restart the portal for the new settings to take effect.
 
 
 

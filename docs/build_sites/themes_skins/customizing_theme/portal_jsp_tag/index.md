@@ -43,7 +43,7 @@ The following `taglib` declarations must be provided to the parent JSP of the sk
 
 !!! note
 	-   The tags in the `portal-internal.tld` tag library are not intended for customization, but for use only by internal portal code.
-	-   The tags in the `engine.tld` and `portal-internal.tld` tag libraries are not intended for customization, but only to support compatibility with an earlier version and migration. The `engine.tld` tag library are not available in subsequent releases of HCL Digital Experience.
+	-   The tags in the `engine.tld` and `portal-internal.tld` tag libraries are not intended for customization, but only to support compatibility with an earlier version and migration. The `engine.tld` tag library are not available in subsequent releases of HCL Portal.
 
 
 ???+ info "Related information"

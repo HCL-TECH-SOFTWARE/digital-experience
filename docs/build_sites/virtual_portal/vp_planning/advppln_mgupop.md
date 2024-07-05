@@ -15,7 +15,7 @@ This depends on whether you want separate user populations for your virtual port
     With this configuration the entire portal installation and all virtual portals share a common user population, which is defined in a single user repository. In this case all users of that user population can access all virtual portals, unless their access permissions are explicitly restricted by portal access control settings. In order to achieve access restrictions for specific virtual portals, you can use the Portal Access Control portlets. You define user groups and assign to them the access permissions to the resources of each virtual portal.
 
 
-For HCL Digital Experience (DX) installations, the Federated Repository option offers you more flexibility for the user management of virtual portals. By using the Virtual Member Manager, you can limit the usage of a particular virtual portal to a specific user population. This is achieved by introducing the concept of **realms**.
+For HCL Portal installations, the Federated Repository option offers you more flexibility for the user management of virtual portals. By using the Virtual Member Manager, you can limit the usage of a particular virtual portal to a specific user population. This is achieved by introducing the concept of **realms**.
 
 The following sections give overview information of how to use the Virtual Member Manager and realms in the context of virtual portals. For a wider overview of portal security see the topics about *Securing* and *Configuring* the portal and about access permissions, users and groups. For more details about how to configure the Virtual Member Manager and realms see the topics about adding realm support for your environment.
 
@@ -33,7 +33,7 @@ If you plan to use realms for your virtual portals, you need to configure Virtua
 
 In addition to the realms that you create to define the user populations of the individual virtual portals, you must create a super realm. This super realm spans all other realms and contains all the users of those other realms; it is also known as the default realm.
 
-By default HCL DX is configured with Federated Repositories as User Registry provider. By default only the super realm, or default realm, is configured. After you have configured your portal instance against your user backend repositories, you can use tasks that are provided by the portal to configure the realms that the Virtual Member Manager provides. For the task that describes how to add a realm and modify the base entries or nodes inside that realm, read the topics about adding realm support for your portal environment.
+By default HCL Portal is configured with Federated Repositories as User Registry provider. By default only the super realm, or default realm, is configured. After you have configured your portal instance against your user backend repositories, you can use tasks that are provided by the portal to configure the realms that the Virtual Member Manager provides. For the task that describes how to add a realm and modify the base entries or nodes inside that realm, read the topics about adding realm support for your portal environment.
 
 **Using a non-default realm:** If you assign a non-default realm to the default virtual portal, ensure that all administrative accounts are available within the non-default realm. If you have Web Content Manager, do not use a non-default realm, as Web Content Manager is not scoped to virtual portals.
 
@@ -43,7 +43,7 @@ The following sections give an overview of example configurations of the Virtual
 
 In a simple setup, you can use the Virtual Member Manager together with a common user repository. This user repository is represented by a single realm, and used by all virtual portals. In this case, all virtual portals use a common realm and a common user repository. This configuration provides no separation between the users of the different virtual portals.
 
-HCL DX still supports the WebSphere Application Server Lightweight Directory Access Protocol \(LDAP\) custom user registry that previous versions of HCL DX used. You can configure it as alternative. Again, this configuration uses a common user repository for all virtual portals without separation between the users of the different virtual portals.
+HCL Portal still supports the WebSphere Application Server Lightweight Directory Access Protocol \(LDAP\) custom user registry that previous versions of HCL Portal used. You can configure it as alternative. Again, this configuration uses a common user repository for all virtual portals without separation between the users of the different virtual portals.
 
 ## Configuring separate user populations for the individual virtual portals
 

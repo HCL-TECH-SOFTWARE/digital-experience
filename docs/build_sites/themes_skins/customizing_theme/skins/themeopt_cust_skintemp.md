@@ -8,7 +8,7 @@ The skin.html file is located in the root directory of the skin on WebDAV \\fs-t
 
 ## Root skin template
 
-In a default HCL Digital Experience installation, the portal does not render the template file skin.html located in the root directory of the theme. Instead, this file links to the localized templates, and the portal renders the appropriate localized template. The links to the localized templates are at the beginning of the root template. They have the following form:
+In a default HCL Portal installation, the portal does not render the template file skin.html located in the root directory of the theme. Instead, this file links to the localized templates, and the portal renders the appropriate localized template. The links to the localized templates are at the beginning of the root template. They have the following form:
 
 ```
 <a rel="alternate" href="nls/skin_locale_code.html" hreflang="locale_code" class="wpthemeDisplayNone"></a>

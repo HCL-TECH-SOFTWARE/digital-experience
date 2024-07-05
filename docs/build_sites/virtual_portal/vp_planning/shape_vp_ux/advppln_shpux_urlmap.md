@@ -5,7 +5,7 @@ You can provide human readable URLs for your users to access their virtual porta
 When you create a virtual portal, you specify the human readable URL as required by your business environment. The URL mapping that you specify is assigned to the virtual portal during its initialization. The URL mapping points to the content root of the virtual portal.
 
 !!! note
-    URL mappings were deprecated with HCL Digital Experience (DX) Version 8.5. Use friendly URLs instead. However, URL mappings are still used for internal purposes in the portal, for example, to map virtual portals.
+    URL mappings were deprecated with HCL Portal Version 8.5. Use friendly URLs instead. However, URL mappings are still used for internal purposes in the portal, for example, to map virtual portals.
 
 Internally, this URL mapping corresponds to a unique name wps.vp.internal\_ID\_of\_the\_virtual\_portal. The portal installation uses this unique name to identify and access the virtual portal unambiguously. The XML configuration interface and the Portal Scripting Interface also use this URL mapping to identify the virtual portal.
 
