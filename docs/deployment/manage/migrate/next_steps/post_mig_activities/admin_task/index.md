@@ -5,7 +5,7 @@ To ensure that your new environment functions properly, complete administrative 
 -   **[Enabling automatic synchronization for a clustered environment](mig_enable_auto-sync.md)**  
 Before you started migration, you disabled automatic synchronization to prevent the source and target environments from becoming corrupted. Now that the data migration is complete, it is safe to enable this feature on both the source and target environments.
 -   **[Staying logged in when switching URI](mig_post_swtcurl.md)**  
-If you migrated from Version 8.0.0.1, the default portal behavior was to log you out when you switched from a protected to unprotected URI. In Version 8.5/9.5, the default behavior is to keep you logged in. If you do not want to get logged out, you can enable the Version 8.5/9.5 default behavior.
+If you migrated from Version 8.0.0.1, the default portal behavior was to log you out when you switched from a protected to unprotected URI. In Version 8.5, the default behavior is to keep you logged in. If you do not want to get logged out, you can enable the Version 8.5 default behavior.
 -   **[Enabling unprotected URI Authentication](mig_post_saml_uri_auth.md)**  
 If Security Assertion Markup Language (SAML) is enabled, or if you plan to enable SAML, you must ensure that LTPA authentication works correctly with the web and proxy servers.
 -   **[Federating the LDAP user registry](mig_t_pre_standalone_ldap.md)**  

@@ -23,7 +23,7 @@ You can enhance and extend the tagging and rating features of the portal by usin
 
 You can use Personalization APIs to allow Rational Application Developer and the Personalization runtime environment access to user and content data in customer data stores.
 
-## List of APIs
+# List of APIs
 
 **[HCL Experience API](../apis/hcl_experience_api/index.md)**  
 The HCL Experience API is a set of OpenAPI-compliant REST APIs you can use to deploy HCL Digital Experience 9.5 containers on supported Kubernetes platforms. It supports the integration and management of HCL Digital Experience content and functionality to any digital channel using any front-end development framework. The HCL Experience API includes REST APIs that serve as a wrapper around previously published HCL Digital Experience HTTP-based APIs.
@@ -53,10 +53,6 @@ Reference copy of the Portal Version 8.5.0. API, javadocs, and other specificati
 
 **[Portal v8.5 SPI Specifications](https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/spi_docs/index.html)**
 Reference copy of the Portal Version 8.5.0. SPI, javadocs, and other specifications.
-
-## HCLSoftware U learning materials
-
-For an introduction and a demo on using DX for developers, go to [DX for Developers (Advanced)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1777). To try it out yourself, refer to [DX Setup Local Java Development Environment Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-300_DX_Setup_a_Java_Development_Environment_Lab.pdf).
 
 ???+ info "Related Information"
     - **[Developing themes and skins](../../build_sites/themes_skins/index.md)**  

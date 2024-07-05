@@ -11,7 +11,7 @@ For example, if you migrate a Virtual Portal that contains a Document Libraries 
     !!!note
         The name of the file might change based on the release and editions of portal that you are using. The following are examples of file names: "InitVirtualContentPortal.xml, InitAdminVirtualPortal.xml."
 
-2.  **Important:** If you are migrating to HCL Digital Experience 9.5 or 8.5 CF04 or later, you can skip the following steps.
+2.  **Important:** If you are migrating to HCL Digital Experience 8.5 CF04 or later, you can skip the following steps.
 
 3.  Use the WebSphere® Integrated Solutions Console to update the virtual portal XML scripts to remove references to Dynamic Person Tag portlet.
 

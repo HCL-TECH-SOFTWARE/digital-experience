@@ -69,7 +69,7 @@ If you make the web content available on your delivery portal by using syndicati
     If you made clones of the HCL API Web Content Viewer portlet or of the Portal API Remote Web Content Viewer portlet, or if you renamed the portlets, you might need to modify the parameters in the file wp_profile_root/PortalServer/wcm/config/portletconversion.properties that identify the portlet that you use as the source for the conversion. For a complete reference of all parameters that the portlet conversion task supports, read *Converting portlet instances and settings from the Portal API to the standard API*.
 
 !!!note
-    In the version 8.5/9.5 user interface, the JSR 286 Web Content Viewer portlet has been renamed to Web Content Viewer.
+    In the version 8.5 user interface, the JSR 286 Web Content Viewer portlet has been renamed to Web Content Viewer.
 
 ???+ info "Related information"  
     -   [Portlet API Web Content Viewer and Remote Web Content Viewer](../../../../../../../deployment/manage/migrate/planning_migration/migration_consideration/migrating_wcm_70_80/mig_pre_wcm_portlets.md)

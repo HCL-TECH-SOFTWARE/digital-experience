@@ -12,7 +12,7 @@ For information about migrating applications, read more about the Application Mi
 
 # Installing the new version of IBM HTTP Server in a new directory
 
-1.  Install the Version 8.5 or 9 IBM HTTP Server in a new directory.
+1.  Install the Version 8.5 IBM HTTP Server in a new directory.
 
 2.  If you installed IBM HTTP Server into a new directory and retained your previous version of IBM HTTP Server, by default the administration server and the web server use the same ports as the previous version administration server and web server. If you ever run both versions of the IBM HTTP Server simultaneously, port conflicts occur unless you change the port numbers for one of the server versions. To modify the port numbers for one of the IBM HTTP Servers, edit the server configuration files for that IBM HTTP Server. These files are in the http\_server\_install/conf directory.
 
@@ -60,7 +60,7 @@ For information about migrating applications, read more about the Application Mi
             rd /s current_install_directory
             ```
 
-    5.  Install the Version 8.5 or 9 IBM HTTP Server in the same directory location as the previous version.
+    5.  Install the Version 8.5 IBM HTTP Server in the same directory location as the previous version.
 
     6.  Run the Plug-ins Configuration Tool, the pct tool, to configure your web server plug-ins. Refer to [Configuring a web server plug-in using the pct tool](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.nd.doc/ae/tins_pctcl_using.html) for information on running the pct tool.
 
@@ -70,17 +70,17 @@ For information about migrating applications, read more about the Application Mi
 
             If you used the httpd.conf configuration files that are provided with the previous version of IBM HTTP Server as the starting point for your configuration files, compare the content of each configuration file, with its corresponding .default file, within the directory that contains your previous IBM HTTP Server installation. For example, if you compare the content of the httpd.conf file with the httpd.conf.default file, you can see any customizations that were made to the httpd.conf file since the original installation. Then, perform similar comparisons for the other configuration files.
 
-            If you did not use the httpd.conf configuration files that are provided with the previous version of IBM HTTP Server as the starting point for your configuration files, perform a manual analysis to determine your previous settings. In this situation, you might want to compare the settings in the httpd.conf.default file that is provided with the new IBM HTTP Server, with the settings in the httpd.conf.default file that is provided with the previous IBM HTTP Server version. Use this comparison to identify configuration differences in the two httpd.conf.default files. You can then use this information to modify your customized configuration file to work with the Version 8.5 or 9 IBM HTTP Server.
+            If you did not use the httpd.conf configuration files that are provided with the previous version of IBM HTTP Server as the starting point for your configuration files, perform a manual analysis to determine your previous settings. In this situation, you might want to compare the settings in the httpd.conf.default file that is provided with the new IBM HTTP Server, with the settings in the httpd.conf.default file that is provided with the previous IBM HTTP Server version. Use this comparison to identify configuration differences in the two httpd.conf.default files. You can then use this information to modify your customized configuration file to work with the Version 8.5 IBM HTTP Server.
 
             Compare the bin/envars file to the bin/envars-std file within the directory that contains your previous IBM HTTP Server installation. This comparison identifies any customizations that were made to this file.
 
         -   Merge the customizations into the newly installed IBM HTTP Server configuration and envars files.
 
-            After you identify the configuration customizations that you made to your previous version of IBM HTTP Server, make these same changes, when applicable, to the configuration files for the Version 8.5 or 9 IBM HTTP Server.
+            After you identify the configuration customizations that you made to your previous version of IBM HTTP Server, make these same changes, when applicable, to the configuration files for the Version 8.5 IBM HTTP Server.
 
-            If the configuration files contain WebSphere Application Server plug-in statements from previous versions, remove them to prevent duplicates. If you do not remove these statements, when IBM HTTP Server attempts to start the Version 8.5 or 9 plug-in binary module, an error might occur that indicates that the module is already loaded.
+            If the configuration files contain WebSphere Application Server plug-in statements from previous versions, remove them to prevent duplicates. If you do not remove these statements, when IBM HTTP Server attempts to start the Version 8.5 plug-in binary module, an error might occur that indicates that the module is already loaded.
 
-            The configuration file might also contain duplicate entries for accessing WebSphere Application Server samples. Remove any aliases for previous versions and retain the Version 8.5 or 9 entries.
+            The configuration file might also contain duplicate entries for accessing WebSphere Application Server samples. Remove any aliases for previous versions and retain the Version 8.5 entries.
 
     8.  Restore HTML content. If your web page content was previously stored under your IBM HTTP Server installation directory, copy those content files from the directory that contains your prior version of IBM HTTP Server into the installation directory for the new version.
 
@@ -92,9 +92,9 @@ For information about migrating applications, read more about the Application Mi
 
     There are no Apache API (application programming interface) changes from the previous major release, so there should be no need to rebuild modules that worked with the previous release. However, if you use modules from third-party vendors, contact your vendors to verify that they support the module with the version of IBM HTTP Server to which you are upgrading.
 
-    Apache plug-in modules from sources other than the Version 8.5 or 9 IBM HTTP Server must be built to support Apache 2.2. The distributors of modules that are used with later versions of IBM HTTP Server might need to recompile the modules to support Apache 2.2.
+    Apache plug-in modules from sources other than the Version 8.5 IBM HTTP Server must be built to support Apache 2.2. The distributors of modules that are used with later versions of IBM HTTP Server might need to recompile the modules to support Apache 2.2.
 
-    -   WebSphere Application Server provides a new plug-in for Apache 2.2 and IBM HTTP Server 8.5 or 9.
+    -   WebSphere Application Server provides a new plug-in for Apache 2.2 and IBM HTTP Server 8.5.
     -   If you use modules from third-party vendors, contact your vendor for a version of the module that works with the Apache 2.2 API.
     -   If you use modules that were developed in-house, you must rebuild your modules to support Apache 2.2. The modules might also require some modifications.
 

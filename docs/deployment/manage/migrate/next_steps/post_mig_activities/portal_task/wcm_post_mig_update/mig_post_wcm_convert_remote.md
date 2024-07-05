@@ -36,7 +36,7 @@ The Remote Web Content Viewer portlet that is based on the Portlet API was remov
 
 The source rendering portal of the migration does not contain the web content it delivers. Instead the HCL Portlet API Remote Web Content Viewer connects to another portal of your source environment to retrieve the web content.
 
-As the target rendering portal does not include HCL Web Content Manager, you must continue displaying web content remotely. To perform remote rendering with HCL Web Content Manager 8.5/9.5, you must configure your target environment to use the JSR 286 Web Content Viewer with WSRP.
+As the target rendering portal does not include HCL Web Content Manager, you must continue displaying web content remotely. To perform remote rendering with HCL Web Content Manager 8.5, you must configure your target environment to use the JSR 286 Web Content Viewer with WSRP.
 
 The target rendering portal that does not include HCL Web Content Manager and still uses the Portlet API Remote Web Content Viewer becomes the WSRP consumer. It consumes the JSR 286 Web Content Viewer from the target authoring portal that includes HCL Web Content Manager and contains the web content.
 

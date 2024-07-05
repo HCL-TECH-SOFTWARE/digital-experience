@@ -1,15 +1,13 @@
 nav:
     - optional_internal_networking.md
     - optional_imagepullsecrets.md
-    - optional_options_spread_pods_across_nodes.md
+    - optional_nodeselectors.md
     - optional_disable_apps.md
     - optional_configure_apps.md
     - optional_configure_scaling.md
-    - optional_container_resources.md
     - optional_configure_credentials.md
     - optional_core_sidecar_log.md
     - optional_rs_sidecar_log.md
     - optional_labels_annotations.md
     - optional_experimental_features.md
-    - optional_install_new_search.md
     - ...

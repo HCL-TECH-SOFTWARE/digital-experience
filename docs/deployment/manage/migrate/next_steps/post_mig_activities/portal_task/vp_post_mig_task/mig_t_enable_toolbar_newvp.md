@@ -1,6 +1,6 @@
-# Enabling the 8.5/9.5 site toolbar before you create your first Virtual Portal
+# Enabling the 8.5 site toolbar before you create your first Virtual Portal
 
-After migration and before you create your first Virtual Portal on your migrated server, you must install the 8.5/9.5 site toolbar.
+After migration and before you create your first Virtual Portal on your migrated server, you must install the 8.5 site toolbar.
 
 If you want to create Virtual Portals on your migrated system, complete the following configuration task once before you create the Virtual Portal.
 
@@ -14,6 +14,6 @@ If you want to create Virtual Portals on your migrated system, complete the foll
 
 You must restart the Portal server after you run the install-toolbar task.
 
-For more information about using the 8.5/9.5 toolbar, see the site toolbar documentation.
+For more information about using the 8.5 toolbar, see the site toolbar documentation.
 
 

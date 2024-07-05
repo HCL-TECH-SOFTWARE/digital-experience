@@ -1,15 +1,15 @@
-# Creating authors and groups and setting permissions
+# Authors, groups, setting permissions
 
-Administrators must understand the roles and goals of content authors to grant the appropriate permissions. Learn how to create users, content authors, and reviewer groups. Also learn how to grant access to resources and libraries.
+Administrators must understand the roles and goals of content authors to grant the appropriate permissions. Learn how to create users, create content author and reviewer groups, and grant access to resources and libraries.
 
 
 ## Background information for the administrator: Identify the goals of the content authors
 
-As the administrator, you must understand the various content author roles. For example, a content author might want to create a landing page from a page template. For this type of site update, the content author creates a project and then creates a page from a page template in Site Manager. To accomplish these goals, the content author must exist in the system and belong to a content author group. The content author requires access to projects to create or enter a project and access to other resource types like pages in order to create a draft page.
+As the administrator, you must understand the various content author roles. For example, a content author might want to create a landing page from a page template. For this type of site update, the content author creates a project and then creates a page from a page template in site manager. To accomplish these goals, the content author needs to exist in the system and belong to a content author group. The content author would need access to projects to create or enter a project and access to other resources types like pages in order to create a draft page.
 
-A content reviewer must also exist in the content authoring story. Add the content reviewer to a content reviewer group on the system. The content reviewer group requires sufficient access to view draft content and to move drafts to the next workflow stage.
+A content reviewer role also exists in the content authoring story. You need to add the content reviewer to the system to a content reviewer group. The content reviewer group needs sufficient access to view draft content and to move drafts to the next workflow stage.
 
-The flow chart that follows highlights the content authors' and reviewers' goals and the tasks that administrators must complete for the people in these roles to accomplish their goals.
+The flow chart highlights the content authors and reviewers goals and the tasks that administrators must complete for these roles to accomplish their goals.
 
 This roadmap focuses on creating users and groups, assigning resource permissions, and assigning library permissions.
 
@@ -29,16 +29,16 @@ Learn how to create the Content Authors Group and the Content Reviewers Group. T
 3.  Click **All Portal User Groups**.
 
 4.  Create the Content Author and the Content Reviewer Groups. These groups represent various content authoring roles.
-5.  Click **New Group** and enter ``Content Authors Group`` as the ID for your new group. Click **OK** to save your group.
+5.  Click **New Group** and enter Content Authors Group as the ID for your new group. Click **OK** to save your group.
 
-6.  Click **New Group** and enter ``Content Reviewers Group`` as the an ID for your new group. Click **OK** to save your group.
+6.  Click **New Group** and enter Content Reviewers Group as the an ID for your new group. Click **OK** to save your group.
 
 7.  Create users in the system. Add these users to your new groups.
-8.  Click **Content Authors Group** to open the group. Then, click **New User** to create your content author, such as Author1, to your group. To create a new content author, you must enter profile information for the user. Profile information includes user the ID and password. Click **OK** to save your changes.
+8.  Click **Content Authors Group** to open the group. Then, click **New User** to create your content author, such as Author1, to your group. To create a new content author, you must enter profile information for the user. Profile information includes user ID and password. Click **OK** to save your changes.
 
 9.  Click **All Portal User Groups**.
 
-10. Click **Content Reviewers Group** to open the group. Then, click **New User** to create a content reviewer, such as Reviewer1, who will review content.
+10. Click **Content Reviewers Group** to open the group. Then, click **New User** to create a content reviewer, such as Reviewer1, that you want to review content.
 
 
 # Assigning the authoring groups access to pages and vanity URLs
@@ -47,16 +47,16 @@ The content authoring options that are available to content authors depend on th
 
 1.  Click the **Administration** menu icon. Then, click **Access** \> **Resource Permissions.**
 
-2.  Assign access to resource types that content authors and content reviewers use to create and publish content.
+2.  Assign access to resources types that content authors and content reviewers use to create and publish content.
 3.  Assign access to pages. Assign the Content Authors Group to the Contributor role. Assign the Content Reviewers Group to the User role.
 
-    If access control is set up correctly, the **Create Sibling Page** and the **Create Child Page** options are available and enabled in the Site Manager menu for the content author. Content authors must have access to these options to create a new landing page from a page template. For content authors to create drafts from published content, the administrator must assign the appropriate workflow access. A later roadmap provides instructions for workflow permissions.
+    If the access control is set up correctly, **Create Sibling Page** and the **Create Child Page** options are available and enabled in the context menu from Site Manager for the content author. Content authors must have access to these options to create a new landing page from a page template. For content authors to create drafts from published content, the administrator must assign the appropriate workflow access. Instructions for workflow permissions are contained in a later roadmap.
 
     1.  Click **Pages**.
 
-    2.  Click the **Assign Access** icon by the Content Root. A list of roles that are associated with the Page resource opens.
+    2.  Click the **Assign Access** icon by the Content Root. A list of roles that are associated with the Page resource appears.
 
-        **Tip:** To assign access to a specific page in your site hierarchy, click **Content Root** to find the page.
+        **Note:** If you want to assign access to a specific page in your site hierarchy, click **Content Root** to find the page.
 
     3.  By the Contributor role, click the **Edit Role** icon to assign your Content Author group to this role.
 
@@ -64,7 +64,7 @@ The content authoring options that are available to content authors depend on th
 
     5.  Browse or search for the Content Authors Group. Select this user group from the search results.
 
-    6.  Click **OK** to save your changes. The user group is assigned to the role.
+    6.  Click **OK** to save your changes. The user group is now assigned to the role.
 
     7.  Click **Content Root**.
 
@@ -74,18 +74,18 @@ The content authoring options that are available to content authors depend on th
 
     10. Browse or search for the Content Reviewers Group. Select this user group from the search results.
 
-    11. Click **OK** to save your changes. The user group is assigned to the role.
+    11. Click **OK** to save your changes. The user group is now assigned to the role.
 
-4.  Assign access to virtual resources. Assign the Content Authors Group to the Editor role. Assign the Content Reviewers Group to the User role. From Resource Permissions, click **Virtual resources** \> **Vanity URL** to assign access to these roles. Follow the instructions in the earlier step for assigning access to these roles.
+4.  Assign access to virtual resources. Assign the Content Authors Group to the Editor role. Assign the Content Reviewers Group to the User role. From Resource Permissions, go to **Virtual resources** \> **Vanity URL** to assign access to these roles. Follow the instructions that are outlined in the earlier step for assigning access to these roles.
 
 
 # Setting up library access
 
-Libraries store content and pages on the site. Draft pages that the content author creates from Site Manager in the site toolbar are stored in the portal site library. Workflows, content, and other design elements are stored in the web content library. You must give content authors the correct permissions to work with the web content and portal site libraries.
+Libraries store content and pages on the site. Draft pages that the content author creates from Site Manager in the site toolbar are stored in the portal site library. Workflows, content, and other design elements are stored in the web content library. You must give your content author the correct permissions to work with the web content and portal site libraries.
 
 1.  Click the **Administration menu** icon. Then, click **Portal Content** \> **Web Content Libraries**.
 
-2.  To set permissions for the Portal Site library:
+2.  Set **permissions** for the Portal Site library.
 
     1.  Click the **Set permissions** icon for the Portal Site library.
 
@@ -93,11 +93,11 @@ Libraries store content and pages on the site. Draft pages that the content auth
 
     3.  Click **Add**. Then, click **Search** to show all groups.
 
-    4.  Select **Content Authors Group** and **Content Reviewers Group**.
+    4.  Select the **Content Authors Group** and **Content Reviewers Group**.
 
 3.  Click **Portal Content** \> **Web Content Libraries**.
 
-4.  To set **permissions** for the Web Content library:
+4.  Set **permissions** for the Web Content library.
 
     1.  Click the **Set permissions** icon for the Web Content library.
 
@@ -105,6 +105,6 @@ Libraries store content and pages on the site. Draft pages that the content auth
 
     3.  Click **Add**. Click **Search** to show all groups.
 
-    4.  Select **Content Authors Group** and **Content Reviewers Group**.
+    4.  Select the **Content Authors Group** and **Content Reviewers Group**.
 
 

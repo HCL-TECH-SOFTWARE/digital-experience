@@ -38,6 +38,12 @@ All search collections are available by the **All Sources** selection option of 
 
 -   **[Managing search services](srtmgsrchsrvc.md)**  
 Get an overview of how you manage the portal search services. This task includes creating a new search service or editing an existing search service.
+-   **[Search service configuration parameters](../administer_portal_search/search_service_params/index.md)**  
+Learn about the portal search service parameters and possible values.
+-   **[Configuring the default location for search collections](srtcfgdfltlctsrchcllc.md)**  
+You can modify the default directory location under which search collections are created on a per search service basis. View some related information.
+-   **[Configuring the Search Center portlet](../administer_portal_search/cfg_searchcenter/index.md)**  
+Get an overview of how you configure the Search Center.
 -   **[Replacing the search administrator user ID](srt_srch_admin_id.md)**  
 If you changed the portal administrator user ID or password, you need to update the search administrator user ID to match the same values.
 -   **[Customizing the Search Center](../administer_portal_search/customize_searchcenter/index.md)**  

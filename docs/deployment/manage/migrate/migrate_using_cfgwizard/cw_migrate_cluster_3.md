@@ -147,7 +147,7 @@ If you click **View Step Command**, you can see the task and properties that are
 
         upgrade-profile
 
-    **Version 7.0 Server Offering-only migration:** Do not complete the upgrade profile step using the Configuration Wizard. Instead you must run this task manually. For more information about running this task manually, see [Migration from Portal Server Offering 7.0 to Portal 8.5/9.5](../../../../deployment/manage/migrate/planning_migration/migration_consideration/mig_consider_7serveronly.md).
+    **Version 7.0 Server Offering-only migration:** Do not complete the upgrade profile step using the Configuration Wizard. Instead you must run this task manually. For more information about running this task manually, see [Migration from Portal Server Offering 7.0 to Portal 8.5](../../../../deployment/manage/migrate/planning_migration/migration_consideration/mig_consider_7serveronly.md).
 
     !!!note
         When you run this step, the sub task that is named action-deploy-portlets-applyMIGStatic-wp.oob.full runs and completes successfully. However, the following error messages are shown. You can ignore these error messages: <br> -   EJPXA0161W: The web module ContactList could not be activated. Please see previous messages for reasons and possible corrective actions. <br> -   EJPPH0048W: The synchronization mode of all nodes in the portal cluster is not consistently set. The portlet application PA_ContactList will not be started in the Application Server. Manual synchronization is assumed for all nodes. Manually start the application after all nodes were synchronized. <br> -   EJPXA0067E: The following configuration data is needed to create a content-node resource: content-parentref.

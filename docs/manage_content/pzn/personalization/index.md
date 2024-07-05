@@ -1,5 +1,7 @@
 # Personalization
 
+
+
 Personalization can recognize a specific site visitor based on a profile. It can also determine characteristics of a user based on previous purchases, products or pages viewed, or other attributes. If a visitor belongs to a particular geographic region, content specific to that region can be targeted to the visitor. The page is assembled with the personalized information, and the visitor sees a personalized page.
 
 Personalization includes the following tools:

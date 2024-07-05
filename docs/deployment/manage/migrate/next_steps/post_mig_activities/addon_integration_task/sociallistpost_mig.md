@@ -1,8 +1,8 @@
 # Social Lists
 
-After you migrate from a previous Portal Version to HCL Digital Experience 8.5/9.5, you must run a configuration task. The configuration task is run to deploy the new web content library and templates before you can use the Social Lists features. If you already used the social rendering feature from 8.0.0.1, your existing web content libraries and all portlet clones that were created during the enablement on Portal 8.0.0.1 is not changed.
+After you migrate from a previous Portal Version to HCL Digital Experience 8.5, you must run a configuration task. The configuration task is run to deploy the new web content library and templates before you can use the Social Lists features. If you already used the social rendering feature from 8.0.0.1, your existing web content libraries and all portlet clones that were created during the enablement on Portal 8.0.0.1 is not changed.
 
-If you migrated from Portal 7.0 to HCL Digital Experience 8.5/9.5, then you must run the action-install-wcm-localrender-portlet task before you start the following procedure:
+If you migrated from Portal 7.0 to HCL Digital Experience 8.5, then you must run the action-install-wcm-localrender-portlet task before you start the following procedure:
 
 -   AIX® and Linux™: `./ConfigEngine.sh action-install-wcm-localrender-portlet -DPortalAdminPwd=password -DWasPassword=password`
 -   Windows™: `ConfigEngine.bat action-install-wcm-localrender-portlet -DPortalAdminPwd=password -DWasPassword=password`

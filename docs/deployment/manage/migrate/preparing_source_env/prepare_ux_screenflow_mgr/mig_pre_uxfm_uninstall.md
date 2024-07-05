@@ -1,6 +1,6 @@
 # Uninstalling UX Screen Flow Manager
 
-If you are migrating from Portal 8.0.0.1 with the UX Screen Flow Manager (UXFM) enabled, then you must uninstall UXFM before migrating to Version 8.5/9.5.
+If you are migrating from Portal 8.0.0.1 with the UX Screen Flow Manager (UXFM) enabled, then you must uninstall UXFM before migrating to Version 8.5.
 
 You must remove the dialog definitions before you uninstall UXFM. If you do not remove the dialog definitions prior to completing the uninstall, it can have a catastrophic effect on your system rendering it unusable.
 

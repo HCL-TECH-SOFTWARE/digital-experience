@@ -256,7 +256,7 @@ Only authorized users can view, edit, and delete the comments in the library whe
 The actions available for a user depend on their role:
 
 - The **User** role or higher is required to see the comments.
-- The **Editor** role or higher is required to create comments.
+- The **Contributor** role or higher is required to create comments.
 - The **Manager** role or higher is required to delete comments. In addition to the Manager role, you can configure a specific group solely for deleting comments.
 
 ## Limitations

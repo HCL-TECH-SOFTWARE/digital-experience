@@ -3,7 +3,7 @@
 Migration is supported between equivalent HCL Digital Experience offerings.
 
 !!!note
-    You cannot migrate directly to HCL Digital Experience Version 9.0. You must migrate to HCL Digital Experience Version 8.5/9.5 with the latest combined cumulative fixes applied.  You can keep your profile at the current level or migrate your profile to the updated version.
+    You cannot migrate directly to HCL Digital Experience Versions 9.0 or 9.5. You must migrate first to HCL Digital Experience Version 8.5.0 with the latest combined cumulative fixes applied, then you can install HCL Digital Experience 9.0 or 9.5 using IBM Installation Manager. You can keep your profile at the current level or migrate your profile to the updated version.
 
 !!!note "Note for new HCL Digital Experience customers"
     HCL Digital Experience 9.5 can install directly to IBM WebSphere Application Server Version ND 9.0.5 using the following installation path:
@@ -28,24 +28,24 @@ Migration is supported between equivalent HCL Digital Experience offerings.
 
 The following table summarizes the supported migration paths:
 
-|Offering|HCL Portal 8.5 Express|HCL Portal 8.5 (Server)|HCL Portal 8.5 (Enable, Extend)|HCL Web Content Manager Version 8.5|HCL Digital Experience 9.0 (Enable, Extend, Server)|HCL Digital Experience 9.5 (Server)|HCL Digital Experience 9.5 (Enable, Extend)
-|--------|----------------------|-------------------------|---------------------------------|-----------------------------------|----------------------------------------------------------------------------------|------|------|
-|HCL Portal Express 7.x|Supported|Not Supported|Not Supported|Supported|Not Supported|Not Supported|Not Supported
-|HCL Portal Server 7.x (Server)|Not Supported|Supported|Supported|Not Supported|Not Supported|Supported|Supported
-|HCL Portal Server 7.x (Enable, Extend)|Not Supported|Supported|Supported|Supported|Not Supported|Supported|Supported
-|Web Content Manager 7.x|Not Supported|Not Supported|Not Supported|Supported|Not Supported|Not Supported|Not Supported
-|HCL Portal Express 8.0 on WebSphere® Application Server Version 8.0|Supported|Not Supported|Not Supported|Supported|Not Supported|Not Supported|Not Supported
-|HCL Portal Server 8.0 (Server) on WebSphere Application Server Version 8.0|Not Supported|Supported|Supported|Not Supported|Not Supported|Supported|Supported
-|HCL Portal Server 8.0 (Enable, Extend) on WebSphere Application Server Version 8.0|Not Supported|Supported|Supported|Supported|Not Supported|Supported|Supported
-|Web Content Manager 8.0 on WebSphere Application Server Version 8.0|Not Supported|Not Supported|Not Supported|Supported|Not Supported|Not Supported|Not Supported
-|HCL Portal Server 8.0 (Server) on WebSphere Application Server Version 8.5.0|Not Supported|Supported|Supported|Not Supported|Not Supported|Supported|Supported
-|HCL Portal Server 8.0 (Enable, Extend) on WebSphere Application Server Version 8.5.0|Not Supported|Supported|Supported|Supported|Not Supported|Supported|Supported
-|Web Content Manager 8.0 on WebSphere Application Server Version 8.5.0|Not Supported|Not Supported|Supported|Supported|Not Supported|Not Supported|Supported
+|Offering|HCL Portal 8.5 Express|HCL Portal 8.5 (Server)|HCL Portal 8.5 (Enable, Extend)|HCL Web Content Manager Version 8.5|HCL Digital Experience 9.0 / HCL Digital Experience 9.5 (Enable, Extend, Server)|
+|--------|----------------------|-------------------------|---------------------------------|-----------------------------------|----------------------------------------------------------------------------------|
+|HCL Portal Express 7.x|Supported|Not Supported|Not Supported|Supported|Not Supported|
+|HCL Portal Server 7.x (Server)|Not Supported|Supported|Supported|Not Supported|Not Supported|
+|HCL Portal Server 7.x (Enable, Extend)|Not Supported|Supported|Supported|Supported|Not Supported|
+|Web Content Manager 7.x|Not Supported|Not Supported|Not Supported|Supported|Not Supported|
+|HCL Portal Express 8.0 on WebSphere® Application Server Version 8.0|Supported|Not Supported|Not Supported|Supported|Not Supported|
+|HCL Portal Server 8.0 (Server) on WebSphere Application Server Version 8.0|Not Supported|Supported|Supported|Not Supported|Not Supported|
+|HCL Portal Server 8.0 (Enable, Extend) on WebSphere Application Server Version 8.0|Not Supported|Supported|Supported|Supported|Not Supported|
+|Web Content Manager 8.0 on WebSphere Application Server Version 8.0|Not Supported|Not Supported|Not Supported|Supported|Not Supported|
+|HCL Portal Server 8.0 (Server) on WebSphere Application Server Version 8.5.0|Not Supported|Supported|Supported|Not Supported|Not Supported|
+|HCL Portal Server 8.0 (Enable, Extend) on WebSphere Application Server Version 8.5.0|Not Supported|Supported|Supported|Supported|Not Supported|
+|Web Content Manager 8.0 on WebSphere Application Server Version 8.5.0|Not Supported|Not Supported|Supported|Supported|Not Supported|
 
 You can also migrate from a Server install to the Enable or Extend versions of HCL Digital Experience.
 
 !!!note "Note for Version 6.1 customers" 
-    If you are currently on Version 6.1, you must perform a two-step migration from Version 6.1 to Version 8.0, and then from Version 8.0 to 8.5/9.5. Go to [Migrating from HCL Portal 6.1 to Portal 8.5/9.5](https://support.hcltechsw.com/csm) for guidance on the two-step migration process.
+    If you are currently on Version 6.1, you must perform a two-step migration from Version 6.1 to Version 8.0, and then from Version 8.0 to 8.5. Go to [Migrating from HCL Portal 6.1 to Portal 8.5](https://support.hcltechsw.com/csm) for guidance on the two-step migration process.
 
 **Important Fix Pack Requirements:** Migration is supported from the two most recent fix packs for Version 7.0.0.2 and Version 8.0.0.1. However, you must apply the latest cumulative fix to your source environment. Your target environment must also have the latest cumulative fix and the most recent fix pack applied.
 
@@ -54,7 +54,7 @@ If you are not sure which earlier version is installed, run the following comman
 -   Windows™: wp_profile_root\PortalServer\bin\WPVersionInfo.bat
 -   UNIX™Linux™: wp_profile_root/PortalServer/bin/WPVersionInfo.sh
 
-When you migrate to 8.5/9.5, HCL Digital Experience automatically migrates the following applications and configuration data:
+When you migrate to 8.5, HCL Digital Experience automatically migrates the following applications and configuration data:
 
 -   Security configuration
 -   Access control
@@ -65,7 +65,7 @@ When you migrate to 8.5/9.5, HCL Digital Experience automatically migrates the f
 -   Virtual portals
 
 !!!note
-    You cannot upgrade the source portal with a fix pack after migration if you intend to remigrate the JCR. For example, if your source portal is Version 7.0.0.1 and you migrate it to 8.5/9.5, you cannot then upgrade the source portal to Version 7.0.0.2 and remigrate the JCR. This path is not supported.
+    You cannot upgrade the source portal with a fix pack after migration if you intend to remigrate the JCR. For example, if your source portal is Version 7.0.0.1 and you migrate it to 8.5, you cannot then upgrade the source portal to Version 7.0.0.2 and remigrate the JCR. This path is not supported.
 
 
 ???+ info "Related information"  

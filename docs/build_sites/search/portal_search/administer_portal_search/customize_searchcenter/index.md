@@ -14,5 +14,5 @@ Delete or replace the All Sources default scope.
 
 
 ???+ info "Related information"
-    - [Configuring search scopes for the Search Center portlet](../../../cfg_dx_search/cfg_searchcenter/srtcfg_sc_scopes.md)
+    - [Configuring search scopes for the Search Center portlet](../cfg_searchcenter/srtcfg_sc_scopes.md)
 

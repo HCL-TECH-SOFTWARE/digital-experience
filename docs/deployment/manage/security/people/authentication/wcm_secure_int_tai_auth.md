@@ -14,8 +14,8 @@ The SAML TAI and OpenID Connect TAI configuration accepts users of the configure
 
 For more information, refer to the following:
 
--   [Enabling your system to use the SAML web single sign-on (SSO) feature](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=swss-enabling-your-system-use-saml-web-single-sign-sso-feature)
--   [Configuring an OpenID Connect Relying Party](https://www.ibm.com/docs/en/was/9.0.5?topic=users-configuring-openid-connect-relying-party)
+-   [Enabling your system to use the SAML web single sign-on (SSO) feature](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.nd.doc/ae/twbs_enablesamlsso.html)
+-   [Configuring an OpenID Connect Relying Party](http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.base.doc/ae/tsec_oidconfigure.html)
 
 ## Placing a login module in the WebSphere Application Server WEB\_INBOUND login flow before you create the LTPA token, then updating the distinguished name created by the TAI so it is recognized as a portal transient user.
 

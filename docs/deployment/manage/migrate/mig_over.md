@@ -8,14 +8,14 @@ HCL Digital Experience also supports integration with additional products to ext
 
 Migrated elements are not automatically upgraded to use features that are available in the new version. Taking advantage of new features that were not available in the earlier portal requires extra attention after migration is complete.
 
-You can migrate to HCL Digital Experience Version 8.5/9.5 from either Version 7.0 or 8.0 so long as you install CF13. For additional information about supported migrations, see *Supported migration paths*.
+You can migrate to HCL Digital Experience Version 8.5 from either Version 7.0 or 8.0 so long as you install CF13. For additional information about supported migrations, see *Supported migration paths*.
 
 !!!note
-    If you are migrating from HCL Digital Experience Version 8.0.0.1 on WebSphere® Application Server Version 8.5.5.2 to HCL Digital Experience Version 8.5/9.5, you must follow a different migration process. For more information, see *Migrating from Portal 8.0.0.1 on WebSphere Application Server 8.5.5.2*.
+    If you are migrating from HCL Digital Experience Version 8.0.0.1 on WebSphere® Application Server Version 8.5.5.2 to HCL Digital Experience Version 8.5, you must follow a different migration process. For more information, see *Migrating from Portal 8.0.0.1 on WebSphere Application Server 8.5.5.2*.
 
-## Migration to Version 8.5/9.5
+## Migration to Version 8.5
 
-For Version 8.5/9.5, data, applications, databases, property files, security settings, and configuration are migrated using the Configuration Wizard. Use the roadmaps for cluster and stand-alone migrations to guide you through planning, preparing your source environment, setting up your target environment, migrating data, and post-migration steps. For a high-level overview of this process, see the *Roadmaps for migration*.
+For Version 8.5, data, applications, databases, property files, security settings, and configuration are migrated using the Configuration Wizard. Use the roadmaps for cluster and stand-alone migrations to guide you through planning, preparing your source environment, setting up your target environment, migrating data, and post-migration steps. For a high-level overview of this process, see the *Roadmaps for migration*.
 
 
 ???+ info "Related information"  

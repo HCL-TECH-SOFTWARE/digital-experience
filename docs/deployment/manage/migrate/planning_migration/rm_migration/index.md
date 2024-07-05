@@ -13,6 +13,6 @@ Roadmaps provide a high-level overview of complex tasks such as migrating a clus
 
 ???+ info "Related information" 
     -   [Migration overview](../../../../../deployment/manage/migrate/mig_over.md)
-    -   [Migration from Portal Server Offering 7.0 to Portal 8.5/9.5](../../../../../deployment/manage/migrate/planning_migration/migration_consideration/mig_consider_7serveronly.md)
+    -   [Migration from Portal Server Offering 7.0 to Portal 8.5](../../../../../deployment/manage/migrate/planning_migration/migration_consideration/mig_consider_7serveronly.md)
     -   [Migrate data using the configuration wizard](../../../../../deployment/manage/migrate/migrate_using_cfgwizard/index.md)
 

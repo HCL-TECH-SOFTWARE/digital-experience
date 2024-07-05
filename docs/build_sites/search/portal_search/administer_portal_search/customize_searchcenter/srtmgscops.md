@@ -40,5 +40,5 @@ Working with search scopes and custom links: To open the **Manage Search** portl
 
 
 ???+ info "Related information"
-    - [Configuring search scopes for the Search Center portlet](../../../cfg_dx_search/cfg_searchcenter/srtcfg_sc_scopes.md)
+    - [Configuring search scopes for the Search Center portlet](../cfg_searchcenter/srtcfg_sc_scopes.md)
 

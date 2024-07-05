@@ -2,7 +2,7 @@
 
 When migrating themes that were developed in an earlier version, you must be aware of general guidelines, differences, and known issues.
 
-With HCL Digital Experience 8.5/9.5, the new modularized theme provides a flexible framework that minimizes download size by giving you the control to specify just the capabilities that are needed for a certain scenario or use case and also minimizes the number of requests by combining necessary resources.
+With HCL Digital Experience 8.5, the new modularized theme provides a flexible framework that minimizes download size by giving you the control to specify just the capabilities that are needed for a certain scenario or use case and also minimizes the number of requests by combining necessary resources.
 
 Previous themes required a monolithic design and that the same content was downloaded for every page. Theme optimization allows the theme to be highly adaptive to the content you are displaying on certain pages. For example, on pages where only simple content is displayed you can define a lightweight profile. A lightweight profile causes the system to download few static resources such as JavaScript™ and CSS files. However, on pages where more advanced scenarios are required you can choose to switch to a more powerful profile that causes more resources to download than on the other pages. This way you have only the capabilities you need on certain pages, but all other pages do not pay the penalty. As a result the overall system performance increases significantly.
 

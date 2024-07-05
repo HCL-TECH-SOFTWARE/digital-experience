@@ -4,19 +4,19 @@ Content Template versions 3.x, 4.0.x, and 4.1.x are migrated along with all Web 
 
 ## Important post migration steps for Content Template versions 3.x, 4.0.x, and 4.1.x
 
-As part of your migration to HCL Portal version 8.5/9.5 you must do all the migration steps and post-migration steps.
+As part of your migration to HCL Portal version 8.5 you must do all the migration steps and post-migration steps.
 
-## Using the HCL Portal version 8.5/9.5 default theme
+## Using the HCL Portal version 8.5 default theme
 
-If you want to use the new HCL Portal version 8.5/9.5 default theme, including all the new features that are included with that theme, such as the updated toolbar, you need to download and install Content Template version 4.2 or higher. Follow the upgrade procedures in the Content Template version 4.2 documentation.
+If you want to use the new HCL Portal version 8.5 default theme, including all the new features that are included with that theme, such as the updated toolbar, you need to download and install Content Template version 4.2 or higher. Follow the upgrade procedures in the Content Template version 4.2 documentation.
 
-## Upgrading the Content Template Catalog 3.x theme to HCL Digital Experience 8.5/9.5
+## Upgrading the Content Template Catalog 3.x theme to HCL Digital Experience 8.5
 
-If you upgraded from Portal 7 to HCL Digital Experience 8.5/9.5, content and pages created with Content Template Catalog 3.x are migrated to HCL Digital Experience 8.5/9.5 automatically.
+If you upgraded from Portal 7 to HCL Digital Experience 8.5, content and pages created with Content Template Catalog 3.x are migrated to HCL Digital Experience 8.5 automatically.
 
-The version of Content Template 3.x that ran on Portal 7 was based on the PageBuilder2 theme. To run on HCL Digital Experience 8.5/9.5, install the Mashup Integration .ear file, which installs additional required modules. Then, use the XML Access script that is provided to configure the Content Template Catalog 3.x theme on the HCL Digital Experience 8.5/9.5 server.
+The version of Content Template 3.x that ran on Portal 7 was based on the PageBuilder2 theme. To run on HCL Digital Experience 8.5, install the Mashup Integration .ear file, which installs additional required modules. Then, use the XML Access script that is provided to configure the Content Template Catalog 3.x theme on the HCL Digital Experience 8.5 server.
 
-1.  On the HCL Digital Experience 8.5/9.5 server, install the Mashup Integration .ear file by running the ConfigEngine batch or script file with the following arguments:
+1.  On the HCL Digital Experience 8.5 server, install the Mashup Integration .ear file by running the ConfigEngine batch or script file with the following arguments:
     -   **Windows™**
 
         ```

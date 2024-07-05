@@ -4,7 +4,7 @@ This roadmap describes how to create the dynamic list page component of the desi
 
 ## Who should use this roadmap
 
-You are a developer on the technical team that is creating home and landing page templates for content authors to use on the site. You are responsible only for creating page components and design templates. Other developers are responsible for developing other pieces of the design. Learn the basics of developing the dynamic list page component.
+You are a developer on the technical team that is tasked with creating home and landing page templates for content authors to use on the site. You are responsible only for creating page components and design templates. Other developers are responsible for developing other pieces of the design. Learn the basics of developing the dynamic list page component.
 
 
 # Creating your dynamic list page component
@@ -19,15 +19,15 @@ Ensure that your design library exists, for example, Greenwheels Design.
 
     1.  Enter a name for your menu.
 
-        For example, type ``List``.
+        For example, type List.
 
     2.  Ensure that your location is set to **your\_design\_library** \> **your\_dyn\_list\_page\_component**.
 
-        For example, ensure that the location is ``Greenwheels\List``. If the location is not set, click **Select Location**.
+        For example, ensure that the location is **Greenwheels** \> **List**. If the location is not set, click **Select Location**.
 
     3.  Select the **Query string** check box in the Further options section and then enter the parameter name for the query string.
 
-        For example, type ``list\_path``.
+        For example, type list\_path.
 
     4.  In the Menu design properties section, you can also define the following parameters to customize your dynamic list page component:
 
@@ -50,23 +50,23 @@ Ensure that your design library exists, for example, Greenwheels Design.
 
     2.  Enter a page component name for your teaser.
 
-        For example, type ``List``.
+        For example, type List.
 
     3.  Ensure that your design library is selected.
 
     4.  Click **OK**.
 
-5.  Click the following link in the Information dialog box to customize the page component:
+5.  Click the following link in the **Information** dialog box to customize the page component:
 
     **your\_design\_library** \> **Authoring Templates** \> **your\_page\_component**. For example, click **Greenwheels Design** \> **Authoring Templates** \> **List**.
 
-    **Note:** If you close the Information dialog box, you can follow the path in your design library.
+    **Note:** If you close the **Information** dialog box, you can follow the path in your design library.
 
 6.  Click **Edit**.
 
 7.  Click **Manage Elements**.
 
-8.  Delete all the listed default elements before you create a customized element for the page component.
+8.  Delete all of the listed default elements before you create a customized element for the page component.
 
 9.  Create a list element:
 
@@ -74,7 +74,7 @@ Ensure that your design library exists, for example, Greenwheels Design.
 
     2.  Enter a name for your element.
 
-        For example, type ``list\_path``.
+        For example, type list\_path.
 
     3.  Click **Add**.
 
@@ -101,7 +101,7 @@ Ensure that your design library exists, for example, Greenwheels Design.
     -   **Link Query string**
     -   **Link target**
     -   **Link Additional attributes**
-12. Click the menu for the **Save and Close** button. Then, select **Save and Read**.
+12. Click the drop-down menu on the **Save and Close** button. Then, select **Save and Read**.
 
 13. Click **Apply Author Template** to update the content associated with this authoring template.
 
@@ -111,11 +111,11 @@ Ensure that your design library exists, for example, Greenwheels Design.
 
 16. Click **Close** to close the authoring template.
 
-17. Click the following link in the Information dialog box to customize the page component:
+17. Click the following link in the **Information** dialog box to customize the page component:
 
     **your\_design\_library** \> **Presentation Templates** \> **your\_page\_component**. For example, click **Greenwheels Design** \> **Presentation Templates** \> **List**.
 
-    **Note:** If you close the Information dialog box, you can follow the path in your design library.
+    **Note:** If you close the **Information** dialog box, you can follow the path in your design library.
 
 18. Click **Edit**.
 
@@ -133,10 +133,10 @@ Ensure that your design library exists, for example, Greenwheels Design.
     [Component name="Greenwheels Design/list/list"]
     ```
 
-    This text allows Krista to select the path where the list items are coming from. This selection is shown only in edit mode. It then passes this path into the menu component as a query parameter by using the **RequestAttribute** tag. Finally, it renders the menu component.
+    This text allows Krista to select the path where the list items are coming from. This selection is shown only in edit mode. It then passes this path into the menu component as a query parameter by using the RequestAttribute tag. Finally, it renders the menu component.
 
 20. Click **Save and Close**.
 
 
-The content author can now enter **Edit** mode and add the dynamic list page component to the landing page template. The content author sets the list path by selecting the content page that contains articles or events. The list is then displayed on the landing page template.
+The content author can now go into **Edit** mode and add the dynamic list page component to the landing page template. The content author sets the list path by selecting the content page that contains articles or events. The list is then displayed on the landing page template.
 

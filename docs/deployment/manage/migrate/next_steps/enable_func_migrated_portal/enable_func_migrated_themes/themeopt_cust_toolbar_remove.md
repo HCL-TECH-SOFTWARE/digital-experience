@@ -1,8 +1,8 @@
 # Removing the Portal 8.0 site toolbar from a Portal 8.0 theme
 
-To use the new site toolbar of HCL Digital Experience 8.5/9.5 within a Portal 8.0 theme, you must first remove the existing toolbar that comes with your Portal 8.0 theme.
+To use the new site toolbar of HCL Digital Experience 8.5 within a Portal 8.0 theme, you must first remove the existing toolbar that comes with your Portal 8.0 theme.
 
-All of the theme modules providing functions for editing and managing the site, which are also available in the new site toolbar, can be removed when you remove the toolbar. You cannot add the Portal 8.5/9.5 site toolbar to a Portal 8.0 theme while keeping the version 8.0 toolbar.
+All of the theme modules providing functions for editing and managing the site, which are also available in the new site toolbar, can be removed when you remove the toolbar. You cannot add the Portal 8.5 site toolbar to a Portal 8.0 theme while keeping the version 8.0 toolbar.
 
 1.  Remove the theme modules from the HCL Portal 8.0 site toolbar from the theme profiles. Go through the theme profiles of your Portal 8.0 theme and remove the theme modules that are listed.
 

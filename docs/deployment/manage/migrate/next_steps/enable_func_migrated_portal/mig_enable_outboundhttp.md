@@ -1,16 +1,16 @@
 # Changing from Ajax proxy to outbound HTTP connection
 
-HCL Digital Experience 8.5/9.5 provides a migration process for the change from the Ajax proxy of previous portal versions to the new outbound HTTP connection.
+HCL Digital Experience 8.5 provides a migration process for the change from the Ajax proxy of previous portal versions to the new outbound HTTP connection.
 
-If you upgrade your Portal from a previous version to HCL Digital Experience 8.5/9.5, the outbound HTTP connection infrastructure attempts to migrate existing Ajax proxy configuration settings to the outbound HTTP connection service configuration. It moves all settings from the Ajax proxy configuration into database settings for the outbound HTTP connection service. This migration takes place as follows:
+If you upgrade your Portal from a previous version to HCL Digital Experience 8.5, the outbound HTTP connection infrastructure attempts to migrate existing Ajax proxy configuration settings to the outbound HTTP connection service configuration. It moves all settings from the Ajax proxy configuration into database settings for the outbound HTTP connection service. This migration takes place as follows:
 
 -   **Migration of global configuration settings:**
 
-    In previous Portal versions, global proxy configuration settings were in the proxy-config.xml file of the Ajax Proxy Configuration web module. The outbound HTTP connections infrastructure migrates global proxy configuration settings when the HCL Digital Experience 8.5/9.5 outbound HTTP connection service is accessed for the first time after the portal upgrade. The global configuration settings are updated in the system configuration profile.
+    In previous Portal versions, global proxy configuration settings were in the proxy-config.xml file of the Ajax Proxy Configuration web module. The outbound HTTP connections infrastructure migrates global proxy configuration settings when the HCL Digital Experience 8.5 outbound HTTP connection service is accessed for the first time after the portal upgrade. The global configuration settings are updated in the system configuration profile.
 
 -   **Migration of customized global configuration settings:**
 
-    In previous Portal versions, custom global proxy configuration settings were in the WP Configuration Service Resource Environment Provider (REP) property named proxy.config.file. The outbound HTTP connections infrastructure migrates these custom global configuration settings when the Portal Version 8.5/9.5 outbound HTTP connection service is accessed for the first time after the portal upgrade. Custom global configuration settings are updated into the global configuration profile.
+    In previous Portal versions, custom global proxy configuration settings were in the WP Configuration Service Resource Environment Provider (REP) property named proxy.config.file. The outbound HTTP connections infrastructure migrates these custom global configuration settings when the Portal Version 8.5 outbound HTTP connection service is accessed for the first time after the portal upgrade. Custom global configuration settings are updated into the global configuration profile.
 
 -   **Migration of application-specific proxy configurations**
 

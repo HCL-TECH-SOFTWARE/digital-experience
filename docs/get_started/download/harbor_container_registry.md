@@ -1,35 +1,34 @@
 ---
-title: Harbor container registry
+title: Harbor Container Registry
 ---
 
-# Download and deploy HCL products from a Harbor Repository
-<!-- Harbor is a project name that, as far as I can see, does not belong to HCL. Therefore, placing our company name in front of “ Harbor container repository” makes it seem as though It’s HCL’s Harbor container repository. The Harbor container repository is associated with HCL, to be sure, but we have to word items like this so there’s no confusion.  -->
+# Download and Deploy from HCL Harbor Repository
 
-The HCL Digital Experience 9.5 container images and Helm charts can be accessed from the [HCL container repository on Harbor](https://hclcr.io/){:target="_blank"}. Customers with credentials to access entitled software on the HCL Software Licensing Portal can apply those credentials to optionally access these components of Digital Experience v9.5. 
+The HCL Digital Experience 9.5 container images and Helm charts can be accessed from the [HCL Harbor container repository](https://hclcr.io/){:target="_blank"}. Customers with credentials to access entitled software in the HCL Software Licensing Portal may apply those credentials to optionally access these components of Digital Experience v9.5. 
 
-With the CF216 release (November 2023), the Harbor repository provides an OCI-based registry. The Helm chart command is updated to be OCI-compliant. However, older versions of the Helm chart are still used in the non-OCI approach. Both approaches are described later.
+As of the CF216 release (November 2023), the Harbor repository provides an OCI-based registry. The Helm chart command is updated to be OCI-compliant. However, older versions of the Helm chart are still utilized in the non-OCI approach. On this page, both approaches are described.
 
 ## OCI-based registry
-Helm Charts that are pushed and managed through OCI are not part of the `Helm Charts` category in Harbor anymore. Therefore, the `Helm Charts` section does not reflect the newer version of Helm charts, which are pushed by using OCI commands. OCI assets such as container images and Helm charts are currently in the same category and both are listed as an OCI repository.
+Note that Helm Charts pushed and managed through OCI are not part of the `Helm Charts` category in Harbor anymore. Therefore, the `Helm Charts` section does not reflect the newer version of helm charts which are pushed using OCI commands. OCI assets such as container images and helm charts are now in the same category and both are listed as an OCI repository.
 
-### Pulling Helm charts by using OCI commands
+### Pulling helm charts via OCI commands
 
-These commands are different from the previous approach in the non-OCI-based registry. Using OCI commands requires an initial login before you can run the pull command.
+These commands are different from the previous approach with the non-OCI-based registry. It now requires an initial login before executing the pull command.
 
 
-1. Log in to the Helm registry by using the following command: 
+1. Log in to the Helm registry using the following command: 
 
     ```sh
     helm registry login -u <YOUR_HARBOR_USERNAME> -p <YOUR_HARBOR_CLI_SECRET_> https://hclcr.io/
     ```
 
-2. After you log in, run the following OCI-based pull command:
+2. After logging in, execute the OCI-based pull command:.
 
     ```sh
     helm pull oci://hclcr.io/dx/hcl-dx-deployment --version <HELM_CHART_VERSION_NUMBER>
     ```
 
-3. After you run the pull command, you can check whether the Helm Chart was downloaded to your local computer:
+3. After running the pull command, you can check if the Helm Chart has been downloaded to your local machine:
 
     ```sh
     # List directory content to check successful pull
@@ -41,15 +40,15 @@ These commands are different from the previous approach in the non-OCI-based reg
 
 ## Non-OCI-based registry
 
-This section describes the previous non-OCI approach that still uses older versions of the Helm chart. 
+This section describes the previous non-OCI approach where older versions of the Helm chart are still used. 
 
-### Configuring the Helm repository on Harbor to your HCL Digital Experience 9.5 Kubernetes deployment
+### Configuring the HCL Harbor Helm repository to your DX 9.5 Kubernetes Deployment
 
-As an alternative to downloading the DX 9.5 Helm charts from the Docker components from your HCL DX offering entitlements on the HCL Software License Portal, you can directly use the Helm repository on Harbor with Helm from HCL DX Container Update CF205 and later releases.
+As an alternative to downloading the DX 9.5 Helm Charts from the Docker components from your HCL DX offering entitlements in the HCL Software License Portal, you can also directly use the HCL Harbor Helm repository with Helm from Container Update CF205 and later releases.
 
-#### Adding the Helm repository on Harbor to your Helm configuration
+#### Adding the HCL Harbor Helm repository
 
-To add the Helm repository on Harbor to your Helm configuration, you can use the following command:
+To add the HCL Harbor Helm repository to your Helm configuration, you can use the following command:
 
 ```
 helm repo add 
@@ -58,17 +57,17 @@ helm repo add
 hcl-dx https://hclcr.io/chartrepo/dx
 ```
 
-To obtain the `CLI secret`, you must log in to [Harbor GitHub site for HCL](https://hclcr.io/) by using your authorized HCL user credentials, navigating to your HCL `User Profile` on Harbor, and then copying it from the `CLI secret` field.
+To obtain the `CLI secret`, you must log in to [HCL Harbor](https://hclcr.io/) using your authorized user credentials, navigate to your `User Profile` in HCL Harbor, and then copy it from the field called `CLI secret`.
 
-After you add the repository to your Helm deployment, you should see the following message:
+After adding the repository to your Helm deployment, you should see the following message:
 
 ```
 "hcl-dx" has been added to your repositories
 ```
 
-#### Listing available Helm chart versions
+#### Listing available Helm Chart versions
 
-To verify that your Helm configuration works to connect and to see which [HCL DX 9.5 Container Update CF application versions](../../deployment/install/container/image_list.md) are available from the HCL repository on Harbor, you can use the following command:
+To verify that your Helm configuration works to connect and to see which [HCL DX 9.5 Container Update CF application versions](../../deployment/install/container/image_list.md) are available from the HCL Harbor repository, you can use the following command:
 
 ```
 # Using helm search to find available versions, the DX helm charts are named hcl-dx-deployment
@@ -76,32 +75,32 @@ To verify that your Helm configuration works to connect and to see which [HCL DX
 helm search repo hcl-dx/hcl-dx-deployment --versions
 ```
 
-This command returns a list of available versions, which looks similar to this example:
+This would return you a list of available versions, looking similar to this:
 
 ```
 NAME                        CHART VERSION   APP VERSION DESCRIPTION                                    
 hcl-dx/hcl-dx-deployment    2.7.1           95_CF204    Kubernetes Deployment of HCL Digital Experience
 ```
 
-You can see which chart version correlates to which HCL Digital Experience 9.5 Container Update CF version. In the preceding example, installing Container Update CF204 requires you to use Helm chart version 2.7.1.
+You can see which chart version correlates to which HCL Digital Experience 9.5 Container Update CF version. In the above example, installing Container Update CF204 would require you to use Helm Chart version 2.7.1.
 
-After you complete the preceding actions, your Helm configuration can use HCL DX 9.5 Helm charts directly from the Helm Repository on Harbor.
+Your Helm configuration is now capable of using HCL DX 9.5 Helm Charts directly from the HCL Harbor Helm Repository.
 
 !!! note
-    Applying the method to pull DX 9.5 Container Update images directly from the HCL container registry on Harbor requires that every cluster node can access the HCL container registry on Harbor. To leverage this feature, you have to configure an `ImagePullSecret` with your HCL credentials for the Harbor site. For instructions, see [Configure deployment to use the HCL container registry on Harbor](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_imagepullsecrets.md#configure-deployment-to-use-the-hcl-harbor-container-registry).
+    Applying the method to pull DX 9.5 Container Update images directly from the HCL Harbor container registry requires every cluster node to be able to access the HCL Harbor container registry. To leverage this feature, you will have to configure an `ImagePullSecret` with your HCL Harbor credentials. For instructions, see [Configure deployment to use the HCL Harbor container registry](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_imagepullsecrets.md#configure-deployment-to-use-the-hcl-harbor-container-registry).
 
-#### Pulling a Helm chart for deployment
+#### Pulling Helm Chart for deployment
 
-To use the HCL Digital Experience v9.5 Helm chart from the Helm repository on Harbor, for best results, pull the Helm chart through Helm to your local computer. By using this method, you can work in the same manner as the manually downloaded method.
+To use the HCL Digital Experience v9.5 Helm Chart from the HCL Harbor Helm repository, we recommend you pull it via Helm to your local machine. Using this method, you can work in the same manner as the manually downloaded method.
 
-To do so, run the following command with the correct Helm chart version:
+To do so, run the following command with the correct Helm Chart version:
 
 ```
-# Use Helm Pull with the version you want to deploy. (This example uses version 2.7.1. Enter the version you want to use.)
+# Use Helm Pull with the version you want to deploy (example uses 2.7.1, please fill in your desired version)
 helm pull hcl-dx/hcl-dx-deployment --version 2.7.1
 ```
 
-After running this command, you can verify whether the Helm chart was downloaded to your local computer:
+After running this command, you can check to verify if the Helm Chart has been downloaded to your local machine:
 
 ```
 # List directory content to check successful pull
@@ -111,9 +110,9 @@ ls -lah
 # -rw-r--r--. 1 user user  136052 Jul  7 11:28 hcl-dx-deployment-2.7.1.tgz
 ```
 
-You downloaded your DX 9.5 Container Update Helm chart from the HCL repository on Harbor and can continue with your deployment. 
+You have now downloaded your DX 9.5 Container Update Helm Chart from the HCL Harbor repository and can continue with your deployment. 
 
-After the Helm charts are downloaded, the next step is [Retagging images](../../deployment/install/container/helm_deployment/preparation/get_the_code/prepare_load_images.md#re-tag-images).
+After the Helm charts are downloaded, the next step is [Re-tagging images](../../deployment/install/container/helm_deployment/preparation/get_the_code/prepare_load_images.md#re-tag-images).
 
 ???+ info "Related information"
-    -   [Deploying container platforms by using Helm](../../deployment/install/container/helm_deployment/overview.md)
+    -   [Deploying container platforms using Helm](../../deployment/install/container/helm_deployment/overview.md)

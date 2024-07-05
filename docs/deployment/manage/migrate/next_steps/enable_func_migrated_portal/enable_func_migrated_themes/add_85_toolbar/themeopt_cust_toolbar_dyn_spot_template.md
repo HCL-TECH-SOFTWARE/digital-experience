@@ -6,7 +6,7 @@ Embedding a toolbar into a theme with a dynamic content spot provides an optimiz
 
     -   **wp\_toolbar\_host**
 
-        The first level module of the HCL Portal 8.5/9.5 site toolbar. It groups all of the resources that are required to run the toolbar in your theme. It supports view mode and edit mode.
+        The first level module of the HCL Portal 8.5 site toolbar. It groups all of the resources that are required to run the toolbar in your theme. It supports view mode and edit mode.
 
     -   **wp\_toolbar\_host\_view**
 
@@ -50,7 +50,7 @@ Embedding a toolbar into a theme with a dynamic content spot provides an optimiz
 
         The theme module `wp_toolbar_host_edit` will not be loaded until you enter edit mode.
 
-3.  Add the dynamic content spot of the version 8.5/9.5 toolbar to the theme templates. To integrate the new toolbar to your theme, you must add a dynamic content spot to the theme HTML templates of your theme. The ID of the dynamic content spot is `85toolbar`.
+3.  Add the dynamic content spot of the version 8.5 toolbar to the theme templates. To integrate the new toolbar to your theme, you must add a dynamic content spot to the theme HTML templates of your theme. The ID of the dynamic content spot is `85toolbar`.
 
 4.  To add this dynamic content spot, create a HTML anchor element which references this dynamic content spot. Embed the dynamic content spot in the header of your page
 

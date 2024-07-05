@@ -34,10 +34,6 @@ In either topology \(on-premises OS, or Kubernetes\), the union of the WAS profi
 
 One important difference is that when a configuration change takes place in a Kubernetes environment, typically it is recommended that only one HCL DX POD is active. In that case, the profile and database are updated with any WAS or HCL DX changes. As new PODs are then spawned, they also inherit these changes.
 
-The following diagram outlines how a DX solution could be deployed for high availability and blue/green deployments in a single Kubernetes cluster:
-
-![](../../../assets/DXKubernetesBlueGreenDeployment.jpg "HCL Digital Experience High Availability Kubernetes sample topology")
-
 ## Single Kubernetes Cluster Versus Multiple Kubernetes Cluster
 
 Just like in the “traditional” WAS ND cluster, the lowest risk topology for deployment of new artifacts into a Kubernetes cluster is to maintain two independent Kubernetes clusters. Just like in the traditional WAS ND cluster, one would deploy all changes to the “off-line” cluster, validate that cluster and then switch that cluster at the load balancer to be active. One could then apply the same processes to the down-level Kubernetes cluster, which is now out of the active load balancer.

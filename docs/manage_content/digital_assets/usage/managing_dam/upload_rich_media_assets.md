@@ -1,4 +1,4 @@
-# Uploading rich media assets
+# Upload rich media assets
 
 Follow these steps to upload rich media assets using HCL Digital Experience 9.5 Digital Asset Management \(DAM\).
 
@@ -26,36 +26,13 @@ Follow these steps to upload rich media assets using HCL Digital Experience 9.5 
 
     ![Upload completed with details viewed](../../../../images/dam_interface_upload_success_view_details.png)
 
-## Uploading using drag-and-drop
+    !!! notes
 
-You can upload files and folders using the drag-and-drop feature. With this feature, you can add multiple folders and their contents to DAM. When you drag and drop folders to DAM, the system handles the upload of folders, their sub-folders, and their respective assets. The hierarchy of nested folders during the upload process is preserved.
+        - If the Kaltura plugin is configured and enabled, the media tile shows the following sync statuses for uploaded videos:
 
-To upload files and folders using drag-and-drop, refer to the following steps:
+            - SYNC IN PROGRESS
+            - SYNC FAILED
+            - SYNCED
+            See the [Configure DAM - Kaltura integration](../../configuration/dam_extensibility/kaltura_configuration.md) topic for details.
 
-1. Select the folders or files to be uploaded from the system file explorer.
-
-    ![Selecting folders](../../../../images/drag_and_drop_1.png)
-
-2. Drag and drop the files and folders into the DAM root page or any other sub-collection page.
-
-    ![Uploading folders](../../../../images/drag_and_drop_2.png)
-
-3. (Optional) If files are dropped into a root collection page, a dialog box appears where you can select the collection where you want to upload the assets.
-
-All uploaded folders create a collection with the same name as the folder. The contents of the folders are uploaded into the same collection.
-
-![Uploaded folders](../../../../images/drag_and_drop_3.png)
-
-!!!note
-
-    - If the Kaltura plugin is configured and enabled, the media tile shows the following sync statuses for uploaded videos:
-
-        - SYNC IN PROGRESS
-        - SYNC FAILED
-        - SYNCED
-        
-        See the [Configure DAM - Kaltura integration](../../configuration/dam_extensibility/kaltura_configuration.md) topic for details.
-
-    - The interface displays features that allows you to edit media asset metadata (for example, `Title` and `Description`) and user access control (for example, Access) of the new or existing collection the rich media asset is uploaded to. For more information, see [Manage collections](manage_collections.md).
-
-    - To upload folders without using drag-and-drop, you must [manually create collections](#uploading-rich-media-assets) and upload assets using the **Upload** button.
+        -   The interface displays features that allows you to edit media asset metadata \(such as `Title` and `Description`\) and user access control \(Access\) of the new or existing collection the rich media asset is uploaded to. See the [Manage collections](manage_collections.md) topic for details.

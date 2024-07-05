@@ -85,7 +85,7 @@ Some of the following entry fields and options are available when you create a s
 
     Use this entry field to type the directory path where you want the new search collection to be created and the related data to be saved. You can insert a full path or a path relative to the `Collections Locations` search service parameter. The search collection is created in the following location:
 
-    -   If you type a name of your choice, the location for the new search collection is combined from the default directory and the name. Example: If you type my\_collection\_location, the new search collection is created under the directory `wp\_root/collections/my_collection_location`. For details about the default directory for search collections and how you configure it, refer to [Configuring the default location for search collection](../cfg_dx_search/srtcfgdfltlctsrchcllc.md) in product documentation under Portal Search.
+    -   If you type a name of your choice, the location for the new search collection is combined from the default directory and the name. Example: If you type my\_collection\_location, the new search collection is created under the directory `wp\_root/collections/my_collection_location`. For details about the default directory for search collections and how you configure it, refer to [Configuring the default location for search collection](../portal_search/administer_portal_search/srtcfgdfltlctsrchcllc.md) in product documentation under Portal Search.
     -   If you type the full directory path, the location for the new search collection is different from the default search collection location. The new search collection is created under the directory location that you specify.
 
 -   **Name of Collection**

@@ -1,6 +1,6 @@
 # Migrating from a 32-bit source environment to 64-bit target environment
 
-The 32-bit Portal installation is no longer supported in HCL Digital Experience 8.5/9.5. If you are migrating from a 32-bit source environment to a 64-bit Version 8.5/9.5 environment, you need to take extra steps to ensure that the WASPreMigration task completes successfully.
+The 32-bit Portal installation is no longer supported in HCL Digital Experience 8.5. If you are migrating from a 32-bit source environment to a 64-bit Version 8.5 environment, you need to take extra steps to ensure that the WASPreMigration task completes successfully.
 
 The binary files that are used to run the WASPreUpgrade task on the source server are typically created on the target environment. However, the remote migration package includes a Java™ JRE that matches the 64-bit architecture of the target environment, and it cannot be run on the source environment. If you attempt to use the 64-bit remote migration package on the 32-bit source environment, you are prompted with an error message that states that the 64-bit JVM cannot run on 32-bit hardware.
 

@@ -1,6 +1,6 @@
 # Enabling vanity URL support after migration
 
-In a new HCL Digital Experience 8.5/9.5 installation, vanity URL support is enabled. However, if you upgrade your Portal from a previous version to Version 8.5/9.5, vanity URL support is disabled. You can enable and disable vanity URL support as required by using a portal configuration task.
+In a new HCL Digital Experience 8.5 installation, vanity URL support is enabled. However, if you upgrade your Portal from a previous version to Version 8.5, vanity URL support is disabled. You can enable and disable vanity URL support as required by using a portal configuration task.
 
 If vanity URL support is not enabled and a user tries to access a vanity URL, the portal gives a 404 return code.
 

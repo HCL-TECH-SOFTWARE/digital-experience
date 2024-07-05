@@ -1,19 +1,19 @@
-# Author access by workflow stage
+# Author access per workflow stage
 
-Set up access for content authors so that they can create landing pages from a new page template. The page template is based on a wire frame design.
+Set up access for content authors that want to create landing pages from a new page template. The page template is based on a wire frame design.
 
 
-# Background information for the administrator: Identify the content authors' goals
+# Background information for the administrator: Identify the goals of the content authors
 
 You perform a task analysis of content authors for each stage of a workflow that you recently created.
 
-Later, you must set up access control for content authors in other authoring roles. For example, a user who does not create draft content or manage their project does not require the same access rights. Users who can review or publish content require different access rights. You plan to refer to other roadmaps for these authoring roles to understand their goals and required access for each workflow stage after you complete setting up access for the a content author group.
+You will later need set up access control for content authors in other authoring roles. For example, a user that does not create draft content or manage their project would not need the same access rights. Users that can review or publish content require different access rights. You plan to refer to other roadmaps for these authoring roles to understand their goals and required access per workflow stage once you complete setting up access for the a content author group.
 
-![An image of a flowchart that shows and describes roles for the Draft stage, Review stage, and Publish stage. Administrators need to assign Manager access to the draft stage so content authors can create a project, create content, and edit their content. Administrators need to assign Reviewer access to this stage so content authors can move draft content to the review stage. Administrators must assign User access to content authors so they can check the status of their content. Content authors wait to learn whether their drafts will move to the publish stage or be returned to the draft stage. During the Publish stage, Administrators must assign Draft Creator access to content authors so they can create drafts of published content.](../_img/rm-workflow-author.jpeg)
+![Image of a flowchart that shows and describes roles for the Draft stage, Review stage, and Publish stage. Administrators need to assign Manager access to the draft stage so content authors can create a project, create content, and edit their content. Administrators need to assign Reviewer access to this stage so content authors can move draft content to the review stage. Administrators need to assign User access to content authors to check the status of their content, since the content author is waiting to find out if their drafts will move to the publish stage or be returned to the draft stage. During the Publish stage, Administrators need to assign Draft Creator access to content authors so they can create drafts of published content.](../_img/rm-workflow-author.jpeg)
 
 # Assigning access to your Content Author Group for the Draft, Review, and Publish stages of the workflow
 
-You created a workflow named Landing Page Workflow in an earlier roadmap. Go to the Roadmaps section and find *Roadmap: Controlling who can create drafts, reviews, and publish content with workflows* for more information.
+You created a workflow named Landing Page Workflow in an earlier roadmap. Go to the Roadmaps section and find *Roadmap: Controlling who can create drafts, reviews, and publish content with workflows* for more topic information.
 
 1.  Log in to the authoring server as SiteAdmin.
 
@@ -35,13 +35,13 @@ You created a workflow named Landing Page Workflow in an earlier roadmap. Go to 
 
     4.  Click **Grant Manager Access**.
 
-    5.  Type ``Co`` in the search field and click **Search**.
+    5.  Type Co in the search field and click **Search**.
 
     6.  Select **Content Authors Group** and click **Add**. Then, click **OK**.
 
     7.  Click **Grant Reviewer Access**.
 
-    8.  Type ``Co`` in the search field and click **Search**.
+    8.  Type Co in the search field and click **Search**.
 
     9.  Select **Content Authors Group** and click **Add**. Then, click **OK**.
 
@@ -59,7 +59,7 @@ You created a workflow named Landing Page Workflow in an earlier roadmap. Go to 
 
     4.  Click **Grant User Access**.
 
-    5.  Type ``Co`` in the search field and click **Search**.
+    5.  Type Co in the search field and click **Search**.
 
     6.  Select **Content Authors Group** and click **Add**. Then, click **OK**.
 
@@ -77,7 +77,7 @@ You created a workflow named Landing Page Workflow in an earlier roadmap. Go to 
 
     4.  Click **Grant Draft Creator Access**.
 
-    5.  Type ``Co`` in the search field and click **Search**.
+    5.  Type Co in the search field and click **Search**.
 
     6.  Select **Content Authors Group** and click **Add**. Then, click **OK**.
 

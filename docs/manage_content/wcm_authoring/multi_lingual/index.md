@@ -4,7 +4,7 @@ The HCL Web Content Manager Multilingual Solution is a set of tools that are use
 
 The multilingual solution requires:
 
--   HCL Digital Experience 8.0.0.1 or later, or Web Content Manager 8.0.0.1 or later.
+-   HCL Portal 8.0.0.1 or later, or Web Content Manager 8.0.0.1 or later.
 
 See [Multilingual deployment, installation, and configuration](./mls_install/index.md) to learn more how to deploy, install, and configure the multilingual solution extensions, update and configure your system before using the HCL Web Content Manager Multilingual Solution.
 
@@ -16,10 +16,6 @@ A multilingual site consists of content that is localized to support multiple au
 Before you use the multilingual solution, you must deploy, install and configure the multilingual solution extensions, and the also update and configure your system.
 -   **[Extensions for multilingual sites Multilingual Solution](./mls_extension/index.md)**  
 The multilingual solution uses a set of extensions that can be used with existing features to author, manage, and publish your multilingual websites.
-
-## HCLSoftware U learning materials
-
-For an introduction and a demo on how to use the Web Content Manager Multilingual Solution, go to [Multilingual](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D2792). To try it out yourself, refer to [Multilingual Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-200_Multilingual_Lab.pdf) and corresponding [Multilingual Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-200_Multilingual_Lab_Resources.zip).
 
 
 ???+ info "Related information"

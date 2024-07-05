@@ -104,14 +104,14 @@ The standard Web Content Viewer portlet supports extra portlet and page display 
 !!!note
     This was new in Web Content Manager version 8.0. No action is required if migrating from Web Content Manager version 8.0 or higher.
 
-The federated documents feature of Web Content Manager is used to insert links to content from a remote content system or document repository. Examples of supported repositories include HCL Content Manager, IBM® FileNet® Content Manager, and Microsoft™ SharePoint. This capability is provided by the rich text editors in Version 8.5/9.5:
+The federated documents feature of Web Content Manager is used to insert links to content from a remote content system or document repository. Examples of supported repositories include HCL Content Manager, IBM® FileNet® Content Manager, and Microsoft™ SharePoint. This capability is provided by the rich text editors in Version 8.5:
 
 -   The default and advanced rich text editors include a toolbar button named **Insert Link to Remote Document**.
 -   In addition to the toolbar button, the advanced rich text editor includes a menu item named **Insert Link to Remote Document**.
 
 You can also use the federated documents feature with Personalization to create selection rules. Personalization is used to retrieve metadata about documents that are stored in external content management systems or document repositories. With personalization components in Web Content Manager, you can display the metadata and create links to the documents in your web content. To select remote content in the Personalization Editor, the federated documents feature provides a wizard.
 
-In Version 8.5/9.5, the capabilities of the portal theme determine whether the user interface features for Web Content Manager and Personalization are available.
+In Version 8.5, the capabilities of the portal theme determine whether the user interface features for Web Content Manager and Personalization are available.
 
 To enable the **Insert Link to Remote Content** function after migration, ensure that the `wp_federated_documents_picker` theme module is available on the migrated portal. Any page that contains the authoring portlet must use a theme that integrates this theme module. In addition, to ensure that the module is loaded, the module profile that is used by the page must include the `wp_federated_documents_picker` theme module. If the feature is disabled when you use inline editing of web content, complete these steps:
 

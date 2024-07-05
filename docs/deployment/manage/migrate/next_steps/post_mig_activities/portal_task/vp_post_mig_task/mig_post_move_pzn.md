@@ -1,6 +1,6 @@
 # Moving the personalization page
 
-After you migrate from Portal Version 7.x to HCL Digital Experience 8.5/9.5, change your theme to Version 8.5/9.5. The Personalization welcome page is in the Content application area. You can run a task to move the Personalization welcome page back to the application level.
+After you migrate from Portal Version 7.x to HCL Digital Experience 8.5, change your theme to Version 8.5. The Personalization welcome page is in the Content application area. You can run a task to move the Personalization welcome page back to the application level.
 
 !!!note
     This task is only required on the virtual portals.

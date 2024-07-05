@@ -1,6 +1,6 @@
 # Updating DB2 self-tuning memory manager (STMM) settings
 
-With the Version 8.5/9.5 release, a number of the settings have been changed to be managed by the self-tuning memory manager (STMM) engine. Change your settings to the recommended values, if there are no specific needs for the current values.
+With the Version 8.5 release, a number of the settings have been changed to be managed by the self-tuning memory manager (STMM) engine. Change your settings to the recommended values, if there are no specific needs for the current values.
 
 1.  Stop the portal server.
 

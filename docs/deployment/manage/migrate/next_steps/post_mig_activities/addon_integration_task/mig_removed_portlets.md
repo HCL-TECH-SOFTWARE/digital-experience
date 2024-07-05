@@ -1,6 +1,6 @@
 # Portlets no longer available
 
-Some portlets that were available on previous releases of HCL Portal are no longer including in Version 8.5/9.5. These portlets are not migrated as part of the HCL Portal migration process.
+Some portlets that were available on previous releases of HCL Portal are no longer including in Version 8.5. These portlets are not migrated as part of the HCL Portal migration process.
 
 Choose one of the following methods to correct any references to unsupported portlets:
 

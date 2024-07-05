@@ -22,7 +22,3 @@ The Out-of-box application object method allows you to create a Default Applicat
 The Unica Segment picker allows the user to select a value from the Unica Segment list for the condition added while writing Personalization Rules. See the link for more information.
 
 These application objects can then be used in Personalization Rules by validating the segments against the conditions for providing better Content visibility or Content Selection.
-
-## HCLSoftware U learning materials
-
-For an introduction and a demo on how to use Personalization, go to [Personalization](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D2803). To try it out yourself, refer to [Personalization Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-200_Personalization_Lab.pdf) and corresponding [Personalization Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-200_Personalization_Lab_Resouces.zip).

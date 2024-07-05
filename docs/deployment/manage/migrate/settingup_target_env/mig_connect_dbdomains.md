@@ -7,7 +7,7 @@ Review the following list before you begin.
 !!!important
     -   Copying the source portal JCR and Release domains is a recommendation but not a requirement. If you point the new portal server to the source portal domains, you cannot use the JCR and Release domains with the earlier portal server.
     -   During migration, the Community and Customization domains are upgraded to their new definitions required by the new HCL Digital Experience release. This migration might break the compatibility with the source portal server. Carefully check the requirements for the source portal server if you plan to use the earlier portal server until migration is finished.
-    -   If you are migrating from Portal Version 7 to HCL Digital Experience 8.5/9.5, be aware that there is a major schema change in the JCR database that may cause the JCR database to triple in size. Ensure that there is enough disk space for the new copies of the database when you create the new copies.
+    -   If you are migrating from Portal Version 7 to HCL Digital Experience 8.5, be aware that there is a major schema change in the JCR database that may cause the JCR database to triple in size. Ensure that there is enough disk space for the new copies of the database when you create the new copies.
     -   DB2® only: When you migrate a source portal to a target portal that uses a different driver type, reconnect all of the affected domains. For example, the source portal is using DB2 with Type 2 drivers for all domains. You plan to use a Type 4 driver type for all of the domains in your target portal. In this case, you must reconnect all of the database domains that use the connect-database command.
 
 !!!warning

@@ -3,4 +3,4 @@ nav:
     - index.md
     -   configuring_local_flexnet_entitlement_server.md
     -   entitlement_checks_scenarios.md
-    -   export_usage_report.md
+    -   local_license_server_manager.md

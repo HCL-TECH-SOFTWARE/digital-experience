@@ -1,6 +1,6 @@
 # Using staging to production techniques to complete the migration
 
-Choose this option if you want to use staging to production techniques to migrate from Portal Version 8.0.0.1 on WebSphere® Application Server Version 8.5.5.2 to HCL Digital Experience 8.5/9.5.
+Choose this option if you want to use staging to production techniques to migrate from Portal Version 8.0.0.1 on WebSphere® Application Server Version 8.5.5.2 to HCL Digital Experience 8.5.
 
 You can set up a staging server with a Portal 8.0.0.1 and WebSphere Application Server 8.0.0.5 installation, and use the staging to production tools to create a new environment that is based on the source environment.
 
@@ -8,7 +8,7 @@ You can set up a staging server with a Portal 8.0.0.1 and WebSphere Application 
 
 2.  Use the HCL Portal staging to production tools to deploy a stand-alone server that is based on the source server.
 
-3.  Install the HCL Digital Experience 8.5/9.5 and WebSphere Application Server 8.5.5.12/9.0.5 binary files on the target server.
+3.  Install the HCL Digital Experience 8.5 and WebSphere Application Server 8.5.5.2 binary files on the target server.
 
 4.  Access the Configuration Wizard on the target server, and click **Migrate to a New Version > Migrate a Stand-alone Server**.
 

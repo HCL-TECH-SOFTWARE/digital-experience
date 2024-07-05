@@ -17,6 +17,6 @@ Complete the following steps on your source HCL Portal profile.
 3.  Delete the Portal_V8_profile/paa/wcm.wcs.integrator.paa directory.
 
 
-When migration is complete, you can install the 8.5/9.5 version of the PAA file.
+When migration is complete, you can install the 8.5 version of the PAA file.
 
 

@@ -1,6 +1,6 @@
 # Migration: Blogs and wikis
 
-After you migrate from HCL Portal Versions 7.0 or 8.0 to Version 8.5/9.5, you must run a configuration task to update the presentation templates that are used by blogs and wikis to apply the latest updates. You must run this task for content in your blogs and wikis to render properly.
+After you migrate from HCL Portal Versions 7.0 or 8.0 to Version 8.5, you must run a configuration task to update the presentation templates that are used by blogs and wikis to apply the latest updates. You must run this task for content in your blogs and wikis to render properly.
 
 If you customized your blogs and wiki, you will lose your customizations and you must reapply those customizations after you run the task.
 

@@ -1,6 +1,6 @@
 # Staying logged in when switching URI
 
-If you migrated from Version 8.0.0.1, the default portal behavior was to log you out when you switched from a protected to unprotected URI. In Version 8.5/9.5, the default behavior is to keep you logged in. If you do not want to get logged out, you can enable the Version 8.5/9.5 default behavior.
+If you migrated from Version 8.0.0.1, the default portal behavior was to log you out when you switched from a protected to unprotected URI. In Version 8.5, the default behavior is to keep you logged in. If you do not want to get logged out, you can enable the Version 8.5 default behavior.
 
 1.  Access the WebSphere® Integrated Solutions Console.
 

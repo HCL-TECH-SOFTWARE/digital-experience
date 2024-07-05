@@ -1,6 +1,6 @@
 # Tag and Search Center pages
 
-When you migrate to HCL Digital Experience Version 8.5/9.5, the migration process does not apply the Portal 8.5 theme to all portal pages. For example, this affects the Tag and Search Center pages. To continue to use your Tag Center and Search Center pages, you must update the theme for the pages to the Version 8.5 theme. You must also update the profile of the pages to the Search and Tag Center profile.
+When you migrate to HCL Digital Experience Version 8.5, the migration process does not apply the Portal 8.5 theme to all portal pages. For example, this affects the Tag and Search Center pages. To continue to use your Tag Center and Search Center pages, you must update the theme for the pages to the Version 8.5 theme. You must also update the profile of the pages to the Search and Tag Center profile.
 
 Ensure that the Portal 8.5 theme is set for your Tag and Search Center pages before completing the following procedure.
 

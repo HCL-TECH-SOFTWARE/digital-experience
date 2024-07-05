@@ -35,7 +35,7 @@ jobs:
       # Install python pre-reqs
       - name: Install Mkdocs and pre-reqs
         run: |
-          pip install mkdocs-material==9.5.6
+          pip install mkdocs-material==8.5.11
           pip install mkdocs-awesome-pages-plugin
           pip install mkdocs-git-revision-date-localized-plugin
           pip install mike

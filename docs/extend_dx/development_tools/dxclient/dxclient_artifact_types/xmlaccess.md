@@ -81,5 +81,3 @@ Log files from command execution can be found in the logs directory of the DXCli
 !!! note 
     The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
 
-For information on how to use the XML configuration interface, see [About the XML configuration interface](../../../../deployment/manage/portal_admin_tools/xml_config_interface/adxmlabt.md).
-

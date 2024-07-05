@@ -1,4 +1,4 @@
-# Applying the Portal 8.5 theme to your Portal pages
+# Applying the new theme to your Portal pages
 
 Custom portal resources, such as themes and skins, are migrated automatically. The Portal 8.5 theme is also deployed when migration is complete. However, you must complete extra steps to apply the theme to your pages.
 

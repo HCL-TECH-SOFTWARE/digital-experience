@@ -19,8 +19,4 @@ Learn about the WML tags used by the portlets within the Struts Application Fram
 -   **[Application extension registry](extension.md)**  
 HCL Digital Experience provides an application extension registry which is equivalent to the application extension registry provided by IBM WebSphere Application Server. This registry allows any J2EE compliant application to define extension points for other applications to use, or to plug in to other extensible applications.
 
-## HCLSoftware U learning materials
-
-For an introduction and a demo on developing Java portlets, go to [Java Portlet Development](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D2784). To try it out yourself, refer to [DX JSP Portlet Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-300_DX_JSP_Portlet_Development_Lab.pdf).
-
 
