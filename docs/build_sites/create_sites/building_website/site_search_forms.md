@@ -15,11 +15,11 @@ Learn about the initial considerations for setting up search for site visitors b
 
 -   **How do you want to return search results when a site visitor runs a search?**
 
-    The results of a search on HCL Portal collections are displayed in the Search Center by default. The Search Center is wired together with the search form in standard themes included with HCL Portal. However, you can use the Search Results page template to create a search landing page that displays a list of search results when a site visitor runs a search query. The search landing page that you create can be placed anywhere in your site. Search results are automatically displayed on the new search landing page instead of in the Search Center.
+    The results of a search on HCL Digital Experience (DX) collections are displayed in the Search Center by default. The Search Center is wired together with the search form in standard themes included with HCL DX. However, you can use the Search Results page template to create a search landing page that displays a list of search results when a site visitor runs a search query. The search landing page that you create can be placed anywhere in your site. Search results are automatically displayed on the new search landing page instead of in the Search Center.
 
 -   **Do you need to index documents of various formats, such as PDFs?**
 
-    If so, you must install and configure Document Conversion Services \(DCS\). This third-party software is included with HCL Portal. DCS converts various types of documents into a format that can be consumed and processed by the search engine. DCS is needed in order for attachments to be indexed and appear in search results.
+    If so, you must install and configure Document Conversion Services \(DCS\). This third-party software is included with HCL DX. DCS converts various types of documents into a format that can be consumed and processed by the search engine. DCS is needed in order for attachments to be indexed and appear in search results.
 
 -   **Which search service suits your business and website needs?**
 

@@ -20,6 +20,7 @@ You can edit an existing markup type and its locale-specific settings.
         -   theme\_web\_module\_root\_path/themes/MathML
         -   theme\_web\_module\_root\_path/skins/MathML
         -   theme\_web\_module\_root\_path/screens/MathML
+        
         For this reason, avoid characters in the markup name that might cause conflicts in file or path names, such as / , \\ , . , or & . The markup name also acts as default title for those languages where no locale-specific title has been set.
 
     2.  **MIME type:** Required. Enter the MIME type associated with this markup.
