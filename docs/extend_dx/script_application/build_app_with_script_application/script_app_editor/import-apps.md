@@ -45,6 +45,7 @@ You can add only the following Web Content Manager tags to the main .html file. 
     Example: `[Plugin:PageMode pageMode="EDIT"]Edit mode is ON[/Plugin:PageMode]`
 
 []()
+
 1.  Turn on **Edit** mode.
 
 2.  Open the site toolbar and click **Create** \> **Applications**.
