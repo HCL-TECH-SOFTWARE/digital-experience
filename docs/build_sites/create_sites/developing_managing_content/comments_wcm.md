@@ -20,7 +20,7 @@ Note that this solution is not related to the existing comments for blogs/wikis 
 
 ### Enabling the comments plugin in WAS Console 
 
-To make the comments plugin visible in the plugin component tag which should be added to presentation template, you must first add the configuraton in WAS Console. In WAS Console, go to **Resources > Resources Environment Providers > WCM_WCMConfigService > Custom properties > New Property**. Enter the following details:
+To make the comments plugin visible in the plugin component tag which should be added to presentation template, you must first add the configuration in WAS Console. In WAS Console, go to **Resources > Resources Environment Providers > WCM_WCMConfigService > Custom properties > New Property**. Enter the following details:
 
 - Name: enable.comment.plugin
 - Value: true
@@ -52,6 +52,7 @@ For security purposes, if you need to limit the delete comments option to a spec
 2. In the **Presentation Template Options**, click the **Insert Tag** button to add the custom plugin.
 
 3. In the **Insert Tag** window, select the following values:
+
     - In **Select a tag type** field, select **Plugin Component**.
     - In **Select a plugin type** field, select **Content**.
     - In **Select plugin to reference** field, select **NewCommentRenderPlugin**. 
@@ -67,6 +68,7 @@ For security purposes, if you need to limit the delete comments option to a spec
         You can specify the library you want to use for storing comments in the commentsLibrary field.
 
 6. Set up and view the Comments UI on the page. 
+
     1. Click **Create Page** and add the content created in Step 5. 
     2. Using the Web Content Viewer portlet, select the content to render.
     3. Click **OK**.
@@ -135,6 +137,7 @@ After setting up the page component with comments UI on the page, actions such a
 2. In the **Rich Text Editor**, click the **Insert Tag** button to add the WCM tag.
 
 3. In the **Insert a Tag** window, select the following values:
+
     - In **Select a tag type** field, select **Content**.
     - In **Select item context** field, select **Selected**.
     - In **Select the content item to reference** field, select **New Comments content under WCM Comments 1.0/Page Component**. 
@@ -162,7 +165,9 @@ After configuring the WCM comments HTML markup component in the Rich Text Editor
 ![Add Script Application to Page](../developing_managing_content/_img/script_application.png)
 2. Click **Edit > Actions > Insert WCM Tag**. The **Insert a Tag** window appears.
 ![Insert WCM Tag](../developing_managing_content/_img/insert_wcm_tag.png)
+
 3. In the **Insert a Tag** window, select the following values:
+
     - In **Select a tag type** field, select **Content**.
     - In **Select item context** field, select **Selected**.
     - In **Select the content item to reference** field, select **New Comments content under WCM Comments 1.0/Page Component**. 
@@ -251,7 +256,7 @@ Only authorized users can view, edit, and delete the comments in the library whe
 The actions available for a user depend on their role:
 
 - The **User** role or higher is required to see the comments.
-- The **Contributor** role or higher is required to create comments.
+- The **Editor** role or higher is required to create comments.
 - The **Manager** role or higher is required to delete comments. In addition to the Manager role, you can configure a specific group solely for deleting comments.
 
 ## Limitations
@@ -264,6 +269,19 @@ The actions available for a user depend on their role:
 ## Update global "Article" presentation template
 
 If you want to perform a replacement of the OOB components that are shipped, see [Adding the sample web content libraries in the authoring portlet](../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/getting_started/creating_contentsamples/wcm_delivery_ctsamples_libraries.md).
+
+## CSRF protection for adding and deleting comments
+
+Starting CF217, you can enable Cross-Site Request Forgery (CSRF) tokens to be utilized when creating or deleting a comment to prevent possible CSRF attacks. The feature is disabled by default and can be enabled through the WAS Console. Note that a request without a valid CSRF token will fail.
+
+To enable CSRF tokens, go to the WAS Console and navigate to to **Resources > Resources Environment Providers > WCM_WCMConfigService > Custom properties > New Property**. Enter the following details:
+
+- Name: wcm.csrf.comments.enabled
+- Value: true
+- Type: String
+
+!!!important
+    After adding the configuration, a JVM restart is required.
 
 ## Cleaning up orphaned comments data stored in the library
 

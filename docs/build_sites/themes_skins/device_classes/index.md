@@ -16,7 +16,7 @@ The mvc:URI scheme is a special URI format that accesses different resources, de
 4.  [Creating and deleting device classes](themeopt_devclass_working.md)  
 You can create and delete device classes using the XML configuration interface.
 5.  [Assigning device classes](../device_classes/assigning_device_classes/index.md)  
-The process of assigning a device class to one of the supported clients in HCL Portal. Usually, when a certain device class needs to be supported, the first step is to create client definitions for each of the devices that belong to this class. Then, you create a device class and assign the device class to the clients. The assignment of device classes on clients is done in the Supported Clients administration section, using a specific capability on the client.
+The process of assigning a device class to one of the supported clients in HCL Digital Experience. Usually, when a certain device class needs to be supported, the first step is to create client definitions for each of the devices that belong to this class. Then, you create a device class and assign the device class to the clients. The assignment of device classes on clients is done in the Supported Clients administration section, using a specific capability on the client.
 6.  [Device class equations](themeopt_devclass_equat.md)  
 Device class equations are expressions that involve a mixture of device class operands and Boolean logic operators.
 

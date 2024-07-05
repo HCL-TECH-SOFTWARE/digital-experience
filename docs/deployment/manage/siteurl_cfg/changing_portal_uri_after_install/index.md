@@ -7,8 +7,8 @@ If you are on Combined Cumulative Fix 7 or earlier, go to [CF07 and earlier: Cha
 HCL Digital Experience and Web Services for Remote Portlets are installed with a default URI. You can change this URI after installation to better suit the requirements of your organization.
 
 !!!note "Notes"
--   To change the HCL Digital Experience URI: When you specify the context root, do not specify a value that is the same as a directory that exists in a portlet WAR directory. For example, you set the HCL Digital Experience context root to /images. There is a portlet with the directory structure /myPortlet.ear/myPortlet.war/images. This issue might cause a conflict if the portlet encodes URI references to resources in its own /images directory. In this situation, the portlet would be unable to display images. HCL Digital Experience looks for the image resources according to its own context root path instead of the directory path that is specified by the portlet WAR file.
--   For changing the URI of a WSRP Producer portal: Changing the WSRP Producer context root does not require that you redeploy all portlets. Run the modify-servlet-path configuration task only.
+    -   To change the HCL Digital Experience URI: When you specify the context root, do not specify a value that is the same as a directory that exists in a portlet WAR directory. For example, you set the HCL Digital Experience context root to /images. There is a portlet with the directory structure /myPortlet.ear/myPortlet.war/images. This issue might cause a conflict if the portlet encodes URI references to resources in its own /images directory. In this situation, the portlet would be unable to display images. HCL Digital Experience looks for the image resources according to its own context root path instead of the directory path that is specified by the portlet WAR file.
+    -   For changing the URI of a WSRP Producer portal: Changing the WSRP Producer context root does not require that you redeploy all portlets. Run the modify-servlet-path configuration task only.
 
 !!!important
     With Version 8, the URI of the context root for the WSRP Producer is `/wps/wsrp`. Before Version 8, this context root was `/wsrp`. If you migrated from an earlier version, you still might have WSRP Consumers that attempt to access the WSRP Producer with the previous context root (`/wsrp`). You can correct this issue in one of the following ways:
@@ -158,8 +158,20 @@ HCL Digital Experience and Web Services for Remote Portlets are installed with a
     |Cluster type|Steps|
     |------------|-----|
     |Static clusterIdle standby|Complete the following steps if you have a static clusteran idle standby environment:  <br>  1.  Open the deployment manager WebSphere Integrated Solutions Console. <br> 2.  Click **System Administration > Nodes**, select the primary node from the list, and click **Full Resynchronize**. <br> 3.  Click **Servers > Clusters**.<br> 4.  Select the cluster and click **Stop**. <br>5.  After the cluster stops, restart it by selecting the cluster. Then, click **Start**.|
-    |Dynamic cluster|Complete the following steps if you have a dynamic cluster:  <br>  1.  Open the deployment manager WebSphere Integrated Solutions Console.<br> 2.  Click **System Administration > Nodes**, select the primary node from the list, and click **Full Resynchronize**. <br> 3.  Click **Servers > Dynamic Clusters**.<br> 4.  Click the dynamic cluster that you want to stop and restart. <br> 5.  Click **Dynamic cluster members**. <br>
-    6.  Select the member name that you want to stop and then click **Stop**. <br> 7.  Select the member name that you want to start and then click **Start**.|
+    |Dynamic cluster|Complete the following steps if you have a dynamic cluster:  <br>  1. Open the deployment manager WebSphere Integrated Solutions Console.<br> 2. Click **System Administration > Nodes**, select the primary node from the list, and click **Full Resynchronize**. <br> 3. Click **Servers > Dynamic Clusters**.<br> 4. Click the dynamic cluster that you want to stop and restart. <br> 5. Click **Dynamic cluster members**. <br> 6. Select the member name that you want to stop and then click **Stop**. <br> 7. Select the member name that you want to start and then click **Start**.|
+
+8.  (For hybrid deployment only) After adjusting the context root of the Digital Experience URI, you must adjust the Kubernetes deployment to align. To do this, adjust the `custom-values.yaml` that you are using for your Helm deployment. See [Custom value files](../../../install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md#custom-value-files) for more information.
+
+    In `custom-values.yaml` file, you can configure the following section:
+    
+    ```yaml
+    core:
+      contextRoot: wps
+      home: portal   
+      personalizedHome: myportal 
+    ```
+
+Now, perform a helm upgrade to apply these new values. See [Overview of Helm Configuration Updates](../../../install/container/helm_deployment/update_helm_deployment.md) for details.
 
 ???+ info "Related information" 
     -   [Accessing the Configuration Wizard](../../../manage/portal_admin_tools/cfg_wizard/configuration/cw_run.md)<br>

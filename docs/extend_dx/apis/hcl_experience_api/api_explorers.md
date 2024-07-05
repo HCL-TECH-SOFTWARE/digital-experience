@@ -17,7 +17,10 @@ This section shows the DX REST API explorers available for use with deployments 
 |[Remote Model API](https://opensource.hcltechsw.com/experience-api-documentation/remotemodel-api/)|/dx/api/remotemodel/v1/explorer|Shows the develop entry points to the various models for pages, layouts, and more.|Atom XML format. Support for more endpoints are planned in upcoming releases. See the [Digital Experience Portal Remote Model REST API Explorer](../model_spi/remote_model_rest_api.md) Help Center topic for more information.|
 |[Search API](https://opensource.hcltechsw.com/experience-api-documentation/search-api/)|/dx/api/search/v1/explorer|Shows the developer entry points to search (like text or keyword searches).|Atom XML format. See the [Search REST API specification](../../../build_sites/search/search-rest-api/index.md) Help Center topic for more information.|
 |[Users and Groups API](https://opensource.hcltechsw.com/experience-api-documentation/users-api/)|/dx/api/users/v1/explorer|Shows the developer entry points to the users and groups.|Atom XML format. See the [Remote REST service for PUMA](../puma_spi/remote_rest_service_for_puma/index.md) Help Center topic for more information.|
-|[WCM API](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/)|/dx/api/wcm/v2/explorer|Shows the updated set of entry points to the Web Content Manager (WCM).|JSON format. Currently in beta stage as support for more WCM artifacts are added.See the [REST service for Web Content Manager](../../../manage_content/wcm_development/wcm_dev_api/index.md) Help Center topic for more information.
+|[WCM API](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/)|/dx/api/wcm/v2/explorer|Shows the updated set of entry points to the Web Content Manager (WCM).|JSON format. See the [REST service for Web Content Manager](../../../manage_content/wcm_development/wcm_rest/index.md) Help Center topic for information about V1 APIs. The V2 APIs are available and out of beta starting CF217. See [Getting started with the REST service for Web Content Manager V2](../../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md) for more information.|
+
+
+
 
 
 

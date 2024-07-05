@@ -1,8 +1,8 @@
 # Importing federated tags and resources
 
-When tags from remote systems, such as HCL Connections are integrated into HCL Portal, you need to schedule a task to retrieve the tags and related data from the remote system.
+When tags from remote systems, such as HCL Connections are integrated into HCL Digital Experience (DX), you need to schedule a task to retrieve the tags and related data from the remote system.
 
-To retrieve tags and related resource for federation, schedule a task named `com.ibm.wps.cp.tagging.federation.taskhandler.FederationTaskHandler` HCL Portal by using the XML configuration interface \(XMLAccess\). In the following example, the XML task triggerTask.xml is scheduled to run the task `com.ibm.wps.cp.tagging.federation.taskhandler.FederationTaskHandler` once a day:
+To retrieve tags and related resource for federation, schedule a task named `com.ibm.wps.cp.tagging.federation.taskhandler.FederationTaskHandler` HCL DX by using the XML configuration interface \(XMLAccess\). In the following example, the XML task triggerTask.xml is scheduled to run the task `com.ibm.wps.cp.tagging.federation.taskhandler.FederationTaskHandler` once a day:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>

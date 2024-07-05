@@ -49,7 +49,9 @@ You can readd the All Sources scope only if this scope does not exist in the cur
 
 1.  In the navigation click **Resources** \> **Resources Environment** \> **Resource Environment Providers**.
 2.  Make the appropriate selection, depending on your portal environment:
+
     -   In the Resource Environment Providers page, select the appropriate node or cluster from the scopes drop-down list, or uncheck the Show Scope selection drop-down check box and select one of the following options, depending on your portal environment:
+    
         -   If your portal is running as a single server, select **Browse Nodes** and select the node.
         -   If your portal is installed in a cluster, select **Browse Clusters** and select the portal cluster.
 
@@ -76,6 +78,6 @@ You can readd the All Sources scope only if this scope does not exist in the cur
 
 
 ???+ info "Related information"
-    - [Configuring search scopes for the Search Center portlet](../cfg_searchcenter/srtcfg_sc_scopes.md)
+    - [Configuring search scopes for the Search Center portlet](../../../cfg_dx_search/cfg_searchcenter/srtcfg_sc_scopes.md)
     - [WebSphere® Integrated Solutions Console](../../../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
 

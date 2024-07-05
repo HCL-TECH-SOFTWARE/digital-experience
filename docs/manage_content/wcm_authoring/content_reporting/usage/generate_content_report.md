@@ -4,7 +4,7 @@ This section details how to generate a content report in HCL Content Reporting.
 
 ## Prerequisites
 
-- Content Reporting should be installed and configured in HCL Digital Experience 9.5 release update CF213 or higher. For instructions on installing Content Reporting on supported environments, see the [Install HCL Digital Experience 9.5 Content Reporting](../installation/index.md) topic.
+- Beginning with HCL Digital Experience 9.5 release update CF214, Content Reporting is enabled by default. For HCL Digital Experience 9.5 release update CF213, Content Reporting should be installed and configured. For instructions on installing Content Reporting manually on supported environments, see the [Installing HCL Digital Experience 9.5 Content Reporting](../installation/index.md) topic.
 
 - Configure a JCR search collection to get valid search results. When you create a content item and then try to generate a report using the **Phrase** or **Word** criterion without running the seedlist crawler manually or waiting for its next scheduled crawl, the generated report will not include the item you created. Refer to [Setting up a JCR search collection](../../../../build_sites/search/portal_search/administer_portal_search/setup_search_collections/jcr_search_collections/index.md) for more information.
 
@@ -40,17 +40,23 @@ A report is a list of items that matches a set or combined sets of criteria. Con
 
     - **Owner**
 
-        Selecting the **Owner** criterion adds the **User** field, a typeahead input field where you can select the owners of the items you want included in your report. The list of matched users is displayed as auto-suggested options according to the input value as you type. Only the suggested users are considered valid inputs. At least one of the suggested users must be selected to finish setting up the criteria. A checkmark appears to the left of the selected user to indicate that it has been selected. 
-        
+        When you select the **Owner** criterion, four input fields appear: **User attribute**, **Users**, **Group attribute** and **Groups**.
+
+        Selecting any attribute from user or group attributes enables the **Users** or **Groups** field respectively. **Users** and **Groups** are type-ahead input fields where you can select the users or groups as owner of the items you want included in your report. The list of matched users or groups is displayed as auto-suggested options depending on the selected user or group attribute and the input value as you type. Only suggested users or groups are valid values.
+
+        You must select at least one of the suggested users or groups to finish setting up the criteria. A checkmark appears to the left of the selected user or group to indicate that it has been selected.
+
         ![](../../../../assets/HCL_Content_Reporting_Owner_Criteria.png)
     
     - **Author**
 
-        Selecting the **Author** criterion adds the **User** field, a typeahead input field where you can select the authors of the items you want included in your report. The list of matched users is displayed as auto-suggested options according to the input value as you type. Only the suggested users are considered valid inputs. At least one of the suggested users must be selected to finish setting up the criteria. A checkmark appears to the left of the selected user to indicate that it has been selected. 
-        
-        ![](../../../../assets/HCL_Content_Reporting_Author_Criteria.png)
+        When you select the **Author** criterion, four input fields appear: **User attribute**, **Users**, **Group attribute** and **Groups**.
 
-        
+        Selecting any attribute from user or group attributes enables the **Users** or **Groups** field respectively. **Users** and **Groups** are type-ahead input fields where you can select the users or groups as author of the items you want included in your report. The list of matched users or groups is displayed as auto-suggested options depending on the selected user or group attribute and the input value as you type. Only the suggested users or groups are valid values.
+
+        You must select at least one of the suggested users or groups to finish setting up the criteria. A checkmark appears to the left of the selected user or group to indicate that it has been selected.
+
+        ![](../../../../assets/HCL_Content_Reporting_Author_Criteria.png)
 
     - **Item type**
 
@@ -95,8 +101,6 @@ A report is a list of items that matches a set or combined sets of criteria. Con
 
 - To sort the search results, hover over the column header of the field with which you want to sort. An Arrow icon appears with a tooltip indicating that this icon is used to sort the results. Click the Arrow icon to sort the search results according to your preference. This icon remains visible to indicate the last sort used.
     
-    ![](../../../../assets/HCL_Content_Reporting_Search_Results_PreSort.png)
-
     ![](../../../../assets/HCL_Content_Reporting_Search_Results_PostSort.png)
 
 - To change the number of rows per page of the search results, select from the options in the **Show rows:** dropdown menu.
@@ -115,6 +119,6 @@ A report is a list of items that matches a set or combined sets of criteria. Con
     
     ![](../../../../assets/HCL_Content_Reporting_Remove_Criteria.png)
 
-- To remove multiple selected criteria, click the **Clear** button.
+- To remove all selected criteria, click the **Clear** button.
     
     ![](../../../../assets/HCL_Content_Reporting_Clear_Criteria_Options.png)

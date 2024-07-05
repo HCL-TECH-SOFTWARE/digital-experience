@@ -1,4 +1,4 @@
-# Embedding the HCL Portal 8.5 site toolbar dynamically without a dynamic content spot
+# Embedding the HCL Digital Experience 8.5/9.5 site toolbar dynamically without a dynamic content spot
 
 Embedding a toolbar into a theme dynamically integrates the toolbar without editing the theme HTML template.
 
@@ -26,5 +26,5 @@ Embedding a toolbar into a theme dynamically integrates the toolbar without edit
 ???+ info "Related information" 
     -   [Adding or removing a module from a profile](../../../../../../../build_sites/themes_skins/the_module_framework/add_remove_oob_modules/index.md)
     -   [Using WebDAV file store](../../../../../../../manage_content/wcm_delivery/webdav/administer_webdav/mash_webdav_store.md)
-    <!-- -   [Setting a profile override on a page](../dev-theme/themeopt_cust_changepro_override.md) -->
+  
 

@@ -1,5 +1,6 @@
 nav:
     - index.md
-    - Generate Content Report: generate_content_report.md
-    - Export Report: export_content_report.md
-    - Bulk Update: bulk_update_report.md
+    - Generating a content report: generate_content_report.md
+    - Exporting a report: export_content_report.md
+    - Performing a bulk update: bulk_update_report.md
+    - Bookmarking: bookmarking_content_report.md

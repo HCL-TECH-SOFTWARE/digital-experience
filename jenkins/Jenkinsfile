@@ -44,6 +44,7 @@ pipeline {
                         docker cp ${SSH_KEY} doc-builder:/root/.ssh/id_rsa
                         docker exec doc-builder /bin/bash -c 'microdnf install -y openssh-clients && ssh-keygen -p -P ${SSH_PASS} -N "" -f /root/.ssh/id_rsa'
                         docker cp ${WORKSPACE}/jenkins/helpers/01-publish-doc.sh doc-builder:/build
+                        docker cp ${WORKSPACE}/requirements.txt doc-builder:/build
                         docker exec doc-builder /bin/bash /build/01-publish-doc.sh --publish true --version ${BUILD_VERSION}
                     """
                 }

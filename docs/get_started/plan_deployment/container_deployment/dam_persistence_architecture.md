@@ -1,6 +1,6 @@
 # Digital Asset Management persistence
 
-This topic describes the components of the Digital Asset Management persistence. The updated DAM persistence feature is available from HCL Digital Experience 9.5 Container Update CF198 and later.
+This topic describes the components of the Digital Asset Management (DAM) persistence. The updated DAM persistence feature is available with HCL Digital Experience (DX) 9.5 Container Update CF198 and later.
 
 ![Digital Asset Management persistence component architecture](../../../images/dam_persistence_components.png "DAM persistence components")
 
@@ -8,13 +8,13 @@ This topic describes the components of the Digital Asset Management persistence.
 
 ## `persistence-node`
 
-`persistence-node` provides the database functionality for HCL Digital Asset Management [HCL Digital Asset Management](../../../manage_content/digital_assets/index.md). The `persistence-node` is a DX [Red Hat Universal Base Image \(UBI\)](https://www.redhat.com/en/blog/introducing-red-hat-universal-base-image) container image installed with PostgreSQL and the Replication Manager Service. [`repmgr`](https://repmgr.org/) is an open-source tool suite for managing replication and failover in a cluster of PostgreSQL servers. `repmgr` enhances the built-in hot-standby capabilities of PostgreSQL with tools to set up standby servers, monitor replication, and perform administrative tasks, such as failover or manual switchover operations.
+The `persistence-node` provides the database functions for HCL Digital Asset Management [HCL Digital Asset Management](../../../manage_content/digital_assets/index.md). The `persistence-node` is a DX [Red Hat Universal Base Image \(UBI\)](https://www.redhat.com/en/blog/introducing-red-hat-universal-base-image) container image installed with PostgreSQL and the Replication Manager Service. The [`repmgr`](https://repmgr.org/) is an open-source tool suite for managing replication and failover in a cluster of PostgreSQL servers. The `repmgr` enhances the built-in hot-standby capabilities of PostgreSQL with tools to set up standby servers, monitor replication, and perform administrative tasks, such as failover or manual switchover operations.
 
-In case of PostgreSQL master server failure, the `repmgr` service switches the server role from master to standby.
+In case of PostgreSQL master server failure, the `repmgr` service switches the server role from primary to standby.
 
-The `persistence-node` configurations are available in the Helm Chart [values.yaml](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md) file as `persistenceNode`.
+The `persistence-node` configurations are available in the Helm chart [values.yaml](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md) file as `persistenceNode`.
 
-The administrator can configure number of `persistence-node` under `scaling` configuration.
+The administrator can configure the number of `persistence-nodes` under `scaling` configuration.
 
 ```yaml
 # Scaling settings for deployed applications
@@ -27,9 +27,9 @@ scaling:
 
 !!! note
 
-    Scaling affects only the read requests and ensures fail-over capabilities. Write requests are always directed only to the primary pod.
+    Scaling affects only the read requests and ensures failover capabilities. Write requests are always directed only to the primary pod.
 
-The `persistence-node` is a stateful application and it requires a volume. The configuration must have a dynamic volume class to start the container. The `storageClassName` and `storage` must be updated according to the cloud service provider and project requirement.
+The `persistence-node` is a stateful application and it requires a volume. The configuration must have a dynamic volume class to start the container. You must update the `storageClassName` and `storage`  according to the cloud service provider and project requirements.
 
 ```yaml
 volumes:
@@ -45,14 +45,14 @@ volumes:
 ```
 ## `persistence-connection-pool`
 
-The `persistence-connection-pool` container runs the [Pg-pool](https://www.pgpool.net/mediawiki/index.php/Main_Page) service. Pg-pool is a middleware that works between `persistence-node` and HCL Digital Asset Management [HCL Digital Asset Management](../../../manage_content/digital_assets/index.md).
+The `persistence-connection-pool` container runs the [Pg-pool](https://www.pgpool.net/mediawiki/index.php/Main_Page) service. Pg-pool is middleware that works between `persistence-node` and HCL Digital Asset Management [HCL Digital Asset Management](../../../manage_content/digital_assets/index.md).
 
-The service provides:
+The service provides the following services:
 
 -   Connection pooling
 -   Load balancing
 
-For better performance, administrator can scale the `persistence-connection-pool` to more than one pod. The `persistence-connection-pool` configurations are available in Helm Chart [values.yaml](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/probes_configuration.md) file as `persistenceConnectionPool`.
+For better performance, the administrator can scale the `persistence-connection-pool` to more than one pod. The `persistence-connection-pool` configurations are available in Helm chart [values.yaml](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/probes_configuration.md) file as `persistenceConnectionPool`.
 
 ```yaml
 # Scaling settings for deployed applications
@@ -63,9 +63,32 @@ scaling:
     persistenceNode: 3
 ```
 
-The following is an example of a persistence cluster in a successful deployment.
+The following example shows a persistence cluster in a successful deployment.
 
 ![](../../../images/cluster_status_example.png "Persistence cluster in a successful deployment")
+
+## PostgreSQL version upgrade
+
+PostgreSQL version 11 (PG 11) is no longer supported. Starting CF220, the persistence node containing the PostgreSQL DB is upgraded from version 11 to 16. This happens automatically as soon as CF220 or later versions deploy for the first time. Along with PostgreSQL, `repmgr` is also updated to version 5.2.1. Before upgrading from pre-CF220 to CF220 or later, make sure to back up the database dump. Refer to [Backup Persistence](../../../manage_content/digital_assets/dam_backup_restore_image.md#backup-persistence) for instructions on exporting the dump.
+
+During the upgrade, note that the data directory of PG 11 is not removed. To remove the data directory after upgrading to the latest CF, refer to the following instructions. Make sure to change the pod name accordingly and execute the commands for all persistence pods.
+
+1. Navigate to the persistence pod using the following command:
+
+    ```
+      kubectl -n dxns exec -it dx-deployment-persistence-node-0 bash
+    ```
+
+2. Remove the PG 11 data directory by running the following command:
+
+    ```
+     rm -rf '/var/lib/pgsql/11/data/dx'
+    ```   
+
+    !!! note
+         Be cautious when deleting the PG 11 data directory. The mount path for PostgreSQL is `/var/lib/pgsql/11/data`; the PG 16 data folder is available in parallel to DX. Wrongful deletion could cause the entire data to be removed.
+
+In case of upgrade failure, rollback to the previous CF version and reach out to [HCL Software Customer Support](https://support.hcltechsw.com/csm?id=csm_index) for assistance.
 
 ???+ info "Related information"
     - [HCL Digital Asset Management](../../../manage_content/digital_assets/index.md)

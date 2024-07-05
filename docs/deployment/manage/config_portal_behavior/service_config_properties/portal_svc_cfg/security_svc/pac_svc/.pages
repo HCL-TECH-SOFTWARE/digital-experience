@@ -3,3 +3,4 @@ nav:
     - index.md
     - srvcfgref_secy_pac_datamgmt.md
     - srvcfgref_ext_acctrl.md
+    - AuditingService.md

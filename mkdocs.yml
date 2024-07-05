@@ -14,10 +14,12 @@ theme:
     - navigation.indexes
     - navigation.top
     - navigation.instant
+    - navigation.prune
     - search.highlight
     - search.share
     - search.suggest
     - navigation.prune
+    - content.code.copy
   custom_dir: theme_overrides/
   icon:
     repo: fontawesome/brands/github
@@ -32,10 +34,20 @@ theme:
 
 # Markdown Extensions
 markdown_extensions:
+  - pymdownx.highlight:
+      use_pygments: true
+      pygments_lang_class: true
+      auto_title: false
+      linenums: false
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
   - attr_list
+  - md_in_html
   - pymdownx.tabbed:
       alternate_style: true 
   - pymdownx.emoji:
@@ -46,7 +58,7 @@ markdown_extensions:
 
 # Copyright
 copyright: >-
-  Copyright &copy; 2023, HCL Technologies Limited - 
+  Copyright &copy; 2019-2024, HCL Technologies Limited - 
   <a href="#__consent">Change cookie settings</a>
 
 extra:
@@ -68,11 +80,15 @@ edit_uri: edit/main/docs
 extra_css:
   - assets/stylesheets/style.css
 
+extra_javascript:
+  - javascripts/extra.js
+
 plugins:
   - awesome-pages
   - search
   - tags
   - mike:
       canonical_version: latest
+      alias_type: redirect
   - git-revision-date-localized:
       type: date

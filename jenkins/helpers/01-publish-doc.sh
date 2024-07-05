@@ -50,7 +50,7 @@ make install
 cd ~
 
 # Install mkdocs
-pip3 install mkdocs-material==9.1.21 mike mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin mkdocs-minify-plugin pytz
+pip3 install -r /build/requirements.txt
 
 # Chmod private key for Git Access
 chmod -R 600 /root/.ssh/id_rsa
@@ -78,7 +78,9 @@ if [ "$publish" == true ]; then
     git config --global user.name hcl-digital-experience
     git config --global user.email notarealemail@hcl.dx
     mike set-default latest
-    mike deploy -u $version --push
+    # For the internal build (on jenkins) we use the redirect alias_type. 
+    # This is necessary because symlinks are not supported in GitHub pages of our internal GitHub.
+    mike deploy --alias-type=redirect -u $version --push
 
 elif [ "$publish" == false ]; then
 

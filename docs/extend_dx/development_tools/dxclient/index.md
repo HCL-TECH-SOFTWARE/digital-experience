@@ -21,6 +21,9 @@ The following image illustrates the DXClient Architecture diagram:
 ## Installing DXClient using the container package
 
 The container package provides a fully packaged OCI-compliant container that contains everything to successfully run DXClient. You may use any container runtime that implements OCI Runtime Specification (for example, Docker or Podman).
+<!--
+!!! info
+    To download DXClient scripts, go to [dxclient-scripts](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts) of the HCL-TECH-SOFTWARE GitHub repository. In this repository, you can find the installation and usage details, and the latest scripts for using the containerized version of DXClient which is openly distributed in [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab). -->
 
 In addition, the package includes scripts for all operating systems that make it simpler to work with the container image. These scripts handle the storage for the container and sync input files with the container itself.
 
@@ -187,7 +190,7 @@ In addition, the package includes scripts for all operating systems that make it
 
 2.  Ensure that Node.js version 12.18.3 or later version is installed to the local workstation. The DXClient tool is supported on Microsoft Windows, Linux, and Apple macOS workstations and automation servers.
 
-3.  Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local directory on the local workstation from your DX 9.5 CF19 or later entitlements on the [HCL Software License Portal](https://www.hcltech.com/software/support/release). Reference the [Docker](../../../get_started/system_requirements/docker/index.md) topic for the latest list of HCL DX 9.5 files available for download.
+3.  Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local directory on the local workstation from your DX 9.5 CF19 or later entitlements on the [HCL Software License Portal](https://www.hcltech.com/software/support/release).
 
 4.  Extract the DXClient.zip file.
 
@@ -229,6 +232,45 @@ In addition, the package includes scripts for all operating systems that make it
             node bin/dxclient
             ```
 
+7. A folder named `store` is created in your working directory. This is the default location for configuration, logger, and output files. If you require to create a new configuration, set the environment variable `VOLUME_DIR` to the desired directory name and run your task. For example:
+
+    === "Linux and Apple macOS"
+        ```bash
+        export VOLUME_DIR=storeForScriptApplication
+
+        # or if you want spaces in its value, enclose it in double quotes ("")
+        export VOLUME_DIR="store for script application"
+        ```
+
+    === "Microsoft Windows"
+        ```batch
+        set VOLUME_DIR=storeForScriptApplication
+
+        :: or if you want spaces in its value
+        set VOLUME_DIR=store for script application
+        ```
+
+        !!!important
+            Do not enclose the value of `VOLUME_DIR` in double quotes ("") in Windows. This produces errors when executing DXClient commands.
+
+     The `VOLUME_DIR` requires read and write access permissions. Set appropriate permissions for the `VOLUME_DIR` as per user/group/owner.
+
+    === "Linux and Apple macOS"
+        ```bash
+        chmod xxx <working-directory>/<VOLUME_DIR>
+
+        # where xxx is a 3-digit number where each digit can be anything from 0 to 7.
+        # Ref: https://wiki.archlinux.org/title/File_permissions_and_attributes#Numeric_method
+        ```
+
+    === "Microsoft Windows"
+        1. Right click `<working-directory>/<VOLUME_DIR>` directory > "Properties" > "Security" Tab.
+        2. Set the appropriate permission for the folder.
+
+8. You can find the configuration, logger, and output files under `<working-directory>/<VOLUME_DIR>`.
+
+    Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/<VOLUME_DIR>` folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json), or Kubernetes (default-config-kube.json) platforms is also available under <working-directory>/samples/sample-configurations for reference. If you want to override any of the parameters in the config.json, add them in your command line.           
+
 ## Uninstalling DXClient using the source code package
 
 -   To uninstall the DXClient tool, perform the following commands:
@@ -267,6 +309,9 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
 !!!note
     Refer to the list of features that were released in the following HCL DX 9.5 Container releases:
 
+    -   HCL DX 9.5 CF219 release: **V1.28.0 
+        - [Enabled multiple environment configuration in node version](#configuring-multiple-environments-in-dxclient)
+    
     -   HCL DX 9.5 CF216 release: **V1.25.0
         -   Shows version compatibility details between DX Core and DXClient.
         -   [Resync DAM Staging environments](../../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md)
@@ -429,6 +474,50 @@ Common command arguments can be pre-configured inside the `config.json` file ava
 }
 
 ```
+### Configuring multiple environments in DXClient
+
+A folder named `store` is created in your working directory. This is the default location for configuration, logger, and output files. If you require to create a new configuration, set the environment variable VOLUME_DIR to the desired directory name and run your task. For example:
+
+=== "Linux and Apple macOS"
+    ```bash
+    export VOLUME_DIR=storeForScriptApplication
+
+    # or if you want spaces in its value, enclose it in double quotes ("")
+    export VOLUME_DIR="store for script application"
+    ```
+
+=== "Microsoft Windows"
+    ```batch
+    set VOLUME_DIR=storeForScriptApplication
+
+    :: or if you want spaces in its value
+    set VOLUME_DIR=store for script application
+    ```
+
+    !!!important
+        - Do not enclose the value of `VOLUME_DIR` in double quotes ("") in Windows. This produces errors when executing DXClient commands. 
+        - Do not provide a path to set as `VOLUME_DIR`. Instead, provide a folder name.
+
+The `VOLUME_DIR` requires read and write access permissions. Set appropriate permissions for the `VOLUME_DIR` as per user/group/owner.
+
+=== "Linux and Apple macOS"
+    ```bash
+    chmod xxx <working-directory>/<VOLUME_DIR>
+
+    # where xxx is a 3-digit number where each digit can be anything from 0 to 7.
+    # Ref: https://wiki.archlinux.org/title/File_permissions_and_attributes#Numeric_method
+    ```
+
+=== "Microsoft Windows"
+    1. Right click `<working-directory>/<VOLUME_DIR>` directory > "Properties" > "Security" Tab.
+    2. Set the appropriate permission for the folder.
+
+You can find the configuration, logger, and output under `<working-directory>/<VOLUME_DIR>`.
+
+Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/<VOLUME_DIR>` folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json), or Kubernetes (default-config-kube.json) platforms is also available under `<working-directory>/samples/sample-configurations` for reference. If you want to override any of the parameters in the config.json, add them in your command line.  
+
+!!!note
+    You must create the config.json in each `<VOLUME_DIR>` folder to set up multiple configurations. Otherwise, the system picks up the configurations specified in the default config.json available under `dist/configuration` in node version.
 
 ## DXClient commands
 
@@ -661,6 +750,12 @@ Use the following command to display the detailed help for a specific command:
 ```bash
 dxclient help [command]
 ```
+    
+## Limitations
+
+- For hybrid deployments in which two different hostnames are used for the on-premises DX Core and Kubernetes DX Services, there are no options to enter both the hostnames. You must consider the DXClient function being used and enter the appropriate hostname. For example, for DAM tasks such as `manage-dam-staging`, you must enter the Kubernetes hostname. For DX Core tasks such as `deploy-portlet` you must enter the on-premises DX Core hostname.
+
+- Starting CF217 (DXClient v1.26.0 and above), it is required to set full access to the bin folder to execute DXClient commands.
 
 ## HCLSoftware U learning materials
 
@@ -679,4 +774,3 @@ For an introduction and a demo on how to use DXClient, go to [Staging](https://h
     - [Themes](../dxclient/dxclient_artifact_types/themes.md)
     - [Script applications](../dxclient/dxclient_artifact_types/scriptapplications.md)
     - [Resource environment provider](../dxclient/dxclient_artifact_types/resourceenvironments.md)
-
