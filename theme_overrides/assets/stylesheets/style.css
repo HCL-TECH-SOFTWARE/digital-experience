@@ -42,11 +42,11 @@
 
 
 [dir=rtl] .md-sidebar--primary > .md-sidebar__scrollwrap {
-    border-right: 1px solid silver;
+    border-left: 1px solid silver;
 }
 
 [dir=rtl]  .md-sidebar--secondary > .md-sidebar__scrollwrap {
-    border-left: 1px solid silver;
+    border-right: 1px solid silver;
 }
 
 .md-sidebar {
