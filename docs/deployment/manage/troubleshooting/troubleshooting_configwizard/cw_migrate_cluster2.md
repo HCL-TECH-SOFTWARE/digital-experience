@@ -110,6 +110,7 @@ Since this is a manual step, any error that occurs is outside the context of the
 |Skip the step|Do not skip this step, if you are running the configuration again. You must restore the JCR content, if you completed the previous manual step to clean up the backup profile that is over 2 GB.|
 |Clean up step|None required|
 
-**Related information**  
-[Cluster Step 2: Migrate node profiles](../../migrate/migrate_using_cfgwizard/cw_migrate_cluster_2.md)<br>
-[Accessing the Configuration Wizard](../../portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+???+ info "Related information"
+- [Cluster Step 2: Migrate node profiles](../../migrate/migrate_using_cfgwizard/cw_migrate_cluster_2.md)
+- [Accessing the Configuration Wizard](../../portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+- [WebSphere® Integrated Solutions Console](../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

@@ -145,5 +145,6 @@ During this step, the wizard runs the member fixer tool to clean up the entries 
 |Skip step|If you successfully completed the step before, then skip this step.|
 |Clean up step|None required|
 
-**Related information**  
-[Accessing the Configuration Wizard](../../portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+???+ info "Related information"
+    - [Accessing the Configuration Wizard](../../portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+    - [WebSphere® Integrated Solutions Console](../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

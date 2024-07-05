@@ -30,3 +30,5 @@ type="update">
 </request>
 ```
 
+???+ info "Related information"
+    - [URL Addressability](../../../../../../build_sites/create_sites/url_addressing/index.md)

@@ -20,3 +20,5 @@ HCL Digital Experience supports portlets written to the standard portlet API.
 Rational® Application Developer includes tools designed to help you develop portlet applications for HCL Digital Experience.
 
 
+???+ info "Related information"
+    - [Portlet development utilities and page creation samples on HCL GitHub](../../guide_me/tutorials/Portletdevelopmentutilitiesandpagecreationsamples.md)

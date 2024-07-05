@@ -71,4 +71,4 @@ There is one method to collect data and analyze symptoms for problem determinati
 ???+ info "Related information"  
     -   [Portal version and history information](../../../manage/troubleshooting/tools_for_troubleshooting_and_diagnostics/wp_history.md)
     -   [Logging and tracing](../../../manage/troubleshooting/logging_and_tracing/index.md)
-
+    - [WebSphere® Integrated Solutions Console](../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

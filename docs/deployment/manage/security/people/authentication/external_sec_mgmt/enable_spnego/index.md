@@ -13,4 +13,5 @@ The HCL Digital Experience installation removes the Simple and Protected GSS-API
 ???+ info "Related information"
     - [WebSphere Application Server Information Center: Enabling and configuring SPNEGO web authentication using the administrative console](https://www.ibm.com/docs/en/ibm-http-server/8.5.5?topic=SSEQTJ_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/tsec_SPNEGO_config.htm)
     - [WebSphere Application Server Information Center: Single sign-on for HTTP requests using SPNEGO web authentication](https://www.ibm.com/docs/en/SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/csec_SPNEGO_explain.html)
+    - [WebSphere® Integrated Solutions Console](../../../../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
 

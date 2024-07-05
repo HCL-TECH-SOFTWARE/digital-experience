@@ -29,5 +29,6 @@ You can configure the Person card to display the business card fields for a sele
 
 8.  Restart the portal server.
 
-
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
 

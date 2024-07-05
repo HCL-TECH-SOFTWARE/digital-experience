@@ -3,6 +3,7 @@ nav:
     - index.md
     - Deciding about virtual portals: vp_overview
     - Planning for virtual portals: vp_planning
+    - Managing virtual portals: mng_vp
     - wcm_mngpages_virtualportal.md
     - Administering virtual portals: adm_vp_task
     - Working with the Virtual Portal Manager portlet: vp_mgr_portlet

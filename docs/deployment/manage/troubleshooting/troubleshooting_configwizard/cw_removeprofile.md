@@ -53,6 +53,7 @@ Each potential step in the configuration is included. Because the steps vary dep
  `/opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh -delete -profileName profile_name` <br>2.  Manually delete the profile directory only if the `manageprofiles -delete` command completes successfully. <br>
 The manageprofiles command creates a log for every profile that it creates, deletes, or augments. If the `manageprofiles -delete` command does not complete successfully, review the log named delete.log in install_root/logs/dmgr_01.|
 
-**Related information**  
-[Remove an HCL Portal profile](../../../manage/profile/cw_remove_profile.md)<br>
-[Accessing the Configuration Wizard](../../../manage/portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+???+ info "Related information" 
+    - [Remove an HCL Portal profile](../../../manage/profile/cw_remove_profile.md)
+    - [Accessing the Configuration Wizard](../../../manage/portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+    - [WebSphere® Integrated Solutions Console](../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
