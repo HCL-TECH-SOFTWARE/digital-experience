@@ -1,6 +1,6 @@
 # WSRP services
 
-By using the Web Services for Remote Portlets (WSRP) standard. HCL Digital Experience can provide portlets, applications, and content as WSRP services.
+By using the Web Services for Remote Portlets (WSRP) standard, HCL Digital Experience can provide portlets, applications, and content as WSRP services.
 
 The WSRP standard and specification is provided by OASIS. It defines a web service communication interface for interactive presentation-oriented web services. This standard simplifies the integration of remote portlets, applications, and content into portals. Producers and Consumers use this interface for providing and consuming portlets. Users can work with WSRP in the following ways:
 

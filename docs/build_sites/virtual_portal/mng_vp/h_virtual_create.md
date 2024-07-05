@@ -51,9 +51,9 @@ To create a new virtual portal, perform the following steps:
 
     Completing the steps to create a virtual portal also creates the virtual portal entity and calls the XML configuration interface script that creates the initial content tree.
 
-4.  If you add virtual portals to your portal installation after you install CF09 or a later cumulative fix and you use Site Builderor the Script Application, add the appropriate library or libraries to each new virtual portal.
+4.  If you add virtual portals to your portal installation after you install CF09 or a later cumulative fix and you use Site Builder or the Script Application, add the appropriate library or libraries to each new virtual portal.
 
-    For more detailed information, read *Adding the Site Builderand Script Application libraries*.
+    For more detailed information, read *Adding the Site Builder and Script Application libraries*.
 
 
 !!! note

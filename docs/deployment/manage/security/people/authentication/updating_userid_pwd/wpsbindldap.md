@@ -55,4 +55,4 @@ Perform the following steps to change the WebSphere® Application Server adminis
 
 ???+ info "Related information"
     - [Applying fix packs to your portal](../../../../manage_portal_using_iim/apply_fixpacks.md)
-
+    - [WebSphere® Integrated Solutions Console](../../../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

@@ -34,4 +34,5 @@ Review the following list before you begin.
 
 ???+ info "Related information"  
     -   [Port conflicts](../../../../deployment/manage/migrate/planning_migration/migration_consideration/mig_plan_port_conflicts.md)
+    -  [WebSphere® Integrated Solutions Console](../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
 

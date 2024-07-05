@@ -11,6 +11,7 @@ nav:
     - wcm_REST_web_content_manager_lock_unlock_api.md
     - wcm_REST_web_content_manager_control_syndication.md
     - wcm_REST_web_content_manager_find_rendering_script_portlet_references.md
+    - wcm_REST_web_content_manager_find_references.md
     - library_component_support.md
     - Reference material for the Web Content Manager REST service: wcm_rest_referencematerial
     - ...

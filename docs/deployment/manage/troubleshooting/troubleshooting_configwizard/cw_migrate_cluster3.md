@@ -104,6 +104,6 @@ When you run this step, the sub task that is named action-deploy-portlets-applyM
 |Skip the step|If this step was successful, you can skip it if you run the configuration process again.|
 |Clean up step|If this step fails, contact support and report the error message to get assistance on how to fix this issue before you run the step again.|
 
-**Related information**  
-[Cluster Step 3: Upgrade node profiles](../../migrate/migrate_using_cfgwizard/cw_migrate_cluster_3.md)<br>
-[Accessing the Configuration Wizard](../../portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+???+ info "Related information"
+    - [Cluster Step 3: Upgrade node profiles](../../migrate/migrate_using_cfgwizard/cw_migrate_cluster_3.md)<br>
+    - [Accessing the Configuration Wizard](../../portal_admin_tools/cfg_wizard/configuration/cw_run.md)

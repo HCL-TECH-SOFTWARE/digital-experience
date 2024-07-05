@@ -120,13 +120,13 @@ Use the `manage-dam-staging trigger-staging` command to trigger DAM staging.
     -ringAPIPort <value>
     ```
 
-    Use this attribute to specify the API version number of DAM of the publisher (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the API version number of DAM of the publisher (default: ""; default version for any Kubernetes environment is v1):
 
     ```
     -damAPIVersion <value>
     ```
 
-    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default version for any Kubernetes environment is v1):
 
     ```
     -ringAPIVersion <value>
@@ -234,13 +234,13 @@ Use the `manage-dam-staging **register**-dam-subscriber` command to register or 
     -ringAPIPort <value>
     ```
 
-    Use this attribute to specify the API version number of DAM of the publisher (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the API version number of DAM of the publisher (default: ""; default version for any Kubernetes environment is v1):
 
     ```
     -damAPIVersion <value>
     ```
 
-    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default version for any Kubernetes environment is v1):
 
     ```
     -ringAPIVersion <value>
@@ -390,13 +390,13 @@ Use the `manage-dam-staging update-secrets` command to update secrets of the pub
     -ringAPIPort <value>
     ```
 
-    Use this attribute to specify the API version number of DAM of the publisher (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the API version number of DAM of the publisher (default: ""; default version for any Kubernetes environment is v1):
 
     ```
     -damAPIVersion <value>
     ```
 
-    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default version for any Kubernetes environment is v1):
 
     ```
     -ringAPIVersion <value>
@@ -524,13 +524,13 @@ Use the `manage-dam-staging get-all-subscribers` command to get all the register
     ```
 
     Use this attribute to specify the API version number of DAM of the publisher 
-    (default: ""; default port for any Kubernetes environment is 443):
+    (default: ""; default version for any Kubernetes environment is v1):
 
     ```
     -damAPIVersion <value>
     ```
 
-    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default version for any Kubernetes environment is v1):
 
     ```
     -ringAPIVersion <value>

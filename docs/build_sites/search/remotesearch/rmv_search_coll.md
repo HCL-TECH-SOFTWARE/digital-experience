@@ -34,4 +34,7 @@ If you plan to use search in a cluster, you must configure a remote search serve
     4.  Restart the WebSphere\_Portal server and then go back to the **Search Collections** page to verify that all search collections are deleted.
 
 
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
+
 

@@ -165,6 +165,7 @@ If you completed a binary installation, this is your first step.
 |Skip the step|Do not skip this step, if you are running the configuration again.|
 |Clean up step|Check for failures in the systemout and systemerror logs for starting or stopping the portal server.|
 
-**Related information**  
-[Create an HCL Portal profile](../../profile/cw_create_profile.md)<br>
-[Accessing the Configuration Wizard](../../portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+???+ info "Related information"
+    - [Create an HCL Portal profile](../../profile/cw_create_profile.md)<br>
+    - [Accessing the Configuration Wizard](../../portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+    - [WebSphere® Integrated Solutions Console](../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
