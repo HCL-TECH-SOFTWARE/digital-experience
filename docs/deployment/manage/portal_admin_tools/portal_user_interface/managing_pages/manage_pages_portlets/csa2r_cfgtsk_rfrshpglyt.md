@@ -2,17 +2,11 @@
 
 Use this configuration task to refresh the page layout for all pages assigned a given page layout template.
 
-## Overview
+Description: You need to run this task if you have manually modified page layout template files stored in the folder layout-templates of the portal file store and you want those changes to be reflected on existing pages. The task reads the data of a specific page layout template from the portal file store and update all pages that are currently assigned that page template accordingly. Depending on the number of page affected, this task can run for a several minutes.
 
-You need to run this task if you have manually modified page layout template files stored in the folder layout-templates of the portal file store and you want those changes to be reflected on existing pages. The task reads the data of a specific page layout template from the portal file store and update all pages that are currently assigned that page template accordingly. Depending on the number of page affected, this task can run for a several minutes.
+Assumptions/Prerequisites: HCL Portal is running. The execution of this task requires that the portal is running. If the portal is not running, the task starts the portal.
 
-## Prerequisite
-
-HCL Portal is running. The execution of this task requires that the portal is running. If the portal is not running, the task starts the portal.
-
-## Usage
-
-Reference the layout template by its file store URI, for example:
+Usage: Reference the layout template by its file store URI, for example as follows:
 
 ```
  /fs-type1/themes/Portal8.5/layout-templates/
@@ -55,9 +49,5 @@ Example:
      -DPageLayoutTemplate=dav:fs-type1/layout-templates/2Columnequal/ 
      -DVirtualPortalContext=virtual_portal_context_url 
 ```
-
-## Limitation
-
-The refresh-page-layout-template task does not update pages and theme artifacts within a WCM Project unless the Project is published. If the Project is in a draft state, the pages are not updated.
 
 

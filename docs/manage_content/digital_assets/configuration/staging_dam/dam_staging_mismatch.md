@@ -47,7 +47,7 @@ To trigger the DAM staging resync, refer to the following steps:
     !!!note
            The status RESYNC_TRIGGER_COMPLETED only means that resync operations have been created. Because these operations are asynchronous, it takes time for the system to be in sync.
 
-5. View the subscriber operations API to check if there are any operations still in progress. For more details about verification, refer to [Verification](#verification).
+5. View the subscriber operations API to check if there are any operations still in progress. Fo more details about verification, refer to [Verification](#verification).
 
 ## Commands to trigger the identification of staging mismatches and resync
 

@@ -28,7 +28,7 @@ See the following Help Center topics [HCL DX 9.5 Kubernetes](../../deployment/in
 
 See the following Help Center topics for more information:
 
-- [HCL DX 9.5 Helm deployment](../../deployment/install/hybrid/index.md)
+- [HCL DX 9.5 Helm deployment](../../get_started/plan_deployment/hybrid_deployment/index.md)
 - [HAProxy overview](../../deployment/install/container/haproxy-migration/haproxy-introduction.md)
 - [Migrate from Ambassador to HAProxy](../../deployment/install/container/haproxy-migration/haproxy-migration.md)
 

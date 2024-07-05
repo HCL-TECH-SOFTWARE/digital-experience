@@ -1,5 +1,5 @@
-mkdocs-material==9.5.25
-mike==2.1.1
+mkdocs-material==9.5.10
+mike
 mkdocs-awesome-pages-plugin
 mkdocs-git-revision-date-localized-plugin
 mkdocs-minify-plugin

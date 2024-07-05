@@ -1,6 +1,6 @@
-# Integrate HCL Unica Discover with HCL DX
+# Integrate HCL Unica Discover with HCL Digital Experience
 
-This section includes information to set up integration of Digital Experience (DX) 9.5 Container Update CF192 and later sites with HCL Unica Discover to access deep insight analytics and session replay services to assess the effectiveness of your DX site pages with end user audiences.
+This section includes information to set up integration of Digital Experience 9.5 Container Update CF192 and later sites with HCL Unica Discover to access deep insight analytics and session replay services to assess the effectiveness of your DX site pages with end user audiences.
 
 [HCL Unica Discover](https://www.hcltechsw.com/products/unica/offerings/discover) provides insights to the online user journeys, enabling DX site managers and marketers to deliver optimized experiences. HCL Unica Discover records what your customers are seeing on your Digital Experience web pages and how they interact with those pages.
 
@@ -33,11 +33,5 @@ HCL Unica Discover can track both authenticated or unauthenticated pages. By def
 <!---
 -   **[Installing the Unica Discover module for Digital Experience integration](../install/installing_the_unica_discover_module.md)**  
  Learn how to install the Unica Discover module for HCL Digital Experience integration. --->
-
-## HCLSoftware U learning materials
-
-For an introduction and a demo on how HCL DX and HCL Discover work together, go to [HCL DX and HCL Discover for Business Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D956). To try it out yourself, refer to [HCL DX and HCL Discover for Business Users Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Integration/HDX-INT-BU_DX_Integration_with_HCL_Discover_for_Business_Users.pdf).
-
-For an introduction and a demo on how to set up the integration between HCL DX and HCL Discover, go to [HCL DX and HCL Discover for Administrators](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1228). To try it out yourself, refer to [HCL DX and HCL Discover for Administrators Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Integration/HDX-INT-ADM_DX_Integration_with_HCL_Discover_for_Administrators.pdf).
 
 

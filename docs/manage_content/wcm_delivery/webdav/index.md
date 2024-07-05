@@ -35,15 +35,6 @@ You can create, modify, or delete the following items: libraries, taxonomies, ca
 
 When using WebDAV with web content, be aware of the following considerations.
 
--   **Drafts**
-
-    Starting CF220, drafts are not exposed with WebDAV for WCM. This is to avoid issues with drafts having the same name as the live or expired items.
-    To re-enable the support for Drafts, go to the WebSphere® Integrated Solutions Console. In the **WCM WCMConfigService** service, change the following configuration parameter to `false`. If the setting does not exist, you can add it.
-
-    ```
-    wcm.webdav.filterdrafts=false
-    ```
-
 -   **Locked item support**
 
     Locking or unlocking an item through WebDAV locks or unlocks the item in Web Content Manager and the JCR database. Because some items are represented by multiple files and folders, locking or unlocking one of these files causes locking or unlocking of the other associated files at the same time. If you lock an item, folders and files that are related to the content of the item, its metadata, and its access control settings are also locked.

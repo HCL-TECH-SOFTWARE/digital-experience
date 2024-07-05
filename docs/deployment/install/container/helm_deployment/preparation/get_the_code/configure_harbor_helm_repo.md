@@ -2,13 +2,13 @@
 
 The HCL Digital Experience 9.5 container images and Helm charts can be accessed from the [HCL Harbor container repository](https://hclcr.io/){:target="_blank"}. Customers with credentials to access entitled software in the HCL Software Licensing Portal may apply those credentials to optionally access these components of Digital Experience v9.5. 
 
-As of the CF216 release, the Harbor repository is updated with a registry based on Open Container Initiative (OCI) standards. The Helm chart command is updated to be OCI-compliant. However, older versions of the Helm chart are still utilized in the non-OCI approach. On this page, both approaches are described.
+As of the CF216 release, the Harbor repository is updated with an OCI-based registry. The Helm chart command is updated to be OCI-compliant. However, older versions of the Helm chart are still utilized in the non-OCI approach. On this page, both approaches are described.
 
 ## OCI-based registry
 
 Note that Helm Charts pushed and managed through OCI are not part of the `Helm Charts` category in Harbor anymore. Therefore, the `Helm Charts` section does not reflect the newer version of helm charts which are pushed using OCI commands. OCI assets such as container images and helm charts are now in the same category and both are listed as an OCI repository.
 
-### Pulling helm charts using OCI commands
+### Pulling helm charts via OCI commands
 
 These commands are different from the previous approach with the non-OCI-based registry. It now requires an initial login before executing the pull command.
 
@@ -23,9 +23,6 @@ These commands are different from the previous approach with the non-OCI-based r
     ```sh
     helm pull oci://hclcr.io/dx/hcl-dx-deployment --version <HELM_CHART_VERSION_NUMBER>
     ```
-
-    !!!note
-        Running the pull command without the version parameter downloads the latest Helm chart version. To see the available Helm chart versions, refer to [Listing available Helm Chart versions](#listing-available-helm-chart-versions).
     
 3. After running the pull command, you can check if the Helm Chart has been downloaded to your local machine:
 

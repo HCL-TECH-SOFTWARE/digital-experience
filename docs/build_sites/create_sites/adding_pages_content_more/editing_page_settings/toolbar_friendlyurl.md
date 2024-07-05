@@ -8,7 +8,7 @@ Associate friendly URL names with pages, labels, and content items in your websi
 For a friendly URL to work for a specific page or content item, every page or label that leads to that page or content item must have a friendly URL name. When you create a new page or content item from site manager, the system recommends a friendly URL name, based on the title of your content item or page. Friendly URLs take the following general form:
 
 ```
-http://host_name/context/content_root/friendly_url_name/friendly_url_name/[!ut/p/encoded_portal_suffix]
+http://host\_name/context/content_root/friendly\_url\_name/friendly\_url\_name/[!ut/p/encoded\_portal\_suffix]
 ```
 
 The `friendly_url_name` portion of the URL is made up of the friendly URL names of all pages in the path of the website hierarchy. The hierarchy begins at the content root and ends with the page or content item for which you want to give your users a friendly URL.

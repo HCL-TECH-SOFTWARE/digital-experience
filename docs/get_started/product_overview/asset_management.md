@@ -18,7 +18,7 @@ Assets are organized into collections, and access can be controlled to the top-l
 
 ## Rendition generation
 
-For images stored in the DAM, renditions are automatically generated for desktop, smartphone, and tablet. The sizes generated can be customized and additional renditions configured. Individual images can be cropped in DAM without spending time in an image editing software.
+For images stored in the DAM, renditions are automatically generated for desktop, smartphone, and mobile devices. The sizes generated can be customized and additional renditions configured. (See information later in this topic.) Individual images can be cropped from in DAM without spending time in image editing software.
 
 ![DAM - Image Editor](assets/dam-image-editor.png)
 
@@ -29,7 +29,7 @@ As delivered with HCL DX, DAM provides two integrations.
 * Video file management can be delegated to the [Kaltura video content management system](https://corp.kaltura.com/video-content-management-system/). When this system is configured, videos are synchronized with Kaltura and can be delivered through that service. With this setup, you can deliver adaptive video in your web experiences.
 * Image assets can be automatically tagged by using [Google Vision](https://cloud.google.com/vision/docs/detect-labels-image-api). With tagging, you can enrich the metadata available for images stored in DAM.
 
-You can customize or replace both integrations with your preferred solutions.
+You can customize or replace both integreations with your preferred solutions.
 
 ## Extensibility
 

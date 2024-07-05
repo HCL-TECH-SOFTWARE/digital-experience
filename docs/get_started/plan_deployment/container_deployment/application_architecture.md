@@ -102,4 +102,4 @@ Application names are defined as follows:
     -   [HCL DX Experience API](../../../extend_dx/apis/hcl_experience_api/index.md)
     -   [Content Composer](../../../manage_content/wcm_authoring/content_composer/index.md)
     -   [Digital Asset Management](../../../manage_content/digital_assets/index.md)
-    -   [Hybrid deployment](../../../deployment/install/hybrid/index.md)
+    -   [Hybrid deployment](../hybrid_deployment/index.md)

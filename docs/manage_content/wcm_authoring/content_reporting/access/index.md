@@ -62,8 +62,4 @@ The HCL Content Reporting UI has the following components:
 
        ![](../../../../assets/HCL_Content_Reporting_Action_Buttons.png)
 
-  -  **Action buttons**:
-  
-    - Click **Search** to proceed with the search. 
-    - Click **Clear** to clear the fields. 
-    - Click **Cancel** to close the search criteria drawer.
+  -  **Action buttons** - Proceed with the search by clicking the **Search** button. Clear fields by clicking the **Clear** button. Close the search criteria drawer by clicking the **Cancel** button.

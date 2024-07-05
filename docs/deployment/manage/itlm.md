@@ -24,7 +24,7 @@ Install and configure HCL Digital Experience before you configure the IBM Licens
         !!!note:
             Whenever the IBM Tivoli® License Compliance Manager agent is stopped, rerun the WASAgentClient task and then reissue the credentials.
 
-    6.  Complete any additional configuration tasks after installation. Read the following topic for instructions: [Configuring IBM License Metric Tool](https://www.ibm.com/docs/en/license-metric-tool).
+    6.  Complete any additional configuration tasks after installation. Read the following topic for instructions: [Configuring IBM License Metric Tool](http://publib.boulder.ibm.com/infocenter/tivihelp/v31r1/topic/com.ibm.license.mgmt.planinconf.doc/t_configure_main.html).
 
 3.  Follow the IBM License Metric Tool instructions that are provided with your customer agreement to complete the IBM License Metric Tool licensing configuration for HCL Portal and HCL Web Content Manager.
 
