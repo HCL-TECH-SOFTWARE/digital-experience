@@ -53,6 +53,10 @@
     border-color: var(--md-primary-bg-color)
 }
 
+.md-button--secondary {
+    background-color: black;
+}
+
 .md-button:focus,
 .md-button:hover {
     background-color: var(--md-accent-fg-color);
