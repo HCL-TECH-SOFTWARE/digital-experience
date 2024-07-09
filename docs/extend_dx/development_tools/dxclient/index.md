@@ -575,7 +575,7 @@ Use the following command to display the detailed help for a specific command:
 dxclient help [command]
 ```
 
-Use the following command to skip prompt of click-through license acceptance agreement:
+- Use the following command to skip prompt of click-through license acceptance agreement:
 
 ```bash
 dxclient accept-license
