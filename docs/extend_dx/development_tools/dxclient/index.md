@@ -321,7 +321,8 @@ This option to install/uninstall are avaialble from HCL DX 9.5 CF221 deployment.
      docker pull hclcr.io/dx-public/dxclient:IMAGE_TAG
     ```
 
-2. To download DXClient scripts, go to [dxclient-scripts](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts) of the HCL-TECH-SOFTWARE GitHub repository. In this repository, you can find the installation and usage details, and the latest scripts for using the containerized version of DXClient which is openly distributed in [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab).
+2. Download DXClient scripts.
+         To download DXClient scripts, go to [dxclient-scripts](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts) of the HCL-TECH-SOFTWARE GitHub repository. In this repository, you can find the installation and usage details, and the latest scripts for using the containerized version of DXClient which is openly distributed in [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab).
 
 ## Verifying your DXClient installation
 
