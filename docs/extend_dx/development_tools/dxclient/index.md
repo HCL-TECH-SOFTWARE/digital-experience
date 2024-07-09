@@ -339,7 +339,7 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
 
     -   HCL DX 9.5 CF221 release: **V221.0.0
         -  A one time license agreement click-through is enabled. To skip the prompt, use the [accept-license](#dxclient-usage-information-commands) command.
-        -   [Open Distribution of DXClient](#new--easy-install-options-for-dxclient-users) DXClient will be openly distributed in NpmJS & harbor repository.
+        -   DXClient is now openly distributed in [NpmJS and Harbor repository](#new--easy-install-options-for-dxclient-users).
 
     -   HCL DX 9.5 CF219 release: **V1.28.0
         -   [Enabled multiple environment configuration in node version](#configuring-multiple-environments-in-DXClient)
