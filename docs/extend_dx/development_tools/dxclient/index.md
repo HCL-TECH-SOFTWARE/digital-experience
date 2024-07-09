@@ -552,7 +552,7 @@ Common command arguments can be pre-configured inside the config.json file avail
 
 ## DXClient usage information commands
 
-The following commands show the Help documents, Version check & License information for DXClient usage.
+To display Help documents, check the DXClient version and compatibility, and accept license information for DXClient, refer to the following commands.
 
 Use the following commands to display the Help document for DXClient:
 
