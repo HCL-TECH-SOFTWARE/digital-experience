@@ -307,7 +307,7 @@ In addition, the package includes scripts for all operating systems that make it
 
 To install the latest version of DXClient, use the `npm install @hcl-software/dxclient` command. 
 
-Use `npm install -g @hcl-software/dxclient` command to install DXClient globally. 
+To install DXClient globally, use the `npm install -g @hcl-software/dxclient` command. 
 
 Use `npm uninstall @hcl-software/dxclient` command to uninstall.
 
