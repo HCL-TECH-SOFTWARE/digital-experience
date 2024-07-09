@@ -175,7 +175,7 @@ In addition, the package includes scripts for all operating systems that make it
         SET Timezone=Asia/Kolkata
         ```
 
-## Installing DXClient using the native javascript package from HCL Software portal
+## Installing DXClient using the native JavaScript package from HCL Software portal
 
 !!! note
     You are encouraged to use the DXClient container image package from CF196 onwards for easier installation.
