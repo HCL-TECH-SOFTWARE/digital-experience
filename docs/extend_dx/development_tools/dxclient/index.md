@@ -564,7 +564,7 @@ dxclient
 dxclient -h, --help 
 ```
 
-Use the following command to display the DXClient version number:
+- Use the following command to display the DXClient version number:
 
 ```bash
 dxclient -V, --version
