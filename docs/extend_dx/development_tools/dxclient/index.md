@@ -303,7 +303,7 @@ In addition, the package includes scripts for all operating systems that make it
         make_unlink.bat
         ```
 
-## Install/Uninstall DXClient from NpmJS registry
+## Installing or uninstalling DXClient from NpmJS registry
 
 Use `npm install @hcl-software/dxclient` command to install the latest version of DXClient. 
 
