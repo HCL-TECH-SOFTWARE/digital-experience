@@ -793,7 +793,7 @@ dxclient livesync pull-theme [options]
 
 - Starting CF217 (DXClient v1.26.0 and above), it is required to set full access to the bin folder to execute DXClient commands.
 
-- The maximum input file size allowed in DXClient is 256 MB currently. This limitation will be addressed in one of the future releases.
+- Currently, the maximum input file size allowed in DXClient is 256 MB.
 
 ## HCLSoftware U learning materials
 
