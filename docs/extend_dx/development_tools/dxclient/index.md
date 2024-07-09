@@ -550,7 +550,7 @@ Common command arguments can be pre-configured inside the config.json file avail
 !!!note
     You must create the config.json in each `<VOLUME_DIR>` folder to set up multiple configurations. Otherwise, the system picks up the configurations specified in the default config.json available under `dist/configuration` in node version.
 
-## DXClient Usage Information Commands
+## DXClient usage information commands
 
 The following commands show the Help documents, Version check & License information for DXClient usage.
 
