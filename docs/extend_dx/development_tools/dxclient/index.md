@@ -305,7 +305,7 @@ In addition, the package includes scripts for all operating systems that make it
 
 ## Installing or uninstalling DXClient from NpmJS registry
 
-Use `npm install @hcl-software/dxclient` command to install the latest version of DXClient. 
+To install the latest version of DXClient, use the `npm install @hcl-software/dxclient` command. 
 
 Use `npm install -g @hcl-software/dxclient` command to install DXClient globally. 
 
