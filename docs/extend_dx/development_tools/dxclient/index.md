@@ -582,7 +582,7 @@ dxclient help [command]
 dxclient accept-license
 ```
 
-Use this command to show version compatibility details between DX Core and DXClient [`version-compat`](../dxclient/dxclient_artifact_types/versionCompat.md):
+- Use the following command to show version compatibility details between DX Core and DXClient [`version-compat`](../dxclient/dxclient_artifact_types/versionCompat.md):
 
 ```bash
 dxclient version-compat [options]
