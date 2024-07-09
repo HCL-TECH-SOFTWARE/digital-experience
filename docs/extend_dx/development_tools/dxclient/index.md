@@ -17,7 +17,7 @@ HCL DX also introduces a license agreement which can be accepted using the comma
 
 ## New & Easy install options for DXClient Users
 
-1. Install from NpmJS public registry. See [here](#installuninstall-dxclient-from-npmjs-registry) for more details.
+- [Install DXClient from the NpmJS public registry.](#installuninstall-dxclient-from-npmjs-registry)
 
 2. Install from Container image in public Harbor repository. See [here](#using-container-of-dxclient-from-harbor-registry) for more details.
 
