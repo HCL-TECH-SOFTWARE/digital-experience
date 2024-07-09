@@ -133,4 +133,19 @@ public class RequestFilterSample implements Filter {
 }
 
 ```
+The highlevel steps to add the filter are:
 
+- Extract the VwatReverseProxyServlet.ear file from the WAS Console, expand it.
+- After compiling the class package it into the classes directory with the according package or into the jar file in WEB-INF/lib.
+- Modify the web.xml to add the filter of the included war file - sample:
+```
+	<filter>
+		<filter-name>Sample Filter</filter-name>
+		<filter-class>com.hcl.dx.RequestFilterSample</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Sample Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+```
+- Repackage the war and ear file and update the ear file in WAS.
