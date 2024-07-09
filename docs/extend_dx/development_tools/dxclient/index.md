@@ -278,7 +278,7 @@ In addition, the package includes scripts for all operating systems that make it
 
     Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/<VOLUME_DIR>` folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json), or Kubernetes (default-config-kube.json) platforms is also available under <working-directory>/samples/sample-configurations for reference. If you want to override any of the parameters in the config.json, add them in your command line.           
 
-## Uninstalling DXClient using the javascript package
+## Uninstalling DXClient using the JavaScript package
 
 -   To uninstall the DXClient tool, perform the following commands:
 
