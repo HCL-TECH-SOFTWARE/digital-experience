@@ -570,7 +570,7 @@ dxclient -h, --help
 dxclient -V, --version
 ```
 
-Use the following command to display the detailed help for a specific command:
+- Use the following command to display the Help information for a specific command:
 
 ```bash
 dxclient help [command]
