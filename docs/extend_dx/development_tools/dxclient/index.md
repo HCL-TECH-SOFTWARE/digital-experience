@@ -309,7 +309,7 @@ To install the latest version of DXClient, use the `npm install @hcl-software/dx
 
 To install DXClient globally, use the `npm install -g @hcl-software/dxclient` command. 
 
-Use `npm uninstall @hcl-software/dxclient` command to uninstall.
+To uninstall DXClient, use the `npm uninstall @hcl-software/dxclient` command.
 
 This option to install/uninstall are avaialble from HCL DX 9.5 CF221 deployment. The latest version you install will be "221.0.0".
 
