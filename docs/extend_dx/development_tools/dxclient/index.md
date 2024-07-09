@@ -8,7 +8,7 @@ DXClient is meant to be the one-stop, platform-independent solution that lets yo
 
 DXClient comes with two deployment options:
 
-1. One option is the DXClient container package. DXClient is packaged as a container that can be run using OCI-based runtimes such as Docker or Podman. It is available as a container image from HCL DX 9.5 CF196 and later releases. See the [DXClient installation using container package](#installing-dxclient-using-the-container-package-from-hcl-software-portal) for more details.
+- First option is to deploy using the DXClient container package. DXClient is packaged as a container that you can run using OCI-based runtimes such as Docker or Podman. It is available as a container image from HCL DX 9.5 CF196 and later releases. For more information, see [DXClient installation using container package](#installing-dxclient-using-the-container-package-from-hcl-software-portal).
 
 2. The alternative deployment option is DXClient as native JavaScript code. Customers who want to rely on this deployment option need to install their own Node.js and npm runtime environment in the correct version and must install necessary dependencies as needed. See the [DXClient installation using native js package](#installing-dxclient-using-the-native-javascript-package-from-hcl-software-portal) for more details.
 
