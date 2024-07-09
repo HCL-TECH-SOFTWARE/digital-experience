@@ -12,19 +12,10 @@ DXClient comes with two deployment options:
 
 - The alternative option is to deploy DXClient as native JavaScript code. Users who want to use this deployment option must install their own Node.js and Node Package Manager (npm) runtime environment in the correct version. Users must also install the required dependencies. For more information, see [DXClient installation using native js package](#installing-dxclient-using-the-native-javascript-package-from-hcl-software-portal).
 
-!!!important "Important note related to DXClient versions and distribution"
-          DXClient is now free to download and install through NpmJS and Harbor repositories. After openly distributing DXClient, the versioning format of DXClient is now changed from 1.xx.x to <CFNumber>.x.x. For example, the version of DXClient in the previous release was "1.29.0". Starting CF221, the versioning format uses the corresponding CF number of the DX deployment, making the DXClient version for CF221 "221.0.0". 
+!!!important "Information about DXClient versions and distribution"
+    DXClient is now free to download and install through [NpmJS and Harbor repositories](#public-and-free-dxclient-installation-options). After openly distributing DXClient, the versioning format of DXClient is now changed from 1.xx.x to <CFNumber>.x.x. For example, the version of DXClient in the previous release was "1.29.0". Starting CF221, the versioning format uses the corresponding CF number of the DX deployment, making the DXClient version for CF221 "221.0.0". 
 
-          HCL DX also introduces a license agreement which can be accepted using the command `accept-license`. For command details, see [DXClient Usage Information Commands](#dxclient-usage-information-commands).
-
-## Public and free DXClient installation options 
-
-The following options to install DXClient are available starting CF221. Both options are free to use.
-
-- [Install DXClient from the NpmJS public registry.](#installuninstall-dxclient-from-npmjs-registry)
-
-- [Install DXClient from the container image in the public Harbor repository.](#using-container-of-dxclient-from-harbor-registry)
-
+    HCL DX also introduces a license agreement which can be accepted using the command `accept-license`. For command details, see [DXClient information commands](#dxclient-information-commands).
 
 ## Architecture
 
@@ -52,7 +43,7 @@ In addition, the package includes scripts for all operating systems that make it
             ```bash
             make unlink
             ```
-        
+            
         === "Microsoft Windows"
             ```bash
             make_unlink.bat
@@ -66,14 +57,14 @@ In addition, the package includes scripts for all operating systems that make it
         === "Linux and Apple macOS"
             ```bash
             export CONTAINER_RUNTIME=<YOUR_CONTAINER_RUNTIME>
-            
+                
             # For example: export CONTAINER_RUNTIME=podman
             ```
 
         === "Microsoft Windows"
             ```batch
             set CONTAINER_RUNTIME=<YOUR_CONTAINER_RUNTIME>
-            
+                
             :: For example: set CONTAINER_RUNTIME=podman
             ```
 
@@ -167,7 +158,7 @@ In addition, the package includes scripts for all operating systems that make it
 
 11. By default, the logs will be available in UTC format. If needed, synchronize your local timezone from host to container using an environment variable as shown in the example below.
 
-    Example Usage:
+    Example usage:
     
     === "Linux and Apple macOS"
         ```bash
@@ -307,7 +298,15 @@ In addition, the package includes scripts for all operating systems that make it
         make_unlink.bat
         ```
 
-## Installing or uninstalling DXClient from NpmJS registry
+## Public and free DXClient installation options 
+
+The following options to install DXClient are available starting CF221. Both options are free to use.
+
+- [Install DXClient from the NpmJS public registry.](#installing-or-uninstalling-dxclient-from-npmjs-registry)
+
+- [Install DXClient from the container image in the public Harbor repository.](#installing-dxclient-using-the-container-image-in-the-harbor-repository)
+
+### Installing or uninstalling DXClient from NpmJS registry
           
 The option to install or uninstall from the NpmJS registry is only available starting CF221. The DXClient version installed must be 221.0.0.
 
@@ -317,16 +316,17 @@ The option to install or uninstall from the NpmJS registry is only available sta
 
 - To uninstall DXClient, use the `npm uninstall @hcl-software/dxclient` command.
 
-## Installing DXClient using the container image in the Harbor repository
+### Installing DXClient using the container image in the Harbor repository
 
-1. Pull the docker image from https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab using the following command.
+1. Pull the docker image from https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab using the following command:
 
     ```
      docker pull hclcr.io/dx-public/dxclient:IMAGE_TAG
     ```
 
 2. Download DXClient scripts.
-         To download DXClient scripts, go to [dxclient-scripts](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts) of the HCL-TECH-SOFTWARE GitHub repository. In this repository, you can find the installation and usage details, and the latest scripts for using the containerized version of DXClient which is openly distributed in [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab).
+    
+    To download DXClient scripts, go to [dxclient-scripts](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts) of the HCL-TECH-SOFTWARE GitHub repository. In this repository, you can find the installation and usage details, and the latest scripts for using the containerized version of DXClient which is openly distributed in [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab).
 
 ## Verifying your DXClient installation
 
@@ -342,8 +342,8 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
     Refer to the list of features that were released in the following HCL DX 9.5 releases:
 
     -   HCL DX 9.5 CF221 release: **V221.0.0
-        -  A one time license agreement click-through is enabled. To skip the prompt, use the [accept-license](#dxclient-usage-information-commands) command.
-        -   DXClient is now openly distributed in [NpmJS and Harbor repository](#new--easy-install-options-for-dxclient-users).
+        -  A one time license agreement click-through is enabled. To skip the prompt, use the [accept-license](#dxclient-information-commands) command.
+        -   DXClient is now openly distributed in [NpmJS and Harbor repository](#public-and-free-dxclient-installation-options).
 
     -   HCL DX 9.5 CF219 release: **V1.28.0 
         - [Enabled multiple environment configuration in node version](#configuring-multiple-environments-in-dxclient)
@@ -444,7 +444,7 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
         -   [XML Access](../dxclient/dxclient_artifact_types/xmlaccess.md)
         -   [Restore Script Application](../dxclient/dxclient_artifact_types/scriptapplications.md)
 
-## Additional Information
+## Additional information
     
 1. The attribute `-dxConnectHostname` has been deprecated (since CF202) and removed (since CF210) and must be replaced with `-hostname` wherever necessary.
 2. The attribute `-targetServerHostname`, `-targetServerPort`,`-targetServerUsername`,`-targetServerPassword` & `-targetServerProfileName` has been deprecated (since CF202) and removed (since CF210) and must be replaced with `-targetHostname`, `-targetDxConnectPort`,`-targetDxConnectUsername`,`-targetDxConnectPassword` & `-targetDxProfileName` respectively wherever necessary.
@@ -554,43 +554,43 @@ Common command arguments can be pre-configured inside the config.json file avail
 !!!note
     You must create the config.json in each `<VOLUME_DIR>` folder to set up multiple configurations. Otherwise, the system picks up the configurations specified in the default config.json available under `dist/configuration` in node version.
 
-## DXClient usage information commands
+## DXClient information commands
 
 To display Help documents, check the DXClient version and compatibility, and accept license information for DXClient, refer to the following commands.
 
-- Use the following commands to display the Help document for DXClient:
+Use the following commands to display the Help document for DXClient:
 
-          ```bash
-          dxclient
-          ```
+    ```bash
+    dxclient
+    ```
 
-          ```bash
-          dxclient -h, --help 
-          ```
+    ```bash
+    dxclient -h, --help 
+    ```
 
-- Use the following command to display the DXClient version number:
+Use the following command to display the DXClient version number:
 
-          ```bash
-          dxclient -V, --version
-          ```
+    ```bash
+    dxclient -V, --version
+    ```
 
-- Use the following command to display the Help information for a specific command:
+Use the following command to display the Help information for a specific command:
 
-          ```bash
-          dxclient help [command]
-          ```
+    ```bash
+    dxclient help [command]
+    ```
 
-- Use the following command to skip prompt of click-through license acceptance agreement:
+Use the following command to skip prompt of click-through license acceptance agreement:
 
-          ```bash
-          dxclient accept-license
-          ```
+    ```bash
+    dxclient accept-license
+    ```
 
-- Use the following command to show version compatibility details between DX Core and DXClient [`version-compat`](../dxclient/dxclient_artifact_types/versionCompat.md):
+Use the following command to show version compatibility details between DX Core and DXClient [`version-compat`](../dxclient/dxclient_artifact_types/versionCompat.md):
 
-          ```bash
-          dxclient version-compat [options]
-          ```
+    ```bash
+    dxclient version-compat [options]
+    ```
 
 ## DXClient commands
 
