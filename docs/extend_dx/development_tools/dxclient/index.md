@@ -315,7 +315,7 @@ This option to install/uninstall are avaialble from HCL DX 9.5 CF221 deployment.
 
 ## Installing DXClient using the container image in the Harbor repository
 
-1. Pull the docker image from https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab using the below command.
+1. Pull the docker image from https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab using the following command.
 
     ```
      docker pull hclcr.io/dx-public/dxclient:IMAGE_TAG
