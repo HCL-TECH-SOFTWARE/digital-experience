@@ -28,7 +28,7 @@ The following image illustrates the DXClient Architecture diagram:
 
 ![HCL DXclient Architecture diagram](../../../images/HCLDXClient_Architecture_Diagram.png)
 
-## Installing DXClient using the container package from HCL Software portal.
+## Installing DXClient using the container package from HCL Software portal
 
 The container package provides a fully packaged OCI-compliant container that contains everything to successfully run DXClient. You may use any container runtime that implements OCI Runtime Specification (for example, Docker or Podman).
 
