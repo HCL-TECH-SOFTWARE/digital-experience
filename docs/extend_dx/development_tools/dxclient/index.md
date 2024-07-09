@@ -313,7 +313,7 @@ To uninstall DXClient, use the `npm uninstall @hcl-software/dxclient` command.
 
 This option to install/uninstall are avaialble from HCL DX 9.5 CF221 deployment. The latest version you install will be "221.0.0".
 
-## Using container of DXClient from Harbor registry
+## Installing DXClient using the container image in the Harbor repository
 
 1. Pull the docker image from https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab using the below command.
 
