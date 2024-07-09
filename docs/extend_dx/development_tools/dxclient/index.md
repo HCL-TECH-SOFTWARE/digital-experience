@@ -14,7 +14,8 @@ DXClient comes with two deployment options:
 
 !!!important "Important note related to DXClient versions and distribution"
           DXClient is now free to download and install through NpmJS and Harbor repositories. After openly distributing DXClient, the versioning format of DXClient is now changed from 1.xx.x to <CFNumber>.x.x. For example, the version of DXClient in the previous release was "1.29.0". Starting CF221, the versioning format uses the corresponding CF number of the DX deployment, making the DXClient version for CF221 "221.0.0". 
-HCL DX also introduces a license agreement which can be accepted using the command `accept-license`. For command details, see [DXClient Usage Information Commands](#dxclient-usage-information-commands).
+
+          HCL DX also introduces a license agreement which can be accepted using the command `accept-license`. For command details, see [DXClient Usage Information Commands](#dxclient-usage-information-commands).
 
 ## New & Easy install options for DXClient Users
 
@@ -305,14 +306,14 @@ In addition, the package includes scripts for all operating systems that make it
         ```
 
 ## Installing or uninstalling DXClient from NpmJS registry
+          
+The option to install or uninstall from the NpmJS registry is only available starting CF221. The DXClient version installed must be 221.0.0.
 
-To install the latest version of DXClient, use the `npm install @hcl-software/dxclient` command. 
+- To install the latest version of DXClient, use the `npm install @hcl-software/dxclient` command. 
 
-To install DXClient globally, use the `npm install -g @hcl-software/dxclient` command. 
+- To install DXClient globally, use the `npm install -g @hcl-software/dxclient` command. 
 
-To uninstall DXClient, use the `npm uninstall @hcl-software/dxclient` command.
-
-This option to install/uninstall are avaialble from HCL DX 9.5 CF221 deployment. The latest version you install will be "221.0.0".
+- To uninstall DXClient, use the `npm uninstall @hcl-software/dxclient` command.
 
 ## Installing DXClient using the container image in the Harbor repository
 
@@ -557,37 +558,37 @@ To display Help documents, check the DXClient version and compatibility, and acc
 
 - Use the following commands to display the Help document for DXClient:
 
-```bash
-dxclient
-```
+          ```bash
+          dxclient
+          ```
 
-```bash
-dxclient -h, --help 
-```
+          ```bash
+          dxclient -h, --help 
+          ```
 
 - Use the following command to display the DXClient version number:
 
-```bash
-dxclient -V, --version
-```
+          ```bash
+          dxclient -V, --version
+          ```
 
 - Use the following command to display the Help information for a specific command:
 
-```bash
-dxclient help [command]
-```
+          ```bash
+          dxclient help [command]
+          ```
 
 - Use the following command to skip prompt of click-through license acceptance agreement:
 
-```bash
-dxclient accept-license
-```
+          ```bash
+          dxclient accept-license
+          ```
 
 - Use the following command to show version compatibility details between DX Core and DXClient [`version-compat`](../dxclient/dxclient_artifact_types/versionCompat.md):
 
-```bash
-dxclient version-compat [options]
-```
+          ```bash
+          dxclient version-compat [options]
+          ```
 
 ## DXClient commands
 
