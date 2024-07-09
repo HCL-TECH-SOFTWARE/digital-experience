@@ -554,7 +554,7 @@ Common command arguments can be pre-configured inside the config.json file avail
 
 To display Help documents, check the DXClient version and compatibility, and accept license information for DXClient, refer to the following commands.
 
-Use the following commands to display the Help document for DXClient:
+- Use the following commands to display the Help document for DXClient:
 
 ```bash
 dxclient
