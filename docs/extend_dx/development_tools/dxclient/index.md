@@ -17,7 +17,9 @@ DXClient comes with two deployment options:
 
           HCL DX also introduces a license agreement which can be accepted using the command `accept-license`. For command details, see [DXClient Usage Information Commands](#dxclient-usage-information-commands).
 
-## New & Easy install options for DXClient Users
+## Public and free DXClient installation options 
+
+The following options to install DXClient are available starting CF221. Both options are free to use.
 
 - [Install DXClient from the NpmJS public registry.](#installuninstall-dxclient-from-npmjs-registry)
 
