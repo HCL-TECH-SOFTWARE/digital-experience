@@ -12,7 +12,8 @@ DXClient comes with two deployment options:
 
 - The alternative option is to deploy DXClient as native JavaScript code. Users who want to use this deployment option must install their own Node.js and Node Package Manager (npm) runtime environment in the correct version. Users must also install the required dependencies. For more information, see [DXClient installation using native js package](#installing-dxclient-using-the-native-javascript-package-from-hcl-software-portal).
 
-**Important Note related to DXClient version & distribution:** With the aim to help DX Developers, DXClient is now available free to download/install through NpmJS and harbor repositories. Following the decision to openly distribute DXClient, we have changed the current versioning format of DXClient from 1.xx.x to <CFNumber>.x.x. For example, the last release version of DXClient was "1.29.0" but the upcoming release is reformatted to "221.0.0". The number 221 is synonymous with the CF Number version of DX deployments. 
+!!!important "Important note related to DXClient versions and distribution"
+          DXClient is now free to download and install through NpmJS and Harbor repositories. After openly distributing DXClient, the versioning format of DXClient is now changed from 1.xx.x to <CFNumber>.x.x. For example, the version of DXClient in the previous release was "1.29.0". Starting CF221, the versioning format uses the corresponding CF number of the DX deployment, making the DXClient version for CF221 "221.0.0". 
 HCL DX also introduces a license agreement which can be accepted using the command `accept-license`. For command details, see [DXClient Usage Information Commands](#dxclient-usage-information-commands).
 
 ## New & Easy install options for DXClient Users
