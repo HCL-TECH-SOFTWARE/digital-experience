@@ -98,12 +98,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     You can now install DXClient [from the NpmJS public registry](../../extend_dx/development_tools/dxclient/index.md#installing-or-uninstalling-dxclient-from-npmjs-registry) or [from the container image in the public Harbor repository](../../extend_dx/development_tools/dxclient/index.md#installing-dxclient-using-the-container-image-in-the-harbor-repository). The open distribution of DXClient makes it easier for DX developers to download and work with the tool. Previously, developers need Administrator access to get DXClient.
 
-    After openly distributing DXClient, the versioning format is now changed from 1.xx.x to <CFNumber>.x.x. For CF221, the DXClient version is 221.0.0. For more information, see [DXClient](../../extend_dx/development_tools/dxclient/index.md).
+    After openly distributing DXClient, the versioning format is now changed from 1.xx.x to <CFNumber\>.x.x. For CF221, the DXClient version is 221.0.0. For more information, see [DXClient](../../extend_dx/development_tools/dxclient/index.md).
 
 === "On-Premises"
     You can now install DXClient [from the NpmJS public registry](../../extend_dx/development_tools/dxclient/index.md#installing-or-uninstalling-dxclient-from-npmjs-registry) or [from the container image in the public Harbor repository](../../extend_dx/development_tools/dxclient/index.md#installing-dxclient-using-the-container-image-in-the-harbor-repository). The open distribution of DXClient makes it easier for DX developers to download and work with the tool. Previously, developers need Administrator access to get DXClient.
 
-    After openly distributing DXClient, the versioning format is now changed from 1.xx.x to <CFNumber>.x.x. For CF221, the DXClient version is 221.0.0. For more information, see [DXClient](../../extend_dx/development_tools/dxclient/index.md).
+    After openly distributing DXClient, the versioning format is now changed from 1.xx.x to <CFNumber\>.x.x. For CF221, the DXClient version is 221.0.0. For more information, see [DXClient](../../extend_dx/development_tools/dxclient/index.md).
 
 ### New DXClient command `accept-license`
 
