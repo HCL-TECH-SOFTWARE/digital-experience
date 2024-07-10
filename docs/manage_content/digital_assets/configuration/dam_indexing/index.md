@@ -20,6 +20,7 @@ Know how to use DAM Indexing.
 
 
 ???+ info "Related information"
-    - [Installing search based on OpenSearch](../../../../deployment//install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md)
+    - [Installing search based on OpenSearch](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md)
+    - [Running search queries via REST API](../../../../deployment/manage/container_configuration/configure_opensearch/run_search_queries_api.md)
 
 
