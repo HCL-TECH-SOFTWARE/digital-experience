@@ -158,7 +158,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Digital Asset Management - Indexing
 
 === "Containers"
-    You can use Digital Asset Management (DAM) as a datasource of the Search service for you to search DAM assets and images more efficiently. For instructions on how to configure and use indexing in DAM, see [DAM Indexing](../../manage_content/digital_assets/configuration/dam_indexing/index.md).
+    You can use Digital Asset Management (DAM) as a datasource of the [Search](../../deployment/manage/container_configuration/configure_opensearch/run_search_queries_api.md) service for you to search DAM assets and images more efficiently. For instructions on how to configure and use indexing in DAM, see [DAM Indexing](../../manage_content/digital_assets/configuration/dam_indexing/index.md).
 
 ### Downloading a mismatch report even if find mismatch process is not complete
 
