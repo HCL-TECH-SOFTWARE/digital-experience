@@ -108,10 +108,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New DXClient command `accept-license`
 
 === "Containers"
-    HCL DX introduces a license agreement in DXClient which can be accepted using the command `accept-license`. For command details, see [DXClient usage information commands](../../extend_dx/development_tools/dxclient/index.md#dxclient-information-commands).
+    HCL DX introduces a license agreement in DXClient which can be accepted using the command `accept-license`. For command details, see [DXClient information commands](../../extend_dx/development_tools/dxclient/index.md#dxclient-information-commands).
 
 === "On-Premises"
-    HCL DX introduces a license agreement in DXClient which can be accepted using the command `accept-license`. For command details, see [DXClient usage information commands](../../extend_dx/development_tools/dxclient/index.md#dxclient-information-commands).
+    HCL DX introduces a license agreement in DXClient which can be accepted using the command `accept-license`. For command details, see [DXClient information commands](../../extend_dx/development_tools/dxclient/index.md#dxclient-information-commands).
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
