@@ -205,3 +205,7 @@ This returns all documents containing the word `Product` in their `title` field 
 ```
 
 This returns all documents containing the word `Product` in their `title` field but only the ones with the `locale` being `fr`. The filter has no influence on scoring and is purely binary.
+
+???+ info "Related information"
+    - [DAM Indexing](../../../../manage_content/digital_assets/configuration/dam_indexing/index.md)
+    - [Search REST API specification](../../../../build_sites/search/search-rest-api/index.md)
