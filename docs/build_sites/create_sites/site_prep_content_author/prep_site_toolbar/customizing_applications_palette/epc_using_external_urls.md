@@ -38,7 +38,7 @@ To assign portlets to these categories, you must point the external URL to a fee
 
 4. Under the application category root label, click **New URL** to create a new URL.
 
-5. Add a title and description in **Title** and **Description** field respectively for the new category. Click **OK**.
+5. Add a title and description in the **Title** and **Description** fields respectively for the new category. Click **OK**.
 
 6. In the Advanced Options section, select **HTML** as supported markup. Specify a Uniform Resource Identifier (URI) pointing to a feed that returns a list of portlet definitions or portlet entities.
 
