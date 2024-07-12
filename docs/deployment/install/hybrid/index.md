@@ -1,10 +1,13 @@
 # Hybrid Deployment - Helm
 
-This section describes how to install HCL Digital Experience 9.5 Container Update CF198 and later Portal Server and Web Content Manager services to on-premises platforms, operating with Digital Asset Management, Content Composer, Experience API deployed to cloud-based Kubernetes and OpenShift platforms using the Helm deployment method.
+This section describes how to install HCL Digital Experience 9.5 Container Update CF198 and later Portal Server and Web Content Manager services to on-premises platforms, operating with Digital Asset Management (DAM), Content Composer, Experience API deployed to cloud-based Kubernetes and OpenShift platforms using the Helm deployment method.
+
+!!!note
+    Running DAM on an on-premises server is not supported. You can only run DAM in a Kubernetes platform.
 
 ## Overview
 
-The HCL Digital Experience 9.5 Hybrid deployment reference architecture and topics describe an approach to deploy and manage HCL Digital Experience 9.5 core Portal Server and Web Content Manager services on premises, and connect to cloud native components Digital Asset Management, Content Composer, Experience API and related services using Helm, in a production environment.
+The HCL Digital Experience 9.5 Hybrid deployment reference architecture and topics describe an approach to deploy and manage HCL Digital Experience 9.5 core Portal Server and Web Content Manager services on-premises, and connect to cloud native components Digital Asset Management, Content Composer, Experience API and related services using Helm, in a production environment.
 
 ![Topology - HCL Digital Experience Hybrid On-premises and Cloud components deployment](../hybrid/_img/topology_hybrid_onprem_cloud_deployment.png)
 

@@ -61,6 +61,62 @@ This section provides sample search queries for several scenarios.
 
 This search query returns all documents containing the word `Product` in their `title` field.
 
+### Search for a collection in DAM
+
+```
+{
+  "query": {
+    "must": [
+      {
+        "wildcard": {
+          "documentObject.name": {
+            "value": "*Product*",
+            "case_insensitive": true
+          }
+        }
+      },
+      {
+        "match": {
+          "documentObject.type": "collection"
+        }
+      }
+    ]
+  },
+  "page": 0,
+  "pageSize": 10
+}
+```
+
+This search query returns all documents containing the word `Product` in their `name` field and the `type` is `collection`.
+
+### Search for an asset in DAM
+
+```
+{
+  "query": {
+    "must": [
+      {
+        "wildcard": {
+          "documentObject.name": {
+            "value": "*Product*",
+            "case_insensitive": true
+          }
+        }
+      },
+      {
+        "match": {
+          "documentObject.type": "asset"
+        }
+      }
+    ]
+  },
+  "page": 0,
+  "pageSize": 10
+}
+```
+
+This search query returns all documents containing the word `Product` in their `name` field and the `type` is `asset`.
+
 ### Search using a query string
 
 ```json
@@ -149,3 +205,7 @@ This returns all documents containing the word `Product` in their `title` field 
 ```
 
 This returns all documents containing the word `Product` in their `title` field but only the ones with the `locale` being `fr`. The filter has no influence on scoring and is purely binary.
+
+???+ info "Related information"
+    - [DAM Indexing](../../../../manage_content/digital_assets/configuration/dam_indexing/index.md)
+    - [Search REST API specification](../../../../build_sites/search/search-rest-api/index.md)

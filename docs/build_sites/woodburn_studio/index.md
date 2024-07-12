@@ -29,6 +29,10 @@ However, one can immediately force the indexer to run manually from the **Search
 
 Go to [Configuring a crawler to search your local portal site](../search/searching_local_portal/srccrwlindxsite.md) for more information about configuring and running a search crawler on your local portal site.
 
+!!!note
+    If you have uninstalled HCL DX version 9.5, the Practitioner Studio or Woodburn Studio Theme applications are not removed.
+
+    After Practitioner Studio and Woodburn Studio are installed, neither of their .ear files are removed from the WebSphere Administration Console. When you upgrade HCL DX to CF17 or later and you have removed HCL DX version 9.5, the upgrade will fail because the upgrade configuration tasks use these .ear files to take actions that are valid only for version 9.5. If HCL DX version 9.5 is uninstalled from the environment, you must manually uninstall the Practitioner Studio Theme and Woodburn Studio Theme applications from the WebSphere Administration Console to successfully upgrade your CF version. 
 
 -   **[Filtering the results of a WCM Navigator Component](woodburn_studio_filtering_WCM.md)**  
 This document shows how to filter navigator component results and uses the Woodburn Studio site as an example of when this type of filtering might be needed.

@@ -6,7 +6,7 @@ title: AWS Marketplace Helm Deployment
 
 This topic provides information on how to deploy HCL Digital Experience (DX) acquired from the AWS Marketplace on both Amazon-managed Kubernetes and self-managed Kubernetes for on-premise deployments. 
 
-The latest DX 9.5 container images and Helm charts available for HCL DX 9.5 will be available shortly through the [AWS Marketplace](https://aws.amazon.com/marketplace/search/results?searchTerms=hcl) for customers who purchase through the Marketplace as a containerized product offering. Upon subscription, you can utilize the Helm-based fulfillment option presented for selection, enabling the deployment of DX on a Kubernetes cluster of their preference.
+The latest DX 9.5 container images and Helm charts available for HCL DX 9.5 is available through the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-xxxuhyr7adj3a) for customers who purchase through the Marketplace as a containerized product offering. Upon subscription, you can utilize the Helm-based fulfillment option presented for selection, enabling the deployment of DX on a Kubernetes cluster of your preference.
 
 ## Prerequisites
 
