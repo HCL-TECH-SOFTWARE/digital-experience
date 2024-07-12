@@ -27,7 +27,6 @@ The following features and updates are available to customers installing HCL Dig
 - Digital Asset Management - Access control for nested collections
 - Digital Asset Management - PostgreSQL version upgrade
 - Added guidance for upgrading a Helm deployment
-- New guidance for performance sizing for rendering with maximum throughput on a single node
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Notice of deprecation of automated Pod restart on ConfigMap updates
 
@@ -132,7 +131,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Added guidance for upgrading a Helm deployment
 
 === "Containers"
-    Information about the [prerequisites](../../deployment/install/container/helm_deployment/update_helm_deployment.md#prerequisites) when upgrading a Helm deployment and the [recommended actions before a CF upgrade for Kubernetes](../../deployment/install/container/helm_deployment/update_helm_deployment.md#recommended-actions-before-a-cf-upgrade) are now available.
+    Information about the [prerequisites](../../deployment/install/container/helm_deployment/update_helm_deployment.md#prerequisites) when upgrading a Helm deployment and the [recommended actions before a CF upgrade for Kubernetes](../../deployment/install/container/helm_deployment/update_helm_deployment.md#recommended-actions-before-a-cf-upgrade) are now available. 
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
