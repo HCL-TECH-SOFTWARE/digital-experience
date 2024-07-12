@@ -55,10 +55,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Setting a cache header for WCM GET REST APIs
 
 === "Containers"
-    You can configure a cache header for GET requests for unauthenticated users. Configuring cache headers result to better performance and cachability. For more information, see [Cache headers for WCM REST V2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md#cache-headers-for-wcm-rest-v2).
+    You can configure a cache header for GET requests for unauthenticated users. Configuring cache headers results in better performance and cachability. For more information, see [Cache headers for WCM REST V2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md#cache-headers-for-wcm-rest-v2).
     
 === "On-Premises"
-    You can configure a cache header for GET requests for unauthenticated users. Configuring cache headers result to better performance and cachability. For more information, see [Cache headers for WCM REST V2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md#cache-headers-for-wcm-rest-v2).
+    You can configure a cache header for GET requests for unauthenticated users. Configuring cache headers results in better performance and cachability. For more information, see [Cache headers for WCM REST V2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md#cache-headers-for-wcm-rest-v2).
 
 ### Retrieving multiple content items in one REST call through a list of UUIDs   
 
