@@ -17,7 +17,7 @@ There are a number of different context paths available for this API to allow fo
 
 The order of the parameters in the requests does not matter. The parameter names are case-sensitive; they must be entered in the format documented. Any unknown or unsupported parameters that are submitted as part of a request is ignored.
 
-The request must be a standard HTTP GET command. The URL is formed by combining the search server's host name, port, and path; and a collection of name-value pairs \(input parameters\) separated by & characters. Any parameter value must be URL-escaped if in GET request.
+The request must be a standard HTTP GET command. The URL is formed by combining the search server's host name, port, and path, as well as a collection of name-value pairs (input parameters) separated by "&" characters. Any parameter value must be URL-escaped if in GET request.
 
 |Name|Description|Comments|
 |----|-----------|--------|
