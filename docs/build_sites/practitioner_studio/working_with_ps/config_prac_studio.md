@@ -1,25 +1,38 @@
-# How to configure Practitioner Studio
+# Configuring Practitioner Studio
 
-Learn how to show Practitioner Studio and Woodburn Studio themes, and Administration changes in a newly created virtual Portal.
+Learn how to show Practitioner Studio and Woodburn Studio themes, and administration changes in a newly created virtual Portal.
 
-Administrator users can configure the Virtual Portal Manager portlet so Practitioner Studio and Woodburn Studio themes and Administration changes show in newly created virtual Portals.
+Administrators can configure the Virtual Portal Manager portlet so Practitioner Studio and Woodburn Studio themes and administration changes show in newly created virtual Portals. For more information, see [Configuring Virtual Portal Manager for newly created virtual Portals](#configuring-virtual-portal-manager-for-newly-created-virtual-portals).
 
-## Configuring Virtual Portal Manager so that newly created virtual Portals contain Practitioner Studio and Woodburn Studio
+Starting CF221, the Virtual Portal Manager is configured to use the file `WebSphere:assetname=VirtualPortal.zip:InitVirtualContentPortalV9.5NoWoodburn.xml` on newly deployed containers so that newly created virtual Portals contain Practitioner Studio. For upgrades from older versions, the default is not changed to allow continued use of virtual Portals as configured previously.
 
-!!! note
-    Prerequisite is to enable the 9.5 features on the base Portal. Optionally, you can configure the Virtual Portal Manager portlet to use a different XML file so that subsequent virtual portals will contain the new 95 UI features.
+## Configuring Virtual Portal Manager for newly created virtual Portals 
 
-1.  From **Site Management**, navigate to **Virtual Portal** \> **Virtual Portal Manager** \> **Create New Virtual Portal**.
-2.  Go to the overlay menu \(the three vertical dots\) and click **Configure**.
-3.  In the field **XML script to create virtual portal content tree**, enter the appropriate value. For example:
-    -   `WebSphere:assetname=VirtualPortal.zip:InitVirtualContentPortalV9.5.xml`
+To configure Virtual Portal Manager for newly created virtual Portals to contain Practitioner Studio and Woodburn Studio, refer to the following steps. 
+
+### Prerequisite
+
+Enable the HCL DX 9.5 features on the base Portal. Optionally, you can configure the Virtual Portal Manager portlet to use a different XML file so that subsequent virtual Portals will contain the HCL DX 9.5 UI features.
+
+### Steps
+
+1.  From **Site Management**, navigate to **Virtual Portal > Virtual Portal Manager > Create New Virtual Portal**.
+
+2.  Go to the overlay menu and click **Configure**.
+
+3.  In the **XML script to create virtual portal content tree** field, enter the appropriate value. 
+
+    For example, `WebSphere:assetname=VirtualPortal.zip:InitVirtualContentPortalV9.5.xml`.
+
 4.  Click **OK**.
 
 !!! note
-    This does not create the two Woodburn Studio libraries in the virtual portal. You will need to syndicate these libraries to your virtual portal.
+    This does not create the two Woodburn Studio libraries in the virtual Portal. You have to syndicate these libraries to your virtual Portal.
 
-## Removing Practitioner Studio or Woodburn Studio from a virtual portal that was created by modifying the Virtual Portal Manager configuration
+Alternatively, to skip Woodburn Studio, you can use the file `WebSphere:assetname=VirtualPortal.zip:InitVirtualContentPortalV9.5NoWoodburn.xml` starting CF221.
 
--   Virtual portals that were created by modifying the Virtual Portal Manager portlet configuration can not use the **disable-v95-UI-features-virtual-portal** task to disable the features. These will require a manual cleanup of the artifacts.
+## Removing Practitioner Studio or Woodburn Studio from a virtual Portal 
+
+Virtual portals that were created by modifying the Virtual Portal Manager portlet configuration cannot use the **disable-v95-UI-features-virtual-portal** task to disable the features. These will require a manual cleanup of the artifacts.
 
 

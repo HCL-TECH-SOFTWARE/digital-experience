@@ -38,11 +38,11 @@ New Digital Asset Management Features are added with HCL Digital Experience Cont
 
 See the [HCL Digital Asset Management Help Center](../../manage_content/digital_assets/index.md) topic for additional information.
 
-## HCL Digital Experience 9.5 Integration with HCL Unica Discover
+## HCL Digital Experience 9.5 Integration with HCL Discover
 
-Integration of [HCL Digital Experience](https://www.hcltechsw.com/wps/portal/products/dx/features){:target="_blank"} 9.5 sites with [HCL Unica Discover](https://www.hcltechsw.com/products/unica/offerings/discover){:target="_blank"} enables DX site managers and marketers to access deep insight analytics and session replay services to assess the effectiveness of DX site pages with end user audiences.
+Integration of [HCL Digital Experience](https://www.hcltechsw.com/wps/portal/products/dx/features){:target="_blank"} 9.5 sites with [HCL Discover](https://www.hcltechsw.com/products/unica/offerings/discover){:target="_blank"} enables DX site managers and marketers to access deep insight analytics and session replay services to assess the effectiveness of DX site pages with end user audiences.
 
-See the [Integrate HCL Unica Discover with HCL Digital Experience](../../build_sites/site_analytics/unica/index.md) topic for more information.
+See the [Integrate HCL Discover with HCL Digital Experience](../../build_sites/site_analytics/unica/index.md) topic for more information.
 
 ## Content Security Policy
 
@@ -76,7 +76,7 @@ Take advantage of new step-by-step guidance for HCL Digital Experience practitio
     - [HCL Content Composer Help Center](../content_composer/cont_comp_overview.md)
     - [HCL Digital Asset Management Help Center](../digital_asset_mgmt/digital_asset_mgmt_overview.md)
     - [HCL Digital Asset Management Help Center](../digital_asset_mgmt/digital_asset_mgmt_overview.md)
-    - [Integrate HCL Unica Discover with HCL Digital Experience](../install/integrate_hcl_unica_discover.md)
+    - [Integrate HCL Discover with HCL Digital Experience](../install/integrate_hcl_unica_discover.md)
     - [Content Security Policy Help Center](../security/content_security_policy.md)
     - [HCL Digital Experience 9.5 Container Deployment](../containerization/deployment.md)
     - [Using the dxctl tool to deploy Digital Experience 9.5 on Red Hat OpenShift](../containerization/dxtools_dxctl.md)
