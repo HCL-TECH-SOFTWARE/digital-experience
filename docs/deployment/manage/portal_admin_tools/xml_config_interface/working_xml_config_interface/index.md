@@ -40,7 +40,7 @@ The following topics mention several sample files suitable for different purpose
 
 ## XMLAccess progress logging
 
-Starting CF221, you can enable progress logging to see the progress of XMLAccess in updating items contained in the xmlaccess input script. To use this new function, turn on tracing for: ```com.ibm.wps.command.xml.Progress=all```
+Starting CF221, you can enable progress logging to see the progress of XMLAccess in updating items contained in the xmlaccess input script. To use this new function, turn on tracing for ```com.ibm.wps.command.xml.Progress=all```.
 
 The trace.log file contain entries like the following:
 
