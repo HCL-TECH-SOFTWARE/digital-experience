@@ -1,12 +1,14 @@
 # Configuring Practitioner Studio
 
-Learn how to show Practitioner Studio and Woodburn Studio themes, and Administration changes in a newly created virtual Portal.
+Learn how to show Practitioner Studio and Woodburn Studio themes, and administration changes in a newly created virtual Portal.
 
-Administrator users can configure the Virtual Portal Manager portlet so Practitioner Studio and Woodburn Studio themes and Administration changes show in newly created virtual Portals.
+Administrators can configure the Virtual Portal Manager portlet so Practitioner Studio and Woodburn Studio themes and administration changes show in newly created virtual Portals. For more information, see [Configuring Virtual Portal Manager for newly created virtual Portals](#configuring-virtual-portal-manager-for-newly-created-virtual-portals).
 
 Starting CF221, the Virtual Portal Manager is configured to use the file `WebSphere:assetname=VirtualPortal.zip:InitVirtualContentPortalV9.5NoWoodburn.xml` on newly deployed containers so that newly created virtual Portals contain Practitioner Studio. For upgrades from older versions, the default is not changed to allow continued use of virtual Portals as configured previously.
 
-## Configuring Virtual Portal Manager for newly created virtual Portals to contain Practitioner Studio and Woodburn Studio
+## Configuring Virtual Portal Manager for newly created virtual Portals 
+
+To configure Virtual Portal Manager for newly created virtual Portals to contain Practitioner Studio and Woodburn Studio, refer to the following steps. 
 
 ### Prerequisite
 
@@ -29,8 +31,8 @@ Enable the HCL DX 9.5 features on the base Portal. Optionally, you can configure
 
 Alternatively, to skip Woodburn Studio, you can use the file `WebSphere:assetname=VirtualPortal.zip:InitVirtualContentPortalV9.5NoWoodburn.xml` starting CF221.
 
-## Removing Practitioner Studio or Woodburn Studio from a virtual portal that was created by modifying the Virtual Portal Manager configuration
+## Removing Practitioner Studio or Woodburn Studio from a virtual Portal 
 
--   Virtual portals that were created by modifying the Virtual Portal Manager portlet configuration cannot use the **disable-v95-UI-features-virtual-portal** task to disable the features. These will require a manual cleanup of the artifacts.
+Virtual portals that were created by modifying the Virtual Portal Manager portlet configuration cannot use the **disable-v95-UI-features-virtual-portal** task to disable the features. These will require a manual cleanup of the artifacts.
 
 

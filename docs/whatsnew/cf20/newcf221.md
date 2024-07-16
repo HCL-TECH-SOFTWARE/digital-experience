@@ -6,27 +6,28 @@ The following features and updates are available to customers installing HCL Dig
 
 - Progress indication for XMLAccess
 - Progress indication for syndication
-- Web Content Manager REST API V2 - Setting a cache header for WCM GET REST APIs
-- Web Content Manager REST API V2 - Retrieving multiple content items in one REST call through a list of UUIDs
-- Web Content Manager REST API V2 - Updated OpenAI ChatGPT to latest model `gpt-4o`
+- Setting a cache header for WCM GET REST APIs
+- Retrieving multiple content items in one REST call through a list of UUIDs
+- Updated OpenAI ChatGPT to latest model `gpt-4o`
 - SEO tag configuration for Open Graph compatibility
-- TinyMCE - Menu options for inplace editing now similar to WCM authoring
-- DXClient - Installing DXClient as an NPM module
+- TinyMCE - Improved menu options for inplace editing
+- New options for installing DXClient
+- New DXClient command `accept-license`
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
 
-- End of Support Announced for Digital Experience v8.5 and 9
-- DX upgrades starting CF222 automatically applies 9.5 to an 8.5/9.0 installation
+- End of Support announced for Digital Experience v8.5 and 9
+- Automatically apply 9.5 from CF222 installation
 
 **Digital Experience 9.5 Container Version**
 
 - Newly created virtual Portals now contain Practitioner Studio
 - HCL DX on AWS Marketplace now available
 - New parameter for configuring HAProxy networking
+- New documentation about the types of Services used in DX
 - Digital Asset Management - Indexing
-- Digital Asset Management - Downloading a mismatch report even if find mismatch process is not complete
-<!--- New guidance for performance sizing for rendering in medium configuration-->
+- Downloading a mismatch report even if find mismatch process is not complete
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Notice of deprecation of customized OpenLDAP container starting CF223
 - Removal of automated Pod restart on ConfigMap updates
@@ -54,10 +55,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Setting a cache header for WCM GET REST APIs
 
 === "Containers"
-    You can configure a cache header for GET requests for unauthenticated users. Configuring cache headers result to better performance and cachability. For more information, see [Cache headers for WCM REST V2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md#cache-headers-for-wcm-rest-v2).
+    You can configure a cache header for GET requests for unauthenticated users. Configuring cache headers results in better performance and cachability. For more information, see [Cache headers for WCM REST V2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md#cache-headers-for-wcm-rest-v2).
     
 === "On-Premises"
-    You can configure a cache header for GET requests for unauthenticated users. Configuring cache headers result to better performance and cachability. For more information, see [Cache headers for WCM REST V2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md#cache-headers-for-wcm-rest-v2).
+    You can configure a cache header for GET requests for unauthenticated users. Configuring cache headers results in better performance and cachability. For more information, see [Cache headers for WCM REST V2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md#cache-headers-for-wcm-rest-v2).
 
 ### Retrieving multiple content items in one REST call through a list of UUIDs   
 
@@ -92,9 +93,25 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     The menu options for inplace editing using TinyMCE are now similar to the menu for TinyMCE in WCM authoring. For information about TinyMCE Editor, see [Rich text editor toolbar configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md).
 
-### DXClient - Installing DXClient as an NPM module
+### New options for installing DXClient
 
-(Doc in progress)
+=== "Containers"
+    You can now install DXClient [from the NpmJS public registry](../../extend_dx/development_tools/dxclient/index.md#installing-or-uninstalling-dxclient-from-npmjs-registry) or [from the container image in the public Harbor repository](../../extend_dx/development_tools/dxclient/index.md#installing-dxclient-using-the-container-image-in-the-harbor-repository). The open distribution of DXClient makes it easier for DX developers to download and work with the tool. Previously, developers need Administrator access to get DXClient.
+
+    After openly distributing DXClient, the versioning format is now changed from 1.xx.x to <CFNumber\>.x.x. For CF221, the DXClient version is 221.0.0. For more information, see [DXClient](../../extend_dx/development_tools/dxclient/index.md).
+
+=== "On-Premises"
+    You can now install DXClient [from the NpmJS public registry](../../extend_dx/development_tools/dxclient/index.md#installing-or-uninstalling-dxclient-from-npmjs-registry) or [from the container image in the public Harbor repository](../../extend_dx/development_tools/dxclient/index.md#installing-dxclient-using-the-container-image-in-the-harbor-repository). The open distribution of DXClient makes it easier for DX developers to download and work with the tool. Previously, developers need Administrator access to get DXClient.
+
+    After openly distributing DXClient, the versioning format is now changed from 1.xx.x to <CFNumber\>.x.x. For CF221, the DXClient version is 221.0.0. For more information, see [DXClient](../../extend_dx/development_tools/dxclient/index.md).
+
+### New DXClient command `accept-license`
+
+=== "Containers"
+    HCL DX introduces a license agreement in DXClient which can be accepted using the command `accept-license`. For command details, see [DXClient information commands](../../extend_dx/development_tools/dxclient/index.md#dxclient-information-commands).
+
+=== "On-Premises"
+    HCL DX introduces a license agreement in DXClient which can be accepted using the command `accept-license`. For command details, see [DXClient information commands](../../extend_dx/development_tools/dxclient/index.md#dxclient-information-commands).
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
@@ -106,7 +123,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 8.5 and 9.0 Versions
 
-### End of Support Announced for Digital Experience v8.5 and 9
+### End of Support announced for Digital Experience v8.5 and 9
 
 === "On-Premises"
     On June 30, 2023, HCL Software announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
@@ -141,9 +158,9 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Digital Asset Management - Indexing
 
 === "Containers"
-    You can use Digital Asset Management (DAM) as a datasource of the Search service for you to search DAM assets and images more efficiently. For instructions on how to configure and use indexing in DAM, see [DAM Indexing](../../manage_content/digital_assets/configuration/dam_indexing/index.md).
+    You can use Digital Asset Management (DAM) as a datasource of the [Search](../../deployment/manage/container_configuration/configure_opensearch/run_search_queries_api.md) service for you to search DAM assets and images more efficiently. For instructions on how to configure and use indexing in DAM, see [DAM Indexing](../../manage_content/digital_assets/configuration/dam_indexing/index.md).
 
-### Digital Asset Management - Downloading a mismatch report even if find mismatch process is not complete
+### Downloading a mismatch report even if find mismatch process is not complete
 
 === "Containers" 
     You can use the `-forceDownload <value>` attribute to download a mismatch report even if the find mismatch process is not complete. Documentation is also updated to list the scenarios where you cannot download a mismatch report. For more information, see [DAM Staging Mismatch and Resync](../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md#download-mismatch-report).
@@ -161,7 +178,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Notice of deprecation of customized OpenLDAP container starting CF223
 
 === "Containers"
-    Starting CF223, HCL DX will no longer build and ship its custom OpenLDAP container and will instead use an open source container. By using the robust and well-maintained Bitnami OpenLDAP image, HCL DX can focus on delivering enhanced features and support without the overhead of maintaining its customized container. This shift is to provide you with more reliable and up-to-date solutions for your test environments. The new alternative, Bitnami, will be provided but will not ship with the release. Sample LDIF files for your OpenLDAP configuration will also be available.
+    Starting CF223, HCL DX will no longer build and ship its custom OpenLDAP container and will instead use an open source container. By using the robust and well-maintained Bitnami&copy; OpenLDAP image, HCL DX can focus on delivering enhanced features and support without the overhead of maintaining its customized container. This shift is to provide you with more reliable and up-to-date solutions for your test environments. The new alternative, Bitnami&copy;, will be provided but will not ship with the release. Sample LDIF files for your OpenLDAP configuration will also be available.
     
 ### Removal of automated Pod restart on ConfigMap updates
 
