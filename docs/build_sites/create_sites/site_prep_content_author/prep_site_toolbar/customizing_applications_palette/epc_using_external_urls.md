@@ -25,7 +25,7 @@ To assign portlets to these categories, you must point the external URL to a fee
 
     Use this format to create a tag if it does not exist, and you can assign as many tags as you want to as many portlets. This way, you can see the custom portlets displayed under just one category or multiple different categories.
 
-2. After adding tags to portlet resources, you can get a portlet entity feed of all portlets tagged with a custom tag by using the following URL:
+2. After adding tags to portlet resources, get a portlet entity feed of all portlets tagged with a custom tag using the following URL:
 
     https://your_dx_hostname/wps/mycontenthandler?uri=rm:empty?tmparam=tm%3aname%3aCustomAppCategory
 
