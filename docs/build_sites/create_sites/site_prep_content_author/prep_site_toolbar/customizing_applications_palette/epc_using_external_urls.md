@@ -25,22 +25,22 @@ To assign portlets to these categories, you must point the external URL to a fee
 
     Use this format to create a tag if it does not exist, and you can assign as many tags as you want to as many portlets. This way, you can see the custom portlets displayed under just one category or multiple different categories.
 
-    After adding tags to portlet resources, you can get a portlet entity feed of all portlets tagged with a custom tag by using the following URL:
+2. After adding tags to portlet resources, you can get a portlet entity feed of all portlets tagged with a custom tag by using the following URL:
 
     https://your_dx_hostname/wps/mycontenthandler?uri=rm:empty?tmparam=tm%3aname%3aCustomAppCategory
 
 
-2.  Open the **Manage Pages** portlet. To open the portlet, click the **Administration** menu icon then go to **Portal User Interface > Manage Pages**.
+3. Open the **Manage Pages** portlet. To open the portlet, click the **Administration** menu icon then go to **Portal User Interface > Manage Pages**.
 
-3. Locate the category root label.
+4. Locate the category root label.
 
     For example, search for the label with the unique name `com.ibm.portal.toolbar.applications.category.label.root`.
 
-4. Under the application category root label, click **New URL** to create a new URL.
+5. Under the application category root label, click **New URL** to create a new URL.
 
-5. Add a title and description in the **Title** and **Description** fields respectively for the new category. Click **OK**.
+6. Add a title and description in the **Title** and **Description** fields respectively for the new category. Click **OK**.
 
-6. In the Advanced Options section, select **HTML** as supported markup. Specify a Uniform Resource Identifier (URI) pointing to a feed that returns a list of portlet definitions or portlet entities.
+7. In the Advanced Options section, select **HTML** as supported markup. Specify a Uniform Resource Identifier (URI) pointing to a feed that returns a list of portlet definitions or portlet entities.
 
     For example, the URL from step 1 has the following URI: `rm:empty?tmparam=tm%3aname%3aCustomAppCategory`
 
