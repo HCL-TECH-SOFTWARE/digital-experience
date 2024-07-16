@@ -35,7 +35,7 @@ If you add a custom request cookie with the same name as an existing cookie, the
 
 Filters are Java code that can be started on demand to run custom actions. They modify the request programmatically. Filters are extensions to the core feature. Use the servlet filter API to create custom filters. The filters manipulate the request or response from the portal to the content provider. Developers create the filters.
 
-The sample code below shows how such a filter could look like:
+The following sample code shows how a filter could look like:
 
 ```
 /*
@@ -133,19 +133,21 @@ public class RequestFilterSample implements Filter {
 }
 
 ```
-The highlevel steps to add the filter are:
+To add a filter, refer to the following steps:
 
-- Extract the VwatReverseProxyServlet.ear file from the WAS Console, expand it.
-- After compiling the class package it into the classes directory with the according package or into the jar file in WEB-INF/lib.
-- Modify the web.xml to add the filter of the included war file - sample:
-```
-	<filter>
-		<filter-name>Sample Filter</filter-name>
-		<filter-class>com.hcl.dx.RequestFilterSample</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>Sample Filter</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
-```
-- Repackage the war and ear file and update the ear file in WAS.
+1. Extract the VwatReverseProxyServlet.ear file from the WebSphere Application Server (WAS) Console and expand it.
+2. After compiling the class, package it into the classes directory with the according package or into the JAR file in WEB-INF/lib.
+3. Modify the web.xml to add the filter of the included WAR file.
+	Example:
+	```
+		<filter>
+			<filter-name>Sample Filter</filter-name>
+			<filter-class>com.hcl.dx.RequestFilterSample</filter-class>
+		</filter>
+		<filter-mapping>
+			<filter-name>Sample Filter</filter-name>
+			<url-pattern>/*</url-pattern>
+		</filter-mapping>
+	```
+4. Repackage the WAR and EAR files. 
+5. In the WAS console, update the EAR file. 
