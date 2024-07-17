@@ -22,7 +22,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
-### Values moved from incubator to the to main section of `values.yaml`
+### Values moved from incubator to the main section of `values.yaml`
 
 === "Containers"
     Values for heartbeat intervals and threshold times are moved from the incubator to the main section. If those values are changed in your [`values.yaml` or custom `values.yaml` file](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md#helm-chart-valuesyaml), adjust them accordingly. For more information, see [Cleanup and Rendition Version Regeneration](../../manage_content/digital_assets/configuration/rendition_version_regeneration_and_cleanup.md).
