@@ -150,4 +150,4 @@ To add a filter, refer to the following steps:
 		</filter-mapping>
 	```
 4. Repackage the WAR and EAR files. 
-5. In the WAS console, update the EAR file. 
+5. In the WAS console, replace the existing EAR file with the repackaged EAR file from Step 4. 
