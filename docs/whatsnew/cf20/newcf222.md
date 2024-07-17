@@ -13,6 +13,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- New values moved out of incubator to main section of `values.yaml`
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Notice of deprecation of customized OpenLDAP container starting CF223
 - Removal of automated Pod restart on ConfigMap updates
@@ -24,4 +25,4 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New values moved out of incubator to main section of values.yaml
 
 === "Containers" 
-    Values for heartbeat intervals and threshold times are moved from the incubator to the main section. If those values are changed in `custom-values.yaml`, adjust them accordingly. For more information, see [Cleanup and Rendition Version Regeneration](../../manage_content/digital_assets/configuration/rendition_version_regeneration_and_cleanup.md).
+    Values for heartbeat intervals and threshold times are moved from the incubator to the main section. If those values are changed in custom `values.yaml`, adjust them accordingly. For more information, see [Cleanup and Rendition Version Regeneration](../../manage_content/digital_assets/configuration/rendition_version_regeneration_and_cleanup.md).
