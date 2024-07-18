@@ -14,14 +14,14 @@ It is recommended to configure the host before you run the deployment. This is o
 
 If that is the case, define the host using the following syntax:
 
-   ```
-   # Networking specific configuration
-   networking:
-   # Networking configuration specific to Core
-   core:
-   # Host of Core
-   host: "your-dx-instance.whateverdomain.com"
-  ```
+```yaml
+# Networking specific configuration
+networking:
+  # Networking configuration specific to Core
+  core:
+    # Host of Core
+    host: "your-dx-instance.whateverdomain.com"
+```
 
 If you do not know the hostname beforehand, you can leave it blank and run an additional step later in the installation, which would retrieve the assigned hostname from HAProxy and configure all applications accordingly.
 
@@ -31,16 +31,16 @@ The HCL Digital Experience 9.5 Helm Chart allows you to configure CORS configura
 
 You can define a list of allowed hosts for a specific application using the following syntax in your `custom-values.yaml`:
 
-```
-   # Networking specific configuration
-   networking:
-     # Networking configurations specific to all addon applications
-     addon:
-       contentComposer:
-         # CORS Origin configuration for Content Composer, array of elements
-         corsOrigin: 
-          - "https://my-different-application.net"
-          - "https://the-other-application.com"
+```yaml
+# Networking specific configuration
+networking:
+  # Networking configurations specific to all addon applications
+  addon:
+    contentComposer:
+      # CORS Origin configuration for Content Composer, array of elements
+      corsOrigin: 
+      - "https://my-different-application.net"
+      - "https://the-other-application.com"
 ```
 
 Refer to the HCL DX 9.5 `values.yaml` detail for all possible applications that can be configured.
@@ -48,7 +48,7 @@ Refer to the HCL DX 9.5 `values.yaml` detail for all possible applications that 
 
 **Configuring Hybrid Host**
 
-In a [Hybrid](../../../../../../get_started/plan_deployment/hybrid_deployment/index.md) deployment, the host for the on-premise DX Core will be added in the core configuration section and the other applications host will be placed under the add-on section. See the following example:
+In a [Hybrid](../../../../../../deployment/install/hybrid/index.md) deployment, the host for the on-premise DX Core will be added in the core configuration section and the other applications host will be placed under the add-on section. See the following example:
 
 ```yaml
 networking:
@@ -99,11 +99,11 @@ HAProxy is deployed with a `LoadBalancer` type service to handle the incoming tr
 |`serviceType`|Defines the Kubernetes [`ServiceType`](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types) of the HAProxy service. Supported ServiceType includes `LoadBalancer`, `ClusterIP` and `NodePort` | `LoadBalancer` \| `ClusterIP` \| `NodePort` |`LoadBalancer`|
 |`servicePort`|This value is used to select the port exposed by the HAProxy service. Defaults to port `443` if `ssl` is set to `true`, otherwise, port `80` is used. | Number |`null`|
 |`serviceNodePort`|This value is used to select the node port exposed by the HAProxy service. Defaults to a port selected by Kubernetes if no value is set. | Number |`null`|
-|`strictTransportSecurity.enabled`|This value is used for HTTP Strict Transport Security (HSTS) to determine if it should be `enabled` | Boolean |`true`|
+|`strictTransportSecurity.enabled`|This value is used for HTTP Strict Transport Security (HSTS) to determine if it should be `enabled`. When enabled, this value requires SSL in DX or any proxy in front of the SSL. | Boolean |`true`|
 |`strictTransportSecurity.maxAge`|This value is used to set for how long the browser should remember the HSTS rule | Number |`31536000`|
 |`strictTransportSecurity.includeSubDomains`|If this optional parameter is specified, this rule applies to all of the site's subdomains as well. | Boolean |`false`|
 |`strictTransportSecurity.preload`|See [Preloading Strict Transport Security](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security#preloading_strict_transport_security) for details. When using preload, the max-age directive must be at least 31536000 (1 year), and the includeSubDomains directive must be present. This parameter is not part of the HSTS specification. For more information, see [Strict-Transport-Security HTTP Response Header Field](https://www.rfc-editor.org/rfc/rfc6797#section-6.1). | Boolean |`false`|
-
+|`sessionCookieName`|Available starting CF221. This parameter does not directly change the cookie name. Instead, you must set this value if the cookie name is changed in the [console](../../../../../manage/config_portal_behavior/http_sessn_cookie.md).| String |`JSESSIONID`|
 
 !!!note
     If `ssl` is set to `true`, HAProxy will use the certificate that is supplied as a secret in `networking.tlsCertSecret`.
@@ -126,6 +126,8 @@ networking:
       maxAge: 31536000
       includeSubDomains: false
       preload: false
+    # Set cookie value for session affinity in HAProxy configuration for DX applications that require session affinity (e.g. HAProxy)
+    sessionCookieName: "JSESSIONID"
 ```
   
 This configuration is helpful for those who want to use a custom `Ingress Controller` to expose the service in a compatible way. Even then, HAProxy will still be active. The `Ingress Controller` will handle the incoming traffic and then route them to the HAProxy service.
@@ -136,12 +138,12 @@ This configuration is helpful for those who want to use a custom `Ingress Contro
 
 Creation of that certificate can be achieved using the following commands for OpenSSL:
 
-```
-  # Creation of a private key
-  openssl genrsa -out my-key.pem 2048
-                    
-  # Creation of a certificate signed by the private key created before
-  openssl req -x509 -key my-key.pem -out my-cert.pem -days 365 -subj '/CN=my-cert'
+```sh
+# Creation of a private key
+openssl genrsa -out my-key.pem 2048
+                  
+# Creation of a certificate signed by the private key created before
+openssl req -x509 -key my-key.pem -out my-cert.pem -days 365 -subj '/CN=my-cert'
 ```
 
 This provides you with a key and cert file that can be used in the next step, creation of the certificate to your deployment.
@@ -157,11 +159,11 @@ The secret can be created using the following commands:
 !!!note
     The secret name can be chosen by you and must be referenced in the next configuration step (the following example uses `dx-tls-cert`). The namespace is the Kubernetes namespace where you want to deploy HCL Digital Experience 9.5 to (the example uses `digital-experience`).
 
-```
-  # Create secret with the name "dx-tls-cert"
-  # Secret will be created in the namespace "digital-experience"
-  # You can either reference the cert and key file created before, or a proper signed certificate e.g. from your CA
-  kubectl create secret tls dx-tls-cert --cert=my-cert.pem --key=my-key.pem -n digital-experience 
+```sh
+# Create secret with the name "dx-tls-cert"
+# Secret will be created in the namespace "digital-experience"
+# You can either reference the cert and key file created before, or a proper signed certificate e.g. from your CA
+kubectl create secret tls dx-tls-cert --cert=my-cert.pem --key=my-key.pem -n digital-experience 
 ```
 
 ## Configure secret in deployment
@@ -171,8 +173,8 @@ You need to make sure that the reference to the secret is set up correctly in yo
 You can set the name of the certificate used with the following syntax, the default value is `dx-tls-cert`:
 
 ```yaml
-  # Networking specific configuration
-  networking:
+# Networking specific configuration
+networking:
   # TLS Certificate secret used for haproxy
   tlsCertSecret: "dx-tls-cert"
 ```

@@ -23,8 +23,8 @@ Each row in the table provides information about a specific language including t
 |Hungarian	|hu	|Available	|Available	|Available	|Available	|Available|
 |Italian	|it	|Available	|Available	|Available	|Available	|Available|
 |Japanese	|ja	|Available	|Available	|Available	|Available	|Available|
-|Kazakh	kk	|Available	|Available	|Not Available	|Available	|Available|
-|Korean	ko	|Available	|Available	|Available	|Available	|Available|
+|Kazakh	|kk	|Available	|Available	|Not Available	|Available	|Available|
+|Korean	|ko	|Available	|Available	|Available	|Available	|Available|
 |Norwegian	|no	|Not available	|Not available	|Not available	|Not available	|Available|
 |Polish	|pl	|Available	|Available	|Available	|Available	|Available|
 |Portuguese	|pt	|Available	|Available	|Not Available	|Available	|Available|

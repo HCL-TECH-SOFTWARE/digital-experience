@@ -1,10 +1,13 @@
 # Hybrid Deployment - Helm
 
-This section describes how to install HCL Digital Experience 9.5 Container Update CF198 and later Portal Server and Web Content Manager services to on-premises platforms, operating with Digital Asset Management, Content Composer, Experience API deployed to cloud-based Kubernetes and OpenShift platforms using the Helm deployment method.
+This section describes how to install HCL Digital Experience 9.5 Container Update CF198 and later Portal Server and Web Content Manager services to on-premises platforms, operating with Digital Asset Management (DAM), Content Composer, Experience API deployed to cloud-based Kubernetes and OpenShift platforms using the Helm deployment method.
+
+!!!note
+    Running DAM on an on-premises server is not supported. You can only run DAM in a Kubernetes platform.
 
 ## Overview
 
-The HCL Digital Experience 9.5 Hybrid deployment reference architecture and topics describe an approach to deploy and manage HCL Digital Experience 9.5 core Portal Server and Web Content Manager services on premises, and connect to cloud native components Digital Asset Management, Content Composer, Experience API and related services using Helm, in a production environment.
+The HCL Digital Experience 9.5 Hybrid deployment reference architecture and topics describe an approach to deploy and manage HCL Digital Experience 9.5 core Portal Server and Web Content Manager services on-premises, and connect to cloud native components Digital Asset Management, Content Composer, Experience API and related services using Helm, in a production environment.
 
 ![Topology - HCL Digital Experience Hybrid On-premises and Cloud components deployment](../hybrid/_img/topology_hybrid_onprem_cloud_deployment.png)
 
@@ -12,7 +15,7 @@ The HCL Digital Experience 9.5 Hybrid deployment reference architecture and topi
 
 -   The on-premises platform and the container platform must be at the same CF level.
 -   HCL Digital Experience V9.5 CF198 or a higher release is deployed to supported on-premises platforms in a standalone, cluster, or farm topology. See the [Roadmaps to deploy your Digital Experience 9.5 system](../../../get_started/plan_deployment/traditional_deployment/roadmaps/index.md) topic for more information.
--   Practitioner Studio is enabled in the Digital Experience 9.5 CF198 or higher installation. See [How to enable Practitioner Studio](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md) for instructions.
+-   Practitioner Studio is enabled in the Digital Experience 9.5 CF198 or a later installation. See [How to enable Practitioner Studio](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md) for instructions.
 -   A common domain that uses an SSL connection is established for both the on-premise HCL DX 9.5 CF198 and higher on-premise environments and the target Red Hat Open Shift or Amazon EKS, Azure AKS, or Google GKE platform deployment to contain the cloud native components (HCL DX Experience API, Digital Asset Management and Content Composer).
 
     For example, mytargetcloud.dx.com and myonprem.dx.com would have the same domain: dx.com.
@@ -33,5 +36,5 @@ The HCL Digital Experience 9.5 Hybrid deployment reference architecture and topi
 
 ## HCLSoftware U learning materials
 
-For an introduction and a demo on how to upgrade your HCL Digital Experience deployment to the latest Cumulative Fix, go to [Upgrade the HCL HCL Digital Experience software](https://hclsoftwareu.hcltechsw.com/courses/lesson/?id=1461).
+For an introduction and a demo on how to upgrade your HCL Digital Experience deployment to the latest Cumulative Fix, go to [Upgrade the HCL Digital Experience software](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1461). 
 

@@ -8,7 +8,7 @@ Before you begin this procedure, ensure that you created a content spot.
 
 2.  Insert the following code at the end of the JSP page:
 
-    ```
+    ```jsp
     <HR>
     
     Here are all your personalized offers:

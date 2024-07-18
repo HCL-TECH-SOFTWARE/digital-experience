@@ -23,9 +23,9 @@ To trigger the staging mismatch process and download the report, refer to the fo
     !!!note
            If the status is not FIND_MISMATCH_COMPLETED, you can still download the report but it is not accurate.
       
-   If the report is not generated due to unavailability of data, it means that both the publisher and subscriber are in sync. If they are not in sync, the report should contain the detailed information of mismatches found.
+    If the report is not generated because data is not available, then both the publisher and subscriber are in sync. If they are not in sync, the report should contain the detailed information of mismatches found.
 
-If you want to rerun the process, an additional action to [delete the created staging mismatch](#delete-staging-mismatch) is now available. This deletes the mismatch information for subscribers from the database.
+    If you want to rerun the process, you can [delete the created staging mismatch report](#delete-staging-mismatch). This deletes the mismatch information for subscribers from the database.
 
     !!!note
            You can delete all the generated mismatch information or choose to delete only for a specific subscriber ID.
@@ -47,7 +47,7 @@ To trigger the DAM staging resync, refer to the following steps:
     !!!note
            The status RESYNC_TRIGGER_COMPLETED only means that resync operations have been created. Because these operations are asynchronous, it takes time for the system to be in sync.
 
-5. View the subscriber operations API to check if there are any operations still in progress. Fo more details about verification, refer to [Verification](#verification).
+5. View the subscriber operations API to check if there are any operations still in progress. For more details about verification, refer to [Verification](#verification).
 
 ## Commands to trigger the identification of staging mismatches and resync
 
@@ -227,7 +227,7 @@ Use the `manage-dam-staging get-staging-mismatch-report` command to download the
     -subscriberId <value>
     ```
 
-    Use this attribute to specify the record type (default: ""). Other possible values are COLLECTION, MEDIA_ITEM, RENDITION, VERSION, FAVORITE, KEYWORD, COLLECTION_MEDIA_RELATION, CUSTOM_URL, MEDIA_TYPE, MEDIA_TYPE_GROUP, RESOURCE, and PERMISSION:
+    Use this attribute to specify the record type (default: ""). Other possible values are COLLECTION, MEDIA_ITEM, RENDITION, VERSION, FAVORITE, KEYWORD, CUSTOM_URL, MEDIA_TYPE, MEDIA_TYPE_GROUP, RESOURCE, and PERMISSION:
     
     ```
     -recordType <value>
@@ -245,9 +245,21 @@ Use the `manage-dam-staging get-staging-mismatch-report` command to download the
     -reportPath <value>
     ```
 
-    !!! note 
-        `recordType`, `recordAction`, and `reportPath` are optional parameters.
+    Set this attribute to `true` to download the mismatch report even if find mismatch process is not complete:
 
+    ```
+    -forceDownload <value>
+    ```
+
+    !!! note 
+        `recordType`, `recordAction`, `reportPath` and `forceDownload`  are optional parameters.
+
+    You cannot download the report during the following scenarios:
+    
+    - If resyncStatus is 'FIND_MISMATCH_START' or 'DYNAMIC_STATUS_COMPUTATION_REQUIRED', the message `Report cannot be downloaded as Find staging mismatch is still in progress.` is displayed.
+    - If resyncStatus is 'FIND_MISMATCH_FAILED', the message `Report cannot be downloaded as Find staging mismatch process failed. Try to execute find-staging-mismatch again to trigger the mismatch generation process and download report once it is done.` is displayed.
+    - If resyncStatus is 'RESYNC_TRIGGER_START' or 'RESYNC_TRIGGER_COMPLETED' or 'RESYNC_TRIGGER_FAILED', the message `Please run find mismatch first before generating report logs.` is displayed.
+    - If subscriberId is not passed in command and all subscribers are not in resyncStatus 'FIND_MISMATCH_COMPLETED', the message `Find mismatch is not completed for one or more subscribers. Please check the resync status for all subscribers before generating report logs.` is displayed.
 
 -   **Commands:**
 
@@ -460,7 +472,7 @@ To verify if both the environments are in sync, perform the following steps.
 
 ## Configurations
 
-- [Find staging mismatch](#find-staging-mismatch) compares tables between both publisher and subscriber. The `maxRecordsToCompare` value under `configuration.digitalAssetManagement` in Helm charts is the number of records picked up to compare at a single iteration. This can be tuned for better performance.
+- [Find staging mismatch](#find-staging-mismatch) compares tables between both publisher and subscriber. The `maxRecordsToCompare` value under `configuration.digitalAssetManagement` in Helm charts is the number of records picked up to compare at a single iteration. The recommended value is 1000, but you can tune the value for better performance.
 
 
 ## Limitations
@@ -478,7 +490,7 @@ To verify if both the environments are in sync, perform the following steps.
            enableStagingCleanupHeartbeats
            findStagingMismatchHeartbeatIntervalTimeInMinutes
            ```
+
 - Performing a resync is not supported for two-way staging (for example, a scenario where two environments are each other's publisher and subscriber). Performing resync on these environments will lead to loss of collections or assets from both the environments.
-- If the [Find staging mismatch](#find-staging-mismatch) status is in FIND_MISMATCH_START or FIND_MISMATCH_FAILED for more than 30 minutes, it could be because of the excessive amount of data to process. This can also be verified through the [DAM API](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/OperationController.find). Search for triggerFunction `findStagingMismatch`. If the status field in the API response is FAILED with retryCounter value greater than 0, it means that the process failed because of the large amount of data to process. In this scenario, it is advised to deregister and register the subscriber again to allow staging to sync the data between publisher and subscriber.
 - Before triggering the find mismatch operation, ensure there are no in progress staging operations. You can verify this by checking if there are any [Operations](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/OperationController.find) in subscriber with triggerFunctions that begin with the text `sync` (for example, syncStagingCollectionContent, syncStagingPermissionResource, syncStagingDeletePermission, syncStagingCreatePermission, syncStagingFavoriteContent, syncStagingRenditionContent, syncStagingVersionContent, syncStagingMediaTypeContent, syncStagingMediaTypeGroupContent, syncStagingMediaContent etc) and with the following statuses: "TODO", "PROCESSING","READ", "RETRY", "WAIT", and  "PENDING".
 - Before starting the resync process, ensure that there are no failed staging operations in the subscriber. Use the [OperationController.find API](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/OperationController.find) in subscriber to verify operations that are in "FAILED" status and contain trigger functions that begin with the text `sync`. Currently, all failed operations are deleted after a [certain interval](../../operation_framework.md#failed-operations-clean-up-job).

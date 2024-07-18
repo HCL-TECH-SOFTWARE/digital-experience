@@ -1,6 +1,6 @@
 # Search REST API specification
 
-The following topics describe-s- the API calls to search HCL Digital Experience. You can search HCL Digital Experience web pages and content to find content that contains a specific text string in its title or content, or is tagged with a specific tag.
+The following topics describes the API calls to search HCL Digital Experience. You can search HCL Digital Experience web pages and content to find content that contains a specific text string in its title or content, or is tagged with a specific tag.
 
 Beginning with [HCL DX 9.5 Container Update and CF 200](../../../whatsnew/cf20/newcf200.md), a new API explorer is available that allows developers using the Digital Experience Search REST APIs to explore and test these APIs. See the topic [Digital Experience Search REST API Explorer](index.md) below for details.
 
@@ -17,10 +17,7 @@ There are a number of different context paths available for this API to allow fo
 
 The order of the parameters in the requests does not matter. The parameter names are case-sensitive; they must be entered in the format documented. Any unknown or unsupported parameters that are submitted as part of a request is ignored.
 
-The request must be a standard HTTP GET or POST command.
-
--   When the request is GET, the URL is formed by combining the search server's host name, port, and path; and a collection of name-value pairs \(input parameters\) separated by & characters. Any parameter value must be URL-escaped if in GET request.
--   When the request is POST, the URL is formed by combining the search server's host name, port, and path; and a collection of name-value pairs \(input parameters\) is passed on the request as parameters.
+The request must be a standard HTTP GET command. The URL is formed by combining the search server's host name, port, and path, as well as a collection of name-value pairs (input parameters) separated by "&" characters. Any parameter value must be URL-escaped if in GET request.
 
 |Name|Description|Comments|
 |----|-----------|--------|
@@ -173,6 +170,9 @@ The Digital Experience Search REST API provides developers programmatic access t
 
 
 ???+ info "Related information"
-   - [Search](../index.md)
-   - [Paged Feeds](https://datatracker.ietf.org/doc/html/rfc5005#section-3)
+      - [Search](../index.md)
+      - [Paged Feeds](https://datatracker.ietf.org/doc/html/rfc5005#section-3)
+      - [Running search queries via REST API](../../../deployment/manage/container_configuration/configure_opensearch/run_search_queries_api.md)
+
+
 

@@ -1,4 +1,4 @@
-# Create a custom plug-ins
+# Creating custom plug-ins
 
 A custom plug-in is a reusable Java class that you create to run a task. You can create custom plug-ins such as custom workflow actions, plug-ins to run when a page is rendered, plug-ins to store multi-locale text strings and plug-ins to run when a file is uploaded.
 
@@ -31,4 +31,6 @@ A content URL generation filter is used to customize the URLs that are generated
 -   **[Deploying custom plug-in applications](wcm_dev_class_register.md)**  
 You must deploy your custom plug-in applications on your server before they can be used in your web content system.
 
+## HCLSoftware U learning materials
 
+For an introduction and a demo on using DX for developers, go to [DX for Developers (Advanced)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1777). To try it out yourself, refer to [DX Setup Local Java Development Environment Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-300_DX_Setup_a_Java_Development_Environment_Lab.pdf).

@@ -18,11 +18,12 @@ The following parameters can be used with queries.
 |`approver`|This parameter is used to query items with a specific approver. A user ID must be specified when this parameter is used. For example: <br> ```?approver=userid```|
 |`authoringtemplateid`|This parameter is used to query items with a specific authoring template ID. For example: <br> ```?authoringtemplateid=wcmrest:18cfc80c-a490-4d75-9057-fed3db89de53```|
 |`author`|This parameter is used to query items with a specific author. A user UID must be specified when this parameter is used. For example: <br> ```?author=uid=WCMUT_Editor_A,o=defaultWIMFileBasedRealm```|
+|`notauthor`|This parameter is used to query items without a specific author. A user UID must be specified when this parameter is used. For example: <br> ```?notauthor=uid=WCMUT_Editor_A,o=defaultWIMFileBasedRealm```|
 |`categoryid`|This parameter is used to query items with a specific category ID. For example: <br> ```?categoryid=wcmrest:18cfc80c-a490-4d75-9057-fed3db89de53```|
 |`createdafter`|This parameter is used to query items that are created after a specific date and time. For example: <br> ```?createdafter=2011-01-11T11:43:29.0150Z```|
 |`createdbefore`|This parameter is used to query items that are created before a specific date and time. For example: <br> ```?createdbefore=2011-01-11T11:43:29.0150Z```|
 |`creator`|This parameter is used to query items with a specific creator. A user UID must be specified when this parameter is used. For example: <br> ```?creator=uid=WCMUT_Editor_A,o=defaultWIMFileBasedRealm```|
-|`dateformat`|This parameter is used to define the date format of query parameters. For example: <br> ```?dateformat=mm-dd-yyyy&createdbefore=12-31-2011```If a date format not specified, then the default format yyyy-MM-dd'T'HH:mm:ssz is used.|
+|`dateformat`|This parameter is used to define the date format of query parameters. For example: <br> ```?dateformat=mm-dd-yyyy&createdbefore=12-31-2011```<br> If a date format not specified, then the default format yyyy-MM-dd'T'HH\:mm:ssz is used.|
 |`depth`|This parameter is used with the `parentid` and is used to define whether to search for all descendants of a parent, or just the immediate children of a parent item. For example, to query only the immediate children of an item, you add `&depth=CHILDREN` to the query: ```?parentid=wcmrest:18cfc80c-a490-4d75-9057-fed3db89de53&depth=CHILDREN<br/>\``` <br/> To query all descendants of an item, you add `&depth=DESCENDANTS` to the query: ```?parentid=wcmrest:18cfc80c-a490-4d75-9057-fed3db89de53&depth=DESCENDANTS```|
 |`expireafter`|This parameter is used to query items that are expired after a specific date and time. For example: <br> ```?expireafter=2011-01-11T11:43:29.0150Z```|
 |`expirebefore`|This parameter is used to query items that were expired before a specific date and time. For example: <br> ```?expirebefore=2011-01-11T11:43:29.0150Z```|
@@ -36,6 +37,7 @@ The following parameters can be used with queries.
 |`namelike`|This parameter is used as a wildcard query for items with names like the specified *namelike* parameter. For example: <br> ```?namelike=nameApproxValue%``` <br> **Note:** Libraries cannot be queried by using this parameter.|
 |`name`|This parameter is used to query an item with a specific name. For example: <br> ```?name=nameValue``` <br> **Note:** Libraries cannot be queried by using this parameter.|
 |`owner`|This parameter is used to query items with a specific owner. A user UID must be specified when this parameter is used. For example: <br> ```?owner=uid=WCMUT_Editor_A,o=defaultWIMFileBasedRealm```|
+|`notowner`|This parameter is used to query items without a specific owner. A user UID must be specified when this parameter is used. For example: <br> ```?notowner=uid=WCMUT_Editor_A,o=defaultWIMFileBasedRealm```|
 |`pagesize`|This parameter is used to restrict the number of items that are returned by a query to a set number. It can be used with the `page` parameter to return specific pages of results. For example, to restrict the number of queries to be returned to 5: <br> ```?type=PresentationTemplate&pagesize=5```|
 |`page`|This parameter is used with the `pagesize` parameter to define what set of results to display. For example, if `pagesize` is set to 5, and the `page` parameter is set to 2, then only results 6 - 10 are displayed. For example: <br> ```?type=PresentationTemplate&pagesize=5&page=2```|
 |`parentid`|This parameter is used to query items that are the children of a specific parent item. For example: <br> ```?parentid=wcmrest:18cfc80c-a490-4d75-9057-fed3db89de53```You can use the `depth` parameter to define whether to search for all descendants of a parent, or just the immediate children of a parent item.|
@@ -203,6 +205,10 @@ The existing search query API is extended and two new parameters are added. See 
     </feed>
     
     ```
+
+## Getting only items that have a workflow with REST API search query results
+
+You can filter the search results to only include items that have a workflow by specifying the `options=has-workflow` URL parameter.
 
 ## Adding Workflow date fields and link to the REST API search query results
 

@@ -1,6 +1,6 @@
 # Post-migration activities
 
-After you migrate to HCL Digital Experience 8.5, you need to complete extra tasks depending on how you customized the source portal environment and which components you used. First, complete the Applying the latest Combined Cumulative Fix updates task, then you can begin the post-migration tasks followed by enabling new functionality.
+After you migrate to HCL Digital Experience 8.5/9.5, you need to complete extra tasks depending on how you customized the source portal environment and which components you used. First, complete the Applying the latest Combined Cumulative Fix updates task, then you can begin the post-migration tasks followed by enabling new functionality.
 
 -   **[For CF07 and earlier: Applying the latest Combined Cumulative Fix updates](mig_post_cf.md)**  
 This task is a required if you are on CF07 or earlier. After you migrate using the Configuration Wizard, you must run two tasks to ensure that all of the Combined Cumulative Fix updates are applied to your system before you complete other post-migration or enablement tasks. If you are on CF08 or later, the Configuration Wizard automatically runs these commands.
