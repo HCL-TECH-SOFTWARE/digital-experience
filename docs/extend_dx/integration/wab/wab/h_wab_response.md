@@ -137,7 +137,7 @@ To add a filter, refer to the following steps:
 
 1. Extract the VwatReverseProxyServlet.ear file from the WebSphere Application Server (WAS) Console and expand it.
 2. Compile the filter class.
-3. Package the filter class file into the classes directory with the according package or into the JAR file in WEB-INF/lib.
+3. Package the filter class file into the classes directory with the appropriate package or into the JAR file in WEB-INF/lib.
 4. Modify the web.xml to add the filter of the included WAR file.
 	Example:
 	```
