@@ -34,7 +34,7 @@ configuration:
         damContentSourceId: ""
 ```
 
-You can create the `damContentSourceId` by using the `POST` `/contentsources` endpoint from the OpenSearch middleware service:
+You can create the `damContentSourceId` by using the `POST` `/dx/api/search/v2/contentsources` endpoint from the OpenSearch REST API:
 
 ```json
 {
