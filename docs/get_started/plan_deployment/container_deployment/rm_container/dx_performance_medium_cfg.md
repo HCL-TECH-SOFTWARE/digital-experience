@@ -269,7 +269,7 @@ There were a number of alterations done to the initial Helm chart configuration.
 | **Total** | | **60000** | **79532** | **60000** | **79532** |
 
 !!note
-      Bolded values are tuned helm values and other values are default minimal values.
+    Bolded values are tuned helm values and other values are default minimal values.
 
 For convenience, these values were added to the medium-config-values.yaml file in the hcl-dx-deployment Helm chart. To use these values, complete the following steps:
 
@@ -283,18 +283,6 @@ For convenience, these values were added to the medium-config-values.yaml file i
 ## Additional References:
 
 - Digital Experience Core tuning details are available in [DX core tuning](https://opensource.hcltechsw.com/digital-experience/CF221/guide_me/Performance_Tuning/)
-
-- For guidance when rendering with a small configuration, see Performance-sizing guidance for rendering with a small configuration.
-
-- For guidance when rendering with upper limit on a single node, see Performance-sizing guidance for rendering with maximum throughput on a single node.
-
-
-
-
-
-
-
-
 
 
 
