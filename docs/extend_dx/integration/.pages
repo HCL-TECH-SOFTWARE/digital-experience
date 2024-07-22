@@ -8,5 +8,5 @@ nav:
     - Integrate Huddo Boards: huddo_boards
     - Unified Task List Portlet: unified_task_list
     - Web Application Bridge: wab
-    - Java Connector Architecture: fea_ai
+    - Java Connector Architecture: fea_ai.md
     - Integrate IBM MobileFirst: ibm_mobilefirst
