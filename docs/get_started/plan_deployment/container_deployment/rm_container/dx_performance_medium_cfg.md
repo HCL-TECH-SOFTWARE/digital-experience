@@ -286,7 +286,7 @@ There were a number of alterations done to the initial Helm chart configuration.
 |---|---|---:|---|---|---|
 | **Component** | **No. of pods** | **cpu (m)<br>** | **memory (Mi)<br>** | **cpu (m)<br>** | **memory (Mi)<br>** |
 | contentComposer | 1 | 100 | 128 | 100 | 128 |
-| **core** | **7** | 5600 | **8192** | **5200** | **8192** |
+| **core** | **7** | **5600** | **8192** | **5200** | **8192** |
 | **digitalAssetManagement** | **4** | **1000** | **2048** | **1000** | **2048** |
 | imageProcessor | 1 | 200 | 2048 | 200 | 2048 |
 | **openLdap** | **1** | **500** | **2048** | **500** | **2048** |
