@@ -197,21 +197,48 @@ The following list contains details of tuning and enhancements done to DX core d
 
 - LTPA token timeout increased from 120 minutes to 480 minutes for rendering tests execution.
 
+ ![](../../../../images/Core_Tuning_LTPA.png)
+
 - WCM object cache for rendering updated as per DX performance tuning guide DX core tuning.
+
+
+ ![](../../../../images/Core_WCM_Object_Cache_list.png)
+
+
+ ![](../../../../images/WCM_Object_Cache_Instances.png)
+
 
 - Updated abspath, abspathreverse, processing, session, strategy, summary values WCM rendering values as per tuning guide.
 
 - Added new custom property under Resource environment providers > WP CacheManagerService > Custom properties > cacheinstance.com.ibm.wps.resolver.friendly.cache.size.
 
+ ![](../../../../images/Core_Friendly_Url_Cache.png)
+
+
 - Adjusted JVM Heap size from 3584 to 4096 under Application servers > WebSphere_Portal > Process_definition > Java Virtual Machine.
+
+ ![](../../../../images/Core_JVM_Tuning.png)
+
 
 - Set LDAP user cache attributes and search to 10000.
 
+ ![](../../../../images/Core_DX_LDAP_User_Cache.png)
+
+
 - Disabled jcr.text.search under Resource environment providers > JCR ConfigService Portal Content > Custom properties because there is currently no authoring search functionality in these tests.
+
+ ![](../../../../images/Core_Tuning_JCR_Text_Search_Disable.png)
+
 
 - Deleted search collections in Portal > Administration > Search > Search collections (both JCRCollection1 and Default Search Collection).
 
+ ![](../../../../images/Core_Tuning_Delete_Search_Collections.png)
+
+
 - Logged level changes from info to severe in WAS for both configuration and run time.
+
+ ![](../../../../images/Core_Tuning_Log_Level_Details.png)
+
 
 - DB2 tuning performed by executing DB2 Reorg and Runstats.
 
@@ -226,8 +253,7 @@ The following list contains details of tuning and enhancements done to DX core d
 
 The initial sets of tests were run on a AWS-distributed Kubernetes setup with one master and 3 worker nodes. Concurrent user loads of 1000, 2500, 4000 and 5000 users were successful, as measured by a very low error rate (< 0.0001%) and satisfactory response times. At 8000 users, this was no longer the case as the response times increased dramatically and the error rates went up as well.
 
-The tests then successfully moved to a four worker node setup with 10000 concurrent users. The error rates were low (<0.0001%) and response times were satisfactory. 
-At this point, alterations were made to the number of pods, CPU and memory of each of the following containers: HAProxy, Core, RingAPI, digitalAssetManagement, persistenceNode and persistenceConnectionPool to determine which factors were significantly beneficial. 
+The tests then successfully moved to a four worker node setup with 10000 concurrent users. The error rates were low (<0.0001%) and response times were satisfactory. At this point, alterations were made to the number of pods, CPU and memory of each of the following containers: HAProxy, Core, RingAPI, digitalAssetManagement, persistenceNode and persistenceConnectionPool to determine which factors were significantly beneficial. 
 For the HAProxy container, increasing the CPU dramatically increased throughput. When the number of HAProxy pods was increased, the throughput actually decreased.
 
 For the Core pod, increasing the CPU limit gave a boost to performance but this effect eventually saturated at 5600 millicore. Increasing the number of core pods at this point had additional, beneficial effects. 
@@ -244,6 +270,10 @@ We have the following recommendations:
 - For a medium-sized workload in AWS, the Kubernetes (K8s) cluster should begin with one master and four worker nodes. 
 
 - For the HAProxy and RingApi containers, increasing the CPU will increase throughput, but increasing the number of pods will not.
+
+- For the DAM and persistence node pods CPU limits are increased by the observations from Grafana about the usage of CPU and memopry on the load test. Then increased the pod replicas which boosted the performance and really helps in handling 10k concurrent users load. For DAM especially increasing more pods will increase throughput not by just increasing the CPU of the pod. 
+
+- OpenLDAP pod values are also increased for holding more authenticated users for rendering, but this is not really for production. 
 
 - For optimizing the Core container begin by increasing the CPU until this saturates. Once the optimal CPU level is determined, increase the number of pods to increase performance.
 
@@ -283,13 +313,6 @@ For convenience, these values were added to the medium-config-values.yaml file i
 ## Additional References:
 
 - Digital Experience Core tuning details are available in [DX core tuning](https://opensource.hcltechsw.com/digital-experience/CF221/guide_me/Performance_Tuning/)
-
-
-
-
-
-
-
 
 
 
