@@ -313,9 +313,3 @@ For convenience, these values were added to the medium-config-values.yaml file i
 ## Additional References:
 
 - Digital Experience Core tuning details are available in [DX core tuning](https://opensource.hcltechsw.com/digital-experience/CF221/guide_me/Performance_Tuning/)
-
-
-
-
-
-
