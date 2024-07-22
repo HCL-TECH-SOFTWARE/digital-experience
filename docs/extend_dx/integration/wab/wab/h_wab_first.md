@@ -155,6 +155,11 @@ The portal administrator collects information about the content provider and its
         -   Go to the web dock application and give the content user the correct permissions.
         -   Go to the credential vault used for the authentication. Give the content user the correct permissions to the credential vault.
 
+
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to use Web Application Bridge, go to [Web Application Bridge](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D2956). To try it out yourself, refer to [Web Application Bridge Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Web_Application_Bridge_Lab.pdf).
+
 ???+ info "Related information"  
     -   [Providing short vanity URLs](../../../../manage_content/wcm_delivery/vanity_url/adm_vanity_url/van_url_short.md)
     -   [Apache Module mod_rewrite](http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html)
