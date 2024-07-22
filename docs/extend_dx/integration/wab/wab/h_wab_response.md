@@ -150,5 +150,5 @@ To add a filter, refer to the following steps:
 			<url-pattern>/*</url-pattern>
 		</filter-mapping>
 	```
-4. Repackage the WAR and EAR files. 
-5. In the WAS console, replace the existing EAR file with the repackaged EAR file from Step 4. 
+5. Repackage the WAR and EAR files. 
+6. In the WAS console, replace the existing EAR file with the repackaged EAR file from Step 5. 
