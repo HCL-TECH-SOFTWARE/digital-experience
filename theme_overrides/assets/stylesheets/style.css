@@ -58,6 +58,7 @@
     box-shadow: none;
     background: none;
     color: black;
+    position: inherit
 }
 
 /* Right hand nav title */
@@ -65,6 +66,7 @@
     box-shadow: none;
     background: none;
     color: black;
+    position: inherit
 }
 
 .md-sidebar__scrollwrap {
