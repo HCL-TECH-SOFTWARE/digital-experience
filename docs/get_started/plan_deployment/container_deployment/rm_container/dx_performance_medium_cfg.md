@@ -301,7 +301,7 @@ There were a number of alterations done to the initial Helm chart configuration.
 | **Total** | | **60000** | **79532** | **60000** | **79532** |
 
 !!!note
-    Bolded values are tuned helm values and other values are default minimal values.
+     Bolded values are tuned helm values and other values are default minimal values.
 
 For convenience, these values were added to the medium-config-values.yaml file in the hcl-dx-deployment Helm chart. To use these values, complete the following steps:
 
