@@ -21,7 +21,7 @@ Rational® Application Developer includes tools designed to help you develop por
 
 ## HCLSoftware U learning materials
 
-For an introduction and a demo on how to use Java portlets, go to [Java Portlet Development](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D2784). To try it out yourself, refer to [DX JSP Portlet Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-300_DX_JSP_Portlet_Development_Lab.pdf).
+For an introduction and a demo on how to use Java portlets, go to [Java Portlet Development](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D2784){target="_blank"}. To try it out yourself, refer to [DX JSP Portlet Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-300_DX_JSP_Portlet_Development_Lab.pdf){target="_blank"}.
 
 
 ???+ info "Related information"
