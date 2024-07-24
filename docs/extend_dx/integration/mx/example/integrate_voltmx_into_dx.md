@@ -24,10 +24,10 @@ To implement the example, an existing [Volt MX Web Application](https://opensour
 
     For information on how to create content provider profiles, policies, and connections, refer to the following:
 
-      - [Content provider profile](../../wab/wab/h_wab_provider)
-      - [Content provider profile policy](../../wab/wab/h_wab_policy)
-      - [Content provider policy requests and responses](../../wab/wab/h_wab_response)
-      - [Content provider policy single sign-on](../../wab/wab/h_wab_auth)  
+      - [Content provider profile](../../wab/wab/h_wab_provider.md)
+      - [Content provider profile policy](../../wab/wab/h_wab_policy.md)
+      - [Content provider policy requests and responses](../../wab/wab/h_wab_response.md)
+      - [Content provider policy single sign-on](../../wab/wab/h_wab_auth.md)  
 
     Follow these steps to create the profile:
 
