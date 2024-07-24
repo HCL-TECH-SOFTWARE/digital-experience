@@ -271,9 +271,11 @@ We have the following recommendations:
 
 - For the HAProxy and RingApi containers, increasing the CPU will increase throughput, but increasing the number of pods will not.
 
-- For the DAM and persistence node pods CPU limits are increased by the observations from Grafana about the usage of CPU and memopry on the load test. Then increased the pod replicas which boosted the performance and really helps in handling 10k concurrent users load. For DAM especially increasing more pods will increase throughput not by just increasing the CPU of the pod. 
+- For the DAM and persistence node pods CPU limits were increased due to the observations from Grafana about the usage of CPU and memopry on the load test. After this initial change, increasing the pod replicas boosted the performance and handling of 10000 concurrent users load. For DAM, increasing the number of pods will increase throughput.
 
-- OpenLDAP pod values are also increased for holding more authenticated users for rendering, but this is not really for production. 
+- OpenLDAP pod values are also increased for holding more authenticated users for rendering for purposes of testing. However, the OpenLDAP pod is not for production use.
+
+- For the DAM and persistence node pods CPU limits are increased by the observations from Grafana about the usage of CPU and memopry on the load test. Then increased the pod replicas which boosted the performance and really helps in handling 10k concurrent users load. For DAM especially increasing more pods will increase throughput not by just increasing the CPU of the pod. 
 
 - For optimizing the Core container begin by increasing the CPU until this saturates. Once the optimal CPU level is determined, increase the number of pods to increase performance.
 
