@@ -10,7 +10,7 @@ HCL Digital Experience and HCL Web Content Manager solutions can consist of many
 
 ## HCLSoftware U learning materials
 
-For an introduction and a demo on DX staging, go to [Staging](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D505).
+For an introduction and a demo on DX staging, go to [Staging](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D505){target="_blank"}.
 
 ???+ info "Related information" 
     - [Multiple tier environments](../migrate/planning_migration/migration_consideration/mig_multiple_envs.md)
