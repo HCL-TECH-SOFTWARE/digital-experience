@@ -26,7 +26,7 @@ The troubleshooting information is useful for planning and implementing your Web
 
 ## HCLSoftware U learning materials
 
-For an introduction and a demo on how to use Web Application Bridge, go to [Web Application Bridge](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D2956). To try it out yourself, refer to [Web Application Bridge Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Web_Application_Bridge_Lab.pdf).
+For an introduction and a demo on how to use Web Application Bridge, go to [Web Application Bridge](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D2956){target="_blank"}. To try it out yourself, refer to [Web Application Bridge Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Web_Application_Bridge_Lab.pdf){target="_blank"}.
 
 
 ???+ info "Related information"
