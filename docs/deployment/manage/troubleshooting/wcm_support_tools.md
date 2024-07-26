@@ -71,7 +71,7 @@ The WCM JCR uses XPath to search the node hierarchy. XPath is translated to SQL 
 
 ## Generate WCM Search URL
 
-This option helps you generate a WCM Seed List URL to be used within a content source. You can select a type of site for your environment from the four button options: **Stand-alone**, **Cluster**, **Virtual Portal**, or **Virtual Portal with Unique URL**. Note that Administrator access is required to use this portlet.
+This option helps you generate a WCM Seed List URL to be used within a content source. You can select a type of site for your environment from the four button options: **Stand-alone**, **Cluster**, **Virtual Portal**, or **Virtual Portal with Unique URL**. Note that Administrator access is required to generate a WCM Search URL.
 
 To generate a WCM Seed List URL, refer to the following steps:
 

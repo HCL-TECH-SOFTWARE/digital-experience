@@ -3,6 +3,6 @@ nav:
     - Tutorials: tutorials
     - wpsdirstr.md
     - SecurityHardeningGuide
-    - Performance_Tuning.md
+    - performance_tuning
     - search_tips.md
     - glossary.md
