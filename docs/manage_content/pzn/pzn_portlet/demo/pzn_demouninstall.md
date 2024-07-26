@@ -1,6 +1,6 @@
 # Uninstall Personalization sample and database
 
-View the steps to uninstall Personalization sample demo, database, and users.
+Steps to uninstall Personalization sample demo, database, and users.  
 
 1. From a command prompt, navigate to wp_profile_root/ConfigEngine.
 

@@ -41,8 +41,9 @@ This exercise installs the Portal Personalization sample and configures your dat
     3. Click to the **Add Member** button and add all four **pzndemousers** to the **wpsadmins** group.
     4. Click the **OK** button and ensure that the users are added to the group.
 
-    !!!note
-        By default standard users don't have permissions to access the Personalization page. To simplify the demo make sure that all resources can be reviewed by each user. That can be tested at best, by adding all the users of the **pzndemousers** to the **wpsadmins** group.  
+    !!!note  
+        By default standard users don't have permissions to access the Personalization page or resources.
+        Access to the demo and resources is, in the simple case, done by adding all the users of the **pzndemousers** to the **wpsadmins** group.  
 
     **PZN demo users added to the wpsadmins group**
     ![Adding the PZN Demo users to the wpsadmins group](./images/pzndemo_users_wpsadmins_group.png)  
