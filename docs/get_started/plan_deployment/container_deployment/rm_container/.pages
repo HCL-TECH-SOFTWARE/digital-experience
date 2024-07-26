@@ -1,4 +1,3 @@
 nav:
     - index.md
-    - rm_container_deployment.md
-    - dx_performance_medium_cfg.md
+    - rm_container_deployment.md   
