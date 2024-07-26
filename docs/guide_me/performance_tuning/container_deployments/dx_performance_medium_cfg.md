@@ -43,12 +43,12 @@ This setup is common in most of the scenarios where we have multi-nested site ar
 
 - The final portlet on each page shows a menu of items and is both scoped to the top-level site area and also selects only those items profiled with the "MENU" keyword.
 
-- Total 99999 users added to openLDAP as authenticated users.
+- A total of 99999 was users added to openLDAP as authenticated users.
 
 #### DAM Default Test Data - 25k assets
 
-The Below DAM set up covers the mix and match of all different types of mostly commonly used assets with three different ways UUID, custom and friendly urls.
-Testers uploaded 25,000 assets. These assets include images (136 KB, .jpg), documents (199 KB, .docx), and videos (1.1 MB, .mp4) to preheat the environment. After preloading 25,000 assets, 15 assets - containing a mix of original images and renditions were uploaded and rendered for 1 hour at peak load after ramp-up time.
+The Below DAM set up covers the mix and match of all the different types of most commonly used assets with three different ways: UUID, custom, and friendly urls
+Testers uploaded 25,000 assets. These assets include images (136 KB, .jpg), documents (199 KB, .docx), and videos (1.1 MB, .mp4) to preheat the environment. After preloading 25,000 assets, 15 assets containing a mix of original images and renditions, were uploaded and rendered for 1 hour at peak load after ramp-up time.
 
 The test then rendered those assets by way of 3 custom URLs, 8 UUID URLs, and 8 short URLs for an hour. Further details provided in the following summary of the results.
 
@@ -71,7 +71,7 @@ The test then rendered those assets by way of 3 custom URLs, 8 UUID URLs, and 8 
 
 #### Pages and portlets default test data: 80 pages
 
-The Below pages & portlets set up covers the different types of mostly commonly used portlets as mentioned below and performance tests include the response time for rendering the whole page with the portlet which is very crucial to know.
+The below pages & portlets set up covers the different types of the most commonly used portlets, as mentioned below, and performance tests include the response time for rendering the whole page with the portlet, which is very crucial to know.
 
 We used a total of eight unique pages with portlets. To complete authoring and rendering, both anonymous and authenticated users received access. The same users were added in openLDAP as for WCM rendering. All authenticated users are assigned the User role. The pages in the following list are duplicated 10 times with different page numbers, resulting in 80 pages.
 
@@ -193,7 +193,7 @@ The section below provides details for the Kubernetes cluster, Jmeter, LDAP and 
 
 The following list contains details of tuning and enhancements done to DX core during testing:
 
-- Initial definition of the deployment as rendering environment to trigger the tuning task for initial tuning.
+- Initial definition of the deployment as a rendering environment to trigger the tuning task for initial tuning.
 
 - LTPA token timeout increased from 120 minutes to 480 minutes for rendering tests execution.
 
@@ -210,7 +210,7 @@ The following list contains details of tuning and enhancements done to DX core d
 
 - Updated abspath, abspathreverse, processing, session, strategy, summary values WCM rendering values as per tuning guide.
 
-- Added new custom property under Resource environment providers > WP CacheManagerService > Custom properties > cacheinstance.com.ibm.wps.resolver.friendly.cache.size.
+- Added a new custom property under Resource environment providers > WP CacheManagerService > Custom properties > cacheinstance.com.ibm.wps.resolver.friendly.cache.size.
 
  ![](../../../images/Core_Friendly_Url_Cache.png)
 
@@ -247,11 +247,11 @@ The following list contains details of tuning and enhancements done to DX core d
 
 
 !!!note
-     For DAM no tuning details mentioned in this document except the pod resources like CPU and memory limits for the all pods related to DAM like ring-api, persistence-node, persistence-connection-pool and core. Because for DAM which is NodeJS app it is appropriate to have CPU and memory requests and limits in the Kubernetes by monitoring CPU usage, memory usage using Prometheus and Grafana to have good response times, and throughput.
+     For DAM no tuning details are mentioned in this document except the pod resources like CPU and memory limits for all pods related to DAM like ring-api, persistence-node, persistence-connection-pool and core. Because DAM, which is NodeJS app, it is appropriate to have CPU and memory requests and limits in Kubernetes by monitoring CPU usage, memory usage using Prometheus and Grafana to have good response times, and throughput.
 
 ## Results
 
-The initial sets of tests were run on a AWS-distributed Kubernetes setup with one master and 3 worker nodes. Concurrent user loads of 1000, 2500, 4000 and 5000 users were successful, as measured by a very low error rate (< 0.0001%) and satisfactory response times. At 8000 users, this was no longer the case as the response times increased dramatically and the error rates went up as well.
+The initial sets of tests were run on an AWS-distributed Kubernetes setup with one master and 3 worker nodes. Concurrent user loads of 1000, 2500, 4000 and 5000 users were successful, as measured by a very low error rate (< 0.0001%) and satisfactory response times. At 8000 users, this was no longer the case as the response times increased dramatically and the error rates went up as well.
 
 The tests then successfully moved to a four worker node setup with 10000 concurrent users. The error rates were low (<0.0001%) and response times were satisfactory. At this point, alterations were made to the number of pods, CPU and memory of each of the following containers: HAProxy, Core, RingAPI, digitalAssetManagement, persistenceNode and persistenceConnectionPool to determine which factors were significantly beneficial. 
 For the HAProxy container, increasing the CPU dramatically increased throughput. When the number of HAProxy pods was increased, the throughput actually decreased.
