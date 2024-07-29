@@ -107,34 +107,34 @@ The section below provides details for the Kubernetes cluster, Jmeter, LDAP and 
 
       - Info
 
-      ![](../../../images/Header-1-AWS-Med.png)
+       ![](../../../images/Header-1-AWS-Med.png)
 
-      ![](../../../images/ec2_c5_4xlarge_info.png)
+       ![](../../../images/ec2_c5_4xlarge_info.png)
 
 
       - Processor details
 
-      ![](../../../images/c5_4xlarge_cpu_info.png)
+       ![](../../../images/c5_4xlarge_cpu_info.png)
 
       - Volume details
 
-      ![](../../../images/c5_4xlarge_volume_info.png){ width="600" }
+       ![](../../../images/c5_4xlarge_volume_info.png){ width="600" }
 
 - c5.large
 
       - Info
 
-      ![](../../../images/Header-1-AWS-Med.png)
+       ![](../../../images/Header-1-AWS-Med.png)
 
-      ![](../../../images/ec2_c5_large_info.png)
+       ![](../../../images/ec2_c5_large_info.png)
 
       - Processor details
 
-      ![](../../../images/c5_large_cpu_info.png)
+       ![](../../../images/c5_large_cpu_info.png)
 
       - Volume details
 
-      ![](../../../images/c5_large_volume_info.png){ width="600" }
+       ![](../../../images/c5_large_volume_info.png){ width="600" }
 
 
 ### DB2 instance
