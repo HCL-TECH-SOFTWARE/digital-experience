@@ -1,4 +1,4 @@
-# Test the Personalization Demo
+# Test the personalization demo
 
 ## Find the personalized demo resources on the Portal
 
