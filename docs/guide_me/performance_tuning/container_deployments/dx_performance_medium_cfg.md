@@ -30,7 +30,7 @@ This setup is common in most of the scenarios where there are multi-nested site 
 
 - Half of the content items are visible to "Anonymous" and "All Authenticated" users. The other half are visible only to members of ten groups per content item. These ten groups are spread out among the 500 groups assumed to exist in the test LDAP (and assumed to be called "Group0000" through "Group0499").
 
-- Half of the content items visible to members of ten groups per content item (spread evenly over each visibility type "Anonymous" and "All Authenticated" described above) are profiled with the keyword "MENU".
+- Half of the content items visible to members of ten groups per content item (spread evenly over "Anonymous" and "All Authenticated" users) are profiled with the keyword "MENU".
 
 - There are 20 test portal pages created under the label "PerformanceTest". Each has a friendly URL of the form "<context-root>/perf/page-xx".
 
@@ -192,7 +192,7 @@ This section provides details for the Kubernetes cluster, Jmeter, LDAP, and data
 
 The following list contains details of tuning and enhancements done to DX core during testing:
 
-- Defined the initial deployment as a rendering environment to trigger the tuning task for initial tuning. For more information, see [Portal server performance tuning tool](https://opensource.hcltechsw.com/digital-experience/CF221/deployment/manage/tune_servers/wp_tune_tool/).
+- Defined the initial deployment as a rendering environment to trigger the tuning task for initial tuning. For more information, see [Portal server performance tuning tool](../../../deployment/manage/tune_servers/wp_tune_tool.md).
 
 - LTPA token timeout increased from 120 minutes to 480 minutes for rendering tests execution.
 
@@ -261,7 +261,7 @@ For the Core pod, increasing the CPU limit gave a boost to performance but this 
 There are several factors that can affect the performance of DX in Kubernetes. Changes in the number of running nodes, number of pods, and the capacity of individual pods can  improve the performance of DX. 
 
 !!!note
-     Performance tuning for a Kubernetes DX cluster must be conducted for the particular workloads involved with number of concurrent users. Generally, these recommendations are intended to speed up tuning for others. Further enhancements may be achieved by following the [DX Core tuning guide](../traditional_deployments.md).
+     Performance tuning for a Kubernetes DX cluster must be conducted for the particular workloads involved the number of concurrent users. Generally, these recommendations are intended to speed up tuning for others. Further enhancements may be achieved by following the [DX Core tuning guide](../traditional_deployments.md).
 
 ### Recommendations
 
@@ -306,8 +306,3 @@ For convenience, these values were added to the `medium-config-values.yaml` file
 2. Extract the TGZ file (`hcl-dx-deployment-XXX.tgz`).
 
 3. In the extracted folder, navigate to the following structure to go to the `medium-config-values.yaml` file: `hcl-dx-deployment/value-samples/medium-config-values.yaml`.
-
-
-## Additional References:
-
-- Digital Experience Core tuning details are available in [DX Performance Tuning Guide](../traditional_deployments.md)
