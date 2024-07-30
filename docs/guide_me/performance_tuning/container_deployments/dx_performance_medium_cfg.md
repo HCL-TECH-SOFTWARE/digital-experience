@@ -261,13 +261,13 @@ For the Core pod, increasing the CPU limit gave a boost to performance but this 
 There are several factors that can affect the performance of DX in Kubernetes. Changes in the number of running nodes, number of pods, and the capacity of individual pods can  improve the performance of DX. 
 
 !!!note
-     Performance tuning for a Kubernetes DX cluster must be conducted for the particular workloads involved the number of concurrent users. Generally, these recommendations are intended to speed up tuning for others. Further enhancements may be achieved by following the [DX Core tuning guide](../traditional_deployments.md).
+     Performance tuning for a Kubernetes DX cluster must be conducted for the particular workloads involving the number of concurrent users. Generally, these recommendations are intended to speed up tuning for others. Further enhancements may be achieved by following the [DX Core tuning guide](../traditional_deployments.md).
 
 ### Recommendations
 
 - For a medium-sized workload in AWS, the Kubernetes cluster should begin with one master and four worker nodes. 
 
-- For the HAProxy and RingApi containers, increasing the CPU increase throughput, but increasing the number of pods does not.
+- For the HAProxy and RingApi containers, increasing the CPU increases throughput, but increasing the number of pods does not.
 
 - For DAM and persistence node pods, CPU limits were increased due to the observations from Grafana about the usage of CPU and memory on the load test. After this initial change, increasing the pod replicas boosted the performance and handling of the 10000 concurrent users load. For DAM, increasing the number of pods increases throughput.
 
