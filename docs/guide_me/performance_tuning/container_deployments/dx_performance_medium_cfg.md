@@ -306,3 +306,6 @@ For convenience, these values were added to the `medium-config-values.yaml` file
 2. Extract the TGZ file (`hcl-dx-deployment-XXX.tgz`).
 
 3. In the extracted folder, navigate to the following structure to go to the `medium-config-values.yaml` file: `hcl-dx-deployment/value-samples/medium-config-values.yaml`.
+ 
+???+ info "Related information"
+    - [DX Performance Tuning Guide](../traditional_deployments.md)
