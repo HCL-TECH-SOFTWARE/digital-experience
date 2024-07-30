@@ -20,7 +20,7 @@ In this exercise, you can install the Portal Personalization sample and configur
 
 5. Open your web browser and log in to the Portal as **wpsadmin** user.
 
-6. In the Portal menu navigate to **Administration > Security > User and Groups > All Portal User Groups > pzndemousers**
+6. In the Portal menu, navigate to **Administration > Security > User and Groups > All Portal User Groups > pzndemousers**.
 
 7. Confirm that the following users were created:
 
@@ -34,10 +34,10 @@ In this exercise, you can install the Portal Personalization sample and configur
 
 8. Add all pzndemousers to the wpsadmins group.
 
-    1. On the page that lists the **pzndemousers** click to the breadcrumb navigation item **All Portal User Groups**.
-    2. Click the user group **wpsadmins**.
-    3. Click **Add Member** and add all four **pzndemousers** to the **wpsadmins** group.
-    4. Click **OK**.
+    1. On the **Manage Users and Groups** page, click the navigation item **All Portal User Groups**.  
+    2. Click the user group **wpsadmins**.  
+    3. Click **Add Member** and add all four **pzndemousers** to the **wpsadmins** group.  
+    4. Click **OK**.  
 
     !!!note  
         By default standard users do not have permissions to access the Personalization page or resources.
