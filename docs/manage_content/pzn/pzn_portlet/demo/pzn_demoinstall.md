@@ -1,4 +1,4 @@
-# Installing the Personalization sample
+# Install the PZNDemo resources
 
 In this exercise, you can install the Portal Personalization sample and configure your database for the sample. No additional database requirements are needed.
 
