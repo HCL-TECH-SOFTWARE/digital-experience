@@ -1,10 +1,10 @@
-# Uninstall Personalization sample and database
+# Uninstalling the Personalization sample and database
 
-Steps to uninstall Personalization sample demo, database, and users.  
+In this exercise, you can uninstall the Personalization sample demo and remove the database and users.  
 
-1. From a command prompt, navigate to wp_profile_root/ConfigEngine.
+1. From a command prompt, navigate to `wp_profile_root/ConfigEngine`.
 
-2. From this command prompt, run the following commands:
+2. Run the following commands to uninstall PZNDemo resources and to remove the demo users.
 
     - UNIX™Linux™:  
         `./ConfigEngine.sh remove-pzndemo -DPortalAdminPwd=<password> -DWasPassword=<password>`  
@@ -14,7 +14,7 @@ Steps to uninstall Personalization sample demo, database, and users.
         `ConfigEngine.bat remove-pzndemo -DPortalAdminPwd=<password> -DWasPassword=<password>`  
         `ConfigEngine.bat remove-pzndemo-users -DPortalAdminPwd=<password> -DWasPassword=<password>`  
 
-The sample demo, database, and users will be removed.
+The Personalization sample, database, and users are removed.
 
 !!!note
-    The database connection to the included Apache Derby database may stay open and prevent removal of the database directory. Restart HCL Digital Experience and run `ConfigEngine.bat/sh remove-pzndemo-database -DPortalAdminPwd=<password> -DWasPassword=<password>` if this is a problem. The directory PznDemo in the root of the Portal Personalization Workspace may need to be removed manually.
+    The database connection to the included Apache Derby database may stay open and prevent removal of the database directory. If this happens, restart HCL Digital Experience and run `ConfigEngine.bat/sh remove-pzndemo-database -DPortalAdminPwd=<password> -DWasPassword=<password>`. The directory PZNDemo in the root of the Portal Personalization Workspace may need to be removed manually.
