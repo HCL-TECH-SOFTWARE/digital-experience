@@ -198,7 +198,7 @@ The following list contains details of tuning and enhancements done to DX core d
 
  ![](../../../images/Core_Tuning_LTPA.png)
 
-- WCM object cache for rendering is updated as per DX performance tuning guide DX core tuning. For more information, see [DX Core tuning guide](https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/in-progress/guide_me/performance_tuning/traditional_deployments.html).
+- WCM object cache for rendering is updated as per DX performance tuning guide DX core tuning. For more information, see [DX Core tuning guide](../traditional_deployments.md).
 
 
  ![](../../../images/Core_WCM_Object_Cache_list.png)
@@ -207,7 +207,7 @@ The following list contains details of tuning and enhancements done to DX core d
  ![](../../../images/WCM_Object_Cache_Instances.png)
 
 
-- Updated abspath, abspathreverse, processing, session, strategy, summary values WCM rendering values as per [DX Core tuning guide](https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/in-progress/guide_me/performance_tuning/traditional_deployments.html).
+- Updated abspath, abspathreverse, processing, session, strategy, summary values WCM rendering values as per [DX Core tuning guide](../traditional_deployments.md).
 
 - Added a new custom property under **Resource environment providers > WP CacheManagerService > Custom properties > cacheinstance.com.ibm.wps.resolver.friendly.cache.size**.
 
@@ -261,7 +261,7 @@ For the Core pod, increasing the CPU limit gave a boost to performance but this 
 There are several factors that can affect the performance of DX in Kubernetes. Changes in the number of running nodes, number of pods, and the capacity of individual pods can  improve the performance of DX. 
 
 !!!note
-     Performance tuning for a Kubernetes DX cluster must be conducted for the particular workloads involved. Generally, these recommendations are intended to speed up tuning for others. Further enhancements may be achieved by following the [DX Core tuning guide](https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/in-progress/guide_me/performance_tuning/traditional_deployments.html).
+     Performance tuning for a Kubernetes DX cluster must be conducted for the particular workloads involved with number of concurrent users. Generally, these recommendations are intended to speed up tuning for others. Further enhancements may be achieved by following the [DX Core tuning guide](../traditional_deployments.md).
 
 ### Recommendations
 
@@ -310,4 +310,4 @@ For convenience, these values were added to the `medium-config-values.yaml` file
 
 ## Additional References:
 
-- Digital Experience Core tuning details are available in [DX Performance Tuning Guide](https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/in-progress/guide_me/performance_tuning/traditional_deployments.html)
+- Digital Experience Core tuning details are available in [DX Performance Tuning Guide](../traditional_deployments.md)
