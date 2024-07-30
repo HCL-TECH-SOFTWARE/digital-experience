@@ -14,19 +14,19 @@ By default, when the personalization demo (PZNDemo) will be installed, the follo
 Logout and log back in to the server.
 
     Personalized information should be shown up on the different pages.
-    The **initialize the database** button does not have to be clicked again after the database is initialized.
+    After the database is initialized, you do not have to click **Initialize Database** again.
 
-    For example:
+    The following images are sample pages of the Personalization demo for each user.  
   
-    **YourCo Main Page sample for user scott:**  
+    **YourCo Main Page** sample for user **scott**:  
 
     ![main page sample](./images/scott_YourCo_mainpage_sample.png)
 
-    **YourCo Products sample for user marge:**  
+    **YourCo Products** sample for user **marge**:  
 
     ![products sample](./images/marge_YourCo_Products_sample.png)
 
-    **YourCo Services sample for user andy:**  
+    **YourCo Services** sample for user **andy**:  
 
     ![services sample](./images/andy_YourCo_services_sample.png)
 
