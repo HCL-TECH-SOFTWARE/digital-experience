@@ -267,9 +267,9 @@ There are several factors that can affect the performance of DX in Kubernetes. C
 
 - For a medium-sized workload in AWS, the Kubernetes cluster should begin with one master and four worker nodes. 
 
-- For the HAProxy and RingApi containers, increasing the CPU will increase throughput, but increasing the number of pods will not.
+- For the HAProxy and RingApi containers, increasing the CPU increase throughput, but increasing the number of pods does not.
 
-- For the DAM and persistence node pods CPU limits were increased due to the observations from Grafana about the usage of CPU and memopry on the load test. After this initial change, increasing the pod replicas boosted the performance and handling of 10000 concurrent users load. For DAM, increasing the number of pods will increase throughput.
+- For DAM and persistence node pods, CPU limits were increased due to the observations from Grafana about the usage of CPU and memory on the load test. After this initial change, increasing the pod replicas boosted the performance and handling of the 10000 concurrent users load. For DAM, increasing the number of pods increases throughput.
 
 - For testing purposes, OpenLDAP pod values were also increased for holding more authenticated users for rendering. However, the OpenLDAP pod is not for production use.
 
