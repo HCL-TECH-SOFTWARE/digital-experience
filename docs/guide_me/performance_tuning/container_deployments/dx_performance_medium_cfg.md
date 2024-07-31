@@ -4,7 +4,7 @@
 
 In Digital Experience (DX) performance testing, it is important to determine both DX container sizing and the relationships between the components that make up DX. The goal of performance testing is to identify the optimal Kubernetes configurations for varying levels of DX demands, ranging from small to large setups. This sizing guidance examines these factors in a configuration using 10,000 Virtual Users.
  
-In this investigation, the key performance indicators are the number of concurrent users, the average response time, and throughput. These metrics serve as benchmarks for evaluating the performance of a medium DX configuration, providing insights into the system's ability to handle specific loads. Furthermore, this topic explores the impact of core tuning adjustments, pod scaling, node scaling, and pod configuration modifications on enhancing system responsiveness. This sizing guidance shows how strategic changes can lead to significant improvements in performance.
+In this investigation, the key performance indicators are the number of concurrent users, the average response time, and throughput. These metrics serve as benchmarks for evaluating the performance of a medium DX configuration, providing insights into the system's ability to handle specific loads. This topic also explores the impact of core tuning adjustments, pod scaling, node scaling, and pod configuration modifications on enhancing system responsiveness. This sizing guidance shows how strategic changes can lead to significant improvements in performance.
  
 The sizing tests examined rendering scenarios for Web Content Manager (WCM), portlets, and Digital Asset Management (DAM). The tests were facilitated by a rendering setup deployed on AWS/Native-Kubernetes (Kubernetes installed directly in Amazon EC2 instances). This topic presents a comprehensive overview of the findings, offering guidance for organizations seeking to optimize their DX platforms for peak performance.
 
@@ -12,11 +12,11 @@ The sizing tests examined rendering scenarios for Web Content Manager (WCM), por
 
 ### Overview of DX rendering sizing-performance tests
 
-This sizing work consisted of rendering scenarios of WCM, portlets, and DAM with a rendering setup enabled in AWS/Native-Kubernetes (Kubernetes installed directly in Amazon EC2 instances). A combination run was performed that rendered WCM content, DAM assets, and DX pages and portlets. The load distribution is WCM content (40%), DAM assets (30%), and DX pages and portlets (30%). All systems were pre-populated before performing the rendering tests.
+This sizing work consisted of rendering scenarios of WCM, portlets, and DAM with a rendering setup enabled in AWS/Native-Kubernetes (Kubernetes installed directly in Amazon EC2 instances). A combination run was performed that rendered WCM content, DAM assets, and DX pages and portlets. The load distribution was WCM content (40%), DAM assets (30%), and DX pages and portlets (30%). All systems were pre-populated before performing the rendering tests.
 
-To achieve the 10000 concurrent users mark, an initial set of runs was done with a lower number of users on a multiple node setup with varying numbers of worker nodes. The tests started with three worker nodes. The number of worker nodes and pods was increased as needed to achieve the desired load with an acceptable error rate (< 0.01%). After establishing the number of nodes, further steps were taken to optimize the limits on the available resources for each pod, as well as the ratios of key pods to each other.
+To achieve the 10,000 concurrent users mark, an initial set of runs was done with a lower number of users on a multiple node setup with varying numbers of worker nodes. The tests started with three worker nodes. The number of worker nodes and pods was increased as needed to achieve the desired load with an acceptable error rate (< 0.01%). After establishing the number of nodes, further steps were taken to optimize the limits on the available resources for each pod, as well as the ratios of key pods to each other.
 
-- The following section below provides details for the [WCM default test data - 200 pages](#wcm-default-test-data-200-pages), [DAM default test data - 25,000 assets](#dam-default-test-data-25000-assets), and [Pages and portlets default test data - 80 pages](#pages-and-portlets-default-test-data-80-pages).
+The following sections provide details for the [WCM default test data - 200 pages](#wcm-default-test-data-200-pages), [DAM default test data - 25,000 assets](#dam-default-test-data-25000-assets), and [Pages and portlets default test data - 80 pages](#pages-and-portlets-default-test-data-80-pages).
 
 #### WCM default test data - 200 pages
 
@@ -46,7 +46,7 @@ This setup is common in most of the scenarios where there are multi-nested site 
 
 #### DAM default test data - 25,000 assets
 
-The following DAM setup covers the mix and match of the different types of most commonly used assets in three different ways: UUID, custom, and friendly urls. Testers uploaded 25,000 assets. These assets include images (136 KB, .jpg), documents (199 KB, .docx), and videos (1.1 MB, .mp4) to preheat the environment. After preloading 25,000 assets, 15 assets containing a mix of original images and renditions were uploaded and rendered for 1 hour at peak load after ramp-up time.
+The following DAM setup covers the mix and match of the different types of most commonly used assets in three different ways: UUID, custom, and friendly URLs. Testers uploaded 25,000 assets. These assets include images (136 KB, .jpg), documents (199 KB, .docx), and videos (1.1 MB, .mp4) to preheat the environment. After preloading 25,000 assets, 15 assets containing a mix of original images and renditions were uploaded and rendered for 1 hour at peak load after ramp-up time.
 
 The test then rendered those assets by way of 3 custom URLs, 8 UUID URLs, and 8 short URLs for an hour. Further details provided in the following summary of the results.
 
@@ -78,7 +78,7 @@ As part of authoring, pages and portlets were added manually. The list shows the
 - Page 1 - 2 Articles
 - Page 2 - 2 Rich text
 - Page 3 - Login portlet
-- Page 4 - Information Portlet (JSR) - JSP file -  jsp/oob/welcome.jsp 
+- Page 4 - Information portlet (JSR) - JSP file -  jsp/oob/welcome.jsp 
 - Page 5 - Search Center portlet
 - Page 6 - Custom JSF portlet with simple form (Disable this portlet for now.)
 - Page 7 - Script Application portlet (Added JavaScript Functions and Date and Time object examples)
@@ -104,7 +104,7 @@ This section provides details for the Kubernetes cluster, Jmeter, LDAP, and data
 
 - c5.4xlarge
 
-      - Info
+      - Information
 
        ![](../../../images/Header-1-AWS-Med.png)
 
@@ -121,7 +121,7 @@ This section provides details for the Kubernetes cluster, Jmeter, LDAP, and data
 
 - c5.large
 
-      - Info
+      - Information
 
        ![](../../../images/Header-1-AWS-Med.png)
 
@@ -198,7 +198,7 @@ The following list contains details of tuning and enhancements done to DX core d
 
  ![](../../../images/Core_Tuning_LTPA.png)
 
-- WCM object cache for rendering is updated as per DX performance tuning guide DX core tuning. For more information, see [DX Core tuning guide](../traditional_deployments.md).
+- WCM object cache for rendering is updated as per [DX Core tuning guide](../traditional_deployments.md).
 
 
  ![](../../../images/Core_WCM_Object_Cache_list.png)
@@ -207,7 +207,7 @@ The following list contains details of tuning and enhancements done to DX core d
  ![](../../../images/WCM_Object_Cache_Instances.png)
 
 
-- Updated abspath, abspathreverse, processing, session, strategy, summary values WCM rendering values as per [DX Core tuning guide](../traditional_deployments.md).
+- Updated abspath, abspathreverse, processing, session, strategy, and summary values WCM rendering values as per [DX Core tuning guide](../traditional_deployments.md).
 
 - Added a new custom property under **Resource environment providers > WP CacheManagerService > Custom properties > cacheinstance.com.ibm.wps.resolver.friendly.cache.size**.
 
@@ -244,13 +244,13 @@ The following list contains details of tuning and enhancements done to DX core d
 !!!note
      - Neither fragment caching nor static resource caching were enabled to trigger actual stress and processing. In a customer scenario, it is recommended to enable both fragment caching and static resource caching. 
 
-     - For DAM, no tuning details are mentioned in this topic except the pod resources like CPU and memory limits for all pods related to DAM (for example, ring-api, persistence-node, persistence-connection-pool and core). Because DAM uses Node.js, you can monitor CPU and memory usage using Prometheus and Grafana and have CPU and memory requests and limits in Kubernetes to have good response times and throughput.
+     - For DAM, no tuning details are mentioned in this topic except the pod resources like CPU and memory limits for all pods related to DAM (for example, ring-api, persistence-node, persistence-connection-pool, and core). Because DAM uses Node.js, you can monitor CPU and memory usage using Prometheus and Grafana. You can have CPU and memory requests and limits in Kubernetes to have good response times and throughput.
 
 ## Results
 
-The initial sets of tests were run on an AWS-distributed Kubernetes setup with one master and three worker nodes. Concurrent user loads of 1000, 2500, 4000, and 5000 users were successful, as measured by a low error rate (< 0.0001%) and satisfactory response times. At 8000 users, this was no longer the case as the response times increased dramatically and the error rates went up as well.
+The initial sets of tests were run on an AWS-distributed Kubernetes setup with one master and three worker nodes. Concurrent user loads of 1,000, 2,500, 4,000, and 5,000 users were successful, as measured by a low error rate (< 0.0001%) and satisfactory response times. At 8,000 users, this was no longer the case because the response times increased dramatically and the error rates went up as well.
 
-The tests then moved to a setup with four worker nodes and 10000 concurrent users. The error rates were low (<0.0001%) and response times were satisfactory. At this point, alterations were made to the number of pods, CPU, and memory of each of the following containers: HAProxy, Core, RingAPI, digitalAssetManagement, persistenceNode and persistenceConnectionPool. The alterations to these containers aimed to determine which factors were significantly beneficial.
+The tests then moved to a setup with four worker nodes and 10,000 concurrent users. The error rates were low (<0.0001%) and response times were satisfactory. At this point, alterations were made to the number of pods, CPU, and memory of each of the following containers: HAProxy, Core, RingAPI, digitalAssetManagement, persistenceNode, and persistenceConnectionPool. The alterations to these containers aimed to determine which factors were significantly beneficial.
 
 For the HAProxy container, increasing the CPU dramatically increased throughput. When the number of HAProxy pods was increased, the throughput decreased.
 
@@ -261,7 +261,7 @@ For the Core pod, increasing the CPU limit gave a boost to performance but this 
 There are several factors that can affect the performance of DX in Kubernetes. Changes in the number of running nodes, number of pods, and the capacity of individual pods can  improve the performance of DX. 
 
 !!!note
-     Performance tuning for a Kubernetes DX cluster must be conducted for the particular workloads involving the number of concurrent users. Generally, these recommendations are intended to speed up tuning for others. Further enhancements may be achieved by following the [DX Core tuning guide](../traditional_deployments.md).
+     Performance tuning for a Kubernetes DX cluster must be conducted for the particular workloads involving the number of concurrent users. Generally, these recommendations are intended to speed up tuning for others. Refer to the [DX Core tuning guide](../traditional_deployments.md) for further enhancements.
 
 ### Recommendations
 
@@ -269,7 +269,7 @@ There are several factors that can affect the performance of DX in Kubernetes. C
 
 - For the HAProxy and RingApi containers, increasing the CPU increases throughput, but increasing the number of pods does not.
 
-- For DAM and persistence node pods, CPU limits were increased due to the observations from Grafana about the usage of CPU and memory on the load test. After this initial change, increasing the pod replicas boosted the performance and handling of the 10000 concurrent users load. For DAM, increasing the number of pods increases throughput.
+- For DAM and persistence node pods, CPU limits were increased due to the observations from Grafana about the usage of CPU and memory on the load test. After this initial change, increasing the pod replicas boosted the performance and handling of the 10,000 concurrent users load. For DAM, increasing the number of pods increases throughput.
 
 - For testing purposes, OpenLDAP pod values were also increased for holding more authenticated users for rendering. However, the OpenLDAP pod is not for production use.
 
@@ -278,7 +278,7 @@ There are several factors that can affect the performance of DX in Kubernetes. C
 !!!note
      Do not size your JVM Heap size larger than the allotted memory for the pod.
 
-There were a number of alterations done to the initial Helm chart configuration. The following table contains the number and limits for each pod. Using these values significantly improves the responsiveness of the setup and enables the system to handle 10000 concurrent users with a vastly improved average response time and a minimal error rate.
+There were a number of alterations done to the initial Helm chart configuration. The following table contains the number and limits for each pod. Using these values significantly improves the responsiveness of the setup and enables the system to handle 10,000 concurrent users with a vastly improved average response time and a minimal error rate.
 
 |  |  | Request | Request | Limit | Limit |
 |---|---|---:|---|---|---|
