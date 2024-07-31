@@ -30,7 +30,7 @@ This setup is common in most of the scenarios where there are multi-nested site 
 
 - Half of the content items are visible to "Anonymous" and "All Authenticated" users. The other half are visible only to members of ten groups per content item. These ten groups are spread out among the 500 groups assumed to exist in the test LDAP (and assumed to be called "Group0000" through "Group0499").
 
-- Half of the content items visible to members of ten groups per content item (spread evenly over "Anonymous" and "All Authenticated" users) are profiled with the keyword "MENU".
+- Half of the content items visible to members of ten groups per content item are profiled with the keyword "MENU".
 
 - There are 20 test portal pages created under the label "PerformanceTest". Each has a friendly URL of the form "<context-root>/perf/page-xx".
 
@@ -207,7 +207,7 @@ The following list contains details of tuning and enhancements done to DX core d
  ![](../../../images/WCM_Object_Cache_Instances.png)
 
 
-- Updated abspath, abspathreverse, processing, session, strategy, and summary values WCM rendering values as per [DX Core tuning guide](../traditional_deployments.md).
+- Updated abspath, abspathreverse, processing, session, strategy, summary values, and WCM rendering values as per [DX Core tuning guide](../traditional_deployments.md).
 
 - Added a new custom property under **Resource environment providers > WP CacheManagerService > Custom properties > cacheinstance.com.ibm.wps.resolver.friendly.cache.size**.
 
