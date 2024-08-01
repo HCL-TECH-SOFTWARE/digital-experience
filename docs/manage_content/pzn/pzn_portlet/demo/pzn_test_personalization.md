@@ -2,7 +2,7 @@
 
 In [Installing the PZNDemo resources](./pzn_demoinstall.md), you installed the Personalization demo resources such as the backend database, pages, portlets, and users. In this exercise, you can review the personalized pages for each user.
 
-By default, when the personalization demo (PZNDemo) is installed, the following users are created:  
+By default, when the Personalization demo (PZNDemo) is installed, the following users are created:  
 
 - andy  
 - scott  
@@ -33,4 +33,4 @@ By default, when the personalization demo (PZNDemo) is installed, the following 
 
    ![services sample](./images/andy_YourCo_services_sample.png)
 
-4. Log out from the HCL DX.
+4. Log out of HCL DX.
