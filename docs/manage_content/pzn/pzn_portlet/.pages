@@ -1,6 +1,7 @@
 title: Developing a personalized portlet
 nav:
     - index.md
+    - Testing the PZNDemo: demo
     - pzn_demoprereq.md
     - pzn_demoinstall.md
     - pzn_demo_create_jsp_rad.md
