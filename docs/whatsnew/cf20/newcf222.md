@@ -7,6 +7,7 @@ The following features and updates are available to customers installing HCL Dig
 - Updated documentation for creating categories by using external URLs
 - Updated documentation for WAB filters
 - Updated documentation for generating WCM search URLs
+- Personalization demo
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -19,6 +20,7 @@ The following features and updates are available to customers installing HCL Dig
 - Values moved from incubator to the main section of `values.yaml`
 - DAM Indexing - Updated API endpoints
 - New sizing guidance for rendering in a medium configuration
+- New guidance capturing Kube pod logs using Logstash-FileBeat
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Notice of deprecation of customized OpenLDAP container starting CF223
 - Removal of automated Pod restart on ConfigMap updates
@@ -50,6 +52,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     The topic [HCL Web Content Manager Support Tools](../../deployment/manage/troubleshooting/wcm_support_tools.md#generate-wcm-search-url) is updated to include steps on how to generate a WCM search URL to be used within a content source. Note that Administrator access is required to generate a WCM Search URL.
+
+### Personalization demo
+
+Doc in progress
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
@@ -87,6 +93,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"    
     Results of DX sizing tests for rendering in a Kubernetes medium configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic [Sizing guidance for rendering in a Kubernetes medium configuration](../../guide_me/performance_tuning/container_deployments/index.md).
+
+### New guidance capturing Kube pod logs using Logstash-FileBeat
+
+Doc in progress
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
