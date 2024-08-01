@@ -1,6 +1,6 @@
 # Testing the personalization demo
 
-In the previous step the personalization demo resources (backend database, pages, portlets and users) got installed by using automated ConfigEngine commands. In this exercise these personalized pages can be reviewed.
+In the previous steps the personalization demo resources (backend database, pages, portlets and users) got installed by using automated ConfigEngine commands. In this exercise these personalized pages can be reviewed.
 
 By default, when the personalization demo (PZNDemo) is installed, the following users are created:  
 
