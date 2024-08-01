@@ -16,7 +16,7 @@ In this exercise, you can install the Portal Personalization sample and configur
         `ConfigEngine.bat create-pzndemo-users -DPortalAdminPwd=<password> -DWasPassword=<password>`  
         `ConfigEngine.bat install-pzndemo -DPortalAdminPwd=<password> -DWasPassword=<password>`  
 
-4. Stop and restart the HCL Digital Experience (DX) server.
+4. Stop and restart the HCL DX server.
 
 5. Open your web browser and log in to the Portal as **wpsadmin** user.
 
@@ -29,7 +29,7 @@ In this exercise, you can install the Portal Personalization sample and configur
     - tawana
     - marge  
 
-    **PZN demo users in the Portal**
+    The following screenshot shows the PZN demo users:
     ![PZN Demo Users](./images/pzndemo_users.png)
 
 8. Add all pzndemousers to the wpsadmins group.
@@ -40,10 +40,9 @@ In this exercise, you can install the Portal Personalization sample and configur
     4. Click **OK**.  
 
     !!!note  
-        By default, standard users do not have permissions to access the Personalization page or resources.
-        In this exercise it is suggested to add all the pzndemousers to the wpsadmins group to ensure that the users getting access to all demo resources.  
+        By default, standard users do not have permissions to access the Personalization page or resources. In this exercise, it is recommended to add all the pzndemousers to the wpsadmins group to ensure that users get access to all demo resources.   
 
-9. Log out from the HCL DX to apply the changes.
+9. Log out of HCL DX to apply the changes.
 
-    **PZN demo users added to the wpsadmins group**
+    In the following screenshot, PZN demo users are under the wpsadmins group:
     ![Adding the PZN Demo users to the wpsadmins group](./images/pzndemo_users_wpsadmins_group.png)  
