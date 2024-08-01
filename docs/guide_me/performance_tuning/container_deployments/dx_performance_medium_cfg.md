@@ -1,4 +1,4 @@
-# Sizing guidance for DX Rendering Scenarios in a Kubernetes Medium Configuration
+# Sizing guidance for rendering in a Kubernetes medium configuration
 
 ## Introduction
 
