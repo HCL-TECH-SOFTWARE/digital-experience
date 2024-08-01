@@ -7,7 +7,6 @@ The following features and updates are available to customers installing HCL Dig
 - Updated documentation for creating categories by using external URLs
 - Updated documentation for WAB filters
 - Updated documentation for generating WCM search URLs
-- New documentation for testing the PZNDemo
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -52,14 +51,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     The topic [HCL Web Content Manager Support Tools](../../deployment/manage/troubleshooting/wcm_support_tools.md#generate-wcm-search-url) is updated to include steps on how to generate a WCM search URL to be used within a content source. Note that Administrator access is required to generate a WCM Search URL.
-
-### New documentation for testing the PZNDemo
-
-=== "Containers"
-    A new section containing exercises for installing, testing, and uninstalling the Personalization demo (PZNDemo) resources is now available. For more information, see [Testing the PZNDemo](../../manage_content/pzn/pzn_portlet/demo/index.md).
-
-=== "On-Premises"
-    A new section containing exercises for installing, testing, and uninstalling the Personalization demo (PZNDemo) resources is now available. For more information, see [Testing the PZNDemo](../../manage_content/pzn/pzn_portlet/demo/index.md).
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
