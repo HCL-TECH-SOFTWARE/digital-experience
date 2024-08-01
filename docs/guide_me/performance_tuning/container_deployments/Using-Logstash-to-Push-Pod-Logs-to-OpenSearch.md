@@ -35,7 +35,7 @@ OpenSearch is a community-driven, open-source search and analytics suite derived
     3. Logs are processed and filtered by Logstash.
     4. Processed logs are forwarded to OpenSearch for indexing and storage.
 
-          ![image](./Logstash-OpenSearch-Data-Flow-Diagram.png)
+          ![](../../../images/Logstash-OpenSearch-Data-Flow-Diagram.png){ width="600" }
 
 ## Installation and Configuration
 
@@ -151,7 +151,10 @@ Modify indexes to handle the creation, rollover, and deletion of indices. This h
 ### Monitoring and Alerting
 
 1. Use OpenSearch Dashboards to visualize log data.We can use available Filters to check specific deployment host names and pod in the log data.
-        ![image](./OpenSearch-Dashboard-Filters.png)
+        
+        
+    ![](../../../images/OpenSearch-Dashboard-Filters.png){ width="600" }
+
 2. Set up alerts for specific log patterns or anomalies.
 3. Monitor Logstash performance using metrics and logs.
 
@@ -170,7 +173,7 @@ A DX deployment was enhanced with Logstash, Filebeat and OpenSearch to manage lo
 
 Using Logstash to push Kubernetes pod logs to OpenSearch provides a robust and scalable solution for log management. By following the setup and best practices outlined in this white paper, organizations can enhance their observability and improve operational efficiency  of their log data.
 
-# References
+## References
 
 - [Logstash Documentation](https://www.elastic.co/guide/en/logstash/current/index.html)
 - [Filebeat Documentation](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-overview.html)
