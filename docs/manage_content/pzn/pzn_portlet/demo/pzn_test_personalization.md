@@ -1,6 +1,6 @@
-# Testing the personalization demo
+# Reviewing the PZNdemo
 
-In the previous steps the personalization demo resources (backend database, pages, portlets and users) got installed by using automated ConfigEngine commands. In this exercise these personalized pages can be reviewed.
+In [Installing the PZNDemo resources](./pzn_demoinstall.md), you installed the Personalization demo resources such as the backend database, pages, portlets, and users. In this exercise, you can review the personalized pages for each user.
 
 By default, when the personalization demo (PZNDemo) is installed, the following users are created:  
 
@@ -9,9 +9,9 @@ By default, when the personalization demo (PZNDemo) is installed, the following 
 - tawana  
 - marge  
 
-## Review the PZNDemo portal pages
+[]()
 
-1. Log in as one of the pzndemousers to your Portal. Use **pzndemo** as password for each user.  
+1. Log in as one of the pzndemousers (for example, "scott") to HCL DX. Use **pzndemo** as password for each user.  
 2. Navigate to **Personalization > Demo**.
 3. Click the different pages and portlets for each user. Notice the different information displayed for each user.  
 
