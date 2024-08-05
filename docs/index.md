@@ -93,12 +93,5 @@ hide:
 
     [:octicons-arrow-right-24: Access Support](https://support.hcltechsw.com/csm?id=csm_index)
 
--   :material-lifebuoy:{ .lg .middle } __Access HCL Support__
-
-    ---
-
-    Discover our support bulletins and access your support cases.
-
-    [:octicons-arrow-right-24: Access Support](https://support.hcltechsw.com/csm?id=csm_index)
 
 </div>
