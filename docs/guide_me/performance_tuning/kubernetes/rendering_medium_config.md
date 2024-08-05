@@ -109,44 +109,43 @@ This section provides details for the Kubernetes cluster, Jmeter, LDAP, and data
 - c5.4xlarge
 
       - Information
-
-       ![](../../../images/Header-1-AWS-Med.png)
-
-       ![](../../../images/ec2_c5_4xlarge_info.png)
-
+      
+      ![](../../../images/Header-1-AWS-Med.png){ width="1000" }
+      
+      ![](../../../images/ec2_c5_4xlarge_info.png){ width="1000" }
 
       - Processor details
 
-       ![](../../../images/c5_4xlarge_cpu_info.png)
+      ![](../../../images/c5_4xlarge_cpu_info.png){ width="1000" }
 
       - Volume details
 
-       ![](../../../images/c5_4xlarge_volume_info.png){ width="600" }
+      ![](../../../images/c5_4xlarge_volume_info.png){ width="600" }
 
 - c5.large
 
       - Information
 
-       ![](../../../images/Header-1-AWS-Med.png)
+      ![](../../../images/Header-1-AWS-Med.png){ width="1000" }
 
-       ![](../../../images/ec2_c5_large_info.png)
+      ![](../../../images/ec2_c5_large_info.png){ width="1000" }
 
       - Processor details
 
-       ![](../../../images/c5_large_cpu_info.png)
+      ![](../../../images/c5_large_cpu_info.png){ width="1000" }
 
       - Volume details
 
-       ![](../../../images/c5_large_volume_info.png){ width="600" }
+      ![](../../../images/c5_large_volume_info.png){ width="600" }
 
 
 ### DB2 instance
 
 - Remote DB2 - [c5.2xlarge]
 
-      ![](../../../images/Header-1-AWS-Med.png)
+      ![](../../../images/Header-1-AWS-Med.png){ width="1000" }
 
-      ![](../../../images/C5.2xlarge.png)
+      ![](../../../images/C5.2xlarge.png){ width="1000" }
 
 - Processor details
 
@@ -164,9 +163,9 @@ This section provides details for the Kubernetes cluster, Jmeter, LDAP, and data
 
 - To run the tests, a distributed AWS/JMeter agents setup consisting of one primary and eight subordinates was used.
 
-      ![](../../../images/Header-1-AWS-Med.png)
+      ![](../../../images/Header-1-AWS-Med.png){ width="1000" }
 
-      ![](../../../images/C5.2xlarge.png)
+      ![](../../../images/C5.2xlarge.png){ width="1000" }
 
 
 - Processor details
@@ -200,47 +199,47 @@ The following list contains details of tuning and enhancements done to DX core d
 
 - LTPA token timeout increased from 120 minutes to 480 minutes for rendering tests execution.
 
- ![](../../../images/Core_Tuning_LTPA.png)
+      ![](../../../images/Core_Tuning_LTPA.png){ width="1000" }
 
 - WCM object cache for rendering is updated as per [DX Core tuning guide](../traditional_deployments.md).
 
 
- ![](../../../images/Core_WCM_Object_Cache_list.png)
+      ![](../../../images/Core_WCM_Object_Cache_list.png){ width="1000" }
 
 
- ![](../../../images/WCM_Object_Cache_Instances.png)
+      ![](../../../images/WCM_Object_Cache_Instances.png){ width="1000" }
 
 
 - Updated abspath, abspathreverse, processing, session, strategy, summary values, and WCM rendering values as per [DX Core tuning guide](../traditional_deployments.md).
 
 - Added a new custom property under **Resource environment providers > WP CacheManagerService > Custom properties > cacheinstance.com.ibm.wps.resolver.friendly.cache.size**.
 
- ![](../../../images/Core_Friendly_Url_Cache.png)
+      ![](../../../images/Core_Friendly_Url_Cache.png){ width="1000" }
 
 
 - Adjusted JVM Heap size from 3584 to 4096 under **Application servers > WebSphere_Portal > Process_definition > Java Virtual Machine**.
 
- ![](../../../images/Core_JVM_Tuning.png)
+      ![](../../../images/Core_JVM_Tuning.png){ width="1000" }
 
 
 - Set LDAP user cache attributes and search to 10000.
 
- ![](../../../images/Core_DX_LDAP_User_Cache.png)
+      ![](../../../images/Core_DX_LDAP_User_Cache.png){ width="1000" }
 
 
 - Disabled jcr.text.search under **Resource environment providers > JCR ConfigService Portal Content > Custom properties** because there is currently no authoring search functionality in these tests.
 
- ![](../../../images/Core_Tuning_JCR_Text_Search_Disable.png)
+      ![](../../../images/Core_Tuning_JCR_Text_Search_Disable.png)
 
 
 - Deleted search collections in **Portal > Administration > Search > Search collections** (both JCRCollection1 and Default Search Collection).
 
- ![](../../../images/Core_Tuning_Delete_Search_Collections.png)
+      ![](../../../images/Core_Tuning_Delete_Search_Collections.png)
 
 
 - Logged level changes from info to severe in WAS for both configuration and run time.
 
- ![](../../../images/Core_Tuning_Log_Level_Details.png)
+      ![](../../../images/Core_Tuning_Log_Level_Details.png){ width="1000" }
 
 
 - DB2 tuning performed by executing DB2 Reorg and Runstats.
