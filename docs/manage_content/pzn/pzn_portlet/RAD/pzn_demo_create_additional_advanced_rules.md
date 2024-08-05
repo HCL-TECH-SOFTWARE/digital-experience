@@ -43,7 +43,7 @@ Ensure you have properly followed the steps in [Create the user profiler rule](p
 
 16. Select **Show Platinum Offers** and click **OK**
 
-Do the same steps for Titanimum customers.  
+Do the same steps for Titanium customers.  
 
 ## Result
 

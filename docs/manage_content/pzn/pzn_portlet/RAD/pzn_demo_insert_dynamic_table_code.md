@@ -52,7 +52,7 @@ Before you begin this procedure, ensure that you created a content spot.
    }%>
    ```
 
-3. Save and close the file. Verify no errors other than exception handling errors.
+3. Save and close the file. Verify no errors are handled other than exception handling errors.
 
 4. Export the project as a war file. Close Rational Application Developer.
 

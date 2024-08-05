@@ -20,7 +20,8 @@ Before you begin this procedure, ensure you have properly created additional adv
 
 7. Run the portlet.
 
-If you run the portlet as wpsadmin, it fails because wpsadmin does not exist in the user resource database, and the programmer who coded the JSP did not code the proper error handling.
+!!!note
+    If you run the portlet as wpsadmin, it fails because wpsadmin does not exist in the user resource database.
 
 Congratulations! You have finished building a Personalized portlet.
 
