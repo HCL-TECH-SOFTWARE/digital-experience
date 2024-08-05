@@ -1,8 +1,8 @@
 ---
-title: Rendering - Medium Sized Config
+title: Rendering - Medium-Sized Configuration
 ---
 
-# Sizing guidance for rendering in a medium sized Kubernetes configuration
+# Sizing guidance for rendering in a medium-sized Kubernetes configuration
 
 ## Introduction
 
