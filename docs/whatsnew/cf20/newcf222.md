@@ -87,11 +87,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New sizing guidance for rendering in a medium configuration
 
 === "Containers"    
-    Results of DX sizing tests for rendering in a Kubernetes medium configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic [Sizing guidance for rendering in a Kubernetes medium configuration](../../guide_me/performance_tuning/container_deployments/index.md).
+    Results of DX sizing tests for rendering in a Kubernetes medium configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic [Sizing guidance for rendering in a Kubernetes medium configuration](../../guide_me/performance_tuning/kubernetes/rendering_medium_config.md).
 
-### New guidance capturing Kube pod logs using Logstash-FileBeat
+### New documentation for using Logstash to push pod logs to OpenSearch
 
-Doc in progress
+=== "Containers"
+    As applications scale, managing Kubernetes logs is important for monitoring, debugging, and compliance. The new topic [Using Logstash to push pod logs to OpenSearch]() outlines the steps for configuring Logstash and Filebeat so that Kubernetes pod logs are forwarded to OpenSearch, an open source search and analytics engine. 
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
