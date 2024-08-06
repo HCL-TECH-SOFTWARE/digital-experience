@@ -82,7 +82,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### DAM Indexing - Updated API endpoints 
 
 === "Containers" 
-    The API endpoint used for [creating the `damContentSourceID`](../../manage_content/digital_assets/configuration/dam_indexing/configure_dam_indexing.md#configuring-dam-indexing) is now ``/dx/api/search/v2/contentsources` while the endpoint for [starting the reindexing process](../../manage_content/digital_assets/configuration/dam_indexing/using_dam_indexing.md#reindexing) is `/dx/api/dam/v1/reindex`. 
+    The API endpoint used for [creating the `damContentSourceID`](../../manage_content/digital_assets/configuration/dam_indexing/configure_dam_indexing.md#configuring-dam-indexing) is now `/dx/api/search/v2/contentsources` while the endpoint for [starting the reindexing process](../../manage_content/digital_assets/configuration/dam_indexing/using_dam_indexing.md#reindexing) is `/dx/api/dam/v1/reindex`. 
 
 ### New sizing guidance for rendering in a medium configuration
 
