@@ -152,13 +152,13 @@ Modify indexes to handle the creation, rollover, and deletion of indices. This h
 
 ### Monitoring and Alerting
 
-1. Use OpenSearch Dashboards to visualize log data. Use available filters to check specific deployment host names and pod in the log data. The following image shows the filters you can use.
+- Use OpenSearch Dashboards to visualize log data. Use available filters to check specific deployment host names and pod in the log data. The following image shows the filters you can use.
         
         
     ![](../../../images/OpenSearch-Dashboard-Filters.png){ width="600" }
 
-2. Set up alerts for specific log patterns or anomalies.
-3. Monitor Logstash performance using metrics and logs.
+- Set up alerts for specific log patterns or anomalies.
+- Monitor Logstash performance using metrics and logs.
 
 
 ### Real-world Example
@@ -167,16 +167,16 @@ A DX deployment was enhanced with Logstash, Filebeat, and OpenSearch to manage l
 
 ### Results
 
-1. DX endgame results analysis in OpenSearch improved by 50%.
-2. Efforts for debugging the logs for root cause analysis were reduced. 
+- DX endgame results analysis in OpenSearch improved by 50%.
+- Efforts for debugging the logs for root cause analysis were reduced. 
 
 ## Conclusion
 
 Using Logstash to push Kubernetes pod logs to OpenSearch provides a robust and scalable solution for log management. Follow the setup and best practices outlined in this topic to enhance observability and improve operational efficiency of your log data.
 
-## For more information, refer to the official documentation of Logstash, Filebeat, OpenSearch, and Kubernetes:
+- For more information, refer to the official documentation of Logstash, Filebeat, OpenSearch, and Kubernetes:
 
-- [Logstash Documentation](https://www.elastic.co/guide/en/logstash/current/index.html)
-- [Filebeat Documentation](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-overview.html)
-- [OpenSearch Documentation](https://opensearch.org/docs/latest/)
-- [Kubernetes Documentation](https://kubernetes.io/docs/home/)
+- [Logstash Documentation](https://www.elastic.co/guide/en/logstash/current/index.html){target="_blank"}
+- [Filebeat Documentation](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-overview.html){target="_blank"}
+- [OpenSearch Documentation](https://opensearch.org/docs/latest/){target="_blank"}
+- [Kubernetes Documentation](https://kubernetes.io/docs/home/){target="_blank"}
