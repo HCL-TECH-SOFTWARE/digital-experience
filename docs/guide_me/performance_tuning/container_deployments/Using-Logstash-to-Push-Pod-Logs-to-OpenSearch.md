@@ -44,7 +44,7 @@ Make sure that you have the following:
 
 - A running Kubernetes cluster.
 
-- An accessible OpenSearch cluster
+- An accessible OpenSearch cluster : Deploy an OpenSearch cluster using the official Helm chart or operator. Ensure the cluster is accessible from the Logstash instance.
 
 ## Installing and configuring Logstash
   
@@ -52,46 +52,46 @@ Make sure that you have the following:
 
 2. Configure Logstash for Kubernetes Logs.
 
-Modify the provided pipeline.conf file according to your requirements. This file defines the input sources, filters, and output destinations for Logstash.
+    Modify the provided `pipeline.conf` file according to your requirements. This configuration file defines the input sources, filters, and output destinations for Logstash. Refer to the following sample of a `pipeline.conf` file.
 
-```
-input {
-    beats {
-    port => 5044
-    }
-}
-
-
-filter {
-
-    mutate {
-    update => { "[host][name]" => "${KUBE_HOSTNAME}" }
-    }
-}
-
-
-output {
-    opensearch {
-        hosts => ["${OS_PROTOCOL}://${OS_HOSTNAME}:443"]
-        index => "${OS_INDEX_NAME}"
-        auth_type => {
-            type => "basic"
-            user => "${OS_USERNAME}"
-            password => "${OPENSEARCH_PASSWORD}"
+    ```
+    input {
+        beats {
+        port => 5044
         }
-        ssl => true
-        ssl_certificate_verification => false
     }
-}
-```
 
-`Input Configuration`: Defines the source of the data. Here, it's configured to receive data from Filebeat on TCP port 5044.
 
-`Filter`: Processes the incoming data. The mutate filter is used here to modify events.
+    filter {
 
-`Update`: Specifically, it updates the [host][name] field of the event to the value of the KUBE_HOSTNAME environment variable. This is useful for dynamically setting the hostname based on the environment where Logstash is running.
+        mutate {
+        update => { "[host][name]" => "${KUBE_HOSTNAME}" }
+        }
+    }
 
-`Output Configuration`: The `opensearch` output plugin is configured to send logs to an OpenSearch server. The hosts parameter specifies the `server's protocol, hostname, and port. Additionally, the logs index, user, and password` parameters are provided for authentication. SSL encryption is enabled (ssl => true), with certificate verification disabled (ssl_certificate_verification => false).
+
+    output {
+        opensearch {
+            hosts => ["${OS_PROTOCOL}://${OS_HOSTNAME}:443"]
+            index => "${OS_INDEX_NAME}"
+            auth_type => {
+                type => "basic"
+                user => "${OS_USERNAME}"
+                password => "${OPENSEARCH_PASSWORD}"
+            }
+            ssl => true
+            ssl_certificate_verification => false
+        }
+    }
+    ```
+
+    `Input Configuration`: This defines the data source. The example is configured to receive data from Filebeat on TCP port 5044.
+
+    `Filter`: This processes the incoming data. The example uses the mutate filter to modify events.
+
+    `Update`: This updates the [host][name] field of the event to the value of the KUBE_HOSTNAME environment variable. This is useful for dynamically setting the hostname based on the environment where Logstash is running.
+
+    `Output Configuration`: The `opensearch` output plugin is configured to send logs to an OpenSearch server. The hosts parameter specifies the `server's protocol`, `hostname`, and `port`. Additionally, the `logs index`, `user`, and `password` parameters are provided for authentication. SSL encryption is enabled (ssl => true), with certificate verification disabled (ssl_certificate_verification => false).
 
 ### Installing and creating the Filebeat configuration file
   
@@ -99,56 +99,46 @@ output {
 
 2. Create the Filebeat configuration file.
 
-Create the filebeat-conf.yml file according to your requirements. This file specify the log files to read and the output destination.
+    Create the `filebeat-conf.yml` file according to your requirements. This file specify the log files to read from and the output destination. Refer to the following sample of a `filebeat-conf.yml` file.
 
-```
-filebeat.autodiscover:
-    providers:
-    - type: kubernetes
-        hints.enabled: true
-        kube_config: /home/centos/.kube/config
-        templates:
-        - condition:
-            equals:
-                kubernetes.namespace: "dxns"
-            config:
-            - type: container
-                paths:
-                - /var/log/containers/*\${data.kubernetes.container.id}.log
-                fields:
-                pod_name: \${data.kubernetes.pod.name}
+    ```
+    filebeat.autodiscover:
+        providers:
+        - type: kubernetes
+            hints.enabled: true
+            kube_config: /home/centos/.kube/config
+            templates:
+            - condition:
+                equals:
+                    kubernetes.namespace: "dxns"
+                config:
+                - type: container
+                    paths:
+                    - /var/log/containers/*\${data.kubernetes.container.id}.log
+                    fields:
+                    pod_name: \${data.kubernetes.pod.name}
 
-output.logstash:
-    hosts: ["${KUBE_HOSTNAME}:5044"]
-```
+    output.logstash:
+        hosts: ["${KUBE_HOSTNAME}:5044"]
+    ```
 
-This configuration tells Filebeat to read all .log files in the /var/log/ directory and send the log data to a Logstash instance running on ${KUBE_HOSTNAME}:5044.
+    This sample configuration tells Filebeat to read all `.log` files in the /var/log/ directory and send the log data to a Logstash instance running on ${KUBE_HOSTNAME}:5044.
 
-
-### Setting Up OpenSearch
-
-Deploy an OpenSearch cluster using the official Helm chart or operator. Ensure the cluster is accessible from the Logstash instance.
-
-## Integration Steps
-
-### Configuring Logstash Output for OpenSearch
-
-In the Logstash configuration file, specify the OpenSearch output plugin, as shown in the example above. This configuration ensures logs are sent to the correct OpenSearch endpoint.
 
 ### Managing indexes in OpenSearch
 
-Modify indexes to handle the creation, rollover, and deletion of indices. This helps manage storage efficiently and maintain optimal performance. For more detailed information, you may refer to the official OpenSearch documentation:
+Modify indexes to handle the creation, rollover, and deletion of indexes. This helps manage storage efficiently and maintain optimal performance. For more detailed information, you may refer to the official OpenSearch documentation:
 
-- [Managing Indexes in OpenSearch](https://opensearch.org/docs/latest/im-plugin/)
-- [OpenSearch Index Templates](https://opensearch.org/docs/latest/im-plugin/index-templates/)
-- [OpenSearch Index Lifecycle Management (ILM)](https://opensearch.org/docs/latest/dashboards/im-dashboards/index/)
+- [Managing Indexes in OpenSearch](https://opensearch.org/docs/latest/im-plugin/){target="_blank"} 
+- [OpenSearch Index Templates](https://opensearch.org/docs/latest/im-plugin/index-templates/){target="_blank"} 
+- [OpenSearch Index Lifecycle Management (ILM)](https://opensearch.org/docs/latest/dashboards/im-dashboards/index/){target="_blank"} 
 
-## Best Practices
+## Best practices
 
-### Performance Optimization
+### Performance optimization
 
-1. Scale the OpenSearch cluster based on log ingestion rates. Monitor various performance metrics (for example, CPU, memory, disk I/O) to understand current usage. To monitor these metrics, you can use tools such as OpenSearch Dashboards and Prometheus.
-2. Distribute the load to enhance the cluster's ability to handle higher ingestion rates and search queries. To distribute the load, increase the number of data, master, and coordinating nodes.
+- Scale the OpenSearch cluster based on log ingestion rates. Monitor various performance metrics (for example, CPU, memory, disk I/O) to understand current usage. To monitor these metrics, you can use tools such as OpenSearch Dashboards and Prometheus.
+- Distribute the load to enhance the cluster's ability to handle higher ingestion rates and search queries. To distribute the load, increase the number of data, master, and coordinating nodes.
 
 ### Monitoring and Alerting
 
