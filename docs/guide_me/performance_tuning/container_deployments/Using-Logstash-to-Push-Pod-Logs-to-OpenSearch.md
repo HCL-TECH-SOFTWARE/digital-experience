@@ -140,7 +140,7 @@ Modify indexes to handle the creation, rollover, and deletion of indexes. This h
 - Scale the OpenSearch cluster based on log ingestion rates. Monitor various performance metrics (for example, CPU, memory, disk I/O) to understand current usage. To monitor these metrics, you can use tools such as OpenSearch Dashboards and Prometheus.
 - Distribute the load to enhance the cluster's ability to handle higher ingestion rates and search queries. To distribute the load, increase the number of data, master, and coordinating nodes.
 
-### Monitoring and Alerting
+### Monitoring and alerting
 
 - Use OpenSearch Dashboards to visualize log data. Use available filters to check specific deployment host names and pod in the log data. The following image shows the filters you can use.
         
@@ -150,8 +150,7 @@ Modify indexes to handle the creation, rollover, and deletion of indexes. This h
 - Set up alerts for specific log patterns or anomalies.
 - Monitor Logstash performance using metrics and logs.
 
-
-### Real-world Example
+## Case Study
 
 A DX deployment was enhanced with Logstash, Filebeat, and OpenSearch to manage logs from their Kubernetes-based microservices. By implementing the described [architecture](), there is improved log visibility, faster incident response times, and better overall system reliability.
 
