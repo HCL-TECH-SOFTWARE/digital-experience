@@ -4,7 +4,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
-- WAS versions 9.0.5.20 and 8.5.5.26 now supported
+- WAS versions 9.0.5.20 and 8.5.5.26 (and later) now supported
 - Updated documentation for creating categories by using external URLs
 - Updated documentation for WAB filters
 - Updated documentation for generating WCM search URLs
@@ -31,11 +31,15 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ### WAS versions 9.0.5.20 and 8.5.5.26 now supported
 
+As indicated in [ConfigEngine errors when updating WebSphere Application Server to Fixpack v9.0.5.19 & v8.5.5.25](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0112396) the WAS fix packs 9.0.5.19 and 8.5.5.25 or later were not supported due to changes in the WebSphere Application Server ant implementation.
+
+Starting with CF222 this issue has been addressed.
+
 === "Containers"
-    HCL DX now supports versions 9.0.5.20 and 8.5.5.26 of the WebSphere Application Server (WAS). Previously, only the latest WAS version was supported.
+    HCL DX now ships with the 9.0.5.20 WebSphere Application Server fix pack applied.
 
 === "On-Premises"
-    HCL DX now supports versions 9.0.5.20 and 8.5.5.26 of the WebSphere Application Server (WAS). Previously, only the latest WAS version was supported.  
+    HCL DX now supports versions 9.0.5.20 and 8.5.5.26 or later versions of the WebSphere Application Server (WAS). 
 
 ### Updated documentation for creating categories by using external URLs
 
