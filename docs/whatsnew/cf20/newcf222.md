@@ -29,17 +29,17 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## All Digital Experience Versions (8.5, 9.0, 9.5)
 
-### WAS versions 9.0.5.20 and 8.5.5.26 now supported
-
-As indicated in [ConfigEngine errors when updating WebSphere Application Server to Fixpack v9.0.5.19 & v8.5.5.25](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0112396) the WAS fix packs 9.0.5.19 and 8.5.5.25 or later were not supported due to changes in the WebSphere Application Server ant implementation.
-
-Starting with CF222 this issue has been addressed.
+### WAS versions 8.5.5.26, 9.0.5.20, and later now supported
 
 === "Containers"
-    HCL DX now ships with the 9.0.5.20 WebSphere Application Server fix pack applied.
+    As indicated in [ConfigEngine errors when updating WebSphere Application Server (WAS) to Fix pack v9.0.5.19 & v8.5.5.25](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0112396), the WAS fix packs 9.0.5.19 and 8.5.5.25 or later were not supported due to changes in the WAS ANT implementation.
+
+    Starting CF222, this issue has been addressed. HCL DX now ships with the WAS fix pack 9.0.5.20 applied.
 
 === "On-Premises"
-    HCL DX now supports versions 9.0.5.20 and 8.5.5.26 or later versions of the WebSphere Application Server (WAS). 
+    As indicated in [ConfigEngine errors when updating WebSphere Application Server (WAS) to Fix pack v9.0.5.19 & v8.5.5.25](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0112396), the WAS fix packs 9.0.5.19 and 8.5.5.25 or later were not supported due to changes in the WAS ANT implementation.
+
+    Starting CF222, this issue has been addressed. HCL DX now supports versions 8.5.5.26, 9.0.5.20, and later versions of WAS. 
 
 ### Updated documentation for creating categories by using external URLs
 
