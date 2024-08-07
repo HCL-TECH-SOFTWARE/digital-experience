@@ -36,7 +36,21 @@ OpenSearch is a community-driven, open source search and analytics suite derived
     4. Processed logs are forwarded to OpenSearch for indexing and storage.
 
           ![](../../../images/Logstash-OpenSearch-Data-Flow-Diagram.png){ width="600" }
+          
+The following flowchart shows how pod logs are processed from Kubernetes to OpenSearch:
 
+```mermaid
+flowchart TB
+  accTitle: Data flow overview
+  accDescr: Flowchart showing how logs are processed from Kubernetes to OpenSearch
+  node_1["`**Kubernetes pods** generate log data.`"]
+  node_2["`**FileBeat** collects logs.`"]
+  node_3["`**LogStash** processes and filters logs.`"]
+  node_4["`**OpenSearch** stores and indexes the processed logs.`"]
+  node_1 --> node_2
+  node_2 --> node_3
+  node_3 --> node_4
+```
 
 ## Prerequisites
 
@@ -44,7 +58,7 @@ Make sure that you have the following:
 
 - A running Kubernetes cluster.
 
-- An accessible OpenSearch cluster : Deploy an OpenSearch cluster using the official Helm chart or operator. Ensure the cluster is accessible from the Logstash instance.
+- An accessible OpenSearch cluster. Deploy an OpenSearch cluster using the official Helm chart or operator. Ensure the cluster is accessible from the Logstash instance.
 
 ## Installing and configuring Logstash
   
@@ -84,14 +98,16 @@ Make sure that you have the following:
         }
     }
     ```
+    
+    Refer to the following list for more information about the parameters in the example:
 
-    `Input Configuration`: This defines the data source. The example is configured to receive data from Filebeat on TCP port 5044.
+    - `Input Configuration`: This defines the data source. The example is configured to receive data from Filebeat on TCP port 5044.
 
-    `Filter`: This processes the incoming data. The example uses the mutate filter to modify events.
+    - `Filter`: This processes the incoming data. The example uses the `mutate` filter to modify events.
 
-    `Update`: This updates the [host][name] field of the event to the value of the KUBE_HOSTNAME environment variable. This is useful for dynamically setting the hostname based on the environment where Logstash is running.
+    - `Update`: This updates the [host][name] field of the event to the value of the KUBE_HOSTNAME environment variable. This is useful for dynamically setting the hostname based on the environment where Logstash is running.
 
-    `Output Configuration`: The `opensearch` output plugin is configured to send logs to an OpenSearch server. The hosts parameter specifies the `server's protocol`, `hostname`, and `port`. Additionally, the `logs index`, `user`, and `password` parameters are provided for authentication. SSL encryption is enabled (ssl => true), with certificate verification disabled (ssl_certificate_verification => false).
+    - `Output Configuration`: The `opensearch` output plugin is configured to send logs to an OpenSearch server. The `hosts` parameter specifies the `server's protocol`, `hostname`, and `port`. Additionally, the `logs index`, `user`, and `password` parameters are provided for authentication. SSL encryption is enabled (`ssl => true`), with certificate verification disabled (`ssl_certificate_verification => false`). This configuration ensures logs are sent to the correct OpenSearch endpoint.
 
 ### Installing and creating the Filebeat configuration file
   
@@ -99,7 +115,7 @@ Make sure that you have the following:
 
 2. Create the Filebeat configuration file.
 
-    Create the `filebeat-conf.yml` file according to your requirements. This file specify the log files to read from and the output destination. Refer to the following sample of a `filebeat-conf.yml` file.
+    Create the `filebeat-conf.yml` file according to your requirements. This file specifies the log files to read from and the output destination. Refer to the following sample of a `filebeat-conf.yml` file.
 
     ```
     filebeat.autodiscover:
@@ -127,7 +143,7 @@ Make sure that you have the following:
 
 ### Managing indexes in OpenSearch
 
-Modify indexes to handle the creation, rollover, and deletion of indexes. This helps manage storage efficiently and maintain optimal performance. For more detailed information, you may refer to the official OpenSearch documentation:
+Modify indexes to handle the creation, rollover, and deletion of indexes. This helps manage storage efficiently and maintain optimal performance. For detailed information, refer to the official OpenSearch documentation:
 
 - [Managing Indexes in OpenSearch](https://opensearch.org/docs/latest/im-plugin/){target="_blank"} 
 - [OpenSearch Index Templates](https://opensearch.org/docs/latest/im-plugin/index-templates/){target="_blank"} 
@@ -150,9 +166,9 @@ Modify indexes to handle the creation, rollover, and deletion of indexes. This h
 - Set up alerts for specific log patterns or anomalies.
 - Monitor Logstash performance using metrics and logs.
 
-## Case Study
+## Case study
 
-A DX deployment was enhanced with Logstash, Filebeat, and OpenSearch to manage logs from their Kubernetes-based microservices. By implementing the described [architecture](), there is improved log visibility, faster incident response times, and better overall system reliability.
+A DX deployment was enhanced with Logstash, Filebeat, and OpenSearch to manage logs from their Kubernetes-based microservices. By implementing the recommended [architecture](#system-architecture), there is improved log visibility, faster incident response times, and better overall system reliability.
 
 ### Results
 
@@ -163,7 +179,7 @@ A DX deployment was enhanced with Logstash, Filebeat, and OpenSearch to manage l
 
 Using Logstash to push Kubernetes pod logs to OpenSearch provides a robust and scalable solution for log management. Follow the setup and best practices outlined in this topic to enhance observability and improve operational efficiency of your log data.
 
-- For more information, refer to the official documentation of Logstash, Filebeat, OpenSearch, and Kubernetes:
+For more information, refer to the official documentation of Logstash, Filebeat, OpenSearch, and Kubernetes:
 
 - [Logstash Documentation](https://www.elastic.co/guide/en/logstash/current/index.html){target="_blank"}
 - [Filebeat Documentation](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-overview.html){target="_blank"}
