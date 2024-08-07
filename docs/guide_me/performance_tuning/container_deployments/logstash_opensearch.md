@@ -1,6 +1,6 @@
 ---
-id: Using-Logstash-to-Push-Pod-Logs-to-OpenSearch
-title: Using Logstash to Push Pod Logs to OpenSearch
+id: logstash_opensearch
+title: Using Logstash to push pod logs to OpenSearch
 ---
 
 ## Introduction
