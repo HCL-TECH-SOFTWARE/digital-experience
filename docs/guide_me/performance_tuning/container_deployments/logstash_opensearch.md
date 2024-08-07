@@ -22,20 +22,6 @@ Kubernetes is a widely adopted platform for container orchestration in cloud-nat
 OpenSearch is a community-driven, open source search and analytics suite derived from Elasticsearch. It provides powerful indexing, search, and visualization capabilities. OpenSearch is ideal for storing, searching, and analyzing large volumes of log data in near real-time.
 
 ## System Architecture
-
-- Key Components
-    1. Kubernetes Pods: Generate log data.
-    2. Logstash: Collects and processes log data.
-    3. FileBeat: Reads log files and forwards them to Logstash.
-    4. OpenSearch: Stores and indexes log data.
-
-- Data Flow Overview
-    1. Kubernetes pods generate logs.
-    2. Logstash collects logs from Kubernetes using FileBeat input plugin.
-    3. Logs are processed and filtered by Logstash.
-    4. Processed logs are forwarded to OpenSearch for indexing and storage.
-
-          ![](../../../images/Logstash-OpenSearch-Data-Flow-Diagram.png){ width="600" }
           
 The following flowchart shows how pod logs are processed from Kubernetes to OpenSearch:
 
@@ -115,7 +101,7 @@ Make sure that you have the following:
 
 2. Create the Filebeat configuration file.
 
-    Create the `filebeat-conf.yml` file according to your requirements. This file specifies the log files to read from and the output destination. Refer to the following sample of a `filebeat-conf.yml` file.
+    Create the `filebeat-conf.yml` file according to your requirements. This file specifies the log files to read the input from Kubernetes and send them to the output destination. Refer to the following sample of a `filebeat-conf.yml` file.
 
     ```
     filebeat.autodiscover:
