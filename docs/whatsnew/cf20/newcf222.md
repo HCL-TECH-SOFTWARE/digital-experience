@@ -4,7 +4,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
-- WAS versions 9.0.5.20 and 8.5.5.26 (and later) now supported
+- WAS versions 8.5.5.26, 9.0.5.20, and later now supported
 - Updated documentation for creating categories by using external URLs
 - Updated documentation for WAB filters
 - Updated documentation for generating WCM search URLs
