@@ -1,0 +1,91 @@
+# Cleaning up WCM items
+
+The amount of Web Content Manager (WCM) items grow over time. To maintain good system performance, it is recommended to clean up old items that are no longer needed. Regular cleanup makes it easier for content authors to perform their tasks. This is especially important when migrating from an earlier release.
+
+The following are examples of items that accumulate over time which you can clean up:
+
+- Drafts
+- Versions
+- Expired content
+- Published projects
+- References to users and groups that no longer exist 
+- Item history
+- Deleted items
+- Unused items
+
+The following sections provide information on how to deal with each of these items.
+
+As always the following limitations apply:
+
+DISCLAIMER OF WARRANTIES:
+-------------------------
+The code is provided "AS IS", without warranty of any kind. HCL shall
+not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.
+
+## Drafts
+
+Draft items that are not published can accumulate over time. Use the following sample JSP to clean up drafts that are no longer needed. You can adjust the JSP to go against different libraries and to have a "last changed" check.
+
+Download the file `wcm_maintenance.zip` here: wcm_maintenance.zip The sample JSP is `purgeDrafts.jsp` inside the zip.
+
+## Versions
+
+Use the clear versions tool to eliminate versions. For more information, see [Clearing version history](../manage_content/wcm_configuration/wcm_adm_tools/wcm_admin_clear_versions.md).
+
+With the clear versions tool, you can specify how many versions you want to keep or the timestamp before which all versions should be deleted. It is also recommended to change the default policy in WCMConfigService to not create versions automatically but to set it to manual to let the user decide which versions to keep.
+
+## Expired content
+
+When content expires as part of a workflow, an additional action in the workflow can trigger a deletion of the content as well. If the additional action was not done and a lot of expired content still exists, they can accumulate. Use the following sample JSP to clean up drafts that are no longer needed. You can adjust the JSP to go against different libraries and to have a "last changed" check.
+
+Download the file `wcm_maintenance.zip` here: wcm_maintenance.zip The sample JSP is `purgeDrafts.jsp` inside the zip.
+
+## Published projects
+
+While there is not an out-of-the-box tool to delete published projects, you can use WCM API to delete published projects. In the WCM Authoring portlet, Project View All Published projects can be displayed and deleted.
+
+You can also configure a utility to run in the background to delete published projects. For more information, see [Configuring Web content cleanup tasks](../manage_content/wcm_configuration/wcm_adm_tools/wcm_config_clean_tasks.md).
+
+## References to users and groups that no longer exist
+
+Users and groups are referenced in Web Content Manager items to ensure that only authorized users can access the items. It is common for user names or group names to change over time.
+
+Some sample scenarios:
+
+- A user name can change due to a change in their marital status.
+- A user can move from one department to another within the organization (for example, from Human Resources to Finance) which would change the fully qualified distinguished name from **CN=<firstname lastname>,OU=HR,O=<companyname>** to **CN=<firstname lastname>,OU=Finance,O=<companyname>**.
+
+In such cases, you should change the user or group references made in an item to refer to the new user or group.
+
+Administrators can also use the member fixer task to check whether any users or groups referenced in the WCM items were renamed or deleted, and fix these references. The member fixer task checks all of the items in a specified library for references to users and groups that no longer exist in the current user repository. When run in report mode, it reports all the references to members. When run in fix mode, these references can be fixed, either by replacing them with references to members that exist, or by removing the references. For more information, see [How to use the member fixer task](../manage_content/wcm_configuration/wcm_adm_tools/wcm_member_fixer/wcm_admin_member-fixer.md)
+
+## Item history
+
+Administrators can use the clear history tool to clear the history of an item. For more information, see [Clearing item history](../manage_content/wcm_configuration/wcm_adm_tools/wcm_admin_clear_history.md).
+
+## Deleted items
+
+When items are deleted, they are not completely removed to give users the chance to undo a deletion. These "deleted" items grow over time. To finally delete an item, WCM offers the Purge command. You can trigger the Purge through the user interface or API.
+
+Use the following sample JSP to clean up drafts that are no longer needed. You can adjust the JSP to go against different libraries and to have a "last changed" check. Download the file `wcm_maintenance.zip` here: wcm_maintenance.zip The sample JSP in question is `purgeContent.jsp` inside the zip.
+
+You can also configure a utility to run in the background to delete published projects. For more information, see [Configuring Web content cleanup tasks](../manage_content/wcm_configuration/wcm_adm_tools/wcm_config_clean_tasks.md).
+
+## Unused items
+
+Content that is no longer used but is still around can also accumulate. Cleaning unused items saves space and improves performance, syndication or other staging activities. You can use the WCM API to query, delete, and purge content and other WCM items.
+
+## Appendix
+
+The Query to find which JCR nodes are versions has changed with version 8.5 and 9 and 9.5:
+Finding the nodes per workspace:
+SELECT COUNT(1) AS NODE_COUNT, WSID FROM <schema>.ICMUTSWIDE0 WHERE WSID > 0 GROUP BY WSID
+Finding the workspaces:
+SELECT WSID,WSNAME FROM JCR.ICMSTJCRWS WHERE WSID > 0 ORDER BY WSID
+-> The nodes in jcr:versioning and any _v workspace for virtual portals represent the version nodes.
+
+## Cleanup of other items
+
+In addition to the WCM items mentioned in the cleanup list, a frequent item that increases the load is old content that is not expired but is no longer needed. It is recommended to manage old content using policies (for example, enforcing an expiration of content every 1 year).
+
+You can also us WCM APIs to find content that has not been updated in a while. The findContentModifiedBetween API only returns content modified between a certain date (for example, to find content not modified since 2016, you can run a query from 1970 to 2016). For more information, see the [WCM API documentation](https://help.hcl-software.com/digital-experience/8.5/dev/javadoc/vrm/850/api_docs/com/ibm/workplace/wcm/api/Workspace.html#findContentModifiedBetween(java.util.Date,%20java.util.Date)).
