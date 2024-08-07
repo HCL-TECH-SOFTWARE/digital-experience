@@ -44,8 +44,8 @@ flowchart TB
   accTitle: Data flow overview
   accDescr: Flowchart showing how logs are processed from Kubernetes to OpenSearch
   node_1["`**Kubernetes pods** generate log data.`"]
-  node_2["`**FileBeat** collects logs.`"]
-  node_3["`**LogStash** processes and filters logs.`"]
+  node_2["`**Filebeat** collects logs.`"]
+  node_3["`**Logstash** processes and filters logs.`"]
   node_4["`**OpenSearch** stores and indexes the processed logs.`"]
   node_1 --> node_2
   node_2 --> node_3
