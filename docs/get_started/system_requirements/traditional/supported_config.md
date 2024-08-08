@@ -101,7 +101,7 @@ HCL Digital Experience 9.5 requires the following capabilities and products to p
 ||9.0.0.2 and later maintenance releases|9.0|
 ||9.0.5 and later maintenance releases**|9.0 CF17|
 
-** WebSphere Application Server fix packs 9.0.5.19 and 8.5.5.25 are currently causing an issue with ConfigEngine tasks and should not be used at this time. See the documentation [ConfigEngine errors when updating WebSphere Application Server](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0112396) for more details.
+** Starting CF222, the issue with the fix packs 9.0.5.19 and 8.5.5.25 has been addressed. WAS versions 8.5.5.26, 9.0.5.20, and later are now supported.
 
 |Prerequisite|Prerequisite minimum and supported versions|Product minimum|
 |----------|----------|----------|
