@@ -586,6 +586,9 @@ Use the following command to skip prompt of click-through license acceptance agr
 dxclient accept-license
 ```
 
+!!!note
+    For container versions, you must accept the license agreement every time before running a command.
+
 Use the following command to show version compatibility details between DX Core and DXClient [`version-compat`](../dxclient/dxclient_artifact_types/versionCompat.md):
 
 ```bash
