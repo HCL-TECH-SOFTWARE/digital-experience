@@ -171,9 +171,9 @@ Add a database user registry to the default federated repository in a clustered 
 
         2.  Create the variable that is used to access the VMM database jar files.
 
-            -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-node-prep-vmm-db-secured-environment -DWassPassword=password -DDbDomain=federated.db -DVmmNodeName=node_name -Ddb_type.NodeDbLibrary=local full path of the databse jars` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory on each node.
-            -   IBM i: Run the `ConfigEngine.sh wp-node-prep-vmm-db-secured-environment -DWassPassword=password -DDbDomain=federated.db -DVmmNodeName=node_name -Ddb_type.NodeDbLibrary=local full path of the databse jars` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)/ConfigEngine directory on each node.
-            -   Windows: Run the `ConfigEngine.bat wp-node-prep-vmm-db-secured-environment -DWassPassword=password -DDbDomain=federated.db -DVmmNodeName=node_name,node_name,node_name -Ddb_type.NodeDbLibrary=local full path of the databse jars` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory on each node.
+            -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-node-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=federated.db -DVmmNodeName=node_name -Ddb_type.NodeDbLibrary=local full path of the databse jars` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory on each node.
+            -   IBM i: Run the `ConfigEngine.sh wp-node-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=federated.db -DVmmNodeName=node_name -Ddb_type.NodeDbLibrary=local full path of the databse jars` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)/ConfigEngine directory on each node.
+            -   Windows: Run the `ConfigEngine.bat wp-node-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=federated.db -DVmmNodeName=node_name,node_name,node_name -Ddb_type.NodeDbLibrary=local full path of the databse jars` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory on each node.
 
             !!!note
                 VmmNodeName is a list of one or more HCL Portal nodes names in the cell which share database driver paths. The `db_type` in `db_type.NodeDbLibrary` should be set to the type of database you are using, for example:<br>
@@ -189,7 +189,7 @@ Add a database user registry to the default federated repository in a clustered 
 8.  Add a database user registry to the default federated repository.
 
     -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-create-db -DWasPassword=password` task, from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
-    -   IBM i: Run the `ConfigEngine.sh wp-create-db -DWassPassword=password` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+    -   IBM i: Run the `ConfigEngine.sh wp-create-db -DWasPassword=password` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
     -   Windows: Run the `ConfigEngine.bat wp-create-db -DWasPassword=password` task, from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory.
 
     !!!note
