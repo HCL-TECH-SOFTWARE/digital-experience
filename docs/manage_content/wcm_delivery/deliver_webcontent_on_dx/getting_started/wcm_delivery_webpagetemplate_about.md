@@ -73,6 +73,9 @@ Web content viewers on the page template can be configured to reference content 
 
 It is possible to create a hierarchy of templates, for examples, a parent template page with a child page. If the page metadata `ibm.portal.instantiation.page.include.descendants` is set to `true` on the parent page, then creating a page from the parent template not only creates a single page but the complete hierarchy that includes the children.
 
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to use Page Templates as a business user, go to [Page Template](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D2999){target="_blank"}. To try it out yourself, refer to [Page Template Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-300_Page_Template.pdf){target="_blank"}.
 
 ???+ info "Related information"
     - [Creating a web content page](../displaying_content/mp_wcm_createpage.md)

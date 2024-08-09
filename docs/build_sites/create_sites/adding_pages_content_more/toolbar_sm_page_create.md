@@ -45,3 +45,6 @@ Before you create your child page, you select the **Family Vacations** project f
 
 -   After you create a page, you can edit the page information, change the layout, or add page components and applications to the page. You can also create more content for the Travel Articles page by clicking the context menu icon ![Screen capture of the context menu](../../../images/toolbar_context_menu.jpg) and then clicking **Create Content**.
 
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to use Page Templates as a business user, go to [Page Template](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D2999){target="_blank"}. To try it out yourself, refer to [Page Template Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-300_Page_Template.pdf){target="_blank"}.

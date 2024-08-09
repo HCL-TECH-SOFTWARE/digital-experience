@@ -1,8 +1,5 @@
 # Content provider policy requests and responses
 
-
-
-
 Use the **Request** and **Response** tabs to define a fine-grained control over HTTP headers, HTTP cookies, and filters. Filters provide a programmatic control over content during the request and response phases of the interaction between HCL Digital Experience and the web application.
 
 ## Headers
