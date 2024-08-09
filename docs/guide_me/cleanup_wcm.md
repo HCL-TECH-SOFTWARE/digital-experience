@@ -15,7 +15,7 @@ The following are examples of items that accumulate over time which you can clea
 
 The following sections provide information on how to deal with each of these items.
 
-As always the following limitations apply:
+The following limitations apply:
 
 DISCLAIMER OF WARRANTIES:
 -------------------------
