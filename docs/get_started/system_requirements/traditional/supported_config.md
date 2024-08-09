@@ -157,7 +157,7 @@ JDBC Drivers support forward compatibility for all maintenance levels and also n
 |IBM Application Connectivity for DB2 for z/OS Feature|All versions and later maintenance releases|8.5|
 |IBM DB2 Universal JDBC Provider (XA) from DB2 z/OS (type 2)*|All versions and later maintenance releases|8.5|
 |IBM DB2 Universal JDBC Provider (XA) from DB2 z/OS (type 4)**|All versions and later maintenance releases|8.5|
-|IBM Data Server Driver for JDBC and SQLJ|4.21 (11.1)<br>No future versions, releases, or fix packs supported.|8.5|
+|IBM Data Server Driver for JDBC and SQLJ|4.26 (11.5) <br> No future versions supported. <br>Later maintenance releases are categorized as Other Configuration Support|8.5|
 |Microsoft SQL Server JDBC Driver|6.2, and later maintenance releases|8.5|
 |Oracle JDBC Driver 12.c***|12.2, and later maintenance releases|8.5|
 
@@ -207,7 +207,7 @@ All LDAP Servers that support the LDAP V3 Specification are supported.
 ||9.0.5 and later maintenance releases|8.5|
 |Microsoft Internet Information Services|10.0 and later maintenance releases|8.5|
 
-*IBM HTTP Server 8.5.5 is supported only with HCL Digital Experience Server V8.5.5.x.  
+*IBM HTTP Server 8.5.5 is supported only with WebSphere Application V8.5.5.x.  
 
 
 ## Hardware requirements
