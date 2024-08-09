@@ -19,7 +19,7 @@ Kubernetes is a widely adopted platform for container orchestration in cloud-nat
 
 ### OpenSearch
 
-OpenSearch is a community-driven, open source search and analytics suite derived from Elasticsearch. It provides powerful indexing, search, and visualization capabilities. OpenSearch is ideal for storing, searching, and analyzing large volumes of log data in near real-time.
+[OpenSearch](https://opensearch.org/docs/latest/about/){target="_blank"} is a community-driven, open source search and analytics suite derived from Elasticsearch. It provides powerful indexing, search, and visualization capabilities. OpenSearch is ideal for storing, searching, and analyzing large volumes of log data in near real-time.
 
 ## System Architecture
           
