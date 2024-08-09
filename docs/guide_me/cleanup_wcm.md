@@ -41,7 +41,7 @@ Download the file [`wcm_maintenance.zip`](https://git.cwp.pnp-hcl.com/CWPdoc/dx-
 
 ## Published projects
 
-While there is not an out-of-the-box tool to delete published projects, you can use WCM API to delete published projects. In the WCM Authoring portlet, Project View All Published projects can be displayed and deleted.
+While there is not an out-of-the-box tool to delete published projects, you can use [WCM API](https://help.hcl-software.com/digital-experience/8.5/dev/javadoc/vrm/850/api_docs/com/ibm/workplace/wcm/api/Workspace.html){target="_blank"} to delete published projects. In the WCM Authoring portlet, Project View All Published projects can be displayed and deleted.
 
 You can also configure a utility to run in the background to delete published projects. For more information, see [Configuring Web content cleanup tasks](../manage_content/wcm_configuration/wcm_adm_tools/wcm_config_clean_tasks.md).
 
@@ -72,7 +72,7 @@ You can also configure a utility to run in the background to delete published pr
 
 ## Unused items
 
-Content that is no longer used but is still around can also accumulate. Cleaning unused items saves space and improves performance, syndication, or other staging activities. You can use the WCM API to query, delete, and purge content and other WCM items.
+Content that is no longer used but is still around can also accumulate. Cleaning unused items saves space and improves performance, syndication, or other staging activities. You can use [WCM API](https://help.hcl-software.com/digital-experience/8.5/dev/javadoc/vrm/850/api_docs/com/ibm/workplace/wcm/api/Workspace.html){target="_blank"} to query, delete, and purge content and other WCM items.
 
 In addition to the WCM items mentioned in the cleanup list, a frequent item that increases the load is old content that is not expired but is no longer needed. It is recommended to manage old content using policies (for example, enforcing an expiration of content every 1 year).
 
@@ -82,7 +82,6 @@ You can also us WCM APIs to find content that has not been updated in a while. T
 
 To determine which JCR nodes are versions, refer to the following queries:
 - To find the nodes per workspace: SELECT COUNT(1) AS NODE_COUNT, WSID FROM <schema>.ICMUTSWIDE0 WHERE WSID > 0 GROUP BY WSID
-SELECT COUNT(1) AS NODE_COUNT, WSID FROM <schema>.ICMUTSWIDE0 WHERE WSID > 0 GROUP BY WSID
 - To find the workspaces: SELECT WSID,WSNAME FROM JCR.ICMSTJCRWS WHERE WSID > 0 ORDER BY WSID
-SELECT WSID,WSNAME FROM JCR.ICMSTJCRWS WHERE WSID > 0 ORDER BY WSID
+  
 The nodes in jcr:versioning and any _v workspace for virtual portals represent the version nodes.
