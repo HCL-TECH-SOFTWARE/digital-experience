@@ -78,7 +78,7 @@ In addition to the WCM items mentioned in the cleanup list, a frequent item that
 
 You can also us WCM APIs to find content that has not been updated in a while. The findContentModifiedBetween API only returns content modified between a certain date (for example, to find content not modified since 2016, you can run a query from 1970 to 2016). For more information, see the [WCM API documentation](https://help.hcl-software.com/digital-experience/8.5/dev/javadoc/vrm/850/api_docs/com/ibm/workplace/wcm/api/Workspace.html#findContentModifiedBetween(java.util.Date,%20java.util.Date)).
 
-## Appendix
+## Querying version nodes
 
 The Query to find which JCR nodes are versions has changed with version 8.5 and 9 and 9.5:
 Finding the nodes per workspace:
