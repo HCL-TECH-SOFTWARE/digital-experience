@@ -44,7 +44,7 @@ Make sure that you have the following:
 
 - A running Kubernetes cluster.
 
-- An accessible OpenSearch cluster. Deploy an OpenSearch cluster using the official [OpenSearch Documentation](https://opensearch.org/docs/latest/){target="_blank"} Helm chart or operator. Ensure the cluster is accessible from the Logstash instance.
+- An accessible OpenSearch cluster. Deploy an OpenSearch cluster using the official [OpenSearch Documentation](https://opensearch.org/docs/latest/install-and-configure/){target="_blank"}. Ensure the cluster is accessible from the Logstash instance.
 
 ## Installing and configuring Logstash
   
@@ -125,7 +125,7 @@ Make sure that you have the following:
     ```
 
     This sample configuration tells Filebeat to read all `.log` files in the /var/log/containers directory and send the log data to a Logstash instance running on ${KUBE_HOSTNAME}:5044.
-    kubeconfig is the default way to authenticate to a Kubernetes cluster.The kube_config file's default location is the ~/.kube directory.
+    The kube_config file is the default way to authenticate to a Kubernetes cluster. By default, the kube_config file is located in the ~/.kube directory.
 
 ### Managing indexes in OpenSearch
 
@@ -147,7 +147,7 @@ Modify indexes to handle the creation, rollover, and deletion of indexes. This h
 - Use OpenSearch Dashboards to visualize log data. Use available filters to check specific deployment host names and pod in the log data. The following image shows the filters you can use.
         
         
-    ![](../../../images/OpenSearch-Dashboard-Filters.png){ width="600" }
+    ![](../../../images/OpenSearch-Dashboard-Filters.png){ width="800" }
 
 - Set up alerts for specific log patterns or anomalies.
 - Monitor Logstash performance using metrics and logs.
