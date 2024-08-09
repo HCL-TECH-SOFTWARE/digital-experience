@@ -29,7 +29,7 @@ The following flowchart shows how pod logs are processed from Kubernetes to Open
 flowchart TB
   accTitle: Data flow overview
   accDescr: Flowchart showing how logs are processed from Kubernetes to OpenSearch
-  node_1["`**Kubernetes pods** generate log data.`"]
+  node_1["`**Pods** generate log data.`"]
   node_2["`**Filebeat** collects logs.`"]
   node_3["`**Logstash** processes and filters logs.`"]
   node_4["`**OpenSearch** stores and indexes the processed logs.`"]
@@ -44,13 +44,13 @@ Make sure that you have the following:
 
 - A running Kubernetes cluster.
 
-- An accessible OpenSearch cluster. Deploy an OpenSearch cluster using the official Helm chart or operator. Ensure the cluster is accessible from the Logstash instance.
+- An accessible OpenSearch cluster. Deploy an OpenSearch cluster using the official [OpenSearch Documentation](https://opensearch.org/docs/latest/){target="_blank"} Helm chart or operator. Ensure the cluster is accessible from the Logstash instance.
 
 ## Installing and configuring Logstash
   
 1. Install Logstash on a node within the Kubernetes cluster or on a dedicated log processing server. Refer to the official documentation [Installing Logstash](https://www.elastic.co/guide/en/logstash/current/getting-started-with-logstash.html){target="_blank"} for more information.
 
-2. Configure Logstash for Kubernetes Logs.
+2. Configure Logstash for container logs.
 
     Modify the provided `pipeline.conf` file according to your requirements. This configuration file defines the input sources, filters, and output destinations for Logstash. Refer to the following sample of a `pipeline.conf` file.
 
