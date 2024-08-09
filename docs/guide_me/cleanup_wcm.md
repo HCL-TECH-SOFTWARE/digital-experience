@@ -85,4 +85,4 @@ To determine which JCR nodes are versions, refer to the following queries:
 SELECT COUNT(1) AS NODE_COUNT, WSID FROM <schema>.ICMUTSWIDE0 WHERE WSID > 0 GROUP BY WSID
 - To find the workspaces: SELECT WSID,WSNAME FROM JCR.ICMSTJCRWS WHERE WSID > 0 ORDER BY WSID
 SELECT WSID,WSNAME FROM JCR.ICMSTJCRWS WHERE WSID > 0 ORDER BY WSID
--> The nodes in jcr:versioning and any _v workspace for virtual portals represent the version nodes.
+The nodes in jcr:versioning and any _v workspace for virtual portals represent the version nodes.
