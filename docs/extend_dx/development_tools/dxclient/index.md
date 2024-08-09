@@ -344,6 +344,7 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
     -   HCL DX 9.5 CF221 release: **V221.0.0
         -  A one time license agreement click-through is enabled. To skip the prompt, use the [accept-license](#dxclient-information-commands) command.
         -   DXClient is now openly distributed in [NpmJS and Harbor repository](#public-and-free-dxclient-installation-options).
+        -   In [DAM Staging](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md) tasks, the parameters `dxWASUsername`, `dxWASPassword`, `targetServerWASUsername`, and `targetServerWASPassword` are now deprecated and should no longer be used.
 
     -   HCL DX 9.5 CF219 release: **V1.28.0 
         - [Enabled multiple environment configuration in node version](#configuring-multiple-environments-in-dxclient)
