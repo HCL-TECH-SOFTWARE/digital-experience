@@ -19,14 +19,13 @@ As always the following limitations apply:
 
 DISCLAIMER OF WARRANTIES:
 -------------------------
-The code is provided "AS IS", without warranty of any kind. HCL shall
-not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.
+The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.
 
 ## Drafts
 
 Draft items that are not published can accumulate over time. Use the following sample JSP to clean up drafts that are no longer needed. You can adjust the JSP to go against different libraries and to have a "last changed" check.
 
-Download the file `wcm_maintenance.zip` here: wcm_maintenance.zip The sample JSP is `purgeDrafts.jsp` inside the zip.
+Download the file [`wcm_maintenance.zip`](https://git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/files/1822/wcm_maintenance.zip). The sample JSP file is `purgeDrafts.jsp` located in the wcm_maintenance folder.
 
 ## Versions
 
@@ -38,7 +37,7 @@ With the clear versions tool, you can specify how many versions you want to keep
 
 When content expires as part of a workflow, an additional action in the workflow can trigger a deletion of the content as well. If the additional action was not done and a lot of expired content still exists, they can accumulate. Use the following sample JSP to clean up drafts that are no longer needed. You can adjust the JSP to go against different libraries and to have a "last changed" check.
 
-Download the file `wcm_maintenance.zip` here: wcm_maintenance.zip The sample JSP is `purgeDrafts.jsp` inside the zip.
+Download the file [`wcm_maintenance.zip`](https://git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/files/1822/wcm_maintenance.zip). The sample JSP file is `purgeDrafts.jsp` located in the wcm_maintenance folder.
 
 ## Published projects
 
@@ -67,13 +66,17 @@ Administrators can use the clear history tool to clear the history of an item. F
 
 When items are deleted, they are not completely removed to give users the chance to undo a deletion. These "deleted" items grow over time. To finally delete an item, WCM offers the Purge command. You can trigger the Purge through the user interface or API.
 
-Use the following sample JSP to clean up drafts that are no longer needed. You can adjust the JSP to go against different libraries and to have a "last changed" check. Download the file `wcm_maintenance.zip` here: wcm_maintenance.zip The sample JSP in question is `purgeContent.jsp` inside the zip.
+Use the following sample JSP to clean up drafts that are no longer needed. You can adjust the JSP to go against different libraries and to have a "last changed" check. Download the file [`wcm_maintenance.zip`](https://git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/files/1822/wcm_maintenance.zip). The sample JSP file is `purgeContent.jsp` located in the wcm_maintenance folder.
 
 You can also configure a utility to run in the background to delete published projects. For more information, see [Configuring Web content cleanup tasks](../manage_content/wcm_configuration/wcm_adm_tools/wcm_config_clean_tasks.md).
 
 ## Unused items
 
-Content that is no longer used but is still around can also accumulate. Cleaning unused items saves space and improves performance, syndication or other staging activities. You can use the WCM API to query, delete, and purge content and other WCM items.
+Content that is no longer used but is still around can also accumulate. Cleaning unused items saves space and improves performance, syndication, or other staging activities. You can use the WCM API to query, delete, and purge content and other WCM items.
+
+In addition to the WCM items mentioned in the cleanup list, a frequent item that increases the load is old content that is not expired but is no longer needed. It is recommended to manage old content using policies (for example, enforcing an expiration of content every 1 year).
+
+You can also us WCM APIs to find content that has not been updated in a while. The findContentModifiedBetween API only returns content modified between a certain date (for example, to find content not modified since 2016, you can run a query from 1970 to 2016). For more information, see the [WCM API documentation](https://help.hcl-software.com/digital-experience/8.5/dev/javadoc/vrm/850/api_docs/com/ibm/workplace/wcm/api/Workspace.html#findContentModifiedBetween(java.util.Date,%20java.util.Date)).
 
 ## Appendix
 
@@ -83,9 +86,3 @@ SELECT COUNT(1) AS NODE_COUNT, WSID FROM <schema>.ICMUTSWIDE0 WHERE WSID > 0 GRO
 Finding the workspaces:
 SELECT WSID,WSNAME FROM JCR.ICMSTJCRWS WHERE WSID > 0 ORDER BY WSID
 -> The nodes in jcr:versioning and any _v workspace for virtual portals represent the version nodes.
-
-## Cleanup of other items
-
-In addition to the WCM items mentioned in the cleanup list, a frequent item that increases the load is old content that is not expired but is no longer needed. It is recommended to manage old content using policies (for example, enforcing an expiration of content every 1 year).
-
-You can also us WCM APIs to find content that has not been updated in a while. The findContentModifiedBetween API only returns content modified between a certain date (for example, to find content not modified since 2016, you can run a query from 1970 to 2016). For more information, see the [WCM API documentation](https://help.hcl-software.com/digital-experience/8.5/dev/javadoc/vrm/850/api_docs/com/ibm/workplace/wcm/api/Workspace.html#findContentModifiedBetween(java.util.Date,%20java.util.Date)).
