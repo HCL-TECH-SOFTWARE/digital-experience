@@ -83,6 +83,6 @@ You can also us WCM APIs to find content that has not been updated in a while. T
 To determine which JCR nodes are versions, refer to the following queries:
 - To find the nodes per workspace: SELECT COUNT(1) AS NODE_COUNT, WSID FROM <schema>.ICMUTSWIDE0 WHERE WSID > 0 GROUP BY WSID
 SELECT COUNT(1) AS NODE_COUNT, WSID FROM <schema>.ICMUTSWIDE0 WHERE WSID > 0 GROUP BY WSID
-Finding the workspaces:
+- To find the workspaces: SELECT WSID,WSNAME FROM JCR.ICMSTJCRWS WHERE WSID > 0 ORDER BY WSID
 SELECT WSID,WSNAME FROM JCR.ICMSTJCRWS WHERE WSID > 0 ORDER BY WSID
 -> The nodes in jcr:versioning and any _v workspace for virtual portals represent the version nodes.
