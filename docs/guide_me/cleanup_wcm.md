@@ -80,7 +80,7 @@ You can also us WCM APIs to find content that has not been updated in a while. T
 
 ## Querying version nodes
 
-The Query to find which JCR nodes are versions has changed with version 8.5 and 9 and 9.5:
+To determine which JCR nodes are versions, refer to the following queries:
 Finding the nodes per workspace:
 SELECT COUNT(1) AS NODE_COUNT, WSID FROM <schema>.ICMUTSWIDE0 WHERE WSID > 0 GROUP BY WSID
 Finding the workspaces:
