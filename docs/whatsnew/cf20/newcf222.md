@@ -8,6 +8,7 @@ The following features and updates are available to customers installing HCL Dig
 - Updated documentation for creating categories by using external URLs
 - Updated documentation for WAB filters
 - Updated documentation for generating WCM search URLs
+- New guidance for cleaning up WCM items
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -32,12 +33,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### WAS versions 8.5.5.26, 9.0.5.20, and later now supported
 
 === "Containers"
-    As indicated in [ConfigEngine errors when updating WebSphere Application Server (WAS) to Fix pack v9.0.5.19 & v8.5.5.25](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0112396), the WAS fix packs 9.0.5.19 and 8.5.5.25 or later were not supported due to changes in the WAS ANT implementation.
+    As stated in [ConfigEngine errors when updating WebSphere Application Server (WAS) to Fix pack v9.0.5.19 & v8.5.5.25](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0112396), the WAS fix packs 9.0.5.19 and 8.5.5.25 or later were not supported due to changes in the WAS ANT implementation.
 
     Starting CF222, this issue has been addressed. HCL DX now ships with the WAS fix pack 9.0.5.20 applied.
 
 === "On-Premises"
-    As indicated in [ConfigEngine errors when updating WebSphere Application Server (WAS) to Fix pack v9.0.5.19 & v8.5.5.25](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0112396), the WAS fix packs 9.0.5.19 and 8.5.5.25 or later were not supported due to changes in the WAS ANT implementation.
+    As stated in [ConfigEngine errors when updating WebSphere Application Server (WAS) to Fix pack v9.0.5.19 & v8.5.5.25](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0112396), the WAS fix packs 9.0.5.19 and 8.5.5.25 or later were not supported due to changes in the WAS ANT implementation.
 
     Starting CF222, this issue has been addressed. HCL DX now supports versions 8.5.5.26, 9.0.5.20, and later versions of WAS. 
 
@@ -64,6 +65,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     The topic [HCL Web Content Manager Support Tools](../../deployment/manage/troubleshooting/wcm_support_tools.md#generate-wcm-search-url) is updated to include steps on how to generate a WCM search URL to be used within a content source. Note that Administrator access is required to generate a WCM Search URL.
+
+### New guidance for cleaning up WCM items
+
+=== "Containers"
+    The amount of Web Content Manager (WCM) items can accumulate over time. To maintain good system performance, it is recommended to clean up old items that are no longer needed. See the new topic [Cleaning up WCM items]() for more information. (Doc in progress)
+
+=== "On-Premises"
+    The amount of Web Content Manager (WCM) items can accumulate over time. To maintain good system performance, it is recommended to clean up old items that are no longer needed. See the new topic [Cleaning up WCM items]() for more information.
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
@@ -105,7 +114,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Documentation for using Logstash to push pod logs to OpenSearch
 
 === "Containers"
-    As applications scale, managing Kubernetes logs is important for monitoring, debugging, and compliance. The new topic [Using Logstash to push pod logs to OpenSearch]() outlines the steps for configuring Logstash and Filebeat so that Kubernetes pod logs are forwarded to OpenSearch, an open source search and analytics engine. 
+    As applications scale, managing Kubernetes logs is important for monitoring, debugging, and compliance. The new topic [Using Logstash to push pod logs to OpenSearch]() outlines the steps for configuring Logstash and Filebeat so that Kubernetes pod logs are forwarded to OpenSearch, an open source search and analytics engine. (Doc in progress)
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
