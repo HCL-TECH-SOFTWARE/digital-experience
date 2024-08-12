@@ -48,7 +48,7 @@ hide:
 
     [:octicons-arrow-right-24: Go to System Requirements](./get_started/system_requirements/index.md)
 
--   :material-book-open-variant-outline:{ .lg .middle } __Tutorials__
+-   :material-book-open-variant:{ .lg .middle } __Tutorials__
 
     ---
 
