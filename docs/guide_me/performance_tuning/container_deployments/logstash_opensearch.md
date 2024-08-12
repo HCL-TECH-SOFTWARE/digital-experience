@@ -29,7 +29,7 @@ The following flowchart shows how pod logs are processed from Kubernetes to Open
 flowchart TB
   accTitle: Data flow overview
   accDescr: Flowchart showing how logs are processed from Kubernetes to OpenSearch
-  node_1["`**Pods** generate log data.`"]
+  node_1["`**Containers in Pods** generate log data.`"]
   node_2["`**Filebeat** collects logs.`"]
   node_3["`**Logstash** processes and filters logs.`"]
   node_4["`**OpenSearch** stores and indexes the processed logs.`"]
@@ -150,15 +150,19 @@ Modify indexes to handle the creation, rollover, and deletion of indexes. This h
     ![](../../../images/OpenSearch-Dashboard-Filters.png){ width="800" }
 
 - Set up alerts for specific log patterns or anomalies.
+For DX implemented an alert notification channel based on the threshold of response time in Opensearch Dashboard.The following image shows the alerts received on Google chat.
+
+    ![](../../../images/Opensearch-Notification.png){ width="800" }
+
 - Monitor Logstash performance using metrics and logs.
 
 ## Case study
 
-A DX deployment was enhanced with Logstash, Filebeat, and OpenSearch to manage logs from their Kubernetes-based microservices. By implementing the recommended [architecture](#system-architecture), there is improved log visibility, faster incident response times, and better overall system reliability.
+By implementing the recommended [architecture](#system-architecture), for DX observed improved log visibility, faster incident response times, and better overall system reliability.
 
 ### Results
 
-- DX performance results analysis in OpenSearch improved by 50%.
+- With OpenSearch Dashboard able to visualize the data for longer durations in graphical format.This seems to better and conclusive than tabular format.
 - Efforts for debugging the logs for root cause analysis were reduced. 
 
 ## Conclusion
