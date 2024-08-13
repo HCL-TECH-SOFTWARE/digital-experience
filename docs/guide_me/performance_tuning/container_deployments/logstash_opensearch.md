@@ -143,16 +143,17 @@ This section contains recommendations for monitoring and debugging log data.
         
         
     ![](../../../images/OpenSearch-Dashboard-Filters.png){ width="1000" }
+Viewing data in this format is more user-friendly and helps you make quicker conclusions compared to a regular server systemout format.
 
 - Debug server issues using metrics and logs.
 
 ## Case study results
 
 The recommended [architecture](#system-architecture) was implemented in a DX deployment.
+The following improvements were observed:
 
-- Viewing data in this format is more user-friendly and helps you make quicker conclusions compared to a regular server systemout format.
 - Efforts for debugging the logs for root cause analysis were reduced.
-- With above set up observed improved log visibility, faster incident response times, and better overall system reliability.
+- Using the recommended architecture in the DX deployment resulted in improved log visibility, faster incident response times, and better overall system reliability.
 
 ## Conclusion
 
