@@ -3,7 +3,7 @@ id: logstash_opensearch
 title: Using Logstash to push pod logs to OpenSearch
 ---
 
-This topic outlines the steps and best practices for configuring Logstash to push pod logs to OpenSearch.
+This topic outlines the steps for configuring Logstash to push pod logs to OpenSearch.
 
 ## Introduction
 
