@@ -150,9 +150,9 @@ This section contains recommendations for monitoring and debugging log data.
 
 The recommended [architecture](#system-architecture) was implemented in a DX deployment.
 
-- With the OpenSearch Dashboard, you can view the data for longer durations in graphical format.Viewing data in this format is more user-friendly and helps you make quicker conclusions compared to a tabular format.
+- Viewing data in this format is more user-friendly and helps you make quicker conclusions compared to a regular server systemout format.
 - Efforts for debugging the logs for root cause analysis were reduced.
-- The deployment observed improved log visibility, faster incident response times, and better overall system reliability.
+- With above set up observed improved log visibility, faster incident response times, and better overall system reliability.
 
 ## Conclusion
 
