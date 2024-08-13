@@ -142,7 +142,7 @@ Modify indexes to handle the creation, rollover, and deletion of indexes. This h
         
     ![](../../../images/OpenSearch-Dashboard-Filters.png){ width="1000" }
 
-- Debug servers issues using metrics and logs.
+- Debug server issues using metrics and logs.
 
 ## Case study
 
@@ -150,7 +150,7 @@ The recommended [architecture](#system-architecture) was implemented in a DX dep
 
 ### Results
 
-- With the OpenSearch Dashboard, you can view the data for longer durations in graphical format. Viewing data in this format is recommended over the tabular format.
+- With the OpenSearch Dashboard, you can view the data for longer durations in graphical format.Viewing data in this format is more user-friendly and allows for quicker conclusions compared to a tabular format.
 - Efforts for debugging the logs for root cause analysis were reduced. 
 
 ## Conclusion
