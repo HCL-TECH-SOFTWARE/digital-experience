@@ -7,11 +7,11 @@ title: Using Logstash to push pod logs to OpenSearch
 
 Kubernetes is a widely adopted platform for container orchestration in cloud-native environments. As applications scale, managing the logs they generate is important for monitoring, debugging, and compliance. Logstash is an open source data processing pipeline that collects, processes, and forwards logs from Kubernetes pods to OpenSearch, an open source search and analytics engine. This topic outlines the steps and best practices for configuring Logstash to push pod logs to OpenSearch.
 
-## Overview of Logstash, Filebeat and OpenSearch
+## Overview of Logstash, Filebeat, and OpenSearch
 
 ### Logstash
 
-[Logstash](https://www.elastic.co/guide/en/logstash/current/introduction.html){target="_blank"} is an open-source tool for managing events and logs. It enables the collection, parsing, and transformation of logs before forwarding them to a specified destination (for example, OpenSearch). Logstash supports various input, filter, and output plugins, making it extensible and flexible.
+[Logstash](https://www.elastic.co/guide/en/logstash/current/introduction.html){target="_blank"} is an open source tool for managing events and logs. It enables the collection, parsing, and transformation of logs before forwarding them to a specified destination (for example, OpenSearch). Logstash supports various input, filter, and output plugins, making it extensible and flexible.
 
 ### Filebeat
 
@@ -21,7 +21,7 @@ Kubernetes is a widely adopted platform for container orchestration in cloud-nat
 
 [OpenSearch](https://opensearch.org/docs/latest/about/){target="_blank"} is a community-driven, open source search and analytics suite derived from Elasticsearch. It provides powerful indexing, search, and visualization capabilities. OpenSearch is ideal for storing, searching, and analyzing large volumes of log data in near real-time.
 
-## System Architecture
+## System architecture
           
 The following flowchart shows how pod logs are processed from Kubernetes to OpenSearch:
 
@@ -143,14 +143,14 @@ This section contains recommendations for monitoring and debugging log data.
         
         
     ![](../../../images/OpenSearch-Dashboard-Filters.png){ width="1000" }
-Viewing data in this format is more user-friendly and helps you make quicker conclusions compared to a regular server systemout format.
+    
+    Viewing data in this format is more user-friendly and helps you make quicker conclusions compared to a regular server SystemOut format.
 
 - Debug server issues using metrics and logs.
 
 ## Case study results
 
-The recommended [architecture](#system-architecture) was implemented in a DX deployment.
-The following improvements were observed:
+The recommended [architecture](#system-architecture) was implemented in a DX deployment. The following improvements were observed:
 
 - Efforts for debugging the logs for root cause analysis were reduced.
 - Using the recommended architecture in the DX deployment resulted in improved log visibility, faster incident response times, and better overall system reliability.
