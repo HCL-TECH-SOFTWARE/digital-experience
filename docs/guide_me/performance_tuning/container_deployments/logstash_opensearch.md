@@ -135,34 +135,22 @@ Modify indexes to handle the creation, rollover, and deletion of indexes. This h
 - [OpenSearch Index Templates](https://opensearch.org/docs/latest/im-plugin/index-templates/){target="_blank"} 
 - [OpenSearch Index Lifecycle Management (ILM)](https://opensearch.org/docs/latest/dashboards/im-dashboards/index/){target="_blank"} 
 
-## Best practices
-
-### Performance optimization
-
-- Scale the OpenSearch cluster based on log ingestion rates. Monitor various performance metrics (for example, CPU, memory, disk I/O) to understand current usage. To monitor these metrics, you can use tools such as OpenSearch Dashboards and Prometheus.
-- Distribute the load to enhance the cluster's ability to handle higher ingestion rates and search queries. To distribute the load, increase the number of data, master, and coordinating nodes.
-
-### Monitoring and alerting
+### Monitoring and debugging
 
 - Use OpenSearch Dashboards to visualize log data. Use available filters to check specific deployment host names and pod in the log data. The following image shows the filters you can use.
         
         
-    ![](../../../images/OpenSearch-Dashboard-Filters.png){ width="800" }
+    ![](../../../images/OpenSearch-Dashboard-Filters.png){ width="1000" }
 
-- Set up alerts for specific log patterns or anomalies.
-For DX implemented an alert notification channel based on the threshold of response time in Opensearch Dashboard.The following image shows the alerts received on Google chat.
-
-    ![](../../../images/Opensearch-Notification.png){ width="800" }
-
-- Monitor Logstash performance using metrics and logs.
+- Debug servers issues using metrics and logs.
 
 ## Case study
 
-By implementing the recommended [architecture](#system-architecture), for DX observed improved log visibility, faster incident response times, and better overall system reliability.
+The recommended [architecture](#system-architecture) was implemented in a DX deployment. The deployment observed improved log visibility, faster incident response times, and better overall system reliability.
 
 ### Results
 
-- With OpenSearch Dashboard able to visualize the data for longer durations in graphical format.This seems to better and conclusive than tabular format.
+- With the OpenSearch Dashboard, you can view the data for longer durations in graphical format. Viewing data in this format is recommended over the tabular format.
 - Efforts for debugging the logs for root cause analysis were reduced. 
 
 ## Conclusion
