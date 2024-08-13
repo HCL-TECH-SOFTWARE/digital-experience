@@ -2,3 +2,4 @@ title: Kubernetes Deployments
 nav:
     - index.md
     - rendering_medium_config.md
+    - logstash_opensearch.md

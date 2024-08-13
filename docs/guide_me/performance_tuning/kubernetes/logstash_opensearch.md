@@ -3,9 +3,11 @@ id: logstash_opensearch
 title: Using Logstash to push pod logs to OpenSearch
 ---
 
+This topic outlines the steps for configuring Logstash to push pod logs to OpenSearch.
+
 ## Introduction
 
-Kubernetes is a widely adopted platform for container orchestration in cloud-native environments. As applications scale, managing the logs they generate is important for monitoring, debugging, and compliance. Logstash is an open source data processing pipeline that collects, processes, and forwards logs from Kubernetes pods to OpenSearch, an open source search and analytics engine. This topic outlines the steps and best practices for configuring Logstash to push pod logs to OpenSearch.
+Kubernetes is a widely adopted platform for container orchestration in cloud-native environments. As applications scale, managing the logs they generate is important for monitoring, debugging, and compliance. Logstash is an open source data processing pipeline that collects, processes, and forwards logs from Kubernetes pods to OpenSearch, an open source search and analytics engine. 
 
 ## Overview of Logstash, Filebeat, and OpenSearch
 
@@ -95,7 +97,7 @@ Make sure that you have the following:
 
     - `Output Configuration`: The `opensearch` output plugin is configured to send logs to an OpenSearch server. The `hosts` parameter specifies the `server's protocol`, `hostname`, and `port`. Additionally, the `logs index`, `user`, and `password` parameters are provided for authentication. SSL encryption is enabled (`ssl => true`), with certificate verification disabled (`ssl_certificate_verification => false`). This configuration ensures logs are sent to the correct OpenSearch endpoint.
 
-### Installing and creating the Filebeat configuration file
+## Installing and creating the Filebeat configuration file
   
 1. Install FileBeat on a node within the Kubernetes cluster or on a dedicated log processing server. Refer to the official documentation [Filebeat quick start: installation and configuration](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-installation-configuration.html){target="_blank"} for more information.
 
@@ -127,7 +129,7 @@ Make sure that you have the following:
     This sample configuration tells Filebeat to read all `.log` files in the /var/log/containers directory and send the log data to a Logstash instance running on ${KUBE_HOSTNAME}:5044.
     The kube_config file is the default way to authenticate to a Kubernetes cluster. By default, the kube_config file is located in the ~/.kube directory.
 
-### Managing indexes in OpenSearch
+## Managing indexes in OpenSearch
 
 Modify indexes to handle the creation, rollover, and deletion of indexes. This helps manage storage efficiently and maintain optimal performance. For detailed information, refer to the official OpenSearch documentation:
 
@@ -135,7 +137,7 @@ Modify indexes to handle the creation, rollover, and deletion of indexes. This h
 - [OpenSearch Index Templates](https://opensearch.org/docs/latest/im-plugin/index-templates/){target="_blank"} 
 - [OpenSearch Index Lifecycle Management (ILM)](https://opensearch.org/docs/latest/dashboards/im-dashboards/index/){target="_blank"} 
 
-### Monitoring and debugging
+## Monitoring and debugging
 
 This section contains recommendations for monitoring and debugging log data.
 
@@ -153,7 +155,7 @@ This section contains recommendations for monitoring and debugging log data.
 The recommended [architecture](#system-architecture) was implemented in a DX deployment. The following improvements were observed:
 
 - Efforts for debugging the logs for root cause analysis were reduced.
-- Using the recommended architecture in the DX deployment resulted in improved log visibility, faster incident response times, and better overall system reliability.
+- Using the recommended [architecture](#system-architecture) in the DX deployment resulted in improved log visibility, faster incident response times, and better overall system reliability.
 
 ## Conclusion
 
