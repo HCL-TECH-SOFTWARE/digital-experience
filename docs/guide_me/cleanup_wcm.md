@@ -1,6 +1,6 @@
 # Cleaning up WCM items
 
-The amount of Web Content Manager (WCM) items grow over time. To maintain good system performance, it is recommended to clean up old items that are no longer needed. Regular cleanup makes it easier for content authors to perform their tasks. This is especially important when migrating from an earlier release.
+The amount of Web Content Manager (WCM) items grow over time. To maintain good system performance, it is recommended to clean up old items that are no longer needed. With regular cleanup, content authors can perform their tasks better and migrating from an earlier release can take less time.
 
 The following are examples of items which you can clean up:
 
