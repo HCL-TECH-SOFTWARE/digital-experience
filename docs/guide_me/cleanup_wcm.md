@@ -41,7 +41,9 @@ Download the file [`wcm_maintenance.zip`](https://git.cwp.pnp-hcl.com/CWPdoc/dx-
 
 ## Published projects
 
-While there is no out-of-the-box tool to delete published projects, you can use [WCM API](https://help.hcl-software.com/digital-experience/8.5/dev/javadoc/vrm/850/api_docs/com/ibm/workplace/wcm/api/Workspace.html){target="_blank"} to delete published projects. In the WCM Authoring portlet, Project View All Published projects can be displayed and deleted.
+While there is no out-of-the-box tool to delete published projects, you can use [WCM API](https://help.hcl-software.com/digital-experience/8.5/dev/javadoc/vrm/850/api_docs/com/ibm/workplace/wcm/api/Workspace.html){target="_blank"} to delete published projects. 
+
+Another option is to delete them through the WCM Authoring portlet. Go to **Project > Published** to display all published projects. Select the projects for deletion and click **Delete Project**.
 
 You can also configure a utility to run in the background to delete published projects. For more information, see [Configuring Web content cleanup tasks](../manage_content/wcm_configuration/wcm_adm_tools/wcm_config_clean_tasks.md).
 
