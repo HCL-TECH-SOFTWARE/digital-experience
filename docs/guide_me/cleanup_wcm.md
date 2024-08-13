@@ -35,7 +35,7 @@ With the clear versions tool, you can specify how many versions you want to keep
 
 ## Expired content
 
-When content expires as part of a workflow, an additional action in the workflow can trigger a deletion of the content as well. If the additional action was not done and a lot of expired content still exists, they can accumulate. Use the following sample JSP file to clean up drafts that are no longer needed. You can adjust the file to go against different libraries and to have a "last changed" check.
+When content expires as part of a workflow, an additional action in the workflow can trigger a deletion of the content as well. If the additional action was not done and a lot of expired content still exists, they can accumulate. Use the following sample JSP file to clean up expired contents that are no longer needed. You can adjust the file to go against different libraries and to adjust how recent content is being deleted.
 
 Download the file [`wcm_maintenance.zip`](https://git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/files/1822/wcm_maintenance.zip). The sample JSP file is `purgeExpiredData.jsp` located in the wcm_maintenance folder.
 
