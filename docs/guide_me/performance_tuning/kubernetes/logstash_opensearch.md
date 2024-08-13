@@ -3,9 +3,11 @@ id: logstash_opensearch
 title: Using Logstash to push pod logs to OpenSearch
 ---
 
+This topic outlines the steps and best practices for configuring Logstash to push pod logs to OpenSearch.
+
 ## Introduction
 
-Kubernetes is a widely adopted platform for container orchestration in cloud-native environments. As applications scale, managing the logs they generate is important for monitoring, debugging, and compliance. Logstash is an open source data processing pipeline that collects, processes, and forwards logs from Kubernetes pods to OpenSearch, an open source search and analytics engine. This topic outlines the steps and best practices for configuring Logstash to push pod logs to OpenSearch.
+Kubernetes is a widely adopted platform for container orchestration in cloud-native environments. As applications scale, managing the logs they generate is important for monitoring, debugging, and compliance. Logstash is an open source data processing pipeline that collects, processes, and forwards logs from Kubernetes pods to OpenSearch, an open source search and analytics engine. 
 
 ## Overview of Logstash, Filebeat, and OpenSearch
 
@@ -153,7 +155,7 @@ This section contains recommendations for monitoring and debugging log data.
 The recommended [architecture](#system-architecture) was implemented in a DX deployment. The following improvements were observed:
 
 - Efforts for debugging the logs for root cause analysis were reduced.
-- Using the recommended architecture in the DX deployment resulted in improved log visibility, faster incident response times, and better overall system reliability.
+- Using the recommended [architecture](#system-architecture) in the DX deployment resulted in improved log visibility, faster incident response times, and better overall system reliability.
 
 ## Conclusion
 

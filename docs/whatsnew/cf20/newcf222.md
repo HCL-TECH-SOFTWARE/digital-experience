@@ -114,7 +114,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Documentation for using Logstash to push pod logs to OpenSearch
 
 === "Containers"
-    As applications scale, managing Kubernetes logs is important for monitoring, debugging, and compliance. The new topic [Using Logstash to push pod logs to OpenSearch]() outlines the steps for configuring Logstash and Filebeat so that Kubernetes pod logs are forwarded to OpenSearch, an open source search and analytics engine. (Doc in progress)
+    As applications scale, managing Kubernetes logs is important for monitoring, debugging, and compliance. The new topic [Using Logstash to push pod logs to OpenSearch](../../guide_me/performance_tuning/kubernetes/logstash_opensearch.md) provides the steps for configuring Logstash and Filebeat to have Kubernetes pod logs forwarded to OpenSearch, an open source search and analytics engine.
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
