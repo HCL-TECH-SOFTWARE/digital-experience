@@ -15,11 +15,8 @@ The following are examples of items which you can clean up:
 
 The following sections provide information on how to deal with each of these items.
 
-The following limitations apply:
-
-DISCLAIMER OF WARRANTIES:
--------------------------
-The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.
+!!!note "DISCLAIMER OF WARRANTIES"
+    The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.
 
 ## Drafts
 
@@ -83,6 +80,7 @@ You can also use WCM APIs to find content that has not been updated in a while. 
 ## Querying version nodes
 
 To determine which JCR nodes are versions, refer to the following queries:
+
 - To find the nodes per workspace: SELECT COUNT(1) AS NODE_COUNT, WSID FROM <schema>.ICMUTSWIDE0 WHERE WSID > 0 GROUP BY WSID
 - To find the workspaces: SELECT WSID, WSNAME FROM JCR.ICMSTJCRWS WHERE WSID > 0 ORDER BY WSID
   

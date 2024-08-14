@@ -69,10 +69,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New guidance for cleaning up WCM items
 
 === "Containers"
-    The amount of Web Content Manager (WCM) items can accumulate over time. To maintain good system performance, it is recommended to clean up old items that are no longer needed. See the new topic [Cleaning up WCM items]() for more information. (Doc in progress)
+    The amount of Web Content Manager (WCM) items can accumulate over time. To maintain good system performance, it is recommended to clean up old items that are no longer needed. See the new topic [Cleaning up WCM items](../../guide_me/cleanup_wcm.md) for more information.
 
 === "On-Premises"
-    The amount of Web Content Manager (WCM) items can accumulate over time. To maintain good system performance, it is recommended to clean up old items that are no longer needed. See the new topic [Cleaning up WCM items]() for more information.
+    The amount of Web Content Manager (WCM) items can accumulate over time. To maintain good system performance, it is recommended to clean up old items that are no longer needed. See the new topic [Cleaning up WCM items](../../guide_me/cleanup_wcm.md) for more information.
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
