@@ -341,6 +341,9 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
 !!!note
     Refer to the list of features that were released in the following HCL DX 9.5 releases:
 
+    -   HCL DX 9.5 CF223 release: **V223.0.0
+        -  New DXClient LiveSync Sub-Commands: [LiveSync push-wcm-design-library | pull-wcm-design-library](../dxclient/dxclient_artifact_types/livesync.md)
+
     -   HCL DX 9.5 CF221 release: **V221.0.0
         -  A one time license agreement click-through is enabled. To skip the prompt, use the [accept-license](#dxclient-information-commands) command.
         -   DXClient is now openly distributed in [NpmJS and Harbor repository](#public-and-free-dxclient-installation-options).
