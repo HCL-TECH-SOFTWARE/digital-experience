@@ -100,8 +100,8 @@
 .dx-hero-container {
     padding-top: 0rem;
     /* background: url(../images/dx-doc-hero-banner.png) no-repeat; */
-    background: url(../images/dx-teams-abstract-dots-black.jpeg) no-repeat;
-    background-position: left bottom;
+    background: url(../images/dx-doc-new-banner.png) no-repeat;
+    background-position: center;
     background-size: cover;
     /*height: 15rem;*/
     min-height: auto;
