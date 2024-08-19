@@ -1,6 +1,6 @@
-# Installation and upgrade for customers running on Portal 9.0 on WAS 8.5/9.0 and Java SDK 7.0
+# Installation and upgrade for customers running on DX 9.0 on WAS 8.5/9.0 and Java SDK 7.0 or 8.0
 
-This guide shows how to upgrade your HCL Portal 9.0 environment to HCL Portal 9.5. Information on how to migrate the WAS layer to IBM WebSphere Application Server ND Version 9.0.5.x is also available.
+This guide shows how to upgrade your HCL Digital Experience (DX) Portal 9.0 environment to HCL DX 9.5. Information on how to migrate the WAS layer to IBM WebSphere Application Server ND Version 9.0.5.x is also available.
 
 ## Preparing the environment
 
