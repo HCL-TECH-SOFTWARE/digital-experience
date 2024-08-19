@@ -8,7 +8,7 @@ The following are the available options for installing and upgrading to HCL DX 9
 
 - [Installation and upgrade for new HCL DX customers](../install_upgrade_plan_supported_paths/Install_upgrade_new_HCL_DX_customers.md): HCL DX 9.5 can run on top of IBM WebSphere Application Server Version ND 9.0.5 using the installation path provided in this topic.  
 
-- [Installation and upgrade for customers running on DX 8.5 on WAS 8.5/9.0 and Java SDK 7.0 or 8.0](../install_upgrade_plan_supported_paths/Install_upgrade_customers_Portal_85_Java_SDK7.md): Upgrade your HCL DX or Web Content Manager 8.5 environment to HCL DX or Web Content Manager 9.5.
+- [Installation and upgrade for customers running on DX 8.5 on WAS 8.5/9.0 and Java SDK 7.0 or 8.0](../install_upgrade_plan_supported_paths/Install_upgrade_customers_Portal_85_Java_SDK7.md): Upgrade your HCL DX 8.5 environment to HCL DX 9.5.
 
 - [Installation and upgrade for customers running on DX 9.0 on WAS 8.5/9.0 and Java SDK 7.0 or 8.0](../install_upgrade_plan_supported_paths/Install_upgrade_customers_Portal_9_Java_SDK7.md): Upgrade your HCL DX 9.0 environment to HCL DX 9.5.
 
