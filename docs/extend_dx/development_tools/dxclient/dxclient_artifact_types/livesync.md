@@ -368,7 +368,7 @@ This command will sync your WCM Design Library local files into DX Server. Then,
     dxclient livesync push-wcm-design-library -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -libraryPath <libraryPath> -libraryName <themeSystemName>
     ```
 
-### Ignoring Files WCM Design Library
+<!-- ### Ignoring Files WCM Design Library
 
 You can opt to ignore files and folder paths to push to the server by creating an ignore file (`.ignore`) under the root of the WCM Design Library folder (the WCM Design Library that is provided in `--libraryPath`).
 
@@ -380,7 +380,7 @@ Sample `.ignore` file contents:
 
 .DS_Store
 logs/
-```
+``` -->
 
 ## LiveSync Pull WCM Design Library
 
