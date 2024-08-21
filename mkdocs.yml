@@ -21,9 +21,11 @@ theme:
     - search.suggest
     - navigation.prune
     - content.code.copy
+    - content.action.edit
   custom_dir: theme_overrides/
   icon:
     repo: fontawesome/brands/github
+    edit: fontawesome/regular/pen-to-square
   font:
     text: Roboto
     code: Roboto Mono
