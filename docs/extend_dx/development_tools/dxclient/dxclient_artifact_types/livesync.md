@@ -39,53 +39,37 @@ This command will sync your WebDAV based theme files into DX Server. Then, it wi
 
 -   **Common Command options**
 
-    Use this attribute to specify the protocol with which to connect to the DX server (`wp_profile`):
-
-    ```shell
+    ```shell title="Use this attribute to specify the protocol with which to connect to the DX server (`wp_profile`):"
     -dxProtocol <value>
     ```
 
-    Use this attribute to specify the hostname of the target DX server:
-
-    ```shell
+    ```shell title="Use this attribute to specify the hostname of the target DX server:"
     -hostname <value>
     ```
 
-    Use this attribute to specify the port on which to connect to the DX server (`wp_profile`):
-
-    ```shell
+    ```shell title="Use this attribute to specify the port on which to connect to the DX server (`wp_profile`):"
     -dxPort <value>
     ```
 
-    Use this attribute to specify the username to authenticate with the DX server (`wp_profile`):
-
-    ```shell
+    ```shell title="Use this attribute to specify the username to authenticate with the DX server (`wp_profile`):"
     -dxUsername <value>
     ```
 
-    Use this attribute to specify the password for the user in the `dxUsername` attribute:
-
-    ```shell
+    ```shell title="Use this attribute to specify the password for the user in the `dxUsername` attribute:"
     -dxPassword <value>
     ```
 
-    Use this attribute to specify the path to the contenthandler servlet on the DX server (for example, /wps/mycontenthandler):
-
-    ```shell
+    ```shell title="Use this attribute to specify the path to the contenthandler servlet on the DX server (for example, /wps/mycontenthandler):"
     -contenthandlerPath <value>
     ```
 
-    Use the Disable Prompt attribute to disable the confirmation prompt for overwriting local and server files. This bypasses the prompt and immediately proceeds to pushing theme files.
-
-    ```shell
+    ```shell title="Use the Disable Prompt attribute to disable the confirmation prompt for overwriting local and server files. This bypasses the prompt and immediately proceeds to pushing theme files."
     -disablePrompt, --disablePrompt <value>
     ```
 
 -   **Required options for LiveSync Push Theme**
 
-    Use this attribute to specify the Theme System Name of the theme created under DX server:
-
-    ```shell
+    ```shell title="Use this attribute to specify the Theme System Name of the theme created under DX server:"
     -themeName <value>
     ```
 
@@ -155,53 +139,37 @@ This command is used to sync a theme from a DX WebDAV based theme on a remote se
 
 -   **Common Command options**
 
-    Use this attribute to specify the protocol with which to connect to the DX server (`wp_profile`):
-
-    ```shell
+    ```shell title="Use this attribute to specify the protocol with which to connect to the DX server (`wp_profile`):"
     -dxProtocol <value>
     ```
 
-    Use this attribute to specify the hostname of the target DX server:
-
-    ```shell
+    ```shell title="Use this attribute to specify the hostname of the target DX server:"
     -hostname <value>
     ```
 
-    Use this attribute to specify the port on which to connect to the DX server (`wp_profile`):
-
-    ```shell
+    ```shell title="Use this attribute to specify the port on which to connect to the DX server (`wp_profile`):"
     -dxPort <value>
     ```
 
-    Use this attribute to specify the username to authenticate with the DX server (`wp_profile`):
-
-    ```shell
+    ```shell title="Use this attribute to specify the username to authenticate with the DX server (`wp_profile`):"
     -dxUsername <value>
     ```
 
-    Use this attribute to specify the password for the user in the `dxUsername` attribute:
-
-    ```shell
+    ```shell title="Use this attribute to specify the password for the user in the `dxUsername` attribute:"
     -dxPassword <value>
     ```
 
-    Use this attribute to specify the path to the contenthandler servlet on the DX server (for example, /wps/mycontenthandler):
-
-    ```shell
+    ```shell title="Use this attribute to specify the path to the contenthandler servlet on the DX server (for example, /wps/mycontenthandler):"
     -contenthandlerPath <value>
     ```
 
-    Use the Disable Prompt attribute to disable the confirmation prompt for overwriting local and server files. This bypasses the prompt and immediately proceeds to pulling theme files.
-
-    ```shell
+    ```shell title="Use the Disable Prompt attribute to disable the confirmation prompt for overwriting local and server files. This bypasses the prompt and immediately proceeds to pulling theme files."
     -disablePrompt, --disablePrompt <value>
     ```
 
 -   **Required option for LiveSync Pull Theme**
 
-    Use this attribute to specify the Theme System Name of the theme created under the DX server:
-
-    ```shell
+    ```shell title="Use this attribute to specify the Theme System Name of the theme created under the DX server:"
     -themeName <value>
     ```
 
@@ -284,67 +252,45 @@ This command will sync your WCM Design Library local files into DX Server. Then,
 
 -   **Common Command options**
 
-    Use this attribute to specify the protocol with which to connect to the DX server (`wp_profile`):
-
-    ```shell
+    ```shell title="Use this attribute to specify the protocol with which to connect to the DX server (`wp_profile`):"
     -dxProtocol <value>
     ```
 
-    Use this attribute to specify the hostname of the target DX server:
-
-    ```shell
+    ```shell title="Use this attribute to specify the hostname of the target DX server:"
     -hostname <value>
     ```
 
-    Use this attribute to specify the port on which to connect to the DX server (`wp_profile`):
-
-    ```shell
+    ```shell title="Use this attribute to specify the port on which to connect to the DX server (`wp_profile`):"
     -dxPort <value>
     ```
 
-    Use this attribute to specify the username to authenticate with the DX server (`wp_profile`):
-
-    ```shell
+    ```shell title="Use this attribute to specify the username to authenticate with the DX server (`wp_profile`):"
     -dxUsername <value>
     ```
 
-    Use this attribute to specify the password for the user in the `dxUsername` attribute:
-
-    ```shell
+    ```shell title="Use this attribute to specify the password for the user in the `dxUsername` attribute:"
     -dxPassword <value>
     ```
 
-    Use this attribute to specify the path to the contenthandler servlet on the DX server (for example, /wps/mycontenthandler):
-
-    ```shell
+    ```shell title="Use this attribute to specify the path to the contenthandler servlet on the DX server (for example, /wps/mycontenthandler):"
     -contenthandlerPath <value>
     ```
 
-    Use this attribute to specify the Name of the WCM Project the library is part of.
-
-    ```shell
+    ```shell title="Use this attribute to specify the Name of the WCM Project the library is part of."
     -wcmProjectName <value>
     ```
 
-    Use this attribute to specify the Name of the Context of the virtual portal of the DX Core server the library is part of.
-
-    ```shell
+    ```shell title="Use this attribute to specify the Name of the Context of the virtual portal of the DX Core server the library is part of."
     -virtualPortalContext <value>
     ```
 
-    Use the Disable Prompt attribute to disable the confirmation prompt for overwriting local and server files. This bypasses the prompt and immediately proceeds to pushing WCM Design Library files.
-
-    ```shell
+    ```shell title="Use the Disable Prompt attribute to disable the confirmation prompt for overwriting local and server files. This bypasses the prompt and immediately proceeds to pushing WCM Design Library files."
     -disablePrompt, --disablePrompt <value>
     ```
 
-    <!-- THIS IS NOW NOT NEEDED I THINK BECAUSE WE ALWAYS USE THE SAVED METADATA SINCE WE ONLY ALLOW USING WDL ALREADY PULLED USING OUR OWN PULL FEATURE
-    Use this attribute to specify the WCM Design Library System Name of the WCM Design Library created under DX server:
-
-    ```shell
+    ```shell title="Use this attribute to specify the WCM Design Library System Name of the WCM Design Library created under DX server:"
     -libraryName <value>
     ```
-    -->
 
 -   **Required options for LiveSync Push WCM Design Library**
 
@@ -354,33 +300,11 @@ This command will sync your WCM Design Library local files into DX Server. Then,
     -libraryPath <value>
     ```
 
-    <!-- NOT SURE IF THIS STILL EXISTS
-    !!! warning
-        1. Avoid using `~` `!` `()` `'` and `*` special characters when naming files and folders.
-        2. If you have a WCM Design Library title name with special characters, those are automatically converted to underscores (`_`) by the server (for example, `来源folder` is translated to `__folder`). For the WCM Design Library name, use the WCM Design Library System Name, the one with `_` like `__folder` in the following example.
-
-        ![livesync proper WCM Design Library name](../../../../images/livesync_themename.png){: style="height:450px"}
-     -->
-
 !!! example
 
     ```
     dxclient livesync push-wcm-design-library -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -libraryPath <libraryPath> -libraryName <themeSystemName>
     ```
-
-<!-- ### Ignoring Files WCM Design Library
-
-You can opt to ignore files and folder paths to push to the server by creating an ignore file (`.ignore`) under the root of the WCM Design Library folder (the WCM Design Library that is provided in `--libraryPath`).
-
-When changing the contents of the ignore file, the command needs to be re-run again to reflect the files that needs to be ignored.
-
-Sample `.ignore` file contents:
-```txt
-#.ignore
-
-.DS_Store
-logs/
-``` -->
 
 ## LiveSync Pull WCM Design Library
 
@@ -411,57 +335,39 @@ This command is used to sync a theme from a DX WCM Design Library from DX Server
 
 -   **Common Command options**
 
-    Use this attribute to specify the protocol with which to connect to the DX server (`wp_profile`):
-
-    ```shell
+    ```shell title="Use this attribute to specify the protocol with which to connect to the DX server (`wp_profile`):"
     -dxProtocol <value>
     ```
 
-    Use this attribute to specify the hostname of the target DX server:
-
-    ```shell
+    ```shell title="Use this attribute to specify the hostname of the target DX server:"
     -hostname <value>
     ```
 
-    Use this attribute to specify the port on which to connect to the DX server (`wp_profile`):
-
-    ```shell
+    ```shell title="Use this attribute to specify the port on which to connect to the DX server (`wp_profile`):"
     -dxPort <value>
     ```
 
-    Use this attribute to specify the username to authenticate with the DX server (`wp_profile`):
-
-    ```shell
+    ```shell title="Use this attribute to specify the username to authenticate with the DX server (`wp_profile`):"
     -dxUsername <value>
     ```
 
-    Use this attribute to specify the password for the user in the `dxUsername` attribute:
-
-    ```shell
+    ```shell title="Use this attribute to specify the password for the user in the `dxUsername` attribute:"
     -dxPassword <value>
     ```
 
-    Use this attribute to specify the path to the contenthandler servlet on the DX server (for example, /wps/mycontenthandler):
-
-    ```shell
+    ```shell title="Use this attribute to specify the path to the contenthandler servlet on the DX server (for example, /wps/mycontenthandler):"
     -contenthandlerPath <value>
     ```
 
-    Use this attribute to specify the Name of the WCM Project the library is part of.
-
-    ```shell
+    ```shell title="Use this attribute to specify the Name of the WCM Project the library is part of."
     -wcmProjectName <value>
     ```
 
-    Use this attribute to specify the Name of the Context of the virtual portal of the DX Core server the library is part of.
-
-    ```shell
+    ```shell title="Use this attribute to specify the Name of the Context of the virtual portal of the DX Core server the library is part of."
     -virtualPortalContext <value>
     ```
 
-    Use the Disable Prompt attribute to disable the confirmation prompt for overwriting local and server files. This bypasses the prompt and immediately proceeds to pushing WCM Design Library files.
-
-    ```shell
+    ```shell title="Use the Disable Prompt attribute to disable the confirmation prompt for overwriting local and server files. This bypasses the prompt and immediately proceeds to pushing WCM Design Library files."
     -disablePrompt, --disablePrompt <value>
     ```
 
@@ -473,22 +379,22 @@ This command is used to sync a theme from a DX WCM Design Library from DX Server
     -libraryPath <value>
     ```
 
-!!! example
+    !!! example
+
+        ```shell
+        dxclient livesync pull-wcm-design-library -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -libraryPath <themePath> -libraryName <libraryName>
+        ```
+
+    Note that LiveSync commands can be triggered from within the target local libraryPath path.
+
+    See the following example where '...' represents truncated parameters.
 
     ```shell
-    dxclient livesync pull-wcm-design-library -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -libraryPath <themePath> -libraryName <libraryName>
+    $ pwd
+    /Users/path/to/library
+
+    dxclient livesync pull-wcm-design-library --libraryPath "/Users/path/to/library" --libraryName "portal site" ...
     ```
-
-Note that LiveSync commands can be triggered from within the target local libraryPath path.
-
-See the following example where '...' represents truncated parameters.
-
-```shell
-$ pwd
-/Users/path/to/library
-
-dxclient livesync pull-wcm-design-library --libraryPath "/Users/path/to/library" --libraryName "portal site" ...
-```
 
     Use either of these attributes to specify the WCM Design Library created in DX server:
 
@@ -496,15 +402,18 @@ dxclient livesync pull-wcm-design-library --libraryPath "/Users/path/to/library"
     -libraryName <value>
     ```
 
+
     ```shell title="WCM Design Library ID"
     -libraryId <value>
     ```
 
-    If neither of these options is not provided:
+
+!!! info "If neither of these options is not provided:"
+
     1. The LiveSync will check if a saved library was previously pull using this command and use that as the basis.
     2. If no saved library is detected, a list of WCM Design Libraries displayed and you can select a WCM Design Library to pull.
 
-    ```shell
+    ```shell title="Sample WCM Design Library Selection Prompt"
     $ dxclient livesync pull-wcm-design-library -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -libraryPath <libraryPath>
     2024-08-16 19:53:06 : Checking for saved WCM Design Library in **_<libraryPath>_**
     2024-08-16 19:53:06 : Please select a WCM Design Library
