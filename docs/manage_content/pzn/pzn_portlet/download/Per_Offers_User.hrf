@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ibm-websphere-personalization>
+	<ResourceCollection action="create" name="Per_Offers_User">
+		<ResourceType>USER</ResourceType>
+		<ResourceClass>pers_offers.Per_Offers_User</ResourceClass>
+		<ResourceManagerClass>pers_offers.Per_Offers_UserManager</ResourceManagerClass>
+		<ResourceDomainClass>pers_offers.Per_Offers_UserManager</ResourceDomainClass>
+	</ResourceCollection>
+	<ResourceCollectionDefinition deploymentProtocol="SQL" generateSchemas="true" primaryResourceTable="PZNDEMO.PZN_USER" type="USER">
+		<ContentSpot className="Per_Offers_UserSpot" displayName="Per_Offers_User spot"></ContentSpot>
+		<ResourceTable displayName="Per_Offers_User" generateTemplates="false" name="PZN_USER" schema="PZNDEMO" supportsRuntimeMetadata="false">
+			<ResourceColumn initializeOnlyWhenNeeded="false" isNullable="true" isQueryable="true" isSelected="true" length="32" name="FIRST_NAME" sqlType="VARCHAR" userPrefType="0"></ResourceColumn>
+			<ResourceColumn initializeOnlyWhenNeeded="false" isNullable="true" isQueryable="true" isSelected="true" name="INCOMEGROUP" precision="0" scale="0" sqlType="INTEGER" userPrefType="0"></ResourceColumn>
+			<ResourceColumn initializeOnlyWhenNeeded="false" isNullable="true" isQueryable="true" isSelected="true" length="32" name="ROLE" sqlType="VARCHAR" userPrefType="0"></ResourceColumn>
+			<ResourceColumn initializeOnlyWhenNeeded="false" isNullable="true" isQueryable="true" isSelected="true" length="32" name="EMAIL" sqlType="VARCHAR" userPrefType="0"></ResourceColumn>
+			<ResourceColumn initializeOnlyWhenNeeded="false" isNullable="true" isQueryable="true" isSelected="true" name="NUMLOGINS" precision="0" scale="0" sqlType="INTEGER" userPrefType="0"></ResourceColumn>
+			<ResourceColumn initializeOnlyWhenNeeded="false" isNullable="true" isQueryable="true" isSelected="true" length="32" name="TITLE" sqlType="VARCHAR" userPrefType="0"></ResourceColumn>
+			<ResourceColumn initializeOnlyWhenNeeded="false" isNullable="true" isQueryable="true" isSelected="true" length="32" name="GENDER" sqlType="VARCHAR" userPrefType="0"></ResourceColumn>
+			<ResourceColumn initializeOnlyWhenNeeded="false" isNullable="true" isQueryable="true" isSelected="true" name="BIRTHDATE" precision="0" sqlType="TIMESTAMP" userPrefType="0"></ResourceColumn>
+			<ResourceColumn initializeOnlyWhenNeeded="false" isNullable="true" isQueryable="true" isSelected="true" length="32" name="DEPARTMENT" sqlType="VARCHAR" userPrefType="0"></ResourceColumn>
+			<ResourceColumn initializeOnlyWhenNeeded="false" isNullable="true" isQueryable="true" isSelected="true" length="32" name="CUSTOMERTYPE" sqlType="VARCHAR" userPrefType="0">
+				<Value description="Gold">Gold</Value>
+				<Value description="Titanium">Titanium</Value>
+				<Value description="Platinum">Platinum</Value>
+			</ResourceColumn>
+			<ResourceColumn initializeOnlyWhenNeeded="false" isNullable="true" isQueryable="true" isSelected="true" length="32" name="OFFICE_PHONE" sqlType="VARCHAR" userPrefType="0"></ResourceColumn>
+			<ResourceColumn initializeOnlyWhenNeeded="false" isNullable="true" isQueryable="true" isSelected="true" length="32" name="LAST_NAME" sqlType="VARCHAR" userPrefType="0"></ResourceColumn>
+			<ResourceColumn initializeOnlyWhenNeeded="false" isNullable="true" isPrimaryKeyColumn="true" isQueryable="true" isSelected="true" length="32" name="USERNAME" sqlType="VARCHAR" userPrefType="0"></ResourceColumn>
+			<ResourceColumn initializeOnlyWhenNeeded="false" isNullable="true" isQueryable="true" isSelected="true" length="32" name="PASSWORD" sqlType="VARCHAR" userPrefType="0"></ResourceColumn>
+		</ResourceTable>
+		<DomainSettings class="com.ibm.etools.portlet.personalization.internal.model.sql.impl.SQLDomainSettings" id="SQL">
+			<ConnectionPooling>true</ConnectionPooling>
+			<DataSource>jdbc/pzndemo</DataSource>
+			<DriverClass>org.apache.derby.jdbc.EmbeddedDriver</DriverClass>
+			<DataSourceClass></DataSourceClass>
+			<ConnectionName>PZNDemo Database</ConnectionName>
+			<DataModel></DataModel>
+			<Url>jdbc:derby:C:\HCL\wp_profile\PortalServer\derby\pzndemo_db</Url>
+			<UserId></UserId>
+		</DomainSettings>
+	</ResourceCollectionDefinition>
+</ibm-websphere-personalization>
