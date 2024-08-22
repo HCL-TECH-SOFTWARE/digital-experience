@@ -798,17 +798,16 @@ Use this command to download the theme files in WebDAV Server in preparation for
 ```bash
 dxclient livesync pull-theme [options]
 ```
+Use this command to download the WCM Design Library files from the DX Server in preparation for [`livesync push-wcm-design-library`](../dxclient/dxclient_artifact_types/livesync.md#livesync-push-wcm-design-library):
+
+```bash
+dxclient livesync pull-wcm-design-library [options]
+```
 
 Use this command to sync a local WCM Design Library with the DX server. Succeeding changes are immediately reflected in the DX Server:
 
 ```bash
 dxclient livesync push-wcm-design-library [options]
-```
-
-Use this command to download the WCM Design Library files from the DX Server in preparation for [`livesync push-wcm-design-library`](../dxclient/dxclient_artifact_types/livesync.md#livesync-push-wcm-design-library):
-
-```bash
-dxclient livesync pull-wcm-design-library [options]
 ```
 
 ## Limitations
