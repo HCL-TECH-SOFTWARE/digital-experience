@@ -17,7 +17,7 @@ hcl-dxclient-image-v95_CF222_20240814-1304.zip
 hcl-dxclient-v95_CF222_20240814-1304.zip
 ```
 
-### hcl-dx-kubernetes-v95-CF22.zip
+### hcl-dx-kubernetes-v95-CF222.zip
 
 ```shell
 HCL DX notices V9.5 CF222.txt
