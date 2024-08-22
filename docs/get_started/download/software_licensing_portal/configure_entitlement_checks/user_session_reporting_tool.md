@@ -32,12 +32,16 @@ Enabling NCSA Access Logging can be configured in the IBM WAS console by followi
 1. Click Servers > Server Types > WebSphere application servers > server_name (e.g., Websphere_Portal) > Under the Troubleshooting section, click NCSA access and HTTP error logging.
 2. Select Enable logging service at server start-up.
 3. Ensure that Enable access logging is selected and the file path is set to ${SERVER_LOG_ROOT}/http_access.log. Increase the maximum number of historical files. A suggested number is 3 for better tracking.
+!!!note
+        -   The number and size of log files are crucial factors to consider and depend on how frequently the tool is run. It is important to either keep enough log files available or run the tool often enough to ensure all requests are processed. If the logs are rolled over too frequently before they are processed by the tool, there is a risk of losing session data, which could lead to incomplete or inaccurate results.
 4. Under Application servers > WebSphere_Portal > Container Settings > Web Container settings > click on Web container transport chains.
 5. Select WCInboundDefaultSecure, and then click on HTTP inbound channel (HTTP_4) under general properties.
 6. Under the Logging section, make sure Enable logging is enabled.
 7. Expand NCSA Access logging, select Use chain-specific logging, and enter the file path for the log files and maximum file number for historical files.
 8. Add a Custom property under Additional Properties.
-9. Select New and provide Name: accessLogFormat and Value: [DX_UST] %t %h "%{User-Agent}i" "%{X-Forwarded-For}i" [/DX_UST]. This will change the format to include essential session data that we need.
+9. Select New and provide Name: `accessLogFormat` and Value: `[DX_UST] %t %h "%{User-Agent}i" "%{X-Forwarded-For}i" [/DX_UST]`. This will change the format to include essential session data that we need.
+!!!note
+        -   In cases that a format is already set, the string mentioned above can be added to the already existing value
 10. Save and restart the server.
 
 
@@ -79,5 +83,5 @@ The tool is packaged as an executable JAR file and can be executed directly by u
 java -jar <jarFilepath> <filePaths...> <startDate> <endDate>
 ```
 
-After executing the tool it should return with the expected session count within the specified start and end date parameters. Additionally it will generate a csv, log, and data file that contains the user session report summary.
+After executing the tool it should return with the expected session count within the specified start and end date parameters. Additionally it will generate a csv, log, and data file that contains the user session report summary. It can be run either once for all collected log files or incrementally every X days, hours, or minutes. The tool stores its state between runs, ensuring that you still get the correct overall result, even when processing logs in multiple stages.
 
