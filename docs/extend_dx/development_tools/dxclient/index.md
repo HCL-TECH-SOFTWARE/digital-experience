@@ -342,7 +342,7 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
     Refer to the list of features that were released in the following HCL DX 9.5 releases:
 
     -   HCL DX 9.5 CF223 release: **V223.0.0
-        -  New DXClient LiveSync Sub-Commands: [LiveSync push-wcm-design-library](../dxclient/dxclient_artifact_types/livesync.md#livesync-push-wcm-design-library) | [pull-wcm-design-library](../dxclient/dxclient_artifact_types/livesync.md#livesync-pull-wcm-design-library)
+        -  New DXClient LiveSync sub-commands: [LiveSync push-wcm-design-library](../dxclient/dxclient_artifact_types/livesync.md#livesync-push-wcm-design-library) and [pull-wcm-design-library](../dxclient/dxclient_artifact_types/livesync.md#livesync-pull-wcm-design-library)
 
     -   HCL DX 9.5 CF221 release: **V221.0.0
         -  A one time license agreement click-through is enabled. To skip the prompt, use the [accept-license](#dxclient-information-commands) command.
@@ -799,13 +799,13 @@ Use this command to download the theme files in WebDAV Server in preparation for
 dxclient livesync pull-theme [options]
 ```
 
-Use this command to sync WCM Design Library from local to DX server and then watch for succeeding changes which will immediately reflect in the DX Server:
+Use this command to sync a local WCM Design Library with the DX server. Succeeding changes are immediately reflected in the DX Server:
 
 ```bash
 dxclient livesync push-wcm-design-library [options]
 ```
 
-Use this command to download the WCM Design Library files from DX Server in preparation for [`livesync push-wcm-design-library`](../dxclient/dxclient_artifact_types/livesync.md#livesync-push-wcm-design-library):
+Use this command to download the WCM Design Library files from the DX Server in preparation for [`livesync push-wcm-design-library`](../dxclient/dxclient_artifact_types/livesync.md#livesync-push-wcm-design-library):
 
 ```bash
 dxclient livesync pull-wcm-design-library [options]
