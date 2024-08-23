@@ -83,5 +83,7 @@ The tool is packaged as an executable JAR file and can be executed directly by u
 java -jar <jarFilepath> <filePaths...> <startDate> <endDate>
 ```
 
-After executing the tool it should return with the expected session count within the specified start and end date parameters. Additionally it will generate a csv, log, and data file that contains the user session report summary. It can be run either once for all collected log files or incrementally every X days, hours, or minutes. The tool stores its state between runs, ensuring that you still get the correct overall result, even when processing logs in multiple stages.
+After executing the tool it should return with the expected session count within the specified start and end date parameters. Additionally it will generate a csv file named  `sessionCounts<startDate><endDate>.csv` (i.e. sessionCounts_2024-01-01_2024-12-31.csv) which reports the session counts sorted and categorized by months based on the star and end date parameters. 
+
+The tool can be run either once for all collected log files or incrementally every X days, hours, or minutes. The tool stores its state between runs, ensuring that you still get the correct overall result, even when processing logs in multiple stages.
 
