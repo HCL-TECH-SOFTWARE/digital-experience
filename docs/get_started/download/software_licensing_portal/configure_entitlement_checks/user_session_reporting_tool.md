@@ -19,7 +19,7 @@ Additionally, the User Session Reporting Tool is designed to handle complex scen
 
 ### Where to get it
 
-Available through `FlexNet`, the User Session Reporting Tool is designed to integrate effortlessly into existing HCL DX deployments, particularly in on-premise deployments. A significant advantage of this tool is its backward compatibility with previous deployment versions. `Users do not need to upgrade to the latest Cumulative Fix (CF) to utilize the User Session Reporting Tool`, making it accessible to a broader range of deployments without necessitating additional updates or changes to the existing infrastructure.
+Available through `FlexNet`, the User Session Reporting Tool is designed to integrate effortlessly into existing HCL DX deployments, particularly in on-premise deployments. A significant advantage of this tool is its backward compatibility with previous deployment versions. ****Users do not need to upgrade to the latest Cumulative Fix (CF) to utilize the User Session Reporting Tool****, making it accessible to a broader range of deployments without necessitating additional updates or changes to the existing infrastructure.
 
 ## Usage Guide
 
@@ -53,10 +53,6 @@ Access log files can be access in side the `wp_profile` directory (i.e. /opt/IBM
 [DX_UST] [17/Jun/2024:09:47:24 +0000] 192.168.243.142 "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" "10.134.209.51" [/DX_UST]
 [DX_UST] [17/Jun/2024:09:47:24 +0000] 192.168.243.142 "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" "10.134.209.51" [/DX_UST]
 [DX_UST] [17/Jun/2024:09:47:25 +0000] 192.168.243.142 "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" "10.134.209.51" [/DX_UST]
-[DX_UST] [17/Jun/2024:09:47:30 +0000] 192.168.243.136 "axios/1.6.7" "-" [/DX_UST]
-[DX_UST] [17/Jun/2024:09:47:30 +0000] 192.168.243.136 "axios/1.6.7" "-" [/DX_UST]
-[DX_UST] [17/Jun/2024:09:47:30 +0000] 192.168.243.136 "axios/1.6.7" "-" [/DX_UST]
-[DX_UST] [17/Jun/2024:09:47:30 +0000] 192.168.243.136 "axios/1.6.7" "-" [/DX_UST]
 ```
 
 !!!important
@@ -85,5 +81,5 @@ java -jar <jarFilepath> <filePaths...> <startDate> <endDate>
 
 After executing the tool it should return with the expected session count within the specified start and end date parameters. Additionally it will generate a csv file named  `sessionCounts<startDate><endDate>.csv` (i.e. sessionCounts_2024-01-01_2024-12-31.csv) which reports the session counts sorted and categorized by months based on the star and end date parameters. 
 
-The tool can be run either once for all collected log files or incrementally every X days, hours, or minutes. The tool stores its state between runs, ensuring that you still get the correct overall result, even when processing logs in multiple stages.
+The tool can be run either once for all collected log files or incrementally every X days, hours, or minutes. It stores its state between runs, processing only the logs that are after the last previously processed timestamp to prevent re-processing old entries. This ensures that you still get the correct overall result, even when processing logs in multiple stages. Additionally, if there are logs from multiple deployments belonging to the same system—such as in Active-Active setups or backups—those logs should be processed together in one run, as the tool will merge them to provide a comprehensive and accurate session count.
 
