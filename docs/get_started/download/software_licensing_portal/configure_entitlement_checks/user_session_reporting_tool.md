@@ -68,14 +68,18 @@ Please make sure that the `X-Forwarded-For` header is correctly set in your rout
 
 ### Running the Tool
 
-The tool is packaged as an executable JAR file and can be executed directly by using the command and parameters below:
+The tool is packaged as an executable JAR file and can be executed directly by using the parameters below:
 
 ```cmd
 # <jarFilepath> Path to the jar file
 # <filePaths> List of input log files to get session counts
 # <startDate> Specifies the start date in YYYY-MM-DD format
 # <endDate> Specifies the end date in YYYY-MM-DD format
+```
 
+Trigger/execute the tool passing the log files and date range parameters
+
+```cmd
 java -jar <jarFilepath> <filePaths...> <startDate> <endDate>
 ```
 
