@@ -35,7 +35,7 @@ Enabling NCSA Access Logging can be configured in the IBM WAS console by followi
 !!!note
         -   The number and size of log files are crucial factors to consider and depend on how frequently the tool is run. It is important to either keep enough log files available or run the tool often enough to ensure all requests are processed. If the logs are rolled over too frequently before they are processed by the tool, there is a risk of losing session data, which could lead to incomplete or inaccurate results.
 4. Under Application servers > WebSphere_Portal > Container Settings > Web Container settings > click on Web container transport chains.
-5. Select WCInboundDefaultSecure, and then click on HTTP inbound channel (HTTP_4) under general properties.
+5. Select the inbound channel to cover (i.e. WCInboundDefaultSecure), and then click on HTTP inbound channel (HTTP_4) under general properties.
 6. Under the Logging section, make sure Enable logging is enabled.
 7. Expand NCSA Access logging, select Use chain-specific logging, and enter the file path for the log files and maximum file number for historical files.
 8. Add a Custom property under Additional Properties.
@@ -83,7 +83,11 @@ Trigger/execute the tool passing the log files and date range parameters
 java -jar <jarFilepath> <filePaths...> <startDate> <endDate>
 ```
 
-After executing the tool it should return with the expected session count within the specified start and end date parameters. Additionally it will generate a csv file named  `sessionCounts<startDate><endDate>.csv` (i.e. sessionCounts_2024-01-01_2024-12-31.csv) which reports the session counts sorted and categorized by months based on the star and end date parameters. 
+After executing the tool it should return with the expected session count within the specified start and end date parameters,it will generate the following files:
+
+1. `.csv` file named  `sessionCounts<startDate><endDate>.csv` (i.e. sessionCounts_2024-01-01_2024-12-31.csv) which reports the session counts sorted and categorized by months based on the star and end date parameters.
+2. `.log` file named `sessionCounts.log` where the incremental session counts are logged
+3. `.dat` file named `sessionStorage.dat` serves as the internal storage for saving session data and counts between runs. This file allows the tool to maintain its state, enabling accurate aggregation of session counts over time. It is crucial to save this file and store it securely, as it will be used by the tool to continue the session count during the next subsequent run. Losing or tampering with this file could result in incorrect session data and an inaccurate count.
 
 The tool can be run either once for all collected log files or incrementally every X days, hours, or minutes. It stores its state between runs, processing only the logs that are after the last previously processed timestamp to prevent re-processing old entries. This ensures that you still get the correct overall result, even when processing logs in multiple stages. Additionally, if there are logs from multiple deployments belonging to the same system—such as in Active-Active setups or backups—those logs should be processed together in one run, as the tool will merge them to provide a comprehensive and accurate session count.
 
