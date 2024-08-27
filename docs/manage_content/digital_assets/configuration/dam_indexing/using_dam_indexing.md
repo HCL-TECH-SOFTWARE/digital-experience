@@ -18,9 +18,9 @@ This process indexes all existing assets while revalidating stale indexes. There
  
     The following script is added in DXClient that triggers the reindexing process:
     
-        ```bash
-        dxclient trigger-dam-reindex [options]
-        ```
+    ```bash
+    dxclient trigger-dam-reindex [options]
+    ```
 
     The following options are available:
 
