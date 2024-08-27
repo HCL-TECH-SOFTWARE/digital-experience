@@ -230,7 +230,7 @@ The LiveSync Pull WCM Design Library command syncs a WCM Design Library in a DX 
 
     This command invokes the `livesync pull-wcm-design-library` tool inside the DXClient.
 
-    This command downloads the WCM Design Library files from the DX Server under the given library name (provided in `-wcmLibraryName`). The WCM Design Library files are then saved to the target local directory of the library (provided in `-wcmLibraryPath`). This overwrites existing files in the local directory and deletes stale files in the process.
+    This command downloads the WCM Design Library files from the DX Server under the given library name (provided in `wcmLibraryName`). The WCM Design Library files are then saved to the target local directory of the library (provided in `wcmLibraryPath`). This overwrites existing files in the local directory and deletes stale files in the process.
 
     ```shell
     dxclient livesync pull-wcm-design-library
