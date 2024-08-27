@@ -287,7 +287,7 @@ The LiveSync Pull WCM Design Library command syncs a WCM Design Library in a DX 
     -disablePrompt, --disablePrompt <value>
     ```
 
-    **Use either of the following attributes to specify the WCM Design Library created in the DX server you want to pull using this feature.**
+    **Use either of the following attributes to specify the WCM Design Library in the DX server you want to pull using this feature.**
 
     ```shell title="WCM Design Library Name"
     -wcmLibraryName <value>
