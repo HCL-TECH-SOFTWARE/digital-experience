@@ -287,15 +287,7 @@ The LiveSync Pull WCM Design Library command syncs a WCM Design Library in a DX 
     -disablePrompt, --disablePrompt <value>
     ```
 
--   **Required attributes for LiveSync Pull WCM Design Library**
-
-    Use this attribute to specify the local library folder path where the WCM Design Library files should be placed. This attribute accepts a folder path:
-
-    ```shell
-    -wcmLibraryPath <value>
-    ```
-
-    Use either of the following attributes to specify the WCM Design Library created in the DX server:
+    **Use either of the following attributes to specify the WCM Design Library created in the DX server you want to pull using this feature.**
 
     ```shell title="WCM Design Library Name"
     -wcmLibraryName <value>
@@ -319,6 +311,15 @@ The LiveSync Pull WCM Design Library command syncs a WCM Design Library in a DX 
         ( ) [Library Name: ml configuration,  Display Title: ML Configuration,  ID: cac73711-d639-436b-a922-1a717c5e1105]
         ( ) [Library Name: portal site,  Display Title: Portal Site,  ID: TWFuYWdlZCBQYWdlcyBSb290IExpYnJhcnk]
         ```
+
+
+-   **Required attribute for LiveSync Pull WCM Design Library**
+
+    Use this attribute to specify the local library folder path where the WCM Design Library files should be placed. This attribute accepts a folder path:
+
+    ```shell
+    -wcmLibraryPath <value>
+    ```
 
 !!! example "Example command for pulling a WCM Design Library"
 
