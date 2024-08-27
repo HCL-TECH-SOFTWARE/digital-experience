@@ -287,7 +287,7 @@ The LiveSync Pull WCM Design Library command syncs a DX WCM Design Library in a 
     -disablePrompt, --disablePrompt <value>
     ```
 
--   **Required attributes for LiveSync Pull WCM Design Library**
+-   **Required attribute for LiveSync Pull WCM Design Library**
 
     Use this attribute to specify the local library folder path where the WCM Design Library files should be placed. This attribute accepts a folder path:
 
@@ -339,7 +339,7 @@ The LiveSync Pull WCM Design Library command syncs a DX WCM Design Library in a 
 
 ## LiveSync Push WCM Design Library
 
-The LiveSync Push WCM Design Library command syncs your WCM Design Library local files with the DX Server. The system watches for succeeding changes within the given `wcmLibraryPath` and the changes are immediately reflected in the DX server. This feature only works on a WCM Design Library previously pulled by the LiveSync Pull WCM Design Library feature.
+The LiveSync Push WCM Design Library command syncs your WCM Design Library local files with the DX Server. The system watches for succeeding changes within the given `wcmLibraryPath` and the changes are immediately reflected in the DX server. This feature only works on a WCM Design Library previously pulled by the [LiveSync Pull WCM Design Library feature](#livesync-pull-wcm-design-library).
 
 
 -   **Command description**
@@ -421,11 +421,11 @@ The LiveSync Push WCM Design Library command syncs your WCM Design Library local
     dxclient livesync push-wcm-design-library -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -wcmLibraryPath <wcmLibraryPath> -wcmLibraryName <wcmLibraryName>
     ```
 
-## Limitations & Troubleshooting
+## Limitations and Troubleshooting
 
 ### General
 
-1. In any case, if the real-time sync during the push command gets disrupted, disconnect and reconnect again.
+1. If the real-time sync during the push command gets disrupted, disconnect and reconnect again.
 2. It is not recommended to use LiveSync on a production server.
 3. Conflict detection and resolutions are not implemented.
 
