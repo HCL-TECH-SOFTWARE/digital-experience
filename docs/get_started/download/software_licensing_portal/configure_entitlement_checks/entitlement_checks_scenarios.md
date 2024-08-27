@@ -75,7 +75,7 @@ Access the Reports section of the HCL Software License and Download Portal (Flex
     !!!note
         The results might show an overage percentage amount in parentheses which does not apply to this informational dashboard report.
 
-![](../../software_licensing_portal/_img/select_account_entitlements.png)
+    ![](../../software_licensing_portal/_img/select_account_entitlements.png)
 
 The Usage report shows the following information:
 
