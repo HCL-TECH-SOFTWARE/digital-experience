@@ -319,34 +319,34 @@ The LiveSync Pull WCM Design Library command syncs a DX WCM Design Library in a 
     ```
 
     ```shell title="WCM Design Library ID"
-    -libraryId <value>
+    -wcmLibraryId <value>
     ```
 
-!!! info "If neither of these attributes is provided:"
+    !!! info "If neither of these attributes is provided:"
 
-    1. LiveSync checks if a saved library was previously pulled using the `dxclient livesync push-wcm-design-library command` and uses that as basis.
-    2. If no saved library is detected, a list of WCM Design Libraries is displayed. You can select a WCM Design Library to pull.
+        1. LiveSync checks if a saved library was previously pulled using the `dxclient livesync push-wcm-design-library command` and uses that as basis.
+        2. If no saved library is detected, a list of WCM Design Libraries is displayed. You can select a WCM Design Library to pull.
 
-    ```shell title="Sample WCM Design Library Selection Prompt"
-    $ dxclient livesync pull-wcm-design-library -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -wcmLibraryPath <wcmLibraryPath>
-    2024-08-16 19:53:06 : Checking for saved WCM Design Library in <wcmLibraryPath>
-    2024-08-16 19:53:06 : Please select a WCM Design Library
-    (x) [Library Name: blog solo template v70,  Display Title: Blog Solo Template v70,  ID: ddc1c6de-b18d-4cfd-af8f-dac5ccdd5d30]
-    ( ) [Library Name: blog template v70,  Display Title: Blog Template v70,  ID: 5eb62c46-6f7d-498f-b71d-6bbdaac3e84a]
-    ( ) [Library Name: ml configuration,  Display Title: ML Configuration,  ID: cac73711-d639-436b-a922-1a717c5e1105]
-    ( ) [Library Name: portal site,  Display Title: Portal Site,  ID: TWFuYWdlZCBQYWdlcyBSb290IExpYnJhcnk]
-    ```
+        ```shell title="Sample WCM Design Library Selection Prompt"
+        $ dxclient livesync pull-wcm-design-library -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -wcmLibraryPath <wcmLibraryPath>
+        2024-08-16 19:53:06 : Checking for saved WCM Design Library in <wcmLibraryPath>
+        2024-08-16 19:53:06 : Please select a WCM Design Library
+        (x) [Library Name: blog solo template v70,  Display Title: Blog Solo Template v70,  ID: ddc1c6de-b18d-4cfd-af8f-dac5ccdd5d30]
+        ( ) [Library Name: blog template v70,  Display Title: Blog Template v70,  ID: 5eb62c46-6f7d-498f-b71d-6bbdaac3e84a]
+        ( ) [Library Name: ml configuration,  Display Title: ML Configuration,  ID: cac73711-d639-436b-a922-1a717c5e1105]
+        ( ) [Library Name: portal site,  Display Title: Portal Site,  ID: TWFuYWdlZCBQYWdlcyBSb290IExpYnJhcnk]
+        ```
 
 ## LiveSync Push WCM Design Library
 
-The LiveSync Push WCM Design Library command syncs your WCM Design Library local files with the DX Server. The system watches for succeeding changes within the given `wcmLibraryPath` and the changes are immediately reflected in the DX server.
+The LiveSync Push WCM Design Library command syncs your WCM Design Library local files with the DX Server. The system watches for succeeding changes within the given `wcmLibraryPath` and the changes are immediately reflected in the DX server. This feature only works on a WCM Design Library previously pulled by the LiveSync Pull WCM Design Library feature.
 
 
 -   **Command description**
 
     This command invokes the `livesync push-wcm-design-library` tool inside the DXClient.
 
-    First, this command pushes the local WCM Design Library (provided in `wcmLibraryPath`) to the DX Server with the WCM Design Library system name (provided in `wcmLibraryName`). The command then creates a file system watcher which looks out for any changes in the files or folders under `wcmLibraryPath` and immediately reflects those changes in the DX server. To stop watching, press **Ctrl + C**.
+    First, this command pushes the local WCM Design Library (provided in `wcmLibraryPath`) to the DX Server with the WCM Design Library system name (provided in `wcmLibraryName`). The command then creates a file system watcher which looks out for any changes in the files or folders under `wcmLibraryPath` and immediately reflects those changes in the DX server. To stop watching for changes, press **Ctrl + C**.
 
     ```shell
     dxclient livesync push-wcm-design-library
