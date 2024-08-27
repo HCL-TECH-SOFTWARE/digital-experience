@@ -230,7 +230,7 @@ The LiveSync Pull WCM Design Library command syncs a DX WCM Design Library in a 
 
     This command invokes the `livesync pull-wcm-design-library` tool inside the DXClient.
 
-    This command downloads the WCM Design Library files from the DX Server under the given library name (provided in `-libraryName`). The WCM Design Library files are then saved to the target local directory of the library (provided in `-libraryPath`). This overwrites existing files in the local directory and deletes stale files in the process.
+    This command downloads the WCM Design Library files from the DX Server under the given library name (provided in `-wcmLibraryName`). The WCM Design Library files are then saved to the target local directory of the library (provided in `-wcmLibraryPath`). This overwrites existing files in the local directory and deletes stale files in the process.
 
     ```shell
     dxclient livesync pull-wcm-design-library
@@ -292,16 +292,16 @@ The LiveSync Pull WCM Design Library command syncs a DX WCM Design Library in a 
     Use this attribute to specify the local library folder path where the WCM Design Library files should be placed. This attribute accepts a folder path:
 
     ```shell
-    -libraryPath <value>
+    -wcmLibraryPath <value>
     ```
 
     !!! example
 
         ```shell
-        dxclient livesync pull-wcm-design-library -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -libraryPath <libraryPath> -libraryName <libraryName>
+        dxclient livesync pull-wcm-design-library -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -wcmLibraryPath <wcmLibraryPath> -wcmLibraryName <wcmLibraryName>
         ```
 
-    Note that you can trigger LiveSync commands from within the target local `libraryPath`.
+    Note that you can trigger LiveSync commands from within the target local `wcmLibraryPath`.
 
     See the following example where '...' represents truncated parameters.
 
@@ -309,13 +309,13 @@ The LiveSync Pull WCM Design Library command syncs a DX WCM Design Library in a 
     $ pwd
     /Users/path/to/library
 
-    dxclient livesync pull-wcm-design-library --libraryPath "/Users/path/to/library" --libraryName "portal site" ...
+    dxclient livesync pull-wcm-design-library --wcmLibraryPath "/Users/path/to/library" --wcmLibraryName "portal site" ...
     ```
 
     Use either of the following attributes to specify the WCM Design Library created in the DX server:
 
     ```shell title="WCM Design Library Name"
-    -libraryName <value>
+    -wcmLibraryName <value>
     ```
 
     ```shell title="WCM Design Library ID"
@@ -328,8 +328,8 @@ The LiveSync Pull WCM Design Library command syncs a DX WCM Design Library in a 
     2. If no saved library is detected, a list of WCM Design Libraries is displayed. You can select a WCM Design Library to pull.
 
     ```shell title="Sample WCM Design Library Selection Prompt"
-    $ dxclient livesync pull-wcm-design-library -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -libraryPath <libraryPath>
-    2024-08-16 19:53:06 : Checking for saved WCM Design Library in <libraryPath>
+    $ dxclient livesync pull-wcm-design-library -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -wcmLibraryPath <wcmLibraryPath>
+    2024-08-16 19:53:06 : Checking for saved WCM Design Library in <wcmLibraryPath>
     2024-08-16 19:53:06 : Please select a WCM Design Library
     (x) [Library Name: blog solo template v70,  Display Title: Blog Solo Template v70,  ID: ddc1c6de-b18d-4cfd-af8f-dac5ccdd5d30]
     ( ) [Library Name: blog template v70,  Display Title: Blog Template v70,  ID: 5eb62c46-6f7d-498f-b71d-6bbdaac3e84a]
@@ -339,14 +339,14 @@ The LiveSync Pull WCM Design Library command syncs a DX WCM Design Library in a 
 
 ## LiveSync Push WCM Design Library
 
-The LiveSync Push WCM Design Library command syncs your WCM Design Library local files with the DX Server. The system watches for succeeding changes within the given `libraryPath` and the changes are immediately reflected in the DX server.
+The LiveSync Push WCM Design Library command syncs your WCM Design Library local files with the DX Server. The system watches for succeeding changes within the given `wcmLibraryPath` and the changes are immediately reflected in the DX server.
 
 
 -   **Command description**
 
     This command invokes the `livesync push-wcm-design-library` tool inside the DXClient.
 
-    First, this command pushes the local WCM Design Library (provided in `libraryPath`) to the DX Server with the WCM Design Library system name (provided in `libraryName`). The command then creates a file system watcher which looks out for any changes in the files or folders under `libraryPath` and immediately reflects those changes in the DX server. To stop watching, press **Ctrl + C**.
+    First, this command pushes the local WCM Design Library (provided in `wcmLibraryPath`) to the DX Server with the WCM Design Library system name (provided in `wcmLibraryName`). The command then creates a file system watcher which looks out for any changes in the files or folders under `wcmLibraryPath` and immediately reflects those changes in the DX server. To stop watching, press **Ctrl + C**.
 
     ```shell
     dxclient livesync push-wcm-design-library
@@ -404,7 +404,7 @@ The LiveSync Push WCM Design Library command syncs your WCM Design Library local
     ```
 
     ```shell title="Use this attribute to specify the system name of the WCM Design Library created under the DX server:"
-    -libraryName <value>
+    -wcmLibraryName <value>
     ```
 
 -   **Required attribute for LiveSync Push WCM Design Library**
@@ -412,13 +412,13 @@ The LiveSync Push WCM Design Library command syncs your WCM Design Library local
     Use this attribute to specify the WCM Design Library folder path that contains all static WebDAV-based files to be pushed to the DX WCM Design Library. This attribute accepts the folder path of the WebDAV-based WCM Design Library folder:
 
     ```shell
-    -libraryPath <value>
+    -wcmLibraryPath <value>
     ```
 
 !!! example
 
     ```
-    dxclient livesync push-wcm-design-library -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -libraryPath <libraryPath> -libraryName <libraryName>
+    dxclient livesync push-wcm-design-library -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -wcmLibraryPath <wcmLibraryPath> -wcmLibraryName <wcmLibraryName>
     ```
 
 ## Limitations & Troubleshooting
