@@ -287,7 +287,7 @@ The LiveSync Pull WCM Design Library command syncs a WCM Design Library in a DX 
     -disablePrompt, --disablePrompt <value>
     ```
 
--   **Required attribute for LiveSync Pull WCM Design Library**
+-   **Required attributes for LiveSync Pull WCM Design Library**
 
     Use this attribute to specify the local library folder path where the WCM Design Library files should be placed. This attribute accepts a folder path:
 
