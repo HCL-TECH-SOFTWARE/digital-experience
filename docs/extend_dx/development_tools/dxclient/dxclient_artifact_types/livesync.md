@@ -409,7 +409,7 @@ The LiveSync Push WCM Design Library command syncs your WCM Design Library local
 
 -   **Required attribute for LiveSync Push WCM Design Library**
 
-    Use this attribute to specify the WCM Design Library folder path that contains all static WebDAV-based files to be pushed to the DX WCM Design Library. This attribute accepts the folder path of the WebDAV-based WCM Design Library folder:
+    Use this attribute to specify the WCM Design Library folder path that contains all files to be pushed to the DX WCM Design Library. This attribute accepts the folder path of the WCM Design Library folder previously pulled by the LiveSync Pull WCM Design Library feature:
 
     ```shell
     -wcmLibraryPath <value>
