@@ -1,12 +1,12 @@
 # LiveSync
 
-This topic provides information about syncing WebDAV based theme or WCM Design Library files from local-to-server and server-to-local in real time. It watches the file system for changes in the background.
+This topic provides information about syncing WebDAV-based theme or WCM Design Library files from local-to-server and server-to-local in real time. LiveSync watches the file system for changes in the background and reflects them in the DX server.
 
 
 !!! note
     - It is recommended that you use the node version of the DXClient while working with LiveSync.
-    - Starting CF214, LiveSync is supported in scaled DX environment setups.
-    - Starting CF217, all LiveSync commands can be triggered from within the target local theme path.
+    - LiveSync is supported in scaled DX environment setups.
+    - You can trigger all LiveSync commands from within the target local theme path.
     - Starting CF223, LiveSync Pull and Push commands for WCM Design Library are available for HTML and Folder Components.
 
 ## LiveSync Push Theme
@@ -67,7 +67,7 @@ This command will sync your WebDAV based theme files into DX Server. Then, it wi
     -disablePrompt, --disablePrompt <value>
     ```
 
--   **Required options for LiveSync Push Theme**
+-   **Required attribute for LiveSync Push Theme**
 
     ```shell title="Use this attribute to specify the Theme System Name of the theme created under DX server:"
     -themeName <value>
@@ -167,7 +167,7 @@ This command is used to sync a theme from a DX WebDAV based theme on a remote se
     -disablePrompt, --disablePrompt <value>
     ```
 
--   **Required option for LiveSync Pull Theme**
+-   **Required attribute for LiveSync Pull Theme**
 
     ```shell title="Use this attribute to specify the Theme System Name of the theme created under the DX server:"
     -themeName <value>
@@ -224,7 +224,7 @@ dxclient livesync pull-theme --themePath "/Users/path/to/theme" --themeName "Por
 
 ## LiveSync Pull WCM Design Library
 
-The LiveSync Pull WCM Design Library command syncs a DX WCM Design Library in a DX Server with a local folder.
+The LiveSync Pull WCM Design Library command syncs a DX WCM Design Library in a DX Server with a local folder. Pulling the WCM Design Library is a prerequisite for the Push WCM Design Library feature.
 
 -   **Command description**
 
@@ -247,7 +247,7 @@ The LiveSync Pull WCM Design Library command syncs a DX WCM Design Library in a 
 -   **Required files**
 
     1. A local folder where all the WCM Design Library files will be placed after downloading.
-    2. Existing WCM Design Library in server.
+    2. An existing WCM Design Library in server.
 
 -   **Common Command Attributes**
 
@@ -295,7 +295,7 @@ The LiveSync Pull WCM Design Library command syncs a DX WCM Design Library in a 
     -wcmLibraryPath <value>
     ```
 
-    !!! example
+    !!! example "Example command for pulling a WCM Design Library"
 
         ```shell
         dxclient livesync pull-wcm-design-library -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -wcmLibraryPath <wcmLibraryPath> -wcmLibraryName <wcmLibraryName>
@@ -324,7 +324,7 @@ The LiveSync Pull WCM Design Library command syncs a DX WCM Design Library in a 
 
 !!! info "If neither of these attributes is provided:"
 
-    1. LiveSync checks if a saved library was previously pulled using the `dxclient livesync push-wcm-design-library command` and use that as basis.
+    1. LiveSync checks if a saved library was previously pulled using the `dxclient livesync push-wcm-design-library command` and uses that as basis.
     2. If no saved library is detected, a list of WCM Design Libraries is displayed. You can select a WCM Design Library to pull.
 
     ```shell title="Sample WCM Design Library Selection Prompt"
@@ -363,7 +363,7 @@ The LiveSync Push WCM Design Library command syncs your WCM Design Library local
 -   **Required files**
 
     1. WCM Design Library files in local pulled using the `livesync pull-wcm-design-library` command.
-    2. Registered WCM Design Library in server.
+    2. A registered WCM Design Library in server.
 
 -   **Common Command Attributes**
 
@@ -415,7 +415,7 @@ The LiveSync Push WCM Design Library command syncs your WCM Design Library local
     -wcmLibraryPath <value>
     ```
 
-!!! example
+!!! example "Example command for pushing a WCM Design Library"
 
     ```
     dxclient livesync push-wcm-design-library -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -wcmLibraryPath <wcmLibraryPath> -wcmLibraryName <wcmLibraryName>
@@ -441,4 +441,4 @@ The LiveSync Push WCM Design Library command syncs your WCM Design Library local
 1. Currently, only HTML and Folder components are the supported components of this feature.
 2. Moving and renaming of files are equivalent to deleting the original components and creating an entirely new set of components.
 3. If a published component has a draft version, the feature will pull and push into the draft version.
-4. The Push WCM Design Library feature only works on a WCM Design Library previously pulled by the LiveSync Pull WCM Design Library feature.
+4. The LiveSync Push WCM Design Library feature only works on a WCM Design Library previously pulled by the LiveSync Pull WCM Design Library feature.
