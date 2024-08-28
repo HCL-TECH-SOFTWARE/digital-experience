@@ -16,7 +16,7 @@ The following features and updates are available to customers installing HCL Dig
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Notice of deprecation of customized OpenLDAP container starting CF223
 - Removal of automated Pod restart on ConfigMap updates
-- Core Image - Moved wstemp directory to ephemeral storage
+- DX core image - Moved wstemp directory to ephemeral storage
 
 Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases.
 
