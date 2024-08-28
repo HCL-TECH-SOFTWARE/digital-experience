@@ -91,7 +91,7 @@ java -jar <jarFilepath> <filePaths...> <startDate> <endDate>
 
 After execution, the system returns the expected session count within the specified start and end date parameters. The tool generates the following files:
 
-1. `.csv` file named  `sessionCounts<startDate><endDate>.csv` (i.e. sessionCounts_2024-01-01_2024-12-31.csv) which reports the session counts sorted and categorized by months based on the star and end date parameters.
+- A CSV file named  `sessionCounts<startDate><endDate>.csv` (for example, sessionCounts_2024-01-01_2024-12-31.csv) which reports the session counts sorted and categorized by months based on the star and end date parameters
 - An LOG file named `sessionCounts.log` where the incremental session counts are logged
 3. A DAT file named `sessionStorage.dat` which serves as the internal storage for saving session data and counts between runs. This file allows the tool to maintain its state, enabling accurate aggregation of session counts over time. It is important to save this file and store it securely, because it will be used by the tool to continue the session count during the next run. Losing or tampering with this file could result in incorrect session data and an inaccurate count.
 
