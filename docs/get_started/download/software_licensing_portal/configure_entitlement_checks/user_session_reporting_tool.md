@@ -27,7 +27,7 @@ The User Session Reporting Tool is a utility designed for HCL Digital Experience
 
 To track usage data using the User Session Reporting Tool, you must use the National Center for Supercomputing Applications (NCSA) access logging to generate log files containing entries about usage data that the tool will interpret.
 
-Enabling NCSA Access Logging can be configured in the IBM WAS console by following these steps:
+Refer to the following steps to enable and configure NCSA access logging:
 
 1. Click Servers > Server Types > WebSphere application servers > server_name (e.g., Websphere_Portal) > Under the Troubleshooting section, click NCSA access and HTTP error logging.
 2. Select Enable logging service at server start-up.
