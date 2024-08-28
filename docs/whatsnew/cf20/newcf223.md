@@ -16,6 +16,7 @@ The following features and updates are available to customers installing HCL Dig
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Notice of deprecation of customized OpenLDAP container starting CF223
 - Removal of automated Pod restart on ConfigMap updates
+- DX core image - Moved wstemp directory to ephemeral storage
 
 Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases.
 
@@ -59,6 +60,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Runtime Controller triggering Pod restarts for [direct configuration changes](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes) in ConfigMaps is removed. You must restart the appropriate Pods manually to apply the changes made to the ConfigMaps for testing configurations. For more information, see [Deprecated features](../deprecated_features.md).
+
+### DX core image - Moved wstemp directory to ephemeral storage
+
+=== "Containers"
+    To improve system performance, the wstemp directory is no longer persisted as part of the core profile. It is now created in the ephemeral storage within `/opt/HCL/caches/wstemp`. 
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
