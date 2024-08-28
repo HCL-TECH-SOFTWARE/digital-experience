@@ -89,7 +89,7 @@ Trigger/execute the tool passing the log files and date range parameters
 java -jar <jarFilepath> <filePaths...> <startDate> <endDate>
 ```
 
-After executing the tool it should return with the expected session count within the specified start and end date parameters,it will generate the following files:
+After execution, the system returns the expected session count within the specified start and end date parameters. The tool generates the following files:
 
 1. `.csv` file named  `sessionCounts<startDate><endDate>.csv` (i.e. sessionCounts_2024-01-01_2024-12-31.csv) which reports the session counts sorted and categorized by months based on the star and end date parameters.
 - An LOG file named `sessionCounts.log` where the incremental session counts are logged
