@@ -4,13 +4,13 @@ The following features and updates are available to customers installing HCL Dig
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
-- User Session Reporting Tool
-
 **Digital Experience 8.5 and 9.0 Versions**
+
+- User Session Reporting Tool
 
 **Digital Experience 9.5 Container Version**
 
-## All Digital Experience Versions (8.5, 9.0, 9.5)
+## Digital Experience 8.5 and 9.0 Versions
 
 ### User Session Reporting Tool
 

@@ -3,13 +3,13 @@ title: User Session Reporting Tool
 ---
 # User Session Reporting Tool
 
-## Overview
-
-### Introduction
+This topic describes how you can use the User Session Reporting Tool to count and report user sessions.
 
 The User Session Reporting Tool is a utility designed for HCL Digital Experience (DX) users, initially for those managing on-premises deployments. This tool provides a solution for analyzing and interpreting web traffic data by processing National Center for Supercomputing Applications (NCSA) access log files. Relevant parts of each log are extracted to identify and count unique user sessions. This offers a precise understanding of usage data over specified periods.
 
 ## Functionalities
+
+This section provides information about the functionalities and use cases of the User Session Reporting Tool in different scenarios.
 
 - **Detects new unique sessions based on parameters such as IP addresses, user-agent strings, and timestamp.** The tool increments the session counter when a session becomes inactive. Inactive is defined as no new requests from the same user for 30 minutes or after a maximum of 4 hours from the start of the session. This ensures accurate session counting, even across extended periods of user activity. It supports custom date range analysis, allowing users to track and report on specific time frames. 
 
@@ -41,14 +41,13 @@ Refer to the following steps to enable and configure NCSA access logging:
 7. Expand **NCSA Access logging** and select **Use chain-specific logging**.
 8. In **Access log file path**, enter the file path for the log files.
 9. In **Maximum number of historical files**, enter the maximum file number for historical files.
-8. Add a Custom property under Additional Properties.
-1. Click **New**. 
-2. In the **Name** field, enter `accessLogFormat`.
-3. In the **Value** field, enter `[DX_UST] %t %h "%{User-Agent}i" "%{X-Forwarded-For}i" [/DX_UST]`.
-         This changes the format to include essential session data.
+10. Add a Custom property under Additional Properties.
+    1. Click **New**. 
+    2. In the **Name** field, enter `accessLogFormat`.
+    3. In the **Value** field, enter `[DX_UST] %t %h "%{User-Agent}i" "%{X-Forwarded-For}i" [/DX_UST]`. This changes the format to include essential session data.
 !!!note
         In cases that a format is already set, you can add the string mentioned to the already existing value.
-10. Save and restart the server.
+11. Save and restart the server.
 
 
 You can obtain access log files inside the `wp_profile` directory (`/opt/IBM/WebSphere/wp_profile/logs/WebSphere_Portal/http_access.log`). The following is an example of a log:
@@ -69,8 +68,6 @@ You can obtain access log files inside the `wp_profile` directory (`/opt/IBM/Web
 For every request, a key is computed based on the requesting IP of the user, combined with the user agent and a forwarding header (`X-Forwarded-For`) for proxy (if a customer uses a proxy in their deployment setup) usage. Subsequent interactions during the same user session period use that key to identify the same user.
 
 If a reverse proxy server, load balancer or similar component is used in the deployment setup, the [`X-Forwarded-For` header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For) is used to identify the user. This header is a de facto standard for identifying the originating IP address of a client connecting to a web server through an HTTP proxy or load balancer. 
-
-Please make sure that the `X-Forwarded-For` header is correctly set in your routing setup.
 
 ### Running the User Session Reporting Tool
 
@@ -93,7 +90,7 @@ After execution, the system returns the expected session count within the specif
 
 - A CSV file named  `sessionCounts<startDate><endDate>.csv` (for example, sessionCounts_2024-01-01_2024-12-31.csv) which reports the session counts sorted and categorized by months based on the star and end date parameters
 - An LOG file named `sessionCounts.log` where the incremental session counts are logged
-3. A DAT file named `sessionStorage.dat` which serves as the internal storage for saving session data and counts between runs. This file allows the tool to maintain its state, enabling accurate aggregation of session counts over time. It is important to save this file and store it securely, because it will be used by the tool to continue the session count during the next run. Losing or tampering with this file could result in incorrect session data and an inaccurate count.
+- A DAT file named `sessionStorage.dat` which serves as the internal storage for saving session data and counts between runs. This file allows the tool to maintain its state, enabling accurate aggregation of session counts over time. It is important to save this file and store it securely, because it will be used by the tool to continue the session count during the next run. Losing or tampering with this file could result in incorrect session data and an inaccurate count.
 
 You can run the User Session Reporting Tool either once for all collected log files or incrementally every X days, hours, or minutes. It stores its state between runs, processing only the logs that are after the last previously processed timestamp to prevent re-processing old entries. This ensures that you still get the correct overall result, even when processing logs in multiple stages. 
 
