@@ -62,7 +62,7 @@ You can obtain access log files inside the `wp_profile` directory (`/opt/IBM/Web
 ```
 
 !!!important
-        -   There is a [known issue with WAS fix packs 9.0.5.16 and 9.0.5.17](https://www.ibm.com/docs/en/was/9.0.5?topic=application-enabling-access-logging) where timestamps are broken, rendering the access log files unusable.
+        There is a [known issue with WAS fix packs 9.0.5.16 and 9.0.5.17](https://www.ibm.com/docs/en/was/9.0.5?topic=application-enabling-access-logging){target="_blank"} where timestamps are broken, rendering the access log files unusable.
 
 ### Handling routing setup including reverse proxy servers, load balancers and similar components
 
