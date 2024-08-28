@@ -15,7 +15,7 @@ The User Session Reporting Tool is a utility designed for HCL Digital Experience
 
 - **Automatically excludes internal requests.** This ensures that session data reflects only external user activity. This is crucial for organizations focusing on customer interactions rather than internal maintenance or system-generated traffic. To further ensure its reliability, the User Session Reporting Tool has been rigorously tested with large sets of log files and across different access log formats. This demonstrates its capability to handle diverse and extensive data sources without compromising accuracy.
 
-Additionally, the User Session Reporting Tool is designed to handle complex scenarios, such as merging multiple log files without overcounting sessions. This feature is particularly useful in environments where logs are segmented or spread across different servers. Users can manually input and exclude specific IP addresses, allowing for greater flexibility in reporting and ensuring that internal or irrelevant traffic does not skew the session data. The tool also includes support for alternate syntax inputs, making it resilient to potential user errors during setup or configuration.
+- **Handles complex scenarios such as merging multiple log files without overcounting sessions.** This feature is useful in environments where logs are segmented or spread across different servers. You can manually input and exclude specific IP addresses for greater flexibility in reporting and ensuring that internal or irrelevant traffic does not skew the session data. The tool also supports alternate syntax inputs to avoid potential user errors during setup or configuration.
 
 ### Where to get it
 
