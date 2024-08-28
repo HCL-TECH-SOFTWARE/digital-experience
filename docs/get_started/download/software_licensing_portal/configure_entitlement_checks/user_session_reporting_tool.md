@@ -39,7 +39,10 @@ Enabling NCSA Access Logging can be configured in the IBM WAS console by followi
 6. Under the Logging section, make sure Enable logging is enabled.
 7. Expand NCSA Access logging, select Use chain-specific logging, and enter the file path for the log files and maximum file number for historical files.
 8. Add a Custom property under Additional Properties.
-9. Select New and provide Name: `accessLogFormat` and Value: `[DX_UST] %t %h "%{User-Agent}i" "%{X-Forwarded-For}i" [/DX_UST]`. This will change the format to include essential session data that we need.
+1. Click **New**. 
+2. In the **Name** field, enter `accessLogFormat`.
+3. In the **Value** field, enter `[DX_UST] %t %h "%{User-Agent}i" "%{X-Forwarded-For}i" [/DX_UST]`.
+         This changes the format to include essential session data.
 !!!note
         -   In cases that a format is already set, the string mentioned above can be added to the already existing value
 10. Save and restart the server.
