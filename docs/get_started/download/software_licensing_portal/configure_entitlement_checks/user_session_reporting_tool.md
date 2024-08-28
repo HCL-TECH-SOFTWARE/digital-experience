@@ -64,7 +64,7 @@ You can obtain access log files inside the `wp_profile` directory (`/opt/IBM/Web
 !!!important
         There is a [known issue with WAS fix packs 9.0.5.16 and 9.0.5.17](https://www.ibm.com/docs/en/was/9.0.5?topic=application-enabling-access-logging){target="_blank"} where timestamps are broken, rendering the access log files unusable.
 
-### Handling routing setup including reverse proxy servers, load balancers and similar components
+### Handling the routing setup
 
 For every request, a key is computed based on the requesting IP of the user, combined with the user agent and a forwarding header (`X-Forwarded-For`) for proxy (if a customer uses a proxy in their deployment setup) usage. Subsequent interactions during the same user session period use that key to identify the same user.
 
