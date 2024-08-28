@@ -25,7 +25,7 @@ The User Session Reporting Tool is a utility designed for HCL Digital Experience
 
 ### Enabling access logs
 
-To track usage data using the User Session Reporting Tool, we need to leverage NCSA Access Logging to generate log files containing entries about usage data that the tool will interpret.
+To track usage data using the User Session Reporting Tool, you must use the National Center for Supercomputing Applications (NCSA) access logging to generate log files containing entries about usage data that the tool will interpret.
 
 Enabling NCSA Access Logging can be configured in the IBM WAS console by following these steps:
 
