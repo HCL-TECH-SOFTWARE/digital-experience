@@ -68,7 +68,7 @@ You can obtain access log files inside the `wp_profile` directory (`/opt/IBM/Web
 
 ### Handling the routing setup
 
-For every request, a key is computed based on the requesting IP of the user, combined with the user agent and a forwarding header (`X-Forwarded-For`) for proxy (if a customer uses a proxy in their deployment setup) usage. Subsequent interactions during the same user session period use that key to identify the same user.
+For every request, a key is computed based on the requesting internet protocol (IP) of the user. This key is combined with the user agent and a forwarding header (`X-Forwarded-For`) for proxy (if a customer uses a proxy in their deployment setup) usage. The next interactions during the same user session period use that key to identify the same user. 
 
 If a reverse proxy server, load balancer or similar component is used in the deployment setup, the [`X-Forwarded-For` header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For) is used to identify the user. This header is a de facto standard for identifying the originating IP address of a client connecting to a web server through an HTTP proxy or load balancer. 
 
