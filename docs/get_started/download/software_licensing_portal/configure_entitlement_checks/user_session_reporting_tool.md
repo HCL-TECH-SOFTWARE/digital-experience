@@ -23,7 +23,7 @@ The User Session Reporting Tool is a utility designed for HCL Digital Experience
 
 ## Usage guide
 
-### Enabling Access Logs
+### Enabling access logs
 
 To track usage data using the User Session Reporting Tool, we need to leverage NCSA Access Logging to generate log files containing entries about usage data that the tool will interpret.
 
