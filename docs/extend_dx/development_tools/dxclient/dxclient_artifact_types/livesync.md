@@ -2,10 +2,9 @@
 
 This topic provides information about syncing WebDAV-based theme or WCM Design Library files from local-to-server and server-to-local in real time. LiveSync watches the file system for changes in the background and reflects them in the DX server.
 
+It is recommended that you use the node version of the DXClient while working with LiveSync. LiveSync is supported in scaled DX environment setups.
 
 !!! note
-    - It is recommended that you use the node version of the DXClient while working with LiveSync.
-    - LiveSync is supported in scaled DX environment setups.
     - You can trigger all LiveSync commands from within the target local theme path.
     - Starting CF223, LiveSync Pull and Push commands for WCM Design Library are available for HTML and Folder Components.
 
@@ -34,10 +33,10 @@ This command will sync your WebDAV based theme files into DX Server. Then, it wi
 
 -   **Required files**
 
-    1. WebDAV based theme files in local.
-    2. Registered Theme in server.
+    - WebDAV-based theme files in local
+    - A registered Theme in server
 
--   **Common Command options**
+-   **Common command attributes**
 
     ```shell title="Use this attribute to specify the protocol with which to connect to the DX server (`wp_profile`):"
     -dxProtocol <value>
@@ -134,10 +133,10 @@ This command is used to sync a theme from a DX WebDAV based theme on a remote se
 
 -   **Required files**
 
-    1. A local folder where all the WebDAV based theme files will be placed after downloading.
-    2. Registered WebDAV based Theme in server.
+    - A local folder where all the WebDAV-based theme files will be placed after downloading
+    - A registered WebDAV-based Theme in server
 
--   **Common Command options**
+-   **Common command attributes**
 
     ```shell title="Use this attribute to specify the protocol with which to connect to the DX server (`wp_profile`):"
     -dxProtocol <value>
@@ -246,10 +245,10 @@ The LiveSync Pull WCM Design Library command syncs a WCM Design Library in a DX 
 
 -   **Required files**
 
-    1. A local folder where all the WCM Design Library files will be placed after downloading.
-    2. An existing WCM Design Library in server.
+    - A local folder where all the WCM Design Library files will be placed after downloading
+    - An existing WCM Design Library in server.
 
--   **Common Command Attributes**
+-   **Common command attributes**
 
     ```shell title="Use this attribute to specify the protocol with which to connect to the DX server (`wp_profile`):"
     -dxProtocol <value>
@@ -287,7 +286,7 @@ The LiveSync Pull WCM Design Library command syncs a WCM Design Library in a DX 
     -disablePrompt, --disablePrompt <value>
     ```
 
-    **Use either of the following attributes to specify the WCM Design Library in the DX server you want to pull using this feature.**
+    Use either of the following attributes to specify the WCM Design Library in the DX server you want to pull using this feature.
 
     ```shell title="WCM Design Library Name"
     -wcmLibraryName <value>
@@ -327,9 +326,9 @@ The LiveSync Pull WCM Design Library command syncs a WCM Design Library in a DX 
     dxclient livesync pull-wcm-design-library -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -wcmLibraryPath <wcmLibraryPath> -wcmLibraryName <wcmLibraryName>
     ```
 
-    Note that you can trigger LiveSync commands from within the target local `wcmLibraryPath`.
+Note that you can trigger LiveSync commands from within the target local `wcmLibraryPath`.
 
-    See the following example where '...' represents truncated parameters.
+See the following example where '...' represents truncated parameters.
 
     ```shell
     $ pwd
@@ -363,10 +362,10 @@ The LiveSync Push WCM Design Library command syncs your WCM Design Library local
 
 -   **Required files**
 
-    1. WCM Design Library files in local pulled using the `livesync pull-wcm-design-library` command.
-    2. A registered WCM Design Library in server.
+    - WCM Design Library files in local pulled using the `livesync pull-wcm-design-library` command
+    - A registered WCM Design Library in server
 
--   **Common Command Attributes**
+-   **Common command attributes**
 
     ```shell title="Use this attribute to specify the protocol with which to connect to the DX server (`wp_profile`):"
     -dxProtocol <value>
