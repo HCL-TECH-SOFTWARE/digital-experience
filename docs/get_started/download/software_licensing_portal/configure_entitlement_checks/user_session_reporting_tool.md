@@ -29,7 +29,7 @@ To track usage data using the User Session Reporting Tool, you must use the Nati
 
 Refer to the following steps to enable and configure NCSA access logging:
 
-1. Click Servers > Server Types > WebSphere application servers > server_name (e.g., Websphere_Portal) > Under the Troubleshooting section, click NCSA access and HTTP error logging.
+1. Click **Servers > Server Types > WebSphere application servers > server_name (for example, Websphere_Portal)**. Under the **Troubleshooting** section, click **NCSA access and HTTP error logging**.
 2. Select Enable logging service at server start-up.
 3. Ensure that Enable access logging is selected and the file path is set to ${SERVER_LOG_ROOT}/http_access.log. Increase the maximum number of historical files. A suggested number is 3 for better tracking.
 !!!note
