@@ -72,7 +72,7 @@ If a reverse proxy server, load balancer or similar component is used in the dep
 
 Please make sure that the `X-Forwarded-For` header is correctly set in your routing setup.
 
-### Running the Tool
+### Running the User Session Reporting Tool
 
 The tool is packaged as an executable JAR file and can be executed directly by using the parameters below:
 
