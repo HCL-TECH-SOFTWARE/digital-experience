@@ -19,7 +19,7 @@ The User Session Reporting Tool is a utility designed for HCL Digital Experience
 
 ### Where to get it
 
-Available through `FlexNet`, the User Session Reporting Tool is designed to integrate effortlessly into existing HCL DX deployments, particularly in on-premise deployments. A significant advantage of this tool is its backward compatibility with previous deployment versions. ****Users do not need to upgrade to the latest Cumulative Fix (CF) to utilize the User Session Reporting Tool****, making it accessible to a broader range of deployments without necessitating additional updates or changes to the existing infrastructure.
+ The User Session Reporting Tool is available in FlexNet. The tool is designed to integrate effortlessly into existing HCL DX deployments, particularly in on-premises deployments. It is backward compatible with previous deployment versions. You do not need to upgrade to the latest Cumulative Fix (CF) to utilize the User Session Reporting Tool, making it accessible to a broader range of deployments without requiring additional updates or changes to the existing infrastructure.
 
 ## Usage Guide
 
