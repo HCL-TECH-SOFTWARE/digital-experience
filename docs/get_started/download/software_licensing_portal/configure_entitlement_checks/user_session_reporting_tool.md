@@ -35,7 +35,7 @@ Refer to the following steps to enable and configure NCSA access logging:
 4. Increase the maximum number of historical files. For better tracking, the recommended number is 3.
 !!!note
         The number and size of log files are crucial factors to consider and they depend on how frequently the tool is run. It is important to either keep enough log files available or run the tool often enough to ensure all requests are processed. If the logs are rolled over too frequently before they are processed by the tool, there is a risk of losing session data, which could lead to incomplete or inaccurate results.
-4. Under Application servers > WebSphere_Portal > Container Settings > Web Container settings > click on Web container transport chains.
+5. Go to **Application servers > WebSphere_Portal > Container Settings > Web Container settings**. Click **Web container transport chains**.
 5. Select the inbound channel to cover (i.e. WCInboundDefaultSecure), and then click on HTTP inbound channel (HTTP_4) under general properties.
 6. Under the Logging section, make sure Enable logging is enabled.
 7. Expand NCSA Access logging, select Use chain-specific logging, and enter the file path for the log files and maximum file number for historical files.
