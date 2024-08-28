@@ -33,22 +33,25 @@ Refer to the following steps to enable and configure NCSA access logging:
 2. Select **Enable logging service at server start-up**.
 3. Ensure that **Enable access logging** is selected and the file path is set to `${SERVER_LOG_ROOT}/http_access.log`. 
 4. Increase the maximum number of historical files. For better tracking, the recommended number is 3.
-!!!note
-        The number and size of log files are crucial factors to consider and they depend on how frequently the tool is run. It is important to either keep enough log files available or run the tool often enough to ensure all requests are processed. If the logs are rolled over too frequently before they are processed by the tool, there is a risk of losing session data, which could lead to incomplete or inaccurate results.
+
+    !!! note
+        The number and size of log files are crucial factors to consider, and they depend on how frequently the tool is run. It is important to either keep enough log files available or run the tool often enough to ensure all requests are processed. If the logs are rolled over too frequently before they are processed by the tool, there is a risk of losing session data, which could lead to incomplete or inaccurate results.
+
 5. Go to **Application servers > WebSphere_Portal > Container Settings > Web Container settings**. Click **Web container transport chains**.
 6. Select the inbound channel to cover (for example, WCInboundDefaultSecure), and then click **HTTP inbound channel (HTTP_4)** under general properties.
-6. Under the **Logging** section, make sure **Enable logging** is enabled.
-7. Expand **NCSA Access logging** and select **Use chain-specific logging**.
-8. In **Access log file path**, enter the file path for the log files.
-9. In **Maximum number of historical files**, enter the maximum file number for historical files.
-10. Add a Custom property under Additional Properties.
+7. Under the **Logging** section, make sure **Enable logging** is enabled.
+8. Expand **NCSA Access logging** and select **Use chain-specific logging**.
+9. In **Access log file path**, enter the file path for the log files.
+10. In **Maximum number of historical files**, enter the maximum file number for historical files.
+11. Add a Custom property under Additional Properties.
     1. Click **New**. 
     2. In the **Name** field, enter `accessLogFormat`.
     3. In the **Value** field, enter `[DX_UST] %t %h "%{User-Agent}i" "%{X-Forwarded-For}i" [/DX_UST]`. This changes the format to include essential session data.
-!!!note
-        In cases that a format is already set, you can add the string mentioned to the already existing value.
-11. Save and restart the server.
 
+        !!! note
+            In cases where a format is already set, you can add the string mentioned to the already existing value.
+          
+12. Save and restart the server.
 
 You can obtain access log files inside the `wp_profile` directory (`/opt/IBM/WebSphere/wp_profile/logs/WebSphere_Portal/http_access.log`). The following is an example of a log:
 
