@@ -64,7 +64,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### DX core image - Moved wstemp directory to ephemeral storage
 
 === "Containers"
-    The wstemp directory will no longer be persisted as part of the core profile, which improves performance. It is now configured to be created in ephemeral storage within `/opt/HCL/caches/wstemp`, resulting in increased efficiency.
+    To improve system performance, the wstemp directory is no longer persisted as part of the core profile. It is now created in the ephemeral storage within `/opt/HCL/caches/wstemp`. 
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
