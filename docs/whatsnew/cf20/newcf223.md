@@ -61,7 +61,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     Runtime Controller triggering Pod restarts for [direct configuration changes](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes) in ConfigMaps is removed. You must restart the appropriate Pods manually to apply the changes made to the ConfigMaps for testing configurations. For more information, see [Deprecated features](../deprecated_features.md).
 
-### Core Image - Moved wstemp directory to ephemeral storage
+### DX core image - Moved wstemp directory to ephemeral storage
 
 === "Containers"
     The wstemp directory will no longer be persisted as part of the core profile, which improves performance. It is now configured to be created in ephemeral storage within `/opt/HCL/caches/wstemp`, resulting in increased efficiency.
