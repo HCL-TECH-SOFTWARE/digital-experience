@@ -51,7 +51,7 @@ Refer to the following steps to enable and configure NCSA access logging:
 10. Save and restart the server.
 
 
-Access log files can be access in side the `wp_profile` directory (i.e. /opt/IBM/WebSphere/wp_profile/logs/WebSphere_Portal/http_access.log). The log could look like this:
+You can obtain access log files inside the `wp_profile` directory (`/opt/IBM/WebSphere/wp_profile/logs/WebSphere_Portal/http_access.log`). The following is an example of a log:
 
 ```
 [DX_UST] [17/Jun/2024:09:47:24 +0000] 192.168.243.142 "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" "10.134.209.51" [/DX_UST]
