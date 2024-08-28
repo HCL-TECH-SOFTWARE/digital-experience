@@ -74,7 +74,7 @@ Please make sure that the `X-Forwarded-For` header is correctly set in your rout
 
 ### Running the User Session Reporting Tool
 
-The tool is packaged as an executable JAR file and can be executed directly by using the parameters below:
+The tool is packaged as an executable JAR file. Execute the tool by using the following parameters:
 
 ```cmd
 # <jarFilepath> Path to the jar file
