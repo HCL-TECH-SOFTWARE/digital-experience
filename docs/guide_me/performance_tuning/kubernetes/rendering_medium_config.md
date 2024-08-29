@@ -291,7 +291,7 @@ There were a number of alterations done to the initial Helm chart configuration.
 | **digitalAssetManagement** | **4** | **1000** | **2048** | **1000** | **2048** |
 | imageProcessor | 1 | 200 | 2048 | 200 | 2048 |
 | **openLdap** | **1** | **500** | **2048** | **500** | **2048** |
-| **persistenceNode** | **2** | **1200** | **2048** | **1000** | **2048** |
+| **persistenceNode** | **2** | **1200** | **2048** | **1200** | **2048** |
 | **persistenceConnectionPool** | **2** | **700** | **1024** | **700** | **1024** |
 | **ringApi** | **2** | **2000** | **512** | **2000** | **512** |
 | runtimeController | 1 | 100 | 256 | 100 | 256 |
