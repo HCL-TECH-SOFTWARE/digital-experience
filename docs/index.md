@@ -56,7 +56,7 @@ hide:
 
     ---
 
-    [:octicons-arrow-right-24: Go to Tutorials](./guide_me/)
+    [:octicons-arrow-right-24: Go to Tutorials](./guide_me/tutorials/index.md)
 
 -   :material-school:{ .lg .middle } __HCLSoftware U__
 
