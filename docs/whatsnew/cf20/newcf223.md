@@ -4,6 +4,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
+- Ability to change the context root or hostname of a Virtual Portal
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -21,6 +22,15 @@ The following features and updates are available to customers installing HCL Dig
 Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases.
 
 ## All Digital Experience Versions (8.5, 9.0, 9.5)
+
+### Ability to change the context root or hostname of a Virtual Portal
+
+=== "Containers"
+    Starting with version 223 it is possible to change the context root or hostname of an already existing Virtual Portal using the administration portlet. For more details see: [Using the Virtual Portal Manager administration portlet](../../build_sites/virtual_portal/vp_mgr_portlet/advp_vpmgr_use.html)
+
+=== "On-Premises"
+    Starting with version 223 it is possible to change the context root or hostname of an already existing Virtual Portal using the administration portlet. For more details see: [Using the Virtual Portal Manager administration portlet](../../build_sites/virtual_portal/vp_mgr_portlet/advp_vpmgr_use.html)
+
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
