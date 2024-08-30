@@ -23,7 +23,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## All Digital Experience Versions (8.5, 9.0, 9.5)
 
-### Ability to change the context root or hostname of a Virtual Portal
+### Ability to change the context root or hostname of a virtual portal
 
 === "Containers"
     Starting with version 223 it is possible to change the context root or hostname of an already existing Virtual Portal using the administration portlet. For more details see: [Using the Virtual Portal Manager administration portlet](../../build_sites/virtual_portal/vp_mgr_portlet/advp_vpmgr_use.html)
