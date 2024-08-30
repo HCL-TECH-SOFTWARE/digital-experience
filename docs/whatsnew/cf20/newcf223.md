@@ -4,7 +4,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
-- Ability to change the context root or hostname of a Virtual Portal
+- Ability to change the context root or hostname of a virtual portal
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
