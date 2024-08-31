@@ -68,7 +68,7 @@ After you complete a regular portal installation, the portal is ready and enable
     ```
     vp.allow.hostroot.change=true
     ```
-    Note that if changing the context root or hostname the syndication from and to the environment will need to be setup again as the URL changes. Also existing Search collections need to be reconfigured to use the new context root or hostname.
+    Note that when changing the context root or hostname, you must again set up the syndication from and to the environment as the URL changes. You also have to reconfigure existing search collections to use the new context root or hostname.
 !!!important
        As the URL changes, bookmarked pages or other external references must be adjusted. It is recommended to change the context root or hostname of a virtual portal only after careful consideration.
 
