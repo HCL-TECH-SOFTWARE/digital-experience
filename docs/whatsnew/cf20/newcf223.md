@@ -15,7 +15,7 @@ The following features and updates are available to customers installing HCL Dig
 ### User Session Reporting Tool
 
 === "On-Premises"
-    The User Session Reporting Tool is a utility designed for HCL DX users, initially for those managing on-premises deployments. his tool provides a solution for analyzing and interpreting web traffic data by processing National Center for Supercomputing Applications (NCSA) access log files. Relevant parts of each log are extracted to identify and count unique user sessions. This offers a precise understanding of usage data over specified periods.
+    The User Session Reporting Tool is a utility designed for HCL DX users, initially for those managing on-premises deployments. This tool provides a solution for analyzing and interpreting web traffic data by processing National Center for Supercomputing Applications (NCSA) access log files. Relevant parts of each log are extracted to identify and count unique user sessions. This offers a precise understanding of usage data over specified periods.
 
     See [User Session Reporting Tool](../../get_started/download/software_licensing_portal/configure_entitlement_checks/user_session_reporting_tool.md) for more information.
 
