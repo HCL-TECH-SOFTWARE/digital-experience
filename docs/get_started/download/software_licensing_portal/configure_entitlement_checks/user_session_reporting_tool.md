@@ -49,7 +49,7 @@ Refer to the following steps to enable and configure NCSA access logging:
     3. In the **Value** field, enter `[DX_UST] %t %h "%{User-Agent}i" "%{X-Forwarded-For}i" [/DX_UST]`. This changes the format to include essential session data.
 
         !!! note
-            In cases where a format is already set, you can add the string mentioned to the already existing value.
+            In cases where a format is already set, you can add the string mentioned in the **Value** field to the already existing value.
           
 12. Save and restart the server.
 
