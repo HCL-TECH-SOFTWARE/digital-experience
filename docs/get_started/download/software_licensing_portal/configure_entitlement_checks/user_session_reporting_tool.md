@@ -19,7 +19,7 @@ This section provides information about the functionalities and use cases of the
 
 ## Availability and system compatibility
 
- The User Session Reporting Tool is available in FlexNet. The tool is designed to integrate effortlessly into existing HCL DX deployments, particularly in on-premises deployments. It is backward compatible with previous deployment versions. You do not need to upgrade to the latest Cumulative Fix (CF) to utilize the User Session Reporting Tool, making it accessible to a broader range of deployments without requiring additional updates or changes to the existing infrastructure.
+The User Session Reporting Tool is available in FlexNet. The tool is designed to integrate effortlessly into existing HCL DX deployments, particularly in on-premises deployments. It is backward compatible with previous deployment versions. You do not need to upgrade to the latest Cumulative Fix (CF) to utilize the User Session Reporting Tool, making it accessible to a broader range of deployments without requiring additional updates or changes to the existing infrastructure.
 
 ## Usage guide
 
@@ -27,7 +27,7 @@ This section provides information on how you can use the User Session Reporting 
 
 ### Enabling access logs
 
-To track usage data using the User Session Reporting Tool, you must use the National Center for Supercomputing Applications (NCSA) access logging to generate log files containing entries about usage data that the tool will interpret.
+To track usage data using the User Session Reporting Tool, you must use the National Center for Supercomputing Applications (NCSA) access logging to generate log files containing usage data entries that the tool will interpret.
 
 Refer to the following steps to enable and configure NCSA access logging:
 
@@ -37,7 +37,7 @@ Refer to the following steps to enable and configure NCSA access logging:
 4. Increase the maximum number of historical files. For better tracking, the recommended number is 3.
 
     !!! note
-        The number and size of log files are crucial factors to consider, and they depend on how frequently the tool is run. It is important to either keep enough log files available or run the tool often enough to ensure all requests are processed. If the logs are rolled over too frequently before they are processed by the tool, there is a risk of losing session data, which could lead to incomplete or inaccurate results.
+        The number and size of log files are crucial factors to consider when configuring access logs. They depend on how frequently the tool is run. It is important to either keep enough log files available or run the tool often enough to ensure all requests are processed. If the logs are rolled over too frequently before they are processed by the tool, there is a risk of losing session data, which could lead to incomplete or inaccurate results.
 
 5. Go to **Application servers > WebSphere_Portal > Container Settings > Web Container settings**. Click **Web container transport chains**.
 6. Select the inbound channel to cover (for example, WCInboundDefaultSecure), and then click **HTTP inbound channel (HTTP_4)** under general properties.
@@ -45,13 +45,13 @@ Refer to the following steps to enable and configure NCSA access logging:
 8. Expand **NCSA Access logging** and select **Use chain-specific logging**.
 9. In **Access log file path**, enter the file path for the log files.
 10. In **Maximum number of historical files**, enter the maximum file number for historical files.
-11. Add a Custom property under Additional Properties.
+11. Add a custom property under **Additional Properties**.
     1. Click **New**. 
     2. In the **Name** field, enter `accessLogFormat`.
     3. In the **Value** field, enter `[DX_UST] %t %h "%{User-Agent}i" "%{X-Forwarded-For}i" [/DX_UST]`. This changes the format to include essential session data.
 
         !!! note
-            In cases where a format is already set, you can add the string mentioned to the already existing value.
+            In cases where a format is already set, you can add the string mentioned in the **Value** field to the already existing value.
           
 12. Save and restart the server.
 
@@ -66,7 +66,7 @@ You can obtain access log files inside the `wp_profile` directory (`/opt/IBM/Web
 ```
 
 !!!important
-        There is a [known issue with WAS fix packs 9.0.5.16 and 9.0.5.17](https://www.ibm.com/docs/en/was/9.0.5?topic=application-enabling-access-logging){target="_blank"} where timestamps are broken, rendering the access log files unusable.
+        There is a [known issue with WAS fix packs 9.0.5.16 and 9.0.5.17](https://www.ibm.com/docs/en/was/9.0.5?topic=application-enabling-access-logging){target="_blank"} where timestamps are broken, making the access log files unusable.
 
 ### Handling the routing setup
 
@@ -85,7 +85,7 @@ The tool is packaged as an executable JAR file. Execute the tool by using the fo
 # <endDate> Specifies the end date in YYYY-MM-DD format
 ```
 
-Trigger/execute the tool passing the log files and date range parameters
+The following is a sample command for running the User Session Reporting Tool using all the parameters provided:
 
 ```cmd
 java -jar <jarFilepath> <filePaths...> <startDate> <endDate>
@@ -93,8 +93,8 @@ java -jar <jarFilepath> <filePaths...> <startDate> <endDate>
 
 After execution, the system returns the expected session count within the specified start and end date parameters. The tool generates the following files:
 
-- A CSV file named  `sessionCounts<startDate><endDate>.csv` (for example, sessionCounts_2024-01-01_2024-12-31.csv) which reports the session counts sorted and categorized by months based on the star and end date parameters
-- An LOG file named `sessionCounts.log` where the incremental session counts are logged
+- A CSV file named  `sessionCounts<startDate><endDate>.csv` (for example, sessionCounts_2024-01-01_2024-12-31.csv) which reports the session counts sorted and categorized by months based on the start and end date parameters.
+- An LOG file named `sessionCounts.log` where the incremental session counts are logged.
 - A DAT file named `sessionStorage.dat` which serves as the internal storage for saving session data and counts between runs. This file allows the tool to maintain its state, enabling accurate aggregation of session counts over time. It is important to save this file and store it securely, because it will be used by the tool to continue the session count during the next run. Losing or tampering with this file could result in incorrect session data and an inaccurate count.
 
 You can run the User Session Reporting Tool either once for all collected log files or incrementally every X days, hours, or minutes. It stores its state between runs, processing only the logs that are after the last previously processed timestamp to prevent re-processing old entries. This ensures that you still get the correct overall result, even when processing logs in multiple stages. 
