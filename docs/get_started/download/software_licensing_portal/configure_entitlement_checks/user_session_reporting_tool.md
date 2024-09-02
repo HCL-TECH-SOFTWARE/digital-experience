@@ -25,7 +25,7 @@ The User Session Reporting Tool is available in FlexNet. The tool is designed to
 
 ### Enabling access logs
 
-To track usage data using the User Session Reporting Tool, you must use the National Center for Supercomputing Applications (NCSA) access logging to generate log files containing entries about usage data that the tool will interpret.
+To track usage data using the User Session Reporting Tool, you must use the National Center for Supercomputing Applications (NCSA) access logging to generate log files containing usage data entries that the tool will interpret.
 
 Refer to the following steps to enable and configure NCSA access logging:
 
