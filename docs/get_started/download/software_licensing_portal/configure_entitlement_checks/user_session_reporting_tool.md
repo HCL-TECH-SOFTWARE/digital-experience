@@ -83,7 +83,7 @@ The tool is packaged as an executable JAR file. Execute the tool by using the fo
 # <endDate> Specifies the end date in YYYY-MM-DD format
 ```
 
-Trigger/execute the tool passing the log files and date range parameters
+The following is a sample command for running the User Session Reporting Tool using all the parameters provided:
 
 ```cmd
 java -jar <jarFilepath> <filePaths...> <startDate> <endDate>
