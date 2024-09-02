@@ -23,6 +23,8 @@ This section provides information about the functionalities and use cases of the
 
 ## Usage guide
 
+This section provides information on how you can use the User Session Reporting Tool in different scenarios.
+
 ### Enabling access logs
 
 To track usage data using the User Session Reporting Tool, you must use the National Center for Supercomputing Applications (NCSA) access logging to generate log files containing entries about usage data that the tool will interpret.
