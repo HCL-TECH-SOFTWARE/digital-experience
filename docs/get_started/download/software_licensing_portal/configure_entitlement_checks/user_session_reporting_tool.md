@@ -43,7 +43,7 @@ Refer to the following steps to enable and configure NCSA access logging:
 8. Expand **NCSA Access logging** and select **Use chain-specific logging**.
 9. In **Access log file path**, enter the file path for the log files.
 10. In **Maximum number of historical files**, enter the maximum file number for historical files.
-11. Add a Custom property under Additional Properties.
+11. Add a custom property under **Additional Properties**.
     1. Click **New**. 
     2. In the **Name** field, enter `accessLogFormat`.
     3. In the **Value** field, enter `[DX_UST] %t %h "%{User-Agent}i" "%{X-Forwarded-For}i" [/DX_UST]`. This changes the format to include essential session data.
