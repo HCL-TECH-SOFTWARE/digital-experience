@@ -65,13 +65,15 @@ After you complete a regular portal installation, the portal is ready and enable
     You can modify the title and description of the virtual portal. You can also set locale-specific titles and descriptions.
 
     Starting CF223, you can change the context root or hostname of an existing virtual portal. This functionality is disabled by default. To enable, add the following property in **WP ConfigService** and restart Core: 
+
     ```
     vp.allow.hostroot.change=true
     ```
+    
     Note that when changing the context root or hostname, you must again set up the syndication from and to the environment as the URL changes. You also have to reconfigure existing search collections to use the new context root or hostname.
     
-!!!important
-       As the URL changes, bookmarked pages or other external references must be adjusted. It is recommended to change the context root or hostname of a virtual portal only after careful consideration.
+    !!!important
+        As the URL changes, bookmarked pages or other external references must be adjusted. It is recommended to change the context root or hostname of a virtual portal only after careful consideration.
 
 -   **Reinitializing a virtual portal**
 
