@@ -521,7 +521,7 @@ To reset a property to the default value:
 
 Note that there may be multiple Providers listed in the console. If this is the case, make sure that the properties are being updated at the _server level_ (Server=WebSphere_Portal), not the node level.
 
-![alt text](Untitled.jpg)
+![alt text](CustomProperties.jpg)
 
 ### Disable Tagging and Rating
 
@@ -1275,9 +1275,9 @@ We have leveraged Horizontal Pod Autoscaling (HPA) to determine the appropriate 
 
 To enable HPA for a deployment, you would typically define a YAML configuration that specifies the target CPU utilization and minimum/maximum pod counts. For example:
 
-![alt text](image-3.png)
+![alt text](HorizontalPodAutoScalerLimits.png)
 
-![alt text](image-4.png)
+![alt text](HPAdata.png)
 
 Horizontal Pod Autoscaling is an essential tool in Kubernetes for maintaining application performance and resource efficiency as demands change.
 
@@ -1745,7 +1745,7 @@ Restart the Portal server
 
 There can be a performance impact when accessing site areas without default content set. The impact becomes larger as the number of content items under the site area grows. WCM has to parse all of the content items to see which should be the first by title. It is a best practice to set this on every site area even if site areas are not being referenced directly.
 
-![alt text](Untitled-1.jpg)
+![alt text](DefaultContentOnSiteAreas.jpg)
 
 **How to Set**
 
@@ -1783,7 +1783,7 @@ On the content item enable **Use Portal Page Security**
 
 Click OK 
 
-![alt text](Untitled-2.jpg)
+![alt text](PageLevelAccessControl.jpg)
 
 ### Asynchronous Web Content Rendering
 
@@ -1800,7 +1800,7 @@ How to Set
 - To enable asynchronous web content rendering for this portlet, select the check box in the Asynchronous Web Content Rendering subsection.
 - Click OK to save and leave the Edit Shared Settings mode.
 
-![alt text](Untitled-1-2.jpg)
+![alt text](AsynchronousWebContentRendering.jpg)
 
 There are other values that can be set. For more details, see [Improving page loading performance with asynchronous web content rendering](../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/improving_asynch_render/index.md).
 
@@ -2469,7 +2469,7 @@ Each of these steps may require a substantial amount of processing time. The net
 
 **Portal Caching Layers**
 
-![alt text](Untitled-1.png)
+![alt text](PortalCachingLayers.png)
 
 In general, the closer the data is to an end user, the faster the response time and the more performant Portal will be. Caching requests at the front end will also reduce the number of requests that Portal itself actually has to serve. This will save CPU processing and allow higher overall throughput.
 
@@ -2524,13 +2524,13 @@ Check Enable portlet fragment caching
 
 **WCM Rendering Portlet Configuration**
 
-![alt text](Untitled-3.jpg)
+![alt text](WCMRenderingPortletConfiguration.jpg)
 
 - Select the appropriate Cache Scope and Cache Expiration for the portlet.
 
 **Portlet Cache Options**
 
-![alt text](Untitled-1-3.jpg)
+![alt text](PortalCacheOptions.jpg)
 
 #### Cache Scope
 
@@ -2903,7 +2903,7 @@ The cylinders represent cache instances. The gray caches are caches of the Porta
 
 The vertical axis represents the cache aggregation direction. The cache instances in higher layers leverage cache instances of lower layers to compute their values. For example, when computing effective permissions (entitlements) for a user (cached in the ExplicitEntitlementsCache), the Portal access control component leverages cache values from the ChildResourcesCache and RoleMappingCache.
 
-![alt text](image-1.png)
+![alt text](Portal Access Control Cache Hierarchy.png)
 
 **com.ibm.wps.ac.AccessControlUserContextCache**
 
@@ -3149,7 +3149,7 @@ The model component only caches data at a rather high aggregation level. As a re
 
 **Portal Model Cache Hierarchy**
 
-![alt text](image-2.png)
+![alt text](Portal Model Cache Hierarchy.png)
 
 **com.ibm.wps.model.admin.ListModelCache**
 
