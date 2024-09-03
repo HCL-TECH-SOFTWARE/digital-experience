@@ -8,6 +8,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 8.5 and 9.0 Versions**
 
+- User Session Reporting Tool
 - End of Support announced for Digital Experience v8.5 and 9
 - Automatically apply 9.5 from CF223 installation
 
@@ -31,6 +32,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and End of Support (EOS) is on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
 
 ## Digital Experience 8.5 and 9.0 Versions
+
+### User Session Reporting Tool
+
+=== "On-Premises"
+    The User Session Reporting Tool is a utility designed for HCL DX users, initially for those managing on-premises deployments. This tool provides a solution for analyzing and interpreting web traffic data by processing National Center for Supercomputing Applications (NCSA) access log files. Relevant parts of each log are extracted to identify and count unique user sessions. This offers a precise understanding of usage data over specified periods. For more information, see [User Session Reporting Tool](../../get_started/download/software_licensing_portal/configure_entitlement_checks/user_session_reporting_tool.md).
 
 ### End of Support announced for Digital Experience v8.5 and 9
 
@@ -69,4 +75,3 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
 The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
-
