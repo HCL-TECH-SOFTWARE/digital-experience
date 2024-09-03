@@ -23,7 +23,7 @@ The User Session Reporting Tool is available in FlexNet. The tool is designed to
 
 ## Usage guide
 
-This section provides information on how you can use the User Session Reporting Tool in different scenarios.
+Complete the following prerequisites before running the User Session Reporting Tool.
 
 ### Enabling access logs
 
