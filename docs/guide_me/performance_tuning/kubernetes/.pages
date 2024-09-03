@@ -3,3 +3,4 @@ nav:
     - index.md
     - rendering_medium_config.md
     - logstash_opensearch.md
+    - DX-PerformanceTuningGuide-Kubernetes.md
