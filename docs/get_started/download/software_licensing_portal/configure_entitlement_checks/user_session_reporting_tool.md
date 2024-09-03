@@ -9,7 +9,7 @@ The User Session Reporting Tool is a utility designed for HCL Digital Experience
 
 ## Functionalities
 
-This section provides information about the functionalities and use cases of the User Session Reporting Tool in different scenarios.
+This section provides information about the functionalities and use cases of the User Session Reporting Tool.
 
 - **Detects new unique sessions based on parameters such as IP addresses, user-agent strings, and timestamp.** The tool increments the session counter when a session becomes inactive. Inactive is defined as no new requests from the same user for 30 minutes or after a maximum of 4 hours from the start of the session. This ensures accurate session counting, even across extended periods of user activity. It supports custom date range analysis, allowing users to track and report on specific time frames. 
 
