@@ -34,7 +34,7 @@ Refer to the following steps to enable and configure NCSA access logging:
 1. Click **Servers > Server Types > WebSphere application servers > server_name (for example, Websphere_Portal)**. Under the **Troubleshooting** section, click **NCSA access and HTTP error logging**.
 2. Select **Enable logging service at server start-up**.
 3. Ensure that **Enable access logging** is selected and the file path is set to `${SERVER_LOG_ROOT}/http_access.log`. 
-4. Increase the maximum number of historical files. For better tracking, the recommended number is 3.
+4.  In **Maximum number of historical files**, enter the maximum file number for historical files. For better tracking, the recommended number is 3.
 
     !!! note
         The number and size of log files are crucial factors to consider when configuring access logs. They depend on how frequently the tool is run. It is important to either keep enough log files available or run the tool often enough to ensure all requests are processed. If the logs are rolled over too frequently before they are processed by the tool, there is a risk of losing session data, which could lead to incomplete or inaccurate results.
