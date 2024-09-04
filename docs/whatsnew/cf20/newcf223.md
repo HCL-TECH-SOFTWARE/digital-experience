@@ -68,15 +68,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     Runtime Controller triggering Pod restarts for [direct configuration changes](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes) in ConfigMaps is removed. You must restart the appropriate Pods manually to apply the changes made to the ConfigMaps for testing configurations. For more information, see [Deprecated features](../deprecated_features.md).
 
-### DX core image - Moved wstemp directory to temporary storage
+### DX core image - Moved directories to temporary storage
 
 === "Containers"
-    To improve system performance, the wstemp directory is no longer persisted in the `PersistentVolume` of the core profile. It is now created in the temporary storage within `/opt/HCL/caches/wstemp`. 
-
-### DX core image - Moved PortalServer/jcr/binaryValues/cache directory to temporary storage
-
-=== "Containers"
-    To improve system performance, the binaryValues directory is no longer persisted in the `PersistentVolume` of the core profile. It is now created in the temporary storage within `/opt/HCL/caches/binaryValues`. 
+    To improve system performance, the wstemp and binaryValues directories are no longer persisted in the `PersistentVolume` of the core profile. They are now created in the temporary storage within `/opt/HCL/caches/wstemp` and `/opt/HCL/caches/binaryValues` respectively.
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
