@@ -66,11 +66,13 @@ You can obtain access log files inside the `wp_profile` directory (`/opt/IBM/Web
 ```
 
 !!!important
-        There is a [known issue with WAS fix packs 9.0.5.16 and 9.0.5.17](https://www.ibm.com/docs/en/was/9.0.5?topic=application-enabling-access-logging){target="_blank"} where timestamps are broken, making the access log files unusable.
+    There is a [known issue with WAS fix packs 9.0.5.16 and 9.0.5.17](https://www.ibm.com/docs/en/was/9.0.5?topic=application-enabling-access-logging){target="_blank"} where timestamps are broken, making the access log files unusable.
 
 ### (Optional) Handling the routing setup
 
-For every request, a key is computed based on the requesting IP address of the user. If you are using a proxy server in your deployment setup, this key is combined with the user agent and a forwarding header (`X-Forwarded-For`) for proxy usage. The next interactions during the same user session period use that key to identify the same user. If you are not using a proxy server, you do not have to follow the routing setup in this section.
+If you are not using a proxy server, you do not have to follow the routing setup in this section.
+
+For every request, a key is computed based on the requesting IP address of the user. If you are using a proxy server in your deployment setup, this key is combined with the user agent and a forwarding header (`X-Forwarded-For`) for proxy usage. The next interactions during the same user session period use that key to identify the same user.
 
 If a reverse proxy server, load balancer, or a similar component is used in the deployment setup, the [X-Forwarded-For header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For){target="_blank"} is used to identify the user. This header is the standard for identifying the originating IP address of a client connecting to a web server through an HTTP proxy or load balancer. Make sure that the `X-Forwarded-For` header is correctly configured in your routing setup.
 
