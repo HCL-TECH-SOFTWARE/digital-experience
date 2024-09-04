@@ -72,6 +72,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     To improve system performance, the wstemp directory is no longer persisted in the `PersistentVolume` of the core profile. It is now created in the temporary storage within `/opt/HCL/caches/wstemp`. 
 
+### DX core image - Moved PortalServer/jcr/binaryValues/cache directory to temporary storage
+
+=== "Containers"
+    To improve system performance, the binaryValues directory is no longer persisted in the `PersistentVolume` of the core profile. It is now created in the temporary storage within `/opt/HCL/caches/binaryValues`. 
+
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
 The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
