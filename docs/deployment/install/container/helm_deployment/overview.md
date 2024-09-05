@@ -41,15 +41,15 @@ flowchart TD
   C ----> |Optional| I;
   I --> J;
 
-  click B1 "../preparation/get_the_code/configure_harbor_helm_repo/"
-  click B2 "../preparation/get_the_code/prepare_load_images/"
-  click D "../preparation/mandatory_tasks/prepare_namespace/"
-  click E "../preparation/mandatory_tasks/prepare_configuration/"
-  click F "../preparation/mandatory_tasks/prepare_persistent_volume_claims/"
-  click G "../preparation/mandatory_tasks/prepare_configure_networking/"
-  click H "../preparation/mandatory_tasks/prepare_ingress_certificate/"
-  click I "../preparation/optional_tasks/optional_internal_networking/"
-  click J "../helm_install_commands/"
+  click B1 "../helm_deployment/preparation/get_the_code/configure_harbor_helm_repo.html"
+  click B2 "../helm_deployment/preparation/get_the_code/prepare_load_images.html"
+  click D "../helm_deployment/preparation/mandatory_tasks/prepare_namespace.html"
+  click E "../helm_deployment/preparation/mandatory_tasks/prepare_configuration.html"
+  click F "../helm_deployment/preparation/mandatory_tasks/prepare_persistent_volume_claims.html"
+  click G "../helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.html"
+  click H "../helm_deployment/preparation/mandatory_tasks/prepare_ingress_certificate.html"
+  click I "../helm_deployment/preparation/optional_tasks/optional_internal_networking.html"
+  click J "../helm_deployment/helm_install_commands.html"
 
 
 
