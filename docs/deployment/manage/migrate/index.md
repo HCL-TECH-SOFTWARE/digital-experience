@@ -13,6 +13,6 @@ The migration requires you to install the required Portal and WebSphere® binary
 -   **[Migrate data using the configuration wizard](../../manage/migrate/migrate_using_cfgwizard/index.md)**  
 For Version 8.5/9.5, data, applications, databases, property files, security settings, and configuration are migrated using the Configuration Wizard. Use the roadmaps for cluster and stand-alone environments to guide you through the process.
 -   **[Migration: Next steps](../../manage/migrate/next_steps/index.md)**  
-To complete migration, you must first perform several post-migration steps that depend on how Portal is being used. After completing the post-migration steps, review the Enabling new functionality section to take advantage of the new tools available in HCL Digital Experience 8.5/9.5. Enabling new functionality should not be started until all post-migration steps have been completed. 
+To complete migration, you must first perform several post-migration steps that depend on how Portal is being used. After completing the post-migration steps, review the Enabling new functionality section to take advantage of the new tools available in HCL Digital Experience 8.5/9.5. Enabling new functionality should not be started until all post-migration steps have been completed.
 
 
