@@ -1,0 +1,5125 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/extend_dx/paa/developing_adv_paa_app/ant_tasks_paa/">
+      
+      
+        <link rel="prev" href="../extpnts_si/">
+      
+      
+        <link rel="next" href="../../../apis/">
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Tasks and extension points for custom code - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tasks-and-extension-points-for-custom-code" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../latest/extend_dx/paa/developing_adv_paa_app/ant_tasks_paa/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tasks and extension points for custom code
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../whatsnew/cf20/newcf222/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../deployment/" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../build_sites/" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../whatsnew/cf20/newcf222/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../build_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Extend DX
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../integration/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integrate Applications
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../development_tools/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Development Tools
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../script_application/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Script Applications
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../ddc/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Digital Data Connector
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../portlets_development/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Portlet Development
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../screenflow/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Screen Flow Manager
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_8" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Portal Application Archive
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_8" id="__nav_7_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_8">
+            <span class="md-nav__icon md-icon"></span>
+            Portal Application Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../developing_basic_paa_app/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Developing basic PAA file applications
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_8_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Developing advanced PAA file applications
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_8_3" id="__nav_7_8_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_8_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Developing advanced PAA file applications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../si_component_sdd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The component level sdd.xml file
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../add_custom_code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Add custom code to a Portal Application Archive (PAA) file
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../update_paa_dev/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating a Portal Application Archive (PAA) file
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extpnts_si/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ConfigEngine extension points for the Solution Installer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tasks and extension points for custom code
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Tasks and extension points for custom code
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#common-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#framework-specific-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Framework-specific Attributes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#embedded-markup-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Embedded Markup Tag
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-application-library-ref" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-application-library-ref
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-application-library-ref" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-application-library-ref
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-app-server-classloader" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-app-server-classloader
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-app-server-classloader" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-app-server-classloader
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-app-server-custom-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-app-server-custom-property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-app-server-custom-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-app-server-custom-property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-app-server-library-ref" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-app-server-library-ref
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-app-server-library-ref" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-app-server-library-ref
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-cmp-connection-factory" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-cmp-connection-factory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-cmp-connection-factory" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-cmp-connection-factory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-datasource" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-datasource
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-modify-datasource" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-modify-datasource
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-datasource" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-datasource
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-host-alias" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-host-alias
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-host-alias" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-host-alias
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-j2c-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-j2c-auth
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-modify-j2c-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-modify-j2c-auth
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-j2c-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-j2c-auth
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-jvm-custom-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-jvm-custom-property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-jvm-custom-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-jvm-custom-property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-jdbc-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-jdbc-provider
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-modify-jdbc-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-modify-jdbc-provider
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-jdbc-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-jdbc-provider
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-library
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-library
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-res-env-custom-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-res-env-custom-property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-retrieve-res-env-custom-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-retrieve-res-env-custom-property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-res-env-custom-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-res-env-custom-property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-res-env-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-res-env-entry
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-res-env-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-res-env-entry
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-res-env-entry-custom-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-res-env-entry-custom-property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-res-env-entry-custom-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-res-env-entry-custom-property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-resource-env-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-resource-env-provider
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-resource-env-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-resource-env-provider
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-res-referenceable" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-res-referenceable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-res-referenceable" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-res-referenceable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-variable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-variable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-retrieve-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-retrieve-variable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-res-env-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-res-env-directory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-cluster-sync-all-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-cluster-sync-all-node
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-cluster-sync-single-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-cluster-sync-single-node
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-extract-ear-local-or-remote" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-extract-ear-local-or-remote
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-query-application-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-query-application-list
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-retrieve-datasource-custom-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-retrieve-datasource-custom-property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-wait-for-sync-to-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-wait-for-sync-to-complete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-ear" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-ear
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-edit-ear" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-edit-ear
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-update-ear" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-update-ear
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-modify-ear" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-modify-ear
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-update-file-in-ear" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-update-file-in-ear
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-ear" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-ear
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../apis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    APIs
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#common-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#framework-specific-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Framework-specific Attributes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#embedded-markup-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Embedded Markup Tag
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-application-library-ref" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-application-library-ref
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-application-library-ref" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-application-library-ref
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-app-server-classloader" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-app-server-classloader
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-app-server-classloader" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-app-server-classloader
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-app-server-custom-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-app-server-custom-property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-app-server-custom-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-app-server-custom-property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-app-server-library-ref" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-app-server-library-ref
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-app-server-library-ref" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-app-server-library-ref
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-cmp-connection-factory" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-cmp-connection-factory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-cmp-connection-factory" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-cmp-connection-factory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-datasource" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-datasource
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-modify-datasource" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-modify-datasource
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-datasource" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-datasource
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-host-alias" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-host-alias
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-host-alias" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-host-alias
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-j2c-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-j2c-auth
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-modify-j2c-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-modify-j2c-auth
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-j2c-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-j2c-auth
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-jvm-custom-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-jvm-custom-property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-jvm-custom-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-jvm-custom-property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-jdbc-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-jdbc-provider
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-modify-jdbc-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-modify-jdbc-provider
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-jdbc-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-jdbc-provider
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-library
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-library
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-res-env-custom-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-res-env-custom-property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-retrieve-res-env-custom-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-retrieve-res-env-custom-property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-res-env-custom-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-res-env-custom-property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-res-env-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-res-env-entry
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-res-env-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-res-env-entry
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-res-env-entry-custom-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-res-env-entry-custom-property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-res-env-entry-custom-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-res-env-entry-custom-property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-resource-env-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-resource-env-provider
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-resource-env-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-resource-env-provider
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-res-referenceable" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-res-referenceable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-res-referenceable" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-res-referenceable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-variable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-variable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-retrieve-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-retrieve-variable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-res-env-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-res-env-directory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-cluster-sync-all-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-cluster-sync-all-node
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-cluster-sync-single-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-cluster-sync-single-node
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-extract-ear-local-or-remote" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-extract-ear-local-or-remote
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-query-application-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-query-application-list
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-retrieve-datasource-custom-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-retrieve-datasource-custom-property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-wait-for-sync-to-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-wait-for-sync-to-complete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-create-ear" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-create-ear
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-edit-ear" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-edit-ear
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-update-ear" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-update-ear
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-modify-ear" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-modify-ear
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-update-file-in-ear" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-update-file-in-ear
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wplc-remove-ear" class="md-nav__link">
+    <span class="md-ellipsis">
+      wplc-remove-ear
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="tasks-and-extension-points-for-custom-code">Tasks and extension points for custom code</h1>
+<p>You can use the following tasks and extension points when you create custom code to work with the ConfigEngine framework.</p>
+<h2 id="common-properties">Common Properties</h2>
+<p>These attributes are a reflection of similar attributes present on the WsAdmin task. Not all attributes on the WsAdmin task are used and some have a restricted range of values. None of these values are written into the dynamic profile.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Required</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>wasuser</td>
+<td>Contains the user ID to authenticate with the server.</td>
+<td>Yes</td>
+<td>Global</td>
+</tr>
+<tr>
+<td>waspassword</td>
+<td>Contains the password that is associated with the wasuser user ID to authenticate with the server.</td>
+<td>Yes</td>
+<td>Global</td>
+</tr>
+<tr>
+<td>conntype</td>
+<td>Specifies the type of server connection. The following values are allowed:-   SOAP: Establishes a SOAP connection. This value is the default. <br>-   NONE: No server connection is used. Instead, a direct connection to the local WebSphere® Application Server configuration repository is used.</td>
+<td>No</td>
+<td>Global</td>
+</tr>
+<tr>
+<td>properties</td>
+<td>Java properties file containing attributes to set in the JVM System properties. The default is ${EngineInstallLocation}/config/work/was/jacl.properties.</td>
+<td>No</td>
+<td>Global</td>
+</tr>
+<tr>
+<td>script</td>
+<td>Provides the location of the deployment script file. This file contains a set of commands to be passed to the WsAdmin script processor. Set the lang attribute to determine the script processor.If not specified, each deployment task assigns a default script location. It is built from the home directory of the configuration engine and a name specific to the task. For example, wplc_deployEar. Refer to the individual task for this name. Set the lang attribute to determine the file extension.</td>
+<td>No</td>
+<td>Global</td>
+</tr>
+<tr>
+<td>lang</td>
+<td>Contains the language to be used to interpret scripts. The supported values are as follows:-   jacl: Use the Jacl interpreter. This value is the default. <br>-   jpython: Use the Java Python interpreter.</td>
+<td>No</td>
+<td>Global</td>
+</tr>
+</tbody>
+</table>
+<h2 id="framework-specific-attributes">Framework-specific Attributes</h2>
+<p>These attributes provide information about the runtime environment that is associated with the configuration engine.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Required</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>engineinstalllocation</td>
+<td>The location of the configuration engine home directory. This location is used as the root when you construct many of the default locations. It defaults to the setting of the Ant property: engineInstallLocation.</td>
+<td>No</td>
+<td>Global</td>
+</tr>
+<tr>
+<td>engineinstalllocation</td>
+<td>The location of a deployment file that contains some or all of the deployment attributes of the targeted resource. This file is an XML file whose syntax mirrors that of the Ant task that references the file.</td>
+<td>No</td>
+<td>not applicable</td>
+</tr>
+</tbody>
+</table>
+<h2 id="embedded-markup-tag">Embedded Markup Tag</h2>
+<p>The following markup tags are supported.</p>
+<ul>
+<li>
+<p><strong>Comment markup tag</strong></p>
+<p>Use the comment markup tag to embed a comment into a task value. The comment text is displayed during the task output trace, which is enclosed by parentheses. It is not included in the value that is passed to the task execution. Use &lt;c&gt; or &lt;comment&gt; to begin a comment. This tag has no attributes.</p>
+</li>
+<li>
+<p><strong>Default markup tag</strong></p>
+<p>Use the default markup tag to force a default value for a task value. The default is chosen if the target value resolves to an empty string. Otherwise, it is ignored. Use &lt;d&gt; or &lt;default&gt; to delimit text that is defaulted. This tag has the following single attribute:</p>
+<ul>
+<li>value: The default value. This attribute is required.</li>
+<li><strong><code>&lt;lower&gt;</code> markup tag</strong></li>
+</ul>
+<p>Use the lower markup tag to force text to lowercase. Use <code>&lt;l&gt;</code> or <code>&lt;lower&gt;</code> to delimit lowercase text. This tag has no attributes.</p>
+</li>
+<li>
+<p><strong>Password markup tag</strong></p>
+<p>Use the password markup tag to indicate a portion of text that is to remain hidden (or obscured) whenever the text value is logged. Use <code>&lt;p&gt;</code>, <code>&lt;pw&gt;</code>, or <code>&lt;password&gt;</code> to indicate the beginning of password text. This tag has no attributes. The default is to substitute the string, PASSWORD_REMOVED, for the text value during logging. You can override this value with the log attribute.</p>
+<ul>
+<li>log: The value that is substituted for the real password during logging of the task. Defaults to PASSWORD_REMOVED. This attribute is not required.</li>
+</ul>
+</li>
+<li>
+<p><strong>Upper markup tag</strong></p>
+<p>Use the upper markup tag to force text to uppercase. Use <code>&lt;u&gt;</code> or <code>&lt;upper&gt;</code> to delimit uppercase text. This tag has no attributes.</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>The following example illustrates the use for each of the supported tags. The last instance embeds an undefined tag. This tag causes the parsing to stop and results in a value that is unchanged.</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;wplc-create-variable server=&quot;server&quot;
+      node=&quot;node&quot;
+      wasuser=&quot;${WasUserid}&quot;
+      waspassword=&quot;${WasPassword}&quot;
+      testbeanclass=&quot;com.ibm.wplc.deploy.tasks.impl.TestAdminBeanImpl&quot;&gt;
+      &lt;resource name=&quot;r1&quot; value=&quot;&amp;lt;cValue for r1&amp;lt;/&gt;v1&quot;/&gt;       
+                &lt;resource name=&quot;r2&quot; value=&quot;&amp;lt;dvalue=&amp;quot;xxx&amp;quot;&gt; &amp;lt;/&gt;&quot;/&gt;     
+                &lt;resource name=&quot;r3&quot; value=&quot;&lt;u&gt;uPpEr&lt;/u&gt;&quot;/&gt;       
+                &lt;resource name=&quot;r4&quot; value=&quot;&lt;l&gt;LoWeR&lt;/l&gt;&quot;/&gt;       
+                &lt;resource name=&quot;r5&quot; value=&quot;&lt;p&gt;password&lt;/p&gt;&quot;/&gt;       
+                &lt;resource name=&quot;r6&quot; value=&quot;&lt;p log=&quot;SECRET&quot;&gt;password&lt;/p&gt;&quot;/&gt;       
+                &lt;resource name=&quot;r7&quot; value=&quot;&lt;undefined attr=&quot;Attribute&quot;&gt;password&lt;/undefined&gt;&quot;/&gt;     
+&lt;/wplc-create-variable&gt; 
+</code></pre></div>
+<p>Running the previous task results in the following trace. The second set of output for each instance is produced by the test bean class. This bean class is a dummy bean implementation that is used to echo the output that is passed in to a bean for each WPLC task.</p>
+<div class="language-text highlight"><pre><span></span><code>    [wplc-create-variable] Task parameters:
+    [wplc-create-variable]   Global attributes:
+    [wplc-create-variable]     cell=&quot;&quot;
+    [wplc-create-variable]     engineinstalllocation=&quot;directory\_path&quot;
+    [wplc-create-variable]     pathseparator=&quot;;&quot;
+    [wplc-create-variable]     osarch=&quot;x86&quot;
+    [wplc-create-variable]     node=&quot;node&quot;
+    [wplc-create-variable]     server=&quot;server&quot;
+
+    [wplc-create-variable]   Instance attributes (Set 1 of 7):
+    [wplc-create-variable]     name=&quot;r1&quot;
+    [wplc-create-variable]     description= *** NOT_SPECIFIED ***
+    [wplc-create-variable]     value=&quot;(Comment:  Value for r1)v1&quot;
+    [wplc-create-variable] name=&quot;r1&quot;
+    [wplc-create-variable] engineinstalllocation=&quot;directory\_path&quot;
+    [wplc-create-variable] node=&quot;node&quot;
+    [wplc-create-variable] server=&quot;server&quot;
+    [wplc-create-variable] pathseparator=&quot;;&quot;
+    [wplc-create-variable] osarch=&quot;x86&quot;
+    [wplc-create-variable] value=&quot;v1&quot;
+    [wplc-create-variable] cell=&quot;&quot;
+    [wplc-create-variable] description=&quot;&quot;
+
+    [wplc-create-variable]   Instance attributes (Set 2 of 7):
+    [wplc-create-variable]     name=&quot;r2&quot;
+    [wplc-create-variable]     description= *** NOT_SPECIFIED ***
+    [wplc-create-variable]     value=&quot;xxx&quot;
+    [wplc-create-variable] name=&quot;r2&quot;
+    [wplc-create-variable] engineinstalllocation=&quot;directory\_path&quot;
+    [wplc-create-variable] node=&quot;node&quot;
+    [wplc-create-variable] server=&quot;server&quot;
+    [wplc-create-variable] pathseparator=&quot;;&quot;
+    [wplc-create-variable] osarch=&quot;x86&quot;
+    [wplc-create-variable] value=&quot;xxx&quot;
+    [wplc-create-variable] cell=&quot;&quot;
+    [wplc-create-variable] description=&quot;&quot;
+
+    [wplc-create-variable]   Instance attributes (Set 3 of 7):
+    [wplc-create-variable]     name=&quot;r3&quot;
+    [wplc-create-variable]     description= *** NOT_SPECIFIED ***
+    [wplc-create-variable]     value=&quot;UPPER&quot;
+    [wplc-create-variable] name=&quot;r3&quot;
+    [wplc-create-variable] engineinstalllocation=&quot;directory\_path&quot;
+    [wplc-create-variable] node=&quot;node&quot;
+    [wplc-create-variable] server=&quot;server&quot;
+    [wplc-create-variable] pathseparator=&quot;;&quot;
+    [wplc-create-variable] osarch=&quot;x86&quot;
+    [wplc-create-variable] value=&quot;UPPER&quot;
+    [wplc-create-variable] cell=&quot;&quot;
+    [wplc-create-variable] description=&quot;&quot;
+
+    [wplc-create-variable]   Instance attributes (Set 4 of 7):
+    [wplc-create-variable]     name=&quot;r4&quot;
+    [wplc-create-variable]     description= *** NOT_SPECIFIED ***
+    [wplc-create-variable]     value=&quot;lower&quot;
+    [wplc-create-variable] name=&quot;r4&quot;
+    [wplc-create-variable] engineinstalllocation=&quot;directory\_path&quot;
+    [wplc-create-variable] node=&quot;node&quot;
+    [wplc-create-variable] server=&quot;server&quot;
+    [wplc-create-variable] pathseparator=&quot;;&quot;
+    [wplc-create-variable] osarch=&quot;x86&quot;
+    [wplc-create-variable] value=&quot;lower&quot;
+    [wplc-create-variable] cell=&quot;&quot;
+    [wplc-create-variable] description=&quot;&quot;
+
+    [wplc-create-variable]   Instance attributes (Set 5 of 7):
+    [wplc-create-variable]     name=&quot;r5&quot;
+    [wplc-create-variable]     description= *** NOT_SPECIFIED ***
+    [wplc-create-variable]     value=&quot;PASSWORD_REMOVED&quot;
+    [wplc-create-variable] name=&quot;r5&quot;
+    [wplc-create-variable] engineinstalllocation=&quot;directory\_path&quot;
+    [wplc-create-variable] node=&quot;node&quot;
+    [wplc-create-variable] server=&quot;server&quot;
+    [wplc-create-variable] pathseparator=&quot;;&quot;
+    [wplc-create-variable] osarch=&quot;x86&quot;
+    [wplc-create-variable] value=&quot;password&quot;
+    [wplc-create-variable] cell=&quot;&quot;
+    [wplc-create-variable] description=&quot;&quot;
+
+    [wplc-create-variable]   Instance attributes (Set 6 of 7):
+    [wplc-create-variable]     name=&quot;r6&quot;
+    [wplc-create-variable]     description= *** NOT_SPECIFIED ***
+    [wplc-create-variable]     value=&quot;SECRET&quot;
+    [wplc-create-variable] name=&quot;r6&quot;
+    [wplc-create-variable] engineinstalllocation=&quot;directory\_path&quot;
+    [wplc-create-variable] node=&quot;node&quot;
+    [wplc-create-variable] server=&quot;server&quot;
+    [wplc-create-variable] pathseparator=&quot;;&quot;
+    [wplc-create-variable] osarch=&quot;x86&quot;
+    [wplc-create-variable] value=&quot;password&quot;
+    [wplc-create-variable] cell=&quot;&quot;
+    [wplc-create-variable] description=&quot;&quot;
+
+    [wplc-create-variable]   Instance attributes (Set 7 of 7):
+    [wplc-create-variable]     name=&quot;r7&quot;
+    [wplc-create-variable]     description= *** NOT_SPECIFIED ***
+    [wplc-create-variable]     value=&quot;password&quot;
+    [wplc-create-variable] name=&quot;r7&quot;
+    [wplc-create-variable] engineinstalllocation=&quot;directory\_path&quot;
+    [wplc-create-variable] node=&quot;node&quot;
+    [wplc-create-variable] server=&quot;server&quot;
+    [wplc-create-variable] pathseparator=&quot;;&quot;
+    [wplc-create-variable] osarch=&quot;x86&quot;
+    [wplc-create-variable] value=&quot;password&quot;
+    [wplc-create-variable] cell=&quot;&quot;
+    [wplc-create-variable] description=&quot;&quot;
+</code></pre></div>
+</li>
+</ul>
+<h2 id="wplc-create-application-library-ref">wplc-create-application-library-ref</h2>
+<ul>
+<li>
+<p><strong>Definition and usage</strong></p>
+<p>Use this Ant task to create or modify the specified library reference.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>appName: The name of the application with required library reference. The scope is instance.</li>
+<li>libraryName: The name of the library reference. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>mode: The mode of the class loader. The scope is instance.</li>
+<li>sharedClassloader: Boolean - specifies whether to use a shared class loader. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parameters that are specified as nested elements</strong></p>
+<p>attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.</p>
+<ul>
+<li>name: The name of the attribute.</li>
+<li>value: The value of the attribute.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.ApplicationLibraryRefCreateImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-remove-application-library-ref">wplc-remove-application-library-ref</h2>
+<ul>
+<li>
+<p><strong>Definition and usage</strong></p>
+<p>Use this Ant task to remove the specified library reference.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>appName: The name of the application with required library reference. The scope is instance.</li>
+<li>libraryName: The name of the library reference. The scope is instance.</li>
+<li><strong>Optional parameters</strong></li>
+</ul>
+<p>The following parameter is optional:</p>
+<ul>
+<li>mode: The mode of the class loader. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parameters that are specified as nested elements</strong></p>
+<p>attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.</p>
+<ul>
+<li>name: The name of the attribute.</li>
+<li>value: The value of the attribute.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.ApplicationLibraryRefRemoveImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-create-app-server-classloader">wplc-create-app-server-classloader</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to create the specified application server class loader.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>mode: The mode to operate the application server class loader in. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: Cell scope of resource action. The scope is global.</li>
+<li>node: The node scope of resource action. The scope is global.</li>
+<li>server: Server scope of resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parameters that are specified as nested Elements</strong></p>
+<p>A generic attribute parameter for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.</p>
+<ul>
+<li>name: The name of the attribute.</li>
+<li>value: The value of the attribute.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.ApplicationServerClassloaderCreateImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-remove-app-server-classloader">wplc-remove-app-server-classloader</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to create the specified application server class loader.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>mode: The mode to operate the application server class loader in. The scope is instance.</li>
+<li><strong>Optional parameters</strong></li>
+</ul>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: Cell scope of resource action. The scope is global.</li>
+<li>node: The node scope of resource action. The scope is global.</li>
+<li>server: Server scope of resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parameters that are specified as nested Elements</strong></p>
+<p>A generic attribute parameter for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.</p>
+<ul>
+<li>name: The name of the attribute.</li>
+<li>value: The value of the attribute.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.ApplicationServerClassloaderCreateImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-create-app-server-custom-property">wplc-create-app-server-custom-property</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to create or modify a custom property.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>name: The name of the property to create. The scope is instance.</li>
+<li>value: The value of the property to create. The scope is instance.</li>
+<li><strong>Optional parameters</strong></li>
+</ul>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: Cell scope of resource action. The scope is global.</li>
+<li>description: The description of the property you are creating. The scope is instance.</li>
+<li>node: Node scope of resource action. The scope is global.</li>
+<li>required: Boolean - specifies whether the property is required or not. The scope is instance.</li>
+<li>server: Server scope of resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parameters that are specified as nested Elements</strong></p>
+<p>attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.</p>
+<ul>
+<li>name: The name of the attribute.</li>
+<li>value: The value of the attribute.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.ApplicationServerCustomPropertyCreateImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-remove-app-server-custom-property">wplc-remove-app-server-custom-property</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to remove a custom property.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameter is required:</p>
+<ul>
+<li>name: The name of the property to remove. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: Cell scope of resource action. The scope is global.</li>
+<li>node: The node scope of resource action. The scope is global.</li>
+<li>server: Server scope of resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parameters that are specified as nested Elements</strong></p>
+<p>A generic attribute parameter for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.</p>
+<ul>
+<li>name: The name of the attribute.</li>
+<li>value: The value of the attribute.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.ApplicationServerCustomPropertyRemoveImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-create-app-server-library-ref">wplc-create-app-server-library-ref</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to create or modify the specified reference.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>libraryName: Tells what library reference to add. The scope is instance.</li>
+<li>mode: The mode of the class loader. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: Cell scope of resource action. The scope is global.</li>
+<li>node: Node scope of resource action. The scope is global.</li>
+<li>server: Server scope of resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parameters that are specified as nested Elements</strong></p>
+<p>attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.</p>
+<ul>
+<li>name: The name of the attribute.</li>
+<li>value: The value of the attribute.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.ApplicationServerLibraryRefCreateImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-remove-app-server-library-ref">wplc-remove-app-server-library-ref</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to remove the specified library reference.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>libraryName: Tells what library reference to remove. The scope is instance.</li>
+<li>mode: The mode of the class loader. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: Cell scope of resource action. The scope is global.</li>
+<li>node: Node scope of resource action. The scope is global.</li>
+<li>server: Server scope of resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parameters that are specified as nested Elements</strong></p>
+<p>attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.</p>
+<ul>
+<li>name: The name of the attribute.</li>
+<li>value: The value of the attribute.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.ApplicationServerLibraryRefRemoveImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-create-cmp-connection-factory">wplc-create-cmp-connection-factory</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to add a data source to the specified CMP J2CResourceAdaptor.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>authDataAlias: The AuthAlias used this binding procedure. The scope is instance.</li>
+<li>datasourcename: Name of the data source. The scope is instance.</li>
+<li>j2cresourceadaptorname: The J2C Resource adapter name. The scope is instance.</li>
+<li>jdbcprovidername: Name of the JDBC provider that identifies this resource. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: Cell of the resource action. The scope is global.</li>
+<li>containerauthalias: Authorization alias for container. The scope is instance.</li>
+<li>containermappingalias: Mapping alias for container. The scope is instance.</li>
+<li>description: A description of the data source. The scope is instance.</li>
+<li>forceScope: Set to true if do not want to scope to the existing cluster. The scope is instance.</li>
+<li>node: Node of the resource action. The scope is global.</li>
+<li>server: Server of the resource action. The scope is global.</li>
+<li>usecontainer: Use the container. The value must be set to true or false. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parameters that are specified as nested Elements</strong></p>
+<p>attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.</p>
+<ul>
+<li>name: The name of the attribute.</li>
+<li>value: The value of the attribute.</li>
+</ul>
+<p>customproperty - used to create a custom property under this data source.</p>
+<ul>
+<li>name: The name of the custom property.</li>
+<li>value: The value of the custom property.</li>
+</ul>
+<p>connectionpool - used to set the connection pool properties for this data source.</p>
+<ul>
+<li>name: The name of the connection pool.</li>
+<li>value: The value of the connection pool.</li>
+</ul>
+<p>relationalresourceadapter - used to set the Relational Resource adapter properties for this data source.</p>
+<ul>
+<li>name: The name of the relational resource adapter.</li>
+<li>value: The value of the relational resource adapter.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.CMPConnectionFactoryCreateImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-remove-cmp-connection-factory">wplc-remove-cmp-connection-factory</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to remove a data source to the specified CMP J2CResourceAdaptor.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>containermappingalias: The mapping alias for the container.</li>
+<li>datasourcename: Name of the data source. The scope is instance.</li>
+<li>j2cresourceadaptorname: The J2C Resource adapter name. The scope is instance.</li>
+<li>jdbcprovidername: Name of the JDBC provider that identifies this resource. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: Cell of the resource action. The scope is global.</li>
+<li>containerauthalias: Authorization alias for container. The scope is instance.</li>
+<li>containermappingalias: Mapping alias for container. The scope is instance.</li>
+<li>description: A description of the data source. The scope is instance.</li>
+<li>forceScope: Set to true if do not want to scope to cluster, if exists. The scope is instance.</li>
+<li>node: Node of the resource action. The scope is global.</li>
+<li>server: Server of the resource action. The scope is global.</li>
+<li>usecontainer: Use the container. The value must be set to true or false. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parameters that are specified as nested Elements</strong></p>
+<p>attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.</p>
+<ul>
+<li>name: The name of the attribute.</li>
+<li>value: The value of the attribute.</li>
+</ul>
+<p>customproperty - used to create a custom property under this data source.</p>
+<ul>
+<li>
+<p>name: The name of the custom property.</p>
+</li>
+<li>
+<p>value: The value of the custom property.</p>
+</li>
+</ul>
+<p>connectionpool - used to set the connection pool properties for this data source.</p>
+<ul>
+<li>name: The name of the connection pool.</li>
+<li>value: The value of the connection pool.</li>
+</ul>
+<p>relationalresourceadapter - used to set the Relational Resource adapter properties for this data source.</p>
+<ul>
+<li>name: The name of the relational resource adapter.</li>
+<li>value: The value of the relational resource adapter.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.CMPConnectionFactoryRemoveImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-create-datasource">wplc-create-datasource</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to create a data source at the target scope.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>datasourcename: Name of the data source. The scope is instance.</li>
+<li>jdbcprovidername: Name of the JDBC provider that identifies this resource. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: Cell scope of resource action. The scope is global.</li>
+<li>containerauthalias: Authorization alias for container. The scope is instance.</li>
+<li>containermappingalias: Mapping alias for container. The scope is instance.</li>
+<li>DbDriverType: Specifies the driver type for this data source. Can be the type 2 or type 4 driver for this database. The scope is instance.</li>
+<li>DbType: The database type for this data source. Use this parameter to specify the database type; for example: db2, oracle, sqlserver, db2 for zOS. The scope is instance.</li>
+<li>DbUrl: The database URL. Use the data source to connect to the database. The database name displays in this URL. The scope is instance.</li>
+<li>description: A description of the data source. The scope is instance.</li>
+<li>forceScope: Set to true if do not want to scope to existing cluster. The scope is instance.</li>
+<li>isPortalDatasource: Specifies whether this parameter is a Portal data source domain. Portal data source domains are governed by special rules for config-split and database domain function in Portal. If your data source is not governed by these rules, enter false. The default for this property is true. The scope is instance.</li>
+<li>node: Node of the resource action. The scope is global.</li>
+<li>portalDomain: Required only for HCL Portal domain-based data sources. This setting tells the name of the domain of the data source. The scope is instance.</li>
+<li>server: Server of the resource action. The scope is global.</li>
+<li>templatename: Name of the WebSphere template to follow when you create the data source. The scope is instance.</li>
+<li>usecontainer: Use the container. The value must be set to true or false. The scope is instance.</li>
+<li>useXA: Specify whether this data source uses XA connections or not. The value must be set to true or false. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parameters that are specified as nested Elements</strong></p>
+<p>attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.</p>
+<ul>
+<li>name: The name of the attribute.</li>
+<li>value: The value of the attribute.</li>
+</ul>
+<p>customproperty - used to create a custom property under this data source.</p>
+<ul>
+<li>name: The name of the custom property.</li>
+<li>value: The value of the custom property.</li>
+</ul>
+<p>connectionpool - used to set the connection pool properties for this data source.</p>
+<ul>
+<li>name: The name of the connection pool.</li>
+<li>value: The value of the connection pool.</li>
+</ul>
+<p>relationalresourceadapter - used to set the Relational Resource adapter properties for this data source.</p>
+<ul>
+<li>name: The name of the relational resource adapter.</li>
+<li>value: The value of the relational resource adapter.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.DataSourceCreateImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-modify-datasource">wplc-modify-datasource</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to modify a data source at the target scope.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>datasourcename: Name of the data source. The scope is instance.</li>
+<li>jdbcprovidername: Name of the JDBC provider that identifies this resource. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: Cell scope of resource action. The scope is global.</li>
+<li>containerauthalias: Authorization alias for container. The scope is instance.</li>
+<li>containermappingalias: Mapping alias for container. The scope is instance.</li>
+<li>description: A description of the data source. The scope is instance.</li>
+<li>forceScope: Set to true if do not want to scope to existing cluster. The scope is instance.</li>
+<li>node: Node of the resource action. The scope is global.</li>
+<li>server: Server of the resource action. The scope is global.</li>
+<li>usecontainer: Use the container. The value must be set to true or false. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parameters that are specified as nested Elements</strong></p>
+<p>attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.</p>
+<ul>
+<li>name: The name of the attribute.</li>
+<li>value: The value of the attribute.</li>
+</ul>
+<p>customproperty - used to create a custom property under this data source.</p>
+<ul>
+<li>name: The name of the custom property.</li>
+<li>value: The value of the custom property.</li>
+</ul>
+<p>connectionpool - used to set the connection pool properties for this data source.</p>
+<ul>
+<li>name: The name of the connection pool.</li>
+<li>value: The value of the connection pool.</li>
+</ul>
+<p>relationalresourceadapter - used to set the Relational Resource adapter properties for this data source.</p>
+<ul>
+<li>name: The name of the relational resource adapter.</li>
+<li>value: The value of the relational resource adapter.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.DataSourceModifyImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-remove-datasource">wplc-remove-datasource</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to remove a data source at the target scope.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>datasourcename: Name of the data source. The scope is instance.</li>
+<li>jdbcprovidername: Name of the JDBC provider that identifies this resource. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: Cell scope of resource action. The scope is global.</li>
+<li>forceScope: Set to true if do not want to scope to existing cluster. The scope is instance.</li>
+<li>node: Node of the resource action. The scope is global.</li>
+<li>portalDomain: Required only for HCL Portal domain-based data sources. This setting tells the name of the domain of the data source. The scope is instance.</li>
+<li>server: Server of the resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.DataSourceRemoveImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-create-host-alias">wplc-create-host-alias</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to create the specified Host Alias.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>host: The host name for the host alias. The scope is instance.</li>
+<li>port: The port number for this host alias. The scope is instance.</li>
+<li>virtualHostName: The virtual host name to use for this host alias. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameter is optional:</p>
+<ul>
+<li>cell: The cell scope of resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parameters that are specified as nested Elements</strong></p>
+<p>attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.</p>
+<ul>
+<li>name: The name of the attribute.</li>
+<li>value: The value of the attribute.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.HostAliasCreateImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-remove-host-alias">wplc-remove-host-alias</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to remove the specified Host Alias.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>host: The host name for the host alias. The scope is instance.</li>
+<li>port: The port number for this host alias. The scope is instance.</li>
+<li>virtualHostName: The virtual host name to use for this host alias. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameter is optional:</p>
+<ul>
+<li>cell: The cell scope of resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parameters that are specified as nested Elements</strong></p>
+<p>attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.</p>
+<ul>
+<li>name: The name of the attribute.</li>
+<li>value: The value of the attribute.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.HostAliasRemoveImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-create-j2c-auth">wplc-create-j2c-auth</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to create an entry in the security table of the target cell. This entry can be used as a user-password pair for your configuration.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>alias: The alias that is used to identify this authentication data. The scope is instance.</li>
+<li>password: The password that is associated with this user ID.</li>
+<li>user: The user name that is used to create a connection with this authentication data.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: The name of the cell where this J2C authentication data is created, removed, or modified. The scope is global.</li>
+<li>description: A description of what this authentication data is used for and what it connects to. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.J2CAuthCreateImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-modify-j2c-auth">wplc-modify-j2c-auth</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to modify an entry in the security table of the target cell. This entry can be used as a user-password pair for your configuration.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>alias: The alias that is used to identify this authentication data. The scope is instance.</li>
+<li>password: The password that is associated with this user ID.</li>
+<li>user: The user name that is used to create a connection with this authentication data.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: The name of the cell where this J2C authentication data is created, removed, or modified. The scope is global.</li>
+<li>description: A description of what this authentication data is used for and what it connects to. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.J2CAuthModifyImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-remove-j2c-auth">wplc-remove-j2c-auth</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to remove an entry in the security table of the target cell.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameter is required:</p>
+<ul>
+<li>alias: The alias that is used to identify this authentication data. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameter is optional:</p>
+<ul>
+<li>cell: The name of the cell where this J2C authentication data is created, removed, or modified. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.J2CAuthRemoveImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-create-jvm-custom-property">wplc-create-jvm-custom-property</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to create or update a custom JVM property in the WebSphere® Application Server environment.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>name: The name of the JVM custom property. The scope is instance.</li>
+<li>value: The value of the property to create.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: The cell scope of the resource action. The scope is global.</li>
+<li>description: A description of the JVM custom property. The scope is instance.</li>
+<li>node: The node scope of the resource action.</li>
+<li>required: The Boolean value that is used to tell WebSphere if this property is required or not.</li>
+<li>server: The server scope of the resource action.</li>
+<li>zosProcessDefType: Used to tell which region this property is created for: Servant, Control, or Abjunct. The value defaults to Servant.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.JVMCustomPropertyCreateImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-remove-jvm-custom-property">wplc-remove-jvm-custom-property</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to remove a custom JVM property in the WebSphere® Application Server environment.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>name: The name of the JVM custom property. The scope is instance.</li>
+<li>value: The value of the property to create.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: The cell scope of the resource action. The scope is global.</li>
+<li>node: The node scope of the resource action.</li>
+<li>server: The server scope of the resource action.</li>
+<li>zosProcessDefType: Used to tell which region this property is removed from: Servant, Control, or Abjunct. The value defaults to Servant.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.JVMCustomPropertyRemoveImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-create-jdbc-provider">wplc-create-jdbc-provider</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to create a JDBC provider resource on the target scope.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameter is required:</p>
+<ul>
+<li>jdbcprovidername: The name of the JDBC provider that identities this resource. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: Cell scope of resource action. The scope is global.</li>
+<li>DbDriverType: Specifies the driver type for this JDBC Provider. Can be the type 2 or type 4 driver for this database. The scope is instance.</li>
+<li>DbType: The database type for this JDBC Provider. Use this parameter to specify the database type; for example: db2, oracle, sqlserver, db2 for zOS. The scope is instance.</li>
+<li>DbUrl: The database URL. This JDBC Provider is used to connect to the database. The database name displays in this URL. The scope is instance.</li>
+<li>forceScope: Set to true if do not want to scope to an existing cluster. The scope is instance.</li>
+<li>implementationClassName: The class name that is used to create this JDBC Provider. The scope is instance.</li>
+<li>node: The node of the resource action. The scope is global.</li>
+<li>server: The server of the resource action. The scope is global.</li>
+<li>templatename: Name of the template to follow when you create the JDBC Provider. The scope is instance.</li>
+<li>useXA: Specify whether this JDBC Provider uses XA connections or not. Set to true or false. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parameters that are specified as nested Elements</strong></p>
+<p>attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.</p>
+<ul>
+<li>name: The name of the attribute.</li>
+<li>value: The value of the attribute.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.JDBCProviderCreateImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-modify-jdbc-provider">wplc-modify-jdbc-provider</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to create a JDBC provider resource on the target scope.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameter is required:</p>
+<ul>
+<li>jdbcprovidername: The name of the JDBC provider that identities this resource. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: Cell scope of resource action. The scope is global.</li>
+<li>forceScope: Set to true if do not want to scope to an existing cluster. The scope is instance.</li>
+<li>node: The node of the resource action. The scope is global.</li>
+<li>server: The server of the resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parameters that are specified as nested Elements</strong></p>
+<p>attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.</p>
+<ul>
+<li>name: The name of the attribute.</li>
+<li>value: The value of the attribute.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.JDBCProviderModifyImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-remove-jdbc-provider">wplc-remove-jdbc-provider</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to remove a JDBC provider resource on the target scope.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameter is required:</p>
+<ul>
+<li>jdbcprovidername: The name of the JDBC provider that identities this resource. The scope is instance.   </li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: Cell scope of resource action. The scope is global.</li>
+<li>forceScope: Set to true if do not want to scope to an existing cluster. The scope is instance.</li>
+<li>node: The node of the resource action. The scope is global.</li>
+<li>server: The server of the resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.JDBCProviderRemoveImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-create-library">wplc-create-library</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to create or modify the specified library.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameter is required:</p>
+<ul>
+<li>name: The name of the library. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: The cell of the resource action. The scope is global.</li>
+<li>classpath: Tells what class path entries to add. The scope is instance.</li>
+<li>node: The node of the resource action. The scope is global.</li>
+<li>server: The server of the resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parameters that are specified as nested Elements</strong></p>
+<p>attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.</p>
+<ul>
+<li>name: The name of the attribute.</li>
+<li>value: The value of the attribute.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.LibraryCreateImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-remove-library">wplc-remove-library</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to remove the specified library.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameter is required:</p>
+<ul>
+<li>name: The name of the library. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: The cell of the resource action. The scope is global.</li>
+<li>node: The node of the resource action. The scope is global.</li>
+<li>server: The server of the resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parameters that are specified as nested Elements</strong></p>
+<p>attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.</p>
+<ul>
+<li>name: The name of the attribute.</li>
+<li>value: The value of the attribute.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.LibraryRemoveImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-create-res-env-custom-property">wplc-create-res-env-custom-property</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to create or reassign a Resource Environment Provider custom property.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>name: The name of the resource to create, update, or modify. The scope is instance.</li>
+<li>
+<p>providerName: The name of the resource environment provider. The scope is instance.</p>
+</li>
+<li>
+<p>value: The value of the custom property. The scope is instance.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: The cell of the resource action. The scope is global.</li>
+<li>description: The description of the custom property. The scope is instance.</li>
+<li>forceScope: Set to true if do not want to scope to an existing cluster. The scope is instance.</li>
+<li>node: The node of the resource action. The scope is global.</li>
+<li>required: The Boolean value to specify whether this property is required or not. The scope is instance.</li>
+<li>server: The server of the resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.ResourceEnvProviderCustomPropertyCreateImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-retrieve-res-env-custom-property">wplc-retrieve-res-env-custom-property</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to return the value of a Resource Environment Provider custom property.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>name: The name of the resource to create, update, or modify. The scope is instance.</li>
+<li>propToSet: The property that is set in the Ant project with the value retrieved from this property. The scope is instance.</li>
+<li>providerName: The name of the resource environment provider. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: The cell of the resource action. The scope is global.</li>
+<li>forceScope: Set to true if do not want to scope to an existing cluster. The scope is instance.</li>
+<li>node: The node of the resource action. The scope is global.</li>
+<li>server: The server of the resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.ResourceEnvProviderCustomPropertyRetreiveImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-remove-res-env-custom-property">wplc-remove-res-env-custom-property</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to remove a Resource Environment Provider custom property.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>name: The name of the resource to create, update, or modify. The scope is instance.</li>
+<li>providerName: The name of the resource environment provider. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: The cell of the resource action. The scope is global.</li>
+<li>forceScope: Set to true if do not want to scope to an existing cluster. The scope is instance.</li>
+<li>node: The node of the resource action. The scope is global.</li>
+<li>server: The server of the resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.ResourceEnvProviderCustomPropertyRemoveImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-create-res-env-entry">wplc-create-res-env-entry</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to create or modify a resource environment entry.</p>
+</li>
+<li>
+<p><strong>Prerequisites</strong></p>
+<p>Run the wplc-create-res-referenceable task before you run the wplc-create-res-env-entry task. The resource entry that is referenced in the wplc-create-res-env-entry task is not automatically created. Instead, the wplc-create-res-referenceable task creates the resource.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>jndiName: The JNDI name. The scope is instance.</li>
+<li>name: The name of the resource to create, update, or modify. The scope is instance.</li>
+<li>providerName: The name of the resource environment provider. The scope is instance.</li>
+<li>referenceable.Class: The class of the resource environment provider. The scope is instance.</li>
+<li>referenceable.FactoryClass: The factory class of the resource environment provider. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>category: The name of the category. The scope is instance.</li>
+<li>cell: The cell of the resource action. The scope is global.</li>
+<li>description: The description of the resource action. The scope is instance.</li>
+<li>forceScope: Set to true if do not want to scope to an existing cluster. The scope is instance.</li>
+<li>node: The node of the resource action. The scope is global.</li>
+<li>server: The server of the resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.ResourceEnvEntryCreateImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-remove-res-env-entry">wplc-remove-res-env-entry</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to remove a resource environment entry.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>name: The name of the resource to create, update, or modify. The scope is instance.</li>
+<li>providerName: The name of the resource environment provider. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: The cell of the resource action. The scope is global.</li>
+<li>forceScope: Set to true if do not want to scope to an existing cluster. The scope is instance.</li>
+<li>node: The node of the resource action. The scope is global.</li>
+<li>server: The server of the resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.ResourceEnvEntryRemoveImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-create-res-env-entry-custom-property">wplc-create-res-env-entry-custom-property</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to create or reassign a custom SSL property in WebSphere® Application Server security.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>entryName: The name of the resource entry to update. The scope is instance.</li>
+<li>name: The name of the resource to create, update, or modify. The scope is instance.</li>
+<li>providerName: The name of the resource environment provider. The scope is instance.</li>
+<li>value: The value of the custom property. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: The cell of the resource action. The scope is global.</li>
+<li>description: The description of the custom property. The scope is instance.</li>
+<li>forceScope: Set to true if do not want to scope to an existing cluster. The scope is instance.</li>
+<li>node: The node of the resource action. The scope is global.</li>
+<li>required: The Boolean value to specify whether this property is required or not. The scope is instance.</li>
+<li>server: The server of the resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.ResourceEnvEntryCustomPropertyCreateImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-remove-res-env-entry-custom-property">wplc-remove-res-env-entry-custom-property</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to remove a custom SSL property in WebSphere® Application Server security.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>entryName: The name of the resource entry to update. The scope is instance.</li>
+<li>name: The name of the resource to create, update, or modify. The scope is instance.</li>
+<li>providerName: The name of the resource environment provider. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: The cell of the resource action. The scope is global.</li>
+<li>forceScope: Set to true if do not want to scope to an existing cluster. The scope is instance.</li>
+<li>node: The node of the resource action. The scope is global.</li>
+<li>server: The server of the resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.ResourceEnvEntryCustomPropertyRemoveImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-create-resource-env-provider">wplc-create-resource-env-provider</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to create a resource environment provider at the specified scope.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameter is required:</p>
+<ul>
+<li>name: The name of the resource to create, update, or modify. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: The cell of the resource action. The scope is global.</li>
+<li>description: The description of the custom property. The scope is instance.</li>
+<li>forceScope: Set to true if do not want to scope to an existing cluster. The scope is instance.</li>
+<li>node: The node of the resource action. The scope is global.</li>
+<li>server: The server of the resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.ResourceEnvProviderCreateImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-remove-resource-env-provider">wplc-remove-resource-env-provider</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to remove a resource environment provider at the specified scope and with the specified name.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameter is required:</p>
+<ul>
+<li>name: The name of the resource to create, update, or modify. The scope is instance.</li>
+<li><strong>Optional parameters</strong></li>
+</ul>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: The cell of the resource action. The scope is global.</li>
+<li>forceScope: Set to true if do not want to scope to an existing cluster. The scope is instance.</li>
+<li>node: The node of the resource action. The scope is global.</li>
+<li>server: The server of the resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.ResourceEnvProviderRemoveImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-create-res-referenceable">wplc-create-res-referenceable</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to create or modify a resource entry that you can reference.</p>
+<p><strong>Important:</strong> Run this task before you run the wplc-create-res-env-entry task. The wplc-create-res-referenceable task creates the resource that is referenced in the wplc-create-res-env-entry task.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>providerName: The name of the resource environment provider. The scope is instance.</li>
+<li>referenceable.Class: The reference class of the resource environment provider. The scope is instance.</li>
+<li>referenceable.FactoryClass: The reference factory class of the resource environment provider. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: Cell of the resource action. The scope is global.</li>
+<li>forceScope: Set to true if do not want to scope to cluster, if exists. The scope is instance.</li>
+<li>node: Node of the resource action. The scope is global.</li>
+<li>server: Server of the resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.ResourceReferenceableCreateImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-remove-res-referenceable">wplc-remove-res-referenceable</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to remove a resource entry you can reference.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>providerName: The name of the resource environment provider. The scope is instance.</li>
+<li>referenceable.Class: The reference class of the resource environment provider. The scope is instance.</li>
+<li>referenceable.FactoryClass: The reference factory class of the resource environment provider. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: Cell of the resource action. The scope is global.</li>
+<li>forceScope: Set to true if do not want to scope to an existing cluster. The scope is instance.</li>
+<li>node: Node of the resource action. The scope is global.</li>
+<li>server: Server of the resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.ResourceReferenceableRemoveImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-create-variable">wplc-create-variable</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to create or reassign a WebSphere® Application Server environment variable and value.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>name: The name of the variable. The scope is instance.</li>
+<li>value: The value that is assigned to the variable. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: The cell of the resource action. The scope is global.</li>
+<li>description: The description of the variable.</li>
+<li>node: The node of the resource action. The scope is global.</li>
+<li>server: The server of the resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.VariableCreateImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-remove-variable">wplc-remove-variable</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to remove a WebSphere® Application Server environment variable and value.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameter is required:</p>
+<ul>
+<li>name: The name of the variable. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: The cell of the resource action. The scope is global.</li>
+<li>node: The node of the resource action. The scope is global.</li>
+<li>server: The server of the resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.VariableRemoveImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-retrieve-variable">wplc-retrieve-variable</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to retrieve a WebSphere® Application Server environment variable and value.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameter is required:</p>
+<ul>
+<li>name: The name of the variable. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: The cell of the resource action. The scope is global.</li>
+<li>node: The node of the resource action. The scope is global.</li>
+<li>server: The server of the resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.VariableRetrieveImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-create-res-env-directory">wplc-create-res-env-directory</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to create RP file names in the directory.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameter is required:</p>
+<ul>
+<li>rpPropertyDirectoryName: The property directory name. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: Cell of the resource action. The scope is global.</li>
+<li>forceScope: Set to true if do not want to scope to an existing cluster. The scope is instance.</li>
+<li>node: Node of the resource action. The scope is global.</li>
+<li>rpPrefix: The name of the prefix. The scope is instance.</li>
+<li>server: Server of the resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.REProviderCreateByDirectoryImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-cluster-sync-all-node">wplc-cluster-sync-all-node</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to sync all nodes in the cluster.</p>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: Cell of the resource action. The scope is global.</li>
+<li>node: Node of the resource action. The scope is global.</li>
+<li>server: Server of the resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.ClusterSyncAllNodesImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-cluster-sync-single-node">wplc-cluster-sync-single-node</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to sync a single cluster node.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameter is required:</p>
+<ul>
+<li>syncNode: The name of the node to sync. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: Cell of the resource action. The scope is global.</li>
+<li>node: Node of the resource action. The scope is global.</li>
+<li>server: Server of the resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.ClusterSyncSingleNodeImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-extract-ear-local-or-remote">wplc-extract-ear-local-or-remote</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to extract ear files locally or remotely.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>appName: The application name for the ear file. The scope is instance.</li>
+<li>earFile: The local directory and file where the ear file is exported to. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: Cell of the resource action. The scope is global.</li>
+<li>node: Node of the resource action. The scope is global.</li>
+<li>server: Server of the resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.ExtractEarLocalOrRemoteImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-query-application-list">wplc-query-application-list</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to query a list of applications that are installed in the cell and to return a comma delimited string. The application list is placed in an Ant property called ${filteredAppList}.</p>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: Cell of the resource action. The scope is global.</li>
+<li>filter: The filter that is used for the application query; for example: PA_.</li>
+<li>node: Node of the resource action. The scope is global.</li>
+<li>server: Server of the resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.ApplicationsQueryImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-retrieve-datasource-custom-property">wplc-retrieve-datasource-custom-property</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to retrieve a value from the data source custom properties.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>datasourcename: Name of the data source. The scope is instance.</li>
+<li>jdbcprovidername: Name of the JDBC provider that identifies this resource. The scope is instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: Cell of the resource action. The scope is global.</li>
+<li>forceScope: Set to true if do not want to scope to the existing cluster. The scope is instance.</li>
+<li>node: Node of the resource action. The scope is global.</li>
+<li>propertyName: The name of the custom property to retrieve the value from. The scope is instance.</li>
+<li>propToSet: The property that is set in the Ant project with the value retrieved from WebSphere® Application Server. The scope is instance.</li>
+<li>server: Server of the resource action. The scope is global.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.DataSourceRetrieveCustomPropertyValue class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-wait-for-sync-to-complete">wplc-wait-for-sync-to-complete</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to wait for the ear expansion and distribution to complete.</p>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cell: Cell of the resource action. The scope is global.</li>
+<li>maxAppTimeToWait: The maximum time in minutes to wait for each application expansion process to complete.</li>
+<li>maxTimeToWait: The maximum time in minutes to wait for the expansion process to complete.</li>
+<li>node: Node of the resource action. The scope is global.</li>
+<li>server: Server of the resource action. The scope is global.</li>
+<li>waitTime: The time to wait between checks for the application to deploy.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.impl.ClusterWaitForSyncToCompleteImpl class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-create-ear">wplc-create-ear</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to deploy an EAR resource to the target Application or portal server.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>appname: The name of the application for the EAR file.</li>
+<li>earfile: The location of the EAR file to deploy.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>cluster: Defines the cluster name. Do not include spaces with this value. If not set, the value defaults to the context that is defined in the EAR file's application.xml file.</li>
+<li>classloadermode: Sets the class-loader delegation mode, also known as the class loader order. This value determines whether a class loader delegates the loading of classes to the parent class loader. The following values are supported:<ul>
+<li>PARENT_FIRST: Delegates the loading of classes to its parent before you load the class from its local path. This value is the default for the class-loader policy and for standard JVM class loaders.</li>
+<li>PARENT_LAST: Causes the class loader to attempt to load classes from its local class path before you delegate the class loading to its parent. Using this policy, an application class loader can override and provide its own version of a class that exists in the parent class loader.</li>
+</ul>
+</li>
+<li>startingweight: Sets the starting weight for the application. The starting weight specifies the order in which applications are started when the server starts. The application with the lowest starting weight is started first.</li>
+<li>server: The name of the application server for HCL Portal.</li>
+<li>node: The name of the WebSphere® Application Server node.</li>
+<li>cell: The name of the WebSphere® Application Server cell.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parameters that are specified as nested Elements</strong></p>
+<p>attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task. This parameter is used to pass any attribute that is associated with the resource action.</p>
+<ul>
+<li>name: The name of the attribute.</li>
+<li>value: The value of the attribute.
+option - Not all available EAR deployment options are supported by the wplc-create-ear syntax as attributes. The option element passes more information to the underlying framework inside the WsAdmin profile. This feature is similar to how other parameters are passed into the WsAdmin script file. However, in this situation, the full set of options are assembled into a string corresponding to the syntax of the scripting language.</li>
+</ul>
+<p>Do not code parameters that are included as attributes on the task as options. Use the corresponding attribute to avoid redundancy and to prevent runtime exception during the task parsing.</p>
+<p>The syntax of the nested option element allows for the following three formats: keyword only, keyword/value pairing, or keyword with value list.</p>
+<ul>
+<li>key: The name of the option</li>
+<li>value: The value of the option. If no value is present and the option does not contain nested value elements, then this key does not take a value.
+If a keyword can take a list of values, then a single nested value element is used for each value in the list.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter type</th>
+<th>Example (with AdminApp syntax)</th>
+<th>Option element syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Keyword only</td>
+<td><code>-nodeployejb</code></td>
+<td><code>&lt;option key="nodeployejb"/&gt;</code></td>
+</tr>
+<tr>
+<td>Keyword with simple value</td>
+<td><code>-custom value</code></td>
+<td><code>&lt;option key="custom" value="value"/&gt;</code></td>
+</tr>
+<tr>
+<td>Keyword with list of values</td>
+<td><code>-MapresrefToEJB {{value1} {value2} {value3}}</code></td>
+<td><code>&lt;option key="MapResRefToEJB"/&gt;</code> <br><code>&lt;value&gt;value1&lt;/value&gt;</code><br><code>&lt;value&gt;value2&lt;/value&gt;</code> <br><code>&lt;value&gt;value3&lt;/value&gt;</code><br><code>&lt;/option&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.EarCreate class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-edit-ear">wplc-edit-ear</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to edit the attributes of the target application.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameter is required:</p>
+<ul>
+<li>appname: The name of the application for the EAR file.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parameters that are specified as nested Elements</strong></p>
+<p>option - Not all available EAR deployment options are supported by the wplc-create-ear syntax as attributes. The option element passes more information to the underlying framework inside the WsAdmin profile. This feature is similar to how other parameters are passed into the WsAdmin script file. However, in this situation, the full set of options are assembled into a string corresponding to the syntax of the scripting language.</p>
+<p>Do not code parameters that are included as attributes on the task as options. Use the corresponding attribute to avoid redundancy and to prevent runtime exception during the task parsing.</p>
+<p>The syntax of the nested option element allows for the following three formats: keyword only, keyword/value pairing, or keyword with value list.</p>
+<ul>
+<li>key: The name of the option</li>
+<li>value: The value of the option. If no value is present and the option does not contain nested value elements, then this key does not take a value.
+If a keyword can take a list of values, then a single nested value element is used for each value in the list.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter type</th>
+<th>Example (with AdminApp syntax)</th>
+<th>Option element syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Keyword only</td>
+<td><code>-nodeployejb</code></td>
+<td><code>&lt;option key="nodeployejb"/&gt;</code></td>
+</tr>
+<tr>
+<td>Keyword with simple value</td>
+<td><code>-custom value</code></td>
+<td><code>&lt;option key="custom" value="value"/&gt;</code></td>
+</tr>
+<tr>
+<td>Keyword with list of values</td>
+<td><code>-MapresrefToEJB {{value1} {value2} {value3}}</code></td>
+<td><code>&lt;option key="MapResRefToEJB"/&gt;</code> <br><code>&lt;value&gt;value1&lt;/value&gt;</code> <br><code>&lt;value&gt;value2&lt;/value&gt;</code> <br><code>&lt;value&gt;value3&lt;/value&gt;</code><br> <code>&lt;/option&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.EarEdit class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-update-ear">wplc-update-ear</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to update an existing deployed EAR file with a new or modified version.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>appname: The name of the application for the EAR file.</li>
+<li>earfile: The location of the EAR file to deploy.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional parameters</strong></p>
+<p>The following parameters are optional:</p>
+<ul>
+<li>classloadermode: Sets the class-loader delegation mode, also known as the class loader order. This value determines whether a class loader delegates the loading of classes to the parent class loader. The following values are supported:<ul>
+<li>PARENT_FIRST: Delegates the loading of classes to its parent before you load the class from its local class path. This value is the default for the class-loader policy and for standard JVM class loaders.</li>
+<li>PARENT_LAST: Causes the class loader to attempt to load classes from its local class path before you delegate the class loading to its parent. Using this policy, an application class loader can override and provide its own version of a class that exists in the parent class loader.</li>
+</ul>
+</li>
+<li>startingweight: Sets the starting weight for the application. The starting weight specifies the order in which applications are started when the server starts. The application with the lowest starting weight is started first.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parameters that are specified as nested Elements</strong></p>
+<p>attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task. This parameter is used to pass any attribute that is associated with the resource action.</p>
+<ul>
+<li>name: The name of the attribute.</li>
+<li>value: The value of the attribute.
+option - Not all available EAR deployment options are supported by the wplc-create-ear syntax as attributes. The option element passes more information to the underlying framework inside the WsAdmin profile. This feature is similar to how other parameters are passed into the WsAdmin script file. However, in this situation, the full set of options are assembled into a string corresponding to the syntax of the scripting language.</li>
+</ul>
+<p>Do not code parameters that are included as attributes on the task as options. Use the corresponding attribute to avoid redundancy and to prevent runtime exception during the task parsing.</p>
+<p>The syntax of the nested option element allows for the following three formats: keyword only, keyword/value pairing, or keyword with value list.</p>
+<ul>
+<li>key: The name of the option</li>
+<li>value: The value of the option. If no value is present and the option does not contain nested value elements, then this key does not take a value.
+If a keyword can take a list of values, then a single nested value element is used for each value in the list.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter type</th>
+<th>Example (with AdminApp syntax)</th>
+<th>Option element syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Keyword only</td>
+<td><code>-nodeployejb</code></td>
+<td><code>&lt;option key="nodeployejb"/&gt;</code></td>
+</tr>
+<tr>
+<td>Keyword with simple value</td>
+<td><code>-custom value</code></td>
+<td><code>&lt;option key="custom" value="value"/&gt;</code></td>
+</tr>
+<tr>
+<td>Keyword with list of values</td>
+<td><code>-MapresrefToEJB {{value1} {value2} {value3}}</code></td>
+<td><code>&lt;option key="MapResRefToEJB"/&gt;</code><br><code>&lt;value&gt;value1&lt;/value&gt;</code><br><code>&lt;value&gt;value2&lt;/value&gt;</code><br><code>&lt;value&gt;value3&lt;/value&gt;</code><br><code>&lt;/option&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.EarUpdate class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-modify-ear">wplc-modify-ear</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to modify a previously deployed EAR resource to the target application or Portal server instance.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>appname: The name of the application for the EAR file.</li>
+<li><strong>Optional parameters</strong></li>
+</ul>
+<p>The following parameters are optional:</p>
+<ul>
+<li>classloadermode: Sets the class-loader delegation mode, also known as the class loader order. This parameter determines whether a class loader delegates the loading classes to the parent class loader. The following values are supported:<ul>
+<li>PARENT_FIRST: Delegates the loading of classes to its parent before you load the class from its local class path. This value is the default for the class-loader policy and for standard JVM class loaders.</li>
+<li>PARENT_LAST: Causes the class loader to attempt to load classes from its local class path before you delegate the class loading to its parent. Using this policy, an application class loader can override and provide its own version of a class that exists in the parent class loader.</li>
+</ul>
+</li>
+<li>startingweight: Set the starting weight for the application. The starting weight specifies the order in which applications are started when the server starts. The application with the lowest starting weight is started first.</li>
+<li>server: The name of the HCL Portal server.</li>
+<li>node: The name of the WebSphere® Application Server node.</li>
+<li>cell: The name of the WebSphere® Application Server cell.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parameters that are specified as nested Elements</strong></p>
+<p>attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.</p>
+<ul>
+<li>name: The name of the attribute.</li>
+<li>value: The value of the attribute.</li>
+</ul>
+<p>option - Not all available EAR deployment options are supported by the wplc-create-ear syntax as attributes. The option element passes more information to the underlying framework inside the WsAdmin profile. This feature is similar to how other parameters are passed into the WsAdmin script file. However, in this situation, the full set of options are assembled into a string corresponding to the syntax of the scripting language.</p>
+<p>Do not code parameters that are included as attributes on the task as options. Use the corresponding attribute to avoid redundancy and to prevent runtime exception during the task parsing.</p>
+<p>The syntax of the nested option element allows for the following three formats: keyword only, keyword/value pairing, or keyword with value list.</p>
+<ul>
+<li>key: The name of the option</li>
+<li>value: The value of the option. If no value is present and the option does not contain nested value elements, then this key does not take a value.
+If a keyword can take a list of values, then a single nested value element is used for each value in the list.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter type</th>
+<th>Example (with AdminApp syntax)</th>
+<th>Option element syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Keyword only</td>
+<td><code>-nodeployejb</code></td>
+<td><code>&lt;option key="nodeployejb"/&gt;</code></td>
+</tr>
+<tr>
+<td>Keyword with simple value</td>
+<td><code>-custom value</code></td>
+<td><code>&lt;option key="custom" value="value"/&gt;</code></td>
+</tr>
+<tr>
+<td>Keyword with list of values</td>
+<td><code>-MapresrefToEJB {{value1} {value2} {value3}}</code></td>
+<td><code>&lt;option key="MapResRefToEJB"/&gt;</code><br><code>&lt;value&gt;value1&lt;/value&gt;</code><br><code>&lt;value&gt;value2&lt;/value&gt;</code><br><code>&lt;value&gt;value3&lt;/value&gt;</code><br><code>&lt;/option&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.EarModify class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-update-file-in-ear">wplc-update-file-in-ear</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to update a file in the deployed ear.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameters are required:</p>
+<ul>
+<li>appname: The name of the application for the EAR file.</li>
+<li>classloadermode: Sets the class-loader delegation mode, also known as the class loader order. This value determines whether a class loader delegates the loading of classes to the parent class loader. The following values are supported:<ul>
+<li>PARENT_FIRST: Delegates the loading of classes to its parent before you load the class from its local class path. This value is the default for the class-loader policy and for standard JVM class loaders.</li>
+<li>PARENT_LAST: Causes the class loader to attempt to load classes from its local class path before you delegate the class loading to its parent. Using this policy, an application class loader can override and provide its own version of a class that exists in the parent class loader.</li>
+<li>startingweight: Sets the starting weight for the application. The starting weight specifies the order in which applications are started when the server starts. The application with the lowest starting weight is started first.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Parameters that are specified as nested Elements</strong></p>
+<p>option - Not all available EAR deployment options are supported by the wplc-create-ear syntax as attributes. The option element passes more information to the underlying framework inside the WsAdmin profile. This feature is similar to how other parameters are passed into the WsAdmin script file. However, in this situation, the full set of options are assembled into a string corresponding to the syntax of the scripting language.</p>
+<p>Do not code parameters that are included as attributes on the task as options. Use the corresponding attribute to avoid redundancy and to prevent runtime exception during the task parsing.</p>
+<p>The syntax of the nested option element allows for the following three formats: keyword only, keyword/value pairing, or keyword with value list.</p>
+<ul>
+<li>key: The name of the option</li>
+<li>value: The value of the option. If no value attribute is present and the option does not contain value elements, then this key does not take a value.
+If a keyword can take a list of values, then a single nested value element is used for each value in the list.</li>
+</ul>
+<p>Add the following two &lt;option&gt; keys:</p>
+<ul>
+<li>An option element with a key of contents points to the location on disk of the file to update option key="contents" value="locationOfFileOnDisk"/&gt;.</li>
+<li>An option element with a key of contenturi points to the location inside of an .ear file of the file to update option key="contenturi" value="locationOfFileInEar"/&gt;</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.EarCreate class implements this task.</p>
+</li>
+</ul>
+<h2 id="wplc-remove-ear">wplc-remove-ear</h2>
+<ul>
+<li>
+<p><strong>Description and usage</strong></p>
+<p>Use this Ant task to remove or uninstall an EAR resource from the target application or Portal server instance.</p>
+</li>
+<li>
+<p><strong>Required parameters</strong></p>
+<p>The following parameter is required:</p>
+<ul>
+<li>appname: The name of the application for the EAR file.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation bean</strong></p>
+<p>The com.ibm.wplc.deploy.tasks.EarRemove class implements this task.</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 1, 2022</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

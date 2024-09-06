@@ -1,0 +1,2476 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/extend_dx/paa/developing_basic_paa_app/creating_paa_file/paa_file_structure/si_paa_spec_compdir/">
+      
+      
+        <link rel="prev" href="../si_paa_spec_doc/">
+      
+      
+        <link rel="next" href="../../si_paa_spec_inst/">
+      
+      
+      <link rel="icon" href="../../../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Components directory - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#components-directory" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../../../latest/extend_dx/paa/developing_basic_paa_app/creating_paa_file/paa_file_structure/si_paa_spec_compdir/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Components directory
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../whatsnew/cf20/newcf222/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../deployment/" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../build_sites/" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../../whatsnew/cf20/newcf222/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../build_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Extend DX
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../integration/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integrate Applications
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../development_tools/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Development Tools
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../script_application/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Script Applications
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../ddc/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Digital Data Connector
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../portlets_development/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Portlet Development
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../screenflow/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Screen Flow Manager
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_8" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Portal Application Archive
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_8" id="__nav_7_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_8">
+            <span class="md-nav__icon md-icon"></span>
+            Portal Application Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_8_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Developing basic PAA file applications
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_8_2" id="__nav_7_8_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_8_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Developing basic PAA file applications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dep_check_paa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Checking server dependency
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../add_paa_dependency/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PAA dependencies for deployment and removal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_8_2_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Create a Portal Application Archive (PAA) file
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_8_2_4" id="__nav_7_8_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_7_8_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_8_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Create a Portal Application Archive (PAA) file
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_8_2_4_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    PAA file structure overview
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_8_2_4_2" id="__nav_7_8_2_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_7_8_2_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_8_2_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            PAA file structure overview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../si_paa_spec_doc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation directory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Components directory
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../si_paa_spec_inst/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation tasks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../si_paa_spec_order/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Order of installation of scripts and artifacts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sdd.xml_file/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    The sdd.xml file
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../si_paa_spec_prop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Property files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbprops_si/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database properties for the Solution Installer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../si_paa_spec_vp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Virtual portals in the PAA file
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../developing_adv_paa_app/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Developing advanced PAA file applications
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../apis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    APIs
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="components-directory">Components directory</h1>
+<p>The components directory and its sub-directories in the PAA file archive are where all deployable artifacts must be stored. If you examine the content of the components directory in the PortalServer_root/doc/paa-samples/Sample1.paa file, you see one component, sample1. There is always at least one component that is contained in a PAA file. However, there is no limit on the number of extra components that you can include.</p>
+<p>The number of available components depends on how you want to organize your deployable artifacts. Potentially all the deployable artifacts can be stored in a single component. However, if there are multiple stand-alone applications to be stored in the PAA file, create a component for each application. Also, if you want to be able to reuse components across PAA file distributions, then it makes sense to separate artifacts into multiple components.</p>
+<p>There is no limit on the type of artifacts that can be contained within a specific component. There is a limitation on where the artifacts can be placed within the component directory sub tree structure.</p>
+<p>A component can include artifacts and configuration details for an entire application. It can also contain only artifacts that relate to a certain part of the application. For example, you might include all your theme-related artifacts in one component, and your XML access scripts to create the pages for your site in another. The Solution Installer is not concerned with the approach selected. It processes each component based on the dependencies that are listed in the sdd.xml file. However, it might make sense to have some separation to handle reusability of components.</p>
+<p>Using the <a href="../../../../../../guide_me/wpsdirstr/">PortalServer_root</a>/doc/paa-samples/sample1.paa example, open the components/Sample1 directory. The following directories must be present with the component level sdd.xml file:</p>
+<ul>
+<li>
+<p><strong>config</strong></p>
+<p>This directory contains includes and templates directories. Both directories are important if you plan to add custom tasks to aid the installation or configuration of the component artifacts.</p>
+<ul>
+<li>
+<p><strong>includes</strong></p>
+<p>This directory is where the ConfigEngine looks for tasks that implement the extension points that are listed in the component level sdd.xml file. The name of the xml file that contains the Ant tasks is not hardcoded, so the ConfigEngine automatically loads any XML files that are found in this directory. The Ant tasks do not have to be stored in a single file. They can be spread over multiple files that are all picked up by the ConfigEngine.</p>
+</li>
+<li>
+<p><strong>templates</strong></p>
+<p>This directory is where extra script files are stored for configuration tasks. For example, if you deploy a WAR file and want to run portlet configuration tasks, you can place the XML scripts in this directory. Copy the war file to the profile_dir/installableApps directory with your custom task implementation and reference this location in your XMLAccess script.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Solution Installer does not automatically run the scripts that are stored in this location. Instead, the custom tasks are responsible for calling these scripts.</p>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>content</strong></p>
+<p>This directory is where you can store HCL Web Content Manager libraries and other content related artifacts for import. The component/content directory contains the following sub-directories:</p>
+<ul>
+<li>
+<p><strong>jcr</strong></p>
+<p>This directory contains JCR-related artifacts and a directory structure of nodes. Each entry is either a file or a directory, with associated metadata (title, last modified, permissions). Content that is found in this directory must be installed with custom code. The Solution Installer does not auto-generate any tasks to handle resources that are found in this location.</p>
+</li>
+<li>
+<p><strong>jsp</strong></p>
+<p>Place any JSP files that you want to package as part of your application in this directory. Usually, the custom code handles resources in this location. However, Web Content Manager related JSP files are treated as a special case. Place such files in a sub folder that is called wcm under the jsp directory, for example, jsp/wcm. The Solution Installer copies all files and folders to the relevant location on the server: <code>${WasUserHome}/installedApps/${NodeName}/WCM_EXTENSION.ear/wp.wcmextension.war/jsp/wcm/content</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Solution Installer does not run any default tasks to handle other JSP content, excluding those tasks that are found in the jsp/wcm directory. A developer must provide a custom task to ensure that this content is copied to the correct location.</p>
+</div>
+</li>
+<li>
+<p><strong>wcm</strong></p>
+<p>This directory contains Web Content Manager libraries. Each sub-directory of the wcm directory represents a separate library. These libraries are a specialized form of JCR artifacts. Web Content Manager libraries are separated into their own directory due to the process required to install them with the default function. For example, if you have a library that is called lib1, you might place the content in the content/wcm/lib1 directory; for example, content/wcm/lib1/554ee7f5.</p>
+<p>Multiple Web Content Manager libraries that are contained within a single sub-directory are supported. However, it places a limitation on the Solution Installer's ability to delete and replace libraries. That is, the task that Solution installer relies upon to import takes everything within a supplied sub-directory and attempts to import to the server. Therefore, to be able to successfully replace all the libraries in the directory, they must all be marked for deletion. Where libraries are allocated to their own sub-directory, they can be replaced on the system individually when there are no interlibrary dependencies. Another existing library does not have a dependency on items in the library that is selected for deletion.</p>
+</li>
+<li>
+<p><strong>webdav</strong></p>
+<p>This directory and its sub tree structure contain artifacts that must be uploaded to the WebDAV file store. There are four possible sub-directories. Each one is named to reflect the type of function that is provided in the files supplied. The following options are available:</p>
+<ul>
+<li>
+<p><strong>iwidgets</strong></p>
+<p>Place .zip files that contain iWidgets that must be uploaded to the WebDAV file store and registered with HCL Portal. The Solution Installer automatically uploads any .zip files that are found in this directory to the dav:fs-type1/iwidgets/ directory. Extra work is necessary to have the iWidget definitions that are registered with HCL Portal. The installer must know about the widget definition files to register with WebSphere Portal. A properties file called iwidgets.properties must be included in the iwidgets directory in the PAA. The properties are generated with the .zip file name that contains the definition file as the name of the property. It also supplies a comma-separated list of definition files that are contained in this file as the value.</p>
+</li>
+<li>
+<p><strong>layout-templates</strong></p>
+<p>Place .zip files that contain layout-templates in this directory. When such files are detected by the installer, code is generated to automatically upload such content to the dav:fs-type1/layout-templates/ directory in the WebDAV file store.</p>
+</li>
+<li>
+<p><strong>skins</strong></p>
+<p>Place any .zip files that contains skins not specific to a theme in this directory. The content is automatically uploaded to the dav:fs-type1/skins/ directory in the WebDAV file store.</p>
+</li>
+<li>
+<p><strong>themes</strong></p>
+<p>Place .zip files that contain static theme content in this directory. They are automatically uploaded to the dav:fs-type1/themes/ directory in the WebDAV file store.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If your theme contains dynamic content, include them in a WAR file that is deployed at run time.</p>
+</div>
+</li>
+</ul>
+<p>The Solution Installer uploads WebDAV content with the dav:fs-type1/*.* WebDAV entry point. The themes and skins are not automatically made available through the themelist or skinlist entry points. To ensure that they are available through the administration pages, an XMLAccess script must be created to register the resources with HCL Portal. The context root, where the content of the individual .zip files is installed, is set in the following manner:</p>
+<ul>
+<li>The root directory is contained within the .zip file. For example, all the content is enclosed within a directory. Then, it is appended to the TargetURI. For example, a .zip file in the componentName/content/webdav/themes directory with a root directory of sample would result in TargetURI dav:fs-type1/themes/sample/.</li>
+<li>No root directory is contained in the .zip file. All the items are in the parent level. Then, the name of the .zip file minus the ‘.zip’ suffix is used. For example, a .zip file with the name sample1.zip would result in TargetURI ‘dav:fs-type1/themes/sample1/’. The upload task for the .zip files to the WebDAV file system is set to replace the current directory with the new content. However, the Solution Installer alters this function to merge the content by default instead. When the UpdateMode parameter is set to replace, which is the default, the upload replaces all content found at the TargetURI. For example, if you upload a .zip file to dav:fs-type1/themes/, it does not replace the equivalent content that is stored in the directory. It replaces everything in this directory. Therefore, it was decided that it would be better to have the content that is set to merge with the existing content as the default behavior. If you do require UpdateMode set to replace, then you must add a properties file to the directory. For example, if you want to replace all the themes, you would place the webdav.properties file in the componentName/content/webdav/themes directory. There is just one property available in this file: webdav.replace=list of .zip files. The value of the webdav.replace property is a comma-separated list of files that tells the Solution Installer which files must be uploaded.</li>
+</ul>
+</li>
+<li>
+<p><strong>xmlaccess</strong></p>
+<p>Stores any component level XML access scripts. This directory differs from the component/config/templates directory that stores scripts to be called by custom Ant tasks. Any scripts that must be run by default, are placed in the content/xmlaccess directory. This directory has two sub-directories to aid in the distinction between installation and uninstall scripts. The scripts that are required for installation are in the /content/xmlaccess/install directory and the uninstall scripts are placed in the /content/xmlaccess/uninstall directory. The type of scripts in the component/content/xmlaccess directory can include scripts to register a theme or create pages and assign portlets. Other examples are scripts to create a set of users and groups or a credential slot in the HCL Portal credential vault. All the scripts that are found by Solution Installer in these directories are automatically run.</p>
+</li>
+<li>
+<p><strong>database</strong></p>
+<p>This directory contains any database scripts for creating tables and pre-populating the tables with any relevant data. Solution Installer can generate Ant tasks to create the relevant configuration settings on the underlying WebSphere® Application Server. For details of the required properties, go to <a href="../../dbprops_si/">Database properties for the Solution Installer</a>.</p>
+<p>There are two directories in the database directory in the PAA file: install and uninstall. The PAA file developer must place the following scripts in these directories:</p>
+<ul>
+<li>.ddl and .sql scripts to create and populate tables in the install directory</li>
+<li>.ddl and .sql scripts for dropping tables in the uninstall directory</li>
+</ul>
+<p>Where multiple scripts are required, include an order.properties file in the appropriate directory to specify the correct order for installation.</p>
+<p>If you are providing setup scripts for different database types in a single PAA file, there is an extra step. Run this step during the PAA creation phase. For each database type, a properties file must be added to the components/componentName/content/database/install directory.</p>
+<ul>
+<li>For Derby scripts, call the scripts.derby.properties file.</li>
+<li>For DB2® scripts, call the scripts.db2.properties file.</li>
+<li>For Oracle scripts, call the scripts.oracle.properties file.</li>
+<li>For SQL Server scripts, call the scripts.sql.properties file.</li>
+</ul>
+<p>Add a comma-separated list of scripts to the properties file in the order that they must be run for a specific database type. The Solution Installer determines at run time, which set of scripts to run for the database type requested.</p>
+</li>
+<li>
+<p><strong>pzn</strong></p>
+<p>PZN-related artifacts, such as JAR files that contain business rules and personalization .nodes files are in this directory. The Solution installer automatically copies any JAR files that contain custom Java classes to the correct location under the profile directory and upload any .nodes files to the server.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>installableApps</strong></p>
+<p>The installableApps directory is where any artifacts that must be installed to HCL Portal or directly to the application server are to be stored. Solution Installer copies the relevant files across to the <a href="../../../../../../guide_me/wpsdirstr/">wp_profile_root</a>/installableApps directory automatically when the default implementation tasks are used. The artifacts are stored in the PAA file in sub-directories of the installableApps directory. The sub-directories are based on their resource type to allow for default code to be easily generated to manage installation and deployment of artifacts. However, when the artifacts are copied to the <a href="../../../../../../guide_me/wpsdirstr/">wp_profile_root</a>/installableApps directory, it is just the content of the sub-directories that is copied and not the directories themselves. The following is a list of currently supported resource sub-directories:</p>
+<ul>
+<li>
+<p><strong>ear</strong></p>
+<p>Contains any EAR files that must be deployed to the application server. Wrap .war files that do not contain any portlets and must be installed to the application server in an EAR file. The reason for this is that the default scripts used to deploy artifacts require specific information to run the installation. For example, the display name and context root for the application. This information can be found in the application.xml file of an EAR file. The context root information would not be available with just a WAR file. An example of a WAR file that must be wrapped in this way is a theme.war file. If you are providing a custom Ant deployment script, it is unnecessary because you can provide the required information in the script or a properties file.</p>
+<p>EAR files are deployed automatically to the server. However, if a WAR file that contains a portlet is wrapped inside of an EAR file, the developer must supply an extra script to register the portlets with HCL Portal. It is the responsibility of the developer to ensure that the portlets are registered in the correct manner.</p>
+</li>
+<li>
+<p><strong>portlets</strong></p>
+<p>Place any WAR files that contain JSR portlets into the portlets directory. Legacy portlets are not handled automatically by the installer. They require custom code to install and must not be placed in this directory. The reason for separating these WAR files from those files that contain servlets or other application types is due to the installation method required. Those files that contain JSR portlets are typically installed and deployed with an XML access script. Those files that need to be installed directly to the application server are deployed with a ConfigEngine Ant task or with a wsadmin script. The Solution Installer can then read the portlets directory and install the WAR files automatically and does not need to worry that it might encounter a non-portlet WAR. However, if there is extra configuration setup for a portlet, then overwrite the default installation task with an Ant task with a custom XMLAccess script to do the installation. Add a <code>&lt;SCU&gt;</code> element to the sdd.xml file for the deploy-portlets-applySIFeaturePack extension point and add an Ant task that implements this extension point in the config/includes directory. This Ant task must call the XMLAccess task to run any supplied XMLAccess script against the portal server.</p>
+<p>The automatic installation uses the unique ID from the <code>&lt;portlet-app&gt;</code> element that is found in the warfile/WEB-INF/portlet.xml file, and the location of the WAR file itself to enable the deployment. If the unique ID is not available, the name of the WAR file is used. The WAR file is automatically copied over to the <a href="../../../../../../guide_me/wpsdirstr/">wp_profile_root</a>/installableApps directory. The following is a sample XMLAccess script that shows how the information is used to drive the installation.</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;request xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+        xsi:noNamespaceSchemaLocation=&quot;PortalConfig_8.5.0.0.xsd&quot; type=&quot;update&quot;
+        create-oids=&quot;true&quot;&gt;
+        &lt;portal action=&quot;locate&quot;&gt;
+            &lt;web-app action=&quot;update&quot; active=&quot;true&quot;
+                uid=&quot;portletXmlUniqueId.webmod&quot;&gt;
+                &lt;url&gt;file:///$profile_dir$/installableApps/warfile.war&lt;/url&gt;
+            &lt;/web-app&gt;
+        &lt;/portal&gt;
+&lt;/request&gt;
+</code></pre></div>
+<p>WAR files that are placed at this location also have unique names that are automatically generated for the individual portlets during installation. The generation of unique name values is based on the scheme componentName.portletName. The following is a sample XMLAccess script that shows how the unique name values are specified:</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;request xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+xsi:noNamespaceSchemaLocation=&quot;PortalConfig_8.5.0.0.xsd&quot; type=&quot;update&quot; create-oids=&quot;true&quot;&gt;
+        &lt;portal action=&quot;locate&quot;&gt;
+            &lt;web-app action=&quot;locate&quot; domain=&quot;rel&quot; objectid=&quot;WebAppID.webmod&quot;
+uid=&quot;WebAppId.webmod&quot;&gt;
+            &lt;portlet-app action=&quot;update&quot; domain=&quot;rel&quot; name=&quot;PortletAppId&quot;
+uid=&quot;PortletAppId&quot;&gt;
+            &lt;portlet action=&quot;update&quot; domain=&quot;rel&quot; name=&quot;PortletName&quot;
+uniquename=&quot;componentName.PortletName&quot;/&gt;
+            &lt;/portlet-app&gt;
+        &lt;/web-app&gt;
+    &lt;/portal&gt;
+&lt;/request&gt;
+</code></pre></div>
+<p>Prefix the component name to the WAR file name with the componentName.WARname.war scheme. Although not essential, it allows the user to easily track which WAR files were installed with the Solution Installer.</p>
+</li>
+<li>
+<p><strong>war</strong></p>
+<p>This directory contains any WAR files that the developer does not want to automatically install. The developer extends the extension point with a custom Ant task to install the artifacts. An example is if the WAR file contains legacy portlets. Alternatively, the WAR file does not contain any portlets and the developer does not want to wrap it in an EAR. Also, extra customization steps might be required for the configuration of the deployed artifacts. Therefore, a custom script is necessary. The installer generally ignores this directory apart from copying the files to the <a href="../../../../../../guide_me/wpsdirstr/">wp_profile_root</a>/installableApps directory and then starting any custom code that is provided to handle these artifacts.</p>
+</li>
+<li>
+<p><strong>zip</strong></p>
+<p>This directory contains any .zip file content that you must include for a component. For example, you might have some artifacts that must be copied and installed to a server that currently is not supported by Solution Installer. Solution Installer does not automatically process the content of this directory. The individual files remain in their compressed state after the PAA file is extracted. Instead, any processing of these files is completed by either custom Ant tasks that are provided by the developer or through manual steps.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>shared</strong></p>
+<p>When you deploy an application to HCL Portal, often extra shared libraries are required for the application to function correctly. These libraries can be at different levels of scope for the application. If stored in the WAR file itself, then only classes within that WAR file are able to access the library files. The second situation is when a set of libraries are solution-specific. That is, the classes in the shared library are available only to the overall solution. The WAR file option is not appropriate as it might mean a number of separate applications that work together as a larger solution, all requiring access to the library. The third level of scope is global, meaning that many applications on the server can access these classes. The first situation where the library JAR files are stored in the WAR file is out of scope for this document. However, the ability to handle the other two situations is provided by the Solution Installer.</p>
+<p>For globally available JAR files, place the JAR files into either the component/shared/app or component/shared/ext directories. These files are not copied to the equivalent directories under the <a href="../../../../../../guide_me/wpsdirstr/">PortalServer_root</a> directory. Instead, a task is run to register all the JAR files found in the shared/app and shared/ext directories of the components. When objects are found in these directories, they are registered directly with a Solution Installer-specific set of shared libraries that are inside the profile. This action makes the libraries profile-specific thus different versions of the same files might be installed to different profiles.</p>
+<p>JAR files that are registered in the component/shared/app directory are registered in the Solution Installer-specific shared.app.jar file. Similarly, for the .jar files in componentName/shared/ext directory, these files are registered with a profile-specific shared.ext.jar file. These files can be found under the <a href="../../../../../../guide_me/wpsdirstr/">wp_profile_root</a>/PortalServer/solutionInstaller directory sub tree. The specific library ‘SiSharedLib’ is registered at the cell or node level of the profile. A reference is then added to the class path of the application server to ensure that the files are available at run time. Only the shared.app.jar file is loaded automatically by the SiSharedLib library. When the registration of these files is finished, a server restart is required to reload the libraries and make the classes available on the class path. When complete, the library-specific classes are now available globally to that server for an application to access.</p>
+<p>To allow a library scope that is limited to a specific solution, place the relevant JAR files in the component/shared/common directory. Files in this directory are not copied to a location inside of the profile directory. Instead, a shared library for this component that points to this directory are added to the WebSphere® Application Server. This shared library then must be associated with either the application or made available on the server-wide class path so it is available to all applications. A properties file called shared-library.properties is in the component/shared/common directory. This file contains information on the scope to which the shared library must be registered. It also provides information on any required class loader properties, such as class loading precedence. The following properties are available in the shared-library.properties file:</p>
+<div class="language-text highlight"><pre><span></span><code># set whether the library should be at the server scope or application scope
+# Can have the following values:
+# cell, cluster, node, server
+library-scope=server
+# specify whether the library should be added to the server class path
+# or associated with a specific application.
+Library-ref=application
+# Set the name of the application(s) to which the library is to be associated.
+# name of application(s) found in the integrated administration
+# console/applications/enterprise applications.
+applicationName=# your application name
+# Set class loading preference, options are either
+# &#39;PARENT_FIRST&#39; or &#39;PARENT_LAST&#39;.
+classLoadingMode=PARENT_FIRST
+</code></pre></div>
+<p>If multiple applications are associated with the library, specify a comma-separated list of application name; for example: applicationName=AppName1,AppName2,AppName3, where AppName1,AppName2,AppName3 represent the applications to which the library is associated.</p>
+</li>
+<li>
+<p><strong>template</strong></p>
+<p>The template directory is where a developer can place files to create a website template. The template is based on one or more of the components that are supplied in the PAA distribution. One or more sub-directories might be contained within the template directory, one for each template that you want to provide. The default directory name is reserved by Solution Installer as the content of this directory is always run.</p>
+<p>The default directory and any subsequent template directories have their content split into two further sub-directories to aid in the distinction between installation and uninstallation scripts. The installation scripts are in the /component/template/template_Name/install directory and the uninstallation scripts are placed in the /component/template/template_Name/uninstall directory. The scripts that are contained in the default directory are always run. Therefore, if you are offering multiple templates and do not want one to be installed by default, leave this directory structure empty. In general the content of the default, or template-specific directories, include XMLAccess scripts to create pages, put portlets on the pages, and create users. That is, any task that is site-related and not covered by the other directories or components. For example, do not place an XMLAccess script to install a WAR file here. Instead, if this file is required, place it in the component/config/templates directory if a custom Ant task is required or in the component/content/xmlaccess/install directory otherwise.</p>
+<p>To use a different template to the default, set the templateName property in the componentName.properties file. The value of the templateName property should reflect the name of the template to be used. For example: templateName=template2.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Store any site-wide template-related artifacts in a single component separate from the components on which they depend. This placement allows the overall site presentation to be separate from the underlying technologies they surface and it makes it easier for the installer to handle updates in the future. It also makes it much easier to manage the provision of multiple site templates in a single PAA distribution. Store sample or demonstration pages for a single component local to that component.</p>
+</div>
+</li>
+<li>
+<p><strong>version</strong></p>
+<p>The component/version directory contains a single .component file with the application version information. The file contains build date, build version, name, and spec-version. This file is what tells the ConfigEngine the version of the application. Knowledge of the version that is already installed is necessary to facilitate updates to an application. The following is an example of a .component file:</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE component PUBLIC &quot;componentId&quot; &quot;component.dtd&quot;&gt;
+&lt;component build-date=&quot;6/10/14&quot; build-version=&quot;20140610-1200&quot; name=&quot;components/sample1&quot; spec-version=&quot;5.0&quot;/&gt;
+</code></pre></div>
+</li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 1, 2022</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2605 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/deployment/install/traditional/cf_install/ccf_95_known_issues/">
+      
+      
+        <link rel="prev" href="../ccf_95_health_checker/">
+      
+      
+        <link rel="next" href="../../install_addons/">
+      
+      
+      <link rel="icon" href="../../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Combined CF Known Issues - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#combined-cf-known-issues" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../../latest/deployment/install/traditional/cf_install/ccf_95_known_issues/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Combined CF Known Issues
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../whatsnew/cf20/newcf222/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../build_sites/" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../whatsnew/cf20/newcf222/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Deploy DX
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Install
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Install
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../container/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Kubernetes Deployment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Traditional Deployment
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2_3" id="__nav_4_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Traditional Deployment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../install_upgrade_plan_supported_paths/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Supported installation and upgrade paths
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../install_prereq_software/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Prepare the prerequisite software
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../installing_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Install HCL Digital Experience
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Apply Combined Cumulative Fix
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2_3_5" id="__nav_4_2_3_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_3_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Apply Combined Cumulative Fix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ccf_95_standalone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cumulative fix instructions: Stand-alone 9.5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ccf_95_cluster/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cumulative fix instructions: Cluster 9.5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ccf_95_farm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cumulative fix instructions: Farm 9.5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ccf_95_remote_search/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cumulative fix instructions: Remote search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ccf_95_health_checker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cumulative Fix Health Checker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Combined CF Known Issues
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Combined CF Known Issues
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#known-issues-for-hcl-portal-85-90-95-combined-cf17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Known Issues for HCL Portal 8.5 / 9.0 / 9.5 Combined CF17
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../install_addons/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Add ons
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../uninstall/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Uninstall HCL Digital Experience
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../hybrid/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Hybrid Deployment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docker-compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Compose
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../manage/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../build_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#known-issues-for-hcl-portal-85-90-95-combined-cf17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Known Issues for HCL Portal 8.5 / 9.0 / 9.5 Combined CF17
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="combined-cf-known-issues">Combined CF Known Issues</h1>
+<p>Learn what are the known issues in the HCL Digital Experience Combined Cumulative Fixes.</p>
+<p>This page will contain the known issues for the HCL Portal 9.5 Combined Cumulative Fix 17 or later releases.</p>
+<h2 id="known-issues-for-hcl-portal-85-90-95-combined-cf17">Known Issues for HCL Portal 8.5 / 9.0 / 9.5 Combined CF17</h2>
+<ul>
+<li>Problem: As of HCL Portal 8.5 and 9.0 CF16, some features are not visible to users assigned to the Anonymous user role and the All authenticated users role, such as the tree view in Site Manager.</li>
+<li>
+<p>Solution: Add the necessary roles for user <strong>Anonymous</strong> and user group <strong>All Authenticated Users</strong> explicitly. For example, to use site manager features within the toolbar, you must assign the <strong>User</strong> role to the <strong>All Authenticated Users</strong> group for the Site Manager portlet.</p>
+</li>
+<li>
+<p>Problem: The HCL Portal 8.5 and 9.0 CF15 <code>applyCF</code> task may fail if using the specific combination of WAS 8.5.5.12 on a Windows OS. An error similar to the following may be seen in the failure*.log in the (profile_root)/ConfigEngine/log directory:</p>
+<div class="language-text highlight"><pre><span></span><code>wp.theme.modules.webapp_cfg.xml:296: java.lang.NoClassDefFoundError: com.ibm.ffdc.config.Formattable
+</code></pre></div>
+</li>
+<li>
+<p>Solution: This is due to an OSGi issue in WAS 8.5.5.12 that will be fixed in their next release. Simply rerunning the <code>applyCF</code> task should allow continuation and success of the CF15 update. The following command also remediates the issue:</p>
+<div class="language-text highlight"><pre><span></span><code>(profile_root)/bin/osgiCfgInit.sh|bat
+</code></pre></div>
+</li>
+<li>
+<p>Problem: A failure, similar to the following, may be seen when running a Rollback on a system configured with WAS 8.5.5.x with JDK8:</p>
+<div class="language-text highlight"><pre><span></span><code>/opt/IBM/WebSphere/PortalServer/toolbar/wp.toolbar.themes/toolbar85/config/includes/wp.theme.themes.toolbar85_cfg.xml:217: The 
+following error occurred while executing this line:
+/opt/IBM/WebSphere/ConfigEngine/config/includes/utils.xml:2093: EJPXB0019E: Server response indicates an error. For status and 
+details of the XMLAccess error look at file /opt/IBM/WebSphere/wp_profile/ConfigEngine/config/work/xmlaccess.temp.file.657596238.xml.
+</code></pre></div>
+</li>
+<li>
+<p>Solution: This is due to an EJBDeploy incompatibility with JDK8 on WAS 8.5.5.x. The following steps can be used to bypass the issue: After rollback failure, use the following command to switch the JDK used by the profile to 1.7.</p>
+<p>For example:</p>
+<div class="language-text highlight"><pre><span></span><code>/opt/IBM/WebSphere/wp_profile/bin/managesdk.sh -enableProfileAll -sdkName 1.7_64
+</code></pre></div>
+<p>Then rerun the failing <code>rollbackCF</code> command, from the start by removing the rollbackCFprogress directory in example (profile_root)/ConfigEngine/log. After rollback success, the JDK can then be switched back to the original JDK8 via the same command and substituting <code>-sdkName 1.8_64</code>. This is planned to be fixed in the next Portal CF.</p>
+</li>
+<li>
+<p>Problem: The following error may be seen when working with or installing Portal Web Modules, when configured with WAS 8.5.5.12 / 9.0.0.5 generates this error:</p>
+<div class="language-text highlight"><pre><span></span><code>com.ibm.portal.tasks.wtf.XmlAccessException: Xmlaccess request failed with an error. Result [failed], 
+Messages: 
+[[EJPXA0043E: EJPXA0043E: An error occurred while creating or updating the resource.], 
+[EJPPD0015E: EJPPD0015E: Portlet application manager failed when user xmlaccess scripting user executed command InstallWebApplication.], 
+[EJPPE0013E: EJPPE0013E: The installation of Web Module from WAR file /opt/IBM/WebSphere/wp_profile/PortalServer/deployed/ilwwcm-wcmlibutil.war did not complete successfully when invoking the WebSphere Application Server administration interface.], 
+[EJPPE0001E: EJPPE0001E: Instantiation of the WebSphere Application Server administration manager failed.], 
+[EJPPH0007E: EJPPH0007E: Instantiation of the administration module for Portal context failed.], 
+[EJPPH0010E: EJPPH0010E: Failed to retrieve and initialize administration runtime variables from Application Server.],
+</code></pre></div>
+</li>
+<li>
+<p>Solution: This is expected to be fixed in an upcoming WAS level. The temporary workaround to alleviate this problem is to set the following JVM Property:</p>
+<div class="language-text highlight"><pre><span></span><code>com.ibm.ws.management.connector.soap.disableSOAPAuthCheck = true
+</code></pre></div>
+</li>
+<li>
+<p>Problem: Errors may be seen in DCS (Document Conversion Service) based on Oracle OIT (Outside In Technology) levels. The new OIT 8.5.3 level has additional prerequisites outside of Portal's scope.</p>
+</li>
+<li>
+<p>Solution: Go and log in to <a href="https://support.hcltechsw.com/csm">HCL Software Support</a> page to find related information about the PI84847 introduced in Portal Version 8.5 and Version 9.0 CF15 section.</p>
+</li>
+<li>
+<p>Problem: On a Linux system, it is possible that the <code>applyCF</code> command may fail, with this error message recorded in ConfigTrace.log:</p>
+<div class="language-text highlight"><pre><span></span><code>Couldn&#39;t flush user prefs: java.util.prefs.BackingStoreException: Couldn&#39;t get file lock.
+</code></pre></div>
+</li>
+<li>
+<p>Solution: The problem concerns Java system and/or user preferences and can potentially be addressed in one of the following ways:</p>
+<ol>
+<li>Make sure that Java's preferences directory is accessible. Ensure that the /etc/.java/.systemPrefs directory exists and is read/writable by the user performing the upgrade as well as any alternate user ID used to do WAS administration.</li>
+<li>Create a new unique Java preferences path for use by WAS.<ul>
+<li>a. Create a new sub-directory of your choice (for example, under /home/wasadmin/prefs/).</li>
+<li>b. Assign permissions on this directory so that it is read/writable by the user performing the upgrade as well as any alternate user ID used to do WAS administration.</li>
+<li>c. Set the following argument on the affected WebSphere JVM: <code>-Djava.util.prefs.userRoot=/home/wasadmin/prefs</code>. To set this argument, go to the administrative console, click <strong>Servers &gt; Server Types &gt; WebSphere application servers</strong>, and select the server that you want to add the generic argument to. Then, in the <strong>Server Infrastructure</strong> section, click <strong>Java</strong> and <strong>Process management &gt; Process definition &gt; Java virtual machine</strong>.</li>
+<li>d. Add <code>-Djava.util.prefs.userRoot=/home/wasadmin/prefs</code> to any existing properties in the <strong>Generic JVM Arguments</strong> field and click <strong>OK</strong>. Then click <strong>Save</strong> to save your changes and restart the application server.</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>Problem: An error may occur during <code>applyCF</code> on the primary cluster node, similar to the following:</p>
+<div class="language-text highlight"><pre><span></span><code>[wplc-remove-ear] AppName EphoxTbioServices 
+[wplc-remove-ear] ADMA5017I: Uninstallation of EphoxTbioServices started. 
+[wplc-remove-ear] ADMA5104I: The server index entry for WebSphere:cell=psvtmigwin08Cell01,node=psvtmigwin11+WebSphere:cell=psvtmigwin08Cell01,node=psvtmigwin09+WebSphere:cell=psvtmigwin08Cell01,node=psvtmigwin10Node01 is updated successfully. 
+[wplc-remove-ear] ADMA5102I: The configuration data for EphoxTbioServices from the configuration repository is deleted successfully. 
+[wplc-remove-ear] ADMA5011I: The cleanup of the temp directory for application EphoxTbioServices is complete. 
+[wplc-remove-ear] ADMA5106I: Application EphoxTbioServices uninstalled successfully. 
+[wplc-remove-ear] WASX7015E: Exception running command: &quot;source &quot;C:/ibm/wp85/wp_profile/ConfigEngine/config/work/was/curJaclScript.jacl&quot;&quot;; exception information: 
+[wplc-remove-ear] com.ibm.websphere.management.exception.ConfigServiceException 
+[wplc-remove-ear] com.ibm.ws.sm.workspace.WorkSpaceException 
+[wplc-remove-ear] com.ibm.websphere.management.exception.DocumentIOException: cells/psvtmigwin08Cell01/applications/EphoxTbioServices.ear/EphoxTbioServices.ear
+</code></pre></div>
+</li>
+<li>
+<p>Solution: Go and log in to <a href="https://support.hcltechsw.com/csm">HCL Software Support</a> page to find related information about disabling auto plugin generation. Once <code>applyCF</code> completes, re-enable the two plugin settings.</p>
+</li>
+<li>
+<p>Problem: The post-was-configuration-update task may fail due to an error in the Portal server startup. SystemOut.log shows an exception related to the <code>wps_scheduler</code>, and the <code>wps_scheduler</code> does not start when the Portal server starts. Error logs may appear similar to the following:</p>
+<div class="language-text highlight"><pre><span></span><code>[6/21/17 23:05:06:112 EDT] 00000080 InternalGetSc E com.ibm.wps.command.scheduler.internal.InternalGetSchedulerTaskCommand AbstractCommand.throwCommandException EJPDD0009E: JNDI naming lookup failed for name = [ejb/wpsSchedulerManager].
+javax.naming.NameNotFoundException: Context: w7944aCell/nodes/w7944aNode/servers/HCL Portal and HCL Web Content Manager, 
+name: ejb/wpsSchedulerManager: First component in name wpsSchedulerManager not found. 
+[Root exception is org.omg.CosNaming.NamingContextPackage.NotFound: IDL:omg.org/CosNaming/NamingContext/NotFound:1.0]
+</code></pre></div>
+</li>
+<li>
+<p>Solution: Edit the WAS 9 properties file, ex. AppServer/properties/migration.properties.</p>
+<div class="language-text highlight"><pre><span></span><code>#-------------------------------------------------------------------------
+# Specify the number of apps which can be installed in parallel.  default=3
+#-------------------------------------------------------------------------
+#com.ibm.ws.migration.application.install.threadPoolSize=3
+</code></pre></div>
+<p>Then uncomment the property and set to a value of 1. For example:</p>
+<div class="language-text highlight"><pre><span></span><code>com.ibm.ws.migration.application.install.threadPoolSize=1
+</code></pre></div>
+<p>Then, save the change and continue with the profile migration. Stop the Portal server, and run the following command again:</p>
+<div class="language-text highlight"><pre><span></span><code>post-was-configuration-update
+</code></pre></div>
+</li>
+<li>
+<p>Problem: When creating a portal page, there is an option to Create Content. When clicking on that option, it presents available templates to create content from <strong>Content Hub Authoring Template</strong> is one of them. If selecting this template, it may show an error:</p>
+<div class="language-text highlight"><pre><span></span><code>&quot;The new content item could not be created. The selected template is not supported. A workflow is required, but the workflow is not 
+set for the item&quot;
+</code></pre></div>
+</li>
+<li>
+<p>Solution: This authoring template is not designed for this feature. It has to be exempted from creating content items off it from toolbar. To do that:</p>
+<ol>
+<li>Go to the <strong>Content Hub</strong> library.</li>
+<li>Open Authoring templates, edit the <strong>Content Hub authoring template</strong>.</li>
+<li>Go to the tab <strong>Properties</strong>.</li>
+<li>Open section <strong>Profile</strong>.</li>
+<li>Add this keyword <code>hcl.portal.toolbar.hiddenTemplate</code> to the keywords text box.</li>
+<li>Save and Close.</li>
+</ol>
+</li>
+<li>
+<p>Problem: XMLAccess in the <code>applyCF</code> command may fail when updating a virtual portal</p>
+</li>
+<li>
+<p>Solution: The CF install attempts to update the Portal owned pages in the base portal and all virtual portals. Prior to CF11 there were some cases where error conditions were suppressed for both the base portal and all virtual portals. This has changed and error conditions are no longer suppressed. If the CF install (<code>applyCF</code> command) reports an error while running the XMLAccess tool on a virtual portal, there may be a problem with the virtual portal. If virtual portal(s) have been modified and removed some of the Portal owned pages on purpose then these errors can be safely suppressed and allow the CF install to continue. This can be done by adding the <code>ignore-errors-all-vps</code> property to the <code>applyCF</code> command. Example:</p>
+<div class="language-text highlight"><pre><span></span><code>applyCF.(sh|bat) ..... -Dignore-errors-all-vps=&#39;true&#39;
+</code></pre></div>
+<p>If Portal-owned pages have not been purposely removed from the virtual portal, then the error should be investigated and attempted to be fixed.</p>
+</li>
+<li>
+<p>Problem: After HCL Portal 8.5 CF12 or later is applied, warning messages may be seen in the <code>SystemOut.log</code> similar to the following, and custom themes or custom portlets may stop working:</p>
+<div class="language-text highlight"><pre><span></span><code>[10/5/15 8:00:00:000 EDT] 0000000a AbstractReque W com.ibm.wps.resolver.resource.AbstractRequestDispatcherFactory matchesWebAppDefault(aResource) Servlet context [/...] does not specify a blackwhite list when accessing resource [...], 
+falling back to the default [[whitelist(null), blacklist(.*)]]...
+</code></pre></div>
+<p>There might be many of these warning messages which could cause a significant performance issue.</p>
+</li>
+<li>
+<p>Solution: HCL Portal 8.5 CF12 (and later) contains a security fix (PI65954). Similar to APAR PI47714, this APAR warns and then blocks access to files in a web application that does not have a blacklist or whitelist. The difference between PI47714 and PI65954 is that the default value for the blacklist is now ".<em>" instead of "WEB-INF/.</em>" which is much more restrictive than before. Applications can define a custom blacklist or whitelist list by adding the keys <code>com.ibm.portal.resource.whitelist</code> and <code>com.ibm.portal.resource.blacklist</code> to their web.xml deployment descriptor. Custom themes must be redeployed for these changes to take effect. Alternatively, as a temporary solution, you can define a different default value for the blacklist. Details on the action required for the custom code mentioned in these messages and the setting of a default value for the blacklist can be found on the <a href="https://support.hcltechsw.com/csm">HCL Software Support</a> page.</p>
+</li>
+<li>
+<p>Problem: If you drag and drop digital assets into:</p>
+<ol>
+<li>The Dropzone in the Sharing Tab of Rich Media Edition console, or</li>
+<li>Shared files directory (MBAssets folder and its subfolders) that the Rich Media Edition uses,
+then default renditions may not be created automatically.</li>
+</ol>
+</li>
+<li>
+<p>Solution: One of the two workaround approaches can be followed to place assets into Rich Media Edition and generate default renditions.</p>
+<ol>
+<li>You can either use WCM interface to place assets in Rich Media Edition instead of Dropzone or shared files directory of the Rich Media Edition server.</li>
+<li>Launch the link from Shared files section in the Sharing tab of Rich Media Edition console in a browser to open the user's workspace. Login and double click the assets for which you want to generate renditions and open Renditions tab. Click on <strong>Regenerate Renditions</strong> button.</li>
+</ol>
+</li>
+<li>
+<p>Problem: If HCL Portal is configured with an empty value for the <code>wps</code> context root or an empty value for the <code>portal</code> mapping for public pages then the following message may be seen in the browser when a user accesses a page that has a whitespace character or any other special character in the friendly page name:</p>
+<div class="language-text highlight"><pre><span></span><code>Error 400: EJBCD0006E: The resolution of a URI failed. Refer to the SystemOut.log for more detailed information.
+</code></pre></div>
+<p>A similar warning in the SystemOut.log may also be seen:</p>
+<div class="language-text highlight"><pre><span></span><code>ExceptionLogg W com.ibm.wps.logging.ExceptionLogger logThrowable An exception occurred: [Illegal character in path at index 43: com.ibm.portal.friendly.name:/Search/Search Center]. Enable traces for [com.ibm.wps.logging.ExceptionLogger=all] to see the exception stack trace.
+</code></pre></div>
+</li>
+<li>
+<p>Solution: This is a known issue and is fixed by applying the WAS interim fix for PI67942 for WAS 8.5.5.10. This issue will also be fixed or included in WAS 8.5.5.11. <a href="https://www.hcltechsw.com/wps/portal/about/welcome">HCL Software</a> page in the maintenance package.</p>
+</li>
+<li>
+<p>Problem: A decrease in performance may occur when Textbox.io or TinyMCE is used with large amounts of HTML (~4000 lines/20,000 characters) that can cause the Firefox browser to stop working when switching between code and design views.</p>
+</li>
+<li>
+<p>Solution: When switching between code and design views, save and close the content and then reopen it before returning to the design view. For other browsers, waiting and allowing processes to continue running eventually returns to the design view and no further action is required.</p>
+</li>
+<li>
+<p>Problem: If WAS 8.5.5.10 is installed with JDK8 for the Portal server profile and CF12 or later is installed, the following errors may be found in the ConfigTrace.logfile:</p>
+<div class="language-text highlight"><pre><span></span><code>[exec] SEVERE:
+[exec] java.lang.UnsupportedClassVersionError: JVMCFRE003 bad major version; class=sun/rmi/rmic/Main, offset=6
+</code></pre></div>
+<p>and</p>
+<div class="language-text highlight"><pre><span></span><code>[exec] SEVERE: Error generating RMI code: Cannot run RMIC because it is not installed. Expected location of RMIC is the 
+following: /opt/IBM/WebSphere/AppServer/java_1.8_64/lib.
+[exec] Exception in thread &quot;main&quot; java/lang/NullPointerException
+</code></pre></div>
+</li>
+<li>
+<p>Solution: There is a problem communicating with RMIC while preparing an Enterprise Application for installation. This is fixed by installing WAS APAR PI67166 and retrying the <code>applyCF.sh</code> command. It can also be avoided by installing WAS APAR PI67166 before the Portal CF update.</p>
+</li>
+<li></li>
+<li>Problem: ISAM v7 does not support JDK8. Any customer choosing to move to JDK8 will no longer have compatibility for ISAM v7. ISAM v9 will support JDK8, but Portal does not yet support this level.</li>
+<li>
+<p>Solution: This is currently a Portal limitation. Future plans may include ISAM v9 support in a later CF.</p>
+</li>
+<li>
+<p>Problem: No content indexed in default search collection and system was configured with a custom Portal context root</p>
+</li>
+<li>
+<p>Solution: Prior to CF06 there was a manual step required after changing the context root. The context in the search content source had to be manually adjusted. If this was not performed, then the content source will be using the wrong context root and will not find any content to index. Beginning with CF06 the update of the search content source was included in the task <code>modify-servlet-path</code>. To solve this problem, the context in the search content source can be adjusted manually or just run the task <code>modify-servlet-path</code> again.</p>
+</li>
+<li>
+<p>Problem: In the WCM Authoring environment, when the DAM popup is opened to select an image, it may show all the assets available in DAM, but the thumbnails will not be generated properly. This may be due to a particular library which is installed with Linux, but is at a different version to that which MediaBeacon utilizes.</p>
+</li>
+<li>
+<p>Solution: The typical solution is to create a symbolic link, as shown below.</p>
+<ol>
+<li>Open Terminal.</li>
+<li>
+<p>Run the following command:</p>
+<div class="language-text highlight"><pre><span></span><code>cd /lib64
+</code></pre></div>
+</li>
+<li>
+<p>If Linux is installed with <code>libbz2.so.1.0.4</code> for example, then do:</p>
+<div class="language-text highlight"><pre><span></span><code>ln -s libbz2.so.1.0.4 libbz2.so.1.0
+</code></pre></div>
+</li>
+</ol>
+</li>
+<li>
+<p>Problem: In installations with a large number of resources, it is possible that the <code>applyCF</code> script could run out of memory and fail. Such a failure would record a <code>"java.lang.OutOfMemoryError: Java heap space"</code> message and a Java stack trace in the ConfigTrace.log file.</p>
+</li>
+<li>
+<p>Solution: If this problem is encountered, the amount of memory available to the JVM can be increased, and the configuration can then be re-run.</p>
+<ol>
+<li>
+<p>For Linux:</p>
+<ol>
+<li>Backup the (AppServer_home)/bin/wsadmin.sh file.</li>
+<li>Open this file in a text editor.</li>
+<li>Locate the <code>PERF_JVM_OPTIONS=</code> line specific to your operating system.</li>
+<li>
+<p>Modify this line to have an Xmx parameter of 2048, e.g. from</p>
+<div class="language-text highlight"><pre><span></span><code>PERF_JVM_OPTIONS=&quot;-Xms256m -Xmx256m -Xquickstart&quot; ;;
+</code></pre></div>
+<p>to</p>
+<div class="language-text highlight"><pre><span></span><code>PERF_JVM_OPTIONS=&quot;-Xms256m -Xmx2048m -Xquickstart&quot; ;;
+</code></pre></div>
+</li>
+<li>
+<p>Save changes.</p>
+</li>
+<li>Re-run <code>applyCF.sh</code>. After some initialization, the script will skip configuration steps that have already completed and pick up where it left off before the crash.<ol>
+<li>For Windows:</li>
+</ol>
+</li>
+<li>Backup the AppServer_home)\bin\wsadmin.bat file.</li>
+<li>Locate the <code>set PERFJAVAOPTION</code> statement.</li>
+<li>
+<p>Modify this line to have an Xmx parameter of 2048, e.g.</p>
+<div class="language-text highlight"><pre><span></span><code>set PERFJAVAOPTION=-Xms256m -Xmx256m -Xquickstart
+</code></pre></div>
+<p>to</p>
+<div class="language-text highlight"><pre><span></span><code>set PERFJAVAOPTION=-Xms256m -Xmx2048m -Xquickstart
+</code></pre></div>
+</li>
+<li>
+<p>Save changes.</p>
+</li>
+<li>Re-run <code>applyCF.bat</code>. After some initialization, the script will skip configuration steps that have already completed and pick up where it left off before the crash.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>Problem: Where Textbox.io or TinyMCE is the configured rich text editor in WCM, rapidly opening and re-saving an existing item containing a rich text element can cause the loss of existing content if the item is saved before the rich text content is fully loaded. This is only likely to be an issue in environments with high network latency.</p>
+</li>
+<li>
+<p>Solution: Ensure when editing an existing content, site area, template or component containing a rich text element, the rich text content is fully loaded in the editor before re-saving the item.</p>
+</li>
+<li>
+<p>Problem: During the migration process the node may not start after upgrading to WAS 8.5.5.9 and before executing upgrade-profile. The node does not start with error message:</p>
+<div class="language-text highlight"><pre><span></span><code>ADMU3200I: Server launched. Waiting for initialization status.
+ADMU3011E: Server launched but failed initialization. Server logs, startServer.log, and other log files
+</code></pre></div>
+<p>The log contains the following error message:</p>
+<div class="language-text highlight"><pre><span></span><code>HMGR0031E: A conflicting IP address and port has been detected for the DCS_UNICAST_ADDRESS end point.
+The node does not start due to conflicting port configuration for the DCS_UNICAST_ADDRESS end point of server1 and nodeagent in the node 
+serverindex.xml.
+</code></pre></div>
+</li>
+<li>
+<p>Solution: It is recommended to execute <code>upgrade-profile</code> before upgrading to WAS 8.5.5.9. Alternatively the conflicting port configuration for the DCS_UNICAST_ADDRESS needs to be solved by setting unique port numbers for <code>server1</code> and <code>nodeagent</code>.</p>
+</li>
+<li>
+<p>Problem: After Rollback from CF09 or above to CF08 or below, the portal toolbar may show extra items that have titles <code>$Banner$</code>, <code>$Teaser$</code> and <code>$Video$</code>.</p>
+</li>
+<li>
+<p>Solution: These items can be ignored and should not be used. During an update to CF09 or above again, these items will disappear. To have these items no longer visible in the toolbar, go to <strong>Applications &gt; Content &gt; Web Content Authoring</strong>. Search for each of these pieces of content. Edit each of the pieces of content and go to properties. In the profile keyword field, remove the keyword <code>hcl.portal.toolbar.NewContent</code>. Save this change.</p>
+</li>
+<li>
+<p>Problem: During the upgrade-profile task in migration, there may be an intermittent issue which can cause the uninstall of an application to fail because files from the application are locked and cannot be deleted. This is an example of an error message that may be seen:</p>
+<div class="language-text highlight"><pre><span></span><code>BUILD FAILED
+C:\ibm\wp85\ConfigEngine\config\includes\apply_PTF.xml:172: 
+C:\ibm\wp85\PortalServer\jcr\wp.content.repository.install\config\includes\jcr.mig_cfg.xml:382: Exception found when executing wsadmin: &lt;hostname&gt;
+c:/ibm/wp85/ConfigEngine/lib/wkplc.misc.jar;
+C:/ibm/wp85/AppServer/deploytool/itp/batchboot.jar;C:/ibm/wp85/AppServer/deploytool/itp/batch2.jar;
+C:/ibm/wp85/PortalServer/base/wp.base/shared/app/wp.base.jar;C:/ibm/wp85/PortalServer/shared/app/wp.base.jar
+</code></pre></div>
+</li>
+<li>
+<p>Solution: If this issue is encountered, wait 5 minutes and re-run the <code>upgrade-profile</code> task with the same options to resume the migration. The lock on the file should be released and the uninstall can continue as expected.</p>
+</li>
+<li>
+<p>Problem: It may be noticed that a page created from a page template does not have the access controls that are expected or that the access controls for such a page have recently changed.</p>
+</li>
+<li>
+<p>Solution: APAR PI39231 (IN STANTIATING A PAGE TEMPLATE LEADS TO INCONSISTENT ACCESS CONTROL SETTINGS ON THE TARGET PAGE) was introduced in CF08. With this APAR, access control settings applied to a page template are consistently copied onto the target page. This means that all access rights assigned explicitly on a page template are also applied to the created page. If, for example, the <strong>All Authenticated Portal Users</strong> group is assigned to <code>USER@PageTemplate</code>, then the created page will be visible to every authenticated user, independent of the access control configuration of the parent page. During the installation of the CF the out of the box page templates have also been changed, including those in existing virtual portals, to no longer have explicit role mappings and it is recommended that all customers do the same for custom code templates unless the use case really is to copy that role mapping onto the target page. This is a permanent change in behavior effective in CF08 or later. Go to <a href="https://help.hcltechsw.com/digital-experience/8.5/panel_help/h_mp_create_page_templates.html">Creating page templates</a> topic for more information about this behavior.</p>
+</li>
+<li>
+<p>Problem: Non-English characters are not supported when exporting a Site/Section template from Site Builder. When importing Site or Section templates into the Site Builder application, you may encounter an error that the template PAA file could not be imported. This could be due to using non-English characters in the Site/Section template PAA import object file name. You will see the following messages on the site builder interface:</p>
+<div class="language-text highlight"><pre><span></span><code>&quot;Could not import the template. The solution installer import of the PAA file failed. Review the server logs for more information.&quot;
+</code></pre></div>
+</li>
+<li>
+<p>Solution: Use only English characters in the PAA file name.</p>
+</li>
+<li>
+<p>Problem: If local hostname resolution is not configured properly, the <code>applyCF</code> command may fail with an error like this:</p>
+<div class="language-text highlight"><pre><span></span><code>C:\IBM\WebSphere\PortalServer\theme\wp.setup.themedev\config\includes\wp.setup.themedev_cfg.xml:52: Exception found when executing wsadmin: jacl
+C:/IBM/WebSphere/ConfigEngine/lib/wkplc.misc.jar;C:/IBM/WebSphere/AppServer/deploytool/itp/batchboot.jar;
+C:/IBM/WebSphere/AppServer/deploytool/itp/batch2.jar;C:/IBM/WebSphere/PortalServer/base/wp.base/shared/app/wp.base.jar;
+C:/IBM/WebSphere/PortalServer/shared/app/wp.base.jar
+&#39;HCL Portal and HCL Web Content Manager(cells/winwab09Cell/nodes/winwab09Node/servers/HCL Portal and HCL Web Content Manager|server.xml#Server_1452022426983)&#39;
+Ear File C:/IBM/WebSphere/PortalServer/theme/wp.setup.themedev/installedApps/ThemeDevAssets.ear
+WASX7015E: Exception running command: &quot;source &quot;C:/IBM/WebSphere/wp_profile/ConfigEngine/config/work/was/curJaclScript.jacl&quot;&quot;; 
+exception information: com.ibm.websphere.management.filetransfer.client.TransferFailedException
+java.io.FileNotFoundException: java.io.FileNotFoundException: C:\IBM\WebSphere\PortalServer\theme\wp.setup.themedev\installedApps\ThemeDevAssets.ear (Access is denied)
+</code></pre></div>
+</li>
+<li>
+<p>Solution: This indicates a SOAP issue on the Web server where the hostname does not resolve as expected. ﻿The solution is to make sure that all host names of the machine are associated with the loopback in the hosts file. Edit the following file.</p>
+<p>For Linux, the hosts file is:</p>
+<div class="language-text highlight"><pre><span></span><code>/etc/hosts
+</code></pre></div>
+<p>For Windows, the hosts file is:</p>
+<div class="language-text highlight"><pre><span></span><code>%SystemRoot%\System32\drivers\etc\hosts
+</code></pre></div>
+<p>Add a line similar to the following, substituting your actual machine name where indicated like:</p>
+<div class="language-text highlight"><pre><span></span><code>127.0.0.1 yourhostname yourhostname.yourdomain localhost localhost.localdomain
+</code></pre></div>
+<p>If a line for <code>localhost</code> already exists, you can add your hostname to this existing line.</p>
+</li>
+<li>
+<p>Problem: After the CF is applied, warning messages may be seen in the SystemOut.log similar to:</p>
+<div class="language-text highlight"><pre><span></span><code>[10/5/15 8:00:00:000 EDT] 0000000a AbstractReque W 
+com.ibm.wps.resolver.resource.AbstractRequestDispatcherFactory matchesWebAppDefault(aResource) 
+Servlet context [/...] does not specify a blackwhite list when accessing resource [...], falling back to the default 
+[[(null), (WEB-INF/.*)]]. Applications can define a custom list by adding the keys [com.ibm.portal.resource.whitelist] and 
+[com.ibm.portal.resource.blacklist] to their web.xml deployment descriptor.
+</code></pre></div>
+<p>There might be many of these warning messages which could cause a significant performance issue.</p>
+</li>
+<li>
+<p>Solution: HCL Portal Version 8.5 CF08 (or later) contained a security fix (PI47714 / CVE-2014-8912), which requires specification of black and white lists for custom themes and portlets in certain usage scenarios involving the 'res' data source. You must redeploy your custom theme for these changes to take effect. Details on the action required for the custom code mentioned in these messages can be found in the <a href="https://support.hcltechsw.com/csm">HCL Software Support</a> page.</p>
+</li>
+<li>
+<p>Problem: When following steps to modify site URLs for the Search Engine Optimization (SEO) workflow some portlets and labels may not be available in clustered environments. For example, you cannot perform the <em>Change the JSP components in the Web Resources v70 Library</em> step.</p>
+</li>
+<li>
+<p>Solution: If you do not have a web server, you must resynchronize the nodes and restart the cluster before you can change the JSP components in the Web Resources library.</p>
+</li>
+<li>
+<p>Problem: There may be a performance issue seen (in EditLive) when using Java 1.8 Update 60 / Internet Explorer.</p>
+</li>
+<li>
+<p>Solution: Oracle and Ephox have acknowledged this issue and are documenting the following link on their support site: <a href="https://docs.ephox.com/IBMWCMTB/">https://docs.ephox.com/IBMWCMTB/</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Ephox (EditLive) Java based Rich Text Editor has been deprecated as of HCL Portal 8.5 CF11 and replaced by Textbox.IO. HCL Portal 9.5 requires a minimum of CF17 to offer Textbox.io. The Ephox (EditLive) feature is only available in HCL Portal 9.5 if you explicitly enable it.</p>
+</div>
+</li>
+<li>
+<p>Problem: Error messages can be seen in the SystemOut.log after rollback regarding <code>ManagedRules</code> feature updates. These features would no longer be available after the rollback to a level earlier than CF08. The following error example may be seen in the log:</p>
+<div class="language-text highlight"><pre><span></span><code>java.lang.RuntimeException: java.lang.ClassNotFoundException: com.aptrix.pluto.pzn.Segment
+at com.aptrix.identity.IdentityReference.getTypeClass(IdentityReference.java:190)
+</code></pre></div>
+</li>
+<li>
+<p>Solution: These logging errors are expected if content was created against a Portal feature at an updated CF level and a rollback occurs to a level that does not support it. The logging exceptions could be removed by running the following two <code>ConfigEngine</code> tasks:</p>
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh drop-wcm-recents-and-favorites-tables
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh create-wcm-recents-and-favorites-tables
+</code></pre></div>
+</li>
+<li>
+<p>Problem: Starting with HCL Portal Version 8.5 Cumulative Fix 5, a new check has been added to the XML configuration interface. When the XML configuration interface processes update requests, now all locale identifiers are checked if they represent a locale available on the system. If this is not the case, then the update request fails and the XML configuration interface returns with an error. For example, language-dependent strings are marked with a locale:</p>
+<div class="language-text highlight"><pre><span></span><code>{code:} (localedata locale=&quot;en&quot;) (title)Home(/title) 
+(/localedata){code}
+</code></pre></div>
+<p>Here, for <code>en</code> which stands for the English locale, a title is defined. For other locales, other strings can be defined. Now, if the attribute <code>locale</code> contains an empty value or an identifier of a locale which does not exist on the system, then the file cannot be imported. As on levels prior to HCL Portal Version 8.5 Cumulative Fix 5, this check has not been performed, XML files exported from Portal systems can lead to errors when trying to import them on a HCL Portal Version 8.5 system with at least Cumulative Fix 5. Even HCL Portal systems migrated or upgraded to at least HCL Portal Version 8.5 Cumulative Fix 5 can contain configuration data with invalid locales. Exporting such data with the XML configuration interface is possible without problem. However, trying to import this data can lead to the error described above.</p>
+</li>
+<li>
+<p>Solution: To fix this problem you can remove the XML element <code>localedata</code> with its child elements or you can change the <code>locale</code> attribute to an existing locale identifier.</p>
+</li>
+<li>
+<p>Problem: The Live Repository will not show any available packages to be updated when selecting the IIM Preferences checkbox <strong>Search service repositories during installation and updates</strong>.</p>
+</li>
+<li>
+<p>Solution: IBM Installation Manager (IIM) should be updated to the latest level, at least IIM 1.8, for the packages to be displayed.</p>
+</li>
+<li>
+<p>Problem: The <code>applyCF.bat|sh</code> task may fail with an error like the following:</p>
+<div class="language-text highlight"><pre><span></span><code>action-clear-was-caches:
+     [echo] /usr/IBM/WebSphere/AppServer/deploytool/scripts/install/ejbdeploy-clear-cache.sh
+--- Exception Thrown ---
+/usr/IBM/WebSphere/PortalServer/installer/wp.update/config/includes/cumulative_fix.xml:302: The directory you specified does not exist. 
+</code></pre></div>
+</li>
+<li>
+<p>Solution: Portal Server requires the optional WebSphere Application Server EJBDeploy tool, and the above error will occur if this tool is not installed. To resolve the error, use IBM Installation Manager to modify your copy of WebSphere Application Server and add the feature named <strong>EJBDeploy tool for pre-EJB 3.0 modules</strong>.</p>
+</li>
+<li>
+<p>Problem: The IBM Installation Manager GUI may hang or crash on Red Hat Enterprise Linux v6.6 during the Portal update process.</p>
+</li>
+<li>
+<p>Solution: There are potentially two issues at work. The first is <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=215234">an eclipse bug</a> caused by an infinite loop in code that tries to enumerate printers. This first issue can be resolved by updating your Installation Manager client to v1.8 or later. If updating your client is not a viable option at the moment, you can alternatively work around the problem by adding the following line to the /opt/IBM/InstallationManager/eclipse/IBMIM.ini file:</p>
+<div class="language-text highlight"><pre><span></span><code>-Dorg.eclipse.swt.internal.gtk.disablePrinting
+</code></pre></div>
+<p>The second issue is caused by a different eclipse bug, related to a mismatch between the GTK version and the cairo library. The resolution is to update the cairo libraries.</p>
+</li>
+<li>
+<p>Problem: Starting Portal Farm node may result in Error 500 when accessing Portal.</p>
+</li>
+<li>
+<p>Solution: Go and log in to <a href="https://support.hcltechsw.com/csm?sys_kb_id=2d96ede61b5df34077761fc58d4bcbcb&amp;id=kb_article_view&amp;sysparm_rank=2&amp;sysparm_tsqueryId=6a3bcab51b529414a67e9759bc4bcbc4">HCL Software Support</a> page to find related information about this issue.</p>
+</li>
+<li>
+<p>Problem: If you do a database transfer to z/OS DB2 after installing HCL Portal 8.5 GA and before updating to the current CF, the schema name used for JCR indices will be the config user name instead of the designated schema name, resulting in potential duplicate entries if more than one portal uses the same z/OS DB2. The schema name is supposed to be sufficient for uniquely configuring multiple Portals to the same z/OS DB2 and it is very possible that the same config user could be used for both Portals.</p>
+</li>
+<li>
+<p>Solution: Apply HCL Portal 8.5 CF01 or later prior to doing a database transfer to z/OS DB2.</p>
+</li>
+<li>
+<p>Problem: After installing and rolling back the Cumulative Fix, you may observe error messages similar to the following in the Installation Manager if you subsequently uninstall HCL Portal 8.5:</p>
+<div class="language-text highlight"><pre><span></span><code>Basedir /usr/IBM/WebSphere/wp_profile does not exist
+Basedir /usr/IBM/WebSphere/wp_profile does not exist
+org.apache.tools.ant.Project.setBaseDir(Project.java:844)
+org.apache.tools.ant.Project.setBasedir(Project.java:829)
+</code></pre></div>
+</li>
+<li>
+<p>Solution: The product will be successfully uninstalled despite these messages, so you can safely choose to ignore them. The errors will be avoided if you uninstall HCL Portal 8.5 without first rolling back the Cumulative Fix.</p>
+</li>
+<li>
+<p>Problem: IBM Installation Manager version 1.7.1 crashes with JVM Error when running HCL Portal rollback in GUI Mode.</p>
+</li>
+<li>
+<p>Solution: Upgrade Installation Manager to version 1.7.3 or later and retry the rollback. Please see <a href="https://www.ibm.com/support/pages/installation-manager-173">the following documentation</a> for more details.</p>
+</li>
+<li>
+<p>Problem: After installing or rolling back the cumulative fix, you may observe error messages similar to the following in the Installation Manager log file:</p>
+<div class="language-text highlight"><pre><span></span><code>&quot;Installation Manager cannot remove feature Portal Server Profile during the Update or Rollback.&quot;
+</code></pre></div>
+</li>
+<li>
+<p>Solution: These messages do not indicate a problem. To prevent a configuration error, you are prevented from changing your feature selections when performing an update. If you want to add or drop a portal, you must select the Modify function of Installation Manager instead.</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 12, 2022</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

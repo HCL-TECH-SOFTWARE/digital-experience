@@ -1,0 +1,6068 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/deployment/manage/cfg_property_files/wkplc_dbdomain-dita/">
+      
+      
+        <link rel="prev" href="../wkplc_dbtype-dita/">
+      
+      
+        <link rel="next" href="../wkplc_comp-dita/">
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Properties File: wkplc_dbdomain.properties - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#properties-file-wkplc_dbdomainproperties" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../latest/deployment/manage/cfg_property_files/wkplc_dbdomain-dita/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Properties File: wkplc_dbdomain.properties
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../whatsnew/cf20/newcf222/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../build_sites/" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../whatsnew/cf20/newcf222/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Deploy DX
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../install/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Install
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Manage
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Manage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../container_configuration/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Configure Kubernetes Deployment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stopstart/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Starting and stopping servers, deployment managers, and node agents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../itlm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring the IBM License Metric Tool
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config_standalone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring a stand-alone server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../config_cluster/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Setting up a cluster
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../portalfarm_cfg/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Setting up and maintaining a portal farm
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../security/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../tune_servers/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Tune your environment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../port_chg/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changing ports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../siteurl_cfg/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Changing your site URL
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../config_portal_behavior/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Configuring portal behavior
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../portal_admin_tools/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Portal administration tools
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../manage_portal_using_iim/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Managing Interim Fixes for HCL Portal
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../config_webservers/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Web server
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../db_mgmt_sys/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Database Management Systems
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../profile/iim_modify/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Profile
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_18" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Configuration properties
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3_18" id="__nav_4_3_18_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_18_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3_18">
+            <span class="md-nav__icon md-icon"></span>
+            Configuration properties
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wkplc-dita/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Properties File: wkplc.properties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wkplc_dbtype-dita/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Properties File: wkplc_dbtype.properties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Properties File: wkplc_dbdomain.properties
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Properties File: wkplc_dbdomain.properties
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#release-database-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release Database Properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#community-database-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community Database Properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customization-database-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customization Database Properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jcr-database-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      JCR Database Properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jcr-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      JCR Properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personalization-feedback-database-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personalization Feedback Database Properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#likeminds-database-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      LikeMinds Database Properties
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wkplc_comp-dita/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Properties File: wkplc_comp.properties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../backup_restore/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Backup and restore
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../change_dev_mode_env/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Changing to a developer mode environment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../staging_to_production/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Staging to production
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../migrate/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Migrating
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../multiple_profiles/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Supporting multiple profiles
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../remote_spell_checker/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Setting up a remote spell checker
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../upsell/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Upgrading your existing product offering
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../monitoring/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Monitoring
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../troubleshooting/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../build_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#release-database-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release Database Properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#community-database-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community Database Properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customization-database-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customization Database Properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jcr-database-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      JCR Database Properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jcr-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      JCR Properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personalization-feedback-database-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personalization Feedback Database Properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#likeminds-database-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      LikeMinds Database Properties
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="properties-file-wkplc_dbdomainproperties">Properties File: wkplc_dbdomain.properties</h1>
+<h2 id="release-database-properties">Release Database Properties</h2>
+<ul>
+<li>
+<p><strong>release.DbType</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Database management software to use for the Release domain.</p>
+</li>
+<li>
+<p><strong>Valid values</strong></p>
+<p><code>derby</code></p>
+<p><code>db2</code></p>
+<p><code>db2_iseries</code></p>
+<p><code>db2_zos</code></p>
+<p><code>oracle</code></p>
+<p><code>sqlserver2005</code></p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>derby</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>release.DbName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the database (location name of the DB2 for z/OS subsystem) to be used for this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties schema name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>release.DbType=db2: <code>WPREL</code></p>
+<p>release.DbType=db2_iseries:</p>
+<p>release.DbType=db2_zos:</p>
+<p>release.DbType=oracle: <code>WPREL</code></p>
+<p>release.DbType=sqlserver2005: <code>WPREL</code></p>
+<p>Otherwise: <code>wpsdb</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>Apache Derby: <code>wpsdb</code></p>
+<p>IBM DB2: WPREL</p>
+<p>IBM DB2 for i with type 4 driver: <code>/WPSDB</code></p>
+<p>IBM DB2 for i with type 2 driver: <code>\*LOCAL/WPSDB</code></p>
+<p>DB2 for z/OS:</p>
+<p>Oracle Database: <code>WPREL</code></p>
+<p>Microsoft SQL Server: <code>WPREL</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>release.DbSchema</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name to be used to qualify database objects of this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties database name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>release</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>release.DbNameOnZos</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the database to be used for this portal database domain. It must comply with your database management software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>WPREL</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>release.DataSourceName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the data source to be used for this portal database domain. It must comply with the WebSphere Application Server requirements. You cannot use the reserved names releaseDS, communityDS, customizationDS, jcrDS, lmdbDS, and feedback. You can use the same name for all portal database domains that are sharing user ID, password, and JDBC database URL.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>release.DbType=db2: <code>wpreldbDS</code></p>
+<p>release.DbType=oracle: <code>wpreldbDS</code></p>
+<p>release.DbType=sqlserver2005: <code>wpreldbDS</code></p>
+<p>Otherwise: <code>wpdbDS</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>release.DbUrl</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The JDBC database URL to be used to connect with the database of this portal database domain. It must comply with your JDBC Driver software requirements. This property that is combined with the properties database name and schema name must be unique for the portal database domains release, community, customization, and JCR.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>release.DbType=db2:</p>
+<p>release.DbType=db2_iseries:</p>
+<p>release.DbType=db2_zos:</p>
+<p>release.DbType=oracle:</p>
+<p>release.DbType=sqlserver2005:</p>
+<p>Otherwise: <code>jdbc:derby:wpsdb;create=true</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>Apache Derby: <code>jdbc:derby:wpsdb;create=true</code></p>
+<p>IBM DB2 with type 4 drivers: <code>jdbc:db2://:50000/WPREL:returnAlias=0;</code></p>
+<p>IBM DB2 with type 2 drivers: <code>jdbc:db2:WPREL</code></p>
+<p>IBM DB2 for i with type 4 drivers: <code>jdbc:as400:///WPSDB;metadata source=1;prompt=false</code></p>
+<p>IBM DB2 for i with type 2 drivers: <code>jdbc:db2:\*LOCAL/WPSDB</code></p>
+<p>IBM DB2 for z/OS with type 4 drivers: <code>jdbc:db2://:/</code></p>
+<p>IBM DB2 for z/OS with type 2 drivers: <code>jdbc:db2:</code></p>
+<p>Oracle Database with type 4 drivers and thin client: <code>jdbc:oracle:thin:@//:1521/</code></p>
+<p>Oracle Database with type 2 drivers and thick client: <code>jdbc:oracle:oci:@//:1521/</code></p>
+<p>Microsoft SQL Server: <code>jdbc:sqlserver://:1433;SelectMethod=cursor;DatabaseName=WPREL</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>release.DbUser</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The database user ID to be used to configure the database objects of this portal database domain. It must comply with your database management software requirements. It is also used by the data source to connect with the database, unless you specify a runtime database user.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>release.DbPassword</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The password of the database user ID used to configure the database objects of this portal database domain. It must comply with your database management software requirements. It is also used by the data source to connect with the database, unless you specify a runtime database user. The ConfigEngine cannot validate that the password complies with the software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>release.DbRuntimeUser</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The database user ID used for the data source of the portal database domain to connect with the database during day-to-day operations. It must comply with your database management software requirements. It has fewer permissions than the configuration database user (DbUser) that is used when you leave this blank.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>release.DbRuntimePassword</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The password of the database user ID used for the data source of this portal database domain to connect with the database during day-to-day operations. It must comply with your database management software requirements. The ConfigEngine cannot validate that the password complies with the software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>release.DBA.DbUser</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The database administration user ID used for privileged database operations during database creation and setup for this portal database domain. It must comply with your database management software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>release.DBA.DbPassword</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The password of the database administration user ID used for privileged database operations during database creation and setup for this portal database domain. It must comply with your database management software requirements. The ConfigEngine cannot validate that the password complies with the software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>release.DbHome</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Oracle Database: The location on the Oracle database server where table spaces for this portal database domain must be created.</p>
+<p>Microsoft SQL Server: The location on the SQL Server database server where the database files for this portal database domain must be created.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>Oracle Database: <code>/product/11.2.0/dbhome\_1</code></p>
+<p>Microsoft SQL Server: <code>C:\\\\Microsoft SQL Server\\\\\\\\MSSQL</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>release.AdminUrl</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The JDBC database URL used to connect with the SQL Server that contains the database for this portal database domain. It is used for database administration operations. It is the same value that is used for the JDBC database URL, but with the database name omitted.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>Microsoft SQL Server: <code>jdbc:sqlserver://:1433</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>release.DbConfigRoleName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the role or group for this portal database domain that includes the database permissions that are required by the configuration database user. The configuration database user configures the database objects of this portal database domain. The role or group must comply with your database management software requirements. The configuration database user must be a member of this role or group. If this role or group does not exist, create it and assign it to the release.DbUser ID.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>release.DbType=db2_iseries: <code>WPBASCFG</code></p>
+<p>release.DbType=db2_zos: <code>WPBASCFG</code></p>
+<p>Otherwise: <code>WP\_BASE\_CONFIG\_USERS</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>release.DbRuntimeRoleName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the role or group for this portal database domain that has the database permissions that are required by the runtime database user during day-to-day operations. The role or group must comply with your database management software requirements. The runtime database user must be a member of this role or group. If this role or group does not exist, create it and assign it to the release.DbRuntimeUser ID.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>release.DbType=db2_iseries: <code>WPBASRT</code></p>
+<p>release.DbType=db2_zos: <code>WPBASRT</code></p>
+<p>Otherwise: WP<code>\_BASE\_RUNTIME\_USERS</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>release.XDbName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The database alias used to create the database for this portal database domain. It must comply with your database management software requirements. Required for IBM DB2 that runs on Linux and UNIX operating systems. Also required for IBM DB2 that runs on a Microsoft Windows operating system that uses type 2 JDBC drivers and is running on the same server as HCL Portal.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>WPREL</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>release.DbNode</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the database node that is used to create the database for this portal database domain. It must comply with your database management software requirements. Required for IBM DB2 that run on Linux and UNIX operating systems.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>wpsNode</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>release.DbStorageGroup</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the DB2 for z/OS storage group to be used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>WPSSG</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>release.DbVolumes</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Defines the volumes of the DB2 for z/OS storage group used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>\*</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>release.DbVcat</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Identifies the integrated catalog facility catalog (VCAT) for the DB2 for z/OS storage group that is used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p><code>DSN910</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>release.DbIndex4KBufferPoolName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the DB2 for z/OS 4 K index buffer pool to be used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>BP3</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>release.Db4KBufferPoolName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the DB2 for z/OS 4 K buffer pool to be used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>BP2</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>release.Db32KBufferPoolName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the DB2 for z/OS 32 K buffer pool to be used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>BP32K1</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>release.TablespaceTrackMod</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Specifies whether DB2 for z/OS tracks modified pages in the space map pages of the table spaces for this portal database domain. Before you change this value, see the DB2 for z/OS documentation to learn more about the option TRACKMOD.</p>
+</li>
+<li>
+<p><strong>Valid values</strong></p>
+<p><code>YES</code></p>
+<p><code>NO</code></p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>YES</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>release.TablespaceDefine</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Specifies when the underlying data sets for the table spaces of this portal database domain are physically created. Before you change this value, see the DB2 for z/OS documentation to learn more about the option DEFINE.</p>
+</li>
+<li>
+<p><strong>Valid values</strong></p>
+<p><code>YES</code></p>
+<p><code>NO</code></p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>NO</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="community-database-properties">Community Database Properties</h2>
+<ul>
+<li>
+<p><strong>community.DbType</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Database management software to use for the Community domain.</p>
+</li>
+<li>
+<p><strong>Valid values</strong></p>
+<p><code>derby</code></p>
+<p><code>db2</code></p>
+<p><code>db2_iseries</code></p>
+<p><code>db2_zos</code></p>
+<p><code>oracle</code></p>
+<p><code>sqlserver2005</code></p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>derby</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>community.DbName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the database (location name of the DB2 for z/OS subsystem) to be used for this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties schema name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>community.DbType=db2: <code>WPCOMM</code></p>
+<p>community.DbType=db2_iseries:</p>
+<p>community.DbType=db2_zos:</p>
+<p>community.DbType=oracle: <code>WPCOMM</code></p>
+<p>community.DbType=sqlserver2005: <code>WPCOMM</code></p>
+<p>Otherwise: <code>wpsdb</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>Apache Derby: <code>wpsdb</code></p>
+<p>IBM DB2: WPCOMM</p>
+<p>IBM DB2 for i with type 4 driver: <code>/WPSDB</code></p>
+<p>IBM DB2 for i with type 2 driver: <code>\*LOCAL/WPSDB</code></p>
+<p>DB2 for z/OS:</p>
+<p>Oracle Database: <code>WPCOMM</code></p>
+<p>Microsoft SQL Server: <code>WPCOMM</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>community.DbSchema</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name to be used to qualify database objects of this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties database name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>community</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>community.DbNameOnZos</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the database to be used for this portal database domain. It must comply with your database management software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>WPCOMM</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>community.DataSourceName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the data source to be used for this portal database domain. It must comply with the WebSphere Application Server requirements. You cannot use the reserved names releaseDS, communityDS, customizationDS, jcrDS, lmdbDS, and feedback. You can use the same name for all portal database domains that are sharing user ID, password, and JDBC database URL.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>community.DbType=db2: <code>wpcommdbDS</code></p>
+<p>community.DbType=oracle: <code>wpcommdbDS</code></p>
+<p>community.DbType=sqlserver2005: <code>wpcommdbDS</code></p>
+<p>Otherwise: <code>wpdbDS</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>community.DbUrl</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The JDBC database URL to be used to connect with the database of this portal database domain. It must comply with your JDBC Driver software requirements. This property that is combined with the properties database name and schema name must be unique for the portal database domains release, community, customization, and JCR.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>community.DbType=db2:</p>
+<p>community.DbType=db2_iseries:</p>
+<p>community.DbType=db2_zos:</p>
+<p>community.DbType=oracle:</p>
+<p>community.DbType=sqlserver2005:</p>
+<p>Otherwise: <code>jdbc:derby:wpsdb;create=true</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>Apache Derby: <code>jdbc:derby:wpsdb;create=true</code></p>
+<p>IBM DB2 with type 4 drivers: <code>jdbc:db2://:50000/WPCOMM:returnAlias=0;</code></p>
+<p>IBM DB2 with type 2 drivers: <code>jdbc:db2:WPCOMM</code></p>
+<p>IBM DB2 for i with type 4 drivers: <code>jdbc:as400:///WPSDB;metadata source=1;prompt=false</code></p>
+<p>IBM DB2 for i with type 2 drivers: <code>jdbc:db2:\*LOCAL/WPSDB</code></p>
+<p>IBM DB2 for z/OS with type 4 drivers: <code>jdbc:db2://:/</code></p>
+<p>IBM DB2 for z/OS with type 2 drivers: <code>jdbc:db2:</code></p>
+<p>Oracle Database with type 4 drivers and thin client: <code>jdbc:oracle:thin:@//:1521/</code></p>
+<p>Oracle Database with type 2 drivers and thick client: <code>jdbc:oracle:oci:@//:1521/</code></p>
+<p>Microsoft SQL Server: <code>jdbc:sqlserver://:1433;SelectMethod=cursor;DatabaseName=WPCOMM</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>community.DbUser</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The database user ID to be used to configure the database objects of this portal database domain. It must comply with your database management software requirements. It is also used by the data source to connect with the database, unless you specify a runtime database user.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>community.DbPassword</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The password of the database user ID used to configure the database objects of this portal database domain. It must comply with your database management software requirements. It is also used by the data source to connect with the database, unless you specify a runtime database user. The ConfigEngine cannot validate that the password complies with the software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>community.DbRuntimeUser</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The database user ID used for the data source of the portal database domain to connect with the database during day-to-day operations. It must comply with your database management software requirements. It has fewer permissions than the configuration database user (DbUser) that is used when you leave this blank.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>community.DbRuntimePassword</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The password of the database user ID used for the data source of this portal database domain to connect with the database during day-to-day operations. It must comply with your database management software requirements. The ConfigEngine cannot validate that the password complies with the software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>community.DBA.DbUser</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The database administration user ID used for privileged database operations during database creation and setup for this portal database domain. It must comply with your database management software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>community.DBA.DbPassword</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The password of the database administration user ID used for privileged database operations during database creation and setup for this portal database domain. It must comply with your database management software requirements. The ConfigEngine cannot validate that the password complies with the software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>community.DbHome</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Oracle Database: The location on the Oracle database server where table spaces for this portal database domain must be created.</p>
+<p>Microsoft SQL Server: The location on the SQL Server database server where the database files for this portal database domain must be created.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>Oracle Database: <code>/product/11.2.0/dbhome\_1</code></p>
+<p>Microsoft SQL Server: <code>C:\\\\Microsoft SQL Server\\\\\\\\MSSQL</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>community.AdminUrl</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The JDBC database URL used to connect with the SQL Server that contains the database for this portal database domain. It is used for database administration operations. It is the same value that is used for the JDBC database URL, but with the database name omitted.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>Microsoft SQL Server: <code>jdbc:sqlserver://:1433</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>community.DbConfigRoleName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the role or group for this portal database domain that includes the database permissions that are required by the configuration database user. The configuration database user configures the database objects of this portal database domain. The role or group must comply with your database management software requirements. The configuration database user must be a member of this role or group. If this role or group does not exist, create it and assign it to the community.DbUser ID.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>community.DbType=db2_iseries: <code>WPBASCFG</code></p>
+<p>community.DbType=db2_zos: <code>WPBASCFG</code></p>
+<p>Otherwise: <code>WP_BASE_CONFIG_USERS</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>community.DbRuntimeRoleName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the role or group for this portal database domain that has the database permissions that are required by the runtime database user during day-to-day operations. The role or group must comply with your database management software requirements. The runtime database user must be a member of this role or group. If this role or group does not exist, create it and assign it to the community.DbRuntimeUser ID.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>community.DbType=db2_iseries: <code>WPBASRT</code></p>
+<p>community.DbType=db2_zos: <code>WPBASRT</code></p>
+<p>Otherwise: <code>WP_BASE_RUNTIME_USERS</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>community.XDbName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The database alias used to create the database for this portal database domain. It must comply with your database management software requirements. Required for IBM DB2 that runs on Linux and UNIX operating systems. Also required for IBM DB2 that runs on a Microsoft Windows operating system that uses type 2 JDBC drivers and is running on the same server as HCL Portal.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>WPCOMM</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>community.DbNode</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the database node that is used to create the database for this portal database domain. It must comply with your database management software requirements. Required for IBM DB2 that run on Linux and UNIX operating systems.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>wpsNode</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>community.DbStorageGroup</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the DB2 for z/OS storage group to be used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>WPSSG</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>community.DbVolumes</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Defines the volumes of the DB2 for z/OS storage group used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>\*</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>community.DbVcat</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Identifies the integrated catalog facility catalog (VCAT) for the DB2 for z/OS storage group that is used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p><code>DSN910</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>community.DbIndex4KBufferPoolName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the DB2 for z/OS 4 K index buffer pool to be used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>BP3</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>community.Db4KBufferPoolName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the DB2 for z/OS 4 K buffer pool to be used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>BP2</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>community.Db32KBufferPoolName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the DB2 for z/OS 32 K buffer pool to be used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>BP32K1</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>community.TablespaceTrackMod</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Specifies whether DB2 for z/OS tracks modified pages in the space map pages of the table spaces for this portal database domain. Before you change this value, see the DB2 for z/OS documentation to learn more about the option TRACKMOD.</p>
+</li>
+<li>
+<p><strong>Valid values</strong></p>
+<p><code>YES</code></p>
+<p><code>NO</code></p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>YES</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>community.TablespaceDefine</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Specifies when the underlying data sets for the table spaces of this portal database domain are physically created. Before you change this value, see the DB2 for z/OS documentation to learn more about the option DEFINE.</p>
+</li>
+<li>
+<p><strong>Valid values</strong></p>
+<p><code>YES</code></p>
+<p><code>NO</code></p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>NO</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="customization-database-properties">Customization Database Properties</h2>
+<ul>
+<li>
+<p><strong>customization.DbType</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Database management software to use for the Customization domain.</p>
+</li>
+<li>
+<p><strong>Valid values</strong></p>
+<p><code>derby</code></p>
+<p><code>db2</code></p>
+<p><code>db2_iseries</code></p>
+<p><code>db2_zos</code></p>
+<p><code>oracle</code></p>
+<p><code>sqlserver2005</code></p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>derby</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>customization.DbName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the database (location name of the DB2 for z/OS subsystem) to be used for this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties schema name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>customization.DbType=db2: <code>WPCUST</code></p>
+<p>customization.DbType=db2_iseries:</p>
+<p>customization.DbType=db2_zos:</p>
+<p>customization.DbType=oracle: <code>WPCUST</code></p>
+<p>customization.DbType=sqlserver2005: <code>WPCUST</code></p>
+<p>Otherwise: <code>wpsdb</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>Apache Derby: <code>wpsdb</code></p>
+<p>IBM DB2: <code>WPCUST</code></p>
+<p>IBM DB2 for i with type 4 driver: <code>/WPSDB</code></p>
+<p>IBM DB2 for i with type 2 driver: <code>\*LOCAL/WPSDB</code></p>
+<p>DB2 for z/OS:</p>
+<p>Oracle Database: <code>WPCUST</code></p>
+<p>Microsoft SQL Server: <code>WPCUST</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>customization.DbSchema</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name to be used to qualify database objects of this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties database name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>customization.DbType=db2_iseries: <code>customiz</code></p>
+<p>Otherwise: <code>customization</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>customization.DbNameOnZos</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the database to be used for this portal database domain. It must comply with your database management software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>WPCUST</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>customization.DataSourceName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the data source to be used for this portal database domain. It must comply with the WebSphere Application Server requirements. You cannot use the reserved names releaseDS, communityDS, customizationDS, jcrDS, lmdbDS, and feedback. You can use the same name for all portal database domains that are sharing user ID, password, and JDBC database URL.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>customization.DbType=db2: <code>wpcustdbDS</code></p>
+<p>customization.DbType=oracle: <code>wpcustdbDS</code></p>
+<p>customization.DbType=sqlserver2005: <code>wpcustdbDS</code></p>
+<p>Otherwise: <code>wpdbDS</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>customization.DbUrl</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The JDBC database URL to be used to connect with the database of this portal database domain. It must comply with your JDBC Driver software requirements. This property that is combined with the properties database name and schema name must be unique for the portal database domains release, community, customization, and JCR.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>customization.DbType=db2:</p>
+<p>customization.DbType=db2_iseries:</p>
+<p>customization.DbType=db2_zos:</p>
+<p>customization.DbType=oracle:</p>
+<p>customization.DbType=sqlserver2005:</p>
+<p>Otherwise: <code>jdbc:derby:wpsdb;create=true</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>Apache Derby: <code>jdbc:derby:wpsdb;create=true</code></p>
+<p>IBM DB2 with type 4 drivers: <code>jdbc:db2://:50000/WPCUST:returnAlias=0;</code></p>
+<p>IBM DB2 with type 2 drivers: <code>jdbc:db2:WPCUST</code></p>
+<p>IBM DB2 for i with type 4 drivers: <code>jdbc:as400:///WPSDB;metadata source=1;prompt=false</code></p>
+<p>IBM DB2 for i with type 2 drivers: <code>jdbc:db2:\*LOCAL/WPSDB</code></p>
+<p>IBM DB2 for z/OS with type 4 drivers: <code>jdbc:db2://:/</code></p>
+<p>IBM DB2 for z/OS with type 2 drivers: <code>jdbc:db2:</code></p>
+<p>Oracle Database with type 4 drivers and thin client: <code>jdbc:oracle:thin:@//:1521/</code></p>
+<p>Oracle Database with type 2 drivers and thick client: <code>jdbc:oracle:oci:@//:1521/</code></p>
+<p>Microsoft SQL Server: <code>jdbc:sqlserver://:1433;SelectMethod=cursor;DatabaseName=WPCUST</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>customization.DbUser</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The database user ID to be used to configure the database objects of this portal database domain. It must comply with your database management software requirements. It is also used by the data source to connect with the database, unless you specify a runtime database user.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>customization.DbPassword</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The password of the database user ID used to configure the database objects of this portal database domain. It must comply with your database management software requirements. It is also used by the data source to connect with the database, unless you specify a runtime database user. The ConfigEngine cannot validate that the password complies with the software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>customization.DbRuntimeUser</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The database user ID used for the data source of the portal database domain to connect with the database during day-to-day operations. It must comply with your database management software requirements. It has fewer permissions than the configuration database user (DbUser) that is used when you leave this blank.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>customization.DbRuntimePassword</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The password of the database user ID used for the data source of this portal database domain to connect with the database during day-to-day operations. It must comply with your database management software requirements. The ConfigEngine cannot validate that the password complies with the software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>customization.DBA.DbUser</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The database administration user ID used for privileged database operations during database creation and setup for this portal database domain. It must comply with your database management software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>customization.DBA.DbPassword</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The password of the database administration user ID used for privileged database operations during database creation and setup for this portal database domain. It must comply with your database management software requirements. The ConfigEngine cannot validate that the password complies with the software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>customization.DbHome</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Oracle Database: The location on the Oracle database server where table spaces for this portal database domain must be created.</p>
+<p>Microsoft SQL Server: The location on the SQL Server database server where the database files for this portal database domain must be created.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>Oracle Database: <code>/product/11.2.0/dbhome\_1</code></p>
+<p>Microsoft SQL Server: <code>C:\\\\Microsoft SQL Server\\\\\\\\MSSQL</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>customization.AdminUrl</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The JDBC database URL used to connect with the SQL Server that contains the database for this portal database domain. It is used for database administration operations. It is the same value that is used for the JDBC database URL, but with the database name omitted.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>Microsoft SQL Server: <code>jdbc:sqlserver://:1433</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>customization.DbConfigRoleName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the role or group for this portal database domain that includes the database permissions that are required by the configuration database user. The configuration database user configures the database objects of this portal database domain. The role or group must comply with your database management software requirements. The configuration database user must be a member of this role or group. If this role or group does not exist, create it and assign it to the customization.DbUser ID.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>customization.DbType=db2_iseries: <code>WPBASCFG</code></p>
+<p>customization.DbType=db2_zos: <code>WPBASCFG</code></p>
+<p>Otherwise: <code>WP_BASE_CONFIG_USERS</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>customization.DbRuntimeRoleName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the role or group for this portal database domain that has the database permissions that are required by the runtime database user during day-to-day operations. The role or group must comply with your database management software requirements. The runtime database user must be a member of this role or group. If this role or group does not exist, create it and assign it to the customization.DbRuntimeUser ID.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>customization.DbType=db2_iseries: <code>WPBASRT</code></p>
+<p>customization.DbType=db2_zos: <code>WPBASRT</code></p>
+<p>Otherwise: <code>WP_BASE_RUNTIME_USERS</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>customization.XDbName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The database alias used to create the database for this portal database domain. It must comply with your database management software requirements. Required for IBM DB2 that runs on Linux and UNIX operating systems. Also required for IBM DB2 that runs on a Microsoft Windows operating system that uses type 2 JDBC drivers and is running on the same server as HCL Portal.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>WPCUST</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>customization.DbNode</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the database node that is used to create the database for this portal database domain. It must comply with your database management software requirements. Required for IBM DB2 that run on Linux and UNIX operating systems.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>wpsNode</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>customization.DbStorageGroup</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the DB2 for z/OS storage group to be used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>WPSSG</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>customization.DbVolumes</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Defines the volumes of the DB2 for z/OS storage group used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>\*</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>customization.DbVcat</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Identifies the integrated catalog facility catalog (VCAT) for the DB2 for z/OS storage group that is used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p><code>DSN910</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>customization.DbIndex4KBufferPoolName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the DB2 for z/OS 4 K index buffer pool to be used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>BP3</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>customization.Db4KBufferPoolName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the DB2 for z/OS 4 K buffer pool to be used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>BP2</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>customization.Db32KBufferPoolName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the DB2 for z/OS 32 K buffer pool to be used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>BP32K1</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>customization.TablespaceTrackMod</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Specifies whether DB2 for z/OS tracks modified pages in the space map pages of the table spaces for this portal database domain. Before you change this value, see the DB2 for z/OS documentation to learn more about the option TRACKMOD.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>YES</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>customization.TablespaceDefine</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Specifies when the underlying data sets for the table spaces of this portal database domain are physically created. Before you change this value, see the DB2 for z/OS documentation to learn more about the option DEFINE.</p>
+</li>
+<li>
+<p><strong>Valid values</strong></p>
+<p><code>YES</code></p>
+<p><code>NO</code></p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>NO</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="jcr-database-properties">JCR Database Properties</h2>
+<ul>
+<li>
+<p><strong>jcr.DbType</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Database management software to use for the JCR domain.</p>
+</li>
+<li>
+<p><strong>Valid values</strong></p>
+<p><code>derby</code></p>
+<p><code>db2</code></p>
+<p><code>db2_iseries</code></p>
+<p><code>db2_zos</code></p>
+<p><code>oracle</code></p>
+<p><code>sqlserver2005</code></p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>derby</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.DbName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the database (location name of the DB2 for z/OS subsystem) to be used for this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties schema name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>jcr.DbType=db2: <code>WPJCR</code></p>
+<p>jcr.DbType=db2_iseries:</p>
+<p>jcr.DbType=db2_zos:</p>
+<p>jcr.DbType=oracle: <code>WPJCR</code></p>
+<p>jcr.DbType=sqlserver2005: <code>WPJCR</code></p>
+<p>Otherwise: wpsdb</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>Apache Derby: <code>wpsdb</code></p>
+<p>IBM DB2: WPJCR</p>
+<p>IBM DB2 for i with type 4 driver: <code>/WPSDB</code></p>
+<p>IBM DB2 for i with type 2 driver: <code>\*LOCAL/WPSDB</code></p>
+<p>DB2 for z/OS:</p>
+<p>Oracle Database: <code>WPJCR</code></p>
+<p>Microsoft SQL Server: <code>WPJCR</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.DbSchema</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name to be used to qualify database objects of this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties database name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>jcr</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.DbNameOnZos</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the database to be used for this portal database domain. It must comply with your database management software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>WPJCR</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.DataSourceName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the data source to be used for this portal database domain. It must comply with the WebSphere Application Server requirements. You cannot use the reserved names releaseDS, communityDS, customizationDS, jcrDS, lmdbDS, and feedback. You can use the same name for all portal database domains that are sharing user ID, password, and JDBC database URL.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>jcr.DbType=db2: <code>wpjcrdbDS</code></p>
+<p>jcr.DbType=oracle: <code>wpjcrdbDS</code></p>
+<p>jcr.DbType=sqlserver2005: <code>wpjcrdbDS</code></p>
+<p>Otherwise: <code>wpdbDS</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.DbUrl</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The JDBC database URL to be used to connect with the database of this portal database domain. It must comply with your JDBC Driver software requirements. This property that is combined with the properties database name and schema name must be unique for the portal database domains release, community, customization, and JCR.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>jcr.DbType=db2:</p>
+<p>jcr.DbType=db2_iseries:</p>
+<p>jcr.DbType=db2_zos:</p>
+<p>jcr.DbType=oracle:</p>
+<p>jcr.DbType=sqlserver2005:</p>
+<p>Otherwise: <code>jdbc:derby:wpsdb;create=true</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>Apache Derby: <code>jdbc:derby:wpsdb;create=true</code></p>
+<p>IBM DB2 with type 4 drivers: <code>jdbc:db2://:50000/WPJCR:returnAlias=0;</code></p>
+<p>IBM DB2 with type 2 drivers: <code>jdbc:db2:WPJCR</code></p>
+<p>IBM DB2 for i with type 4 drivers: <code>jdbc:as400:///WPSDB;metadata source=1;prompt=false</code></p>
+<p>IBM DB2 for i with type 2 drivers: <code>jdbc:db2:\*LOCAL/WPSDB</code></p>
+<p>IBM DB2 for z/OS with type 4 drivers: <code>jdbc:db2://:/</code></p>
+<p>IBM DB2 for z/OS with type 2 drivers: <code>jdbc:db2:</code></p>
+<p>Oracle Database with type 4 drivers and thin client: <code>jdbc:oracle:thin:@//:1521/</code></p>
+<p>Oracle Database with type 2 drivers and thick client: <code>jdbc:oracle:oci:@//:1521/</code></p>
+<p>Microsoft SQL Server: <code>jdbc:sqlserver://:1433;SelectMethod=cursor;DatabaseName=WPJCR</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.DbUser</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The database user ID to be used to configure the database objects of this portal database domain. It must comply with your database management software requirements. It is also used by the data source to connect with the database, unless you specify a runtime database user.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.DbPassword</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The password of the database user ID used to configure the database objects of this portal database domain. It must comply with your database management software requirements. It is also used by the data source to connect with the database, unless you specify a runtime database user. The ConfigEngine cannot validate that the password complies with the software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.DbRuntimeUser</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The database user ID used for the data source of the portal database domain to connect with the database during day-to-day operations. It must comply with your database management software requirements. It has fewer permissions than the configuration database user (DbUser) that is used when you leave this blank.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.DbRuntimePassword</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The password of the database user ID used for the data source of this portal database domain to connect with the database during day-to-day operations. It must comply with your database management software requirements. The ConfigEngine cannot validate that the password complies with the software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.DBA.DbUser</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The database administration user ID used for privileged database operations during database creation and setup for this portal database domain. It must comply with your database management software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.DBA.DbPassword</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The password of the database administration user ID used for privileged database operations during database creation and setup for this portal database domain. It must comply with your database management software requirements. The ConfigEngine cannot validate that the password complies with the software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.DbHome</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Oracle Database: The location on the Oracle database server where table spaces for this portal database domain must be created.</p>
+<p>Microsoft SQL Server: The location on the SQL Server database server where the database files for this portal database domain must be created.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>Oracle Database: <code>/product/11.2.0/dbhome\_1</code></p>
+<p>Microsoft SQL Server: <code>C:\\\\Microsoft SQL Server\\\\\\\\MSSQL</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.AdminUrl</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The JDBC database URL used to connect with the SQL Server that contains the database for this portal database domain. It is used for database administration operations. It is the same value that is used for the JDBC database URL, but with the database name omitted.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>Microsoft SQL Server: <code>jdbc:sqlserver://:1433</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.DbConfigRoleName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the role or group for this portal database domain that includes the database permissions that are required by the configuration database user. The configuration database user configures the database objects of this portal database domain. The role or group must comply with your database management software requirements. The configuration database user must be a member of this role or group. If this role or group does not exist, create it and assign it to the jcr.DbUser ID.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>jcr.DbType=db2_iseries: <code>WPJCRCFG</code></p>
+<p>jcr.DbType=db2_zos: <code>WPJCRCFG</code></p>
+<p>Otherwise: <code>WP_JCR_CONFIG_USERS</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.DbRuntimeRoleName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the role or group for this portal database domain that has the database permissions that are required by the runtime database user during day-to-day operations. The role or group must comply with your database management software requirements. The runtime database user must be a member of this role or group. If this role or group does not exist, create it and assign it to the jcr.DbRuntimeUser ID.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>release.DbType=db2_iseries: <code>WPJCRRT</code></p>
+<p>release.DbType=db2_zos: <code>WPJCRRT</code></p>
+<p>Otherwise: <code>WP_JCR_RUNTIME_USERS</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.XDbName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The database alias used to create the database for this portal database domain. It must comply with your database management software requirements. Required for IBM DB2 that runs on Linux and UNIX operating systems. Also required for IBM DB2 that runs on a Microsoft Windows operating system that uses type 2 JDBC drivers and is running on the same server as HCL Portal.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>WPJCR</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.DbNode</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the database node that is used to create the database for this portal database domain. It must comply with your database management software requirements. Required for IBM DB2 that run on Linux and UNIX operating systems.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>wpsNode</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.DbHost</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The host name of the remote system that hosts the DB2 Content Manager Runtime Edition database (DB2 for z/OS only).</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>:</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.DbDomain</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The domain (not including the host name) of the remote system that hosts the DB2 Content Manager Runtime Edition database (DB2 for z/OS only).</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p><code>yourco.com</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.DbPort</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The port number of the DB2 Content Manager Runtime Edition database on the remote system (DB2 for z/OS only).</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p><code>446</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.ZosDbPrefix</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The common prefix of Node Type database names for DB2 Content Manager Runtime Edition (DB2 for z/OS only).</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>ICM</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.ZosDbMaxTables</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The maximum number of user-defined tables to be stored in a particular Node Type database in the DB2 Content Manager Runtime Edition database (DB2 for z/OS only).</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>100</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.DbStorageGroup</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the DB2 for z/OS storage group to be used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>WPSSG</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.DbVolumes</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Defines the volumes of the DB2 for z/OS storage group used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>\*</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.DbVcat</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Identifies the integrated catalog facility catalog (VCAT) for the DB2 for z/OS storage group that is used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p><code>DSN910</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.DbIndex4KBufferPoolName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the DB2 for z/OS 4 K index buffer pool to be used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>BP3</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.Db4KBufferPoolName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the DB2 for z/OS 4 K buffer pool to be used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>BP2</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.Db32KBufferPoolName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the DB2 for z/OS 32 K buffer pool to be used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>BP32K1</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.TablespaceTrackMod</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Specifies whether DB2 for z/OS tracks modified pages in the space map pages of the table spaces for this portal database domain. Before you change this value, see the DB2 for z/OS documentation to learn more about the option TRACKMOD.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>YES</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>jcr.TablespaceDefine</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Specifies when the underlying data sets for the table spaces of this portal database domain are physically created. Before you change this value, see the DB2 for z/OS documentation to learn more about the option DEFINE.</p>
+</li>
+<li>
+<p><strong>Valid values</strong></p>
+<p><code>YES</code></p>
+<p><code>NO</code></p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>NO</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="jcr-properties">JCR Properties</h2>
+<p>The following properties are required to configure the JCR.</p>
+<ul>
+<li>
+<p><strong>jcr.blobBufferpool</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Required only for IBM DB2 for z/OS and OS/390. The name of the bufferpool in which the BLOB tablespaces is created. If it is not specified, then the default value specified in the database is used.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>BP32K1</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="personalization-feedback-database-properties">Personalization Feedback Database Properties</h2>
+<ul>
+<li>
+<p><strong>feedback.DbType</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Database management software to use for the Feedback domain.</p>
+</li>
+<li>
+<p><strong>Valid values</strong></p>
+<p><code>db2</code></p>
+<p><code>db2_iseries</code></p>
+<p><code>db2_zos</code></p>
+<p><code>derby</code></p>
+<p><code>oracle</code></p>
+<p><code>sqlserver2005</code></p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>derby</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>InitializeFeedbackDB</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Specify how to handle the Feedback database during database transfer from Derby.</p>
+</li>
+<li>
+<p><strong>Valid values</strong></p>
+<p><code>true</code></p>
+<p><code>false</code></p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>true</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>feedback.DbName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the database (location name of the DB2 for z/OS subsystem) to be used for this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties schema name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>feedback.DbType=db2: <code>WPFDBK</code></p>
+<p>feedback.DbType=db2_iseries:</p>
+<p>feedback.DbType=db2_zos:</p>
+<p>feedback.DbType=oracle: <code>WPFDBK</code></p>
+<p>feedback.DbType=sqlserver2005: <code>WPFDBK</code></p>
+<p>Otherwise: <code>wpsdb</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>Apache Derby: wpsdb</p>
+<p>IBM DB2: WPFDBK</p>
+<p>IBM DB2 for i with type 4 driver: <code>/WPSDB</code></p>
+<p>IBM DB2 for i with type 2 driver: <code>\*LOCAL/WPSDB</code></p>
+<p>DB2 for z/OS:</p>
+<p>Oracle Database: <code>WPFDBK</code></p>
+<p>Microsoft SQL Server: WPFDBK</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>feedback.DbSchema</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name to be used to qualify database objects of this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties database name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>feedback</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>feedback.DbNameOnZos</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the database to be used for this portal database domain. It must comply with your database management software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>WPFDBK</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>feedback.DataSourceName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the data source to be used for this portal database domain. It must comply with the WebSphere Application Server requirements. You cannot use the reserved names releaseDS, communityDS, customizationDS, jcrDS, lmdbDS, and feedback. You can use the same name for all portal database domains that are sharing user ID, password, and JDBC database URL.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>feedback.DbType=db2: <code>wpfdbkdbDS</code></p>
+<p>feedback.DbType=oracle: <code>wpfdbkdbDS</code></p>
+<p>feedback.DbType=sqlserver2005: <code>wpfdbkdbDS</code></p>
+<p>Otherwise: <code>wpdbDS</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>feedback.DbUrl</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The JDBC database URL to be used to connect with the database of this portal database domain. It must comply with your JDBC Driver software requirements. This property that is combined with the properties database name and schema name must be unique for the portal database domains release, community, customization, and JCR.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>feedback.DbType=db2:</p>
+<p>feedback.DbType=db2_iseries:</p>
+<p>feedback.DbType=db2_zos:</p>
+<p>feedback.DbType=oracle:</p>
+<p>feedback.DbType=sqlserver2005:</p>
+<p>Otherwise: <code>jdbc:derby:wpsdb;create=true</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>Apache Derby: <code>jdbc:derby:wpsdb;create=true</code></p>
+<p>IBM DB2 with type 4 drivers: <code>jdbc:db2://:50000/WPFDBK:returnAlias=0;</code></p>
+<p>IBM DB2 with type 2 drivers: <code>jdbc:db2:WPFDBK</code></p>
+<p>IBM DB2 for i with type 4 drivers: <code>jdbc:as400:/WPSDB;metadata source=1;prompt=false</code></p>
+<p>IBM DB2 for i with type 2 drivers: <code>jdbc:db2:\*LOCAL/WPSDB</code></p>
+<p>IBM DB2 for z/OS with type 4 drivers: <code>jdbc:db2://:/</code></p>
+<p>IBM DB2 for z/OS with type 2 drivers: <code>jdbc:db2:</code></p>
+<p>Oracle Database with type 4 drivers and thin client: <code>jdbc:oracle:thin:@//:1521/</code></p>
+<p>Oracle Database with type 2 drivers and thick client: <code>jdbc:oracle:oci:@//:1521/</code></p>
+<p>Microsoft SQL Server: <code>jdbc:sqlserver://:1433;SelectMethod=cursor;DatabaseName=WPFDBK</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>feedback.DbUser</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The database user ID used to configure the database objects of this portal database domain. It must comply with your database management software requirements. It is also used by the data source to connect with the database, unless you specify a runtime database user.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>feedback.DbPassword</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The password of the database user ID used to configure the database objects of this portal database domain. It must comply with your database management software requirements. It is also used by the data source to connect with the database, unless you specify a runtime database user. The ConfigEngine cannot validate that the password complies with the software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>feedback.DbRuntimeUser</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The database user ID used for the data source of the portal database domain to connect with the database during day-to-day operations. It must comply with your database management software requirements. It has fewer permissions than the configuration database user (DbUser) that is used when you leave this blank.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>feedback.DbRuntimePassword</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The password must comply with the database management software requirements. The ConfigEngine cannot validate that the password complies with the software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>feedback.DBA.DbUser</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The database administration user ID used for privileged database operations during database creation and setup for this portal database domain. It must comply with your database management software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>feedback.DBA.DbPassword</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The password of the database administration user ID used for privileged database operations during database creation and setup for this portal database domain. It must comply with your database management software requirements. The ConfigEngine cannot validate that the password complies with the software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>feedback.DbHome</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Oracle Database: The location on the Oracle database server where table spaces for this portal database domain must be created.</p>
+<p>Microsoft: SQL Server The location on the SQL Server database server where the database files for this portal database domain must be created.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>Oracle Database: <code>/product/11.2.0/dbhome\_1</code></p>
+<p>Microsoft SQL Server: <code>C:\\\\Microsoft SQL Server\\\\\\\\MSSQL</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>feedback.AdminUrl</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The JDBC database URL used to connect with the SQL Server that contains the database for this portal database domain. It is used for database administration operations. It is the same value that is used for the JDBC database URL, but with the database name omitted.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>Microsoft SQL Server 2008: <code>jdbc:sqlserver://:1433</code></p>
+<p>Microsoft SQL Server 2005: <code>jdbc:sqlserver://:1433</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>feedback.DbConfigRoleName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the role or group for this portal database domain that includes the database permissions that are required by the configuration database user. The configuration database user configures the database objects of this portal database domain. The role or group must comply with your database management software requirements. The configuration database user must be a member of this role or group. If this role or group does not exist, create it and assign it to the feedback.DbUser ID.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>feedback.DbType=db2_iseries: <code>WPPZNCFG</code></p>
+<p>feedback.DbType=db2_zos: <code>WPPZNCFG</code></p>
+<p>Otherwise: <code>WP_PZN_CONFIG_USERS</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>feedback.DbRuntimeRoleName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the role or group for this portal database domain that has the database permissions that are required by the runtime database user during day-to-day operations. The role or group must comply with your database management software requirements. The runtime database user must be a member of this role or group. If this role or group does not exist, create it and assign it to the feedback.DbRuntimeUser ID.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>feedback.DbType=db2_iseries: <code>WPPZNRT</code></p>
+<p>feedback.DbType=db2_zos: <code>WPPZNRT</code></p>
+<p>Otherwise: <code>WP_PZN_RUNTIME_USERS</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>feedback.XDbName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The database alias used to create the database for this portal database domain. It must comply with your database management software requirements. Required for IBM DB2 that runs on Linux and UNIX operating systems. Also required for IBM DB2 that runs on a Microsoft Windows operating system that uses type 2 JDBC drivers and is running on the same server as HCL Portal.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>WPFDBK</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>feedback.DbNode</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the database node that is used to create the database for this portal database domain. It must comply with your database management software requirements. Required for IBM DB2 that run on Linux and UNIX operating systems.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>pznNode</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>feedback.DbHostName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Required for Microsoft SQL Server 2005 and 2008 only. The host name of the Feedback database.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>myserver</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>feedback.DbStorageGroup</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the DB2 for z/OS storage group to be used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>WPSSG</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>feedback.DbVolumes</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Defines the volumes of the DB2 for z/OS storage group used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>\*</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>feedback.DbVcat</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Identifies the integrated catalog facility catalog (VCAT) for the DB2 for z/OS storage group that is used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p><code>DSN910</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>feedback.Db4KBufferPoolName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the DB2 for z/OS 4 K buffer pool to be used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>BP2</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>feedback.Db32KBufferPoolName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the DB2 for z/OS 32 K buffer pool to be used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>BP32K1</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="likeminds-database-properties">LikeMinds Database Properties</h2>
+<ul>
+<li>
+<p><strong>likeminds.DbType</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Database management software to use for the LikeMinds domain.</p>
+</li>
+<li>
+<p><strong>Valid values</strong></p>
+<p><code>derby</code></p>
+<p><code>db2</code></p>
+<p><code>db2_iseries</code></p>
+<p><code>db2_zos</code></p>
+<p><code>oracle</code></p>
+<p><code>sqlserver2005</code></p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>derby</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>likeminds.DbName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the database (location name of the DB2 for z/OS subsystem) to be used for this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties schema name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>likeminds.DbType=db2: <code>WPLM</code></p>
+<p>likeminds.DbType=db2_iseries:</p>
+<p>likeminds.DbType=db2_zos:</p>
+<p>likeminds.DbType=oracle: <code>WPLM</code></p>
+<p>likeminds.DbType=sqlserver2005: <code>WPLM</code></p>
+<p>Otherwise: <code>wpsdb</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>Apache Derby: <code>wpsdb</code></p>
+<p>IBM DB2: <code>WPLM</code></p>
+<p>IBM DB2 for i with type 4 driver: <code>/WPSDB</code></p>
+<p>IBM DB2 for i with type 2 driver: <code>\*LOCAL/WPSDB</code></p>
+<p>DB2 for z/OS:</p>
+<p>Oracle Database: <code>WPLM</code></p>
+<p>Microsoft SQL Server: <code>WPLM</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>likeminds.DbSchema</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name to be used to qualify database objects of this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties database name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>likeminds</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>likeminds.DbNameOnZos</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the database to be used for this portal database domain. It must comply with your database management software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>WPLM</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>likeminds.DataSourceName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the data source to be used for this portal database domain. It must comply with the WebSphere Application Server requirements. You cannot use the reserved names releaseDS, communityDS, customizationDS, jcrDS, lmdbDS, and feedback. You can use the same name for all portal database domains that are sharing user ID, password, and JDBC database URL.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>likeminds.DbType=db2: <code>wplmdbDS</code></p>
+<p>likeminds.DbType=oracle: <code>wplmdbDS</code></p>
+<p>likeminds.DbType=sqlserver2005: <code>wplmdbDS</code></p>
+<p>Otherwise: <code>wpdbDS</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>likeminds.DbUrl</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The JDBC database URL to be used to connect with the database of this portal database domain. It must comply with your JDBC Driver software requirements. This property that is combined with the properties database name and schema name must be unique for the portal database domains release, community, customization, and JCR.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>likeminds.DbType=db2:</p>
+<p>likeminds.DbType=db2_iseries:</p>
+<p>likeminds.DbType=db2_zos:</p>
+<p>likeminds.DbType=oracle:</p>
+<p>likeminds.DbType=sqlserver2005:</p>
+<p>Otherwise: <code>jdbc:derby:wpsdb;create=true</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>Apache Derby: <code>jdbc:derby:wpsdb;create=true</code></p>
+<p>IBM DB2 with type 4 drivers: <code>jdbc:db2://:50000/WPLM:returnAlias=0;</code></p>
+<p>IBM DB2 with type 2 drivers: <code>jdbc:db2:WPLM</code></p>
+<p>IBM DB2 for i with type 4 drivers: <code>jdbc:as400:/WPSDB;metadata source=1;prompt=false</code></p>
+<p>IBM DB2 for i with type 2 drivers: <code>jdbc:db2:\*LOCAL/WPSDB</code></p>
+<p>IBM DB2 for z/OS with type 4 drivers: <code>jdbc:db2://:/</code></p>
+<p>IBM DB2 for z/OS with type 2 drivers: <code>jdbc:db2:</code></p>
+<p>Oracle Database with type 4 drivers and thin client: <code>jdbc:oracle:thin:@//:1521/</code></p>
+<p>Oracle Database with type 2 drivers and thick client: <code>jdbc:oracle:oci:@//:1521/</code></p>
+<p>Microsoft SQL Server: <code>jdbc:sqlserver://:1433;SelectMethod=cursor;DatabaseName=WPLM</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>likeminds.DbUser</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The database user ID used to configure the database objects of this portal database domain. It must comply with your database management software requirements. It is also used by the data source to connect with the database, unless you specify a runtime database user.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>likeminds.DbPassword</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The password of the database user ID used to configure the database objects of this portal database domain. It must comply with your database management software requirements. It is also used by the data source to connect with the database, unless you specify a runtime database user. The ConfigEngine cannot validate that the password complies with the software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>likeminds.DbRuntimeUser</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The database user ID used for the data source of the portal database domain to connect with the database during day-to-day operations. It must comply with your database management software requirements. It has fewer permissions than the configuration database user (DbUser) that is used when you leave this blank.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>likeminds.DbRuntimePassword</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The password of the database user ID used for the data source of this portal database domain to connect with the database during day-to-day operations. It must comply with your database management software requirements. The ConfigEngine cannot validate that the password complies with the software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>likeminds.DBA.DbUser</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The database administration user ID used for privileged database operations during database creation and setup for this portal database domain. It must comply with your database management software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>likeminds.DBA.DbPassword</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The password of the database administration user ID used for privileged database operations during database creation and setup for this portal database domain. It must comply with your database management software requirements. The ConfigEngine cannot validate that the password complies with the software requirements.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>likeminds.DbHome</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Oracle Database: The location on the Oracle database server where table spaces for this portal database domain must be created.</p>
+<p>Microsoft: SQL Server The location on the SQL Server database server where the database files for this portal database domain must be created.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>Oracle Database: <code>/product/11.2.0/dbhome\_1</code></p>
+<p>Microsoft SQL Server: <code>C:\\\\Microsoft SQL Server\\\\\\\\MSSQL</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>likeminds.AdminUrl</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The JDBC database URL used to connect with the SQL Server that contains the database for this portal database domain. It is used for database administration operations. It is the same value that is used for the JDBC database URL, but with the database name omitted.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>Microsoft SQL Server 2008: <code>jdbc:sqlserver://:1433</code></p>
+<p>Microsoft SQL Server 2005: <code>jdbc:sqlserver://:1433</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>likeminds.DbConfigRoleName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the role or group for this portal database domain that includes the database permissions that are required by the configuration database user. The configuration database user configures the database objects of this portal database domain. The role or group must comply with your database management software requirements. The configuration database user must be a member of this role or group. If this role or group does not exist, create it and assign it to the likeminds.DbUser ID.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>likeminds.DbType=db2_iseries: <code>WPPZNCFG</code></p>
+<p>likeminds.DbType=db2_zos: <code>WPPZNCFG</code></p>
+<p>Otherwise: <code>WP_PZN_CONFIG_USERS</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>likeminds.DbRuntimeRoleName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the role or group for this portal database domain that has the database permissions that are required by the runtime database user during day-to-day operations. The role or group must comply with your database management software requirements. The runtime database user must be a member of this role or group. If this role or group does not exist, create it and assign it to the likeminds.DbRuntimeUser ID.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>likeminds.DbType=db2_iseries: <code>WPPZNRT</code></p>
+<p>likeminds.DbType=db2_zos: <code>WPPZNRT</code></p>
+<p>Otherwise: <code>WP_PZN_RUNTIME_USERS</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>likeminds.XDbName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The database alias used to create the database for this portal database domain. It must comply with your database management software requirements. Required for IBM DB2 that runs on Linux and UNIX operating systems. Also required for IBM DB2 that runs on a Microsoft Windows operating system that uses type 2 JDBC drivers and is running on the same server as HCL Portal.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>WPLM</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>likeminds.DbNode</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the database node that is used to create the database for this portal database domain. It must comply with your database management software requirements. Required for IBM DB2 that run on Linux and UNIX operating systems.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>pznNode</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>likeminds.DbHostName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Required for Microsoft SQL Server 2005 and 2008 only. The host name of the LikeMinds database.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>myserver</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>likeminds.DbStorageGroup</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the DB2 for z/OS storage group to be used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>WPSSG</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>likeminds.DbVolumes</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Defines the volumes of the DB2 for z/OS storage group used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>\*</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>likeminds.DbVcat</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>Identifies the integrated catalog facility catalog (VCAT) for the DB2 for z/OS storage group that is used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p>No default value</p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p><code>DSN910</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>likeminds.Db4KBufferPoolName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the DB2 for z/OS 4 K buffer pool to be used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>BP2</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>likeminds.Db32KBufferPoolName</strong></p>
+<ul>
+<li>
+<p><strong>Description</strong></p>
+<p>The name of the DB2 for z/OS 32 K buffer pool to be used for this portal database domain.</p>
+</li>
+<li>
+<p><strong>Default value</strong></p>
+<p><code>BP32K1</code></p>
+</li>
+<li>
+<p><strong>Examples</strong></p>
+<p>None available</p>
+</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 1, 2022</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

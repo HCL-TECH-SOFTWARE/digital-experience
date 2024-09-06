@@ -1,0 +1,2853 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/guide_me/tutorials/scriptapps/common-setup/optimized-scriptapps/sharing_dependencies/">
+      
+      
+        <link rel="prev" href="../dependencies_as_module/">
+      
+      
+        <link rel="next" href="../../build-and-deploy/">
+      
+      
+      <link rel="icon" href="../../../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Script Applications Sharing Dependencies - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#script-applications-sharing-dependencies" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../../../latest/guide_me/tutorials/scriptapps/common-setup/optimized-scriptapps/sharing_dependencies/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Script Applications Sharing Dependencies
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../whatsnew/cf20/newcf222/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../deployment/" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../build_sites/" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../../whatsnew/cf20/newcf222/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../build_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Guide Me
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../gettingstartedwithDX/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started with HCL Digital Experience
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../access-software/register-for-access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Access Software and Support
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Script Applications
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8_1_4" id="__nav_8_1_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_1_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Script Applications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pre_requisites/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pre-requisites
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1_4_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Common Setup
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8_1_4_3" id="__nav_8_1_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_8_1_4_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8_1_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Common Setup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../basic-scriptapp/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Basic Script Applications
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1_4_3_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Optimized Script Applications
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8_1_4_3_3" id="__nav_8_1_4_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_8_1_4_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8_1_4_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Optimized Script Applications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dependencies_as_module/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dependencies as DX Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Script Applications Sharing Dependencies
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Script Applications Sharing Dependencies
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bundle-a-script-application-without-its-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bundle a Script Application Without Its Dependencies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bundle a Script Application Without Its Dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initial-project-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial Project Creation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-webpack-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Webpack Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-and-bundle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test and Bundle
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-script-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy Script Application
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../build-and-deploy/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build and Deploy
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../post-deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Post Deployment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../site_integration/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Site Integration
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../how_to/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    How-To Guides
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../samples/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Sample DX Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Portletdevelopmentutilitiesandpagecreationsamples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Portlet development utilities and page creation samples on HCL GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../wpsdirstr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Directory structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../cleanup_wcm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cleaning up WCM items
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../SecurityHardeningGuide/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Security Hardening Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../performance_tuning/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Performance Tuning Guides
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../search_tips/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tips for searching the Help Center
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bundle-a-script-application-without-its-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bundle a Script Application Without Its Dependencies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bundle a Script Application Without Its Dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initial-project-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial Project Creation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-webpack-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Webpack Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-and-bundle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test and Bundle
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-script-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy Script Application
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+  
+
+<nav class="md-tags" hidden>
+  
+    
+    
+    
+      <span class="md-tag">React</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Script Application</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Deploy</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">WebPack</span>
+    
+  
+</nav>
+
+
+  
+  
+
+
+<h1 id="script-applications-sharing-dependencies">Script Applications Sharing Dependencies</h1>
+<p>This guide will detail the steps on how to deploy Script Applications bundled without its dependencies. <a href="https://webpack.js.org/" target="_blank">Webpack</a> is used to package the React Script App.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The full deployment of the sample DX Module described in the guide <a href="../dependencies_as_module/">Dependencies as Module</a> must be first completed. The generated DLL Manifest(i.e: dx-dll-manifest.json) in the DX Module folder is going to be referenced in this guide's instructions.</p>
+</div>
+<h2 id="bundle-a-script-application-without-its-dependencies">Bundle a Script Application Without Its Dependencies</h2>
+<h3 id="initial-project-creation">Initial Project Creation</h3>
+<p>Do the following steps for each of your React Application.</p>
+<ol>
+<li>
+<p>Create or update the React app's package.json file.</p>
+<ul>
+<li>Set the name of the project and the main JavaScript or TypeScript file.</li>
+</ul>
+<div class="language-json highlight"><pre><span></span><code><span class="w">   </span><span class="p">{</span>
+<span class="w">       </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sample-app&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="err">...</span>
+<span class="w">       </span><span class="nt">&quot;main&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;./index.js&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="err">...</span>
+<span class="w">   </span><span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>Add the dxclient parameters as config. Double-check and update the config values as needed. Also, add the 2 deploy-dx-app lines as-is among the scripts. The variables in the scripts will automatically pick up the values from environment variables and config.</li>
+</ul>
+<div class="language-json highlight"><pre><span></span><code><span class="w">   </span><span class="p">{</span>
+<span class="w">       </span><span class="err">...</span>
+<span class="w">       </span><span class="nt">&quot;config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;dxclient&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">              </span><span class="nt">&quot;wcmContentName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;EducSampleApp&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;wcmSiteArea&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Script Application Library/Script Applications&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;mainHtmlFile&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;index.html&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;contentRoot&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;./dist-dx-scriptapp&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;protocol&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;hostname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;port&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10041&quot;</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">       </span><span class="p">},</span>
+<span class="w">       </span><span class="nt">&quot;scripts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">           </span><span class="err">...</span>
+<span class="w">           </span><span class="nt">&quot;dx-deploy-app&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dxclient deploy-scriptapplication push -dxUsername $dxUsername -dxPassword $dxPassword -wcmContentName \&quot;$npm_package_config_dxclient_wcmContentName\&quot; -wcmSiteArea \&quot;$npm_package_config_dxclient_wcmSiteArea\&quot; -mainHtmlFile $npm_package_config_dxclient_mainHtmlFile -contentRoot \&quot;$npm_package_config_dxclient_contentRoot\&quot; -dxProtocol $npm_package_config_dxclient_protocol -hostname $npm_package_config_dxclient_hostname -dxPort $npm_package_config_dxclient_port&quot;</span><span class="p">,</span>
+<span class="w">           </span><span class="nt">&quot;dx-deploy-app-win&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dxclient deploy-scriptapplication push -dxUsername %dxUsername% -dxPassword %dxPassword% -wcmContentName \&quot;%npm_package_config_dxclient_wcmContentName%\&quot; -wcmSiteArea \&quot;%npm_package_config_dxclient_wcmSiteArea%\&quot; -mainHtmlFile %npm_package_config_dxclient_mainHtmlFile% -contentRoot \&quot;%npm_package_config_dxclient_contentRoot%\&quot; -dxProtocol %npm_package_config_dxclient_protocol% -hostname %npm_package_config_dxclient_hostname% -dxPort %npm_package_config_dxclient_port%&quot;</span><span class="p">,</span>
+<span class="w">           </span><span class="nt">&quot;dx-deploy-app-use-env&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dxclient deploy-scriptapplication push -dxUsername $dxUsername -dxPassword $dxPassword -wcmContentName \&quot;$npm_package_config_dxclient_wcmContentName\&quot; -wcmSiteArea \&quot;$npm_package_config_dxclient_wcmSiteArea\&quot; -mainHtmlFile $npm_package_config_dxclient_mainHtmlFile -contentRoot \&quot;$npm_package_config_dxclient_contentRoot\&quot; -dxProtocol $dxProtocol -hostname $dxHostname -dxPort $dxPort&quot;</span><span class="p">,</span>
+<span class="w">           </span><span class="nt">&quot;dx-deploy-app-use-env-win&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dxclient deploy-scriptapplication push -dxUsername %dxUsername% -dxPassword %dxPassword% -wcmContentName \&quot;%npm_package_config_dxclient_wcmContentName%\&quot; -wcmSiteArea \&quot;%npm_package_config_dxclient_wcmSiteArea%\&quot; -mainHtmlFile %npm_package_config_dxclient_mainHtmlFile% -contentRoot \&quot;%npm_package_config_dxclient_contentRoot%\&quot; -dxProtocol %dxProtocol% -hostname %dxHostname% -dxPort %dxPort%&quot;</span>
+<span class="w">       </span><span class="p">},</span>
+<span class="w">       </span><span class="err">...</span>
+<span class="w">   </span><span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>Remove the dependencies that are redundant with the DX Module's scope(i.e: React, ReactDom). Create a dependency linking the folder of the DX Module to the current project via a relative path.</li>
+</ul>
+<div class="language-json highlight"><pre><span></span><code><span class="w">         </span><span class="nt">&quot;dependencies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">             </span><span class="nt">&quot;dxmodules&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;file:../../02DependenciesAsModule&quot;</span>
+<span class="w">         </span><span class="p">},</span>
+</code></pre></div>
+<ul>
+<li>Add all the dev dependencies for the webpack bundler and all its plugins.</li>
+</ul>
+<div class="language-js highlight"><pre><span></span><code><span class="w">         </span><span class="s2">&quot;devDependencies&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">             </span><span class="s2">&quot;@babel/core&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;^7.18.10&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="s2">&quot;@babel/preset-env&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;^7.18.10&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="s2">&quot;@babel/preset-react&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;^7.18.6&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="s2">&quot;babel-loader&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;^8.2.5&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="s2">&quot;clean-webpack-plugin&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;^4.0.0&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="s2">&quot;copy-webpack-plugin&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;^10.2.4&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="s2">&quot;css-loader&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;^6.7.1&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="s2">&quot;css-minimizer-webpack-plugin&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;^4.0.0&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="s2">&quot;html-loader&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;^4.1.0&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="s2">&quot;html-webpack-plugin&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;^5.5.0&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="s2">&quot;mini-css-extract-plugin&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;^2.6.1&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="s2">&quot;mini-svg-data-uri&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;^1.4.4&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="s2">&quot;style-loader&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;^3.3.1&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="s2">&quot;ts-loader&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;^9.3.1&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="s2">&quot;typescript&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;^4.7.4&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="s2">&quot;webpack&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;^5.74.0&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="s2">&quot;webpack-cli&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;^4.10.0&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="s2">&quot;webpack-dev-server&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;^4.9.3&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="s2">&quot;webpack-merge&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;^5.8.0&quot;</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">       </span><span class="p">...</span>
+<span class="w">   </span><span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>If a homepage value is set in package.json, replace it with "./".
+<div class="language-js highlight"><pre><span></span><code><span class="w">  </span><span class="s2">&quot;homepage&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;./&quot;</span><span class="p">,</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>Before using the NPM commands in the succeeding steps, set the PATH environment variable to prioritize the npm executable downloaded by the gradle npm plugin of the DX Module. This is necessary to be consistent with the one used during the DX Module build.</p>
+<div class="language-bash highlight"><pre><span></span><code><span class="w">  </span><span class="nb">cd</span><span class="w"> </span>&lt;app-folder&gt;
+<span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>../../02DependenciesAsModule/.gradle/npm/npm-v8.15.0/bin/:<span class="nv">$PATH</span>
+<span class="w">  </span>which<span class="w"> </span>npm
+<span class="w">  </span>npm<span class="w"> </span>-v
+</code></pre></div>
+</li>
+<li>
+<p>Execute the npm install command.</p>
+<div class="language-bash highlight"><pre><span></span><code><span class="w">  </span><span class="nb">cd</span><span class="w"> </span>&lt;app-folder&gt;
+<span class="w">  </span>npm<span class="w"> </span>install
+</code></pre></div>
+</li>
+<li>
+<p>Find all the React Apps' JS and TS files (i.e: index.jsx, App.jsx, etc.), divert all imports of the libraries that are bundled in the DX Module (i.e: React, ReactDOM) to use the dxmodules alias set in package.json.
+    <div class="language-text highlight"><pre><span></span><code>// From
+import React from &#39;react&#39;;
+import ReactDOM from &#39;react-dom/client&#39;;
+</code></pre></div>
+    for React version 16
+    <div class="language-text highlight"><pre><span></span><code>// To
+import { ReactV16 } from &#39;dxmodules&#39;;
+const { React, ReactDOM } = ReactV16;
+</code></pre></div>
+    for React version 18
+    <div class="language-text highlight"><pre><span></span><code>// To
+import { ReactV18 } from &#39;dxmodules&#39;;
+const { React, ReactDOM } = ReactV1;
+</code></pre></div></p>
+</li>
+<li>Assign a unique id for each of the root html tags of the ScriptApps. Make sure to use the same id in the corresponding index.jsx within the same ScriptApp.<ul>
+<li>SampleAppReact16/src/index.html
+  <div class="language-text highlight"><pre><span></span><code>  &lt;div id=&quot;sample-app-react-16-root&quot;&gt;&lt;/div&gt;
+</code></pre></div>
+  SampleAppReact16/src/index.jsx
+  <div class="language-text highlight"><pre><span></span><code>  const root = ReactDOM.createRoot(document.getElementById(&#39;sample-app-react-16-root&#39;));
+</code></pre></div></li>
+<li>SampleAppReact18/public/index.html
+  <div class="language-text highlight"><pre><span></span><code>  &lt;div id=&quot;sample-app-react-18-root&quot;&gt;&lt;/div&gt;]()
+</code></pre></div>
+  SampleAppReact18/src/index.js
+  <div class="language-text highlight"><pre><span></span><code>  const root = ReactDOM.createRoot(document.getElementById(&#39;sample-app-react-18-root&#39;));
+</code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h3 id="add-webpack-files">Add Webpack Files</h3>
+<ol>
+<li>
+<p>Add or update the webpack.common.js file. Set the main entry JS/TS file. Make sure to replace all old webpack bundlers (i.e: url-loader and file-loader) with the latest asset bundlers.</p>
+<div class="language-js highlight"><pre><span></span><code><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">MiniCssExtractPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;mini-css-extract-plugin&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">svgToMiniDataURI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mini-svg-data-uri&#39;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">entry</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">main</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;./src/index.jsx&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">resolve</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">preferRelative</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">extensions</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;.js&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;.jsx&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;.module.scss&quot;</span><span class="p">]</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">module</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">rules</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.(js|mjs|jsx|ts|tsx)$/</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">exclude</span><span class="o">:</span><span class="w"> </span><span class="sr">/(node_modules|bower_components)/</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nx">loader</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;babel-loader&#39;</span><span class="p">,</span>
+<span class="w">                        </span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="nx">presets</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;@babel/preset-env&#39;</span><span class="p">,</span><span class="s1">&#39;@babel/preset-react&#39;</span><span class="p">],</span>
+<span class="w">                            </span><span class="nx">cacheDirectory</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.(htm|html)$/</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;html-loader&#39;</span><span class="p">],</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.(js|mjs|jsx|ts|tsx)$/</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;ts-loader&#39;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">exclude</span><span class="o">:</span><span class="w"> </span><span class="sr">/node_modules/</span><span class="p">,</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.s[ac]ss$/i</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">MiniCssExtractPlugin</span><span class="p">.</span><span class="nx">loader</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;css-loader&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;sass-loader&quot;</span><span class="p">],</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.css$/</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;style-loader&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;css-loader&#39;</span><span class="p">],</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.svg/</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;asset/inline&#39;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">generator</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nx">dataUrl</span><span class="o">:</span><span class="w"> </span><span class="nx">content</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="nx">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">content</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span>
+<span class="w">                            </span><span class="k">return</span><span class="w"> </span><span class="nx">svgToMiniDataURI</span><span class="p">(</span><span class="nx">content</span><span class="p">);</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.(png|jpg|jpeg|gif|woff|woff2|ttf|eot)$/</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;asset&#39;</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">            </span><span class="p">],</span>
+
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">};</span>
+</code></pre></div>
+</li>
+<li>
+<p>Add or update a webpack.dev.js file. This configuration is intended for the development cycle only (via npm start) and will not be used for DX deployment.</p>
+<div class="language-js highlight"><pre><span></span><code><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">common</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./webpack.common&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">merge</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;webpack-merge&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// New import based on the 5.0.3 changelog</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">HTMLWebpackPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;html-webpack-plugin&#39;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">merge</span><span class="w"> </span><span class="p">(</span><span class="nx">common</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">mode</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;development&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">devtool</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;eval&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">entry</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// Note: point this to the DX Module project</span>
+<span class="w">            </span><span class="nx">dxmodulesstyles</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;../DxModule/SubModuleReact16/styles-index.css&#39;</span><span class="p">),</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">output</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name].bundle.js&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;dist-dev&quot;</span><span class="p">),</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">plugins</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="ow">new</span><span class="w"> </span><span class="nx">HTMLWebpackPlugin</span><span class="p">({</span>
+<span class="w">                </span><span class="nx">template</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;./src/index.html&quot;</span>
+<span class="w">            </span><span class="p">})</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nx">module</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">rules</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">});</span>
+</code></pre></div>
+<ul>
+<li>Add a separate build entry pointing to the styles index file of the DX Sub Module. This will simulate the styling injection that will be done by DX in the HTML header of a DX page.</li>
+</ul>
+<div class="language-json highlight"><pre><span></span><code><span class="w">      </span><span class="err">e</span><span class="kc">ntr</span><span class="err">y</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Note: point this to the DX Module project</span>
+<span class="w">        </span><span class="err">dxmoduless</span><span class="kc">t</span><span class="err">yles</span><span class="p">:</span><span class="w"> </span><span class="err">pa</span><span class="kc">t</span><span class="err">h.resolve(__dir</span><span class="kc">na</span><span class="err">me</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;../DxModule/SubModuleReac</span><span class="kc">t</span><span class="mi">16</span><span class="err">/s</span><span class="kc">t</span><span class="err">yles</span><span class="mi">-</span><span class="err">i</span><span class="kc">n</span><span class="err">dex.css&#39;)</span><span class="p">,</span>
+<span class="w">      </span><span class="p">},</span>
+</code></pre></div>
+<ul>
+<li>Configure the temporary output folder, make sure the folder is not the same as the one for the DX deployment build.</li>
+</ul>
+<div class="language-json highlight"><pre><span></span><code><span class="w">      </span><span class="err">ou</span><span class="kc">t</span><span class="err">pu</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kc">f</span><span class="err">ile</span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[name].bundle.js&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="err">pa</span><span class="kc">t</span><span class="err">h</span><span class="p">:</span><span class="w"> </span><span class="err">pa</span><span class="kc">t</span><span class="err">h.resolve(__dir</span><span class="kc">na</span><span class="err">me</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;dist-dev&quot;</span><span class="err">)</span><span class="p">,</span>
+<span class="w">      </span><span class="p">},</span>
+</code></pre></div>
+<ul>
+<li>Configure the HTML wrapper and assets that will be used when running the Script Application via npm start:</li>
+</ul>
+<div class="language-json highlight"><pre><span></span><code><span class="w">    </span><span class="err">plugi</span><span class="kc">ns</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="kc">ne</span><span class="err">w</span><span class="w"> </span><span class="err">HTMLWebpackPlugi</span><span class="kc">n</span><span class="err">(</span><span class="p">{</span>
+<span class="w">        </span><span class="kc">te</span><span class="err">mpla</span><span class="kc">te</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;./src/index.html&quot;</span>
+<span class="w">    </span><span class="p">}</span><span class="err">)</span><span class="p">,</span>
+<span class="w">    </span><span class="p">],</span>
+</code></pre></div>
+</li>
+<li>
+<p>Add or update the webpack.dx-scriptapp.js file. This is the main bundler configuration that will be used for building the Script Application.</p>
+<div class="language-js highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;path&quot;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">common</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;./webpack.common&quot;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">webpack</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;webpack&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">merge</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;webpack-merge&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="nx">CleanWebpackPlugin</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;clean-webpack-plugin&quot;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">MiniCssExtractPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;mini-css-extract-plugin&quot;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">OptimizeCssAssetsPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;css-minimizer-webpack-plugin&quot;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">TerserPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;terser-webpack-plugin&quot;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">DllReferencePlugin</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;webpack&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">HTMLWebpackPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;html-webpack-plugin&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">CopyPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;copy-webpack-plugin&quot;</span><span class="p">);</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">merge</span><span class="p">(</span><span class="nx">common</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">mode</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;production&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">output</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name].[contenthash].bundle.js&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;dist-dx-scriptapp&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">optimization</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">minimizer</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="ow">new</span><span class="w"> </span><span class="nx">OptimizeCssAssetsPlugin</span><span class="p">(),</span>
+<span class="w">            </span><span class="ow">new</span><span class="w"> </span><span class="nx">TerserPlugin</span><span class="p">(),</span>
+<span class="w">            </span><span class="ow">new</span><span class="w"> </span><span class="nx">HTMLWebpackPlugin</span><span class="p">({</span>
+<span class="w">                </span><span class="nx">template</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;./src/index.html&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">minify</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">removeAttributeQuotes</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">removeComments</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">collapseWhitespace</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">})</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">plugins</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="c1">// remove copying of sp-config.json if you&#39;re not using DX WebDevToolkit</span>
+<span class="w">        </span><span class="ow">new</span><span class="w"> </span><span class="nx">CopyPlugin</span><span class="p">({</span>
+<span class="w">            </span><span class="nx">patterns</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s1">&#39;./sp-config.json&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">}),</span>
+<span class="w">        </span><span class="ow">new</span><span class="w"> </span><span class="nx">webpack</span><span class="p">.</span><span class="nx">IgnorePlugin</span><span class="p">({</span>
+<span class="w">            </span><span class="nx">resourceRegExp</span><span class="o">:</span><span class="w"> </span><span class="sr">/dxmodules\//</span><span class="p">,</span>
+<span class="w">        </span><span class="p">}),</span>
+<span class="w">        </span><span class="ow">new</span><span class="w"> </span><span class="nx">DllReferencePlugin</span><span class="p">({</span>
+<span class="w">            </span><span class="nx">context</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;../WebAppDxModule&#39;</span><span class="p">),</span>
+<span class="w">            </span><span class="nx">manifest</span><span class="o">:</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;../DxModule/SubModuleReact16/dx-dll-manifest-react16.json&#39;</span><span class="p">),</span>
+<span class="w">        </span><span class="p">}),</span>
+<span class="w">        </span><span class="ow">new</span><span class="w"> </span><span class="nx">MiniCssExtractPlugin</span><span class="p">({</span>
+<span class="w">            </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name].[contenthash].css&quot;</span>
+<span class="w">        </span><span class="p">}),</span>
+<span class="w">        </span><span class="ow">new</span><span class="w"> </span><span class="nx">CleanWebpackPlugin</span><span class="p">(),</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nx">module</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">rules</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="p">});</span>
+</code></pre></div>
+<ul>
+<li>
+<p>Point the DllReferencePlugin of the app needing 1st submodule (i.e: React v16) to the correct context folder and manifest.
+<div class="language-js highlight"><pre><span></span><code><span class="w">        </span><span class="ow">new</span><span class="w"> </span><span class="nx">DllReferencePlugin</span><span class="p">({</span>
+<span class="w">            </span><span class="nx">context</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;../DxModule/SubModuleReact16&#39;</span><span class="p">),</span>
+<span class="w">            </span><span class="nx">manifest</span><span class="o">:</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;../DxModule/SubModuleReact16/dx-dll-manifest-react16.json&#39;</span><span class="p">),</span>
+<span class="w">        </span><span class="p">}),</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Point the DllReferencePlugin of the app needing 2nd submodule (i.e: React v18) to the correct context folder and manifest.
+<div class="language-js highlight"><pre><span></span><code><span class="w">        </span><span class="ow">new</span><span class="w"> </span><span class="nx">DllReferencePlugin</span><span class="p">({</span>
+<span class="w">            </span><span class="nx">context</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;../DxModule/SubModuleReact18&#39;</span><span class="p">),</span>
+<span class="w">            </span><span class="nx">manifest</span><span class="o">:</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;../DxModule/SubModuleReact18/dx-dll-manifest-react18.json&#39;</span><span class="p">),</span>
+<span class="w">        </span><span class="p">}),</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Set the folder path and filenames for the bundled files. Make sure the output folder is the same as the one defined as config.dxclient.contentRoot in the package.json file.
+<div class="language-js highlight"><pre><span></span><code><span class="w">   </span><span class="nx">output</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name].[contenthash].bundle.js&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;dist-dx-scriptapp&quot;</span><span class="p">)</span>
+<span class="w">   </span><span class="p">},</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Add a minimizer for the optimization step. Some apps may not need the manifest, favicon nor the filename portion below.
+<div class="language-js highlight"><pre><span></span><code><span class="w">   </span><span class="nx">optimization</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="nx">minimizer</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">          </span><span class="ow">new</span><span class="w"> </span><span class="nx">OptimizeCssAssetsPlugin</span><span class="p">(),</span>
+<span class="w">          </span><span class="ow">new</span><span class="w"> </span><span class="nx">TerserPlugin</span><span class="p">(),</span>
+<span class="w">          </span><span class="ow">new</span><span class="w"> </span><span class="nx">HTMLWebpackPlugin</span><span class="p">({</span>
+<span class="w">            </span><span class="nx">template</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;./public/index.html&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;./index.html&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">favicon</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;./public/favicon.ico&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">manifest</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;./public/manifest.json&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">minify</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">removeAttributeQuotes</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">removeComments</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">collapseWhitespace</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">          </span><span class="p">})</span>
+<span class="w">       </span><span class="p">]</span>
+<span class="w">   </span><span class="p">},</span>
+</code></pre></div></p>
+</li>
+<li>Deployments via DXClient is recommended and is sufficient. In case that you want to add the use of <a href="https://github.com/HCL-TECH-SOFTWARE/WebDevToolkitForDx">DX WebDevToolkit</a> in your development cycle, you'll need to add a sp-config.json file.</li>
+<li>SampleAppReact16/sp-config.json
+   <div class="language-json highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;wcmContentName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SampleAppReact16&quot;</span>
+<span class="p">}</span>
+</code></pre></div></li>
+<li>SampleAppReact18/sp-config.json
+   <div class="language-json highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;wcmContentName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SampleAppReact18&quot;</span>
+<span class="p">}</span>
+</code></pre></div></li>
+<li>If you want to skip using the DX WebDevToolkit, please remove the following in the webpack.dx-scriptapp.js file.</li>
+<li>SampleAppReact16/webpack.dx-scriptapp.jsn and SampleAppReact16/webpack.dx-scriptapp.js
+   <div class="language-js highlight"><pre><span></span><code><span class="w">           </span><span class="c1">// remove copying of sp-config.json if you&#39;re not using DX WebDevToolkit</span>
+<span class="w">           </span><span class="ow">new</span><span class="w"> </span><span class="nx">CopyPlugin</span><span class="p">({</span>
+<span class="w">               </span><span class="nx">patterns</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                   </span><span class="s1">&#39;./src/sp-config.json&#39;</span><span class="p">,</span>
+<span class="w">               </span><span class="p">]</span>
+<span class="w">           </span><span class="p">}),</span>
+</code></pre></div></li>
+<li>Add if not yet included in the project, a tsconfig.json file.</li>
+</ul>
+<div class="language-js highlight"><pre><span></span><code><span class="w">   </span><span class="p">{</span>
+<span class="w">      </span><span class="s2">&quot;compilerOptions&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">&quot;outDir&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;./dist/&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;noImplicitAny&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;module&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;es6&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;target&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;es5&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;allowJs&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;moduleResolution&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;node&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;resolveJsonModule&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;esModuleInterop&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">   </span><span class="p">}</span>
+</code></pre></div>
+</li>
+</ol>
+<h3 id="test-and-bundle">Test and Bundle</h3>
+<ol>
+<li>
+<p>Test the app locally.
+    <div class="language-bash highlight"><pre><span></span><code><span class="w">   </span><span class="nb">cd</span><span class="w"> </span>&lt;app-folder&gt;
+<span class="w">   </span>npm<span class="w"> </span>start
+</code></pre></div></p>
+</li>
+<li>
+<p>Build the Script Application using the following commands:
+    <div class="language-bash highlight"><pre><span></span><code><span class="w">   </span><span class="nb">cd</span><span class="w"> </span>&lt;app-folder&gt;
+<span class="w">   </span>npm<span class="w"> </span>run<span class="w"> </span>build
+</code></pre></div></p>
+</li>
+</ol>
+<h2 id="deploy-script-application">Deploy Script Application</h2>
+<p>Execute the npm script dx-deploy-app, pre-set with the DX admin username and password.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">MacOS or Linux</label><label for="__tabbed_1_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span class="nv">dxUsername</span><span class="o">=</span>&lt;username&gt;<span class="w"> </span><span class="nv">dxPassword</span><span class="o">=</span>&lt;password&gt;<span class="w"> </span>npm<span class="w"> </span>run<span class="w"> </span>dx-deploy-app<span class="w"> </span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span class="nv">dxUsername</span><span class="o">=</span>&lt;username&gt;<span class="w"> </span><span class="nv">dxPassword</span><span class="o">=</span>&lt;password&gt;<span class="w"> </span>npm<span class="w"> </span>run<span class="w"> </span>dx-deploy-app-win
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="language-bash highlight"><pre><span></span><code><span class="w">        </span>&gt;<span class="w"> </span>sample-app@1.0.0<span class="w"> </span>dx-deploy-app
+<span class="w">        </span>&gt;<span class="w"> </span>dxclient<span class="w"> </span>deploy-Script<span class="w"> </span>Applicationlication<span class="w"> </span>push<span class="w"> </span>-dxUsername<span class="w"> </span><span class="nv">$dxUsername</span><span class="w"> </span>-dxPassword<span class="w"> </span><span class="nv">$dxPassword</span><span class="w"> </span>-wcmContentName<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$npm_package_config_dxclient_wcmContentName</span><span class="s2">&quot;</span><span class="w"> </span>-wcmSiteArea<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$npm_package_config_dxclient_wcmSiteArea</span><span class="s2">&quot;</span><span class="w"> </span>-mainHtmlFile<span class="w"> </span><span class="nv">$npm_package_config_dxclient_mainHtmlFile</span><span class="w"> </span>-contentRoot<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$npm_package_config_dxclient_contentRoot</span><span class="s2">&quot;</span><span class="w"> </span>-dxProtocol<span class="w"> </span><span class="nv">$npm_package_config_dxclient_protocol</span><span class="w"> </span>-hostname<span class="w"> </span><span class="nv">$npm_package_config_dxclient_hostname</span><span class="w"> </span>-dxPort<span class="w"> </span><span class="nv">$npm_package_config_dxclient_port</span>
+
+<span class="w">        </span><span class="m">2022</span>-08-19<span class="w"> </span><span class="m">22</span>:57:36<span class="w"> </span>:<span class="w"> </span>Begin<span class="w"> </span>content<span class="w"> </span>push<span class="w"> </span>to<span class="w"> </span>Portal.
+<span class="w">        </span><span class="m">2022</span>-08-19<span class="w"> </span><span class="m">22</span>:57:36<span class="w"> </span>:<span class="w"> </span>WCM<span class="w"> </span>content<span class="w"> </span>ID:<span class="w"> </span>.
+<span class="w">        </span><span class="m">2022</span>-08-19<span class="w"> </span><span class="m">22</span>:57:36<span class="w"> </span>:<span class="w"> </span>WCM<span class="w"> </span>Content<span class="w"> </span>Path:<span class="w"> </span>.
+<span class="w">        </span><span class="m">2022</span>-08-19<span class="w"> </span><span class="m">22</span>:57:36<span class="w"> </span>:<span class="w"> </span>WCM<span class="w"> </span>Content<span class="w"> </span>Title:<span class="w"> </span>.
+<span class="w">        </span><span class="m">2022</span>-08-19<span class="w"> </span><span class="m">22</span>:57:36<span class="w"> </span>:<span class="w"> </span>Main<span class="w"> </span>HTML<span class="w"> </span>file:<span class="w"> </span>index.html.
+<span class="w">        </span><span class="m">2022</span>-08-19<span class="w"> </span><span class="m">22</span>:57:36<span class="w"> </span>:<span class="w"> </span>PrebuiltZip<span class="w"> </span>path<span class="w"> </span>does<span class="w"> </span>not<span class="w"> </span>exist.
+<span class="w">        </span><span class="m">2022</span>-08-19<span class="w"> </span><span class="m">22</span>:57:36<span class="w"> </span>:<span class="w"> </span>Archive<span class="w"> </span>file:
+
+<span class="w">                </span>/var/folders/8x/4zt3nlmn6sg1574fb4pdz56w0000gp/T/tmp--31802-W4L6zoRtZi5a-.zip
+<span class="w">                </span><span class="o">(</span><span class="m">13834</span><span class="w"> </span>bytes<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">4</span><span class="w"> </span>files<span class="o">)</span><span class="w"> </span>
+
+<span class="w">                </span>4fe75d5f9adb18067b85.ico
+<span class="w">                </span>index.html
+<span class="w">                </span>main.bfc69d9380a37f7c3db2.bundle.js
+<span class="w">                </span>sp-config.json.
+<span class="w">        </span><span class="o">(</span>node:31802<span class="o">)</span><span class="w"> </span>Warning:<span class="w"> </span>Setting<span class="w"> </span>the<span class="w"> </span>NODE_TLS_REJECT_UNAUTHORIZED<span class="w"> </span>environment<span class="w"> </span>variable<span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;0&#39;</span><span class="w"> </span>makes<span class="w"> </span>TLS<span class="w"> </span>connections<span class="w"> </span>and<span class="w"> </span>HTTPS<span class="w"> </span>requests<span class="w"> </span>insecure<span class="w"> </span>by<span class="w"> </span>disabling<span class="w"> </span>certificate<span class="w"> </span>verification.
+<span class="w">        </span><span class="o">(</span>Use<span class="w"> </span><span class="sb">`</span>node<span class="w"> </span>--trace-warnings<span class="w"> </span>...<span class="sb">`</span><span class="w"> </span>to<span class="w"> </span>show<span class="w"> </span>where<span class="w"> </span>the<span class="w"> </span>warning<span class="w"> </span>was<span class="w"> </span>created<span class="o">)</span>
+<span class="w">        </span><span class="m">2022</span>-08-19<span class="w"> </span><span class="m">22</span>:57:39<span class="w"> </span>:<span class="w"> </span>Content<span class="w"> </span>push<span class="w"> </span>was<span class="w"> </span>successful.
+<span class="w">        </span><span class="m">2022</span>-08-19<span class="w"> </span><span class="m">22</span>:57:39<span class="w"> </span>:<span class="w"> </span>End<span class="w"> </span>content<span class="w"> </span>push<span class="w"> </span>to<span class="w"> </span>Portal.
+<span class="w">        </span><span class="m">2022</span>-08-19<span class="w"> </span><span class="m">22</span>:57:39<span class="w"> </span>:<span class="w"> </span>Body<span class="w"> </span>content:<span class="w"> </span><span class="o">{</span><span class="s2">&quot;results&quot;</span>:<span class="o">{</span><span class="s2">&quot;status&quot;</span>:<span class="s2">&quot;success&quot;</span>,<span class="s2">&quot;importedFiles&quot;</span>:<span class="o">{</span><span class="s2">&quot;file&quot;</span>:<span class="o">[{</span><span class="s2">&quot;filename&quot;</span>:<span class="s2">&quot;HTML/index.html&quot;</span><span class="o">}</span>,<span class="o">{</span><span class="s2">&quot;filename&quot;</span>:<span class="s2">&quot;JavaScript/main.bfc69d9380a37f7c3db2.bundle.js&quot;</span><span class="o">}]}</span>,<span class="s2">&quot;skippedFiles&quot;</span>:<span class="s2">&quot;&quot;</span>,<span class="s2">&quot;message&quot;</span>:<span class="s2">&quot;The file that you selected was imported successfully.&quot;</span>,<span class="s2">&quot;contentId&quot;</span>:<span class="s2">&quot;8ce2958e-86b0-4700-b6f1-ef7542c10f86&quot;</span><span class="o">}}</span>.<span class="w"> </span>
+</code></pre></div>
+<p>If there's a deployment error, check the DXClient logs in the &lt;app-folder&gt;/store/logs/logger.log file.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 24, 2022</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

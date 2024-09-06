@@ -1,0 +1,2218 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_local_flexnet_entitlement_server/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../entitlement_checks_scenarios/">
+      
+      
+      <link rel="icon" href="../../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Configuring a local HCL FlexNet entitlement server - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configuring-a-local-hcl-flexnet-entitlement-server" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../../latest/get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_local_flexnet_entitlement_server/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configuring a local HCL FlexNet entitlement server
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../whatsnew/cf20/newcf222/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../deployment/" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../build_sites/" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Get Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Product Overview
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../architecture_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Architecture overview
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../plan_deployment/container_deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Plan Your Deployment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software_support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Program Requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../system_requirements/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    System Requirements
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Download Software
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Download Software
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Software Licensing Portal
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6_2" id="__nav_2_6_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Software Licensing Portal
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_2_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Configure entitlement checks
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6_2_2" id="__nav_2_6_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_6_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_6_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Configure entitlement checks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Configuring a local HCL FlexNet entitlement server
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Configuring a local HCL FlexNet entitlement server
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-begin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Before you begin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procedure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procedure
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entitlement_checks_scenarios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configure HCL DX Cloud Native 9.5 entitlement-check scenarios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../export_usage_report/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exporting a usage report manually
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../harbor_container_registry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Harbor container registry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../hc_limitation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Help Center Limitation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../notices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../whatsnew/cf20/newcf222/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../build_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-begin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Before you begin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procedure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procedure
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="configuring-a-local-hcl-flexnet-entitlement-server">Configuring a local HCL FlexNet entitlement server</h1>
+<p>With HCL Digital Experience Cloud Native 9.5 Kubernetes production environments, you can optionally configure a local FlexNet entitlement server to more strictly control the environment in which your entitlement checks are made.</p>
+<p>By using this process, you can remain in entitlement compliance without requiring outbound connections to the HCL-hosted FlexNet entitlement service from your HCL Digital Experience Cloud Native 9.5 Kubernetes production installations.</p>
+<p>By having the offline version of the HCL FlexNet Embedded License Server, a local FlexNet entitlement server can itself also be configured to function without requiring outbound connections. </p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>With outbound connections disabled, however, a member of the development team must manually update the local entitlement server periodically with the HCL Software License Portal to verify entitlements with HCL.</p>
+</div>
+<h2 id="before-you-begin">Before you begin</h2>
+<ul>
+<li>
+<p>Obtain the FlexNet Embedded License Server software from HCL and the installation readme files from the <a href="https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do">HCL License and Delivery Portal</a>. You can find the download package, “HCL Common Local License Server 2.0,” under “Uncategorized Products.”</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Do not attempt to download the software by searching for the package name. The resulting package, “HCL_CLLS_Beta,” is not the correct package.</p>
+</div>
+</li>
+<li>
+<p>Review the following documentation about how to configure a server-based (online) or local license (offline) server: </p>
+<ul>
+<li>For Linux Server, see <a href="https://support.hcltechsw.com/csm?id=kb_article&amp;sysparm_article=KB0090792">How to install HCL Local License Server on Linux</a>.</li>
+<li>For Windows Server, see <a href="https://support.hcltechsw.com/csm?id=kb_article&amp;sysparm_article=KB0082090">How to install HCL Local License Server on Windows Operating System</a>.</li>
+</ul>
+<p>You can use these guides as the primary information for installing and configuring the FlexNet Embedded License Server for HCL.</p>
+</li>
+<li>
+<p>Review the readme documents or the FlexNet Embedded License Server for the HCL installation guide, and the specific requirements for using the Embedded License Server with HCL Digital Experience Cloud Native 9.5 production environments as highlighted in the following steps. </p>
+<p>With a solid understanding of the requirements, configurations, and limitations of this software, create a plan for entitlement checks for your organization. You can also choose to combine the use of both the local FlexNet Embedded License Server for HCL and the remote HCL-hosted FlexNet Entitlement Server in all your production environments, depending on the requirements of your organization.</p>
+</li>
+<li>
+<p>Ensure that you have a local computer that meets the requirements for the FlexNet Embedded License Server software for HCL. </p>
+<p>These requirements are highlighted in detail on pages 22-24 of the installation guide.</p>
+</li>
+</ul>
+<h2 id="procedure">Procedure</h2>
+<ol>
+<li>
+<p>Install, configure, and start the FlexNet Embedded License Server for HCL software.</p>
+<p>Use the <code>Windows ReadMe.docx</code> or <code>Linux ReadMe.docx</code> files for instructions that are included with the package. </p>
+<p>Optionally, the <a href="https://help.hcltechsw.com/commerce/9.1.0/install/pdf/FlexNet%20Embedded%20License%20Server%20Administration%20Guide.pdf">FlexNet Embedded License Server for HCL installation guide</a> is available for more detailed steps and information about this process.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<ul>
+<li>
+<p>Before you install and run the FlexNet Embedded License Server service on your host operating system, ensure that you review <a href="https://help.hcltechsw.com/commerce/9.1.0/install/tasks/tentitlementcheckconfigurelocalcerts.html">Configuring SSL certificates for use with a local HCL Flexnet entitlement server</a> for the required SSL certificates to be generated and included for use on the dependent HCL Digital Experience Cloud Native 9.5 production environments and on the local license server itself.</p>
+</li>
+<li>
+<p>After configuration and registration on the <a href="https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do">HCL License and Delivery Portal</a>, your local license server cannot be migrated to or duplicated on another server. Changes to the network configuration of the host computer can also invalidate the local license server. If you make changes to the local license server that is in use for your organization, ensure that it is correctly registered with HCL.</p>
+</li>
+</ul>
+</div>
+<p>Confirm that the service is running.</p>
+<ul>
+<li>
+<p>On a Windows-based server, run the following command:</p>
+<ul>
+<li>
+<p>At a command prompt, run <code>services.msc</code>.</p>
+</li>
+<li>
+<p>Confirm the service, <code>FNLS-HCL</code>, is listed and running.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>On a Linux-based server, run the following command:</p>
+<ul>
+<li>
+<p>At a command prompt, run <code>sudo systemctl -l status flexnetls-HCL</code>.</p>
+<p>The response should look similar to the following example, which contains all information on the running service:</p>
+<div class="language-text highlight"><pre><span></span><code>flexnetls-HCL.service - FlexnetLS Local License Server for HCL.
+Loaded: loaded (/etc/systemd/system/flexnetls-HCL.service; enabled; vendor preset: disabled)
+Drop-In: /etc/systemd/system/flexnetls-HCL.service.d
+└─flexnetls.conf
+Active: active (running) since Tue 2018-04-10 14:58:55 EDT; 2min 23s ago
+Main PID: 7342 (java)
+CGroup: /system.slice/flexnetls-HCL.service
+└─7342 /bin/java -server -Xms2g -Xmx2g -XX:CompressedClassSpaceSize=64m -XX:MetaspaceSize=256m -XX:+UseG1GC -XX:NewRatio=3 -XX:MaxGCPauseMillis=75 -XX:G1HeapWastePercent=10 -XX:InitiatingHeapOccupancyPercent=75 -XX:+CMSScavengeBeforeRemark - XX:+ScavengeBeforeFullGC -Djava.security.egd=file:/dev/./urandom -Dbase.dir=/var/opt/flexnetls/HCL -jar flexnetls.jar --service
+Apr 10 14:58:54 Linux7.3 systemd[1]: Starting FlexnetLS Local License Server for HCL....
+Apr 10 14:58:55 Linux7.3 systemd[1]: Started FlexnetLS Local License Server for HCL..
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+<p>Additionally, you can view the logs for the local license service. The default log locations are as follows:</p>
+<ul>
+<li>
+<p>Windows: <code>C:\Windows\ServiceProfiles\NetworkService\flexnetls\producer_name\logs\</code></p>
+</li>
+<li>
+<p>Linux: /var/opt/flexnetls/producer_name/logs/</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Obtain the information required to register the local license server with the <a href="https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do">HCL License and Delivery Portal</a>.</p>
+<ol>
+<li>
+<p>Using the default user name and password, request a bearer token from the local license server.</p>
+<div class="language-text highlight"><pre><span></span><code>curl -k --header &quot;Content-Type: application/json&quot; --request POST --data &quot;{\&quot;user\&quot;:\&quot;admin\&quot;,\&quot;password\&quot;:\&quot;HCLDefault@\&quot;}&quot; https://&lt;license server hostname&gt;:&lt;port&gt;/api/1.0/instances/~/authorize
+</code></pre></div>
+<p>Where:</p>
+<ul>
+<li>
+<p><code>&lt;license server hostname&gt;</code> is the host name of the local license server.</p>
+</li>
+<li>
+<p><code>&lt;port&gt;</code> is the configured port number for the local license service.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Extract the <strong>hostids</strong> value from the local license server.</p>
+<p>Using the token value obtained in the previous step, obtain the <strong>hostids</strong>.</p>
+<p><div class="language-text highlight"><pre><span></span><code>curl -k -H &quot;Authorization: Bearer &lt;token value&gt;&quot; https://&lt;license server hostname&gt;:&lt;port&gt;/api/1.0/hostids
+</code></pre></div>
+Where:</p>
+<ul>
+<li><code>&lt;token value&gt;</code> is the token.</li>
+<li><code>&lt;license server hostname&gt;</code> is the host name of the local license server.</li>
+<li><code>&lt;port&gt;</code> is the configured port number for the local license service.</li>
+</ul>
+<p>The value that you are looking for is the 12-character <strong>hostids</strong> value. For example,</p>
+<div class="language-text highlight"><pre><span></span><code>...
+{
+&quot;hostids&quot; : [ {
+    &quot;type&quot; : &quot;ETHERNET&quot;,
+    &quot;value&quot; : &quot;DE32822D0EA&quot;
+}, {
+...
+</code></pre></div>
+</li>
+</ol>
+</li>
+<li>
+<p>Register your local license server on the <a href="https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do">HCL License and Delivery Portal</a>, associate it with your licenses, and download the capability response file to configure your local license server with your entitlement information.</p>
+<ol>
+<li>
+<p>Create the local license server on the HCL License and Delivery Portal.</p>
+<ol>
+<li>
+<p>Log in to the HCL License and Delivery Portal.</p>
+</li>
+<li>
+<p>Under the top tab menu, select <strong>Devices &gt; Create Device</strong>. The New Device page opens.</p>
+</li>
+<li>
+<p>Complete the required fields.</p>
+<ol>
+<li>
+<p>Name the license server.</p>
+</li>
+<li>
+<p>Select the <strong>Runs license server?</strong> checkbox.</p>
+</li>
+<li>
+<p>Leave the <strong>ID Type</strong> as <code>ETHERNET</code>.</p>
+</li>
+<li>
+<p>Under the <strong>ID</strong> field, enter the <strong>hostids</strong> value that you obtained earlier.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click <strong>Save</strong>. The device is created.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Map your HCL Digital Experience Cloud Native 9.5 entitlements to the local license server. Refer to the following table: <a href="../">HCL Digital Experience Cloud Native 9.5 Tier 1 – 7 parts and FlexNet License Server Feature Name</a> for details.</p>
+<ol>
+<li>
+<p>On the device page, select <strong>Action &gt; Map Entitlements</strong>.</p>
+</li>
+<li>
+<p>Associate the HCL Digital Experience Cloud Native 9.5 licenses with your local license server by adding values to the <strong>Qty to add</strong> column.</p>
+</li>
+<li>
+<p>Click <strong>Save</strong>. The licenses are associated with the license server.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Download the capability response (<code>.bin</code>) file to update the entitlements on your local license server.</p>
+<p>On the device page, select <strong>Action &gt; Download Capability Response</strong>. A download <code>.bin</code> file is produced. The file name will match the <strong>hostid</strong> value for your local license server.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Upload the capability response (<code>.bin</code>) file to your local license server to configure your local license entitlements.</p>
+<ol>
+<li>
+<p>Copy the downloaded file into the FlexNet Embedded License Server for the HCL installation configuration directory. Typically, these paths are similar to the following examples:</p>
+</li>
+<li>
+<p>Windows: <code>C:\HCL_CLLS-x64-windows-2018.02-online\server\</code></p>
+</li>
+<li>
+<p>Linux: <code>/opt/flexnetls/HCL/</code></p>
+</li>
+<li>
+<p>Upload the capability response (<code>.bin</code>) file into the server.</p>
+<div class="language-text highlight"><pre><span></span><code>curl -k -X POST -H &quot;Authorization: Bearer &lt;token value&gt;&quot; -H &quot;Cache-Control: no-cache&quot; --data-binary &quot;@&lt;Bin File Name.bin&gt;&quot; https://&lt;license server hostname&gt;:&lt;port&gt;/api/1.0/capability_response
+</code></pre></div>
+<p>Where:
+-   <code>&lt;token value&gt;</code> is the token.
+-   <code>&lt;Bin File Name.bin&gt;</code> is the capability response file.
+-   <code>&lt;license server hostname&gt;</code> is the host name of the local license server.
+-   <code>&lt;port&gt;</code> is the configured port number for the local license service.</p>
+<p>The expected HTTP response is as follows:</p>
+<div class="language-text highlight"><pre><span></span><code>&quot;confirmationRequestNeeded&quot; : false
+</code></pre></div>
+<p>You can also observe the update directly in your local license server logs.</p>
+</li>
+<li>
+<p>Change the default administrator password to secure your local license server.</p>
+<p>See page 64 of the FlexNet Embedded License Server for the HCL installation guide.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>After the local FlexNet license server is verified as running, obtain the following server details:</p>
+<ul>
+<li>
+<p>User name (by default this is set to 'admin' and, according to step 6 earlier, should be changed)</p>
+</li>
+<li>
+<p>Password</p>
+</li>
+<li>
+<p>SSL certificate (This certificate was generated during setup. This will be imported to the HCL Digital Experience 9.5 License manager deployment to enable the SSL connection). Refer to the <strong>Architecture</strong> figure below.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="architecture">Architecture</h2>
+<p>The License Manager component communicates with the local license server to validate license entitlement periods for HCL Digital Experience Cloud Native V9.5 Tier 1 – 7 software configured for production use. The local license server stores user session consumption from the customer’s production DX Cloud Native 9.5 deployments and synchronizes that data from the local license server copy to the FlexNet License Portal Server for HCL when those connections are periodically established. </p>
+<p><img alt="Architecture" src="../../_img/architecture_logical_deployment_kube.png" /></p>
+<h2 id="procedure_1">Procedure</h2>
+<ol>
+<li>
+<p>To configure the optional use of a local FlexNet license server, you add a property to the DX 9.5 Kubernetes Helm configuration to map the local license server SSL certificate (stored in a Kubernetes secret) to an environment variable. This property is optional and the DX 9.5 license manager instance will then automatically run an import to the <code>cacerts truststore</code> script if the variable contains any value.</p>
+<div class="language-text highlight"><pre><span></span><code># License Certificate secret used for Local license server
+licenseCertSecret: &quot;license-secret&quot;
+</code></pre></div>
+</li>
+<li>
+<p>As detailed in <a href="../">HCL Digital Experience Cloud Native 9.5 entitlement checks</a>, you must configure the following items in your DX 9.5 Container Update CF207 or later Helm chart according to the DX Cloud Native 9.5 entitlements (Tier 1 – 7) you are entitled to and have mapped to your Local License Server instance:</p>
+<ol>
+<li>
+<p><code>productionEnvironment:true</code> – Configure this variable to <code>true</code> if this deployment will be used to support a production deployment. See the <a href="https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&amp;CONVERT_TO=url&amp;CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad">HCL Digital Experience Cloud Native v9.5 license document</a> for the definitions of production and non-production deployments.</p>
+</li>
+<li>
+<p><code>licenseServer ID</code> – configure on your Local License Server ID. Note that the Server ID is not the Host ID that you have provided in FlexNet Portal but the Server ID of the local license server. To check, run a <strong>curl</strong> command to the license server health, and server details are shown:</p>
+</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code>curl -k https://yourhostname:port/api/1.0/health
+Sample server response:
+
+&quot;LLS&quot; : {
+    &quot;version&quot; : &quot;2021.05.0&quot;,
+    &quot;buildDate&quot; : &quot;2021-04-21T09:39:52Z&quot;,
+    &quot;buildVersion&quot; : &quot;266216&quot;,
+    &quot;branch&quot; : &quot;master&quot;,
+    &quot;gitHash&quot; : &quot;7967ed0b40e07ef5c28eda34da21f5a20b91f04e&quot;,
+    &quot;patch&quot; : &quot;0&quot;,
+    &quot;fneBuildVersion&quot; : &quot;266165&quot;,
+    &quot;serverInstanceID&quot; : &quot;V2YPFFXBK91E&quot;,
+    &quot;database&quot; : {
+    &quot;connectionCheck&quot; : &quot;success&quot;
+    },
+    &quot;security&quot; : &quot;enabled&quot;,
+    &quot;httpAuth&quot; : &quot;disabled&quot;,
+    &quot;licensingSecurityJSON&quot; : &quot;enabled&quot;,
+    &quot;diskspace&quot; : &quot;ok&quot;
+}
+</code></pre></div>
+<ol>
+<li>
+<p><code>licenseServer URL</code> – verify your connection to the Local License Server URL.</p>
+</li>
+<li>
+<p><code>licenseFeatureNameWithVersion</code> – Configure this variable according to the <a href="../../../../product_overview/offerings/#hcl-digital-experience-cloud-native">HCL DX Cloud Native 9.5 Tier 1 – 7</a> offering part that your organization has acquired and is mapped to your FlexNet server for HCL instances. See Table <a href="../#procedure">HCL Digital Experience Cloud Native 9.5 Tier 1 – 7 parts and FlexNet License Server Feature Name</a>.</p>
+</li>
+<li>
+<p><code>licenseManagerUser</code> – Configure this variable with the user name of the administrator authenticated to manage your Local License Server. (By default, this user name is set to 'admin'.)</p>
+</li>
+<li>
+<p><code>licenseManagerPassword</code> – Configure this variable with the password associated with the user name of the administrator to manage your Local License Server, defined in the previous step.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Manually import the generated SSL certificate for the local license server to the Kubernetes secret. As mentioned in Step 1, use the default secret name 'license-secret' or change the <code>licenseCertSecret</code> in the custom values according to your secret name. The key name in the secret must be set to <code>license-secret</code>:</p>
+<div class="language-text highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; create secret generic license-secret --from-file=license-secret=hostname.certs 
+</code></pre></div>
+</li>
+<li>
+<p>Run a Helm upgrade and restart the DX license manager pod.</p>
+<p>To run helm upgrade:
+<div class="language-text highlight"><pre><span></span><code>helm upgrade -n &lt;namespace&gt; -f current.yaml &lt;deployment-name&gt; install-hcl-dx-deployment
+</code></pre></div></p>
+<p>To restart the DX license manager pod:
+<div class="language-text highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; rollout restart sts &lt;deployment-name&gt;-license-manager
+</code></pre></div></p>
+</li>
+</ol>
+<p>Ensure that your connection to the local FlexNet license server is successful by viewing your HCL DX 9.5 Container Update Server License Manager pod logs.</p>
+<p>Use <code>kubectl</code> logs for the license manager pod. For example:</p>
+<div class="language-text highlight"><pre><span></span><code>kubectl logs pod/dx-deployment-license-manager-0 -n &lt;namespace&gt;
+</code></pre></div>
+<p>Additional references from the HCL Software Support Knowledge Article resources are available: <a href="https://support.hcltechsw.com/csm?id=kb_article&amp;sysparm_article=KB0084616">How to check the license usage on FlexNet using the FlexNet Admin tool included with the local license server download</a>.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 21, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

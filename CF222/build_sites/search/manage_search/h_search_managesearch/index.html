@@ -1,0 +1,3575 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/build_sites/search/manage_search/h_search_managesearch/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../srch_srvs/">
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Manage Search Portlet - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#manage-search-portlet" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../latest/build_sites/search/manage_search/h_search_managesearch/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Manage Search Portlet
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../whatsnew/cf20/newcf222/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../deployment/" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../whatsnew/cf20/newcf222/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Build Sites
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../create_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Setting Up Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../themes_skins/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Themes and Skins
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../practitioner_studio/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Practitioner Studio
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../portal_settings/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage site settings
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../sitebuilder/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Site Builder
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../woodburn_studio/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Woodburn Studio
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Search
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_8" id="__nav_5_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_8">
+            <span class="md-nav__icon md-icon"></span>
+            Search
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../portal_search/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    HCL Digital Experience Portal Search
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../cfg_dx_search/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Configuring DX Search
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../improving_search_quality/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Improving search quality in HCL Digital Experience
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mp_search_pages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Searching pages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../search_center/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Search Center
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tag_rate_search/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Searching for tagged content
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../planning_portal_search/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Planning and preparing for Portal Search
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../indexing_webcontent/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Indexing web content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../language_region_support/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Language and region support in Portal Search
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../crawling_webcontent_seedbase/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Crawling web content with search seedlists
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../searching_local_portal/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Searching your local portal
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../enabling_anonymous_user/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Enabling anonymous users to search public pages of your portal
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redirect_search_custom_form/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Redirecting search requests from a custom search form to the Search Center
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../remotesearch/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Remote search service
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../search-rest-api/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Search REST API specification
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../tagging_rating/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Tagging and rating
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../virtual_portal/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Virtual Portal
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../mobile/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Mobile
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../site_analytics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Site Analytics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../social_rendering/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Social Rendering
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#search-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-collections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Collections
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-search-collections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing Search Collections
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-search-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a search collection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-the-status-of-a-search-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing the status of a search collection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migrating-search-collections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migrating search collections
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exporting-a-search-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exporting a search collection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importing-a-search-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importing a search collection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refreshing-collection-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refreshing collection data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deleting-a-search-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleting a search collection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-the-content-sources-of-a-search-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing the content sources of a search collection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-content-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      New content source
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-the-general-parameters-for-a-content-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting the general parameters for a content source
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-the-advanced-parameters-for-a-content-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting the advanced parameters for a content source
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-the-scheduler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring the Scheduler
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-the-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring the Filters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-security-for-a-content-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring security for a content source
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#starting-to-collect-documents-from-a-content-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starting to collect documents from a content source
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifying-the-address-of-a-content-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verifying the address of a content source
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-scopes-and-custom-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Scopes and Custom Links
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-search-scopes-and-custom-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing Search Scopes and Custom Links
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-search-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a search scope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-custom-link" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a custom link
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="manage-search-portlet">Manage Search Portlet</h1>
+<p>Use the Manage Search portlet to administer portal search.</p>
+<p>To manage Portal Search, click the <strong>Administration menu</strong> icon in the toolbar. Then, click <strong>Portal User Interface</strong> &gt; <strong>Manage Search</strong> from the portal menu. The portal displays the administration portlet Manage Search.</p>
+<p>From the <strong>Manage Search</strong> page, you can view and work with the following search-related resources:</p>
+<ul>
+<li>
+<p><strong>Search Services</strong></p>
+<p>Search Services represent separate instances of the search engine. To manage search services, click <strong>Search Services</strong> to access the Search Services page. Click the name of a search service to view the search collections and content sources that use that search service.</p>
+</li>
+<li>
+<p><strong>Search Collections</strong></p>
+<p>A Search Collection contains one or more content sources of web content or portal content and the related full-text indexes that allows users to search content. To manage Search Collections and their content sources, click <strong>Search Collections</strong> to view the Search Collections page.</p>
+</li>
+<li>
+<p><strong>Search Scopes and Custom Links.</strong></p>
+<p>Search Scopes limit search results to specific content locations and document types. Administrators define search scopes to enable users to target their searches. Custom Links are web link shortcuts that allow users search directly to web search engines, such as Google or Yahoo. To manage Search Scopes and Custom Links, click <strong>Search Scopes</strong>. The Search Scopes and Custom Links page displays.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This portlet help gives instructions for using the Manage Search portlet only. For more information about search services, collections and scopes, planning considerations and configuring search, see Portal Search in the product documentation.</p>
+</div>
+<h2 id="search-services">Search Services</h2>
+<p>From Search Services, you can view and manage the HCL Digital Experience (DX) search services. Search Services represent separate instances of the search engine that is provided and can be used for searching content by using the Search Center. When you create a search collection, you must select a search service so that users can request searches on that collection. A search service can be used for searching multiple search collections. You can set parameters to configure a search service that sets up separate instances of search services with different configurations. You can also set up multiple portal search services and distribute the search load over several nodes. The following Search Service is provided by default:</p>
+<ul>
+<li>
+<p><strong>Portal Search Service</strong></p>
+<p>Select the Portal Search Service to manage search collections that contain portal pages, content that is managed by HCL Web Content Manager, or indexed web pages. In a clustered environment, you need to set up a remote search service.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The HTTP crawler of the Portal Search Service does not support JavaScript. Text that is generated by JavaScript might not be available for search.</p>
+</div>
+</li>
+</ul>
+<p>You can also create more custom search services and add them to your portal.</p>
+<ul>
+<li>
+<p><strong>Creating a search service</strong></p>
+<p>To create a new search service, click <strong>New Search Service</strong>. Manage Search displays the New Search Service page. Specify a <strong>Service name</strong> that is unique within the current portal or virtual portal.</p>
+</li>
+</ul>
+<h2 id="search-collections">Search Collections</h2>
+<p>From Search Collections, you can view and manage the search collections and their content sources in the portal. You can build and maintain search collections of web content, Web Content Manager content, portal content, and the related search collections. Users can then search these collections by using the portal Search Center.</p>
+<p>A search collection can have one or more content sources such as web pages, Web Content Manager content, or portal pages and portlets. The portal default search collection combines two content sources and their related crawlers:</p>
+<ul>
+<li>
+<p><strong>Portal Content Source</strong></p>
+<p>The Portal Content Source contains the local portal site, where users can search for portal pages and portlets.</p>
+</li>
+<li>
+<p><strong>Web Content Manager Content Source</strong></p>
+<p>The Web Content Manager Content Source allows users to search for web content.</p>
+</li>
+</ul>
+<p>During the search collection, build process, content is retrieved for indexing through a crawler (robot) from the content sources. The search collection stores keywords and metadata and maps them to their original source. It allows fast processing of requests from the Search Center portlet.</p>
+<p>Resources can be stored on the local portal server or on remote content sources for searching. Content can be processed by the crawlers, if it is accessible through the HTTP protocol. For example, this content can be from portal pages, Web Content Manager, and documents that are hosted by web servers. The documents can be of different types, for example, editable text files, office suite documents, such as Microsoft and OpenOffice, or PDF files.</p>
+<h2 id="managing-search-collections">Managing Search Collections</h2>
+<p>From the Search Collections panel, select the following options or icons to run the following tasks on search collections:</p>
+<ul>
+<li>Select <strong>Refresh</strong> to update the information and the available option icons for the collections. Examples:<ul>
+<li>If a crawl is running or was completed, the number of documents is updated.</li>
+<li>If a crawl was completed on a collection since the last refresh, option icons can appear, such as <strong>Search and Browse the Collection</strong>.</li>
+<li>If another administrator updated search collections, the information is refreshed.</li>
+</ul>
+</li>
+<li>
+<p>From the Search Collections page, you can import and export search collections. You can also view the status of the search collection and manage the content sources by clicking the search collection name.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The icons for some tasks are only available if the current user can do the specific task on the search collection.</p>
+</div>
+</li>
+</ul>
+<h2 id="creating-a-search-collection">Creating a search collection</h2>
+<p>Some of the following entry fields and options are available when you create a search collection:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The parameters that you select when you create the search collection cannot be changed later. Therefore, plan ahead to carefully create a new search collection. If you want to change the parameters, you must start over by creating a new search collection with new parameters. You can then export the data from the old collection and import it into the new collection. For information, refer to <a href="#exporting-a-search-collection">Exporting a search collection</a> and <a href="#importing-a-search-collection">Importing a search collection</a>.</p>
+</div>
+<ul>
+<li>
+<p><strong>Location of Collection</strong></p>
+<p>Use this entry field to type the directory path where you want the new search collection to be created and the related data to be saved. You can insert a full path or a path relative to the <code>Collections Locations</code> search service parameter. The search collection is created in the following location:</p>
+<ul>
+<li>If you type a name of your choice, the location for the new search collection is combined from the default directory and the name. Example: If you type my_collection_location, the new search collection is created under the directory <code>wp\_root/collections/my_collection_location</code>. For details about the default directory for search collections and how you configure it, refer to <a href="../../cfg_dx_search/srtcfgdfltlctsrchcllc/">Configuring the default location for search collection</a> in product documentation under Portal Search.</li>
+<li>If you type the full directory path, the location for the new search collection is different from the default search collection location. The new search collection is created under the directory location that you specify.</li>
+</ul>
+</li>
+<li>
+<p><strong>Name of Collection</strong></p>
+<p>Use this entry field to name the new search collection. If you do not enter a name, the location that you entered in the previous field is used for the search collection.</p>
+</li>
+<li>
+<p><strong>Specify Collection Language</strong></p>
+<p>Use this menu to select a language for the search collection. The search collection and its index are optimized for the language. This feature enhances the quality of search results for users, as it allows them to use spelling variants, including plurals and inflections, for the search keyword. Search uses this language for indexing if no language is defined for the document. Select one of the <strong>Unspecified</strong> options to index documents without any stemming of the words.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This setting is not overwritten when you import a search collection, for example, during the migration of a search collection. If you create the search collection for migrating an existing collection, choose the selection to match the source collection.</p>
+</div>
+</li>
+<li>
+<p><strong>Select Summarizer</strong></p>
+<p>Use this menu to select a summarizer for the search collection. Choose from the following options:</p>
+<ul>
+<li>Choose <strong>None</strong> if no summary is generated. If you select this option, the Search Center uses the description metadata from the document, if one is available.</li>
+<li>Choose <strong>Automatic</strong> if an automatic summarizer is generated.</li>
+</ul>
+</li>
+</ul>
+<h2 id="viewing-the-status-of-a-search-collection">Viewing the status of a search collection</h2>
+<p>To view the status of the search collection, click the collection name in the list of search collections. Manage Search shows the Content Source Name and the Search collection status information of the selected search collection. The status fields show data that changes over the lifetime of the search collection. Some data that displays is as follows:</p>
+<ul>
+<li>
+<p><strong>Last update completed:</strong></p>
+<p>Shows the date when a content source was last updated by a scheduled crawl and indexed.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The timeout that you might set under <strong>Stop collecting after (minutes):</strong> is an approximation. It might be exceeded by some percentage, as indexing the documents after the crawl takes more time.</p>
+</div>
+</li>
+</ul>
+<p>If you have a faulty search collection in your portal, the portlet shows a link to that faulty collection.</p>
+<h2 id="migrating-search-collections">Migrating search collections</h2>
+<p>When you upgrade to a higher version of HCL, the data storage format is not necessarily compatible with the later version. To prevent loss of data, export all data of search collections to XML files before you upgrade. After the upgrade, you create a search collection and use the previously exported data to import the search collection data back into your upgraded portal.</p>
+<ol>
+<li>If you do not complete these steps, the search collections are lost after you upgrade.</li>
+<li>
+<p>When you create the search collection on the upgraded portal, type data and make selections as follows:</p>
+<ul>
+<li>Enter the location, name, and description of the new collection. You can match the old settings or type new ones.</li>
+<li>You do not need to select a summarizer. These settings are overwritten when you import the data from the source search collection.</li>
+</ul>
+</li>
+<li>
+<p>You cannot migrate a portal site collection between different versions of HCL. If you upgrade to another version, you need to re-create the portal site collection. Proceed as follows:</p>
+<ol>
+<li>Document the configuration data of your portal site content source.</li>
+<li>Delete the existing content source.</li>
+<li>Upgrade your portal.</li>
+<li>On the upgraded portal, create a new portal site content source. Use the documented configuration data.</li>
+<li>Run the new portal content source.</li>
+</ol>
+</li>
+</ol>
+<p>Portlets that were crawled before the upgrade, but do not exist in the upgraded portal, are not returned by a search.</p>
+<p>For more information about these tasks, see the topics about migrating, importing, and exporting search collections in the product documentation.</p>
+<p>For details about how to export and import search collections, refer to <a href="#exporting-a-search-collection">Exporting a search collection</a> and <a href="#importing-a-search-collection">Importing a search collection</a>.</p>
+<h2 id="exporting-a-search-collection">Exporting a search collection</h2>
+<p>To export a search collection and its data, proceed as follows:</p>
+<ol>
+<li>Before you export a collection, make sure that the user who is running the portal application process has write access to the target directory location. Otherwise, you might get an error message, such as File not found.</li>
+<li>Make sure that the target directory is empty or contains no files that you still need, as the export can overwrite files in that directory.</li>
+<li>Locate the search collection that you want to export.</li>
+<li>Click the <strong>Import or Export Collection</strong> icon next to the search collection in the list. Manage Search displays the Import and Export Search Collection panel.</li>
+<li>
+<p>In the entry field <strong>Specify Location (full path with XML extension)</strong>, type the full directory path and XML file name to which you want to export the search collection and its data. Document the names of the collections and the directory locations and target file names to which you export the collections for the import that follows.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When you specify the target directory location for the export, be aware that the export can overwrite files in that directory.</p>
+</div>
+</li>
+<li>
+<p>Click <strong>Export</strong> to export the search collection data. Manage Search writes the complete search collection data to an XML file and stores it in the directory location that you specified. You can use this file later as the source of an import operation to import the search collection into another portal.</p>
+</li>
+<li>To return to the previous panel without exporting the search collection, click the appropriate link in the breadcrumb trail.</li>
+</ol>
+<h2 id="importing-a-search-collection">Importing a search collection</h2>
+<p>To import the data of a search collection, proceed as follows:</p>
+<ol>
+<li>Before you can import the collection data, you need to create the empty shell for the search collection. You can create the empty shell by <a href="#creating-a-search-collection">Creating a search collection</a>. You need to enter only the mandatory data entry field <strong>Location of Collection</strong>. Do not add content sources or documents, as that is completed by the import.</li>
+<li>On the search collection list, locate the search collection into which you want to import the search collection data.</li>
+<li>Click the <strong>Import or Export</strong> icon next to the search collection in the list. Manage Search displays the Import and Export Search Collection panel.</li>
+<li>In the entry field <strong>Specify Location (full path with XML extension):</strong>, type the full directory path and XML file name of the search collection data, which you want to import into the selected search collection.</li>
+<li>Click <strong>Import</strong> to import the complete search collection data from the specified XML file into the selected search collection.</li>
+<li>To return to the previous panel without importing a search collection, click the appropriate link in the breadcrumb trail.</li>
+<li>If required, you can now add content sources and documents to the search collection.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When you import a collection, be aware of the following information:</p>
+</div>
+<ol>
+<li>Import collection data only into an empty collection. Do not import collection data into a target collection that contains content sources or documents.</li>
+<li>When you import collection data into a collection, all settings are overwritten by possibly imported settings. For example, the language setting is overwritten, or a summarizer is added, if it was specified for the imported search collection.</li>
+<li>When you import a collection, a background process fetches, crawls, and indexes all documents that are listed by URL in the previously exported file. This process is asynchronous and can take considerable time until the documents become available.</li>
+<li>
+<p>When you import a collection that contains a portal site content source that was created in a previous version, you need to complete the following actions:</p>
+<ul>
+<li>Regather the content by deleting the existing site content source</li>
+<li>Create a site content source</li>
+<li>Start a crawl</li>
+</ul>
+</li>
+</ol>
+<h2 id="refreshing-collection-data">Refreshing collection data</h2>
+<p>Refreshing the data of a search collection updates that collection by renewed crawling of all the content sources that are associated with it. To refresh a search collection, click <strong>Regather documents from Content Source</strong>. Manage Search does complete new crawls over all its content sources. To verify progress and completion of the regathering, click the collection and view the Collection Status information.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This action might require a considerable amount of system resources, as all content sources of the search collection are crawled at the same time.</p>
+</div>
+<h2 id="deleting-a-search-collection">Deleting a search collection</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you delete the search collection before an upgrade to a higher version of HCL, make sure you export the search collection for later import before you delete it. For details, refer to <a href="#managing-search-collections">Migrating search collections</a>.</p>
+</div>
+<h2 id="managing-the-content-sources-of-a-search-collection">Managing the content sources of a search collection</h2>
+<p>To work with the content sources of a search collection, click the collection name in the list of search collections. Manage Search lists the <strong>Content Sources</strong> and the <strong>Search collection status information</strong> of the selected search collection. A search collection can be configured to cover more than one content source.</p>
+<p>From the <strong>Content Sources</strong> panel, you can do the following tasks:</p>
+<ul>
+<li>Click <strong>Refresh</strong> to refresh the status information. While a crawl on the content source is running, this option updates the information about the run time and the documents collected so far.</li>
+<li>
+<p>View the status information for the content source:</p>
+<ul>
+<li>
+<p><strong>Documents</strong></p>
+<p>The number of documents in the content source. If you click <strong>Refresh</strong> during a crawl, this action shows how many documents the crawler fetched so far.</p>
+</li>
+<li>
+<p><strong>Run Time</strong></p>
+<p>The Run Time of the last crawler that is run on the content sources. If you click <strong>Refresh</strong> during a crawl, this action shows how much time the crawler used so far.</p>
+</li>
+<li>
+<p><strong>Last Run</strong></p>
+<p>The date and time when the Last Run started by which the content source was crawled.</p>
+</li>
+<li>
+<p><strong>Next Run</strong></p>
+<p>The date and time of the Next Run by which the content source is crawled, if scheduled.</p>
+</li>
+<li>
+<p><strong>Status</strong></p>
+<p>The Status of the content source, that is, whether the content source is <strong>Idle</strong> or a crawl is <strong>Running</strong>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Select one of the icons for a specific content source and do one of the following tasks:</p>
+<ul>
+<li>
+<p><strong>View Content Source Schedulers</strong>. This icon is displayed only if you defined scheduled crawls for this content source. If you click this icon, the portlet lists the scheduled crawls, together with the following information:</p>
+<ul>
+<li><strong>Start Date</strong></li>
+<li><strong>Start Time</strong></li>
+<li><strong>Repeat Interval</strong></li>
+<li><strong>Next Run Date</strong></li>
+<li><strong>Next Run Time</strong></li>
+<li><strong>Status</strong>, an option that can be disabled or enabled.</li>
+</ul>
+</li>
+<li>
+<p><strong>Start Crawler</strong>. Click this icon to start a crawl on the content source. This action updates the contents of the content source by a new run of the crawler. During the run, the icon changes to <strong>Stop Crawler</strong>; you can click to end the run. For details, refer to <em>Starting to collect documents from a content source</em> . Portal Search refreshes different content sources as follows:</p>
+<ul>
+<li>For website content sources, documents that were indexed before and still exist in the content source are updated. Documents that were indexed before, but no longer exist are retained in the search collection. Documents that are new in the content source are indexed and added to the collection.</li>
+<li>For HCL DX sites, the crawl adds all pages and portlets to the content source. It deletes portlets and static pages from the content source that were removed from the portal. The crawl works similarly to the option <strong>Regather documents from Content Source</strong>.</li>
+<li>For HCL Web Content Manager sites, Portal Search uses an incremental crawling method. In additions to added and updated content, the Seedlist explicitly specifies deleted content. In contrast, clicking <strong>Regather documents from Content Source</strong> starts a full crawl; it does not continue from the last session, and it is therefore not incremental.</li>
+<li>For content sources created with the seedlist provider option, a crawl on a remote system that supports incremental crawling, such as HCL Connections, behaves like a crawl on a Web Content Manager site.</li>
+</ul>
+</li>
+<li>
+<p><strong>Regather documents from Content Source</strong>. This option deletes existing documents in the content source from previous crawls. Then, it starts a full crawl on the content source. Documents that were indexed before and still exist in the content source are updated. Documents that were indexed before, but no longer exist in the content source are removed from the collection. Documents that are new in the content source are indexed and added to the collection.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>It is beneficial to define a dedicated crawler user ID. The pre-configured default portal site search uses the default administrator user ID wpsadmin with the default password of that user ID for the crawler. If you changed the default administrator user ID during your portal installation, the crawler uses that default user ID. If you changed the user ID or password for the administrative user ID and still want to use it for the Portal Search crawler, you need to adapt the settings.</p>
+<p>To define a crawler user ID, select the <strong>Security</strong> tab, and update the user ID and password. Click <strong>Save</strong>.</p>
+</li>
+<li>
+<p>If you modify a content source that belongs to a search scope, update the scope manually to make sure that it still covers that content source. Especially if you changed the name of the content source, edit the scope and make sure that it is still listed there. If not, add it again.</p>
+</li>
+<li>If you delete a content source, the documents that were collected remain available for search by users under all scopes. All scopes included the content source before it was deleted. These documents are available until the expiration time. Under <strong>General Parameters</strong>, you can specify this expiration time from the <strong>Links expire after (days):</strong> menu.</li>
+</ul>
+<h2 id="new-content-source">New content source</h2>
+<p>When you create a new content source for a search collection, that content source is crawled and the search collection is populated with documents from that content source. You can determine where the index crawls and what information it fetches. Click options from the <strong>Content source type</strong> menu. Entry fields and parameters that you can specify are as follows:</p>
+<ul>
+<li>
+<p><strong>Web site</strong></p>
+<p>Select this option for all remote sites, which includes websites and remote portal sites. Only anonymous pages can be indexed and searched on remote portal sites.</p>
+</li>
+<li>
+<p><strong>Seedlist provider</strong></p>
+<p>Select this option if the crawler uses a seedlist as the content source for the collection.</p>
+</li>
+<li>
+<p><strong>Portal site</strong></p>
+<p>Select this option if the content source is your local portal site.</p>
+</li>
+<li>
+<p><strong>WCM (Managed Web Content) site</strong></p>
+<p>To make a content source of this type available to Portal Search, you need to create it in the Web Content Manager Authoring portlet. You select the appropriate option to make it available for search and specify the search collection to which it belongs. When you complete creating the Managed Web Content site, it is listed among the content sources for the search collection that you specified.</p>
+</li>
+</ul>
+<p>Your selection determines some of the entry fields and options that are available for creating the content source. For example, the option <strong>Obey robots.txt</strong> under the tab <strong>Advanced Parameters</strong> is available only if you select <strong>Web site</strong> as the content source type.</p>
+<ul>
+<li>Select the tabs to configure various types of parameters of the content source:<ol>
+<li><a href="../search_collection/creating_content_source/st_gn_prm_cntsrc/">Setting the General Parameters</a></li>
+<li><a href="../search_collection/creating_content_source/st_adv_prm_cntsrc/">Setting the Advanced Parameters</a></li>
+<li><a href="#configuring-the-scheduler">Configuring the Scheduler</a></li>
+<li><a href="#configuring-the-filters">Configuring the Filters</a></li>
+<li><a href="#configuring-security-for-a-content-source">Configuring Security</a></li>
+</ol>
+</li>
+</ul>
+<h2 id="setting-the-general-parameters-for-a-content-source">Setting the general parameters for a content source</h2>
+<p>Set the general parameters for the content source by completing the entry fields and making your selections in the Create a New Content Source box. The available fields and options depend on the type of content source that you select and are listed as follows:</p>
+<ul>
+<li>
+<p>Type the required web URL or portal URL in the mandatory <strong>Collect documents linked from this URL</strong> field. This action determines the root URL from which the crawler starts. For portal content sources, the value for this field is completed by Manage Search.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>For websites, you need to type the full name that includes http://. For example: http://www.cnn.com. Typing only www.cnn.com results in an error.</li>
+<li>A crawler failure can be caused by URL redirection problems. If this problem occurs, try by editing this field, for example, by changing the URL to the redirected URL.</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Make your selection from the following options by selecting from the lists. The available fields and options differ, depending on the type of content source that you selected.</p>
+<ul>
+<li>
+<p><strong>Levels of links to follow:</strong></p>
+<p>For crawling websites: This option determines the crawling depth that is the maximum number of levels of nested links, which the crawler follows from the root URL.</p>
+</li>
+<li>
+<p><strong>Number of linked documents to collect:</strong></p>
+<p>For crawling websites, this option determines the maximum number of documents that are indexed by the crawler during each session. The number of indexed documents includes documents that are reindexed as their content changed.</p>
+</li>
+<li>
+<p><strong>Stop collecting after (min):</strong></p>
+<p>This option sets the maximum number of minutes the crawler might run in a single session for websites.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The timeout works as an approximate time limit. It might be exceeded by some percentage.</p>
+</div>
+</li>
+<li>
+<p><strong>Stop fetching document after (sec):</strong></p>
+<p>This option indicates the time that the crawler spends trying to fetch a document. This option sets the maximum time limit in seconds for completing the initial phase of the HTTP connection that is for receiving the HTTP headers. This time limit must be finite as it is used to prevent the crawler from getting stuck infinitely on a bad connection. However, it allows the crawler to fetch large files, such as compressed files, which take a long time to fetch.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="setting-the-advanced-parameters-for-a-content-source">Setting the advanced parameters for a content source</h2>
+<p>When you create a new content source, click the <strong>Advanced Parameters</strong> tab and select from the following options, check the boxes, or enter data as follows:</p>
+<ul>
+<li>
+<p><strong>Number of parallel processes:</strong></p>
+<p>This parameter determines the number of threads the crawler uses in a session.</p>
+</li>
+<li>
+<p><strong>Default character encoding:</strong></p>
+<p>This parameter sets the default character set that the crawler uses if it cannot determine the character set of a document.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The entry field for the Default character encoding contains the initial default value <code>windows-1252</code>, regardless of the setting for the Default Portal Language under <strong>Administration menu</strong> &gt; <strong>Portal Settings</strong> &gt; <strong>Global Settings</strong>. Enter the required default character encoding, depending on your portal language. Otherwise, documents might be displayed incorrectly from <strong>Browse Documents</strong>.</p>
+</div>
+</li>
+<li>
+<p><strong>Always use default character encoding:</strong></p>
+<p>If you check this option, the crawler always uses the default character set, regardless of the document character set. If you do not check this option, the crawler tries to determine the character sets of the documents.</p>
+</li>
+<li>
+<p><strong>Obey Robots.txt</strong></p>
+<p>If you select this option, the crawler observes the restrictions that are specified in the file <code>robots.txt</code> when it accesses URLs for documents. This option is only available for the website content source type, not for the Portal site or seedlist provider.</p>
+</li>
+<li>
+<p><strong>Proxy server:</strong></p>
+<p>If you leave this HTTP proxy server value empty, the crawler does not use a proxy server.</p>
+</li>
+<li>
+<p><strong>Port:</strong></p>
+<p>If you leave this Port value empty, the crawler does not use a proxy server.</p>
+</li>
+</ul>
+<h2 id="configuring-the-scheduler">Configuring the Scheduler</h2>
+<p>To configure the schedule, click the <strong>Scheduler</strong> tab to display the following options:</p>
+<ul>
+<li>
+<p><strong>Define Schedule</strong></p>
+<p>Add new schedule from this box.</p>
+</li>
+<li>
+<p><strong>Scheduled Updates</strong></p>
+<p>This box shows when scheduled crawls are done.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The time interval between the crawler runs must be more than the maximum crawler execution time. A crawler cannot be started if it is running. If a crawler job is started while the crawler is running, this execution is ignored and the crawler is only started at the next scheduled time.</p>
+</div>
+<h2 id="configuring-the-filters">Configuring the Filters</h2>
+<p>The crawler filters control the crawler progress and the type of documents that are indexed and cataloged. To configure filters, click the <strong>Filters</strong> tab. You can define new filters in the <strong>Define Filter Rules</strong> box. The defined filters are listed in the <strong>Filtering Rules</strong> box.</p>
+<p>Crawler filters are divided into the following two types:</p>
+<ul>
+<li>
+<p><strong>URL filters</strong></p>
+<p>These filters control which documents are crawled and indexed, based on the URL where the documents are found.</p>
+</li>
+<li>
+<p><strong>Type filters</strong></p>
+<p>These filters control which documents are crawled and indexed, based on the document type.</p>
+</li>
+</ul>
+<p>If you define no filters, all documents from a content source are fetched and crawled. If you click <strong>Include</strong> filters, only those documents that pass the included filters are crawled and indexed. If you click <strong>Exclude</strong> filters, they override the included filters. If you define no included filters, they limit the number of documents that are crawled and indexed. More specifically, if a document passes one of the included filters, but also passes one of the excluded filters, it is not crawled, indexed, or cataloged.</p>
+<p>You can do the following tasks with the Filters box:</p>
+<ul>
+<li>
+<p><strong>Creating a filter</strong></p>
+<p>When you use the option <strong>Apply rule while: Collecting documents</strong> with <strong>Rule type: Include</strong>, make sure that the URL in the field <strong>Collect documents linked from this URL:</strong> fits the specified rule; otherwise, no documents are collected. For instance, crawling the URL http://www.ibm.com/products with the URL filter */products/* does not give any results because the rule has a trailing slash, but the URL does not. But either crawling http://www.ibm.com/products/ with the URL filter */products/* (both with trailing slash), or crawling http://www.ibm.com/products with the URL filter */products* (no trailing slash) works.</p>
+</li>
+</ul>
+<h2 id="configuring-security-for-a-content-source">Configuring security for a content source</h2>
+<p>You can configure the security for indexing secured content sources and repositories that require authentication. Click the <strong>Security</strong> tab to display the following two boxes:</p>
+<ul>
+<li>
+<p><strong>Define security realm</strong></p>
+<p>This box is used to add new secured content sources.</p>
+</li>
+<li>
+<p><strong>Security realms</strong></p>
+<p>This box displays a list of existing security realms.</p>
+</li>
+</ul>
+<p>In the Define security realm box, enter the following data entry fields:</p>
+<ul>
+<li>
+<p><strong>User Name</strong></p>
+<p>Enter the user ID with by which the crawler can access the secured content source or repository.</p>
+</li>
+<li>
+<p><strong>Password</strong></p>
+<p>Enter the password for the user ID that you completed for the user name.</p>
+</li>
+<li>
+<p><strong>Host name</strong></p>
+<p>Enter the name of the server. For Portal sites and seedlist providers, this entry is not required. If you leave it blank, the host name is inferred from the provided root URL.</p>
+</li>
+<li>
+<p><strong>Realm</strong></p>
+<p>Enter the realm of the secured content source or repository.</p>
+</li>
+</ul>
+<h2 id="starting-to-collect-documents-from-a-content-source">Starting to collect documents from a content source</h2>
+<p>To start an update from a content source manually, proceed by the following steps:</p>
+<ol>
+<li>
+<p>Click <strong>Start Crawler</strong> for the content source for which you want to start a new run of the crawler. The crawler fetches the documents from the selected content source. If they are new or modified, they are updated in the search collection. While a crawl is running, the icon changes to <strong>Stop Crawler</strong>, which you can click to stop the crawl. Portal Search refreshes different content sources as follows:</p>
+<ul>
+<li>For website content sources, documents that were indexed before and still exist in the content source are updated. Documents that were indexed before, but no longer exist are retained in the search collection. Documents that are new in the content source are indexed and added to the collection.</li>
+<li>For HCL DX sites, the crawl adds all pages and portlets to the content source. It deletes portlets and static pages from the content source that were removed from the portal. The crawl works similarly to the option <strong>Regather documents from Content Source</strong>.</li>
+<li>For HCL Web Content Manager sites, Portal Search uses an incremental crawling method. In additions to added and updated content, the Seedlist explicitly specifies deleted content. In contrast, clicking <strong>Regather documents from Content Source</strong> starts a full crawl; it does not continue from the last session, and it is therefore not incremental.</li>
+<li>For content sources created with the seedlist provider option, a crawl on a remote system that supports incremental crawling, such as HCL Connections, behaves like a crawl on a Web Content Manager site.</li>
+</ul>
+</li>
+<li>
+<p>To view the updated status information about the progress of the crawl process, click <strong>Refresh</strong>. The following status information is updated:</p>
+<ul>
+<li>
+<p><strong>Documents</strong></p>
+<p>Shows how many documents the crawler fetched so far from the selected content source.</p>
+</li>
+<li>
+<p><strong>Run time</strong></p>
+<p>Shows how much time the crawler used so far to crawl the content source.</p>
+</li>
+<li>
+<p><strong>Status</strong></p>
+<p>Shows whether the crawler for the content source is running or idle.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="verifying-the-address-of-a-content-source">Verifying the address of a content source</h2>
+<p>To verify the URL address of a content source, locate the content source and click the <strong>Verify Address</strong> icon.</p>
+<p>If the web content source is available and not blocked by a robots.txt file, Manage Search returns the message Content Source is OK. If the content source is invalid, inaccessible, or blocked, Manage Search returns an error message.</p>
+<p>When you create a new content source, Manage Search starts the Verify Address feature.</p>
+<h2 id="search-scopes-and-custom-links">Search Scopes and Custom Links</h2>
+<p>From <strong>Search Scopes</strong>, you can view and manage search scopes and custom links. The search scopes are displayed to users as search options in the drop-down list of the search box in the banner and in the Search Center portlet. Users can select the scope relevant for their search queries. You can configure scopes by one of the following ways:</p>
+<ul>
+<li>One or more search locations, or content sources.</li>
+<li>Document features or characteristics, such as the document type.</li>
+</ul>
+<p>HCL Digital Experience includes these scopes:</p>
+<ul>
+<li>
+<p><strong>All Sources</strong></p>
+<p>This scope includes documents with all features from all content sources in the search.</p>
+</li>
+<li>
+<p><strong>Managed Web Content</strong></p>
+<p>This scope restricts the search to sites that were created by Web Content Manager.</p>
+</li>
+</ul>
+<p>You can add your own custom search scopes and an icon for each scope. Your icons are placed in the list of scopes.</p>
+<p>You can also add new custom links to search locations. This custom link includes links to external web locations, such as Google or Yahoo. The Search Center global search lists the custom links in the selection menu of search options.</p>
+<h2 id="managing-search-scopes-and-custom-links">Managing Search Scopes and Custom Links</h2>
+<p>From the Search Scopes and Custom Links panel, select the following options or icons to complete tasks on search scopes and custom links:</p>
+<ul>
+<li>
+<p><strong>New Scope</strong></p>
+<p>Click this option to create a new search scope. For details, refer to <a href="../searchscopes_customlinks/crt_nw_srch_scp/">Creating a new search scope</a>.</p>
+</li>
+<li>
+<p><strong>Refresh</strong></p>
+<p>Click this option to refresh to update the information for the scopes, for example, the status of scopes, or updates that another administrator made on scopes.</p>
+</li>
+<li>
+<p><strong>Move Down and Move Up arrows</strong></p>
+<p>Click these arrows to move search scopes up and down in the list. This action determines the sequence by which the scopes are listed in the menu from which users select search options for searches with the Search Center portlet.</p>
+</li>
+<li>
+<p><strong>Edit Search Scope</strong></p>
+<p>Click this icon to work with or modify a search scope.</p>
+</li>
+<li>
+<p><strong>Delete Search Scope</strong></p>
+<p>Click this icon to delete a search scope.</p>
+</li>
+<li>
+<p><strong>New Custom Link</strong></p>
+<p>Click this option to add new custom link. For details, refer to <a href="../searchscopes_customlinks/add_nw_cstm_lnk/">Adding a new custom link</a>.</p>
+</li>
+<li>
+<p><strong>Edit Custom Link</strong></p>
+<p>Click this icon to work or modify a custom link.</p>
+</li>
+<li>
+<p><strong>Delete Custom Link</strong></p>
+<p>Click this icon to delete a custom link.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You must clear the browser cache to see changes, for example, a new scope, or the new default scope that is displayed in the correct position.</p>
+</div>
+<h2 id="creating-a-search-scope">Creating a search scope</h2>
+<p>To create a new search scope, click the <strong>New Scope</strong> to display the New Search Scope page. Enter the required data in the fields and select from the available options:</p>
+<ul>
+<li>
+<p><strong>Scope Name</strong></p>
+<p>A mandatory field where you enter a name for the new search scope. The name must be unique within the current portal or virtual portal.</p>
+</li>
+<li>
+<p><strong>Description</strong></p>
+<p>An optional field where you can describe the scope.</p>
+</li>
+<li>
+<p><strong>Custom Icon URL:</strong></p>
+<p>Enter the URL location where the portal can locate the scope icon that you want to be displayed with the search options. If the icon file exists in the default icon directory <code>wps/images/icons</code>, you need to type only the icon file name. If the icon file is in a different directory path, type the absolute file path with the file name. Click <strong>Check icon path</strong> to ensure that the icon is available at the URL you specified.</p>
+</li>
+<li>
+<p><strong>Status:</strong></p>
+<p>Set the status of the search scope as you require. To make the scope available to users, set the status to <strong>Active</strong>.</p>
+</li>
+<li>
+<p><strong>Visible to anonymous users:</strong></p>
+<p>Select <strong>Yes</strong> to make the search scope available to users who use your portal without logging in. Select <strong>No</strong> to make the scope available to authenticated users only.</p>
+</li>
+<li>
+<p><strong>Query text (optional):</strong></p>
+<p>Enter a query text that is invisibly appended to all searches in this scope. Searches return results that match both the user search and the query text that you enter in this field. Both sets of results are weighted with the same relevance in the result list. The query text that you enter must conform to the syntax rules of entering a query in the Search Center. For more information about these query syntax rules, see the Search Center portlet help.</p>
+</li>
+<li>
+<p><strong>Select Locations</strong></p>
+<p>Select the location as required. Only documents from these search locations or content sources are searched when users select this scope for their search.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The location tree also shows content sources that are deleted if they still contain documents in the collection. After a deleted content source has no documents, the cleanup daemon removes it from the location tree.</p>
+</div>
+</li>
+</ul>
+<p>To set names and descriptions for the search scope, you must create and save the scope first. Then, locate the scope on the scopes list and edit the scope by clicking the <strong>Edit</strong> icon. The option for setting names and descriptions in other locales is available only on the Edit Search Scope page.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you modify a content source that belongs to a search scope, update the scope manually to make sure that the scope still covers that content source. Especially if you changed the name of the content source, edit the scope and make sure that it is still listed there. If not, add it again.</p>
+</div>
+<h2 id="adding-a-custom-link">Adding a custom link</h2>
+<p>You can add Custom Links to allow direct searches from web search engines, such as Google or Yahoo. Click <strong>New Custom Link</strong> to display the New Custom Link page. Enter the required data in the fields and select from the available options:</p>
+<ul>
+<li>
+<p><strong>Status:</strong></p>
+<p>Set the status of the custom link as required. To make the link available to users, set the status to active.</p>
+</li>
+<li>
+<p><strong>Custom link name:</strong></p>
+<p>A mandatory field where you enter a name for the new custom link. The name must be unique within the current portal or virtual portal.</p>
+</li>
+<li>
+<p><strong>Link URL:</strong></p>
+<p>Enter the URL to the target web search engine for the new custom link. This field is mandatory. Be careful to use the correct format for the URL, as the user queries are appended to the URL. For the correct web interface syntax, refer to the help documentation of the target search engine. In some cases, it might be possible to determine the web interface syntax as follows:</p>
+<ol>
+<li>Perform a search with some distinctive search text on the target search engine, for example, an unusual name.</li>
+<li>Review the browser <strong>URL</strong> field and locate your search string. The part of the URL that precedes your search string is likely to be the Link URL for your target search engine.</li>
+<li>
+<p>If your search string is not at the end of the URL, it might be helpful to edit the URL and experiment with different versions with a search string added.
+The following examples show web interface syntax:</p>
+</li>
+<li>
+<p>For Google: <code>http://www.google.com/search?&amp;q=</code></p>
+</li>
+<li>For Yahoo: <code>http://search.yahoo.com/search?p=</code></li>
+</ol>
+</li>
+<li>
+<p><strong>Custom icon URL:</strong></p>
+<p>Enter the URL location where the portal can find the icon that you want to be displayed with the new custom link. Click <strong>Check icon path</strong> to ensure that the icon is available at the URL you specified.</p>
+</li>
+</ul>
+<p>To set names and descriptions for the custom link, you must create and save the link first. Then, locate the custom link on the list, and edit the link by clicking the <strong>Edit</strong> icon. The option for setting names and descriptions in other locales is available only on the Edit Custom Link page.</p>
+<details class="info" open="open">
+<summary>Related information</summary>
+<ul>
+<li><a href="../../portal_search/administer_portal_search/searching_crawling_portal_sites/srtcrtprtlstecllc/">Resetting the default search collection</a></li>
+<li><a href="../../portal_search/administer_portal_search/searching_crawling_portal_sites/srtseedlistcreate/">Crawling an external site using a seedlist provider</a></li>
+</ul>
+</details>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 5, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

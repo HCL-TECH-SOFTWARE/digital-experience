@@ -1,0 +1,3801 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/build_sites/themes_skins/the_module_framework/oob_modules/themeopt_oob_dojoclass/">
+      
+      
+        <link rel="prev" href="../themeopt_oob_capability/">
+      
+      
+        <link rel="next" href="../../theme_modules_features/">
+      
+      
+      <link rel="icon" href="../../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Dojo classes provided by the Dojo modules - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dojo-classes-provided-by-the-dojo-modules" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../../latest/build_sites/themes_skins/the_module_framework/oob_modules/themeopt_oob_dojoclass/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Dojo classes provided by the Dojo modules
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../whatsnew/cf20/newcf222/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../deployment/" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../whatsnew/cf20/newcf222/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Build Sites
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../create_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Setting Up Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Themes and Skins
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Themes and Skins
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../themeopt_themedev_themes_roadmap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Roadmap - Creating and customizing themes | HCL Digital Experience
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../getting_started_with_themes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Getting started with Themes
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    The module framework
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_3_4" id="__nav_5_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            The module framework
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../themeopt_mod_objmodel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic artifacts and their relation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../themeopt_contrib_types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribution types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../themeopt_module_defer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deferred and non-deferred modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../themeopt_reso_agg/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resource Aggregator overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../themeopt_mod_capfilters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module dependencies in portlets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../change_the_auto_loading_of_portlet/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Change the auto-loading of portlet capabilities
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../themeopt_renderflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Response rendering for themes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../writing_module/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Writing modules
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../themeopt_analyzer/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Theme Optimization Analyzer
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../troubleshooting_modular_themes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Troubleshooting modular themes
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../specify_profiles/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Specify profiles
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_4_13" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Modules that are provided with the modularized theme
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_3_4_13" id="__nav_5_3_4_13_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_3_4_13_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_3_4_13">
+            <span class="md-nav__icon md-icon"></span>
+            Modules that are provided with the modularized theme
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../themeopt_oob_capability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module capabilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Dojo classes provided by the Dojo modules
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../theme_modules_features/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modules that add features to a theme
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../add_remove_oob_modules/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Adding or removing a module from a profile
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../themeopt_configengine_profile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ConfigEngine tasks for creating a new profile based on a template and an existing profile in the system
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../simple_theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Understanding the Simple Theme
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../portal85_modularized_theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Understanding the Portal 8.5 modularized theme
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../manage_theme_capabilities/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Managing theme capabilities
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../customizing_theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Customizing the theme
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../developing_theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Developing themes for a production portal
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../device_classes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Device classes
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../responsive_web_design/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Responsive Web Design
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../practitioner_studio/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Practitioner Studio
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../portal_settings/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage site settings
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../sitebuilder/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Site Builder
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../woodburn_studio/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Woodburn Studio
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../search/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Search
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../tagging_rating/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Tagging and rating
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../virtual_portal/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Virtual Portal
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../mobile/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Mobile
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../site_analytics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Site Analytics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../social_rendering/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Social Rendering
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="dojo-classes-provided-by-the-dojo-modules">Dojo classes provided by the Dojo modules</h1>
+<p>A list of Dojo classes that are provided by each version 1.9 Dojo meta-module.</p>
+<ul>
+<li>
+<p><strong>dojo</strong></p>
+<p>dojo.main</p>
+</li>
+<li>
+<p><strong>dojo_dom</strong></p>
+<p>dojo.window</p>
+<p>dojo.uacss</p>
+<p>dojo.html</p>
+<p>dojo.parser</p>
+<p>dojo.touch</p>
+</li>
+<li>
+<p><strong>dojo_app</strong></p>
+<p>dojo.cookie</p>
+<p>dojo.back</p>
+<p>dojo.hash</p>
+<p>dojo.i18n</p>
+<p>dojo.io.iframe</p>
+<p>dojo.io.script</p>
+<p>dojo.string</p>
+<p>dojo.cache</p>
+<p>dojo.Stateful</p>
+<p>dojo.AdapterRegistry</p>
+<p>dojo.DeferredList</p>
+<p>dojo.query</p>
+</li>
+<li>
+<p><strong>dojo_fx</strong></p>
+<p>dojo.fx</p>
+<p>dojo.fx.Toggler</p>
+<p>dojo.fx.easing</p>
+</li>
+<li>
+<p><strong>dojo_fmt</strong></p>
+<p>dojo.currency</p>
+<p>dojo.number</p>
+<p>dojo.text</p>
+<p>dojo.colors</p>
+<p>dojo.date</p>
+<p>dojo.date.locale</p>
+<p>dojo.date.stamp</p>
+</li>
+<li>
+<p><strong>dojo_node_list</strong></p>
+<p>dojo.NodeList-fx</p>
+<p>dojo.NodeList-html</p>
+<p>dojo.NodeList-manipulate</p>
+<p>dojo.NodeList-traverse</p>
+</li>
+<li>
+<p><strong>dojo_data</strong></p>
+<p>dojo.data.ItemFileReadStore</p>
+<p>dojo.data.ItemFileWriteStore</p>
+<p>dojo.data.util.simpleFetch</p>
+<p>dojo.data.util.sorter</p>
+<p>dojo.data.util.filter</p>
+<p>dojo.data.ObjectStore</p>
+</li>
+<li>
+<p><strong>dojo_dnd_basic</strong></p>
+<p>dojo.dnd.common</p>
+<p>dojo.dnd.Source</p>
+<p>dojo.dnd.AutoSource</p>
+<p>dojo.dnd.Target</p>
+<p>dojo.dnd.Selector</p>
+<p>dojo.dnd.Container</p>
+<p>dojo.dnd.Manager</p>
+<p>dojo.dnd.Avatar</p>
+</li>
+<li>
+<p><strong>dojo_dnd_ext</strong></p>
+<p>dojo.dnd.move</p>
+<p>dojo.dnd.autoscroll</p>
+<p>dojo.dnd.Mover</p>
+<p>dojo.dnd.Moveable</p>
+<p>dojo.dnd.TimedMoveable</p>
+</li>
+<li>
+<p><strong>dojo_promise</strong></p>
+<p>dojo.promise.all</p>
+<p>dojo.promise.first</p>
+<p>dojo.promise.instrumentation</p>
+<p>dojo.promise.Promise</p>
+<p>dojo.promise.tracer</p>
+</li>
+<li>
+<p><strong>dojo_request</strong></p>
+<p>dojo.request.default</p>
+<p>dojo.request.handlers</p>
+<p>dojo.request.iframe</p>
+<p>dojo.request.node</p>
+<p>dojo.request.notify</p>
+<p>dojo.request.registry</p>
+<p>dojo.request.script</p>
+<p>dojo.request.util</p>
+<p>dojo.request.watch</p>
+</li>
+<li>
+<p><strong>dojo_data_ext</strong></p>
+<p>dojo.store.Cache</p>
+<p>dojo.store.DataStore</p>
+<p>dojo.store.JsonRest</p>
+<p>dojo.store.Memory</p>
+<p>dojo.store.Observable</p>
+<p>dojo.store.util.QueryResults</p>
+<p>dojo.store.util.SimpleQueryEngine</p>
+</li>
+<li>
+<p><strong>dojo_selector_lite</strong></p>
+<p>dojo.selector.lite</p>
+</li>
+<li>
+<p><strong>dijit</strong></p>
+<p>dijit.dijit</p>
+<p>dijit._Templated</p>
+<p>dijit.Fieldset</p>
+<p>dijit._BidiMixin</p>
+</li>
+<li>
+<p><strong>dijit_app</strong></p>
+<p>dijit.ColorPalette</p>
+<p>dijit.ProgressBar</p>
+<p>dijit.Toolbar</p>
+<p>dijit.ToolbarSeparator</p>
+<p>dijit.Tooltip</p>
+</li>
+<li>
+<p><strong>dijit_menu</strong></p>
+<p>dijit.Menu</p>
+<p>dijit.MenuBar</p>
+<p>dijit.MenuBarItem</p>
+<p>dijit.MenuItem</p>
+<p>dijit.MenuSeparator</p>
+<p>dijit.CheckedMenuItem</p>
+<p>dijit.PopupMenuItem</p>
+<p>dijit.PopupMenuBarItem</p>
+</li>
+<li>
+<p><strong>dijit_form</strong></p>
+<p>dijit.InlineEditBox</p>
+<p>dijit.Calendar</p>
+<p>dijit.form.Button</p>
+<p>dijit.form.CheckBox</p>
+<p>dijit.form.ComboBox</p>
+<p>dijit.form.ComboButton</p>
+<p>dijit.form.CurrencyTextBox</p>
+<p>dijit.form.DateTextBox</p>
+<p>dijit.form.DropDownButton</p>
+<p>dijit.form.FilteringSelect</p>
+<p>dijit.form.Form</p>
+<p>dijit.form.HorizontalSlider</p>
+<p>dijit.form.HorizontalRule</p>
+<p>dijit.form.HorizontalRuleLabels</p>
+<p>dijit.form.MappedTextBox</p>
+<p>dijit.form.MultiSelect</p>
+<p>dijit.form.NumberSpinner</p>
+<p>dijit.form.NumberTextBox</p>
+<p>dijit.form.RadioButton</p>
+<p>dijit.form.RangeBoundTextBox</p>
+<p>dijit.form.Select</p>
+<p>dijit.form.SimpleTextarea</p>
+<p>dijit.form.Slider</p>
+<p>dijit.form.TextBox</p>
+<p>dijit.form.Textarea</p>
+<p>dijit.form.TimeTextBox</p>
+<p>dijit.form.ToggleButton</p>
+<p>dijit.form.ValidationTextBox</p>
+<p>dijit.form.VerticalSlider</p>
+<p>dijit.form.VerticalRule</p>
+<p>dijit.form.VerticalRuleLabels</p>
+</li>
+<li>
+<p><strong>dijit_editor</strong></p>
+<p>dijit.Editor</p>
+<p>dijit._editor._Plugin</p>
+<p>dijit._editor.RichText</p>
+<p>dijit._editor.html</p>
+<p>dijit._editor.range</p>
+<p>dijit._editor.selection</p>
+</li>
+<li>
+<p><strong>dijit_editor_plugins</strong></p>
+<p>dijit._editor.plugins.AlwaysShowToolbar</p>
+<p>dijit._editor.plugins.EnterKeyHandling</p>
+<p>dijit._editor.plugins.FontChoice</p>
+<p>dijit._editor.plugins.FullScreen</p>
+<p>dijit._editor.plugins.LinkDialog</p>
+<p>dijit._editor.plugins.NewPage</p>
+<p>dijit._editor.plugins.Print</p>
+<p>dijit._editor.plugins.TabIndent</p>
+<p>dijit._editor.plugins.TextColor</p>
+<p>dijit._editor.plugins.ToggleDir</p>
+<p>dijit._editor.plugins.ViewSource</p>
+</li>
+<li>
+<p><strong>dijit_layout_basic</strong></p>
+<p>dijit.layout.ContentPane</p>
+<p>dijit.layout.LinkPane</p>
+<p>dijit.TitlePane</p>
+<p>dijit.Dialog</p>
+<p>dijit.TooltipDialog</p>
+</li>
+<li>
+<p><strong>dijit_layout_ext</strong></p>
+<p>dijit.layout.BorderContainer</p>
+<p>dijit.layout.AccordionContainer</p>
+<p>dijit.layout.AccordionPane</p>
+<p>dijit.layout.TabContainer</p>
+<p>dijit.layout.LayoutContainer</p>
+<p>dijit.layout.ScrollingTabController</p>
+<p>dijit.layout.SplitContainer</p>
+<p>dijit.layout.StackContainer</p>
+<p>dijit.layout.StackController</p>
+<p>dijit.layout.TabController</p>
+</li>
+<li>
+<p><strong>dijit_tree</strong></p>
+<p>dijit.Tree</p>
+<p>dijit.tree.dndSource</p>
+<p>dijit.tree.TreeStoreModel</p>
+<p>dijit.tree.ForestStoreModel</p>
+</li>
+<li>
+<p><strong>dijit-all</strong></p>
+<p>dijit.dijit-all</p>
+</li>
+<li>
+<p><strong>dojox_gfx</strong></p>
+<p>dojox.gfx.svg</p>
+<p>dojox.gfx.vml</p>
+<p>dojox.gfx</p>
+</li>
+<li>
+<p><strong>dojox_charting</strong></p>
+<p>dojox.charting.Chart</p>
+</li>
+<li>
+<p><strong>dojox_charting_all</strong></p>
+<p>dojox.charting.BidiSupport</p>
+<p>dojox.charting.Chart</p>
+<p>dojox.charting.Chart2D</p>
+<p>dojox.charting.Chart3D</p>
+<p>dojox.charting.DataChart</p>
+<p>dojox.charting.DataSeries</p>
+<p>dojox.charting.Element</p>
+<p>dojox.charting.Series</p>
+<p>dojox.charting.StoreSeries</p>
+<p>dojox.charting.Theme</p>
+<p>dojox.charting.action2d.Base</p>
+<p>dojox.charting.action2d.ChartAction</p>
+<p>dojox.charting.action2d.Highlight</p>
+<p>dojox.charting.action2d.Magnify</p>
+<p>dojox.charting.action2d.MouseIndicator</p>
+<p>dojox.charting.action2d.MouseZoomAndPan</p>
+<p>dojox.charting.action2d.MoveSlice</p>
+<p>dojox.charting.action2d.PlotAction</p>
+<p>dojox.charting.action2d.Shake</p>
+<p>dojox.charting.action2d.Tooltip</p>
+<p>dojox.charting.action2d.TouchIndicator</p>
+<p>dojox.charting.action2d.TouchZoomAndPan</p>
+<p>dojox.charting.axis2d.Base</p>
+<p>dojox.charting.axis2d.common</p>
+<p>dojox.charting.axis2d.Default</p>
+<p>dojox.charting.axis2d.Invisible</p>
+<p>dojox.charting.plot2d.Areas</p>
+<p>dojox.charting.plot2d.Bars</p>
+<p>dojox.charting.plot2d.Base</p>
+<p>dojox.charting.plot2d.Bubble</p>
+<p>dojox.charting.plot2d.Candlesticks</p>
+<p>dojox.charting.plot2d.ClusteredBars</p>
+<p>dojox.charting.plot2d.ClusteredColumns</p>
+<p>dojox.charting.plot2d.Columns</p>
+<p>dojox.charting.plot2d.common</p>
+<p>dojox.charting.plot2d.Default</p>
+<p>dojox.charting.plot2d.Grid</p>
+<p>dojox.charting.plot2d.Lines</p>
+<p>dojox.charting.plot2d.Markers</p>
+<p>dojox.charting.plot2d.MarkersOnly</p>
+<p>dojox.charting.plot2d.OHLC</p>
+<p>dojox.charting.plot2d.Pie</p>
+<p>dojox.charting.plot2d.Scatter</p>
+<p>dojox.charting.plot2d.Spider</p>
+<p>dojox.charting.plot2d.Stacked</p>
+<p>dojox.charting.plot2d.StackedAreas</p>
+<p>dojox.charting.plot2d.StackedBars</p>
+<p>dojox.charting.plot2d.StackedColumns</p>
+<p>dojox.charting.plot2d.StackedLines</p>
+<p>dojox.charting.plot3d.Bars</p>
+<p>dojox.charting.plot3d.Base</p>
+<p>dojox.charting.plot3d.Cylinders</p>
+<p>dojox.charting.scaler.common</p>
+<p>dojox.charting.scaler.linear</p>
+<p>dojox.charting.scaler.primitive</p>
+<p>dojox.charting.themes.PlotKit.base</p>
+<p>dojox.charting.themes.PlotKit.blue</p>
+<p>dojox.charting.themes.PlotKit.cyan</p>
+<p>dojox.charting.themes.PlotKit.green</p>
+<p>dojox.charting.themes.PlotKit.orange</p>
+<p>dojox.charting.themes.PlotKit.purple</p>
+<p>dojox.charting.themes.PlotKit.red</p>
+<p>dojox.charting.themes.Adobebricks</p>
+<p>dojox.charting.themes.Algae</p>
+<p>dojox.charting.themes.Bahamation</p>
+<p>dojox.charting.themes.BlueDusk</p>
+<p>dojox.charting.themes.Charged</p>
+<p>dojox.charting.themes.Chris</p>
+<p>dojox.charting.themes.Claro</p>
+<p>dojox.charting.themes.common</p>
+<p>dojox.charting.themes.CubanShirts</p>
+<p>dojox.charting.themes.Desert</p>
+<p>dojox.charting.themes.Distinctive</p>
+<p>dojox.charting.themes.Dollar</p>
+<p>dojox.charting.themes.Electric</p>
+<p>dojox.charting.themes.gradientGenerator</p>
+<p>dojox.charting.themes.Grasshopper</p>
+<p>dojox.charting.themes.Grasslands</p>
+<p>dojox.charting.themes.GreySkies</p>
+<p>dojox.charting.themes.Harmony</p>
+<p>dojox.charting.themes.IndigoNation</p>
+<p>dojox.charting.themes.Ireland</p>
+<p>dojox.charting.themes.Julie</p>
+<p>dojox.charting.themes.MiamiNice</p>
+<p>dojox.charting.themes.Midwest</p>
+<p>dojox.charting.themes.Minty</p>
+<p>dojox.charting.themes.PrimaryColors</p>
+<p>dojox.charting.themes.PurpleRain</p>
+<p>dojox.charting.themes.Renkoo</p>
+<p>dojox.charting.themes.RoyalPurples</p>
+<p>dojox.charting.themes.SageToLime</p>
+<p>dojox.charting.themes.Shrooms</p>
+<p>dojox.charting.themes.ThreeD</p>
+<p>dojox.charting.themes.Tom</p>
+<p>dojox.charting.themes.Tufte</p>
+<p>dojox.charting.themes.WatersEdge</p>
+<p>dojox.charting.themes.Wetland</p>
+<p>dojox.charting.widget.BidiSupport</p>
+<p>dojox.charting.widget.Chart</p>
+<p>dojox.charting.widget.Chart2D</p>
+<p>dojox.charting.widget.Legend</p>
+<p>dojox.charting.widget.SelectableLegend</p>
+<p>dojox.charting.widget.Sparkline</p>
+<p>dojox.charting.plot2d.CartesianBase</p>
+<p>dojox.charting.plot2d.commonStacked</p>
+</li>
+<li>
+<p><strong>dojox_gfx3d</strong></p>
+<p>dojox.gfx3d</p>
+<p>dojox.gfx3d.gradient</p>
+<p>dojox.gfx3d.lighting</p>
+<p>dojox.gfx3d.matrix</p>
+<p>dojox.gfx3d.object</p>
+<p>dojox.gfx3d.scheduler</p>
+<p>dojox.gfx3d.vector</p>
+</li>
+<li>
+<p><strong>dojox_fx</strong></p>
+<p>dojox.fx</p>
+<p>dojox.fx.Shadow</p>
+<p>dojox.fx.easing</p>
+</li>
+<li>
+<p><strong>dojox_layout_basic</strong></p>
+<p>dojox.layout.ResizeHandle</p>
+<p>dojox.layout.ContentPane</p>
+</li>
+<li>
+<p><strong>dojox_collections</strong></p>
+<p>dojox.collections</p>
+<p>dojox.collections.ArrayList</p>
+<p>dojox.collections.BinaryTree</p>
+<p>dojox.collections.Dictionary</p>
+<p>dojox.collections.Queue</p>
+<p>dojox.collections.Set</p>
+<p>dojox.collections.SortedList</p>
+<p>dojox.collections.Stack</p>
+</li>
+<li>
+<p><strong>dojox_uuid</strong></p>
+<p>dojox.uuid</p>
+<p>dojox.uuid.Uuid</p>
+<p>dojox.uuid.generateRandomUuid</p>
+<p>dojox.uuid.generateTimeBasedUuid</p>
+</li>
+<li>
+<p><strong>dojox_html_basic</strong></p>
+<p>dojox.html</p>
+<p>dojox.html.metrics</p>
+<p>dojox.html.entities</p>
+</li>
+<li>
+<p><strong>dojox_xml</strong></p>
+<p>dojox.data.dom</p>
+<p>dojox.xml.parser</p>
+</li>
+<li>
+<p><strong>dojox_data_basic</strong></p>
+<p>dojox.data.XmlStore</p>
+<p>dojox.data.CsvStore</p>
+</li>
+<li>
+<p><strong>dojox_data_all</strong></p>
+<p>dojox.data.AndOrReadStore</p>
+<p>dojox.data.AndOrWriteStore</p>
+<p>dojox.data.AppStore</p>
+<p>dojox.data.AtomReadStore</p>
+<p>dojox.data.CdfStore</p>
+<p>dojox.data.ClientFilter</p>
+<p>dojox.data.CouchDBRestStore</p>
+<p>dojox.data.css</p>
+<p>dojox.data.CssClassStore</p>
+<p>dojox.data.CssRuleStore</p>
+<p>dojox.data.CsvStore</p>
+<p>dojox.data.dom</p>
+<p>dojox.data.FileStore</p>
+<p>dojox.data.FlickrRestStore</p>
+<p>dojox.data.FlickrStore</p>
+<p>dojox.data.GoogleFeedStore</p>
+<p>dojox.data.GoogleSearchStore</p>
+<p>dojox.data.HtmlStore</p>
+<p>dojox.data.HtmlTableStore</p>
+<p>dojox.data.KeyValueStore</p>
+<p>dojox.data.OpenSearchStore</p>
+<p>dojox.data.OpmlStore</p>
+<p>dojox.data.PersevereStore</p>
+<p>dojox.data.PicasaStore</p>
+<p>dojox.data.QueryReadStore</p>
+<p>dojox.data.RailsStore</p>
+<p>dojox.data.S3Store</p>
+<p>dojox.data.ServiceStore</p>
+<p>dojox.data.SnapLogicStore</p>
+<p>dojox.data.WikipediaStore</p>
+<p>dojox.data.XmlItem</p>
+<p>dojox.data.XmlStore</p>
+</li>
+<li>
+<p><strong>dojox_grid_all</strong></p>
+<p>dojox.grid.cells</p>
+<p>dojox.grid.DataGrid</p>
+<p>dojox.grid.DataSelection</p>
+<p>dojox.grid.LazyTreeGrid</p>
+<p>dojox.grid.LazyTreeGridStoreModel</p>
+<p>dojox.grid.Selection</p>
+<p>dojox.grid.TreeGrid</p>
+<p>dojox.grid.TreeSelection</p>
+<p>dojox.grid.util</p>
+<p>dojox.grid.cells.dijit</p>
+<p>dojox.grid.cells.tree</p>
+<p>dojox.grid.EnhancedGrid</p>
+<p>dojox.grid.enhanced.plugins.AutoScroll</p>
+<p>dojox.grid.enhanced.plugins.CellMerge</p>
+<p>dojox.grid.enhanced.plugins.Cookie</p>
+<p>dojox.grid.enhanced.plugins.Dialog</p>
+<p>dojox.grid.enhanced.plugins.DnD</p>
+<p>dojox.grid.enhanced.plugins.Exporter</p>
+<p>dojox.grid.enhanced.plugins.Filter</p>
+<p>dojox.grid.enhanced.plugins.GridSource</p>
+<p>dojox.grid.enhanced.plugins.IndirectSelection</p>
+<p>dojox.grid.enhanced.plugins.Menu</p>
+<p>dojox.grid.enhanced.plugins.NestedSorting</p>
+<p>dojox.grid.enhanced.plugins.Pagination</p>
+<p>dojox.grid.enhanced.plugins.Printer</p>
+<p>dojox.grid.enhanced.plugins.Rearrange</p>
+<p>dojox.grid.enhanced.plugins.Search</p>
+<p>dojox.grid.enhanced.plugins.Selector</p>
+</li>
+<li>
+<p><strong>dojox_aspect</strong></p>
+<p>dojox.lang.aspect</p>
+</li>
+<li>
+<p><strong>dojox_string</strong></p>
+<p>dojox.string.Builder</p>
+<p>dojox.string.tokenize</p>
+<p>dojox.string.sprintf</p>
+</li>
+<li>
+<p><strong>dojox_io</strong></p>
+<p>dojox.atom.io.model</p>
+<p>dojox.atom.io.Connection</p>
+</li>
+<li>
+<p><strong>dojox_mobile</strong></p>
+<p>dojox.mobile</p>
+</li>
+<li>
+<p><strong>dojox_mobile_app</strong></p>
+<p>dojox.mobile.app</p>
+</li>
+<li>
+<p><strong>dojox_mobile_compat</strong></p>
+<p>dojox.mobile.compat</p>
+</li>
+<li>
+<p><strong>dojox_mobile_app_compat</strong></p>
+<p>dojox.mobile.app.compat</p>
+</li>
+<li>
+<p><strong>dojox_app</strong></p>
+<p>dojox.app.Controller</p>
+<p>dojox.app.main</p>
+<p>dojox.app.View</p>
+<p>dojox.app.ViewBase</p>
+<p>dojox.app.controllers.BorderLayout</p>
+<p>dojox.app.controllers.History</p>
+<p>dojox.app.controllers.HistoryHash</p>
+<p>dojox.app.controllers.Layout</p>
+<p>dojox.app.controllers.LayoutBase</p>
+<p>dojox.app.controllers.Load</p>
+<p>dojox.app.controllers.Transition</p>
+<p>dojox.app.module.env</p>
+<p>dojox.app.module.lifecycle</p>
+<p>dojox.app.utils.mvcModel</p>
+<p>dojox.app.utils.config</p>
+<p>dojox.app.utils.constraints</p>
+<p>dojox.app.utils.hash</p>
+<p>dojox.app.utils.layout</p>
+<p>dojox.app.utils.model</p>
+<p>dojox.app.utils.nls</p>
+<p>dojox.app.utils.simpleModel</p>
+<p>dojox.app.widgets.Container</p>
+</li>
+<li>
+<p><strong>dojox_dgauges</strong></p>
+<p>dojox.dgauges.CircularGauge</p>
+<p>dojox.dgauges.CircularRangeIndicator</p>
+<p>dojox.dgauges.CircularScale</p>
+<p>dojox.dgauges.CircularValueIndicator</p>
+<p>dojox.dgauges.GaugeBase</p>
+<p>dojox.dgauges.IndicatorBase</p>
+<p>dojox.dgauges.LinearScaler</p>
+<p>dojox.dgauges.LogScaler</p>
+<p>dojox.dgauges.MultiLinerarScaler</p>
+<p>dojox.dgauges.RectangularGauge</p>
+<p>dojox.dgauges.RectangularRangeIndicator</p>
+<p>dojox.dgauges.RectangularScale</p>
+<p>dojox.dgauges.RectangularSegmentedRangeIndicator</p>
+<p>dojox.dgauges.ScaleBase</p>
+<p>dojox.dgauges.ScaleIndicator</p>
+<p>dojox.dgauges.TextIndicator</p>
+</li>
+<li>
+<p><strong>dojox-image</strong></p>
+<p>dojox.image.Badge</p>
+<p>dojox.image.FlikrBadge</p>
+<p>dojox.image.Gallery</p>
+<p>dojox.image.Lightbox</p>
+<p>dojox.image.LightboxNano</p>
+<p>dojox.image.Magnifier</p>
+<p>dojox.image.MagnifierLite</p>
+<p>dojox.image.SlideShow</p>
+<p>dojox.image.ThumbnailPicker</p>
+</li>
+<li>
+<p><strong>dojox-all</strong></p>
+<p>Contains all of the other dojox modules</p>
+</li>
+<li>
+<p><strong>dojox_layout_ext</strong></p>
+<p>dojox.layout.BorderContainer</p>
+<p>dojox.layout.Dock</p>
+<p>dojox.layout.DragPane</p>
+<p>dojox.layout.ExpandoPane</p>
+<p>dojox.layout.FloatingPane</p>
+<p>dojox.layout.GridContainer</p>
+<p>dojox.layout.RadioGroup</p>
+<p>dojox.layout.RotatorContainer</p>
+<p>dojox.layout.ScrollPane</p>
+<p>dojox.layout.TableContainer</p>
+<p>dojox.layout.ToggleSplitter</p>
+</li>
+<li>
+<p><strong>dojox_widget_standby</strong></p>
+<p>dojox.widget.standby</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 7, 2022</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

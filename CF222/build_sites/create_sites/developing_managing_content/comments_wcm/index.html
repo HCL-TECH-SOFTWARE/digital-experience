@@ -1,0 +1,3488 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/build_sites/create_sites/developing_managing_content/comments_wcm/">
+      
+      
+        <link rel="prev" href="../intr_por/">
+      
+      
+        <link rel="next" href="../../url_addressing/">
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Comments in WCM - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#comments-in-wcm" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../latest/build_sites/create_sites/developing_managing_content/comments_wcm/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Comments in WCM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../whatsnew/cf20/newcf222/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../deployment/" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../whatsnew/cf20/newcf222/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Build Sites
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Setting Up Sites
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Setting Up Sites
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../website_building_blocks/site_portlets/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Website building blocks
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../create_reusable_assets/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Creating reusable assets
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../building_website/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Building the website
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../authoring_tools/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Authoring tools
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../site_prep_content_author/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Preparing for content authors
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../adding_pages_content_more/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Adding pages, content, and more
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../content_spot/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Configure your content spot
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_9" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Developing and managing content
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_2_9" id="__nav_5_2_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            Developing and managing content
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../blogs/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Blogs
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../wikis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Wikis
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intr_por/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installed portlets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Comments in WCM
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Comments in WCM
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wcm-comments-as-custom-plugin-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      WCM Comments as Custom Plugin Component
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WCM Comments as Custom Plugin Component">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-the-comments-plugin-in-was-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enabling the comments plugin in WAS Console
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-admin-user-group-configuration-in-was-console-for-user-access-control-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Admin User Group Configuration in WAS Console for User Access Control (Optional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-custom-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Custom Plugin
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rendering-wcm-comments-in-external-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rendering WCM comments in external components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rendering WCM comments in external components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-page-component-for-wcm-comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Page Component for WCM Comments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom Page Component for WCM Comments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authoring-template-of-page-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authoring Template of Page Component
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#presentation-template-of-page-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      Presentation Template of Page Component
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wcm-comments-html-markup-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      WCM comments HTML markup component
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newly-added-custom-page-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      Newly added Custom Page Component
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page-component-accessible-in-site-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Page Component accessible in Site Manager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showing-and-hiding-comments-page-component-in-site-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Showing and Hiding Comments Page Component in Site Manager
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rendering-and-configuring-new-page-component-to-have-wcm-comments-html-markup-component-on-the-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rendering and configuring new page component to have WCM comments HTML markup component on the page
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rendering-and-configuring-wcm-comments-html-markup-component-in-rich-text-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rendering and configuring WCM comments HTML markup component in Rich Text Editor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-wcm-comments-in-script-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring WCM comments in Script Application
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-wcm-comments-in-a-custom-dx-portlet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring WCM comments in a custom DX Portlet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-wcm-comments-in-a-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring WCM comments in a theme
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-roles-and-permissions-for-wcm-comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Roles and Permissions for WCM Comments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-global-article-presentation-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update global "Article" presentation template
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#csrf-protection-for-adding-and-deleting-comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSRF protection for adding and deleting comments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cleaning-up-orphaned-comments-data-stored-in-the-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cleaning up orphaned comments data stored in the library
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../url_addressing/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    URL Addressability
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../themes_skins/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Themes and Skins
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../practitioner_studio/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Practitioner Studio
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../portal_settings/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage site settings
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../sitebuilder/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Site Builder
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../woodburn_studio/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Woodburn Studio
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../search/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Search
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../tagging_rating/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Tagging and rating
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../virtual_portal/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Virtual Portal
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../mobile/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Mobile
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../site_analytics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Site Analytics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../social_rendering/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Social Rendering
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wcm-comments-as-custom-plugin-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      WCM Comments as Custom Plugin Component
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WCM Comments as Custom Plugin Component">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-the-comments-plugin-in-was-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enabling the comments plugin in WAS Console
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-admin-user-group-configuration-in-was-console-for-user-access-control-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Admin User Group Configuration in WAS Console for User Access Control (Optional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-custom-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Custom Plugin
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rendering-wcm-comments-in-external-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rendering WCM comments in external components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rendering WCM comments in external components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-page-component-for-wcm-comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Page Component for WCM Comments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom Page Component for WCM Comments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authoring-template-of-page-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authoring Template of Page Component
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#presentation-template-of-page-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      Presentation Template of Page Component
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wcm-comments-html-markup-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      WCM comments HTML markup component
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newly-added-custom-page-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      Newly added Custom Page Component
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page-component-accessible-in-site-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Page Component accessible in Site Manager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showing-and-hiding-comments-page-component-in-site-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Showing and Hiding Comments Page Component in Site Manager
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rendering-and-configuring-new-page-component-to-have-wcm-comments-html-markup-component-on-the-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rendering and configuring new page component to have WCM comments HTML markup component on the page
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rendering-and-configuring-wcm-comments-html-markup-component-in-rich-text-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rendering and configuring WCM comments HTML markup component in Rich Text Editor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-wcm-comments-in-script-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring WCM comments in Script Application
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-wcm-comments-in-a-custom-dx-portlet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring WCM comments in a custom DX Portlet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-wcm-comments-in-a-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring WCM comments in a theme
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-roles-and-permissions-for-wcm-comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Roles and Permissions for WCM Comments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-global-article-presentation-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update global "Article" presentation template
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#csrf-protection-for-adding-and-deleting-comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSRF protection for adding and deleting comments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cleaning-up-orphaned-comments-data-stored-in-the-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cleaning up orphaned comments data stored in the library
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="comments-in-wcm">Comments in WCM</h1>
+<p>Starting from CF213, the product contains a new solution that allows users to leave comments for Web Content Manager (WCM). These comments can be used in Intranet scenarios or in controlled settings allowing external comments. </p>
+<h2 id="wcm-comments-as-custom-plugin-component">WCM Comments as Custom Plugin Component</h2>
+<p>Starting from CF213, WCM Comments can be enabled as Custom Plugin Component for a WCM content. WCM Comments can be rendered on page and on the Web Content Viewer​ Portlet.</p>
+<p>This section describes how to enable, configure, and disable the WCM commenting solution as as Custom Plugin Component for a WCM content.</p>
+<h3 id="overview">Overview</h3>
+<p>WCM Comments is a feature that allows customers to enhance their presentation template by adding in a plugin for commenting. The actual comments are also stored in WCM and can be managed like regular content. You can choose which library is being used for storing the comments.</p>
+<p>Note that this solution is not related to the existing comments for blogs/wikis ability.</p>
+<h3 id="enabling-the-comments-plugin-in-was-console">Enabling the comments plugin in WAS Console</h3>
+<p>To make the comments plugin visible in the plugin component tag which should be added to presentation template, you must first add the configuration in WAS Console. In WAS Console, go to <strong>Resources &gt; Resources Environment Providers &gt; WCM_WCMConfigService &gt; Custom properties &gt; New Property</strong>. Enter the following details:</p>
+<ul>
+<li>Name: enable.comment.plugin</li>
+<li>Value: true</li>
+<li>Type: String</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>After adding the configuration, a JVM restart is required.</p>
+</div>
+<p><img alt="Enable comments plugin in WAS Server" src="../_img/enable-comment-plugin.png" /></p>
+<h3 id="adding-admin-user-group-configuration-in-was-console-for-user-access-control-optional">Adding Admin User Group Configuration in WAS Console for User Access Control (Optional)</h3>
+<p>By default, if the configuration for the admin user group is not present in the console, only users with manager-level access can delete comments.</p>
+<p>For security purposes, if you need to limit the delete comments option to a specific user group, you must add the following configuration. In WAS Console, go to <strong>Resources &gt; Resources Environment Providers &gt; WCM_WCMConfigService &gt; Custom properties &gt; New Property</strong>. Enter the details below:</p>
+<ul>
+<li>Name: comments.admin.group</li>
+<li>Value: cn={user-group},o=defaultWIMFileBasedRealm</li>
+<li>Type: String</li>
+</ul>
+<p><strong>user-group</strong> can be any user group such as managers, admins, editors, etc.</p>
+<p><img alt="Adding Admin User Group Configuration in WAS Console" src="../_img/comments-admin-group.png" /></p>
+<h3 id="adding-custom-plugin">Adding Custom Plugin</h3>
+<ol>
+<li>
+<p>To use the custom plugin, add it to <strong>Libraries &gt; Web Content &gt; Presentation Templates &gt; Article Presentation</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Presentation Template Options</strong>, click the <strong>Insert Tag</strong> button to add the custom plugin.</p>
+</li>
+<li>
+<p>In the <strong>Insert Tag</strong> window, select the following values:</p>
+<ul>
+<li>In <strong>Select a tag type</strong> field, select <strong>Plugin Component</strong>.</li>
+<li>In <strong>Select a plugin type</strong> field, select <strong>Content</strong>.</li>
+<li>In <strong>Select plugin to reference</strong> field, select <strong>NewCommentRenderPlugin</strong>. 
+<img alt="Insert a Tag" src="../_img/insert-a-tag.png" /></li>
+</ul>
+</li>
+<li>
+<p>Click <strong>OK</strong> after selecting all the values.</p>
+</li>
+<li>
+<p>The plugin tag for custom plugin is added on the Article Presentation body. Click <strong>Save and Close</strong> to save changes.</p>
+<p><img alt="Plugin Tag" src="../_img/plugin-tag.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can specify the library you want to use for storing comments in the commentsLibrary field.</p>
+</div>
+</li>
+<li>
+<p>Set up and view the Comments UI on the page. </p>
+<ol>
+<li>Click <strong>Create Page</strong> and add the content created in Step 5. </li>
+<li>Using the Web Content Viewer portlet, select the content to render.</li>
+<li>Click <strong>OK</strong>.</li>
+</ol>
+<p><img alt="Page with Web Content" src="../_img/page-with-web-content.png" /></p>
+</li>
+</ol>
+<p>After setting up the comments UI on the page, you can now add, reply, like/unlike, and delete comments. You can also view the total comments count on the content item.
+<img alt="WCM Comments UI" src="../_img/wcm-comments-ui.png" /></p>
+<h2 id="rendering-wcm-comments-in-external-components">Rendering WCM comments in external components</h2>
+<p>Starting from CF214, WCM comments can be rendered in external components such as Page Components and Rich Text, Script applications or Custom Portlet. For these scenarios, enabling and configuring Custom Plugin Component for WCM comments as described in the <a href="#wcm-comments-as-custom-plugin-component">WCM Comments as Custom Plugin Component</a> are not required.</p>
+<p>This section provides an overview of the page component shipped as part of CF214. It also describes how to configure WCM comments in external components such as Rich Text Editor, Script Application, and Custom Portlet.</p>
+<h3 id="custom-page-component-for-wcm-comments">Custom Page Component for WCM Comments</h3>
+<p>Starting from CF214, the default WCM Comments library is shipped with a new custom page component and an additional authoring template that uses a new presentation template. This presentation template is for rendering the WCM comments HTML markup component inside the new page component.</p>
+<p>This section provides an overview of the components related to the newly shipped page component. You can see the different components in the following images.</p>
+<h4 id="authoring-template-of-page-component">Authoring Template of Page Component</h4>
+<p><img alt="Authoring Template of Page Component" src="../_img/authoring_template_page_component.png" /></p>
+<h4 id="presentation-template-of-page-component">Presentation Template of Page Component</h4>
+<p><img alt="Presentation Template of Page Component" src="../_img/presentation_template_page_component.png" /></p>
+<h4 id="wcm-comments-html-markup-component">WCM comments HTML markup component</h4>
+<p><img alt="WCM comments HTML markup component" src="../_img/html_markup_component_of_comments.png" /></p>
+<h4 id="newly-added-custom-page-component">Newly added Custom Page Component</h4>
+<p><img alt="New Page Component" src="../_img/new_page_component.png" /></p>
+<h4 id="page-component-accessible-in-site-manager">Page Component accessible in Site Manager</h4>
+<p>Use the Site Manager on Edit mode. Go to <strong>Applications &gt; Page Components</strong>. Only administrators can view the new custom page component.</p>
+<p><img alt="Page Component accessible in Site Manager" src="../_img/page_component_in_site_manager.png" /></p>
+<h4 id="showing-and-hiding-comments-page-component-in-site-manager">Showing and Hiding Comments Page Component in Site Manager</h4>
+<p>To show the Comments page component in Site Manager, go to the <strong>Profile</strong> section. In the <strong>Keywords</strong> property, enter <code>ibm.portal.toolbar.NewContent</code>. Removing the keyword hides the Comments page component in the Site Manager.</p>
+<p><img alt="Enabling and Disabling Comments page component in Site Manager" src="../_img/profile_keyword_for_enabling_comments_pagecomponent.png" /></p>
+<h3 id="rendering-and-configuring-new-page-component-to-have-wcm-comments-html-markup-component-on-the-page">Rendering and configuring new page component to have WCM comments HTML markup component on the page</h3>
+<ol>
+<li>Open the Site Manager in Edit mode.</li>
+<li>Add the newly shipped page component to any page where the comments functionality needs to be enabled. After adding the page component to the page, the WCM comments UI should be visible. </li>
+<li>In the <strong>Library Name</strong> field, specify the library name to be used for storing the comments.
+<img alt="Library Name for Comments" src="../_img/library_name_for_storing_comments.png" /></li>
+<li>In the <strong>Content uuid</strong> field, specify the content UUID to which comments need to be added.
+<img alt="Content UUID for Comments" src="../_img/content_uuid_mapping_to_comments.png" /></li>
+</ol>
+<p>After setting up the page component with comments UI on the page, actions such as add, reply, like/unlike, and delete comments can be done. The total comments count on the content item can also be viewed. </p>
+<h3 id="rendering-and-configuring-wcm-comments-html-markup-component-in-rich-text-editor">Rendering and configuring WCM comments HTML markup component in Rich Text Editor</h3>
+<ol>
+<li>
+<p>Go to the content to which the WCM comments feature needs to be available. Edit the content.
+<img alt="Add New Page Component having WCM comments HTML markup component to Rich Text Editor" src="../_img/add_new_page_component_to_rich_text_editor.png" /></p>
+</li>
+<li>
+<p>In the <strong>Rich Text Editor</strong>, click the <strong>Insert Tag</strong> button to add the WCM tag.</p>
+</li>
+<li>
+<p>In the <strong>Insert a Tag</strong> window, select the following values:</p>
+<ul>
+<li>In <strong>Select a tag type</strong> field, select <strong>Content</strong>.</li>
+<li>In <strong>Select item context</strong> field, select <strong>Selected</strong>.</li>
+<li>In <strong>Select the content item to reference</strong> field, select <strong>New Comments content under WCM Comments 1.0/Page Component</strong>. </li>
+</ul>
+<p><img alt="Insert a Tag" src="../_img/insert_tag_helper_content_map_page_component.png" /></p>
+</li>
+<li>
+<p>Click <strong>OK</strong> after selecting all the values. 
+<img alt="Content mapping to Page Component" src="../_img/content_refer_to_page_component_in_rich_text.png" /></p>
+</li>
+<li>
+<p>Currently, there is a CSS alignment issue while rendering comments inside Rich Text. To avoid it, refer to the following steps:</p>
+<ol>
+<li>Click the <strong>Source</strong> button in the <strong>Rich Text Editor</strong>.</li>
+<li>Remove <strong><p dir="ltr" style="margin: 0px;"></p></strong> from the last line of the body. </li>
+<li>Enclose the Content tag you added as a part of Step 4 inside the div blocks exactly as how it appears in the following example: <code>&lt;/div&gt;&lt;div&gt;[Content context="selected" uuid="dab6a312-06ad-45b1-a9f9-4bf583749d24"]&lt;/div&gt;&lt;div&gt;</code>.
+<img alt="Rich Text Limitation" src="../_img/wcm_comments_richtext_limitation.png" /></li>
+</ol>
+</li>
+<li>
+<p>Save the content to enable the commenting feature for that particular content. After setting up the comments UI on the rich text editor, this content can be added to any page.</p>
+</li>
+<li>
+<p>After the WCM Comments UI is rendered for the content on the page, specify the library name to be used for storing the comments and the current content UUID. Refer to <a href="#rendering-and-configuring-new-page-component-to-have-wcm-comments-html-markup-component-on-the-page">Rendering and configuring new page component to have WCM comments HTML markup component on the page</a> for instructions.</p>
+</li>
+</ol>
+<p>After configuring the WCM comments HTML markup component in the Rich Text Editor, actions such as add, reply, like/unlike, and delete comments can be done. The total comments count on the content item can also be viewed.</p>
+<h3 id="configuring-wcm-comments-in-script-application">Configuring WCM comments in Script Application</h3>
+<ol>
+<li>Open the Site Manager on Edit mode. Go to <strong>Applications &gt; Page Components</strong>. Click the <strong>+</strong> button to add it to the page.
+<img alt="Add Script Application to Page" src="../_img/script_application.png" /></li>
+<li>
+<p>Click <strong>Edit &gt; Actions &gt; Insert WCM Tag</strong>. The <strong>Insert a Tag</strong> window appears.
+<img alt="Insert WCM Tag" src="../_img/insert_wcm_tag.png" /></p>
+</li>
+<li>
+<p>In the <strong>Insert a Tag</strong> window, select the following values:</p>
+<ul>
+<li>In <strong>Select a tag type</strong> field, select <strong>Content</strong>.</li>
+<li>In <strong>Select item context</strong> field, select <strong>Selected</strong>.</li>
+<li>In <strong>Select the content item to reference</strong> field, select <strong>New Comments content under WCM Comments 1.0/Page Component</strong>. 
+<img alt="Insert a Tag" src="../_img/insert_tag_helper_content_map_page_component.png" /></li>
+<li>Click <strong>OK</strong> after selecting all the values.</li>
+<li>Click <strong>Save</strong>.
+<img alt="Preview Comments and Save" src="../_img/comments_preview.png" /></li>
+<li>Close the <strong>Script Application Editor</strong> window.</li>
+<li>After the WCM Comments UI is rendered for the content on the page, specify the library name to be used for storing the comments and the current content UUID. Refer to <a href="#rendering-and-configuring-new-page-component-to-have-wcm-comments-html-markup-component-on-the-page">Rendering and configuring new page component to have WCM comments HTML markup component on the page</a> for instructions.</li>
+</ul>
+</li>
+</ol>
+<p>After configuring WCM comments in a Script Application, actions such as add, reply, like/unlike, and delete comments can be done. The total comments count on the content item can also be viewed. </p>
+<h3 id="configuring-wcm-comments-in-a-custom-dx-portlet">Configuring WCM comments in a custom DX Portlet</h3>
+<ol>
+<li>Create the custom DX Portlet. For more information, see <a href="https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities/tree/main/hcl_dx_jsp_demoportlet_archetype">Creating Custom DX Portlet</a>.</li>
+<li>Go to the custom DX Portlet you created.</li>
+<li>Go to the folder that contains the view files inside the created custom DX Portlet. In this example, navigate to: <code>src/main/webapp/_JSPDemoPortlet/jsp/html/</code>.
+   <img alt="WCM JSP Tags in View Files of Custom Portlet" src="../_img/wcm_jsp_tag_custom_portlet.png" /></li>
+<li>
+<p>Add the following piece of code in any of the view files where the Comments feature should be enabled.
+    <div class="language-text highlight"><pre><span></span><code>&lt;%@ taglib uri=&quot;/WEB-INF/tld/wcm.tld&quot; prefix=&quot;wcm&quot;%&gt;
+&lt;wcm:initworkspace&gt;login fail&lt;/wcm:initworkspace&gt;
+&lt;wcm:setExplicitContext path=&quot;WCM Comments 1.0/Page Components/New Comments&quot; &gt;
+    Setting Explicit Context Failed
+&lt;/wcm:setExplicitContext&gt;
+&lt;wcm:content&gt;
+    Content Rendering Failed
+&lt;/wcm:content&gt;
+</code></pre></div></p>
+<p>For more information, see <a href="../../../../manage_content/wcm_development/wcm_dev_api/wcm_reference_wcm-jsp-tags/">Web Content Manager JSP tags</a>.</p>
+</li>
+<li>
+<p>Copy the <code>/wcm.ear/wcm-inplaceEdit.war/WEB-INF/tld/wcm.tld</code> file from the DX core container into the path <code>/WEB-INF/tld</code>.</p>
+</li>
+<li>Build the WAR file. See <a href="https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities/tree/main/hcl_dx_jsp_demoportlet_archetype#build-the-war-file-deployment-artifact">Build the WAR file</a> for instructions.</li>
+<li>Deploy the portlet. For instructions, refer to <a href="https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities/tree/main/hcl_dx_jsp_demoportlet_archetype#deployupdate-or-undeploy-the-portlet-using-dxclient-optional">Deploy the portlet</a>.</li>
+<li>Add the custom DX Portlet to the page. For more information, see <a href="https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities/tree/main/hcl_dx_jsp_demoportlet_archetype#test-the-generated-portlet-optional">Testing Custom DX Portlet</a>.</li>
+<li>After the WCM Comments UI is rendered for the custom DX Portlet, specify the library name to be used for storing the comments in and the current content UUID. Refer to <a href="#rendering-and-configuring-new-page-component-to-have-wcm-comments-html-markup-component-on-the-page">Rendering and configuring new page component to have WCM comments HTML markup component on the page</a> for instructions.</li>
+</ol>
+<p>After configuring WCM comments in a custom DX Portlet, actions such as add, reply, like/unlike, and delete comments can be done. The total comments count on the content item can also be viewed.</p>
+<h3 id="configuring-wcm-comments-in-a-theme">Configuring WCM comments in a theme</h3>
+<ol>
+<li>
+<p>Create a new Site Area inside a WCM content library where you want to store a copy of the comments page component with the pre-populated library name and content UUID.</p>
+<p><img alt="Create a new Site Area inside a WCM content library #1" src="../_img/create-a-new-site-area-1.png" /></p>
+<p><img alt="Create a new Site Area inside a WCM content library #2" src="../_img/create-a-new-site-area-2.png" /></p>
+</li>
+<li>
+<p>In the created site area, create a new copy of a page component which is created in <a href="#custom-page-component-for-wcm-comments">Custom Page Component for WCM Comments</a>.</p>
+</li>
+<li>
+<p>In the <strong>Properties</strong> tab, copy the content UUID for which comments should be rendered. 
+    <img alt="Content UUID" src="../_img/contentuuid.png" /></p>
+</li>
+<li>
+<p>Edit the page component and enter the content UUID. 
+    <img alt="Copy of new page component with content UUID" src="../_img/copy_new_page_component_with_contentuuid.png" /></p>
+</li>
+<li>
+<p>Save the page component. </p>
+</li>
+<li>
+<p>Add the highlighted code snippets in the following screenshot to any of the view files of a theme (for example, default85) where the comments feature should be enabled. In this example, navigate to <code>/opt/HCL/PortalServer/theme/wp.theme.themes/default85/installedApps/DefaultTheme85.ear/DefaultTheme85.war/themes/html/dynamicSpots/</code> and open the <code>footer.jsp</code> view file.
+<img alt="WCM JSP Tags in a Theme View File" src="../_img/wcm_jsp_tag_theme.png" /></p>
+</li>
+<li>
+<p>Add the following code snippet in the <code>footer.jsp</code> view file to enable the comments for the new page component with pre-populated content UUID.</p>
+<p><div class="language-text highlight"><pre><span></span><code>&lt;%@ taglib uri=&quot;/WEB-INF/tld/wcm.tld&quot; prefix=&quot;wcm&quot;%&gt;
+&lt;wcm:initworkspace&gt;login fail&lt;/wcm:initworkspace&gt;
+&lt;wcm:setExplicitContext path=&quot;Custom Library/Custom Comments/Copy of New Comments&quot; &gt;
+    Setting Explicit Context Failed
+&lt;/wcm:setExplicitContext&gt;
+&lt;wcm:content&gt;
+    Content Rendering Failed
+&lt;/wcm:content&gt;
+</code></pre></div>
+ For more information, see <a href="../../../../manage_content/wcm_development/wcm_dev_api/wcm_reference_wcm-jsp-tags/">Web Content Manager JSP tags</a>.</p>
+</li>
+<li>
+<p>Copy the <code>/wcm.ear/wcm-inplaceEdit.war/WEB-INF/tld/wcm.tld</code> file from the DX core container into the TLD path of the theme to update. In this example, copy the TLD file to <code>/opt/HCL/PortalServer/theme/wp.theme.themes/default85/installedApps/DefaultTheme85.ear/DefaultTheme85.war/WEB-INF/tld</code>.</p>
+</li>
+</ol>
+<p>After configuring WCM comments in a theme, actions such as add, reply, like/unlike, and delete comments can be done. The total comments count on the content item can also be viewed. In the following example, WCM comments is configured in <code>footer.jsp</code>:
+<img alt="WCM Comments in Footer Theme" src="../_img/wcm_comments_in_footer_theme.png" /></p>
+<h2 id="access-roles-and-permissions-for-wcm-comments">Access Roles and Permissions for WCM Comments</h2>
+<p>Only authorized users can view, edit, and delete the comments in the library where the comments are stored. It is required to have at least a <strong>View</strong> access to the WCM content library. For more information, see <a href="../../../../deployment/manage/security/people/authorization/controlling_access/managing_users_groups/">Managing users and groups</a>. </p>
+<p>The actions available for a user depend on their role:</p>
+<ul>
+<li>The <strong>User</strong> role or higher is required to see the comments.</li>
+<li>The <strong>Editor</strong> role or higher is required to create comments.</li>
+<li>The <strong>Manager</strong> role or higher is required to delete comments. In addition to the Manager role, you can configure a specific group solely for deleting comments.</li>
+</ul>
+<h2 id="limitations">Limitations</h2>
+<ul>
+<li>Nested replies to comments are not yet supported.</li>
+<li>Posting and replying are limited to 500 characters. </li>
+<li>Rendering Comments outside the WCM rendering process (for example, from REST or a custom Servlet or JSP via the java WCM API) is not yet supported.</li>
+<li>HTML tags are not rendered in the comments. If HTML tags are present, the system skips HTML tags that are added in a comment.</li>
+</ul>
+<h2 id="update-global-article-presentation-template">Update global "Article" presentation template</h2>
+<p>If you want to perform a replacement of the OOB components that are shipped, see <a href="../../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/getting_started/creating_contentsamples/wcm_delivery_ctsamples_libraries/">Adding the sample web content libraries in the authoring portlet</a>.</p>
+<h2 id="csrf-protection-for-adding-and-deleting-comments">CSRF protection for adding and deleting comments</h2>
+<p>Starting CF217, you can enable Cross-Site Request Forgery (CSRF) tokens to be utilized when creating or deleting a comment to prevent possible CSRF attacks. The feature is disabled by default and can be enabled through the WAS Console. Note that a request without a valid CSRF token will fail.</p>
+<p>To enable CSRF tokens, go to the WAS Console and navigate to to <strong>Resources &gt; Resources Environment Providers &gt; WCM_WCMConfigService &gt; Custom properties &gt; New Property</strong>. Enter the following details:</p>
+<ul>
+<li>Name: wcm.csrf.comments.enabled</li>
+<li>Value: true</li>
+<li>Type: String</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>After adding the configuration, a JVM restart is required.</p>
+</div>
+<h2 id="cleaning-up-orphaned-comments-data-stored-in-the-library">Cleaning up orphaned comments data stored in the library</h2>
+<p>Starting from CF214, a new API is available for soft deleting all the comments that are no longer mapped to content (for example, if the content was deleted). When you soft delete, it marks a comment as no longer active without deleting it from the database.</p>
+<p>In the libraries query parameter, pass all the library names containing the orphaned comments data. 
+The API finds all comments based on the authoring template and site area <code>Comments</code> of each of the defined libraries and soft deletes them. </p>
+<p><img alt="Comments Library with Orphaned Comments" src="../_img/comments_library_orphaned_comments.png" /></p>
+<p><strong>Sample request:</strong></p>
+<p>{{host}}/{{WpsContextRoot}}/mycontenthandler/wcmrest/deleteComments?libraries=Web Content&amp;libraries=Demo Library​</p>
+<p><strong>Sample response body:</strong></p>
+<div class="language-text highlight"><pre><span></span><code>{
+    &quot;deletedCommentsStatus&quot;: {
+        &quot;deletedCommentsList&quot;: [
+            &quot;3346bd13-dfef-456c-bb94-ff4f829f626e&quot;,
+            &quot;e04e2e4f-2ec2-4d7a-b22d-e502eb1a80bc&quot;
+        ]
+    }
+}
+</code></pre></div>
+<p><img alt="Delete Orphaned Comments of the libraries" src="../_img/delete_comments_api.png" /></p>
+<p>For purging deleted comments, refer to <a href="../../../../manage_content/wcm_development/wcm_rest/wcm_rest_deleted_content/wcm_rest_crud_purge_deleted/">How to use REST with Web Content Manager to Purge Deleted Content Items</a>.</p>
+<details class="info" open="open">
+<summary>Related information</summary>
+<ul>
+<li><a href="../../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console/">WebSphere® Integrated Solutions Console</a></li>
+</ul>
+</details>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 13, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

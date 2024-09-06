@@ -1,0 +1,3221 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/deployment/install/container/image_list/">
+      
+      
+        <link rel="prev" href="../overview/">
+      
+      
+        <link rel="next" href="../helm_deployment/overview/">
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Container and Supported OS File listings - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#container-and-supported-os-file-listings" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../latest/deployment/install/container/image_list/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Container and Supported OS File listings
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../whatsnew/cf20/newcf222/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../build_sites/" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../whatsnew/cf20/newcf222/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Deploy DX
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Install
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Install
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Kubernetes Deployment
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2_2" id="__nav_4_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes Deployment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Container and Supported OS File listings
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Container and Supported OS File listings
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hcl-dx-95-cf222" class="md-nav__link">
+    <span class="md-ellipsis">
+      HCL DX 9.5 CF222
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HCL DX 9.5 CF222">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hcl-dx-95-cf222-dxclient-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      HCL DX 9.5 CF222 DXClient files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hcl-dx-kubernetes-v95-cf222zip" class="md-nav__link">
+    <span class="md-ellipsis">
+      hcl-dx-kubernetes-v95-CF222.zip
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hcl-digital-experience-file-package-listings-supported-os-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      HCL Digital Experience File package listings (supported OS platforms)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../helm_deployment/overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Helm deployment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../traditional/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Traditional Deployment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../hybrid/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Hybrid Deployment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker-compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Compose
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../manage/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../build_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hcl-dx-95-cf222" class="md-nav__link">
+    <span class="md-ellipsis">
+      HCL DX 9.5 CF222
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HCL DX 9.5 CF222">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hcl-dx-95-cf222-dxclient-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      HCL DX 9.5 CF222 DXClient files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hcl-dx-kubernetes-v95-cf222zip" class="md-nav__link">
+    <span class="md-ellipsis">
+      hcl-dx-kubernetes-v95-CF222.zip
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hcl-digital-experience-file-package-listings-supported-os-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      HCL Digital Experience File package listings (supported OS platforms)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="container-and-supported-os-file-listings">Container and Supported OS File listings</h1>
+<p>This section presents the latest available HCL Digital Experience (DX) 9.5 Container images. </p>
+<p>You can obtain the HCL DX 9.5 container update and supported OS releases from your HCL Digital Experience entitlements in the <a href="https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do">HCL Software License Portal</a>, in the <strong>HCL_Portal_8.5_9.0_9.5_CFs</strong> download package entry and in the <strong>HCL_DX_9.5_Container_Updates</strong> download package entry for HCL Digital Experience Cloud Native 9.5 entitlements.</p>
+<p>Video: <a href="https://youtu.be/XJONRdpgCuo">How to upload HCL Digital Experience 9.5 CF container images to a private repository</a></p>
+<h2 id="hcl-dx-95-cf222">HCL DX 9.5 CF222</h2>
+<p>If you are deploying the HCL DX 9.5 CF222 Container update release, the package name and images are as follows.</p>
+<h3 id="hcl-dx-95-cf222-dxclient-files">HCL DX 9.5 CF222 DXClient files</h3>
+<div class="language-shell highlight"><pre><span></span><code>hcl-dxclient-image-v95_CF222_20240814-1304.zip
+hcl-dxclient-v95_CF222_20240814-1304.zip
+</code></pre></div>
+<h3 id="hcl-dx-kubernetes-v95-cf222zip">hcl-dx-kubernetes-v95-CF222.zip</h3>
+<div class="language-shell highlight"><pre><span></span><code>HCL<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF222.txt
+hcl-dx-content-composer-image-v1.35.0_20240814-1243.tar.gz
+hcl-dx-core-image-v95_CF222_20240814-1259.tar.gz
+hcl-dx-dam-plugin-google-vision-image-v1.0.0_20240814-1244.tar.gz
+hcl-dx-dam-plugin-kaltura-image-v1.0.0_20240814-1244.tar.gz
+hcl-dx-deployment-v2.31.0_20240815-1439.tgz
+hcl-dx-digital-asset-manager-image-v1.34.0_20240814-1301.tar.gz
+hcl-dx-haproxy-image-v1.18.0_20240814-1253.tar.gz
+hcl-dx-image-processor-image-v1.35.0_20240814-1257.tar.gz
+hcl-dx-license-manager-image-v95_CF222_20240814-1248.tar.gz
+hcl-dx-logging-sidecar-image-v1.0.0_20240814-1248.tar.gz
+hcl-dx-openldap-image-v1.2.0_20240814-1243.tar.gz
+hcl-dx-opensearch-image-v95_CF222_20240814-1248.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.32.0_20240814-1254.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.30.0_20240814-1253.tar.gz
+hcl-dx-persistence-node-image-v1.22_20240814-1253.tar.gz
+hcl-dx-prereqs-checker-image-v1.0.0_20240814-1248.tar.gz
+hcl-dx-remote-search-image-v95_CF222_20240814-1259.tar.gz
+hcl-dx-ringapi-image-v1.35.0_20240814-1255.tar.gz
+hcl-dx-runtime-controller-image-v95_CF222_20240814-1251.tar.gz
+hcl-dx-search-middleware-image-v2.0.0_20240812-1317.tar.gz
+hcl-dx-search-v2.20.0_20240814-1253.tgz
+</code></pre></div>
+<h3 id="hcl-digital-experience-file-package-listings-supported-os-platforms">HCL Digital Experience File package listings (supported OS platforms)</h3>
+<p>This section presents the latest available HCL DX File package listings for supported OS platforms.</p>
+<table>
+<thead>
+<tr>
+<th>File name</th>
+<th>Folder name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HCL-DX-CF222_Express_Update</td>
+<td>HCL-DX-CF222_Express_Update.zip</td>
+</tr>
+<tr>
+<td>HCL-DX-CF222_RemoteSearch_Update</td>
+<td>HCL-DX-CF222_RemoteSearch_Update.zip</td>
+</tr>
+<tr>
+<td>HCL-DX-CF222_Server_Update</td>
+<td>HCL-DX-CF222_Server_Update.zip</td>
+</tr>
+</tbody>
+</table>
+<p>See the <a href="../../../../get_started/system_requirements/">System Requirements</a> section for more information about the supported Container and Operating Systems.</p>
+<!--
+## HCL DX 9.5 CF221
+
+If you are deploying the HCL DX 9.5 CF221 Container update release, the package name and images are as follows.
+
+### HCL DX 9.5 CF221 DXClient files
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dxclient-image-v95_CF221_20240708-2022.zip
+hcl-dxclient-v95_CF221_20240708-2022.zip
+</code></pre></div>
+
+### hcl-dx-kubernetes-v95-CF221.zip
+
+<div class="language-shell highlight"><pre><span></span><code>HCL<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF221.txt
+hcl-dx-content-composer-image-v1.34.0_20240708-1954.tar.gz
+hcl-dx-core-image-v95_CF221_20240708-2145.tar.gz
+hcl-dx-dam-plugin-google-vision-image-v1.0.0_20240708-1954.tar.gz
+hcl-dx-dam-plugin-kaltura-image-v1.0.0_20240708-1950.tar.gz
+hcl-dx-deployment-v2.30.0_20240709-2027.tgz
+hcl-dx-digital-asset-manager-image-v1.33.0_20240708-2012.tar.gz
+hcl-dx-haproxy-image-v1.17.0_20240708-2007.tar.gz
+hcl-dx-image-processor-image-v1.34.0_20240708-2015.tar.gz
+hcl-dx-license-manager-image-v95_CF221_20240708-1955.tar.gz
+hcl-dx-logging-sidecar-image-v1.0.0_20240708-1957.tar.gz
+hcl-dx-openldap-image-v1.2.0_20240708-1954.tar.gz
+hcl-dx-opensearch-image-v95_CF221_20240708-1958.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.31.0_20240708-2006.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.29.0_20240708-2013.tar.gz
+hcl-dx-persistence-node-image-v1.21_20240708-2004.tar.gz
+hcl-dx-prereqs-checker-image-v1.0.0_20240708-2010.tar.gz
+hcl-dx-remote-search-image-v95_CF221_20240708-2145.tar.gz
+hcl-dx-ringapi-image-v1.34.0_20240708-2002.tar.gz
+hcl-dx-runtime-controller-image-v95_CF221_20240708-2006.tar.gz
+hcl-dx-search-middleware-image-v2.0.0_20240708-0052.tar.gz
+hcl-dx-search-v2.19.0_20240708-2015.tgz
+</code></pre></div>
+
+### HCL Digital Experience File package listings (supported OS platforms)
+
+This section presents the latest available HCL DX File package listings for supported OS platforms.
+
+|File name| Folder name|
+|---------|------------|
+|HCL-DX-CF221_Express_Update|HCL-DX-CF221_Express_Update.zip|
+|HCL-DX-CF221_RemoteSearch_Update|HCL-DX-CF221_RemoteSearch_Update.zip|
+|HCL-DX-CF221_Server_Update|HCL-DX-CF221_Server_Update.zip|
+
+See the [System Requirements](../../../get_started/system_requirements/index.md) section for more information about the supported Container and Operating Systems.
+
+## HCL DX 9.5 CF220
+
+If you are deploying the HCL DX 9.5 CF220 Container update release, the package name and images are as follows.
+
+### HCL DX 9.5 CF220 DXClient files
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dxclient-image-v95_CF220_20240522-1932.zip
+hcl-dxclient-v95_CF220_20240522-1932.zip
+</code></pre></div>
+
+### hcl-dx-kubernetes-v95-CF220.zip
+
+<div class="language-shell highlight"><pre><span></span><code>HCL<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF220.txt
+hcl-dx-content-composer-image-v1.33.0_20240522-1908.tar.gz
+hcl-dx-core-image-v95_CF220_20240522-1918.tar.gz
+hcl-dx-dam-plugin-google-vision-image-v1.0.0_20240522-1910.tar.gz
+hcl-dx-dam-plugin-kaltura-image-v1.0.0_20240522-1910.tar.gz
+hcl-dx-deployment-v2.29.0_20240524-1235.tgz
+hcl-dx-digital-asset-manager-image-v1.32.0_20240522-1929.tar.gz
+hcl-dx-haproxy-image-v1.16.0_20240522-1924.tar.gz
+hcl-dx-image-processor-image-v1.33.0_20240522-1923.tar.gz
+hcl-dx-license-manager-image-v95_CF220_20240522-1913.tar.gz
+hcl-dx-logging-sidecar-image-v1.0.0_20240522-1914.tar.gz
+hcl-dx-openldap-image-v1.2.0_20240522-1908.tar.gz
+hcl-dx-opensearch-image-v95_CF220_20240522-1914.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.29.0_20240521-2135.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.28.0_20240522-1921.tar.gz
+hcl-dx-persistence-node-image-v1.20_20240522-1917.tar.gz
+hcl-dx-prereqs-checker-image-v1.0.0_20240522-1914.tar.gz
+hcl-dx-remote-search-image-v95_CF220_20240522-1918.tar.gz
+hcl-dx-ringapi-image-v1.33.0_20240522-1919.tar.gz
+hcl-dx-runtime-controller-image-v95_CF220_20240522-1915.tar.gz
+hcl-dx-search-middleware-image-v2.0.0_20240521-1546.tar.gz
+hcl-dx-search-v2.18.0_20240522-1923.tgz
+</code></pre></div>
+
+### HCL Digital Experience File package listings (supported OS platforms)
+
+This section presents the latest available HCL DX File package listings for supported OS platforms.
+
+|File name| Folder name|
+|---------|------------|
+|HCL-DX-CF220_Express_Update|HCL-DX-CF220_Express_Update.zip|
+|HCL-DX-CF220_RemoteSearch_Update|HCL-DX-CF220_RemoteSearch_Update.zip|
+|HCL-DX-CF220_Server_Update|HCL-DX-CF220_Server_Update.zip|
+
+See the [System Requirements](../../../get_started/system_requirements/index.md) section for more information about the supported Container and Operating Systems.
+
+
+## HCL DX 9.5 CF219
+
+If you are deploying the HCL DX 9.5 CF219 Container update release, the package name and images are as follows.
+
+### HCL DX 9.5 CF219 DXClient files
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dxclient-image-v95_CF219_20240409-1537.zip
+hcl-dxclient-v95_CF219_20240409-1537.zip
+</code></pre></div>
+
+### hcl-dx-kubernetes-v95-CF219.zip
+
+<div class="language-shell highlight"><pre><span></span><code>HCL<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF219.txt
+hcl-dx-content-composer-image-v1.32.0_20240409-1514.tar.gz
+hcl-dx-core-image-v95_CF219_20240409-1535.tar.gz
+hcl-dx-dam-plugin-google-vision-image-v0.1.0_20240409-1516.tar.gz
+hcl-dx-dam-plugin-kaltura-image-v0.1.0_20240409-1521.tar.gz
+hcl-dx-deployment-v2.28.0_20240411-1703.tgz
+hcl-dx-digital-asset-manager-image-v1.31.0_20240409-1541.tar.gz
+hcl-dx-haproxy-image-v1.15.0_20240409-1529.tar.gz
+hcl-dx-image-processor-image-v1.32.0_20240409-1533.tar.gz
+hcl-dx-license-manager-image-v95_CF219_20240409-1524.tar.gz
+hcl-dx-logging-sidecar-image-v1.0.0_20240409-1526.tar.gz
+hcl-dx-openldap-image-v1.2.0_20240409-1522.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.29.0_20240409-2135.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.27.0_20240409-2135.tar.gz
+hcl-dx-persistence-node-image-v1.19_20240409-2133.tar.gz
+hcl-dx-prereqs-checker-image-v1.0.0_20240409-1526.tar.gz
+hcl-dx-remote-search-image-v95_CF219_20240409-1535.tar.gz
+hcl-dx-ringapi-image-v1.32.0_20240409-1539.tar.gz
+hcl-dx-runtime-controller-image-v95_CF219_20240409-1526.tar.gz
+</code></pre></div>
+
+### HCL Digital Experience File package listings (supported OS platforms)
+
+This section presents the latest available HCL DX File package listings for supported OS platforms.
+
+|File name| Folder name|
+|---------|------------|
+|HCL-DX-CF219_Express_Update|HCL-DX-CF219_Express_Update.zip|
+|HCL-DX-CF219_RemoteSearch_Update|HCL-DX-CF219_RemoteSearch_Update.zip|
+|HCL-DX-CF219_Server_Update|HCL-DX-CF219_Server_Update.zip|
+
+See the [System Requirements](../../../get_started/system_requirements/index.md) section for more information about the supported Container and Operating Systems.
+
+## HCL DX 9.5 CF218
+
+If you are deploying the HCL DX 9.5 CF218 Container update release, the package name and images are as follows.
+
+### HCL DX 9.5 CF218 DXClient files
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dxclient-image-v95_CF218_20240226-1633.zip
+hcl-dxclient-v95_CF218_20240226-1633.zip
+</code></pre></div>
+
+### hcl-dx-kubernetes-v95-CF218.zip
+
+<div class="language-shell highlight"><pre><span></span><code>HCL<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF218.txt
+hcl-dx-content-composer-image-v1.31.0_20240226-1612.tar.gz
+hcl-dx-core-image-v95_CF218_20240226-1632.tar.gz
+hcl-dx-dam-plugin-google-vision-image-v0.1.0_20240226-1613.tar.gz
+hcl-dx-dam-plugin-kaltura-image-v0.1.0_20240226-1613.tar.gz
+hcl-dx-deployment-v2.27.0_20240227-0112.tgz
+hcl-dx-digital-asset-manager-image-v1.30.0_20240226-1629.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20240226-1618.zip
+hcl-dx-haproxy-image-v1.14.0_20240226-1619.tar.gz
+hcl-dx-image-processor-image-v1.31.0_20240226-1623.tar.gz
+hcl-dx-license-manager-image-v95_CF218_20240226-1617.tar.gz
+hcl-dx-logging-sidecar-image-v1.0.0_20240226-1618.tar.gz
+hcl-dx-openldap-image-v1.2.0_20240226-1613.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.29.0_20240227-2135.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.27.0_20240227-2135.tar.gz
+hcl-dx-persistence-node-image-v1.19_20240227-2133.tar.gz
+hcl-dx-prereqs-checker-image-v1.0.0_20240226-1618.tar.gz
+hcl-dx-remote-search-image-v95_CF218_20240226-1632.tar.gz
+hcl-dx-ringapi-image-v1.31.0_20240226-1627.tar.gz
+hcl-dx-runtime-controller-image-v95_CF218_20240226-1619.tar.gz
+</code></pre></div>
+
+### HCL Digital Experience File package listings (supported OS platforms)
+
+This section presents the latest available HCL DX File package listings for supported OS platforms.
+
+|File name| Folder name|
+|---------|------------|
+|HCL-DX-CF218_Express_Update|HCL-DX-CF218_Express_Update.zip|
+|HCL-DX-CF218_RemoteSearch_Update|HCL-DX-CF218_RemoteSearch_Update.zip|
+|HCL-DX-CF218_Server_Update|HCL-DX-CF218_Server_Update.zip|
+
+See the [System Requirements](../../../get_started/system_requirements/index.md) section for more information about the supported Container and Operating Systems.
+
+
+
+## HCL DX 9.5 CF217
+
+If you are deploying the HCL DX 9.5 CF217 Container update release, the package name and images are as follows.
+
+### HCL DX 9.5 CF217 DXClient files
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dxclient-image-v95_CF217_20240118-0009.zip
+hcl-dxclient-v95_CF217_20240118-0010.zip
+</code></pre></div>
+
+### hcl-dx-kubernetes-v95-CF217.zip
+
+<div class="language-shell highlight"><pre><span></span><code>HCL<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF217.txt
+hcl-dx-content-composer-image-v1.30.0_20240117-2348.tar.gz
+hcl-dx-core-image-v95_CF217_20240117-2359.tar.gz
+hcl-dx-dam-plugin-google-vision-image-v0.1.0_20240117-2350.tar.gz
+hcl-dx-dam-plugin-kaltura-image-v0.1.0_20240117-2349.tar.gz
+hcl-dx-deployment-v2.26.0_20240123-1320.tgz
+hcl-dx-digital-asset-manager-image-v1.29.0_20240118-0006.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20240117-2355.zip
+hcl-dx-haproxy-image-v1.13.0_20240118-0002.tar.gz
+hcl-dx-image-processor-image-v1.30.0_20240118-0002.tar.gz
+hcl-dx-license-manager-image-v95_CF217_20240117-2354.tar.gz
+hcl-dx-logging-sidecar-image-v1.0.0_20240117-2354.tar.gz
+hcl-dx-openldap-image-v1.2.0_20240117-2348.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.29.0_20240118-2135.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.27.0_20240118-2135.tar.gz
+hcl-dx-persistence-node-image-v1.19_20240118-2133.tar.gz
+hcl-dx-prereqs-checker-image-v1.0.0_20240117-2354.tar.gz
+hcl-dx-remote-search-image-v95_CF217_20240117-2359.tar.gz
+hcl-dx-ringapi-image-v1.30.0_20240117-2357.tar.gz
+hcl-dx-runtime-controller-image-v95_CF217_20240117-2354.tar.gz
+</code></pre></div>
+
+### HCL Digital Experience File package listings (supported OS platforms)
+
+This section presents the latest available HCL DX File package listings for supported OS platforms.
+
+|File name| Folder name|
+|---------|------------|
+|HCL-DX-CF217_Express_Update|HCL-DX-CF217_Express_Update.zip|
+|HCL-DX-CF217_RemoteSearch_Update|HCL-DX-CF217_RemoteSearch_Update.zip|
+|HCL-DX-CF217_Server_Update|HCL-DX-CF217_Server_Update.zip|
+
+See the [System Requirements](../../../get_started/system_requirements/index.md) section for more information about the supported Container and Operating Systems.
+
+
+## HCL DX 9.5 CF216
+
+If you are deploying the HCL DX 9.5 CF216 Container update release, the package name and images are as follows.
+
+### HCL DX 9.5 CF216 DXClient files
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dxclient-image-v95_CF216_20231114-2151.zip
+hcl-dxclient-v95_CF216_20231114-2151.zip
+</code></pre></div>
+
+### hcl-dx-kubernetes-v95-CF216.zip
+
+<div class="language-shell highlight"><pre><span></span><code>HCL<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF216.txt
+hcl-dx-content-composer-image-v1.29.0_20231114-2121.tar.gz
+hcl-dx-core-image-v95_CF216_20231114-2130.tar.gz
+hcl-dx-dam-plugin-google-vision-image-v0.1.0_20231114-2123.tar.gz
+hcl-dx-dam-plugin-kaltura-image-v0.1.0_20231114-2122.tar.gz
+hcl-dx-deployment-v2.25.0_20231115-1912.tgz
+hcl-dx-digital-asset-manager-image-v1.28.0_20231114-2142.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20231114-2130.zip
+hcl-dx-haproxy-image-v1.12.0_20231114-2137.tar.gz
+hcl-dx-image-processor-image-v1.29.0_20231114-2136.tar.gz
+hcl-dx-license-manager-image-v95_CF216_20231114-2128.tar.gz
+hcl-dx-logging-sidecar-image-v1.0.0_20231114-2129.tar.gz
+hcl-dx-openldap-image-v1.2.0_20231114-2128.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.29.0_20231114-2135.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.27.0_20231114-2135.tar.gz
+hcl-dx-persistence-node-image-v1.19_20231114-2133.tar.gz
+hcl-dx-prereqs-checker-image-v1.0.0_20231114-2129.tar.gz
+hcl-dx-remote-search-image-v95_CF216_20231114-2130.tar.gz
+hcl-dx-ringapi-image-v1.29.0_20231114-2132.tar.gz
+hcl-dx-runtime-controller-image-v95_CF216_20231114-2129.tar.gz
+</code></pre></div>
+
+### HCL Digital Experience File package listings (supported OS platforms)
+
+|File name| Folder name|
+|---------|------------|
+|HCL-DX-CF216_Express_Update|HCL-DX-CF216_Express_Update.zip|
+|HCL-DX-CF216_RemoteSearch_Update|HCL-DX-CF216_RemoteSearch_Update.zip|
+|HCL-DX-CF216_Server_Update|HCL-DX-CF216_Server_Update.zip|
+
+
+## HCL DX 9.5 CF215
+
+If you are deploying the HCL DX 9.5 CF215 Container update release, the package name and images are as follows.
+
+### HCL DX 9.5 CF215 DXClient files
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dxclient-image-v95_CF215_20231004-1332.zip
+hcl-dxclient-v95_CF215_20231004-1332.zip
+</code></pre></div>
+
+### hcl-dx-kubernetes-v95-CF215.zip
+
+<div class="language-shell highlight"><pre><span></span><code>HCL<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF215.txt
+hcl-dx-content-composer-image-v1.28.0_20231004-1314.tar.gz
+hcl-dx-core-image-v95_CF215_20231004-1322.tar.gz
+hcl-dx-dam-plugin-google-vision-image-v0.1.0_20231004-1315.tar.gz
+hcl-dx-dam-plugin-kaltura-image-v0.1.0_20231004-1315.tar.gz
+hcl-dx-deployment-v2.23.1_20231004-2130.tgz
+hcl-dx-digital-asset-manager-image-v1.27.0_20231004-1334.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20231004-1323.zip
+hcl-dx-haproxy-image-v1.11.0_20231004-1321.tar.gz
+hcl-dx-image-processor-image-v1.28.0_20231004-1323.tar.gz
+hcl-dx-license-manager-image-v95_CF215_20231004-1319.tar.gz
+hcl-dx-logging-sidecar-image-v1.0.0_20231004-1319.tar.gz
+hcl-dx-openldap-image-v1.2.0_20231004-1314.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.28.0_20231004-1327.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.26.0_20231004-1330.tar.gz
+hcl-dx-persistence-node-image-v1.18_20231004-1330.tar.gz
+hcl-dx-prereqs-checker-image-v1.0.0_20231004-1320.tar.gz
+hcl-dx-remote-search-image-v95_CF215_20231004-1322.tar.gz
+hcl-dx-ringapi-image-v1.28.0_20231004-1325.tar.gz
+hcl-dx-runtime-controller-image-v95_CF215_20231004-1320.tar.gz
+</code></pre></div>
+
+### HCL Digital Experience File package listings (supported OS platforms)
+
+|File name| Folder name|
+|---------|------------|
+|HCL-DX-CF215_Express_Update|HCL-DX-CF215_Express_Update.zip|
+|HCL-DX-CF215_RemoteSearch_Update|HCL-DX-CF215_RemoteSearch_Update.zip|
+|HCL-DX-CF215_Server_Update|HCL-DX-CF215_Server_Update.zip|
+
+
+## HCL DX 9.5 CF214
+
+If you are deploying the HCL DX 9.5 CF214 Container update release, the package name and images are as follows.
+
+### HCL DX 9.5 CF214 DXClient files
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dxclient-image-v95_CF214_20230814-1528.zip
+hcl-dxclient-v95_CF214_20230814-1528.zip
+</code></pre></div>
+
+### hcl-dx-kubernetes-v95-CF214.zip
+
+<div class="language-shell highlight"><pre><span></span><code>HCL<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF214.txt
+hcl-dx-content-composer-image-v1.27.0_20230814-1508.tar.gz
+hcl-dx-core-image-v95_CF214_20230814-1518.tar.gz
+hcl-dx-dam-plugin-google-vision-image-v0.1.0_20230814-1510.tar.gz
+hcl-dx-dam-plugin-kaltura-image-v0.1.0_20230814-1510.tar.gz
+hcl-dx-deployment-v2.22.0_20230815-1742.tgz
+hcl-dx-digital-asset-manager-image-v1.26.0_20230814-1526.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20230814-1524.zip
+hcl-dx-haproxy-image-v1.10.0_20230814-1519.tar.gz
+hcl-dx-image-processor-image-v1.27.0_20230814-1520.tar.gz
+hcl-dx-license-manager-image-v95_CF214_20230814-1514.tar.gz
+hcl-dx-logging-sidecar-image-v1.0.0_20230814-1515.tar.gz
+hcl-dx-openldap-image-v1.2.0_20230814-1513.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.27.0_20230814-1521.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.25.0_20230814-1521.tar.gz
+hcl-dx-persistence-node-image-v1.17_20230814-1522.tar.gz
+hcl-dx-prereqs-checker-image-v1.0.0_20230814-1516.tar.gz
+hcl-dx-remote-search-image-v95_CF214_20230814-1518.tar.gz
+hcl-dx-ringapi-image-v1.27.0_20230814-1525.tar.gz
+hcl-dx-runtime-controller-image-v95_CF214_20230814-1517.tar.gz
+</code></pre></div>
+
+### HCL Digital Experience File package listings (supported OS platforms)
+
+|File name| Folder name|
+|---------|------------|
+|HCL-DX-CF214_Express_Update|HCL-DX-CF214_Express_Update.zip|
+|HCL-DX-CF214_RemoteSearch_Update|HCL-DX-CF214_RemoteSearch_Update.zip|
+|HCL-DX-CF214_Server_Update|HCL-DX-CF214_Server_Update.zip|
+
+
+## HCL DX 9.5 CF213
+
+If you are deploying the HCL DX 9.5 CF213 Container update release, the package name and images are as follows.
+
+### HCL DX 9.5 CF213 DXClient files
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dxclient-image-v95_CF213_20230707-1526.zip
+hcl-dxclient-v95_CF213_20230707-1526.zip
+</code></pre></div>
+
+### hcl-dx-kubernetes-v95-CF213.zip
+
+<div class="language-shell highlight"><pre><span></span><code>HCL<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF213.txt
+hcl-dx-content-composer-image-v1.26.0_20230707-1509.tar.gz
+hcl-dx-core-image-v95_CF213_20230707-1519.tar.gz
+hcl-dx-dam-plugin-google-vision-image-v0.1.0_20230707-1510.tar.gz
+hcl-dx-dam-plugin-kaltura-image-v0.1.0_20230707-1510.tar.gz
+hcl-dx-deployment-v2.21.0_20230710-1422.tgz
+hcl-dx-digital-asset-manager-image-v1.25.0_20230707-1523.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20230707-1525.zip
+hcl-dx-haproxy-image-v1.9.0_20230707-1517.tar.gz
+hcl-dx-image-processor-image-v1.26.0_20230707-1518.tar.gz
+hcl-dx-license-manager-image-v95_CF213_20230707-1514.tar.gz
+hcl-dx-logging-sidecar-image-v1.0.0_20230707-1515.tar.gz
+hcl-dx-openldap-image-v1.2.0_20230707-1511.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.26.0_20230707-1520.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.24.0_20230707-1525.tar.gz
+hcl-dx-persistence-node-image-v1.16_20230707-1525.tar.gz
+hcl-dx-prereqs-checker-image-v1.0.0_20230707-1515.tar.gz
+hcl-dx-remote-search-image-v95_CF213_20230707-1519.tar.gz
+hcl-dx-ringapi-image-v1.26.0_20230707-1527.tar.gz
+hcl-dx-runtime-controller-image-v95_CF213_20230707-1515.tar.gz
+</code></pre></div>
+
+### HCL Digital Experience File package listings (supported OS platforms)
+
+|File name| Folder name|
+|---------|------------|
+|HCL-DX-CF213_Express_Update|HCL-DX-CF213_Express_Update.zip|
+|HCL-DX-CF213_RemoteSearch_Update|HCL-DX-CF213_RemoteSearch_Update.zip|
+|HCL-DX-CF213_Server_Update|HCL-DX-CF213_Server_Update.zip|
+
+
+## HCL DX 9.5 CF212
+
+If you are deploying the HCL DX 9.5 CF212 Container update release, the package name and images are as follows.
+
+### HCL DX 9.5 CF212 DXClient files
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dxclient-image-v95_CF212_20230525-1308.zip
+hcl-dxclient-v95_CF212_20230525-1308.zip
+</code></pre></div>
+
+### hcl-dx-kubernetes-v95-CF212.zip
+
+<div class="language-shell highlight"><pre><span></span><code>HCL<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF212.txt
+hcl-dx-content-composer-image-v1.25.0_20230525-1252.tar.gz
+hcl-dx-core-image-v95_CF212_20230525-1253.tar.gz
+hcl-dx-dam-plugin-google-vision-image-v0.1.0_20230525-1253.tar.gz
+hcl-dx-dam-plugin-kaltura-image-v0.1.0_20230525-1253.tar.gz
+hcl-dx-deployment-v2.20.0_20230525-2036.tgz
+hcl-dx-digital-asset-manager-image-v1.24.0_20230525-1300.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20230525-1305.zip
+hcl-dx-haproxy-image-v1.8.0_20230525-1256.tar.gz
+hcl-dx-image-processor-image-v1.25.0_20230525-1257.tar.gz
+hcl-dx-license-manager-image-v95_CF212_20230525-1252.tar.gz
+hcl-dx-logging-sidecar-image-v1.0.0_20230525-1255.tar.gz
+hcl-dx-openldap-image-v1.2.0_20230525-1252.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.25.0_20230525-1346.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.23.0_20230525-1306.tar.gz
+hcl-dx-persistence-node-image-v1.15_20230525-1346.tar.gz
+hcl-dx-prereqs-checker-image-v1.0.0_20230525-1255.tar.gz
+hcl-dx-remote-search-image-v95_CF212_20230525-1253.tar.gz
+hcl-dx-ringapi-image-v1.25.0_20230525-1307.tar.gz
+hcl-dx-runtime-controller-image-v95_CF212_20230525-1256.tar.gz
+</code></pre></div>
+
+### HCL Digital Experience File package listings (supported OS platforms)
+
+|File name| Folder name|
+|---------|------------|
+|HCL-DX-CF212_Express_Update|HCL-DX-CF212_Express_Update.zip|
+|HCL-DX-CF212_RemoteSearch_Update|HCL-DX-CF212_RemoteSearch_Update.zip|
+|HCL-DX-CF212_Server_Update|HCL-DX-CF212_Server_Update.zip|
+
+
+## HCL DX 9.5 CF211
+
+If you are deploying the HCL DX 9.5 CF211 Container update release, the package name and images are as follows.
+
+### HCL DX 9.5 CF211 DXClient files
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dxclient-image-v95_CF211_20230406-1814.zip
+hcl-dxclient-v95_CF211_20230406-1814.zip
+</code></pre></div>
+
+### hcl-dx-kubernetes-v95-CF211.zip
+
+<div class="language-shell highlight"><pre><span></span><code>HCL<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF211.txt
+hcl-dx-content-composer-image-v1.24.0_20230406-1758.tar.gz
+hcl-dx-core-image-v95_CF211_20230406-1759.tar.gz
+hcl-dx-dam-plugin-google-vision-image-v0.1.0_20230406-1759.tar.gz
+hcl-dx-dam-plugin-kaltura-image-v0.1.0_20230406-1759.tar.gz
+hcl-dx-deployment-v2.19.0_20230410-1431.tgz
+hcl-dx-digital-asset-manager-image-v1.23.0_20230406-1807.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20230406-1809.zip
+hcl-dx-haproxy-image-v1.7.0_20230406-1804.tar.gz
+hcl-dx-image-processor-image-v1.24.0_20230406-1804.tar.gz
+hcl-dx-license-manager-image-v95_CF211_20230406-1758.tar.gz
+hcl-dx-logging-sidecar-image-v1.0.0_20230406-1758.tar.gz
+hcl-dx-openldap-image-v1.2.0_20230406-1813.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.24.0_20230406-1812.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.22.0_20230406-1812.tar.gz
+hcl-dx-persistence-node-image-v1.14_20230406-1811.tar.gz
+hcl-dx-prereqs-checker-image-v1.0.0_20230406-1800.tar.gz
+hcl-dx-remote-search-image-v95_CF211_20230406-1759.tar.gz
+hcl-dx-ringapi-image-v1.24.0_20230406-1810.tar.gz
+hcl-dx-runtime-controller-image-v95_CF211_20230406-1800.tar.gz
+</code></pre></div>
+
+### HCL Digital Experience File package listings (supported OS platforms)
+
+|File name| Folder name|
+|---------|------------|
+|HCL-DX-CF211_Express_Update|HCL-DX-CF211_Express_Update.zip|
+|HCL-DX-CF211_RemoteSearch_Update|HCL-DX-CF211_RemoteSearch_Update.zip|
+|HCL-DX-CF211_Server_Update|HCL-DX-CF211_Server_Update.zip|
+
+
+## HCL DX 9.5 CF210
+
+If you are deploying the HCL DX 9.5 CF210 Container update release, the package name and images are as follows.
+
+### HCL DX 9.5 CF210 DXClient files
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dxclient-image-v95_CF210_20230307-1921.zip
+hcl-dxclient-v95_CF210_20230307-1920.zip
+</code></pre></div>
+
+### hcl-dx-kubernetes-v95-CF210.zip
+
+<div class="language-shell highlight"><pre><span></span><code>HCL<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF210.txt
+hcl-dx-content-composer-image-v1.23.0_20230307-1654.tar.gz
+hcl-dx-core-image-v95_CF210_20230307-1922.tar.gz
+hcl-dx-dam-plugin-google-vision-image-v0.1.0_20230307-1903.tar.gz
+hcl-dx-dam-plugin-kaltura-image-v0.1.0_20230307-1903.tar.gz
+hcl-dx-deployment-v2.13.0_20230310-1530.tgz
+hcl-dx-digital-asset-manager-image-v1.22.0_20230307-1917.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20230302-2003.zip
+hcl-dx-haproxy-image-v1.6.0_20230307-1910.tar.gz
+hcl-dx-image-processor-image-v1.23.0_20230307-1913.tar.gz
+hcl-dx-license-manager-image-v95_CF210_20230307-1904.tar.gz
+hcl-dx-logging-sidecar-image-v1.0.0_20230307-1907.tar.gz
+hcl-dx-openldap-image-v1.2.0_20230307-1902.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.23.0_20230307-1916.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.21.0_20230307-1916.tar.gz
+hcl-dx-persistence-node-image-v1.13_20230307-1918.tar.gz
+hcl-dx-prereqs-checker-image-v1.0.0_20230307-1907.tar.gz
+hcl-dx-remote-search-image-v95_CF210_20230307-1922.tar.gz
+hcl-dx-ringapi-image-v1.23.0_20230307-1921.tar.gz
+hcl-dx-runtime-controller-image-v95_CF210_20230307-1910.tar.gz
+</code></pre></div>
+
+### HCL Digital Experience File package listings (supported OS platforms)
+
+|File name| Folder name|
+|---------|------------|
+|HCL-DX-CF210_Express_Update|HCL-DX-CF210_Express_Update.zip|
+|HCL-DX-CF210_RemoteSearch_Update|HCL-DX-CF210_RemoteSearch_Update.zip|
+|HCL-DX-CF210_Server_Update|HCL-DX-CF210_Server_Update.zip|
+
+## HCL DX 9.5 CF209
+
+If you are deploying the HCL DX 9.5 CF209 Container update release, the package name and images are as follows.
+
+### HCL DX 9.5 CF209 DXClient files
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dxclient-image-v95_CF209_20230119-2232.zip
+hcl-dxclient-v95_cf209_20230119-2228.zip
+</code></pre></div>
+
+### hcl-dx-kubernetes-v95-CF209.zip
+
+<div class="language-shell highlight"><pre><span></span><code>HCL<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF209.txt
+hcl-dx-content-composer-image-v1.22.0_20230119-2151.tar.gz
+hcl-dx-core-image-v95_CF209_20230119-2225.tar.gz
+hcl-dx-dam-plugin-google-vision-image-v0.1.0_20230119-2152.tar.gz
+hcl-dx-dam-plugin-kaltura-image-v0.1.0_20230119-2152.tar.gz
+hcl-dx-deployment-v2.12.0_20230123-1623.tgz
+hcl-dx-design-studio-image-v0.12.0_20230119-2221.tar.gz
+hcl-dx-digital-asset-manager-image-v1.21.0_20230119-2229.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20230119-2221.zip
+hcl-dx-haproxy-image-v1.5.0_20230119-2219.tar.gz
+hcl-dx-image-processor-image-v1.22.0_20230119-2220.tar.gz
+hcl-dx-license-manager-image-v95_CF209_20230119-2155.tar.gz
+hcl-dx-logging-sidecar-image-v1.0.0_20230119-2155.tar.gz
+hcl-dx-openldap-image-v1.2.0_20230119-2153.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.22.0_20230119-2226.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.20.0_20230119-2225.tar.gz
+hcl-dx-persistence-node-image-v1.12_20230119-2223.tar.gz
+hcl-dx-prereqs-checker-image-v1.0.0_20230119-2156.tar.gz
+hcl-dx-remote-search-image-v95_CF209_20230119-2225.tar.gz
+hcl-dx-ringapi-image-v1.22.0_20230119-2223.tar.gz
+hcl-dx-runtime-controller-image-v95_CF209_20230119-2159.tar.gz
+</code></pre></div>
+
+### HCL Digital Experience File package listings (supported OS platforms)
+
+|File name| Folder name|
+|---------|------------|
+|HCL-DX-CF209_Express_Update|HCL-DX-CF209_Express_Update.zip|
+|HCL-DX-CF209_RemoteSearch_Update|HCL-DX-CF209_RemoteSearch_Update.zip|
+|HCL-DX-CF209_Server_Update|HCL-DX-CF209_Server_Update.zip|
+
+## HCL DX 9.5 CF208
+
+If you are deploying the HCL DX 9.5 CF208 Container update release, the package name and images are as follows.
+
+### HCL DX 9.5 CF208 DXClient files
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dxclient-image-v95_CF208_20221208-2242.zip
+hcl-dxclient-v95_CF208_20221208-2242.zip
+</code></pre></div>
+
+### hcl-dx-kubernetes-v95-CF208.zip
+
+<div class="language-shell highlight"><pre><span></span><code>hcl<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF208.txt
+hcl-dx-content-composer-image-v1.21.0_20221208-2224.tar.gz
+hcl-dx-core-image-v95_CF208_20221208-2224.tar.gz
+hcl-dx-dam-plugin-google-vision-image-v0.1.0_20221208-2225.tar.gz
+hcl-dx-dam-plugin-kaltura-image-v0.1.0_20221208-2225.tar.gz
+hcl-dx-deployment-v2.11.2_20221209-1526.tgz
+hcl-dx-design-studio-image-v0.12.0_20221208-2233.tar.gz
+hcl-dx-digital-asset-manager-image-v1.20.0_20221208-2234.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20221208-2237.zip
+hcl-dx-haproxy-image-v1.4.0_20221208-2240.tar.gz
+hcl-dx-image-processor-image-v1.21.0_20221208-2229.tar.gz
+hcl-dx-license-manager-image-v95_CF208_20221208-2224.tar.gz
+hcl-dx-logging-sidecar-image-v1.0.0_20221208-2227.tar.gz
+hcl-dx-openldap-image-v1.2.0_20221208-2224.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.21.0_20221208-2237.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.19.0_20221208-2237.tar.gz
+hcl-dx-persistence-node-image-v1.11_20221208-2238.tar.gz
+hcl-dx-prereqs-checker-image-v0.1.0_20221208-2227.tar.gz
+hcl-dx-remote-search-image-v95_CF208_20221208-2224.tar.gz
+hcl-dx-ringapi-image-v1.21.0_20221208-2240.tar.gz
+hcl-dx-runtime-controller-image-v95_CF208_20221208-2228.tar.gz
+</code></pre></div>
+
+### HCL Digital Experience File package listings (supported OS platforms)
+
+If you are deploying the HCL DX 9.5 CF208 release to supported OS platforms, the file package names are as follows.
+
+|File name| Folder name|
+|---------|------------|
+|HCL_DX_CF208 Express_Update| HCL-DX-CF208_Express_Update.zip|
+|HCL_DX_CF208_RemoteSearch_Update| HCL-DX-CF208_RemoteSearch_Update.zip|
+|HCL_DX_CF208_Server_Update| HCL-DX-CF208_Server_Update.zip|
+
+## HCL DX 9.5 CF207
+
+If you are deploying the HCL DX 9.5 CF207 release, the package name and images are as follows.
+
+### HCL DX 9.5 CF207 DXClient files
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dxclient-image-v95_CF2067_20221014-1618.zip
+hcl-dxclient-v95_CF207_20221014-1614.zip
+</code></pre></div>
+
+### hcl-dx-kubernetes-v95-CF207.zip
+
+<div class="language-shell highlight"><pre><span></span><code>hcl<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF207.txt
+hcl-dx-content-composer-image-v1.20.0_20221014-1558.tar.gz
+hcl-dx-core-image-v95_CF207_20221014-1607.tar.gz
+hcl-dx-dam-plugin-google-vision-image-v0.1.0_20221014-1559.tar.gz
+hcl-dx-dam-plugin-kaltura-image-v0.1.0_20221014-1600.tar.gz
+hcl-dx-deployment-v2.10.0_20221017-1419.tgz
+hcl-dx-design-studio-image-v0.12.0_20221014-1613.tar.gz
+hcl-dx-digital-asset-manager-image-v1.19.0_20221014-1611.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20221014-1613.zip
+hcl-dx-haproxy-image-v1.3.0_20221014-1605.tar.gz
+hcl-dx-image-processor-image-v1.20.0_20221014-1606.tar.gz
+hcl-dx-license-manager-image-v95_CF207_20221014-1601.tar.gz
+hcl-dx-logging-sidecar-image-v1.0.0_20221014-1603.tar.gz
+hcl-dx-openldap-image-v1.2.0_20221014-1601.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.20.0_20221014-1612.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.18.0_20221014-1612.tar.gz
+hcl-dx-persistence-node-image-v1.10_20221014-1612.tar.gz
+hcl-dx-remote-search-image-v95_CF207_20221014-1607.tar.gz
+hcl-dx-ringapi-image-v1.20.0_20221014-1614.tar.gz
+hcl-dx-runtime-controller-image-v95_CF207_20221014-1603.tar.gz
+</code></pre></div>
+
+## HCL DX 9.5 CF206
+
+If you are deploying the HCL DX 9.5 CF206 release, the package name and images are as follows.
+
+### HCL DX 9.5 CF206 DXClient files
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dxclient-image-v95_CF206_20220908-1249.zip
+hcl-dxclient-v95_CF206_20220908-1248.zip
+</code></pre></div>
+
+### hcl-dx-kubernetes-v95-CF206.zip
+
+<div class="language-shell highlight"><pre><span></span><code>hcl<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF206.txt
+hcl-dx-content-composer-image-v1.19.0_20220908-1228.tar.gz
+hcl-dx-core-image-v95_CF206_20220908-1237.tar.gz
+hcl-dx-dam-plugin-google-vision-image-v0.1.0_20220908-1229.tar.gz
+hcl-dx-dam-plugin-kaltura-image-v0.1.0_20220908-1230.tar.gz
+hcl-dx-deployment-v2.9.2_20220909-1328.tgz
+hcl-dx-design-studio-image-v0.12.0_20220908-1242.tar.gz
+hcl-dx-digital-asset-manager-image-v1.18.0_20220908-1240.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20220908-1242.zip
+hcl-dx-haproxy-image-v1.2.0_20220908-1233.tar.gz
+hcl-dx-image-processor-image-v1.19.0_20220908-1236.tar.gz
+hcl-dx-logging-sidecar-image-v1.0.0_20220908-1230.tar.gz
+hcl-dx-openldap-image-v1.2.0_20220908-1231.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.19.0_20220908-1242.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.17.0_20220908-1242.tar.gz
+hcl-dx-persistence-node-image-v1.9_20220908-1245.tar.gz
+hcl-dx-remote-search-image-v95_CF206_20220908-1237.tar.gz
+hcl-dx-ringapi-image-v1.19.0_20220908-1246.tar.gz
+hcl-dx-runtime-controller-image-v95_CF206_20220908-1233.tar.gz
+</code></pre></div>
+
+## HCL DX 9.5 CF205
+
+If you are deploying the HCL DX 9.5 CF205 release, the package name and images are as follows.
+
+### HCL DX 9.5 CF205 DXClient files
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dxclient-image-v95_CF205_20220720-1706.zip
+hcl-dxclient-v95_CF205_20220720-1706.zip
+</code></pre></div>
+
+### hcl-dx-kubernetes-v95-CF205.zip
+
+<div class="language-shell highlight"><pre><span></span><code>hcl<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF205.txt
+hcl-dx-content-composer-image-v1.18.0_20220720-1628.tar.gz
+hcl-dx-core-image-v95_CF205_20220720-1646.tar.gz
+hcl-dx-dam-plugin-google-vision-image-v0.1.0_20220720-1629.tar.gz
+hcl-dx-dam-plugin-kaltura-image-v0.1.0_20220720-1629.tar.gz
+hcl-dx-deployment-v2.8.5_20220726-1512.tgz
+hcl-dx-design-studio-image-v0.11.0_20220720-1659.tar.gz
+hcl-dx-digital-asset-manager-image-v1.17.0_20220726-1322.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20220720-1650.zip
+hcl-dx-google-vision-image-v0.1.0_20220720-0243.tar.gz
+hcl-dx-haproxy-image-v1.1.0_20220720-1636.tar.gz
+hcl-dx-image-processor-image-v1.18.0_20220720-1653.tar.gz
+hcl-dx-logging-sidecar-image-v1.0.0_20220720-1631.tar.gz
+hcl-dx-openldap-image-v1.2.0_20220720-1630.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.18.0_20220720-1654.tar.gz
+hcl-dx-persistence-image-v1.18.0_20220720-1654.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.16.0_20220720-1658.tar.gz
+hcl-dx-persistence-node-image-v1.8_20220720-1704.tar.gz
+hcl-dx-remote-search-image-v95_CF205_20220720-1646.tar.gz
+hcl-dx-ringapi-image-v1.18.0_20220720-1700.tar.gz
+hcl-dx-runtime-controller-image-v95_CF205_20220720-1634.tar.gz
+hcl-dx-sidecar-image-v1.0.0_8.6-751.tar.gz
+</code></pre></div>
+
+## HCL DX 9.5 CF204
+
+If you are deploying the HCL DX 9.5 CF204 release, the package name and images are as follows.
+
+### HCL DX 9.5 CF204 DXClient files
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dxclient-image-v95_CF204_20220602-1806.zip
+hcl-dxclient-v95_CF204_20220602-1805.zip
+</code></pre></div>
+
+### hcl-dx-kubernetes-v95-CF204.zip
+
+<div class="language-shell highlight"><pre><span></span><code>hcl<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF204.txt
+hcl-dx-content-composer-image-v1.17.0_20220602-1750.tar.gz
+hcl-dx-core-image-v95_CF204_20220602-1751.tar.gz
+hcl-dx-deployment-v2.7.1_20220602-1755.tgz
+hcl-dx-design-studio-image-v0.9.0_20220602-1755.tar.gz
+hcl-dx-digital-asset-manager-image-v1.16.0_20220602-1805.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20220602-1755.zip
+hcl-dx-haproxy-image-v1.0.0_20220602-1754.tar.gz
+hcl-dx-image-processor-image-v1.17.0_20220602-1751.tar.gz
+hcl-dx-logging-sidecar-image-v0.1.0_20220602-1750.tar.gz
+hcl-dx-openldap-image-v1.2.0_20220602-1750.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.17.0_20220602-1802.tar.gz
+hcl-dx-persistence-image-v1.17.0_20220602-1803.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.15.0_20220602-1802.tar.gz
+hcl-dx-persistence-node-image-v1.7_20220602-1800.tar.gz
+hcl-dx-redis-image-5.0.14.tar.gz
+hcl-dx-remote-search-image-v95_CF204_20220602-1751.tar.gz
+hcl-dx-ringapi-image-v1.17.0_20220602-1757.tar.gz
+hcl-dx-runtime-controller-image-v95_CF204_20220602-1750.tar.gz
+hcl-dx-sidecar-image-v1.0.0_8.6-751.tar.gz
+</code></pre></div>
+
+## HCL DX 9.5 CF203
+
+If you are deploying the HCL DX 9.5 CF203 release, the package name and images are as follows.
+
+### HCL DX 9.5 CF203 DXClient files
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dxclient-image-v95_CF203_20220429-1049.zip
+hcl-dxclient-v95_CF203_20220429-1409.zip
+</code></pre></div>
+
+### hcl-dx-kubernetes-v95-CF203.zip
+
+<div class="language-shell highlight"><pre><span></span><code>hcl<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF203.txt
+hcl-dx-ambassador-image-1142.tar.gz
+hcl-dx-content-composer-image-v1.16.0_20220429-1042.tar.gz
+hcl-dx-core-image-v95_CF203_20220429-1033.tar.gz
+hcl-dx-deployment-v2.6.12_20220503-1239.tgz
+hcl-dx-design-studio-image-v0.9.0_20220429-1029.tar.gz
+hcl-dx-digital-asset-manager-image-v1.15.0_20220429-1035.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20220429-1030.zip
+hcl-dx-haproxy-image-v0.1.0_20220429-1036.tar.gz
+hcl-dx-image-processor-image-v1.16.0_20220429-1034.tar.gz
+hcl-dx-openldap-image-v1.2.0_20220429-1041.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.16.0_20220429-1031.tar.gz
+hcl-dx-persistence-image-v1.16.0_20220429-1032.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.14.0_20220429-1031.tar.gz
+hcl-dx-persistence-node-image-v1.6_20220429-1030.tar.gz
+hcl-dx-redis-image-5.0.14.tar.gz
+hcl-dx-remote-search-image-v95_CF203_20220429-1033.tar.gz
+hcl-dx-ringapi-image-v1.16.0_20220429-1033.tar.gz
+hcl-dx-runtime-controller-image-v95_CF203_20220429-1038.tar.gz
+hcl-dx-sidecar-image-v1.0.0_8.4-205.tar.gz
+</code></pre></div>
+
+## HCL DX 9.5 CF202
+
+If you are deploying the HCL DX 9.5 CF202 release, the package name and images are as follows.
+
+### HCL DX 9.5 CF202 DXClient files
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dxclient-image-v95_CF202_20220319-1416.zip
+hcl-dxclient-v95_CF202_20220319-1409.zip
+</code></pre></div>
+
+### hcl-dx-kubernetes-v95-CF202.zip
+
+<div class="language-shell highlight"><pre><span></span><code>hcl<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF202.txt
+hcl-dx-ambassador-image-1142.tar.gz
+hcl-dx-content-composer-image-v1.15.0_20220319-1357.tar.gz
+hcl-dx-core-image-v95_CF202_20220319-1358.tar.gz
+hcl-dx-deployment-v2.5.9_20220319-1358.tgz
+hcl-dx-design-studio-image-v0.8.0_20220319-1409.tar.gz
+hcl-dx-digital-asset-manager-image-v1.14.0_20220319-1405.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20220319-1409.zip
+hcl-dx-image-processor-image-v1.15.0_20220319-1358.tar.gz
+hcl-dx-openldap-image-v1.2.0_20220319-1357.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.15.0_20220319-1407.tar.gz
+hcl-dx-persistence-image-v1.15.0_20220319-1402.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.13.0_20220319-1408.tar.gz
+hcl-dx-persistence-node-image-v1.5_20220319-1408.tar.gz
+hcl-dx-redis-image-5.0.14.tar.gz
+hcl-dx-remote-search-image-v95_CF202_20220319-1358.tar.gz
+hcl-dx-ringapi-image-v1.15.0_20220319-1413.tar.gz
+hcl-dx-runtime-controller-image-v95_CF202_20220319-1357.tar.gz
+hcl-dx-sidecar-image-v1.0.0_8.4-205.tar.gz
+</code></pre></div>
+
+## HCL DX 9.5 CF201
+
+If you are deploying the HCL DX 9.5 CF201 release, the package name and images are as follows.
+
+### HCL DX 9.5 CF201 DXClient files
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dxclient-image-v95_CF201_20220207-1614.zip
+hcl-dxclient-v95_CF201_20220207-1613.zip
+</code></pre></div>
+
+### HCL DX 9.5 CF\_201-hcl-dx-kubernetes-v95-CF201.zip
+
+<div class="language-shell highlight"><pre><span></span><code>hcl<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF201.txt
+hcl-dx-ambassador-image-1142.tar.gz
+hcl-dx-content-composer-image-v1.14.0_20220207-1550.tar.gz
+hcl-dx-core-image-v95_CF201_20220206-1331.tar.gz
+hcl-dx-deployment-v2.4.0_20220207-1606.tgz
+hcl-dx-design-studio-image-v0.7.0_20220207-1549.tar.gz
+hcl-dx-digital-asset-manager-image-v1.13.0_20220207-1609.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20220207-1549.zip
+hcl-dx-image-processor-image-v1.14.0_20220207-1606.tar.gz
+hcl-dx-openldap-image-v1.2.0_20220207-1556.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.14.0_20220207-1612.tar.gz
+hcl-dx-persistence-image-v1.14.0_20220207-1611.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.12.0_20220207-1611.tar.gz
+hcl-dx-persistence-node-image-v1.4_20220207-1549.tar.gz
+hcl-dx-redis-image-5.0.14.tar.gz
+hcl-dx-remote-search-image-v95_CF201_20220206-1331.tar.gz
+hcl-dx-ringapi-image-v1.14.0_20220207-1554.tar.gz
+hcl-dx-runtime-controller-image-v95_CF201_20220207-1558.tar.gz
+hcl-dx-sidecar-image-v1.0.0_8.4-205.tar.gz
+</code></pre></div>
+
+## HCL DX 9.5 CF200
+
+If you are deploying the HCL DX 9.5 CF200 release, the package name and images are as follows.
+
+### HCL DX 9.5 CF200 DXClient files
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dxclient-image-v95_CF200_20211213-1500.zip
+hcl-dxclient-v95_CF200_20211213-1459.zip
+</code></pre></div>
+
+### HCL DX 9.5 CF 200-hcl-dx-kubernetes-v95-CF200.zip
+
+!!! important
+    Starting with HCL DX Container Update 9.5 CF200, HCL removed the Operator-based deployment. Because of this change, you will find some changes in the list of files and their names in CF199 and later releases.
+
+<div class="language-shell highlight"><pre><span></span><code>hcl<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF200.txt
+hcl-dx-ambassador-image-1142.tar.gz
+hcl-dx-content-composer-image-v1.13.0_20211213-1443.tar.gz
+hcl-dx-core-image-v95_CF200_20211213-1442.tar.gz
+hcl-dx-deployment-v2.2.0_20211213-1446.tgz
+hcl-dx-design-studio-image-v0.6.0_20211213-1448.tar.gz
+hcl-dx-digital-asset-manager-image-v1.12.0_20211213-1448.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20211213-1454.zip
+hcl-dx-image-processor-image-v1.13.0_20211213-1446.tar.gz
+hcl-dx-openldap-image-v1.2.0_20211213-1444.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.13.0_20211213-1457.tar.gz
+hcl-dx-persistence-image-v1.13.0_20211213-1457.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.11.0_20211213-1458.tar.gz
+hcl-dx-persistence-node-image-v1.3_20211213-1454.tar.gz
+hcl-dx-redis-image-5.0.14.tar.gz
+hcl-dx-remote-search-image-v95_CF200_20211213-1442.tar.gz
+hcl-dx-ringapi-image-v1.13.0_20211213-1457.tar.gz
+hcl-dx-runtime-controller-image-v95_CF200_20211213-1444.tar.gz
+hcl-dx-sidecar-image-v1.0.0_8.4-205.tar.gz
+</code></pre></div>
+
+## HCL DX 9.5 CF199
+
+If you are deploying the HCL DX 9.5 CF199 release, the package name and images are as follows.
+
+### HCL DX 9.5 CF199 DXClient files
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dxclient-image-v95_CF199_20211029-1357.zip
+hcl-dxclient-v95_CF199_20211029-1357.zip
+</code></pre></div>
+
+### HCL DX 9.5 CF\_199-hcl-dx-kubernetes-v95-CF199.zip
+
+<div class="language-shell highlight"><pre><span></span><code>hcl<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF199.txt
+hcl-dx-ambassador-image-154.tar.gz
+hcl-dx-cloud-operator-image-v95_CF199_20211029-1700.tar.gz
+hcl-dx-cloud-scripts-v95_CF199_20211029-1700.zip
+hcl-dx-content-composer-image-v1.12.0_20211029-1341.tar.gz
+hcl-dx-core-image-v95_CF199_20211029-1348.tar.gz
+hcl-dx-deployment-v2.1.0_20211029-1346.tgz
+hcl-dx-design-studio-image-v0.5.0_20211029-0013.tar.gz
+hcl-dx-digital-asset-management-operator-image-v95_CF199_20211029-1342.tar.gz
+hcl-dx-digital-asset-manager-image-v1.11.0_20211029-1350.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20211029-1354.zip
+hcl-dx-image-processor-image-v1.12.0_20211029-1346.tar.gz
+hcl-dx-openldap-image-v1.2.0_20211029-1342.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.11.0_20211029-0224.tar.gz
+hcl-dx-persistence-image-v1.11.0_20211029-1349.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.10.0_20211029-1352.tar.gz
+hcl-dx-persistence-node-image-v1.1_20211029-0148.tar.gz
+hcl-dx-redis-image-5.0.1.tar.gz
+hcl-dx-remote-search-image-v95_CF199_20211029-1348.tar.gz
+hcl-dx-ringapi-image-v1.12.0_20211029-1357.tar.gz
+hcl-dx-runtime-controller-image-v95_CF199_20211029-1344.tar.gz
+hcl-dx-sidecar-image-v1.0.0_8.4-205.tar.gz
+</code></pre></div>
+
+!!! important
+    HCL deprecated Operator-based deployment in CF198 and plans to remove in HCL DX Container Update 9.5 CF200. You can find some changes in the list of files and their names in CF199 and later releases.
+
+!!! note
+    The new image files and the change in file names are highlighted in the table below.
+
+|Component|Image name|CF198|CF199|
+|---------|----------|-----|-----|
+|DX Core|hcl-dx-core-image-vx.x.x_xxxxxxxx-xxxx.tar.gz|hcl-dx-core-image-v95_CF198_20210917-1438.tar.gz|hcl-dx-core-image-v95_CF199_20211029-1348.tar.gz|
+|Ring API|hcl-dx-ringapi-image-vx.x.x_xxxxxxxx-xxxx.tar.gz|hcl-dx-ringapi-image-v1.11.0_20210917-1441.tar.gz|hcl-dx-ringapi-image-v1.12.0_20211029-1357.tar.gz|
+|Content Composer|hcl-dx-content-composer-image-vx.x.x_xxxxxxxx-xxxx.tar.gz|hcl-dx-content-composer-image-v1.10.0_20210917-1437.tar.gz|hcl-dx-content-composer-image-v1.12.0_20211029-1341.tar.gz|
+|DX Deployment|hcl-dx-deployment-vx.x.x_xxxxxxxx-xxxx.tgz|hcl-dx-deployment-v2.0.0_20210917-1441.tgz|hcl-dx-deployment-v2.1.0_20211029-1346.tgz|
+|Design Studio|hcl-dx-design-studio-image- vx.x.x_xxxxxxxx-xxxx.tar.gz|**hcl-dx-site-manager-image-v0.4.0_20210917-1445.tar.gz**|**hcl-dx-design-studio-image-v0.5.0_20211029-0013.tar.gz**|
+|Digital Asset Management|hcl-dx-digital-asset-manager-image- vx.x.x_xxxxxxxx-xxxx.tar.gz|hcl-dx-digital-asset-manager-image-v1.10.0_20210917-1444.tar.gz|hcl-dx-digital-asset-manager-image-v1.11.0_20211029-1350.tar.gz|
+|Persistence Connection Pool|hcl-dx-persistence-connection-pool-image- vx.x.x_xxxxxxxx-xxxx.tar.gz|**hcl-dx-postgres-persistence-pgpool-image-v1.11.0_20210916-0224.tar.gz**|**hcl-dx-persistence-connection-pool-image-v1.11.0_20211029-0224.tar.gz**|
+|Persistence Node|hcl-dx-persistence-node-image-vx.x.x_xxxxxxxx-xxxx.tar.gz|**hcl-dx-persistence-postgres-repmgr-image-v1.1_20210916-0148.tar.gz**|**hcl-dx-persistence-node-image-v1.1_20211029-0148.tar.gz**|
+|Persistence Metrics Exporter|hcl-dx-persistence-metrics-exporter-image-vx.x.x_xxxxxxxx-xxxx.tar.gz|N/A|**hcl-dx-persistence-metrics-exporter-image-v1.10.0_20211029-1352.tar.gz**|
+|Persistence|hcl-dx-persistence-image- vx.x.x_xxxxxxxx-xxxx.tar.gz|**hcl-dx-postgres-image-v1.11.0_20210917-1444.tar.gz**|**hcl-dx-persistence-image-v1.11.0_20211029-1349.tar.gz**|
+|DX Experience API|hcl-dx-experience-api-sample-ui-vx.x.x.xxxxxxxx-xxxx.zip|hcl-dx-experience-api-sample-ui-v0.2.0.20210917-1439.zip|hcl-dx-experience-api-sample-ui-v0.2.0.20211029-1354.zip|
+|Image processor|hcl-dx-image-processor-image-vx.x.x_xxxxxxxx-xxxx.tar.gz|hcl-dx-image-processor-image-v1.11.0_20210917-1449.tar.gz|hcl-dx-image-processor-image-v1.12.0_20211029-1346.tar.gz|
+|Open LDAP|hcl-dx-openldap-image-vx.x.x_xxxxxxxx-xxxx.tar.gz|hcl-dx-openldap-image-v1.2.0_20210917-1437.tar.gz|hcl-dx-openldap-image-v1.2.0_20211029-1342.tar.gz|
+|Remote search|hcl-dx-remote-search-image-v95_CFxxx_xxxxxxxx-xxxx.tar.gz|hcl-dx-remote-search-image-v95_CF198_20210917-1438.tar.gz|hcl-dx-remote-search-image-v95_CF199_20211029-1348.tar.gz|
+|Runtime Controller|hcl-dx-runtime-controller-image-v95_CFxxx_xxxxxxxx-xxxx.tar.gz|hcl-dx-runtime-controller-image-v95_CF198_20210917-1441.tar.gz|hcl-dx-runtime-controller-image-v95_CF199_20211029-1344.tar.gz|
+|Ambassador|hcl-dx-ambassador-image-xxx.tar.gz|hcl-dx-ambassador-image-154.tar.gz|hcl-dx-ambassador-image-154.tar.gz|
+|Redis|hcl-dx-redis-image-x.x.x.tar.gz|hcl-dx-redis-image-5.0.1.tar.gz|hcl-dx-redis-image-5.0.1.tar.gz|
+|Sidecar|hcl-dx-sidecar-image-vx.x._x.x-xxx.tar.gz|N/A|**hcl-dx-sidecar-image-v1.0.0_8.4-205.tar.gz**|
+
+!!! note
+    The new image files and the change in file names are highlighted in the table.
+
+## HCL DX 9.5 CF198
+
+If you are deploying HCL DX 9.5 CF198 release, the package name and images are as follows.
+
+### HCL DX 9.5 CF198 DXClient files
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dxclient-image-v95_CF198_20210917-1455.zip
+hcl-dxclient-v95_CF198_20210917-1455.zip
+</code></pre></div>
+
+### HCL DX 9.5 CF198 - hcl-dx-kubernetes-v95-CF198.zip
+
+<div class="language-shell highlight"><pre><span></span><code>hcl<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF198.txt
+hcl-dx-ambassador-image-154.tar.gz
+hcl-dx-cloud-operator-image-v95_CF198_20210917-1749.tar.gz
+hcl-dx-cloud-scripts-v95_CF198_20210917-1749.zip
+hcl-dx-content-composer-image-v1.10.0_20210917-1437.tar.gz
+hcl-dx-core-image-v95_CF198_20210917-1438.tar.gz
+hcl-dx-deployment-v2.0.0_20210917-1441.tgz
+hcl-dx-digital-asset-management-operator-image-v95_CF198_20210917-1437.tar.gz
+hcl-dx-digital-asset-manager-image-v1.10.0_20210917-1444.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20210917-1439.zip
+hcl-dx-image-processor-image-v1.11.0_20210917-1449.tar.gz
+hcl-dx-openldap-image-v1.2.0_20210917-1437.tar.gz
+hcl-dx-persistence-postgres-repmgr-image-v1.1_20210916-0148.tar.gz
+hcl-dx-postgres-image-v1.11.0_20210917-1444.tar.gz
+hcl-dx-postgres-persistence-pgpool-image-v1.11.0_20210916-0224.tar.gz
+hcl-dx-redis-image-5.0.1.tar.gz
+hcl-dx-remote-search-image-v95_CF198_20210917-1438.tar.gz
+hcl-dx-ringapi-image-v1.11.0_20210917-1441.tar.gz
+hcl-dx-runtime-controller-image-v95_CF198_20210917-1441.tar.gz
+hcl-dx-site-manager-image-v0.4.0_20210917-1445.tar.gz
+</code></pre></div>
+
+## HCL DX 9.5 CF197
+
+If you are deploying HCL DX 9.5 CF197 release, the package name and images are as follows.
+
+### HCL DX 9.5 CF197 Client - hcl-dx-client-v95-CF197.zip
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dxclient-image-v95_CF197_20210806-1311.zip
+hcl-dxclient-v95_CF197_20210806-1311.zip
+</code></pre></div>
+
+### HCL DX 9.5 CF197 - hcl-dx-kubernetes-v95-CF197.zip
+
+<div class="language-shell highlight"><pre><span></span><code>hcl<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF197.txt
+hcl-dx-ambassador-image-154.tar.gz
+hcl-dx-cloud-operator-image-v95_CF197_20210806-1310.tar.gz
+hcl-dx-cloud-scripts-v95_CF197_20210806-1310.zip
+hcl-dx-content-composer-image-v1.10.0_20210806-1258.tar.gz
+hcl-dx-core-image-v95_CF197_20210806-1259.tar.gz
+hcl-dx-deployment-v2.0.0_20210806-1300.tgz
+hcl-dx-digital-asset-management-operator-image-v95_CF197_20210806-1258.tar.gz
+hcl-dx-digital-asset-manager-image-v1.10.0_20210806-1302.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20210806-1308.zip
+hcl-dx-image-processor-image-v1.10.0_20210806-1300.tar.gz
+hcl-dx-openldap-image-v1.2.0_20210806-1258.tar.gz
+hcl-dx-postgres-image-v1.10.0_20210806-1302.tar.gz
+hcl-dx-redis-image-5.0.1.tar.gz
+hcl-dx-remote-search-image-v95_CF197_20210806-1259.tar.gz
+hcl-dx-ringapi-image-v1.10.0_20210806-1311.tar.gz
+hcl-dx-runtime-controller-image-v95_CF197_20210806-1258.tar.gz
+hcl-dx-site-manager-image-v0.3.0_20210806-1308.tar.gz
+</code></pre></div>
+
+## HCL DX 9.5 CF196
+
+If you are deploying HCL DX 9.5 CF196 release, the package name and images are as follows.
+
+### HCL DX 9.5 CF196 Client - hcl-dx-client-v95-CF196.zip
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dxclient-image-v95_CF196_20210625-2028.zip
+hcl-dxclient-v95_CF196_20210625-2029.zip
+</code></pre></div>
+
+### HCL DX 9.5 CF196 - hcl-dx-kubernetes-v95-CF196.zip
+
+<div class="language-shell highlight"><pre><span></span><code>hcl<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF196.txt
+hcl-dx-ambassador-image-154.tar.gz
+hcl-dx-cloud-operator-image-v95_CF196_20210625-2033.tar.gz
+hcl-dx-cloud-scripts-v95_CF196_20210625-2033.zip
+hcl-dx-content-composer-image-v1.9.0_20210625-2012.tar.gz
+hcl-dx-core-image-v95_CF196_20210625-2011.tar.gz
+hcl-dx-deployment-v1.0.0_20210625-2026.tgz
+hcl-dx-digital-asset-management-operator-image-v95_CF196_20210625-2013.tar.gz
+hcl-dx-digital-asset-manager-image-v1.9.0_20210625-2016.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20210625-2023.zip
+hcl-dx-image-processor-image-v1.8.0_20210625-2015.tar.gz
+hcl-dx-openldap-image-v1.2.0_20210625-2013.tar.gz
+hcl-dx-postgres-image-v1.9.0_20210625-2016.tar.gz
+hcl-dx-redis-image-5.0.1.tar.gz
+hcl-dx-remote-search-image-v95_CF196_20210625-2011.tar.gz
+hcl-dx-ringapi-image-v1.9.0_20210625-2026.tar.gz
+hcl-dx-runtime-controller-image-v95_CF196_20210625-2013.tar.gz
+hcl-dx-site-manager-image-v0.2.0_20210625-2023.tar.gz
+</code></pre></div>
+
+## HCL DX 9.5 CF195
+
+If you are deploying HCL DX 9.5 CF195 release, the package name and images are as follows.
+
+### HCL DX 9.5 CF195 Client - hcl-dx-client-v95-CF195.zip
+
+<div class="language-shell highlight"><pre><span></span><code>dxclient_v1.4.0_20210514-1713.zip
+</code></pre></div>
+
+### HCL DX 9.5 CF195 - hcl-dx-kubernetes-v95-CF195.zip
+
+<div class="language-shell highlight"><pre><span></span><code>hcl<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF195.txt
+dxclient_v1.4.0_20210514-1713.zip
+hcl-dx-ambassador-image-154.tar.gz
+hcl-dx-cloud-operator-image-v95_CF195_20210515-0201.tar.gz
+hcl-dx-cloud-scripts-v95_CF195_20210514-1707.zip
+hcl-dx-content-composer-image-v1.8.0_20210514-1707.tar.gz
+hcl-dx-core-image-v95_CF195_20210514-1708.tar.gz
+hcl-dx-digital-asset-management-operator-image-v95_CF195_20210514-1714.tar.gz
+hcl-dx-digital-asset-manager-image-v1.8.0_20210514-1711.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20210514-1708.zip
+hcl-dx-image-processor-image-v1.8.0_20210514-1712.tar.gz
+hcl-dx-openldap-image-v1.1.0-master_20210514_1621013302.tar.gz
+hcl-dx-postgres-image-v1.8.0_20210514-1708.tar.gz
+hcl-dx-redis-image-5.0.1.tar.gz
+hcl-dx-remote-search-image-v95_CF195_20210514-1708.tar.gz
+hcl-dx-ringapi-image-v1.8.0_20210514-1709.tar.gz
+</code></pre></div>
+
+## HCL DX 9.5 CF194
+
+!!! important
+    Consult the HCL DX Support Knowledge Base article, [Manual Steps to Apply the Digital Experience 9.5 Container Deployment Core Certificate Update](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0089699), to apply the certificate update to your HCL DX 9.5 container deployment.
+
+If you are deploying HCL DX 9.5 CF194 release, the package name and images are as follows.
+
+### HCL DX 9.5 CF194 Client - hcl-dx-client-v95-CF194.zip
+
+<div class="language-shell highlight"><pre><span></span><code>dxclient_v1.3.0_20210415-2128.zip
+</code></pre></div>
+
+### HCL DX 9.5 CF194 - hcl-dx-kubernetes-v95-CF194.zip
+
+<div class="language-shell highlight"><pre><span></span><code>hcl<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF194.txt
+dxclient_v1.3.0_20210415-2128.zip
+hcl-dx-ambassador-image-154.tar.gz
+hcl-dx-cloud-operator-image-v95_CF194_20210416-0233.tar.gz
+hcl-dx-cloud-scripts-v95_CF194_20210416-0233.zip
+hcl-dx-content-composer-image-v1.7.0_20210415-2121.tar.gz
+hcl-dx-core-image-v95_CF194_20210415-2120.tar.gz
+hcl-dx-digital-asset-management-operator-image-v95_CF194_20210415-2127.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20210415-2121.zip
+hcl-dx-image-processor-image-v1.7.0_20210415-2120.tar.gz
+hcl-dx-openldap-image-v1.1.0-master_20210416_1618540820.tar.gz
+hcl-dx-postgres-image-v1.7.0_20210415-2120.tar.gz
+hcl-dx-redis-image-5.0.1.tar.gz
+hcl-dx-remote-search-image-v95_CF194_20210415-2120.tar.gz
+</code></pre></div>
+
+## HCL DX 9.5 CF193
+
+If you are deploying HCL DX 9.5 CF193 release, the package name and images are as follows.
+
+### HCL DX 9.5 CF193 Client - hcl-dx-client-v95-CF193.zip
+
+<div class="language-shell highlight"><pre><span></span><code>dxclient_v1.3.0_20210331-1335.zip
+</code></pre></div>
+
+### HCL DX 9.5 CF193 - hcl-dx-kubernetes-v95-CF193.zip
+
+<div class="language-shell highlight"><pre><span></span><code>hcl<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF193.txt
+dxclient_v1.3.0_20210331-1335.zip
+hcl-dx-ambassador-image-154.tar.gz
+hcl-dx-cloud-operator-image-v95_CF193_20210331-1847.tar.gz
+hcl-dx-cloud-scripts-v95_CF193_20210331-1847.zip
+hcl-dx-content-composer-image-v1.7.0_20210331-1333.tar.gz
+hcl-dx-core-image-v95_CF193_20210331-1336.tar.gz
+hcl-dx-digital-asset-management-operator-image-v95_CF193_20210331-1335.tar.gz
+hcl-dx-digital-asset-manager-image-v1.7.0_20210331-1339.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20210331-1343.zip
+hcl-dx-image-processor-image-v1.7.0_20210331-1336.tar.gz
+hcl-dx-openldap-image-v1.1.0-master_20210331_1617216873.tar.gz
+hcl-dx-postgres-image-v1.7.0_20210331-1337.tar.gz
+hcl-dx-redis-image-5.0.1.tar.gz
+hcl-dx-remote-search-image-v95_CF193_20210331-1336.tar.gz
+hcl-dx-ringapi-image-v1.7.0_20210331-1339.tar.gz
+</code></pre></div>
+
+## HCL DX 9.5 CF192
+
+If you are deploying HCL DX 9.5 CF192 release, the package name and images are as follows.
+
+### hcl-dx-kubernetes-v95-CF192.zip
+
+<div class="language-shell highlight"><pre><span></span><code>hcl<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF192.txt
+dxclient_v1.2.0_20210305-1758.zip
+hcl-dx-ambassador-image-154.tar.gz
+hcl-dx-cloud-operator-image-v95_CF192_20210305-2309.tar.gz
+hcl-dx-cloud-scripts-v95_CF192_20210305-2309.zip
+hcl-dx-content-composer-image-v1.6.0_20210305-1756.tar.gz
+hcl-dx-core-image-v95_CF192_20210305-1758.tar.gz
+hcl-dx-digital-asset-management-operator-image-v95_CF192_20210305-1757.tar.gz
+hcl-dx-digital-asset-manager-image-v1.6.0_20210305-1802.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20210305-1805.zip
+hcl-dx-image-processor-image-v1.6.0_20210305-1758.tar.gz
+hcl-dx-openldap-image-v1.0.0-master_20210305_1614986151.tar.gz
+hcl-dx-postgres-image-v1.6.0_20210305-1800.tar.gz
+hcl-dx-redis-image-5.0.1.tar.gz
+hcl-dx-remote-search-image-v95_CF192_20210305-1758.tar.gz
+hcl-dx-ringapi-image-v1.6.0_20210305-1802.tar.gz
+</code></pre></div>
+
+## HCL DX 9.5 CF191
+
+If you are deploying HCL DX 9.5 CF191 release, the package name and images are as follows.
+
+### hcl-dx-kubernetes-v95-CF191.zip file
+
+<div class="language-shell highlight"><pre><span></span><code>hcl<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF191.txt
+hcl-dx-ambassador-image-154.tar.gz
+hcl-dx-cloud-operator-image-v95_CF191_20201214-1527.tar.gz
+hcl-dx-cloud-scripts-v95_CF191_20201214-1527.zip
+hcl-dx-content-composer-image-v1.5.0_20201211-2151.tar.gz
+hcl-dx-core-image-v95_CF191_20201212-1421.tar.gz
+hcl-dx-digital-asset-management-operator-image-v95_CF191_20201211-2152.tar.gz
+hcl-dx-digital-asset-manager-image-v1.5.0_20201211-2155.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20201211-2205.zip
+hcl-dx-image-processor-image-v1.5.0_20201211-2154.tar.gz
+hcl-dx-openldap-image-v1.0.0-master_20201212_1607741365.tar.gz
+hcl-dx-postgres-image-v1.5.0_20201211-2155.tar.gz
+hcl-dx-redis-image-5.0.1.tar.gz
+hcl-dx-remote-search-image-v95_CF191_20201212-1421.tar.gz
+hcl-dx-ringapi-image-v1.5.0_20201211-2200.tar.gz
+dxclient_v1.1.0_20201211-2153.zip
+</code></pre></div>
+
+!!! note
+    You can obtain and install HCL DX 9.5 CF191 images. HCL DX 9.5 CF191 is supported for new deployments only. DX administrators should not upgrade DX 9.5 container deployments to this release.
+
+## HCL DX 9.5 CF19
+
+If you are deploying HCL DX 9.5 CF19 release, the package name and images are as follows.
+
+### hcl-dx-kubernetes-v95-CF19.zip file
+
+<div class="language-shell highlight"><pre><span></span><code>hcl<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF19.txt
+hcl-dx-ambassador-image-154.tar.gz
+hcl-dx-cloud-operator-image-v95_CF19_20201110-0401.tar.gz
+hcl-dx-cloud-scripts-v95_CF19_20201110-0401.zip
+hcl-dx-content-composer-image-v1.4.0_20201109-2203.tar.gz
+hcl-dx-core-image-v95_CF19_20201109-2312.tar.gz
+hcl-dx-digital-asset-management-operator-image-v95_CF19_20201109-2204.tar.gz
+hcl-dx-digital-asset-manager-image-v1.4.0_20201109-2206.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20201109-2208.zip
+hcl-dx-image-processor-image-v1.4.0_20201109-2204.tar.gz
+hcl-dx-openldap-image-v1.0.0-master_20201110_1604981292.tar.gz
+hcl-dx-postgres-image-v1.4.0_20201109-2206.tar.gz
+hcl-dx-redis-image-5.0.1.tar.gz
+hcl-dx-remote-search-image-v95_CF19_20201109-2312.tar.gz
+hcl-dx-ringapi-image-v1.4.0_20201109-2209.tar.gz
+dxclient_v1.0.0_20201110-2010.zip
+</code></pre></div>
+
+## HCL DX 9.5 CF184
+
+If you are deploying HCL DX 9.5 CF184 release, the package name and images are as follows.
+
+### hcl-dx-kubernetes-v95-CF184.zip files
+
+<div class="language-shell highlight"><pre><span></span><code>hcl<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF184.txt
+hcl-dx-ambassador-image-154.tar.gz
+hcl-dx-cloud-operator-image-v95_CF184_20200917-0054.tar.gz
+hcl-dx-cloud-scripts-v95_CF184_20200917-0054.zip
+hcl-dx-content-composer-image-v1.3.0_20200916-1952.tar.gz
+hcl-dx-core-image-v95_CF184_20200916-2009.tar.gz
+hcl-dx-digital-asset-management-operator-image-v95_CF184_20200916-2034.tar.gz
+hcl-dx-digital-asset-manager-image-v1.3.0_20200916-1953.tar.gz
+hcl-dx-image-processor-image-v1.3.0_20200916-1953.tar.gz
+hcl-dx-openldap-image-v1.0.0-master_20200917_1600304449.tar.gz
+hcl-dx-postgres-image-v1.3.0_20200916-2003.tar.gz
+hcl-dx-redis-image-5.0.1.tar.gz
+hcl-dx-remote-search-image-v95_CF184_20200916-2009.tar.gz
+hcl-dx-ringapi-image-v1.3.0_20200916-1953.tar.gz
+</code></pre></div>
+
+## HCL DX 9.5 CF183
+
+If you are deploying HCL DX 9.5 CF183 release, the image and package names are as follows.
+
+### CF183-core.zip files
+
+<div class="language-shell highlight"><pre><span></span><code>hcl<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF183.txt
+hcl-dx-ambassador-image-154.tar.gz
+hcl-dx-cloud-operator-image-v95_CF183_20200818-1852.tar.gz
+hcl-dx-cloud-scripts-v95_CF183_20200818-1852.zip
+hcl-dx-core-image-v95_CF183_20200818-1342.tar.gz
+hcl-dx-redis-image-5.0.1.tar.gz
+</code></pre></div>
+
+### CF183-other.zip files
+
+<div class="language-shell highlight"><pre><span></span><code>hcl<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF183.txt
+hcl-dx-content-composer-image-v1.2.0_20200818-1343.tar.gz
+hcl-dx-digital-asset-management-operator-image-v95_CF183_20200818-1344.tar.gz
+hcl-dx-digital-asset-manager-image-v1.2.0_20200818-1346.tar.gz
+hcl-dx-image-processor-image-v1.2.0_20200818-1345.tar.gz
+hcl-dx-openldap-image-v1.0.0-master_20200818_1597758965.tar.gz
+hcl-dx-postgres-image-v1.2.0_20200818-1349.tar.gz
+hcl-dx-remote-search-image-v95_CF183_20200818-1342.tar.gz
+hcl-dx-ringapi-image-v1.2.0_20200818-1351.tar.gz
+</code></pre></div>
+
+## HCL DX 9.5 CF182
+
+### CF182
+
+If you are deploying HCL DX 9.5 CF182 release, the image and package names are as follows.
+
+### hcl-dx-kubernetes-v95-CF182-core.zip
+
+<div class="language-shell highlight"><pre><span></span><code>hcl<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF182.txt
+hcl-dx-ambassador-image-0850.tar.gz
+hcl-dx-cloud-operator-image-v95_CF182_20200720-1708.tar.gz
+hcl-dx-cloud-scripts-v95_CF182_20200720-1708.zip
+hcl-dx-core-image-v95_CF182_20200720-1645.tar.gz
+</code></pre></div>
+
+### hcl-dx-kubernetes-v95-CF182-other.zip
+
+<div class="language-shell highlight"><pre><span></span><code>hcl<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF182.txt
+hcl-dx-content-composer-image-v1.1.0_20200720-1708.tar.gz
+hcl-dx-digital-asset-management-operator-image-v95_CF182_20200720-1716.tar.gz
+hcl-dx-digital-asset-manager-image-v1.1.0_20200720-1712.tar.gz
+hcl-dx-image-processor-image-v1.1.0_20200720-1716.tar.gz
+hcl-dx-openldap-image-v1.0.0-master_20200720_1595265588.tar.gz
+hcl-dx-postgres-image-v1.1.0_20200720-1715.tar.gz
+hcl-dx-remote-search-image-v95_CF182_20200720-1645.tar.gz
+hcl-dx-ringapi-image-v1.1.0_20200720-1707.tar.gz
+</code></pre></div>
+
+## HCL DX 9.5 CF181
+
+If you are deploying HCL DX 9.5 CF181 and later container update release, the image and package names add HCL DX 9.5 Content Composer and Digital Asset Management components and supporting services images, and Remote Search and OpenLDAP images. See the following list of images presented within the HCL DX 9.5 Container Update CF181 package.
+
+### hcl-dx-kubernetes-v95-CF181-core.zip
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dx-cloud-scripts-v95_CF181_xxxxxxxx-xxxx.zip
+hcl-dx-core-image-v95_CF181_xxxxxxxx-xxxx.tar.gz
+hcl-dx-cloud-operator-image-v95_CF181_xxxxxxxx-xxxx.tar.gz
+hcl-dx-ambassador-image-xxxx.tar.gz
+hcl<span class="w"> </span>DX<span class="w"> </span>notices<span class="w"> </span>V9.5<span class="w"> </span>CF181.txt
+</code></pre></div>
+
+### hcl-dx-kubernetes-v95-CF181-other.zip
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dx-ringapi-image-v1.0.0_xxxxxxxx-xxxx.tar.gz
+hcl-dx-postgres-image-v1.0.0_xxxxxxxx-xxxx.tar.gz
+hcl-dx-openldap-image-v1.0.0-release_xxxxxxxx_xxxxxxxxxx.tar.gz
+hcl-dx-medialibrary-operator-image-v95_CF181_xxxxxxxx-xxxx.tar.gz
+hcl-dx-image-processor-image-v1.0.0_xxxxxxxx-xxxx.tar.gz
+hcl-dx-dxrs-image-v95_CF181_xxxxxxxx-xxxx.tar.gz
+</code></pre></div>
+
+## HCL DX 9.5 CF18
+
+If you are deploying HCL DX 9.5 CF18 or later container update release, the image and package names included for this are as follows.
+
+<div class="language-shell highlight"><pre><span></span><code>hcl-dx-kubernetes-v95-CF18.zip
+hcl-dx-core-image-v95_CF18_xxxxxxxx-xxxx.tar.gz
+hcl-dx-cloud-operator-image-v95_CF18_xxxxxxxx-xxxx.tar.gz
+hcl-dx-cloud-scripts-v95_CF18_xxxxxxxx-xxxx.zip
+hcl-dx-ambassador-image-xxxx.tar.gz
+</code></pre></div>
+-->
+
+<details class="info" open="open">
+<summary>Related information</summary>
+<ul>
+<li><a href="../../../../get_started/download/">Download the HCL Digital Experience software</a></li>
+<li><a href="../../../../guide_me/tutorials/access-software/locating-downloads/">Locating and Downloading DX Products</a></li>
+</ul>
+</details>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 21, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

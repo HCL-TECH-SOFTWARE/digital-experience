@@ -1,0 +1,2506 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/build_sites/mobile/progressive_web_applications/">
+      
+      
+        <link rel="prev" href="../mobile_themes_and_enabled_portlets/">
+      
+      
+        <link rel="next" href="../mobile_preview/">
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Progressive Web Applications - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#progressive-web-applications" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../latest/build_sites/mobile/progressive_web_applications/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Progressive Web Applications
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../whatsnew/cf20/newcf222/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../deployment/" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../whatsnew/cf20/newcf222/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Build Sites
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../create_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Setting Up Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../themes_skins/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Themes and Skins
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../practitioner_studio/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Practitioner Studio
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../portal_settings/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage site settings
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sitebuilder/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Site Builder
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../woodburn_studio/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Woodburn Studio
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../search/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Search
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../tagging_rating/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Tagging and rating
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../virtual_portal/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Virtual Portal
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_11" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Mobile
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_11" id="__nav_5_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_11">
+            <span class="md-nav__icon md-icon"></span>
+            Mobile
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mobile_themes_and_enabled_portlets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HCL DX Mobile Experience
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Progressive Web Applications
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Progressive Web Applications
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#progressive-web-application-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Progressive Web Application requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authenticated-versus-unauthenticated" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authenticated versus Unauthenticated
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#localization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Localization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hiding-pages-in-pwa-application-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hiding pages in PWA application mode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps-required-to-enable-progressive-web-application-capabilities-in-a-digital-experience-site" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps required to enable Progressive Web Application capabilities in a Digital Experience site
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-custom-pwa-install-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a custom PWA install button
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mobile_preview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mobile Preview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../site_analytics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Site Analytics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../social_rendering/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Social Rendering
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#progressive-web-application-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Progressive Web Application requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authenticated-versus-unauthenticated" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authenticated versus Unauthenticated
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#localization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Localization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hiding-pages-in-pwa-application-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hiding pages in PWA application mode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps-required-to-enable-progressive-web-application-capabilities-in-a-digital-experience-site" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps required to enable Progressive Web Application capabilities in a Digital Experience site
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-custom-pwa-install-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a custom PWA install button
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="progressive-web-applications">Progressive Web Applications</h1>
+<p>Develop support that adds native mobile application experience and performance to your web site using browser-based functionality.</p>
+<p>Progressive Web Applications (PWAs) offer a delivery pattern that can transform a web site into an experience that feels like a native application using browser-based functionality. Progressive Web Applications use web browser APIs and features along with progressive enhancement strategy. Using PWA artifacts such as a service worker, caching provisions, and a manifest file can deliver faster load times, easier navigation, and responsive behavior. PWAs allow offline capability and access to native device capabilities without writing any native code.</p>
+<p>For additional information please consult <a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Introduction">Introduction to Progressive Web Applications</a> at the developer.mozilla.org site.</p>
+<p><strong>Video</strong>: <a href="https://www.youtube.com/watch?v=JP1cWlM1s2k">Progressive Web Applications with HCL Digital Experience (DX) 9.5</a></p>
+<h2 id="progressive-web-application-requirements">Progressive Web Application requirements</h2>
+<p>To make a Progressive Web Application installable (as noted in the <a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Introduction">Introduction to Progressive Web Applications</a> topic), the following items and configurations are required:</p>
+<ol>
+<li>Must be served over HTTPS with a valid certificate (or using localhost for development).</li>
+<li>
+<p>Include a Web App manifest file that includes the following information:</p>
+<ul>
+<li><code>short_name</code> or <code>name</code></li>
+<li>icons (must include a 192px and a 512px icon)</li>
+<li><code>start_url</code></li>
+<li>
+<p>display (must be either <code>fullscreen</code>, <code>standalone</code>, or <code>minimal-ui</code>)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>prefer_related_applications</code> must not be present, or be false.</p>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p>Register a service worker with a functional fetch handler.</p>
+</li>
+</ol>
+<p>Once an application meets the above criteria, the browser will display a button that will allow the application to be installed. See the PWA install option example shown below using the <a href="../../woodburn_studio/">Woodburn Studio Demo Site</a>.</p>
+<p><img alt="Woodburn Studio Demo Site" src="../../../images/woodburn_studio_demo_site.png" /></p>
+<p>When the install button is clicked, a dialog will appear that prompts the user to install the application.</p>
+<p><img alt="Install Woodburn Studio offline option" src="../../../images/Install%20Woodburn%20studio%20PWA%20offline%20option.png" /></p>
+<p>Once the application is installed, the application icon will display (in the following example as a Google Chrome application) and the application will be launched.</p>
+<p><img alt="Progressive Web Application" src="../../../images/progressive_web_application.png" /></p>
+<p>For a Progressive Web Application to function correctly, the scope of both the manifest and the service-worker needs to be set correctly. The web application manifest file provides information about a web application in JSON format.</p>
+<p>The combination of modules, files and metadata allows HCL DX 9.5 to serve files required by the (PWA) application, and restrict which web pages should be viewed while the manifest is applied, while still maintaining the appropriate scope settings. If the user navigates outside the scope, it reverts to a normal web page inside a browser tab or window.</p>
+<p>HCL Digital Experience 9.5 CF19 and Container Update CF192 add new platform and component support to add these capabilities to HCL DX 9.5 and higher sites. These include:</p>
+<ol>
+<li><strong>Updated System module</strong> delivered in HCL DX 9.5 CF19. This module serves the manifest and service worker files.</li>
+<li><strong>New Theme scope module</strong> that is defined in the theme.json file. This loads the pwa.js.</li>
+<li><strong>New page metadata</strong> is created that can be used on the root page of the site (or other pages in some cases).</li>
+<li>
+<p>An updated <a href="../../woodburn_studio/">Woodburn Studio Demo Site</a>, which will present a Progressive Web Application enabled for installation and display to supported mobile platforms. PWA installation and display of the updated Woodburn Studio site experience is tested and verified on the following mobile browser platforms:</p>
+<ul>
+<li>Apple Safari must be used for Apple Mobile devices. (Not supported for desktop access). Apple iOS v13 and v14 are tested and verified.</li>
+<li>Google Chrome 85 on Mac and Windows</li>
+<li>Microsoft Edge 85 on Mac and Windows 10</li>
+<li>Tablet running Android v7 and Google Pixel 3 running on v11 (Google Chrome 85)</li>
+<li>Google Chrome 86 on Linux</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Progressive Web Application functionality is not supported on all web browser platforms, for example, <a href="https://www.microsoft.com/en-us/download/details.aspx?id=41628">Microsoft Internet Explorer 11.</a> Developers are encouraged to verify if Progressive Web Application support is available for web browser platforms intended for use.</p>
+</div>
+</li>
+</ol>
+<p>Many of these files (theme.json, pwa.js, service-worker.js, etc.) can be included and re-used in other HCL DX 9.5 CF19 and higher themes. See details below:</p>
+<p>Manifest Scope: Defines the navigation scope of the application. It restricts which web pages can be viewed while the manifest is applied. If the user navigates outside the scope, the application will signal that the page is out of scope and native operations included on the page may not work. The scope can be set directly in the manifest files or using the <code>com.hcl.dx.pwa.manifest.scope</code> page metadata parameter on the Progressive Web Application configuration node. The scope can be set to a hardcoded value of auto which will result in the friendly name of the page being used.</p>
+<p>Service worker: The scope of the service worker determines which files the service worker controls. In other words, scope determines from which path the service worker will intercept requests. The default scope is generally the location of the service worker file and extends to all directories below.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When registering a service worker, you can specify a scope with a more restrictive path, but that path should be a child of the path where the service worker was loaded. In this situation, this pattern poses a problem in HCL DX since the path of the theme (where the service worker resides) and the path of the site pages are not in the same path hierarchy. For this reason, HCL DX 9.5 will default the scope to the friendly URL of the root label or page of the PWA site. If a less restrictive scope is set, a <code>Service-Worker-Allowed</code> header must be included on the response for the service worker.</p>
+</div>
+<p>The PWA theme module will use the friendly URL of the root page of the PWA site for the value of the <code>Service-Worker-Allowed</code> header. This value will also need to be set as the scope when registering the service worker in the theme.</p>
+<h2 id="authenticated-versus-unauthenticated">Authenticated versus Unauthenticated</h2>
+<p>HCL DX generates URLs differently based on whether or not a user is logged into the site. For anonymous sites (unauthenticated), the URL for a given page would be of the form /wps/portal/ whereas authenticated pages would be of the form /wps/myportal/. These differences in URL generation have a large effect on PWA processing. For this reason, a site scoped metadata parameter for protected versus non-protected is needed (<code>com.hcl.dx.pwa.app.protected</code>). The protected parameter impacts the generation of scope and start URL settings in the manifest file and the service worker scope (i.e. should they be /portal or /myportal) when <code>auto</code> is used. In addition, the PWA configuration cache key (<code>pwaConfigCacheKey</code> in the service-worker.js file) is generated differently if the protected parameter is set to true.</p>
+<p>The protected parameter defaults to false, which means that the <strong>+</strong> sign to install the application, visible in the browser address bar, will display when the home page of the site is accessed by an unauthenticated user. At this point, the PWA application could be installed. If the user logs into the site before the PWA application is installed, the <strong>+</strong> will no longer be visible in the browser address bar.</p>
+<p>If the protected parameter is set to true, the <strong>+</strong> sign to install the application will not be visible in the browser address bar until the user logs into the site. </p>
+<h2 id="localization">Localization</h2>
+<p>By default, the manifest.json file does not provide any localization information. There is a single name and description field that sets the name of the PWA application. To handle localization for DX PWA applications, the following manifest.json fields are extended to include an array of localized values:</p>
+<ul>
+<li>descriptions</li>
+<li>names</li>
+<li>short_names</li>
+<li>
+<p>shortcuts:</p>
+<ul>
+<li>names</li>
+<li>descriptions</li>
+</ul>
+</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code>        &quot;name&quot;: &quot;Woodburn&quot;,
+        &quot;names&quot;: [
+            {
+                &quot;value&quot;: &quot;Woodburn application&quot;,
+                &quot;lang&quot;: &quot;en&quot;
+            },
+            {
+                &quot;value&quot;: &quot;Woodburn Anwendung&quot;,
+                &quot;lang&quot;: &quot;de&quot;
+            }
+        ],
+</code></pre></div>
+<p>In this example, if the user accesses the DX Progressive Web Application using German language preferences, the name of the application displayed will be <strong>Woodburn Anwendung</strong>. However, if the user were to access the application in a language that is not defined in the manifest, the value from the name field would be used as a fallback.</p>
+<h2 id="hiding-pages-in-pwa-application-mode">Hiding pages in PWA application mode</h2>
+<p>It is important to be able to exclude pages when the site is in PWA application mode. Applications on smaller devices may not appropriately display the entire site as it would be shown on a desktop. For this reason, page metadata has been added to hide pages in application mode. If the <code>pwa.Hidden</code> metadata is set to true on a page in the site, that page will not be displayed in the PWA application.</p>
+<p>Hidden pages are implemented via CSS included in the theme. There are two places where the theme must be changed:</p>
+<ul>
+<li>
+<p>Add the following CSS to the default.css file located in the css/default directory in the root of the static files.</p>
+<p><strong>Example : Setting display mode to <code>hidden</code> for DX pages using PWA application mode</strong></p>
+<div class="language-text highlight"><pre><span></span><code>        @media all and (display-mode: standalone){
+        .pwaHidden {
+        display: none
+        }
+</code></pre></div>
+</li>
+<li>
+<p>Update the navigation JSP for the theme; usually located in the themes/html/dynamicSpots directory in the root of the dynamic files. The <code>pwa.Hidden</code> page metadata parameter is checked and if it is true the <code>pwa.Hidden</code> CSS class will be applied to the <code>li</code> element to hide the page. In the example below, the hidden parameter is added to the mainNav.jsp in the Woodburn Studio theme.</p>
+<p><strong>Example : Adding a hidden page metadata parameter to the Woodburn Studio theme</strong></p>
+<div class="language-text highlight"><pre><span></span><code>    &lt;c:set var=&quot;pwaHidden&quot; value=&quot;${node.metadata[&#39;pwa.Hidden&#39;]}&quot;&gt;&lt;/c:set&gt;
+    &lt;li class=&quot;list-item &lt;c:if test=&#39;${pwaHidden == true}&#39;&gt;pwaHIdden&lt;/c:if&gt;&quot;&gt;
+        &lt;a href=&quot;$
+    {fn:escapeXml(node.urlGeneration.autoNavigationalState.clearScreenTemplate)}&quot;&gt;
+        &lt;c:out value=&quot;${node.title}&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/li&gt;
+</code></pre></div>
+</li>
+</ul>
+<h2 id="steps-required-to-enable-progressive-web-application-capabilities-in-a-digital-experience-site">Steps required to enable Progressive Web Application capabilities in a Digital Experience site</h2>
+<ol>
+<li>
+<p><strong>Apply Stateless URLs</strong>. In order for a PWA application to function properly in HCL DX 9.5 CF19 and higher, the site is required to use stateless, or friendly URLs. See <a href="../../../deployment/manage/siteurl_cfg/changing_siteurl/cw_navstate/mp_friendly_short_url/">Defining friendly URLs without state information for pages in your site</a> to learn how to configure stateless or friendly URLs.</p>
+<p>The use of friendly URLs can also be configured by doing the following steps:</p>
+<ul>
+<li>
+<p>Set the following <code>WP_ConfigService</code> resource environment variables as follows:</p>
+<ul>
+<li>stateless.urls.enabled=true</li>
+<li>generate.stateless.urls=true</li>
+<li>generate.stateless.redirect.urls=true</li>
+</ul>
+</li>
+<li>
+<p>Update the theme parameters to include the following parameters:</p>
+<div class="language-text highlight"><pre><span></span><code>    &lt;parameter name=&quot;com.ibm.portal.theme.hasBaseURL&quot; type=&quot;string&quot;
+    update=&quot;set&quot;&gt;&lt;![CDATA[true]]&gt;&lt;/parameter&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Restart the HCL DX 9.5 server.</p>
+</li>
+</ul>
+<p>Note the display of the PWA install option will vary depending on the device you are using (e.g. Chrome on MacOS and Safari on iOS) as noted above in the Updated <a href="../../woodburn_studio/">Woodburn Studio Demo Site</a> detail.</p>
+<p>All further steps apply to custom themes and/or to custom sites.</p>
+</li>
+<li>
+<p><strong>Create a pwas directory in the root of the theme static files</strong>. This directory will contain all of the PWA configurations. Each sub-directory under pwas represents a single configuration. For example, in the updated Woodburn Studio theme ( in CF19 and higher releases), these directories/files exist:</p>
+<ul>
+<li>pwas (folder)<ul>
+<li>woodburn (folder)<ul>
+<li>images (folder)</li>
+<li>manifest.json</li>
+<li>service-worker.js</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Create a new folder under the pwas directory</strong> to represent the site configuration.</p>
+</li>
+<li>
+<p><strong>Create a manifest.json file in the PWA configuration folder</strong>. The manifest file should include the following information:</p>
+<ul>
+<li><code>short_name</code> or name</li>
+<li>icons (must include a 192px and a 512px icon)</li>
+<li>
+<p>scope, which defines the navigation scope of the application. It restricts which web pages can be viewed while the manifest is applied. If the user navigates outside the scope, the application will signal that the page is out of scope and native operations included on the page may not work. The scope can be set directly in the manifest file, or using the <code>com.hcl.dx.pwa.manifest.scope</code> page metadata parameter on the PWA configuration node (usually the root label or page of the site). The scope can be set to a value of auto which will result in the friendly name of the page/label being used.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The scope is not a required field in the manifest.</p>
+</div>
+</li>
+<li>
+<p><code>start_url</code> or the preferred URL that should be loaded when the user launches the web application. The scope can be set directly in the manifest file or using the <code>com.hcl.dx.pwa.manifest.start_url</code> page metadata parameter on the PWA configuration node (usually the root label or page of the site). The scope can be set to a value of auto which will result in the friendly name of the root page being used (if the root is a label, the <code>start_url</code> will default to the path of the first child under the label). </p>
+</li>
+<li>display (must be either fullscreen, standalone, or minimal-ui)</li>
+<li><code>prefer_related_applications</code> must not be present, or be false
+See the Woodburn Studio theme installed to HCL DX 9.5 CF19 and higher releases for an example of this file, and the implementation examples below.</li>
+</ul>
+</li>
+<li>
+<p><strong>Create a service-worker.js file in the PWA configuration folder.</strong> It is possible to use the same service worker file across multiple PWA configurations. HCL DX will first look for the service-worker.js file in the PWA configuration directory. If a service-worker.js file cannot be found there, it will next look in the root pwas directory. See the Woodburn Studio theme for an example of this file.</p>
+</li>
+<li>
+<p><strong>Create a theme scoped module in the theme.json file</strong> located in the contributions directory in the root of the static files. This module will be used to load the pwa.js file that is responsible for registering the PWA service worker. An example of this module could be presented as follows:</p>
+<p><strong>Example : Registering the PWA service worker</strong></p>
+<div class="language-text highlight"><pre><span></span><code>            {
+                &quot;id&quot;:&quot;wp_theme+pwa&quot;,
+                &quot;prereqs&quot;: [
+                    {
+                        &quot;id&quot;:&quot;wp_pwa&quot;
+                    }
+                ],
+                &quot;contributions&quot;: [
+                    {
+                        &quot;type&quot;:&quot;config&quot;,
+                        &quot;sub-contributions&quot;: [
+                            {
+                                &quot;type&quot;:&quot;js&quot;,
+                                &quot;uris&quot;: [
+                                    {
+                                        &quot;value&quot;:&quot;/js/pwa.js&quot;
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                &quot;titles&quot;: [
+                    {
+                        &quot;value&quot;:&quot;PWA support&quot;,
+                        &quot;lang&quot;:&quot;en&quot;
+                    }
+                ],
+                &quot;descriptions&quot;: [
+                    {
+                        &quot;value&quot;:&quot;PWA support&quot;,
+                        &quot;lang&quot;:&quot;en&quot;
+                    }
+                ]
+            },
+</code></pre></div>
+</li>
+<li>
+<p><strong>Add the pwa.js file referenced in the theme scoped module to the js directory</strong> in the root of the static files. The pwa.js file is responsible for registering the service worker with the browser. See the Woodburn Studio theme for an example of this file.</p>
+</li>
+<li>
+<p><strong>Add the new theme scoped module</strong> (<code>wp_theme_pwa</code> from the theme.json file) to the theme profile(s). For example, the deferred_profile.json might be updated to: </p>
+<div class="language-text highlight"><pre><span></span><code>            &quot;wp_one_ui&quot;,
+            &quot;wp_one_ui_dijit&quot;,
+            &quot;wp_theme_pwa&quot;
+        ],
+</code></pre></div>
+</li>
+<li>
+<p><strong>Depending on how the theme is deployed, the theme caches may need to be cleared</strong> using the Theme Analyzer. See the <a href="../../themes_skins/the_module_framework/themeopt_analyzer/">Theme Analyzer</a> Help Center topic for instructions to analyze and clear theme caches.</p>
+</li>
+<li>
+<p><strong>Add any necessary metadata values</strong> to the pages:</p>
+<ul>
+<li><strong>Required: <code>com.hcl.dx.pwa.configuration</code></strong> - Set on the root label or page of the site to identify the PWA configuration located in the theme pwas directory that will apply. For example, this page metadata parameter is set to <code>woodburn</code> on the Woodburn Studio theme root label (<code>Woodburn Studio</code>).</li>
+<li><strong>Optional: <code>com.hcl.dx.pwa.app.protected</code></strong> - Set on the root label or page of the site to identify whether or not the application will apply to authenticated (true) or anonymous (false) parts of the site. The value of this parameter will default to false.</li>
+<li><strong>Optional: <code>com.hcl.dx.pwa.serviceworker.scope</code></strong> - Set on the root label or page of the site to override the service worker scope that will be used to register the service worker with the browser (typically the URL for the root page of the site, for example, /wps/myportal/site1). The service worker scope can also be set to auto which will cause the service worker scope to be set to the friendly path of the PWA configuration node. See the <em>Authenticated versus Unauthenticated</em> section for further explanation of how this parameter is affected by the <code>com.hcl.dx.pwa.app.protected</code> metadata parameter. The value of this parameter will default to auto.</li>
+<li><strong>Optional: <code>com.hcl.dx.pwa.preload_urls</code></strong> - Set on the root label or page of the site to define a list of URLs that can be preloaded by the service-worker. This list is comma-separated and will be dynamically added to the service-worker using the variable preloadURLs.</li>
+<li><strong>Optional: <code>com.hcl.dx.pwa.manifest.scope</code></strong> - Set on a label or page in the site to override the <code>scope</code> specified in the PWA manifest (typically the URL for the root page of the site, for example, /wps/myportal/site1). The scope can also be set to auto which will cause the scope to be set to the friendly path of the PWA configuration node. See the <em>Authenticated versus Unauthenticated</em> section for further explanation of how this parameter is affected by the <code>com.hcl.dx.pwa.app.protected</code> metadata parameter.</li>
+<li><strong>Optional: <code>com.hcl.dx.pwa.manifest.start_url</code></strong> - See the <em>Authenticated versus Unauthenticated</em> section for further explanation of how this parameter is affected by the <code>com.hcl.dx.pwa.app.protected</code> metadata parameter.</li>
+<li><strong>Optional: <code>pwa.Hidden</code></strong> - Set on a label or page in the site to exclude a page from the PWA application navigation (true or false).</li>
+</ul>
+</li>
+<li>
+<p><strong>Optionally, update the theme files for hiding pages in PWA application mode</strong>. See the <em>Hiding pages in PWA application mode</em> guidance above in this section for explanations and guidance to apply these changes.</p>
+</li>
+</ol>
+<p>PWA support in Virtual Portals: Typically, PWAs are designed to serve a single site. Because HCL Digital Experience is capable of serving multiple sites through <a href="../../virtual_portal/vp_planning/advppln_scope/">Virtual Portal</a> support, HCL DX administrators should be able to configure multiple sites to implement PWA capabilities.</p>
+<h2 id="creating-a-custom-pwa-install-button">Creating a custom PWA install button</h2>
+<p>It is possible to create a custom PWA install button within the site itself by changing the theme. There is a custom button in the Woodburn Studio theme that can be used as a sample.</p>
+<p><img alt="" src="../../../images/pwa-woodburn-button.png" /></p>
+<p>The button also appears when the site is in responsive mode.</p>
+<p><img alt="" src="../../../images/pwa-woodburn-button-responsive.png" /></p>
+<p>The following changes were made to the Woodburn Studio theme to implement the button:</p>
+<ol>
+<li>The pwa.js file was updated to include handling PWA specific events such as <code>beforeinstallprompt</code> and <code>appinstalled</code>. These events handle displaying the install button when the install criteria is met, not displaying the button when in PWA application mode and other processing.</li>
+<li>
+<p>The theme custom CSS was updated to style the button (the main.css file in Woodburn Studio).</p>
+<p>For example:</p>
+<div class="language-text highlight"><pre><span></span><code>.wb-hide-pwa-button {
+  display:none;
+}
+:
+.wb-navigation-list
+    ul.nav-list
+    li.pwa-install-button
+    {
+  color: white;
+  background-color: #ef1212;
+  line-height: 2.25em;
+  width: 60px;
+  text-align: center;
+}
+</code></pre></div>
+</li>
+<li>
+<p>The theme custom navigation JSP was updated to include the button in the navigation (the mainNav.jsp in Woodburn Studio).</p>
+<p>For example:</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;li class=&quot;list-item pwa-install-button wb-hide-pwa-button&quot;&gt;
+    &lt;a href=&quot;#&quot; onclick=&quot;pwaInstall(event)&quot;&gt;&lt;c:out value=&quot;GET APP&quot;/&gt;&lt;/a&gt;
+&lt;/li&gt;
+</code></pre></div>
+</li>
+</ol>
+<p>For additional information on PWA custom install options, see the following link from the Web.dev site: <a href="https://web.dev/customize-install/">How to provide your own in-app install experience</a></p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 20, 2023</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,4909 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/deployment/manage/security/people/authorization/controlling_access/resources_roles/sec_acc_rights/">
+      
+      
+        <link rel="prev" href="../sec_roles/">
+      
+      
+        <link rel="next" href="../init_acc_cntl_set/">
+      
+      
+      <link rel="icon" href="../../../../../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Access permissions - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#access-permissions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../../../../../latest/deployment/manage/security/people/authorization/controlling_access/resources_roles/sec_acc_rights/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Access permissions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../../whatsnew/cf20/newcf222/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../../build_sites/" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../../../../whatsnew/cf20/newcf222/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Deploy DX
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../../install/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Install
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Manage
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Manage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../container_configuration/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Configure Kubernetes Deployment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../stopstart/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Starting and stopping servers, deployment managers, and node agents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../itlm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring the IBM License Metric Tool
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../config_standalone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring a stand-alone server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../config_cluster/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Setting up a cluster
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../portalfarm_cfg/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Setting up and maintaining a portal farm
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_8" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3_8" id="__nav_4_3_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_8_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    People
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3_8_2" id="__nav_4_3_8_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_3_8_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            People
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../authentication/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Authentication
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_8_2_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Authorization
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3_8_2_3" id="__nav_4_3_8_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_3_8_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3_8_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Authorization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../users_and_groups/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Users and groups
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_8_2_3_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Controlling access
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3_8_2_3_3" id="__nav_4_3_8_2_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_3_8_2_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3_8_2_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Controlling access
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../managing_users_groups/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Managing users and groups
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../working_with_resource_permission/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Working with resource permissions
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../user_group_permission/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Managing permissions for users and groups
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../managing_cred_info/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Managing credential information
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sec_ac_adm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Access Control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_8_2_3_3_7" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Resources, roles, access rights, and initial access control settings
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3_8_2_3_3_7" id="__nav_4_3_8_2_3_3_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="7" aria-labelledby="__nav_4_3_8_2_3_3_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3_8_2_3_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            Resources, roles, access rights, and initial access control settings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../resources/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Resources
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sec_roles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resource Roles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Access permissions
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Access permissions
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overlay-reports-and-site-promotions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overlay reports and site promotions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-mappings-and-wsrp-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role Mappings and WSRP services
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../init_acc_cntl_set/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Initial Access Control Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sec_acc_scen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Access control scenarios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../wcm_security/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Web Content Manager access control
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sec_ugpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting user and group permissions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sec_rpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting resource permissions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../d_acc_cntl_admin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Delegated Access Control Administration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../acc_control_cache/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Access Control Caching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../enable_abs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enabling Attribute Based Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../nonrepudiation/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Nonrepudiation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../information/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Information
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../tune_servers/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Tune your environment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../port_chg/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changing ports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../siteurl_cfg/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Changing your site URL
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../config_portal_behavior/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Configuring portal behavior
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../portal_admin_tools/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Portal administration tools
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../manage_portal_using_iim/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Managing Interim Fixes for HCL Portal
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../config_webservers/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Web server
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../db_mgmt_sys/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Database Management Systems
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../profile/iim_modify/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Profile
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../cfg_property_files/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Configuration properties
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../backup_restore/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Backup and restore
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../change_dev_mode_env/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Changing to a developer mode environment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../staging_to_production/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Staging to production
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../migrate/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Migrating
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../multiple_profiles/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Supporting multiple profiles
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../remote_spell_checker/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Setting up a remote spell checker
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../upsell/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Upgrading your existing product offering
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../monitoring/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Monitoring
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../troubleshooting/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../../../build_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../../../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overlay-reports-and-site-promotions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overlay reports and site promotions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-mappings-and-wsrp-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role Mappings and WSRP services
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="access-permissions">Access permissions</h1>
+<p>Learn about sensitive operations for resources and the roles that are required to perform those operations. Sensitive operations include common tasks such as viewing portlets on specific pages and complex, high-risk tasks like running XML configuration interface scripts.</p>
+<p>Roles provide permissions for user to perform specific operations on resources. The following tables denote roles as follows: <code>Role@Resource</code>.</p>
+<p><strong>Notes about the following tables:</strong></p>
+<ul>
+<li>The following tables list minimum role assignments that are necessary to perform sensitive operations. Roles are organized in a hierarchy. Roles that are higher in the hierarchy generally include the permissions of roles that are lower in the role hierarchy. For example, to install web modules the editor role on the virtual resource <code>Web Modules</code>, <code>Editor@Web Modules</code>, is the minimum role assignment for this operation. The manager role is higher in the hierarchy than the editor role. For this reason, the manager role includes the permissions of the editor role. <code>Manager@Web Modules</code> also allows users to install web modules.</li>
+<li>When access permissions are granted to any listed resource, it inherently requires access to the resource Access Control Administration.</li>
+<li>Use the Access Control Administration to change the owner of a resource.</li>
+<li>The resources that are listed can be different depending on other products that might be installed with the product. Some roles are required on virtual resources; other roles must be on resource instances.</li>
+<li>Users might also have access permissions for some operations through ownership of resources.</li>
+<li>
+<p>Definition of terms:</p>
+<ul>
+<li>
+<p><strong><em>*private</em></strong>*</p>
+<p>Accessible only by the owner of the resource.</p>
+<p><strong>Note:</strong> Creators of private resources automatically gain rights that are similar to the rights of a Manager. For example, if you create a private page, you have rights similar to manager for that page. You can also perform certain actions such as changing the page theme or deleting the page.</p>
+</li>
+<li>
+<p><strong><em>*non-private</em></strong>*</p>
+<p>Accessible by those people who were granted access to the resource.</p>
+</li>
+<li>
+<p><strong><em>*public</em></strong>*</p>
+<p>Accessible without authentication.</p>
+</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Viewing the access control configuration of a resource R</td>
+<td>If R is under internal PORTAL protection: <code>Security Administrator@R</code> or <code>Security Administrator@PORTAL</code>. If R is under external protection: <code>Security Administrator@R</code> or <code>Security Administrator@PORTAL</code> + <code>Security Administrator@EXTERNAL\_ACCESS\_CONTROL</code><br> <strong>Notes:</strong><br> - PORTAL and EXTERNAL_ACCESS_CONTROL are virtual resources.<br> - The <code>Security Administrator@EXTERNAL\_ACCESS\_CONTROL</code> role is created and managed in the External Security Manager. It must be modified with the external security management tools. For example, use the IBM® Security Access Manager <code>pdadmin&gt;</code> command line or the Computer Associates eTrust SiteMinder administrative console.</td>
+</tr>
+<tr>
+<td>Creating a role RT on resource R</td>
+<td>If R is under PORTAL protection: <code>Security Administrator@R</code> + RT@R or <code>Security Administrator@PORTAL</code>If R is under external protection: <code>Security Administrator@R</code> + <code>RT@R</code> or <code>Security Administrator@PORTAL</code> + <code>Security Administrator@EXTERNAL\_ACCESS\_CONTROL</code><br> <strong>Notes:</strong><br> - PORTAL and EXTERNAL_ACCESS_CONTROL are virtual resources.<br> - The <code>Security Administrator@EXTERNAL\_ACCESS\_CONTROL</code> role is created and managed in the External Security Manager. It must be modified with the external security management tools. For example, use the Security Access Manager <code>pdadmin&gt;</code> command line or the eTrust SiteMinder administrative console.</td>
+</tr>
+<tr>
+<td>Deleting a role that is created from role RT on resource R. All corresponding role mappings are also deleted.</td>
+<td>If R is under internal PORTAL protection: <code>Security Administrator@R</code> + RT@<code>R</code> + Delegator role on all assigned principals or Security Administrator@PORTALIf R is under external protection: <code>Security Administrator@R</code> + <code>RT@R</code> + Delegator role on all assigned principals or <code>Security Administrator@PORTAL</code> + <code>Security Administrator@EXTERNAL\_ACCESS\_CONTROL</code><br> <strong>Notes:</strong><br> - PORTAL and EXTERNAL_ACCESS_CONTROL are virtual resources.<br> - The <code>Security Administrator@EXTERNAL\_ACCESS\_CONTROL</code> role is created and managed in the External Security Manager. It must be modified with the external security management tools. For example, use the Security Access Manager <code>pdadmin&gt;</code> command line or the eTrust SiteMinder administrative console.</td>
+</tr>
+<tr>
+<td>Creating or deleting a role assignment for user or group U created from role RT on resource R</td>
+<td>If R is under internal PORTAL protection: <code>Security Administrator@R</code> + <code>RT@R</code> + <code>Delegator@U</code> or <code>Security Administrator@PORTAL</code>If R is under external protection: <code>Security Administrator@R</code> + <code>RT@R</code> + <code>Delegator@U</code> or <code>Security Administrator@PORTAL</code> + <code>Security Administrator@EXTERNAL\_ACCESS\_CONTROL</code><br> <strong>Notes:</strong><br> - PORTAL and EXTERNAL_ACCESS_CONTROL are virtual resources.<br> - The <code>Security Administrator@EXTERNAL\_ACCESS\_CONTROL</code> role is created and managed in the External Security Manager. It must be modified with the external security management tools. For example, use the Security Access Manager <code>pdadmin&gt;</code> command lineor the eTrust SiteMinder administrative console.</td>
+</tr>
+<tr>
+<td>Creating or deleting a role block for all roles that are created from role RT on resource R</td>
+<td>If R is under internal PORTAL protection: <code>Security Administrator@R</code> + <code>RT@R</code> or <code>Security Administrator@PORTAL</code>If R is under external protection: <code>Security Administrator@R</code> + <code>RT@R</code> or <code>Security Administrator@PORTAL</code> + <code>Security Administrator@EXTERNAL\_ACCESS\_CONTROL</code><br> <strong>Note:</strong> A Security Administrator on this resource is always implicitly a Delegator on this resource. For all other roles, the <code>Security Administrator@R</code> plus the previous assignments are required.<br> <strong>Notes:</strong><br> - PORTAL and EXTERNAL_ACCESS_CONTROL are virtual resources.<br> - The <code>Security Administrator@EXTERNAL\_ACCESS\_CONTROL</code> role is created and managed in the External Security Manager. It must be modified with the external security management tools. For example, use the Security Access Manager <code>pdadmin&gt;</code> command lineor the eTrust SiteMinder administrative console.</td>
+</tr>
+<tr>
+<td>Externalizing or internalizing resources:<br> Moving a resource R back and forth from internal to external control. All non-private child resources of R move with it. Private resources cannot be externalized.</td>
+<td><code>Security Administrator@R</code> + <code>Security Administrator@EXTERNAL\_ACCESS\_CONTROL</code> or <code>Security Administrator@Portal</code> + <code>Security Administrator@EXTERNAL\_ACCESS\_CONTROL</code><br><strong>Notes:</strong><br> - Portal and EXTERNAL_ACCESS_CONTROL are virtual resources.<br> - The <code>Security Administrator@EXTERNAL\_ACCESS\_CONTROL</code> role is created and managed in the External Security Manager. It must be modified with the external security management tools. For example, use the Security Access Manager <code>pdadmin&gt;</code> command lineor the eTrust SiteMinder administrative console.</td>
+</tr>
+<tr>
+<td>Modifying the owner of a resource:<br>Setting a user or group U1 as new owner of the non-private resource R, where the old owner was U2</td>
+<td><code>Delegator@U1</code>, <code>Delegator@U2</code>, <code>Manager@R</code>, and <code>Security_Administrator@R</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Viewing a Business Rule</td>
+<td><code>User@Business Rules Workspace</code><br> Set this permission on the Business Rules workspace in the Personalization navigator by selecting the root node and then choosing <strong>Extra Action</strong> &gt; <strong>Edit Access</strong> from the menu.</td>
+</tr>
+<tr>
+<td>Creating a Business Rule</td>
+<td><code>Contributor@Business Rules Workspace</code><br> <strong>Important:</strong> <code>Contributor@Business Rules Workspace</code> is the minimum required access permission to create a Business Rule. However, you must use <code>Editor@Business Rules Workspace</code> to create and maintain business rules and use the Portal administration facilities.</td>
+</tr>
+<tr>
+<td>Deleting a Business Rule</td>
+<td><code>Manager@Business Rules Workspace</code></td>
+</tr>
+<tr>
+<td>Assigning a Business rule to a page P</td>
+<td>For non-private pages: <code>Editor@P</code> and <code>User@Business Rules Workspace</code>For private pages: <code>Priviliged User@P</code> and <code>User@Business Rules Workspace</code></td>
+</tr>
+<tr>
+<td>Assigning a Business rule to a portlet PO on page P</td>
+<td>For non-private pages: <code>Editor@P</code>, <code>User@PO</code>, and <code>User@Business Rules Workspace</code><br> For private pages: <code>Privileged User@P</code>, <code>User@PO</code>, and <code>User@Business Rules Workspace</code></td>
+</tr>
+<tr>
+<td>Additional actions</td>
+<td>Use the <strong>Set Access</strong> icon in Personalization to add a user or a group to a role on the root of the workspace. The same role is given to that user or group for all Web Content Manager libraries, policies, and templates.</td>
+</tr>
+<tr>
+<td>Create or edit Segment Groups</td>
+<td>- <code>Editor@Business Rules Workspace</code><br> To be able to create Segment Groups, the user must have read access to the Application objects and Resource Collections that are used in the segment group definition. Write access is required to add or manage dynamic properties. To obtain this level of access, the user must be given the <code>Editor@Business Rules Workspace</code> role on the Business Rules workspace.<br> - Set as <code>Editor</code> of the library that contains the segment groups.<br> <code>Editor</code> role is required on the web content library to be able to create and edit segment groups. Log in to HCL Portal. Click the <strong>Administration menu</strong> icon. Then, click <strong>Portal Content</strong> &gt; <strong>Web Content Libraries</strong>. Click the <strong>Set permissions</strong> icon on the <strong>Web Content</strong> library to set the <code>Editor</code> role. For information about the roles, go to <a href="../../wcm_security/wcm_cms_access/wcm_cms_roles/">Web content management roles</a>.</td>
+</tr>
+<tr>
+<td>Use Segments from Segment Groups to target content</td>
+<td>Set as <code>User</code> on the segment groups to be accessible.Set this access at the library level or Segments folder level to give access to all segment groups within the library. Use the <strong>Web Content Libraries</strong> portlet to set access. Alternatively, set this access at the item level to give access to individual segment groups. For information about the roles, go to <a href="../../wcm_security/wcm_cms_access/wcm_cms_roles/">Web content management roles</a>.<br> To target content on a <strong>Web Content Viewer</strong> portlet on a page, a user must have the following roles:<br> - <code>Editor</code> on the <strong>Web Content Viewer</strong> portlet. Click the <strong>Administration menu</strong> icon. Then, click <strong>Portlet Management</strong> &gt; <strong>Portlets</strong>.<br> - <code>Editor</code> on the page itself.<br> - <code>User</code> on the content to be targeted.<br> - <code>Contributor</code> on the library where the content is stored.<br> - <code>Editor</code> on the <strong>Site Areas and Pages</strong> library resource (item types) in the Portal Site Library. Go to the <strong>Web Content Library</strong>. Click the <strong>Library resources</strong> icon for this library. Then, click the <strong>Set permissions</strong> icon for <strong>Site Areas and Pages</strong>. You can now add users and groups to the <code>Editor</code> role.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description<br> <strong>Note:</strong> The operations in this column specifically refer to pages only, but also applies to labels and URLs in some cases.</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Traversing a page:<br> Viewing the navigation of a page P</td>
+<td><code>User@P</code> or @ some child resource of P</td>
+</tr>
+<tr>
+<td>Viewing the content of a page P, including page decoration and potentially the portlets on that page. The portlets on a page are protected separately. See the portlets on pages row of this table for information.</td>
+<td><code>User@P</code></td>
+</tr>
+<tr>
+<td>Modifying page properties includes the following actions:<br> - Adding or removing markup<br> - Adding or removing a locale<br> - Adding or removing parameters<br> to or from a page P</td>
+<td><code>Editor@P</code></td>
+</tr>
+<tr>
+<td>Modifying page properties includes Set page layout properties of a static page.P</td>
+<td><code>Markup editor role</code>. If the resources are in secure locations of layout templates, use <code>Manager role</code>. For more information, see <em>Adapt the list of required runtime configuration changes for your theme</em> in the related links.</td>
+</tr>
+<tr>
+<td>Changing the theme of a page P</td>
+<td><code>Editor@P</code></td>
+</tr>
+<tr>
+<td>Modifying the layout of a page P includes the following actions:<br> - Adding or removing wires<br> - Managing actions</td>
+<td>For non-private pages: <code>Editor@P</code><br>For private pages: <code>Privileged User@P</code><br> For managing receiving actions of a portlet on a target page: <code>Editor@P</code> and <code>Editor@PO</code></td>
+</tr>
+<tr>
+<td>Customizing the layout of a non-private page:<br> Creating a private, implicitly derived copy of a non-private page P</td>
+<td><code>Privileged User@P</code></td>
+</tr>
+<tr>
+<td>Adding a root page:<br> Creating and adding a new top-level page P</td>
+<td>For non-private pages: <code>Editor@Pages</code><br> For private pages: <code>Privileged User@Pages</code><br> Pages is a virtual resource.</td>
+</tr>
+<tr>
+<td>Adding a page:<br>Creating a page under any Page P</td>
+<td>For non-private pages: <code>Editor@P</code><br> For private pages: <code>Privileged User@P</code></td>
+</tr>
+<tr>
+<td>Creating a derived page:<br> Creating a page underneath P1 that is explicitly derived from page P2</td>
+<td>New page is private: <code>Privileged User@P1</code> + <code>Editor@P2</code><br> New page is non-private: <code>Editor@P1</code> + <code>Editor@P2</code></td>
+</tr>
+<tr>
+<td>Deleting a page P and all descendant pages, including further subpages and the portlets on those pages</td>
+<td><code>Manager@P</code></td>
+</tr>
+<tr>
+<td>Moving page P1 to a new parent page P2</td>
+<td>For non-private pages: <code>Manager@P1</code> + <code>Editor@P2</code>For private pages: <code>Manager@P1</code> + <code>Privileged User@P2</code></td>
+</tr>
+<tr>
+<td>Locking or unlocking the contents of a non-private page P</td>
+<td><code>Editor@P</code> + <code>User@portlet</code> (Page Locks) + <code>User@page</code> (Locks)</td>
+</tr>
+<tr>
+<td>Edit page associations for a non-private page P</td>
+<td><code>Editor@P</code></td>
+</tr>
+<tr>
+<td>Edit page associations for a private page P</td>
+<td><code>Privileged User@P</code></td>
+</tr>
+<tr>
+<td>Enabling membership-based access control delegation for a Community Page P associated to an HCL Connections<br> Community C represented by the virtual user groups G. It is activated through the <strong>Limit access to this page to only community members</strong> Page Associations check mark.</td>
+<td><code>Editor@P</code> + <code>Security Administrator@P</code> + <code>Delegator@G</code> + <code>View Privileges@C(in HCL Connections)</code></td>
+</tr>
+<tr>
+<td>Activating Portal Page Security for a web content page P that is associated with site area SA in web content library L. This security is activated through the <strong>Use Portal Page Security</strong> check mark in the Page Associations window.</td>
+<td><code>Editor@P</code> + <code>User@SA</code> + <code>Administrator@L</code> and <code>Editor@P</code> + <code>User@SA</code> + <code>Administrator@L</code> + <code>Manager@VirtualResource CONTENT MAPPINGS</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Adding a root page<br> Creating and adding a new top-level page<br> Pages based on page template T</td>
+<td>For non-private pages: <code>Editor@Pages</code> and <code>User@T</code><br> For private pages: <code>Privileged User@Pages</code> and <code>User@T</code><br> Additional roles can be required based on instantiation features associated to page template T:<br> - T is associated to site area SA1 in Web Content Manager, and the <strong>wps.content.root</strong> label is associated with site area SA2, with default content associations on each site area. Web Content Manager view permissions on SA1 and Web Content Manager create content permissions on SA2.<br> - T is associated to an HCL Connections community C. Grant the following privileges to the user in HCL Connections: View C and Create new communities<br> - T is configured to create a community during instantiation with the ibm.portal.instantiation.community.create.new page parameter. Grant the following privileges to the user in HCL Connections: Create new communities<br> - T is enabled for Membership-based access control delegation: <code>Delegator@USER\_GROUPS</code><br> USER_GROUPS is a virtual resource.</td>
+</tr>
+<tr>
+<td>Adding a page<br> Creating a page from Template T under any Page P</td>
+<td>For private pages: <code>Privileged User@P</code> and <code>User@T</code><br>Additional roles can be required based on instantiation features associated to page template T:<br> - T is associated to site area SA1 in Web Content Manager, and the <strong>wps.content.root</strong> label is associated with site area SA2, with default content associations on each site area. Web Content Manager view permissions on SA1 and Web Content Manager create content permissions on SA2.<br> - T is associated to an HCL Connections community C. Grant the following privileges to the user in HCL Connections: View C and Create new communities<br> - T is configured to create a community during instantiation with the ibm.portal.instantiation.community.create.new page parameter. Grant the following privileges to the user in HCL Connections: Create new communities<br> - T is enabled for Membership-based access control delegation: <code>Delegator@USER\_GROUPS</code><br> USER_GROUPS is a virtual resource.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sensitive operation and description</td>
+<td>Required role assignment</td>
+</tr>
+<tr>
+<td>Adding, viewing, or deleting a vault segment</td>
+<td>Management of the Credential Vault through the Credential Vault portlet requires access to an instance of the Credential Vault portlet.</td>
+</tr>
+<tr>
+<td>Adding a shared administrative credential vault slot (containing a system credential)</td>
+<td>Management of the Credential Vault through the Credential Vault portlet requires access to an instance of the Credential Vault portlet.</td>
+</tr>
+<tr>
+<td>Retrieving the credential from a shared administrative credential vault slot (containing a system credential)</td>
+<td><code>User@slot</code> or <code>User@ADMIN\_SLOTS</code></td>
+</tr>
+<tr>
+<td>Modifying a shared administrative credential vault slot (containing a system credential)</td>
+<td><code>Editor@slot</code> or <code>Editor@ADMIN\_SLOTS</code></td>
+</tr>
+<tr>
+<td>Deleting a shared administrative credential vault slot (containing a system credential)</td>
+<td><code>Manager@slot</code> or <code>Manager@ADMIN\_SLOTS</code></td>
+</tr>
+<tr>
+<td>Adding, viewing, deleting, or editing a non-shared vault slot</td>
+<td>Management of the Credential Vault through the Credential Vault portlet requires access to an instance of the Credential Vault portlet.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>Virtual resource: ADMIN\_SLOTS</code> is a virtual resource. The permission on this node is propagated to all slots, if it is not blocked by an inheritance or propagation block.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Adding or deleting portal trace settings</td>
+<td>Adding or deleting portal trace setting through the <strong>Enable Tracing</strong> portlet requires access to an instance of the <strong>Enable Tracing</strong> portlet.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Managing event handlers:<br> Creating, modifying, and deleting event handlers</td>
+<td><code>Security Administrator@Event Handlers</code><br> <strong>Virtual resource:</strong> Event Handlers is a virtual resource.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Managing clients:<br> Viewing the portlet; deleting, modifying, and adding clients in the Manage Clients portlet</td>
+<td><code>User@Manage Clients</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Creating a search index</td>
+<td><code>Editor@PSE\_Sources</code><br> <strong>Virtual resource:</strong> PSE_Sources is a virtual resource.</td>
+</tr>
+<tr>
+<td>Associating keywords with content items through the Search Center portlet, so that they are promoted to users who search for those keywords.</td>
+<td><code>Administrator@</code> for <code>Search Center Portlet</code><br> <strong>Virtual resource:</strong> Search Center Portlet is a virtual resource.</td>
+</tr>
+<tr>
+<td>Modifying keywords that are associated with content items that exist in the Suggested Links portlet already.</td>
+<td><code>Administrator@</code> for <code>Suggested Links Portlet</code><br> <strong>Virtual resource:</strong> Suggested Links Portlet is a virtual resource.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Creating the New Virtual Portal</td>
+<td><code>Security Administrator@Portal</code><br> <strong>Virtual resource:</strong> Portal is a virtual resource.</td>
+</tr>
+<tr>
+<td>Viewing the Virtual Portal</td>
+<td><code>Security Administrator@Portal</code><br> <strong>Virtual resource:</strong> Portal is a virtual resource.</td>
+</tr>
+<tr>
+<td>Deleting the Virtual Portal</td>
+<td><code>Security Administrator@Portal</code><br> <strong>Virtual resource:</strong> Portal is a virtual resource.</td>
+</tr>
+<tr>
+<td>Editing the Virtual Portal</td>
+<td><code>Security Administrator@Portal</code><br> <strong>Virtual resource:</strong> Portal is a virtual resource.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Managing Markups:<br> Creating, deleting, or modifying a Markup</td>
+<td><code>Editor@Markups</code><br> <strong>Virtual resource:</strong> Markups is a virtual resource</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Creating a Policy under any Policy</td>
+<td><code>Editor@Policy</code> and <code>User@Business Rules Workspace</code><br> <strong>Notes:</strong><br> - <code>Contributor@Policy</code> is the minimum required access permission to create a Policy under any Policy, though it is not recommended. <code>Editor@Policy</code> is recommended to create and maintain policies and use the Portal administration utilities.<br> - If a rule must be created or edited during the creation of a Policy, then <code>Editor@Business Rules Workspace</code> and <code>Editor@Policy</code> is also required.<br> - Business Rules workspace is the root node in the Personalization navigator for Business Rules resources. Set permissions on this node by selecting the workspace node and then choosing <strong>Extra Action</strong> &gt; <strong>Edit Access</strong> from the menu.</td>
+</tr>
+<tr>
+<td>Assigning a Business rule to a Policy</td>
+<td><code>User@Business Rules</code> and <code>Editor@Policy</code></td>
+</tr>
+<tr>
+<td>Editing a Policy</td>
+<td><code>Editor@Policy</code> and <code>User@Business Rules</code><br> <strong>Note:</strong> If a rule must be created or edited during the creation of a Policy, then <code>Editor@Business Rules</code> is also required.</td>
+</tr>
+<tr>
+<td>Viewing a Policy</td>
+<td><code>User@Policy</code> + <code>User@Business Rules</code></td>
+</tr>
+<tr>
+<td>Importing a new Policy</td>
+<td><code>Editor@Policy\_Root</code><br> <strong>Important:</strong> <code>Contributor@Policy\_Root</code> is the minimum required access permission to import a new Policy, however, you must use <code>Editor@Policy\_Root</code> to import and maintain policies and use the Portal administration utilities.</td>
+</tr>
+<tr>
+<td>Deleting a Policy</td>
+<td><code>Manager@Policy</code> + <code>User@Business Rules</code><br> <strong>Deleting policies:</strong> When you delete a policy, the associated rule is not deleted.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Viewing current portal settings</td>
+<td><code>User@Portal Settings</code><br> <strong>Virtual resource:</strong> Portal Settings is a virtual resource.</td>
+</tr>
+<tr>
+<td>Modifying current portal settings</td>
+<td><code>Editor@Portal Settings</code><br> <strong>Virtual resource:</strong> Portal Settings is a virtual resource.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Viewing the portlet application definition information for a portlet application PA</td>
+<td><code>User@PA</code></td>
+</tr>
+<tr>
+<td>Modifying a portlet application includes the following actions:<br> - Adding or removing a locale<br> - Setting default locale<br> - Modifying settings<br> to, from, or of the portlet application PA.</td>
+<td><code>Editor@PA</code></td>
+</tr>
+<tr>
+<td>Duplicating a portlet application:<br> Creating a portlet application based on an existing portlet application PA</td>
+<td><code>Editor@Portlet Applications</code> + <code>User@PA</code><br> <strong>Virtual resource:</strong> Portlet Applications is a virtual resource.</td>
+</tr>
+<tr>
+<td>Deleting a portlet application and removing all corresponding portlets and portlet entities from all pages within the portal</td>
+<td><code>Manager@PA</code></td>
+</tr>
+<tr>
+<td>Enabling or disabling a portlet application:<br> Temporarily enabling or disabling the portlet application PA</td>
+<td><code>Manager@PA</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Viewing an installed portlet:<br> Viewing the portlet definition information of a portlet PO</td>
+<td><code>User@PO</code></td>
+</tr>
+<tr>
+<td>Modifying an installed portlet includes the following actions:<br> - Adding or removing a locale<br> - Setting default locale<br> - Modifying settings<br> to, from, or of the portlet PO.</td>
+<td>For adding or removing locales and setting default locale: <code>Editor@PO</code><br> For modifying settings: <code>Manager@PO</code></td>
+</tr>
+<tr>
+<td>Duplicating an installed portlet:<br> Creating a new installed portlet based on an existing portlet PO that is part of a portlet application PA.</td>
+<td><code>Editor@Portlet Applications</code> + <code>User@PO</code> + <code>User@PA</code><br> <strong>Virtual resource:</strong> Portlet Applications is a virtual resource.</td>
+</tr>
+<tr>
+<td>Deleting an installed portlet PO and removing all corresponding portlet entities from all pages within the portal</td>
+<td><code>Manager@PO</code></td>
+</tr>
+<tr>
+<td>Enabling or disabling an installed portlet:<br> Temporarily enabling or disabling a portlet PO</td>
+<td><code>Manager@PO</code></td>
+</tr>
+<tr>
+<td>Providing portlet PO as a WSRP service</td>
+<td><code>Editor@WSRP Export</code> and <code>Editor@PO</code><br> <strong>Virtual resource:</strong> WSRP Export is a virtual resource.</td>
+</tr>
+<tr>
+<td>Withdrawing portlet PO from WSRP service</td>
+<td><code>Manager@WSRP Export</code> and <code>Editor@PO</code><br> <strong>Virtual resource:</strong> WSRP Export is a virtual resource.</td>
+</tr>
+<tr>
+<td>Integrating the portlet of a WSRP Producer PR into the portal</td>
+<td>If no portlet application exists for the group of portlets:<br> <code>Editor@Portlet Applications</code> and <code>User@PR</code><br> <strong>Virtual resource:</strong> Portlet Applications is a virtual resource.<br> If a Portlet Applications PA exists for the group of portlets:<br> <code>Editor@PA</code> and <code>User@PR</code></td>
+</tr>
+<tr>
+<td>Deleting an integrated WSRP portlet PO contained in the portlet application PA from the portal</td>
+<td>If this portlet is the last portlet in Portlet Applications: <code>Manager@PA</code><br> If more than one portlet is in Portlet Applications: <code>Manager@PO</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Viewing a portlet PO on page P</td>
+<td><code>User@P</code> + <code>User@PO</code></td>
+</tr>
+<tr>
+<td>Configuring an installed portlet:<br> Entering the configure mode of a portlet PO and modifying its configuration</td>
+<td><code>Manager@PO</code></td>
+</tr>
+<tr>
+<td>Modifying a portlet on a page:<br> Entering the <strong>Edit Shared Settings</strong> mode of a portlet PO on page P and modifying its configuration<br> <strong>Note:</strong> If P is a non-private page and the user has no Editor role for this page, then modifying the configuration of the portlet results in the creation of an implicitly derived copy of page P.</td>
+<td><code>Editor@P</code> + <code>Editor@PO</code>Or<br> <code>Privileged User@P</code> + <code>Privileged User@PO</code></td>
+</tr>
+<tr>
+<td>Modifying page content:<br> Adding or removing a portlet PO to/from a page P<br> <strong>Note:</strong> If P is a non-private page and the user has no Editor role for this page, then modifying the content of P results in the creation of an implicitly derived copy of page P.</td>
+<td>For non-private pages: <code>Editor@P</code> + <code>User@PO</code>Or<br> For private pages: <code>Privileged User@P</code> + <code>User@PO</code></td>
+</tr>
+<tr>
+<td>Adding web content to a page:<br> Adding a web content viewer portlet PO that is configured to render web content C from site area SA in Web Content Manager. Portlet PO is configured with the option <strong>Create content (based on selection)</strong>, and page P is associated with site area SA.<br> <strong>Note:</strong> If P is a non-private page and the user has no Editor role for this page, then modifying the content of P results in the creation of an implicitly derived copy of page P.</td>
+<td>For non-private pages: <code>Editor@P + User @ PO</code> + Web Content Manager view permissions on C and Web Content Manager create content permissions on SA.<br> For private pages: <code>Privileged User@P</code> + <code>User@PO</code> + Web Content Manager view permissions on C and Web Content Manager create content permissions on SA</td>
+</tr>
+<tr>
+<td>Restricting the content of a page:<br> Adding or removing a portlet from the Allowed Portlet List of a page</td>
+<td><code>Editor@P</code> + <code>User@PO</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operating with ActionSets or PropertySets for a portlet PO</td>
+<td><code>User@PO</code></td>
+</tr>
+<tr>
+<td>Creating, updating, or deleting a wire from a portlet PO1 on Page P1 to a portlet PO2 on Page P2</td>
+<td>Global wire: <code>Editor@P1</code>, <code>User@PO1</code>, <code>Editor@P2</code>, <code>User@PO2</code><br> Personal wire: <code>Privileged User@P1</code>, <code>User@PO1</code>, <code>Privileged User@P2</code>, <code>User@PO2</code><br> <strong>Important:</strong> To update or delete a personal wire, the user must have the previous role assignments and created the wire that they are updating or deleting.</td>
+</tr>
+<tr>
+<td>Creating a wire from a portlet PO1 on Page P1 to a portlet PO2 on Page P2</td>
+<td>Global wire: <code>User@P1</code>, <code>User@PO1</code>, <code>User@P2</code>, <code>User@PO2</code><br> Personal wire: <code>Privileged User@P1</code>, <code>User@PO1</code>, <code>Privileged User@P2</code>, <code>User@PO2</code><br> <strong>Important:</strong> To create a personal wire, the user must have the previous role assignments and created the wire that they are starting.</td>
+</tr>
+<tr>
+<td>Viewing a wire from a portlet PO1 on Page P1 to a portlet PO2 on Page P2</td>
+<td>Global wire: <code>User@P1</code>, <code>User@PO1</code>, <code>User@P2</code>, <code>User@PO2</code><br> Personal wire: <code>Privileged User@P1</code>, <code>User@PO1</code>, <code>Privileged User@P2</code>, <code>User@PO2</code><br> <strong>Important:</strong> To view a personal wire, the user must have the previous role assignments and created the wire that they are viewing</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Creating a PSE Source:<br> Creating a search collection</td>
+<td><code>Editor@PSE Sources</code><br> <strong>Virtual resource:</strong> PSE Sources is a virtual resource.</td>
+</tr>
+<tr>
+<td>Viewing a PSE Source:<br> Viewing a search collection SC</td>
+<td><code>User@SC</code></td>
+</tr>
+<tr>
+<td>Facilitating a PSE Source:<br> Using a search collection SC</td>
+<td><code>User@SC</code></td>
+</tr>
+<tr>
+<td>Editing a PSE Source:<br> Editing a search collection SC</td>
+<td><code>Editor@SC</code></td>
+</tr>
+<tr>
+<td>Deleting a PSE Source:<br> Deleting a search collection SC</td>
+<td><code>Manager@SC</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Viewing community tags and ratings that other users applied.<br> Creating and deleting personal public tags and ratings.<br> Deleting community tags regardless of ownership.</td>
+<td><code>Manager@Tags</code> + <code>Manager@Ratings</code><br> <strong>Virtual resource:</strong> Tags and Ratings are virtual resources.</td>
+</tr>
+<tr>
+<td>Viewing community tags and ratings that other users applied.<br> Creating and deleting personal public tags and ratings.</td>
+<td><code>Contributor@Tags</code> + <code>Contributor@Ratings</code></td>
+</tr>
+<tr>
+<td>Viewing community tags and ratings that other users applied.<br> Creating and deleting personal private tags and ratings.</td>
+<td><code>Privileged user@Tags</code> + <code>Privileged user@Ratings</code></td>
+</tr>
+<tr>
+<td>Viewing community tags and ratings that other users applied.</td>
+<td><code>User@Tags</code> + <code>User@Ratings</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Creating, viewing, editing, and deleting a Theme, Skin, or Layout Template</td>
+<td><code>Manager@THEME MANAGEMENT</code><br> <strong>Virtual resource:</strong> THEME MANAGEMENT is a virtual resource.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Managing unique names:<br> Viewing the portlet; deleting, modifying, and adding unique names in the Unique Names portlet</td>
+<td><code>Editor@R</code> + <code>User@Unique Names</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Creating a URL mapping context UMC</td>
+<td><code>Editor@URL Mapping Contexts</code><br> <strong>Virtual resource:</strong> URL Mapping Contexts is a virtual resource.</td>
+</tr>
+<tr>
+<td>Traversing a URL mapping context:<br> The ability to traverse a URL mapping context due to a role assignment to some child context of UMC</td>
+<td><code>User@UMC</code> or @ some child context of UMC</td>
+</tr>
+<tr>
+<td>Viewing the definition of a URL mapping context UMC</td>
+<td><code>User@UMC</code></td>
+</tr>
+<tr>
+<td>Assigning a URL:<br> Creating or editing a mapping between a URL mapping context UMC and a portal resource R</td>
+<td><code>Editor@UMC</code> + <code>User@R</code></td>
+</tr>
+<tr>
+<td>Modifying a URL mapping context:<br> Changing the properties of an existing URL mapping context UMC; for example, editing the label</td>
+<td><code>Editor@UMC</code><br> If Virtual Portal Mapping: <code>Editor@VP URL Mappings</code><br> <strong>Virtual resource:</strong> VP URL Mappings is a virtual resource.</td>
+</tr>
+<tr>
+<td>Deleting a URL mapping context UMC and all of its child contexts</td>
+<td><code>Manager@UMC</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Creating a User group within the user registry</td>
+<td><code>Editor@User Groups</code><br> <strong>Virtual resource:</strong> User Groups is a virtual resource.</td>
+</tr>
+<tr>
+<td>Viewing the User group profile information of a user group UG</td>
+<td><code>User@UG</code></td>
+</tr>
+<tr>
+<td>Modifying the profile information of a User group UG</td>
+<td><code>Editor@UG</code></td>
+</tr>
+<tr>
+<td>Adding or removing an existing User U or a User group UG2 to or from an existing User group UG1</td>
+<td><code>Security Administrator@Users</code> + <code>Editor@UG1</code><br> <strong>Virtual resource:</strong> Users is a virtual resource.</td>
+</tr>
+<tr>
+<td>Deleting a user group UG</td>
+<td><code>Manager@UG</code><br> <strong>Deleting the user group:</strong> The owner of the user group can also delete it.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Creating a user in the user registry</td>
+<td><code>Contributor@User Self Enrollment</code> or <code>Editor@Users</code><br> <code>Contributor@User Self Enrollment</code> allows the user to add new users. You can modify other existing users with <code>Editor@Users</code><br> <strong>Virtual resource:</strong> User Self Enrollment is a virtual resource. Users is also a virtual resource.</td>
+</tr>
+<tr>
+<td>Viewing the user profile information of a user U</td>
+<td><code>User@UG</code> and U is a member of user group UG or <code>User@Users</code><br> <strong>Virtual resource:</strong> Users is a virtual resource</td>
+</tr>
+<tr>
+<td>Modifying the profile information of a user U</td>
+<td><code>Editor@UG</code> and U is a member of user group UG or <code>Editor@Users</code><br> <strong>Virtual resource:</strong> Users is a virtual resource.</td>
+</tr>
+<tr>
+<td>Deleting a user from the user registry and deleting all private pages that are created by this user</td>
+<td><code>Manager@Users</code><br> <strong>Virtual resource:</strong> Users is a virtual resource.</td>
+</tr>
+<tr>
+<td>Impersonating a user to troubleshoot problems and view pages, portlets, and other portal components.</td>
+<td><code>Can Run As User@Users</code><br> <strong>Restriction:</strong> To use the <strong>Can Run As User</strong> role, you must enable the impersonation feature and assign the <strong>Can Run As User</strong> role to an appropriate user.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Creating a user in the user registry</td>
+<td><code>Editor@User Self Enrollment</code><br> <strong>Virtual resource:</strong> User Self Enrollment is a virtual resource.</td>
+</tr>
+<tr>
+<td>Viewing the user profile information of a user U</td>
+<td><code>User@UG</code> and U is a member of user group UG or <code>User@Users</code><br> <strong>Virtual resource:</strong> Users is a virtual resource.</td>
+</tr>
+<tr>
+<td>Modifying the profile information of a user U</td>
+<td><code>Editor@UG</code> and U is a member of user group UG or <code>Editor@Users</code><br> <strong>Virtual resource:</strong> Users is a virtual resource.</td>
+</tr>
+<tr>
+<td>Deleting a user from the user registry and deleting all private pages that are created by this user</td>
+<td><code>Manager@Users</code><br> <strong>Virtual resource:</strong> Users is a virtual resource.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Creating new clippings</td>
+<td><code>Editor@Portlet Applications</code><br> <strong>Virtual resource:</strong> Portlet Applications is a virtual resource.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Installing a new portlet application WAR file</td>
+<td><code>Editor@Web Modules</code><br> <strong>Virtual resource:</strong> Web Modules is a virtual resource.</td>
+</tr>
+<tr>
+<td>Updating a web module WM by installing a corresponding WAR file</td>
+<td><code>Editor@Web Modules</code> + <code>Manager@WM</code></td>
+</tr>
+<tr>
+<td>Uninstalling a web module and removing all corresponding portlet applications and portlets from all pages within the portal</td>
+<td><code>Manager@WM</code> + Manager @ all portlet applications that are contained in WM</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Adding a remote WSRP Producer PR to the Portal</td>
+<td><code>Editor@WSRP Producers</code><br> <strong>Virtual resource:</strong> WSRP Producers is a virtual resource.</td>
+</tr>
+<tr>
+<td>Editing the settings of a remote Producer PR</td>
+<td><code>Editor@PR</code></td>
+</tr>
+<tr>
+<td>Viewing the settings or display the list of portlets that are provided by a remote WSRP Producer PR</td>
+<td><code>User@PR</code></td>
+</tr>
+<tr>
+<td>Deleting a remote WSRP Producer from the portal</td>
+<td><code>Manager@PR</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Running commands with the XML configuration interface</td>
+<td><code>Security Administrator@Portal</code> + <code>Editor@XML Access</code><br> <strong>Virtual resources:</strong> Portal and XML Access are virtual resources.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Creating, modifying, or deleting a vanity URL that points to page P</td>
+<td><code>Editor@P</code> and <code>Editor@VANITY_URL</code><br> <strong>Virtual resources:</strong> VANITY_URL is a virtual resource.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a user deletes a page, all vanity URLs that point to that page are also deleted, independent of the rights that the user has on the virtual resource VANITY_URL.</p>
+</div>
+<h2 id="overlay-reports-and-site-promotions">Overlay reports and site promotions</h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Sensitive operation and description</th>
+<th>Required role assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Overlay reports</td>
+<td>Can view overlay reports on a resource.</td>
+<td><code>User@OverlayReports</code> + <code>User@Resource</code><br><strong>Note:</strong> <code>OVERLAY_REPORTS</code> is a virtual resource.</td>
+</tr>
+<tr>
+<td>Overlay reports</td>
+<td>Can view all existing site promotions.</td>
+<td><code>User@SitePromotions</code><br> <strong>Note:</strong> <code>SITE_PROMOTIONS</code> is a virtual resource.</td>
+</tr>
+<tr>
+<td>Overlay reports</td>
+<td>Can create a site promotion.</td>
+<td><code>Editor@SitePromotions</code></td>
+</tr>
+<tr>
+<td>Overlay reports</td>
+<td>Can update an existing site promotion.</td>
+<td><code>Editor@SitePromotions</code></td>
+</tr>
+<tr>
+<td>Overlay reports</td>
+<td>Can delete a site promotion.</td>
+<td><code>Editor@SitePromotions</code></td>
+</tr>
+<tr>
+<td>Overlay reports</td>
+<td>Can add a site promotion assignment on specific resource.</td>
+<td><code>Editor@SitePromotions</code> + <code>User@Resource</code></td>
+</tr>
+<tr>
+<td>Overlay reports</td>
+<td>Can view a site promotion assignment on specific resource.</td>
+<td><code>User@SitePromotions</code> + <code>User@Resource</code></td>
+</tr>
+<tr>
+<td>Site promotions</td>
+<td>Can remove a site promotion assignment on specific resource.</td>
+<td><code>Editor@SitePromotions</code> + <code>User@Resource</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="role-mappings-and-wsrp-services">Role Mappings and WSRP services</h2>
+<p>On the WSRP producer side, you can set the configuration property wsrp.security.enabled to enforce the access control decision for the provided portlets. If this property value is set to true, then all access control decisions in the producing portal are based on the authenticated principal. If wsrp.security.enabled is set to false, then the producing portal does not enforce any access control on incoming client portal WSRP requests.</p>
+<p>When you use identity propagation, the user who is authenticated on the client portal needs to have the required role assignments. If no identity propagation is configured, but SSL client certificate authentication is enabled, then the ID of the certificate needs to have the required role assignments. If no authentication method is used, then the request is treated as if it comes from the Anonymous Portal Users. In the latter case, the required roles need to be assigned to the Anonymous Portal User. This assignment implies allowing unauthenticated access to the corresponding resources for all users who can access the producer portal.</p>
+<details class="info" open="open">
+<summary>Related information</summary>
+<ul>
+<li><a href="../../../../../../../../extend_dx/portlets_development/usage/wsrp/configuration/portal_wsrp_producer/securing_wsrp_prod_portal/wsrpt_prod_prep_sec/">Securing a WSRP Producer portal</a></li>
+<li><a href="../../../../../../../../extend_dx/portlets_development/usage/wsrp/configuration/portal_wsrp_consumer/cfg_security_consumer_portal/wsrpt_cons_prep_sec/">Configuring security on the Consumer portal</a></li>
+<li><a href="../../../../../../../../extend_dx/portlets_development/usage/wsrp/configuration/portal_wsrp_producer/securing_wsrp_prod_portal/wsrpt_prod_sec_pac/">Configuring Portal Access Control for a WSRP Producer portal</a></li>
+<li><a href="../../../../../../../../build_sites/themes_skins/developing_theme/dev_op_overview/manual_packaging_themes/themeopt_move_repack_runtime/">Adapting the list of required runtime configuration changes for your theme</a></li>
+<li><a href="../../../../../../../../manage_content/wcm_delivery/vanity_url/van_url_create/">Viewing and creating vanity URLs</a></li>
+<li><a href="../../../../../../../../build_sites/virtual_portal/vp_planning/shape_vp_ux/advppln_shpux_urlmap/">Human readable URL mappings for virtual portals</a></li>
+<li><a href="../../../../../../../../extend_dx/integration/connections/configuration/managing_community_pages/commpages_create_mapping/">Managing community associations</a></li>
+<li><a href="../../../../../../../../build_sites/tagging_rating/tag_rate_secy/">Security for tagging and rating</a></li>
+</ul>
+</details>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 13, 2022</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../../../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../../../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

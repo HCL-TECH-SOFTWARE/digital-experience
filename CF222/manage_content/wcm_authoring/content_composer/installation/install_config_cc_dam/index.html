@@ -1,0 +1,2939 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/manage_content/wcm_authoring/content_composer/installation/install_config_cc_dam/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../configure_cc_virtual_portals/">
+      
+      
+      <link rel="icon" href="../../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Install Content Composer - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#install-the-hcl-digital-experience-95-components" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../../latest/manage_content/wcm_authoring/content_composer/installation/install_config_cc_dam/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Install Content Composer
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../whatsnew/cf20/newcf222/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../deployment/" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../build_sites/" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../whatsnew/cf20/newcf222/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../build_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Manage Content
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Author Web Content
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Author Web Content
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../inline_editing/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Site Manager
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Content Composer
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2_3" id="__nav_6_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Content Composer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2_3_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2_3_2" id="__nav_6_2_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_2_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Install Content Composer
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Install Content Composer
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#high-level-architecture-and-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      High-level architecture and topology
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisite
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-the-hcl-digital-experience-95-container-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing the HCL Digital Experience 9.5 Container components
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-configure-digital-asset-management-with-a-cdn" class="md-nav__link">
+    <span class="md-ellipsis">
+      (Optional) Configure Digital Asset Management with a CDN
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configure_cc_virtual_portals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enable or Disable in Virtual Portals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../configuration/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Configuration
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../usage/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Usage
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../limitations/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Limitations
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../authoring_portlet/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Authoring Portlet
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../dcs/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Document Conversion Services
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../content_reporting/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Content Reporting
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../dx_picker/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    DX Picker
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../multi_lingual/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Multilingual Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../renditions/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Renditions
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../wci/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Web Content Integrator
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../wcm_delivery/vanity_url/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deliver Web Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../wcm_configuration/wcm_adm_tools/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Configure Web Content Manager
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../wcm_development/wcm_dev_api/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend Web Content Manager
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../digital_assets/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Digital Asset Management
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../design_studio/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Design studio
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../pzn/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Personalization
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#high-level-architecture-and-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      High-level architecture and topology
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisite
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-the-hcl-digital-experience-95-container-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing the HCL Digital Experience 9.5 Container components
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-configure-digital-asset-management-with-a-cdn" class="md-nav__link">
+    <span class="md-ellipsis">
+      (Optional) Configure Digital Asset Management with a CDN
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="install-the-hcl-digital-experience-95-components">Install the HCL Digital Experience 9.5 components</h1>
+<p>This section provides a high-level overview of the architecture and the steps to install, configure, and update the HCL Digital Experience 9.5 components: Experience API, Content Composer, and Digital Asset Management.</p>
+<p><strong>Video</strong>: <a href="https://youtu.be/Hhop8M89SVA" target="_blank">Install HCL Digital Experience components (Experience API, Content Composer, and Digital Asset Management) on Red Hat OpenShift</a></p>
+<h2 id="high-level-architecture-and-topology">High-level architecture and topology</h2>
+<p><img alt="High-level architecture" src="../../../../../images/container_deploy_tp_cf_181.png" /></p>
+<p><img alt="Topology" src="../../../../../images/cf_181_topology.png" /></p>
+<h2 id="prerequisite">Prerequisite</h2>
+<p>DX Administrators can choose to install the DX Core containers then proceed to install Content Composer and Digital Asset Management containers to the supported Kubernetes container platforms as outlined in the following steps. See the <a href="../../../../../deployment/install/container/image_list/">Deployment image files</a> section for the latest DX 9.5 container file listings.</p>
+<p>Deploying the HCL Digital Asset Management or Content Composer components is supported on Kubernetes or OpenShift platforms and is not supported for deployment to Docker platforms. See the <a href="../../../../../get_started/system_requirements/kubernetes/kubernetes-runtime/">System requirements</a> section for more information and the latest updates.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For initial deployments, it is recommended to install the HCL Digital Experience 9.5 components (Experience API, Content Composer, and Digital Asset Management) to a non-production (test) HCL Digital Experience 9.5 environment.</p>
+</div>
+<h2 id="installing-the-hcl-digital-experience-95-container-components">Installing the HCL Digital Experience 9.5 Container components</h2>
+<p>Follow these steps to install your HCL Digital Experience 9.5 components (Experience API, Content Composer, and Digital Asset Management):</p>
+<p><strong>Asset Management components</strong></p>
+<p>If installing in conjunction with HCL Digital Experience 9.5 CF181 or higher, follow the instructions in the <a href="../../../../../deployment/install/container/helm_deployment/overview/">Container Deployment</a> topic. This page lists the latest HCL Digital Experience 9.5 CF181 or higher product images available and how to obtain and load the images into your Docker repository before continuing with these instructions.</p>
+<p>If installing to an existing HCL Digital Experience 9.5 CF181 or higher Kubernetes environment:</p>
+<ol>
+<li>
+<p>Verify that you can access the HCL Digital Experience 9.5 CF181 or higher Practitioner Studio by logging in to your HCL Digital Experience 9.5 Practitioner Studio interface. See the <a href="../../../../../build_sites/practitioner_studio/">HCL Digital Experience 9.5 Practitioner Studio</a> topic for information.</p>
+</li>
+<li>
+<p>Download and extract the HCL Digital Experience 9.5 components from your Digital Experience entitlements from the <a href="https://www.hcltech.com/software/support/release" target="_blank">HCL Software License Portal</a> to the local file system.</p>
+<p><strong>Sample download package name</strong>: <code>hcl-dx-kubernetes-v95-CF181-other.zip</code> or higher, depending on the DX 9.5 Container Update version you are installing.</p>
+<p><strong>Example</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code>**hcl-dx-kubernetes-v95-CF181-other.zip:**
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>-   **HCL Experience API (Docker image)** - `hcl-dx-ringapi-image-v1.0.0_xxxxxxxx-xxxx.tar.gz`
+-   **Postgres** - `hcl-dx-postgres-image-v1.0.0_xxxxxxxx-xxxx.tar.gz`
+-   **HCL Digital Asset Management (Operator)** - `hcl-dx-medialibrary-operator-image-v95_CF181_xxxxxxxx-xxxx.tar.gz`
+-   **HCL Digital Asset Management (Image processor)** - `hcl-dx-image-processor-image-v1.0.0_xxxxxxxx-xxxx.tar.gz`
+-   **HCL Digital Asset Management (Docker image)** - `hcl-dx-digital-asset-manager-image-v1.0.0_xxxxxxxx-xxxx.tar.gz`
+-   **HCL Content Composer (Docker image)** - `hcl-dx-content-composer-image-v1.0.0_xxxxxxxx-xxxx.tar.gz`
+</code></pre></div>
+</li>
+<li>
+<p>Extract the images to the local file system.</p>
+</li>
+<li>
+<p>Open a terminal window and change to the root directory of the extracted package images.</p>
+</li>
+<li>
+<p>Load the images into your Docker environment.</p>
+<p>Example:</p>
+<div class="language-text highlight"><pre><span></span><code>Docker load &lt; hcl-dx-ringapi-image-v1.0.0_xxxxxxxx-xxxx.tar.gz
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>Docker load &lt; hcl-dx-medialibrary-operator-image-v95_CF181_xxxxxxxx-xxxx.tar.gz
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>Docker load &lt; hcl-dx-digital-asset-manager-image-v1.0.0_xxxxxxxx-xxxx.tar.gz
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>Docker load &lt; hcl-dx-content-composer-image-v1.0.0_xxxxxxxx-xxxx.tar.gz
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>Docker load &lt; hcl-dx-image-processor-image-v1.0.0_xxxxxxxx-xxxx.tar.gz
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>Docker load &lt; hcl-dx-postgres-image-v1.0.0_xxxxxxxx-xxxx.tar.gz
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Either <strong><code>-i</code></strong> or <strong><code>&lt;</code></strong> works for the load command. In case you encounter an error when using one, try running the command using the other.</p>
+</div>
+</li>
+<li>
+<p>Get the Docker images in your local Docker repository to your target Kubernetes system by tagging and pushing them appropriately. If you used <code>docker load</code> to get your images on the target environment, proceed to the next step.</p>
+</li>
+<li>
+<p>Install the HCL Digital Experience 9.5 CF181 or higher Experience API, Content Composer, and Digital Asset Management components by using the following steps. Container Update CF182 or higher is required if deploying to Microsoft Azure Kubernetes Service (AKS).</p>
+<div class="admonition notes">
+<p class="admonition-title">Notes</p>
+<ul>
+<li>The config map name value used must be the same as the HCL Digital Experience 9.5 CF181 and higher deployment. By default, the config map deployment name value is dx-deployment.</li>
+<li>The HCL Experience API must be installed to access and use the HCL Content Composer and the HCL Digital Asset Management features.</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Reminder</p>
+<p>If you are currently running an HCL Digital Experience 9.5 CF181 or higher Kubernetes deployment in production, adding new components requires an outage and setup time so plan it carefully.</p>
+</div>
+<p>If you are creating the dx-deployment config map, you can use the following content (adjusting the image tag values to match your environment) to create a YAML file and use a command line client to create the config map which is used to deploy the HCL Experience API, HCL Content Composer, and HCL Digital Asset Management CF181 and later components.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is possible to deploy the services for the HCL Experience API and HCL Content Composer and/or Digital Asset Management, if either of those combinations is preferred, by removing either the HCL Content Composer or HCL Digital Asset Management service lines from the YAML file.</p>
+</div>
+</li>
+<li>
+<p>Confirm your HCL Digital Experience 9.5 CF181 and higher container instance is up and running on Amazon EKS, Microsoft Azure (CF182 or higher), or Red Hat OpenShift platform.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are adding components for HCL Content Composer, HCL Digital Asset Management, and HCL Experience API to an existing HCL Digital Experience 9.5 environment (must be at level 9.5 CF181 or higher) deployment, you must stop the deployment and restart it with one (1) replica.</p>
+</div>
+<div class="admonition reminder">
+<p class="admonition-title">Reminder</p>
+<p>For an initial deployment, it is not advisable to deploy these components to a production HCL Digital Experience 9.5 deployment.</p>
+</div>
+</li>
+<li>
+<p>Update the HCL Digital Experience 9.5 CF181 or higher container deployment configuration map to deploy the HCL Experience API, HCL Content Composer, and HCL Digital Asset Management CF181 and higher components.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The config map name value used to support the CF181 or higher components must be the same as the HCL Digital Experience 9.5 CF181 and higher deployment. By default, the config map deployment name value is <code>dx-deployment</code>.</p>
+</div>
+</li>
+<li>
+<p>Create a YAML file with the following config map settings:</p>
+<div class="language-text highlight"><pre><span></span><code>kind: `ConfigMap`
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>metadata:
+  name: dx-deployment
+</code></pre></div>
+</li>
+<li>
+<p>Use the following example YAML (<code>dx-deploy-config-map.yaml</code>) to deploy the HCL Experience API, HCL Content Composer, and HCL Digital Asset Management CF181 or higher components. If deploying HCL Content Composer and HCL Digital Asset Management CF181 components, replace their file names in the sample YAML file services lines used.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is possible to deploy the services for the HCL Experience API and HCL Content Composer and/or Digital Asset Management by removing either the HCL Content Composer or HCL Digital Asset Management service lines from the YAML file.</p>
+</div>
+<div class="language-text highlight"><pre><span></span><code>kind: ConfigMap
+metadata:
+  name: dx-deployment
+data:
+  dx.deploy.dam.persistence.tag: v1.0.0_20200622-1806
+  dx.deploy.dam.persistence.image: portal/persistence/postgres
+  dx.deploy.dam.volume: volume name
+  dx.deploy.dam.imgprocessor.tag:  v95_CF181_20200622-1550
+  dx.deploy.remotesearch.tag: v95_CF181_20200622-1550
+  dx.deploy.dam.imgprocessor.image: portal/image-processor
+  dx.deploy.dam.storageclass: dx-deploy-stg
+  dx.deploy.remotesearch.image: dxrs
+  dx.deploy.openldap.tag: v1.0.0-release_20200622_1592846796
+  dx.deploy.openldap.image: dx-openldap
+  dx.deploy.contentui.tag: v1.0.0_20200622-1709
+  dx.deploy.contentui.image: portal/content-ui
+  dx.deploy.remotesearch.enabled: &#39;true&#39;
+  dx.deploy.dam.tag: v1.0.0_20200622-1718
+  dx.deploy.experienceapi.tag: v1.0.0_20200622-1719
+  dx.deploy.experienceapi.image: portal/api/ringapi
+  dx.deploy.dam.image: portal/media-library
+  dx.deploy.openldap.enabled: &#39;true&#39;
+  dx.deploy.contentui.enabled: &#39;true&#39;
+  dx.deploy.experienceapi.enabled: &#39;true&#39;
+  dx.deploy.dam.enabled: &#39;true&#39;
+  dx.deploy.dam.operator.tag: v95_CF181_20200622-1756
+  dx.deploy.dam.operator.image: hcl-medialibrary-operator
+  dx.deploy.remotesearch.volume.storageclass: gp2
+</code></pre></div>
+<div class="admonition notes">
+<p class="admonition-title">Notes</p>
+<ul>
+<li>
+<p>The deployment of HCL Content Composer and HCL Experience API components create:</p>
+<ul>
+<li>
+<p>The <code>dx.deploy.contentui.enabled</code> and <code>dx.deploy.experienceapi.enabled</code> configurations tell the operator to deploy HCL Content Composer and HCL Experience API components. This defaults to using the same repository as the HCL Digital Experience 9.5 CF181 or higher container core deployment.</p>
+</li>
+<li>
+<p>Services <code>dx-deployment-service-content-ui</code> and <code>dx-deployment-service-ring-api</code>, and a route for each.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Administrators can override the repository by adding the following to the config map entries:</p>
+<div class="language-text highlight"><pre><span></span><code>dx.deploy.contentui.repository
+</code></pre></div>
+</li>
+<li>
+<p>The <code>dx.deploy.dam.enabled</code> tells the operator to deploy the HCL Digital Asset Management component. Note that there are 4 required sets of image/tag parameters:</p>
+<ul>
+<li>The HCL Digital Asset Management operator component uses <code>prefixdx.deploy.dam.operator</code>.</li>
+<li>The Postgres datastore component uses <code>dx.deploy.dam.persistence</code>.</li>
+<li>The HCL Digital Asset Management library services use <code>dx.deploy.dam</code>.</li>
+<li>The Image processor uses <code>dx.deploy.dam.persistence</code>.</li>
+</ul>
+<p>To override the repository values for the components above, use <code>dx.deploy.COMPONENT.repository</code></p>
+<p>The last two parameters in the example YAML file provide the storage class and volume (must be <strong>ReadWriteMany</strong>) for the HCL Digital Asset Management component. This is where the persistence layer maintains the datastore layer.</p>
+<p>The <code>dx.deploy.dam.volume: volume name</code> setting is optional if the storage class used/specified by <code>dx.deploy.dam.storageclass</code> is self-provisioning.</p>
+<p>A <code>dx.dam.config.cors</code> config map setting is auto-generated and provides the ability for Cross Origin Resource Sharing across Content Composer and Digital Asset Management resources.</p>
+<p>In the Digital Experience 9.5 core deployment, the <code>dx.config.cors</code> setting is set in the DX configuration map. Reference the <a href="../../../../../deployment/install/container/">Kubernetes Deployment</a> pages for additional details.</p>
+<p>An additional self-provisioning volume is created for each of the HCL Digital Asset Management Persistence (Postgres) pods. The access mode of these self-provisioning persistent volumes must include <code>ReadWriteOnce</code>. If this volume is not present the images are lost and shows blank if/when the HCL Digital Asset Management library is restarted.</p>
+<p>Administrators can override the repository by adding to:</p>
+<div class="language-text highlight"><pre><span></span><code>dx.deploy.contentui.repository
+</code></pre></div>
+<p>In addition, the following default settings are configurable:</p>
+<ul>
+<li><code>dx.deploy.contentui.resources.cpurequest</code>, the default is 1.</li>
+<li><code>dx.deploy.contentui.resources.cpulimit</code>, the default is 3.</li>
+<li><code>dx.deploy.contentui.resources.memoryrequest</code>, the default is 2G.</li>
+<li><code>dx.deploy.contentui.resources.memorylimit</code>, the default is 4G.</li>
+<li><code>dx.deploy.experienceapi.resources.cpurequest</code>, the default is 1.</li>
+<li><code>dx.deploy.experienceapi.resources.cpulimit</code>, the default is 3.</li>
+<li><code>dx.deploy.experienceapi.resources.memoryrequest</code>, the default is 2G.</li>
+<li><code>dx.deploy.experienceapi.resources.memorylimit</code>, the default is 4G.</li>
+</ul>
+<p>Additional configuration options are currently not supported.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Deploy the YAML (<code>dx-deploy-config-map.yaml</code>) by issuing the following:</p>
+<ul>
+<li>
+<p>Kubernetes command:
+    <div class="language-text highlight"><pre><span></span><code>kubectl apply -f dx-deploy-config-map.yaml -n your-namespace
+</code></pre></div></p>
+</li>
+<li>
+<p>OpenShift command:
+    <div class="language-text highlight"><pre><span></span><code>oc project your-namespace
+</code></pre></div></p>
+<p>followed by:</p>
+<div class="language-text highlight"><pre><span></span><code>oc apply -f dx-deploy-config-map.yaml
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Stop and restart the HCL Digital Experience 9.5 CF181 and higher container deployment.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are adding components for HCL Content Composer, HCL Digital Asset Management, and HCL Experience API to an existing HCL Digital Experience 9.5 environment (must be at level 9.5 CF181 or higher) deployment, you must stop the deployment and restart it with one (1) replica. Once it is fully started, you can safely scale it to <code>N</code> instances.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Reminder</p>
+<p>As outlined in this section, adding new components to a production deployment requires an outage and some setup time. It is advisable to plan carefully if you are currently running a Digital Experience container deployment in a supported Kubernetes environment.</p>
+</div>
+</li>
+<li>
+<p>Change to the extracted hcl-dx-cloud-scripts directory.</p>
+<div class="language-text highlight"><pre><span></span><code>./scripts/removeDx.sh NAMESPACE
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This script removes resources from the existing deployment (pods, statefulsets, etc) but does not remove persisted data or existing configmaps.</p>
+</div>
+</li>
+<li>
+<p>Remove the <code>claimRef</code> from the PersistedVolume.</p>
+</li>
+<li>
+<p>Open the persistent volume in a visual editor (vi) using the Kubernetes or OpenShift command line client command:</p>
+<div class="language-text highlight"><pre><span></span><code>kubectl edit pv &lt;pv name&gt;
+</code></pre></div>
+<p>or</p>
+<div class="language-text highlight"><pre><span></span><code>oc edit pv &lt;pv name&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Remove the <code>claimRef</code> section:</p>
+<div class="language-text highlight"><pre><span></span><code>claimRef:
+apiVersion: v1
+kind: PersistentVolumeClaim
+name: dx-deploy-pvc
+namespace: awseks-demo
+resourceVersion: &quot;488931120&quot;
+uid: ebd58361-0e2a-11ea-b02e-02f8fe687954
+</code></pre></div>
+</li>
+<li>
+<p>Ensure you get the '<code>persistentvolume/your_namespace edited</code>' message.</p>
+</li>
+<li>
+<p>Change to the extracted hcl-dx-cloud-scripts directory.</p>
+<div class="language-text highlight"><pre><span></span><code>./scripts/deployDx.sh NAMESPACE REPLICAS REPOSITORY IMAGENAME IMAGETAG VOLUMENAME STORAGECLASS DBTYPE
+</code></pre></div>
+<p>or</p>
+<div class="language-text highlight"><pre><span></span><code>./scripts/deployDx.sh NAMESPACE REPLICAS REPOSITORY IMAGENAME IMAGETAG VOLUMENAME STORAGECLASS DBTYPE INGRESSIMAGE INGRESSTAG
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You must restart the deployment with one (1) replica. Once it is fully started, you can safely scale it to <code>N</code> instances.</p>
+</div>
+<div class="admonition reminder">
+<p class="admonition-title">Reminder</p>
+<p>As outlined in this section, adding new components to a production deployment requires an outage and some setup time. It is advisable to plan carefully if you are currently running a Digital Experience container deployment in a supported Kubernetes environment.</p>
+</div>
+</li>
+<li>
+<p>Access the HCL Content Composer and HCL Digital Asset Management components by navigating to <strong>Practitioner Studio &gt; Web Content &gt; Content</strong>, or <strong>Practitioner Studio &gt; Digital Assets</strong>.</p>
+<div class="language-text highlight"><pre><span></span><code>https://your-portal.net/wps/myportal/Practitioner/Web Content/Content Library
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>https://your-portal.net/wps/myportal/Practitioner/Digital Assets
+</code></pre></div>
+</li>
+<li>
+<p>Access the HCL Experience API Explorer at the following URL:</p>
+<div class="language-text highlight"><pre><span></span><code>http://&lt;HOST&gt;:&lt;PORT&gt;dx/api/core/v1/explorer
+</code></pre></div>
+<p>For example,</p>
+<div class="language-text highlight"><pre><span></span><code>http://127.0.0.1:3000/dx/api/core/v1/explorer
+</code></pre></div>
+</li>
+</ol>
+<h2 id="optional-configure-digital-asset-management-with-a-cdn">(Optional) Configure Digital Asset Management with a CDN</h2>
+<p>If you are using a content delivery network (CDN) such as <a href="https://www.akamai.com/our-thinking/cdn/what-is-a-cdn" target="_blank">Akamai</a>, using <code>Vary: Origin</code> may prevent you from caching content. To bypass this limitation, your CDN configuration must strip the <code>Vary</code> header on the way in, to reinstate your ability to cache content. On the way out, you can append the <code>Origin</code> parameter to the <code>Vary</code> header when serving a response using <strong>'Modify Outgoing Response Header'</strong>.</p>
+<details class="info" open="open">
+<summary>Related information</summary>
+<ul>
+<li><a href="../../../../digital_assets/">HCL Digital Asset Management</a></li>
+<li><a href="../../../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio/">How to enable Practitioner Studio</a></li>
+<li><a href="../../../../../deployment/install/container/helm_deployment/overview/">Docker image deployment</a></li>
+<li><a href="../../../../../get_started/plan_deployment/container_deployment/dam_persistence_architecture/">Digital Asset Management persistence architecture</a></li>
+</ul>
+</details>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 28, 2023</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2765 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/extend_dx/ddc/implementing_user_interactions/sending_data_to_webcontentviewer_portlet/generic_xml_ddc_sink/plrf_datasink_parms/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../plrf_use_gen_xml_ddc_datasink_rsltobjct/">
+      
+      
+      <link rel="icon" href="../../../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Parameters that the generic XML data sink supports - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#parameters-that-the-generic-xml-data-sink-supports" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../../../latest/extend_dx/ddc/implementing_user_interactions/sending_data_to_webcontentviewer_portlet/generic_xml_ddc_sink/plrf_datasink_parms/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Parameters that the generic XML data sink supports
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../whatsnew/cf20/newcf222/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../deployment/" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../build_sites/" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../../whatsnew/cf20/newcf222/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../build_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Extend DX
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../integration/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integrate Applications
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../development_tools/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Development Tools
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../script_application/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Script Applications
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Digital Data Connector
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            Digital Data Connector
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../plrf_tech_concepts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technical concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../plrf_render_flow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The rendering flow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../integrating_voltmx_foundry/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    HCL Volt MX Foundry via DDC
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Implementing user interactions
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_5_5" id="__nav_7_5_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_5_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Implementing user interactions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5_5_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Sending data to the Web Content Viewer portlet
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_5_5_2" id="__nav_7_5_5_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_7_5_5_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_5_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sending data to the Web Content Viewer portlet
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plrf_sendata2wcv_createhtmlform/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating the HTML form
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plrf_sendata2wcv_receivhtmlform/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Receiving the result of an HTML form submission
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5_5_2_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    The generic XML Digital Data Connector data sink
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_5_5_2_4" id="__nav_7_5_5_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_7_5_5_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_5_5_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            The generic XML Digital Data Connector data sink
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Parameters that the generic XML data sink supports
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Parameters that the generic XML data sink supports
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example-creating-a-resource" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Creating a resource
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-deleting-an-existing-resource" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Deleting an existing resource
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plrf_use_gen_xml_ddc_datasink_rsltobjct/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The generic XML data sink result object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plrf_set_dyn_ddc_fltr_valus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting dynamic Digital Data Connector filter values
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../working_with_list_rendering_profiles/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Working with list-rendering profiles
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../integrating_remote_xml_data/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integrating remote XML data
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../integrating_remote_json_data/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integrating remote JSON data
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../plrf_crt_dply_cust_beanlst_prvdr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating and deploying custom Digital Data Connector plug-ins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../crt_dply_cstm_attval_pro_plgin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating and deploying custom attribute value processor plug-ins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../ddc_cache_tuning/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Digital Data Connector cache tuning
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../plrf_hint_tip/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hints and tips for Digital Data Connector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../portlets_development/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Portlet Development
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../screenflow/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Screen Flow Manager
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../paa/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Portal Application Archive
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../apis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    APIs
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example-creating-a-resource" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Creating a resource
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-deleting-an-existing-resource" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Deleting an existing resource
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="parameters-that-the-generic-xml-data-sink-supports">Parameters that the generic XML data sink supports</h1>
+<p>The generic XML Digital Data Connector (DDC) for HCL Portal data sink supports the parameters that are listed here.</p>
+<ul>
+<li>
+<p><strong>ddc.method</strong></p>
+<p>Use this parameter to identify the HTTP method that you want to be used for sending the data to the outbound target. Supported values are <code>put</code>, <code>post</code>, and <code>delete</code>.</p>
+</li>
+<li>
+<p><strong>ddc.uri.target</strong></p>
+<p>Use this parameter to specify a URI that identifies the target of the outbound request. The target can be an HTTP or HTTPs URL, for example, to a remote REST service.</p>
+</li>
+<li>
+<p><strong>ddc.uri.template</strong></p>
+<p>Use this parameter to specify a URI that identifies the template XML document that is required for <code>set</code>, <code>addChild</code>, <code>addPredecessor</code>, and <code>addSuccessor</code> actions. This document is the starting point for creating the final XML document that is sent to the target service. You can modify the template for starting a specific operation by using form post parameters. The URI used in this parameter needs to identify a well-formed XML document.</p>
+</li>
+<li>
+<p><strong>ddc.profile.in</strong></p>
+<p>Use this parameter to define the name of the list-rendering profile that you want to apply to the template XML document. You can use the item attribute definitions and corresponding XPath statements of this profile to modify specific fragments of the template XML document. This modification is done before the resulting XML document is sent to the target service.</p>
+</li>
+<li>
+<p><strong>ddc.profile.out</strong></p>
+<p>Use this parameter to define the name of the list-rendering profile that you want to apply to the data returned by the target service. You can use the item attribute definitions and corresponding XPath statements of this profile to extract specific XML fragments of XML documents that are served in response to the update operation. If you do not set this parameter, the data sink uses the same profile as the one that the <code>ddc.profile.in</code> parameter references.</p>
+</li>
+<li>
+<p><strong>ddc.itemattribute.value.suffix</strong></p>
+<p>Use this parameter to specify the value that you want to use for modifying the template XML document that is required for <code>set</code>, <code>addChild</code>, <code>addPredecessor</code>, and <code>addSuccessor</code> actions. The value can come from user input or can be specified through hidden form input field that is filled by HCL Web Content Manager tags. For example, such a tag can be the <code>[AttributeResource]</code> tag.</p>
+<p>Depending on the value of the <code>valueType</code> definition of the related operation, specify one of the following values:</p>
+<ul>
+<li>A URI that identifies the item attribute value for the operation. This URI must be a URI that the POC resolver framework can resolve.</li>
+<li>Plain text that represents the item attribute value for the operation.
+The <code>suffix</code> value does not imply any semantics. Use it to correlate this attribute value specification with an item attribute operation specification. Both specifications must be represented by a <code>ddc.itemattribute.value.suffix</code> and <code>ddc.itemattribute.operation.suffix</code> parameter, respectively. For example, the following attribute value specification is correlated with the following item attribute operation specification by using the common suffix <code>xyz</code>: <code>addc.itemattribute.value.xyz</code> and <code>ddc.itemattribute.operation.xyz</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>ddc.itemattribute.template.suffix</strong></p>
+<p>Use this parameter to specify an optional item attribute value template. The generic XML DDC data sink data sink replaces all occurrences of the <code>${value}</code> string in the template with the value of the related <code>ddc.itemattribute.value.suffix</code> parameter. This step creates the final value to use for modifying the template XML document that is used for <code>set</code>, <code>addChild</code>, <code>addPredecessor</code>, and <code>addSuccessor</code> actions.</p>
+<p>If the related <code>ddc.itemattribute.value.suffix</code> defines more than one value by using a separator specified by the <code>valueSeparator</code> parameter, the generic data sink applies each individual value to the template.</p>
+<p>Depending on the value of the <code>templateType</code> definition of the related operation, specify one of the following values:</p>
+<ul>
+<li>A URI that identifies the item attribute value template for the operation. This URI must be a URI that the POC resolver framework can resolve.</li>
+<li>Plain text that represents the template for the operation.
+The <code>suffix</code> value does not imply any semantics. Use it to correlate this attribute value with a corresponding item attribute value specification and item attribute operation specification. Both specifications must be represented by a <code>ddc.itemattribute.value.suffix</code> and <code>ddc.itemattribute.operation.suffix</code> parameter, respectively. For example, the following attribute value specification is correlated with the following item attribute operation specification by using the common suffix <code>xyz</code>: <code>addc.itemattribute.value.xyz</code> and <code>ddc.itemattribute.operation.xyz</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>ddc.itemattribute.operation.suffix</strong></p>
+<p>Use this parameter to specify a modification of the template document. The value for this parameter is comma-separated list of name-value pairs. You can specify the following keys:</p>
+<ul>
+<li>
+<p><strong>action</strong></p>
+<p>Use this key to identify the action that you want to be completed on the template document. The data sink completes the following actions on the template XML document. The node selection is based on the <code>itemAttribtueName</code> value and the list-rendering profile that is attached through the <code>ddc.profile.in</code> parameter. You can specify the following values:</p>
+<ul>
+<li>
+<p><strong>set</strong></p>
+<p>Use this value to modify the node selected by the <code>itemAttributeName</code> value.</p>
+</li>
+<li>
+<p><strong>addChild</strong></p>
+<p>Use this value to add a child node selected by the <code>itemAttributeName</code> value.</p>
+</li>
+<li>
+<p><strong>addPredecessor</strong></p>
+<p>Use this value to add a predecessor sibling to the node selected by the <code>itemAttributeName</code> value.</p>
+</li>
+<li>
+<p><strong>addSuccessor</strong></p>
+<p>Use this value to add a successor sibling to the node selected by the <code>itemAttributeName</code> value.</p>
+</li>
+<li>
+<p><strong>remove</strong></p>
+<p>Use this value to remove the selected node.</p>
+</li>
+</ul>
+<p>In contrast to the actions listed previously, the <code>get</code> action is not performed on the template document, but on the resulting XML document that the addressed service returns. If you use this action, the node selection is based on the <code>itemAttribtueName</code> value and the list-rendering profile that is attached through the <code>ddc.profile.out</code> parameter.</p>
+<ul>
+<li>
+<p><strong>get</strong></p>
+<p>Use this value to add a corresponding entry to the result JSON object that the data sink generates. The entry holds the string value of the selected node in the result XML document.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>itemAttributeName</strong></p>
+<p>Use this key to reference an individual item attribute definition in the associated list-rendering profile. The XPath that is associated with this item attribute definition is used to select the target node for this operation. In this context, you can use only <code>ItemAttribute</code> definitions. The following definitions are not supported: <code>AssociatedItemAttribute</code>, <code>ComputeItemAttribute</code>, <code>ConstructedItemAttributes</code>.</p>
+</li>
+<li>
+<p><strong>templateType</strong></p>
+<p>Use this key to specify the type of the value of the <code>ddc.uri.template</code> parameter that was listed earlier. You can specify the following values:</p>
+<ul>
+<li>
+<p><strong>text</strong></p>
+<p>If you specify the value <code>text</code>, the value of the <code>ddc.itemattribute.template.suffix</code> parameter is used as a normal string that represents the item attribute template. This is the default template type.</p>
+</li>
+<li>
+<p><strong>uri</strong></p>
+<p>If you specify the value <code>uri</code>, the data sink parses the value of the <code>ddc.itemattribute.template.suffix</code> parameter as a URI. The data sink determines the actual value by reading the data that is served from this URI. The URI needs to be a URI that the POC resolver framework can resolve.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>valueType</strong></p>
+<p>Use this key to specify the type of the value of the <code>ddc.itemattribute.value.suffix</code> parameter that is related to the operation. You can specify one of the following values:</p>
+<ul>
+<li>
+<p><strong>text</strong></p>
+<p>If you specify the value text, the value of the <code>ddc.itemattribute.value.suffix</code> parameter is used as a normal string. This is the default value type.</p>
+</li>
+<li>
+<p><strong>uri</strong></p>
+<p>If you specify the value <code>uri</code>, the data sink parses value of the <code>ddc.itemattribute.value.suffix</code>  parameter as a URI. The data sink determines the actual value by reading the data that is served from this URI. The URI must be a URI that the POC resolver framework can resolve.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>valueSeparator</strong></p>
+<p>Use this key to enable the operation to support multiple values. The generic data sink computes the individual values by splitting the correlated parameter value using the separator that this key specifies. If the separator consists of multiple characters, each character is treated as a separate separator. Example: To split an input value on all occurrences of commas (<code>,</code>) and semicolons (<code>;</code>), you combine both separators in the value for this parameter as follows: <code>;,</code>. The data sink completes the operation for each fragment of the separated value. Use this parameter only for the following actions: <code>addChild</code>, <code>addPredecessor</code>, <code>addSuccessor</code>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>ddc.state.operation.suffix</strong></p>
+<p>Use this parameter to specify a modification of the portlet render state. The value for this parameter is comma-separated list of name-value pairs. You can specify the following keys:</p>
+<ul>
+<li>
+<p><strong>action</strong></p>
+<p>Use this key to identify the action that you want to be completed on the portlet render state. You can use the following values:</p>
+<ul>
+<li>
+<p><strong>set</strong></p>
+<p>Use this value to set a private render parameter.</p>
+</li>
+<li>
+<p><strong>add</strong></p>
+<p>Use this value to add a private render parameter.</p>
+</li>
+<li>
+<p><strong>remove</strong></p>
+<p>Use this value to remove a private render parameter.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>renderParameterName</strong></p>
+<p>Use this key to specify the name of the private render parameter that you want to modify.</p>
+</li>
+<li>
+<p><strong>condition</strong></p>
+<p>Use this key to specify the condition under which you want this operation to be performed. You can use the following values:</p>
+<ul>
+<li>
+<p><strong>success</strong></p>
+<p>If you specify this value, the modification to the portlet render state is performed only if the overall data sink operation succeeded.</p>
+</li>
+<li>
+<p><strong>error</strong></p>
+<p>If you specify this value, the modification to the portlet render state is performed only if the overall data sink operation resulted in an error.</p>
+</li>
+<li>
+<p><strong>always</strong></p>
+<p>If you specify this value, the modification to the portlet render state is performed independent of whether the overall data sink result succeeded or resulted in an error.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>ddc.state.value.suffix</strong></p>
+<p>Use this parameter to specify the value for the state operation as described in the corresponding <code>ddc.state.operation</code> parameter.</p>
+</li>
+<li>
+<p><strong>ddc.passback.name</strong></p>
+<p>Use this parameter to specify custom pass-back parameters. The generic XML DDC data sink does not analyze these parameters. It only adds them to the interaction result JSON object as a <code>passbackData</code> member using <code>name</code> as an identifier. This parameter can be useful for retaining specific state information after the operation is completed, for example when you create a new resource.</p>
+</li>
+<li>
+<p><strong>ddc.resultheaders</strong></p>
+<p>Use this parameter to specify the names of HTTP response header fields that you want to be included in the result object. The HTTP response header fields refer to the outbound call of the generic XML DDC data sink. To specify more than one header field, use multiple <code>ddc.resultheaders</code> parameters. After processing the response from the remote REST service, the data sink adds the specified header fields from the response to the interaction result JSON object as a <code>resultHeaderData</code> member. You can use this parameter to access information from the outbound call that the data sink makes.</p>
+</li>
+</ul>
+<h2 id="example-creating-a-resource">Example: Creating a resource</h2>
+<p>Typical XML REST services support the creation of new resources by sending a corresponding resource XML document to the service. To do so, the client typically uses an HTTP POST request. The following HTML fragment shows an HTML form that you can use to create a comment on a HCL Connections blog post:</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;form id=&quot;[AttributeResource attributeName=&#39;id&#39;]CreateBlogPostComment&quot; 
+      method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot; 
+      action=&quot;[Plugin:ActionURL copyCurrentParams=&quot;true&quot; 
+      param=&quot;resultSessionAttribute=myResult&quot; compute=&quot;always&quot;]&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;_charset_&quot; value=&quot;[Plugin:EvaluateEL
+         value=&quot;${pageContext.response.characterEncoding}&quot; compute=&quot;once&quot;]&quot;/&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;action.uri&quot; value=&quot;ddc:operation:blp:ibm.portal.ddc.xml&quot;/&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;ddc.uri.template&quot; 
+         value=&quot;wcmrest:LibraryHTMLComponent/[Component 
+         name=&quot;yourLibrary/interaction 
+         templates/create comment&quot; format=&quot;id&quot;]&quot;/&gt;          
+  &lt;input type=&quot;hidden&quot; name=&quot;ddc.profile.in&quot; 
+         value=&quot;ibm.portal.sr.blogs.post.comments&quot;/&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;ddc.itemattribute.operation.addComment&quot; 
+         value=&quot;action=set,itemAttributeName=body&quot;/&gt;
+  &lt;textarea title=&quot;Content&quot; name=&quot;ddc.itemattribute.value.addComment&quot; 
+            placeholder=&quot; &quot;&gt;&lt;/textarea&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;ddc.uri.target&quot; value=&quot;[AttributeResource 
+         attributeName=&quot;rawCommentsEditLink&quot;]&quot;/&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;ddc.method&quot; value=&quot;post&quot;/&gt;
+  &lt;input type=&quot;submit&quot; class=&quot;lotusBtn&quot; value=&quot;Submit&quot; name=&quot;submitButton&quot;/&gt;
+&lt;/form&gt;
+</code></pre></div>
+<p>The form sets the <code>action</code>, <code>method</code>, and <code>enctype</code> parameters. The form also specifies the <code>_charset_</code> and <code>action.uri</code> input fields. For more information about these fields, read <em>Creating the HTML form</em>. Additionally, the form specifies the following behavior:</p>
+<ul>
+<li>The form sets the <code>action.uri</code> parameter to the value <code>ddc:operation:blp:ibm.portal.ddc.xml</code>. As a result, the generic XML Digital Data Connector data sink processes the form.</li>
+<li>
+<p>The template document that represents the blog post comment XML entry is referenced by using the <code>ddc.uri.template</code> parameter. In this example, the template document is served from a Web Content Manager HTML component that is referenced by a corresponding <code>wcmrest</code> URI. For more information about the Web Content Manager REST URI format, read <em>REST service for Web Content Manager</em>in the Web Content Manager documentation. In this example, the referenced HTML component contains the following XML fragment:</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&#39;1.0&#39; encoding=&#39;UTF-8&#39;?&gt;
+&lt;entry xmlns=&#39;http://www.w3.org/2005/Atom&#39;
+xmlns:thr=&quot;http://purl.org/syndication/thread/1.0&quot;&gt;
+   &lt;content type=&#39;html&#39;&gt;
+   &lt;/content&gt;
+&lt;/entry&gt;
+</code></pre></div>
+</li>
+<li>
+<p>The profile for this template document is identified by using the <code>ddc.profile.in</code> parameter. As the example posts a blog post comment document, the profile <code>ibm.portal.sr.blogs.post.comments</code> is used.</p>
+</li>
+<li>The parameters <code>ddc.itemattribute.operation.addComment</code> and <code>ddc.itemattribute.value.addComment</code> define the update of the <code>&lt;content&gt;</code> element in the template document. The operation parameter is set to the value <code>action=set,itemAttributeName=body</code>. As a result, the value that the user entered in the <code>ddc.itemattribute.value.addComment</code> text area is used to update the XML node that the item attribute named <code>body</code> selected. The referenced profile holds the information about where to locate the <code>&lt;content&gt;</code> element in the template.</li>
+<li>To create the blog post comment, the modified template document needs to be sent to the blog post edit link. To do so, set the <code>ddc.method</code> parameter to the value <code>post</code>. To extract the blog post edit link from the current DDC list-rendering context, use the tag <code>[AttributeResource attributeName="rawCommentsEditLink"]</code>.</li>
+</ul>
+<h2 id="example-deleting-an-existing-resource">Example: Deleting an existing resource</h2>
+<p>Typical XML REST services support the deletion of existing resources by sending a corresponding an HTTP DELETE request to the resource URL. The following HTML fragment shows an HTML form that you can use to delete a comment from an HCL Connections blog post:</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;form id=&quot;[AttributeResource attributeName=&quot;id&quot; 
+      separator=&quot;,&quot;]DeleteBlogComment&quot; method=&quot;POST&quot; 
+      enctype=&quot;multipart/form-data&quot; action=&quot;[Plugin:ActionURL 
+      action=&quot;post&quot; copyCurrentParams=&quot;true&quot; 
+      param=&quot;resultSessionAttribute=myResult&quot; compute=&quot;always&quot;]&quot;&gt;
+    &lt;input type=&quot;hidden&quot; name=&quot;_charset_&quot; value=&quot;[Plugin:EvaluateEL 
+           value=&quot;${pageContext.response.characterEncoding}&quot; compute=&quot;once&quot;]&quot;/&gt;
+    &lt;input type=&quot;hidden&quot; name=&quot;action.uri&quot; 
+           value=&quot;ddc:operation:blp:ibm.portal.ddc.xml&quot;/&gt;
+    &lt;input type=&quot;hidden&quot; name=&quot;ddc.method&quot; value=&quot;delete&quot;/&gt;
+    &lt;input type=&quot;hidden&quot; name=&quot;ddc.uri.target&quot; 
+           value=&quot;[AttributeResource attributeName=&quot;rawEditLink&quot; 
+                   separator=&quot;,&quot;]&quot; /&gt;
+&lt;/form&gt;
+</code></pre></div>
+<p>The form specifies the following behavior:</p>
+<ul>
+<li>The form sets the <code>uri</code> parameter to the value <code>ddc:operation:blp:ibm.portal.ddc.xml</code>. As a result, the generic XML Digital Data Connector (DDC) for HCL Portal data sink processes the form.</li>
+<li>To delete the resource, you do not need to send XML data to the data sink. Therefore, the form does not specify the parameters <code>ddc.uri.template</code> or <code>ddc.profile.in</code> or any of the <code>ddc.itemattribute</code> parameters.</li>
+<li>To delete the blog post comment, you need to send an HTTP delete request to the blog post edit link. To do so, set the <code>ddc.method</code> parameter to the value <code>delete</code>. To extract the blog post edit link from the current DDC list-rendering context, use the tag <code>[AttributeResource attributeName="rawCommentsEditLink"]</code>.</li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 5, 2022</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2781 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/manage_content/wcm_development/wcm_dev_remoteactions/">
+      
+      
+        <link rel="prev" href="../wcm_dev_profiling_taxonomy_planning/">
+      
+      
+        <link rel="next" href="../wcm_dev_storing_translated_text/">
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>How to use remote actions - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-to-use-remote-actions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../latest/manage_content/wcm_development/wcm_dev_remoteactions/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              How to use remote actions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../whatsnew/cf20/newcf222/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../deployment/" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../build_sites/" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../whatsnew/cf20/newcf222/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../build_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Manage Content
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../wcm_authoring/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Author Web Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../wcm_delivery/vanity_url/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deliver Web Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../wcm_configuration/wcm_adm_tools/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Configure Web Content Manager
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Extend Web Content Manager
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            Extend Web Content Manager
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../wcm_dev_api/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    HCL Web Content Manager API
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../wcm_custom_plugin/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    How to create custom plug-ins
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../wcm_rest/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    REST service for Web Content Manager
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../wcm_rest_v2/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    REST service for Web Content Manager v2
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wcm_dev_context/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Determining the current web content context
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wcm_dev_custom_html_editor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to create a custom HTML editor integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wcm_dev_custom_ui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to create a custom launch page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wcm_dev_displaying_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to display data from external sources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wcm_dev_profiling_taxonomy_planning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Taxonomies, Categories, and keywords
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    How to use remote actions
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    How to use remote actions
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#remote-action-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remote action types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#populating-fields-when-creating-or-editing-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Populating fields when creating or editing content
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#save-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Save parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-comments-to-the-item-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding comments to the item history
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wcm_dev_storing_translated_text/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to store translated text in a content item or site area
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wcm_jms_enable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Java messaging services for web content
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../wcm_rest_v2_ai_analysis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    REST API for AI analyis of a content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../digital_assets/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Digital Asset Management
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../design_studio/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Design studio
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../pzn/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Personalization
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#remote-action-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remote action types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#populating-fields-when-creating-or-editing-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Populating fields when creating or editing content
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#save-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Save parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-comments-to-the-item-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding comments to the item history
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="how-to-use-remote-actions">How to use remote actions</h1>
+<p>Remote actions are used to trigger actions from the HCL Web Content Manager application.</p>
+<p>You can reference remote actions by using plug-in tags by using the following format:</p>
+<div class="language-text highlight"><pre><span></span><code>[plugin:RemoteAction action=&quot; &quot; docid=&quot; &quot; 
+dialog=&quot; &quot; dialogSize=&quot; &quot; dialogTitle=&quot; &quot; useCurrentContext=&quot; &quot; showInfoMsg=&quot; &quot; ]
+</code></pre></div>
+<ul>
+<li>
+<p><strong><code>action</code></strong></p>
+<p>This is the remote action to perform.</p>
+</li>
+<li>
+<p><strong><code>docid</code></strong></p>
+<p>This is the document ID of the item to run the remote action against.</p>
+</li>
+<li>
+<p><strong><code>useCurrentContext</code></strong></p>
+<p>If set to true, then the document ID is obtained from the rendering context instead of the docid attribute.</p>
+</li>
+<li>
+<p><strong><code>dialog</code></strong></p>
+<p>If set to true, when rendered within a Web Content Viewer portlet, the remote action is rendered as a URL that redirects the user to a hidden portal page that is used by the Web Content Viewer portlet for inline editing.</p>
+</li>
+<li>
+<p><strong><code>dialogSize</code></strong></p>
+<p>This optional setting defines the size of the dialog executing the remote action. The value must be in the format "width,height". For example, <code>dialogSize="200,300"</code> for a dialog of width 200 pixel and a height of 300 pixel. If omitted, the dialog size is calculated from the content that is displayed in the dialog. This setting is only used if dialog="true".</p>
+</li>
+<li>
+<p><strong><code>dialogTitle</code></strong></p>
+<p>This optional setting sets the title of the dialog executing the remote action. If omitted, the action name is used instead. This setting is only used if dialog="true".</p>
+</li>
+<li>
+<p><strong><code>showInfoMsg</code></strong></p>
+<p>Set this to true to display success status and other information messages after the remote action has finished. If omitted, this parameter is set to false and only warning and error status messages are displayed. This setting can only be used if dialog="true".</p>
+</li>
+</ul>
+<p>Remote actions can also be appended to the URL of an authoring portlet. For example:</p>
+<div class="language-text highlight"><pre><span></span><code>http://[host]/wps/myportal/wcmAuthoring?wcmAuthoringAction=action
+</code></pre></div>
+<p>You can also append remote actions to the URL of a local web Content Viewer portlet. This can be useful in sites that feature inline editing of content items.</p>
+<p><strong>Custom authoring interfaces:</strong> Remote actions are not intended to be used to create a custom authoring interface. There are limitations to the functions delivered using remote actions. For example, remote actions only support plain text. You cannot use remote actions to add markup into elements such as HTML elements. You instead use the Web Content Manager API to create custom authoring interfaces.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Each web content item can be identified by a DocumentId. The "docid" can be retrieved by using the web content API. In the following examples, the value of the "docid" parameter should be the DocumentId as retrieved by using the <code>DocumentID.getID()</code> API method. A document ID consists of a document type and a unique ID. The "docid" values that are provided in the examples are placeholders for real document IDs. For example, <code>com.ibm.workplace.wcm.api.WCM_Content/ID1</code></p>
+</div>
+<h2 id="remote-action-types">Remote action types</h2>
+<ul>
+<li>
+<p><strong><code>new</code></strong></p>
+<p>This is used to open a new item form. You must also specify a "type" parameter.</p>
+<p>For example:</p>
+<ul>
+<li>
+<p><code>[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_Content" ]</code>
+The following type parameters can be used:</p>
+</li>
+<li>
+<p><code>com.ibm.workplace.wcm.api.WCM_AuthoringTemplate</code></p>
+</li>
+<li><code>com.ibm.workplace.wcm.api.WCM_Category</code></li>
+<li><code>com.ibm.workplace.wcm.api.WCM_Content</code></li>
+<li><code>com.ibm.workplace.wcm.api.WCM_DateComponent</code></li>
+<li><code>com.ibm.workplace.wcm.api.WCM_FileComponent</code></li>
+<li><code>com.ibm.workplace.wcm.api.WCM_HTMLComponent</code></li>
+<li><code>com.ibm.workplace.wcm.api.WCM_ImageComponent</code></li>
+<li><code>com.ibm.workplace.wcm.api.WCM_NumericComponent</code></li>
+<li><code>com.ibm.workplace.wcm.api.WCM_PresentationTemplate</code></li>
+<li><code>com.ibm.workplace.wcm.api.WCM_RichTextComponent</code></li>
+<li><code>com.ibm.workplace.wcm.api.WCM_ShortTextComponent</code></li>
+<li><code>com.ibm.workplace.wcm.api.WCM_SiteArea</code></li>
+<li><code>com.ibm.workplace.wcm.api.WCM_Taxonomy</code></li>
+<li><code>com.ibm.workplace.wcm.api.WCM_TextComponent</code></li>
+<li><code>com.ibm.workplace.wcm.api.WCM_Workflow</code></li>
+<li><code>com.ibm.workplace.wcm.api.WCM_WorkflowStage</code></li>
+</ul>
+<p>When creating a new content item, you can specify a default authoring template by providing the document ID of the authoring template in the atid parameter:</p>
+<ul>
+<li><code>[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_Content" atid="com.ibm.workplace.wcm.api.WCM_AuthoringTemplate/ID1"]</code></li>
+</ul>
+<p>When creating site areas, content items and categories, you can specify the document ID of the parent item to save the new item under. Specify this ID in the pid parameter:</p>
+<ul>
+<li><code>[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_Content" pid="com.ibm.workplace.wcm.api.WCM_SiteArea/ID"]</code></li>
+<li><code>[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_SiteArea" pid="com.ibm.workplace.wcm.api.WCM_SiteArea/ID"]</code></li>
+<li><code>[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_Category" pid="com.ibm.workplace.wcm.api.WCM_Taxonomy/ID"]</code></li>
+</ul>
+<p>When creating site areas, you can specify the position of the new site area by using a position parameter. You can specify to save the new site area at the start or end relative to any existing site areas. If not specified, the new site area is saved at the start relative to any existing site areas:</p>
+<ul>
+<li><code>[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_Content" position="start"]</code></li>
+<li><code>[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_SiteArea" position="end"]</code></li>
+</ul>
+</li>
+<li>
+<p><strong><code>delete</code></strong></p>
+<p>This is used to delete an item. You must also specify the docid of the item.</p>
+<p>For example:</p>
+<ul>
+<li><code>[plugin:RemoteAction action="delete" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1"]</code></li>
+</ul>
+</li>
+<li>
+<p><strong><code>edit</code></strong></p>
+<p>This is used to open an item form in edit mode. You must also specify the docid of the item.</p>
+<p>For example:</p>
+<ul>
+<li><code>[plugin:RemoteAction action="edit" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1"]</code></li>
+</ul>
+</li>
+<li>
+<p><strong><code>read</code></strong></p>
+<p>This is used to open an item form in read-only mode. You must also specify the docid of the item.</p>
+<p>For example:</p>
+<ul>
+<li><code>[plugin:RemoteAction action="read" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1"]</code></li>
+</ul>
+</li>
+<li>
+<p><strong><code>openmainview</code></strong></p>
+<p>This is used to open a view within an authoring portlet. You must also specify a view parameter.</p>
+<p>For example:</p>
+<ul>
+<li>
+<p><code>[plugin:RemoteAction action="openmainview" view="contentbysitearea"]</code>
+The following view parameters can be used:</p>
+</li>
+<li>
+<p><code>contentbysitearea</code></p>
+</li>
+<li><code>contentbytitle</code></li>
+<li><code>myrecent</code></li>
+<li><code>mydraft</code></li>
+<li><code>mypendingapproval</code></li>
+<li><code>mypublished</code></li>
+<li><code>myexpired</code></li>
+<li><code>mydeleted</code></li>
+<li><code>alldraftitems</code></li>
+<li><code>allexpireditems</code></li>
+<li><code>allpublisheditems</code></li>
+<li><code>alldeleteditems</code></li>
+<li><code>componentsbytype</code></li>
+</ul>
+</li>
+<li>
+<p><strong><code>move</code></strong></p>
+<p>This is used to move a site area or content item.</p>
+<p>For example, to open the move dialog for a content item or site area:</p>
+<ul>
+<li>
+<p><code>[plugin:RemoteAction action="move" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1"]</code>
+A move direction is specified as "1" for up and "-1" for down. For example, to move a content item up one position:</p>
+</li>
+<li>
+<p><code>[plugin:RemoteAction action="move" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1" pid="com.ibm.workplace.wcm.api.WCM_SiteArea/ID1" moveDirection="1"]</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code>link</code></strong></p>
+<p>This will link a content item to a site area.</p>
+<p>For example:</p>
+<ul>
+<li>
+<p><code>[plugin:RemoteAction action="link" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1" pid="com.ibm.workplace.wcm.api.WCM_SiteArea/ID2"]</code>
+When linking items, you can specify the path to the parent item by using the ppath parameter instead of the pid parameter:</p>
+</li>
+<li>
+<p><code>[plugin:RemoteAction action="link" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1" ppath="library1/sitearea1/sitearea2"]</code>
+When linking items, you can create a new parent item by using the autoCreateParent parameter. You must also specify the library where the item being linked is located by using the slibrary parameter. The ppath parameter is used to specify the existing parent that the new parent item is created under:</p>
+</li>
+<li>
+<p><code>[plugin:RemoteAction action="link" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1" autoCreateParent="true" slibrary="libraryname" ppath="library1/sitearea1/sitearea2"]</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code>copy</code></strong></p>
+<p>This is used to make a copy of an item.</p>
+<p>For example, to copy a content item to a new site area:</p>
+<ul>
+<li>
+<p><code>[plugin:RemoteAction action="copy" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1" pid="com.ibm.workplace.wcm.api.WCM_SiteArea/ID2"]</code>
+You can use the following extra parameters when copying:</p>
+</li>
+<li>
+<p><code>copyAsDraft="true"</code></p>
+<p>This will restart the workflow of the copy being creating. In most cases this would result in the copy being created with a status of draft.</p>
+</li>
+<li>
+<p><code>wid="com.ibm.workplace.wcm.api.WCM_Workflow/ID1"</code></p>
+<p>Use this to specify a different workflow to use when creating the copy. This will also restart the workflow of the copy being creating. In most cases this would result in the copy being created with a status of draft.</p>
+</li>
+<li>
+<p><code>position="start"</code></p>
+<p>This will create the copy as the first item under the specified parent item. If not specified the item is copied as the last child of the specified parent item.</p>
+</li>
+</ul>
+<p>When copying items you can specify the path to the parent item by using the ppath parameter instead of the pid parameter:</p>
+<ul>
+<li>
+<p><code>[plugin:RemoteAction action="copy" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1" ppath="library1/sitearea1/sitearea2"]</code>
+When copying items you can create a new parent item by using the autoCreateParent parameter. You must also specify the library where the item being copied is located by using the slibrary parameter. The ppath parameter is used to specify the existing parent that the new parent item is created under:</p>
+</li>
+<li>
+<p><code>[plugin:RemoteAction action="copy" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1" autoCreateParent="true" slibrary="libraryname" ppath="library1/sitearea1/sitearea2"]</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code>approve</code></strong></p>
+<p>This is used to approve an item in a workflow. You must also specify the docid of the item.</p>
+<p>For example:</p>
+<ul>
+<li><code>[plugin:RemoteAction action="approve" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1"]</code></li>
+</ul>
+</li>
+<li>
+<p><strong><code>decline</code></strong></p>
+<p>This is used to decline an item in a workflow. You must also specify the docid of the item.</p>
+<p>For example:</p>
+<ul>
+<li><code>[plugin:RemoteAction action="decline" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1"]</code></li>
+</ul>
+</li>
+<li>
+<p><strong><code>saveandapprove</code></strong></p>
+<p>This is used to approve an item in a workflow where that item is open in edit mode within the same session. You must also specify the docid of the item.</p>
+<p>For example:</p>
+<ul>
+<li><code>[plugin:RemoteAction action="saveandapprove" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1"]</code></li>
+<li><code>[plugin:RemoteAction action="saveandapprove" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1" isdraft="true"]</code></li>
+</ul>
+</li>
+<li>
+<p><strong><code>previousstage</code></strong></p>
+<p>This is used to move an item to the previous stage in a workflow. You must also specify the docid of the item.</p>
+<p>For example:</p>
+<ul>
+<li><code>[plugin:RemoteAction action="previousstage" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1"]</code></li>
+</ul>
+</li>
+<li>
+<p><strong><code>viewversions</code></strong></p>
+<p>This is used to open the versions dialog for an item. You must also specify the docid of the item.</p>
+<p>For example:</p>
+<ul>
+<li><code>[plugin:RemoteAction action="viewversions" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1"]</code></li>
+</ul>
+</li>
+<li>
+<p><strong><code>viewhistory</code></strong></p>
+<p>This is used to open the history dialog for an item. You must also specify the docid of the item.</p>
+<p>For example:</p>
+<ul>
+<li><code>[plugin:RemoteAction action="viewhistory" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1"]</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="populating-fields-when-creating-or-editing-content">Populating fields when creating or editing content</h2>
+<p>When using the "new" or "edit" parameters with content items, you can also add data to different fields in the content item using a URL.</p>
+<p>For example, to add "newcontent" as the name of the content item, you would use this URL:</p>
+<ul>
+<li><code>[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_Content" wcmfield.content.name="newcontent"]</code></li>
+</ul>
+<p>The following parameters can be used to populate fields when creating or editing content:</p>
+<ul>
+<li><code>wcmfield.content.name=</code></li>
+<li><code>wcmfield.content.title=</code></li>
+<li><code>wcmfield.content.description=</code></li>
+<li><code>wcmfield.content.authors=</code></li>
+<li><code>wcmfield.content.owners=</code></li>
+<li><code>wcmfield.content.publishDate=</code></li>
+<li><code>wcmfield.content.expiryDate=</code></li>
+<li><code>wcmfield.content.generalDateOne=</code></li>
+<li><code>wcmfield.content.generalDateTwo=</code></li>
+<li><code>wcmfield.content.workflow=</code> (This can only be used when creating content.)</li>
+<li><code>wcmfield.content.categories=</code></li>
+<li><code>wcmfield.content.keywords=</code></li>
+<li>
+<p><code>wcmfield.element.elementname=</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You replace elementname with the name of the element you are populating. The element parameter can only be used with the following element types:</p>
+</div>
+<ul>
+<li>Text</li>
+<li>Html</li>
+<li>Rich text</li>
+<li>Option Selection</li>
+<li>User Selection</li>
+<li>Date and time</li>
+<li>Number</li>
+<li>JSP</li>
+<li>Link</li>
+<li>Component Reference</li>
+</ul>
+</li>
+</ul>
+<p>When populating fields with user IDs, you must use this format:</p>
+<ul>
+<li><code>[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_Content" wcmfield.content.authors="uid=usera,cn=cn-name,dc=dc-name"]</code></li>
+</ul>
+<p>When populating workflow and category fields, you must use the document IDs as their values:</p>
+<ul>
+<li><code>[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_Content" wcmfield.content.workflow="ID1"]</code></li>
+<li><code>[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_Content" wcmfield.content.categories="ID1"]</code></li>
+</ul>
+<p>When populating date fields, the date format must be US English. Either a date and time, or just a date can be specified. If only a date is specified, the time used will be 12:00:00 AM. For example:</p>
+<ul>
+<li><code>[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_Content" wcmfield.content.generalDateOne="Feb 14, 2008 12:53:03 PM"]</code></li>
+<li><code>[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_Content" wcmfield.content.generalDateOne="Feb 14, 2008"]</code></li>
+</ul>
+<p>The date and time set here are based on the server's timezone, not the timezone of the user's computer.</p>
+<p>When populating a JSP element, you need to specify the path to the JSP file:</p>
+<ul>
+<li><code>[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_Content" wcmfield.element.jspelementname="/wps/wcm/jsp/html/example.jsp"]</code></li>
+</ul>
+<p>When populating a component reference element, you specify the component to reference. For example:</p>
+<ul>
+<li><code>[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_Content" wcmfield.element.mycompref.type="com.aptrix.pluto.cmpnt.NavigatorCmpnt" wcmfield.element.mycompref.id="e4bdf10042d0769698ccbeb0e25cc973"]</code></li>
+</ul>
+<p>When populating an option selection element, you specify each selection option. For example:</p>
+<ul>
+<li><code>[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_Content" wcmfield.element.elementname="AA" wcmfield.element.elementname="BB"]</code></li>
+</ul>
+<p>When populating a user selection element, you specify each user. For example:</p>
+<ul>
+<li><code>[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_Content" wcmfield.element.elementname="uid=wpsadmin,o=defaultWimFileBasedRealm" wcmfield.element.elementname="uid=wpsadmin2,o=defaultWimFileBasedRealm"]</code></li>
+</ul>
+<p>When populating a Link element, you can specify the following parameters:</p>
+<ul>
+<li>
+<p><strong>Adding a link to a content item:</strong></p>
+<p><code>[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_Content" wcmfield.element.elementname.type="content" wcmfield.element.elementname.id="contentID"]</code></p>
+</li>
+<li>
+<p><strong>Adding a link to a link component:</strong></p>
+<p><code>[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_Content" wcmfield.element.elementname.type="link" wcmfield.element.elementname.id="linkcomponentID"]</code></p>
+</li>
+<li>
+<p><strong>Adding a link to an image or file resource component:</strong></p>
+<p><code>[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_Content" wcmfield.element.elementname.type="resource" wcmfield.element.elementname.id="componentID"]</code></p>
+</li>
+<li>
+<p><strong>Adding a link to a URL:</strong></p>
+<p><code>[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_Content" wcmfield.element.elementname.type="external" wcmfield.element.elementname.externalReference="myurl"]</code></p>
+</li>
+<li>
+<p><strong>To specify whether to use the name of the item you are linking to as the link text, add this to the tag:</strong></p>
+<p><code>wcmfield.element.elementname.useReferenceLinkText="true"</code></p>
+</li>
+<li>
+<p><strong>When specifying an image to display as the link, add this to the tag:</strong></p>
+<p><code>wcmfield.element.elementname.linkImage="imagecomponentID"</code></p>
+</li>
+<li>
+<p><strong>When specifying the text of the link, add this to the URL:</strong></p>
+<p><code>wcmfield.element.elementname.linkText="text"</code></p>
+</li>
+<li>
+<p><strong>When specifying the description of the link, add this to the URL:</strong></p>
+<p><code>wcmfield.element.elementname.linkDescription="text"</code></p>
+</li>
+<li>
+<p><strong>When specifying a link target, add this to the URL:</strong></p>
+<p><code>wcmfield.element.elementname.linkTarget=</code></p>
+<ul>
+<li><code>_blank</code></li>
+<li><code>_parent</code></li>
+<li><code>_self</code></li>
+<li><code>_top</code></li>
+<li><code>targetname</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="save-parameters">Save parameters</h2>
+<p>You can add the following "save" parameters to a remote action tag.</p>
+<ul>
+<li>
+<p><strong><code>autoSave</code></strong></p>
+<p>This is used to save a controllable. This happens in the background and is not displayed to users.</p>
+<p>For example:</p>
+<ul>
+<li><code>wcmfield.autosave="true"</code></li>
+</ul>
+</li>
+<li>
+<p><strong><code>saveValidate</code></strong></p>
+<p>This parameter determines if warning and error messages resulting from the autosave is displayed to the user. If set to "true", warning and error messages are displayed to the user. If set to false, messages are suppressed. The default is true.</p>
+<p>For example:</p>
+<ul>
+<li><code>&amp;wcmfield.saveValidate="false"</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="adding-comments-to-the-item-history">Adding comments to the item history</h2>
+<p>When creating items that use a workflow with "Enter comment on approval" set to true, you can add a comment to the item history by adding <code>comment="comment text"</code> to the URL.</p>
+<p>For example:</p>
+<div class="language-text highlight"><pre><span></span><code>`[plugin:RemoteAction action=&quot;edit&quot; docid=&quot;com.ibm.workplace.wcm.api.WCM_Content/ID1&quot; 
+createDraft=&quot;true&quot; comment=&quot;comment text&quot;]`
+</code></pre></div>
+<h2 id="examples">Examples</h2>
+<p>Open the versions view for an item:</p>
+<ul>
+<li>Tag: <code>[plugin:RemoteAction action="viewversions" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1"]</code></li>
+<li>Url: <code>http://&lt;host&gt;/wps/myportal/wcmAuthoring?wcmAuthoringAction=viewversions&amp;docid=com.ibm.workplace.wcm.api.WCM_Content/ID1</code></li>
+</ul>
+<p>Open the history view for an item:</p>
+<ul>
+<li>Tag: <code>[plugin:RemoteAction action="viewhistory" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1"]</code></li>
+<li>Url: <code>http://&lt;host&gt;/wps/myportal/wcmAuthoring?wcmAuthoringAction=viewhistory&amp;docid=com.ibm.workplace.wcm.api.WCM_Content/ID1</code></li>
+</ul>
+<p>Open a content item in read mode:</p>
+<ul>
+<li>Tag: <code>[plugin:RemoteAction action="read" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1"]</code></li>
+<li>Url: <code>http://&lt;host&gt;/wps/myportal/wcmAuthoring?wcmAuthoringAction=read&amp;docid=com.ibm.workplace.wcm.api.WCM_Content/ID1</code></li>
+</ul>
+<p>Open a content item in edit mode:</p>
+<ul>
+<li>Tag: <code>[plugin:RemoteAction action="edit" &amp;docid=com.ibm.workplace.wcm.api.WCM_Content/ID1]</code></li>
+<li>Url: <code>http://&lt;host&gt;/wps/myportal/wcmAuthoring?wcmAuthoringAction=edit&amp;docid=com.ibm.workplace.wcm.api.WCM_Content/ID1</code></li>
+</ul>
+<p>Move a content item up:</p>
+<ul>
+<li>Tag: <code>[plugin:RemoteAction action="move" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1" moveDirection="1" pid="com.ibm.workplace.wcm.api.WCM_SiteArea/ID1"]</code></li>
+<li>Url: <code>http://&lt;host&gt;/wps/myportal/wcmAuthoring?wcmAuthoringAction=move&amp;docid=com.ibm.workplace.wcm.api.WCM_Content/ID1&amp;moveDirection=1&amp;pid=com.ibm.workplace.wcm.api.WCM_SiteArea/ID1</code></li>
+</ul>
+<p>Move a site area down:</p>
+<ul>
+<li>Tag: <code>[plugin:RemoteAction action="move" docid="com.ibm.workplace.wcm.api.WCM_SiteArea/ID1" "moveDirection="-1" pid="com.ibm.workplace.wcm.api.WCM_SiteArea/ID1"]</code></li>
+<li>Url: <code>http://&lt;host&gt;/wps/myportal/wcmAuthoring?wcmAuthoringAction=move&amp;docid=com.ibm.workplace.wcm.api.WCM_SiteArea/ID1&amp;moveDirection=-1&amp;pid=com.ibm.workplace.wcm.api.WCM_SiteArea/ID1</code></li>
+</ul>
+<p>Create a new content item with title of 'newcontent':</p>
+<ul>
+<li>Tag: <code>[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_Content" wcmfield.content.title="newcontent"]</code></li>
+<li>Url: <code>http://&lt;host&gt;/wps/myportal/wcmAuthoring?wcmAuthoringAction=new&amp;type=com.ibm.workplace.wcm.api.WCM_Content&amp;wcmfield.content.title=newcontent</code></li>
+</ul>
+<p>To open a content item in edit mode and automatically change keywords:</p>
+<ul>
+<li>Tag: <code>[plugin:RemoteAction action="edit" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1" wcmfield.content.keywords="keyword1" wcmfield.content.keywords="keyword2"]</code></li>
+<li>Url: <code>http://&lt;host&gt;/wps/myportal/wcmAuthoring?wcmAuthoringAction=edit&amp;docid=com.ibm.workplace.wcm.api.WCM_Content/ID1&amp;wcmfield.content.keywords=keyword1&amp;wcmfield.content.keywords=keyword2</code></li>
+</ul>
+<p>To edit a content item, automatically change the keywords and use autosave to automatically save the content (no dialog opens):</p>
+<ul>
+<li>Tag: <code>[plugin:RemoteAction action="edit" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1" wcmfield.content.keywords="keyword1" wcmfield.content.keywords="keyword2" wcmfield.autosave="true"]</code></li>
+<li>Url: <code>http://&lt;host&gt;/wps/myportal/wcmAuthoring?wcmAuthoringAction=edit&amp;docid=com.ibm.workplace.wcm.api.WCM_Content/ID1&amp;wcmfield.content.keywords=keyword1&amp;wcmfield.content.keywords=keyword2&amp;wcmfield.autosave=true</code></li>
+</ul>
+<p>To edit a content item, automatically save the item and prevent any validation exception from being displayed, use autosave with saveValidate=false:</p>
+<ul>
+<li>Tag: <code>[plugin:RemoteAction action="edit" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1" wcmfield.content.keywords="keyword1" wcmfield.autosave="true" wcmfield.saveValidate="false"]</code></li>
+<li>Url: <code>http://&lt;host&gt;/wps/myportal/wcmAuthoring?wcmAuthoringAction=edit&amp;docid=com.ibm.workplace.wcm.api.WCM_Content/ID1&amp;wcmfield.content.keywords=keyword1&amp;wcmfield.autosave=true&amp;wcmfield.saveValidate=false</code></li>
+</ul>
+<p>To create a content item, set the name and use autosave to automatically save the content (no dialog opens). The authoring template that is used by the content item must have a workflow pre-selected:</p>
+<ul>
+<li>Tag: <code>[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_Content" atid="com.ibm.workplace.wcm.api.WCM_AuthoringTemplate/ID1" pid="com.ibm.workplace.wcm.api.WCM_SiteArea/ID2" wcmfield.content.name="newcontent" wcmfield.autosave="true" wcmfield.saveValidate="true"]</code></li>
+<li>Url: <code>http://&lt;host&gt;/wps/myportal/wcmAuthoring?wcmAuthoringAction=new&amp;type=com.ibm.workplace.wcm.api.WCM_Content&amp;atid=com.ibm.workplace.wcm.api.WCM_AuthoringTemplate/ID1&amp;pid=com.ibm.workplace.wcm.api.WCM_SiteArea/ID2&amp;wcmfield.content.name=newcontent&amp;wcmfield.autosave=true&amp;wcmfield.saveValidate=true</code></li>
+</ul>
+<p>To edit a content item and create a draft on the edit and set the history log comment:</p>
+<ul>
+<li>Tag: <code>[plugin:RemoteAction action="edit" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1" createDraft="true" comment="comment"]</code></li>
+<li>Url: <code>http://&lt;host&gt;/wps/myportal/wcmAuthoring?wcmAuthoringAction=edit&amp;docid=com.ibm.workplace.wcm.api.WCM_Content/ID1&amp;createDraft=true&amp;comment=comment</code></li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 24, 2022</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

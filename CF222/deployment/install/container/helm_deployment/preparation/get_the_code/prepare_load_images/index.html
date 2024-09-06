@@ -1,0 +1,2517 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/deployment/install/container/helm_deployment/preparation/get_the_code/prepare_load_images/">
+      
+      
+        <link rel="prev" href="../configure_harbor_helm_repo/">
+      
+      
+        <link rel="next" href="../../mandatory_tasks/prepare_namespace/">
+      
+      
+      <link rel="icon" href="../../../../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Loading images - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#loading-images" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../../../../latest/deployment/install/container/helm_deployment/preparation/get_the_code/prepare_load_images/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Loading images
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../whatsnew/cf20/newcf222/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../build_sites/" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../../../whatsnew/cf20/newcf222/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Deploy DX
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Install
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Install
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Kubernetes Deployment
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2_2" id="__nav_4_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes Deployment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../image_list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Container and Supported OS File listings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_2_4" id="__nav_4_2_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Helm deployment
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Helm deployment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying using Helm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2_4_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Preparation
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2_2_4_2" id="__nav_4_2_2_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_2_2_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2_2_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Preparation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2_4_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_2_4_2_2" id="__nav_4_2_2_4_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Get the Code
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_2_2_4_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2_2_4_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Get the Code
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configure_harbor_helm_repo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configure Harbor Helm Repository
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Loading images
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Loading images
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#retrieving-container-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieving container images
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Retrieving container images">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-helm-chart-image-pull-secret" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure the Helm chart image pull secret
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull-directly-from-harbor-container-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pull directly from Harbor container registry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-hcl-digital-experience-95-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      From HCL Digital Experience 9.5 package
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load-images-to-your-own-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Load Images to Your Own Repository
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Load Images to Your Own Repository">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#re-tag-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Re-tag images
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#push-to-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Push to repository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjust-deployment-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adjust deployment configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Tasks
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../mandatory_tasks/prepare_namespace/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Mandatory Steps
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../optional_tasks/optional_internal_networking/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Optional Steps
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../helm_install_commands/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../helm_uninstall/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Uninstall
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aws_marketplace_helm_deployment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS Marketplace Helm Deployment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../update_helm_deployment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Upgrading Helm Deployment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../traditional/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Traditional Deployment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../hybrid/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Hybrid Deployment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../docker-compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Compose
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../manage/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../../build_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#retrieving-container-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieving container images
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Retrieving container images">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-helm-chart-image-pull-secret" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure the Helm chart image pull secret
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull-directly-from-harbor-container-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pull directly from Harbor container registry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-hcl-digital-experience-95-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      From HCL Digital Experience 9.5 package
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load-images-to-your-own-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Load Images to Your Own Repository
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Load Images to Your Own Repository">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#re-tag-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Re-tag images
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#push-to-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Push to repository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjust-deployment-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adjust deployment configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Tasks
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="loading-images">Loading images</h1>
+<p>This section presents how to load the HCL DX 9.5 images into your container image repository, tag them to fit your repository structure, and push them to your repository, so that all Nodes in your Kubernetes cluster can deploy HCL Digital Experience 9.5 Pods.</p>
+<p>To use HCL Digital Experience 9.5 in your Kubernetes cluster, you have to make the container images available to all nodes of your cluster. Usually this is done by providing them through a container image repository.</p>
+<p>Depending on your cloud provider, there may be different types of default container image repositories already configured. Refer to the documentation of your cloud provider for setup and use of such platform container image repository.</p>
+<p>It is assumed that you have a repository configured and running, and is technically reachable from all your Kubernetes cluster nodes.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In the following guidance, the docker CLI is used as a command reference. Tools like Podman may also be used, but are not described in this documentation. The procedure for the use of such tools are the same.</p>
+</div>
+<h2 id="retrieving-container-images">Retrieving container images</h2>
+<p>You can either directly pull the HCL DX images from the HCL Harbor container image registry, or download the HCL Digital Experience 9.5 package, unpack it locally and load the images into your container registry. In both cases, you can load the images to your own container registry for others in your organization to access.</p>
+<h3 id="configure-the-helm-chart-image-pull-secret">Configure the Helm chart image pull secret</h3>
+<p>It is possible to have your Kubernetes deployment pull images directly from a container registry. This requires all of your cluster nodes to be able to reach the container registry.</p>
+<p>Ensure that you have configured your deployment to authenticate to the container registry, as described in <a href="../../optional_tasks/optional_imagepullsecrets/">Using ImagePullSecrets</a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you configure your deployment to use the HCL Harbor container registry you do not need to retrieve, re-tag and push the images manually. This is very handy for quick deployments or if you do not have a local container image registry. The steps to do this are described in the <a href="../../optional_tasks/optional_imagepullsecrets/#configure-deployment-to-use-the-hcl-harbor-container-registry">Using ImagePullSecrets</a> page.</p>
+</div>
+<h3 id="pull-directly-from-harbor-container-registry">Pull directly from Harbor container registry</h3>
+<p>To access the harbor container registry, you need to log in with docker. This can easily be done using the following command:</p>
+<div class="language-sh highlight"><pre><span></span><code>docker<span class="w"> </span>login<span class="w"> </span>hclcr.io
+<span class="c1"># Enter your harbor username and CLI secret to login</span>
+</code></pre></div>
+<p>You can obtain the CLI secret from harbor by navigating to your <code>User Profile</code> in <a href="https://hclcr.io">HCL Harbor</a>. You can copy it from the field called <code>CLI secret</code>.</p>
+<p>After a successful login, you will see the message:</p>
+<div class="language-text highlight"><pre><span></span><code>    Login Succeeded
+</code></pre></div>
+<p>You can now pull images from the Harbor container registry.</p>
+<h3 id="from-hcl-digital-experience-95-package">From HCL Digital Experience 9.5 package</h3>
+<p>The HCL Digital Experience 9.5 Container Update packages are provided in a compressed .zip file, that can easily be unzipped using a utility of your choice. Refer to the latest <a href="../../../../image_list/">Container file listing</a> topic for a list of the files contained in the .zip archive.</p>
+<p>Unzip the archive. </p>
+<p>To load the individual image files, you may use the following command, replacing the name of each image you would like to load. You will have to run this command multiple times to load all images.</p>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Command to load container image into local repository</span>
+<span class="c1"># docker load &lt; image-file-name.tar.gz</span>
+docker<span class="w"> </span>load<span class="w"> </span>&lt;<span class="w"> </span>hcl-dx-core-image-v95_CFXXX_XXXXXXXX-XXXX.tar.gz
+</code></pre></div>
+<p>If you want to load all DX 9.5 CFxxx image files via one command, use the following command:</p>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Command to load all images at once</span>
+<span class="c1"># Since HCL Digital Experience images are all containing the word &quot;images&quot;, </span>
+<span class="c1"># we can filter for fitting tar.gz files</span>
+ls<span class="w"> </span>-f<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>image<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>-L<span class="w"> </span><span class="m">1</span><span class="w"> </span>docker<span class="w"> </span>load<span class="w"> </span>-i
+</code></pre></div>
+<p>This loads all images to your local repository, ready for further usage.</p>
+<p>You may verify if the loading is successful with the following command:</p>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># List all images</span>
+docker<span class="w"> </span>images
+
+<span class="c1"># Command output (minified, example)</span>
+REPOSITORY<span class="w">                                    </span>TAG<span class="w">                                   </span>IMAGE<span class="w"> </span>ID<span class="w">       </span>CREATED<span class="w">         </span>SIZE
+hcl/dx/remote-search<span class="w">                          </span>v95_CF195_20210514-1708<span class="w">               </span>e4c46618f404<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span><span class="m">2</span>.25GB
+hcl/dx/cloud-operator<span class="w">                         </span>v95_CF195_20210515-0201<span class="w">               </span>62cc304706a3<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>220MB
+hcl/dx/core<span class="w">                                   </span>v95_CF195_20210514-1708<span class="w">               </span>36e30c620cdd<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span><span class="m">6</span>.29GB
+hcl/dx/openldap<span class="w">                               </span>v1.1.0-master_20210514_1621013302<span class="w">     </span>a5519e06dd17<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>772MB
+hcl/dx/image-processor<span class="w">                        </span>v1.8.0_20210514-1712<span class="w">                  </span>d5d99d86f81a<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>507MB
+hcl/dx/digital-asset-manager<span class="w">                  </span>v1.8.0_20210514-1711<span class="w">                  </span>19c8b76b1cad<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>547MB
+hcl/dx/digital-asset-management-operator<span class="w">      </span>v95_CF195_20210514-1714<span class="w">               </span>bc0f5638817a<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>218MB
+hcl/dx/content-composer<span class="w">                       </span>v1.8.0_20210514-1707<span class="w">                  </span>62b7b54d3895<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>427MB
+hcl/dx/postgres<span class="w">                               </span>v1.8.0_20210514-1708<span class="w">                  </span>d94672f395ad<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>498MB
+hcl/dx/ringapi<span class="w">                                </span>v1.8.0_20210514-1709<span class="w">                  </span>505eebb52ebf<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>397MB
+</code></pre></div>
+<h2 id="load-images-to-your-own-repository">Load Images to Your Own Repository</h2>
+<h3 id="re-tag-images">Re-tag images</h3>
+<p>If you are using a Kubernetes cluster that is not configured to operate on your local machine, you may need to push the HCL Digital Experience 9.5 container images to a remote repository.</p>
+<p>To do so, you need to re-tag the images to point to your remote repository.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not change the version tags of the DX 9.5 images, because they are used for uniquely identifying which versions of DX applications are running in your cluster.</p>
+</div>
+<p>You may re-tag any image using the following command:</p>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Re-tag an existing loaded image</span>
+<span class="c1"># docker tag OLD_IMAGE_PATH:VERSION NEW_IMAGE_TAG:VERSION</span>
+
+<span class="c1"># Example command for DX Core:</span>
+docker<span class="w"> </span>tag<span class="w"> </span>dx/core:v95_CF195_20210514-1708<span class="w"> </span>my/test/repository/dx/core:v95_CF195_20210514-1708
+</code></pre></div>
+<p>If you want to prefix all HCL Digital Experience 9.5 container images with your repository structure, you may use the following command:</p>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Command to prefix all HCL Digital Experience container images</span>
+<span class="c1"># export the prefix for the repository structure, without tailing slash</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">REMOTE_REPO_PREFIX</span><span class="o">=</span><span class="s2">&quot;my/test/repository&quot;</span>
+
+<span class="c1"># First we list all HCL Digital Experience 9.5 Images, then we remove the first line containing the header</span>
+<span class="c1"># Then we execute the docker tag command, prefixing each image with the $REMOTE_REPO_PREFIX</span>
+docker<span class="w"> </span>images<span class="w"> </span>dx/*<span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-n<span class="w"> </span>+2<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span>-F<span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="s1">&#39;{system(&quot;docker tag &quot; $1 &quot;:&quot; $2 &quot; $REMOTE_REPO_PREFIX/&quot; $1 &quot;:&quot; $2) }&#39;</span>
+</code></pre></div>
+<p>The output may be verified by using the following command:</p>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># List all images</span>
+docker<span class="w"> </span>images
+
+<span class="c1"># Command output (minified, example)</span>
+
+REPOSITORY<span class="w">                                                    </span>TAG<span class="w">                                  </span>IMAGE<span class="w"> </span>ID<span class="w">       </span>CREATED<span class="w">         </span>SIZE
+hcl/dx/remote-search<span class="w">                                          </span>v95_CF195_20210514-1708<span class="w">              </span>e4c46618f404<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span><span class="m">2</span>.25GB
+my/test/repository/hcl/dx/remote-search<span class="w">                       </span>v95_CF195_20210514-1708<span class="w">              </span>e4c46618f404<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span><span class="m">2</span>.25
+hcl/dx/cloud-operator<span class="w">                                         </span>v95_CF195_20210515-0201<span class="w">              </span>62cc304706a3<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>220MB
+my/test/repository/hcl/dx/cloud-operator<span class="w">                      </span>v95_CF195_20210515-0201<span class="w">              </span>62cc304706a3<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>220MB
+hcl/dx/core<span class="w">                                                   </span>v95_CF195_20210514-1708<span class="w">              </span>36e30c620cdd<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span><span class="m">6</span>.29GB
+my/test/repository/hcl/dx/core<span class="w">                                </span>v95_CF195_20210514-1708<span class="w">              </span>6e30c620cdd<span class="w">    </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span><span class="m">6</span>.29GB
+hcl/dx/openldap<span class="w">                                               </span>v1.1.0-master_20210514_1621013302<span class="w">    </span>a5519e06dd17<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>772MB
+my/test/repository/hcl/dx/openldap<span class="w">                            </span>v1.1.0-master_20210514_1621013302<span class="w">    </span>a5519e06dd17<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>772MB
+hcl/dx/image-processor<span class="w">                                        </span>v1.8.0_20210514-1712<span class="w">                 </span>d5d99d86f81a<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>507MB
+my/test/repository/hcl/dx/image-processor<span class="w">                     </span>v1.8.0_20210514-1712<span class="w">                 </span>d5d99d86f81a<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>507MB
+hcl/dx/digital-asset-manager<span class="w">                                  </span>v1.8.0_20210514-1711<span class="w">                 </span>19c8b76b1cad<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>547MB
+my/test/repository/hcl/dx/digital-asset-manager<span class="w">               </span>v1.8.0_20210514-1711<span class="w">                 </span>19c8b76b1cad<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>547MB
+hcl/dx/digital-asset-management-operator<span class="w">                      </span>v95_CF195_20210514-1714<span class="w">              </span>bc0f5638817a<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>218MB
+my/test/repository/hcl/dx/digital-asset-management-operator<span class="w">   </span>v95_CF195_20210514-1714<span class="w">              </span>bc0f5638817a<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>218MB
+my/test/repository/hcl/dx/content-composer<span class="w">                    </span>v1.8.0_20210514-1707<span class="w">                 </span>62b7b54d3895<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>427MB
+hcl/dx/content-composer<span class="w">                                       </span>v1.8.0_20210514-1707<span class="w">                 </span>62b7b54d3895<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>427MB<span class="w"> </span>
+hcl/dx/postgres<span class="w">                                               </span>v1.8.0_20210514-1708<span class="w">                 </span>d94672f395ad<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>498MB
+my/test/repository/hcl/dx/postgres<span class="w">                            </span>v1.8.0_20210514-1708<span class="w">                 </span>d94672f395ad<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>498MB
+hcl/dx/ringapi<span class="w">                                                </span>v1.8.0_20210514-1709<span class="w">                 </span>505eebb52ebf<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>397MB
+my/test/repository/hcl/dx/ringapi<span class="w">                             </span>v1.8.0_20210514-1709<span class="w">                 </span>505eebb52ebf<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>397MB
+</code></pre></div>
+<h3 id="push-to-repository">Push to repository</h3>
+<p>You may use the following command to push the container images to your repository:</p>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Push the new tagged images</span>
+<span class="c1"># docker push NEW_IMAGE_TAG:VERSION</span>
+<span class="c1"># Example command for core:</span>
+docker<span class="w"> </span>push<span class="w"> </span>my/test/repository/dx/core:v95_CF195_20210514-1708
+</code></pre></div>
+<p>If you want to push all your locally processed images, use the following command:</p>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Command to push all HCL Digital Experience images to a remote repository</span>
+<span class="c1"># export the prefix for the repository structure, without tailing slash</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">REMOTE_REPO_PREFIX</span><span class="o">=</span><span class="s2">&quot;my/test/repository&quot;</span>
+
+<span class="c1"># Push the images, first we filter for the ones necessary</span>
+<span class="c1"># Second we execute a docker push for each image</span>
+docker<span class="w"> </span>images<span class="w"> </span><span class="nv">$REMOTE_REPO_PREFIX</span>/dx/*<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span>-F<span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="s1">&#39;{system(&quot;docker push &quot; $1 &quot;:&quot; $2)}&#39;</span>
+</code></pre></div>
+<p>After running this command, Docker goes ahead and pushes the images to your remote repository. After the push, the container images are now ready for use by your Kubernetes cluster.</p>
+<h3 id="adjust-deployment-configuration">Adjust deployment configuration</h3>
+<p>After you have successfully prepared all DX 9.5 images, you need to configure the images inside your custom-values.yaml.</p>
+<p>The following syntax may be used to define the correct image configuration for your environment:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If deploying to a <a href="../../../../../hybrid/">Hybrid</a> environment, with DX 9.5 Container Update CF198 or later, the Core needs to be set as false, since Core is already installed to an On-premise Server.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>From CF205 onwards, the image name and tag configuration of the Helm Chart is pre-filled using the default image names and matching version tags for the respective version of DX. You might need to re-adjust these if you have renamed/re-tagged the images in your local container image repository.</p>
+<p>If you want to use the HCL Harbor container registry, ensure to configure your target repository accordingly and have the <a href="../../optional_tasks/optional_imagepullsecrets/">ImagePullSecret</a> configured:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">images</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Configure the HCL Harbor registry repository</span>
+<span class="w">  </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;hclcr.io&quot;</span>
+<span class="w">  </span><span class="c1"># Use the image pull secret configured before</span>
+<span class="w">  </span><span class="nt">imagePullSecrets</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx-harbor&quot;</span>
+</code></pre></div>
+</div>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Fill in the values fitting to your configuration</span>
+<span class="c1"># Ensure to use the correct image version tags</span>
+<span class="nt">images</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my/test/repository&quot;</span>
+<span class="w">    </span><span class="c1"># Image tag for each application</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">contentComposer</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v95_CFXXX_XXXXXXXX-XXXX&quot;</span>
+<span class="w">    </span><span class="nt">core</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v95_CFXXX_XXXXXXXX-XXXX&quot;</span>
+<span class="w">    </span><span class="nt">digitalAssetManagement</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;vX.X.X_XXXXXXXX-XXXX&quot;</span>
+<span class="w">    </span><span class="nt">imageProcessor</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;vX.X.X_XXXXXXXX-XXXX&quot;</span>
+<span class="w">    </span><span class="nt">openLdap</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;vX.X.X_XXXXXXXX-XXXX&quot;</span>
+<span class="w">    </span><span class="nt">persistence</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;vX.X.X_XXXXXXXX-XXXX&quot;</span>
+<span class="w">    </span><span class="nt">remoteSearch</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v95_CFXXX_XXXXXXXX-XXXX&quot;</span>
+<span class="w">    </span><span class="nt">ringApi</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;vX.X.X_XXXXXXXX-XXXX&quot;</span>
+<span class="w">    </span><span class="nt">runtimeController</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;vX.X.X_XXXXXXXX-XXXX&quot;</span>
+<span class="w">    </span><span class="c1"># Image name for each application</span>
+<span class="w">    </span><span class="nt">names</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">contentComposer</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/content-composer&quot;</span>
+<span class="w">    </span><span class="nt">core</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/core&quot;</span>
+<span class="w">    </span><span class="nt">digitalAssetManagement</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/digital-asset-manager&quot;</span>
+<span class="w">    </span><span class="nt">imageProcessor</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/image-processor&quot;</span>
+<span class="w">    </span><span class="nt">openLdap</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/openldap&quot;</span>
+<span class="w">    </span><span class="nt">persistence</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/postgres&quot;</span>
+<span class="w">    </span><span class="nt">remoteSearch</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/remote-search&quot;</span>
+<span class="w">    </span><span class="nt">ringApi</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/ringapi&quot;</span>
+<span class="w">    </span><span class="nt">runtimeController</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/runtime-controller&quot;</span>
+</code></pre></div>
+<h2 id="additional-tasks">Additional Tasks</h2>
+<p>If your remote repository requires access credentials, it is necessary to configure an <code>ImagePullSecret</code> to allow your cluster nodes to have proper access to the HCL DX 9.5 container images. This is also required if you want to use the HCL Harbor container registry directly.</p>
+<p>Please refer to <a href="../../optional_tasks/optional_imagepullsecrets/">Using ImagePullSecrets</a> topic for instructions on how to configure this.</p>
+<!-- ???info "Related information"
+    - [Hybrid](hybrid_deployment_helm.md) -->
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 29, 2023</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

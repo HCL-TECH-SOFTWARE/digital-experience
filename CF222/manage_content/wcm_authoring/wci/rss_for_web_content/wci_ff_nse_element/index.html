@@ -1,0 +1,3890 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/manage_content/wcm_authoring/wci/rss_for_web_content/wci_ff_nse_element/">
+      
+      
+        <link rel="prev" href="../wci_ff_nse_content/">
+      
+      
+        <link rel="next" href="../wci_ff_nse_workflow/">
+      
+      
+      <link rel="icon" href="../../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Element Control Element - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#element-control-element" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../../latest/manage_content/wcm_authoring/wci/rss_for_web_content/wci_ff_nse_element/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Element Control Element
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../whatsnew/cf20/newcf222/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../deployment/" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../build_sites/" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../whatsnew/cf20/newcf222/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../build_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Manage Content
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Author Web Content
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Author Web Content
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../inline_editing/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Site Manager
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../content_composer/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Content Composer
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../authoring_portlet/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Authoring Portlet
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../dcs/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Document Conversion Services
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../content_reporting/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Content Reporting
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../dx_picker/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    DX Picker
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../multi_lingual/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Multilingual Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../renditions/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Renditions
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2_10" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Web Content Integrator
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2_10" id="__nav_6_2_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_2_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            Web Content Integrator
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wci_ff_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feed Format Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2_10_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    RSS Namespace Extension for web content
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2_10_3" id="__nav_6_2_10_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_2_10_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_2_10_3">
+            <span class="md-nav__icon md-icon"></span>
+            RSS Namespace Extension for web content
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wci_ff_nse_adding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding the Custom Namespace Definition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wci_ff_nse_process/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Process Control Elements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wci_ff_nse_location/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Location Control Elements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wci_ff_nse_identify/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Identity Control Elements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wci_ff_nse_profile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Profile Control Elements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wci_ff_nse_content/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Authoring Template Element
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Element Control Element
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Element Control Element
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#element-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Element overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text element
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#short-text-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      Short Text element
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTML element
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rich-text-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rich text element
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-resource-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      File resource element
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image element
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      Date element
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      Link element
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#number-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      Number element
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-selection-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option selection element
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component-reference-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component reference element
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-selection-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      User selection element
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#style-sheet-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      Style sheet element
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wci_ff_nse_workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Workflow control elements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wci_ff_nse_security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security control elements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wci_ff_nse_association/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Association Control Element
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wci_ff_links/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Embedded Links
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wci_ff_images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Processing Images
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wci_ff_examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Example Feeds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../rss_for_feed/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    RSS Namespace Extension for the Feed Service
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../webcontentfeed_mgmt/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Web Content Feed Management
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../wcm_delivery/vanity_url/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deliver Web Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../wcm_configuration/wcm_adm_tools/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Configure Web Content Manager
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../wcm_development/wcm_dev_api/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend Web Content Manager
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../digital_assets/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Digital Asset Management
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../design_studio/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Design studio
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../pzn/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Personalization
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#element-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Element overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text element
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#short-text-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      Short Text element
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTML element
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rich-text-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rich text element
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-resource-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      File resource element
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image element
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      Date element
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      Link element
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#number-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      Number element
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-selection-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option selection element
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component-reference-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component reference element
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-selection-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      User selection element
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#style-sheet-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      Style sheet element
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="element-control-element">Element Control Element</h1>
+<p>The element control element is used to populate elements that are stored in components, site areas, and content items.</p>
+<h2 id="element-overview">Element overview</h2>
+<p>The Web Content Integrator uses the following business logic to process each component element in the feed entry:</p>
+<ol>
+<li>It checks whether the component site area or content item contains a field whose name matches the value in the feed element's name attribute. This is a case-sensitive comparison so the names must match exactly.</li>
+<li>If a matching field is found, it checks whether the data type matches what was specified in the feed element's sub-element.</li>
+<li>If both the name and data type match, the element in the site area or content item is updated to match the data contained the feed element.</li>
+<li>If an element is found which matches the feed element's name, but not its data type, the Web Content Integrator removes the old field from the site area or content item and attempt to replace it with a new field that matches the data type specified in the feed.</li>
+<li>If no matching field can be found on the content, the Web Content Integrator attempts to create a new element.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When creating elements in Web Content Manager using an authoring portlet, it is possible to specify a number of field validation criteria such as the maximum size of a text field or the allowable range of a date field. These are validated during the save operation. If the data in the field does not meet the validation criteria the entire save operation fails, meaning that none of the changes in the feed entry is applied. The Web Content Integrator does not have the ability to check that the data in the feed element is valid before attempting the save operation. Therefore, if you elect to implement validations on your authoring templates, it is important for the feed producer to ensure that the content is valid during the generation of the feed.</p>
+</div>
+<h2 id="text-element">Text element</h2>
+<table>
+<thead>
+<tr>
+<th>Element parameters:</th>
+<th>Details for this element:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Applies to item types</td>
+<td>Site areas and content items</td>
+</tr>
+<tr>
+<td>Required for item types</td>
+<td>None.</td>
+</tr>
+<tr>
+<td>Allowable Values</td>
+<td>A text component must contain a plain text value.</td>
+</tr>
+<tr>
+<td>Required Attributes</td>
+<td>-   <strong>name</strong><br>The value of this attribute must match the name of an existing text element in a site area or content item.</td>
+</tr>
+<tr>
+<td>Optional Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Required sub-elements</td>
+<td>-   <strong>type</strong><br>The value of this sub-element must be "text". This value is not case-sensitive.<br>-   <strong>value</strong><br>The value of this sub-element must be plain text.</td>
+</tr>
+<tr>
+<td>Optional sub-elements</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<h2 id="short-text-element">Short Text element</h2>
+<table>
+<thead>
+<tr>
+<th>Element parameters:</th>
+<th>Details for this element:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Applies to item types</td>
+<td>Site areas and content items</td>
+</tr>
+<tr>
+<td>Required for item types</td>
+<td>None.</td>
+</tr>
+<tr>
+<td>Allowable Values</td>
+<td>A short text component must contain a plain text value.</td>
+</tr>
+<tr>
+<td>Required Attributes</td>
+<td>-   <strong>name</strong><br>The value of this attribute must match the name of an existing short text element in a site area or content item.</td>
+</tr>
+<tr>
+<td>Optional Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Required sub-elements</td>
+<td>-   <strong>type</strong><br>The value of this sub-element must be "shorttext". This value is not case-sensitive.<br>-   <strong>value</strong><br>The value of this sub-element must be plain text.</td>
+</tr>
+<tr>
+<td>Optional sub-elements</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:element name=&quot;Headline&quot;&gt;
+    &lt;ibmwcm:type&gt;shorttext&lt;/ibmwcm:type&gt;
+    &lt;ibmwcm:value&gt;New Product Released&lt;/ibmwcm:value&gt;
+&lt;/ibmwcm:element&gt;
+</code></pre></div>
+<h2 id="html-element">HTML element</h2>
+<table>
+<thead>
+<tr>
+<th>Element parameters:</th>
+<th>Details for this element:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Applies to item types</td>
+<td>HTML components, site areas, and content items</td>
+</tr>
+<tr>
+<td>Required for item types</td>
+<td>HTML components.</td>
+</tr>
+<tr>
+<td>Allowable Values</td>
+<td>The value of the value sub-element must be HTML that is stored in the corresponding HTML element. The HTML can either be entity-encoded or contained within a CDATA element. Alternatively, the feed producer can provide a URL to an HTML file whose contents are retrieved by the Web Content Integrator</td>
+</tr>
+<tr>
+<td>Required Attributes</td>
+<td>-   <strong>name</strong><br>The value of this attribute must match the name of an existing HTML element in a site area or content item.</td>
+</tr>
+<tr>
+<td>Optional Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Required sub-elements</td>
+<td>-   <strong>type</strong><br>The value of this sub-element must be "html".<br>-   <strong>value</strong><br>Used when adding HTML markup that is either entity-encoded or contained within a CDATA element.<br>-   <strong>source</strong><br>Used with a fully qualified URL to an HTML file. When the Web Content Integrator processes the feed it retrieves the file and store its contents in the HTML element in the site area or content item.</td>
+</tr>
+<tr>
+<td>Optional sub-elements</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<p>Examples:</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:element name=&quot;footer&quot;&gt;
+    &lt;ibmwcm:type&gt;html&lt;/ibmwcm:type&gt;
+    &lt;ibmwcm:value&gt;
+        &amp;lt;strong&amp;gt;Copyright 2006&amp;lt;/strong&amp;gt;
+    &lt;/ibmwcm:value&gt;
+&lt;/ibmwcm:element&gt;
+
+
+&lt;ibmwcm:element name=&quot;footer&quot;&gt;
+    &lt;ibmwcm:type&gt;html&lt;/ibmwcm:type&gt;
+    &lt;ibmwcm:value&gt;
+        &lt;![CDATA[&lt;strong&gt;Copyright 2006&lt;/strong&gt;]]&gt;
+    &lt;/ibmwcm:value&gt;
+&lt;/ibmwcm:element&gt;
+
+
+&lt;ibmwcm:element name=&quot;footer&quot;&gt;
+    &lt;ibmwcm:type&gt;html&lt;/ibmwcm:type&gt;
+    &lt;ibmwcm:source&gt;
+        http://sourcecms.cntserv_exmp.com/pages/footer.htm
+    &lt;/ibmwcm:source&gt;
+&lt;/ibmwcm:element&gt;
+</code></pre></div>
+<h2 id="rich-text-element">Rich text element</h2>
+<table>
+<thead>
+<tr>
+<th>Element parameters:</th>
+<th>Details for this element:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Applies to item types</td>
+<td>Site areas and content items</td>
+</tr>
+<tr>
+<td>Required for item types</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Allowable Values</td>
+<td>The value of the value sub-element must be HTML that is stored in the corresponding rich text element. The HTML can either be entity-encoded or contained within a CDATA element.</td>
+</tr>
+<tr>
+<td>Required Attributes</td>
+<td>-   <strong>name</strong><br>The value of this attribute must match the name of an existing rich text element in a site area or content item.</td>
+</tr>
+<tr>
+<td>Optional Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Required sub-elements</td>
+<td>-   <strong>type</strong><br>The value of this sub-element must be "rich text". These values are not case-sensitive.<br>-   <strong>value</strong><br>The value of this sub-element must be HTML markup that is either entity-encoded or contained within a CDATA element.</td>
+</tr>
+<tr>
+<td>Optional sub-elements</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<p>Examples:</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:element name=&quot;body&quot;&gt;
+    &lt;ibmwcm:type&gt;rich text&lt;/ibmwcm:type&gt;
+    &lt;ibmwcm:value&gt;
+        &amp;ltp&amp;gt;This is the content&amp;ltp/p&amp;gt;
+    &lt;/ibmwcm:value&gt;
+&lt;/ibmwcm:element&gt;
+
+
+&lt;ibmwcm:element name=&quot;body&quot;&gt;
+    &lt;ibmwcm:type&gt;rich text&lt;/ibmwcm:type&gt;
+    &lt;ibmwcm:value&gt;
+        &lt;![CDATA[&lt;p&gt;This is the content&lt;/p&gt;]]&gt;
+    &lt;/ibmwcm:value&gt;
+&lt;/ibmwcm:element&gt;
+</code></pre></div>
+<h2 id="file-resource-element">File resource element</h2>
+<table>
+<thead>
+<tr>
+<th>Element parameters:</th>
+<th>Details for this element:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Applies to item types</td>
+<td>File resource components, site areas, and content items</td>
+</tr>
+<tr>
+<td>Required for item types</td>
+<td>File resource components.</td>
+</tr>
+<tr>
+<td>Allowable Values</td>
+<td>The value must be a fully qualified URL that points to the binary file that is to be uploaded into file resource element.</td>
+</tr>
+<tr>
+<td>Required Attributes</td>
+<td>-   <strong>name</strong><br>The value of this attribute must match the name of an existing file resource element in a site area or content item.</td>
+</tr>
+<tr>
+<td>Optional Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Required sub-elements</td>
+<td>-   <strong>type</strong><br>The value of this sub-element must be "file". These values are not case-sensitive.<br>-   <strong>source</strong><br>The value must be a fully qualified URL that points to the binary file that is to be uploaded into a file resource element.<br></td>
+</tr>
+<tr>
+<td><strong>Note:</strong> If the URL contains non-ascii characters, the non-ascii characters must be encoded. For example: http://server:port/wps/wcm/%E4%B8%AD%E6%96%87/%E7%BB%84%E4%BB%B6.pdf</td>
+<td></td>
+</tr>
+<tr>
+<td>Optional sub-elements</td>
+<td>-   <strong>fileName</strong><br>The value of this sub-element must be the file name and extension to be applied to the file attachment when added to the file resource element. If this sub-element is present in the feed entry, then its value is used as the file name of the attachment in Web Content Manager regardless of what the name of the file was on the source server. This is useful if the URL to the binary file does not include the file name as is the case with some content management systems. If the fileName sub-element is not present in the feed, then the Web Content Integrator attempts to determine the file name from the URL in the value sub-element by taking all of the characters following the last forward slash in the URL.</td>
+</tr>
+</tbody>
+</table>
+<p>Examples:</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:element name=&quot;attachment&quot;&gt;
+    &lt;ibmwcm:type&gt;file&lt;/ibmwcm:type&gt;
+    &lt;ibmwcm:source&gt;
+        http://sourcecms.cntserv_exmp.com/files/plan.doc
+    &lt;/ibmwcm:source&gt;
+&lt;/ibmwcm:element&gt;
+
+
+&lt;ibmwcm:element name=&quot;attachment&quot;&gt;
+    &lt;ibmwcm:type&gt;file&lt;/ibmwcm:type&gt;
+    &lt;ibmwcm:source&gt;
+        http://sourcecms.cntserv_exmp.com/files/plan.doc
+    &lt;/ibmwcm:source&gt;
+    &lt;ibmwcm:fileName&gt;MktgPlan.doc&lt;/ibmwcm:fileName&gt;
+&lt;/ibmwcm:element&gt;
+</code></pre></div>
+<h2 id="image-element">Image element</h2>
+<table>
+<thead>
+<tr>
+<th>Element parameters:</th>
+<th>Details for this element:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Applies to item types</td>
+<td>Image components, site areas, and content items</td>
+</tr>
+<tr>
+<td>Required for item types</td>
+<td>Image components.</td>
+</tr>
+<tr>
+<td>Allowable Values</td>
+<td>The value must be a fully qualified URL that points to the binary file that is to be uploaded into image element.</td>
+</tr>
+<tr>
+<td>Required Attributes</td>
+<td>-   <strong>name</strong><br>The value of this attribute must match the name of an existing image element in a site area or content item.<br></td>
+</tr>
+<tr>
+<td>Optional Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Required sub-elements</td>
+<td>-   <strong>type</strong><br>The value of this sub-element must be "image". These values are not case-sensitive.<br>-   <strong>source</strong><br>The value must be a fully qualified URL that points to the binary file that is to be uploaded into an image element.<br></td>
+</tr>
+<tr>
+<td><strong>Note:</strong> If the URL contains non-ASCII characters, the non-ASCII characters must be encoded. For example: http://server:port/wps/wcm/%E4%B8%AD%E6%96%87/%E7%BB%84%E4%BB%B6.jpg</td>
+<td></td>
+</tr>
+<tr>
+<td>Optional sub-elements</td>
+<td>-   <strong>fileName</strong><br>The value of this sub-element must be the file name and extension to be applied to the file attachment when added to the image element. If this sub-element is present in the feed entry, then its value is used as the file name of the attachment in Web Content Manager regardless of what the name of the file was on the source server. This is useful if the URL to the binary file does not include the file name as is the case with some content management systems. If the fileName sub-element is not present in the feed, then the Web Content Integrator attempts to determine the file name from the URL in the value sub-element by taking all of the characters following the last forward slash in the URL.<br>-   <strong>htmlName</strong><br>The HTML tag name for the image.<br>-   <strong>altText</strong><br>The alternative text describing the image.<br>-   <strong>height</strong><br>The height of the image. The value must be a number (for pixels) or a percentage.<br>-   <strong>width</strong><br>The width of the image. The value must be a number (for pixels) or a percentage.<br>-   <strong>border</strong><br>The width of a border around the image. The value must be a number (for pixels).</td>
+</tr>
+</tbody>
+</table>
+<p>Examples:</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:element name=&quot;image&quot;&gt;
+    &lt;ibmwcm:type&gt;image&lt;/ibmwcm:type&gt;
+    &lt;ibmwcm:source&gt;
+        http://sourcecms.cntserv_exmp.com/images/logo.gif
+    &lt;/ibmwcm:source&gt;
+&lt;/ibmwcm:element&gt;
+
+
+&lt;ibmwcm:element name=&quot;image&quot;&gt;
+    &lt;ibmwcm:type&gt;image&lt;/ibmwcm:type&gt;
+    &lt;ibmwcm:source&gt;
+        http://sourcecms.cntserv_exmp.com/images/logo.gif
+    &lt;/ibmwcm:source&gt;
+    &lt;ibmwcm:fileName&gt;cntserv_exmp_logo.doc&lt;/ibmwcm:fileName&gt;
+&lt;/ibmwcm:element&gt;
+</code></pre></div>
+<h2 id="date-element">Date element</h2>
+<table>
+<thead>
+<tr>
+<th>Element parameters:</th>
+<th>Details for this element:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Applies to item types</td>
+<td>Date and time components, site areas, and content items</td>
+</tr>
+<tr>
+<td>Required for item types</td>
+<td>Date and time components.</td>
+</tr>
+<tr>
+<td>Allowable Values</td>
+<td>A date or time value to be stored in a date and time element.</td>
+</tr>
+<tr>
+<td>Required Attributes</td>
+<td>-   <strong>name</strong><br>he value of this attribute must match the name of an existing date and time element in a site area or content item.</td>
+</tr>
+<tr>
+<td>Optional Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Required sub-elements</td>
+<td>-   <strong>type</strong><br>The value of this sub-element must be "date". This value is not case-sensitive.<br>-   <strong>value</strong><br>The value of this sub-element must be a date and time value in the RFC 822 format.</td>
+</tr>
+<tr>
+<td>Optional sub-elements</td>
+<td>-   <strong>format</strong><br>This allows the feed producer to specify the format of the date or time. A value of "date" causes the date and time element to be set to display only the date portion of the data. Likewise, a value of "time" displays only the time portion of the data. Any other value, or the absence of this sub-element, results in both portions of the data being displayed. The values for this sub-element are not case-sensitive.</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:element name=&quot;StartDate&quot;&gt;
+    &lt;ibmwcm:type&gt;date&lt;/ibmwcm:type&gt;
+    &lt;ibmwcm:value&gt;
+        Thu, 14 Apr 1966 15:15:00 EDT
+    &lt;/ibmwcm:value&gt;
+    &lt;ibmwcm:format&gt;date&lt;/ibmwcm:format&gt;
+&lt;/ibmwcm:element&gt;
+</code></pre></div>
+<h2 id="link-element">Link element</h2>
+<table>
+<thead>
+<tr>
+<th>Element parameters:</th>
+<th>Details for this element:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Applies to item types</td>
+<td>Link components, site areas, and content items</td>
+</tr>
+<tr>
+<td>Required for item types</td>
+<td>Link components.</td>
+</tr>
+<tr>
+<td>Allowable Values</td>
+<td>This component contains the information that is required to configure a link element. There are a number of optional sub-elements that can be used to set the various parameters of the Link field.</td>
+</tr>
+<tr>
+<td>Required Attributes</td>
+<td>-   <strong>name</strong><br>The value of this attribute must match the name of an existing link element in a site area or content item.</td>
+</tr>
+<tr>
+<td>Optional Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Required sub-elements</td>
+<td>-   <strong>type</strong><br>The value of this sub-element must be "link". This value is not case-sensitive.<br>-   <strong>format</strong><br></td>
+</tr>
+<tr>
+<td>-   ExternalLink: creates a link to a URL external to your Web Content Manager system.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>-   ManagedContent: creates a link to another Web Content Manager item.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>-   ExistingLink: creates a link to a preexisting link component<br></td>
+<td></td>
+</tr>
+<tr>
+<td>-   <strong>value</strong><br>The value of this sub-element depends on what was specified in the "format" sub-element:<br></td>
+<td></td>
+</tr>
+<tr>
+<td>-   ExternalLink: a URL.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>-   ManagedContent: the GUID of an existing Web Content Manager item.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>-   ExistingLink: the GUID of an existing link component.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Optional sub-elements</td>
+<td>-   <strong>linkText</strong> <br>This sub-element allows the feed producer to specify what is rendered between the <code>&lt;a href=""&gt;</code> and <code>&lt;/a&gt;</code> portions of the anchor tag. Possible values include: <br></td>
+</tr>
+<tr>
+<td>-   A plain text string <br></td>
+<td></td>
+</tr>
+<tr>
+<td>-   A string of HTML markup that is either entity-encoded or enclosed in a CDATA tag <br></td>
+<td></td>
+</tr>
+<tr>
+<td>-   The GUID of a feed entry that describes an image component <br></td>
+<td></td>
+</tr>
+<tr>
+<td>A required type attribute indicates which of the previous value types to use. It can be set to "text", "html", or "imageGuid". <br></td>
+<td></td>
+</tr>
+<tr>
+<td>If the linkText sub-element is not included in the feed, the link text default to the value set in either "ExternalLink", "ManagedContent" or "ExistingLink". <br>-   <strong>linkDescription</strong> <br>This sub-element provides a mechanism to specify a description for the link element. If this sub-element is not present, the description on the link element defaults to the value of the description of the site area or content item. <br>-   <strong>linkTarget</strong> <br>The sub-element is used to set the target browser window where the link is displayed when it is clicked. Allowable values are: "none", "_blank", "_top", "_self", "_parent", and "{NEW_WINDOW_NAME}". If this element is not present in the feed the link target defaults to "none" meaning that the link will open in the same browser window as the page containing it. <br>-   <strong>queryString</strong> <br>If present, the value of this sub-element is appended to the generated HREF of the link. This value must be encapsulated in a CDATA tag to prevent parsing problems. <br>-   <strong>additionalAttributes</strong> <br>The value of this sub-element is inserted into the <code>&lt;a&gt;</code> tag as extra HTML attributes. <br>-   <strong>allowClear</strong> <br>This sub-element controls whether the value in the link element can be deleted. It must be set to either "true" or "false". It defaults to "true" if this element is not present in the feed.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><strong>Simple Link to external URL for IBM.com</strong></p>
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:element name=&quot;Link&quot;&gt;
+    &lt;ibmwcm:type&gt;link&lt;/ibmwcm:type&gt;
+    &lt;ibmwcm:value&gt;http://www.ibm.com&lt;/ibmwcm:value&gt;
+    &lt;ibmwcm:format&gt;ExternalLink&lt;/ibmwcm:format&gt;
+    &lt;ibmwcm:linkText type=&quot;text&quot;&gt;IBM&lt;/ibmwcm:linkText&gt;
+&lt;/ibmwcm:element&gt;
+</code></pre></div>
+</li>
+<li>
+<p><strong>Expanded link to external URL for IBM.com</strong></p>
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:element name=&quot;Link&quot;&gt;
+    &lt;ibmwcm:type&gt;link&lt;/ibmwcm:type&gt;
+    &lt;ibmwcm:value&gt;http://www.ibm.com/search&lt;/ibmwcm:value&gt;
+    &lt;ibmwcm:format&gt;ExternalLink&lt;/ibmwcm:format&gt;
+    &lt;ibmwcm:linkText type=&quot;text&quot;&gt;RSS Feed Format Resources&lt;/ibmwcm:linkText&gt;
+    &lt;ibmwcm:linkDescription&gt;Search for RSS Feed Format&lt;/ibmwcm:linkDescription&gt;
+    &lt;ibmwcm:queryString&gt;&lt;![CDATA[?q=rss+feed+format]]&gt;&lt;/ibmwcm:queryString&gt;]]&gt;
+    &lt;ibmwcm:linkTarget&gt;_blank&lt;/ibmwcm:linkTarget&gt;
+    &lt;ibmwcm:additionalAttributes&gt;class=&quot;extLink&quot;&lt;/ibmwcm:additionalAttributes&gt;
+&lt;/ibmwcm:element&gt;
+</code></pre></div>
+</li>
+<li>
+<p><strong>Simple link to a file resource component</strong></p>
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:element name=&quot;Link&quot;&gt;
+    &lt;ibmwcm:type&gt;link&lt;/ibmwcm:type&gt;
+    &lt;ibmwcm:value&gt;63000001&lt;/ibmwcm:value&gt;
+    &lt;ibmwcm:format&gt;ManagedContent&lt;/ibmwcm:format&gt;
+    &lt;ibmwcm:linkText type=&quot;imageGuid&quot;&gt;290df293e20a&lt;/ibmwcm:linkText&gt;
+    &lt;ibmwcm:allowClear&gt;true&lt;/ibmwcm:allowClear&gt;
+&lt;/ibmwcm:element&gt;
+</code></pre></div>
+</li>
+<li>
+<p><strong>Simple Link to another content item</strong></p>
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:element name=&quot;Link&quot;&gt;
+    &lt;ibmwcm:type&gt;link&lt;/ibmwcm:type&gt;
+    &lt;ibmwcm:value&gt;80220102&lt;/ibmwcm:value&gt;
+    &lt;ibmwcm:format&gt;ManagedContent&lt;/ibmwcm:format&gt;
+    &lt;ibmwcm:linkText type=&quot;html&quot;&gt;&lt;![CDATA[&lt;b&gt;Marketing Plan&lt;/b&gt;&lt;/ibmwcm:linkText&gt;]]&gt;
+
+&lt;/ibmwcm:element&gt;
+</code></pre></div>
+</li>
+</ul>
+<h2 id="number-element">Number element</h2>
+<table>
+<thead>
+<tr>
+<th>Element parameters:</th>
+<th>Details for this element:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Applies to item types</td>
+<td>Number components, site areas, and content items</td>
+</tr>
+<tr>
+<td>Required for item types</td>
+<td>Number components.</td>
+</tr>
+<tr>
+<td>Allowable Values</td>
+<td>A numerical value to be stored in a number element.</td>
+</tr>
+<tr>
+<td>Required Attributes</td>
+<td>-   <strong>name</strong> <br>The value of this attribute must match the name of an existing number element in a site area or content item.</td>
+</tr>
+<tr>
+<td>Optional Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Required sub-elements</td>
+<td>-   <strong>type</strong> <br>The value of this sub-element must be "number". This value is not case-sensitive. <br>-   <strong>value</strong> <br>A numerical value to be stored in a number element.</td>
+</tr>
+<tr>
+<td>Optional sub-elements</td>
+<td>-   <strong>format</strong> <br>This allows the feed producer to specify the format for the number element. For example, if a value of "integer" is specified, then only data in the format of whole numbers are imported.</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:element name=&quot;FileSize&quot;&gt;
+    &lt;ibmwcm:type&gt;number&lt;/ibmwcm:type&gt;
+    &lt;ibmwcm:value&gt;34082&lt;/ibmwcm:value&gt;
+    &lt;ibmwcm:format&gt;integer&lt;/ibmwcm:format&gt;
+&lt;/ibmwcm:element&gt;
+</code></pre></div>
+<h2 id="option-selection-element">Option selection element</h2>
+<table>
+<thead>
+<tr>
+<th>Element parameters:</th>
+<th>Details for this element:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Applies to item types</td>
+<td>Site areas and content items</td>
+</tr>
+<tr>
+<td>Required for item types</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Allowable Values</td>
+<td>This component contains a list of values that are set as the selected options in an option selection element.</td>
+</tr>
+<tr>
+<td>Required Attributes</td>
+<td>-   <strong>name</strong><br>The value of this attribute must match the name of an existing option selection element in a site area or content item.</td>
+</tr>
+<tr>
+<td>Optional Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Required sub-elements</td>
+<td>-   <strong>type</strong><br>The value of this sub-element must be "option". This value is not case-sensitive.</td>
+</tr>
+<tr>
+<td>Optional sub-elements</td>
+<td>-   <strong>optionType</strong><br>This is used to define the type of option selection element. <br>-   Specify <code>user</code> when referencing from a list of user-defined options. <br> -   Specify <code>taxonomy</code> when referencing options from an existing taxonomy. <br> You can only specify 1 option type per option selection element. If no option type is defined, "user" will be used by default.<br>-   <strong>selectedCategory</strong><br>This is used with the option type of "taxonomy" and is used to specify the path to a category you want to use in the option selection element. You can use as many selectedCategory elements as you require.<br>If the taxonomy exists in a different library from the option selection element, you can also specify the library name. For example:<br> <pre> ``` <br><ibmwcm:selectedCategory library="shared"> <br>Days/Monday</ibmwcm:selectedCategory> <br>    ```<br></td>
+</tr>
+<tr>
+<td><br>You must specify the name of each category and taxonomy you want to reference. If they do not exist, they are created when the feed is processed<br>-   <strong>selectedOption</strong><br>This is used with the option type of "user" and is used to specify a list of user-defined options. You can use as many selectedOption elements as you require.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><strong>Example 1:</strong></p>
+<p>Selecting a single category where the category is in the same library as the item. In this example "Days" is the name of a taxonomy and "Monday" is the name of a category.</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:element name=&quot;DayOfTheWeek&quot;&gt;
+    &lt;ibmwcm:type&gt;option&lt;/ibmwcm:type &gt;
+    &lt;ibmwcm:optionType&gt;taxonomy&lt;/ibmwcm:optionType&gt;
+    &lt;ibmwcm:selectedCategory&gt;Days/Monday&lt;/ibmwcm:selectedCategory&gt;
+&lt; /ibmwcm:element&gt;
+</code></pre></div>
+</li>
+<li>
+<p><strong>Example 2:</strong></p>
+<p>Selecting multiple categories where the categories are in the same library as the item.</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:element name=&quot;DayOfTheWeek&quot;&gt;
+  &lt;ibmwcm:type&gt;option&lt;/ibmwcm:type &gt;
+    &lt;ibmwcm:optionType&gt;taxonomy&lt;/ibmwcm:optionType&gt;
+    &lt;ibmwcm:selectedCategory&gt;Days/Monday&lt;/ibmwcm:selectedCategory&gt;
+        &lt;ibmwcm:selectedCategory&gt;Days/Tuesday&lt;/ibmwcm:selectedCategory&gt;
+&lt; ;/ibmwcm:element&gt;
+</code></pre></div>
+</li>
+<li>
+<p><strong>Example 3:</strong></p>
+<p>Selecting a single category where the category is in a different library to the item.</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:element name=&quot;DayOfTheWeek&quot;&gt;
+  &lt;ibmwcm:type&gt;option&lt;/ibmwcm:type &gt;
+    &lt;ibmwcm:optionType&gt;taxonomy&lt;/ibmwcm:optionType&gt;
+    &lt;ibmwcm:selectedCategory library=&quot;shared&quot;&gt;Days/Monday&lt;/ibmwcm:selectedCategory&gt;
+&lt;/ibmwcm:element&gt;
+</code></pre></div>
+</li>
+<li>
+<p><strong>Example 4:</strong></p>
+<p>Selecting a user-defined option. In this example "False" is an option that is defined by a user on the Authoring Template for an item.</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:element name=&quot;Enable&quot;&gt;
+    &lt;ibmwcm:type&gt;option&lt;/ibmwcm:type &gt;
+    &lt;ibmwcm:optionType&gt;user&lt;/ibmwcm:optionType&gt;
+    &lt;ibmwcm:selectedOption&gt;False&lt;/ibmwcm:selectedOption&gt;
+&lt;/ibmwcm:element&gt;
+</code></pre></div>
+</li>
+</ul>
+<h2 id="component-reference-element">Component reference element</h2>
+<table>
+<thead>
+<tr>
+<th>Element parameters:</th>
+<th>Details for this element:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Applies to item types</td>
+<td>Site areas and content items</td>
+</tr>
+<tr>
+<td>Required for item types</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Allowable Values</td>
+<td>This component contains the GUID of a component.</td>
+</tr>
+<tr>
+<td>Required Attributes</td>
+<td>-   <strong>name</strong><br></td>
+</tr>
+<tr>
+<td>The value of this attribute must match the name of an existing component reference element in a site area or content item.</td>
+<td></td>
+</tr>
+<tr>
+<td>Optional Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Required sub-elements</td>
+<td>-   <strong>type</strong><br></td>
+</tr>
+<tr>
+<td>The value of this sub-element must be "reference". This value is not case-sensitive.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>-   <strong>value</strong><br></td>
+<td></td>
+</tr>
+<tr>
+<td>This component contains the GUID of a component.</td>
+<td></td>
+</tr>
+<tr>
+<td>Optional sub-elements</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:element name=&quot;Footer&quot;&gt;
+    &lt;ibmwcm:type&gt;reference&lt;/ibmwcm:type&gt;
+    &lt;ibmwcm:value&gt;29bc2daf3289&lt;/ibmwcm:value&gt;
+&lt;/ibmwcm:element&gt;
+</code></pre></div>
+<h2 id="user-selection-element">User selection element</h2>
+<table>
+<thead>
+<tr>
+<th>Element parameters:</th>
+<th>Details for this element:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Applies to item types</td>
+<td>User selection components, site areas, and content items</td>
+</tr>
+<tr>
+<td>Required for item types</td>
+<td>User selection components.</td>
+</tr>
+<tr>
+<td>Allowable Values</td>
+<td>A list of names of users to be selected in a user selection element.</td>
+</tr>
+<tr>
+<td>Required Attributes</td>
+<td>-   <strong>name</strong><br></td>
+</tr>
+<tr>
+<td>The value of this attribute must match the name of an existing user selection element in a site area or content item.</td>
+<td></td>
+</tr>
+<tr>
+<td>Optional Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Required sub-elements</td>
+<td>-   <strong>type</strong><br></td>
+</tr>
+<tr>
+<td>The value of this sub-element must be "userSelect". This value is not case-sensitive.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>-   <strong>value</strong><br></td>
+<td></td>
+</tr>
+<tr>
+<td>The value of this sub-element must be a comma-separated list of user names. When processed the Web Content Integrator attempts to resolve each name to a valid portal user. If a name cannot be resolved, it is skipped.</td>
+<td></td>
+</tr>
+<tr>
+<td>Optional sub-elements</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:element name=&quot;Users&quot;&gt;
+    &lt;ibmwcm:type&gt;userSelect&lt;/ibmwcm:type&gt;
+    &lt;ibmwcm:value&gt;wpsadmin,John Smith&lt;/ibmwcm:value&gt;
+&lt;/ibmwcm:element&gt;
+</code></pre></div>
+<h2 id="style-sheet-element">Style sheet element</h2>
+<table>
+<thead>
+<tr>
+<th>Element parameters:</th>
+<th>Details for this element:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Applies to item types</td>
+<td>Stylesheet components</td>
+</tr>
+<tr>
+<td>Required for item types</td>
+<td>Stylesheet components</td>
+</tr>
+<tr>
+<td>Allowable Values</td>
+<td>A URL that points to a CSS file that is uploaded into a stylesheet component.</td>
+</tr>
+<tr>
+<td>Required Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Optional Attributes</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Required sub-elements</td>
+<td>-   <strong>type</strong><br></td>
+</tr>
+<tr>
+<td>The value of this sub-element must be "styleSheet". This value is not case-sensitive.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>-   <strong>source</strong><br></td>
+<td></td>
+</tr>
+<tr>
+<td>A URL that points to a CSS file that is uploaded into the stylesheet component.</td>
+<td></td>
+</tr>
+<tr>
+<td>Optional sub-elements</td>
+<td>-   <strong>format</strong><br></td>
+</tr>
+<tr>
+<td>This sub-element is used to specify the type of the stylesheet. Valid options are: "preferred", "alternate", and "persistent". If this sub-element is not present in the feed, or if any value other than the previous values is specified, the type will default to "preferred".<br></td>
+<td></td>
+</tr>
+<tr>
+<td>-   <strong>mediaType</strong><br></td>
+<td></td>
+</tr>
+<tr>
+<td>This sub-element specifies the media type of the stylesheet. Valid values are: "all", "aural", "braille", "handheld", "print", "projection", "screen", "tty", "tv", and "unspecified". If the mediaType sub-element is not present in the feed, or if any value other than the previous values is specified, the media type defaults to "unspecified".<br></td>
+<td></td>
+</tr>
+<tr>
+<td>-   <strong>cssTitle</strong><br></td>
+<td></td>
+</tr>
+<tr>
+<td>The value of this sub-element must be a string that is set as the value of the title attribute when the link to the CSS file is rendered.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;ibmwcm:element name=&quot;cssFile&quot;&gt;
+    &lt;ibmwcm:type&gt;styleSheet&lt;/ibmwcm:type&gt;
+    &lt;ibmwcm:source&gt;http://www.cntserv_exmp.com/styles/news.css&lt;/ibmwcm:source&gt;
+    &lt;ibmwcm:format&gt;alternate&lt;/ibmwcm:format&gt;
+    &lt;ibmwcm:mediaType&gt;print&lt;/ibmwcm:mediaType&gt;
+&lt;/ibmwcm:element&gt;
+</code></pre></div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 24, 2022</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

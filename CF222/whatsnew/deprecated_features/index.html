@@ -1,0 +1,2527 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/whatsnew/deprecated_features/">
+      
+      
+        <link rel="prev" href="../cf17/new_cf17/">
+      
+      
+        <link rel="next" href="../unsupported_features/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Deprecated features - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#deprecated-features" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../latest/whatsnew/deprecated_features/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Deprecated features
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../cf20/newcf222/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../deployment/" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../build_sites/" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            What's New
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../cf20/newcf222/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    CF200 and later
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../cf19/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    CF19 to CF199
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../cf18/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    CF18 to CF184
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../cf17/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    CF17 to CF173
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Deprecated features
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Deprecated features
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recently-deprecated-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recently Deprecated Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deprecated-dependent-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deprecated Dependent Products
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deprecated Dependent Products">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux-os-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux OS family
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-os-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows OS family
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hypervisor-aix-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hypervisor - AIX Summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hypervisor-linux-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hypervisor - Linux Summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hypervisor-windows-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hypervisor - Windows Summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java SDK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Databases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collaboration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collaboration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jdbc-drivers" class="md-nav__link">
+    <span class="md-ellipsis">
+      JDBC Drivers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-browsers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web Browsers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#previously-deprecated-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Previously Deprecated Features
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unsupported_features/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unsupported features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../build_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recently-deprecated-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recently Deprecated Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deprecated-dependent-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deprecated Dependent Products
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deprecated Dependent Products">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux-os-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux OS family
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-os-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows OS family
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hypervisor-aix-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hypervisor - AIX Summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hypervisor-linux-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hypervisor - Linux Summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hypervisor-windows-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hypervisor - Windows Summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java SDK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Databases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collaboration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collaboration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jdbc-drivers" class="md-nav__link">
+    <span class="md-ellipsis">
+      JDBC Drivers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-browsers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web Browsers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#previously-deprecated-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Previously Deprecated Features
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="deprecated-features">Deprecated features</h1>
+<p>Deprecation means that the features are supported at this time but can be removed in an upcoming CF. It is recommended that deprecated items be removed as soon as possible as they can cause unpredictable behavior. </p>
+<p>Links to more information on the replacement for those items listed for deprecation will be posted as they become available to provide help as you move away from these features.</p>
+<h2 id="recently-deprecated-features">Recently Deprecated Features</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Deprecated</th>
+<th>Recommended Action</th>
+<th>Effective Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HCL DX Software Version</td>
+<td>HCL Digital Experience Version 8.5 and 9 solutions</td>
+<td>On June 30, 2023, HCL announces End of Support dates for HCL DX product release versions 8.5 and 9, effective on June 30, 2025. Customers should upgrade to HCL DX release version 9.5, by following the <a href="../../deployment/install/traditional/install_upgrade_plan_supported_paths/">upgrade steps in the Help Center</a>. For more information, please refer to the <a href="https://www.hcltechsw.com/resources/product-release/product-lifecycle-table?productFamily=digital%20experience">HCL Software Lifecycle site</a>, Digital Experience category.</td>
+<td>June 30, 2025</td>
+</tr>
+<tr>
+<td>Deploying</td>
+<td>Automated Pod restart on ConfigMap updates</td>
+<td>Beginning with CF221, Runtime Controller will not restart Pods automatically when a ConfigMap is changed manually. For production deployments, always use the Helm custom values and <code>helm upgrade</code> to change configuration. Using Helm upgrade for configuration changes triggers the appropriate restart processes. For development and testing when a ConfigMap is changed, you have to restart the appropriate Pod manually.</td>
+<td>June 2024</td>
+</tr>
+<tr>
+<td>Manage Content</td>
+<td>Design Studio</td>
+<td>The Design Studio Beta component has been removed. Future Digital Experience 9.5 releases will incorporate feedback on the component features received during the Beta evaluation period.</td>
+<td>March 2023</td>
+</tr>
+<tr>
+<td>Manage Content</td>
+<td>Textbox.io</td>
+<td>The Textbox.io component in the HCL Digital Experience software is being deprecated and will End of Support (EOS) on January 31, 2024. From CF208 onwards, the TinyMCE editor can be used as the embedded Rich text editor. For more information, see <a href="../../manage_content/wcm_authoring/authoring_portlet/auth_portlet_settings/wcm_config_authoringportlet_richtext/">Web Content Author Editor options</a> and <a href="../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring/#defining-the-editor-used-for-in-place-editing">Web content authoring options</a>.</td>
+<td>January 2023</td>
+</tr>
+<tr>
+<td>Developing</td>
+<td>DAM API</td>
+<td>Effective June 2022, the following DAM API will be deprecated.<br>- PUT /plugins/{plugin_id}<br>- PATCH /plugins/{plugin_id}<br>- GET /plugins/{plugin_id}<br>- DELETE /plugins/{plugin_id}<br>- POST /plugins<br>- GET /plugins<br>For more information, refer to the latest <a href="https://github.com/HCL-TECH-SOFTWARE/experience-api-documentation">HCL Experience API</a> Github repository.</td>
+<td>June 2022</td>
+</tr>
+<tr>
+<td>Third-party Document Conversion Services</td>
+<td>Deprecation of Document Conversion Services provided by Oracle</td>
+<td>Document Conversion Services components in HCL Digital Experience software will be updated and replaced in the future HCL DX Container Update release in 2022. HCL Digital Experience will remove the third-party component, which is supplied by Oracle, that provides these capabilities and replace them with HCL supported functions. After that point, HCL Digital Experience v8.5, v9, and v9.5 Container Update and CF releases will include the newer HCL supported component. Refer to the following HCL Digital Experience support article: <a href="https://support.hcltechsw.com/csm?id=kb_article&amp;sysparm_article=KB0096908">Replacement of Document Conversion Services component in HCL Digital Experience software for additional information</a>.</td>
+<td>August 20, 2022</td>
+</tr>
+<tr>
+<td>Deploying</td>
+<td>Operator-based deployment</td>
+<td>Beginning with HCL Digital Experience 9.5 Container Update CF200, HCL has discontinued releasing the HCL Digital Experience (DX) Operator-based deployments and will provide support only for Helm-based deployments. There will be no further updates or code fixes provided for the Operator-based deployments. For more information, see <a href="https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/overview/">Helm-based deployment</a>.</td>
+<td>December 2021</td>
+</tr>
+<tr>
+<td>Integrating </td>
+<td>Sametime Integration </td>
+<td>Integration with Sametime will be deprecated. The supported Sametime version 9.0 already reached EOS. </td>
+<td>November 2021</td>
+</tr>
+<tr>
+<td>Integrating </td>
+<td>Add to Sametime List </td>
+<td>Effective November 2021, integration with Sametime will be deprecated. The supported Sametime version 9.0 already reached EOS. </td>
+<td>November 2021</td>
+</tr>
+<tr>
+<td>Online Help </td>
+<td>Sametime Web 2.0 Contact List </td>
+<td>Effective November 2021, integration with Sametime will be deprecated. The supported Sametime version 9.0 already reached EOS.  </td>
+<td>November 2021</td>
+</tr>
+<tr>
+<td>Developing </td>
+<td>Microsoft Exchange 2010 Calendar </td>
+<td>Effective November 2021, integration with Microsoft Exchange 2010 will be deprecated. Exchange 2010 is out of support for Microsoft. </td>
+<td>November 2021</td>
+</tr>
+<tr>
+<td>Developing </td>
+<td>Microsoft Exchange 2010 Mail </td>
+<td>Effective November 2021, integration with Microsoft Exchange 2010 will be deprecated. Exchange 2010 is out of support for Microsoft. </td>
+<td>November 2021</td>
+</tr>
+<tr>
+<td>Online Help </td>
+<td>Coach </td>
+<td>Effective November 2021, Coach portlet will be deprecated. IBM no longer supports WebSphere Lombardi. </td>
+<td>November 2021</td>
+</tr>
+<tr>
+<td>Online Help </td>
+<td>Dynamic Coach </td>
+<td>Effective November 2021, Dynamic Coach portlet will be deprecated. IBM no longer supports WebSphere Lombardi. </td>
+<td>November 2021</td>
+</tr>
+<tr>
+<td>Configuring </td>
+<td>Federated Documents Picker </td>
+<td>Effective November 2021, Federated Documents Picker feature will be deprecated. HCL Digital Asset Management may be use in replacement for this feature. </td>
+<td>November 2021</td>
+</tr>
+<tr>
+<td>Online Help </td>
+<td>Frequent Users </td>
+<td>Effective November 2021, Frequent Users portlet will be deprecated. This is an obsolete portlet and no replacement is needed. </td>
+<td>November 2021</td>
+</tr>
+<tr>
+<td>Setting up a website </td>
+<td>Syndicated Feed Portlet </td>
+<td>Effective November 2021, Syndicated Feed portlet will be deprecated. </td>
+<td>November 2021</td>
+</tr>
+<tr>
+<td>Integrating </td>
+<td>TPIR Configuration Viewer </td>
+<td>Effective November 2021, TPIR Configuration Viewer will be deprecated. IBM no longer supports WebSphere Lombardi. </td>
+<td>November 2021</td>
+</tr>
+<tr>
+<td>Developing </td>
+<td>UX Screen Flow Manager - Dialog Stack Portlet </td>
+<td>Effective November 2021, Dialog Stack portlet will be deprecated. The feature was already removed on the later version of Portal. </td>
+<td>November 2021</td>
+</tr>
+<tr>
+<td>Developing </td>
+<td>UX Screen Flow Manager - Dialog State Display Portlet </td>
+<td>Effective November 2021, Dialog State Display portlet will be deprecated. The feature was already removed on the later version of Portal. </td>
+<td>November 2021</td>
+</tr>
+<tr>
+<td>Setting up a website </td>
+<td>Welcome to WebSphere Portal </td>
+<td>Effective November 2021, Welcome portlet will be deprecated. This is an obsolete portlet and no replacement is needed. </td>
+<td>November 2021</td>
+</tr>
+<tr>
+<td>Integrating </td>
+<td>Watson Content Hub support </td>
+<td>Effective November 2021, integration with Watson Content Hub will be deprecated. HCL Digital Asset Management may be use in replacement for this feature. </td>
+<td>November 2021</td>
+</tr>
+<tr>
+<td>Integrating </td>
+<td>Web Application Bridge - Microsoft SharePoint </td>
+<td>Effective November 2021, integration with Microsoft SharePoint will be deprecated. </td>
+<td>November 2021</td>
+</tr>
+<tr>
+<td>Integrating </td>
+<td>SAP NetWeaver </td>
+<td>Effective November 2021, integration with SAP NetWeaver will be deprecated. NetWeaver is no longer supported by SAP. </td>
+<td>November 2021</td>
+</tr>
+<tr>
+<td>Integrating </td>
+<td>Domino </td>
+<td>Effective November 2021, integration with Domino will be deprecated. The iFrame integration approach is already obsolete and not used. </td>
+<td>November 2021</td>
+</tr>
+<tr>
+<td>Integrating </td>
+<td>iNotes portlet </td>
+<td>Effective November 2021, integration with Domino will be deprecated. The iFrame integration approach is already obsolete and not used. </td>
+<td>November 2021</td>
+</tr>
+<tr>
+<td>Migrating </td>
+<td>IBM® JSF Bridge </td>
+<td>In WAS 9.0.5.2 and 8.5.5.17, IBM removed the JSF Bridge from WAS. To address this, an updated JSF Portlet Bridge is included in DX CF18 release. Customers installing HCL DX CF18, and using an IBM WebSphere Application Server Network Deployment version later than 8.5.5.17 or 9.0.5.2 should utilize the new JSF Portlet Bridge. The HCL JSF Portlet Bridge is built using the same class names as the IBM JSF Portlet Bridge provided in WAS 9.0.0.7 thru 9.0.5.1 and WAS 8.5.5.16 respectively. User applications should be able to continue to function without any modification.</td>
+<td>December 2020</td>
+</tr>
+</tbody>
+</table>
+<h2 id="deprecated-dependent-products">Deprecated Dependent Products</h2>
+<p>These are the lists of Dependent Products that are already Out of Support.</p>
+<h3 id="linux-os-family">Linux OS family</h3>
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th>OS Supported Versions</th>
+<th>Hardware</th>
+<th>Bitness</th>
+<th>Product Minimum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SUSE Linux Enterprise Server (SLES) 11</td>
+<td>Base and later maintenance releases</td>
+<td>x86-64 IBM z Systems</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Ubuntu 16.04 LTS</td>
+<td>Base and later maintenance releases</td>
+<td>Power System – Little Endian</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Ubuntu 16.04 LTS</td>
+<td>Base and later maintenance releases</td>
+<td>x86-64</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>8.5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="windows-os-family">Windows OS family</h3>
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th>Supported Versions</th>
+<th>Hardware</th>
+<th>Bitness</th>
+<th>Product Minimum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows 8.1 Enterprise*</td>
+<td>Base and later maintenance releases</td>
+<td>x86-64</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Windows 8.1 Professional*</td>
+<td>Base and later maintenance releases</td>
+<td>x86-64</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Windows 8.1 Standard*</td>
+<td>Base and later maintenance releases</td>
+<td>x86-64</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Windows Server 2012 Datacenter Edition</td>
+<td>Base and later maintenance releases</td>
+<td>x86-64</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Windows Server 2012 R2 Datacenter Edition</td>
+<td>Base and later maintenance releases</td>
+<td>x86-64</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Windows Server 2012 Standard Edition</td>
+<td>Base and later maintenance releases</td>
+<td>x86-64</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Windows Server 2012 R2 Standard Edition</td>
+<td>Base and later maintenance releases</td>
+<td>x86-64</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Windows Server 2016 Datacenter Edition</td>
+<td>Base and later maintenance releases</td>
+<td>x86-64</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Windows Server 2016 Essentials Edition</td>
+<td>Base and later maintenance releases</td>
+<td>x86-64</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Windows Server 2016 Standard Edition</td>
+<td>Base and later maintenance releases</td>
+<td>x86-64</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>8.5</td>
+</tr>
+</tbody>
+</table>
+<p>*Support for developer platform only.  </p>
+<h3 id="hypervisor-aix-summary">Hypervisor - AIX Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Hypervisor</th>
+<th>Product minimum</th>
+<th>Deployment Units</th>
+<th>Supported Guest Operating System</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Application Workload Partition (WPAR) AIX 7.1</td>
+<td>8.5</td>
+<td>Server</td>
+<td>-   AIX 7.1 POWER System - Big Endian<br>- AIX 7.2 POWER System - Big Endian</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition important">
+<p class="admonition-title">AIX support</p>
+<p>Portal Express offering does not support AIX.  </p>
+</div>
+<h3 id="hypervisor-linux-summary">Hypervisor - Linux Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Hypervisor</th>
+<th>Product Minimum</th>
+<th>Deployment Units</th>
+<th>Supported Guest Operating System</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KVM in SUSE Linux Enterprise Server (SLES) 11 and later</td>
+<td>8.5</td>
+<td>Server</td>
+<td>All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian</td>
+</tr>
+<tr>
+<td>VMware ESXi 5.0</td>
+<td>8.5</td>
+<td>Server</td>
+<td>All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 and 8 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian</td>
+</tr>
+<tr>
+<td>VMware ESXi 5.5 and later</td>
+<td>8.5</td>
+<td>Server</td>
+<td>All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 and 8 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian</td>
+</tr>
+<tr>
+<td>VMware ESXi 6.0 and later</td>
+<td>8.5</td>
+<td>Server</td>
+<td>All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 and 8 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian</td>
+</tr>
+<tr>
+<td>VMware ESXi 6.1 and later</td>
+<td>8.5</td>
+<td>Server</td>
+<td>All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>-   Red Hat Enterprise Linux (RHEL) Server 7 and 8 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian</td>
+</tr>
+<tr>
+<td>z/VM 6.1 and later</td>
+<td>8.5</td>
+<td>Server</td>
+<td>All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 and 8 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian</td>
+</tr>
+<tr>
+<td>z/VM 6.2 and later</td>
+<td>8.5</td>
+<td>Server</td>
+<td>All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 and 8 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian</td>
+</tr>
+<tr>
+<td>z/VM 6.3 and later</td>
+<td>8.5</td>
+<td>Server</td>
+<td>All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 and 8 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hypervisor-windows-summary">Hypervisor - Windows Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Hypervisor</th>
+<th>Product Minimum</th>
+<th>Deployment Units</th>
+<th>Supported Guest Operating System</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KVM in SUSE Linux Enterprise Server (SLES) 11 and later</td>
+<td>8.5</td>
+<td>Server</td>
+<td>All supported operating systems:<br/>- Windows Server 2012 Datacenter Edition x86-64<br/>- Windows Server 2012 Standard Edition x86-64<br/>- Windows 8.1 Enterprise x86-64<br/>- Windows 8.1 Professional x86-64<br/>- Windows 8.1 Standard x86-64<br/>- Windows Server 2012 R2 Datacenter Edition x86-64<br/>- Windows Server 2012 R2 Standard Edition x86-64<br/>- Windows 10 Pro x86-64<br/>- Windows 10 Enterprise x86-64<br/>- Windows Server 2016 Datacenter Edition x86-64<br/>- Windows Server 2016 Standard Edition x86-64<br/>- Windows Server 2016 Essentials Edition x86-64<br/>- Windows Server 2019 Datacenter Edition x86-64<br/>- Windows Server 2019 Datacenter Edition x86-64<br/>- Windows Server 2019 Essentials Edition x86-64</td>
+</tr>
+<tr>
+<td>VMware ESXi 5.0</td>
+<td>8.5</td>
+<td>Server</td>
+<td>All supported operating systems:<br/>- Windows Server 2012 Datacenter Edition x86-64<br/>- Windows Server 2012 Standard Edition x86-64<br/>- Windows 8.1 Enterprise x86-64<br/>- Windows 8.1 Professional x86-64<br/>- Windows 8.1 Standard x86-64<br/>- Windows Server 2012 R2 Datacenter Edition x86-64<br/>- Windows Server 2012 R2 Standard Edition x86-64<br/>- Windows 10 Pro x86-64<br/>- Windows 10 Enterprise x86-64<br/>- Windows Server 2016 Datacenter Edition x86-64<br/>- Windows Server 2016 Standard Edition x86-64<br/>- Windows Server 2016 Essentials Edition x86-64<br/>- Windows Server 2019 Datacenter Edition x86-64<br/>- Windows Server 2019 Datacenter Edition x86-64<br/>- Windows Server 2019 Essentials Edition x86-64</td>
+</tr>
+<tr>
+<td>VMware ESXi 5.5</td>
+<td>8.5</td>
+<td>Server</td>
+<td>All supported operating systems:<br/>- Windows Server 2012 Datacenter Edition x86-64<br/>- Windows Server 2012 Standard Edition x86-64<br/>- Windows 8.1 Enterprise x86-64<br/>- Windows 8.1 Professional x86-64<br/>- Windows 8.1 Standard x86-64<br/>- Windows Server 2012 R2 Datacenter Edition x86-64<br/>- Windows Server 2012 R2 Standard Edition x86-64<br/>- Windows 10 Pro x86-64<br/>- Windows 10 Enterprise x86-64<br/>- Windows Server 2016 Datacenter Edition x86-64<br/>- Windows Server 2016 Standard Edition x86-64<br/>- Windows Server 2016 Essentials Edition x86-64<br/>- Windows Server 2019 Datacenter Edition x86-64<br/>- Windows Server 2019 Datacenter Edition x86-64<br/>- Windows Server 2019 Essentials Edition x86-64</td>
+</tr>
+<tr>
+<td>VMware ESXi 6.0</td>
+<td>8.5</td>
+<td>Server</td>
+<td>All supported operating systems:<br/>- Windows Server 2012 Datacenter Edition x86-64<br/>- Windows Server 2012 Standard Edition x86-64<br/>- Windows 8.1 Enterprise x86-64<br/>- Windows 8.1 Professional x86-64<br/>- Windows 8.1 Standard x86-64<br/>- Windows Server 2012 R2 Datacenter Edition x86-64<br/>- Windows Server 2012 R2 Standard Edition x86-64<br/>- Windows 10 Pro x86-64<br/>- Windows 10 Enterprise x86-64<br/>- Windows Server 2016 Datacenter Edition x86-64<br/>- Windows Server 2016 Standard Edition x86-64<br/>- Windows Server 2016 Essentials Edition x86-64<br/>- Windows Server 2019 Datacenter Edition x86-64<br/>- Windows Server 2019 Datacenter Edition x86-64<br/>- Windows Server 2019 Essentials Edition x86-64</td>
+</tr>
+<tr>
+<td>VMware ESXi 6.1</td>
+<td>8.5</td>
+<td>Server</td>
+<td>All supported operating systems:<br/>- Windows Server 2012 Datacenter Edition x86-64<br/>- Windows Server 2012 Standard Edition x86-64<br/>- Windows 8.1 Enterprise x86-64<br/>- Windows 8.1 Professional x86-64<br/>- Windows 8.1 Standard x86-64<br/>- Windows Server 2012 R2 Datacenter Edition x86-64<br/>- Windows Server 2012 R2 Standard Edition x86-64<br/>- Windows 10 Pro x86-64<br/>- Windows 10 Enterprise x86-64<br/>- Windows Server 2016 Datacenter Edition x86-64<br/>- Windows Server 2016 Standard Edition x86-64<br/>- Windows Server 2016 Essentials Edition x86-64<br/>- Windows Server 2019 Datacenter Edition x86-64<br/>- Windows Server 2019 Datacenter Edition x86-64<br/>- Windows Server 2019 Essentials Edition x86-64</td>
+</tr>
+</tbody>
+</table>
+<h3 id="java-sdk">Java SDK</h3>
+<p>HCL Digital Experience 9.5 requires JDK 7.0 or later for installation. </p>
+<table>
+<thead>
+<tr>
+<th>Prerequisite</th>
+<th>Prerequisite minimum, and Supported versions</th>
+<th>Product Minimum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IBM Runtime Environment, Java Technology Edition</td>
+<td>7.0 and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td></td>
+<td>7.1 and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="databases">Databases</h3>
+<table>
+<thead>
+<tr>
+<th>Supported Software</th>
+<th>Supported software minimum</th>
+<th>Product minimum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DB2 Advanced Enterprise Server Edition</td>
+<td>11.1.0** and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>DB2 Advanced Workgroup Server Edition</td>
+<td>11.1.0** and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>DB2 Connect Application Server Advanced Edition</td>
+<td>11.1.0 and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>DB2 Connect Enterprise Edition</td>
+<td>11.1.0 and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>DB2 Enterprise Server Edition</td>
+<td>11.1.0 and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>DB2 Express Edition</td>
+<td>11.1.0 and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>DB2 for z/OS</td>
+<td>11.1.0 and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Microsoft SQL Server</td>
+<td>2014 and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td></td>
+<td>2016 and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Oracle Database 12.2 Standard Edition</td>
+<td>(12.2.0.0) and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Oracle Database 12.2 Enterprise Edition</td>
+<td>(12.2.0.0) and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Oracle Database 12.2.0.1.0 Enterprise Edition</td>
+<td>12.2.0.1.0 and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Oracle Database 12.2.0.2 Enterprise Edition</td>
+<td>12.2.0.2 and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="collaboration">Collaboration</h3>
+<table>
+<thead>
+<tr>
+<th>Prerequisite</th>
+<th>Supported software versions</th>
+<th>Product Minimum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HCL Sametime Communicate</td>
+<td>9.0 and later maintenance</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>HCL Sametime Complete</td>
+<td>9.0 and later maintenance</td>
+<td>8.5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="jdbc-drivers">JDBC Drivers</h3>
+<table>
+<thead>
+<tr>
+<th>Supported Software</th>
+<th>Supported software minimum</th>
+<th>Product minimum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DB2 Connect Enterprise Edition</td>
+<td>11.1, and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Microsoft SQL Server JDBC Driver</td>
+<td>4.2, and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="security-management">Security Management</h3>
+<table>
+<thead>
+<tr>
+<th>Supported Software</th>
+<th>Supported software minimum</th>
+<th>Product minimum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IBM Security Access Manager for Web</td>
+<td>7.0, and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>IBM Security Access Manager</td>
+<td>9.0, and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Tivoli Directory Integrator</td>
+<td>7.1.1, and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="web-browsers">Web Browsers</h3>
+<table>
+<thead>
+<tr>
+<th>Supported Software</th>
+<th>Supported software minimum</th>
+<th>Product minimum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Microsoft Internet Explorer</td>
+<td>11</td>
+<td>8.5</td>
+</tr>
+</tbody>
+</table>
+<h2 id="previously-deprecated-features">Previously Deprecated Features</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Unsupported</th>
+<th>Recommended Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Configuring</td>
+<td>OpenShift Passthrough</td>
+<td>To deploy OpenShift manually using <code>Routes</code>, you need to create a .yaml file and add the changes required. Those changes can be applied by running <code>kubectl apply</code> and specifying the namespace and location.<br>Documentation resource: <a href="../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking/#create-the-route-resource-manually">Create the route resource manually</a></td>
+</tr>
+<tr>
+<td>Setting up a site </td>
+<td>Running the "Local Content Viewer" portlet (WCM Rendering Portlet) with WSRP </td>
+<td>The Local Content View portlet has no architectural replacement. Instead, use WCM Rendering portlet locally. The feature allows customers to run the content viewer on a remote portal and integrate it into a local portal. You can run the content viewer only locally.<br> Documentation resource: <a href="https://help.hcltechsw.com/digital-experience/9.5/wcm/wcm_config_wcmviewer_wsrp.html">Enabling remote rendering with WSRP and the Web Content Viewer</a>.<!-- (../wcm/wcm_config_wcmviewer_wsrp.md) --></td>
+</tr>
+<tr>
+<td>Administering </td>
+<td>Frequent Users portlet<br> Documentation resource: <a href="https://help.hcltechsw.com/digital-experience/8.5/panel_help/h_main_frequent_users.html">Viewing frequent users</a></td>
+<td>Login filters can be used to record login activity as needed.<br>Documentation resource: <a href="https://support.hcltechsw.com/csm" target="_blank">New security APIs in HCL Portal</a></td>
+</tr>
+<tr>
+<td>Security </td>
+<td>OpenID authentication<br>Legacy Portal OpenID TAI (com.ibm.portal.auth.tai.OpenidTAI provided by HCL Digital Experience)<br>See <a href="https://help.hcltechsw.com/digital-experience/9.5/security/use_openid.html" target="_blank">Integrating with OpenID authentication</a>.</td>
+<td>For authentication in HCL Digital Experience with an external Identity Provider use SAML/OpenID Connect TAIs provided by IBM WebSphere Application Server or custom TAIs.<br>Documentation resource: <a href="https://help.hcltechsw.com/digital-experience/9.5/dev-portlet/outbhttp_auth_est_sso_saml_tok.html" target="_blank">Establishing SSO connections through SAML 2.0 tokens</a></td>
+</tr>
+<tr>
+<td>Administering </td>
+<td>XMLAccess xsds for older releases (HCL Digital Experience Portal 5.0 - 7.0) </td>
+<td>Use the XML configuration interface with XML input files specified according to the latest schema file: PortalConfig_8.5.0.xsd.<br>Documentation resource: <a href="https://help.hcltechsw.com/digital-experience/9.5/admin-system/adxmltsk_cmdln.html" target="_blank">Using the XML configuration command line client</a>.</td>
+</tr>
+<tr>
+<td>Developing </td>
+<td>Enabler, Builder, and Mashups components and API </td>
+<td>The <strong>Mashup Enabler</strong> and the <strong>Builder</strong> components are deprecated. The <strong>Mashups Enabler</strong> and the <strong>Builder</strong> API are deprecated.<br> Documentation resource: <a href="https://help.hcltechsw.com/digital-experience/9.5/migrate/mig_t_post_mig.html">Mashup integration post migration activities</a></td>
+</tr>
+<tr>
+<td>Personalization </td>
+<td>LikeMinds </td>
+<td>The <strong>LikeMinds</strong> services and database domains are deprecated.<br> Documentation resource: <a href="https://help.hcltechsw.com/digital-experience/9.5/admin-system/adxmltsk_cmdln.html" target="_blank">Using the XML configuration commands line client</a> <br>Go to Active Site Analytics to learn how to configure a variety of analysis tools to support your Digital Experience platform requirements. <br>Documentation resource: <a href="https://support.hcltechsw.com/csm" target="_blank">Enabling Active Site Analytics for your Marketing Center Spot</a></td>
+</tr>
+<tr>
+<td>Personalization </td>
+<td>Feedback </td>
+<td>The <strong>Feedback</strong> database domains are deprecated.<br>Documentation resource: <a href="https://help.hcltechsw.com/digital-experience/9.5/admin-system/adxmltsk_cmdln.html" target="_blank">Using the XML configuration commands line client</a> <br>Go to Active Site Analytics to learn how to configure a variety of analysis tools to support your Digital Experience platform requirements.<br>Documentation resource: <a href="https://support.hcltechsw.com/csm" target="_blank">Enabling Active Site Analytics for your Marketing Center Spot</a></td>
+</tr>
+<tr>
+<td>Security </td>
+<td>Active Credentials </td>
+<td>Active credentials are deprecated from the Credential Vault portlet. Passive credentials are still available.<br>Documentation resource: <a href="https://help.hcltechsw.com/digital-experience/9.5/plan/plan_credvault.html" target="_blank">Credential Vault</a></td>
+</tr>
+<tr>
+<td>Administering </td>
+<td>Shared private pages </td>
+<td>The Sharing private pages service is deprecated.<br>Documentation resource: <a href="https://support.hcltechsw.com/csm" target="_blank">Sharing pages with other users</a><br>Go to Managing Pages for the set of services available in HCL Digital Experience 8.5 and 9 releases.<br>Documentation resource: <a href="https://help.hcltechsw.com/digital-experience/9.5/admin-system/mp_manage_pages.html" target="_blank">Managing pages</a></td>
+</tr>
+<tr>
+<td>Administering </td>
+<td>Parallel Portlet rendering </td>
+<td>The Parallel Portlet rendering feature is deprecated. See the <a href="https://support.hcltechsw.com/csm?id=kb_article&amp;sysparm_article=KB0074411" target="_blank">HCL Digital Experience Performance Tuning Guide</a> for recommendations to optimize digital experience application performance. </td>
+</tr>
+<tr>
+<td>Security </td>
+<td>Stand-alone LDAP user registry </td>
+<td>The stand-alone LDAP user registry configuration is deprecated. Instead, configure the federated LDAP user registry. If you upgraded from HCL Digital Experience 7.0 or 8.0 with a stand-alone LDAP user registry, you can continue to use your stand-alone LDAP user registry. However, run the wp-modify-federated-security to change to a federated LDAP user registry.<br>Documentation resource: <a href="https://help.hcltechsw.com/digital-experience/9.5/security/mod_fed_sec.html" target="_blank">Changing from a stand-alone repository to a federated repository</a></td>
+</tr>
+<tr>
+<td>Administering </td>
+<td>URL mappings </td>
+<td>URL mappings are deprecated. If you upgrade from HCL Digital Experience 8.0 to 8.5, you can continue to use your existing URL mappings, but creating new URL mappings is no longer supported. Use <a href="https://help.hcltechsw.com/digital-experience/9.5/wcm/vanity_urls.html" target="_blank">Vanity URLs</a> or <a href="https://help.hcltechsw.com/digital-experience/9.5/admin-system/mp_friendly_url.html" target="_blank">Friendly URLs</a>.</td>
+</tr>
+<tr>
+<td>Installation </td>
+<td>Full and Base installation options </td>
+<td>Before HCL Digital Experience 8.5, a customer chose either a full deployment with all the same pages and artifacts or a base deployment to customize their portal. Starting with HCL Digital Experience 8.5, the <strong>Configuration Wizard</strong> installs the full deployment. Customers can then remove pages to customize their portal. Then, they can package their customizations as a Portal Application Archive (PAA) file. Finally, customers can install their production server, run the empty-portal task, and install the customization PAA file. </td>
+</tr>
+<tr>
+<td>Security </td>
+<td>LTPA version 1 token support </td>
+<td>The LTPA version 1 token is deprecated. WebSphere® Application Server 8.5.5. disables the LTPA version 1 token by default. If you are integrating with third-party applications that rely on LTPA version 1, update the application to support LTPA version 2. If you cannot update the application, you must manually re-enable LTPA version 1 support after you complete the migration. For information on updating your application to support LTPA version 2, see the documentation for the application <a href="https://www.ibm.com/support/knowledgecenter/en/SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/twbs_interopltpatoken.html" target="_blank">Enabling or disabling single sign-on interoperability mode for the LTPA token for WebSphere® Application Server 8.5.5</a> and <a href="https://www.ibm.com/support/knowledgecenter/en/SSAW57_9.0.0/com.ibm.websphere.nd.multiplatform.doc/ae/twbs_interopltpatoken.html" target="_blank">Enabling or disabling single sign-on interoperability mode for the LTPA token for WebSphere® Application Server 9.0.0</a>.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 12, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

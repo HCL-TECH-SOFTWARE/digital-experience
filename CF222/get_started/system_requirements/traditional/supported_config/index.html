@@ -1,0 +1,3138 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/get_started/system_requirements/traditional/supported_config/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../unsupported_config/">
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Supported configurations - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#supported-configurations" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../latest/get_started/system_requirements/traditional/supported_config/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Supported configurations
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../whatsnew/cf20/newcf222/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../deployment/" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../build_sites/" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Get Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Product Overview
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../architecture_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Architecture overview
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../plan_deployment/container_deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Plan Your Deployment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software_support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Program Requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    System Requirements
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            System Requirements
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../kubernetes/kubernetes-runtime/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Kubernetes
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Traditional
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5_3" id="__nav_2_5_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Traditional
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Supported configurations
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Supported configurations
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#operating-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operating systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operating systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aix-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      AIX family
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux family
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows family
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hypervisors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hypervisors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hypervisors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aix-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      AIX summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#websphere-application-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebSphere Application Server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibm-installation-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      IBM Installation Manager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java SDK
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Databases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collaboration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collaboration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Development tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jdbc-drivers" class="md-nav__link">
+    <span class="md-ellipsis">
+      JDBC drivers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ldap-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      LDAP servers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#product-specific-or-mixed-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product-specific or mixed content
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-browsers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web browsers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-servers-non-container-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web Servers (Non-Container Platforms)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware requirements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hardware requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aix" class="md-nav__link">
+    <span class="md-ellipsis">
+      AIX
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unsupported_config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unsupported configurations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../other_config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Other configurations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../disclaimer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Disclaimers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System Requirements Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../download/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Download Software
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hc_limitation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Help Center Limitation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../notices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../whatsnew/cf20/newcf222/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../build_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#operating-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operating systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operating systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aix-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      AIX family
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux family
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows family
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hypervisors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hypervisors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hypervisors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aix-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      AIX summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#websphere-application-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebSphere Application Server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibm-installation-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      IBM Installation Manager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java SDK
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Databases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collaboration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collaboration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Development tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jdbc-drivers" class="md-nav__link">
+    <span class="md-ellipsis">
+      JDBC drivers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ldap-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      LDAP servers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#product-specific-or-mixed-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product-specific or mixed content
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-browsers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web browsers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-servers-non-container-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web Servers (Non-Container Platforms)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware requirements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hardware requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aix" class="md-nav__link">
+    <span class="md-ellipsis">
+      AIX
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="supported-configurations">Supported configurations</h1>
+<p>A “supported configuration” is a combination of HCL Software and other dependent products (typically at a specified version, release, fix, or specification level) that has been validated by HCL.</p>
+<p>HCL provides full support for configurations in this category. Support is provided under the terms of the product license to ensure that the product operates within its specifications.  </p>
+<p>For more details, see <a href="../../../software_support/">HCL DX support statement</a>.</p>
+<h2 id="operating-systems">Operating systems</h2>
+<p>HCL Digital Experience V9.5 supports the following operating systems, which are organized by operating system family. Operating system families include AIX, Linux, and Windows.</p>
+<h3 id="aix-family">AIX family</h3>
+<table>
+<thead>
+<tr>
+<th>Operating system (OS)</th>
+<th>Supported versions</th>
+<th>Hardware</th>
+<th>Bit version</th>
+<th>Product minimum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AIX 7.1</td>
+<td>Base and later maintenance releases</td>
+<td>POWER System - Big Endian</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>AIX 7.2</td>
+<td>Base and later maintenance releases</td>
+<td>Power System - Big Endian</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>9.0</td>
+</tr>
+<tr>
+<td>AIX 7.3</td>
+<td>Base and later maintenance releases</td>
+<td>Power System - Big Endian</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>9.5</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If the installation of DX on AIX 7.3 fails (with missing library messages) while you use the IBM Installation Manager (IIM) installer contained in the DX Setup <code>.zip</code> files, then use the a later version of IBM AIX IIM (version 1.9.2.3 or later). Using a later IIM version helps ensure that the required AIX 7.3 libraries for installation are present. Refer to the following link to check the list of IIM fix levels and their corresponding download links: <a href="https://www.ibm.com/support/pages/fix-list-installation-manager">Fix list for Installation Manager</a>.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The Portal Express offering does not support AIX.</p>
+</div>
+<h3 id="linux-family">Linux family</h3>
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th>Supported versions</th>
+<th>Hardware</th>
+<th>Bit version</th>
+<th>Product minimum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Red Hat Enterprise Linux (RHEL) Server 7</td>
+<td>Base and later maintenance releases</td>
+<td>IBM Z Systems</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Red Hat Enterprise Linux (RHEL) 7</td>
+<td>7.1 and later maintenance releases</td>
+<td>Power System – Little Endian</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Red Hat Enterprise Linux (RHEL) 7</td>
+<td>7.1 and later maintenance releases</td>
+<td>x86-64</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Red Hat Enterprise Linux (RHEL) 8</td>
+<td>8 and later maintenance releases</td>
+<td>x86-64</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>9.0</td>
+</tr>
+<tr>
+<td>Red Hat Enterprise Linux (RHEL) 9</td>
+<td>9 and later maintenance releases</td>
+<td>x86-64</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>9.5 CF209</td>
+</tr>
+<tr>
+<td>SUSE Linux Enterprise Server (SLES) 12</td>
+<td>Base and later maintenance releases</td>
+<td>x86-64 IBM z Systems</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>SUSE Linux Enterprise Server (SLES) 15</td>
+<td>Base and later maintenance releases</td>
+<td>x86-64</td>
+<td>64-Tolerate</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Ubuntu 18.04 LTS</td>
+<td>Base and later maintenance releases</td>
+<td>Power System – Little Endian</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Ubuntu 18.04 LTS</td>
+<td>Base and later maintenance releases</td>
+<td>x86-64</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Ubuntu 20.04 LTS</td>
+<td>Base and later maintenance releases</td>
+<td>Power System – Little Endian</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Ubuntu 20.04 LTS</td>
+<td>Base and later maintenance releases</td>
+<td>x86-64</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>8.5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="windows-family">Windows family</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As of Cumulative Fix 09, Windows Server 2008 is no longer supported. The operating system went out of mainstream support in January 2015.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th>Supported versions</th>
+<th>Hardware</th>
+<th>Bit version</th>
+<th>Product minimum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows 10 Enterprise*</td>
+<td>Base and later maintenance releases</td>
+<td>x86-64</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Windows 10 Pro*</td>
+<td>Base and later maintenance releases</td>
+<td>x86-64</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Windows 11 Enterprise*</td>
+<td>Base and later maintenance releases</td>
+<td>x86-64</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>9.5</td>
+</tr>
+<tr>
+<td>Windows 11 Pro*</td>
+<td>Base and later maintenance releases</td>
+<td>x86-64</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>9.5</td>
+</tr>
+<tr>
+<td>Windows Server 2019 Datacenter Edition</td>
+<td>Base and later maintenance releases</td>
+<td>x86-64</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Windows Server 2019 Essential Edition</td>
+<td>Base and later maintenance releases</td>
+<td>x86-64</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Windows Server 2022</td>
+<td>Base and later maintenance releases</td>
+<td>x86-64</td>
+<td>64-Exploit, 64-Tolerate</td>
+<td>9.0 CF199</td>
+</tr>
+</tbody>
+</table>
+<p>*Support for developer platform only.</p>
+<h2 id="hypervisors">Hypervisors</h2>
+<p>HCL Digital Experience 9.5 supports the following hypervisors:</p>
+<h3 id="aix-summary">AIX summary</h3>
+<table>
+<thead>
+<tr>
+<th>Hypervisor</th>
+<th>Product minimum</th>
+<th>Deployment units</th>
+<th>Supported guest operating system</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IBM PowerVM Hypervisor (LPAR, DPAR, Micro-Partition) any supported version</td>
+<td>8.5</td>
+<td>Server</td>
+<td>-    AIX 7.1 POWER System \– Big Endian<Br>- AIX 7.2 POWER System - Big Endian</td>
+</tr>
+<tr>
+<td>WPAR: Product installed in System Workload Partition AIX 6.1</td>
+<td>8.5</td>
+<td>Server</td>
+<td>-  AIX 7.1 POWER System \– Big Endian<br>- AIX 7.2 POWER System \– Big Endian</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The Portal Express offering does not support AIX.  </p>
+</div>
+<h3 id="linux-summary">Linux summary</h3>
+<table>
+<thead>
+<tr>
+<th>Hypervisor</th>
+<th>Product minimum</th>
+<th>Deployment units</th>
+<th>Supported guest operating System</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IBM PR/SM any version</td>
+<td>8.5</td>
+<td>Server</td>
+<td>All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM zSystems<br>- Red Hat Enterprise Linux (RHEL) Server 7 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian</td>
+</tr>
+<tr>
+<td>IBM PowerVM Hypervisor (LPAR, DPAR, Micro-Partition) any supported version</td>
+<td>8.5</td>
+<td>Server</td>
+<td>All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian</td>
+</tr>
+<tr>
+<td>Red Hat KVM as delivered with Red Hat Enterprise Linux (RHEL) and its RHEV equivalent 7.0</td>
+<td>8.5</td>
+<td>Server</td>
+<td>All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian</td>
+</tr>
+<tr>
+<td>VMware ESXi 6.5 and later</td>
+<td>8.5</td>
+<td>Server</td>
+<td>All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 and 8 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian</td>
+</tr>
+<tr>
+<td>VMware ESXi 7.0</td>
+<td>9.5</td>
+<td>Server</td>
+<td>All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 and 8 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian</td>
+</tr>
+</tbody>
+</table>
+<h3 id="windows-summary">Windows summary</h3>
+<table>
+<thead>
+<tr>
+<th>Hypervisor</th>
+<th>Product minimum</th>
+<th>Deployment units</th>
+<th>Supported guest operating system</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Red Hat KVM as delivered with Red Hat Enterprise Linux (RHEL) and it’s RHEV equivalent 7.0</td>
+<td>8.5</td>
+<td>Server</td>
+<td>All supported operating systems<br/>- Windows Server 2012 Datacenter Edition x86-64<br/>- Windows Server 2012 Standard Edition x86-64<br/>- Windows 8.1 Enterprise x86-64<br/>- Windows 8.1 Professional x86-64<br/>- Windows 8.1 Standard x86-64<br/>- Windows Server 2012 R2 Datacenter Edition x86-64<br/>- Windows Server 2012 R2 Standard Edition x86-64<br/>- Windows 10 Pro x86-64<br/>- Windows 10 Enterprise x86-64<br/>- Windows Server 2016 Datacenter Edition x86-64<br/>- Windows Server 2016 Standard Edition x86-64<br/>- Windows Server 2016 Essentials Edition x86-64<br/>- Windows Server 2019 Datacenter Edition x86-64<br/>- Windows Server 2019 Datacenter Edition x86-64<br/>- Windows Server 2019 Essentials Edition x86-64</td>
+</tr>
+<tr>
+<td>VMware ESXi 6.5</td>
+<td>8.5</td>
+<td>Server</td>
+<td>All supported operating systems:<br/>- Windows Server 2012 Datacenter Edition x86-64<br/>- Windows Server 2012 Standard Edition x86-64<br/>- Windows 8.1 Enterprise x86-64<br/>- Windows 8.1 Professional x86-64<br/>- Windows 8.1 Standard x86-64<br/>- Windows Server 2012 R2 Datacenter Edition x86-64<br/>- Windows Server 2012 R2 Standard Edition x86-64<br/>- Windows 10 Pro x86-64<br/>- Windows 10 Enterprise x86-64<br/>- Windows Server 2016 Datacenter Edition x86-64<br/>- Windows Server 2016 Standard Edition x86-64<br/>- Windows Server 2016 Essentials Edition x86-64<br/>- Windows Server 2019 Datacenter Edition x86-64<br/>- Windows Server 2019 Standard Edition x86-64<br/>- Windows Server 2019 Essentials Edition x86-64</td>
+</tr>
+<tr>
+<td>VMware ESXi 7.0</td>
+<td>9.5</td>
+<td>Server</td>
+<td>All supported operating systems:<br>- Windows Server 2012 Datacenter Edition x86-64<br>- Windows Server 2012 Standard Edition x86-64<br>- Windows 8.1 Enterprise x86-64<br>- Windows 8.1 Professional x86-64<br>- Windows 8.1 Standard x86-64<br>- Windows Server 2012 R2 Datacenter Edition x86-64<br>- Windows Server 2012 R2 Standard Edition x86-64<br>- Windows 10 Pro x86-64<br>- Windows 10 Enterprise x86-64<br>- Windows Server 2016 Datacenter Edition x86-64<br>- Windows Server 2016 Standard Edition x86-64<br>- Windows Server 2016 Essentials Edition x86-64<br>- Windows Server 2019 Datacenter Edition x86-64<br>- Windows Server 2019 Standard Edition x86-64</td>
+</tr>
+</tbody>
+</table>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>HCL Digital Experience 9.5 requires the following capabilities and products to provide those capabilities:</p>
+<h3 id="websphere-application-server">WebSphere Application Server</h3>
+<table>
+<thead>
+<tr>
+<th>Prerequisite</th>
+<th>Prerequisite minimum and supported versions</th>
+<th>Product minimum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WebSphere Application Server</td>
+<td>8.5.5.12 and later maintenance releases**</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td></td>
+<td>9.0.0.2 and later maintenance releases</td>
+<td>9.0</td>
+</tr>
+<tr>
+<td></td>
+<td>9.0.5 and later maintenance releases**</td>
+<td>9.0 CF17</td>
+</tr>
+</tbody>
+</table>
+<p>** Starting CF222, the issue with the fix packs 9.0.5.19 and 8.5.5.25 has been addressed. WAS versions 8.5.5.26, 9.0.5.20, and later are now supported.</p>
+<table>
+<thead>
+<tr>
+<th>Prerequisite</th>
+<th>Prerequisite minimum and supported versions</th>
+<th>Product minimum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WebSphere eXtreme Scale</td>
+<td>8.6.1 and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ibm-installation-manager">IBM Installation Manager</h3>
+<table>
+<thead>
+<tr>
+<th>Prerequisite</th>
+<th>Prerequisite minimum and supported versions</th>
+<th>Product minimum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IBM Installation Manager</td>
+<td>1.8.5 and later maintenance</td>
+<td>8.5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="java-sdk">Java SDK</h3>
+<p>HCL Digital Experience 9.5 requires JDK 7.0 or later for installation. </p>
+<table>
+<thead>
+<tr>
+<th>Prerequisite</th>
+<th>Prerequisite minimum and supported versions</th>
+<th>Product minimum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IBM Runtime Environment, Java Technology Edition</td>
+<td>8.0 and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+</tbody>
+</table>
+<h2 id="databases">Databases</h2>
+<table>
+<thead>
+<tr>
+<th>Supported software</th>
+<th>Supported software minimum</th>
+<th>Product minimum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apache Derby</td>
+<td>10.11*<br/></td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>DB2 Standard and Advanced Edition</td>
+<td>11.5** and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Microsoft SQL Server Enterprise and Standard Edition</td>
+<td>2017, 2019 and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Oracle Database 19c</td>
+<td>19c and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Oracle on Amazon Relational Database Service</td>
+<td>12.2.0.1.0 and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+</tbody>
+</table>
+<p>* Apache Derby is not supported in a product environment.<br />
+* DB2 includes support for the DB2 pureScale component.  </p>
+<h2 id="collaboration">Collaboration</h2>
+<table>
+<thead>
+<tr>
+<th>Prerequisite</th>
+<th>Supported software versions</th>
+<th>Product minimum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HCL Connections</td>
+<td>8.0 and later maintenance</td>
+<td>9.5</td>
+</tr>
+<tr>
+<td>HCL Leap</td>
+<td>9.2 and later maintenance</td>
+<td>9.5</td>
+</tr>
+</tbody>
+</table>
+<h2 id="development-tools">Development tools</h2>
+<table>
+<thead>
+<tr>
+<th>Supported software</th>
+<th>Supported software minimum</th>
+<th>Product minimum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HCL Web Experience Factory</td>
+<td>8.5.1 and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Rational Application Developer for WebSphere</td>
+<td>9.7 and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+</tbody>
+</table>
+<h2 id="jdbc-drivers">JDBC drivers</h2>
+<p>JDBC Drivers support forward compatibility for all maintenance levels and also new version levels for the types listed below, unless explicitly stated otherwise.</p>
+<table>
+<thead>
+<tr>
+<th>Supported software</th>
+<th>Supported software minimum</th>
+<th>Product minimum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IBM Application Connectivity for DB2 for z/OS Feature</td>
+<td>All versions and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>IBM DB2 Universal JDBC Provider (XA) from DB2 z/OS (type 2)*</td>
+<td>All versions and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>IBM DB2 Universal JDBC Provider (XA) from DB2 z/OS (type 4)**</td>
+<td>All versions and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>IBM Data Server Driver for JDBC and SQLJ</td>
+<td>4.26 (11.5) <br> No future versions supported. <br>Later maintenance releases are categorized as Other Configuration Support</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Microsoft SQL Server JDBC Driver</td>
+<td>6.2, and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Oracle JDBC Driver 12.c***</td>
+<td>12.2, and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+</tbody>
+</table>
+<p><em>JDBC drivers are shipped as DB2 for z/OS APARs. You can check for the appropriate APAR/PTF numbers in the DB2 for z/OS Infocenter, 'Programming for DB2 &gt; Programming for Java &gt; Supported drivers for JDBC and SQLJ'. Obtain the PTFs from DB2 on z/OS support or IBMLINK. Version 3.58 and later are supported.<br />
+</em><em>Requires APAR PK93123 for DB2 on z/OS V9.1. You can obtain the fix from DB2 on z/OS support or IBMLINK.<br />
+</em>**Oracle JDBC Driver Thin (type 4) Oracle JDBC Driver Thick, TAF (type 2) - Supported on Linux operating systems only.  </p>
+<h2 id="ldap-servers">LDAP servers</h2>
+<p>All LDAP Servers that support the LDAP V3 Specification are supported.</p>
+<table>
+<thead>
+<tr>
+<th>Supported software</th>
+<th>Supported software minimum</th>
+<th>product minimum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IBM Security Directory Suite</td>
+<td>8.0.1 and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+</tbody>
+</table>
+<h2 id="product-specific-or-mixed-content">Product-specific or mixed content</h2>
+<table>
+<thead>
+<tr>
+<th>Supported software</th>
+<th>Supported software minimum</th>
+<th>Product minimum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dojo Toolkit</td>
+<td>1.9.7</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>IBM License Metric Tool</td>
+<td>9.2 and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>jQuery</td>
+<td>3.5.1</td>
+<td>8.5</td>
+</tr>
+</tbody>
+</table>
+<h2 id="security-management">Security management</h2>
+<table>
+<thead>
+<tr>
+<th>Supported software</th>
+<th>Supported software minimum</th>
+<th>Product minimum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CA Siteminder*</td>
+<td>12.0, and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+</tbody>
+</table>
+<h2 id="web-browsers">Web browsers</h2>
+<table>
+<thead>
+<tr>
+<th>Supported software</th>
+<th>Supported software minimum</th>
+<th>Product minimum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Android default browser</td>
+<td>Newer levels are supported</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Apple Safari</td>
+<td>Newer levels are supported</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Google Chrome</td>
+<td>Newer levels are supported</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Microsoft Edge Chromium-Based</td>
+<td>Newer levels are supported</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Mozilla Firefox</td>
+<td>Newer levels are supported</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Mozilla Firefox ESR</td>
+<td>Newer levels are supported</td>
+<td>8.5</td>
+</tr>
+</tbody>
+</table>
+<h2 id="web-servers-non-container-platforms">Web Servers (Non-Container Platforms)</h2>
+<table>
+<thead>
+<tr>
+<th>Supported software</th>
+<th>Supported software minimum, and later</th>
+<th>Product minimum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apache Server</td>
+<td>2.4 and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>HCL Domino</td>
+<td>9.0 and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>IBM HTTP Server</td>
+<td>8.5.5 and later maintenance releases*</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td></td>
+<td>9.0 and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td></td>
+<td>9.0.5 and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>Microsoft Internet Information Services</td>
+<td>10.0 and later maintenance releases</td>
+<td>8.5</td>
+</tr>
+</tbody>
+</table>
+<p>*IBM HTTP Server 8.5.5 is supported only with WebSphere Application V8.5.5.x.  </p>
+<h2 id="hardware-requirements">Hardware requirements</h2>
+<p>HCL Digital Experience requires the following hardware, organized by type of hardware, deployment units or components.</p>
+<h3 id="aix">AIX</h3>
+<table>
+<thead>
+<tr>
+<th>Hardware</th>
+<th>Deployment units</th>
+<th>Requirement</th>
+<th>Applicable operating systems</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Disk space</td>
+<td>Server</td>
+<td>Minimum 3 GB free disk space for installation of DX Portal<br>Minimum 2 GB free disk space for installation of WebSphere Application Server<br>Minimum 3 GB free disk space for installation of IBM Installation Manager and the Installation Manager shared directory<br>Minimum 8 GB total free disk space recommended for installation</td>
+<td>All supported AIX operating systems</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>Server</td>
+<td>Physical memory requirements and recommendations for DX Portal or HCL Web Content Manager (or WCM):<br>Under minimal load, DX Portal can function with 4GB of RAM and a remote database. In a production environment, 8GB is an optimal starting point for RAM. Production environments and environments featuring multiple profiles will require more memory.<br>Note: The amount of memory assigned to the <em>INTERACT pool should be set at a minimum of well over 1 GB and a maximum of 100%. If the </em>INTERACT pool cannot be given enough memory, then the database tasks have to be started with SBMJOB so that they run in the *BASE pool.</td>
+<td>All supported AIX operating systems</td>
+</tr>
+<tr>
+<td>Other hardware</td>
+<td>Server</td>
+<td>Minimum 2 CPUs required for installations of DX Portal and HCL WCM</td>
+<td>All supported AIX operating systems</td>
+</tr>
+<tr>
+<td>Processor</td>
+<td>Server</td>
+<td>X86-64 IBM POWER Family of processors<br>System z Processors</td>
+<td>All supported AIX operating systems</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Server</td>
+<td>Minimum 2 CPUs for installation of Portal or WCM</td>
+<td>All supported AIX operating systems</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The Portal Express offering does not support AIX.</p>
+</div>
+<h3 id="linux">Linux</h3>
+<table>
+<thead>
+<tr>
+<th>Hardware</th>
+<th>Deployment units</th>
+<th>Requirement</th>
+<th>Applicable operating systems</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Disk Space</td>
+<td>Server</td>
+<td>Minimum 3 GB free disk space for installation of DX Portal<br/>Minimum 2 GB free disk space for installation of WebSphere Application Server<br/>Minimum 3 GB free disk space for installation of IBM Installation Manager and the Installation Manager shared directory<br/>Minimum 8 GB total free disk space recommended for installation</td>
+<td>All supported Linux operating systems</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>Server</td>
+<td>Physical memory requirements and recommendations for DX Portal or HCL Web Content Manager (or WCM):<br/>Under minimal load, DX Portal can function with 4GB of RAM and a remote database. In a production environment, 8GB is an optimal starting point for RAM. Production environments and environments featuring multiple profiles will require more memory.<br/>Note: The amount of memory assigned to the <em>INTERACT pool should be set at a minimum of well over 1 GB and a maximum of 100%. If the </em>INTERACT pool cannot be given enough memory, then the database tasks have to be started with SBMJOB so that they run in the *BASE pool.</td>
+<td>All supported Linux operating systems</td>
+</tr>
+<tr>
+<td>Other Hardware</td>
+<td>Server</td>
+<td>Minimum 2 CPUs required for installations of DX Portal and HCL WCM</td>
+<td>All supported Linux operating systems</td>
+</tr>
+<tr>
+<td>Processor</td>
+<td>Server</td>
+<td>X86-64 IBM POWER Family of processors<br/>System z Processors</td>
+<td>All supported Linux operating systems</td>
+</tr>
+<tr>
+<td></td>
+<td>Server</td>
+<td>Minimum 2 CPUs for installation of Portal or WCM</td>
+<td>All supported Linux operating systems</td>
+</tr>
+</tbody>
+</table>
+<h3 id="windows">Windows</h3>
+<table>
+<thead>
+<tr>
+<th>Hardware</th>
+<th>Deployment units</th>
+<th>Requirement</th>
+<th>Applicable operating systems</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Disk Space</td>
+<td>Server</td>
+<td>Minimum 3 GB free disk space for installation of DX Portal<br/>Minimum 2 GB free disk space for installation of WebSphere Application Server<br/>Minimum 3 GB free disk space for installation of IBM Installation Manager and the Installation Manager shared directory<br/>Minimum 8 GB total free disk space recommended for installation</td>
+<td>All supported Windows operating systems</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>Server</td>
+<td>Physical memory requirements and recommendations for DX Portal or HCL Web Content Manager (or WCM):<br/>Under minimal load, DX Portal can function with 4GB of RAM and a remote database. In a production environment, 8GB is an optimal starting point for RAM. Production environments and environments featuring multiple profiles will require more memory.<br/>Note: The amount of memory assigned to the <em>INTERACT pool should be set at a minimum of well over 1 GB and a maximum of 100%. If the </em>INTERACT pool cannot be given enough memory, then the database tasks have to be started with SBMJOB so that they run in the *BASE pool.</td>
+<td>All supported Windows operating systems</td>
+</tr>
+<tr>
+<td>Other Hardware</td>
+<td>Server</td>
+<td>Minimum 2 CPUs required for installations of DX Portal and HCL WCM</td>
+<td>All supported Windows operating systems</td>
+</tr>
+<tr>
+<td>Processor</td>
+<td>Server</td>
+<td>X86-64 IBM POWER Family of processors<br/>System z Processors</td>
+<td>All supported Windows operating systems</td>
+</tr>
+<tr>
+<td></td>
+<td>Server</td>
+<td>Minimum 2 CPUs for installation of Portal or WCM</td>
+<td>All supported Windows operating systems</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 9, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

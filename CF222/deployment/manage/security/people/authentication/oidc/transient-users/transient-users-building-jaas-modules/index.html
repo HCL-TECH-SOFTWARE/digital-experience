@@ -1,0 +1,4483 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/deployment/manage/security/people/authentication/oidc/transient-users/transient-users-building-jaas-modules/">
+      
+      
+        <link rel="prev" href="../dx-update-webshpere-for-oidc-transient-users/">
+      
+      
+        <link rel="next" href="../transient-users-softgroups-configuration/">
+      
+      
+      <link rel="icon" href="../../../../../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Building a custom JAAS login module for your Identity Provider (IdP) - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#building-a-custom-jaas-login-module-for-your-identity-provider-idp" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../../../../../latest/deployment/manage/security/people/authentication/oidc/transient-users/transient-users-building-jaas-modules/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Building a custom JAAS login module for your Identity Provider (IdP)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../../whatsnew/cf20/newcf222/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../../build_sites/" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../../../../whatsnew/cf20/newcf222/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Deploy DX
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../../install/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Install
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Manage
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Manage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../container_configuration/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Configure Kubernetes Deployment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../stopstart/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Starting and stopping servers, deployment managers, and node agents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../itlm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring the IBM License Metric Tool
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../config_standalone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring a stand-alone server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../config_cluster/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Setting up a cluster
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../portalfarm_cfg/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Setting up and maintaining a portal farm
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_8" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3_8" id="__nav_4_3_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_8_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    People
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3_8_2" id="__nav_4_3_8_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_3_8_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            People
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_8_2_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Authentication
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3_8_2_2" id="__nav_4_3_8_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_3_8_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3_8_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Authentication
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../user_registry/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    User registry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../customer_user_repo/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Setting up custom user repositories
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../external_sec_mgmt/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    External security managers
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../sec_auth_consideration/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Security authentication considerations
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_8_2_2_6" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Configuring OIDC for HCL DX
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3_8_2_2_6" id="__nav_4_3_8_2_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_3_8_2_2_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3_8_2_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Configuring OIDC for HCL DX
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dx-update-webshpere-for-oidc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating WebSphere to support OIDC Authentication for DX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dx-integration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adjusting the DX Login flow for OIDC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dx-oidc-customization-considerations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Implications for customizing IdP's user login flow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oidc-troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting OIDC configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../automation/dx-oidc-automation/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Automation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_8_2_2_6_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_3_8_2_2_6_7" id="__nav_4_3_8_2_2_6_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Transient users
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="7" aria-labelledby="__nav_4_3_8_2_2_6_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3_8_2_2_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            Transient users
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dx-update-webshpere-for-oidc-transient-users/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating WebSphere to support OIDC Authentication for DX with Transient Users
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Building a custom JAAS login module for your Identity Provider (IdP)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Building a custom JAAS login module for your Identity Provider (IdP)
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extending-jaas-loginmodule-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extending JAAS LoginModule interface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extending JAAS LoginModule interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defining-itransientusersloginmodule-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining ITransientUsersLoginModule interface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing-itransientusersloginmodule-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementing ITransientUsersLoginModule interface
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-and-deploying-custom-jaas-login-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building and deploying custom JAAS login module
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transient-users-softgroups-configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring Rule-based user groups adapter for Transient Users
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wcm_secure_int_tai_auth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Integrating with IBM WAS TAI authentication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../stepup_auth/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Enabling step-up authentication and/or the Remember me cookie
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../basic_auth/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Enabling HTTP Basic Authentication for simple clients
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../updating_userid_pwd/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Updating user ID and passwords
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../integrate_oid/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Integrating with Transient Users with OpenID Connect
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../authorization/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Authorization
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../nonrepudiation/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Nonrepudiation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../information/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Information
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../tune_servers/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Tune your environment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../port_chg/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changing ports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../siteurl_cfg/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Changing your site URL
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../config_portal_behavior/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Configuring portal behavior
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../portal_admin_tools/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Portal administration tools
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../manage_portal_using_iim/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Managing Interim Fixes for HCL Portal
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../config_webservers/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Web server
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../db_mgmt_sys/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Database Management Systems
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../profile/iim_modify/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Profile
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../cfg_property_files/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Configuration properties
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../backup_restore/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Backup and restore
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../change_dev_mode_env/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Changing to a developer mode environment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../staging_to_production/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Staging to production
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../migrate/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Migrating
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../multiple_profiles/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Supporting multiple profiles
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../remote_spell_checker/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Setting up a remote spell checker
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../upsell/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Upgrading your existing product offering
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../monitoring/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Monitoring
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../troubleshooting/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../../../build_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../../../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extending-jaas-loginmodule-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extending JAAS LoginModule interface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extending JAAS LoginModule interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defining-itransientusersloginmodule-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining ITransientUsersLoginModule interface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing-itransientusersloginmodule-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementing ITransientUsersLoginModule interface
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-and-deploying-custom-jaas-login-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building and deploying custom JAAS login module
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="building-a-custom-jaas-login-module-for-your-identity-provider-idp">Building a custom JAAS login module for your Identity Provider (IdP)</h1>
+<h2 id="overview">Overview</h2>
+<p>You can build a custom Java Authentication and Authorization Service (JAAS) login module to either make additional authentication decisions or add information to the subject to make fine-grained authorization decisions inside your application.</p>
+<p>The sample implementation custom JAAS login module provided here uses <a href="https://opensource.hcltechsw.com/digital-experience/latest/deployment/manage/security/people/authorization/users_and_groups/rule_based_user_groups/">Rule-based user groups</a> (Softgroups) that allows you to define dynamic portal user groups and resolve users role/group membership. For more information on Rule-based user groups, see <a href="https://opensource.hcltechsw.com/digital-experience/latest/deployment/manage/security/people/authorization/users_and_groups/rule_based_user_groups/#what-you-can-do-with-rule-based-user-groups">capabilities</a>.</p>
+<p>To resolve transient users role/group membership, you can retrieve <code>roles/groups</code> information from IdPs claim token (JWT). In addition to <code>roles/groups</code>, you can use other attributes from the claim token, for example, the <code>email</code> attribute to determine the domain the user belongs to. These attributes will help you define rule-based user groups within the Softgroups.</p>
+<p>Once the attribute values are determined, the attribute-value pairs are fed into the <code>Softgroup service</code> provided by the Softgroups portlet. This service will then determine user groups based on rules defined within the Softgroup portlet. Once these groups are determined they can help you in facilitating access control. For more information, see <a href="../transient-users-softgroups-configuration/">Configuring Rule-based user groups for Transient Users</a>.</p>
+<h2 id="extending-jaas-loginmodule-interface">Extending JAAS LoginModule interface</h2>
+<p>Different IdPs have different ways to add the <code>role/group</code> attributes to the claim token (JWT). Some of the IdPs could add them as a comma-separated string, and some may add them as an array.</p>
+<p>To address this variablilty, there is a need to provide a common interface that allows you to adjust the implementation specific to your IdP.</p>
+<h3 id="defining-itransientusersloginmodule-interface">Defining ITransientUsersLoginModule interface</h3>
+<p>This interface extends the standard <code>LoginModule</code> interface and introduces two additional methods for customization.</p>
+<div class="language-java highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">ITransientUsersLoginModule</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">LoginModule</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Resolve and return the groups associated with the provided user from OIDC.</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param uniqueid             The unique identifier for the user.</span>
+<span class="cm">     * @param subjectUserInfoJSON The user information retrieved from OIDC.</span>
+<span class="cm">     * @return A map of group names associated with the user.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="nf">getGroupsForCurrentSubject</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">uniqueid</span><span class="p">,</span><span class="w"> </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">subjectUserInfoJSON</span><span class="p">);</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Resolve and return the groups that are available to be used within DX from Softgroups using attribute values.</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param attributeValues A map of attribute values, typically retrieved from OIDC.</span>
+<span class="cm">     * @return A list of group names available for use within DX.</span>
+<span class="cm">     * @throws NamingException          If there is an issue with naming.</span>
+<span class="cm">     * @throws SoftgroupServiceException If there is an issue with Softgroup service.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getAvailableGroups</span><span class="p">(</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">attributeValues</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">NamingException</span><span class="p">,</span><span class="w"> </span><span class="n">SoftgroupServiceException</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="implementing-itransientusersloginmodule-interface">Implementing ITransientUsersLoginModule interface</h3>
+<p>The central component in this approach is the <code>TransientUsersLoginModule</code>, which implements the <code>ITransientUsersLoginModule</code> interface.</p>
+<p>The sample code and JAAS module implementation provided is an example of how you can implement the two interface functions in addition to the <code>LoginModule</code> interface functions for Keycloak. This implementation provides authentication for general transient users, as well as advanced functionality, such as using Softgroups to add group/role assignments to transient users within DX.</p>
+<div class="language-java highlight"><pre><span></span><code><span class="cm">/*</span>
+<span class="cm"> ********************************************************************</span>
+<span class="cm"> * Licensed Materials - Property of HCL                             *</span>
+<span class="cm"> *                                                                  *</span>
+<span class="cm"> * Copyright HCL Technologies Ltd. 2001, 2023. All Rights Reserved. *</span>
+<span class="cm"> *                                                                  *</span>
+<span class="cm"> * Note to US Government Users Restricted Rights:                   *</span>
+<span class="cm"> *                                                                  *</span>
+<span class="cm"> * Use, duplication or disclosure restricted by GSA ADP Schedule    *</span>
+<span class="cm"> ********************************************************************</span>
+<span class="cm"> */</span>
+<span class="kn">package</span><span class="w"> </span><span class="nn">com.hcl.dx.auth.jaas.impl</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashSet</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Hashtable</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Iterator</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Map</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Set</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.logging.Level</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">javax.naming.InitialContext</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">javax.naming.NamingException</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">javax.security.auth.Subject</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">javax.security.auth.callback.Callback</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">javax.security.auth.callback.CallbackHandler</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">javax.security.auth.callback.NameCallback</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">javax.security.auth.callback.PasswordCallback</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">javax.security.auth.login.LoginException</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.hcl.dx.auth.jaas.ITransientUsersLoginModule</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.ibm.json.java.JSON</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.ibm.json.java.JSONArray</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.ibm.json.java.JSONObject</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.ibm.portal.auth.tai.ExternalIdentityCredential</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.ibm.websphere.security.UserRegistry</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.ibm.websphere.security.auth.WSLoginFailedException</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.ibm.wsspi.security.auth.callback.WSTokenHolderCallback</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.ibm.wsspi.security.token.AttributeNameConstants</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.ibm.websphere.security.oidc.util.OidcClientHelper</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.ibm.wps.services.config.Config</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.ibm.wps.vmm.adapter.softgroups.Softgroup</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.ibm.wps.vmm.adapter.softgroups.SoftgroupService</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.ibm.wps.vmm.adapter.softgroups.SoftgroupServiceException</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.ibm.wps.vmm.adapter.softgroups.SoftgroupServiceFactory</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.logging.Logger</span><span class="p">;</span>
+
+<span class="cm">/*</span>
+<span class="cm"> * TransientUsersLoginModule works in conjunction with Websphere OIDC TAI</span>
+<span class="cm"> * This class builds the Subject such that Transient Users function properly</span>
+<span class="cm"> */</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TransientUsersLoginModule</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">ITransientUsersLoginModule</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="cm">/* logger name */</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TransientUsersLoginModule</span><span class="p">.</span><span class="na">class</span><span class="p">.</span><span class="na">getName</span><span class="p">();</span>
+
+<span class="w">    </span><span class="cm">/* the classes logger instance */</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Logger</span><span class="w"> </span><span class="n">LOGGER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Logger</span><span class="p">.</span><span class="na">getLogger</span><span class="p">(</span><span class="n">LOG_CLASS</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Subject</span><span class="w"> </span><span class="n">currentSubject</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">CallbackHandler</span><span class="w"> </span><span class="n">currentCallbackHandler</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="n">currentSharedState</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">subjectUserInfoJSON</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">softgroupKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dataSourceJNDIName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dbSchema</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dbType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+
+<span class="w">    </span><span class="nd">@SuppressWarnings</span><span class="p">(</span><span class="s">&quot;unchecked&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">initialize</span><span class="p">(</span><span class="n">Subject</span><span class="w"> </span><span class="n">subject</span><span class="p">,</span><span class="w"> </span><span class="n">CallbackHandler</span><span class="w"> </span><span class="n">callbackHandler</span><span class="p">,</span>
+<span class="w">            </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="o">?&gt;</span><span class="w"> </span><span class="n">sharedState</span><span class="p">,</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="o">?&gt;</span><span class="w"> </span><span class="n">options</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">METHOD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;initialize&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">FINE</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule.initialize()&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">currentSubject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subject</span><span class="p">;</span>
+<span class="w">        </span><span class="n">currentCallbackHandler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">callbackHandler</span><span class="p">;</span>
+<span class="w">        </span><span class="n">currentSharedState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="n">sharedState</span><span class="p">;</span>
+<span class="w">        </span><span class="n">softgroupKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="w"> </span><span class="n">options</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;sgroup.softgroupKey&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">dataSourceJNDIName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="w"> </span><span class="n">options</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;sgroup.dataSourceJNDIName&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">dbSchema</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="w"> </span><span class="n">options</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;sgroup.dbSchema&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">dbType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="w"> </span><span class="n">options</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;sgroup.dbType&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@SuppressWarnings</span><span class="p">(</span><span class="s">&quot;unchecked&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">login</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">LoginException</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">METHOD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;login&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">FINE</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule.login()&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">uniqueid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">Hashtable</span><span class="w"> </span><span class="n">hashtable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Hashtable</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Callback</span><span class="w"> </span><span class="n">callbacks</span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Callback</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="p">;</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">callbacks</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WSTokenHolderCallback</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">callbacks</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NameCallback</span><span class="p">(</span><span class="s">&quot;User:&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">callbacks</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PasswordCallback</span><span class="p">(</span><span class="s">&quot;Password:&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w"> </span><span class="c1">// not used</span>
+<span class="w">            </span><span class="n">currentCallbackHandler</span><span class="p">.</span><span class="na">handle</span><span class="p">(</span><span class="n">callbacks</span><span class="p">);</span>
+
+<span class="w">            </span><span class="kt">boolean</span><span class="w"> </span><span class="n">requiresLogin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="n">WSTokenHolderCallback</span><span class="p">)</span><span class="w"> </span><span class="n">callbacks</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">).</span><span class="na">getRequiresLogin</span><span class="p">();</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">requiresLogin</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="n">NameCallback</span><span class="p">)</span><span class="w"> </span><span class="n">callbacks</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">).</span><span class="na">getName</span><span class="p">();</span>
+<span class="w">                </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">FINE</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;username = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">username</span><span class="p">);</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">username</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="c1">// Try to find valid user for given username/email</span>
+<span class="w">                        </span><span class="n">InitialContext</span><span class="w"> </span><span class="n">ctx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">InitialContext</span><span class="p">();</span>
+<span class="w">                        </span><span class="n">UserRegistry</span><span class="w"> </span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">UserRegistry</span><span class="p">)</span><span class="w"> </span><span class="n">ctx</span><span class="p">.</span><span class="na">lookup</span><span class="p">(</span><span class="s">&quot;UserRegistry&quot;</span><span class="p">);</span>
+<span class="w">                        </span><span class="n">uniqueid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reg</span><span class="p">.</span><span class="na">getUniqueUserId</span><span class="p">(</span><span class="n">username</span><span class="p">);</span>
+
+<span class="w">                        </span><span class="c1">// If duplicate user found in user registry throw exception to fail login.</span>
+<span class="w">                        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">uniqueid</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">WARNING</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule.login - Duplicate user lookup error. Login rejected for user: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">uniqueid</span><span class="p">);</span>
+<span class="w">                            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">com</span><span class="p">.</span><span class="na">ibm</span><span class="p">.</span><span class="na">websphere</span><span class="p">.</span><span class="na">security</span><span class="p">.</span><span class="na">UserMappingException</span><span class="p">(</span><span class="s">&quot;Duplicate Registry User Error&quot;</span><span class="p">);</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">com</span><span class="p">.</span><span class="na">ibm</span><span class="p">.</span><span class="na">websphere</span><span class="p">.</span><span class="na">security</span><span class="p">.</span><span class="na">EntryNotFoundException</span><span class="w"> </span><span class="n">e1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="c1">// Entry was not found - or not unique in defaultRealm, user is transient user</span>
+<span class="w">                        </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">FINE</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule - transient user&quot;</span><span class="p">);</span>
+
+<span class="w">                        </span><span class="c1">// Valid OIDC TAI and WEB_INBOUND configuration should be provided as part of the transient user setup.</span>
+<span class="w">                        </span><span class="n">uniqueid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;uid=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">username</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;,o=transparent&quot;</span><span class="p">;</span>
+<span class="w">                        </span><span class="n">hashtable</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">AttributeNameConstants</span><span class="p">.</span><span class="na">WSCREDENTIAL_UNIQUEID</span><span class="p">,</span><span class="n">uniqueid</span><span class="p">);</span>
+<span class="w">                        </span><span class="n">hashtable</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">AttributeNameConstants</span><span class="p">.</span><span class="na">WSCREDENTIAL_SECURITYNAME</span><span class="p">,</span><span class="n">uniqueid</span><span class="p">);</span>
+
+<span class="w">                        </span><span class="c1">// Get user info from Subject</span>
+<span class="w">                        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="n">String</span><span class="w"> </span><span class="n">subjectUserInfoString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OidcClientHelper</span><span class="p">.</span><span class="na">getUserInfoFromSubject</span><span class="p">(</span><span class="n">currentSubject</span><span class="p">);</span>
+<span class="w">                            </span><span class="n">subjectUserInfoJSON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">JSONObject</span><span class="p">)</span><span class="w"> </span><span class="n">JSON</span><span class="p">.</span><span class="na">parse</span><span class="p">(</span><span class="n">subjectUserInfoString</span><span class="p">);</span>
+<span class="w">                            </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">FINE</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule - subjectUserInfoJSON: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">subjectUserInfoJSON</span><span class="p">);</span>
+<span class="w">                        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">WARNING</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule - Failed fetching or parsing the userInfo for subject: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">uniqueid</span><span class="p">);</span>
+<span class="w">                            </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">WARNING</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule - Error during userInfo resolution: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+<span class="w">                        </span><span class="p">}</span>
+
+<span class="w">                        </span><span class="c1">// Add attributes for this user.</span>
+<span class="w">                        </span><span class="n">hashtable</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;sn&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">username</span><span class="p">);</span>
+<span class="w">                        </span><span class="n">hashtable</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;cn&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">username</span><span class="p">);</span>
+<span class="w">                        </span><span class="n">hashtable</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;uid&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">username</span><span class="p">);</span>
+
+<span class="w">                        </span><span class="c1">// Resolve and add groups and/or email to user attributes hashtable</span>
+<span class="w">                        </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">groupAttributeValues</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getGroupsForCurrentSubject</span><span class="p">(</span><span class="n">uniqueid</span><span class="p">,</span><span class="w"> </span><span class="n">subjectUserInfoJSON</span><span class="p">);</span>
+<span class="w">                        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">groupAttributeValues</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">subjectUserInfoJSON</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">subjectUserInfoJSON</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;email&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">FINE</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule - Email &amp; attributevalues provided, set email hashtable &amp; group attribute values&quot;</span><span class="p">);</span>
+<span class="w">                            </span><span class="n">hashtable</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;ibm-primaryEmail&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">subjectUserInfoJSON</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;email&quot;</span><span class="p">).</span><span class="na">toString</span><span class="p">());</span>
+<span class="w">                            </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">emailList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="w">                            </span><span class="n">emailList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">subjectUserInfoJSON</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;email&quot;</span><span class="p">).</span><span class="na">toString</span><span class="p">());</span>
+<span class="w">                            </span><span class="n">groupAttributeValues</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;email&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">emailList</span><span class="p">);</span>
+<span class="w">                        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">subjectUserInfoJSON</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">subjectUserInfoJSON</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;email&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">FINE</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule - only Email provided, set email hashtable value&quot;</span><span class="p">);</span>
+<span class="w">                            </span><span class="n">hashtable</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;ibm-primaryEmail&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">subjectUserInfoJSON</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;email&quot;</span><span class="p">).</span><span class="na">toString</span><span class="p">());</span>
+<span class="w">                        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">FINE</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule - No Email provided, set blank value: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">groupAttributeValues</span><span class="p">);</span>
+<span class="w">                            </span><span class="n">hashtable</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;ibm-primaryEmail&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                        </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">FINE</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule - groupAttributeValues: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">groupAttributeValues</span><span class="p">);</span>
+
+<span class="w">                        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">groupAttributeValues</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">FINE</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule - Have groupAttributeValues, proceed to getAvailableGroups: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">groupAttributeValues</span><span class="p">);</span>
+<span class="w">                            </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">softgroupsList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getAvailableGroups</span><span class="p">(</span><span class="n">groupAttributeValues</span><span class="p">);</span>
+<span class="w">                            </span><span class="n">hashtable</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">AttributeNameConstants</span><span class="p">.</span><span class="na">WSCREDENTIAL_GROUPS</span><span class="p">,</span><span class="n">softgroupsList</span><span class="p">);</span>
+<span class="w">                        </span><span class="p">}</span>
+
+<span class="w">                        </span><span class="c1">// Push user attributes to current subject credentials</span>
+<span class="w">                        </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">FINE</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule - hashtable: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hashtable</span><span class="p">);</span>
+<span class="w">                        </span><span class="n">currentSubject</span><span class="p">.</span><span class="na">getPublicCredentials</span><span class="p">().</span><span class="na">add</span><span class="p">(</span><span class="n">hashtable</span><span class="p">);</span>
+<span class="w">                        </span><span class="n">currentSubject</span><span class="p">.</span><span class="na">getPublicCredentials</span><span class="p">().</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">ExternalIdentityCredential</span><span class="p">(</span><span class="n">hashtable</span><span class="p">));</span>
+<span class="w">                        </span><span class="n">currentSharedState</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">AttributeNameConstants</span><span class="p">.</span><span class="na">WSCREDENTIAL_PROPERTIES_KEY</span><span class="p">,</span><span class="n">hashtable</span><span class="p">);</span>
+<span class="w">                    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">WARNING</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule.login failed for user lookup: &quot;</span><span class="o">+</span><span class="w"> </span><span class="n">e1</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+<span class="w">                        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Exception</span><span class="p">(</span><span class="n">e1</span><span class="p">);</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                    </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">FINE</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;uniqueid = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">uniqueid</span><span class="p">);</span>
+<span class="w">                </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">FINE</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;uniqueid is null - do nothing&quot;</span><span class="p">);</span>
+<span class="w">                    </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">FINE</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule failed with uniqueid= &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">uniqueid</span><span class="p">);</span>
+<span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">FINE</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;This is a repeat login, nothing to do.&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">WARNING</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule failed: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WSLoginFailedException</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">FINE</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule succeeded with uniqueid = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">uniqueid</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Resolve and return the groups associated to the provided user.</span>
+<span class="cm">     *</span>
+<span class="cm">     * This method is called by the {@code login} function to fetch the groups</span>
+<span class="cm">     * and add them to the {@code WSCREDENTIAL_GROUPS} attribute connected to</span>
+<span class="cm">     * the user subject.</span>
+<span class="cm">     *</span>
+<span class="cm">     * Note that the returned group names work in combination with the</span>
+<span class="cm">     * provided {@code Softgroup}s. Ensure that the appropriate groups are</span>
+<span class="cm">     * defined so that users can be assigned to them.</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param uniqueid the id of the current subject to resolve groups for</span>
+<span class="cm">     * @return {@code List&lt;String&gt;} of group names the current subject is assigned to.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="nd">@SuppressWarnings</span><span class="p">(</span><span class="s">&quot;unchecked&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="nf">getGroupsForCurrentSubject</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">uniqueid</span><span class="p">,</span><span class="w"> </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">subjectUserInfoJSON</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">METHOD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;getGroupsForCurrentSubject&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">FINE</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule.getGroupsForCurrentSubject()&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="cm">/* Note that the &quot;sgroup.softgroupKey&quot; Config value will need to be defined as a new general property in the configured JAAS module within the WAS ISC.</span>
+<span class="cm">        *  In additional to email, this is the value that will be used to fetch the Softgroups from the IDP, for example &quot;groups&quot; or &quot;roles&quot;.</span>
+<span class="cm">        */</span>
+<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">groupList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">WARNING</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule.getGroupsForCurrentSubject - GOT SOFTGROUPKEY FROM JAAS Properties: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">softgroupKey</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">subjectUserInfoJSON</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">FINE</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule.getGroupsForCurrentSubject - no OIDC User Info available for user: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">uniqueid</span><span class="p">);</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">softgroupKey</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">WARNING</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule.getGroupsForCurrentSubject - no softgroupKey defined in properties: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">softgroupKey</span><span class="p">);</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Get a JSONArray of values for the softgroupKey provided</span>
+<span class="w">        </span><span class="n">JSONArray</span><span class="w"> </span><span class="n">groupsJSONArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">JSONArray</span><span class="p">)</span><span class="w"> </span><span class="n">subjectUserInfoJSON</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">softgroupKey</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">groupsJSONArray</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">FINE</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule.getGroupsForCurrentSubject - no groups found for property &#39;user_group_membership&#39; on the OIDC UserInfo JSON for user: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">uniqueid</span><span class="p">);</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Iterate through the groupsJSONArray and add the values to a groupList</span>
+<span class="w">        </span><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">groupsJSONArray</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasNext</span><span class="p">()){</span>
+<span class="w">          </span><span class="n">groupList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// The getSoftgroupsForUser function call needs the attributeValues in the Map&lt;String,List&lt;String&gt;&gt; format</span>
+<span class="w">        </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">attributeValues</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">attributeValues</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">softgroupKey</span><span class="p">,</span><span class="w"> </span><span class="n">groupList</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">FINE</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule.getGroupsForCurrentSubject - groupsList: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">groupList</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">attributeValues</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Resolve and return the groups that are available to be used within DX.</span>
+<span class="cm">     *</span>
+<span class="cm">     * This method is called by the {@code initialize} function to fetch the</span>
+<span class="cm">     * available groups and declare them to DX through {@Softgroup}s.</span>
+<span class="cm">     *</span>
+<span class="cm">     * Note that the returned group names work in combination with the groups</span>
+<span class="cm">     * users should get assigned to that resolved through the</span>
+<span class="cm">     * {@code getGroupsForCurrentSubject} method.</span>
+<span class="cm">     *</span>
+<span class="cm">     * @return {@code List&lt;String&gt;} of group names available to be used within HCL Digital Experience.</span>
+<span class="cm">     * @throws NamingException </span>
+<span class="cm">     * @throws SoftgroupServiceException </span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getAvailableGroups</span><span class="p">(</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">groupAttributeValues</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">NamingException</span><span class="p">,</span><span class="w"> </span><span class="n">SoftgroupServiceException</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">METHOD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;getAvailableGroups&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">FINE</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule.getAvailableGroups()&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">SoftgroupService</span><span class="w"> </span><span class="n">softgroupService</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Softgroup</span><span class="o">&gt;</span><span class="w"> </span><span class="n">softgroups</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashSet</span><span class="o">&lt;</span><span class="n">Softgroup</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Instantiate the SoftgroupService instance and fetch any Softgroups for the user</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dataSourceJNDIName</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">dbSchema</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">softgroupService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SoftgroupServiceFactory</span><span class="p">.</span><span class="na">getSoftGroupService</span><span class="p">(</span><span class="n">dataSourceJNDIName</span><span class="p">,</span><span class="w"> </span><span class="n">dbSchema</span><span class="p">,</span><span class="w"> </span><span class="n">dbType</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">3600</span><span class="p">);</span>
+<span class="w">            </span><span class="n">softgroups</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">softgroupService</span><span class="p">.</span><span class="na">getSoftgroupsForUser</span><span class="p">(</span><span class="n">groupAttributeValues</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">FINE</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule.getAvailableGroups - groupsList: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">softgroups</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">Softgroup</span><span class="o">&gt;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">softgroups</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">softgroupsList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">FINE</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule.getAvailableGroups - groupsList: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">softgroups</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+<span class="w">        </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">FINE</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule.getAvailableGroups - groupsList toString: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">softgroups</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+
+<span class="w">        </span><span class="c1">// Add any available Softgroups matches to the group list to be returned.</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasNext</span><span class="p">()){</span>
+<span class="w">          </span><span class="n">softgroupsList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;cn=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">getGroupName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;,o=softgroups&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">logp</span><span class="p">(</span><span class="n">Level</span><span class="p">.</span><span class="na">FINE</span><span class="p">,</span><span class="w"> </span><span class="n">LOG_CLASS</span><span class="p">,</span><span class="w"> </span><span class="n">METHOD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TransientUsersLoginModule.getAvailableGroups - groupsList: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">softgroupsList</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">softgroupsList</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">commit</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">LoginException</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">abort</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">LoginException</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">logout</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">LoginException</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="building-and-deploying-custom-jaas-login-module">Building and deploying custom JAAS login module</h2>
+<p>You can download the entire code for the <code>ITransientUsersLoginModule interface</code> example from <a href="https://github.com/HCL-TECH-SOFTWARE/hclds-keycloak/tree/main/dx.jaas.sample">here</a>. Here we use Maven and Eclipse to build the custom JAAS login module jar file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure that the following JAR files are available in the <code>lib</code> folder. These JAR files are found in the <code>app_server_root/plugins</code> folder on the server, for example <code>/opt/HCL/AppServer/plugins</code>.
+    - com.ibm.ws.runtime.jar
+    - com.ibm.ws.security.oidc.client.jar</p>
+</div>
+<ol>
+<li>
+<p>Open the Eclipse IDE and import the <code>dx.jaas.sample</code> folder from this repository.</p>
+</li>
+<li>
+<p>Right-click on the <code>dx.jaas.sample</code> folder in Eclipse and select <strong>Run as &gt; Maven install</strong>.</p>
+</li>
+<li>
+<p>Next, go to Run as again and choose <code>Maven build...</code> Configure your build window with the following details:</p>
+<ol>
+<li>Add <code>package</code> as a Goal</li>
+<li>Check your JRE</li>
+<li>Click <strong>Run</strong>.</li>
+</ol>
+<p><img alt="Running maven project" src="../../../../../../../../images/DX_JAAS_MODULE_ECLIPSE_RUN.png" /></p>
+</li>
+<li>
+<p>Once it is complete you will get <code>dx.jaas.sample.jar</code> file in <code>dx.jaas.sample\target\dx.jaas.sample.jar</code> folder</p>
+</li>
+<li>
+<p>Now copy the <code>dx.jaas.sample.jar</code> into the classpath (for example <code>opt/HCL/lib/ext/</code> for traditional environments or <code>/opt/HCL/wp_profile/classes</code> for containerized environments):</p>
+<div class="language-sh highlight"><pre><span></span><code>cp<span class="w"> </span>dx.jaas.sample.jar<span class="w"> </span>/opt/HCL/wp_profile/classes
+</code></pre></div>
+</li>
+<li>
+<p>Configure the global security settings in WAS ISC. Go to <strong>Global Security</strong> &gt; <strong>JAAS - System Logins</strong> &gt; <strong>WEB_INBOUND</strong>.</p>
+</li>
+<li>
+<p>Add the class name defined within your JAR file or use the default <code>com.hcl.dx.auth.jaas.impl.TransientUsersLoginModule</code> class.</p>
+</li>
+<li>
+<p>Set the module order for <strong>WEB_INBOUND</strong> as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Module Class Name</th>
+<th>Module Order</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>com.hcl.dx.auth.jaas.impl.TransientUsersLoginModule</td>
+<td>1</td>
+</tr>
+<tr>
+<td>com.ibm.ws.security.server.lm.ltpaLoginModule</td>
+<td>2</td>
+</tr>
+<tr>
+<td>com.ibm.ws.security.server.lm.wsMapDefaultInboundLoginModule</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Click <strong>OK</strong> and <strong>Save</strong> to save the changes to the master configuration.</p>
+</li>
+<li>
+<p>Restart the server</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 22, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../../../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../../../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

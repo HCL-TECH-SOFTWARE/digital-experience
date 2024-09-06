@@ -1,0 +1,3386 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/deployment/install/traditional/cf_install/ccf_95_standalone/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../ccf_95_cluster/">
+      
+      
+      <link rel="icon" href="../../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Cumulative fix instructions: Stand-alone 9.5 - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cumulative-fix-instructions-stand-alone-95" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../../latest/deployment/install/traditional/cf_install/ccf_95_standalone/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cumulative fix instructions: Stand-alone 9.5
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../whatsnew/cf20/newcf222/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../build_sites/" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../whatsnew/cf20/newcf222/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Deploy DX
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Install
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Install
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../container/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Kubernetes Deployment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Traditional Deployment
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2_3" id="__nav_4_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Traditional Deployment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../install_upgrade_plan_supported_paths/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Supported installation and upgrade paths
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../install_prereq_software/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Prepare the prerequisite software
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../installing_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Install HCL Digital Experience
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Apply Combined Cumulative Fix
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2_3_5" id="__nav_4_2_3_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_3_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Apply Combined Cumulative Fix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Cumulative fix instructions: Stand-alone 9.5
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Cumulative fix instructions: Stand-alone 9.5
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-begin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Before you begin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#space-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Space Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syndicatorsubscriber-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Syndicator/Subscriber Information
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-crawler-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Crawler Information
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#take-a-complete-backup-of-the-portal-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Take a complete backup of the Portal environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#known-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Known Issues
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-supported-hardwaresoftware-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review supported hardware/software requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-fixes-installed-on-your-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check fixes installed on your system
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ensure-wkplcproperties-files-are-correct" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ensure wkplc.properties files are correct
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-process-linux-and-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update process (Linux and Windows)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-profile-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple profile considerations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-root-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-root considerations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anti-virus-and-file-indexing-software-considerations-windows-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anti-virus and file indexing software considerations (Windows only)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-note-for-customers-using-was-85514" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special note for customers using WAS 8.5.5.14
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-the-cumulative-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download the cumulative fix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps-for-installing-the-cumulative-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps for installing the cumulative fix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-a-graphical-user-interface-available-on-windows-and-linux-operating-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use a Graphical User Interface (available on Windows and Linux operating systems)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-a-command-line-available-on-windows-and-linux-operating-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use a command line (available on Windows and Linux operating systems)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-silent-mode-installation-available-on-windows-and-linux-operating-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use silent mode installation (available on Windows and Linux operating systems)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-console-mode-interface-available-on-windows-and-linux-operating-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Console Mode Interface (available on Windows and Linux operating systems)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-configuration-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional configuration steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-profiles-for-linux-or-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update profiles (for Linux or Windows)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apply-cumulative-fix-cf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apply Cumulative Fix (CF)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-consideration-for-empty-portals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special Consideration for empty portals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-installation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post installation steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps-for-rolling-back-the-cumulative-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps for rolling back the cumulative fix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations-in-cf-rollback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations in CF rollback
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-begin-rollback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Before you begin rollback
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-process-for-cf-rollback-linux-and-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update process for CF rollback (Linux and Windows)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-a-graphical-user-interface-to-rollback-available-on-windows-and-linux-operating-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use a Graphical User Interface to rollback (available on Windows and Linux operating systems)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-a-command-line-to-rollback-available-on-windows-and-linux-operating-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use a command line to rollback (available on Windows and Linux operating systems)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-silent-mode-to-rollback-available-on-windows-and-linux-operating-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use silent mode to rollback (available on Windows and Linux operating systems)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-console-mode-interface-available-on-windows-and-linux-operating-systems_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Console Mode interface (available on Windows and Linux operating systems)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-rollback-steps-linux-and-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post Rollback Steps (Linux and Windows)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ccf_95_cluster/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cumulative fix instructions: Cluster 9.5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ccf_95_farm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cumulative fix instructions: Farm 9.5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ccf_95_remote_search/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cumulative fix instructions: Remote search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ccf_95_health_checker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cumulative Fix Health Checker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ccf_95_known_issues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Combined CF Known Issues
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../install_addons/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Add ons
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../uninstall/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Uninstall HCL Digital Experience
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../hybrid/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Hybrid Deployment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docker-compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Compose
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../manage/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../build_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-begin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Before you begin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#space-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Space Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syndicatorsubscriber-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Syndicator/Subscriber Information
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-crawler-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Crawler Information
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#take-a-complete-backup-of-the-portal-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Take a complete backup of the Portal environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#known-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Known Issues
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-supported-hardwaresoftware-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review supported hardware/software requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-fixes-installed-on-your-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check fixes installed on your system
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ensure-wkplcproperties-files-are-correct" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ensure wkplc.properties files are correct
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-process-linux-and-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update process (Linux and Windows)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-profile-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple profile considerations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-root-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-root considerations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anti-virus-and-file-indexing-software-considerations-windows-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anti-virus and file indexing software considerations (Windows only)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-note-for-customers-using-was-85514" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special note for customers using WAS 8.5.5.14
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-the-cumulative-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download the cumulative fix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps-for-installing-the-cumulative-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps for installing the cumulative fix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-a-graphical-user-interface-available-on-windows-and-linux-operating-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use a Graphical User Interface (available on Windows and Linux operating systems)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-a-command-line-available-on-windows-and-linux-operating-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use a command line (available on Windows and Linux operating systems)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-silent-mode-installation-available-on-windows-and-linux-operating-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use silent mode installation (available on Windows and Linux operating systems)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-console-mode-interface-available-on-windows-and-linux-operating-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Console Mode Interface (available on Windows and Linux operating systems)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-configuration-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional configuration steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-profiles-for-linux-or-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update profiles (for Linux or Windows)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apply-cumulative-fix-cf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apply Cumulative Fix (CF)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-consideration-for-empty-portals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special Consideration for empty portals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-installation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post installation steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps-for-rolling-back-the-cumulative-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps for rolling back the cumulative fix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations-in-cf-rollback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations in CF rollback
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-begin-rollback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Before you begin rollback
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-process-for-cf-rollback-linux-and-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update process for CF rollback (Linux and Windows)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-a-graphical-user-interface-to-rollback-available-on-windows-and-linux-operating-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use a Graphical User Interface to rollback (available on Windows and Linux operating systems)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-a-command-line-to-rollback-available-on-windows-and-linux-operating-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use a command line to rollback (available on Windows and Linux operating systems)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-silent-mode-to-rollback-available-on-windows-and-linux-operating-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use silent mode to rollback (available on Windows and Linux operating systems)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-console-mode-interface-available-on-windows-and-linux-operating-systems_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Console Mode interface (available on Windows and Linux operating systems)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-rollback-steps-linux-and-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post Rollback Steps (Linux and Windows)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="cumulative-fix-instructions-stand-alone-95">Cumulative fix instructions: Stand-alone 9.5</h1>
+<p>Read the installation instructions to learn how to apply a cumulative fix to a stand-alone portal installation or to roll back the cumulative fix.</p>
+<h2 id="before-you-begin">Before you begin</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unless you are migrating from a previous release or plan to add this node to an existing cluster, you must create your Portal profile before applying the cumulative fix. If you did not do this during the initial installation, you can use the Configuration Wizard to do so now. Portal Version 8.5 CF12 or later introduces support for JDK8. However, if you plan to use JDK 8 with your profile, you must first create the profile using JDK 7 and then upgrade to JDK 8 after applying the cumulative fix.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In Portal Version 8.5 CF12 or later, the blacklist settings have become more restrictive. For inquiries, go to <a href="https://support.hcltechsw.com/csm">HCL Software Support</a> page.</p>
+</div>
+<h2 id="space-requirements">Space Requirements</h2>
+<p>Ensure that enough disk space is available in the following directories:</p>
+<ul>
+<li>For all platforms: 2.0 GB in the download directory to download the cumulative fix, 1.5 GB in <code>Portal_Install_Root</code>, 1 GB temporary disk space in <code>(wp_profile_root)</code>, and 1.66 GB in the shared data space, which is the directory where Installation Manager temporarily stores downloaded files for use during the update.</li>
+</ul>
+<h2 id="best-practices">Best Practices</h2>
+<p>Go to the <a href="https://support.hcltechsw.com/csm">HCL Software Support</a> page for Portal Upgrade Best Practices.</p>
+<h2 id="syndicatorsubscriber-information">Syndicator/Subscriber Information</h2>
+<p>It is recommended that servers utilizing syndication have associated syndicators and subscribers disabled prior to installing the cumulative fixpack.</p>
+<p>Otherwise syndication updates that run during install may clash with install modifications and can cause the CF update to fail.</p>
+<p>Syndicators and subscribers can be disabled by editing them in the syndication administration portlet. Go to the <a href="../../../../../manage_content/wcm_delivery/syndication/manage_synd_subs/">How to manage syndicators and subscribers</a> topic section for more information. Syndication should then be re-enabled after the update is complete.</p>
+<p>Alternatively, the following ConfigEngine tasks have also been integrated into CF09 or later to globally disable and enable syndication (These tasks can be used in place of the manual updates linked above):</p>
+<ul>
+<li>```
+(wp_profile root)/ConfigEngine/ConfigEngine.sh|.bat disable-syndication-auto-scheduler
+<div class="language-text highlight"><pre><span></span><code>-   ```
+(wp_profile root)/ConfigEngine/ConfigEngine.sh|.bat enable-syndication-auto-scheduler
+</code></pre></div></li>
+</ul>
+<h2 id="search-crawler-information">Search Crawler Information</h2>
+<p>It is recommended that any search crawlers are disabled before applying the CF. If a CF is applied at the same time the crawler is running, the search collection may be corrupted. The search crawler should be restarted after the CF update is complete.</p>
+<h2 id="take-a-complete-backup-of-the-portal-environment">Take a complete backup of the Portal environment</h2>
+<p>Before performing a CF upgrade, it is strongly recommended that you perform a complete backup of the Portal environment, including IBM Installation Manager.</p>
+<p>See <a href="https://help.hcltechsw.com/digital-experience/8.5/admin-system/i_wadm_c_bkup_restr_winlinux.html">Backup and Restore</a> topic for guidance on how to do a complete backup of the entire Portal environment.</p>
+<h2 id="known-issues">Known Issues</h2>
+<p>Review the <a href="../ccf_95_known_issues/">Known issues for combined cumulative fix</a> topic page to be aware of any known issues for the HCL Portal Version 9.5 CF releases.</p>
+<h2 id="review-supported-hardwaresoftware-requirements">Review supported hardware/software requirements</h2>
+<p>For Portal Version 8.5 CF08 or later, the minimum recommended WebSphere Application Server level is at least WAS 8.5.5.6 with the corresponding JDK level applied.</p>
+<p>Review the <a href="https://support.hcltechsw.com/csm?id=kb_article&amp;sysparm_article=KB0013514&amp;sys_kb_id=17d6296a1b5df34077761fc58d4bcb03">Supported Hardware and Software Requirements</a> article for this cumulative fix. If necessary, upgrade all hardware and software before applying this cumulative fix, including interim fixes required for WebSphere Application Server.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ensure that the optional WebSphere Application Server feature <strong>EJBDeploy tool for pre-EJB 3.0 modules</strong> is installed.</p>
+</div>
+<h2 id="check-fixes-installed-on-your-system">Check fixes installed on your system</h2>
+<p>All temporary or interim fixes on your system must be removed before installing this cumulative fix.</p>
+<p>Also check whether the fixes installed on your system are included in the list of fixes provided in this cumulative fix. If you have temporary or interim fixes on your system that are not included in this cumulative fix then contact <a href="https://support.hcltechsw.com/csm">HCL Software Support</a> for an updated version of those fixes or for more information.</p>
+<h2 id="ensure-wkplcproperties-files-are-correct">Ensure <code>wkplc.properties</code> files are correct</h2>
+<p>The HCL Portal upgrade will run several ConfigEngine scripts. These scripts depend on the <code>wkplc.properties</code> being up to date and accurate, particularly with the password properties. If you are using multiple profiles, verify that the information in each profile is correct.</p>
+<ol>
+<li>Edit the (wp_profile root)/ConfigEngine/properties/wkplc.properties file and ensure the following values are set correctly:<ul>
+<li><code>WasRemoteHostName=(the hostname of your WAS instance)</code></li>
+<li><code>WasSoapPort=(the soap port of your WAS instance)</code></li>
+<li><code>WasUserid=(your WAS admin user)</code></li>
+<li><code>WasPassword=(your WAS admin pwd)</code></li>
+<li><code>PortalAdminId=(your Portal Admin ID)</code></li>
+<li><code>PortalAdminPwd=(your Portal Admin password)</code></li>
+<li><code>WpsHostName=(Your Portal hostname)</code></li>
+<li><code>WpsHostPort=(The port you use to access Portal)</code></li>
+<li><code>WpsContextRoot=(your Portal context root)</code></li>
+<li>(For HCL DX 9.5 CF19 and later releases): <code>CwUserPwd=xxxxxx (your Config wizard password)</code></li>
+<li>(Optional, For HCL DX 9.5 CF202 and later releases): <code>skipWoodburnUpdate=true</code></li>
+</ul>
+</li>
+<li>Edit the (wp_profile root)/ConfigEngine/properties/wkplc_dbdomain.properties file and ensure the following values are set correctly:<ul>
+<li><code>release.DbPassword=(your database user password)</code></li>
+<li><code>community.DbPassword=(your database user password)</code></li>
+<li><code>customization.DbPassword=(your database user password)</code></li>
+<li><code>jcr.DbPassword=(your database user password)</code></li>
+<li><code>likeminds.DbPassword=(your database user password)</code></li>
+<li><code>feedback.DbPassword=(your database user password)</code></li>
+</ul>
+</li>
+<li>
+<p>Edit the (wp_profile root)/ConfigEngine/properties/wkplc_comp.properties file and ensure the following values are set correctly:</p>
+<ul>
+<li><code>XmlAccessHost=(your Portal hostname)</code></li>
+<li>XmlAccessPort=(the port you use to access Portal)</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If your server is configured with database runtime users, for example, <code>feedback.DbRuntimeUser=(your feedback database runtime user)</code>, ensure to set their password values correctly as well, for example, in <code>feedback.DbRuntimePassword=(your feedback database runtime user password)</code>.</p>
+</div>
+</li>
+</ol>
+<h2 id="update-process-linux-and-windows">Update process (Linux and Windows)</h2>
+<p>The update process removes plain text passwords from the <code>wkplc*.properties</code> files. To keep these passwords in the properties files, include the following line in the <code>wkplc.properties</code> file:</p>
+<div class="language-text highlight"><pre><span></span><code>PWordDelete=false
+</code></pre></div>
+<h2 id="multiple-profile-considerations">Multiple profile considerations</h2>
+<p>Verify that all of your profiles are at the same level before starting the upgrade or rollback. All profiles that share the same Portal installation directory (multiple profile option) must be manually upgraded after the IBM Installation Manager update completes. See the <em>Additional configuration steps</em> for details.</p>
+<h2 id="non-root-considerations">Non-root considerations</h2>
+<p>In Linux environments, you must install the cumulative fix as the same user which you used to install HCL Portal originally. This could be either root or a non-root user. If you need to use a non-root user, ensure the following conditions are met:</p>
+<ul>
+<li>If you are installing as a non-root user on Linux, the <code>umask</code> setting for your login session must be set to 0022 or better. (<code>umask</code> is a setting that controls what file permissions are set for newly created files and directories. A value of 0022 correspond to permission settings of <code>(rwxr-xr-x)</code>.) If the <code>umask</code> is not set appropriately by default, you must set it when you start Installation Manager or when you open a command-line utility to run Installation Manager commands</li>
+<li>The non-root user has a <code>ulimit - n</code> setting of at least 18192. This must be a number and not unlimited.</li>
+<li>The non-root user owns the AppServer, PortalServer, ConfigEngine, and Portal profile directories and has read/write access to all files in these directories. Permission settings of <code>755 (rwxr-xr-x)</code> are sufficient.</li>
+<li>Do not use <code>sudo</code> or <code>su</code> to install the fix pack. Either use root explicitly or use a non-root user that meets the above conditions.</li>
+</ul>
+<p>To open a command-line utility to run Installation Manager commands:</p>
+<ol>
+<li>Open a command line window.</li>
+<li>
+<p>Run this command to check your current umask setting:</p>
+<div class="language-text highlight"><pre><span></span><code>umask
+</code></pre></div>
+</li>
+<li>
+<p>If necessary, run this command to set the umask:</p>
+<div class="language-text highlight"><pre><span></span><code>umask 0022
+</code></pre></div>
+</li>
+</ol>
+<h2 id="anti-virus-and-file-indexing-software-considerations-windows-only">Anti-virus and file indexing software considerations (Windows only)</h2>
+<p>As part of the CF upgrade process, new files will be created in the WebSphere installation directory, as well as the user's temp directory. Anti-viruses and file indexing software (like Google Desktop) have been known to lock newly created files as they are being scanned, which can interfere with the upgrade process. We recommend to exclude the WebSphere installation directory and the user's temp directory from being scanned by this software during the upgrade. Or you can stop / disable these tools for the duration of the upgrade, and re-enable them after the upgrade completes.</p>
+<h2 id="special-note-for-customers-using-was-85514">Special note for customers using WAS 8.5.5.14</h2>
+<p>Support for WebSphere Application Server v8.5.5.14 will be added in Portal Cumulative Fix 16. If you need to apply Portal Cumulative Fix 15 or earlier to a WAS v8.5.5.14 installation, you will need to perform an additional manual step during the upgrade.</p>
+<p>After running Installation Manager to install the new Portal code but before running the <code>applyCF.sh</code> or <code>applyCF.bat</code> command to update the Portal profile, perform these steps:</p>
+<ol>
+<li>Open a command Window and switch to the ConfigEngine home directory. By default this is:<ul>
+<li>Linux: /opt/IBM/WebSphere/ConfigEngine</li>
+<li>Windows: C:\IBM\WebSphere\ConfigEngine</li>
+</ul>
+</li>
+<li>Make a backup copy of the ConfigEngine script. This file is named ConfigEngine.bat for Windows and ConfigEngine.sh for all other platforms.</li>
+<li>Make sure your user has write permissions for the script file and open it in a text editor.</li>
+<li>Look for the text <code>EJBDEPLOY_JAVA_HOME</code> in the script.</li>
+<li>If you do not find it, no further action is necessary and you can continue with the installation. If you do find it, delete every line that contains the text <code>EJBDEPLOY_JAVA_HOME</code> anywhere in the line (There should be 3 such lines in the .sh script and 2 lines in the .bat script.).</li>
+<li>Save the file.</li>
+</ol>
+<p>You may now continue with the installation of the Portal CF.</p>
+<h2 id="download-the-cumulative-fix">Download the cumulative fix</h2>
+<ol>
+<li>Go and log in to <a href="https://support.hcltechsw.com/csm">HCL Software Support</a> and download the latest zip file that corresponds to the installation on your system.</li>
+<li>Create a directory and extract the zip file(s) into this directory. Inside the zip file is a readme file, sample response files (Server and Express only), and the actual cumulative fix file itself.</li>
+<li>Create a sub-directory and extract the appropriate zip file to this directory. The extraction results in a repository.config file that is used by IBM Installation Manager during the update.</li>
+</ol>
+<h2 id="steps-for-installing-the-cumulative-fix">Steps for installing the cumulative fix</h2>
+<p>There are several different methods to install the cumulative fix. Choose one method that is available for your system. Follow the detailed steps for that option, and then proceed with the Additional configuration steps.</p>
+<h2 id="use-a-graphical-user-interface-available-on-windows-and-linux-operating-systems">Use a Graphical User Interface (available on Windows and Linux operating systems)</h2>
+<ol>
+<li>If you are running an external web server, stop the web server.</li>
+<li>
+<p>Stop any active application servers by using the <code>stopServer</code> command. To see which application servers are active, use the <code>serverStatus</code> command from the (wp_profile)/bin directory and again from the (cw_profile)/bin directory:</p>
+<ul>
+<li>
+<p>Linux:</p>
+<div class="language-text highlight"><pre><span></span><code>./serverStatus.sh -all
+</code></pre></div>
+</li>
+<li>
+<p>Windows:</p>
+<div class="language-text highlight"><pre><span></span><code>serverStatus.bat -all
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Launch the IBM Installation Manager that was used to install HCL Portal Version 8.5.</p>
+</li>
+<li>Using Installation Manager, click <strong>File</strong> then <strong>Preferences</strong>.</li>
+<li>Go to the <strong>Repositories</strong> panel and click <strong>Add Repository</strong>.</li>
+<li>Navigate to the repository.config file mentioned earlier and select it.</li>
+<li>Select <strong>Update</strong> and follow the prompts to update HCL Portal.</li>
+<li>After installation completes, proceed with the <em>Additional configuration steps</em>.</li>
+</ol>
+<h2 id="use-a-command-line-available-on-windows-and-linux-operating-systems">Use a command line (available on Windows and Linux operating systems)</h2>
+<ol>
+<li>If you are running an external web server, stop the web server.</li>
+<li>
+<p>Stop any active application servers by using the <code>stopServer</code> command. To see which application servers are active, use the <code>serverStatus</code> command from the (wp_profile)/bin directory and again from the (cw_profile)/bin directory:</p>
+<ul>
+<li>Linux: <code>./serverStatus.sh -all</code></li>
+<li>Windows: <code>serverStatus.bat -all</code></li>
+</ul>
+</li>
+<li>
+<p>Open a command window and switch to the eclipse/tools sub-directory of Installation Manager. By default, this is:</p>
+<ul>
+<li>Linux: /opt/IBM/InstallationManager/eclipse/tools</li>
+<li>Windows: C:\Program Files\IBM\Installation Manager\eclipse\tools</li>
+</ul>
+</li>
+<li>
+<p>If you are installing the cumulative fix on HCL Portal Express, skip to step 5. Otherwise, run the following command to launch the installation program of IBM Installation Manager. Do note, the commands are shown here on multiple lines for clarity, but the entire command must be entered on one line. Include quotation marks around file paths that include spaces.</p>
+<p>For Linux:</p>
+<div class="language-text highlight"><pre><span></span><code>./imcl install com.ibm.websphere.PORTAL.SERVER.v85 
+    -repositories (fullpath/to/repository.config) -installationDirectory (portal_server_root)
+    -installationDirectory(portal_server_root) 
+    -acceptLicense
+</code></pre></div>
+<p>For Windows:</p>
+<div class="language-text highlight"><pre><span></span><code>imcl.exe install com.hcl.websphere.PORTAL.SERVER.v85 
+    -repositories (fullpath/to/repository.config) 
+    -installationDirectory (portal_server_root) 
+    -acceptLicense
+</code></pre></div>
+</li>
+<li>
+<p>For HCL Portal Express only: Run the following command to launch the installation program from the eclipse/tools sub-directory of Installation Manager. Do note that the commands are shown here on multiple lines for clarity, but the entire command must be entered on one line. Include quotation marks around file paths that include spaces.</p>
+<p>For Linux:</p>
+<div class="language-text highlight"><pre><span></span><code>./imcl install com.hcl.websphere.PORTAL.EXPRESS.v85
+    -repositories (fullpath/to/repository.config) 
+    -installationDirectory (portal_server_root) 
+    -acceptLicense
+</code></pre></div>
+<p>For Windows:</p>
+<div class="language-text highlight"><pre><span></span><code>imcl.exe install com.ibm.websphere.PORTAL.EXPRESS.v85 
+    -repositories (fullpath/to/repository.config) 
+    -installationDirectory (portal_server_root) 
+    -acceptLicense
+</code></pre></div>
+</li>
+<li>
+<p>After installation completes, proceed with the <em>Additional configuration steps</em>.</p>
+</li>
+</ol>
+<h2 id="use-silent-mode-installation-available-on-windows-and-linux-operating-systems">Use silent mode installation (available on Windows and Linux operating systems)</h2>
+<ol>
+<li>If you are running an external web server, stop the web server.</li>
+<li>
+<p>Stop any active application servers by using the <code>stopServer</code> command. To see which application servers are active, use the <code>serverStatus</code> command from the (wp_profile)/bin directory and again from the (cw_profile)/bin directory:</p>
+<ul>
+<li>Linux: <code>./serverStatus.sh -all</code></li>
+<li>Windows: <code>serverStatus.bat -all</code></li>
+</ul>
+</li>
+<li>
+<p>Open a command window and switch to the eclipse/tools sub-directory of Installation Manager. By default, this is:</p>
+<ul>
+<li>Linux: /opt/IBM/InstallationManager/eclipse/tools</li>
+<li>Windows: C:\Program Files\IBM\Installation Manager\eclipse\tools</li>
+</ul>
+</li>
+<li>
+<p>Update the sample response file that is packaged with your cumulative fix level according to the comments in the file. You can also record a response file to use to install the fix in silent mode. Visit the <a href="https://support.hcltechsw.com/csm">HCL Software Support</a> page for detailed instructions on the procedure for recording an IBM Installation Manager response. Note that the feature set listed in your response file must match the feature set you have installed. You cannot add or remove features during the cumulative fix update. The feature set listed in the sample response file is </p>
+<div class="language-text highlight"><pre><span></span><code>features=&#39;ce.install,portal.binary,portal.profile&#39;
+</code></pre></div>
+<p>If you do not have any profiles on this node (because you are in the process of migration from a previous version of HCL Portal, or creating multiple profiles, or you originally installed HCL Portal as a binary install ), then you should remove the 'portal.profile' feature from this list</p>
+<div class="language-text highlight"><pre><span></span><code>features=&#39;ce.install,portal.binary&#39;
+</code></pre></div>
+</li>
+<li>
+<p>Run the following command to install in silent mode:</p>
+<div class="language-text highlight"><pre><span></span><code>imcl -acceptLicense -input (Full_path_to_your_response_file) -log (Full_Path_to_a_log_file) -showProgress
+</code></pre></div>
+</li>
+<li>
+<p>After installation completes, proceed with the <em>Additional configuration steps</em>.</p>
+</li>
+</ol>
+<h2 id="use-console-mode-interface-available-on-windows-and-linux-operating-systems">Use Console Mode Interface (available on Windows and Linux operating systems)</h2>
+<ol>
+<li>If you are running an external web server, stop the web server.</li>
+<li>
+<p>Stop any active application servers by using the <code>stopServer</code> command. To see which application servers are active, use the <code>serverStatus</code> command from the (wp_profile)/bin directory and again from the (cw_profile)/bin directory:</p>
+<ul>
+<li>Linux: <code>./serverStatus.sh -all</code></li>
+<li>Windows: <code>serverStatus.bat -all</code></li>
+</ul>
+</li>
+<li>
+<p>Open a command window and switch to the eclipse/tools sub-directory of Installation Manager. By default, this is:</p>
+<ul>
+<li>Linux: /opt/IBM/InstallationManager/eclipse/tools</li>
+<li>Windows: C:\Program Files\IBM\Installation Manager\eclipse\tools</li>
+</ul>
+</li>
+<li>
+<p>Run the command to start the IBM Installation Manager in console mode.</p>
+<p>For Linux:</p>
+<div class="language-text highlight"><pre><span></span><code>./imcl  -c
+</code></pre></div>
+<p>For Windows:</p>
+<div class="language-text highlight"><pre><span></span><code>imcl.exe -c
+</code></pre></div>
+</li>
+<li>
+<p>Complete the following steps to add the repositories.</p>
+</li>
+<li>Select <strong>Update</strong> and follow the prompts to update HCL Portal.</li>
+<li>After installation completes, proceed with the <em>Additional configuration steps</em>.</li>
+</ol>
+<p>To add the repositories for Step 6:</p>
+<ol>
+<li>Enter P to go to the Preferences menu.</li>
+<li>Enter 1 to go to the Repositories menu.</li>
+<li>Enter D to add repositories.</li>
+<li>Type the path for your HCL Portal 8.5 CF repository file.</li>
+<li>Enter A to apply your repositories and return to the <strong>Preferences</strong> menu.</li>
+<li>Enter R to return to the Main menu.</li>
+</ol>
+<h2 id="additional-configuration-steps">Additional configuration steps</h2>
+<p>If you have any profiles the following configuration steps are mandatory.</p>
+<p>If you do not have any profiles at this point (because you are in the process of migration from a previous version of HCL Portal or plan to add this node to an existing cluster\, no additional configuration steps are necessary and you can continue with the <em>Post installation steps</em>. If you are in the process of a migration, you will need to follow these additional configuration steps after running upgrade-profile for your migrated environment.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following configuration steps should be run as the user who normally administers the Portal Server, which may or may not be the same user who runs the installation program.</p>
+</div>
+<h2 id="update-profiles-for-linux-or-windows">Update profiles (for Linux or Windows)</h2>
+<p>Use the following commands to update all profiles. These steps must be repeated for each profile, if multiple profiles exist. All profiles that share the same Portal installation directory (multiple profile option) must be at the same level for future upgrades to be applied.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a remote search server is used within this environment, it should be started before running the following commands.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a WAS update has occurred prior to running the CF update, it is recommended to run the following task: <code>(profile_root)/bin/osgiCfgInit.sh|bat</code></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Optional note</p>
+<p>To skip regeneration of the profile template, add the following flag to the CF update command. <br> Example: <code>applyCF.sh -Dskip.profile.template.update=true</code><br><br> If an updated template is needed at a later time, this command can be run to do so at any time, for example: <code>ConfigEngine.sh cf-create-profile-templates</code></p>
+</div>
+<h2 id="apply-cumulative-fix-cf">Apply Cumulative Fix (CF)</h2>
+<ol>
+<li>Ensure the HCL Portal server is stopped on the profile you intend to upgrade.</li>
+<li>
+<p>Execute the following command from within the path of the profile to configure. If you are installing the CF on an empty portal, see <em>Special Considerations</em> below before running <code>applyCF</code>. If the <code>applyCF</code> command fails for any reason, check the error logs and correct error conditions before re-running.</p>
+<ul>
+<li>
+<p>Linux:</p>
+<div class="language-text highlight"><pre><span></span><code>(profile_root)/PortalServer/bin/applyCF.sh -DPortalAdminPwd=(password) -DWasPassword=(password)
+</code></pre></div>
+</li>
+<li>
+<p>Windows:</p>
+<div class="language-text highlight"><pre><span></span><code>(profile_root)\PortalServer\bin\applyCF.bat -DPortalAdminPwd=(password) -DWasPassword=(password)
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>Important Notes:</strong></p>
+<ul>
+<li>
+<p>If you are applying CF200 to fix an SSRF security vulnerability, ensure that you run the following command:</p>
+<div class="language-text highlight"><pre><span></span><code>./ConfigEngine.sh delete-outbound-http-connection-config -DOutboundProfileType=system -DConfigFileName=/opt/IBM/WebSphere/PortalServer/base/wp.proxy.config/config/templates/sys.delete.xml
+</code></pre></div>
+<p>where /opt/IBM/WebSphere/PortalServer/ is the installation directory path.</p>
+</li>
+<li>
+<p>The DX Connect servlet will not operate on HCL DX deployments prior to HCL DX 9.5 CF191.</p>
+</li>
+<li>
+<p>If applying the CF19 update to HCL DX 9.5, a DX Connect servlet is installed as a method to manage Continuous Integration and Continuous Delivery processes. If you supply the Config Wizard password (<code>CwUserPwd=xxxxxx</code>) during CF191 or higher installation, the DXConnect servlet will be started immediately, a new Resource Environment Provider will be added to the configuration wizard profile along with 2 name/value pairs as shown below in the <code>DXC_ConfigSettings</code> Resource Environment Provider:</p>
+<ul>
+<li>
+<p><strong><code>DXCONNECT_MAX_MEMORY_SIZE_MB</code></strong></p>
+<p>The default value is 40.</p>
+</li>
+<li>
+<p><strong><code>DXCONNECT_MAX_FILE_SIZE_MB</code></strong></p>
+<p>The default value is 50.</p>
+</li>
+</ul>
+<p>If the Config Wizard password (<code>CwUserPwd=xxxxxx</code>) is NOT provided at <code>applyCF</code> time, no resource environment provider is created.</p>
+</li>
+</ul>
+<h2 id="special-consideration-for-empty-portals">Special Consideration for empty portals</h2>
+<p>If you are installing the CF on an empty portal then extra steps are required to avoid upgrade errors.</p>
+<ol>
+<li>
+<p>If you have created any custom content on top of the empty portal, you must first use XMLAccess to export the Portal content. From the wp_profile_root/PortalServer/bin directory run:</p>
+<div class="language-text highlight"><pre><span></span><code>xmlaccess.bat/sh -user Portal_admin_user -password Portal_admin_password -url http://(myhost):(port)/wps/config -in (Portal home)/doc/xml-samples/Export.xml -out result.xml
+</code></pre></div>
+</li>
+<li>
+<p>Upgrade the portal profile to the new CF level. Because many of the expected artifacts will not exist in an empty portal, you must define the <code>isEmptyPortal</code> property when performing this step. If the <code>applyCF</code> command fails for any reason, check the error logs and correct error conditions before continuing:</p>
+<ul>
+<li>
+<p>Linux:</p>
+<div class="language-text highlight"><pre><span></span><code>(profile_root)/PortalServer/bin/applyCF.sh -DisEmptyPortal=true -DPortalAdminPwd=(password) -DWasPassword=(password)
+</code></pre></div>
+</li>
+<li>
+<p>Windows:</p>
+<div class="language-text highlight"><pre><span></span><code>(profile_root)\PortalServer\bin\applyCF.bat -DisEmptyPortal=true -DPortalAdminPwd=(password) -DWasPassword=(password)
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Following a successful run of the <code>applyCF</code> script, re-run the empty-portal task to remove Portal artifacts that were reintroduced with the CF, as these may cause runtime errors.</p>
+<ul>
+<li>
+<p>Linux:</p>
+<div class="language-text highlight"><pre><span></span><code>(profile_root)/ConfigEngine/ ./ConfigEngine.sh empty-portal -DWasPassword=password -DPortalAdminPwd=password
+</code></pre></div>
+</li>
+<li>
+<p>Windows:</p>
+<div class="language-text highlight"><pre><span></span><code>(profile_root)/ConfigEngine/ ConfigEngine.bat empty-portal -DWasPassword=password -DPortalAdminPwd=password
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>If you exported custom content in Step 1 above, you can now use XMLAccess to reimport that content. From the wp_profile_root/PortalServer/bin directory run:</p>
+<div class="language-text highlight"><pre><span></span><code> xmlaccess.bat/sh -user (Portal_admin_user) -password (Portal_admin_password) -url http://(myhost):(port)/wps/config -in result.xml -out importResults.xml
+</code></pre></div>
+</li>
+</ol>
+<h2 id="post-installation-steps">Post installation steps</h2>
+<ol>
+<li>If you are running an external web server and you are using the WebSphere Application Server automatic generation and propagation of the plug-in, then restart the web server. If you are not using the automatic generation and propagation, regenerate the web server plug-in, copy the plugin-cfg.xml file to the plugin directory, then restart the web server.</li>
+<li>If there is a custom theme that contains a static content WAR and the <code>com.ibm.portal.resource.blacklist</code> and <code>com.ibm.portal.resource.whitelist</code> context parameters have not yet been added to the web.xml file, go to the <a href="https://support.hcltechsw.com/csm">HCL Software Support</a> page to fix security vulnerability. The changes associated with this can cause custom themes to produce a lot of warning messages in the logs resulting in a significant performance penalty. The custom theme must be redeployed before the changes will take effect.</li>
+<li>If necessary, redeploy any customizations, including JSPs, to the WCM portlets (if using HCL Web Content Manager), any other portlets, or any other Portal enterprise applications, if these were customized prior to installing the cumulative fix.</li>
+<li>Go to the <a href="https://support.hcltechsw.com/csm">HCL Software Support</a> page see if the Configuration changes and options introduced in the HCL Web Content Manager 8.5 Combined Cumulative Fixes apply to your environment:</li>
+<li>If you modified the permissions on the PortalServer home directory tree to install the cumulative fix as non-root, restore the original permissions.</li>
+<li>If you have set up a remote search server or document conversion server for use with HCL Portal 8.5, then whenever you apply a cumulative fix to the portal server, you should also apply the corresponding cumulative fix to the remote server. Refer to the HCL Portal 8.5 <a href="../ccf_95_remote_search/">Combined cumulative fix instructions: Remote search</a> for the details of applying a cumulative fix to the remote server.</li>
+<li>Clear the browser cache.</li>
+<li>Go to the <a href="https://support.hcltechsw.com/csm">HCL Software Support</a> page for Recommended Updates for HCL Portal and HCL Web Content Manager Version 8.5 to review and apply any recommended Fixes.</li>
+<li>
+<p>Prior to CF07, it was recommended to set the DB2 database configuration parameter <code>dft_queryopt</code> to a value of 2 as this was tested to provide the best balance of query optimization time and query execution time for the SQL produced by the JCR. For CF07 or later, this recommendation has been changed to use a value of 5 in conjunction with the testing and changes made to the JCR and JCR schema. This can be done manually by customers by executing the following SQL against the JCR Domain Database:</p>
+<div class="language-text highlight"><pre><span></span><code>db2 update db cfg for JCRDBNAME using DFT_QUERYOPT 5
+</code></pre></div>
+<p>or running the following Config Engine Task:</p>
+<div class="language-text highlight"><pre><span></span><code>configure-jcr-db2-dft-queryopt
+</code></pre></div>
+</li>
+</ol>
+<h2 id="steps-for-rolling-back-the-cumulative-fix">Steps for rolling back the cumulative fix</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The steps in these sections for rolling back the cumulative fix describe how to roll back from a successful update to a previous level. However, rolling back from a failed update does not guarantee return to a dependable state. When an update fails, it is advised that you fix the cause of the failure and try again for a successful update; to return to a previous level, you must depend on a system and database backup and restore.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Versions of Portal prior to CF12 do not support JDK 8. Therefore, if JDK 8 has been enabled in CF12 or later, the <code>managesdk</code> command must be used to switch back to JDK 7 or 7.1 before performing a rollback to CF11 or earlier.</p>
+</div>
+<h2 id="limitations-in-cf-rollback">Limitations in CF rollback</h2>
+<ol>
+<li>Changing the server context root after upgrading is an unsupported rollback path. To roll back after changing the context root, you must first change the server context root to the values of the previous version.</li>
+<li>When rolling back a CF install, if you have configured an empty context root you cannot roll back to a CF level that does not support the empty context root capability. For instance, if you have applied CF08 and have configured an empty context root you cannot rollback to CF07. If you have applied CF09 and have configured an empty context root you can roll back to CF08 but you would not be able to roll back if your previous CF level was CF07 or prior.</li>
+<li>Configuring HCL Portal from a stand-alone environment to a clustered environment after upgrading is an unsupported rollback path.</li>
+</ol>
+<h2 id="before-you-begin-rollback">Before you begin rollback</h2>
+<ol>
+<li>The HCL Portal rollback scripts depend on the <code>wkplc.properties</code> being up to date and accurate, particularly with the password properties. If you are using multiple profiles, verify that the information in each profile is correct.</li>
+<li>
+<p>Edit the (wp_profile root)/ConfigEngine/properties/wkplc.properties file and ensure the following values are set correctly:</p>
+<ul>
+<li><code>WasRemoteHostName=(the hostname of your WAS instance)</code></li>
+<li><code>WasSoapPort=(the soap port of your WAS instance)</code></li>
+<li><code>WasUserid=(your WAS admin user)</code></li>
+<li><code>WasPassword=(your WAS admin pwd)</code></li>
+<li><code>PortalAdminId=(your Portal Admin ID)</code></li>
+<li><code>PortalAdminPwd=(your Portal Admin password)</code></li>
+<li><code>WpsHostName=(Your Portal hostname)</code></li>
+<li><code>WpsHostPort=(The port you use to access Portal)</code></li>
+<li><code>WpsContextRoot=(your Portal context root)</code></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In a Standalone Portal environment, the <code>WasRemoteHostName</code> should be the local hostname and the <code>WasSoapPort</code> should be the soap port of the HCL Portal server.</p>
+</div>
+</li>
+<li>
+<p>Edit the (wp_profile root)/ConfigEngine/properties/wkplc_dbdomain.properties file and ensure the following values are set correctly:</p>
+<ul>
+<li><code>release.DbPassword=(your database user password)</code></li>
+<li><code>community.DbPassword=(your database user password)</code></li>
+<li><code>customization.DbPassword=(your database user password)</code></li>
+<li><code>jcr.DbPassword=(your database user password)</code></li>
+<li><code>likeminds.DbPassword=(your database user password)</code></li>
+<li><code>feedback.DbPassword=(your database user password)</code></li>
+</ul>
+</li>
+<li>Edit the <code>(wp_profile root)/ConfigEngine/properties/wkplc_comp.properties</code> file and ensure the following values are set correctly:<ul>
+<li><code>XmlAccessHost=(your Portal hostname)</code></li>
+<li><code>XmlAccessPort=(the port you use to access Portal)</code></li>
+</ul>
+</li>
+</ol>
+<h2 id="update-process-for-cf-rollback-linux-and-windows">Update process for CF rollback (Linux and Windows)</h2>
+<p>The update process removes plain text passwords from the <code>wkplc*.properties</code> files. To keep these passwords in the properties files, include the following line in the <code>wkplc.properties</code> file:</p>
+<div class="language-text highlight"><pre><span></span><code>PWordDelete=false
+</code></pre></div>
+<p>There are several different methods to roll back the cumulative fix, and they are:</p>
+<ul>
+<li>Use a Graphical User Interface (GUI) to roll back</li>
+<li>Use a command line roll back</li>
+<li>Use silent mode roll back</li>
+<li>Use console mode roll back</li>
+</ul>
+<p>Choose one method that is available for your system. Follow the detailed steps for that option, and then proceed with the Post Rollback Steps.</p>
+<h2 id="use-a-graphical-user-interface-to-rollback-available-on-windows-and-linux-operating-systems">Use a Graphical User Interface to rollback (available on Windows and Linux operating systems)</h2>
+<ol>
+<li>If you are running an external web server, stop the web server.</li>
+<li>
+<p>Stop any active application servers by using the <code>stopServer</code> command. To see which application servers are active, use the <code>serverStatus</code> command from the (wp_profile)/bin directory and again from the (wp_profile)/bin directory:</p>
+<ul>
+<li>Linux: <code>./serverStatus.sh -all</code></li>
+<li>Windows: <code>serverStatus.bat -all</code></li>
+</ul>
+</li>
+<li>
+<p>Launch the IBM Installation Manager that was used to install HCL Portal Version 8.5.</p>
+</li>
+<li>Select <strong>Roll Back</strong> on the Installation Manager main window and follow the prompts to roll HCL Portal back to the desired level.</li>
+<li>After rollback completes, proceed with the <em>Post Rollback Steps</em>.</li>
+</ol>
+<h2 id="use-a-command-line-to-rollback-available-on-windows-and-linux-operating-systems">Use a command line to rollback (available on Windows and Linux operating systems)</h2>
+<ol>
+<li>If you are running an external web server, stop the web server.</li>
+<li>
+<p>Stop any active application servers by using the <code>stopServer</code> command. To see which application servers are active, use the <code>serverStatus</code> command from the (wp_profile)/bin directory and again from the (cw_profile)/bin directory:</p>
+<ul>
+<li>Linux: <code>./serverStatus.sh -all</code></li>
+<li>Windows: <code>serverStatus.bat -all</code></li>
+</ul>
+</li>
+<li>
+<p>Open a command window and switch to the eclipse/tools sub-directory of Installation Manager. By default, this is:</p>
+<ul>
+<li>Linux: /opt/IBM/InstallationManager/eclipse/tools</li>
+<li>Windows: C:\Program Files\IBM\Installation Manager\eclipse\tools</li>
+</ul>
+</li>
+<li>
+<p>If you are rolling back the cumulative fix on HCL Portal Express, skip to step 5. Otherwise, run the following command to launch the installation program of IBM Installation Manager. The commands are shown here on multiple lines for clarity, but the entire command must be entered on one line. Include quotation marks around file paths that include spaces:</p>
+<p>For Linux:</p>
+<div class="language-text highlight"><pre><span></span><code>./imcl rollback com.ibm.websphere.PORTAL.SERVER.v85
+    -installationDirectory (portal_server_root)
+</code></pre></div>
+<p>For Windows:</p>
+<div class="language-text highlight"><pre><span></span><code>imcl.exe rollback com.ibm.websphere.PORTAL.SERVER.v85
+    -installationDirectory (portal_server_root)
+</code></pre></div>
+</li>
+<li>
+<p>HCL Portal Express only: Run the following command to launch the installation program from the eclipse/tools sub-directory of Installation Manager. The commands are shown here on multiple lines for clarity, but the entire command must be entered on one line. Include quotation marks around file paths that include spaces:</p>
+<p>For Linux:</p>
+<div class="language-text highlight"><pre><span></span><code>./imcl rollback com.ibm.websphere.PORTAL.EXPRESS.v85 
+    -installationDirectory (portal_server_root)
+</code></pre></div>
+<p>For Windows:</p>
+<div class="language-text highlight"><pre><span></span><code>imcl.exe rollback com.ibm.websphere.PORTAL.EXPRESS.v85 
+    -installationDirectory (portal_server_root)
+</code></pre></div>
+</li>
+<li>
+<p>After rollback completes, proceed with the <em>Post Rollback Steps</em>.</p>
+</li>
+</ol>
+<h2 id="use-silent-mode-to-rollback-available-on-windows-and-linux-operating-systems">Use silent mode to rollback (available on Windows and Linux operating systems)</h2>
+<ol>
+<li>If you are running an external web server, stop the web server.</li>
+<li>
+<p>Stop any active application servers by using the <code>stopServer</code> command. To see which application servers are active, use the <code>serverStatus</code> command from the (wp_profile)/bin directory and again from the (cw_profile)/bin directory:</p>
+<ul>
+<li>Linux: <code>./serverStatus.sh -all</code></li>
+<li>Windows: <code>serverStatus.bat -all</code></li>
+</ul>
+</li>
+<li>
+<p>Open a command window and switch to the eclipse/tools sub-directory of Installation Manager. By default, this is:</p>
+<ul>
+<li>Linux: /opt/IBM/InstallationManager/eclipse/tools</li>
+<li>Windows: C:\Program Files\IBM\Installation Manager\eclipse\tools</li>
+</ul>
+</li>
+<li>Update the sample response file that is packaged with your cumulative fix level according to the comments in the file.</li>
+<li>
+<p>Run the following command to roll back in silent mode:</p>
+<div class="language-text highlight"><pre><span></span><code>imcl -input (Full_path_to_your_response_file) -log (Full_Path_to_a_log_file) -showProgress
+</code></pre></div>
+</li>
+<li>
+<p>After rollback completes, proceed with the <em>Post Rollback Steps</em>.</p>
+</li>
+</ol>
+<h2 id="use-console-mode-interface-available-on-windows-and-linux-operating-systems_1">Use Console Mode interface (available on Windows and Linux operating systems)</h2>
+<ol>
+<li>If you are running an external web server, stop the web server.</li>
+<li>
+<p>Stop any active application servers by using the <code>stopServer</code> command. To see which application servers are active, use the <code>serverStatus</code> command from the (wp_profile)/bin directory and again from the (cw_profile)/bin directory:</p>
+<ul>
+<li>Linux: <code>./serverStatus.sh -all</code></li>
+<li>Windows: <code>serverStatus.bat -all</code></li>
+</ul>
+</li>
+<li>
+<p>Open a command window and switch to the eclipse/tools sub-directory of Installation Manager. By default, this is:</p>
+<ul>
+<li>Linux: /opt/IBM/InstallationManager/eclipse/tools</li>
+<li>Windows: C:\Program Files\IBM\Installation Manager\eclipse\tools</li>
+</ul>
+</li>
+<li>
+<p>Run the command to start the IBM Installation Manager in console mode.</p>
+<p>For Linux:</p>
+<div class="language-text highlight"><pre><span></span><code>./imcl  -c
+</code></pre></div>
+<p>For Windows:</p>
+<div class="language-text highlight"><pre><span></span><code>imcl.exe -c
+</code></pre></div>
+</li>
+<li>
+<p>Select Roll back and follow the prompts to roll back HCL Portal.</p>
+</li>
+<li>After installation completes, proceed with the <em>Post Rollback Steps</em>.</li>
+</ol>
+<h2 id="post-rollback-steps-linux-and-windows">Post Rollback Steps (Linux and Windows)</h2>
+<p>Use the following commands to roll back all profiles. These steps must be repeated for each profile, if multiple profiles exist. All profiles that share the same Portal installation directory (multiple profile option) must be at the same level for future upgrades to be applied. The following configuration steps should be run as the user who normally administers the Portal Server, which may or may not be the same user who runs the installation program. If a remote search server is used within this environment, it should be started before running the following commands.</p>
+<ol>
+<li>
+<p>Run the following command from within the path of the profile to configure. If you are rolling back the CF on an empty portal then many of the expected artifacts will not exist and the <code>rollbackCF</code> command will fail. In this case you must define the <code>isEmptyPortal</code> property on the command line.</p>
+<p>Example:</p>
+<div class="language-text highlight"><pre><span></span><code>rollbackCF.sh -DisEmptyPortal=true
+</code></pre></div>
+<p>If the <code>rollbackCF</code> command fails for any reason, check the error logs and correct error conditions, then stop HCL Digital Experience before re-running.</p>
+<ul>
+<li>
+<p>Linux:</p>
+<div class="language-text highlight"><pre><span></span><code>(profile_root)/PortalServer/bin/rollbackCF.sh -DPortalAdminPwd=(password) -DWasPassword=(password)
+</code></pre></div>
+</li>
+<li>
+<p>Windows:</p>
+<div class="language-text highlight"><pre><span></span><code>(profile_root)\PortalServer\bin\rollbackCF.bat -DPortalAdminPwd=(password) -DWasPassword=(password)
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>If you are running an external web server and you are using the WebSphere Application Server automatic generation and propagation of the plug-in, then restart the web server. If you are not using the automatic generation and propagation, simply regenerate the web server plugin, copy the plugin-cfg.xml file to the plugin directory, then restart the web server.</p>
+</li>
+<li>If you previously customized any configuration files in the wp_profile_root/PortalServer/config directory, check to see if rolling back the cumulative fix affected those files by restoring a version of the files that was saved when the cumulative fix was originally installed. If it did affect the files, you must perform the same customization on the restored version of each file.</li>
+<li>If necessary, redeploy any customizations, including JSPs, to the WCM portlets (if using Web Content Manager), any other portlets, or any other Portal enterprise applications, if these were customized prior to rolling back the cumulative fix.</li>
+<li>For rollback to CF03 or earlier level only: If the Brightcove integration was enabled, remove the old Brightcove plugins, then configure HCL Portal to add the new Brightcove plugins.</li>
+<li>For rollback to CF03 or earlier level only: If using Rich Media Edition, remove the Rich Media Edition plugin, restart the Portal Server, then configure HCL Portal to add the Rich Media Edition plugins.</li>
+<li>If you have set up a remote search server or document conversion server for use with HCL Portal Version 8.5, then whenever you roll back a cumulative fix to the portal server, you should also roll back the corresponding cumulative fix to the remote server.</li>
+<li>Clear the browser cache.</li>
+</ol>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 2, 2023</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2765 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/deployment/install/traditional/install_upgrade_plan_supported_paths/Install_upgrade_new_HCL_DX_customers/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../Install_upgrade_customers_Portal_85_Java_SDK7/">
+      
+      
+      <link rel="icon" href="../../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Installation and upgrade for new HCL Digital Experience customers - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#installation-and-upgrade-for-new-hcl-digital-experience-customers" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../../latest/deployment/install/traditional/install_upgrade_plan_supported_paths/Install_upgrade_new_HCL_DX_customers/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Installation and upgrade for new HCL Digital Experience customers
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../whatsnew/cf20/newcf222/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../build_sites/" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../whatsnew/cf20/newcf222/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Deploy DX
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Install
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Install
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../container/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Kubernetes Deployment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Traditional Deployment
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2_3" id="__nav_4_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Traditional Deployment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Supported installation and upgrade paths
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2_3_2" id="__nav_4_2_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Supported installation and upgrade paths
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Installation and upgrade for new HCL Digital Experience customers
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Installation and upgrade for new HCL Digital Experience customers
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preparing-the-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparing the environment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparing the environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparing-your-operating-system-for-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparing your operating system for installation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-the-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting the software
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting the software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparing-the-files-for-install" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparing the files for install
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-hcl-dx-85-with-ibm-websphere-application-server-nd-version-905-and-jdk-version-8-using-the-ibm-installation-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing HCL DX 8.5 with IBM WebSphere Application Server ND Version 9.0.5 and JDK Version 8 using the IBM Installation Manager
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing HCL DX 8.5 with IBM WebSphere Application Server ND Version 9.0.5 and JDK Version 8 using the IBM Installation Manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-system-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      File system paths
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-ibm-installation-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing IBM Installation Manager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-the-portal-85-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install the Portal 8.5 Base
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-the-latest-fixpack-update-cf17-or-later-using-ibm-installation-manager-to-upgrade-hcl-digital-experience-to-cf17-or-later" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install the latest Fixpack update (CF17 or later) using IBM Installation Manager to upgrade HCL Digital Experience to CF17 or later
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install the latest Fixpack update (CF17 or later) using IBM Installation Manager to upgrade HCL Digital Experience to CF17 or later">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#updating-the-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating the profile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-hcl-digital-experience-95-using-ibm-installation-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install HCL Digital Experience 9.5 using IBM Installation Manager
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hclsoftware-u-learning-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      HCLSoftware U learning materials
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Install_upgrade_customers_Portal_85_Java_SDK7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation and upgrade for customers running on DX 8.5 on WAS 8.5/9.0 and Java SDK 7.0 or 8.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Install_upgrade_customers_Portal_9_Java_SDK7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation and upgrade for customers running on DX 9.0 on WAS 8.5/9.0 and Java SDK 7.0 or 8.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cf_install" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Apply Combined Cumulative Fix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../install_prereq_software/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Prepare the prerequisite software
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../installing_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Install HCL Digital Experience
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../cf_install/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Apply Combined Cumulative Fix
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../install_addons/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Add ons
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../uninstall/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Uninstall HCL Digital Experience
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../hybrid/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Hybrid Deployment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docker-compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Compose
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../manage/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../build_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preparing-the-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparing the environment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparing the environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparing-your-operating-system-for-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparing your operating system for installation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-the-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting the software
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting the software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparing-the-files-for-install" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparing the files for install
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-hcl-dx-85-with-ibm-websphere-application-server-nd-version-905-and-jdk-version-8-using-the-ibm-installation-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing HCL DX 8.5 with IBM WebSphere Application Server ND Version 9.0.5 and JDK Version 8 using the IBM Installation Manager
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing HCL DX 8.5 with IBM WebSphere Application Server ND Version 9.0.5 and JDK Version 8 using the IBM Installation Manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-system-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      File system paths
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-ibm-installation-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing IBM Installation Manager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-the-portal-85-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install the Portal 8.5 Base
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-the-latest-fixpack-update-cf17-or-later-using-ibm-installation-manager-to-upgrade-hcl-digital-experience-to-cf17-or-later" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install the latest Fixpack update (CF17 or later) using IBM Installation Manager to upgrade HCL Digital Experience to CF17 or later
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install the latest Fixpack update (CF17 or later) using IBM Installation Manager to upgrade HCL Digital Experience to CF17 or later">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#updating-the-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating the profile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-hcl-digital-experience-95-using-ibm-installation-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install HCL Digital Experience 9.5 using IBM Installation Manager
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hclsoftware-u-learning-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      HCLSoftware U learning materials
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="installation-and-upgrade-for-new-hcl-digital-experience-customers">Installation and upgrade for new HCL Digital Experience customers</h1>
+<p>HCL Digital Experience 9.5 can run on top of IBM WebSphere Application Server Version ND 9.0.5 using the following installation path. This guide is meant to provide a step-by-step information for the setup and installation of a standalone HCL Portal 9.5.</p>
+<h2 id="preparing-the-environment">Preparing the environment</h2>
+<p>Before you install HCL Digital Experience, review the <a href="../../../../../get_started/system_requirements/">hardware and software requirements</a> to ensure that you have the supported versions of prerequisite and co-requisite software and the required hardware.</p>
+<p>Make sure to also review the <a href="https://support.hcltechsw.com/csm?id=kb_article&amp;sysparm_article=KB0013514">detailed requirements article</a> to ensure that your system meets or exceeds the minimum requirements provided by HCL.</p>
+<h3 id="preparing-your-operating-system-for-installation">Preparing your operating system for installation</h3>
+<ul>
+<li>
+<p><a href="../../installing_dx/aix/prep_os-AIX/">Preparing your AIX operating system</a></p>
+</li>
+<li>
+<p><a href="../../installing_dx/linux/prep_os-linux/">Preparing your Linux operating system</a></p>
+</li>
+<li>
+<p><a href="../../installing_dx/windows/prep_os-windows/">Preparing your Windows OS</a></p>
+</li>
+</ul>
+<h2 id="getting-the-software">Getting the software</h2>
+<p>Product software can be obtained from the <a href="https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do">HCL Software Licensing Portal</a>.</p>
+<p>Additional guidance is available here: <a href="https://support.hcltechsw.com/csm?id=kb_article&amp;sysparm_article=KB0077878">Step-by-step guide on downloading HCL Digital Experience products</a>.</p>
+<ol>
+<li>
+<p>Sign in to the HCL Software Licensing Portal.</p>
+</li>
+<li>
+<p>Identify the Portal 9.5 offering you want to install.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There are several different Portal 9.5 offerings. Your license determines which offerings you will see listed as available to download.</p>
+</div>
+<p>Example package names for the different Portal 9.5 offerings are:</p>
+<ul>
+<li>
+<p>HCL Portal Express v9.5 Multiplatform</p>
+</li>
+<li>
+<p>HCL Portal Server v9.5 MP</p>
+</li>
+<li>
+<p>HCL Portal Enable v9.5 Multiplatform</p>
+</li>
+<li>
+<p>HCL Portal Extend v9.5MP</p>
+</li>
+</ul>
+<p>In this example, we will use HCL Portal Enable v9.5 Multiplatform.</p>
+</li>
+<li>
+<p>Click on the <strong>HCL Portal Enable v9.5 Multiplatform</strong> package.</p>
+</li>
+<li>
+<p>On the package page, you will see a long list of parts/components but you only need to download the following four files:</p>
+<ul>
+<li>
+<p>HCL-Portal-95_Enable_SETUP-01.zip</p>
+</li>
+<li>
+<p>HCL-Portal-95_Enable_SETUP-02.zip</p>
+</li>
+<li>
+<p>HCL-Portal-95_Enable_SETUP-03.zip</p>
+</li>
+<li>
+<p>HCL-Portal-95_Enable_SETUP-04.zip</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The zip files above contain all the software required to install:</p>
+<ul>
+<li>
+<p>Portal 9.5 including Installation Manager</p>
+</li>
+<li>
+<p>WebSphere Application Server</p>
+</li>
+<li>
+<p>Portal CF17, etc.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+<h3 id="preparing-the-files-for-install">Preparing the files for install</h3>
+<ol>
+<li>
+<p>Once you have the parts downloaded, create a parent folder wherein the files are to be extracted. You can name it as portal95binaries as shown in the example below:
+    <img alt="Rename portal binary files" src="../../../../../images/rename_Portal_binary_files.png" /></p>
+</li>
+<li>
+<p>Extract the .zip files to the created parent folder. Once all four (4) files are extracted, you should have a folder called SETUP under your parent folder as shown below: <img alt="" src="../../../../../images/extract_Portal_files_setup.png" /></p>
+</li>
+<li>
+<p>Navigate to the <strong>SETUP</strong> folder, there should be a Product folder that holds the files and repositories for WAS 9.0.x, JDK 8.0.x, Portal 8.5.0.0, CF17 for Portal 8.5, Portal 9.5, and iFix PI59896. <img alt="" src="../../../../../images/Portal_95_new_user_files_installation.png" /></p>
+</li>
+</ol>
+<h2 id="installing-hcl-dx-85-with-ibm-websphere-application-server-nd-version-905-and-jdk-version-8-using-the-ibm-installation-manager">Installing HCL DX 8.5 with IBM WebSphere Application Server ND Version 9.0.5 and JDK Version 8 using the IBM Installation Manager</h2>
+<p>This guide was written using Windows as the base operating system, however the steps/concepts listed in this guide are independent of the operating system. The only significant difference is that for Windows, you must use the batch file commands instead of the UNIX shell commands listed in this guide.</p>
+<p>For example, </p>
+<p>UNIX:</p>
+<p><code>./ConfigEngine.sh config-ch-integ</code></p>
+<p>And Windows:</p>
+<p><code>ConfigEngine.bat config-ch-integ</code></p>
+<p>Also, it is recommended to use the Command Prompt (<code>cmd.exe</code>) on Windows instead of PowerShell.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The installation steps below were done using a graphical user interface. There are other ways to install Portal server, via the console or a response file. If you prefer either one of these methods, please refer to the following documentation resource:</p>
+<p>Documentation resource: <a href="../../installing_dx/">Installing the HCL Digital Experience software</a></p>
+</div>
+<h3 id="file-system-paths">File system paths</h3>
+<p>The following tags are used to reference common file system paths:</p>
+<ul>
+<li>
+<p><code>&lt;AppServer_root&gt; - The root path of the AppServer directory. For example C:\IBM\WebSphere\AppServer</code></p>
+</li>
+<li>
+<p><code>&lt;PortalServer_root&gt; - The root path of the PortalServer directory. For example C:\IBM\WebSphere\PortalServer</code></p>
+</li>
+<li>
+<p><code>&lt;wp_profile_root&gt; - The root path of the wp_profile directory. For example C:\IBM\WebSphere\wp_profile</code></p>
+</li>
+</ul>
+<h3 id="troubleshooting">Troubleshooting</h3>
+<p>The following logs were used to troubleshoot errors encountered through the guide:</p>
+<ul>
+<li>
+<p><code>&lt;IM_DATA_DIR&gt;/logs</code></p>
+</li>
+<li>
+<p><code>&lt;IM_DATA_DIR&gt;/installed.xml</code></p>
+</li>
+<li>
+<p><code>&lt;IM_DATA_DIR&gt;/installed.xsl</code></p>
+</li>
+<li>
+<p><code>&lt;IM_DATA_DIR&gt;/installRegistry.xml</code></p>
+</li>
+<li>
+<p><code>&lt;wp_profile root&gt;/logs</code></p>
+</li>
+<li>
+<p><code>&lt;wp_profile root&gt;/ConfigEngine/log/ConfigTrace.log</code></p>
+</li>
+<li>
+<p><code>&lt;AppServer root&gt;/logs</code></p>
+</li>
+</ul>
+<p>The following location is defined IM_DATA_DIR:</p>
+<ul>
+<li>
+<p>In UNIX: /<user_home>/var/ibm/InstallationManager</p>
+</li>
+<li>
+<p>In Windows: C:\ProgramData\IBM\Installation Manager</p>
+</li>
+</ul>
+<p>In any case of problems during the installation, please collect the above data and contact <a href="https://support.hcltechsw.com/csm?id=kb_article&amp;sysparm_article=KB0013608">HCL Software Support</a>.</p>
+<h3 id="installing-ibm-installation-manager">Installing IBM Installation Manager</h3>
+<p>The IBM Installation Manager (IIM) is a tool you can use to install and maintain your software packages. Wizards guide you through the steps that you must take to install, modify, update, roll back, or uninstall your IBM or HCL products.</p>
+<p>To install IIM, navigate to <code>C:\Users\Administrator\Downloads\portal95Binaries\SETUP\IIM folder</code>.</p>
+<p>Within that folder, there are multiple IIM binaries for their relevant operating systems.</p>
+<p>For this guide, install a Windows 2012 R2 system and navigate to the win64 folder. <img alt="" src="../../../../../images/win64.png" /></p>
+<p>From here, run the install.exe file.</p>
+<ol>
+<li>
+<p>You should see the following window appear: <img alt="" src="../../../../../images/install.exe.png" /></p>
+</li>
+<li>
+<p>Select <strong>Next</strong>. Agree to the licensing terms and select <strong>Next</strong> again.</p>
+</li>
+<li>
+<p>Set install path for <strong>IIM</strong>: <img alt="" src="../../../../../images/select_install_path_IIM.png" /></p>
+</li>
+<li>
+<p>Select <strong>Next</strong>. Review the install summary and select <strong>Install</strong>.</p>
+</li>
+<li>
+<p>When the installation is complete, select the <strong>Restart Installation Manager</strong> button.</p>
+</li>
+</ol>
+<h3 id="install-the-portal-85-base">Install the Portal 8.5 Base</h3>
+<p>With a fresh install of Portal v9.5, the first step is to install the base Portal 8.5 with WAS 9.0.5 , JDK 8.0.5, and PI59896. Due to the continuous deployment model and how the product has been architected, this is not a one step install. Portal v9.5 is not applied until Portal 8.5 base has been installed and upgraded to CF17.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The iFix PI59896 is required so that Portal 8.5 is in an installable state with WAS 9.0.x and JDK v8.</p>
+</div>
+<p>This is a temporary step while Portal environment is being built up to the final goal of Portal 9.5 on WAS 9.0.5. Portal 8.5 is NOT supported on WAS 9.0.5 as a final configuration.</p>
+<ol>
+<li>
+<p>Open IBM Installation Manager (IIM) and under <strong>File &gt; Preferences &gt; Repositories</strong> and select the <strong>Add Repository</strong> button. <img alt="" src="../../../../../images/Add_repository_Install_IMM.png" /></p>
+</li>
+<li>
+<p>In the next IIM Window, we need to navigate to the repository.config file. Navigate to <strong>portal95Binaries\SETUP\products\WASND905</strong> and select the file as shown in the next image: <img alt="" src="../../../../../images/navigatee_repository_config_file_install_IIM.png" /></p>
+<p>Continue adding the following repositories noted below: <img alt="" src="../../../../../images/add_repositories_install_IIM.png" /></p>
+<div class="admonition reminder">
+<p class="admonition-title">Reminder</p>
+<p>For the iFix PI59896, point the repository to the zip file itself.</p>
+</div>
+<p>Then, select <strong>OK</strong>.</p>
+</li>
+<li>
+<p>Within IIM, select <strong>Install</strong> icon, then highlight all the items listed. <img alt="" src="../../../../../images/Select_Install_icon_IIM.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Due to the way WAS defines the SDK as a co-requirement, we get two entries for SDK. Both entries are the same package and only one needs to be selected. </p>
+</div>
+<p>Select <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Select iFix listed. <img alt="" src="../../../../../images/Select_listed_ifix_install_IIM.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This iFix is required for Portal 8.5 to be installed while on WAS 9.0 using JDK8.</p>
+</div>
+<p>Select <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Accept terms of licensing agreement. Then select <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Set location of IMShared. <img alt="" src="../../../../../images/Select_IMShared_location.png" /></p>
+<p>Select <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Set the path you wish the WAS and Portal package to be installed. <img alt="" src="../../../../../images/WAS_Portal_package_path_IIM.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The WebSphere Application Server package installation path will need to be customized as it tries to put it under the Program Files folder by default.</p>
+</div>
+<p>Select <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Select the translations you wish to use. <img alt="" src="../../../../../images/Select_translations_IIM.png" /></p>
+<p>Select <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Review the packages that are going to be installed. <img alt="" src="../../../../../images/Review_packages_for_installation_IIM.png" /></p>
+<p>Select <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Enter the user id and password for the <strong>ConfigWizard</strong> admin user. This user is used to access the configuration wizard for when you do your database transfer, or create your cluster, etc. <img alt="" src="../../../../../images/Enter_ConfigWizard_login_IIM.png" /></p>
+<p>Select <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Enter the user id and password for the Portal Admin user. This is your Admin user for logging into Portal Administration page or the WAS admin console. <img alt="" src="../../../../../images/Enter_Portal_Admin_user_login_IIM.png" /></p>
+<p>Select <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Final review the package information. <img alt="" src="../../../../../images/Final_review_IIM_package_info.png" /></p>
+<p>Select <strong>Next</strong>.</p>
+</li>
+<li>
+<p>When the installation is finished, select the <strong>None</strong> option for <strong>"Which program do you want to start?”</strong> and click <strong>Finish</strong>. <img alt="" src="../../../../../images/Select_None_IIM_installation_start.png" /></p>
+<p>Verify that you can access your Portal in an internet browser by navigating to: http://myportal.hcl.com:10039/wps/portal.</p>
+</li>
+</ol>
+<p>While you have successfully installed HCL Portal v8.5 with WebSphere Application Server 9.0.5 using JDK 8.0.5, please note you are still in an <strong>UNSUPPORTED</strong> state.</p>
+<h2 id="install-the-latest-fixpack-update-cf17-or-later-using-ibm-installation-manager-to-upgrade-hcl-digital-experience-to-cf17-or-later">Install the latest Fixpack update (CF17 or later) using IBM Installation Manager to upgrade HCL Digital Experience to CF17 or later</h2>
+<p>Portal now needs to be upgraded to CF17 to support the installation of HCL Portal 9.5.</p>
+<p>We will need to stop the Portal Server and ConfigWizard to allow us to proceed with the upgrade.</p>
+<ol>
+<li>
+<p>Open a Command Prompt and navigate to <wp_profile_root>/bin.</p>
+</li>
+<li>
+<p>Run:</p>
+<p><code>stopServer.bat HCL Portal and HCL Web Content Manager</code></p>
+</li>
+<li>
+<p>Enter Portal credentials when prompted.</p>
+</li>
+<li>
+<p>Navigate to <AppServer_root>/profiles/cw_profile/bin.</p>
+</li>
+<li>
+<p>Run:</p>
+<p><code>stopServer.bat server1</code></p>
+</li>
+<li>
+<p>Enter ConfigWizard credentials when prompted.</p>
+</li>
+</ol>
+<p>Before proceeding, HCL highly recommends that you take a backup of your system. Please review the following links for further details.</p>
+<div class="language-text highlight"><pre><span></span><code>- Documentation resource: [Backup and restore](../../../manage/backup_restore/index.md)
+
+- Documentation resource: [How to backup HCL Portal [Video]](https://www.youtube.com/watch?v=3cjA9IUMJow)
+</code></pre></div>
+<ol>
+<li>
+<p>Open IBM Installation Manager (IIM) and under File &gt; Preferences &gt; Repositories, add the following repository as shown in the image below: <img alt="" src="../../../../../images/Add_Portal_85_CF17_repository_config.png" /></p>
+<div class="admonition reminder">
+<p class="admonition-title">Reminder</p>
+<p>Remove the previous repository entries.</p>
+</div>
+<p>Select <strong>OK</strong>.</p>
+</li>
+<li>
+<p>Within IIM, select <strong>Update</strong> icon, then select the Portal package. <img alt="" src="../../../../../images/Select_update_and_Portal_package.png" /></p>
+<p>Select <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Select CF17 package. <img alt="" src="../../../../../images/Select_CF17_package.png" /></p>
+<div class="admonition reminder">
+<p class="admonition-title">Reminder</p>
+<p>You must stop Portal Server/ConfigWizard to proceed.</p>
+</div>
+<p>Select <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Review validation results. Select <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Accept terms of licensing agreement. Then select <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Review <strong>Features</strong> that are going to be installed. Select <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Update</strong>.</p>
+</li>
+</ol>
+<p><strong>At this point, only the Portal binaries have been updated to CF17</strong>. The IIM only manages the binaries so we will need to run a Portal script to upgrade the profile.</p>
+<h3 id="updating-the-profile">Updating the profile</h3>
+<ul>
+<li>
+<p>Ensure the HCL Portal and HCL Web Content Manager server is stopped on the profile you intend to upgrade.</p>
+</li>
+<li>
+<p>Execute the following command from within the path of the profile to configure:</p>
+<ul>
+<li>
+<p>Unix/Linux: <profile_root>/PortalServer/bin/applyCF.sh -DPortalAdminPwd=<password> -DWasPassword=<password></p>
+</li>
+<li>
+<p>Windows: <profile_root>\PortalServer\bin\applyCF.bat -DPortalAdminPwd=<password> -DWasPassword=<password></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Validate if the server has been updated to CF17. Log in and check the about HCL Portal and see if it says CF17.</p>
+<h2 id="install-hcl-digital-experience-95-using-ibm-installation-manager">Install HCL Digital Experience 9.5 using IBM Installation Manager</h2>
+<p>Make sure the server is stopped before doing the following steps:</p>
+<ol>
+<li>
+<p>Add the HCL Portal 9.5 repositories to IIM.</p>
+<p>In this case, we are using the Enable offering so you need the following repo: Server and Enable.</p>
+<p>For the other offerings, this is what you need for each:</p>
+<ul>
+<li>
+<p>Enable Offering: needs Server and Enable repo</p>
+</li>
+<li>
+<p>Express Offering: needs Express repo</p>
+</li>
+<li>
+<p>Extend Offering: needs Extend and Server repo</p>
+</li>
+<li>
+<p>Server Offering: needs Server repo </p>
+</li>
+</ul>
+<p><img alt="" src="../../../../../images/Add_HCL_Portal_95_repositories_IIM.png" /></p>
+<div class="admonition reminder">
+<p class="admonition-title">Reminder</p>
+<p>Remove the previous repository.</p>
+</div>
+<p>Select <strong>OK</strong>.</p>
+</li>
+<li>
+<p>Within IIM, select the <strong>Install</strong> option. Select both packages. <img alt="" src="../../../../../images/Select_Install_option_IIM_both_packages.png" /></p>
+<p>Select <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Accept terms of licensing agreement. Then select <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Use existing Portal 8.5 package. <img alt="" src="../../../../../images/Use_existing_Portal_85_package_IIM.png" /></p>
+<p>Select <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Enter Admin user id and password for WebSphere Application Server and Portal Server. Then select Next.</p>
+</li>
+<li>
+<p>Review Summary. Select <strong>Install</strong>. <img alt="" src="../../../../../images/Review_Summary_Select_install_95.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>During the installation, a series of ConfigEngine tasks are run to upgrade Portal 8.5 to 9.5 so upgrading the profile after is not required.</p>
+</div>
+</li>
+<li>
+<p>When the installation is finished, you should now be able to verify that you can access your Portal in an internet browser by navigating to: </p>
+<ul>
+<li>
+<p>http://myportal.hcl.com:10039/wps/portal.</p>
+</li>
+<li>
+<p>Check the About WebSphere Portal portlet to make sure it says 9.5.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>This completes the upgrade to HCL Portal 9.5 standalone.</p>
+<h2 id="hclsoftware-u-learning-materials">HCLSoftware U learning materials</h2>
+<p>For an introduction and a demo on how to upgrade your HCL Digital Experience deployment to the latest Cumulative Fix, go to <a href="https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&amp;id=3&amp;forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1461" target="_blank">Upgrade the HCL Digital Experience software</a>.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 19, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2908 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/extend_dx/integration/ibm_mobilefirst/module_framework_mobilefirst/settingup_sso_mobilefirst70/wl_sso/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../meta_moduless_mobilefirst/">
+      
+      
+      <link rel="icon" href="../../../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Setting up single sign-on with MobileFirst - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#setting-up-single-sign-on-with-mobilefirst" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../../../latest/extend_dx/integration/ibm_mobilefirst/module_framework_mobilefirst/settingup_sso_mobilefirst70/wl_sso/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Setting up single sign-on with MobileFirst
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../whatsnew/cf20/newcf222/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../deployment/" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../build_sites/" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../../whatsnew/cf20/newcf222/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../build_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Extend DX
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Integrate Applications
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Integrate Applications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../commerce/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HCL Commerce
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../connections/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    HCL Connections
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../leap/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    HCL Leap
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../mx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    HCL Volt MX Foundry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../huddo_boards/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Huddo Boards
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../unified_task_list/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Unified Task List
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../wab/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Web Application Bridge
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../fea_ai/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Java Connector Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2_10" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    IBM MobileFirst
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_2_10" id="__nav_7_2_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_2_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            IBM MobileFirst
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wl_pln_inst/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Planning to install IBM MobileFirst
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wl_comp_ovr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Default component overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wl_hybrid_app_portal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating a MobileFirst hybrid application for your portal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2_10_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Module framework for IBM MobileFirst
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_2_10_5" id="__nav_7_2_10_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_7_2_10_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_2_10_5">
+            <span class="md-nav__icon md-icon"></span>
+            Module framework for IBM MobileFirst
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wl_config_prop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring the MobileFirst properties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2_10_5_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Setting up single sign-on with MobileFirst 7.0
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_2_10_5_3" id="__nav_7_2_10_5_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_7_2_10_5_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_2_10_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Setting up single sign-on with MobileFirst 7.0
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Setting up single sign-on with MobileFirst
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../meta_moduless_mobilefirst/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Meta-Modules for IBM MobileFirst integration
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wl_device_classes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Target MobileFirst resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wl_ugrade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Upgrading MobileFirst
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../development_tools/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Development Tools
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../script_application/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Script Applications
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../ddc/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Digital Data Connector
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../portlets_development/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Portlet Development
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../screenflow/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Screen Flow Manager
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../paa/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Portal Application Archive
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../apis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    APIs
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="setting-up-single-sign-on-with-mobilefirst">Setting up single sign-on with MobileFirst</h1>
+<p>You can set up single sign-on with MobileFirst so users can share a session between an HCL Portal and MobileFirst server.</p>
+<p>SSO is no longer supported on Android with Worklight 6.2.</p>
+<p>Both HCL Portal and MobileFirst® servers must be configured to use the same user registry, LTPA keys, and be set with a specified domain for SSO. For more information, see <em>Configuring Portal to use a user registry</em> and <em>Managing your user registry</em>. Or, if you are using the WebSphere® Application Server, see the WebSphere Application Server documentation.</p>
+<p>For more information about system support requirements, see <a href="../../../../../../get_started/system_requirements/">System requirements</a>.</p>
+<ol>
+<li>
+<p>Run the following configEngine tasks. These configEngine tasks are available only on the HCL Portal server. If the MobileFirst server is on WebSphere Application Server, run the following commands from the WebSphere Integrated Solutions Console. You can use steps B and C if MobileFirst is on the same instance as HCL Portal.</p>
+<ol>
+<li>
+<p>ConfigEngine.bat configure-single-signon -Ddomain=&lt;domain name&gt; -DWasRemoteHostName=&lt;hostname&gt; -DWasSoapPort=&lt;port&gt; -DWasPassword=&lt;password&gt; -Dinteroperable=true -DattributePropagation=true -DrequiresSSL=false</p>
+</li>
+<li>
+<p>ConfigEngine.bat export-ltpakeys-single-signon -DkeyFile=c:\ltpa.txt -DkeyPass=&lt;testpass&gt; -DdmgrFlag=false -DWasRemoteHostName=&lt;hostname&gt; -DWasSoapPort=&lt;port&gt; -DWasPassword=&lt;password&gt;</p>
+</li>
+<li>
+<p>ConfigEngine.bat import-ltpakeys-single-signon -DkeyFile=c:\ltpa_demo.txt -DkeyPass=&lt;somepassword&gt; -DdmgrFlag=false -DWasRemoteHostName=&lt;hostname&gt; -DWasSoapPort=&lt;port&gt; -DWasPassword=&lt;password&gt;</p>
+</li>
+</ol>
+</li>
+<li>
+<p>To prepare the MobileFirst server, you must update the MobileFirst WAR to enable applications to authenticate with the user registry. Update authenticationConfig.xml in your MobileFirst project. IT is in MobileFirst Project/server/conf/authenticationConfig.xml. Find the <code>&lt;securityTests&gt;</code> element and add the mobile and web security tests.</p>
+<ol>
+<li>
+<p>Find the <code>&lt;securityTests&gt;</code> element and add the mobile and web security tests from the following example.</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;mobileSecurityTest name=&quot;mobileTests&quot;&gt; 
+    &lt;testDeviceId provisioningType=&quot;none&quot; /&gt; 
+    &lt;testUser realm=&quot;WASLTPARealm&quot; /&gt; 
+&lt;/mobileSecurityTest&gt; 
+&lt;webSecurityTest name=&quot;WASLTPARealmTests&quot;&gt; 
+    &lt;testUser realm=&quot;WASLTPARealm&quot;/&gt; 
+&lt;/webSecurityTest&gt; 
+</code></pre></div>
+</li>
+<li>
+<p>Uncomment the security realm.</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;!-- For websphere --&gt; 
+&lt;realm name=&quot;WASLTPARealm&quot; loginModule=&quot;WASLTPAModule&quot;&gt;
+   &lt;className&gt;com.worklight.core.auth.ext.WebSphereFormBasedAuthenticator
+       &lt;/className&gt; 
+   &lt;parameter name=&quot;login-page&quot; value=&quot;/login.html&quot;/&gt; 
+   &lt;parameter name=&quot;error-page&quot; value=&quot;/loginError.html&quot;/&gt; 
+&lt;/realm&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Uncomment the login module for WebSphere.</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;!-- For websphere --&gt; 
+&lt;loginModule name=&quot;WASLTPAModule&quot;&gt; 
+    &lt;className&gt;com.worklight.core.auth.ext.WebSphereLoginModule&lt;/className&gt; 
+&lt;/loginModule&gt;
+</code></pre></div>
+</li>
+</ol>
+</li>
+<li>
+<p>Modify the MobileFirst project WAR by adding two new HTML files to the WAR. The project WAR is in /MobileFirst Project/bin. Copy this WAR to another location for editing.</p>
+<ol>
+<li>
+<p>Create an login.html file with the following contents.</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;html&gt; 
+    &lt;head&gt; 
+        &lt;title&gt;Login&lt;/title&gt; 
+    &lt;/head&gt; 
+    &lt;body&gt; 
+        &lt;form method=&quot;post&quot; action=&quot;j_security_check&quot;&gt; 
+            &lt;label for=&quot;j_username&quot;&gt;User name:&lt;/label&gt; 
+            &lt;input type=&quot;text&quot; id=&quot;j_username&quot; name=&quot;j_username&quot; /&gt; 
+            &lt;br /&gt; 
+            &lt;label for=&quot;j_password&quot;&gt;Password:&lt;/label&gt; 
+            &lt;input type=&quot;password&quot; id=&quot;j_password&quot; name=&quot;j_password&quot; /&gt; 
+            &lt;br /&gt; 
+            &lt;input type=&quot;submit&quot; id=&quot;login&quot; name=&quot;login&quot; value=&quot;Log In&quot; /&gt; 
+        &lt;/form&gt; 
+    &lt;/body&gt; 
+&lt;/html&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Create a loginError.html file with the following contents.</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;html&gt; 
+    &lt;head&gt;&lt;/head&gt; 
+    &lt;body&gt; 
+        Login Error 
+    &lt;/body&gt; 
+&lt;/html&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Add the login.html and loginError.html files to the highest level directory of the WAR.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Modify the MobileFirst project WAR that was updated in the previous step by editing the web.xml file in the WEB-INF directory.</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;login-config&gt; 
+    &lt;auth-method&gt;FORM&lt;/auth-method&gt; 
+    &lt;form-login-config&gt; 
+        &lt;form-login-page&gt;/login.html&lt;/form-login-page&gt; 
+        &lt;form-error-page&gt;/loginError.html&lt;/form-error-page&gt; 
+    &lt;/form-login-config&gt; 
+&lt;/login-config&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Add a security constraint to protect the web resource by modifying web.xml in the updated MobileFirst project WAR</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;security-constraint id=&quot;SecurityConstraint_1&quot;&gt;
+    &lt;web-resource-collection id=&quot;WebResourceCollection_1&quot;&gt;
+        &lt;web-resource-name&gt;mobilefirst&lt;/web-resource-name&gt;
+        &lt;description&gt;Protecting mobilefirst application&lt;/description&gt;
+        &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+        &lt;http-method&gt;GET&lt;/http-method&gt;
+        &lt;http-method&gt;POST&lt;/http-method&gt;
+    &lt;/web-resource-collection&gt;
+    &lt;auth-constraint id=&quot;AuthConstraint_1&quot;&gt;
+        &lt;description&gt;MobileFirst applications&lt;/description&gt;
+        &lt;role-name&gt;Administrator&lt;/role-name&gt;
+    &lt;/auth-constraint&gt;
+    &lt;user-data-constraint id=&quot;UserDataConstraint_1&quot;&gt;
+        &lt;transport-guarantee&gt;NONE&lt;/transport-guarantee&gt;
+    &lt;/user-data-constraint&gt;
+&lt;/security-constraint&gt;
+
+&lt;security-role id=&quot;SecurityRole_1&quot;&gt;
+    &lt;description&gt;Only specific users&lt;/description&gt;
+    &lt;role-name&gt;Administrator&lt;/role-name&gt;
+&lt;/security-role&gt;
+</code></pre></div>
+</li>
+<li>
+<p>When the MobileFirst project WAR is updated, deploy it to the MobileFirst server.</p>
+</li>
+<li>
+<p>Restart the server where MobileFirst is installed. If you added the security constraint, map the group or user to the EAR file.</p>
+</li>
+<li>
+<p>Update the application-descriptor.xml file to add the security tests you configured. Open MobileFirst Project/apps/mobilefirst app/application-descriptor.xml in the design view and update it to have the correct realms and security tests.</p>
+</li>
+<li>
+<p>In the main application, add a security test that is called <strong>WASLTPARealmTests</strong> in the Common (optional) section.</p>
+</li>
+<li>
+<p>In <strong>Android phones and tablets</strong> &gt; <strong>Details</strong>, add the Security test called <strong>mobileTests</strong>.</p>
+</li>
+<li>
+<p>Open MobileFirst Project/apps/mobilefirst app/application-descriptor.xml and add the <code>&lt;securityTests&gt;</code> element.</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;securityTests&gt;
+    &lt;mobileSecurityTest name=&quot;mobileTests&quot;&gt; 
+        &lt;testDeviceId provisioningType=&quot;none&quot; /&gt; 
+        &lt;testUser realm=&quot;WASLTPARealm&quot; /&gt; 
+    &lt;/mobileSecurityTest&gt; 
+    &lt;customSecurityTest name=&quot;WASLTPARealmTests&quot;&gt; 
+        &lt;test realm=&quot;WASLTPARealm&quot; isInternalUserID=&quot;true&quot;/&gt; 
+    &lt;/customSecurityTest&gt; 
+&lt;/securityTests&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Add the example <code>&lt;realm&gt;</code> for <code>WASLTPARealm</code>.</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;realm loginModule=&quot;WASLTPAModule&quot; name=&quot;WASLTPARealm&quot;&gt;
+            &lt;className&gt;com.worklight.core.auth.ext.FormBasedAuthenticator&lt;/className&gt;
+        &lt;/realm&gt;
+    &lt;/realms&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Add the example <code>&lt;loginModule&gt;</code> for <code>WASLTPAModule</code>.</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;loginModule name=&quot;WASLTPAModule&quot;&gt;
+    &lt;className&gt;com.worklight.core.auth.ext.NonValidatingLoginModule&lt;/className&gt;
+&lt;/loginModule&gt;
+</code></pre></div>
+</li>
+<li>
+<p>After you create the server-side WAR, change the client side to allow authentication between the two servers. In an SSO demonstration application, modify the HTML of MobileFirst Project/apps/mobilefirst app/common/index.html to include a login form and JavaScript to handle the response. In a demonstration, index.html includes the code in the following example.</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;title&gt;index&lt;/title&gt;
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0&quot;&gt;
+            &lt;link rel=&quot;shortcut icon&quot; href=&quot;images/favicon.png&quot;&gt;
+            &lt;link rel=&quot;apple-touch-icon&quot; href=&quot;images/apple-touch-icon.png&quot;&gt;
+            &lt;link rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot;&gt;
+            &lt;script&gt;window.$ = window.jQuery = WLJQ;&lt;/script&gt;
+        &lt;/head&gt;
+        &lt;body id=&quot;content&quot; style=&quot;display: none&quot;&gt; 
+            &lt;div id=&quot;AppBody&quot;&gt;
+                &lt;div class=&quot;wrapper&quot;&gt; 
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div id=&quot;AuthBody&quot; style=&quot;display: none&quot;&gt; 
+                &lt;div id=&quot;loginForm&quot;&gt; 
+                    Username:&lt;br/&gt; 
+                    &lt;input type=&quot;text&quot; id=&quot;usernameInputField&quot; autocorrect=&quot;off&quot; autocapitalize=&quot;off&quot; /&gt;&lt;br /&gt; 
+                    Password:&lt;br/&gt; 
+                    &lt;input type=&quot;password&quot; id=&quot;passwordInputField&quot; autocorrect=&quot;off&quot; autocapitalize=&quot;off&quot;/&gt;&lt;br/&gt;         
+                    &lt;input type=&quot;button&quot; id=&quot;loginButton&quot; value=&quot;Login&quot; /&gt; 
+                    &lt;input type=&quot;button&quot; id=&quot;cancelButton&quot; value=&quot;Cancel&quot; /&gt; 
+                &lt;/div&gt; 
+            &lt;/div&gt;
+            &lt;!--application UI goes here--&gt;
+            Hello Worklight
+            &lt;script src=&quot;js/initOptions.js&quot;&gt;&lt;/script&gt;
+            &lt;script src=&quot;js/main.js&quot;&gt;&lt;/script&gt;
+            &lt;script src=&quot;js/messages.js&quot;&gt;&lt;/script&gt;
+            &lt;script src=&quot;js/challengeResponse.js&quot;&gt;&lt;/script&gt;
+        &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Update the initialization options for MobileFirst to force the application to connect to the MobileFirst server on start by changing <code>connectOnStartup</code> from false to true in MobileFirst Project/apps/mobilefirst app/common/js/initOptions.js.</p>
+</li>
+<li>
+<p>Add JavaScript to handle the response from the MobileFirst and HCL Portal servers. In this SSO demonstration application, create a file that is called challengeResponse.js, in MobileFirst Project/apps/mobilefirst app/common/js. Add the following example to the contents of the file. Update the line <code>&lt;code&gt;location.href= "http://server:port/wps/myportal"&lt;/code&gt;</code> to point to your HCL Portal server.</p>
+<div class="language-text highlight"><pre><span></span><code>/*
+*  Licensed Materials - Property of IBM
+*  5725-G92 (C) Copyright HCL Technologies Limited 2006, 2012, 2019. All Rights Reserved.
+*  US Government Users Restricted Rights - Use, duplication or
+*  disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+*/
+
+var sampleAppRealmChallengeHandler = WL.Client.createChallengeHandler(&quot;WASLTPARealm&quot;);
+var busyIndicator = new WL.BusyIndicator(&#39;content&#39;, {text: &quot;Loading...&quot;});
+
+sampleAppRealmChallengeHandler.isCustomResponse = function(response) {
+    if (!response || response.responseText === null) {
+        return false;
+    }
+    var indicatorIdx = response.responseText.search(&#39;j_security_check&#39;);
+
+    if (indicatorIdx &gt;= 0){
+        return true;
+    }  
+    return false;
+};
+
+sampleAppRealmChallengeHandler.handleChallenge = function(response) {
+    busyIndicator.show();
+    $(&#39;#AppBody&#39;).hide();
+    WL.EncryptedCache.open(&quot;wpsadmin&quot;, true, onReadOpen, onOpenError);
+};
+
+sampleAppRealmChallengeHandler.submitLoginFormCallback = function(response) {
+    var isLoginFormResponse = sampleAppRealmChallengeHandler.isCustomResponse(response);
+    if (isLoginFormResponse){
+        sampleAppRealmChallengeHandler.handleChallenge(response);
+    } else {
+        $(&#39;#AppBody&#39;).show();
+        $(&#39;#AuthBody&#39;).hide();
+        sampleAppRealmChallengeHandler.submitSuccess();
+        setTimeout(function(){
+            busyIndicator.hide();
+            location.href= &quot;http://server:port/wps/myportal&quot;;
+        }, 1000);
+    }
+};
+
+$(&#39;#loginButton&#39;).bind(&#39;click&#39;, function () {
+    busyIndicator.show();
+    WL.EncryptedCache.write(&quot;username&quot;, $(&#39;#usernameInputField&#39;).val(), onWriteSuccess, onWriteFailure);
+    function onWriteSuccess(status){
+        WL.EncryptedCache.write(&quot;password&quot;, $(&#39;#passwordInputField&#39;).val(), onWriteSuccess2, onWriteFailure);
+        function onWriteSuccess2(status2){
+            WL.EncryptedCache.close(onCloseCompleteHandler, onCloseFailureHandler);
+
+        }
+    }
+    function onWriteFailure(status){
+        alert(&quot;Encrypted cache closed, writing failed&quot;);
+    }
+});
+
+
+function onCloseCompleteHandler(status){
+    var reqURL = &#39;/j_security_check&#39;;
+    var options = {};
+    options.parameters = {
+        j_username : $(&#39;#usernameInputField&#39;).val(),
+        j_password : $(&#39;#passwordInputField&#39;).val()
+    };
+    options.headers = {};
+    sampleAppRealmChallengeHandler.submitLoginForm(reqURL, options, sampleAppRealmChallengeHandler.submitLoginFormCallback);
+}
+
+
+function onCloseFailureHandler(status){
+    alert(&quot;close faiure&quot;);
+}
+
+
+$(&#39;#cancelButton&#39;).bind(&#39;click&#39;, function () {
+    sampleAppRealmChallengeHandler.submitFailure();
+    $(&#39;#AppBody&#39;).show();
+    $(&#39;#AuthBody&#39;).hide();
+});
+
+function onReadOpen(status){
+    WL.EncryptedCache.read(&quot;username&quot;, onDecryptReadSuccess, onDecryptReadFailure);
+    function onDecryptReadSuccess(value){
+        WL.EncryptedCache.read(&quot;password&quot;, onDecryptReadSuccess2, onDecryptReadFailure);
+        function onDecryptReadSuccess2(value2){
+            if (value &amp;&amp; value2){
+                // submit 1 &amp; 2
+                var reqURL = &#39;/j_security_check&#39;;
+                var options = {};
+                options.parameters = {
+                    j_username : value,
+                    j_password : value2
+                };
+                options.headers = {};
+                sampleAppRealmChallengeHandler.submitLoginForm(reqURL, options, sampleAppRealmChallengeHandler.submitLoginFormCallback);
+            } else {
+                // Didn&#39;t find any cached info, ask for login.
+                busyIndicator.hide();
+                $(&#39;#AuthBody&#39;).show();
+                $(&#39;#passwordInputField&#39;).val(&#39;&#39;);
+            }
+        }
+    }
+    function onDecryptReadFailure(status){
+        alert(&quot;Encrypted cache closed, reading failed&quot;);
+    }
+}
+
+ function onOpenError(status){
+    switch(status){
+        case WL.EncryptedCache.ERROR_KEY_CREATION_IN_PROGRESS:
+            alert(&quot;ERROR: KEY CREATION IN PROGRESS&quot;);
+            break;
+        case WL.EncryptedCache.ERROR_LOCAL_STORAGE_NOT_SUPPORTED:
+            alert(&quot;ERROR: LOCAL STORAGE NOT SUPPORTED&quot;);
+            break;
+        case WL.EncryptedCache.ERROR_NO_EOC:
+            alert(&quot;ERROR: NO EOC&quot;);
+            break;
+        case WL.EncryptedCache.ERROR_COULD_NOT_GENERATE_KEY:
+            alert(&quot;ERROR: COULD NOT GENERATE KEY&quot;);
+            break;
+        case WL.EncryptedCache.ERROR_CREDENTIALS_MISMATCH:
+            alert(&quot;ERROR: CREDENTIALS MISMATCH&quot;);
+            break;
+        default:
+            alert(&quot;AN ERROR HAS OCCURED. STATUS :: &quot; + status);
+    }
+}
+</code></pre></div>
+<p>yes</p>
+</li>
+<li>
+<p>Build your MobileFirst application for your MobileFirst server by right-clicking the MobileFirst application and selecting <strong>Run As</strong> &gt; <strong>Build Settings and Deploy Target</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Build the application to work with a different MobileFirst server</strong>.</p>
+</li>
+<li>
+<p>Add the information for your MobileFirst server to the <strong>Server</strong> and <strong>Context path</strong> fields.</p>
+</li>
+<li>
+<p>Build your application by right-clicking the MobileFirst application and selecting <strong>Run As</strong> &gt; <strong>Build All Environments</strong>.</p>
+</li>
+<li>
+<p>Install the MobileFirst application to your MobileFirst server. Open the MobileFirst console at http://server:port/worklight/console and upload the MobileFirst application by adding it to the <strong>Deploy application or adapter</strong> field. Your MobileFirst application file can be found in your Eclipse workspace in the bin folder. The MobileFirst application file has the .wlapp extension.</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 17, 2022</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

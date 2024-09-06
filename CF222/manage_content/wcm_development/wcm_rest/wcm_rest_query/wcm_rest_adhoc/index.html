@@ -1,0 +1,3408 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc/">
+      
+      
+        <link rel="prev" href="../wcm_rest_defined/">
+      
+      
+        <link rel="next" href="../wcm_rest_csv_export/">
+      
+      
+      <link rel="icon" href="../../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Query parameters - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#query-parameters" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../../latest/manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Query parameters
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../whatsnew/cf20/newcf222/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../deployment/" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../build_sites/" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../whatsnew/cf20/newcf222/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../build_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Manage Content
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../wcm_authoring/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Author Web Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../wcm_delivery/vanity_url/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deliver Web Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../wcm_configuration/wcm_adm_tools/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Configure Web Content Manager
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Extend Web Content Manager
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            Extend Web Content Manager
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../wcm_dev_api/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    HCL Web Content Manager API
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../wcm_custom_plugin/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    How to create custom plug-ins
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    REST service for Web Content Manager
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_5_3" id="__nav_6_5_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_5_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            REST service for Web Content Manager
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wcm_rest_starting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started with the REST service for Web Content Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wcm_rest_crud_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to use REST with Web Content Manager items
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../wcm_rest_deleted_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    How to Use REST to Work with Deleted Content Items
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wcm_rest_content_formats/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REST content formats for components and elements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5_3_6" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    REST Query service for web content
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_5_3_6" id="__nav_6_5_3_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_5_3_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_5_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            REST Query service for web content
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wcm_rest_defined/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Defined query Service
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Query parameters
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Query parameters
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-multiple-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to use multiple parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text-search-rest-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text Search REST API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-only-items-that-have-a-workflow-with-rest-api-search-query-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting only items that have a workflow with REST API search query results
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-workflow-date-fields-and-link-to-the-rest-api-search-query-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Workflow date fields and link to the REST API search query results
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-item-path-information-to-the-rest-api-search-query-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding item path information to the REST API search query results
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-more-detailed-information-to-the-rest-api-search-query-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding more detailed information to the REST API search query results
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wcm_rest_csv_export/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSV Export of REST query results
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../wcm_rest_mng_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    How to manage web content items by using REST
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../manage_web_content_image_renditions_interactions_by_using_rest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to manage web content image renditions interactions by using REST
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wcm_REST_web_content_manager_lock_unlock_api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Web Content Manager Lock/Unlock API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../update_references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating references
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create_content_item/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating a content item
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create_from_skeleton/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating a content item from a skeleton
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wcm_REST_web_content_manager_control_syndication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Web Content Manager Syndication REST APIs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wcm_REST_web_content_manager_find_rendering_script_portlet_references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Web Content Manager Find Rendering and Script Portlet References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wcm_REST_web_content_manager_find_references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Web Content Manager Find References from WCM Artifacts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../library_component_support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Support for library components in content and authoring templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../wcm_rest_referencematerial/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Reference material for the Web Content Manager REST service
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../wcm_rest_v2/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    REST service for Web Content Manager v2
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wcm_dev_context/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Determining the current web content context
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wcm_dev_custom_html_editor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to create a custom HTML editor integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wcm_dev_custom_ui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to create a custom launch page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wcm_dev_displaying_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to display data from external sources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wcm_dev_profiling_taxonomy_planning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Taxonomies, Categories, and keywords
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wcm_dev_remoteactions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to use remote actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wcm_dev_storing_translated_text/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to store translated text in a content item or site area
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wcm_jms_enable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Java messaging services for web content
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../wcm_rest_v2_ai_analysis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    REST API for AI analyis of a content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../digital_assets/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Digital Asset Management
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../design_studio/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Design studio
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../pzn/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Personalization
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-multiple-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to use multiple parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text-search-rest-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text Search REST API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-only-items-that-have-a-workflow-with-rest-api-search-query-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting only items that have a workflow with REST API search query results
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-workflow-date-fields-and-link-to-the-rest-api-search-query-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Workflow date fields and link to the REST API search query results
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-item-path-information-to-the-rest-api-search-query-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding item path information to the REST API search query results
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-more-detailed-information-to-the-rest-api-search-query-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding more detailed information to the REST API search query results
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="query-parameters">Query parameters</h1>
+<p>The following parameters can be used with queries.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Details and examples of parameters that can be added to queries</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>namelikeignorecase</code></td>
+<td>This parameter is used as a wildcard query for items with names like the specified <em>namelike</em> parameter. It ignores the case of the string. For example: <br> <code>?namelikeignorecase=nameApproxValue% &lt;br/&gt;\</code><br><strong>Note:</strong> Libraries cannot be queried by using this parameter.</td>
+</tr>
+<tr>
+<td><code>titlelikeignorecase</code></td>
+<td>This parameter is used as a wildcard query for items with titles like the specified titlelike parameter. It ignores the case of the string. For example:<br> <code>?titlelikeignorecase=nameApproxValue%</code></td>
+</tr>
+<tr>
+<td><code>titleornamelike</code></td>
+<td>If this parameter is set instead of merging titlelike and namelike via an AND condition it will be merged via an OR condition.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Details and examples of parameters that can be added to queries</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>textcontains: Any of the words</code></td>
+<td>This API lets Content Authors search for free form text in the Web Content Manager JCR. <br><strong>Sample URL</strong>: <br> <code>http://host:port/wps/mycontenthandler/wcmrest/query?textcontains=...</code></td>
+</tr>
+<tr>
+<td><code>textcontainsexact: Exact phrase</code></td>
+<td>This API lets Content Authors search for an exact match of text in the Web Content Manager JCR. <br><strong>Sample URL</strong>: <br> <code>http://host:port/wps/mycontenthandler/wcmrest/query?textcontainsexact=...</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Details and examples of parameters that can be added to queries</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>approver</code></td>
+<td>This parameter is used to query items with a specific approver. A user ID must be specified when this parameter is used. For example: <br> <code>?approver=userid</code></td>
+</tr>
+<tr>
+<td><code>authoringtemplateid</code></td>
+<td>This parameter is used to query items with a specific authoring template ID. For example: <br> <code>?authoringtemplateid=wcmrest:18cfc80c-a490-4d75-9057-fed3db89de53</code></td>
+</tr>
+<tr>
+<td><code>author</code></td>
+<td>This parameter is used to query items with a specific author. A user UID must be specified when this parameter is used. For example: <br> <code>?author=uid=WCMUT_Editor_A,o=defaultWIMFileBasedRealm</code></td>
+</tr>
+<tr>
+<td><code>notauthor</code></td>
+<td>This parameter is used to query items without a specific author. A user UID must be specified when this parameter is used. For example: <br> <code>?notauthor=uid=WCMUT_Editor_A,o=defaultWIMFileBasedRealm</code></td>
+</tr>
+<tr>
+<td><code>categoryid</code></td>
+<td>This parameter is used to query items with a specific category ID. For example: <br> <code>?categoryid=wcmrest:18cfc80c-a490-4d75-9057-fed3db89de53</code></td>
+</tr>
+<tr>
+<td><code>createdafter</code></td>
+<td>This parameter is used to query items that are created after a specific date and time. For example: <br> <code>?createdafter=2011-01-11T11:43:29.0150Z</code></td>
+</tr>
+<tr>
+<td><code>createdbefore</code></td>
+<td>This parameter is used to query items that are created before a specific date and time. For example: <br> <code>?createdbefore=2011-01-11T11:43:29.0150Z</code></td>
+</tr>
+<tr>
+<td><code>creator</code></td>
+<td>This parameter is used to query items with a specific creator. A user UID must be specified when this parameter is used. For example: <br> <code>?creator=uid=WCMUT_Editor_A,o=defaultWIMFileBasedRealm</code></td>
+</tr>
+<tr>
+<td><code>dateformat</code></td>
+<td>This parameter is used to define the date format of query parameters. For example: <br> <code>?dateformat=mm-dd-yyyy&amp;createdbefore=12-31-2011</code><br> If a date format not specified, then the default format yyyy-MM-dd'T'HH:mm:ssz is used.</td>
+</tr>
+<tr>
+<td><code>depth</code></td>
+<td>This parameter is used with the <code>parentid</code> and is used to define whether to search for all descendants of a parent, or just the immediate children of a parent item. For example, to query only the immediate children of an item, you add <code>&amp;depth=CHILDREN</code> to the query: <code>?parentid=wcmrest:18cfc80c-a490-4d75-9057-fed3db89de53&amp;depth=CHILDREN&lt;br/&gt;\</code> <br/> To query all descendants of an item, you add <code>&amp;depth=DESCENDANTS</code> to the query: <code>?parentid=wcmrest:18cfc80c-a490-4d75-9057-fed3db89de53&amp;depth=DESCENDANTS</code></td>
+</tr>
+<tr>
+<td><code>expireafter</code></td>
+<td>This parameter is used to query items that are expired after a specific date and time. For example: <br> <code>?expireafter=2011-01-11T11:43:29.0150Z</code></td>
+</tr>
+<tr>
+<td><code>expirebefore</code></td>
+<td>This parameter is used to query items that were expired before a specific date and time. For example: <br> <code>?expirebefore=2011-01-11T11:43:29.0150Z</code></td>
+</tr>
+<tr>
+<td><code>filteraccess</code></td>
+<td>This parameter is used to filter access control roles using the WCM Query API. All other parameters like <code>parentid</code> or <code>type</code> still apply, so one can, for example, find all libraries the user has the Editor role on. Valid roles: <code>User</code>, <code>Editor</code>, <code>Admin, Manager</code>, <code>Contributor</code>. For example: <br> <code>?filteraccess=Contributor</code></td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>This parameter is used to query an item with a specific ID. For example: <br> <code>?id=wcmrest:18cfc80c-a490-4d75-9057-fed3db89de53&lt;br/&gt;\</code></td>
+</tr>
+<tr>
+<td><code>keyword</code></td>
+<td>This parameter is used to query items that are profiled with a specific keyword. For example: <br> <code>?keyword=keywordValue&lt;br/&gt;\</code></td>
+</tr>
+<tr>
+<td><code>lastmodifiedafter</code></td>
+<td>This parameter is used to query items that were last modified after a specific date and time. For example: <br> <code>?lastmodifiedafter=2011-01-11T11:43:29.0150Z&lt;br/&gt;\</code></td>
+</tr>
+<tr>
+<td><code>lastmodifiedbefore</code></td>
+<td>This parameter is used to query items that were last modified before a specific date and time. For example: <br> <code>?lastmodifiedbefore=2011-01-11T11:43:29.0150Z</code></td>
+</tr>
+<tr>
+<td><code>lastmodifier</code></td>
+<td>This parameter is used to query items that were last modified by a specific user. A user UID must be specified when this parameter is used. For example: <br> <code>?lastmodifier=uid=WCMUT_Editor_A,o=defaultWIMFileBasedRealm</code></td>
+</tr>
+<tr>
+<td><code>libraryid</code></td>
+<td>This parameter is used to query items that are stored in a specific library. For example: <br> <code>?libraryid=wcmrest:18cfc80c-a490-4d75-9057-fed3db89de53</code></td>
+</tr>
+<tr>
+<td><code>namelike</code></td>
+<td>This parameter is used as a wildcard query for items with names like the specified <em>namelike</em> parameter. For example: <br> <code>?namelike=nameApproxValue%</code> <br> <strong>Note:</strong> Libraries cannot be queried by using this parameter.</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>This parameter is used to query an item with a specific name. For example: <br> <code>?name=nameValue</code> <br> <strong>Note:</strong> Libraries cannot be queried by using this parameter.</td>
+</tr>
+<tr>
+<td><code>owner</code></td>
+<td>This parameter is used to query items with a specific owner. A user UID must be specified when this parameter is used. For example: <br> <code>?owner=uid=WCMUT_Editor_A,o=defaultWIMFileBasedRealm</code></td>
+</tr>
+<tr>
+<td><code>notowner</code></td>
+<td>This parameter is used to query items without a specific owner. A user UID must be specified when this parameter is used. For example: <br> <code>?notowner=uid=WCMUT_Editor_A,o=defaultWIMFileBasedRealm</code></td>
+</tr>
+<tr>
+<td><code>pagesize</code></td>
+<td>This parameter is used to restrict the number of items that are returned by a query to a set number. It can be used with the <code>page</code> parameter to return specific pages of results. For example, to restrict the number of queries to be returned to 5: <br> <code>?type=PresentationTemplate&amp;pagesize=5</code></td>
+</tr>
+<tr>
+<td><code>page</code></td>
+<td>This parameter is used with the <code>pagesize</code> parameter to define what set of results to display. For example, if <code>pagesize</code> is set to 5, and the <code>page</code> parameter is set to 2, then only results 6 - 10 are displayed. For example: <br> <code>?type=PresentationTemplate&amp;pagesize=5&amp;page=2</code></td>
+</tr>
+<tr>
+<td><code>parentid</code></td>
+<td>This parameter is used to query items that are the children of a specific parent item. For example: <br> <code>?parentid=wcmrest:18cfc80c-a490-4d75-9057-fed3db89de53</code>You can use the <code>depth</code> parameter to define whether to search for all descendants of a parent, or just the immediate children of a parent item.</td>
+</tr>
+<tr>
+<td><code>projectid</code></td>
+<td>This parameter is used to query items that are linked to a specific project. For example: <br> <code>?projectid=wcmrest:18cfc80c-a490-4d75-9057-fed3db89de53</code></td>
+</tr>
+<tr>
+<td><code>projectstate</code></td>
+<td>This parameter is used to query items that are linked to a project with a specific state. Refer to the following documentation for the different values you can use for the <code>projectstate</code> parameter: <a href="../../../../wcm_authoring/authoring_portlet/change_management/projects/wcm_dev_projects_approving/">Project States</a>The following values can be used with this parameter: <br>-   <code>ACTIVE</code> <br>-   <code>SYNDICATING</code><br>-   <code>REVIEW</code><br>-   <code>PENDING</code><br>-   <code>PUBLISHING</code><br>-   <code>PUBLISHED_FAILED</code><br>-   <code>PUBLISHED</code><br>For example, to query items that are linked to projects with a state of "ACTIVE" you would use the following query: <br> <code>?projectstate=ACTIVE</code></td>
+</tr>
+<tr>
+<td><code>publishafter</code></td>
+<td>This parameter is used to query items that are published after a specific date and time. For example: <br> <code>?publishafter=2011-01-11T11:43:29.0150Z</code></td>
+</tr>
+<tr>
+<td><code>publishbefore</code></td>
+<td>This parameter is used to query items that were published before a specific date and time. For example: <br> <code>?publishbefore=2011-01-11T11:43:29.0150Z</code></td>
+</tr>
+<tr>
+<td><code>sort</code></td>
+<td>The <code>sort</code> parameter is appended to queries to determine how query results are sorted. The following values can be used with the <code>sort</code> parameter.-   <code>author</code><br>-   <code>created</code><br>-   <code>modified</code><br>-   <code>name</code><br>-   <code>title</code><br>-   <code>parents</code><br>-   <code>position</code><br>The values <code>_ascending</code> or <code>_descending</code> are appended to the query to determine sort order.<br>For example, to sort a presentation template query in ascending order of creation, you would use: <br> <code>?type=PresentationTemplate&amp;sort=created_ascending</code> <br> To sort a presentation template query in descending order of creation, you would use: <br> <code>?type=PresentationTemplate&amp;sort=created_descending</code> <br> If <code>_ascending</code> or <code>_descending</code> are not specified, the results as displayed in ascending order.</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>This parameter is used to query items that are in a specific state. The following values can be used with this parameter: <br> -   <code>DRAFT</code> <br> -   <code>PUBLISHED</code> <br>-   <code>EXPIRED</code> <br>For example: <br> <code>?state=PUBLISHED</code></td>
+</tr>
+<tr>
+<td><code>titlelike</code></td>
+<td>This parameter is used as a wildcard query for items with titles like the specified <code>titlelike</code> parameter. For example: <br> <code>?titlelike=nameApproxValue%</code></td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td>This parameter is used to query an item with a specific title. For example: <br> <code>?title=titleValue</code></td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>This parameter is used to query items of a specific item type. For example, to query a list of components: <br> <code>?type=LibraryHTMLComponent</code></td>
+</tr>
+<tr>
+<td><code>workflowid</code></td>
+<td>This parameter is used to query items that use a specific workflow. For example: <br> <code>?workflowid=wcmrest:8d25860b-7a5c-4015-9cd5-bdcc60ce14bb</code></td>
+</tr>
+<tr>
+<td><code>workflowstageid</code></td>
+<td>This parameter is used to query items that are currently active within a specific workflow stage. For example: <br> <code>?workflowstageid=wcmrest:18cfc80c-a490-4d75-9057-fed3db89de53</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="how-to-use-multiple-parameters">How to use multiple parameters</h2>
+<ul>
+<li>
+<p>Multiple instances of the same parameter type in a query can be specified only as "OR" queries, with the following exceptions:</p>
+<ul>
+<li>
+<p><strong>Only one value allowed</strong></p>
+<p>Only one instance of the following parameters can be used in a single query. If multiple instances are used, only the first instance is used by the query:</p>
+<ul>
+<li><code>categoryid</code></li>
+<li><code>dateformat</code></li>
+<li><code>depth</code></li>
+<li><code>page</code></li>
+<li><code>pagesize</code><ul>
+<li><strong>"AND" queries allowed</strong></li>
+</ul>
+</li>
+</ul>
+<p>The following queries can be used as "AND" queries:</p>
+<ul>
+<li><code>createdafter</code></li>
+<li><code>createdbefore</code></li>
+<li><code>expireafter</code></li>
+<li><code>expirebefore</code></li>
+<li><code>lastmodifiedafter</code></li>
+<li><code>lastmodifiedbefore</code></li>
+<li><code>publishafter</code></li>
+<li><code>publishbefore</code></li>
+<li><code>author</code></li>
+<li><code>owner</code></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>author</code> and <code>owner</code> queries can be used as "OR" queries if the request URL parameter <code>option=search-any</code> is used. For example, if a query specifies:</p>
+<div class="language-text highlight"><pre><span></span><code>?author=user1&amp;author=user2&amp;option=search-any
+</code></pre></div>
+<p>then all items that have user1 or user2 as their author are returned in the results. If the option parameter is not used, then only items that have both user1 and user2 as the author are returned.</p>
+</div>
+</li>
+<li>
+<p><strong>Sort values</strong></p>
+<p>Sort values are comma-separated. For example:</p>
+<div class="language-text highlight"><pre><span></span><code>?sort=created_ascending,title_descending
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="text-search-rest-api">Text Search REST API</h2>
+<p>This API lets Content Authors search for free form text in the Web Content Manager JCR. It is equivalent to the functionality in the Web Content Manager user interface:</p>
+<p><img alt="" src="../../../../../images/web_content_mgr_jcr_ref_ui.png" title="Advanced Search in WCM" /></p>
+<p>Using the Text Search REST API</p>
+<p>The existing search query API is extended and two new parameters are added. See <a href="../">REST Query service for web content</a> and Table 2 for more information.</p>
+<ul>
+<li>
+<p><strong>Endpoint</strong></p>
+<p><strong>GET request to:</strong></p>
+<div class="language-text highlight"><pre><span></span><code>http://host:port/wps/mycontenthandler/wcmrest/query?textcontainsexact=...
+</code></pre></div>
+<p>or</p>
+<div class="language-text highlight"><pre><span></span><code>http://host:port/wps/mycontenthandler/wcmrest/query?textcontains=...
+</code></pre></div>
+<p><strong>Sample URL:</strong></p>
+<div class="language-text highlight"><pre><span></span><code>http://samplehost.team-q-dev.com:10039/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/query?textcontainsexact=Sample%20Article
+</code></pre></div>
+</li>
+<li>
+<p><strong>Expected Body</strong></p>
+<p>Body can just have the basic WCM structure:</p>
+<div class="language-text highlight"><pre><span></span><code>http://samplehost.team-q-dev.com:10039/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/query?textcontainsexact=Sample%20Article
+</code></pre></div>
+</li>
+<li>
+<p><strong>Expected Headers</strong></p>
+<p>LTPA token of the user. Also works anonymously.</p>
+</li>
+<li>
+<p><strong>Query Parameters</strong></p>
+<div class="language-text highlight"><pre><span></span><code>textcontains: Any of the words
+</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>textcontainsexact: Exact phrase
+</code></pre></div>
+</li>
+<li>
+<p><strong>Return body</strong></p>
+<p>The found results. Same as when calling existing query API.</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;feed xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
+    &lt;id&gt;wcmrest:query?textcontainsexact=Sample%20Article&lt;/id&gt;
+    &lt;title&gt;wcmrest:query?textcontainsexact=Sample%20Article&lt;/title&gt;
+    &lt;updated&gt;2020-04-14T12:36:14.477Z&lt;/updated&gt;
+    &lt;total&gt;2&lt;/total&gt;
+    &lt;entry&gt;
+        &lt;id&gt;wcmrest:5bfbd4e2-f203-4912-87c2-4edd3e6fc4de&lt;/id&gt;
+        &lt;title xml:lang=&quot;en&quot;&gt;Sample Article 2&lt;/title&gt;
+        &lt;wcm:displayTitle xml:lang=&quot;en&quot;&gt;Sample Article 2&lt;/wcm:displayTitle&gt;
+        &lt;summary xml:lang=&quot;en&quot;&gt;&lt;/summary&gt;
+        &lt;wcm:name&gt;Sample Article 2&lt;/wcm:name&gt;
+        &lt;wcm:type&gt;Content&lt;/wcm:type&gt;
+        &lt;updated&gt;2020-04-14T12:30:05.676Z&lt;/updated&gt;
+        &lt;wcm:lastModifier&gt;
+            &lt;wcm:distinguishedName&gt;uid=wpsadmin,o=defaultWIMFileBasedRealm&lt;/wcm:distinguishedName&gt;
+            &lt;uri&gt;/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/um/users/profiles/Z9eAeIHO0JPO64BPIJM4CPHDAMMG65JO6MM07GHO0JMOCHHC43IH6OPC63RS6M1&lt;/uri&gt;
+            &lt;name&gt;wpsadmin&lt;/name&gt;
+        &lt;/wcm:lastModifier&gt;
+        &lt;link rel=&quot;edit&quot; href=&quot;/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/Content/5bfbd4e2-f203-4912-87c2-4edd3e6fc4de&quot; xml:lang=&quot;en&quot; label=&quot;Edit&quot;/&gt;
+        &lt;link rel=&quot;alternate&quot; href=&quot;/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/Content/5bfbd4e2-f203-4912-87c2-4edd3e6fc4de&quot; xml:lang=&quot;en&quot; label=&quot;Read&quot;/&gt;
+        &lt;link rel=&quot;library&quot; href=&quot;/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/Library/f2a3c1ee-591d-4fe1-85d5-7d27662154a5&quot; xml:lang=&quot;en&quot; label=&quot;Library&quot;/&gt;
+        &lt;link rel=&quot;preview&quot; href=&quot;/wps/poc/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcm/oid:5bfbd4e2-f203-4912-87c2-4edd3e6fc4de&quot; xml:lang=&quot;en&quot; label=&quot;Preview&quot;/&gt;
+        &lt;category scheme=&quot;wcmrest:workflowState&quot; term=&quot;PUBLISHED&quot; label=&quot;Published&quot; xml:lang=&quot;en&quot;/&gt;
+    &lt;/entry&gt;
+    &lt;entry&gt;
+        &lt;id&gt;wcmrest:2209b125-a9b3-4f2a-811f-4a297017dc9e&lt;/id&gt;
+        &lt;title xml:lang=&quot;en&quot;&gt;Sample Article&lt;/title&gt;
+        &lt;wcm:displayTitle xml:lang=&quot;en&quot;&gt;Sample Article&lt;/wcm:displayTitle&gt;
+        &lt;summary xml:lang=&quot;en&quot;&gt;&lt;/summary&gt;
+        &lt;wcm:name&gt;Sample Article&lt;/wcm:name&gt;
+        &lt;wcm:type&gt;Content&lt;/wcm:type&gt;
+        &lt;updated&gt;2020-04-14T11:44:10.229Z&lt;/updated&gt;
+        &lt;wcm:lastModifier&gt;
+            &lt;wcm:distinguishedName&gt;uid=wpsadmin,o=defaultWIMFileBasedRealm&lt;/wcm:distinguishedName&gt;
+            &lt;uri&gt;/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/um/users/profiles/Z9eAeIHO0JPO64BPIJM4CPHDAMMG65JO6MM07GHO0JMOCHHC43IH6OPC63RS6M1&lt;/uri&gt;
+            &lt;name&gt;wpsadmin&lt;/name&gt;
+        &lt;/wcm:lastModifier&gt;
+        &lt;link rel=&quot;edit&quot; href=&quot;/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/Content/2209b125-a9b3-4f2a-811f-4a297017dc9e&quot; xml:lang=&quot;en&quot; label=&quot;Edit&quot;/&gt;
+        &lt;link rel=&quot;alternate&quot; href=&quot;/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/Content/2209b125-a9b3-4f2a-811f-4a297017dc9e&quot; xml:lang=&quot;en&quot; label=&quot;Read&quot;/&gt;
+        &lt;link rel=&quot;library&quot; href=&quot;/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/Library/f2a3c1ee-591d-4fe1-85d5-7d27662154a5&quot; xml:lang=&quot;en&quot; label=&quot;Library&quot;/&gt;
+        &lt;link rel=&quot;preview&quot; href=&quot;/wps/poc/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcm/oid:2209b125-a9b3-4f2a-811f-4a297017dc9e&quot; xml:lang=&quot;en&quot; label=&quot;Preview&quot;/&gt;
+        &lt;category scheme=&quot;wcmrest:workflowState&quot; term=&quot;PUBLISHED&quot; label=&quot;Published&quot; xml:lang=&quot;en&quot;/&gt;
+    &lt;/entry&gt;
+&lt;/feed&gt;
+</code></pre></div>
+</li>
+</ul>
+<h2 id="getting-only-items-that-have-a-workflow-with-rest-api-search-query-results">Getting only items that have a workflow with REST API search query results</h2>
+<p>You can filter the search results to only include items that have a workflow by specifying the <code>options=has-workflow</code> URL parameter.</p>
+<h2 id="adding-workflow-date-fields-and-link-to-the-rest-api-search-query-results">Adding Workflow date fields and link to the REST API search query results</h2>
+<p>You can include the date fields associated with the workflow of a requested item by specifying the <code>options=workflow</code> URL parameter. Only the date fields that have been set to a valid value are returned. A link is also added to the workflow. This option is ignored for items that do not have a workflow. For example:</p>
+<div class="language-text highlight"><pre><span></span><code>```
+
+HTTP 1.1 GET /wps/mycontenthandler/wcmrest/query?name=SiteAreaName&amp;options=workflow
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm&quot;&gt;
+    ...
+    &lt;wcm:workflow&gt;
+        &lt;wcm:publishDate&gt;2023-05-22T14:05:03.000Z&lt;/wcm:publishDate&gt;
+        &lt;wcm:expiryDate&gt;2088-06-09T00:00:00.000Z&lt;/wcm:expiryDate&gt;
+        &lt;wcm:generalDateOne&gt;1776-07-04T04:00:00.000Z&lt;/wcm:generalDateOne&gt;
+        &lt;wcm:generalDateTwo&gt;2023-05-31T17:00:00.000Z&lt;/wcm:generalDateTwo&gt;
+    &lt;/wcm:workflow&gt;
+    …
+    &lt;link rel=&quot;workflow&quot; href=&quot;/wps/mycontenthandler/!ut/p/digest!eTdEthwoNryfHPt1e_NrWQ/wcmrest/Workflow/8e97997c-af7a-4aba-88c2-128f0f57c4f8&quot; xml:lang=&quot;en&quot; label=&quot;Workflow&quot;/&gt;
+    …
+&lt;/entry&gt;
+
+```
+</code></pre></div>
+<h2 id="adding-item-path-information-to-the-rest-api-search-query-results">Adding item path information to the REST API search query results</h2>
+<p>The parent path of a requested item can be included by specifying the <code>options=item-path</code> URL parameter. For example:</p>
+<div class="language-text highlight"><pre><span></span><code>HTTP 1.1 GET /wps/mycontenthandler/wcmrest/query?type=SiteArea&amp;options=item-path
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm&quot;&gt;
+    ...
+    &lt;wcm:path&gt;
+        &lt;wcm:pathElement&gt;
+            &lt;wcm:title xml:lang=&quot;en&quot;&gt;TestLibrary986182&lt;/wcm:title&gt;
+            &lt;wcm:name&gt;testlibrary986182&lt;/wcm:name&gt;
+            &lt;wcm:link rel=&quot;alternate&quot; href=&quot;/wps/mycontenthandler/!ut/p/digest!wT3bMC74Icsxn9xtTg_Fkw/wcmrest/Library/7cd8c331-59b7-4b3a-bfe9-9a57c44f67eb?locale=en&amp;amp;locale=ltr&quot; xml:lang=&quot;en&quot; label=&quot;Read&quot;/&gt;
+        &lt;/wcm:pathElement&gt;
+    &lt;/wcm:path&gt;
+…
+&lt;/entry&gt;
+</code></pre></div>
+<p>The <code>options=item-path</code> URL parameter omits the parent preset folder that can be seen in the navigation breadcrumb trail of WCM Authoring when inspecting an item in a library. In the above example of a SiteArea, the Content folder is omitted and only the parent Library information is returned. To include the parent preset folder, use <code>options=item-path-full</code> as the URL parameter instead. For example:</p>
+<div class="language-text highlight"><pre><span></span><code>HTTP 1.1 GET /wps/mycontenthandler/wcmrest/query?type=SiteArea&amp;options=item-path-full
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm&quot;&gt;
+    ...
+    &lt;wcm:path&gt;
+        &lt;wcm:pathElement&gt;
+            &lt;wcm:title xml:lang=&quot;en&quot;&gt;TestLibrary986182&lt;/wcm:title&gt;
+            &lt;wcm:name&gt;testlibrary986182&lt;/wcm:name&gt;
+            &lt;wcm:link rel=&quot;alternate&quot; href=&quot;/wps/mycontenthandler/!ut/p/digest!wT3bMC74Icsxn9xtTg_Fkw/wcmrest/Library/7cd8c331-59b7-4b3a-bfe9-9a57c44f67eb?locale=en&amp;amp;locale=ltr&quot; xml:lang=&quot;en&quot; label=&quot;Read&quot;/&gt;
+        &lt;/wcm:pathElement&gt;
+        &lt;wcm:pathElement&gt;
+            &lt;wcm:title xml:lang=&quot;en&quot;&gt;Content&lt;/wcm:title&gt;
+            &lt;wcm:name&gt;Content&lt;/wcm:name&gt;
+            &lt;wcm:link rel=&quot;alternate&quot; href=&quot;/wps/mycontenthandler/!ut/p/digest!wT3bMC74Icsxn9xtTg_Fkw/wcmrest/Folder/aec6c2b4-59be-4486-a8f6-77ad483f8ae9?locale=en&amp;amp;locale=ltr&quot; xml:lang=&quot;en&quot; label=&quot;Read&quot;/&gt;
+        &lt;/wcm:pathElement&gt;
+    &lt;/wcm:path&gt;
+…
+&lt;/entry&gt;
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>options=item-path-full</code> only works with the query API.</p>
+</div>
+<h2 id="adding-more-detailed-information-to-the-rest-api-search-query-results">Adding more detailed information to the REST API search query results</h2>
+<p>Several other fields of a requested item can be included by specifying the <code>options=details</code> URL parameter. These include: </p>
+<div class="language-text highlight"><pre><span></span><code>- the user who created the item
+- the creation date
+- if the item is a favorite
+- if the item is locked
+- an access control link that gets added to the links section
+</code></pre></div>
+<p>For example:</p>
+<div class="language-text highlight"><pre><span></span><code>HTTP 1.1 GET /wps/mycontenthandler/wcmrest/query?type=SiteArea&amp;options=details
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm&quot;&gt;
+    ...
+    &lt;wcm:created&gt;2023-07-11T18:11:24.122Z&lt;/wcm:created&gt;
+    &lt;wcm:creator&gt;
+        &lt;wcm:distinguishedName&gt;uid=wpsadmin,o=defaultWIMFileBasedRealm&lt;/wcm:distinguishedName&gt;
+        &lt;uri&gt;/wps/mycontenthandler/!ut/p/digest!kYNqh-e3k_yWjknyeEtGBA/um/users/profiles/Z9eAeNHD4JSK6KHOGJM8CGPO6MMG62JP0JM4CMHP2MMS6JPC63JT663CGJRG623&lt;/uri&gt;
+        &lt;name&gt;wpsadmin&lt;/name&gt;
+        &lt;type&gt;USER&lt;/type&gt;
+    &lt;/wcm:creator&gt;…
+    &lt;link rel=&quot;access-control&quot; href=&quot;/wps/mycontenthandler/!ut/p/digest!kYNqh-e3k_yWjknyeEtGBA/ac/access:oid:Z6QReDe33CEJH96M9C2MMOC4RD6MMG64BPIJM8CM1E6MMCCGHC2JS47K9D0JQG6I1&quot; xml:lang=&quot;en&quot; label=&quot;Access Control&quot;/&gt;
+    &lt;category scheme=&quot;wcmrest:favorite&quot; term=&quot;false&quot; xml:lang=&quot;en&quot;/&gt;
+    &lt;category scheme=&quot;wcmrest:locked&quot; term=&quot;false&quot; label=&quot;&quot;/&gt;
+&lt;/entry&gt;
+</code></pre></div>
+<p>To also include the list of owners of an item along with all the other details listed above, use <code>options=details-full</code> as the URL parameter instead. For example:</p>
+<div class="language-text highlight"><pre><span></span><code>HTTP 1.1 GET /wps/mycontenthandler/wcmrest/query?type=SiteArea&amp;options=details-full
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm&quot;&gt;
+    ...
+    &lt;wcm:owner&gt;
+        &lt;wcm:distinguishedName&gt;uid=wpsadmin,o=defaultWIMFileBasedRealm&lt;/wcm:distinguishedName&gt;
+        &lt;uri&gt;/wps/mycontenthandler/!ut/p/digest!kYNqh-e3k_yWjknyeEtGBA/um/users/profiles/Z9eAeNHD4JSK6KHOGJM8CGPO6MMG62JP0JM4CMHP2MMS6JPC63JT663CGJRG623&lt;/uri&gt;
+        &lt;name&gt;wpsadmin&lt;/name&gt;
+        &lt;type&gt;USER&lt;/type&gt;
+    &lt;/wcm:owner&gt;
+    &lt;wcm:created&gt;2023-07-11T18:11:24.122Z&lt;/wcm:created&gt;
+    &lt;wcm:creator&gt;
+        &lt;wcm:distinguishedName&gt;uid=wpsadmin,o=defaultWIMFileBasedRealm&lt;/wcm:distinguishedName&gt;
+        &lt;uri&gt;/wps/mycontenthandler/!ut/p/digest!kYNqh-e3k_yWjknyeEtGBA/um/users/profiles/Z9eAeNHD4JSK6KHOGJM8CGPO6MMG62JP0JM4CMHP2MMS6JPC63JT663CGJRG623&lt;/uri&gt;
+        &lt;name&gt;wpsadmin&lt;/name&gt;
+        &lt;type&gt;USER&lt;/type&gt;
+    &lt;/wcm:creator&gt;…
+    &lt;link rel=&quot;access-control&quot; href=&quot;/wps/mycontenthandler/!ut/p/digest!kYNqh-e3k_yWjknyeEtGBA/ac/access:oid:Z6QReDe33CEJH96M9C2MMOC4RD6MMG64BPIJM8CM1E6MMCCGHC2JS47K9D0JQG6I1&quot; xml:lang=&quot;en&quot; label=&quot;Access Control&quot;/&gt;
+    &lt;category scheme=&quot;wcmrest:favorite&quot; term=&quot;false&quot; xml:lang=&quot;en&quot;/&gt;
+    &lt;category scheme=&quot;wcmrest:locked&quot; term=&quot;false&quot; label=&quot;&quot;/&gt;
+…
+&lt;/entry&gt;
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>options=details-full</code> only works with the query API.</p>
+</div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 18, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

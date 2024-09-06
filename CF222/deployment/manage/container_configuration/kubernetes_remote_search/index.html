@@ -1,0 +1,4193 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/deployment/manage/container_configuration/kubernetes_remote_search/">
+      
+      
+        <link rel="prev" href="../core_interactions_kubernetes/">
+      
+      
+        <link rel="next" href="../run_core_config_engine/">
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Configure Remote Search - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configure-remote-search" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../latest/deployment/manage/container_configuration/kubernetes_remote_search/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configure Remote Search
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../whatsnew/cf20/newcf222/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../build_sites/" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../whatsnew/cf20/newcf222/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Deploy DX
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../install/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Install
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Manage
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Manage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Configure Kubernetes Deployment
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3_2" id="__nav_4_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Configure Kubernetes Deployment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core_interactions_kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Core Behavior
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Configure Remote Search
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Configure Remote Search
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automated-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automated configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Automated configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-requisites-and-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-requisites and limitations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apply-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apply configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-startup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 1: Startup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-core-pod-stand-by-remote-search-waiting-for-core-pod" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 2: Core Pod Stand-By, Remote Search waiting for Core Pod
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-remote-search-finished-core-pod-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 3: Remote Search finished, Core Pod configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-4-configuration-completed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 4: Configuration completed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjusting-timeouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adjusting timeouts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overriding-pre-flight-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overriding pre-flight checks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#re-run-automated-configuration-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Re-run automated configuration steps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manual-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manual configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-requisites-and-limitations_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-requisites and limitations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-core-pod" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure the Core Pod
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-remote-search-pod" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure the Remote Search Pod
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restart-both-core-and-remote-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restart both Core and Remote Search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-services-and-collections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Services and Collections
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Search Services and Collections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-search-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Search Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-search-collections" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Search Collections
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="New Search Collections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#portal-search-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Portal Search Collection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Portal Search Collection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#portal-content-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Portal Content Source
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wcm-content-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      WCM Content Source
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jcr-search-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      JCR Search Collection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JCR Search Collection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jcr-content-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      JCR Content Source
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run_core_config_engine/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running DX Core configuration tasks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../container_scaling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scaling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../container_staging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Container Staging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy_container_artifact_updates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying HCL DX 9.5 Container artifact updates with minimal operations downtime
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy_custom_code_in_openShift/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying Custom Code in OpenShift
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../troubleshooting/helm_troubleshooting/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../monitoring/basic_monitor_helm_deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Monitoring
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../volume_resizing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Increase storage of a PersistentVolumeClaim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../configure_opensearch/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Configuring OpenSearch
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stopstart/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Starting and stopping servers, deployment managers, and node agents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../itlm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring the IBM License Metric Tool
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config_standalone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring a stand-alone server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../config_cluster/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Setting up a cluster
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../portalfarm_cfg/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Setting up and maintaining a portal farm
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../security/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../tune_servers/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Tune your environment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../port_chg/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changing ports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../siteurl_cfg/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Changing your site URL
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../config_portal_behavior/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Configuring portal behavior
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../portal_admin_tools/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Portal administration tools
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../manage_portal_using_iim/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Managing Interim Fixes for HCL Portal
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../config_webservers/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Web server
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../db_mgmt_sys/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Database Management Systems
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../profile/iim_modify/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Profile
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../cfg_property_files/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Configuration properties
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../backup_restore/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Backup and restore
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../change_dev_mode_env/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Changing to a developer mode environment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../staging_to_production/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Staging to production
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../migrate/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Migrating
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../multiple_profiles/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Supporting multiple profiles
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../remote_spell_checker/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Setting up a remote spell checker
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../upsell/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Upgrading your existing product offering
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../monitoring/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Monitoring
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../troubleshooting/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../build_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automated-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automated configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Automated configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-requisites-and-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-requisites and limitations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apply-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apply configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-startup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 1: Startup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-core-pod-stand-by-remote-search-waiting-for-core-pod" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 2: Core Pod Stand-By, Remote Search waiting for Core Pod
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-remote-search-finished-core-pod-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 3: Remote Search finished, Core Pod configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-4-configuration-completed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 4: Configuration completed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjusting-timeouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adjusting timeouts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overriding-pre-flight-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overriding pre-flight checks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#re-run-automated-configuration-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Re-run automated configuration steps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manual-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manual configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-requisites-and-limitations_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-requisites and limitations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-core-pod" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure the Core Pod
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-remote-search-pod" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure the Remote Search Pod
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restart-both-core-and-remote-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restart both Core and Remote Search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-services-and-collections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Services and Collections
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Search Services and Collections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-search-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Search Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-search-collections" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Search Collections
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="New Search Collections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#portal-search-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Portal Search Collection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Portal Search Collection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#portal-content-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Portal Content Source
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wcm-content-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      WCM Content Source
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jcr-search-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      JCR Search Collection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JCR Search Collection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jcr-content-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      JCR Content Source
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="configure-remote-search">Configure Remote Search</h1>
+<p>This section shows how to configure Remote Search for your HCL Digital Experience 9.5 environments. This guidance is for containerized deployments running on Kubernetes. If you are looking for guidance on configuration of Remote Search for non-containerized deployments, please see <a href="../../../../build_sites/search/remotesearch/">Remote search service</a></p>
+<h2 id="introduction">Introduction</h2>
+<p>For using the HCL Digital Experience Search with multiple Pods of Core running, it is required to have Remote Search configured. Remote Search itself is provided as a singleton Pod that will provide all required functionality.</p>
+<p>Both Core and Remote Search need to be configured in a certain way to allow a functional Remote Search setup.<br />
+From release CF211 onwards, you can either use the automated configuration controlled via the Helm Chart deployment values or use the classic setup method using manual steps.</p>
+<p>The configuration is a one-off process. Once you have Remote Search configured, the settings that were changed are persisted in the corresponding Pods Persistent Volumes and will persist after future updates to newer CF releases of HCL Digital Experience.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you have configured search collections already and want them and their index backed up, see the topic <a href="../../../../build_sites/search/portal_search/administer_portal_search/setup_search_collections/srtexpimp/">Exporting and importing search collections</a> for further information.  </p>
+<p>The process of configuring Remote Search will include deleting the default Search Service and its corresponding Search collections.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you change your administrative user password, you have to adjust the security configuration of your Search Collection Sources, otherwise they cannot be crawled. Refer to <a href="../../security/people/authentication/updating_userid_pwd/wpsadmin">Changing the HCL Digital Experience administrator password</a> for more information.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you see that the Remote Search Service in the DX Search Administration is unavailable after a DX Remote Search Pod restart, it may be required to restart DX Core as well. You can use the following command to perform a ripple restart of all DX Core Pods:</p>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Perform the restart of DX Core</span>
+<span class="c1"># adjust the deployment prefix &quot;dx-&quot; and the namespace &quot;dxns&quot; to match your environment</span>
+kubectl<span class="w"> </span>rollout<span class="w"> </span>restart<span class="w"> </span>statefulset<span class="w"> </span>dx-core<span class="w"> </span>-n<span class="w"> </span>dxns
+</code></pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This guide uses <code>kubectl</code> for all commands that are related to Kubernetes. If you are Running on OpenShift, you can replace the <code>kubectl</code> command with <code>oc</code>.</p>
+</div>
+<h2 id="automated-configuration">Automated configuration</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This feature is only available for HCL Digital Experience 9.5 CF211 and newer versions. If you are running on a previous version and want to configure Remote Search, please see the <a href="#manual-configuration">Manual configuration</a> steps.</p>
+</div>
+<h3 id="pre-requisites-and-limitations">Pre-requisites and limitations</h3>
+<p>Before you can leverage the automated configuration, you need to be aware on certain requirements and limitations that the automated configuration has:</p>
+<ul>
+<li>This configuration will only work in containerized deployments running on Kubernetes.</li>
+<li>The configuration of DX Core will not continue automatically if you have configured JCR Text Search or the suppression of automated default search collection creation. </li>
+<li>Both DX Core and DX Remote Search have their credentials configured correctly inside your <code>custom-values.yaml</code> used for the Helm deployment.</li>
+<li>There is currently no ConfigEngine task or similar being performed on either DX Core or DX Remote Search Pods</li>
+</ul>
+<h3 id="configuration-properties">Configuration properties</h3>
+<p>To leverage the automated configuration, you will need to adjust the <code>custom-values.yaml</code> that you are using for your Helm deployment. (See <a href="../../../install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration/#custom-value-files">Custom value files</a>).</p>
+<p>Inside your <code>custom-values.yaml</code> you can configure the following section to leverage Remote Search automated configuration:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Configuration section of hcl-dx-deployment</span>
+<span class="nt">configuration</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Remote Search specific configuration parameters</span>
+<span class="w">  </span><span class="nt">remoteSearch</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># If set to true, Remote Search will be configured automatically</span>
+<span class="w">    </span><span class="nt">autoConfigure</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="c1"># Define Maximum time (in seconds) that DX Core will wait for the Remote Search Pod to run its configuration tasks</span>
+<span class="w">    </span><span class="nt">coreWaitTime</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5400</span>
+<span class="w">    </span><span class="c1"># Define Maximum time (in seconds) that DX Remote Search will wait for the Core Pod to run its configuration tasks</span>
+<span class="w">    </span><span class="nt">remoteSearchWaitTime</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5400</span>
+<span class="w">    </span><span class="c1"># Define the maximum amount of retries that DX Remote Search will attempt to run its configuration task</span>
+<span class="w">    </span><span class="nt">remoteSearchConfigTries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+</code></pre></div>
+<p>The following parameters are available for adjustments:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Possible values</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>autoConfigure</code></td>
+<td><code>true</code> or <code>false</code>(default)</td>
+<td>This will enable or disable the automated configuration. After this value is set and the new <code>custom-values.yaml</code> is applied, the Pod restart of Core and Remote Search will handle the automated configuration.</td>
+</tr>
+<tr>
+<td><code>coreWaitTime</code></td>
+<td>Number, seconds (<code>5400</code> is default)</td>
+<td>Since Core and Remote Search are depending on each other for this configuration process, Core will have to wait for Remote Search to finish its configuration. Based on the performance of the environment that HCL Digital Experience is deployed on, this configuration process time will vary.</td>
+</tr>
+<tr>
+<td><code>remoteSearchWaitTime</code></td>
+<td>Number, seconds (<code>5400</code> is default)</td>
+<td>Since Core and Remote Search are depending on each other for this configuration process, Remote Search will have to wait for Core to finish its configuration and start its JVM in the background (See <a href="#configuration-flow">Configuration flow</a>).</td>
+</tr>
+<tr>
+<td><code>remoteSearchConfigTries</code></td>
+<td>Number (<code>10</code> is default)</td>
+<td>Remote Search will attempt a retry of its configuration tasks if the Core Pod is not reachable during the configuration process. This parameter limits the amount of retries until Remote Search will continue with a regular startup without a successful configuration.</td>
+</tr>
+</tbody>
+</table>
+<p>It is recommended to have generous wait time values, as not waiting long enough by either of the applications may cause the configuration to fail.  </p>
+<p>The given values should suffice for general deployments, but if you are applying those changes directly during an update from one CF to a newer one, it is good to increase those values based on already experienced startup times in your deployment.</p>
+<p>If the configuration process fails due to too low wait time values check the <a href="#troubleshooting">Troubleshooting</a> section that contains steps to re-trigger the configuration process.</p>
+<h3 id="apply-configuration">Apply configuration</h3>
+<p>After you have adjusted your <code>custom-values.yaml</code> with the settings mentioned in the previous sections, you can use <code>helm upgrade</code> with the reference to your <code>custom-values.yaml</code> if you have an existing deployment you want to configure. If you are deploying fresh, you can use <code>helm install</code> for the initial setup of DX.</p>
+<p>This will apply the new configuration and the (re-)start of both the Remote Search and Core Pods will perform the steps necessary to their respective configuration.</p>
+<h3 id="configuration-flow">Configuration flow</h3>
+<p>This section explains the flow that occurs when the automated configuration is performed. This section does not contain any steps that are required to be executed by you and just serves as information material.</p>
+<h4 id="phase-1-startup">Phase 1: Startup</h4>
+<p>After the automated configuration has been enabled via the Helm values, both DX Core and DX Remote Search Statefulsets will be updated / created.</p>
+<p>In case of an existing deployment that is re-configured, both the DX Core and DX Remote Search Pods will get restarted.<br />
+After the Pod start, both will run their usual startup routine and then enter a specific Remote Search configuration logic.
+All log messages relevant to those actions will be prefixed with <code>[RS Autoconfig]</code>.</p>
+<h4 id="phase-2-core-pod-stand-by-remote-search-waiting-for-core-pod">Phase 2: Core Pod Stand-By, Remote Search waiting for Core Pod</h4>
+<p>To perform the automated configuration of Remote Search, the DX Core Pod will go into a stand-by mode.<br />
+In this mode, it will start up the DX Core JVM, but will not set the Pod to ready. This ensures that no active traffic is routed to this Core Pod during the configuration steps (incl. JVM restarts).
+The DX Core Pod will remain in that mode until the DX Remote Search Pod becomes ready or the wait time expires (defined by <code>coreWaitTime</code> in the <a href="#configuration-properties">Configuration properties</a> section).</p>
+<p>The DX Remote Search Pod will wait for a DX Core Pod with a running background JVM and detect a suitable candidate.</p>
+<p>Once the DX Remote Search Pod found a viable DX Core Pod, it will continue with the configuration tasks that are required. This includes:</p>
+<ul>
+<li>Remotely retrieving the LTPA Token from the DX Core Pod for SSO</li>
+<li>Remotely retrieving the DX Core Pods SSL Certificate for trusted communication</li>
+<li>Setting up the serverindex file</li>
+<li>Importing the DX Core LTPA Token into the DX Remote Search WAS</li>
+</ul>
+<p>If during that configuration step any issue occurs, this is likely due to DX Core being restarted or the designated DX Core Pod not being available anymore.<br />
+In that case, DX Remote Search will retry the configuration, starting with the search for a viable DX Core Pod again.  </p>
+<p>The retry count is limited by the <code>remoteSearchConfigTries</code> property described in the <a href="#configuration-properties">Configuration properties</a> section.</p>
+<p>After finishing all configuration tasks, DX Remote Search will re-enter its regular startup routine and become ready.</p>
+<h4 id="phase-3-remote-search-finished-core-pod-configuration">Phase 3: Remote Search finished, Core Pod configuration</h4>
+<p>Once the DX Remote Search Pod becomes ready, DX Core will notice that and continue with its Remote Search configuration steps. If DX Remote Search does not get ready in time (defined by <code>coreWaitTime</code> in the <a href="#configuration-properties">Configuration properties</a> section), the regular startup will continue.</p>
+<p>Before running the configuration, the configuration logic will check if:</p>
+<ul>
+<li>The JCR Text Search configuration</li>
+<li>The suppression of automated default search collection creation</li>
+</ul>
+<p>are enabled. This could be a sign of Remote Search being already configured.</p>
+<p>If those settings are set, the configuration will not continue. To override this manually, see the <a href="#troubleshooting">Troubleshooting</a> section.</p>
+<p>The configuration steps in DX Core include:</p>
+<ul>
+<li>Remotely retrieving the DX Remote Search SSL Certificate for trusted communication</li>
+<li>Enabling suppression of automated default search collection creation</li>
+<li>Configuration for JCR Text Search</li>
+<li>Deletion of the Default Search Service</li>
+<li>Creation of a Remote Search Service</li>
+<li>Creation of Search Collections (Portal and JCRCollection1) incl. their providers</li>
+</ul>
+<p>After these configuration steps are performed, the DX Core Pod will continue with its regular startup routine.</p>
+<h4 id="phase-4-configuration-completed">Phase 4: Configuration completed</h4>
+<p>After all configuration steps have been performed, the new Search Service with the new Search Collections are configured. You can see them in the Search Administration.  </p>
+<p>Next Pod restarts will automatically recognize that the automated configuration has already been performed and will not run any additional steps.</p>
+<h3 id="troubleshooting">Troubleshooting</h3>
+<p>All steps performed via the automated configuration are safe to be run multiple times. This means re-running the configuration after a failed attempt is generally considered safe.</p>
+<h4 id="logs">Logs</h4>
+<p>If you want to see what went wrong during the configuration, look in the logs of both the DX Core Pod and the DX Remote Search Pod for messages prefixed with <code>[RS Autoconfig]</code>. The startup routines perform verbose logging that clearly states which steps have been performed. There is no additional log setting required to enable the log messages from the automated configuration.</p>
+<h4 id="adjusting-timeouts">Adjusting timeouts</h4>
+<p>It may be that in your environment, the startup of DX Core or DX Remote Search take longer than 90 minutes. If that is the case, adjust the timeout wait times in the <a href="#configuration-properties">Configuration properties</a> section.</p>
+<p>After adjusting these properties, you can re-run the automated configuration.</p>
+<h4 id="overriding-pre-flight-checks">Overriding pre-flight checks</h4>
+<p>If case you have at some point configured either the suppression of automated default search collection creation or the JCR Text Search, but not configured Remote Search yet, you can override the pre-flight checks that would cause the configuration to not continue in that case.</p>
+<p>To do so, connect into the DX Core Pod and create a file. See the following example:</p>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Connect into your DX Core Pod</span>
+<span class="c1"># adjust the deployment prefix &quot;dx-&quot; and the namespace &quot;dxns&quot; to match your environment</span>
+kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>dx-core-0<span class="w"> </span>-c<span class="w"> </span>core<span class="w"> </span>--<span class="w"> </span>/bin/bash
+<span class="c1"># Create the preflight check override file</span>
+<span class="c1"># This file is persisted in the DX Core Pods Persistent Volume</span>
+touch<span class="w"> </span>/opt/HCL/wp_profile/rsAutoConfigOverridePreflight
+</code></pre></div>
+<p>If your automated configuration has failed due to those checks, you can re-run it using the commands from the next section.</p>
+<h4 id="re-run-automated-configuration-steps">Re-run automated configuration steps</h4>
+<p>In case your automated configuration failed, you can easily re-run it using the following procedure:</p>
+<p>Remove the configuration semaphore file in the DX Core Pod:</p>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Connect into your DX Core Pod</span>
+<span class="c1"># adjust the deployment prefix &quot;dx-&quot; and the namespace &quot;dxns&quot; to match your environment</span>
+kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>dx-core-0<span class="w"> </span>-c<span class="w"> </span>core<span class="w"> </span>--<span class="w"> </span>/bin/bash
+<span class="c1"># Remove the config status semaphore file</span>
+rm<span class="w"> </span>-f<span class="w"> </span>/opt/HCL/wp_profile/rsAutoConfigStatus
+</code></pre></div>
+<p>Remove the configuration semaphore file in the DX Remote Search Pod:</p>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Connect into your DX Remote Search Pod</span>
+<span class="c1"># adjust the deployment prefix &quot;dx-&quot; and the namespace &quot;dxns&quot; to match your environment</span>
+kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>dx-remote-search-0<span class="w"> </span>-c<span class="w"> </span>remote-search<span class="w"> </span>--<span class="w"> </span>/bin/bash
+<span class="c1"># Remove the config status semaphore file</span>
+rm<span class="w"> </span>-f<span class="w"> </span>/opt/HCL/AppServer/profiles/prs_profile/rsAutoConfigStatus
+</code></pre></div>
+<p>Perform a restart rollout of DX Core and DX Remote Search:</p>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Perform the restart of DX Remote Search</span>
+<span class="c1"># adjust the deployment prefix &quot;dx-&quot; and the namespace &quot;dxns&quot; to match your environment</span>
+kubectl<span class="w"> </span>rollout<span class="w"> </span>restart<span class="w"> </span>statefulset<span class="w"> </span>dx-remote-search<span class="w"> </span>-n<span class="w"> </span>dxns
+<span class="c1"># Perform the restart of DX Core</span>
+<span class="c1"># adjust the deployment prefix &quot;dx-&quot; and the namespace &quot;dxns&quot; to match your environment</span>
+kubectl<span class="w"> </span>rollout<span class="w"> </span>restart<span class="w"> </span>statefulset<span class="w"> </span>dx-core<span class="w"> </span>-n<span class="w"> </span>dxns
+</code></pre></div>
+<h2 id="manual-configuration">Manual configuration</h2>
+<p>For manual configuration, you can rely on existing ConfigEngine tasks that will assist you in configuration of both the DX Core Pod and the DX Remote Search Pod.</p>
+<h3 id="pre-requisites-and-limitations_1">Pre-requisites and limitations</h3>
+<ul>
+<li>This configuration is intended for containerized deployments running on Kubernetes.</li>
+<li>Both DX Core and DX Remote Search have their credentials configured correctly inside your <code>custom-values.yaml</code> used for the Helm deployment.</li>
+<li>There is currently no ConfigEngine task or similar being performed on either DX Core or DX Remote Search Pods</li>
+<li>Both DX Core and DX Remote Search are deployed in your environment and the Pods are up and ready.</li>
+</ul>
+<h3 id="configure-the-core-pod">Configure the Core Pod</h3>
+<p>Execute the ConfigEngine task:</p>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Connect into your DX Core Pod</span>
+<span class="c1"># adjust the deployment prefix &quot;dx-&quot; and the namespace &quot;dxns&quot; to match your environment</span>
+kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>dx-core-0<span class="w"> </span>-c<span class="w"> </span>core<span class="w"> </span>--<span class="w"> </span>/bin/bash
+<span class="c1"># Inside the container execute the ConfigEngine task</span>
+<span class="c1"># make sure that your deployment prefix (dx in this sample, e.g. dx-remote-search) is adjusted to your environment</span>
+<span class="c1"># Ensure to use the right credentials for DWasPassword</span>
+/opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh<span class="w"> </span>configure-portal-for-remote-search<span class="w"> </span>-DWasPassword<span class="o">=[</span>WAS<span class="w"> </span>ADMIN<span class="w"> </span>PASSWORD<span class="o">]</span><span class="w"> </span>-Dremote.search.host.name<span class="o">=</span><span class="s2">&quot;dx-remote-search&quot;</span><span class="w"> </span>-Dremote.search.host.port<span class="o">=</span><span class="s2">&quot;9043&quot;</span><span class="w"> </span>-Dremote.search.cert.alias<span class="o">=</span><span class="s2">&quot;remotesearchalias&quot;</span><span class="w"> </span>-Dremote.search.iiop.url<span class="o">=</span><span class="s2">&quot;iiop://dx-remote-search:2809&quot;</span><span class="w"> </span>-Dremote.search.index.directory<span class="o">=</span><span class="s2">&quot;/opt/HCL/AppServer/profiles/prs_profile/SearchCollections&quot;</span>
+</code></pre></div>
+<p>After this ConfigEngine task has been executed, a file containing the LTPA Key export will be created inside the Container.<br />
+Copy that file out of the Container into your local host:</p>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Copy out the LTPA key export</span>
+<span class="c1"># adjust the deployment prefix &quot;dx-&quot; and the namespace &quot;dxns&quot; to match your environment</span>
+kubectl<span class="w"> </span>cp<span class="w"> </span>dx-core-0:/home/dx_user/LTPAKeyExported<span class="w"> </span>./LTPAKeyExported<span class="w"> </span>-c<span class="w"> </span>core<span class="w"> </span>-n<span class="w"> </span>dxns
+</code></pre></div>
+<h3 id="configure-the-remote-search-pod">Configure the Remote Search Pod</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Before configuring the remote search pod, you must set up single sign-on (SSO) between the WebSphere Application Server running in the <strong>core</strong> pod and the WebSphere Application Server running in the <strong>remote-search</strong> pod. See the topics <a href="https://www.ibm.com/docs/en/was/9.0.5?topic=authentication-single-sign-using-ltpa-cookies">Single sign-on for authentication using LTPA cookies</a> and <a href="../../../../build_sites/search/remotesearch/sso_portal_rss/">Creating a single-sign on domain between HCL Portal and the remote search service</a> for pre-requisites and instructions for setting up SSO.</p>
+</div>
+<p>Copy the LTPA Key exported from DX Core into the Remote Search Pod:</p>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># adjust the deployment prefix &quot;dx-&quot; and the namespace &quot;dxns&quot; to match your environment</span>
+kubectl<span class="w"> </span>cp<span class="w"> </span>./LTPAKeyExported<span class="w"> </span>dx-remote-search-0:/home/dx_user/<span class="w"> </span>-c<span class="w"> </span>remote-search<span class="w"> </span>-n<span class="w"> </span>dxns
+</code></pre></div>
+<p>Execute the ConfigEngine task:
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Connect into your DX Remote Search Pod</span>
+<span class="c1"># adjust the deployment prefix &quot;dx-&quot; and the namespace &quot;dxns&quot; to match your environment</span>
+kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>dx-remote-search-0<span class="w"> </span>-c<span class="w"> </span>remote-search<span class="w"> </span>--<span class="w"> </span>/bin/bash
+<span class="c1"># Inside the container execute the ConfigEngine task</span>
+<span class="c1"># make sure that your deployment prefix (dx in this sample, e.g., dx-core) is adjusted to your environment</span>
+<span class="c1"># Ensure to use the right credentials for DWasPassword</span>
+/opt/HCL/AppServer/profiles/prs_profile/ConfigEngine/./ConfigEngine.sh<span class="w"> </span>configure-remote-search-server-for-remote-search<span class="w"> </span>-DWasPassword<span class="o">=[</span>WAS<span class="w"> </span>ADMIN<span class="w"> </span>PASSWORD<span class="o">]</span><span class="w"> </span>-Dportal.host.name<span class="o">=</span><span class="s2">&quot;dx-core&quot;</span><span class="w"> </span>-Dportal.port.number<span class="o">=</span><span class="s2">&quot;10042&quot;</span><span class="w"> </span>-Dportal.cert.alias<span class="o">=</span><span class="s2">&quot;portaldockeralias&quot;</span><span class="w"> </span>-Dremote.search.host.name<span class="o">=</span><span class="s2">&quot;localhost&quot;</span>
+</code></pre></div></p>
+<h3 id="restart-both-core-and-remote-search">Restart both Core and Remote Search</h3>
+<p>To restart Remote Search:</p>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Connect into your DX Remote Search Pod</span>
+<span class="c1"># adjust the deployment prefix &quot;dx-&quot; and the namespace &quot;dxns&quot; to match your environment</span>
+kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>dx-remote-search-0<span class="w"> </span>-c<span class="w"> </span>remote-search<span class="w"> </span>--<span class="w"> </span>/bin/bash
+<span class="c1"># Create a semaphore file which will ensure, the Pod is not recycled during your restart</span>
+touch<span class="w"> </span>/home/dx_user/configInProgress
+<span class="c1"># Perform restart, fill in the proper credentials</span>
+/opt/HCL/AppServer/profiles/prs_profile/bin/./stopServer.sh<span class="w"> </span>server1<span class="w"> </span>-user<span class="w"> </span><span class="o">[</span>WAS<span class="w"> </span>ADMINISTRATOR<span class="w"> </span>NAME<span class="o">]</span><span class="w"> </span>-password<span class="w"> </span><span class="o">[</span>WAS<span class="w"> </span>ADMINISTRATOR<span class="w"> </span>PASSWORD<span class="o">]</span>
+/opt/HCL/AppServer/profiles/prs_profile/bin/./startServer.sh<span class="w"> </span>server1
+<span class="c1"># Remove semaphore file</span>
+rm<span class="w"> </span>-f<span class="w"> </span>/home/dx_user/configInProgress
+</code></pre></div>
+<p>To restart DX Core:</p>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Connect into your DX Core Pod</span>
+<span class="c1"># adjust the deployment prefix &quot;dx-&quot; and the namespace &quot;dxns&quot; to match your environment</span>
+kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>dx-core-0<span class="w"> </span>-c<span class="w"> </span>core<span class="w"> </span>--<span class="w"> </span>/bin/bash
+<span class="c1"># Create a semaphore file which will ensure, the Pod is not recycled during your restart</span>
+touch<span class="w"> </span>/opt/app/configInProgress
+<span class="c1"># Perform restart, fill in the proper credentials</span>
+/opt/HCL/wp_profile/bin/./stopServer.sh<span class="w"> </span>WebSphere_Portal<span class="w"> </span>-user<span class="w"> </span><span class="o">[</span>WAS<span class="w"> </span>ADMINISTRATOR<span class="w"> </span>NAME<span class="o">]</span><span class="w"> </span>-password<span class="w"> </span><span class="o">[</span>WAS<span class="w"> </span>ADMINISTRATOR<span class="w"> </span>PASSWORD<span class="o">]</span>
+/opt/HCL/wp_profile/bin/./startServer.sh<span class="w"> </span>WebSphere_Portal
+<span class="c1"># Remove semaphore file</span>
+rm<span class="w"> </span>-f<span class="w"> </span>/opt/app/configInProgress
+</code></pre></div>
+<h3 id="search-services-and-collections">Search Services and Collections</h3>
+<h4 id="new-search-service">New Search Service</h4>
+<p>Create a new search service and use the following values for a Remote Search services configuration to a Kubernetes container deployment. See the section on <a href="https://help.hcltechsw.com/digital-experience/9.5/admin-system/create_search_service.html">Creating a new search service</a><!-- (../../9.0/admin-system/create_search_service.md) --> for more information.</p>
+<p>For <strong>Search Services</strong> configuration, the following values are used:</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IIOP_URL</td>
+<td><code>iiop://dx-remote-search:2809</code></td>
+</tr>
+<tr>
+<td>PSE TYPE</td>
+<td>Select ejb from the pull down.</td>
+</tr>
+<tr>
+<td>EJB</td>
+<td><code>ejb/com/ibm/hrl/portlets/WsPse/WebScannerLiteEJBHome</code></td>
+</tr>
+<tr>
+<td>DefaultCollectionsDirectory</td>
+<td>Leave empty.</td>
+</tr>
+<tr>
+<td>Search service implementation</td>
+<td>Select Portal Search Service Type from the pull down.</td>
+</tr>
+<tr>
+<td>CONFIG_FOLDER_PATH</td>
+<td>Did not set (differs from non-container instructions).</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Take care when defining the <code>IIOP_URL</code> parameter, as the target URL is the Service of Remote Search inside your Kubernetes deployment. The prefix <code>dx-deployment</code> may be different in your deployment scenario and is based on the deployment name chosen during the <code>helm install</code> command.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Once completed and saved, the HCL Digital Experience 9.5 container deployment has a new search service called <strong>Remote PSE service EJB</strong>, with a green check mark confirming that the service was correctly set up and can communicate with the Remote Search container.</p>
+</div>
+<h4 id="new-search-collections">New Search Collections</h4>
+<p>Based on the previously created Remote Search service, create a <strong>Portal Search Collection</strong> and a <strong>JCR Search Collection</strong> using the following parameters.</p>
+<h5 id="portal-search-collection">Portal Search Collection</h5>
+<p>Use the following parameters to create a <a href="https://help.hcltechsw.com/digital-experience/9.5/admin-system/create_search_coll.html">Portal search collection</a><!-- (../../9.0/admin-system/create_search_coll.md) -->.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Search collection name</td>
+<td><code>Portal Search Collection</code></td>
+</tr>
+<tr>
+<td>Search collection location</td>
+<td><code>/opt/HCL/AppServer/profiles/prs_profile/SearchCollections/PortalSearchCollection</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>Search collection location</code> is relative to the remote search container. Furthermore, one places the collection in the <strong>profile</strong> of the Remote Search server because the profile of the remote search server is persisted. One obviously wants the search indexes persisted across restarts.</p>
+</div>
+<p>Create the two following Content Sources:</p>
+<h6 id="portal-content-source">Portal Content Source</h6>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content Source Type</td>
+<td>Portal Site</td>
+</tr>
+<tr>
+<td>Content Source Name</td>
+<td>Portal Content Source</td>
+</tr>
+<tr>
+<td>Collect documents linked from this URL</td>
+<td><code>https://dx-core-service:10042/wps/seedlist/myserver?Source=com.ibm.lotus.search.plugins.seedlist.retriever.portal.PortalRetrieverFactory&amp;Action=GetDocuments&amp;Range=100</code></td>
+</tr>
+</tbody>
+</table>
+<p>In the <code>Security</code> panel, use the DX Core Service name (e.g., <code>dx-core</code>) as the host name, along with the username <code>wpsadmin</code> and the associated password for <code>wpsadmin</code>. You can also specify Realm as CrawlerUsersRealm.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Note: The host <code>dx-core</code> and port <code>10042</code> are the Kubernetes service host and the port for DX Core. In this case, 10042 is the HttpQueueInboundDefaultSecure port on the HCL DX 9.5 server. Adjust this according to your deployment configuration.</p>
+</div>
+<h6 id="wcm-content-source">WCM Content Source</h6>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content Source Type</td>
+<td>Seedlist provider</td>
+</tr>
+<tr>
+<td>Content Source Name</td>
+<td>Portal Content Source</td>
+</tr>
+<tr>
+<td>Collect documents linked from this URL</td>
+<td><code>https://dx-core-service:10042//wps/seedlist/myserver?SeedlistId=&amp;Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&amp;Action=GetDocuments</code></td>
+</tr>
+</tbody>
+</table>
+<p>In the <code>Security</code> panel, use the DX Core Service name (e.g., <code>dx-core</code>) as the host name, along with the username <code>wpsadmin</code> and the associated password for <code>wpsadmin</code>. You can also specify Realm as CrawlerUsersRealm.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Note: The host <code>dx-core</code> and port <code>10042</code> are the Kubernetes service host and the port for DX Core. In this case, 10042 is the HttpQueueInboundDefaultSecure port on the HCL DX 9.5 server.  Adjust this according to your deployment configuration.</p>
+</div>
+<h5 id="jcr-search-collection">JCR Search Collection</h5>
+<p>Use the following parameters to create a Content Source <a href="https://help.hcltechsw.com/digital-experience/9.5/admin-system/srtcfg_jcr_colls.html">JCR search collection</a><!-- (../admin-system/srtcfg_jcr_colls.md) -->.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Search collection name</td>
+<td><code>JCRCollection1</code></td>
+</tr>
+<tr>
+<td>Search collection location</td>
+<td><code>/opt/HCL/AppServer/profiles/prs_profile/SearchCollections/JCRCollection1</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>Search collection location</code> is relative to the remote search container. Furthermore, one places the collection in the <strong>profile</strong> of the Remote Search server because the profile of the remote search server is persisted. One obviously wants the search indexes persisted across restarts.</p>
+</div>
+<p>Create the following Content Source:</p>
+<h6 id="jcr-content-source">JCR Content Source</h6>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content Source Type</td>
+<td>Seedlist provider</td>
+</tr>
+<tr>
+<td>Content Source Name</td>
+<td>Portal Content Source</td>
+</tr>
+<tr>
+<td>Collect documents linked from this URL</td>
+<td><code>https://dx-core:10042/wps/seedlist/myserver?Action=GetDocuments&amp;Format=ATOM&amp;Locale=en_US&amp;Range=100&amp;Source=com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory&amp;Start=0&amp;SeedlistId=1@OOTB_CRAWLER1</code></td>
+</tr>
+</tbody>
+</table>
+<p>In the <code>Security</code> panel, use the DX Core Service name (e.g., <code>dx-core</code>) as the host name, along with the username <code>wpsadmin</code> and the associated password for <code>wpsadmin</code>. You can also specify Realm as CrawlerUsersRealm.</p>
+<div class="admonition note">
+<p class="admonition-title">Notes</p>
+<ul>
+<li>Click the <strong>create</strong> button to create the security realm definition inside the frame where you first entered the data. This action ensures that you have the security realm defintion before saving the content source.</li>
+<li>The host <code>dx-core</code> and port <code>10042</code> are the Kubernetes service host and the port for DX Core. In this case, 10042 is the HttpQueueInboundDefaultSecure port on the HCL DX 9.5 server. Adjust this according to your deployment configuration.</li>
+<li>The parsing of the <code>SeedlistId</code> positional parameter in this URL uses an index of the virtual portal being crawled. In this case, 1 (in 2 places) represents the base virtual portal.</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 5, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

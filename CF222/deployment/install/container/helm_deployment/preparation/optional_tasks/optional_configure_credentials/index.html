@@ -1,0 +1,3362 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_credentials/">
+      
+      
+        <link rel="prev" href="../optional_container_resources/">
+      
+      
+        <link rel="next" href="../optional_core_sidecar_log/">
+      
+      
+      <link rel="icon" href="../../../../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Configure Credentials - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configure-credentials" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../../../../latest/deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_credentials/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configure Credentials
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../whatsnew/cf20/newcf222/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../build_sites/" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../../../whatsnew/cf20/newcf222/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Deploy DX
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Install
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Install
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Kubernetes Deployment
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2_2" id="__nav_4_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes Deployment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../image_list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Container and Supported OS File listings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_2_4" id="__nav_4_2_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Helm deployment
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Helm deployment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying using Helm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2_4_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Preparation
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2_2_4_2" id="__nav_4_2_2_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_4_2_2_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2_2_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Preparation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../get_the_code/configure_harbor_helm_repo/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get the Code
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../mandatory_tasks/prepare_namespace/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Mandatory Steps
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2_4_2_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_2_4_2_4" id="__nav_4_2_2_4_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Optional Steps
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_4_2_2_4_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2_2_4_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Optional Steps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optional_internal_networking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configure to Deploy on the Internal Network
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optional_imagepullsecrets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using ImagePullSecrets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optional_options_spread_pods_across_nodes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Options to spread pods across nodes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optional_disable_apps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Select DX Applications to Deploy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optional_configure_apps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configure Applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optional_configure_scaling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configure Scaling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optional_container_resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Container resource management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Configure Credentials
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Configure Credentials
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#randomized-passwords" class="md-nav__link">
+    <span class="md-ellipsis">
+      Randomized passwords
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjusting-default-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adjusting default credentials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating credentials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrading-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upgrading credentials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-security-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core security credentials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remote-search-security-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remote Search security credentials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config-wizard-security-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Config Wizard security credentials
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Config Wizard security credentials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-cf212-and-below-upgrading-to-cf213-and-beyond" class="md-nav__link">
+    <span class="md-ellipsis">
+      For CF212 and below upgrading to CF213 and beyond:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registry-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registry Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Registry Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ldap" class="md-nav__link">
+    <span class="md-ellipsis">
+      LDAP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-based-user-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      File-based user registry
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-credentials-from-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring Credentials from Secrets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring Credentials from Secrets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guidelines-for-configuring-credentials-from-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guidelines for Configuring Credentials from Secrets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Guidelines for Configuring Credentials from Secrets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-a-custom-secret" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Create a Custom Secret
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-reference-the-secret" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Reference the Secret
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-check-the-required-attributes-in-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Check the Required Attributes in Secrets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optional_core_sidecar_log/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configure Core Sidecar Logging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optional_rs_sidecar_log/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configure Remote Search Sidecar Logging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optional_labels_annotations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configure Labels and Annotations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optional_experimental_features/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Experimental Features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optional_install_new_search/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing search based on OpenSearch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optional-configure-dam-custom-cert/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding additional CA to the DAM trust store
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optional-configure-ingress/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configure Ingress For DX Deployment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optional-core-prereqs-checker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configure Prereqs Checker For DX Deployment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optional_configure-timezone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configure Timezone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../helm_install_commands/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../helm_uninstall/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Uninstall
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aws_marketplace_helm_deployment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS Marketplace Helm Deployment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../update_helm_deployment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Upgrading Helm Deployment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../traditional/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Traditional Deployment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../hybrid/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Hybrid Deployment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../docker-compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Compose
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../manage/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../../build_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#randomized-passwords" class="md-nav__link">
+    <span class="md-ellipsis">
+      Randomized passwords
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjusting-default-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adjusting default credentials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating credentials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrading-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upgrading credentials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-security-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core security credentials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remote-search-security-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remote Search security credentials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config-wizard-security-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Config Wizard security credentials
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Config Wizard security credentials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-cf212-and-below-upgrading-to-cf213-and-beyond" class="md-nav__link">
+    <span class="md-ellipsis">
+      For CF212 and below upgrading to CF213 and beyond:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registry-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registry Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Registry Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ldap" class="md-nav__link">
+    <span class="md-ellipsis">
+      LDAP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-based-user-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      File-based user registry
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-credentials-from-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring Credentials from Secrets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring Credentials from Secrets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guidelines-for-configuring-credentials-from-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guidelines for Configuring Credentials from Secrets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Guidelines for Configuring Credentials from Secrets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-a-custom-secret" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Create a Custom Secret
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-reference-the-secret" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Reference the Secret
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-check-the-required-attributes-in-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Check the Required Attributes in Secrets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="configure-credentials">Configure Credentials</h1>
+<p>HCL Digital Experience 9.5 uses several credentials in its deployment to manage access between applications and from outside the container deployment.</p>
+<h2 id="randomized-passwords">Randomized passwords</h2>
+<p>Upon initial deployment, passwords in HCL Digital Experience 9.5 are randomized and stored in secrets. Retrieve the randomized credentials using the following commands:</p>
+<p>To get the credentials for HCL Digital Experience Core administrative access, use:
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>&lt;release-name&gt;-core-wps<span class="w"> </span>--namespace<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>-o<span class="o">=</span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.data.username}&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>--decode<span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>--decode<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>&lt;release-name&gt;-core-wps<span class="w"> </span>--namespace<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>-o<span class="o">=</span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.data.password}&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>--decode<span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>--decode<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span>
+</code></pre></div></p>
+<p>To get the credentials for IBM WebSphere Application Server administrative access, use:
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>&lt;release-name&gt;-core-was<span class="w"> </span>--namespace<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>-o<span class="o">=</span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.data.username}&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>--decode<span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>--decode<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>&lt;release-name&gt;-core-was<span class="w"> </span>--namespace<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>-o<span class="o">=</span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.data.password}&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>--decode<span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>--decode<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span>
+</code></pre></div></p>
+<p>To get the credentials for Config Wizard administrative access, use:
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>&lt;release-name&gt;-core-configwizard<span class="w"> </span>--namespace<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>-o<span class="o">=</span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.data.username}&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>--decode<span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>--decode<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>&lt;release-name&gt;-core-configwizard<span class="w"> </span>--namespace<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>-o<span class="o">=</span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.data.password}&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>--decode<span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>--decode<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span>
+</code></pre></div></p>
+<p>To get the Remote Search credentials for IBM WebSphere Application Server administrative access, use:
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>&lt;release-name&gt;-remote-search-was<span class="w"> </span>--namespace<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>-o<span class="o">=</span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.data.username}&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>--decode<span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>--decode<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>&lt;release-name&gt;-remote-search-was<span class="w"> </span>--namespace<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>-o<span class="o">=</span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.data.password}&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>--decode<span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>--decode<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span>
+</code></pre></div></p>
+<h2 id="adjusting-default-credentials">Adjusting default credentials</h2>
+<p>You can adjust the default credentials that HCL Digital Experience 9.5 is using by adding the following syntax to your custom-values.yaml file and changing the values you need:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Security related configuration, e.g. default credentials</span>
+<span class="nt">security</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Security configuration for Core</span>
+<span class="w">  </span><span class="nt">core</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Credentials used for IBM WebSphere Application Server administrative access.</span>
+<span class="w">    </span><span class="c1"># The credentials defined in these values define the WebSphere Application Server&#39;s primary administrative user. The user gets created if necessary and/or the password is set to the current value.</span>
+<span class="w">    </span><span class="c1"># - If the WAS admin credentials were changed by any other means than through the helm values, the currently active credentials need to be entered as the values for wasUser and wasPassword.</span>
+<span class="w">    </span><span class="c1"># - If LDAP is configured as the user repository, the WebSphere Application Server admin user won&#39;t be applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wasUser and wasPassword need to be manually updated accordingly.</span>
+<span class="w">    </span><span class="nt">wasUser</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;wpsadmin&quot;</span>
+<span class="w">    </span><span class="nt">wasPassword</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">    </span><span class="c1"># Credentials used for HCL Digital Experience Core administrative access.</span>
+<span class="w">    </span><span class="c1"># The credentials defined in these values define the HCL Digital Experience Core administrative user. The user gets created if necessary and/or the password is set to the current value.</span>
+<span class="w">    </span><span class="c1"># - If LDAP is configured as the user repository, the WebSphere Application Server admin user won&#39;t be applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wpsUser and wpsPassword need to be manually updated accordingly.</span>
+<span class="w">    </span><span class="nt">wpsUser</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;wpsadmin&quot;</span>
+<span class="w">    </span><span class="nt">wpsPassword</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">    </span><span class="c1"># Credentials used for Config Wizard administrative access. This only takes effect when &quot;configuration.core.tuning.configWizard&quot; is enabled.</span>
+<span class="w">    </span><span class="c1"># The credentials defined in these values define the WebSphere Application Server primary administrative user. The user gets created if necessary and/or the password is set to the current value.</span>
+<span class="w">    </span><span class="c1"># This will also map the user as the user for Config Wizard and dxconnect (for dxclient)</span>
+<span class="w">    </span><span class="c1"># - If the Config Wizard admin credentials were changed by any other means than through the helm values, the currently active credentials need to be entered as the values for configWizardUser and configWizardPassword.</span>
+<span class="w">    </span><span class="c1"># - If LDAP is configured as the user repository, the WebSphere Application Server admin user won&#39;t be applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for configWizardUser and configWizardPassword need to be manually updated accordingly.</span>
+<span class="w">    </span><span class="nt">configWizardUser</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;wpsadmin&quot;</span>
+<span class="w">    </span><span class="nt">configWizardPassword</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">  </span><span class="c1"># Security configuration for Digital Asset Management</span>
+<span class="w">  </span><span class="nt">digitalAssetManagement</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Credentials used by Digital Asset Management to access the persistence database.</span>
+<span class="w">    </span><span class="nt">dbUser</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;REDACTED&quot;</span>
+<span class="w">    </span><span class="nt">dbPassword</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;REDACTED&quot;</span>
+<span class="w">    </span><span class="c1"># Credentials used by the persistence database to perform replication between database nodes.</span>
+<span class="w">    </span><span class="nt">replicationUser</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;REDACTED&quot;</span>
+<span class="w">    </span><span class="nt">replicationPassword</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;REDACTED&quot;</span>
+<span class="w">  </span><span class="c1"># Security configuration for Open LDAP</span>
+<span class="w">  </span><span class="nt">openLdap</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Admin user for Open LDAP, can not be adjusted currently.</span>
+<span class="w">    </span><span class="nt">ldapUser</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;REDACTED&quot;</span>
+<span class="w">    </span><span class="c1"># Admin password for Open LDAP</span>
+<span class="w">    </span><span class="nt">ldapPassword</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;REDACTED&quot;</span>
+<span class="w">  </span><span class="c1"># Security configuration for Remote Search</span>
+<span class="w">  </span><span class="nt">remoteSearch</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Credentials used for IBM WebSphere Application Server administrative access.</span>
+<span class="w">    </span><span class="c1"># The credentials defined in these values define the WebSphere Application Server&#39;s primary administrative user. The user gets created if necessary and/or the password is set to the current value.</span>
+<span class="w">    </span><span class="c1"># - If the WAS admin credentials were changed by any other means than through the helm values, the currently active credentials need to be entered as the values for wasUser and wasPassword.</span>
+<span class="w">    </span><span class="c1"># - If LDAP is configured as the user repository, the WebSphere Application Server admin user won&#39;t be applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wasUser and wasPassword need to be manually updated accordingly.</span>
+<span class="w">    </span><span class="nt">wasUser</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;wpsadmin&quot;</span>
+<span class="w">    </span><span class="nt">wasPassword</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+</code></pre></div>
+<h2 id="updating-credentials">Updating credentials</h2>
+<p>If the user credentials were changed manually and not through the Helm values, you must update the values for Core, ConfigWizard, and Remote Search credentials in Helm. Refer to <a href="#adjusting-default-credentials">Adjusting default credentials</a> for reference. If you are using the <a href="#guidelines-for-configuring-credentials-from-secrets">custom secret</a>, you must also set the credentials in the secret to the current credentials. Then, execute a <code>helm upgrade</code> with those values. You can use the Helm values to change the credentials. </p>
+<p>If an LDAP is configured as the user registry, you must manually set the security credentials to the credentials of the administrator user from LDAP. If the users are changed in the LDAP, you must manually update the security credentials in the Helm chart. The credentials are used in several startup and configuration scripts. Changes in the Helm values will not cause any changes to the LDAP users.</p>
+<h2 id="upgrading-credentials">Upgrading credentials</h2>
+<p>Before upgrading, ensure that the current credentials are <a href="#updating-credentials">set properly</a> in the Helm values.</p>
+<h2 id="core-security-credentials">Core security credentials</h2>
+<p>The security credentials defined in the <code>security</code> section of the Helm values are necessary to pass the user credentials to the IBM Websphere Application Server and HCL Digital Experience Core startup scripts. The behavior slightly differs depending on the user registry that is configured for HCL Digital Experience. See <a href="#registry-types">Registry Types</a>.</p>
+<h2 id="remote-search-security-credentials">Remote Search security credentials</h2>
+<p>Same as Core, when Remote Search is enabled, WAS admin credentials can be configured from the Helm chart. The behavior slightly differs depending on the user registry that is configured for HCL Digital Experience. See <a href="#registry-types">Registry Types</a>.</p>
+<h2 id="config-wizard-security-credentials">Config Wizard security credentials</h2>
+<p>The following only takes effect when <a href="../optional_configure_apps/#configuration-wizard-configuration">Config Wizard is enabled</a>.</p>
+<h3 id="for-cf212-and-below-upgrading-to-cf213-and-beyond">For CF212 and below upgrading to CF213 and beyond:</h3>
+<ul>
+<li>When upgrading to CF213 or higher, the <code>configWizardUser</code> and <code>configWizardPassword</code> under <code>security.core</code> in your <code>custom-values.yaml</code> file must be updated to the current credentials of the <code>wpsadmin</code> user in the file-based user registry of Core <strong>once</strong>, followed by a Helm upgrade. This is required because the file-based user registry of Core is copied to and reused by Config Wizard and Config Wizard is initially using <code>wpsadmin</code> as the primary admin user. For more information see: <a href="../../../../../../manage/portal_admin_tools/cfg_wizard/configuration/persist_cw_profile/">Persisted Config Wizard Profile</a>.</li>
+<li>After the Helm upgrade, the Config Wizard credentials can now be updated if needed, separately from the Core. </li>
+</ul>
+<p>The section in your <code>custom-values.yaml</code> must be set like this:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">security</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">core</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">configWizardUser</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;wpsadmin&quot;</span>
+<span class="w">    </span><span class="nt">configWizardPassword</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;your</span><span class="nv"> </span><span class="s">wpsadmin</span><span class="nv"> </span><span class="s">password</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file-based</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">registry</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Core</span><span class="nv"> </span><span class="s">&gt;&quot;</span>
+</code></pre></div>
+<p>Alternatively, you can set the username <code>wpsadmin</code> and the correct password in a custom secret and reference them as <code>customConfigWizardSecret</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When the values are not set correctly during the upgrade, the following error message appears in the logs:</p>
+<blockquote>
+<p>Neither the new nor previous Config Wizard Admin credentials in the Kubernetes secrets are valid. Please supply the correct credentials and restart.</p>
+</blockquote>
+<p>Please follow <a href="#for-cf212-and-below-upgrading-to-cf213-and-beyond">the steps above</a> to resolve the error for the initial startup.</p>
+</div>
+<p>Similar to Core and Remote Search, you can configure the Config Wizard admin credentials from the Helm chart. The behavior slightly differs depending on the user registry that is configured for HCL Digital Experience. See <a href="#registry-types">Registry Types</a>.</p>
+<h2 id="registry-types">Registry Types</h2>
+<h3 id="ldap">LDAP</h3>
+<p>If <a href="../optional_configure_apps/#supported-ldap-configuration">LDAP is configured</a> in the Helm values under <code>configuration.core.ldap</code>, the core security credentials need to be manually set to the credentials of the administrator user(s) from LDAP and kept up to date manually in the helm chart if the users are changed in the LDAP. The credentials are used in several startup and configuration scripts. Changes in the helm values will not cause any changes to the LDAP users.</p>
+<p>Please refer to the <a href="../../../../../../manage/security/people/authentication/updating_userid_pwd/">Updating user ID and passwords</a> topic for additional information on how to manually change credentials.</p>
+<h3 id="file-based-user-registry">File-based user registry</h3>
+<p>If no LDAP is configured in the Helm values, HCL Digital Experience is configured with a default file-based user repository. In this case, the security credentials for Core, Config Wizard and Remote Search that are specified in the <code>custom-values.yaml</code> are applied to the file-based registry. This means that any changes to the values are automatically reflected in the administrator user accounts for Websphere and DX.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>security.core.wasUser</code></td>
+<td>Creates a user with this name if it does not exist already. Then makes that user the Websphere primary admin user.</td>
+</tr>
+<tr>
+<td><code>security.core.wasPassword</code></td>
+<td>Sets the password of the <code>wasUser</code> to this value.</td>
+</tr>
+<tr>
+<td><code>security.core.wpsUser</code></td>
+<td>Creates a user with this name if it does not exist already. Then makes that user a HCL Digital Experience administrator.</td>
+</tr>
+<tr>
+<td><code>security.core.wpsPassword</code></td>
+<td>Sets the password of the <code>wpsUser</code> to this value.</td>
+</tr>
+<tr>
+<td><code>security.core.configWizardUser</code></td>
+<td>Creates a user with this name if it does not exist already.</td>
+</tr>
+<tr>
+<td><code>security.core.configWizardPassword</code></td>
+<td>Sets the password of the <code>configWizardUser</code> to this value.</td>
+</tr>
+<tr>
+<td><code>security.remoteSearch.wasUser</code></td>
+<td>Creates a user with this name if it does not exist already. Then make that user the Websphere primary admin user for Remote Search.</td>
+</tr>
+<tr>
+<td><code>security.remoteSearch.wasPassword</code></td>
+<td>Sets the password of the Remote Search <code>wasUser</code> to this value.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="configuring-credentials-from-secrets">Configuring Credentials from Secrets</h2>
+<p>You can also configure the credentials that HCL Digital Experience 9.5 is using by creating a secret that contains the credentials and referencing them by adding the secret name to your <code>custom-values.yaml</code> file and doing a <code>helm upgrade</code> to apply it in the deployments:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Referencing the secret to configure credential, e.g. core credentials</span>
+<span class="nt">security</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Security configuration for Core using secrets</span>
+<span class="w">  </span><span class="nt">core</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Credentials used for IBM WebSphere Application Server administrative access.</span>
+<span class="w">    </span><span class="c1"># The credentials defined in these values define the WebSphere Application Server primary administrative user. The user gets created if necessary and/or the password is set to the current value.</span>
+<span class="w">    </span><span class="c1"># - If the WAS admin credentials were changed by any other means than through the helm values, the currently active credentials need to be entered as the values for wasUser and wasPassword.</span>
+<span class="w">    </span><span class="c1"># - If an LDAP is used, then the WebSphere Application Server admin user is never applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wasUser and wasPassword need to be manually updated accordingly.</span>
+
+<span class="w">    </span><span class="c1"># - If you are using a secret to configure credentials, you must leave the default credentials string empty </span>
+<span class="w">    </span><span class="c1"># - If both default credential and secret name are filled it will block the chart from being deployed.</span>
+<span class="w">    </span><span class="nt">wasUser</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">    </span><span class="nt">wasPassword</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">    </span><span class="c1"># Provide a secret name that will be used to set credentials for WAS</span>
+<span class="w">    </span><span class="c1"># Required attributes:</span>
+<span class="w">    </span><span class="c1">#   - username</span>
+<span class="w">    </span><span class="c1">#   - password</span>
+<span class="w">    </span><span class="c1"># Secret name is being referenced to configure credentials, this secret conatians the key-value pair for &quot;username&quot; and &quot;password&quot;</span>
+<span class="w">    </span><span class="nt">customWasSecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my-was-credential-secret&quot;</span>
+</code></pre></div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Only one method of configuring credentials can be applied at once. Either configure it by using secrets or using the credentials in the Helm <code>custom-values.yaml</code>, unused credential values should be explicitly set to <strong>empty/null</strong>.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>A Helm upgrade is required in order for the new credentials values to reflect inside the containers.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The mechanism described above for file-based user registries applies in the same way when custom secrets are used</p>
+</div>
+<h3 id="guidelines-for-configuring-credentials-from-secrets">Guidelines for Configuring Credentials from Secrets</h3>
+<h4 id="1-create-a-custom-secret">1. Create a Custom Secret</h4>
+<p>Create a secret that will be used to reference credentials, this secret should contain all the required attributes (e.g. "username", "password") needed by the credentials.</p>
+<p>There are two ways to create and deploy custom secrets:</p>
+<p><strong>By Kubectl Command</strong>\
+This is the preferred way of creating a secret inside a cluster, Kubernetes will handle the encoding of the key-value pairs in a base64-encoding format. </p>
+<div class="language-console highlight"><pre><span></span><code><span class="gp">$ </span>kubectl<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>generic<span class="w"> </span>&lt;secret-name&gt;<span class="w"> </span>--from-literal<span class="o">=</span><span class="nv">username</span><span class="o">=</span>&lt;your-username&gt;<span class="w"> </span>--from-literal<span class="o">=</span><span class="nv">password</span><span class="o">=</span>&lt;your-password&gt;<span class="w"> </span>--namespace<span class="o">=</span>&lt;namespace&gt;
+</code></pre></div>
+<p>For details please refer to the official Kubernetes documentation about <a href="https://kubernetes.io/docs/tasks/configmap-secret/managing-secret-using-kubectl/">Managing Secrets using kubectl</a>.</p>
+<p><strong>By YAML files</strong>\
+Secrets can also be created using a secret yaml manifest. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The string values assigned in the data fields of the secret should be base64-encoded. The containers expect a base64-encoded string to be passed from the secrets key-value pairs. The credentials will not work if the values passed are plain strings.</p>
+</div>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Example manifest for creating secret by using a yaml file</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># The value of the key-value pair should be strictly base64-encoded</span>
+<span class="w">  </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;username&gt;</span>
+<span class="w">  </span><span class="c1"># The value of the key-value pair should be strictly base64-encoded</span>
+<span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;password&gt;</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;secret-name&gt;</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
+<span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
+</code></pre></div>
+<h4 id="2-reference-the-secret">2. Reference the Secret</h4>
+<p>Once the secret is created inside the cluster, you can now reference them in their respective custom secret fields inside the <code>custom-values.yaml</code> under <code>security</code> section. See this <a href="./#configuring-credentials-from-secrets">example</a> for reference.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For Core LTPA AND LDAP you can reference your secrets under <code>configuration.core</code> section of the Helm values.</p>
+</div>
+<h4 id="3-check-the-required-attributes-in-secrets">3. Check the Required Attributes in Secrets</h4>
+<p>There are multiple credentials used in HCL Digital Experience 9.5. Each application has different required attributes for credentials. If you want to use a secret to configure credentials for a specific application, check the data attributes of the secret that you are using. This is for the Helm chart to map and have those values passed or cascaded accordingly to each application. </p>
+<p><code>Persistence DAM User Credential secret</code> has a username limitation. The username can begin with lowercase letters or an underscore and can contain only lowercase letters, numbers, underscore, or a dollar sign. The maximum length is 63 characters.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Helm validates the inputs and the deployment will not be applied if required attributes are not set properly in the custom secrets.</p>
+</div>
+<p>Here's a list of the required credential attributes for each application:</p>
+<table>
+<thead>
+<tr>
+<th>Secrets</th>
+<th>Helm Reference</th>
+<th>Required Attributes</th>
+<th>Application</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core WAS Credential secret</td>
+<td><code>security.core.customWasSecret</code></td>
+<td><code>username</code> <br> <code>password</code></td>
+<td>Core</td>
+</tr>
+<tr>
+<td>Core WPS Credential secret</td>
+<td><code>security.core.customWpsSecret</code></td>
+<td><code>username</code>  <br> <code>password</code></td>
+<td>Core</td>
+</tr>
+<tr>
+<td>Core Config Wizard Credential secret</td>
+<td><code>security.core.customConfigWizardSecret</code></td>
+<td><code>username</code>  <br> <code>password</code></td>
+<td>Core (Config Wizard)</td>
+</tr>
+<tr>
+<td>Core LDAP Credential secret</td>
+<td><code>configuration.core.ldap.customLdapSecret</code></td>
+<td><code>bindUser</code> <br> <code>bindPassword</code></td>
+<td>Core</td>
+</tr>
+<tr>
+<td>Core LTPA Credential secret</td>
+<td><code>configuration.core.ltpa.customLtpaSecret</code></td>
+<td><code>ltpa.version</code> <br> <code>ltpa.realm</code> <br> <code>ltpa.desKey</code> <br> <code>ltpa.privateKey</code> <br> <code>ltpa.publicKey</code> <br> <code>ltpa.password</code></td>
+<td>Core</td>
+</tr>
+<tr>
+<td>Core Content AI Secret</td>
+<td><code>security.core.customContentAISecret</code></td>
+<td><code>apiKey</code></td>
+<td>Core</td>
+</tr>
+<tr>
+<td>DAM Plugin Google Vision Credential secret</td>
+<td><code>security.damPluginGoogleVision.customDamGoogleVisionSecret</code></td>
+<td><code>authenticationKey</code> <br> <code>apiKey</code></td>
+<td>DAM Google Vision</td>
+</tr>
+<tr>
+<td>DAM Plugin Kaltura Credential secret</td>
+<td><code>security.damPluginKaltura.customDamKalturaSecret</code></td>
+<td><code>authenticationKey</code> <br> <code>secretKey</code></td>
+<td>DAM Kaltura</td>
+</tr>
+<tr>
+<td>Persistence Connection Pool Credential secret</td>
+<td><code>security.persistence.customConnectionPoolSecret</code></td>
+<td><code>username</code> <br> <code>password</code></td>
+<td>Persistence</td>
+</tr>
+<tr>
+<td>Persistence DAM User Credential secret</td>
+<td><code>security.digitalAssetManagement.customDamSecret</code></td>
+<td><code>username</code>  <br> <code>password</code></td>
+<td>Digital Asset Management</td>
+</tr>
+<tr>
+<td>Persistence Replication Credential secret</td>
+<td><code>security.digitalAssetManagement.customReplicationSecret</code></td>
+<td><code>username</code>  <br> <code>password</code></td>
+<td>Digital Asset Management</td>
+</tr>
+<tr>
+<td>Persistence User Credential secret</td>
+<td><code>security.digitalAssetManagement.customDBSecret</code></td>
+<td><code>username</code>  <br> <code>password</code></td>
+<td>Digital Asset Management</td>
+</tr>
+<tr>
+<td>Image Processor Credential secret</td>
+<td><code>security.imageProcessor.customImageProcessorSecret</code></td>
+<td><code>authenticationKey</code></td>
+<td>Image Processor</td>
+</tr>
+<tr>
+<td>License Manager Credential secret</td>
+<td><code>security.licenseManager.customLicenseManagerSecret</code></td>
+<td><code>username</code>  <br> <code>password</code></td>
+<td>License Manager</td>
+</tr>
+<tr>
+<td>Open LDAP Credential secret</td>
+<td><code>security.openLdap.customLdapSecret</code></td>
+<td><code>username</code>  <br> <code>password</code></td>
+<td>Open LDAP</td>
+</tr>
+<tr>
+<td>Remote Search WAS Credential secret</td>
+<td><code>security.remoteSearch.customWasSecret</code></td>
+<td><code>username</code> <br> <code>password</code></td>
+<td>Remote Search</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core WAS Credential secret</strong>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;username&gt;</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;password&gt;</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-was-secret</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
+<span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
+</code></pre></div></p>
+<p><strong>Core WPS Credential secret</strong>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;username&gt;</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;password&gt;</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-wps-secret</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
+<span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
+</code></pre></div></p>
+<p><strong>Core Config Wizard Credential secret</strong>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;username&gt;</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;password&gt;</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-config-wizard-secret</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
+<span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
+</code></pre></div></p>
+<p><strong>Core LDAP Credential secret</strong>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">bindUser</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;bindUser&gt;</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">bindPassword</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;bindPassword&gt;</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-core-ldap-secret</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
+<span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
+</code></pre></div></p>
+<p><strong>Core LTPA Credential secret</strong>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="s">&quot;ltpa.version&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;version&gt;</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="s">&quot;ltpa.realm&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;realm&gt;</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="s">&quot;ltpa.desKey&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;desKey&gt;</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="s">&quot;ltpa.privateKey&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;privateKey&gt;</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="s">&quot;ltpa.publicKey&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;publicKey&gt;</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="s">&quot;ltpa.password&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;password&gt;</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-core-ltpa-secret</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
+<span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
+</code></pre></div></p>
+<p><strong>Core Content AI Secret</strong>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">apiKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;apiKey&gt;</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-core-content-ai-secret</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
+<span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
+</code></pre></div></p>
+<p><strong>DAM Plugin Google Vision Credential secret</strong>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">authenticationKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;authenticationKey&gt;</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">apiKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;apiKey&gt;</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-google-vision-secret</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
+<span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
+</code></pre></div></p>
+<p><strong>DAM Plugin Kaltura Credential secret</strong>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">authenticationKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;authenticationKey&gt;</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">secretKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;secretKey&gt;</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-kaltura-secret</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
+<span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
+</code></pre></div></p>
+<p><strong>Persistence Connection Pool Credential secret</strong>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;username&gt;</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;password&gt;</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-connection-pool-secret</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
+<span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
+</code></pre></div></p>
+<p><strong>Persistence DAM User Credential secret</strong>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Required attribute. The username can begin with lowercase letters or an underscore and can contain only lowercase letters, numbers, underscore, or a dollar sign. The maximum length is 63 characters.</span>
+<span class="w">  </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;username&gt;</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;password&gt;</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-dam-user-secret</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
+<span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
+</code></pre></div></p>
+<p><strong>Persistence Replication Credential secret</strong>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;username&gt;</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;password&gt;</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-replication-secret</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
+<span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
+</code></pre></div></p>
+<p><strong>Persistence User Credential secret</strong>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;username&gt;</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;password&gt;</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-replication-secret</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
+<span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
+</code></pre></div></p>
+<p><strong>Image Processor Credential secret</strong>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">authenticationKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;authenticationKey&gt;</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-kaltura-secret</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
+<span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
+</code></pre></div></p>
+<p><strong>License Manager Credential secret</strong>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;username&gt;</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;password&gt;</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-license-manager-secret</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
+<span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
+</code></pre></div></p>
+<p><strong>Open LDAP Credential secret</strong>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;username&gt;</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;password&gt;</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-open-ldap-secret</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
+<span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
+</code></pre></div></p>
+<p><strong>Remote Search WAS Credential secret</strong>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;username&gt;</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;password&gt;</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-remote-search-was-secret</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
+<span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
+</code></pre></div></p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 24, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

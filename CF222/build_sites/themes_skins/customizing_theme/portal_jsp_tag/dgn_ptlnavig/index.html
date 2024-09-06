@@ -1,0 +1,4047 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/build_sites/themes_skins/customizing_theme/portal_jsp_tag/dgn_ptlnavig/">
+      
+      
+        <link rel="prev" href="../dgn_ptllogic/">
+      
+      
+        <link rel="next" href="../../../developing_theme/">
+      
+      
+      <link rel="icon" href="../../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.25">
+    
+    
+      
+        <title><portal-navigation/> tags - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#portal-navigation-tags" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../../latest/build_sites/themes_skins/customizing_theme/portal_jsp_tag/dgn_ptlnavig/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              &lt;portal-navigation/> tags
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../whatsnew/cf20/newcf222/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../deployment/" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../whatsnew/cf20/newcf222/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Build Sites
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../create_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Setting Up Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Themes and Skins
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Themes and Skins
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../themeopt_themedev_themes_roadmap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Roadmap - Creating and customizing themes | HCL Digital Experience
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../getting_started_with_themes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Getting started with Themes
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../the_module_framework/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    The module framework
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../simple_theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Understanding the Simple Theme
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../portal85_modularized_theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Understanding the Portal 8.5 modularized theme
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../manage_theme_capabilities/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Managing theme capabilities
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_8" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Customizing the theme
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_3_8" id="__nav_5_3_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            Customizing the theme
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../theme_editor_portlet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Theme Editor Portlet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../themeopt_themedev_editing_static_resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Editing static theme resources and connecting with WebDAV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../copying_theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Copying your theme
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../dynamic_content_spots/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Dynamic content spots
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../layouts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Layouts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../skins/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Skins
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../menus/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Menus
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../theme_templates/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Theme templates
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../theme_logo/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Changing the theme logo
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../cust_nav/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Customizing navigation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../styles/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Styles
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../cfg_portal_theme_and_modules/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Configuring the portal theme and modules
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../expression_language_beans/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Expression language beans for accessing programming models
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../drag_drop/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Drag-and-drop
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../themeopt_disp_messagebar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Displaying messages in the status bar module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../themeopt_disp_draft_ribbon/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Displaying the draft page ribbon
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../add_jquery_to_theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Adding jQuery to a theme
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_8_19" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Tags used by the portal JSPs
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_3_8_19" id="__nav_5_3_8_19_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_3_8_19_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_3_8_19">
+            <span class="md-nav__icon md-icon"></span>
+            Tags used by the portal JSPs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dgn_ptlcore/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    &lt;portal-core/> tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dgn_ptldynam/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    &lt;portal-dynamicui/> tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dgn_ptlfmt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    &lt;portal-fmt/> tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dgn_ptllogic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    &lt;portal-navigation/> tags
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../developing_theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Developing themes for a production portal
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../device_classes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Device classes
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../responsive_web_design/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Responsive Web Design
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../practitioner_studio/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Practitioner Studio
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../portal_settings/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage site settings
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../sitebuilder/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Site Builder
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../woodburn_studio/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Woodburn Studio
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../search/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Search
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../tagging_rating/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Tagging and rating
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../virtual_portal/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Virtual Portal
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../mobile/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Mobile
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../site_analytics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Site Analytics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../social_rendering/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Social Rendering
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="portal-navigation-tags">&lt;portal-navigation/&gt; tags</h1>
+<p>The &lt;portal-navigation/&gt; tags are used to implement navigation tasks such as generating URLs and traversing the portal navigation model.</p>
+<p>The following section provides detailed descriptions of the <code>&lt;portal-navigation/&gt;</code> JSP tags:</p>
+<ul>
+<li>
+<p><strong>&lt;portal-navigation:uiNavigationModel var="uiNavigationModel" mobileDeviceClassTest="device class equation" showHidden="true|false" selectedNodeID="page ID" selectionPath="page IDs" selectionPathSeparator="selectionPath delimiter"&gt;</strong></p>
+<p>The uiNavigationModel tag helps the JSP developer concentrate on building the navigation rather than worrying about the portal-specific implementation details.</p>
+<p>By default, the uiNavigationModel lists the visible pages as part of its iterator. When the <strong>Show hidden pages</strong> option is selected in the toolbar, it lists the hidden pages also. There is a special mobile hidden flag for pages. The model also allows you to specify a mobile test device class expression, which is used to evaluate if the system is rendered as part of a mobile request.</p>
+<p>The uiNavigationModel tag makes the <a href="../../expression_language_beans/ui_nav_model/">uiNavigationModel</a> EL Bean available as a variable that can be specified as part of the <code>var</code> attribute.</p>
+<p>Example:</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;portal-navigation:uiNavigationModel var=&quot;uiNavigationModel&quot; mobileDeviceClassTest=&quot;smartphone/tablet&quot; &gt;
+    &lt;%-- loop through all children of the page at the given curLevel --%&gt;
+    &lt;c:forEach var=&quot;node&quot; items=&quot;${uiNavigationModel.children[selectionPath[curLevel]]}&quot;&gt;
+
+        &lt;%-- print out the page and highlight it if it is in the selection path 
+             (the current page or an ancestor of the current page) --%&gt;
+        &lt;li class=&quot;wpthemeNavListItem wpthemeLeft&lt;c:if test=&quot;${node.isInSelectionPath}&quot;&gt; wpthemeSelected&lt;/c:if&gt;&quot;&gt;
+
+            &lt;%-- output a link to the page --%&gt;
+            &lt;a href=&quot;${fn:escapeXml(node.urlGeneration)}&quot; class=&quot;wpthemeLeft ${node.isHidden ? 
+                 &#39;wpthemeHiddenPageText&#39; : &#39;&#39;} ${node.isDraft? &#39;wpthemeDraftPageText&#39; : &#39;&#39;}&quot;&gt;
+
+                &lt;%-- start page title markup --%&gt;
+                &lt;span lang=&quot;${node.title.xmlLocale}&quot; dir=&quot;${node.title.direction}&quot;&gt;&lt;%--
+
+                    &lt;!-- print out the page title --&gt;
+                    --%&gt;&lt;c:out value=&quot;${node.title}&quot;/&gt;&lt;%--
+
+                    &lt;!-- mark the page if it is currently selected for accessibility --&gt;
+                    --%&gt;&lt;c:if test=&quot;${node.isSelected}&quot;&gt;&lt;span class=&quot;wpthemeAccess&quot;&gt;
+                    &lt;portal-fmt:text key=&quot;currently_selected&quot; bundle=&quot;nls.commonTheme&quot;/&gt;&lt;/span&gt;&lt;/c:if&gt;&lt;%--
+
+                --%&gt;&lt;/span&gt;&lt;%-- end page title markup --%&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/c:forEach&gt;
+&lt;/portal-navigation:uiNavigationModel&gt;
+</code></pre></div>
+<p>Required parameters:</p>
+<ul>
+<li>
+<p><strong>var</strong></p>
+<p>This mandatory attribute specifies the name of a scripting variable that is exposed in the body of the tag. This variable is a <a href="../../expression_language_beans/ui_nav_model/">uiNavigationModel</a> EL Bean.</p>
+</li>
+<li>
+<p><strong>mobileDeviceClassTest</strong></p>
+<p>This attribute is a <a href="../../../device_classes/themeopt_devclass_equat/">device class equation</a>, that describes whether the request is part of a mobile device or not.</p>
+</li>
+</ul>
+<p>The following parameters are all optional. If they are not provided, the information is automatically fetched from the request. In some cases, the selection information is not available and must be passed in explicitly. Use the following attributes in that case.</p>
+<ul>
+<li>
+<p><strong>showHidden</strong></p>
+<p>Defines whether to show the hidden pages or not.</p>
+</li>
+<li>
+<p><strong>selectedNodeID</strong></p>
+<p>String; specifies the selected page ID.</p>
+</li>
+<li>
+<p><strong>selectionPath</strong></p>
+<p>String; list of page IDs defining the selection path, or breadcrumb, in one string. The delimiter can be configured through selectionPathSeparator.</p>
+</li>
+<li>
+<p><strong>selectionPathSeparator</strong></p>
+<p>String; is the delimiter that is used to parse the selectionPath.</p>
+</li>
+</ul>
+<p>Returns: Each individual navigation node that is returned by the uiNavigationModel is also a wrapper around the NavigaitonNode EL Bean and provides additional information, such as isHidden, isDraft, isInSelectionPath, and isSelected. For more information, see <a href="../../expression_language_beans/ui_nav_model/themeopt_el_bean_ui_nav_node/">uiNavigationModel</a>.</p>
+</li>
+<li>
+<p><strong>&lt;portal-navigation:url command="ChangeLanguage"&gt;</strong></p>
+<p>This tag is used to change the active language in the navigational state in which the URL is generated.</p>
+<p>The following code example uses this tag to change the language to German.</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;a href=&#39;&lt;portal-navigation:url 
+         command=&quot;ChangeLanguage&quot;&gt;&lt;portal-navigation:urlParam name=&quot;locale&quot; 
+         value=&quot;de&quot;/&gt;&lt;/portal-navigation:url&gt;&#39;&gt;Diese Seite in deutsch
+&lt;/a&gt;
+</code></pre></div>
+</li>
+<li>
+<p><strong>&lt;portal-navigation:urlParam name="parameter_name" value="parameter_value"&gt;</strong></p>
+<p>This tag is used to add parameters to the parent URL. Parent tags include <code>&lt;portal-navigation:url/&gt;</code> and <code>&lt;portal-navigation:urlGeneration/&gt;</code>. Parameters added to the <code>&lt;urlGeneration/&gt;</code> tag occur as unscoped query parameters unless the attributes specified on <code>&lt;urlGeneration/&gt;</code> specify otherwise. Parameter handling depends on the target of the URL. If the URL points to a page, the parameters are visible to all HCL portlets on that page. Parameters are not visible to standard portlets if the URL does not point specifically to that portlet.</p>
+<p>Attributes are as follows:</p>
+<ul>
+<li>
+<p><strong>name</strong></p>
+<p>This attribute is required. It indicates the name of the parameter.</p>
+</li>
+<li>
+<p><strong>value</strong></p>
+<p>This attribute is required. It indicates the value of the parameter.</p>
+</li>
+<li>
+<p><strong>type</strong></p>
+<p>This attribute is optional. It indicates one of the following types:</p>
+<ul>
+<li>
+<p><strong>query</strong></p>
+<p>The name-value pair is added to the URL as a query parameter. It is the default value if type is not specified.</p>
+</li>
+<li>
+<p><strong>render</strong></p>
+<p>The parameter is available as a render parameter for the portlet.</p>
+</li>
+<li>
+<p><strong>action</strong></p>
+<p>The parameter is available as an action parameter for the portlet.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>&lt;portal-navigation:urlGeneration attribute="value"&gt;</strong></p>
+<p>This tag creates a URL to pages or portlets. The tag is conditional. If the URL cannot be found, the body of the tag is not evaluated. Inside the body of the tag, the &lt;% wpsURL %&gt; scripting variable can be used to write the URL directly to the output stream. For example:</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;a class=&quot;wpsToolBarLink&quot; href=&#39;&lt;% wpsURL.write(out); %&gt;&#39;&gt;My page&lt;/a&gt;  
+</code></pre></div>
+<p>Attributes are as follows:</p>
+<ul>
+<li>
+<p><strong>home="public|protected"</strong></p>
+<p>This attribute creates a URL that points to the public or protected (logged in) page of the portal.</p>
+</li>
+<li>
+<p><strong>accessControlCheck="permission_constant"</strong></p>
+<p>This attribute indicates the permissions to be checked. The following constants can be used:</p>
+<ul>
+<li>CreatePage</li>
+<li>EditLayout</li>
+<li>DeletePage</li>
+<li>AssignRoles</li>
+<li>NoCheck</li>
+<li>EditApplicationProperties</li>
+<li>EditApplicationLayout</li>
+<li>AssignApplicationMember</li>
+<li>ManageApplicationRoles</li>
+<li>SaveAsTemplate
+If the user does not have the required permission, the body of the tag is not run. If the user has the necessary permissions, the current page ID is appended to the URL. If the parameter is set to <code>'NoCheck'</code>, the current page ID is appended without checking the access control permissions. This is necessary for the target page or portlet to create a back button.</li>
+</ul>
+</li>
+<li>
+<p><strong>actionName="name"</strong></p>
+<p>This attribute indicates the name of an action that would be called by the URL to an IBM portlet. The following example generates a URL that calls the <code>myAction</code> action of the portlet, which is contained by <code>my.LayoutNode</code> on <code>my.ContentNode</code>.</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;portal-navigation:urlGeneration actionName=&quot;myAction&quot; contentNode=&quot;my.ContentNode&quot; 
+                          layoutNode=&quot;my.LayoutNode&quot;&gt;
+       &lt;a href=&quot;&lt;%wpsURL.write(out);%&gt;&quot;&gt;Link to portlet with myAction&lt;/a&gt;
+    &lt;/portal-navigation:urlGeneration&gt;   
+</code></pre></div>
+<p>The following code is from the <code>actionPerformed()</code> aspect of the portlet that handles the <code>myAction</code> action.</p>
+<div class="language-text highlight"><pre><span></span><code>     PortletURI actionURL = portletResponse.createURI();
+     actionURL.addAction(&quot;myAction&quot;);     
+</code></pre></div>
+</li>
+<li>
+<p><strong>allowRelativeURL="true|false"</strong></p>
+<p>This attribute indicates whether a fully qualified or relative URL is generated. The default is set by the property <code>com.ibm.portal.state.accessors.url.URLContext.enableRelative</code> in the <code>StateManagerService</code>.</p>
+</li>
+<li>
+<p><strong>contentNode="id|name"</strong></p>
+<p>This attribute indicates the ID or unique name of the page. The name or ID of the content node is also used to specify the page where the portlet can be found.</p>
+</li>
+<li>
+<p><strong>keepNavigationalState="true|false|auto"</strong></p>
+<p>If you set this attribute to <code>false</code>, the current navigational state that includes all portlet modes, states, and render parameters is not included in the URL, and the portal is reset to its default state. If this value is set to <code>true</code>, the navigational state is included. True is the default setting. If it is set to auto, the configuration determines if the navigational state is included. See the descriptions for <code>stateless.urls.enabled</code> and <code>generate.stateless.urls</code> in <em>Configuration Service</em>.</p>
+</li>
+<li>
+<p><strong>layoutNode="id|name|wp.currentSelectedPortlet"</strong></p>
+<p>This attribute indicates the ID or unique name of the control that holds the portlet. It must be used in combination with <code>contentNode</code> to identify the page where the portlet is located. The value <code>wp.currentSelectedPortlet</code> can be used inside a control when you generate a URL to the portlet within that control.</p>
+</li>
+<li>
+<p><strong>newWindow="true|false"</strong></p>
+<p>This attribute creates a session partition. For portlet URLs, you can use it if you want to display the portlet either in a new window or in an iFrame. The default value is false. The portlet window state for the addressed portlet in the new window is set to maximized. The portlet mode is set to the value of the current parent window. In the <code>control.jsp</code> of skins that use iFrames, the <code>&lt;portal:if/&gt;</code> tag can be used to distinguish between rendering in the main window or in an iFrame or detached window.</p>
+</li>
+<li>
+<p><strong>portletMode="view|help|edit|edit_defaults|configure"</strong></p>
+<p>For URLs to a portlet as specified by the parameter <code>layoutNode</code>, this attribute sets the portlet mode. This parameter is ignored if the parameter <code>layoutNode</code> is not set. Specifying <code>portletMode="edit_defaults"</code> opens the portlet in the Edit defaults mode directly.</p>
+</li>
+<li>
+<p><strong>portletParameterType="render|action"</strong></p>
+<p>This attribute generates URLs to a standard portlet's render or action processing methods. If this attribute is omitted, the render method of the portlet is called. Any parameters added to the body of the tag that uses <code>&lt;portal-navigation:urlParam/&gt;</code> are passed to the corresponding method.</p>
+</li>
+<li>
+<p><strong>portletWindowState="maximized|minimized|solo|normal"</strong></p>
+<p>For a portlet, this attribute indicates the state of the portlet window when it is displayed. If portlet state is not specified, the page is shown with the previous state of the portlet. This parameter is ignored if <code>layoutNode</code> is not set.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use caution when you use this tag to address portlets in solo state. The portlet must be able to exist in solo state that uses the <code>createReturnURI()</code> method. If a portlet without this method is placed in solo state, then users are forced to log out or close their browser windows to return to the portal.</p>
+</div>
+</li>
+<li>
+<p><strong>themeTemplate="template_name"</strong></p>
+<p>This specifies the theme template that is taken for rendering the requested page. Can be referenced as either a JSP or a class and is used as theme for this URL.</p>
+</li>
+<li>
+<p><strong>normalize="true|false"</strong></p>
+<p>This attribute indicates that the URL to be generated must be normalized. If more parameters are set, the normalization is run first and afterward the other state modifications are accomplished. Setting the "normalize" parameter to true normalizes the URL with the same XSL file used to normalize URLs for search engines. The normalized representation of the URL can also be used to bookmark a page. The following example shows how to use the tag with this attribute:</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;portal-navigation:urlGeneration normalize=&quot;true&quot; &gt;
+      &lt;a href=&quot;&lt;% wpsURL.write(out); %&gt;&quot;&gt;
+        This is the normalized URL of the current 
+        selected page.
+      &lt;/a&gt;    
+&lt;/portal-navigation:urlGeneration&gt;
+</code></pre></div>
+<p>If more parameters are set for the <code>&lt;portal-navigation:urlGeneration&gt;</code> tag the XSL transformation is run first and all other state modifications is accomplished afterward.</p>
+</li>
+<li>
+<p><strong>forceAbsolute = "true|false"</strong></p>
+<p>This attribute is optional. It specifies whether the URL that is generated by this tag is to be absolute or not. If you set this attribute to true, absolute URLs are enforced; in this case other settings that affect the generation of URLs might be overridden.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>&lt;portal-navigation:url&gt;</strong></p>
+<p>Creates a portal URL depending on the specified attribute. Attributes are as follows:</p>
+<ul>
+<li>
+<p><strong>home="public|protected"</strong></p>
+<p>This attribute creates a URL pointing to the public or protected (logged in) page of the portal.</p>
+</li>
+<li>
+<p><strong>screen="screen_name"</strong></p>
+<p>This attribute creates a URL pointing to the screen name to be displayed.</p>
+</li>
+<li>
+<p><strong>command="LoginUser|LogoutUser|ShowTools"</strong></p>
+<p>This attribute creates a URL that issues the command to the portal. <code>command="LoginUser"</code> is used for the login panel, and <code>command="LogoutUser"</code> is used for the logout button. The <code>"userid"</code> and <code>"password"</code> parameters must be carried with a login URL. <code>command="ShowTools"</code> toggles the value of the showTools indicator. See the <code>&lt;portal-logic:if/&gt;</code> tag <code>"showtools"</code> attribute in for an example.</p>
+</li>
+<li>
+<p><strong>commandParam="parameter_name"</strong></p>
+<p>This attribute directs the portal engine to obtain the actual command to run from an HTTP request parameter instead of on the URL directly. The name of the parameter is the value of the commandParam attribute. This is useful in situations where different commands need to be conditionally run yet only one URL can be specified. Such is the case when using a <code>&lt;form&gt;</code> tag with a <code>&lt;select&gt;</code>. This enables use of the HTML form without requiring JavaScript. For example:</p>
+<div class="language-text highlight"><pre><span></span><code>   &lt;form name=&quot;someFormName&quot; method=&quot;GET&quot; style=&quot;margin-bottom: 0&quot;
+               action=&#39;&lt;portal-navigation:url commandParam=&quot;requestParamName&quot;/&gt;&#39;&gt;
+           &lt;select name=&quot;requestParamName&quot; onchange=&quot;javascript: this.form.submit(); &quot;&gt;
+                   &lt;portal-navigation:someLoop&gt;
+                           &lt;option value=&quot;&lt;%= theUrl %&gt;&quot; &gt;Some title goes here
+                   &lt;/portal-navigation:someLoop&gt;
+
+           &lt;/select&gt;
+           &lt;noscript&gt;
+                   &lt;input type=&quot;image&quot; border=0 align=absmiddle src=&#39;go.gif&#39;/&gt;Go
+           &lt;/noscript&gt;
+   &lt;/form&gt;        
+</code></pre></div>
+<p>The previous code example works both with and without JavaScript enabled.</p>
+</li>
+<li>
+<p><strong>ssl="yes|no|true|false"</strong></p>
+<p>This attribute creates a secure URL (HTTPS).</p>
+</li>
+<li>
+<p><strong>forceAbsolute = "true|false"</strong></p>
+<p>This attribute is optional. It specifies whether the URL that is generated by this tag is to be absolute or not. If you set this attribute to true, absolute URLs are enforced; in this case other settings that affect the generation of URLs might be overridden.</p>
+</li>
+</ul>
+<p>Example: The following example shows part of a user login form that uses the <code>&lt;portal:url&gt;</code> tag to process input fields, user ID, and password.</p>
+<div class="language-text highlight"><pre><span></span><code>    &lt;FORM method=&quot;POST&quot;
+         action=&#39;&lt;portal-navigation:url command=&quot;LoginUser&quot;/&gt;&#39;
+         enctype=&quot;application/x-www-form-urlencoded&quot;
+         name=&quot;LoginPage&quot;&gt;
+</code></pre></div>
+</li>
+<li>
+<p><strong>&lt;portal-navigation:navigationUrl type="link|expand|collapse|launch" varname="node_name" var="variable_name"/&gt;</strong></p>
+<p>Creates URLs for navigation nodes. The tag is used inside the body of the &lt;portal-navigation:navigationLoop&gt; tag and outputs links for the current navigation node according to the type attribute.</p>
+<p>Attributes are as follows:</p>
+<ul>
+<li>
+<p><strong>type</strong></p>
+<p>Use one of the following values:</p>
+<ul>
+<li>
+<p><strong>type="link"</strong></p>
+<p>This attribute creates a URL to change the selected node.</p>
+</li>
+<li>
+<p><strong>type="expand"</strong></p>
+<p>This attribute creates a URL that expands the node to reveal its child nodes. This is intended for expanding the navigation tree.</p>
+</li>
+<li>
+<p><strong>type="collapse"</strong></p>
+<p>This attribute creates a URL that collapses the node to conceal its child nodes. This is intended for collapsing the navigation tree.</p>
+</li>
+<li>
+<p><strong>type="launch"</strong></p>
+<p>This attribute creates a URL that either starts a page if all conditions for the page launch are fulfilled for the navigation node or if just like in the selection URL in <code>type="link"</code>.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The global state of the portal navigation trees is collapsed by default (with some exceptions, such as the Portal Administration navigation). You can configure the default state of the portal navigation trees to expand all nodes by setting the Portal Configuration Service property <code>navigation.expansion.defaultstate</code> to <code>true</code>.</p>
+</div>
+</li>
+<li>
+<p><strong>varname</strong></p>
+<p>This attribute specifies an object of type <code>com.ibm.portal.navigation.NavigationNode</code> for which the URL is to be generated. The attribute is optional.</p>
+</li>
+<li>
+<p><strong>var</strong></p>
+<p>This attribute specifies the name of a scripting variable that is shown in the body of the tag. The attribute is optional. The variable shows an object that implements <code>com.ibm.portal.DisposableURL</code> that can be used to stream the URL to the output. If the content node that is referenced by the navigation node is an internal URL, the body is evaluated only if the target of the internal URL is accessible.</p>
+</li>
+<li>
+<p><strong>forceAbsolute = "true|false"</strong></p>
+<p>This attribute is optional. It specifies whether the URL that is generated by this tag is to be absolute or not. If you set this attribute to true, absolute URLs are enforced; in this case other settings that affect the generation of URLs might be overridden.</p>
+</li>
+<li>
+<p><strong>keepNavigationalState="true|false|auto"</strong></p>
+<p>If this attribute is set to false, the current navigational state (including all portlet modes, states, and render parameters) is not included in the URL and the portal is reset to its default state. If set to true, which is the default, navigational state is included. If it is set to auto, the configuration determines if the navigational state is included. See the descriptions for <code>stateless.urls.enabled</code> and <code>generate.stateless.urls</code> in <em>Configuration Service</em>.</p>
+</li>
+</ul>
+<p>To generate the title or description of a navigation node, use the <code>&lt;portal-fmt:title/&gt;</code> or the <code>&lt;portal-fmt:description/&gt;</code> tags. This tag is used only in theme JSPs.</p>
+</li>
+<li>
+<p><strong>&lt;portal-navigation:navigationShift by="number" maxPages="number"&gt;</strong></p>
+<p>This tag is used in the navigation to create a URL that scrolls to the next set of page links when the number of available pages exceeds maxPages. The by attribute indicates the number of page links to scroll. If this tag is not used, all page links for the current level are rendered.</p>
+<p>This tag is nested in the &lt;portal-navigation:navigation&gt; tag and requires values for the startLevel and stopLevel attributes of the &lt;portal-navigation:navigation&gt; tag for its correct functioning.</p>
+</li>
+<li>
+<p><strong>&lt;portal-navigation:navigationLoop&gt;</strong></p>
+<p>This tag traverses through the navigation model. This tag is nested inside of the &lt;portal-navigation:navigation/&gt; tag when used. This tag indicates the part of the markup that is repeated once for each navigation node. There are no attributes for this tag. The body of this tag is run for each navigation node. This tag makes several scripting variables available for obtaining information for the navigation. These scripting variables are accessible only within the body of the tag.</p>
+</li>
+<li>
+<p><strong>&lt;portal-navigation:navigation&gt;</strong></p>
+<p>This tag initializes a set of objects and makes them available through scripting variables. These objects are required for the rendering process of the navigation. The scripting variables are accessible only within the body of the tag. The settings of the <code>startLevel</code> and <code>stopLevel</code> attributes determine whether the content of the navigation tag is evaluated. The navigation tag uses an "in-order" traversal of the navigation tree to select the nodes.</p>
+<p>Attributes are as follows:</p>
+<ul>
+<li>
+<p><strong>startLevel</strong></p>
+<p>Optional. The level on which this navigation is to begin showing information. If no start level is given, this tag will start at the navigation node after the levels that where shown by other JSPs. Otherwise, the default is level 1.</p>
+</li>
+<li>
+<p><strong>stopLevel</strong></p>
+<p>Optional. The level on which this navigation is to stop showing information. Default is to render all levels.</p>
+</li>
+<li>
+<p><strong>computeNumLevelsToDisplay</strong></p>
+<p>Optional. Compute the number of levels that are shown by this navigation. When this attribute is set to true, a scripting variable is made available inside the body of the navigation tag named <code>wpsNumLevelsToDisplay</code> of Java type java.lang.Integer.</p>
+</li>
+<li>
+<p><strong>scopeUniqueName</strong></p>
+<p>Specifies where to start the rendering of the portal navigation. The expected value is a unique name or string representation of the navigation node's ObjectID. This also replaces the <code>&lt;portal:favoritesLoop/&gt;</code> tag for enabling Organize Favorites functionality. The following code example shows how to use the <code>&lt;portal-navigation:navigation&gt;</code> with the <code>scopeUniqueName</code> attribute to enable Organize Favorites:</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;portal-navigation:navigation scopeUniqueName=&quot;wps.Favorites&quot;&gt;
+   &lt;portal-navigation:navigationLoop&gt;
+     &lt;a href=&#39;&lt;portal-navigation:navigationUrl type=&quot;link&quot;/&gt;&#39;
+        title=&#39;&lt;portal-fmt:description varname=&quot;&lt;%=wpsNavNode%&gt;&quot;/&gt;&#39;&gt;
+           &lt;portal-fmt:title varname=&quot;&lt;%=wpsNavNode%&gt;&quot;/&gt;
+     &lt;/a&gt;
+   &lt;/portal-navigation:navigationLoop&gt;
+ &lt;/portal-navigation:navigation&gt;
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>&lt;portal:favoritesLoop/&gt;</strong></p>
+<p>This tag is deprecated and must be replaced by using the <code>&lt;portal-navigation:navigation/&gt;</code> tag with its <code>scopeUniqueName</code> attribute.</p>
+<p>The following code example uses this tag to create the Organize Favorites functionality. To use this code, you must place it within the themes that you want to have this functionality.</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;%@ taglib uri=&quot;/WEB-INF/tld/portal.tld&quot; prefix=&quot;portal&quot; %&gt;
+&lt;portal-logic:if loggedIn=&quot;yes&quot; notScreen=&quot;SelfcareUserForm,SelfcareUserConf&quot;&gt;
+&lt;table border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; &gt;
+    &lt;tr&gt;
+    &lt;td align=&quot;&lt;%=bidiAlignRight%&gt;&quot; valign=&quot;middle&quot; dir=&quot;ltr&quot; nowrap&gt;
+    &lt;%
+    boolean firstItem = true;
+    %&gt;                        
+    &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; &lt;%= bidiDirAttr %&gt; &gt;
+    &lt;tr&gt;
+    &lt;td valign=&quot;middle&quot;&gt;
+    &lt;form tabIndex=&quot;8&quot; name=&quot;wpsFavoritesSelectionForm&quot; method=&quot;GET&quot; 
+     style=&quot;margin-bottom: 0&quot;&gt; 
+     action=&#39;&lt;portal-navigation:url commandParam=&quot;favoritesCommand&quot;/&gt;&#39;&gt; &lt;select name=&quot;favoritesCommand&quot; onchange=&quot;document.location.href=  
+        this.options[this.selectedIndex].value&quot;&gt;&quot;javascript: if 
+  (this.options[this.selectedIndex].value.charAt(0) == &#39;@&#39;)
+ {          window.open(this.options[this.selectedIndex].value.substring(1),
+  &#39;_blank&#39;); this.selectedIndex=0; return false;} 
+ else { this.form.submit(); return false; }&quot;&gt;
+            &lt;option value=&#39;#&#39; selected&gt;&lt;wps:text key=&#39;link.favorites.myfavorites&#39;
+            bundle=&#39;nls.engine&#39;/&gt;
+
+            &lt;portal-logic:if pageBookmarkable=&quot;true&quot;&gt;
+            &lt;option value=&#39;&lt;portal-navigation:url command=&quot;AddBookmark&quot;
+            alias=&quot;wps.My Favorites&quot;/&gt;&#39;&gt;&lt;portal-fmt:text key=&#39;link.favorites.add&#39;
+            bundle=&#39;nls.engine&#39;/&gt;
+            &lt;/portal-logic:if&gt;
+
+            &lt;portal-navigation:urlGeneration contentNode=&quot;wps.Organize Favorites&quot;
+            portletWindowState=&quot;Normal&quot; pacCheck=&quot;NoCheck&quot;&gt;
+            &lt;option value=&#39;&lt;% wpsURL.write(escapeXmlWriter); %&gt;&#39; &gt;
+            &lt;portal-fmt:text key=&#39;link.favorites.orgainize&#39; bundle=&#39;nls.engine&#39;/&gt;
+            &lt;/portal-navigation:urlGeneration&gt;
+
+            &lt;option value=&#39;#&#39;&gt;------------
+
+                &lt;portal:favoritesLoop&gt;
+                &lt;% 
+                // wpsFavoritesURL is null for folders in the list of favorites
+                if (wpsFavoritesURL != null)
+                {
+                // Check the favorite type.  If it is an external URL, add a symbol to the URL
+                // so the JavaScript on the select can detect when to open a new window
+                // wpsFavoritesType may be null.  wpsFavoritesType=1 means external URL
+                    if (&quot;EXTERNALURL&quot;.equals(wpsFavoritesType))
+                    wpsFavoritesURL = &quot;@&quot; + wpsFavoritesURL;
+                //Phone number links are only supported on WML devices... and
+                    favorites are not markup-specific.
+                // wpsFavoritesType may be null.  wpsFavoritesType=2 means Phone Number
+                    if (!&quot;2&quot;.equals(wpsFavoritesType))
+                    {
+                    %&gt;
+                    &lt;option value=&quot;&lt;%= wpsFavoritesURL %&gt;&quot;&gt;
+                    &lt;% for (int favSpace=1; favSpace &lt; wpsFavoritesLevel.intValue();
+                    favSpace++) {%&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;% } %&gt;&lt;%= wpsFavoritesTitle %&gt;
+                    &lt;%
+                    }
+                    }
+                    else
+                    {
+                    %&gt;
+                    &lt;option value=&quot;#&quot; &gt;&lt;% for (int favSpace=1; 
+                    favSpace &lt; wpsFavoritesLevel.intValue();
+                    favSpace++) {%&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;% } %&gt;--&lt;%= wpsFavoritesTitle %&gt;--
+                    &lt;%
+                    }
+                    %&gt;
+                    &lt;/portal:favoritesLoop&gt;
+                &lt;/select&gt;
+                &lt;noscript&gt;
+                &lt;input type=&quot;image&quot; border=&quot;0&quot; align=&quot;absmiddle&quot;
+                src=&#39;&lt;portal-logic:urlFindInTheme file=&quot;go.gif&quot;/&gt;&#39;/&gt;
+                &lt;span class=&quot;wpsPlaceBarLink&quot; &gt;&amp;nbsp;&amp;lt;portal-fmt:text key=&quot;go&quot;
+                bundle=&quot;nls.button&quot;/&gt;&lt;/span&gt;
+                &lt;/noscript&gt;
+                &lt;/form&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/portal-logic:if&gt;
+</code></pre></div>
+</li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 25, 2022</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>
