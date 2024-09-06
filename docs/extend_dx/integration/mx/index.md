@@ -11,11 +11,44 @@ Volt MX Foundry is a back-end service provider that helps developers build omni-
 
     Note that the specified HCL Volt MX Foundry version is the tested version. Using later versions will most probably work but it is not guaranteed.
 
-Follow the installation and configuration steps to integrate HCL Digital Experience to work with HCL Volt MX Foundry.
+Follow the installation and configuration steps to integrate HCL Digital Experience to work with HCL Volt MX Foundry. [](../../../)
+
+```mermaid
+
+flowchart TB
+node_1(["Start"])
+node_2["Deploy HCL DX using Helm"]
+node_3["Deploy HCL Volt MX Foundry using Helm"]
+node_4[Check prerequisites<img src='../../../assets/external-link.svg' width='15' height='15' />]
+node_5["Perform configuration"]
+node_6["Install Volt MX Foundry Container Cluster Solution"]
+node_7["Perform post installation tasks"]
+node_8["Configure HCL Volt MX Foundry for integration with HCL DX"]
+node_9["Test integration"]
+node_1 --> node_2
+node_2 --> node_3
+node_3 --> node_4
+node_4 --> node_5
+node_5 --> node_6
+node_6 --> node_7
+node_7 --> node_8
+node_8 --> node_9
+
+click node_2 "../mx/installation/index.html#deploy-hcl-digital-experience-using-helm"
+click node_3 "../mx/installation/index.html#deploy-hcl-volt-mx-foundry-using-helm"
+click node_4 href "https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmxfoundry_containers_helm/Content/Installing_Containers_With_Helm.html#prerequisites" _blank
+click node_8 "https://www.github.com" "Open this in a new tab" _blank
+click node_9 "https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmxfoundry_containers_helm/Content/Installing_Containers_With_Helm.html#prerequisites"
+click node_5 href "https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmxfoundry_containers_helm/Content/Installing_Containers_With_Helm.html#prerequisites" _blank
+
+
+```
 
 -   **[Install HCL Digital Experience and HCL Volt MX Foundry using Helm](./installation/index.md)**
 -   **[HCL Volt MX Foundry configuration for the integration with HCL Digital Experience](./configuration/index.md)**  
--   **[Test the integration using example integrations](./example/index.md)**  
+-   **[Test the integration using example integrations](./example/index.md)** 
+
+
 
 ## HCLSoftware U learning materials
 
