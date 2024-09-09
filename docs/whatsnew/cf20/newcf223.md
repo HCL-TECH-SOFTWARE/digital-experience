@@ -10,7 +10,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 8.5 and 9.0 Versions**
 
 - User Session Reporting Tool
-- Extended support announced for DX versions 8.5 and 9
+- End of Support announced for DX versions 8.5 and 9.0
 - Automatically apply 9.5 from CF223 installation
 
 **Digital Experience 9.5 Container Version**
@@ -48,13 +48,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     The User Session Reporting Tool is a utility designed for HCL DX users, initially for those managing on-premises deployments. This tool provides a solution for analyzing and interpreting web traffic data by processing National Center for Supercomputing Applications (NCSA) access log files. Relevant parts of each log are extracted to identify and count unique user sessions. This offers a precise understanding of usage data over specified periods. For more information, see [User Session Reporting Tool](../../get_started/download/software_licensing_portal/configure_entitlement_checks/user_session_reporting_tool.md).
 
-### Extended support announced for DX versions 8.5 and 9
+### End of Support announced for DX versions 8.5 and 9.0*
 
 === "On-Premises"
-    HCL Software initially announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Starting August 30, 2024, [extended support is available for HCL DX versions 8.5 and 9](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0115794){target="_blank"}. It will be available for customers who sign up starting August 30, 2024. Extended support will be offered from June 30, 2025 until June 30, 2026.
+    HCLSoftware initially announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. To accommodate customers who might be unable to update from DX versions 8.5 and 9.0 to DX version 9.5 by that date, customers can sign up for Extended Support until June 30, 2025. For more information, see the article [Starting on August 30, 2024 Extended Support will be available for HCL Digital Experience V8.5.x and 9](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0115794){target="_blank"}. Extended support will be offered from June 30, 2025 until June 30, 2026.
     
     Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
-
     
 ### Automatically apply 9.5 from CF223 installation
 
