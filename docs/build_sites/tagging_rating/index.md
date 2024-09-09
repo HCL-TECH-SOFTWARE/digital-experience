@@ -55,6 +55,9 @@ You can use the XML configuration interface to manage tagging and rating in the 
 -   **[Hints and tips for tagging and rating](../admin-system/tag_rate_ref_hintip.md)**  
 Learn about some hints and tips that apply to tagging and rating. Some hints and tips might help developers and portal administrators, others might help portal users. --->
 
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to use Search for business users, go to [Search](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D2804){target="_blank"}. To try it out yourself, refer to [Search Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-200_Search_Lab.pdf){target="_blank"}.
 
 ???+ info "Related information"
     - [CP Configuration Service for tagging and rating](../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/index.md)
