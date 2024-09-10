@@ -1,0 +1,81 @@
+# Creating a custom Login Portlet for HCL DX
+
+This topic provides steps on how to create a custom login portlet for HCL Digital Experience (DX). This is useful if the base portlet is not in your desired format, or if you want to add additional verification to the login. You can also find information on how to add user credentials to the credential vault.
+
+There is a portlet service that allows you to log in to HCL DX. This service uses the LoginUserAuth in the login process. You can also write your own login portlet and handle any validation or processing before or after the login process.
+
+1. To use this service with Rational Application Developer (RAD), add the following to your build path as an external JAR file:
+
+    ```
+    wp.auth.cmd.jar
+    wp.auth.base.jar
+    ```
+
+    You can find these two .jar files in the `<portalserver>\base\wp.auth.base\shared\app and <portalserver>\base\wp.auth.cmd\shared\app` directories in your HCL DX installation.
+
+2. The first portlet service is `com.ibm.portal.portlet.service.login.LoginService`. To access this service, add code similar to the following:
+
+    ```
+    PortletServiceHome psh;
+    javax.naming.Context ctx = new javax.naming.InitialContext();
+    psh = (PortletServiceHome) ctx.lookup(LoginHome.JNDI_NAME);
+    loginHome = (LoginHome) psh.getPortletService(LoginHome.class);
+    ```
+
+    !!!note
+        It is recommended to use the init method when adding code.
+
+3. In your processAction, log the user by using the following sample code:
+
+    ```
+    LoginService loginService = (LoginService) loginHome.getLoginService(request, response);
+    String userId = request.getParameter(FORM_ID);
+    String password = request.getParameter(FORM_PASSWORD);
+    Map contextMap = new HashMap();
+    contextMap.put(LoginService.DO_RESUME_SESSION_KEY, new Boolean(false));
+    try {
+    loginService.login(userId, password.toCharArray(), contextMap, null)
+    } catch (Exception ex) {
+    System.err.println("this login failed with = " + ex.getMessage());
+    }
+    ```
+
+4. Add a login form to the JSP page which is available from the first portlet provided in Step 2.
+
+    Depending on the response from the LoginService, the user can be logged in or not. Note that once you call the LoginService method, the control will not return to your portlet code if the user is logged in. This behavior is because DX will redirect to the proper Portal page, unless there is an authentication error or a Finally block.
+
+5. Add the credential vault handling. In the init method, use the following code:
+
+    ```
+    javax.naming.Context ctx = new javax.naming.InitialContext();
+    PortletServiceHome cvsHome = (PortletServiceHome)ctx.lookup("portletservice/com.ibm.portal.portlet.service.credentialvault.CredentialVaultService");
+    vaultService = (CredentialVaultService)cvsHome.getPortletService (CredentialVaultService.class);
+    ```
+
+6. Add a Finally block. 
+
+    A user cannot access the credential vault before authentication. After the user is in the LoginService, the service only returns to the portlet code if a failure condition occurs or if you have a Finally block. Otherwise, the code does a redirect and sends you to the correct portal page.
+
+    The processAction method looks like the following:
+
+    ```
+    LoginService loginService = (LoginService) loginHome.getLoginService(request, response);
+    String userId = request.getParameter(FORM_ID);
+    String password = request.getParameter(FORM_PASSWORD);
+    Map contextMap = new HashMap();
+    contextMap.put(LoginService.DO_RESUME_SESSION_KEY, new Boolean(false));
+    try {
+    loginService.login(userId, password.toCharArray(), contextMap, null);
+    } catch (Exception ex) {
+    System.out.println("this login failed with = " + ex.getMessage());
+    ex.printStackTrace();
+    } finally {
+    setCredential(request,userId,password);
+    }
+    ```
+
+    The setCredential method accesses the credential vault and sets this value. This example uses a Shared User slot. This slot is shared across all portlets this user has access to, and there is one secret per user. The full code for this can be found in the following code samples:
+
+
+    - [CustomLoginPortlet.war]()
+    - [LoginPortletWithCV.war]()
