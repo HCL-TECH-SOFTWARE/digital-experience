@@ -13,7 +13,7 @@ There is a portlet service that allows you to log in to HCL DX. This service use
 
     You can find these two .jar files in the `<portalserver>\base\wp.auth.base\shared\app and <portalserver>\base\wp.auth.cmd\shared\app` directories in your HCL DX installation.
 
-2. The first portlet service is `com.ibm.portal.portlet.service.login.LoginService`. To access this service, add code similar to the following:
+2. Access the first portlet service `com.ibm.portal.portlet.service.login.LoginService`. To access this service, add code similar to the following:
 
     ```
     PortletServiceHome psh;
@@ -25,7 +25,7 @@ There is a portlet service that allows you to log in to HCL DX. This service use
     !!!note
         It is recommended to use the init method when adding code.
 
-3. In your processAction, log the user by using the following sample code:
+3. In processAction, log the user by using the following sample code:
 
     ```
     LoginService loginService = (LoginService) loginHome.getLoginService(request, response);
@@ -56,7 +56,7 @@ There is a portlet service that allows you to log in to HCL DX. This service use
 
     A user cannot access the credential vault before authentication. After the user is in the LoginService, the service only returns to the portlet code if a failure condition occurs or if you have a Finally block. Otherwise, the code does a redirect and sends you to the correct portal page.
 
-    The processAction method looks like the following:
+    To add a Finally block, the processAction method should look like the following sample code:
 
     ```
     LoginService loginService = (LoginService) loginHome.getLoginService(request, response);
@@ -74,8 +74,7 @@ There is a portlet service that allows you to log in to HCL DX. This service use
     }
     ```
 
-    The setCredential method accesses the credential vault and sets this value. This example uses a Shared User slot. This slot is shared across all portlets this user has access to, and there is one secret per user. The full code for this can be found in the following code samples:
-
+    The setCredential method accesses the credential vault and sets this value. This example uses a Shared User slot. This slot is shared across all portlets this user has access to, and there is one secret per user. You can find the full code for this in the following code samples:
 
     - [CustomLoginPortlet.war]()
     - [LoginPortletWithCV.war]()
