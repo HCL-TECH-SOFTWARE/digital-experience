@@ -83,7 +83,7 @@ Search indexes are updated periodically. Newly created or updated items are not 
 
 ## Searching for pages in the Portal Site library
 
-Searching for pages in the Portal Site library is not supported. For a possible work-around, [see this answer](https://support.hcltechsw.com/csm?id=kb_category&kb_category=c0ef98b71bb0778083cb86e9cd4bcbf2.).
+Searching for pages in the Portal Site library is not supported. For a possible work-around, [see this answer](https://support.hcltechsw.com/csm?id=kb_category&kb_category=c0ef98b71bb0778083cb86e9cd4bcbf2).
 
 ## HCLSoftware U learning materials
 
