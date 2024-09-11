@@ -15,8 +15,13 @@ To save an item from its default location to a new location, click **Select Loca
 
 In an authoring template, multiple save locations can be specified:
 
-1. Under the Item Properties dropdown menu, go to Location options: and click **Selected locations**.
+1. Under the Item Properties dropdown menu, go to **Location options** and click **Selected locations**.
 2. Click **Add** to open the list of locations the item can be saved in.
-3. Click the checkboxes for the additional locations you want the item to be saved under, then click **OK**.
-4. In the Choose saving option for the author: option, select **Allow item to be placed under multiple locations**.
+3. Click the checkbox for the additional location you want the item to be saved under, then click **OK**.
+4. Under **Choose saving option for the author**, select **Allow item to be placed under multiple locations**.
     - When content items can be saved in multiple locations based on the authoring template, the item is saved in the primary location and links are created in the other save locations specified in the new content item.
+5. Click **Save and Close** at the bottom of the page to save your changes.
+
+## Specifying multiple save locations inside of a new content item
+
+When a new content item is created, the **Add location** option can be used.
