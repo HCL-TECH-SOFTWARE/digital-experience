@@ -42,7 +42,7 @@ There is a portlet service that allows you to log in to HCL DX. This service use
 
 4. Add a login form to the JSP page which is available from the first portlet provided in Step 2.
 
-    Depending on the response from the LoginService, the user can be logged in or not. Note that once you call the LoginService method, the control will not return to your portlet code if the user is logged in. This behavior is because DX will redirect to the proper Portal page, unless there is an authentication error or a Finally block.
+    Depending on the response from the LoginService, the user can be logged in or not. Note that once you call the LoginService method, the control will not return to your portlet code if the user is logged in. This behavior is because DX will redirect to the proper Portal page, unless there is an authentication error or a finally block.
 
 5. Add the credential vault handling. In the init method, use the following code:
 
@@ -52,11 +52,11 @@ There is a portlet service that allows you to log in to HCL DX. This service use
     vaultService = (CredentialVaultService)cvsHome.getPortletService (CredentialVaultService.class);
     ```
 
-6. Add a Finally block. 
+6. Add a finally block. 
 
     A user cannot access the credential vault before authentication. After the user is in the LoginService, the service only returns to the portlet code if a failure condition occurs or if you have a Finally block. Otherwise, the code does a redirect and sends you to the correct portal page.
 
-    To add a Finally block, the processAction method should look like the following sample code:
+    To add a finally block, the processAction method should look like the following sample code:
 
     ```
     LoginService loginService = (LoginService) loginHome.getLoginService(request, response);
