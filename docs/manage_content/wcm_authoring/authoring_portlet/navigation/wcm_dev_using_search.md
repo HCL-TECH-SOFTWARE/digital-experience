@@ -84,3 +84,7 @@ Search indexes are updated periodically. Newly created or updated items are not 
 ## Searching for pages in the Portal Site library
 
 Searching for pages in the Portal Site library is not supported. For a possible work-around, [see this answer](https://support.hcltechsw.com/csm?id=kb_category&kb_category=c0ef98b71bb0778083cb86e9cd4bcbf2.).
+
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to use Search for business users, go to [Search](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D2804){target="_blank"}. To try it out yourself, refer to [Search Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-200_Search_Lab.pdf){target="_blank"}.
