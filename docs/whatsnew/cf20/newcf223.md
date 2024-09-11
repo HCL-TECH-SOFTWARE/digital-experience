@@ -5,11 +5,11 @@ The following features and updates are available to customers installing HCL Dig
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Ability to change the context root or hostname of a virtual portal
+- User Session Reporting Tool
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
 
-- User Session Reporting Tool
 - Extended Support option now available for DX versions 8.5 and 9.0 
 - Automatically apply 9.5 from CF223 installation
 
@@ -32,6 +32,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     You can change the context root or hostname of an already existing Virtual Portal using the administration portlet. For more information, see [Using the Virtual Portal Manager administration portlet](../../build_sites/virtual_portal/vp_mgr_portlet/advp_vpmgr_use.md).
 
+### User Session Reporting Tool
+
+=== "On-Premises"
+    The User Session Reporting Tool is a utility designed for HCL DX users for those managing on-premises deployments. This tool provides a solution for analyzing and interpreting web traffic data by processing National Center for Supercomputing Applications (NCSA) access log files. Relevant parts of each log are extracted to identify and count unique user sessions. This offers a precise understanding of usage data over specified periods. For more information, see [User Session Reporting Tool](../../get_started/download/software_licensing_portal/configure_entitlement_checks/user_session_reporting_tool.md).
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
@@ -42,11 +46,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and End of Support (EOS) is on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
 
 ## Digital Experience 8.5 and 9.0 Versions
-
-### User Session Reporting Tool
-
-=== "On-Premises"
-    The User Session Reporting Tool is a utility designed for HCL DX users, initially for those managing on-premises deployments. This tool provides a solution for analyzing and interpreting web traffic data by processing National Center for Supercomputing Applications (NCSA) access log files. Relevant parts of each log are extracted to identify and count unique user sessions. This offers a precise understanding of usage data over specified periods. For more information, see [User Session Reporting Tool](../../get_started/download/software_licensing_portal/configure_entitlement_checks/user_session_reporting_tool.md).
 
 ### Extended Support option now available for DX versions 8.5 and 9.0 
 
