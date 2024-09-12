@@ -56,7 +56,7 @@ If you only want to customize the flow of the login - like call external validat
 
 6. Add a finally block. 
 
-    A user cannot access the credential vault before authentication. After the user is in the LoginService, the service only returns to the portlet code if a failure condition occurs or if you have a Finally block. Otherwise, the code does a redirect and sends you to the correct portal page.
+    A user cannot access the credential vault before authentication. After the user is in the LoginService, the service only returns to the portlet code if a failure condition occurs or if you have a finally block. Otherwise, the code does a redirect and sends you to the correct portal page.
 
     To add a finally block, the processAction method should look like the following sample code:
 
