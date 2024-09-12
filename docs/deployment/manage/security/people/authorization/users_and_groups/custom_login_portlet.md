@@ -4,7 +4,7 @@ This topic provides steps on how to create a custom login portlet for HCL Digita
 
 There is a portlet service that allows you to log in to HCL DX. This service uses the LoginUserAuth in the login process. You can also write your own login portlet and handle any validation or processing before or after the login process.
 
-1. To use this service with Rational Application Developer (RAD), add the following to your build path as an external JAR file:
+1. To implement a login portlet with Rational Application Developer (RAD) or Eclipse or another Java development tool, add the following to your build path as an external JAR file:
 
     ```
     wp.auth.cmd.jar
