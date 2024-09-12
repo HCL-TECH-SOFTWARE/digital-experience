@@ -2,7 +2,9 @@
 
 This topic provides steps on how to create a custom login portlet for HCL Digital Experience (DX). This is useful if the base portlet is not in your desired format, or if you want to add additional verification to the login. You can also find information on how to add user credentials to the credential vault.
 
-There is a portlet service that allows you to log in to HCL DX. This service uses the LoginUserAuth in the login process. You can also write your own login portlet and handle any validation or processing before or after the login process.
+To implement your own login portlet after capturing the required security credentials your code will need to call the public portlet service as documented here: https://help.hcl-software.com/digital-experience/8.5/dev/javadoc/vrm/850/spi_docs/com/ibm/portal/portlet/service/login/LoginService.html
+
+If you only want to customize the flow of the login - like call external validation - you can also consider writing a login filter as documented here: https://help.hcl-software.com/digital-experience/8.5/admin-system/adauthflt.html
 
 1. To implement a login portlet with Rational Application Developer (RAD) or Eclipse or another Java development tool, add the following to your build path as an external JAR file:
 
