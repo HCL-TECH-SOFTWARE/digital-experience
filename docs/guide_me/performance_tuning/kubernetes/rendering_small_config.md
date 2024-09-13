@@ -113,7 +113,7 @@ This section provides details for the Kubernetes cluster, JMeter, and database.
 
       - Processor details
 
-      ![](../../../../images/Processor_Info_Native-Kube.png){ width="1000" }
+      ![](../../../../images/Processor_Info_Native-Kube.png){ width="600" }
 
       - Volume details
 
@@ -124,19 +124,19 @@ This section provides details for the Kubernetes cluster, JMeter, and database.
 
 - Remote DB2 - [t3a.large]
 
-       ![](../../../../images/Header-2-AWS.png){ width="1000" }
+       ![](../../../../images/Header-2-AWS.png){ width="600" }
 
-       ![](../../../../images/t3a.large.png){ width="1000" }
+       ![](../../../../images/t3a.large.png){ width="600" }
 
 
 - Processor details
 
-       ![](../../../../images/Processor_Info_RemoteDB2.png){ width="1000" }
+       ![](../../../../images/Processor_Info_RemoteDB2.png){ width="600" }
 
 
 - Volume details
 
-       ![](../../../../images/Remote-DB2-Volume-Info.png){ width="1000" }
+       ![](../../../../images/Remote-DB2-Volume-Info.png){ width="600" }
 
 
 ### JMeter agents
@@ -145,9 +145,9 @@ This section provides details for the Kubernetes cluster, JMeter, and database.
 
 - To run the tests, a distributed AWS/JMeter agents setup consisting of one primary and two subordinates was used.
 
-      ![](../../../../images/Header-3-AWS.png){ width="1000" }
+      ![](../../../../images/Header-3-AWS.png){ width="400" }
 
-      ![](../../../../images/t2.xlarge.png){ width="1000" }
+      ![](../../../../images/t2.xlarge.png){ width="400" }
 
 
 - Processor details
@@ -157,7 +157,7 @@ This section provides details for the Kubernetes cluster, JMeter, and database.
 
 - Network details
 
-      ![](../../../../images/JMeter_Agent_Network_Details.png){ width="600" }
+      ![](../../../../images/JMeter_Agent_Network_Details.png){ width="400" }
 
 
 - Volume details
