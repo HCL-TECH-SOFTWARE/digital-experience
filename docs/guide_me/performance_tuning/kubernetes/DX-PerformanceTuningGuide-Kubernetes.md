@@ -46,10 +46,10 @@ If additional tuning is necessary, start by applying the Base Portal Tuning then
 
 Before beginning your install of HCL Portal and Web Content Manager, you should consider how the environment will be used to achieve ideal performance.
 
-HCL DX 9.5 CF200 and later is designed to run on any Certified Kubernetes platform (<https://www.cncf.io/certification/software-conformance>) , provided that the following statements are true:
+HCL DX 9.5 CF200 and later is designed to run on any [Certified Kubernetes platform](https://www.cncf.io/certification/software-conformance){target="_blank"} , provided that the following statements are true:
 
 - The Kubernetes platform is hosted on x86-64 hardware.
-- The Kubernetes platform is officially supported by Helm (<https://helm.sh/docs/topics/kubernetes_distros/>).
+- The Kubernetes platform is officially supported by [Helm](https://helm.sh/docs/topics/kubernetes_distros/){target="_blank"}.
 
 For more information, see [System Requirements](../../../get_started/system_requirements/index.md).
 
@@ -364,7 +364,7 @@ Finally, in some workloads, increasing the prepared cache statement size will be
 
 ### Security Attribute Propagation
 
-If the WebSphere Subject has not been customized, for example through Trust Association Interceptor (TAI) or a custom WAS login module, then there is no need to enable Security Attribute Propagation. Security Attribute Propagation (SAP) can add extra overhead due to the extra processing required. However, there are certain configurations where performance might be better with security propagation enabled due to reduction of remote registry calls. See <https://www.ibm.com/docs/en/was/8.5.5?topic=users-security-attribute-propagation>
+If the WebSphere Subject has not been customized, for example through Trust Association Interceptor (TAI) or a custom WAS login module, then there is no need to enable Security Attribute Propagation. Security Attribute Propagation (SAP) can add extra overhead due to the extra processing required. However, there are certain configurations where performance might be better with security propagation enabled due to reduction of remote registry calls. See [Security attribute propagation](https://www.ibm.com/docs/en/was/8.5.5?topic=users-security-attribute-propagation){target="_blank"} for more information.
 
 If you want to enable SAP for functional reasons, you can reduce the overhead using a custom property **com.ibm.CSI.disablePropagationCallerList**. This will improve login performance. Adding this property and turning off SAP will give the best performance.
 
@@ -430,7 +430,7 @@ Change the contextPool settings to match the following:
 The number of active LDAP connections can be monitored by viewing the number of open connections on the LDAP server via the netstat command:
 **netstat -an | grep 389 | wc -l**
 
-Note: If your networking configuration requires your Portal server to access the LDAP server through a proxy (such as a firewall or a load balancer) that breaks TCP connections without notifying it’s endpoint, it may be necessary to modify the pool timeout to never reuse a connection past a certain age. View additional guidance on connection pooling options available from the IBM WebSphere Application Server Knowledge Center documentation: <https://www.ibm.com/docs/en/was/9.0.5?topic=settings-session-pool>
+Note: If your networking configuration requires your Portal server to access the LDAP server through a proxy (such as a firewall or a load balancer) that breaks TCP connections without notifying it’s endpoint, it may be necessary to modify the pool timeout to never reuse a connection past a certain age. View additional guidance on connection pooling options available from the [IBM WebSphere Application Server Knowledge Center documentation](https://www.ibm.com/docs/en/was/9.0.5?topic=settings-session-pool){target="_blank"}.
 
 **VMM Caches**
 
@@ -785,7 +785,7 @@ WP 8.0.0.1 CF09 introduced (from PI05486) the new ConfigEngine Task 'Delete Sear
 
 **ConfigEngine.sh action-delete-search-services-and-collections-wp.search.service**
 
-See <http://www-01.ibm.com/support/docview.wss?uid=swg1PI05486> for more information.
+See [PI05486: SCRIPT FOR REMOVING THE DEFAULT SEARCH SERVICE (LOCAL) AND ITS SEARCH COLLECTIONS](http://www-01.ibm.com/support/docview.wss?uid=swg1PI05486){target="_blank"} for more information.
 
 These collections include the JCR collection and the “Default Search Collection”.
 
@@ -959,7 +959,7 @@ Portal 9.5 includes a Theme Analyzer tool that can be used to analyze theme prof
 
 For environments where federated LDAP is used, throughput can be improved by disabling nested group caches. Nested group caches are discussed under “Disabling nested group searches” in this document:
 
-<http://www->01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.wim.doc/disablingnestedgroup searches.html>
+<https://www.ibm.com/docs/en/was-zos/9.0.5?topic=limitations-disabling-nested-group-searches>
 
 **How to Set**
 
@@ -1168,7 +1168,7 @@ net.ipv4.ip_local_port_range = 9000 65500
 
 Database performance is very important for obtaining good overall performance from WebSphere Portal.
 
-Below is a list of tuning applied on our Oracle database server with the alter system command. Additional database tuning maybe needed in your production environments. For further information on Oracle database tuning, refer to Oracle Performance Tuning Guide at <https://www.oracle.com/technetwork/indexes/documentation/index.html#database>. <!-- link is broken>
+Below is a list of tuning applied on our Oracle database server with the alter system command. Additional database tuning maybe needed in your production environments. For further information on Oracle database tuning, refer to Oracle Performance Tuning Guide at <https://docs.oracle.com/en/database/oracle/oracle-database/23/tdppt/index.html>
 
 **Command used:** alter system set &lt;parameter&gt; scope=spfile;
 
@@ -1287,7 +1287,7 @@ Horizontal Pod Autoscaling is an essential tool in Kubernetes for maintaining ap
 
 - **CPU Limits and Requests**: Ensure that your CPU limits and requests are appropriately configured. This helps in avoiding resource contention and ensuring your application has the necessary resources during peak loads. Refer sizing document for CPU limit and requests. 
 
-Refer [Medium Config sizing](rendering_medium_config.md)
+Refer to [Medium Config sizing](rendering_medium_config.md) for more information.
 
 - **Memory Management**: Review and adjust memory allocations to prevent out-of-memory errors and ensure smooth operation. 
 
@@ -1967,7 +1967,7 @@ Refer to the Theme section of this document for more information about theme pro
 
 ## Java Server Faces (JSF)
 
-Apache JSF document <http://myfaces.apache.org/docindex.html> mentions 3 items that led to a minor improvement:<!-- link is broken >
+Apache JSF document <https://www.oracle.com/java/technologies/javaserverfaces.html> mentions 3 items that led to a minor improvement:
 
 PROJECT_STAGE=production
 
@@ -2230,8 +2230,7 @@ Troubleshooting → Logs and trace
 
 WebSphere Portal 8.0 and above provides a new Portal light mode which can improve Portal startup time
 and reduce memory consumption in production environments.
-For more information, please visit the following HCL DX Help Center Administering topic URL:
-<https://help.hcl-software.com/digital-experience/9.5/admin-system/portal_light_nbl.html>
+For more information, see [Enabling and disabling portal light mode](../../../deployment/manage/config_portal_behavior/portal_lightmode/portal_light_nbl.md)
 
 ### Managing the Retrieval of User Attributes
 
@@ -2394,8 +2393,7 @@ In the LTPA mechanism WepSphere shares its LTPA keys with the WebSEAL server. We
 
 During the medium configuration tests, we encountered an LTPA token timeout error in the Core logs. To address this issue, the LTPA token timeout was increased from 120 minutes to 480 minutes specifically for the rendering tests execution. This adjustment ensured that the tests could run smoothly without interruptions caused by token expiration.
 
-For more information, we referred to the following HCL Support article.
-<https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0079521>
+For more information, refer to the HCL Support article [How can I avoid SESN0008E errors](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0079521){target="_blank"}
 
 **How to Set**
 
@@ -2562,7 +2560,7 @@ WebSphere Application Server comes with a Cache Monitor application that allows 
 
 1. Install/Update the Cache Monitor. For information on how to do this, go to:
 
-<http://www.ibm.com/developerworks/websphere/downloads/cache_monitor.html>.
+<https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0075565>.
 
 2. Before you can access the Cache Monitor application, you will need to give an administrator account access to this application.
 
@@ -2580,7 +2578,7 @@ Click Save
 
 3. Login to the Cache Monitor application. The URL should look like
 
-<http://myserver.com:&lt;port&gt;/cachemonitor>.
+[Cache Monitor](http://myserver.com:<port>/cachemonitor)
 
 4. Select the “baseCache” and click OK
 5. At this point any WCM Web Content Viewer JSR 286 portlet with caching enabled should add entries to this cache.
@@ -2593,9 +2591,7 @@ Note that the Cache Monitor application will also allow you to view Portal and W
 
 WebSphere provides built in functionality for caching Java objects, DynaCache. Custom portlets can use DynaCache and its DistributedMap interface to programmatically store and retrieve custom Java objects. This is especially useful for caching data from backed sources like databases or legacy applications.
 
-For more information see:
-
-<http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.base.doc/ae/tdyn_distmap.html>
+For more information, see [Using the DistributedMap and DistributedObjectCache interfaces for the dynamic cache](https://www.ibm.com/docs/en/was/8.5.5?topic=service-using-distributedmap-distributedobjectcache-interfaces-dynamic-cache){target="_blank"}.
 
 ### Portal Caching
 
@@ -3505,7 +3501,7 @@ This cache caches data sources on the server. The cache key is the URI of the da
 
 The content of the cache can be viewed via
 
-<http://portalserver/wps/mycontenthandler/distmap/ws/com.ibm.wps.resolver.data.cache.DataSourceCac> he.
+<http://portalserver/wps/mycontenthandler/distmap/ws/com.ibm.wps.resolver.data.cache.DataSourceCache>
 
 The key into the cache is the URI of a data source. The value is the content of the data source, which can be anything from text files to binary data.
 
@@ -3830,10 +3826,6 @@ VMM search results cache to improve the performance of VMM search.
 Default size: 2000, default lifetime: (Same as ltpaToken timeout. Cache entries also go away when user is logged out), usage pattern: regular.
 
 The WSSecureMap cache stores security attributes used to recreate user credential. It scales with the number of users who log in.
-
-In the WAS Knowledge Center, it is documented as "Security cache" in the diagram at <http://www->
-
-01.ibm.com/support/knowledgecenter/SS7JFU_8.0.0/com.ibm.websphere.express.doc/info/exp/ae/csec_s ecattributeprop.html?cp=SS7JFU_8.0.0%2F1-8-32-2-10&lang=en.
 
 **How to Set**
 
