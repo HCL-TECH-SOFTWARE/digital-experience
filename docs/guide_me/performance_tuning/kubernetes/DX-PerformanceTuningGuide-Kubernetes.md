@@ -957,9 +957,7 @@ Portal 9.5 includes a Theme Analyzer tool that can be used to analyze theme prof
 
 ### Disabling Nested Group Searches
 
-For environments where federated LDAP is used, throughput can be improved by disabling nested group caches. Nested group caches are discussed under “Disabling nested group searches” in this document:
-
-<https://www.ibm.com/docs/en/was-zos/9.0.5?topic=limitations-disabling-nested-group-searches>
+For environments where federated LDAP is used, throughput can be improved by disabling nested group caches. For more information about nested group caches, see [Disabling nested group searches](https://www.ibm.com/docs/en/was-zos/9.0.5?topic=limitations-disabling-nested-group-searches){target="_blank"}.
 
 **How to Set**
 
@@ -1168,7 +1166,7 @@ net.ipv4.ip_local_port_range = 9000 65500
 
 Database performance is very important for obtaining good overall performance from WebSphere Portal.
 
-Below is a list of tuning applied on our Oracle database server with the alter system command. Additional database tuning maybe needed in your production environments. For further information on Oracle database tuning, refer to Oracle Performance Tuning Guide at <https://docs.oracle.com/en/database/oracle/oracle-database/23/tdppt/index.html>
+The following table shows a list of tuning applied on our Oracle database server with the alter system command. Additional database tuning might be needed in your production environments. For further information on Oracle database tuning, refer to [Oracle Performance Tuning Guide](https://docs.oracle.com/en/database/oracle/oracle-database/23/tdppt/index.html){target="_blank"}.
 
 **Command used:** alter system set &lt;parameter&gt; scope=spfile;
 
@@ -1967,7 +1965,7 @@ Refer to the Theme section of this document for more information about theme pro
 
 ## Java Server Faces (JSF)
 
-Apache JSF document <https://www.oracle.com/java/technologies/javaserverfaces.html> mentions 3 items that led to a minor improvement:
+The [Apache JSF document](https://www.oracle.com/java/technologies/javaserverfaces.html){target="_blank"} mentions three items that led to a minor improvement:
 
 PROJECT_STAGE=production
 
@@ -2230,7 +2228,7 @@ Troubleshooting → Logs and trace
 
 WebSphere Portal 8.0 and above provides a new Portal light mode which can improve Portal startup time
 and reduce memory consumption in production environments.
-For more information, see [Enabling and disabling portal light mode](../../../deployment/manage/config_portal_behavior/portal_lightmode/portal_light_nbl.md)
+For more information, see [Enabling and disabling portal light mode](../../../deployment/manage/config_portal_behavior/portal_lightmode/portal_light_nbl.md).
 
 ### Managing the Retrieval of User Attributes
 
@@ -2558,9 +2556,7 @@ WebSphere Application Server comes with a Cache Monitor application that allows 
 
 **How to Set**
 
-1. Install/Update the Cache Monitor. For information on how to do this, go to:
-
-<https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0075565>.
+1. Install/Update the Cache Monitor. For more information, see [Detailed steps to download and install the WebSphere Extended Cache Monitor](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0075565){target="_blank"}.
 
 2. Before you can access the Cache Monitor application, you will need to give an administrator account access to this application.
 
@@ -2576,10 +2572,7 @@ Click OK
 
 Click Save
 
-3. Login to the Cache Monitor application. The URL should look like
-
-[Cache Monitor](http://myserver.com:<port>/cachemonitor)
-
+3. Login to the Cache Monitor application. The URL should look like http://myserver.com:<port>/cachemonitor
 4. Select the “baseCache” and click OK
 5. At this point any WCM Web Content Viewer JSR 286 portlet with caching enabled should add entries to this cache.
 6. To look at the contents of the cache, simply click on the “Cache Content” link on the left side menu.
@@ -3499,9 +3492,7 @@ Default size: 10000, default lifetime: infinite, usage pattern: regular
 
 This cache caches data sources on the server. The cache key is the URI of the data source and information about dependencies on request headers. Entries depend, in general, on the user, the project and the virtual portal. Primarily the cache is used to cache aggregated resources via the resource aggregator framework, but it might be used by applications as well, so general purpose predictions on the cache size are not possible.
 
-The content of the cache can be viewed via
-
-<http://portalserver/wps/mycontenthandler/distmap/ws/com.ibm.wps.resolver.data.cache.DataSourceCache>
+You can view the content of the cache via `http://portalserver/wps/mycontenthandler/distmap/ws/com.ibm.wps.resolver.data.cache.DataSourceCache`.
 
 The key into the cache is the URI of a data source. The value is the content of the data source, which can be anything from text files to binary data.
 
