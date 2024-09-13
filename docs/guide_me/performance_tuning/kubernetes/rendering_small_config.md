@@ -190,7 +190,7 @@ This initial performance guidance aims to understand how the ratios of key pod l
 
 ### Recommendations
 
-- Currently default cpu and memory helm values for minimal values for DX to up and run.[DX-Helm-Minimal-Values](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md/#containerization-requirements-and-limitations)
+- Currently default cpu and memory helm values for minimal values for DX to up and run [DX-Helm-Minimal-Values](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md/#containerization-requirements-and-limitations), 
 For a small-sized workload in AWS, the Kubernetes cluster should begin with single node with c5.2xlarge instance type atleast to support 1,000 users load.
 
 - CPU limits were increased due to the observations from Grafana about the usage of CPU and memory on the load test. 
