@@ -1,24 +1,28 @@
 # What's new in CF223
 
-The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF222 on supported platforms:
+The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF223 on supported platforms:
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Ability to change the context root or hostname of a virtual portal
+- User Session Reporting Tool
+- New guidance for creating a custom login portlet
+- New guidance for configuring a content source to gather documents from a single pod
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
 
 - User Session Reporting Tool
-- End of Support announced for Digital Experience v8.5 and 9
+- Extended Support option now available for DX versions 8.5 and 9.0 
 - Automatically apply 9.5 from CF224 installation
 
 **Digital Experience 9.5 Container Version**
 
+- DX core image - Moved directories to temporary storage
+- New sizing guidance for rendering in a small configuration
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Notice of deprecation of customized OpenLDAP container starting CF223
 - Removal of automated Pod restart on ConfigMap updates
-- DX core image - Moved directories to temporary storage
 
 Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases.
 
@@ -27,11 +31,23 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Ability to change the context root or hostname of a virtual portal
 
 === "Containers"
-    You can change the context root or hostname of an already existing Virtual Portal using the administration portlet. For more information, see [Using the Virtual Portal Manager administration portlet](../../build_sites/virtual_portal/vp_mgr_portlet/advp_vpmgr_use.md).
+    You can change the context root or hostname of an already existing virtual portal using the administration portlet. For more information, see [Using the Virtual Portal Manager administration portlet](../../build_sites/virtual_portal/vp_mgr_portlet/advp_vpmgr_use.md).
 
 === "On-Premises"
-    You can change the context root or hostname of an already existing Virtual Portal using the administration portlet. For more information, see [Using the Virtual Portal Manager administration portlet](../../build_sites/virtual_portal/vp_mgr_portlet/advp_vpmgr_use.md).
+    You can change the context root or hostname of an already existing virtual portal using the administration portlet. For more information, see [Using the Virtual Portal Manager administration portlet](../../build_sites/virtual_portal/vp_mgr_portlet/advp_vpmgr_use.md).
 
+### User Session Reporting Tool
+
+=== "On-Premises"
+    The User Session Reporting Tool is a utility designed for HCL DX users for those managing on-premises deployments. This tool provides a solution for analyzing and interpreting web traffic data by processing National Center for Supercomputing Applications (NCSA) access log files. Relevant parts of each log are extracted to identify and count unique user sessions. This offers a precise understanding of usage data over specified periods. For more information, see [User Session Reporting Tool](../../get_started/download/software_licensing_portal/configure_entitlement_checks/user_session_reporting_tool.md).
+
+### New guidance for creating a custom login portlet
+
+Doc in progress
+
+### New guidance for configuring a content source to gather documents from a single pod
+
+Doc in progress
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
@@ -43,15 +59,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 8.5 and 9.0 Versions
 
-### User Session Reporting Tool
+### Extended Support option now available for DX versions 8.5 and 9.0 
 
 === "On-Premises"
-    The User Session Reporting Tool is a utility designed for HCL DX users, initially for those managing on-premises deployments. This tool provides a solution for analyzing and interpreting web traffic data by processing National Center for Supercomputing Applications (NCSA) access log files. Relevant parts of each log are extracted to identify and count unique user sessions. This offers a precise understanding of usage data over specified periods. For more information, see [User Session Reporting Tool](../../get_started/download/software_licensing_portal/configure_entitlement_checks/user_session_reporting_tool.md).
-
-### End of Support announced for Digital Experience v8.5 and 9
-
-=== "On-Premises"
-    On June 30, 2023, HCL Software announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
+    HCLSoftware announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
+    
+    To accommodate customers who might be unable to update from DX versions 8.5 and 9.0 to DX version 9.5 by that date, customers can sign up for Extended Support until June 30, 2025. For more information, see the article [Starting on August 30, 2024, Extended Support will be available for HCL Digital Experience V8.5.x and 9](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0115794){target="_blank"}. Extended support will be offered from June 30, 2025 until June 30, 2026.
     
 ### Automatically apply 9.5 from CF224 installation
 
@@ -59,6 +72,15 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that there are plans starting CF224 to apply 9.5 by default unless you set `install_95=false`.
 
 ## Digital Experience 9.5 Container Version
+
+### DX core image - Moved directories to temporary storage
+
+=== "Containers"
+    To improve system performance, the wstemp and binaryValues directories are no longer persisted in the `PersistentVolume` of the core profile. They are now created in the temporary storage within `/opt/HCL/caches/wstemp` and `/opt/HCL/caches/binaryValues` respectively.
+
+### New sizing guidance for rendering in a small configuration
+
+Doc in progress
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
@@ -74,11 +96,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Runtime Controller triggering Pod restarts for [direct configuration changes](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes) in ConfigMaps is removed. You must restart the appropriate Pods manually to apply the changes made to the ConfigMaps for testing configurations. For more information, see [Deprecated features](../deprecated_features.md).
-
-### DX core image - Moved directories to temporary storage
-
-=== "Containers"
-    To improve system performance, the wstemp and binaryValues directories are no longer persisted in the `PersistentVolume` of the core profile. They are now created in the temporary storage within `/opt/HCL/caches/wstemp` and `/opt/HCL/caches/binaryValues` respectively.
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 

@@ -12,15 +12,15 @@ Volt MX Foundry is a back-end service provider that helps developers build omni-
     Note that the specified HCL Volt MX Foundry version is the tested version. Using later versions will most probably work but it is not guaranteed.
 
 Follow the installation and configuration steps to integrate HCL Digital Experience to work with HCL Volt MX Foundry. [](../../../)
-
+<!--
 ```mermaid
 
 flowchart TB
 node_1(["Start"])
 node_2["Deploy HCL DX using Helm"]
 node_3["Deploy HCL Volt MX Foundry using Helm"]
-node_4[Check prerequisites<img src='../../../assets/external-link.svg' width='15' height='15' />]
-node_5["Perform configuration"]
+node_4[Check prerequisites <img src='../../../assets/MX_logo.png' height='15' width='15' />]
+node_5[Perform configuration <img src='../../../assets/CNX_logo.png' height='15' width='15' />]
 node_6["Install Volt MX Foundry Container Cluster Solution"]
 node_7["Perform post installation tasks"]
 node_8["Configure HCL Volt MX Foundry for integration with HCL DX"]
@@ -41,8 +41,11 @@ click node_8 "https://www.github.com" "Open this in a new tab" _blank
 click node_9 "https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmxfoundry_containers_helm/Content/Installing_Containers_With_Helm.html#prerequisites"
 click node_5 href "https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmxfoundry_containers_helm/Content/Installing_Containers_With_Helm.html#prerequisites" _blank
 
+style node_6 fill:#BFC6FF, color:#fff
+
 
 ```
+-->
 
 -   **[Install HCL Digital Experience and HCL Volt MX Foundry using Helm](./installation/index.md)**
 -   **[HCL Volt MX Foundry configuration for the integration with HCL Digital Experience](./configuration/index.md)**  

@@ -38,7 +38,7 @@ This setup is common in most of the scenarios where there are multi-nested site 
 
 - There are 20 test portal pages created under the label "PerformanceTest". Each has a friendly URL of the form "<context-root>/perf/page-xx".
 
-- Each page contains six WCM viewer portlets that show content below one of the twenty top level site areas. Pages 01 to 04 show content from site areas "SA01" through "SA04" in library "PerformanceTestContent01". Pages 05 to 08 show content from site areas "SA01" through "SA04" in library "PerformanceTestContent02", and so on.
+- Each page contains six WCM viewer portlets that show content below one of the 20 top-level site areas. Pages 01 to 04 show content from site areas "SA01" through "SA04" in library "PerformanceTestContent01". Pages 05 to 08 show content from site areas "SA01" through "SA04" in library "PerformanceTestContent02", and so on.
 
 - Four of the portlets on each page show single content items. For page 01, these would be the first content items in site areas "SA01.01.01.01", "SA01.02.01.01", "SA01.03.01.01", and "SA01.04.01.01" respectively. Other pages follow the same pattern.
 
@@ -46,7 +46,7 @@ This setup is common in most of the scenarios where there are multi-nested site 
 
 - The final portlet on each page shows a menu of items. This portlet is scoped to the top-level site area and selects only those items profiled with the "MENU" keyword.
 
-- A total of 99999 users was added to openLDAP as authenticated users.
+- A total of 99,999 users was added to openLDAP as authenticated users.
 
 #### DAM default test data - 25,000 assets
 
@@ -89,7 +89,7 @@ As part of authoring, pages and portlets were added manually. The list shows the
 - Page 8 - Added all mentioned portlets in this section except JSF portlet
 
 
-After completing the authoring steps, the anonymous portal user and authenticated users (added to openLDAP) must render the pages. Every page request uses a /GET API call (for example, /wps/portal/portletsperf/page1) and there is a response assertion in a sampler to validate the content html in the response body.
+After completing the authoring steps, the anonymous portal user and authenticated users (added to openLDAP) must render the pages. Every page request uses a /GET API call (for example, /wps/portal/portletsperf/page1) and there is a response assertion in a sampler to validate the content HTML in the response body.
 
 
 ## Environment
