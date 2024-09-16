@@ -11,7 +11,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - User Session Reporting Tool
 - End of Support announced for Digital Experience v8.5 and 9
-- Automatically apply 9.5 from CF223 installation
+- Automatically apply 9.5 from CF224 installation
 
 **Digital Experience 9.5 Container Version**
 
