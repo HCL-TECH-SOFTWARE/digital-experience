@@ -12,7 +12,7 @@ Volt MX Foundry is a back-end service provider that helps developers build omni-
     Note that the specified HCL Volt MX Foundry version is the tested version. Using later versions will most probably work but it is not guaranteed.
 
 Follow the installation and configuration steps to integrate HCL Digital Experience to work with HCL Volt MX Foundry. [](../../../)
-
+<!--
 ```mermaid
 
 flowchart TB
@@ -45,6 +45,7 @@ style node_6 fill:#BFC6FF, color:#fff
 
 
 ```
+-->
 
 -   **[Install HCL Digital Experience and HCL Volt MX Foundry using Helm](./installation/index.md)**
 -   **[HCL Volt MX Foundry configuration for the integration with HCL Digital Experience](./configuration/index.md)**  
