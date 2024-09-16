@@ -76,7 +76,7 @@ If you only want to customize the flow of the login (for example, calling extern
     }
     ```
 
-    The setCredential method accesses the credential vault and sets this value. This example uses a Shared User slot. This slot is shared across all portlets this user has access to, and there is one secret per user. You can find the full code for this in the following code samples:
+    The setCredential method stores the user credentials in the credential vault. This sample code uses a Shared User slot. This slot is shared across all portlets this user has access to, and there is one secret per user. You can find the full code for this in the following code samples:
 
     - [CustomLoginPortlet.war](downloads/CustomLoginPortlet.war)
     - [LoginPortletWithCV.war](downloads/LoginPortletWithCV.war)
