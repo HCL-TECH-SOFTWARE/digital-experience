@@ -56,7 +56,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Automatically apply 9.5 from CF224 installation
 
 === "On-Premises"
-    In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that we are planning, starting with the next DX release, CF224, 9.5 to apply by default unless you set `install_95=false`.
+    In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that there are plans starting CF224 to apply 9.5 by default unless you set `install_95=false`.
 
 ## Digital Experience 9.5 Container Version
 
