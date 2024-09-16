@@ -44,7 +44,7 @@ If you only want to customize the flow of the login (for example, calling extern
 
 4. Add a login form to the JSP page which is available from the first portlet provided in Step 2.
 
-    Depending on the response from the LoginService, the user can be logged in or not. Note that once you call the LoginService method, the control will not return to your portlet code if the user is logged in. This behavior is because DX will redirect to the proper Portal page, unless there is an authentication error or a finally block.
+    Depending on the response from the LoginService, the user can be logged in or not. Note that once you call the LoginService method, the control will not return to your portlet code if the user is logged in. This behavior is because DX will redirect to the proper Portal page, unless there is an authentication error or a [finally block](https://docs.oracle.com/javase/tutorial/essential/exceptions/finally.html){target="_blank"}.
 
 5. Add the credential vault handling. In the init method, use the following code:
 
