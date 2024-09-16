@@ -18,7 +18,7 @@ The sizing tests examined rendering scenarios for Web Content Manager (WCM), por
 
 This sizing work consisted of rendering scenarios of WCM, portlets, and DAM with a rendering setup enabled in AWS/Native-Kubernetes (Kubernetes installed directly in Amazon EC2 instances). A combination run was performed that rendered WCM content, DAM assets, and DX pages and portlets. The load distribution was WCM content (40%), DAM assets (30%), and DX pages and portlets (30%). All systems were pre-populated before performing the rendering tests.
 
-To achieve the 1,000 concurrent users mark, an initial set of runs was done with a lower number of users on a single node setup. The tests started with desired load with an acceptable error rate (< 0.01%). Further steps were taken to optimize the limits on the available resources for each pod.
+To achieve the 1,000 concurrent users mark, an initial set of runs was done with a lower number of users on a single node setup. The tests started with the desired load of 1,000 users and an acceptable error rate (< 0.01%). Further steps were taken to optimize the limits on the available resources for each pod.
 
 The following sections provide details for the [WCM default test data - 20 pages](#wcm-default-test-data-20-pages), [DAM default test data - 2,500 assets](#dam-default-test-data-2500-assets), and [Pages and portlets default test data - 8 pages](#pages-and-portlets-default-test-data-8-pages).
 
@@ -75,7 +75,7 @@ The test then rendered those assets by way of 3 custom URLs, 8 UUID URLs, and 8 
 
 The following pages and portlets setup covers the different types of the most commonly used portlets as listed in this section. Performance tests include the response time for rendering the whole page with the portlet. Knowing the response times for rendering pages is important because these portlets are often used in DX content.
 
-The tests used a total of eight unique pages with portlets. To complete authoring and rendering, both anonymous and authenticated users received access. The same users were added in openLDAP as for WCM rendering. All authenticated users are assigned the User role. The pages in the following list are with different page numbers, the list below shows the details of portlets for authoring on every page.
+The tests used a total of eight unique pages with portlets. To complete authoring and rendering, both anonymous and authenticated users received access. The same users were added in openLDAP as for WCM rendering. All authenticated users were assigned the User role. The following list shows the pages, their corresponding page numbers, and the portlet details for authoring on each page.
 
 - Page 1 - 2 Articles
 - Page 2 - 2 Rich text
@@ -169,35 +169,34 @@ This section provides details for the Kubernetes cluster, JMeter, and database.
 
 ## Results
 
-The initial sets of tests were run on an AWS-distributed Kubernetes setup with a single node. Concurrent user loads of 100, 200, 400, and 500 users were successful, as measured by a low error rate (0.0%) and satisfactory response times. At 600 users, this was no longer the case because the response times increased dramatically and the error rates went up as well.
+The initial sets of tests were run on an AWS-distributed Kubernetes setup with a single node. Concurrent user loads of 100, 200, 400, and 500 users were successful, as measured by a low error rate (0.0%) and satisfactory response times. At 600 users, response times increased dramatically and the error rates went up as well.
 
-Test results were analyzed in Promtheus and Grafana dashboards. CPU limits were increased based on observations from Grafana regarding CPU and memory usage during the load test.
+Test results were analyzed in Prometheus and Grafana dashboards. CPU limits were increased based on the observations from Grafana regarding the CPU and memory usage during the load test.
 
-The event loop lag for Ring API pod is also on the higher end at 400 ms for a user load of 500. All the errors are from WCM and Pages and Portlets, not from DAM. 
+The event loop lag for Ring API pod was on the higher end at 400 ms for a user load of 500. All the errors came from WCM and Pages and Portlets, not from DAM.
 
 From these observations, CPU and memory limits of core, ringAPI, and HAProxy pods were tuned one by one to see if no errors occur during a user load of 600 to 1,000 users.
 
 ## Conclusion
 
-This performance tuning guide aims to understand how the ratios of key pod limits can improve the rendering response time in a simple single pod system. This is an important step before attempting to illustrate the impact of scaling of pods. See the following list for observations: 
+This performance tuning guide aims to understand how the ratios of key pod limits can improve the rendering response time in a simple single pod system. This is an important step before attempting to illustrate the impact of scaling of pods. This guide concludes that:  
 
-- Changes to the pod limits for the following Pods significantly improve the responsiveness of the setup and enables the system to handle more users.
+- Changes to the pod limits for the following pods significantly improve the responsiveness of the setup and enable the system to handle more users.
 
 | Pod Name | Minimum Number of Pods | Container | Container Image | Container CPU Request and Limit | Container Memory Request and Limit |
 | -------- | ---------------------- | --------- | --------------- | ------------------------------- | ---------------------------------- |
-| core     | 1                      | core      | core            | 3000m                           | 5000Mi                             |
-| ringApi  | 1                      | ringApi   | ringApi         | 500m                            | 512Mi                              |
-| haproxy  | 1                      | haproxy   | haproxy         | 700m                            | 1024Mi                             |
+| core     | 1                      | core      | core            | 3000 m                           | 5000 Mi                             |
+| ringApi  | 1                      | ringApi   | ringApi         | 500 m                            | 512 Mi                              |
+| haproxy  | 1                      | haproxy   | haproxy         | 700 m                            | 1024 Mi                             |
 
--  The modifications recommended in [small-config-helm-values](#recommendations) led to an improved response time and throughput by 50% compared to using the [default minimal values in the Helm chart](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md/#containerization-requirements-and-limitations).
+-  The modifications recommended in [small-config-helm-values](#recommendations) lead to an improved response time and throughput by 50% compared to using the [default minimal values in the Helm chart](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md/#containerization-requirements-and-limitations).
 
 !!!note
      Performance tuning for a Kubernetes DX cluster must be conducted for the particular workloads involving the number of concurrent users. Generally, these recommendations are intended to speed up tuning for others. Refer to the [DX Core tuning guide](../traditional_deployments.md) for further enhancements.
 
 ### Recommendations
 
-- Currently default cpu and memory helm values for minimal values for DX to up and run [DX-Helm-Minimal-Values](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md/#containerization-requirements-and-limitations), 
-For a small-sized workload in AWS, the Kubernetes cluster should begin with single node with c5.2xlarge instance type atleast to support 1,000 users load.
+- Currently, default CPU and memory values in the [Helm chart](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md/#containerization-requirements-and-limitations) are the minimum values for DX to work. For a small-sized workload in AWS, the Kubernetes cluster should begin with a single node with at least a c5.2xlarge instance type to support a load of 1,000 users.
 
 - For testing purposes, OpenLDAP pod values were used for holding more authenticated users for rendering. However, the OpenLDAP pod is not for production use.
 
@@ -205,7 +204,7 @@ There were a number of alterations done to the initial Helm chart configuration.
 
 |  |  | Request | Request | Limit | Limit |
 |---|---|---:|---|---|---|
-| **Component** | **No. of pods** | **cpu (m)<br>** | **memory (Mi)<br>** | **cpu (m)<br>** | **memory (Mi)<br>** |
+| **Component** | **No. of pods** | **CPU (m)<br>** | **Memory (Mi)<br>** | **CPU (m)<br>** | **Memory (Mi)<br>** |
 | contentComposer | 1 | 100 | 128 | 100 | 128 |
 | **core** | **1** | **3000** | **5000** | **3000** | **5000** |
 | digitalAssetManagement | 1 | 500 | 1536 | 500 | 1536 |
@@ -223,7 +222,7 @@ There were a number of alterations done to the initial Helm chart configuration.
      Values in bold are tuned Helm values while the rest are default minimal values.
      
 
-For convenience, these values were added to the `small-config-values.yaml` file in the hcl-dx-deployment Helm chart. To use these values, follow the following steps:
+For convenience, these values were added to the `small-config-values.yaml` file in the hcl-dx-deployment Helm chart. To use these values, refer to the following steps:
 
 1. Download the Helm chart from FlexNet or Harbor.
 
