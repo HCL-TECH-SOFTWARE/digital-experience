@@ -38,7 +38,7 @@ This setup is common in most of the scenarios where there are multi-nested site 
 
 - There are 20 test portal pages created under the label "PerformanceTest". Each has a friendly URL of the form "<context-root>/perf/page-xx".
 
-- Each page contains six WCM viewer portlets that show content below one of the twenty top level site areas. Pages 01 to 04 show content from site areas "SA01" through "SA04" in library "PerformanceTestContent01". Pages 05 to 08 show content from site areas "SA01" through "SA04" in library "PerformanceTestContent02", and so on.
+- Each page contains six WCM viewer portlets that show content below one of the 20 top-level site areas. Pages 01 to 04 show content from site areas "SA01" through "SA04" in library "PerformanceTestContent01". Pages 05 to 08 show content from site areas "SA01" through "SA04" in library "PerformanceTestContent02", and so on.
 
 - Four of the portlets on each page show single content items. For page 01, these would be the first content items in site areas "SA01.01.01.01", "SA01.02.01.01", "SA01.03.01.01", and "SA01.04.01.01" respectively. Other pages follow the same pattern.
 
@@ -46,7 +46,7 @@ This setup is common in most of the scenarios where there are multi-nested site 
 
 - The final portlet on each page shows a menu of items. This portlet is scoped to the top-level site area and selects only those items profiled with the "MENU" keyword.
 
-- A total of 99999 users was added to openLDAP as authenticated users.
+- A total of 99,999 users was added to openLDAP as authenticated users.
 
 #### DAM default test data - 2,500 assets
 
@@ -75,9 +75,7 @@ The test then rendered those assets by way of 3 custom URLs, 8 UUID URLs, and 8 
 
 The following pages and portlets setup covers the different types of the most commonly used portlets as listed in this section. Performance tests include the response time for rendering the whole page with the portlet. Knowing the response times for rendering pages is important because these portlets are often used in DX content.
 
-The tests used a total of eight unique pages with portlets. To complete authoring and rendering, both anonymous and authenticated users received access. The same users were added in openLDAP as for WCM rendering. All authenticated users are assigned the User role. The pages in the following list are with different page numbers,
-
-As part of authoring, pages and portlets were added manually. The list shows the details of portlets for authoring on every page.
+The tests used a total of eight unique pages with portlets. To complete authoring and rendering, both anonymous and authenticated users received access. The same users were added in openLDAP as for WCM rendering. All authenticated users are assigned the User role. The pages in the following list are with different page numbers, the list below shows the details of portlets for authoring on every page.
 
 - Page 1 - 2 Articles
 - Page 2 - 2 Rich text
@@ -89,7 +87,7 @@ As part of authoring, pages and portlets were added manually. The list shows the
 - Page 8 - Added all mentioned portlets in this section except JSF portlet
 
 
-After completing the authoring steps, the anonymous portal user and authenticated users (added to openLDAP) must render the pages. Every page request uses a /GET API call (for example, /wps/portal/portletsperf/page1) and there is a response assertion in a sampler to validate the content html in the response body.
+After completing the authoring steps, the anonymous portal user and authenticated users (added to openLDAP) must render the pages. Every page request uses a /GET API call (for example, /wps/portal/portletsperf/page1) and there is a response assertion in a sampler to validate the content HTML in the response body.
 
 ## Environment
 
@@ -99,7 +97,7 @@ This section provides details for the Kubernetes cluster, JMeter, and database.
 
 - A Kubernetes platform is running on an AWS Elastic Compute Cloud (EC2) instance with the DX images installed and configured. 
 
-- In AWS/Native Kubernetes, the tests are executed in EC2 instances with one node instance (c5.2xlarge)
+- In AWS/Native Kubernetes, the tests are executed in EC2 instances with one node instance (c5.2xlarge).
 
 - The tests used a remote DB2 instance for the core database (c5.2xlarge).
 
@@ -171,19 +169,27 @@ This section provides details for the Kubernetes cluster, JMeter, and database.
 
 ## Results
 
-The initial sets of tests were run on an AWS-distributed Kubernetes setup with single node. Concurrent user loads of 100, 200, 400, and 500 users were successful, as measured by a error rate (0.0%) and satisfactory response times. At 600 users, this was no longer the case because the response times increased dramatically and the error rates went up as well.
+The initial sets of tests were run on an AWS-distributed Kubernetes setup with a single node. Concurrent user loads of 100, 200, 400, and 500 users were successful, as measured by a low error rate (0.0%) and satisfactory response times. At 600 users, this was no longer the case because the response times increased dramatically and the error rates went up as well.
 
-Test results are analyzed in Promtheus and Grafana dashboards. Event loop lag for Ring API pod is also on the higher end (~400 ms for a user load of 500).All the errors are from WCM and Pages and Portlets, not from DAM. 
+Test results were analyzed in Promtheus and Grafana dashboards. CPU limits were increased based on observations from Grafana regarding CPU and memory usage during the load test.
 
-From this observations, CPU and memory limits of core, ringAPI, and haproxy pods were tuned one by one to see if no errors occurred during a user load of 600 to 1000 users.
+The event loop lag for Ring API pod is also on the higher end at 400 ms for a user load of 500. All the errors are from WCM and Pages and Portlets, not from DAM. 
+
+From these observations, CPU and memory limits of core, ringAPI, and HAProxy pods were tuned one by one to see if no errors occur during a user load of 600 to 1,000 users.
 
 ## Conclusion
 
-This initial performance guidance aims to understand how the ratios of key pod limits can improve the rendering response time in a simple single pod system. This is an important step before attempting to illustrate the impact of scaling of pods.
+This performance tuning guide aims to understand how the ratios of key pod limits can improve the rendering response time in a simple single pod system. This is an important step before attempting to illustrate the impact of scaling of pods. See the following list for observations: 
 
 - Changes to the pod limits for the following Pods significantly improve the responsiveness of the setup and enables the system to handle more users.
 
-- These modifications [small-config-helm-values](#recommendations) resulted to better Response Time and throughput by 50 percent compared to default minimal values in our helm chart [DX-Helm-Minimal-Values](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md/#containerization-requirements-and-limitations).
+| Pod Name | Minimum Number of Pods | Container | Container Image | Container CPU Request and Limit | Container Memory Request and Limit |
+| -------- | ---------------------- | --------- | --------------- | ------------------------------- | ---------------------------------- |
+| core     | 1                      | core      | core            | 3000m                           | 5000Mi                             |
+| ringApi  | 1                      | ringApi   | ringApi         | 500m                            | 512Mi                              |
+| haproxy  | 1                      | haproxy   | haproxy         | 700m                            | 1024Mi                             |
+
+-  The modifications recommended in [small-config-helm-values](#recommendations) led to an improved response time and throughput by 50% compared to using the [default minimal values in the Helm chart](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md/#containerization-requirements-and-limitations).
 
 !!!note
      Performance tuning for a Kubernetes DX cluster must be conducted for the particular workloads involving the number of concurrent users. Generally, these recommendations are intended to speed up tuning for others. Refer to the [DX Core tuning guide](../traditional_deployments.md) for further enhancements.
@@ -193,13 +199,9 @@ This initial performance guidance aims to understand how the ratios of key pod l
 - Currently default cpu and memory helm values for minimal values for DX to up and run [DX-Helm-Minimal-Values](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md/#containerization-requirements-and-limitations), 
 For a small-sized workload in AWS, the Kubernetes cluster should begin with single node with c5.2xlarge instance type atleast to support 1,000 users load.
 
-- CPU limits were increased due to the observations from Grafana about the usage of CPU and memory on the load test. 
-
-- For the Core, HAProxy and RingApi containers, increasing the CPU increases throughput and it inturn the reduced error rate.
-
 - For testing purposes, OpenLDAP pod values were used for holding more authenticated users for rendering. However, the OpenLDAP pod is not for production use.
 
-There were a number of alterations done to the initial Helm chart configuration. The following table contains the number and limits for each pod. Using these values significantly improves the responsiveness of the setup and enables the system to handle 1,000 concurrent users with a improved error rate, average response time, throughput, and event loop lag of  Ring API containers.
+There were a number of alterations done to the initial Helm chart configuration. The following table contains the number and limits for each pod. Using these values significantly improves the responsiveness of the setup and enables the system to handle 1,000 concurrent users with an improved error rate, average response time, throughput, and an event loop lag of Ring API containers.
 
 |  |  | Request | Request | Limit | Limit |
 |---|---|---:|---|---|---|
@@ -221,7 +223,7 @@ There were a number of alterations done to the initial Helm chart configuration.
      Values in bold are tuned Helm values while the rest are default minimal values.
      
 
-For convenience, these values were added to the `small-config-values.yaml` file in the hcl-dx-deployment Helm chart. To use these values, complete the following steps:
+For convenience, these values were added to the `small-config-values.yaml` file in the hcl-dx-deployment Helm chart. To use these values, follow the following steps:
 
 1. Download the Helm chart from FlexNet or Harbor.
 
