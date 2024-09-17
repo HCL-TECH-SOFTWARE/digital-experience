@@ -12,7 +12,6 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 8.5 and 9.0 Versions**
 
-- User Session Reporting Tool
 - Extended Support option now available for DX versions 8.5 and 9.0 
 - Automatically apply 9.5 from CF224 installation
 
