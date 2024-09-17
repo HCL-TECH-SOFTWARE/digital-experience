@@ -6,6 +6,8 @@ To implement your own login portlet after capturing the required security creden
 
 If you only want to customize the flow of the login (for example, calling external validation), you can also consider writing a login filter. For more information, see [Configuring authentication filters](../../../../config_portal_behavior/auth_filters/index.md).
 
+To implement a login portlet with Rational Application Developer (RAD), Eclipse, or another Java development tool, refer to the following steps:
+
 1. Add the following to your build path as an external JAR file:
 
     ```
