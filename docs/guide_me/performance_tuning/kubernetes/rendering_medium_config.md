@@ -4,9 +4,7 @@ title: Rendering - Medium-Sized Configuration
 
 # Sizing guidance for rendering in a medium-sized Kubernetes configuration
 
-## Introduction
-
-[DX Sizing Guidance Introduction](./index.md#introduction)
+This topic provides the details of the environments used for rendering in a medium-sized Kubernetes configuration. You can also find the test results and recommendations for medium configurations on this page.
 
 ## Methodology
 
@@ -16,9 +14,17 @@ This sizing work consisted of rendering scenarios of WCM, portlets, and DAM with
 
 To achieve the 10,000 concurrent users mark, an initial set of runs was done with a lower number of users on a multiple node setup with varying numbers of worker nodes. The tests started with three worker nodes. The number of worker nodes and pods was increased as needed to achieve the desired load with an acceptable error rate (< 0.01%). After establishing the number of nodes, further steps were taken to optimize the limits on the available resources for each pod, as well as the ratios of key pods to each other.
 
-[Medium configuration rendering scenario details](./index.md#rendering-scenario-details)
+The following table contains the rendering scenario details for a medium configuration. 
 
-The following sections provide details for the [WCM default test data](./index.md#wcm-default-test-data), [DAM default test data](./index.md#dam-default-test-data), and [Pages and portlets default test data](./index.md#pages-and-portlets-default-test-data).
+| Concurrent users     |  WCM pages         |  DAM content         |  Pages and portlets content   |
+| -------------------- | ------------------ | -------------------- | ----------------------------- |
+| 10,000 users         | 200                | 25,000               |    80                         |
+
+
+For more information about the setup of test data, refer to the following:
+- [WCM default test data](./index.md#wcm-default-test-data)
+- [DAM default test data](./index.md#dam-default-test-data)
+- [Pages and portlets default test data](./index.md#pages-and-portlets-default-test-data)
 
 
 ## Environment
