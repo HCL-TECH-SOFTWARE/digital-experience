@@ -12,4 +12,4 @@ Use the **Configure** mode to define the default values.
 2. Specify values for any settings that you want to designate with default values.
 
     !!! note
-        - If you want to restore any configuration setting changed in the **Edit Shared Settings** mode can be restored to the default value defined in the **Configure** mode, click **Reset** for the setting.
+        - If you want to restore any configuration setting changed in the **Edit Shared Settings** mode to the default value defined in the **Configure** mode, click **Reset** for the setting.
