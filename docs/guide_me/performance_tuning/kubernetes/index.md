@@ -4,13 +4,13 @@ This topic provides sizing guidance for HCL Digital Experience (DX) rendering sc
 
 For the performance guidance deployments to support Kubernetes container platforms, refer to [Containerization requirements and limitations](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md).
 
-## Sizing Guidance Introduction
+## Introduction
 
-In Digital Experience (DX) performance testing, it is important to determine both DX container sizing and the relationships between the components that make up DX. The goal of performance testing is to identify the optimal Kubernetes configurations for varying levels of DX demands, ranging from small to large setups. This sizing guidance examines these factors in a configuration using 1,000 Virtual Users.
+In Digital Experience (DX) performance testing, it is important to determine both DX container sizing and the relationships between the components that make up DX. The goal of performance testing is to identify the optimal Kubernetes configurations for varying levels of DX demands, ranging from small to large setups. This sizing guidance examines these factors in a configuration using 1,000 and 10,000 virtual users for small and medium configurations, respectively.
  
 In this investigation, the key performance indicators are the number of concurrent users, the average response time, and throughput. These metrics serve as benchmarks for evaluating the performance of a small DX configuration, providing insights into the system's ability to handle specific loads. This sizing guidance shows how strategic changes can lead to significant improvements in performance.
  
-The sizing tests examined rendering scenarios for Web Content Manager (WCM), portlets, and Digital Asset Management (DAM). The tests were facilitated by a rendering setup deployed on AWS/Native-Kubernetes (Kubernetes installed directly in Amazon EC2 instances). This topic presents a comprehensive overview of the findings, offering guidance for organizations seeking to optimize their DX platforms for peak performance.
+The sizing tests examined rendering scenarios for Web Content Manager (WCM), portlets, and Digital Asset Management (DAM). The tests were facilitated by a rendering setup deployed on AWS/Native-Kubernetes (Kubernetes installed directly in Amazon EC2 instances). This guide presents a comprehensive overview of the findings, offering guidance for organizations seeking to optimize their DX platforms for peak performance.
 
 ## Methodology
 
@@ -18,20 +18,24 @@ The sizing tests examined rendering scenarios for Web Content Manager (WCM), por
 
 This sizing work consisted of rendering scenarios of WCM, portlets, and DAM with a rendering setup enabled in AWS/Native-Kubernetes (Kubernetes installed directly in Amazon EC2 instances). A combination run was performed that rendered WCM content, DAM assets, and DX pages and portlets. The load distribution was WCM content (40%), DAM assets (30%), and DX pages and portlets (30%). All systems were pre-populated before performing the rendering tests.
 
-The following sections provide details for the [WCM default test data](#wcm-default-test-data), [DAM default test data](#dam-default-test-data), and [Pages and portlets default test data](#pages-and-portlets-default-test-data).
+### Rendering scenario details
 
-### Rendering Scenario details
+The following table contains the rendering scenario details for each configuration.
 
-| Concurrent users     |  WCM pages         |  DAM Content         |  Page&Portlet Content         |
+| Concurrent users     |  WCM pages         |  DAM Content         |  Pages and portlets content   |
 | -------------------- | ------------------ | -------------------- | ----------------------------- |
-| Small – 1000 users   | 20                 | 2.5k                 |    8                          |
-| Medium – 10000 users | 200                | 25k                  |    80                         |
+| Small – 1,000 users  | 20                 | 2,500                |    8                          |
+| Medium – 10,000 users| 200                | 25,000               |    80                         |
 
-Based on the Rendering Scenario details for small and medium configurations in the above table, we do author the below test data to support our DX combined rendering performance tests.
+Based on these details for small and medium configurations, the following test data are created to support the DX rendering performance tests:
+
+- [WCM default test data](#wcm-default-test-data)
+- [DAM default test data](#dam-default-test-data)
+- [Pages and portlets default test data](#pages-and-portlets-default-test-data)
 
 #### WCM default test data
 
-This setup is common in most of the scenarios where there are multi-nested site areas in libraries with content such as rich text, PDF files, and images in a page and nearly 20 pages in a small configuration and 200 pages in medium configuration. Refer to the following list for more information about this setup:
+This setup is common in most of the scenarios where there are multi-nested site areas in libraries with content such as rich text, PDF files, and images in a page and nearly 20 pages in a small configuration and 200 pages in a medium configuration. Refer to the following list for more information about this setup:
 
 - The default test data has a WCM design library called "PerformanceTestDesign" and five content libraries named "PerformanceTestContent01" through "PerformanceTestContent05".
 
@@ -57,7 +61,7 @@ This setup is common in most of the scenarios where there are multi-nested site 
 
 #### DAM default test data
 
-The following DAM setup covers the mix and match of the different types of most commonly used assets in three different ways: UUID, custom, and friendly URLs. Testers uploaded 2,500 assets in small configuration and 25,000 assets in medium configuration. These assets include images (136 KB, .jpg), documents (199 KB, .docx), and videos (1.1 MB, .mp4) to preheat the environment. After preloading 2,500 assets for small and 25,000 assets for medium configuration, 15 assets containing a mix of original images and renditions were uploaded and rendered for 1 hour at peak load after ramp-up time.
+The following DAM setup covers the mix and match of the different types of most commonly used assets in three different ways: UUID, custom, and friendly URLs. Testers uploaded 2,500 assets for a small configuration and 25,000 assets for a medium configuration. These assets include images (136 KB, .jpg), documents (199 KB, .docx), and videos (1.1 MB, .mp4) to preheat the environment. After preloading 2,500 assets for small and 25,000 assets for medium configuration, 15 assets containing a mix of original images and renditions were uploaded and rendered for 1 hour at peak load after ramp-up time.
 
 The test then rendered those assets by way of 3 custom URLs, 8 UUID URLs, and 8 short URLs for an hour. Further details provided in the following summary of the results.
 
@@ -95,3 +99,8 @@ The tests used a total of eight unique pages with portlets for small configurati
 
 
 After completing the authoring steps, the anonymous portal user and authenticated users (added to openLDAP) must render the pages. Every page request uses a /GET API call (for example, /wps/portal/portletsperf/page1) and there is a response assertion in a sampler to validate the content HTML in the response body.
+ 
+For details about the environments used and the test results and recommendations for each configuration, refer to the following pages:
+- [Sizing guidance for rendering in a small-sized Kubernetes configuration](rendering_small_config.md)
+- [Sizing guidance for rendering in a medium-sized Kubernetes configuration](rendering_medium_config.md)
+ 
