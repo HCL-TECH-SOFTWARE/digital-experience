@@ -18,7 +18,7 @@ The sizing tests examined rendering scenarios for Web Content Manager (WCM), por
 
 This sizing work consisted of rendering scenarios of WCM, portlets, and DAM with a rendering setup enabled in AWS/Native-Kubernetes (Kubernetes installed directly in Amazon EC2 instances). A combination run was performed that rendered WCM content, DAM assets, and DX pages and portlets. The load distribution was WCM content (40%), DAM assets (30%), and DX pages and portlets (30%). All systems were pre-populated before performing the rendering tests.
 
-The following sections provide details for the [WCM default test data](#wcm-default-test-data), [DAM default test data](#dam-default-test-data-25000-assets), and [Pages and portlets default test data](#pages-and-portlets-default-test-data-80-pages).
+The following sections provide details for the [WCM default test data](#wcm-default-test-data), [DAM default test data](#dam-default-test-data), and [Pages and portlets default test data](#pages-and-portlets-default-test-data).
 
 ### Rendering Scenario details
 
@@ -27,10 +27,11 @@ The following sections provide details for the [WCM default test data](#wcm-defa
 | Small – 1000 users   | 20                 | 2.5k                 |    8                          |
 | Medium – 10000 users | 200                | 25k                  |    80                         |
 
+Based on the Rendering Scenario details for small and medium configurations in the above table, we do author the below test data to support our DX combined rendering performance tests.
 
 #### WCM default test data
 
-This setup is common in most of the scenarios where there are multi-nested site areas in libraries with content such as rich text, PDF files, and images in a page and nearly 20 pages in a small configuration. Refer to the following list for more information about this setup:
+This setup is common in most of the scenarios where there are multi-nested site areas in libraries with content such as rich text, PDF files, and images in a page and nearly 20 pages in a small configuration and 200 pages in medium configuration. Refer to the following list for more information about this setup:
 
 - The default test data has a WCM design library called "PerformanceTestDesign" and five content libraries named "PerformanceTestContent01" through "PerformanceTestContent05".
 
@@ -56,7 +57,7 @@ This setup is common in most of the scenarios where there are multi-nested site 
 
 #### DAM default test data
 
-The following DAM setup covers the mix and match of the different types of most commonly used assets in three different ways: UUID, custom, and friendly URLs. Testers uploaded 2,500 assets. These assets include images (136 KB, .jpg), documents (199 KB, .docx), and videos (1.1 MB, .mp4) to preheat the environment. After preloading 2,500 assets, 15 assets containing a mix of original images and renditions were uploaded and rendered for 1 hour at peak load after ramp-up time.
+The following DAM setup covers the mix and match of the different types of most commonly used assets in three different ways: UUID, custom, and friendly URLs. Testers uploaded 2,500 assets in small configuration and 25,000 assets in medium configuration. These assets include images (136 KB, .jpg), documents (199 KB, .docx), and videos (1.1 MB, .mp4) to preheat the environment. After preloading 2,500 assets for small and 25,000 assets for medium configuration, 15 assets containing a mix of original images and renditions were uploaded and rendered for 1 hour at peak load after ramp-up time.
 
 The test then rendered those assets by way of 3 custom URLs, 8 UUID URLs, and 8 short URLs for an hour. Further details provided in the following summary of the results.
 
@@ -81,7 +82,7 @@ The test then rendered those assets by way of 3 custom URLs, 8 UUID URLs, and 8 
 
 The following pages and portlets setup covers the different types of the most commonly used portlets as listed in this section. Performance tests include the response time for rendering the whole page with the portlet. Knowing the response times for rendering pages is important because these portlets are often used in DX content.
 
-The tests used a total of eight unique pages with portlets. To complete authoring and rendering, both anonymous and authenticated users received access. The same users were added in openLDAP as for WCM rendering. All authenticated users were assigned the User role. The following list shows the pages, their corresponding page numbers, and the portlet details for authoring on each page.
+The tests used a total of eight unique pages with portlets for small configuration and 80 pages for medium configuration. To complete authoring and rendering, both anonymous and authenticated users received access. The same users were added in openLDAP as for WCM rendering. All authenticated users were assigned the User role. The following list shows the pages, their corresponding page numbers, and the portlet details for authoring on each page.
 
 - Page 1 - 2 Articles
 - Page 2 - 2 Rich text
