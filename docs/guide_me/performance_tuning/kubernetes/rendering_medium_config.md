@@ -22,6 +22,7 @@ The following table contains the rendering scenario details for a medium configu
 
 
 For more information about the setup of test data, refer to the following:
+
 - [WCM default test data](./index.md#wcm-default-test-data)
 - [DAM default test data](./index.md#dam-default-test-data)
 - [Pages and portlets default test data](./index.md#pages-and-portlets-default-test-data)

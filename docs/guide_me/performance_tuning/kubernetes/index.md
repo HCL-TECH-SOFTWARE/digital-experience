@@ -1,6 +1,6 @@
 # Performance Sizing Guide for Kubernetes Deployments
 
-This topic provides sizing guidance for HCL Digital Experience (DX) rendering scenarios in a Kubernetes configuration. The goal of the sizing guidance is to identify the optimal Kubernetes configurations for varying levels of DX demands, ranging from small to large setups.
+This section provides sizing guides for HCL Digital Experience (DX) rendering scenarios in a Kubernetes configuration. The goal of these sizing guides is to identify the optimal Kubernetes configurations for varying levels of DX demands, ranging from small to large setups.
 
 For the performance guidance deployments to support Kubernetes container platforms, refer to [Containerization requirements and limitations](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md).
 
@@ -99,8 +99,8 @@ The tests used a total of eight unique pages with portlets for small configurati
 
 
 After completing the authoring steps, the anonymous portal user and authenticated users (added to openLDAP) must render the pages. Every page request uses a /GET API call (for example, /wps/portal/portletsperf/page1) and there is a response assertion in a sampler to validate the content HTML in the response body.
- 
+
 For details about the environments used and the test results and recommendations for each configuration, refer to the following pages:
+
 - [Sizing guidance for rendering in a small-sized Kubernetes configuration](rendering_small_config.md)
 - [Sizing guidance for rendering in a medium-sized Kubernetes configuration](rendering_medium_config.md)
- 
