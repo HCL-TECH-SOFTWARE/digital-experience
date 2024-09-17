@@ -363,8 +363,8 @@ In the `Security` panel, use the DX Core Service name (e.g., `dx-core`) as the h
 
 |Parameter|Value|
 |---------|-----|
-|Content Source Type|Seedlist provider|
-|Content Source Name|Portal Content Source|
+|Content Source Type|WCM Site|
+|Content Source Name|WCM Content Source|
 |Collect documents linked from this URL|`https://dx-core-service:10042//wps/seedlist/myserver?SeedlistId=&Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&Action=GetDocuments`|
 
 In the `Security` panel, use the DX Core Service name (e.g., `dx-core`) as the host name, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
@@ -380,7 +380,7 @@ The following table contains information on how to configure a content source to
 |---------|-----|
 |Content Source Type|Portal Site or WCM Site|
 |Content Source Name|Portal Content Source or WCM Content Source|
-|Collect documents linked from this URL|`https://<dx-deployment>-core-<n>.<dx-deployment>-core.<namespace>.svc.cluster.local:10042/wps/seedlist/myserver?Source=com.ibm.lotus.search.plugins.seedlist.retriever.portal.PortalRetrieverFactory&Action=GetDocuments&Range=100`<br>Replace the following values in the URL: <br>- `<n>` with the core pod number to gather documents from <br>- `<dx-deployment>` with the Helm deployment name <br>- `<namespace>` with the correct namespace|
+|Collect documents linked from this URL|`https://<dx-deployment>-core-<n>.<dx-deployment>-core.<namespace>.svc.cluster.local:10042/wps/seedlist/myserver?Source=com.ibm.lotus.search.plugins.seedlist.retriever.portal.PortalRetrieverFactory&Action=GetDocuments&Range=100`<br><br> Replace the following values in the URL: <br>- `<n>` with the core pod number to gather documents from <br>- `<dx-deployment>` with the Helm deployment name <br>- `<namespace>` with the correct namespace <br><br> Depending on the Content Source Type, the `Source` in the URL can be:<br> - For Portal Site: `com.ibm.lotus.search.plugins.seedlist.retriever.portal.PortalRetrieverFactory`<br> - For WCM Site: `com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory`|
 
 If you are indexing from a single pod instead of all core pods, you must update the host name to use the corresponding host and port. Use the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
 
