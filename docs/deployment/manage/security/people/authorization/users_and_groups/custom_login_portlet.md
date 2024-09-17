@@ -15,7 +15,7 @@ To implement a login portlet with Rational Application Developer (RAD), Eclipse,
     wp.auth.base.jar
     ```
 
-    You can find these two .jar files in the `<portalserver>\base\wp.auth.base\shared\app and <portalserver>\base\wp.auth.cmd\shared\app` directories in your HCL DX installation.
+    You can find these two .jar files in the `<portalserver>\base\wp.auth.base\shared\app` and `<portalserver>\base\wp.auth.cmd\shared\app` directories in your HCL DX installation.
 
 2. Access the first portlet service `com.ibm.portal.portlet.service.login.LoginService`. To access this service, add code similar to the following:
 
@@ -46,7 +46,7 @@ To implement a login portlet with Rational Application Developer (RAD), Eclipse,
 
 4. Add a login form to the JSP page which is available from the first portlet provided in Step 2.
 
-    Depending on the response from the LoginService, the user can be logged in or not. Note that once you call the LoginService method, the control will not return to your portlet code if the user is logged in. This behavior is because DX will redirect to the proper Portal page, unless there is an authentication error or a [finally block](https://docs.oracle.com/javase/tutorial/essential/exceptions/finally.html){target="_blank"}.
+    Depending on the response from the LoginService, the user can be logged in or not. Note that after you call the LoginService method, the control will not return to your portlet code if the user is logged in. This behavior is because DX will redirect to the proper Portal page, unless there is an authentication error or a [finally block](https://docs.oracle.com/javase/tutorial/essential/exceptions/finally.html){target="_blank"}.
 
 5. Add the credential vault handling. In the init method, use the following code:
 
