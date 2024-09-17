@@ -2,6 +2,8 @@
 
 Change the default rule mapping to the new binding rule that you created for different customer types who will use the Personalized Offers portlet. Test the portlet for use by all customer types. Verify that the portlet displays the personalized content that is specified by the business rule for each user profile.
 
+## Editing the rule mapping  
+
 Before you begin this procedure, ensure you have properly created additional advanced rules.
 
 1. In the Personalization Navigator, select the content spot **Pzn_offersSpot**, located in the **Workspace Root**.
@@ -12,13 +14,15 @@ Before you begin this procedure, ensure you have properly created additional adv
 
    ![Show all Customertype binding rule](./images/new_binding_rule.png)
 
-4. Log in to the Portal as Scott, with password pzndemo, a Gold customer.
+## Testing the portal using different customer types
 
-5. Run the enhanced Personalized portlet
+1. Log in to the Portal as **Scott** (a Gold customer), with the password **pzndemo**.
 
-6. Log out, then log in as Marge, with password pzndemo, a Platinum customer.
+2. Run the enhanced Personalized portlet.
 
-7. Run the portlet.
+3. Log out, then log in as **Marge** (a Platinum customer), with password **pzndemo**.
+
+4. Run the portlet.
 
 !!!note
     If you run the portlet as wpsadmin, it fails because wpsadmin does not exist in the user resource database.

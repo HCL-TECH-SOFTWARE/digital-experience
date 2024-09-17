@@ -1,4 +1,4 @@
-# 17. Personalized List portlet
+# 17. Using a Personalized List portlet
 
 The Personalized List portlet provides a ready-to-use portlet for displaying personalized content from rules, content spots, or resources. In many cases, it eliminates the need to code new portlets and JSP files yourself.
 

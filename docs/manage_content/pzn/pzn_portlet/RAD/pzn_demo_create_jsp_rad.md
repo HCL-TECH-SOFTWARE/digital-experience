@@ -1,4 +1,4 @@
-# 3. Creating a JSR 268 based JSP Portlet  
+# 3. Creating a JSR 268-based JSP Portlet  
 
 Create a basic JSR 268 portlet with a JSP file for the Personalized Offers project and add the welcome text to the portlet.
 
