@@ -38,7 +38,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### User Session Reporting Tool
 
 === "On-Premises"
-    The User Session Reporting Tool is a utility designed for HCL DX users for those managing on-premises deployments. This tool provides a solution for analyzing and interpreting web traffic data by processing National Center for Supercomputing Applications (NCSA) access log files. Relevant parts of each log are extracted to identify and count unique user sessions. This offers a precise understanding of usage data over specified periods. For more information, see [User Session Reporting Tool](../../get_started/download/software_licensing_portal/configure_entitlement_checks/user_session_reporting_tool.md).
+    The User Session Reporting Tool is a utility designed for HCL DX users managing on-premises deployments. This tool provides a solution for analyzing and interpreting web traffic data by processing National Center for Supercomputing Applications (NCSA) access log files. Relevant parts of each log are extracted to identify and count unique user sessions. This offers a precise understanding of usage data over specified periods. For more information, see [User Session Reporting Tool](../../get_started/download/software_licensing_portal/configure_entitlement_checks/user_session_reporting_tool.md).
 
 ### New guidance for creating a custom login portlet
 
@@ -75,11 +75,12 @@ Doc in progress
 ### DX core image - Moved directories to temporary storage
 
 === "Containers"
-    To improve system performance, the wstemp and binaryValues directories are no longer persisted in the `PersistentVolume` of the core profile. They are now created in the temporary storage within `/opt/HCL/caches/wstemp` and `/opt/HCL/caches/binaryValues` respectively.
+    To improve system performance, the wstemp and binaryValues directories are no longer stored in the `PersistentVolume` of the core profile. They are now created in the temporary storage within `/opt/HCL/caches/wstemp` and `/opt/HCL/caches/binaryValues` respectively.
 
 ### New sizing guidance for rendering in a small configuration
 
-Doc in progress
+=== "Containers"
+    Results of DX sizing tests for rendering in a Kubernetes small configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic [Sizing guidance for rendering in a Kubernetes small configuration](../../guide_me/performance_tuning/kubernetes/rendering_small_config.md).
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
