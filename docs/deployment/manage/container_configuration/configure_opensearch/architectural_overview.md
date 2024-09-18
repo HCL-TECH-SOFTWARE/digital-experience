@@ -34,6 +34,14 @@ The search middleware performs the following functions:
 - Crawlers for data sources
 - REST API for document management, configuration, and search queries
 
+### File processor nodes
+
+The file processor will be an additional set of Pods that we run alongside the search middleware and OpenSearch. It will perform all tasks required for us to run text extraction in order to provide full text search.
+
+The File processor node is mandatory for binary to text extraction.
+
+The file processor is invoked if the document contains a reference for a binary file that we can extract text from. It will be called by the search middleware. The search middleware will retrieve the binary and send it to the file processor for text extraction.
+
 ## Content sources
 
 A content source represents a search index that contains data from a specific data source (for example, WCM). Each content source has its own independent search index inside OpenSearch. This ensures that indexing documents from different data sources does not cause conflicts with duplicate IDs. With OpenSearch, you can still perform search queries over all existing indexes, which enables a separation of indexed data while retaining all search capabilities.
@@ -66,22 +74,40 @@ Documents that are stored inside a content source contain a defined set of metad
 
 ```json
 {
-    "lastIndexed": 1712828704213,
-    "firstIndexed": 1712828704213,
-    "acls": [],
-    "created": 1564176483000,
-    "updated": 1564176483000,
-    "documentObject": {
-        ...
-    }
+  "lastIndexed": 1726633181900,
+  "firstIndexed": 1726633181900,
+  "acls": [],
+  "created": 1564176483000,
+  "updated": 1564176483000,
+  "title": "raspberry pi",
+  "type": "electronic-item/pdf/doc/txt",
+  "description": "Details of raspberry pi",
+  "dataUri": "https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg",
+  "text": "",
+  "tags": [],
+  "documentObject": {
+    "mimeType": "image/jpeg"
+  },
+  "id": "fe657e1b-214f-4816-b2af-77fca67fb17"
 }
 ```
 
 - The `documentObject` contains the document's real data. Its properties vary depending on the type of content source and the fields that are indexed.
 
+we have a fallback logic to extract data from the documentObject, if the common fields are not directly provided
+
 - The `lastIndexed` and `firstIndexed` fields are maintained by the search. These fields display the corresponding timestamps of last indexing and first indexing, respectively. 
 
-- The fields `acls`, `created`, and `updated` are provided by the data source.
+- The `title` field, A descriptive short title of the document. `title` is mandatory field .
+
+- The field `type`, specific type of the document, for example: DAM Asset, DAM Collection, com.ibm.workplace.wcm.api.Content, com.ibm.workplace.wcm.api.SiteArea. `type` is mandatory field
+
+- The field `description`, A longer description or preview text, might not be available for all types of documents stored.
+
+Q.- The `tags` field, 
+
+- The `dataUri` field, The dataUri to retrieve the binary file from for text extraction, can be empty.
+
 
 A document that does not contain any ACLs will be considered public and do not have any visibility restrictions.
 
