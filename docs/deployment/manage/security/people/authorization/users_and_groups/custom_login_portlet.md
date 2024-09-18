@@ -1,4 +1,4 @@
-# Creating a custom Login Portlet for HCL DX
+# Creating a custom login portlet
 
 This topic provides steps on how to create a custom login portlet for HCL Digital Experience (DX). This is useful if the base portlet is not in your desired format, or if you want to add additional verification to the login. You can also find information on how to add user credentials to the credential vault.
 
