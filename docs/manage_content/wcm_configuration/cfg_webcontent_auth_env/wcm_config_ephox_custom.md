@@ -2,11 +2,21 @@
 
 The TinyMCE Editor requires a minimum supported Java level of 1.8. If you are unable to move to Java 8, it is recommended that you use the out-of-the-box, default CKEditor provided with HCL Digital Experience (DX).
 
-## Using TinyMCE editor in the WCM authoring portlet
+## Using the TinyMCE editor in the WCM authoring portlet
 
-You can use the TinyMCE editor in the Web Content Manager (WCM) authoring portlet and in [inline editing](wcm_config_prop_authoring.md#default-in-place-editing-mode). To use TinyMCE in the authoring porlet, go to **Preferences > Edit Shared Settings** in the authoring portlet page.
+You can use the TinyMCE editor in the Web Content Manager (WCM) authoring portlet and in [inline editing](wcm_config_prop_authoring.md#default-in-place-editing-mode). 
 
-On the **Edit Shared Settings** page, open the **Editor Options** menu. Go to the **Select the rich text editor to use in rich text fields** dropdown menu and choose **Enhanced Editor**. Click **OK**.
+Before you can use TinyMCE in WCM, you need to add the following custom property to the WCM WCMConfigService resource environment provider: `inplaceEdit.defaultRichTextEditor=TinyMCE`
+
+Follow these steps to start using TinyMCE in the authoring porlet:
+
+1. In the authoring portlet page, go to **Preferences > Edit Shared Settings**.
+
+2. Open the **Editor Options** menu.
+
+3. Click the **Select the rich text editor to use in rich text fields** dropdown menu and choose **Enhanced Editor**. 
+
+4. Click **OK**.
 
 After configuring your authoring portlet to use TinyMCE, you can create a new piece of content with rich text using the TinyMCE Editor.
 
