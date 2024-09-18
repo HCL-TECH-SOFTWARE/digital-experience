@@ -96,6 +96,7 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 | runtime-controller | 1 | runtime-controller | runtime-controller | 100m | 256Mi |
 | open-search-data/manager | 1 | open-search | dx-opensearch |1000m | 1536Mi |
 | search-middleware-query/data | 1 | search-middleware | dx-search-middlware | 500m | 512Mi |
+| dx-search-file-processor | 1 | file-processor | dx-fileprocessor | 1000m | 2048Mi |
 |  |  |  |  |  |  |
 | **Overall** |  |  |  | **9700m** | **18560Mi** |
 
