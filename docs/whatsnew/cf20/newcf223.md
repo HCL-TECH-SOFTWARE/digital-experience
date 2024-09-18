@@ -18,6 +18,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - DX core image - Moved directories to temporary storage
+- DX Search - File processor
 - New sizing guidance for rendering in a small configuration
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Notice of deprecation of customized OpenLDAP container starting CF223
@@ -42,11 +43,19 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ### New guidance for creating a custom login portlet
 
-Doc in progress
+=== "Containers"
+    Documentation for creating a custom login portlet for HCL DX is now available. A custom login portlet is useful if the base portlet is not in your desired format, or if you want to add additional verification to the login. For more information, see [Creating a custom login portlet](../../deployment/manage/security/people/authorization/users_and_groups/custom_login_portlet.md).
+
+=== "On-Premises"
+    Documentation for creating a custom login portlet for HCL DX is now available. A custom login portlet is useful if the base portlet is not in your desired format, or if you want to add additional verification to the login. For more information, see [Creating a custom login portlet](../../deployment/manage/security/people/authorization/users_and_groups/custom_login_portlet.md).
 
 ### New guidance for configuring a content source to gather documents from a single pod
 
-Doc in progress
+=== "Containers"
+    The topic [Configure Remote Search](../../deployment/manage/container_configuration/kubernetes_remote_search.md#content-source-from-a-single-core-pod) is updated to include information on how to configure a content source to gather documents from a single pod. You can use the URL to index both Portal and WCM content sources.
+
+=== "On-Premises"
+    The topic [Configure Remote Search](../../deployment/manage/container_configuration/kubernetes_remote_search.md#content-source-from-a-single-core-pod) is updated to include information on how to configure a content source to gather documents from a single pod. You can use the URL to index both Portal and WCM content sources.
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
@@ -77,10 +86,14 @@ Doc in progress
 === "Containers"
     To improve system performance, the wstemp and binaryValues directories are no longer stored in the `PersistentVolume` of the core profile. They are now created in the temporary storage within `/opt/HCL/caches/wstemp` and `/opt/HCL/caches/binaryValues` respectively.
 
+### DX Search - File processor
+
+Doc in progress
+
 ### New sizing guidance for rendering in a small configuration
 
 === "Containers"
-    Results of DX sizing tests for rendering in a Kubernetes small configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic [Sizing guidance for rendering in a Kubernetes small configuration](../../guide_me/performance_tuning/kubernetes/rendering_small_config.md).
+    Results of DX sizing tests for rendering in a small Kubernetes configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic [Sizing guidance for rendering in a Kubernetes small configuration](../../guide_me/performance_tuning/kubernetes/rendering_small_config.md).
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
