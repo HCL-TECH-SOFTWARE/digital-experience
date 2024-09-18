@@ -106,11 +106,11 @@ This section provides details for the Kubernetes cluster, JMeter, and database.
 
 ## Results
 
-The initial sets of tests were run on an AWS-distributed Kubernetes setup with a single node. Concurrent user loads of 100, 200, 400, and 500 users were successful, as measured by a low error rate (0.0%) and satisfactory response times. At 600 users, response times increased dramatically and the error rates went up as well.
+The initial sets of tests were run on an AWS-distributed Kubernetes setup with a single node. Concurrent user loads of 100, 200, 400, and 500 users were successful, as measured by a low error rate (0.0%) and satisfactory response times. At 600 users, response times increased dramatically and the error rates went up as well.All the errors are from WCM and Pages and Portlets, not from DAM.
 
-Test results were analyzed in Prometheus and Grafana dashboards. CPU limits were increased based on the observations from Grafana regarding the CPU and memory usage during the load test.
+Test results were analyzed in Prometheus and Grafana dashboards. For HAProxy, Core pods CPU and memory was fully utilized. HAProxy and Core pods CPU and memory limits were increased based on the observations from Grafana regarding the CPU and memory usage during the load test which resolved the errors.
 
-The event loop lag for Ring API pod was on the higher end at 400 ms for a user load of 500. All the errors came from WCM and Pages and Portlets, not from DAM.
+Also the event loop lag for Ring API pod was on the higher end at 400 ms for a user load of 500. After CPU and memory limits of RingAPI pod, event loop lag reduced to 6.6 ms.
 
 From these observations, CPU and memory limits of core, ringAPI, and HAProxy pods were tuned one by one to see if no errors occur during a user load of 600 to 1,000 users.
 
