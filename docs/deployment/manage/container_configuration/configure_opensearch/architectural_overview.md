@@ -102,7 +102,7 @@ Documents that are stored inside a content source contain a defined set of metad
 
 - The field `type`, specific type of the document, for example: DAM Asset, DAM Collection, com.ibm.workplace.wcm.api.Content, com.ibm.workplace.wcm.api.SiteArea. It is a mandatory field.
 
-- The field `description`, A longer description or preview text, might not be available for all types of documents stored.
+- The `description`field is a longer description or preview text that might not be available for all types of documents stored.
 
 - The `tags` field, It is common for every type of document and array of strings.
 
