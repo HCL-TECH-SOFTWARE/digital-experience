@@ -1,6 +1,9 @@
 # HCL People Service
 
-The people service enhances the digital experience by improving visibility and interaction among team members across projects and organizations. It facilitates skill discovery and engagement, fostering a collaborative work environment.
+The People Service enhances the digital experience by increasing visibility and interaction among team members across various projects and organizations. It aids in skill discovery and engagement, promoting a collaborative work environment.
+
+!!!todo
+    Ensure that appropriate Container Release version is mentioned. At the moment we are planning to release in CF224.
 
 Users can access the HCL People Service features in HCL Digital Experience 9.5 Container Update Release CF224 and higher releases.
 
