@@ -3,7 +3,7 @@
 This section aims to help developers use the Personalization API to fully personalize the experience of DX users with a personalization portlet.
 It supplements the [PZNDemo](../demo/index.md) with an additional JSP portlet that will be developed in IBM Rational Application Developer to show personalized offerings to users based on defined rules and content spots.  
 
-- **1. [Prerequisites for the Personalization portlet exercise](./pzn_demoprereq.md)**  
+1. **[Prerequisites for the Personalization portlet exercise](./pzn_demoprereq.md)**  
 Learn which prerequistes are needed to develop java portlets with the personalization API.  
 - **2. [Installing the PZNDemo resources](./pzn_demoinstall.md)**  
 Learn how to install the Portal Personalization sample and configure your database.  
