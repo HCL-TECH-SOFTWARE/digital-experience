@@ -4,7 +4,7 @@ The TinyMCE Editor requires a minimum supported Java level of 1.8. If you are un
 
 ## Using the TinyMCE editor in the WCM authoring portlet
 
-You can use the TinyMCE editor in the Web Content Manager (WCM) authoring portlet and in [inline editing](wcm_config_prop_authoring.md#default-in-place-editing-mode). 
+You can use the TinyMCE editor in the Web Content Manager (WCM) authoring portlet and [inline editing](wcm_config_prop_authoring.md#default-in-place-editing-mode). 
 
 Before you can use TinyMCE in WCM, you need to add the following custom property to the WCM WCMConfigService resource environment provider: `inplaceEdit.defaultRichTextEditor=TinyMCE`
 
@@ -22,14 +22,11 @@ After configuring your authoring portlet to use TinyMCE, you can create a new pi
 
 ## Using a custom configuration with TinyMCE editor in the WCM authoring portlet
 
-!!!note "Notes"
-    - These customization steps only apply to the Enhanced editor used in the HCL WCM authoring portlet.
-    - If working in a clustered deployment, run these steps on the primary node only.  Re-sync the cluster when steps are complete.
+These customization steps only apply to the Enhanced editor used in the HCL WCM authoring portlet. If you are working in a clustered deployment, run these steps on the primary node only. Then, re-sync the cluster after the steps are completed.
 
 1. The TinyMCE editor uses a custom configuration file that is named tiny_config.jsp to set custom parameters for the toolbar. Copy your custom configuration file to wp_profile_root\PortalServer\wcm\shared\app\config\tinymce.
 
-    !!!note
-        Sample configurations can be found in PortalServer_root\wcm\prereq.wcm\wcm\config\templates\shared\app\config\tinymce.
+    - Sample configurations can be found in PortalServer_root\wcm\prereq.wcm\wcm\config\templates\shared\app\config\tinymce.
 
 2. Open a command prompt.
 3. Run the following command from the wp_profile_root/ConfigEngine directory:
@@ -46,21 +43,19 @@ After configuring your authoring portlet to use TinyMCE, you can create a new pi
         `./ConfigEngine.sh configure-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password`
         ```
 
-    !!!note
-        An administrator username and password are not required if you already specified the portal administrator username and password with the PortalAdminId and PortalAdminPwd settings in the wkplc.properties file.
+    An administrator username and password are not required if you already specified the portal administrator username and password with the **PortalAdminId** and **PortalAdminPwd** settings in the wkplc.properties file.
 
 4. Restart the server.
 
-    !!!note
-        To revert to the default editor toolbar, run the remove-wcm-ephox-editor-custom-configuration task and restart the server.
-        ```
-            ConfigEngine(sh/bat) remove-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password
+    - To revert to the default editor toolbar, run the remove-wcm-ephox-editor-custom-configuration task and restart the server.
+
+        ```bash
+        ConfigEngine(sh/bat) remove-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password
         ```
 
 ## Using a custom TinyMCE editor toolbar with in-place editing
 
-!!!note
-    These customization steps only apply for Web content in-place editing with the TinyMCE editor.
+These customization steps only apply for Web content in-place editing with the TinyMCE editor.
 
 1. Log in to the WebSphere® Integrated Solutions Console as an administrator.
 
@@ -88,8 +83,7 @@ After configuring your authoring portlet to use TinyMCE, you can create a new pi
 
 6. Restart the Portal server to apply your changes.
 
-    !!!note
-        To revert to the default editor toolbar, remove the property `inplaceEdit.toolbarConfigForRichText` and restart the server.
+    - To revert to the default editor toolbar, remove the property `inplaceEdit.toolbarConfigForRichText` and restart the server.
 
 ???+ info "Related information"
     - [WebSphere® Integrated Solutions Console](../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
