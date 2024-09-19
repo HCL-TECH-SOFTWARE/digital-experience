@@ -88,10 +88,12 @@ images:
   tags:
     openSearch: "IMAGE_TAG_FROM_LOADED_IMAGES"
     searchMiddleware: "IMAGE_TAG_FROM_LOADED_IMAGES"
+    fileProcessor: "IMAGE_TAG_FROM_LOADED_IMAGES"
   # Image name for each application
   names:
     openSearch: "path/in/your/repository/dx-opensearch"
     searchMiddleware: "path/in/your/repository/dx-search-middleware"
+    fileProcessor: "path/in/your/repository/dx-file-processor"
 ```
 
 Configure other parameters inside the `custom-search-values.yaml` of the search deployment based on your requirements. The default out-of-the-box deployment is a minimal deployment with one replica per service.
@@ -166,6 +168,7 @@ dx-deployment-ring-api-5c4c75b7c7-85qpk                      1/1     Running    
 dx-deployment-runtime-controller-657fbbf7c7-4kbdk            1/1     Running             0               12m
 dx-search-open-search-manager-0                              1/1     Running             0               32s
 dx-search-search-middleware-query-5f7fb4798f-gglvj           1/1     Running             0               32s
+dx-search-file-processor-98bd64657-h82mx                     1/1     Running             0               32s
 ```
 
 ### Validating access to API explorer
