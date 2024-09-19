@@ -98,7 +98,7 @@ Documents that are stored inside a content source contain a defined set of metad
 
 - The `lastIndexed` and `firstIndexed` fields are maintained by the search. These fields display the corresponding timestamps of last indexing and first indexing, respectively. 
 
-- The `title` field, A descriptive short title of the document. It is a mandatory field.
+- The `title` field is a mandatory field that provides short, descriptive title of the document.
 
 - The field `type`, specific type of the document, for example: DAM Asset, DAM Collection, com.ibm.workplace.wcm.api.Content, com.ibm.workplace.wcm.api.SiteArea. It is a mandatory field.
 
