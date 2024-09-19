@@ -40,7 +40,7 @@ A file processor node is an additional set of Pods that is run alongside search 
 
 The file processor node is mandatory for binary-to-text extraction.
 
-Whenever the search middleware detects that a document contains a reference to a binary file that text can be extracted from, the middleware will retrieve the binary file and send it to the file processor node for text extraction.
+Whenever the search middleware detects that a document contains a reference to a binary file that text can be extracted from, the search middleware retrieves the binary file and sends it to the file processor node for text extraction.
 
 ## Content sources
 
