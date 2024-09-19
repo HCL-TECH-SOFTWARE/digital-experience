@@ -100,7 +100,7 @@ Documents that are stored inside a content source contain a defined set of metad
 
 - The `title` field is a mandatory field that provides short, descriptive title of the document.
 
-- The field `type`, specific type of the document, for example: DAM Asset, DAM Collection, com.ibm.workplace.wcm.api.Content, com.ibm.workplace.wcm.api.SiteArea. It is a mandatory field.
+- The`type` field is a mandatory field that refers to a specific type of the document. For example: DAM Asset, DAM Collection, com.ibm.workplace.wcm.api.Content, com.ibm.workplace.wcm.api.SiteArea.
 
 - The `description`field is a longer description or preview text that might not be available for all types of documents stored.
 
