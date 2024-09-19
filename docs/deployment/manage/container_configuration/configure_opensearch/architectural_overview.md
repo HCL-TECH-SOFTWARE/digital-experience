@@ -106,7 +106,7 @@ Documents that are stored inside a content source contain a defined set of metad
 
 - The `tags` field is a common field for every type of document and array of strings.
 
-- The `dataUri` field, The dataUri to retrieve the binary file from for text extraction, can be empty.
+- The `dataUri` field is used to retrieve the binary file from for text extraction and can be empty.
 
 
 A document that does not contain any ACLs will be considered public and do not have any visibility restrictions.
