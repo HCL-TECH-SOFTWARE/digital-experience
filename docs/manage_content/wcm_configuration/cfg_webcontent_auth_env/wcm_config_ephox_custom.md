@@ -20,7 +20,7 @@ Follow these steps to start using TinyMCE in the authoring porlet:
 
 After configuring your authoring portlet to use TinyMCE, you can create a new piece of content with rich text using the TinyMCE Editor.
 
-## Using a custom configuration with TinyMCE editor in the WCM authoring portlet
+## Using a custom configuration with the TinyMCE editor in the WCM authoring portlet
 
 These customization steps only apply to the Enhanced editor used in the HCL WCM authoring portlet. If you are working in a clustered deployment, run these steps on the primary node only. Then, re-sync the cluster after the steps are completed.
 
