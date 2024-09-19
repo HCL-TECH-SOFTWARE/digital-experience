@@ -26,7 +26,7 @@ These customization steps only apply to the Enhanced editor used in the HCL WCM 
 
 1. The TinyMCE editor uses a custom configuration file that is named tiny_config.jsp to set custom parameters for the toolbar. Copy your custom configuration file to wp_profile_root\PortalServer\wcm\shared\app\config\tinymce.
 
-    - Sample configurations can be found in PortalServer_root\wcm\prereq.wcm\wcm\config\templates\shared\app\config\tinymce.
+    - You can find sample configurations in PortalServer_root\wcm\prereq.wcm\wcm\config\templates\shared\app\config\tinymce.
 
 2. Open a command prompt.
 3. Run the following command from the wp_profile_root/ConfigEngine directory:
