@@ -36,7 +36,7 @@ The search middleware performs the following functions:
 
 ### File processor nodes
 
-The file processor will be an additional set of Pods that we run alongside the search middleware and OpenSearch. It will perform all tasks required for us to run text extraction in order to provide full text search.
+A file processor node is an additional set of Pods that is run alongside search middleware and OpenSearch. It performs all the tasks required to run text extraction in order to provide full text search.
 
 The file processor node is mandatory for binary-to-text extraction.
 
