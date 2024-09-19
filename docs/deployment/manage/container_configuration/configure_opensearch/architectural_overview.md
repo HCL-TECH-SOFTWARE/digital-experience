@@ -40,7 +40,7 @@ The file processor will be an additional set of Pods that we run alongside the s
 
 The file processor node is mandatory for binary-to-text extraction.
 
-The file processor is invoked if the document contains a reference for a binary file that we can extract text from. It will be called by the search middleware. The search middleware will retrieve the binary and send it to the file processor for text extraction.
+Whenever the search middleware detects that a document contains a reference to a binary file that text can be extracted from, the middleware will retrieve the binary file and send it to the file processor node for text extraction.
 
 ## Content sources
 
