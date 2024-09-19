@@ -94,7 +94,7 @@ Documents that are stored inside a content source contain a defined set of metad
 
 - The `documentObject` contains the document's real data. Its properties vary depending on the type of content source and the fields that are indexed.
 
- The fallback logic to extract data from the documentObject, if the common fields are not directly provided you could fill in title from the `documentObject.name` field and type from the `documentObject.contentType` field.
+ If common fields are not provided, the fallback logic is to extract data from the `documentObject`. To extract data, enter the title in the `documentObject.name` field and provide the type in the `documentObject.contentType` field.
 
 - The `lastIndexed` and `firstIndexed` fields are maintained by the search. These fields display the corresponding timestamps of last indexing and first indexing, respectively. 
 
