@@ -55,7 +55,7 @@ These customization steps only apply to the Enhanced editor used in the HCL WCM 
 
 ## Using a custom TinyMCE editor toolbar with in-place editing
 
-These customization steps only apply for Web content in-place editing with the TinyMCE editor.
+These customization steps only apply to Web content in-place editing with the TinyMCE editor.
 
 1. Log in to the WebSphere® Integrated Solutions Console as an administrator.
 
