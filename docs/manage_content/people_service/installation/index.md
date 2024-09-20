@@ -12,7 +12,16 @@ In a Kubernetes deployment, modify the Helm values under the `peopleservice` pro
 
 ```yaml
 peopleservice:
+  # If enabled deploys people-service
   enabled: true
+  # Application configuration
+  configuration:
+    # Authentication strategy to be used. If set to DX, people-service leverages the same authentication mechanism that DX uses.
+    authStrategy: DX
+    # Integration configuration
+    integration:
+      # Indicates that people-service is running in an integration mode for HCL Digital Experience.
+      dx: true
 ```
 
 For more information, refer to [Configuring People Service](./configuration.md).
