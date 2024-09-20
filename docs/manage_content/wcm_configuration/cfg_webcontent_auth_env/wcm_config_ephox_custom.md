@@ -49,9 +49,9 @@ These customization steps only apply to the Enhanced editor used in the HCL WCM 
 
     To revert to the default editor toolbar, run the `remove-wcm-ephox-editor-custom-configuration` task and restart the server.
 
-        ```bash
-        ConfigEngine(sh/bat) remove-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password
-        ```
+    ```bash
+     ConfigEngine(sh/bat) remove-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password
+    ```
 
 ## Using a custom TinyMCE editor toolbar with in-place editing
 
