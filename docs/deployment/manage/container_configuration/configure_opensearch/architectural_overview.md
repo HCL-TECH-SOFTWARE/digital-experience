@@ -84,13 +84,16 @@ Documents that are stored inside a content source contain a defined set of metad
   "description": "Details of raspberry pi",
   "dataUri": "https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg",
   "text": "",
-  "tags": [],
+  "tags": [
+    "tag-one",
+    "tag-two"
+  ],
   "documentObject": {
     "mimeType": "image/jpeg"
   },
   "id": "fe657e1b-214f-4816-b2af-77fca67fb17"
 }
-```
+`
 
 - The `documentObject` contains the document's real data. Its properties vary depending on the type of content source and the fields that are indexed.
 
@@ -100,11 +103,11 @@ Documents that are stored inside a content source contain a defined set of metad
 
 - The `title` field is a mandatory field that provides a short, descriptive title of the document.
 
-- The `type` field is a mandatory field that contains the document type. For example, DAM Asset, DAM Collection, com.ibm.workplace.wcm.api.Content, com.ibm.workplace.wcm.api.SiteArea.
+- The `type` field is a mandatory field that contains the document type. For example electronic-item,pdf,doc,txt,etc. 
 
 - The `description` field contains a longer description or preview text that might not be available for all types of documents stored.
 
-- The `tags` field is a common field for every type of document and array of strings.
+- The `tags` field is a common field for every type of document and array of strings.It could we anything such as tag-one,tag-two,etc.If there is no appropriate field, leave it an empty string. 
 
 - The `dataUri` field contains the URL used to retrieve the binary file for text extraction. This field can be empty.
 
