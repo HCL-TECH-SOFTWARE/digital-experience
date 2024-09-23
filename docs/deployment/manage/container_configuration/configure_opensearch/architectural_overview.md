@@ -107,7 +107,7 @@ Documents that are stored inside a content source contain a defined set of metad
 
 - The `description` field contains a longer description or preview text that might not be available for all types of documents stored.
 
-- The `tags` field is a common field for every type of document and array of strings.It could we anything such as tag-one,tag-two,etc.If there is no appropriate field, leave it an empty string. 
+- The `tags` field is a common field for every type of document and array of strings. Tags can be any specific word or phrase that describes the document. If there is no appropriate tag, you can leave the `tags` field blank. 
 
 - The `dataUri` field contains the URL used to retrieve the binary file for text extraction. This field can be empty.
 
