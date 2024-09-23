@@ -109,6 +109,7 @@ security:
     pushAdminPassword: "adminpush"  
 ```  
 Security related configurations like Search admin and Push admin can be re-configured.  
+
 - Search admin: re-configure `searchAdminUser` for search admin username and `searchAdminPassword` for search admin password.   
 - Push admin: re-configure `pushAdminUser` for push admin username and `pushAdminPassword` for push admin password.  
 
@@ -120,6 +121,7 @@ configuration:
   searchMiddleware:
     splitDeployment: false 
 ```  
+
 - `splitDeployment` under `openSearch` section controls if the OpenSearch roles are split into manager and data pods, by default it is false so all roles are combined into the manager pods and no additional data pods are created. Re-configure it to true for having distinct manager data pods, which can be configured individually.  
 - `splitDeployment` under `searchMiddleware` section controls if the data and query load should be split between Pods or not.  
 
@@ -144,8 +146,9 @@ scaling:
       # Target Memory utilization scaling threshold
       targetMemoryUtilizationPercentage: 80
 ```  
-The default amount of replicas per application can be reconfigured  
-- If split deployment is enabled, both values are considered. In non split deployment, only the query value is considered  
+The default amount of replicas per application can be reconfigured.
+
+- If split deployment is enabled, both values are considered. In non split deployment, only the query value is considered.  
 - Automated scaling is achieved by enabling `horizontalPodAutoScaler` for both `searchMiddlewareQuery` and `searchMiddlewareData`, by default they are disabled with minimum and maximum pod count.  
 
 ### Automated setup for DAM  
@@ -159,7 +162,7 @@ configuration:
       uuid: ""
       aclLookupHost: ""
 ```  
-- Configure the `automatedSetup` for `digitalAssetManagement` to configure DAM content source automatically, if `digitalAssetManagement` is enabled then DAM content source will be configured automatically with the given `uuid` and `aclLookupHost` during startup of search, if none is given we assume a default.  
+Configure the `automatedSetup` for `digitalAssetManagement` to configure DAM content source automatically, if `digitalAssetManagement` is enabled then DAM content source will be configured automatically with the given `uuid` and `aclLookupHost` during startup of search, if none is given we assume a default.  
 
 ### Whitelisting for file types in the file processor  
 ```yaml
@@ -173,7 +176,7 @@ configuration:
         - "application/pdf"
         - "image/jpeg"
 ```  
-- Whitelisting for file types has configurable list of mime types that are allowed to be processed during file extraction.  
+Whitelisting for file types has configurable list of mime types that are allowed to be processed during file extraction.  
 
 ### Common fields mapping for fallback  
 ```yaml
@@ -203,7 +206,7 @@ commonFieldMappings:
       type: "category"
       tags: "tags"
 ```  
-- Common field mappings are the defaults for WCM, DAM, JCR and PORTAL documentObject. We can find the suitable mappings for each field in the documentObject. If none applies we can use empty string.  
+Common field mappings are the defaults for WCM, DAM, JCR and PORTAL documentObject. We can find the suitable mappings for each field in the documentObject. If none applies we can use empty string.  
 
 ### PV size requests  
 ```yaml
@@ -217,7 +220,8 @@ volumes:
       requests:
         storage: "1Gi"
 ```  
-- We have 1Gi of storage set as default for opensearch, depending on planning of more indexing and larger deployment you can adjust the storage size.  
+
+We have 1Gi of storage set as default for opensearch, depending on planning of more indexing and larger deployment you can adjust the storage size.  
 
 ## Running Helm install
 
