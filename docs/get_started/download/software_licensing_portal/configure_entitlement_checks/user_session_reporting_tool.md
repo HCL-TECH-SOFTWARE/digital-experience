@@ -103,3 +103,5 @@ You can run the User Session Reporting Tool either once for all collected log fi
 
 Additionally, if there are logs from multiple deployments belonging to the same system (for example, in Active-Active setups or backups), you must process those logs together in one run, because the tool will merge them to provide a comprehensive and accurate session count.
 
+???+ info "Related information"
+    - [User Session consumption for HCL DX Cloud Native v9.5 production deployments](entitlement_checks_scenarios.md#how-to-monitor-user-session-consumption-for-hcl-dx-cloud-native-v95-production-deployments)
