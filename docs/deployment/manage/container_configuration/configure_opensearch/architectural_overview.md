@@ -103,7 +103,7 @@ Documents that are stored inside a content source contain a defined set of metad
 
 - The `title` field is a mandatory field that provides a short, descriptive title of the document.
 
-- The `type` field is a mandatory field that contains the document type. For example electronic-item,pdf,doc,txt,etc. 
+- The `type` field is a mandatory field that contains the document type. For example, electronic-item, pdf, doc, txt.
 
 - The `description` field contains a longer description or preview text that might not be available for all types of documents stored.
 
