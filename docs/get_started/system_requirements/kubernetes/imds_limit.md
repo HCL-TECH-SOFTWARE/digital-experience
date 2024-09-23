@@ -39,7 +39,7 @@ When running EKS worker nodes in a containerized environment, IMDS calls can fai
 
 ### Validating the IMDS hop limit configuration
 
-Verify that the http-put-response-hop-limit is set to 2 using the following AWS CLI command:
+Verify that the `http-put-response-hop-limit` is set to 2 using the following AWS CLI command:
 
 ```bash
 aws ec2 describe-instances --instance-ids <instance-id> --query "Reservations[*].Instances[*].MetadataOptions"
