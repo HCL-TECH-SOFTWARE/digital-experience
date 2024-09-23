@@ -93,7 +93,7 @@ Documents that are stored inside a content source contain a defined set of metad
   },
   "id": "fe657e1b-214f-4816-b2af-77fca67fb17"
 }
-`
+```
 
 - The `documentObject` contains the document's real data. Its properties vary depending on the type of content source and the fields that are indexed.
 
