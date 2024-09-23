@@ -96,6 +96,129 @@ images:
 
 Configure other parameters inside the `custom-search-values.yaml` of the search deployment based on your requirements. The default out-of-the-box deployment is a minimal deployment with one replica per service.
 
+### Security settings  
+```yaml
+# Security related configuration, e.g. default credentials
+security:
+  # Security configuration for Search administration
+  administration:
+    searchAdminUser: "searchadmin"
+    searchAdminPassword: "adminsearch"
+  pushAdministration:
+    pushAdminUser: "pushadmin"
+    pushAdminPassword: "adminpush"  
+```  
+Security related configurations like Search admin and Push admin can be re-configured.  
+- Search admin: re-configure `searchAdminUser` for search admin username and `searchAdminPassword` for search admin password.   
+- Push admin: re-configure `pushAdminUser` for push admin username and `pushAdminPassword` for push admin password.  
+
+### Split deployment settings  
+```yaml
+configuration:
+  openSearch:
+    splitDeployment: false
+  searchMiddleware:
+    splitDeployment: false 
+```  
+- `splitDeployment` under `openSearch` section controls if the OpenSearch roles are split into manager and data pods, by default it is false so all roles are combined into the manager pods and no additional data pods are created. Re-configure it to true for having distinct manager data pods, which can be configured individually.  
+- `splitDeployment` under `searchMiddleware` section controls if the data and query load should be split between Pods or not.  
+
+### Replicas settings  
+```yaml
+scaling:
+  # The default amount of replicas per application
+  replicas:
+    openSearchManager: 1
+    openSearchData: 1
+    searchMiddlewareQuery: 1
+    searchMiddlewareData: 1
+  # Automated scaling using HorizontalPodAutoScaler
+  horizontalPodAutoScaler:
+    searchMiddlewareQuery:
+      # Enable or disable autoscaling
+      enabled: false
+      minReplicas: 1
+      maxReplicas: 3
+      # Target CPU utilization scaling threshold
+      targetCPUUtilizationPercentage: 75
+      # Target Memory utilization scaling threshold
+      targetMemoryUtilizationPercentage: 80
+```  
+The default amount of replicas per application can be reconfigured  
+- If split deployment is enabled, both values are considered. In non split deployment, only the query value is considered  
+- Automated scaling is achieved by enabling `horizontalPodAutoScaler` for both `searchMiddlewareQuery` and `searchMiddlewareData`, by default they are disabled with minimum and maximum pod count.  
+
+### Automated setup for DAM  
+```yaml
+# Automated DAM setup
+configuration:
+  automatedSetup:
+    # Configuring DAM automatically
+    digitalAssetManagement: 
+      enabled: false
+      uuid: ""
+      aclLookupHost: ""
+```  
+- Configure the `automatedSetup` for `digitalAssetManagement` to configure DAM content source automatically, if `digitalAssetManagement` is enabled then DAM content source will be configured automatically with the given `uuid` and `aclLookupHost` during startup of search, if none is given we assume a default.  
+
+### Whitelisting for file types in the file processor  
+```yaml
+configuration:
+  textExtraction:
+      # Configuring Fileprocessor
+      allowedMimeTypes:
+        - "application/msword"
+        - "application/rtf"
+        - "text/plain"
+        - "application/pdf"
+        - "image/jpeg"
+```  
+- Whitelisting for file types has configurable list of mime types that are allowed to be processed during file extraction.  
+
+### Common fields mapping for fallback  
+```yaml
+commonFieldMappings:
+    # Mappings for WCM Crawler
+    wcm:
+      title: "title"
+      description: "summary"
+      type: "documentType"
+      tags: "tags"
+    # Mappings for DAM
+    dam:
+      title: "name"
+      description: "description"
+      type: "type"
+      tags: "tags"
+    # Mappings for JCR Crawler
+    jcr:
+      title: "title"
+      description: "description"
+      type: "category"
+      tags: ""
+    # Mappings for Portal Crawler
+    portal:
+      title: "title"
+      description: "summary"
+      type: "category"
+      tags: "tags"
+```  
+- Common field mappings are the defaults for WCM, DAM, JCR and PORTAL documentObject. We can find the suitable mappings for each field in the documentObject. If none applies we can use empty string.  
+
+### PV size requests  
+```yaml
+# Persistent Volume Setup
+volumes:
+  # Persistent Volumes for OpenSearch
+  openSearchManager:
+    # Data persistence for OpenSearch nodes
+    data: 
+      storageClassName: "manual"
+      requests:
+        storage: "1Gi"
+```  
+- We have 1Gi of storage set as default for opensearch, depending on planning of more indexing and larger deployment you can adjust the storage size.  
+
 ## Running Helm install
 
 !!!important
