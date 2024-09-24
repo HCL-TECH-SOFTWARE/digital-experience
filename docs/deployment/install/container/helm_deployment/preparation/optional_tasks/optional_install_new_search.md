@@ -176,7 +176,7 @@ configuration:
         - "application/pdf"
         - "image/jpeg"
 ```  
-Whitelisting for file types has configurable list of mime types that are allowed to be processed during file extraction.  
+The allowlist for file types has a list of configurable mime types that are allowed to be processed during file extraction.  
 
 ### Common fields mapping for fallback  
 ```yaml
