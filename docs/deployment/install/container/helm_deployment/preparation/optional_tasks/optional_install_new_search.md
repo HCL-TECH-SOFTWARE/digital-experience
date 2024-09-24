@@ -206,7 +206,7 @@ commonFieldMappings:
       type: "category"
       tags: "tags"
 ```  
-Common field mappings are the default mappings for WCM, DAM, JCR, and PORTAL in the documentObject. You can find the suitable mappings for each field in the documentObject. Use an empty string if none of the mappings apply.
+Common field mappings are the default mappings for WCM, DAM, JCR, and PORTAL in the `documentObject`. You can find appropriate mappings for each field in the `documentObject`. Use an empty string if none of the mappings apply.
 
 ### Persistent Volume size requests  
 ```yaml
