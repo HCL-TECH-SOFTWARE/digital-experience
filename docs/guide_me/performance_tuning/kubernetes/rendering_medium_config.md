@@ -189,7 +189,7 @@ The following list contains details of tuning and enhancements done to DX core d
 
 ## Results
 
-The initial sets of tests were run on an AWS-distributed Kubernetes setup with one master and three worker nodes. Concurrent user loads of 1,000, 2,500, 4,000, and 5,000 users were successful, as measured by a low error rate (< 0.0001%) and satisfactory response times. At 8,000 users, this was no longer the case because the response times increased dramatically and the error rates went up as well.
+The initial sets of tests were run on an AWS-distributed Kubernetes setup with one master and three worker nodes. Concurrent user loads of 1,000, 2,500, 4,000, and 5,000 users were successful, as measured by a low error rate (< 0.0001%). At 8,000 users, this was no longer the case because the error rates increased dramatically and the response times went up as well.
 
 The tests then moved to a setup with four worker nodes and 10,000 concurrent users. The error rates were low (<0.0001%) and response times were satisfactory. At this point, alterations were made to the number of pods, CPU, and memory of each of the following containers: HAProxy, Core, RingAPI, digitalAssetManagement, persistenceNode, and persistenceConnectionPool. The alterations to these containers aimed to determine which factors were significantly beneficial.
 
