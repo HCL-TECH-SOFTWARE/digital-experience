@@ -36,7 +36,7 @@ A ConfigEngine tuning task was added in Portal 8.0.0.1 CF 6 and ships out of the
 
 The tuning task also configures Portal as a rendering server by setting deployment.subscriberOnly=true and turning off the toolbar. This can be changed for Authoring environments by editing the task’s properties files.
 
-This task should run as the first step for tuning a Portal server.
+In Kubernetes this task is run automatically when deploying. Depending on the authoring value of true or false the tuning for the authoring or rendering environment is applied.
 
 See [Portal server performance tuning tool](../../../deployment/manage/tune_servers/wp_tune_tool.md) for information on how to configure and run this task.
 
@@ -103,7 +103,7 @@ In addition, ensure that the network bandwidth to the host is sufficient for all
 
 ## Base Portal Tuning
 
-There are many aspects to configuring and tuning an application server in WebSphere Application Server. The aspects presented here are critical to an optimally performing WebSphere Portal in our benchmark environment.
+There are many aspects to configuring and tuning an application server in WebSphere Application Server. The aspects presented here are critical to an optimally performing Digital Experience in our benchmark environment.
 
 The base Portal Scenario covers user login, page navigation and interaction with simple portlets. Users can see a set of pages which are visible to all authenticated users. Another set of pages, based on LDAP group membership, is also configured.
 
@@ -142,56 +142,6 @@ Servers → Server Types → WebSphere application servers → WebSphere_Portal 
 During our performance testing, we observed a 2% improvement by increasing the heap size to **4096MB** (4 GB). This adjustment was particularly beneficial when caching was enabled. We recommend using this configuration as a reference for your medium configuration tests to optimize performance.
 
 This suggests that by adjusting the heap size in your environment, especially when caching mechanisms are in place, you may achieve similar performance gains.
-
-#### Large Pages
-
-Large pages can reduce the CPU overhead needed to keep track of the heap. With this setting we have seen as much as a 10% throughput improvement in our measurements. Be aware that any allocation of large pages is reserved upon boot and only available to applications requesting large pages. 
-
-**Consider the following when using large pages**:
-
-Adjust values to match the maximum heap size of the JVM. Enough large pages must be allocated to hold the entire JVM heap plus native code.
-
-Be careful in your settings to ensure there is enough memory still available to other application, especially the OS.
-
-In some or the measured environments, more large page space was allocated than strictly required for the JVM maximum heap size. If a system is low on memory more tuning could be performed to optimally size the large pages allocated.
-
-This setting is required to ensure that the Portal JVM requests large pages from the operating system. To verify that large pages are being used, ensure that the requestedPageSize and pageSize attributes are the same in the verbose:gc output.
-
-Note that on some Unix implementations you may be required to start HCL Portal as ‘root’ after enabling large page support. 
-
-Large pages are supported by systems running Linux kernels version 2.6 or higher. Note that Linux refers to large pages as ‘Huge Pages’.
-
-For performance benchmarks, 2,048 Huge Pages are configured. Each HP is 2MB in size, so 4GB is reserved upon boot. This memory is available only to apps configured to use it. This is enough memory to store the entire JVM heap in Huge Pages.
-
-**How to Set**
-
-In the WebSphere Integrated Solutions Console
-
-Servers → Server Types → WebSphere application servers → WebSphere_Portal → Server Infrastructure: Java and Process Management → Process Definition → Java Virtual Machine
-
-Add **-Xlp** to the Generic JVM Arguments field
-
-1. Add the -Xlp to the Generic JVM Arguments field.
-2. Allocate 4GB of RAM by placing the following line in the /etc/sysctl.conf file: vm.nr_hugepages=2048
-3. If Portal is running under a non-root user id, the memory lock limit for the user or group will need to be increased to the maximum heap size of the JVM. This can be done with the ulimit command or by adding the following to /etc/security/limits.conf:
-
-@&lt;large group name&gt; soft memlock 2097152
-
-@&lt;large group name&gt; hard memlock 2097152
-
-4. Reboot the system
-
-You can check the status by issuing the following command: grep Huge /proc/meminfo.
-
-On our benchmark system the above command results in the following (when Portal is not running): 
-
-HugePages_Total: 2048
-
-HugePages_Free: 2048
-
-HugePages_Rsvd: 0
-
-Hugepagesize: 2048 KB
 
 #### Nursery Size
 
@@ -2383,7 +2333,7 @@ Note &lt;domain&gt; is one of the Portal database domains. Public tags are store
 
 IBM Security Access Manager is a robust and secure centralized policy management solution for e-business and distributed applications. IBM Security Access Manager WebSEAL is a high performance, multi-threaded Web server that applies fine-grained security policy to the Security Access Manager protected Web object space. WebSEAL can provide single sign-on solutions and incorporate back-end Web application server resources into its security policy.
 
-WebSEAL provides several security mechanisms for providing SSO services, however, our performance effort specifically on LTPA.
+WebSEAL provides several security mechanisms for providing SSO services, however, our performance effort was specifically on LTPA.
 
 #### LTPA
 
@@ -2391,7 +2341,7 @@ In the LTPA mechanism WepSphere shares its LTPA keys with the WebSEAL server. We
 
 During the medium configuration tests, we encountered an LTPA token timeout error in the Core logs. To address this issue, the LTPA token timeout was increased from 120 minutes to 480 minutes specifically for the rendering tests execution. This adjustment ensured that the tests could run smoothly without interruptions caused by token expiration.
 
-For more information, refer to the HCL Support article [How can I avoid SESN0008E errors](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0079521){target="_blank"}
+For more information, refer to the HCL Support article [How can I avoid SESN0008E errors](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0079521){target="_blank"}.
 
 **How to Set**
 
@@ -2453,13 +2403,13 @@ Best practice is to create your own theme based on the theme that HCL Portal shi
 
 After installing a cumulative fix, the tuning to commonActions.jsp will need to be reapplied.
 
-In addition, the default theme profile and the login portlet's theme profile is overwritten. If you are using customized theme profiles, those customizations will need to be re-applied after installing a cumulative fixpack.
+In addition, the default theme profile and the login portlet's theme profile is overwritten. If you are using customized theme profiles, those customizations will need to be reapplied after installing a cumulative fixpack.
 
 ### HCL Portal Caching
 
 Caching, storing frequently accessed data rather than constantly generating or retrieving that data, is of critical concern for Portal performance. Caches in Portal are used to reduce response times for results that are expensive to calculate or avoid a slow network connection.
 
-Rendering a Portal page requires loading the theme and one or more portlets to generate the resulting HTML. Portlets, and Portal itself, make calls to backend databases and LDAP. Rendered Portal pages are sent through one or more network connections, any of which could be slow. These network connections could include a content delivery network (CDN) one or more proxy servers, firewalls or other security appliances. Finally, the end user’s browser will display and render the page.
+Rendering a Portal page requires loading the theme and one or more portlets to generate the resulting HTML. Portlets, and Portal itself, make calls to backend databases and LDAP. Rendered Portal pages are sent through one or more network connections, any of which could be slow. These network connections could include a content delivery network(CDN), one or more proxy servers, firewalls or other security appliances. Finally, the end user’s browser will display and render the page.
 
 Each of these steps may require a substantial amount of processing time. The network could also be a bottleneck for users on slower connections. As a result, Portal performance will require many layers of caching for optimal performance.
 
@@ -2473,11 +2423,11 @@ In general, the closer the data is to an end user, the faster the response time 
 
 Web browsers cache HTTP responses in internal memory or disk caches. Subsequent requests for the same URLs will be served from these caches. When served from cache, no network requests will be made. This is the best performing option since content is already on the user’s local computer.
 
-In order for the browser to cache content, it must include Cache-Control headers. Portal will include these headers for static content it served from the theme (ra:collection URLs). Other static content that is not part of the theme (e.g. custom portlet images) will not have these headers applied. IHS can be configured to automatically apply these headers. See the Adding Cache Headers in IHS section for instructions.
+In order for the browser to cache content, it must include Cache-Control headers. Portal will include these headers for static content it served from the theme (ra:collection URLs). Other static content that is not part of the theme (e.g. custom portlet images) will not have these headers applied. IHS can be configured to automatically apply these headers. 
 
 #### Default Cache-Control Headers
 
-By default, Portal adds Cache-Control headers to all resources served from the theme and WebDAV. Theme URLs will include ra:collection; WebDAV URLs will include /dav/fs-type1. By default these items will be publically cachable for 1 day. These settings can be changed in the WP ConfigService Resource Environment Provider. For the specific properties, see [Deploying themes with cacheable resources](../../../build_sites/themes_skins/manage_theme_capabilities/themeopt_mod_adminmod.md) for theme content and [Using WebDAV file store](../../../manage_content/wcm_delivery/webdav/administer_webdav/mash_webdav_store.md) for WebDAV.
+By default, Portal adds Cache-Control headers to all resources served from the theme and WebDAV. Theme URLs will include ra:collection; WebDAV URLs will include /dav/fs-type1. By default these items will be publicly cacheable for 1 day. These settings can be changed in the WP ConfigService Resource Environment Provider. For the specific properties, see [Deploying themes with cacheable resources](../../../build_sites/themes_skins/manage_theme_capabilities/themeopt_mod_adminmod.md) for theme content and [Using WebDAV file store](../../../manage_content/wcm_delivery/webdav/administer_webdav/mash_webdav_store.md) for WebDAV.
 
 ### Adaptive Page Caching
 
@@ -2489,9 +2439,9 @@ Portal can apply the appropriate Cache-Control headers through its Adaptive Page
 
 ### Portlet Fragment Cache
 
-Depending on processing requirements, it may be beneficial to cache the HTML output of an individual portlets on a page. Portlets that make requests to slow backends or have high processing requirements are good candidates for fragment caching. Note that Performance measurements with and without fragment caching are recommended to see if this feature provides any benefit under real-world conditions.
+Depending on processing requirements, it may be beneficial to cache the HTML output of an individual portlet on a page. Portlets that make requests to slow backends or have high processing requirements are good candidates for fragment caching. Note that Performance measurements with and without fragment caching are recommended to see if this feature provides any benefit under real-world conditions.
 
-Fragment caching is useful when a only a single portlet on a page is dynamic. In this case, the entire page cannot have a Cache-Control header (set with Adaptive Page Caching) since that will prevent the dynamic content from being updated. But, there is no need to regenerate the content of the portlets that do not change. So, the static portlets’ content can be cached to improve performance of the page overall.
+Fragment caching is useful when only a single portlet on a page is dynamic. In this case, the entire page cannot have a Cache-Control header (set with Adaptive Page Caching) since that will prevent the dynamic content from being updated. But, there is no need to regenerate the content of the portlets that do not change. So, the static portlets’ content can be cached to improve performance of the page overall.
 
 Portlet Fragment Caching leverages the underlying WebSphere Servlet Fragment Cache. So, this service must be enabled first. Then, the Portlet Fragment Cache can be enabled. Once enabled, individual portlets must be configured to enable caching for each portlet.
 
@@ -2514,7 +2464,7 @@ Servers → Server Types → WebSphere application servers → WebSphere_Portal 
 Check Enable portlet fragment caching
 
 - Restart the Portal Server
-- Change the portlet cachability settings
+- Change the portlet cacheability settings
     a. For standard portlets, login to Portal as an administrator and navigate to Portal administration page. Select Portlet Management → Portlets. Find the portlet you want to configure and click the Configure portlet button to load the portlet settings.
     b. For WCM Rendering Portlets, go into edit mode and load the portlet menu. Select either Configure or Edit Shared Settings from the dropdown in the upper part of the portlet. With Configure, the settings apply to all instances of WCM Rendering Portlets. With Edit Shared Settings, the settings only apply to the one instance of the portlet.
 
@@ -2578,7 +2528,7 @@ Click Save
 6. To look at the contents of the cache, simply click on the “Cache Content” link on the left side menu.
 7. In addition to viewing the contents of the cache, you can also use the Cache Monitor application to view cache statistics, invalidate individual cache entries, and compare cache content.
 
-Note that the Cache Monitor application will also allow you to view Portal and WCM caches. However, the information displayed is not specific to Portal. The Portal Cache Viewer, mentioned below should be used for monitoring Portal and WCM caches.
+Note that the Cache Monitor application will also allow you to view Portal and WCM caches. However, the information displayed is not specific to Portal. The Portal Cache Viewer, mentioned below, should be used for monitoring Portal and WCM caches.
 
 ### Application Caching
 
@@ -2588,7 +2538,7 @@ For more information, see [Using the DistributedMap and DistributedObjectCache i
 
 ### Portal Caching
 
-Internally, Portal uses a number of DynaCache instances to cache data from the Portal user databases and LDAP. Tuning the sizes of these caches can improve performance. See the Cache Manager Service sections for the cache sizes use in base Portal performance measurements. For a description of the various Portal caches, see the Base Portal Cache Instances section.
+Internally, Portal uses a number of DynaCache instances to cache data from the Portal user databases and LDAP. Tuning the sizes of these caches can improve performance. See the Cache Manager Service sections for the cache sizes used in base Portal performance measurements. For a description of the various Portal caches, see the Base Portal Cache Instances section.
 
 ### WCM Caching
 
@@ -2866,7 +2816,7 @@ com.ibm.wps.model.factory.NavigationModelCache.isolated
 
 #### Base Portal Cache Instances
 
-This section describes the caches in HCL Portal 9.5 along with hints to best configure those caches. As see in previous sections, which detail the modifications made for performance benchmarks, the size and lifetime properties are the most commonly modified properties when tuning Portal caches. You may wish to increase the size of a cache if many values are used on a regular basis and there is sufficient space available in the Java heap. You may wish to increase the lifetime of the entries of a cache if the cached data rarely changes and it is not critical to your business to reflect changes immediately in your Portal. The changes mentioned in this section are either set in the Resource Environment Provider section of the WebSphere Integrated Solutions Console or are set in the file CacheManagersService.properties. For instructions on configuration caches, see the Cache Manager Service section in base Portal tuning.
+This section describes the caches in HCL Portal 9.5 along with hints to best configure those caches. As seen in previous sections, which detail the modifications made for performance benchmarks, the size and lifetime properties are the most commonly modified properties when tuning Portal caches. You may wish to increase the size of a cache if many values are used on a regular basis and there is sufficient space available in the Java heap. You may wish to increase the lifetime of the entries of a cache if the cached data rarely changes and it is not critical to your business to reflect changes immediately in your Portal. The changes mentioned in this section are either set in the Resource Environment Provider section of the WebSphere Integrated Solutions Console or are set in the file CacheManagersService.properties. For instructions on configuration caches, see the Cache Manager Service section in base Portal tuning.
 
 Each cache description includes the following attributes:
 
@@ -2974,7 +2924,7 @@ Note that in Portal 8, this cache was combined into the com.ibm.wps.ac.CommonPro
 
 Default size: 1000, default lifetime: infinite (-1), usage pattern: regular
 
-This cache stores authorization information is about draft pages created in a project. This cache contains the project identification and the database domain identification. Since there are two possible domains, release or jcr, the maximum number of cache entries is twice the number of projects.
+This cache stores authorization information about draft pages created in a project. This cache contains the project identification and the database domain identification. Since there are two possible domains, release or jcr, the maximum number of cache entries is twice the number of projects.
 
 Note that in Portal 8, this cache was combined into the com.ibm.wps.ac.CommonProjectResourcesCache. com.ibm.wps.ac.DataEventPropagationCache
 
@@ -3126,7 +3076,7 @@ You should also configure the setting processintegration.pendingtasks.lifetime i
 
 Default size: 500, default lifetime: infinite (-1), usage pattern: regular.
 
-This cache contains transformation extension nodes. So typically there are only few entries in the cache. There is typically one access to the cache per request. Building an entry to the cache involves one database query. One entry is fairly small. Typically there is no need to modify the settings for this cache.
+This cache contains transformation extension nodes. So typically there are only a few entries in the cache. There is typically one access to the cache per request. Building an entry to the cache involves one database query. One entry is fairly small. Typically there is no need to modify the settings for this cache.
 
 _Model_
 
@@ -3150,7 +3100,7 @@ This cache stores a very limited amount of items and is properly invalidated, so
 
 Default size: 1000, default lifetime: 86400, usage pattern: regular
 
-This cache stores the association of skins to themes. The optimal size correlates with number of themes in use by Portal.
+This cache stores the association of skins to themes. The optimal size correlates with the number of themes in use by Portal.
 
 com.ibm.wps.model.admin.skin.ThemeScopedSkinListCache Default size: 200, default lifetime: 86400, usage pattern: regular Do not change the configuration of this cache. It caches a single item and is properly invalidated, so changing size or lifetime will not improve performance.
 
@@ -3158,13 +3108,13 @@ com.ibm.wps.model.admin.skin.ThemeScopedSkinListCache Default size: 200, default
 
 Default size: 10, default lifetime: 86400, usage pattern: regular.
 
-This cache contains all content nodes which represent extension nodes for dynamic assembly. In an unmodified installation, this is only node, the “Content Root”, which has the PZN dynamic assembly associated with it. Other nodes are root nodes for SAP integration or Dynamic UI.
+This cache contains all content nodes which represent extension nodes for dynamic assembly. In an unmodified installation, this is the only node, the “Content Root”, which has the PZN dynamic assembly associated with it. Other nodes are root nodes for SAP integration or Dynamic UI.
 
 **com.ibm.wps.model.content.impl.ExplicitOidCache**
 
 Default size: 5000, default lifetime: 86400, usage pattern: regular
 
-This cache is used to store the explicit derivations of a content node (Portal Page). The optimal size correlates with number of pages defined in the Portal.
+This cache is used to store the explicit derivations of a content node (Portal Page). The optimal size correlates with the number of pages defined in the Portal.
 
 **com.ibm.wps.model.content.impl.InternalUrlBacklinkCache** 
 
@@ -3190,7 +3140,7 @@ This cache stores a very limited amount of items and is properly invalidated, so
 
 Default size: 10000, default lifetime: 5700, usage pattern: regular.
 
-This cache contains Portal topology information, i.e. Portal navigation elements being composed of navigation nodes and their sorted, access-control-filtered children. Topology elements undergo several processing steps. First they are loaded from the database. Eventually they get added to the cache. This cache contains only the completely processed topology entities. This cache is explicitly used during login and whenever a user navigates to a part of the Portal where he has not been before during the same session. If a cache entry is not found, a private copy is created that is then further processed. Once the private copy is completely processed – that does not happen for all navigation nodes – it is added to the cache. If a user finds an entry in the cache a reference is copied into his private topology model and additional cache accesses are no longer necessary. Hence there is only one cache hit (or miss) per user and navigation node. The cache scales with the number of navigation nodes and the number of different sets of permissions on these and, possibly, the derivation chain (children and parents) a page belongs to. Entries in this cache are expensive to create; they rely on other cached information, like the access control caches and the page instance cache. The entries in the cache are medium sized, being mainly some lists of references to other cached data. The cache should be sized in a way such the most important pages multiplied with all the different sets of permissions that exist on theses page can be stored.
+This cache contains Portal topology information, i.e. Portal navigation elements being composed of navigation nodes and their sorted, access-control-filtered children. Topology elements undergo several processing steps. First they are loaded from the database. Eventually they get added to the cache. This cache contains only the completely processed topology entities. This cache is explicitly used during login and whenever a user navigates to a part of the Portal where he has not been before during the same session. If a cache entry is not found, a private copy is created that is then further processed. Once the private copy is completely processed – that does not happen for all navigation nodes – it is added to the cache. If a user finds an entry in the cache a reference is copied into his private topology model and additional cache accesses are no longer necessary. Hence there is only one cache hit (or miss) per user and navigation node. The cache scales with the number of navigation nodes and the number of different sets of permissions on these and, possibly, the derivation chain (children and parents) a page belongs to. Entries in this cache are expensive to create; they rely on other cached information, like the access control caches and the page instance cache. The entries in the cache are medium sized, being mainly some lists of references to other cached data. The cache should be sized in such a way that the most important pages multiplied with all the different sets of permissions that exist on these pages can be stored.
 
 **com.ibm.wps.model.factory.public.pages.update**
 
@@ -3208,7 +3158,7 @@ This cache stores a very limited amount of items and is properly invalidated, so
 
 Default size: 6000, default lifetime: 19000, usage pattern: regular.
 
-In this cache all models for all users are cached. Besides models that are user dependent, there are models such as the ContentModel, which are session, markup and deviceclass dependent. Thus the number of entries in this cache scales with the number of concurrently logged in users on one cluster node, multiplied by the number of markups and device classes. Additional entries are created if a user logs in more than once. A user logged in more than once has more than one session. The additional sessions cause more entries to be added to the cache. In addition, if many users are interacting with the Portal administrative pages the number of entries will be doubled.
+In this cache all models for all users are cached. Besides models that are user dependent, there are models such as the Content Model, which are session, markup and device class dependent. Thus, the number of entries in this cache scales with the number of concurrently logged in users on one cluster node, multiplied by the number of markups and device classes. Additional entries are created if a user logs in more than once. A user logged in more than once has more than one session. The additional sessions cause more entries to be added to the cache. In addition, if many users are interacting with the Portal administrative pages the number of entries will be doubled.
 
 Typically users have 4 models at maximum on a system where only rendering is taking place.
 
@@ -3260,7 +3210,7 @@ This cache stores the policies. Out of the box, Portal comes with twelve theme p
 
 Default size: 2500, default lifetime: 600, usage pattern: regular.
 
-This cache stores connections between a policy and a policy target, for example a user distinguished name. Theme policies do not use targets, hence there is no cache entry based on these policies. The out-of-thebox mail policy uses the user as target. Hence there is at least one entry for every user accessing the CPP mail portlet. The size of a cache entry depends on the size of the target object. For a distinguished name a cache entry is fairly small. Project Caches
+This cache stores connections between a policy and a policy target, for example a user distinguished name. Theme policies do not use targets, hence there is no cache entry based on these policies. The out of the box mail policy uses the user as target. Hence there is at least one entry for every user accessing the CPP mail portlet. The size of a cache entry depends on the size of the target object. For a distinguished name a cache entry is fairly small. Project Caches
 
 _Portal User Management_
 
@@ -3290,7 +3240,7 @@ This cache stores user-specific Domino information. It is used for HCL Sametime 
 
 Default size: 2000, default lifetime: 10880, usage pattern: regular.
 
-This cache stores user-specific information. Entries represent a compilation of credential information for one user to different LDAP directories and details which data on the given user can be found in which directory. For example, the general info may be stored in one directory, but the mail server and file may be in another. The cache scales with the number of users working with Collaboration portlets. The cache is accessed whenever a Collaboration portlet such as for use with HCL Sametime is accessed. Creating a cache entry can be fairly expensive since multiple resources might be queried. An entry to the cache is mediumsized.
+This cache stores user-specific information. Entries represent a compilation of credential information for one user to different LDAP directories and details which data on the given user can be found in which directory. For example, the general info may be stored in one directory, but the mail server and file may be in another. The cache scales with the number of users working with Collaboration portlets. The cache is accessed whenever a Collaboration portlet such as for use with HCL Sametime is accessed. Creating a cache entry can be fairly expensive since multiple resources might be queried. An entry to the cache is medium-sized.
 
 _Digital Data Connector (DDC)_
 
@@ -3614,7 +3564,7 @@ This cache stores information about rating spaces. A rating space is the aggrega
 
 The cache scales with the number of ratings in the system. The cache is accessed and a new entry is added whenever ratings for a particular resource are being queried - in a way that ratings with the same value can be aggregated as only their count is of interest. Thus, a reasonable size for this cache depends on the amount of ratings being assigned and queried. The standard rating widgets for example access this cache frequently.
 
-Depending on the usage intensity of HCL Portal's rating capabilities a lot of ratings can be quickly created. For instance, if a user invokes the standard rating widget (in order to query ratings for a particular resource) in a short period of time and for a huge amount of different resources that all have been rated a lot, the cache might fill up quickly. Again, one should at least try to allow for a quick reloading of the standard rating widget when invoking it for a resources for which it has been invoked prior. Thus, to achieve best performance, in terms of cache hit rate, the size should be set to a value so that all rating spaces of a typical number of resources for which ratings are being queried in the defined cache lifetime fit into the cache.
+Depending on the usage intensity of HCL Portal's rating capabilities a lot of ratings can be quickly created. For instance, if a user invokes the standard rating widget (in order to query ratings for a particular resource) in a short period of time and for a huge amount of different resources that all have been rated a lot, the cache might fill up quickly. Again, one should at least try to allow for a quick reloading of the standard rating widget when invoking it for a resource for which it has been invoked prior. Thus, to achieve best performance, in terms of cache hit rate, the size should be set to a value so that all rating spaces of a typical number of resources for which ratings are being queried in the defined cache lifetime fit into the cache.
 
 **com.ibm.wps.cp.tagging.ResourceModelCache**
 
@@ -3640,9 +3590,9 @@ Default size: 10000, default lifetime: 3600, usage pattern: regular.
 
 This cache stores information about all the tag names that have already been used to tag resources. The set of tags being maintained as part of this cache is independent from any resource information.
 
-The cache is primarily being used by WebSphere Portal's tagging and rating type-ahead feature. As the user starts typing a tag name, one or more possible matches for the entered text fragment are being searched for and immediately shown to the user. This immediate feedback allows users to select one of the listed options rather having to type the entire word or phrase they were looking for. A user can also choose a closely related option from the presented list. Thus, the type-ahead feature allows users to explore the tag space as they type. This can make it easier to find the correct term they want to use as the tag.
+The cache is primarily being used by WebSphere Portal's tagging and rating type-ahead feature. As the user starts typing a tag name, one or more possible matches for the entered text fragment are being searched for and immediately shown to the user. This immediate feedback allows users to select one of the listed options rather than having to type the entire word or phrase they were looking for. A user can also choose a closely related option from the presented list. Thus, the type-ahead feature allows users to explore the tag space as they type. This can make it easier to find the correct term they want to use as the tag.
 
-Another advantage of the type-ahead feature is that it reduces tag space littering (refer to the knowledge center for more detailed information). The cache scales with the number of distinct tags (actually tag names) in the system. The cache is accessed and a new entry is added whenever a new tag is brought into the system, or when available tags are being queried (by text fragments). hus, a reasonable size for this cache depends on the amount of distinct tag names available. To achieve best performance in terms of cache hit rate, the size should be set to a value so that all distinct tag names fit into the cache. com.ibm.wps.cp.models.ModelCache.\* (TagModel, RatingModel, ResourceModel, CategoryModel) Default size: 200, default lifetime: 3600, usage pattern: regular.
+Another advantage of the type-ahead feature is that it reduces tag space littering (refer to the knowledge center for more detailed information). The cache scales with the number of distinct tags (actually tag names) in the system. The cache is accessed and a new entry is added whenever a new tag is brought into the system, or when available tags are being queried (by text fragments). Thus, a reasonable size for this cache depends on the amount of distinct tag names available. To achieve best performance in terms of cache hit rate, the size should be set to a value so that all distinct tag names fit into the cache. com.ibm.wps.cp.models.ModelCache.\* (TagModel, RatingModel, ResourceModel, CategoryModel) Default size: 200, default lifetime: 3600, usage pattern: regular.
 
 These caches store information about the models HCL Portal's tagging and rating capabilities provide you with. There is one distinct cache for each model being provided (refer to the Knowledge Center for more information on these models):
 
@@ -3814,15 +3764,15 @@ VMM search results cache to improve the performance of VMM search.
 
 **WSSecureMap**
 
-Default size: 2000, default lifetime: (Same as ltpaToken timeout. Cache entries also go away when user is logged out), usage pattern: regular.
+Default size: 2000, default lifetime: (Same as ltpaToken timeout. Cache entries also go away when the user is logged out), usage pattern: regular.
 
-The WSSecureMap cache stores security attributes used to recreate user credential. It scales with the number of users who log in.
+The WSSecureMap cache stores security attributes used to recreate the user credential. It scales with the number of users who log in.
 
 **How to Set**
 
 In the WebSphere Integrated Solutions Console
 
-Security --> Global Secuirty --> Custom properties --> New Create both of these security custom properties:
+Security --> Global Security --> Custom properties --> New Create both of these security custom properties:
 
 **Name:** com.ibm.ws.security.WSSecureMapInitAtStartup
 
@@ -3919,7 +3869,7 @@ services/cache/iwk/menu
 
 Default size: 2000, default lifetime: infinite (-1), usage pattern: regular.
 
-This cache stores WCM Menu entries. An entry comprises of the Content IDs associated with a particular menu. The entries are retrieved and cached without applying security. Whenever a user needs that menu’s results, their specific security will then be applied to the cached results. A dynamic menu, which is one that is affected by the current user’s context (e.g. based on categories in a user’s profile) will store a separate cache entry for each different context. The cache entry will be cleared when a WCM Item is updated that will affect this menu.
+This cache stores WCM Menu entries. An entry comprises the Content IDs associated with a particular menu. The entries are retrieved and cached without applying security. Whenever a user needs that menu’s results, their specific security will then be applied to the cached results. A dynamic menu, which is one that is affected by the current user’s context (e.g. based on categories in a user’s profile) will store a separate cache entry for each different context. The cache entry will be cleared when a WCM Item is updated that will affect this menu.
 
 _Navigator_
 
@@ -4001,7 +3951,7 @@ To enable the module, add the following to WCMConfigService.properties:
 
 #### Example Scenarios
 
-This section describes some example usage scenarios along with descriptions of possible cache settings and suggested cache sizes. This discussion may be useful as starting point for the caches in your environment.
+This section describes some example usage scenarios along with descriptions of possible cache settings and suggested cache sizes. This discussion may be useful as a starting point for the caches in your environment.
 
 _General Comments_
 
@@ -4062,7 +4012,7 @@ Portals in this group have several thousand pages that are available for larger 
 
 For example, your Portal could have 5,000 pages in total. Half of those pages are available to all users; for the other half, there are several user groups who have view rights. Some users have management rights on those pages. In this case, you typically do not want to have all pages and all corresponding information in memory at all times. But you want to make sure that all frequently accessed data is in memory. Typically, not all Portal pages are accessed with equal frequency.
 
-We increased the sizes of the following caches in our measurement environments so that all frequentlyaccessed pages, can be cached.
+We increased the sizes of the following caches in our measurement environments so that all frequently accessed pages, can be cached.
 
 - `com.ibm.wps.ac.CommonExplicitEntitlementsCache`
 - `com.ibm.wps.ac.PermissionCollectionCache`
