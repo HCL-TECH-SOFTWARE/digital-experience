@@ -183,7 +183,9 @@ The following list contains details of tuning and enhancements done to DX core d
 !!!note
      - Neither fragment caching nor static resource caching were enabled to trigger actual stress and processing. In a customer scenario, it is recommended to enable both fragment caching and static resource caching. 
 
-     - For DAM, no tuning details are mentioned in this topic except the pod resources like CPU and memory limits for all pods related to DAM (for example, ring-api, persistence-node, persistence-connection-pool, and core). Because DAM uses Node.js, you can monitor CPU and memory usage using Prometheus and Grafana. You can have CPU and memory requests and limits in Kubernetes to have good response times and throughput.
+     - For DAM, no tuning details are mentioned in this topic except the pod resources like CPU and memory limits for all pods related to DAM (for example, ring-api, persistence-node, persistence-connection-pool, and core). Because DAM uses Node.js, you can monitor CPU and memory usage using Prometheus and Grafana to modify them accordingly.
+
+     - To consider the average response time as optimal, it should ideally be under one second.
 
 ## Results
 
