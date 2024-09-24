@@ -98,7 +98,8 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ### New topic for configuring IMDS hop limit in Amazon EKS v1.30
 
-(Doc in progress)
+=== "Containers"
+    The new topic [Configuring the IMDS hop limit in Amazon EKS v1.30](../../get_started/system_requirements/kubernetes/imds_limit.md) provides steps for setting the Instance Metadata Service (IMDS) `http-put-response-hop-limit` to `2`. This configuration is to prevent pods from getting stuck in a `Pending` state due to IMDSv2 access issues.
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
