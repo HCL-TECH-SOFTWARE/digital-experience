@@ -111,7 +111,7 @@ security:
 You can reconfigure security-related configurations such as **Search admin** and **Push admin**.
 
 - **Search admin**: Reconfigure `searchAdminUser` to the search admin username and `searchAdminPassword` to the search admin password.   
-- **Push admin**: Re-configure `pushAdminUser` to the push admin username and `pushAdminPassword` to the push admin password.  
+- **Push admin**: Reconfigure `pushAdminUser` to the push admin username and `pushAdminPassword` to the push admin password.  
 
 ### Split deployment settings  
 ```yaml
