@@ -1,4 +1,4 @@
-# Library copy portlet extension Multilingual Solution
+# Library copy portlet extension
 
 This extension is used as part of setting up a new locale by copying an existing library, and assigning it a new name and locale.
 

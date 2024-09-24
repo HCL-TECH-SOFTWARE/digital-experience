@@ -1,4 +1,4 @@
-# HCL Web Content Manager Multilingual Solution
+# Multilingual Content & Sites
 
 The HCL Web Content Manager Multilingual Solution is a set of tools that are used to manage translated versions of localized and regionalized websites.
 
