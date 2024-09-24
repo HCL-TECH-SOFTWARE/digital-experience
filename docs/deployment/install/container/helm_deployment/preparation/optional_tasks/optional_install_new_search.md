@@ -148,8 +148,8 @@ scaling:
 ```  
 The default amount of replicas per application can be reconfigured.
 
-- If split deployment is enabled, both values are considered. In non split deployment, only the query value is considered.  
-- You can enable Automated scaling is achieved by enabling `horizontalPodAutoScaler` for both `searchMiddlewareQuery` and `searchMiddlewareData`. By default, Automated scaling is disabled for both settings with minimum and maximum pod count.  
+- If split deployment is enabled, both (`searchMiddlewareQuery` and `searchMiddlewareData`) values are considered. In non split deployment, only the query (`searchMiddlewareQuery`) value is considered.  
+- You can enable Automated scaling by enabling `horizontalPodAutoScaler` for both `searchMiddlewareQuery` and `searchMiddlewareData` with `minReplicas` which indicates minimum number of pods when scaling is enabled and `maxReplicas` which indicates maximum number of pods when scaling is enabled. By default, Automated scaling is disabled for both settings.  
 
 ### Automated setup for DAM  
 ```yaml
