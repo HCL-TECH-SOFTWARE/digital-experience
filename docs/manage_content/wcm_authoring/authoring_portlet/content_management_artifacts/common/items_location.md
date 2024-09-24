@@ -15,7 +15,7 @@ To save an item from its default location to a new location, click **Select Loca
 
 In an authoring template, you can specify multiple save locations for an item.
 
-1. Under **Item Properties**, go to **Location options** and click **Selected locations**.
+1. Under **Item Properties**, go to **Location options** and choose **Selected locations**.
 2. Click **Add** to open the list of locations the item can be saved in.
 3. Select the checkbox for the additional location you want the item to be saved under, then click **OK**.
 4. In **Choose saving option for the author**, select **Allow item to be placed under multiple locations**.
