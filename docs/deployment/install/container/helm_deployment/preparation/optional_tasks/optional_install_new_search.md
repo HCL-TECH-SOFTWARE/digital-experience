@@ -108,10 +108,10 @@ security:
     pushAdminUser: "pushadmin"
     pushAdminPassword: "adminpush"  
 ```  
-Security related configurations like Search admin and Push admin can be re-configured.  
+You can reconfigure security-related configurations such as **Search admin** and **Push admin**.
 
-- Search admin: re-configure `searchAdminUser` for search admin username and `searchAdminPassword` for search admin password.   
-- Push admin: re-configure `pushAdminUser` for push admin username and `pushAdminPassword` for push admin password.  
+- **Search admin**: Re-configure `searchAdminUser` to the search admin username and `searchAdminPassword` to the search admin password.   
+- **Push admin**: Re-configure `pushAdminUser` to the push admin username and `pushAdminPassword` to the push admin password.  
 
 ### Split deployment settings  
 ```yaml
@@ -122,8 +122,8 @@ configuration:
     splitDeployment: false 
 ```  
 
-- `splitDeployment` under `openSearch` section controls if the OpenSearch roles are split into manager and data pods, by default it is false so all roles are combined into the manager pods and no additional data pods are created. Re-configure it to true for having distinct manager data pods, which can be configured individually.  
-- `splitDeployment` under `searchMiddleware` section controls if the data and query load should be split between Pods or not.  
+- `splitDeployment` under the `openSearch` configuration controls whether the OpenSearch roles are split into manager and data pods or not. This configuration is set to `false` by default to ensure all roles are combined into the manager pods and no additional data pods are created. Change the configuration to `true` to create distinct manager data pods which can be configured individually.  
+- `splitDeployment` under the `searchMiddleware` configuration controls whether the data and query load should be split between Pods or not.  
 
 ### Replicas settings  
 ```yaml
@@ -149,7 +149,7 @@ scaling:
 The default amount of replicas per application can be reconfigured.
 
 - If split deployment is enabled, both values are considered. In non split deployment, only the query value is considered.  
-- Automated scaling is achieved by enabling `horizontalPodAutoScaler` for both `searchMiddlewareQuery` and `searchMiddlewareData`, by default they are disabled with minimum and maximum pod count.  
+- You can enable Automated scaling is achieved by enabling `horizontalPodAutoScaler` for both `searchMiddlewareQuery` and `searchMiddlewareData`. By default, Automated scaling is disabled for both settings with minimum and maximum pod count.  
 
 ### Automated setup for DAM  
 ```yaml
@@ -162,7 +162,7 @@ configuration:
       uuid: ""
       aclLookupHost: ""
 ```  
-Configure the `automatedSetup` for `digitalAssetManagement` to configure DAM content source automatically. If `digitalAssetManagement` is enabled, DAM content source will be configured automatically with the given `uuid` and `aclLookupHost` during startup of search. If `uuid` and `aclLookupHost` is not provided, we assume a default.  
+Configure the `automatedSetup` for `digitalAssetManagement` to configure DAM content source automatically. If `digitalAssetManagement` is enabled, DAM content source will be configured automatically with the given `uuid` and `aclLookupHost` during startup of search. If none is given, we assume a default.  
 
 ### Whitelisting for file types in the file processor  
 ```yaml
@@ -206,9 +206,9 @@ commonFieldMappings:
       type: "category"
       tags: "tags"
 ```  
-Common field mappings are the defaults for WCM, DAM, JCR and PORTAL documentObject. We can find the suitable mappings for each field in the documentObject. If none applies we can use empty string.  
+Common field mappings are the default mappings for WCM, DAM, JCR, and PORTAL in the documentObject. You can find the suitable mappings for each field in the documentObject. Use an empty string if none of the mappings apply.
 
-### PV size requests  
+### Persistent Volume size requests  
 ```yaml
 # Persistent Volume Setup
 volumes:
@@ -221,7 +221,7 @@ volumes:
         storage: "1Gi"
 ```  
 
-We have 1Gi of storage set as default for opensearch, depending on planning of more indexing and larger deployment you can adjust the storage size.  
+The default storage size for OpenSearch is set to `1Gi`. You can adjust the storage size for more indexing and larger deployments.
 
 ## Running Helm install
 
