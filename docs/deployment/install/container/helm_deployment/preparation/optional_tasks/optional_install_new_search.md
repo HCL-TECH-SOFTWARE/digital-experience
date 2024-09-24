@@ -123,7 +123,7 @@ configuration:
 ```  
 
 - `splitDeployment` under the `openSearch` configuration controls whether the OpenSearch roles are split into manager and data pods or not. This configuration is set to `false` by default to ensure all roles are combined into the manager pods and no additional data pods are created. Change the configuration to `true` to create distinct manager data pods which can be configured individually.  
-- `splitDeployment` under the `searchMiddleware` configuration controls whether the data and query load should be split between Pods or not.  
+- `splitDeployment` under the `searchMiddleware` configuration controls whether the data and query load should be split between pods or not.  
 
 ### Replicas settings  
 ```yaml
