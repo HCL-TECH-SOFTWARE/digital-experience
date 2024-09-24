@@ -20,6 +20,7 @@ The following features and updates are available to customers installing HCL Dig
 - DX core image - Moved directories to temporary storage
 - DX Search - File processor
 - New sizing guidance for rendering in a small configuration
+- New topic for configuring IMDS hop limit in Amazon EKS v1.30
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Notice of deprecation of customized OpenLDAP container starting CF224
 - Removal of automated Pod restart on ConfigMap updates
@@ -94,6 +95,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Results of DX sizing tests for rendering in a small Kubernetes configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic [Sizing guidance for rendering in a Kubernetes small configuration](../../guide_me/performance_tuning/kubernetes/rendering_small_config.md).
+
+### New topic for configuring IMDS hop limit in Amazon EKS v1.30
+
+(Doc in progress)
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
