@@ -108,7 +108,7 @@ security:
     pushAdminUser: "pushadmin"
     pushAdminPassword: "adminpush"  
 ```  
-Security related configurations like Search admin and Push admin can be re-configured.  
+You can reconfigure security-related configurations such as **Search admin** and **Push admin**.
 
 - Search admin: re-configure `searchAdminUser` for search admin username and `searchAdminPassword` for search admin password.   
 - Push admin: re-configure `pushAdminUser` for push admin username and `pushAdminPassword` for push admin password.  
