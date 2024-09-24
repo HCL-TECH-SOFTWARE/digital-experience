@@ -1,4 +1,4 @@
-# Configuring the IMDS hop limit
+# Configuring the IMDS hop limit in Amazon EKS v1.30
 
 This topic provides the steps to configure the Instance Metadata Service (IMDS) hop limit to `2` after installing the Amazon Elastic Kubernetes Service (Amazon EKS) v1.30. Setting the hop limit limit to `2` is important in a containerized environment to prevent pods from getting stuck in a `Pending` state due to IMDSv2 access issues, especially when using the Amazon Elastic Block Store (Amazon EBS) Container Storage Interface (CSI) driver.
 
