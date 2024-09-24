@@ -208,7 +208,7 @@ commonFieldMappings:
 ```  
 Common field mappings are the defaults for WCM, DAM, JCR and PORTAL documentObject. We can find the suitable mappings for each field in the documentObject. If none applies we can use empty string.  
 
-### PV size requests  
+### Persistent Volume size requests  
 ```yaml
 # Persistent Volume Setup
 volumes:
