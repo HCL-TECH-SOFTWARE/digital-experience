@@ -162,7 +162,7 @@ configuration:
       uuid: ""
       aclLookupHost: ""
 ```  
-Configure the `automatedSetup` for `digitalAssetManagement` to configure DAM content source automatically. If `digitalAssetManagement` is enabled, DAM content source will be configured automatically with the given `uuid` and `aclLookupHost` during startup of search. If none is given, we assume a default.  
+Configure the `automatedSetup` for `digitalAssetManagement` to configure DAM content source automatically. If `digitalAssetManagement` is enabled, DAM content source will be configured automatically with the given `uuid` and `aclLookupHost` during startup of search. If `uuid` is not given, we assume a default.  
 
 ### Whitelisting for file types in the file processor  
 ```yaml
