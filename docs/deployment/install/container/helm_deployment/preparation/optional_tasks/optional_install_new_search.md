@@ -221,7 +221,7 @@ volumes:
         storage: "1Gi"
 ```  
 
-We have 1Gi of storage set as default for opensearch, depending on planning of more indexing and larger deployment you can adjust the storage size.  
+The default storage size for OpenSearch is set to `1Gi`. You can adjust the storage size for more indexing and larger deployments.
 
 ## Running Helm install
 
