@@ -114,6 +114,10 @@ In addition, the event loop lag for Ring API pod was on the higher end at 400 ms
 
 From these observations, CPU and memory limits of core, ringAPI, and HAProxy pods were tuned one by one to see if no errors occur during a user load of 600 to 1,000 users.
 
+!!!note
+     - For a response time to be considered optimal, it should be under 1 second.
+
+
 ## Conclusion
 
 This performance tuning guide aims to understand how the ratios of key pod limits can improve the rendering response time in a simple single pod system. This is an important step before attempting to illustrate the impact of scaling of pods. This guide concludes that:  
@@ -129,8 +133,6 @@ This performance tuning guide aims to understand how the ratios of key pod limit
 -  The modifications recommended in [small-config-helm-values](#recommendations) lead to an improved response time and throughput by 50% compared to using the [default minimal values in the Helm chart](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md/#containerization-requirements-and-limitations).
 
 !!!note
-     - For a response time to be considered optimal, it should be under 1 second.
-     
      - Performance tuning for a Kubernetes DX cluster must be conducted for the particular workloads involving the number of concurrent users. Generally, these recommendations are intended to speed up tuning for others. Refer to the [DX Core tuning guide](../traditional_deployments.md) for further enhancements.
 
 ### Recommendations
