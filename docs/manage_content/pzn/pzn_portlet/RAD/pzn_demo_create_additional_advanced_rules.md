@@ -8,7 +8,7 @@ Ensure you have properly followed the steps in [Create the user profiler rule](p
 
 2. Type **Show Platinum Offers** in the **New Rule** field.  
 
-3. Select **Select Action** from the **Rule Type** drop-down list.  
+3. Choose **Select Action** from the **Rule Type** dropdown list.  
 
 4. Edit the rule so that its Customertype is Platinum and click **Save**.  
 
