@@ -27,10 +27,10 @@ Learn how to create a content spot in HCL Digital Experience.
 Learn how to enhance the current sample portlet with additional rules.  
 12. **[Inserting dynamic table HTML/JSP code](./pzn_demo_insert_dynamic_table_code.md)**  
 Learn how to create dynamic table content in the JSP code.  
-13. **[Modifing resource collection properties](./pzn_demo_modify_resource_collection_properties.md)**  
+13. **[Modifying resource collection properties](./pzn_demo_modify_resource_collection_properties.md)**  
 Learn how to modify resource collection properties in HCL Digital Experience.  
-14. **[Creating the user profiler rule](./pzn_demo_create_additional_advanced_rules.md)**  
-Learn how to create user profile rules.  
+14. **[Creating the user profiler rule](./pzn_demo_create_user_profiler_rule.md)**  
+Learn how to create user profile rules in HCL Digital Experience.  
 15. **[Creating additional advanced rules](./pzn_demo_create_additional_advanced_rules.md)**  
 Learn how to create advanced rules in HCL Digital Experience.
 16. **[Changing content spot rule mapping](./pzn_demo_change_content_spot_rule_mapping.md)**  
