@@ -7,7 +7,7 @@ It supplements the [PZNDemo](../demo/index.md) with an additional JSP portlet th
 Learn which prerequistes are needed to develop java portlets with the personalization API.  
 2. **[Installing the PZNDemo resources](./pzn_demoinstall.md)**  
 Learn how to install the Portal Personalization sample and configure your database.  
-3. **[Creating a JSR 268-based JSP Portlet](./pzn_demo_create_jsp_rad.md)**  
+3. **[Creating a JSR 268-based JSP portlet](./pzn_demo_create_jsp_rad.md)**  
 Learn how to create a JSR 268-based JSP Portlet using IBM Rational Application Developer.  
 4. **[Creating the Personalization content resource classes and content spot](./pzn_demo_create_pzn_content_resources.md)**  
 Learn how to create personalized content resource classes and content spot using the IBM Rational Application Developer.  
