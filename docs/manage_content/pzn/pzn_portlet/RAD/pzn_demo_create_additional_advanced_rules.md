@@ -12,7 +12,7 @@ Ensure you have properly followed the steps in [Create the user profiler rule](p
 
 4. Edit the rule so that its Customertype is Platinum and click **Save**.  
 
-   ![Show Platinium Offers Rule](./images/show_platinium_offer_rule.png)  
+    ![Show Platinium Offers Rule](./images/show_platinium_offer_rule.png)  
 
 5. In the **Pers Offers** folder, create another rule called **Show Titanium Offers**. Select **Pzn offers** whose **Customertype** is **Titanium**.  
 
