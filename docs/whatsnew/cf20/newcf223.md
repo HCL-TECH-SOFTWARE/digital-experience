@@ -19,6 +19,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - DX core image - Moved directories to temporary storage
 - DX Search - File processor
+- Updated documentation for settings when deploying a new search
 - New sizing guidance for rendering in a small configuration
 - New topic for configuring IMDS hop limit in Amazon EKS v1.30
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
@@ -89,7 +90,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ### DX Search - File processor
 
-(Doc in progress)
+=== "Containers"
+    The file processor node is a new component of the DX search based on OpenSearch. This node is an additional set of Pods run alongside search middleware and OpenSearch. The file processor runs text extraction to provide full text search. For more information, see [Architectural Overview](../../deployment/manage/container_configuration/configure_opensearch/architectural_overview.md#file-processor-nodes) and [Installing search based on OpenSearch](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md).
+
+### Updated documentation for new search deployment settings
+
+=== "Containers"
+    The topic [Installing search based on OpenSearch](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md) is updated to include the settings you might want to change when deploying the new search. The topic now provides more information about specific configurations such as security, split deployment, replicas, automated setup for DAM, allowlist for file types in the file processor, common fields mapping, and Persistent Volume size requests.
 
 ### New sizing guidance for rendering in a small configuration
 
