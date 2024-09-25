@@ -29,7 +29,7 @@ Ensure you have properly followed the steps in [Export the WAR file and install 
 
 8. See the resource collection in the Workspace.
 
-9. Do the same to import the **Pers_Offers_User.hrf** file.  
+9. Repeat these steps to import the **Pers_Offers_User.hrf** file.  
 
 ## Result  
 
