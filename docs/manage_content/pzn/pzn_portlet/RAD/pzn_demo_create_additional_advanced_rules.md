@@ -4,7 +4,7 @@ For each customer type specified by a profile, add to the business rule (the pro
 
 Ensure you have properly followed the steps in [Create the user profiler rule](pzn_demo_create_user_profiler_rule.md#).
 
-1. Within the Pers Offers folder, select **New > Rule**  
+1. In the **Pers Offers** folder, select **New > Rule**.  
 
 2. Type **Show Platinum Offers** in the **New Rule** field.  
 
