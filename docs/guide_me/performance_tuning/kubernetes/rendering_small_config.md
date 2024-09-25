@@ -106,9 +106,7 @@ This section provides details for the Kubernetes cluster, JMeter, and database.
 
 ## Results
 
-The initial test runs were conducted on an AWS-distributed Kubernetes setup with a single node. The system successfully handled concurrent user loads of 100, 200, 400, and 500 users, with a low error rate (0.0%). At 600 users, error rates increased dramatically and response times went up as well. All the errors came from WCM and Pages and Portlets, not from DAM.
-
-For a response time to be considered optimal, it should be under 1 second.
+The initial test runs were conducted on an AWS-distributed Kubernetes setup with a single node. The system successfully handled concurrent user loads of 100, 200, 400, and 500 users, with a low error rate (0.0%). At 600 users, error rates increased dramatically and response times went up as well. For a response time to be considered optimal, it should be under 1 second. All the errors came from WCM and Pages and Portlets, not from DAM.
 
 Test results were analyzed in Prometheus and Grafana dashboards. For HAProxy and Core pods, the CPU and memory limits were fully utilized. These limits were increased based on the CPU and memory usage observations from Grafana during the load test. Increasing the CPU and memory limits of HAProxy and Core pods resolved the errors.
 
