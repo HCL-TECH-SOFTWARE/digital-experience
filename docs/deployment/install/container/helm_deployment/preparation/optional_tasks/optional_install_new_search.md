@@ -97,6 +97,9 @@ images:
 Configure other parameters inside the `custom-search-values.yaml` of the search deployment based on your requirements. The default out-of-the-box deployment is a minimal deployment with one replica per service.
 
 ### Security settings  
+
+You can reconfigure security-related configurations such as **Search admin** and **Push admin**.
+
 ```yaml
 # Security related configuration, e.g. default credentials
 security:
@@ -107,13 +110,13 @@ security:
   pushAdministration:
     pushAdminUser: "pushadmin"
     pushAdminPassword: "adminpush"  
-```  
-You can reconfigure security-related configurations such as **Search admin** and **Push admin**.
+``` 
 
 - **Search admin**: Reconfigure `searchAdminUser` to the search admin username and `searchAdminPassword` to the search admin password.   
 - **Push admin**: Reconfigure `pushAdminUser` to the push admin username and `pushAdminPassword` to the push admin password.  
 
 ### Split deployment settings  
+
 ```yaml
 configuration:
   openSearch:
@@ -126,6 +129,9 @@ configuration:
 - `splitDeployment` under the `searchMiddleware` configuration controls whether the data and query load should be split between pods or not.  
 
 ### Replicas settings  
+
+You can reconfigure the default amount of replicas per application.
+
 ```yaml
 scaling:
   # The default amount of replicas per application
@@ -146,12 +152,12 @@ scaling:
       # Target Memory utilization scaling threshold
       targetMemoryUtilizationPercentage: 80
 ```  
-You can reconfigure the default amount of replicas per application.
 
-- If split deployment is enabled, both the `searchMiddlewareQuery` and `searchMiddlewareData` values are considered. In non split deployment, only the `searchMiddlewareQuery` value is considered.  
+- If split deployment is enabled, both the `searchMiddlewareQuery` and `searchMiddlewareData` values are considered. In a non-split deployment, only the `searchMiddlewareQuery` value is considered.  
 - You can enable automated scaling by enabling `horizontalPodAutoScaler` for both `searchMiddlewareQuery` and `searchMiddlewareData`. Enter the minimum number of pods in the `minReplicas` field and the maximum number of pods in `maxReplicas`. By default, automated scaling is disabled for both `searchMiddlewareQuery` and `searchMiddlewareData` settings.  
 
 ### Automated setup for DAM  
+
 ```yaml
 # Automated DAM setup
 configuration:
@@ -162,9 +168,13 @@ configuration:
       uuid: ""
       aclLookupHost: ""
 ```  
-Configure the `automatedSetup` for `digitalAssetManagement` to automatically configure DAM content source. If `digitalAssetManagement` is enabled, DAM content source is configured automatically with the given `uuid` and `aclLookupHost` during startup of search. If `uuid` and `aclLookupHost` are not provided, the system assumes the default DAM auto configurations with `uuid : 75024f9c-2579-58f1-3new-5706ba2a62fc` and `aclLookupHost: https://dx-deployment-core:10042`.  
 
-### Allowlisting for file types in the file processor  
+Configure the `automatedSetup` for `digitalAssetManagement` to automatically configure DAM content source. If `digitalAssetManagement` is enabled, DAM content source is configured automatically with the given `uuid` and `aclLookupHost` during startup of search. If `uuid` and `aclLookupHost` are not provided, the system assumes the default DAM auto configurations with `uuid: 75024f9c-2579-58f1-3new-5706ba2a62fc` and `aclLookupHost: https://dx-deployment-core:10042`.  
+
+### Allowlisting for file types in the file processor 
+
+The allowlist for file types has a list of configurable mime types that are allowed to be processed during file extraction. 
+
 ```yaml
 configuration:
   textExtraction:
@@ -175,10 +185,12 @@ configuration:
         - "text/plain"
         - "application/pdf"
         - "image/jpeg"
-```  
-The allowlist for file types has a list of configurable mime types that are allowed to be processed during file extraction.  
+```   
 
 ### Common fields mapping for fallback  
+
+Common field mappings are the default mappings for WCM, DAM, JCR, and PORTAL in the `documentObject`. You can find appropriate mappings for each field in the `documentObject`. Use an empty string if none of the mappings apply.
+
 ```yaml
 commonFieldMappings:
     # Mappings for WCM Crawler
@@ -206,9 +218,11 @@ commonFieldMappings:
       type: "category"
       tags: "tags"
 ```  
-Common field mappings are the default mappings for WCM, DAM, JCR, and PORTAL in the `documentObject`. You can find appropriate mappings for each field in the `documentObject`. Use an empty string if none of the mappings apply.
 
 ### Persistent Volume size requests  
+
+The default storage size for OpenSearch is set to `1Gi`. You can adjust the storage size for more indexing and larger deployments.
+
 ```yaml
 # Persistent Volume Setup
 volumes:
@@ -220,8 +234,6 @@ volumes:
       requests:
         storage: "1Gi"
 ```  
-
-The default storage size for OpenSearch is set to `1Gi`. You can adjust the storage size for more indexing and larger deployments.
 
 ## Running Helm install
 
