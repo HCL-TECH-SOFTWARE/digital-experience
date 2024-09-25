@@ -1,4 +1,4 @@
-# Framework for multilingual site management Multilingual Solution
+# Framework for multilingual site management
 
 The framework covers a data model for storing multilingual sites, processes for managing multilingual sites, and a model for delivering multilingual sites to site visitors.
 
