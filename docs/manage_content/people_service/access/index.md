@@ -31,5 +31,5 @@ PortalServer_root/pcc.impl/people.iml/persontag/taglib/people.tld/people/people.
 
 ## Rendering business card using Script Application
 
-!!!tbd "TBD"
+!!!todo
     Need to discuss if we need to include this approach for rendering a business card for a person.

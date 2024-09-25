@@ -1,6 +1,6 @@
 # Getting started
 
-This section introduces the service's architecture, core features, and its role in improving understanding and discovery of people within an organization.
+This section provides an overview of HCL People Service and its system requirements.
 
 - [Overview](./overview.md)
 - [System requirements](./system_requirements.md)

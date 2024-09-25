@@ -1,4 +1,4 @@
-# Authentication
+# Uninstallation
 
 !!!note
     In progress.

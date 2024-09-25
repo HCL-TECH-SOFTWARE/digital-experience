@@ -8,4 +8,4 @@ This document is divided in following sections:
 - [Deployment](./deployment/index.md)
 - [Administration](./administration/index.md)
 - [Integration](./integration/index.md)
-- [User guides](./user_guides/index.md)
+- [Features](./features/index.md)

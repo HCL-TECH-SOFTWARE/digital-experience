@@ -1,8 +1,8 @@
-title: Integrate People Services
+title: HCL People Services
 nav:
     - index.md
     - Getting Started: getting_started
+    - Features: features
     - Deployment: deployment
     - Administration: administration
     - Integration: integration
-    - User Guides: user_guides
