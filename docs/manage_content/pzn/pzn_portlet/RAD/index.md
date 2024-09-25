@@ -8,7 +8,7 @@ Learn which prerequistes are needed to develop java portlets with the personaliz
 2. **[Installing the PZNDemo resources](./pzn_demoinstall.md)**  
 Learn how to install the Portal Personalization sample and configure your database.  
 3. **[Creating a JSR 268-based JSP portlet](./pzn_demo_create_jsp_rad.md)**  
-Learn how to create a JSR 268-based JSP Portlet using IBM Rational Application Developer.  
+Learn how to create a JSR 268-based JSP portlet using IBM Rational Application Developer.  
 4. **[Creating the Personalization content resource classes and content spot](./pzn_demo_create_pzn_content_resources.md)**  
 Learn how to create personalized content resource classes and content spot using the IBM Rational Application Developer.  
 5. **[Creating the Personalization user resource classes and content spot](./pzn_demo_create_pzn_user_resources.md)**  
@@ -23,9 +23,9 @@ Learn how to import personalized workspace resource collections into HCL Digital
 Learn how to create a simple content rule in HCL Digital Experience.  
 10. **[Creating a content spot](./pzn_demo_create_content_spot.md)**  
 Learn how to create a content spot in HCL Digital Experience.  
-11. **[Enhancing the Personalized Portlet](./pzn_demo_enhance_personalized_portlet.md)**  
+11. **[Enhancing the Personalized portlet](./pzn_demo_enhance_personalized_portlet.md)**  
 Learn how to enhance the current sample portlet with additional rules.  
-12. **[Inserting dynamic table HTML/JSP code](./pzn_demo_insert_dynamic_table_code.md)**  
+12. **[Inserting the dynamic table HTML/JSP code](./pzn_demo_insert_dynamic_table_code.md)**  
 Learn how to create dynamic table content in the JSP code.  
 13. **[Modifying resource collection properties](./pzn_demo_modify_resource_collection_properties.md)**  
 Learn how to modify resource collection properties in HCL Digital Experience.  
