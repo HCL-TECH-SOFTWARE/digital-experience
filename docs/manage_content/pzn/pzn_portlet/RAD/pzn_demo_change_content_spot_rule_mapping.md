@@ -20,7 +20,7 @@ Before you begin this procedure, ensure you have properly created additional adv
 
 2. Run the enhanced Personalized portlet.
 
-3. Log out, then log in as **Marge** (a Platinum customer), with password **pzndemo**.
+3. Log out, then log in as **Marge** (a Platinum customer), with the password **pzndemo**.
 
 4. Run the portlet.
 
