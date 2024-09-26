@@ -6,6 +6,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Ability to change the context root or hostname of a virtual portal
 - User Session Reporting Tool
+- Updated supported Microsoft SQL Server Enterprise and Standard Edition
 - New guidance for creating a custom login portlet
 - New guidance for configuring a content source to gather documents from a single pod
 - Notice of deprecation of Textbox.io Rich Text Editor
@@ -42,6 +43,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     The User Session Reporting Tool is a utility designed for HCL DX users managing on-premises deployments. This tool provides a solution for analyzing and interpreting web traffic data by processing National Center for Supercomputing Applications (NCSA) access log files. Relevant parts of each log are extracted to identify and count unique user sessions. This offers a precise understanding of usage data over specified periods. For more information, see [User Session Reporting Tool](../../get_started/download/software_licensing_portal/configure_entitlement_checks/user_session_reporting_tool.md).
+
+### Supported versions of SQL Server
+
+=== "Containers"
+    HCL DX now supports Microsoft SQL Server Enterprise and Standard Edition 2022. For more information, see the topics [Databases](../../get_started/system_requirements/kubernetes/databases.md) and [Supported configurations](../../get_started/system_requirements/traditional/supported_config.md#databases).
+
+=== "On-Premises"
+    HCL DX now supports Microsoft SQL Server Enterprise and Standard Edition 2022. For more information, see the topics [Databases](../../get_started/system_requirements/kubernetes/databases.md) and [Supported configurations](../../get_started/system_requirements/traditional/supported_config.md#databases).
 
 ### New guidance for creating a custom login portlet
 
