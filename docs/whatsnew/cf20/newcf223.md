@@ -47,10 +47,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Updated supported versions of SQL Server
 
 === "Containers"
-    HCL DX now supports Microsoft SQL Server Enterprise and Standard Edition 2022. For more information, see the topics [Databases](../../get_started/system_requirements/kubernetes/databases.md) and [Supported configurations](../../get_started/system_requirements/traditional/supported_config.md#databases).
+    HCL DX now supports Microsoft SQL Server Enterprise and Standard Edition 2022. For more information, see [Databases](../../get_started/system_requirements/kubernetes/databases.md).
 
 === "On-Premises"
-    HCL DX now supports Microsoft SQL Server Enterprise and Standard Edition 2022. For more information, see the topics [Databases](../../get_started/system_requirements/kubernetes/databases.md) and [Supported configurations](../../get_started/system_requirements/traditional/supported_config.md#databases).
+    HCL DX now supports Microsoft SQL Server Enterprise and Standard Edition 2022. For more information, see [Supported configurations](../../get_started/system_requirements/traditional/supported_config.md#databases).
 
 ### New guidance for creating a custom login portlet
 
