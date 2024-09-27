@@ -7,7 +7,7 @@
 ## Introduction
 
 HCL Digital Experience includes different kinds of search-features that can be used to find documents. One of these features is the Search Center.
-This documentation is written to get a better understanding for using the DX Search and the Search Center when trying to find different kind documents used in the HCL Digital Experience. It also provide detailed steps that can be used to prepare Web Content Management (WCM) articles to find them better with the search service (by defining metadata).  
+This documentation is written to get a better understanding for using the DX Search and the Search Center when trying to find different kinds of documents used in the HCL Digital Experience. It also provide detailed steps that can be used to prepare Web Content Management (WCM) articles to find them better with the search service (by defining metadata).  
 
 This How-to document is structured as a workflow sample that include different parts. First of all, a sample user will be created in HCL Digital Experience. Then a WCM document is created for which that user will be set as an author. Additional metadata will be added to that document (keywords, name, title etc.). Finally the created WCM document will be used in the Search Center to find it with different search-filters (finding by title, author etc.)
 
