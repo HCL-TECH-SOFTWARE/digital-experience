@@ -11,23 +11,23 @@ For each customer type specified by a profile, add to the business rule (the pro
 
 3. Choose **Select Action** from the **Rule Type** dropdown list.  
 
-4. Edit the rule so that its Customertype is Platinum and click **Save**.  
+4. Edit the rule so that its Customertype is Platinum, then click **Save**.  
 
     ![Show Platinium Offers Rule](./images/show_platinium_offer_rule.png)  
 
-5. In the **Pers Offers** folder, create another rule called **Show Titanium Offers**. Select **Pzn offers** whose **Customertype** is **Titanium**.  
+5. In the **Pers Offers** folder, create another rule called **Show Titanium Offers**. 
+6. Edit the rule so that its Customertype is Titanium, then click **Save**.
+    ![Show Titanium Offers Rule](./images/show_titanium_offers_rule.png)  
 
-   ![Show Titanium Offers Rule](./images/show_titanium_offers_rule.png)  
+6. In the same folder, select **New > Rule** .
 
-6. Within the same folder, select **New > Rule**  
-
-7. Type **Show Offers by Customer Type** in the **New Rule** field.  
+7. Enter **Show Offers by Customer Type** in the **New Rule** field.  
 
 8. Select **Binding** from the **Rule Type** drop-down list.  
 
 9. Click **Profiler > Select a Profiler...**.  
 
-10. Expand the Pers Offers folder, select **Pers Offers User Profiler** and click **OK**.  
+10. In the Pers Offers folder, select **Pers Offers User Profiler** then click **OK**.  
 
 11. Click **Profile** and select **Gold** from the drop-down list.  
 
@@ -50,4 +50,4 @@ Do the same steps for Titanium customers.
 
 ![Show offers by customer type](./images/show_offers_by_customer_type_rule.png)
 
-You can now change your content spot mapping.
+You have successfully created additional advanced rules. In the next topic, you will learn how to [Change content spot rule mapping.](./pzn_demo_change_content_spot_rule_mapping.md)
