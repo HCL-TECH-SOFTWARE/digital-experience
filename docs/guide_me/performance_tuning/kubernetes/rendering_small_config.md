@@ -42,36 +42,36 @@ This section provides details for the Kubernetes cluster, JMeter, and database.
 
       - Information
       
-      ![](../../../../images/Header-1-AWS.png){ width="1000" }
+      ![](../../../images/Header-1-AWS.png){ width="1000" }
       
-      ![](../../../../images/C5.2xlarge.png){ width="1000" }
+      ![](../../../images/C5.2xlarge.png){ width="1000" }
 
       - Processor details
 
-      ![](../../../../images/Processor_Info_Native-Kube.png){ width="600" }
+      ![](../../../images/Processor_Info_Native-Kube.png){ width="600" }
 
       - Volume details
 
-      ![](../../../../images/AWS-Native-Kube-Volume-Info.png){ width="600" }
+      ![](../../../images/AWS-Native-Kube-Volume-Info.png){ width="600" }
 
 
 ### DB2 instance
 
 - Remote DB2 - [t3a.large]
 
-       ![](../../../../images/Header-2-AWS.png){ width="600" }
+       ![](../../../images/Header-2-AWS.png){ width="600" }
 
-       ![](../../../../images/t3a.large.png){ width="600" }
+       ![](../../../images/t3a.large.png){ width="600" }
 
 
 - Processor details
 
-       ![](../../../../images/Processor_Info_RemoteDB2.png){ width="600" }
+       ![](../../../images/Processor_Info_RemoteDB2.png){ width="600" }
 
 
 - Volume details
 
-       ![](../../../../images/Remote-DB2-Volume-Info.png){ width="600" }
+       ![](../../../images/Remote-DB2-Volume-Info.png){ width="600" }
 
 
 ### JMeter agents
@@ -80,24 +80,24 @@ This section provides details for the Kubernetes cluster, JMeter, and database.
 
 - To run the tests, a distributed AWS/JMeter agents setup consisting of one primary and two subordinates was used.
 
-      ![](../../../../images/Header-3-AWS.png){ width="400" }
+      ![](../../../images/Header-3-AWS.png){ width="400" }
 
-      ![](../../../../images/t2.xlarge.png){ width="400" }
+      ![](../../../images/t2.xlarge.png){ width="400" }
 
 
 - Processor details
 
-      ![](../../../../images/Processor_Info_JMeterAgent.png){ width="600" }
+      ![](../../../images/Processor_Info_JMeterAgent.png){ width="600" }
 
 
 - Network details
 
-      ![](../../../../images/JMeter_Agent_Network_Details.png){ width="400" }
+      ![](../../../images/JMeter_Agent_Network_Details.png){ width="400" }
 
 
 - Volume details
 
-      ![](../../../../images/JMeter-Agent-Volume-Info.png){ width="600" }
+      ![](../../../images/JMeter-Agent-Volume-Info.png){ width="600" }
 
 
 !!!note
@@ -127,14 +127,14 @@ This performance tuning guide aims to understand how the ratios of key pod limit
 | ringApi  | 1                      | ringApi   | ringApi         | 500 m                            | 512 Mi                              |
 | haproxy  | 1                      | haproxy   | haproxy         | 700 m                            | 1024 Mi                             |
 
--  The modifications recommended in [small-config-helm-values](#recommendations) lead to an improved response time and throughput by 50% compared to using the [default minimal values in the Helm chart](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md/#containerization-requirements-and-limitations).
+-  The modifications recommended in [small-config-helm-values](#recommendations) lead to an improved response time and throughput by 50% compared to using the [default minimal values in the Helm chart](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md#containerization-requirements-and-limitations).
 
 !!!note
      Performance tuning for a Kubernetes DX cluster must be conducted for the particular workloads involving the number of concurrent users. Generally, these recommendations are intended to speed up tuning for others. Refer to the [DX Core tuning guide](../traditional_deployments.md) for further enhancements.
 
 ### Recommendations
 
-- Currently, default CPU and memory values in the [Helm chart](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md/#containerization-requirements-and-limitations) are the minimum values for DX to work. For a small-sized workload in AWS, the Kubernetes cluster should begin with a single node with at least a c5.2xlarge instance type to support a load of 1,000 users.
+- Currently, default CPU and memory values in the [Helm chart](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md#containerization-requirements-and-limitations) are the minimum values for DX to work. For a small-sized workload in AWS, the Kubernetes cluster should begin with a single node with at least a c5.2xlarge instance type to support a load of 1,000 users.
 
 - For testing purposes, OpenLDAP pod values were used for holding more authenticated users for rendering. However, the OpenLDAP pod is not for production use.
 
@@ -170,4 +170,4 @@ For convenience, these values were added to the `small-config-values.yaml` file 
  
 ???+ info "Related information"
     - [DX Performance Tuning Guide](../traditional_deployments.md)
-    - [DX Helm Minimal Values](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md/#containerization-requirements-and-limitations)
+    - [DX Helm Minimal Values](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md#containerization-requirements-and-limitations)
