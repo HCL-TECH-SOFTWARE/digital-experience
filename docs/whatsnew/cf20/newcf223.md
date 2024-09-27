@@ -8,7 +8,6 @@ The following features and updates are available to customers installing HCL Dig
 - User Session Reporting Tool
 - Updated supported versions of SQL Server
 - New guidance for creating a custom login portlet
-- New guidance for configuring a content source to gather documents from a single pod
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -21,6 +20,7 @@ The following features and updates are available to customers installing HCL Dig
 - DX core image - Moved directories to temporary storage
 - DX Search - File processor
 - Updated documentation for settings when deploying a new search
+- New guidance for configuring a content source to gather documents from a single pod
 - New sizing guidance for rendering in a small configuration
 - New topic for configuring IMDS hop limit in Amazon EKS v1.30
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
@@ -60,14 +60,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     Documentation for creating a custom login portlet for HCL DX is now available. A custom login portlet is useful if the base portlet is not in your desired format, or if you want to add additional verification to the login. For more information, see [Creating a custom login portlet](../../deployment/manage/security/people/authorization/users_and_groups/custom_login_portlet.md).
 
-### New guidance for configuring a content source to gather documents from a single pod
-
-=== "Containers"
-    The topic [Configure Remote Search](../../deployment/manage/container_configuration/kubernetes_remote_search.md#content-source-from-a-single-core-pod) is updated to include information on how to configure a content source to gather documents from a single pod. You can use the URL to index both Portal and WCM content sources.
-
-=== "On-Premises"
-    The topic [Configure Remote Search](../../deployment/manage/container_configuration/kubernetes_remote_search.md#content-source-from-a-single-core-pod) is updated to include information on how to configure a content source to gather documents from a single pod. You can use the URL to index both Portal and WCM content sources.
-
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
 === "Containers"
@@ -106,6 +98,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     The topic [Installing search based on OpenSearch](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md) is updated to include the settings you might want to change when deploying the new search. The topic now provides more information about specific configurations such as security, split deployment, replicas, automated setup for DAM, allowlist for file types in the file processor, common fields mapping, and Persistent Volume size requests.
+
+### New guidance for configuring a content source to gather documents from a single pod
+
+=== "Containers"
+    The topic [Configure Remote Search](../../deployment/manage/container_configuration/kubernetes_remote_search.md#content-source-from-a-single-core-pod) is updated to include information on how to configure a content source to gather documents from a single pod. You can use the URL to index both Portal and WCM content sources.
 
 ### New sizing guidance for rendering in a small configuration
 
