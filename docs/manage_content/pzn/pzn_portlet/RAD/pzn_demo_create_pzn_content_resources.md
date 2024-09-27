@@ -40,19 +40,16 @@ In this topic, you will learn how to create the Personalization content resource
 
     ![PZNDemo table selection](./images/pzn_offers_table_selection.png)  
 
-10. Select the **Columns** tab.
 
-11. On the **Columns** tab, move all columns to the selected columns list by clicking the double arrow button. Notice the primary key is the column **Offer_ID**.  
+11. Under the **Columns** tab, click **>>** to move all columns to the selected columns list. Note that the primary key is the column **Offer_ID**.  
 
     ![PZNOffers columns selection](./images/pzn_offers_columns_selection.png)  
 
-12. Click the **Mappings** tab.
 
-13. On the **Mappings** tab, select **Customertype**.
 
-14. Click the **Edit** button.
+12. Under the **Mappings** tab, select **Customertype** and click **Edit**.
 
-15. Add the following Descriptions and values:
+15. Add the following **Descriptions** and **values**:
 
     |Description|values|
     |-----------|------|
@@ -66,15 +63,18 @@ In this topic, you will learn how to create the Personalization content resource
 
     ![PZNOffers mappings](./images/pzn_user_populate_mapping_final.png)  
 
-16. Click the **Deployment** tab.
 
-17. On the **Deployment** tab, change the datasource to **jdbc/pzndemo**. This datasource is defined in WAS by the Personalization demo program installation.
+16. Under the **Deployment** tab, change the datasource to **jdbc/pzndemo**. This datasource is defined in WAS by the Personalization demo program installation.
 
     ![PZNOffers JNDI settings](./images/pzn_offers_deployment_jndi.png)  
 
 18. Click **Next**.
 
-19. Set the package name as **pers_offers**. Select **Generate a Content Spot for this resource**. Select **Include schema names** in the generated Resource Runtime Manager.
+19. Enter **pers_offers** as the package name.
+
+20. Tick the following checkboxes:
+    1. Generate a Content Spot for this resource
+    2. Include schema names in the generated Resource Runtime Manager
 
     ![PZNOffers Resource Generation](./images/pzn_offers_resource_generation.png)  
 
