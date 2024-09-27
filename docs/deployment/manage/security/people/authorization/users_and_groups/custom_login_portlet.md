@@ -6,8 +6,9 @@ To implement your own login portlet after capturing the required security creden
 
 If you only want to customize the flow of the login (for example, calling external validation), you can also consider writing a login filter. For more information, see [Configuring authentication filters](../../../../config_portal_behavior/auth_filters/index.md).
 
+Another approach to create a custom login user interface is to use [Script Applications](../../../../../../extend_dx/script_application/index.md). However, note that Script Applications cannot execute any server-side validation.
+
 To implement a login portlet with Rational Application Developer (RAD), Eclipse, or another Java development tool, refer to the following steps. 
-Another approach to a custom login UI can be the  [Script Applications](../../../../../../extend_dx/script_application/index.md) though it cannot execute any server side validation.
 
 1. Add the following to your build path as an external JAR file:
 
