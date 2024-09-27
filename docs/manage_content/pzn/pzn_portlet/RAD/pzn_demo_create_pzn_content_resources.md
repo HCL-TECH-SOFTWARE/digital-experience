@@ -23,7 +23,7 @@ In this topic, you will learn how to create the Personalization content resource
 
     1. From the **JDBC driver** drop-down list, select **Derby Embedded JDBC Driver**.
 
-    2. From the **Database location** field, click **Browse**. Navigate to and select ``<wp_profile_root>/PortalServer/derby/pzndemo_db/.``
+    2. From the **Database location** field, click **Browse** and select ``<wp_profile_root>/PortalServer/derby/pzndemo_db/.``
 
     3. From the **Class location** field, click **Browse**. Navigate to and select ``<AppServer_root>/derby/lib/derby.jar``.
 
