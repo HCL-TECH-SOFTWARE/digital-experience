@@ -58,7 +58,7 @@ Before you begin this procedure, ensure that you created a content spot.
 
 5. Log in to HCL Portal as wpsadmin. Click the **Administration menu** icon. Then, click **Portlet Management > Web Modules**.
 
-6. Click **Update** to update the web module.
+8. Click **Update** to update the web module.
 
 7. Complete the installation process by using the newly created war file.
 

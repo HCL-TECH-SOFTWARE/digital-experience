@@ -2,7 +2,6 @@
 
 The Personalized List portlet provides a ready-to-use portlet for displaying personalized content from rules, content spots, or resources. In many cases, it eliminates the need to code new portlets and JSP files yourself.
 
-!!!note
     You can use this portlet instead of coding the IBM® Rational® Application Developer portlet. The Personalized List portlet is not intended to be used with the Web Content resource collection or with rules that involve the Web Content resource collection. To display Web Content rules, use a Portal Personalization Component in HCL Web Content Manager. When the Web Content resource collection is used with the Personalized List portlet, certain attributes like authoring template shows raw values from the repository that cannot be translated to a readable form. The details page of the Personalized List portlet does not show the results of the rendered content. The details page shows some attribute from the content, such as the creator or last modified date, which is not suitable for production use of content from Web Content Manager.
 
 The intended use of the Personalized List portlet is to display personalized lists of documents. The Personalized List can also be used with some generated or custom resource collections.
