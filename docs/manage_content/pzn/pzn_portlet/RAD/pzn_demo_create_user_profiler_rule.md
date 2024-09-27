@@ -1,18 +1,16 @@
-# 14. Creating the user profiler rule
+# Creating the user profiler rule
 
-Use the Personalization Editor to create a profiler rule for users who qualify as customers for Gold Offers in the Personalized Offers resource collection.
+In this topic, you will learn how to use the Personalization Editor to create a profiler rule for users who qualify as customers for Gold Offers in the Personalized Offers resource collection. Before you begin, ensure that you have modified the resource collection properties to specify the Translator Class.
 
-Before you begin this procedure, ensure that you have modified the resource collection properties to specify the Translator Class.
 
 In the Personalization Editor, follow these steps:
 
 1. Within the Pers Offers folder, click **New > Rule**.
 
-2. Enter the following values:
 
-    1. In the **New Rule** field, type **Pers Offers User Profiler**.
+2. In the **New Rule** field, enter **Pers Offers User Profiler**.
 
-    2. Select **Profiler** in the Rule Type menu.
+2. Select **Profiler** from the Rule Type dropdown list.
 
 3. Click **Profile**, type **Gold** in the Profile field, and click **Submit**.
 
@@ -30,4 +28,4 @@ In the Personalization Editor, follow these steps:
 
 ![Pers Offers User Profiler results](./images/Pers_Offers_User_Profiler_results.png)
 
-You can now create some additional advanced rules for your personalized portlet.  
+You have successfully created the user profiler rule. In the next topic, you will learn how to [Create additional advanced rules.](./pzn_demo_create_additional_advanced_rules.md)
