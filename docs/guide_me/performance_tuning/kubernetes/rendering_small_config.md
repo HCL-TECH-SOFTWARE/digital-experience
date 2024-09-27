@@ -222,17 +222,19 @@ This section provides details for the Kubernetes cluster, JMeter, and database.
 
       - Information
 
-            ![](../../../images/Header-1-AWS-Med.png){ width="1000" }
+      ![](../../../images/Header-1-AWS-Med.png){ width="1000" }
 
-            ![](../../../images/C5.4x_9xlarge.png){ width="1000" }
+      ![](../../../images/C5.4x_9xlarge.png){ width="1000" }
 
       - Processor details
 
-            ![](../../../../images/Processor_Info_Native-Kube-9x.png){ width="600" }
+      ![](../../../images/Processor_Info_Native-Kube-9x.png){ width="600" }
+
+       ![](../../../images/Processor_Info_Native-Kube-9x.png){ width="600" }
 
       - Volume details
 
-            ![](../../../images/AWS-Native-Kube-Volume-Info-9x.png){ width="600" }
+      ![](../../../images/AWS-Native-Kube-Volume-Info-9x.png){ width="600" }
 
 
 ### DB2 instance
