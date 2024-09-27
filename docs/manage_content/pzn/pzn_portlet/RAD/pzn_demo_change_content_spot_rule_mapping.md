@@ -24,11 +24,10 @@ Before you begin this procedure, ensure you have properly created additional adv
 
 3. Log out, then log in as **Marge** (a Platinum customer), with the password **pzndemo**.
 
-4. Run the portlet.
+4. Run the portlet again.
 
 !!!note
     If you run the portlet as wpsadmin, it fails because wpsadmin does not exist in the user resource database.
 
-Congratulations! You have finished building a Personalized portlet.
+You have successfully changed the content spot mapping rule and finished building a Personalized portlet. In the next topic, you will learn how to [Use the Personalized List portlet.](./pzn_demo_list_portlet.md) instead of coding the Rational Application Developer portlet.
 
-The next topic, **Personalized list portlet**, shows how to use this portlet instead of coding the Rational Application Developer portlet.
