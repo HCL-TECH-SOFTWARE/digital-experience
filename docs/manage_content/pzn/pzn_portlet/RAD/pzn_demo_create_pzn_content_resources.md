@@ -86,8 +86,8 @@ You can now see the new java classes in your project.
 
 ![PZNOffers Resource Generation result](./images/pznoffers_resource_generation_results.png)  
 
-Please also review the Pzn_Offers.hrf file to understand the definitions
+Ensure to also review the Pzn_Offers.hrf file to understand the definitions.
 
 ![Pzn_Offers_hrf](./images/Pzn_Offers_hrf_definitions.png)
 
-Congratulations. You have successfully create the Personalization user resource classes and content spot.
+You have successfully created the Personalization content resource classes and content spot. In the next topic, you will learn how to [Code the JSP portlet.](./pzn_demo_finish_coding_portlet_jsp.md)

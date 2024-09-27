@@ -1,8 +1,8 @@
-# 5. Creating the Personalization user resource classes and content spot
+# Creating the Personalization user resource classes and content spot
 
-Use the Project Explorer of IBM Rational Application Developer to create the user resource classes and content spot for the Personalization demo that creates the Personalized Offers portlet for different customer profiles.
+In this topic, you will learn how to use the Project Explorer of IBM Rational Application Developer to create the user resource classes and content spot for the Personalization demo that creates the Personalized Offers portlet for different customer profiles.
 
-1. In the **Project Explorer** tab of Rational® Application Developer, right-click the **Pers_Offers** project and choose **New > Other**.
+1. In the **Project Explorer** tab of the Rational® Application Developer, right-click the **Pers_Offers** project and choose **New > Other**.
 
 2. From the **New** window, select **Portal > Personalization > Content or User Resource**.
 
