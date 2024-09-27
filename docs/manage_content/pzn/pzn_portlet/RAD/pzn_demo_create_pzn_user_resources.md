@@ -6,14 +6,16 @@ In this topic, you will learn how to use the Project Explorer of IBM Rational Ap
 
 2. From the **New** window, select **Portal > Personalization > Content or User Resource**.
 
-3. Click **Next**
+3. Click **Next**.
 
-4. Select one of the following radio buttons:
+4. Under **Choose a protocol**, click the **SQL** radio button.
 
-   - **SQL**  
-   - **Web users**  
+5. Under **Create a resource collection that represents:**, click the **Web users** radio button.
 
-   ![PZNUser data model](./images/pzn_user_data_model_selection.png)  
+6. Click **Next**.
+
+
+    ![PZNUser data model](./images/pzn_user_data_model_selection.png)  
 
 5. Select **Use an existing connection** and select **pzndemo_db** from the list of existing connections.
 
