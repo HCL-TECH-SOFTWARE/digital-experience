@@ -1,6 +1,6 @@
-# 4. Creating the Personalization content resource classes and content spot
+# Creating the Personalization content resource classes and content spot
 
-View the steps to create the Personalization content resource classes and content spot using IBM Rational Application Developer.
+In this topic, you will learn how to create the Personalization content resource classes and content spot using the IBM Rational Application Developer.
 
 1. In the Project Explorer tab in Rational® Application Developer, right-click on the **Pers_Offers** project and choose **New > Other**.
 
