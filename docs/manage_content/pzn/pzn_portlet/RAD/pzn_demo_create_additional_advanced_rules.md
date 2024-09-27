@@ -1,8 +1,9 @@
-# 15. Creating additional advanced rules
+# Creating additional advanced rules
 
-For each customer type specified by a profile, add to the business rule (the profiler) by selecting actions to build the syntax of the rule.
+In this topic, you will learn how to create additional advanced rules.
 
-Ensure you have properly followed the steps in [Create the user profiler rule](pzn_demo_create_user_profiler_rule.md#).
+For each customer type specified by a profile, add to the business rule (the profiler) by selecting actions to build the syntax of the rule. Before you begin, ensure you have properly followed the steps in [Create the user profiler rule](pzn_demo_create_user_profiler_rule.md#).
+
 
 1. In the **Pers Offers** folder, select **New > Rule**.  
 
