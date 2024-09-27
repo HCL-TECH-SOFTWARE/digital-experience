@@ -14,7 +14,6 @@ In this topic, you will learn how to create the Personalization content resource
 
 6. Click **Next**.
 
-    - **Web Content**  
 
     ![PZNDemo data model selection](./images/pzn_offers_data_model_selection.png)  
 
