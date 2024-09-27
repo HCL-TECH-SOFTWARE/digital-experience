@@ -1,4 +1,4 @@
-# 16. Changing content spot rule mapping
+# Changing content spot rule mapping
 
 Change the default rule mapping to the new binding rule that you created for different customer types who will use the Personalized Offers portlet. Test the portlet for use by all customer types. Verify that the portlet displays the personalized content that is specified by the business rule for each user profile.
 
