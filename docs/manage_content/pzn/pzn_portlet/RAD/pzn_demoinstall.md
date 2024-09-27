@@ -1,4 +1,4 @@
-# 2. Installing the PZNDemo resources
+# Installing the PZNDemo resources
 
 In this topic, you will learn how to install the Portal Personalization sample resources (the demo users, the Derby database, and pages). No additional database requirements are needed.
 

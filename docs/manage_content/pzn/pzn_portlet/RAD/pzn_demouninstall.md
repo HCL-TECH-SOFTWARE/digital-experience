@@ -16,5 +16,5 @@ In this topic, you will learn how to uninstall the Personalization sample demo, 
 
 !!!note
     The database connection to the included Apache Derby database may stay open and prevent the removal of the database directory. If you encounter this issue, restart HCL Digital Experience and run `ConfigEngine.bat/sh remove-pzndemo-database -DPortalAdminPwd=<password> -DWasPassword=<password>`. The directory PznDemo in the root of the Portal Personalization Workspace may also need to be removed manually.
-    
+
 You have successfully removed the sample demo, database, and users.

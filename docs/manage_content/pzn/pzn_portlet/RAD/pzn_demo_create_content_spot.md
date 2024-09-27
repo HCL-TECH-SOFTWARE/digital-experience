@@ -34,7 +34,6 @@ Before you begin this procedure, ensure you have created the simple content rule
 
 9. View the page with your Pers_Offers portlet.
 
-
 ## Result  
 
 ![Pers Offers Portlet content spot test](./images/Pers_Offers_portlet_content_spot_test_result.png)

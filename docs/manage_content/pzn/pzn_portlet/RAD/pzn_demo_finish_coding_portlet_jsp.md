@@ -1,6 +1,6 @@
 # Coding the JSP portlet
 
-In this topic, you will learn how to code the JSP portlet. 
+In this topic, you will learn how to code the JSP portlet.  
 
 Use the Rational Application Developer Project Explorer to configure `pers_offers.Pzn_offersSpot.class` and `pers_offers.Per_Offers_UserSpot.class` to define the context parameters for offersSpot and userSpot. Then, code the `setRequest` calls to pass the user context to personalization.
 
@@ -51,4 +51,4 @@ Use the Rational Application Developer Project Explorer to configure `pers_offer
 
 5. Save and close the JSP file.
 
-You finished the basic coding of the personalized portlet. In the next topic, you will learn how to [Export and install the personalized portlet.](./pzn_demo_export_war_install_portlet.md) 
+You finished the basic coding of the personalized portlet. In the next topic, you will learn how to [Export and install the personalized portlet.](./pzn_demo_export_war_install_portlet.md)  

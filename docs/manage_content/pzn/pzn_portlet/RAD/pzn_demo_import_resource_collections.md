@@ -1,16 +1,18 @@
 # Importing Personalization Workspace resource collections
 
-In this topic, you will learn how to import Personalization Workspace resource collections. 
+In this topic, you will learn how to import Personalization Workspace resource collections.  
 
 Use the Personalization Navigator to create Workspace folders for the resource collections. Then, import the resource collections into the Workspace of the Personalization Navigator.
 
 Before you can use the content and user resources in the Personalization Navigator, you must place these class files into a directory accessible by that portlet.
 
 1. Open the Rational Application Developer Pers Offers project.
-2. Export the pers_offers folder under **Pers_Offers/Java Resources/JavaSource/src/pers_offers** as a JAR file and set the target location to **PortalServer_root/pzn/prereq.pzn/collections/pers_offers.jar** 
-3. Accept the defaults and click **Finish**
+2. Export the pers_offers folder under **Pers_Offers/Java Resources/JavaSource/src/pers_offers** as a JAR file and set the target location to **PortalServer_root/pzn/prereq.pzn/collections/pers_offers.jar**  
+3. Accept the defaults and click **Finish**  
 4. Restart the server to make sure that the pers_offers.jar file is loaded correctly.  
-## Importing the resource collections into the portlet
+
+## Importing the resource collections into the portlet  
+
 Ensure you have properly followed the steps in [Export the WAR file and install the portlet](pzn_demo_export_war_install_portlet.md).
 
 1. Click the **Personalization** tab.

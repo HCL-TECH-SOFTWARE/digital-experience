@@ -62,4 +62,3 @@ Before you begin, complete the following prerequisites:
 ![Welcome JSP](.\images\Pers_Offers_Welcome_JSP.png)
 
 You have successfully created a basic JSR 268 portlet with a JSP file using Rational Application Developer. In the next topic, you will learn how to [Create the Personalization content resource classes and content spot.](./pzn_demo_create_pzn_content_resources.md)
-

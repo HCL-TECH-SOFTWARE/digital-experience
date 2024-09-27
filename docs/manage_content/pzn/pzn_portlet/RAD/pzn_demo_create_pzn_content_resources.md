@@ -14,12 +14,11 @@ In this topic, you will learn how to create the Personalization content resource
 
 6. Click **Next**.
 
-
     ![PZNDemo data model selection](./images/pzn_offers_data_model_selection.png)  
 
-5. Select **Create a new connection** and click **Next**.
+7. Select **Create a new connection** and click **Next**.
 
-6. Enter the following values:
+8. Enter the following values:
 
     1. From the **JDBC driver** drop-down list, select **Derby Embedded JDBC Driver**.
 
@@ -29,25 +28,21 @@ In this topic, you will learn how to create the Personalization content resource
 
        ![PZNDemo Database Settings](./images/RAD_jdbc_settings.png)  
 
-7. Click **Next**. This will open the Personalization Resource wizard.
+9. Click **Next**. This will open the Personalization Resource wizard.
 
+10. Under the Tables tab, expand the **PZNDEMO** dropdown list.
 
-8. Under the Tables tab, expand the PZNDEMO dropdown list.
+11. Select **PZN_OFFERS**, and click **>** to add the table to the list of selected tables.  
 
-9. Select **PZN_OFFERS**, and click **>** to add the table to the list of selected tables. 
-
-10. Click **Primary Table** to mark **PZN_OFFERS** as the primary table.
+12. Click **Primary Table** to mark **PZN_OFFERS** as the primary table.
 
     ![PZNDemo table selection](./images/pzn_offers_table_selection.png)  
 
-
-11. Under the **Columns** tab, click **>>** to move all columns to the selected columns list. Note that the primary key is the column **Offer_ID**.  
+13. Under the **Columns** tab, click **>>** to move all columns to the selected columns list. Note that the primary key is the column **Offer_ID**.  
 
     ![PZNOffers columns selection](./images/pzn_offers_columns_selection.png)  
 
-
-
-12. Under the **Mappings** tab, select **Customertype** and click **Edit**.
+14. Under the **Mappings** tab, select **Customertype** and click **Edit**.  
 
 15. Add the following **Descriptions** and **values**:
 
@@ -63,16 +58,15 @@ In this topic, you will learn how to create the Personalization content resource
 
     ![PZNOffers mappings](./images/pzn_user_populate_mapping_final.png)  
 
-
 16. Under the **Deployment** tab, change the datasource to **jdbc/pzndemo**. This datasource is defined in WAS by the Personalization demo program installation.
 
     ![PZNOffers JNDI settings](./images/pzn_offers_deployment_jndi.png)  
 
-18. Click **Next**.
+17. Click **Next**.
 
-19. Enter **pers_offers** as the package name.
+18. Enter **pers_offers** as the package name.
 
-20. Tick the following checkboxes:
+19. Tick the following checkboxes:
     1. Generate a Content Spot for this resource
     2. Include schema names in the generated Resource Runtime Manager
 
