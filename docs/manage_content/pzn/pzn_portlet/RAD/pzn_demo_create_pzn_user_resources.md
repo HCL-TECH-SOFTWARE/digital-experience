@@ -17,25 +17,26 @@ In this topic, you will learn how to use the Project Explorer of IBM Rational Ap
 
     ![PZNUser data model](./images/pzn_user_data_model_selection.png)  
 
-5. Select **Use an existing connection** and select **pzndemo_db** from the list of existing connections.
+5. Select **Use an existing connection** and click **pzndemo_db** from the list of existing connections.
 
-   ![PZNUser database settings](./images/RAD_jdbc_settings.png)  
+    ![PZNUser database settings](./images/RAD_jdbc_settings.png)  
 
-6. Click **Next**. The personalization resource wizard opens.
+7. Click **Next**. This will open the Personalization Resource wizard.
 
-7. Expand **PZNDEMO**.
+7. Under the Tables tab, expand the PZNDEMO dropdown list.
 
-8. On the **Tables** tab, highlight **PZN_USER**. Click the appropriate arrow to select the table.
+8. Select **PZN_USER** and click **>** to add the table to the list of selected tables. 
 
-   ![PZNUser table selection](./images/pzn_user_table_selection.png)  
+    ![PZNUser table selection](./images/pzn_user_table_selection.png)  
 
-9. Change the display name of **PZN_USER** to **Per_Offers_User** to avoid naming conflicts with the previously installed demo code. You can do this by doing a double click to the Display Name **Pzn_user**. Click the Primary Table to mark it as the primary table.
+9. Double-click the display name and rename it to **Per_Offers_User** to avoid naming conflicts with the previously installed demo code. 
 
-   ![PZNUser table selection](./images/pzn_user_table_selection2.png)  
+10. Click **Primary Table** to mark **PZN_USER** as the primary table.
 
-10. Select the **Columns** tab
+    ![PZNUser table selection](./images/pzn_user_table_selection2.png)  
 
-11. On the **Columns** tab, move all of the columns to the selected columns area by clicking the double arrow. Notice the primary key is the column **USERNAME**.  
+
+11. Under the **Columns** tab, click **>>** to move all columns to the selected columns list. Note that the primary key is the column **USERNAME**.  
 
     ![PZNUser Colum selection](./images/pzn_user_columns_selection.png)  
 
