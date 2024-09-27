@@ -5,7 +5,7 @@ In this topic, you will learn how to change content spot rule mapping.
 Change the default rule mapping to the new binding rule that you created for different customer types who will use the Personalized Offers portlet. Then, test the portlet for use by all customer types and verify that the portlet displays the personalized content specified by the business rule for each user profile.
 
 ## Editing the rule mapping  
-
+### Editing the rule mapping
 Before you begin this procedure, ensure you have properly created additional advanced rules.
 
 1. In the Personalization Navigator, select the content spot **Pzn_offersSpot**, located in the **Workspace Root**.
@@ -15,7 +15,7 @@ Before you begin this procedure, ensure you have properly created additional adv
 3. Change the default rule mapping to the new binding rule and click **Save**.
 
    ![Show all Customertype binding rule](./images/new_binding_rule.png)
-
+### Testing the portal using different customer types
 ## Testing the portal using different customer types
 
 1. Log in to the Portal as **Scott** (a Gold customer), with the password **pzndemo**.
