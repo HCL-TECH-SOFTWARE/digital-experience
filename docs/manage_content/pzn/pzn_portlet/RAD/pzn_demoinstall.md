@@ -9,4 +9,4 @@ In this topic, you will learn how to install the Portal Personalization sample r
 
 2. Stop the HCL DX server to free the single connection to the Derby database.
 
-The sample demo and database configuration is complete. You can now begin coding a basic personalized portlet.  
+You have successfully installed the PZNDemo resources. In the next topic, you will learn how to [Create a JSR 268-based JSP portlet](./pzn_demo_create_jsp_rad.md)
