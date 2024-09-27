@@ -84,4 +84,3 @@ Ensure to also review the Per_Offers_User.hrf file to understand the definitions
 ![Pzn_Offers_hrf](./images/Per_Offers_User_hrf.png)
 
 You have successfully created the Personalization user resource classes and content spot. In the next topic, you will learn how to [Code the JSP portlet.](./pzn_demo_finish_coding_portlet_jsp.md)
-You can now finish coding the portlet JSP file.
