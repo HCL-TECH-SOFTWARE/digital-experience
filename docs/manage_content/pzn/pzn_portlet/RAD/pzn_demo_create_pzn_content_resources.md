@@ -29,15 +29,16 @@ In this topic, you will learn how to create the Personalization content resource
 
        ![PZNDemo Database Settings](./images/RAD_jdbc_settings.png)  
 
-7. Click **Next**.
+7. Click **Next**. This will open the Personalization Resource wizard.
 
-    The personalization resource wizard opens.
 
-8. Expand PZNDEMO.
+8. Under the Tables tab, expand the PZNDEMO dropdown list.
 
-9. On the **Tables** tab, select **PZN_OFFERS**, and click the arrow to add the table to the list of selected tables. Click **Primary Table** to mark it as the primary table.
+9. Select **PZN_OFFERS**, and click **>** to add the table to the list of selected tables. 
 
-   ![PZNDemo table selection](./images/pzn_offers_table_selection.png)  
+10. Click **Primary Table** to mark **PZN_OFFERS** as the primary table.
+
+    ![PZNDemo table selection](./images/pzn_offers_table_selection.png)  
 
 10. Select the **Columns** tab.
 
