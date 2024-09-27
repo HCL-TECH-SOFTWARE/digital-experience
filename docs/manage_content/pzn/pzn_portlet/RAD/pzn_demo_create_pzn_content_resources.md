@@ -4,11 +4,15 @@ In this topic, you will learn how to create the Personalization content resource
 
 1. In the Project Explorer tab of the Rational® Application Developer, right-click on the **Pers_Offers** project and choose **New > Other**.
 
-2. From the New window, select **Portal > Personalization > Content or User Resource**.
+2. From the **New** window, select **Portal > Personalization > Content or User Resource**.
 
 3. Click **Next**.
 
-4. Select the following options by clicking the appropriate radio button:
+4. Under **Choose a protocol**, click the **SQL** radio button.
+
+5. Under **Create a resource collection that represents:**, click the **Web content** radio button.
+
+6. Click **Next**.
 
     - **SQL**  
     - **Web Content**  
