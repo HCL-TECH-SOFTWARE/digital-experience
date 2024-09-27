@@ -25,7 +25,7 @@ In this topic, you will learn how to create the Personalization content resource
 
     2. From the **Database location** field, click **Browse** and select ``<wp_profile_root>/PortalServer/derby/pzndemo_db/.``
 
-    3. From the **Class location** field, click **Browse**. Navigate to and select ``<AppServer_root>/derby/lib/derby.jar``.
+    3. From the **Class location** field, click **Browse** and select ``<AppServer_root>/derby/lib/derby.jar``.
 
        ![PZNDemo Database Settings](./images/RAD_jdbc_settings.png)  
 
