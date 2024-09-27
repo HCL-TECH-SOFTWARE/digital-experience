@@ -38,15 +38,13 @@ In this topic, you will learn how to use the Project Explorer of IBM Rational Ap
 
 11. Under the **Columns** tab, click **>>** to move all columns to the selected columns list. Note that the primary key is the column **USERNAME**.  
 
-    ![PZNUser Colum selection](./images/pzn_user_columns_selection.png)  
+    ![PZNUser Column selection](./images/pzn_user_columns_selection.png)  
 
-12. Click the Mappings tab.
 
-13. On the Mappings tab, select **Customertype**.
 
-14. Click the **Edit** button.
+12. Under the **Mappings** tab, select **Customertype** and click **Edit**.
 
-15. Add the following Descriptions and values:
+15. Add the following **Descriptions** and **values**:
 
     |Description|values|
     |-----------|------|
@@ -58,15 +56,18 @@ In this topic, you will learn how to use the Project Explorer of IBM Rational Ap
 
     ![PZNUser data mappings result](./images/pzn_user_populate_mapping_2.png)  
 
-16. Click the **Deployment** tab.
 
-17. On the **Deployment** tab, change the datasource to **jdbc/pzndemo**. This datasource is defined in WAS by the Personalization demo program installation.
+16. Under the **Deployment** tab, change the datasource to **jdbc/pzndemo**. This datasource is defined in WAS by the Personalization demo program installation.
 
     ![PZNUser deployment](./images/pzn_user_deployment_jndi.png)
 
 18. Click **Next**.
 
-19. Set the package name as **pers_offers**. Select **Generate a Content Spot for this resource**. Select **Include schema names in the generated Resource Runtime Manager**.
+19. Enter **pers_offers** as the package name. 
+
+20. Select the following checkboxes:
+    1. Generate a Content Spot for this resource
+    2. Include schema names in the generated Resource Runtime Manager
 
     ![PZNUser resource generation selection](./images/pzn_user_resource_generation.png)
 
@@ -78,9 +79,9 @@ You can now see the new java classes in your project.
 
 ![PZNUser result](./images/pznuser_resource_generation_results.png)
 
-Please also review the Per_Offers_User.hrf file to understand the definitions
+Ensure to also review the Per_Offers_User.hrf file to understand the definitions.
 
 ![Pzn_Offers_hrf](./images/Per_Offers_User_hrf.png)
 
-Congratulations. You have successfully created personalization user resource classes and the content spot.
+You have successfully created the Personalization user resource classes and content spot. In the next topic, you will learn how to [Code the JSP portlet.](./pzn_demo_finish_coding_portlet_jsp.md)
 You can now finish coding the portlet JSP file.
