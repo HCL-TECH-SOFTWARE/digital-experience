@@ -6,3 +6,4 @@ nav:
     - Deployment: deployment
     - Administration: administration
     - Integration: integration
+    - API documentation: api

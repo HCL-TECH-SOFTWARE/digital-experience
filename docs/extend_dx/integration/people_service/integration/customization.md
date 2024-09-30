@@ -20,4 +20,3 @@ People Service provides theme customization options to enhance the visual appear
 ## Language
 
 People Service supports National Language Support (NLS) to provide a localized user experience. You can customize the language settings to display the service in the preferred language of your users. This customization ensures that users can interact with the service in their native language, enhancing accessibility and usability.
-
