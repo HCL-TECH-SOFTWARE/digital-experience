@@ -84,11 +84,11 @@ To implement a login portlet with Rational Application Developer (RAD), Eclipse,
 
     The setCredential method stores the user credentials in the credential vault. The code in the following sample uses a Shared User slot. This slot is shared across all portlets this user has access to, and there is one secret per user. 
     
-    ## Sample code
+### Sample code
     
-    You can find the full code for a custom login portlet in the following code samples:
+You can find the full code for a custom login portlet in the following code samples:
 
-    <!-->
+<!-->
     ```
     /*
     * Copyright 2024 HCL America, Inc.
@@ -108,12 +108,12 @@ To implement a login portlet with Rational Application Developer (RAD), Eclipse,
     */
     ```-->
 
-    !!!note "DISCLAIMER OF WARRANTIES"
-        The files in the [CustomLoginPortlet.war](downloads/CustomLoginPortlet.war) and [LoginPortletWithCV.war](downloads/LoginPortletWithCV.war) files are sample codes. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if you have been advised of the possibility of such damages.
+!!!note "DISCLAIMER OF WARRANTIES"
+    The files in the [CustomLoginPortlet.war](downloads/CustomLoginPortlet.war) and [LoginPortletWithCV.war](downloads/LoginPortletWithCV.war) files are sample codes. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if you have been advised of the possibility of such damages.
 
-    - Sample code for a custom login portlet: [CustomLoginPortlet.war](downloads/CustomLoginPortlet.war)
-    - Sample code for a custom login portlet using a credential vault: [LoginPortletWithCV.war](downloads/LoginPortletWithCV.war)
+- Sample code for a custom login portlet: [CustomLoginPortlet.war](downloads/CustomLoginPortlet.war)
+- Sample code for a custom login portlet using a credential vault: [LoginPortletWithCV.war](downloads/LoginPortletWithCV.war)
 
-    ### Using the sample
+### Using the sample code
 
-    These two WAR files contain the Java source code. The typical development steps involve reusing the WAR file in a development tool such as RAD or extracting the WAR files and using the code to create your own WAR project with Maven or another build tool. 
+These two WAR files contain the Java source code. The typical development steps involve reusing the WAR file in a development tool such as RAD or extracting the WAR files and using the code to create your own WAR project with Maven or another build tool. 
