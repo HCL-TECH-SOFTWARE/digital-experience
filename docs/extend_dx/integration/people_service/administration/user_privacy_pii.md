@@ -31,13 +31,13 @@ This means that user data that should be removed from the People Service must al
 
 ## User data retrieval
 
-Users have the right to access their personal data stored in the People Service. The People Service provides the API endpoint `/people/api/v1/people/{id}/privacy/data` to retrieve user data based on the user's identifier. Currently, this endpoint is only accessible to administrators. 
+Users have the right to access their personal data stored in the People Service. The People Service provides the API endpoint `/dx/api/people/v1/people/{id}/privacy/data` to retrieve user data based on the user's identifier. Currently, this endpoint is only accessible to administrators. 
 
 The response includes all user data stored in the People Service, including aggregated and user-generated data. The data may be summarized or redacted if they may contain PII of other users.
 
 ## User data erasure
 
-Users also have the right to request the erasure of their personal data from the People Service. The People Service provides the API endpoint `/people/api/v1/people/{id}/privacy/anonymize` to initiate the data erasure process. Currently, this endpoint is only accessible to administrators.
+Users also have the right to request the erasure of their personal data from the People Service. The People Service provides the API endpoint `/dx/api/people/v1/people/{id}/privacy/anonymize` to initiate the data erasure process. Currently, this endpoint is only accessible to administrators.
 
 This process anonymizes the user's data by removing all personal information from the People Service. The user's profile is retained, but all PII is replaced with generic or placeholder values, or is removed entirely. The anonymized data is still available for reporting and analytics purposes, but the user's identity is no longer identifiable.
 

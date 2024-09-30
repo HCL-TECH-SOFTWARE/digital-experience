@@ -47,7 +47,7 @@
 |-----|------|---------|-------------|
 | networking.ssl.enabled | boolean | `false` | Indicates if the application is accessible on http or https. |
 | networking.host | string | `""` | Public qualified host name. Example: "example.com". If `networking.ssl.enabled` is true, this will be prefixed with `https://` or `http://` otherwise. |
-| networking.contextRoot.api | string | `"/people/api/v1"` | Context root for the API |
+| networking.contextRoot.api | string | `"/dx/api/people/v1"` | Context root for the API |
 | networking.contextRoot.ui | string | `"/people/ui"` | Context root for the UI |
 | networking.ingress.enabled | boolean | `false` | Enable ingress for the application |
 | networking.ingress.ingressClassName | string | `""` | Class name for the ingress |
