@@ -8,7 +8,7 @@ If you only want to customize the flow of the login (for example, calling extern
 
 Another approach to create a custom login user interface is to use [Script Applications](../../../../../../extend_dx/script_application/index.md). However, note that Script Applications cannot execute any server-side validation.
 
-## Details for development of a java based custom login portlet
+## Developing a Java-based custom login portlet
 
 To implement a login portlet with Rational Application Developer (RAD), Eclipse, or another Java development tool, refer to the following steps. 
 
