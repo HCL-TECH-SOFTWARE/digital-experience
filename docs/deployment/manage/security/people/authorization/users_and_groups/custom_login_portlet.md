@@ -8,6 +8,8 @@ If you only want to customize the flow of the login (for example, calling extern
 
 Another approach to create a custom login user interface is to use [Script Applications](../../../../../../extend_dx/script_application/index.md). However, note that Script Applications cannot execute any server-side validation.
 
+## Details for development of a java based custom login portlet
+
 To implement a login portlet with Rational Application Developer (RAD), Eclipse, or another Java development tool, refer to the following steps. 
 
 1. Add the following to your build path as an external JAR file:
@@ -80,10 +82,11 @@ To implement a login portlet with Rational Application Developer (RAD), Eclipse,
     }
     ```
 
-    The setCredential method stores the user credentials in the credential vault. This sample code uses a Shared User slot. This slot is shared across all portlets this user has access to, and there is one secret per user. 
+    The setCredential method stores the user credentials in the credential vault. The code in the sample below uses a Shared User slot. This slot is shared across all portlets this user has access to, and there is one secret per user. 
     
+    ## Sample code
     
-    You can find the full code for this in the following code samples:
+    You can find the full code for a custom login portlet in the following code samples:
 
     <!-->
     ```
@@ -110,3 +113,7 @@ To implement a login portlet with Rational Application Developer (RAD), Eclipse,
 
     - Sample code for a custom login portlet: [CustomLoginPortlet.war](downloads/CustomLoginPortlet.war)
     - Sample code for a custom login portlet using a credential vault: [LoginPortletWithCV.war](downloads/LoginPortletWithCV.war)
+
+    ### Using the sample
+
+    The two war files contain the java source code and the typical development steps would involve reusing the war in a development tool like RAD or unjarring the war files and leveraging the code to create your own war project with maven or another build tool. 
