@@ -82,6 +82,7 @@ To implement a login portlet with Rational Application Developer (RAD), Eclipse,
 
     The setCredential method stores the user credentials in the credential vault. This sample code uses a Shared User slot. This slot is shared across all portlets this user has access to, and there is one secret per user. You can find the full code for this in the following code samples:
 
+    <!-->
     ```
     /*
     * Copyright 2024 HCL America, Inc.
@@ -99,7 +100,10 @@ To implement a login portlet with Rational Application Developer (RAD), Eclipse,
     * See the License for the specific language governing permissions and
     * limitations under the License.
     */
-    ```
+    ```-->
+
+    !!!note "DISCLAIMER OF WARRANTIES"
+        The files in the [CustomLoginPortlet.war](downloads/CustomLoginPortlet.war) and [LoginPortletWithCV.war](downloads/LoginPortletWithCV.war) files are sample codes. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if you have been advised of the possibility of such damages.
 
     - Sample code for a custom login portlet: [CustomLoginPortlet.war](downloads/CustomLoginPortlet.war)
     - Sample code for a custom login portlet using a credential vault: [LoginPortletWithCV.war](downloads/LoginPortletWithCV.war)
