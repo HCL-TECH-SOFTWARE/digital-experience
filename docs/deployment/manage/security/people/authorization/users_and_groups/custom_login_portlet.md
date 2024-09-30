@@ -82,7 +82,7 @@ To implement a login portlet with Rational Application Developer (RAD), Eclipse,
     }
     ```
 
-    The setCredential method stores the user credentials in the credential vault. The code in the sample below uses a Shared User slot. This slot is shared across all portlets this user has access to, and there is one secret per user. 
+    The setCredential method stores the user credentials in the credential vault. The code in the following sample uses a Shared User slot. This slot is shared across all portlets this user has access to, and there is one secret per user. 
     
     ## Sample code
     
