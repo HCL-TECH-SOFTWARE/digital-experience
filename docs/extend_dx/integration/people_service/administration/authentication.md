@@ -19,7 +19,7 @@ People Service supports OpenId Connect (OIDC). OpenID Connect is an identity lay
 
 In the context of integrating the people service with other products or services, OIDC provides a standardized way to authenticate users and obtain user information. This allows for seamless user experiences across different applications and services, as well as secure and reliable authentication mechanisms.
 
-To configure People Service to use OIDC for authentication, refer to [Configuration parameters](../deployment/configuration_parameters.md). Additionally you need to ensure that DX is configured against the same OIDC provider, refer to [Configuring OIDC for HCL Digital Experience](../../../../deployment//manage/security/people/authentication/oidc/index.md)
+To set up People Service with OIDC for authentication, see [Configuration parameters](../deployment/configuration_parameters.md). Additionally, ensure that DX is configured with the same OIDC provider by referring to [Configuring OIDC for HCL Digital Experience](../../../../deployment/manage/security/people/authentication/oidc/index.md).
 
 ## Authorization
 
