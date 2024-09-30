@@ -1,4 +1,0 @@
-# Troubleshooting
-
-!!!warning
-    In progress.

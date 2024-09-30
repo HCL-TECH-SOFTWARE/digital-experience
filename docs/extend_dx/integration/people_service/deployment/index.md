@@ -5,4 +5,3 @@ This section will guide you through installation, configuration, uninstallation 
 - [Installation](./installation.md)
 - [Configuration parameters](./configuration_parameters.md)
 - [Uninstallation](./uninstallation.md)
-- [Troubleshooting](./troubleshooting.md)
