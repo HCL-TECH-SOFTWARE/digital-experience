@@ -116,4 +116,4 @@ To implement a login portlet with Rational Application Developer (RAD), Eclipse,
 
     ### Using the sample
 
-    The two war files contain the java source code and the typical development steps would involve reusing the war in a development tool like RAD or unjarring the war files and leveraging the code to create your own war project with maven or another build tool. 
+    These two WAR files contain the Java source code. The typical development steps involve reusing the WAR file in a development tool such as RAD or extracting the WAR files and using the code to create your own WAR project with Maven or another build tool. 
