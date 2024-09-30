@@ -101,5 +101,5 @@ To implement a login portlet with Rational Application Developer (RAD), Eclipse,
     */
     ```
 
-    - [CustomLoginPortlet.war](downloads/CustomLoginPortlet.war)
-    - [LoginPortletWithCV.war](downloads/LoginPortletWithCV.war)
+    - Sample code for a custom login portlet: [CustomLoginPortlet.war](downloads/CustomLoginPortlet.war)
+    - Sample code for a custom login portlet using a credential vault: [LoginPortletWithCV.war](downloads/LoginPortletWithCV.war)
