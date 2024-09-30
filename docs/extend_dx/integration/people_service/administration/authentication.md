@@ -1,11 +1,11 @@
 # Authentication
 
+## Authentication strategies
+
 HCL People Service supports following authentication strategies:
 
 - HCL Digital Experience (DX) Authentication
 - OpenId Connect (OIDC)
-
-## Authentication strategies
 
 ### DX authentication
 
