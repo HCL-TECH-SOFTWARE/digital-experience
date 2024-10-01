@@ -1,5 +1,7 @@
 # Disabling the toolbar logo
 
+Starting with version CF224 the default HCL toolbar logo is disabled by default. The information below relates to previous versions. 
+
 You can disable the toolbar logo for the entire portal that includes all the virtual portals or for a specific virtual portal.
 
 !!! note
