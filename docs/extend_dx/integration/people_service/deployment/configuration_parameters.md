@@ -216,8 +216,8 @@ They are declared by their ID via the `USER_DIRECTORIES` environment variable. F
 
 | Key | Default | Description |
 |-----|---------|-------------|
-| USER_DIRECTORY_<ID>_BASE_URL | `""` | Base URL for the custom user directory with the ID `<ID>`. |
-| USER_DIRECTORY_<ID>_API_KEY | `""` | API key for the custom user directory with the ID `<ID>`. |
+| USER_DIRECTORY_&lt;ID&gt;_BASE_URL | `""` | Base URL for the custom user directory with the ID `<ID>`. |
+| USER_DIRECTORY_&lt;ID&gt;_API_KEY | `""` | API key for the custom user directory with the ID `<ID>`. |
 
 ### User attribute settings
 
