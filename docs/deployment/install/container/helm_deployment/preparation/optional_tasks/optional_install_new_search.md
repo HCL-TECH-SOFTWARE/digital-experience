@@ -195,7 +195,7 @@ configuration:
 
 Common field mappings are the default mappings for WCM, DAM, JCR, and PORTAL in the `documentObject`. You can find appropriate mappings for each field in the `documentObject`. Use an empty string if none of the mappings apply.
 
-Visit for more information on [`documentObject`](https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/in-progress/deployment/manage/container_configuration/configure_opensearch/architectural_overview/#indexed-documents)  
+For more information about `documentObject`, see [Indexed documents](../../../../../manage/container_configuration/configure_opensearch/architectural_overview.md#indexed-documents). 
 
 ```yaml
 commonFieldMappings:
@@ -224,11 +224,13 @@ commonFieldMappings:
       type: "category"
       tags: "tags"
 ```  
-Refer to the following list for more information about the fields:  
-- `wcm`, `dam`, `jcr` and `portal` are the types of content source currently supported.  
-- Names of common field mappings `title`, `description`, `type` and `tags` cannot be changed.  
-- Additional common fields are not allowed apart from `title`, `description`, `type` and `tags`.  
-- We have defaults defined to map different content source like `wcm`, `dam`, `jcr` and `portal` to the different common fields like `title`, `description`, `type` and `tags`. These mappings values can be changed.  
+
+Refer to the following list for more information about the fields:
+
+- `wcm`, `dam`, `jcr`, and `portal` are the types of content source currently supported.  
+- Names of common field mappings such as `title`, `description`, `type`, and `tags` cannot be changed.  
+- Apart from `title`, `description`, `type` and `tags`, additional common fields are not allowed.  
+- There are default values defined to map different content sources such as `wcm`, `dam`, `jcr` and `portal` to different common fields such as `title`, `description`, `type` and `tags`. You can change these default mapping values.
 
 ### Persistent Volume size requests  
 
