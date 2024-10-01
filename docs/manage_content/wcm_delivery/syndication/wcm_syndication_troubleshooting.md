@@ -26,7 +26,7 @@ If you encounter issues when syndicating, there are some common methods availabl
 From time to time, items fail to syndicate. Use the **Failed Items** view to review a list of failed items then run syndication again after you fix the issue.
 
 !!!note
-    Once you run syndication for your web content library, you can see the syndication status in the Web Content Authoring tool. In an item fails to syndicate, you are guided to the syndicator to get more details on the failure.
+    Once you run syndication for your web content library, you can see the syndication status in the Web Content Authoring tool. If an item fails to syndicate, you are guided to the syndicator to get more details on the failure.
 
 1.  Log on to your syndicator as an administrator.
 2.  Click the **Administration menu** icon. Then, click **Portal Content > Syndicators**.
