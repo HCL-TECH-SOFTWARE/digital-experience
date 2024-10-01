@@ -228,7 +228,7 @@ commonFieldMappings:
 - `wcm`, `dam`, `jcr`, and `portal` are the types of content source currently supported.  
 - Names of common field mappings such as `title`, `description`, `type`, and `tags` cannot be changed.  
 - Apart from `title`, `description`, `type` and `tags`, additional common fields are not allowed.  
-- We have defaults defined to map different content source like `wcm`, `dam`, `jcr` and `portal` to the different common fields like `title`, `description`, `type` and `tags`. These mappings values can be changed.  
+- There are default values defined to map different content sources such as `wcm`, `dam`, `jcr` and `portal` to different common fields such as `title`, `description`, `type` and `tags`. You can change these default mapping values.
 
 ### Persistent Volume size requests  
 
