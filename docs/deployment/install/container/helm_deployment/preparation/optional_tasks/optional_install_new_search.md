@@ -195,7 +195,7 @@ configuration:
 
 Common field mappings are the default mappings for WCM, DAM, JCR, and PORTAL in the `documentObject`. You can find appropriate mappings for each field in the `documentObject`. Use an empty string if none of the mappings apply.
 
-Visit for more information on [`documentObject`](https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/in-progress/deployment/manage/container_configuration/configure_opensearch/architectural_overview/#indexed-documents)  
+For more information about `documentObject`, see [Indexed documents](../../../../../manage/container_configuration/configure_opensearch/architectural_overview.md#indexed-documents). 
 
 ```yaml
 commonFieldMappings:
