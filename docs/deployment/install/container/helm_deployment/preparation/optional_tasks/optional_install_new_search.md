@@ -171,7 +171,9 @@ configuration:
       aclLookupHost: ""
 ```  
 
-Configure the `automatedSetup` for `digitalAssetManagement` to automatically configure DAM content source. If `digitalAssetManagement` is enabled, DAM content source is configured automatically with the given `uuid` and `aclLookupHost` during startup of search. If `uuid` is not provided, the system assumes the default DAM auto configurations with `uuid: 75024f9c-2579-58f1-3new-5706ba2a62fc`. Configure `aclLookupHost` for example :`aclLookupHost: https://dx-deployment-core:10042`. In this example `dx-deployment-core` utilizes the internal name of the core container in a helm deployment on the same cluster. Depending on your installation you may need to point to the webEngine container or if you use different clusters an external host name.  
+Configure the `automatedSetup` for `digitalAssetManagement` to automatically configure DAM content source. If `digitalAssetManagement` is enabled, DAM content source is configured automatically with the given `uuid` and `aclLookupHost` during startup of search. 
+
+If `uuid` is not provided, the system assumes the default DAM auto configuration with `uuid: 75024f9c-2579-58f1-3new-5706ba2a62fc`. For `aclLookupHost`, a sample configuration is `aclLookupHost: https://dx-deployment-core:10042`. In this example, `dx-deployment-core` utilizes the internal name of the core container in a Helm deployment on the same cluster. Depending on your installation, you might need to point to the webEngine container or, if you use different clusters, to an external host name.  
 !!!note
     The host `dx-deployment-core` and port `10042` are the Kubernetes service host and the port for DX Core. In this case, 10042 is the HttpQueueInboundDefaultSecure port on the HCL DX 9.5 server. Adjust this according to your deployment configuration.  
 
