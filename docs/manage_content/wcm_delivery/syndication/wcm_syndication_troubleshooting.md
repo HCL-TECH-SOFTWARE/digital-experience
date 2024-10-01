@@ -23,14 +23,17 @@ If you encounter issues when syndicating, there are some common methods availabl
 
 ## Working with failed items
 
-From time to time items fail to syndicate. You use the failed items view to review a list of failed items and then run syndication again after you fix the issue.
+From time to time, items fail to syndicate. Use the **Failed Items** view to review a list of failed items then run syndication again after you fix the issue.
+
+!!!note
+    Once you run syndication for your web content library, you can see the syndication status in the Web Content Authoring tool. In an item fails to syndicate, you are guided to the syndicator to get more details on the failure.
 
 1.  Log on to your syndicator as an administrator.
 2.  Click the **Administration menu** icon. Then, click **Portal Content > Syndicators**.
-3.  The number of failed items for a syndicator are displayed in the Failed Items column. Click the number of failed items to open the Failed Items view.
+3.  The number of failed items for a syndicator are displayed in the **Failed Items** column. Click the number of failed items to open the **Failed Items** view.
     -   Each failed item for the selected syndicator is displayed in the **Failed Items** view. Information is displayed about each failed item, including information about how the appropriate action required to fix the issue.
-    -   The Root and Impact columns are used to find the root cause of a syndication failure, and what secondary items are impacted by the root cause. By finding and fixing the root cause of the syndication failure, you also potentially fix the syndication failures of the items that are impacted by the root cause.
-    -   The Important Items tab can also be used to narrow down which items are the most crucial to fix.
+    -   The **Root** and **Impact** columns are used to find the root cause of a syndication failure, and what secondary items are impacted by the root cause. By finding and fixing the root cause of the syndication failure, you also potentially fix the syndication failures of the items that are impacted by the root cause.
+    -   The **Important Items** tab can also be used to narrow down which items are the most crucial to fix.
     
 4.  After you identified and fixed the issues, you can click **Retry** to initiate syndication for individual items, or use the **Retry All** in the Important Items tab to try to syndicate all failed items. You can also choose to update or rebuild a syndication relationship.
 
