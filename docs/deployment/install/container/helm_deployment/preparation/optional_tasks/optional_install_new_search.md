@@ -171,7 +171,9 @@ configuration:
       aclLookupHost: ""
 ```  
 
-Configure the `automatedSetup` for `digitalAssetManagement` to automatically configure DAM content source. If `digitalAssetManagement` is enabled, DAM content source is configured automatically with the given `uuid` and `aclLookupHost` during startup of search. If `uuid` and `aclLookupHost` are not provided, the system assumes the default DAM auto configurations with `uuid: 75024f9c-2579-58f1-3new-5706ba2a62fc` and `aclLookupHost: https://dx-deployment-core:10042`.  
+Configure the `automatedSetup` for `digitalAssetManagement` to automatically configure DAM content source. If `digitalAssetManagement` is enabled, DAM content source is configured automatically with the given `uuid` and `aclLookupHost` during startup of search. If `uuid` is not provided, the system assumes the default DAM auto configurations with `uuid: 75024f9c-2579-58f1-3new-5706ba2a62fc`. Configure `aclLookupHost` for example :`aclLookupHost: https://dx-deployment-core:10042`. Where `dx-deployment` will be the helm deployment name of dx-deployment and not the dx-search.  
+!!!tip
+    The host `dx-deployment-core` and port `10042` are the Kubernetes service host and the port for DX Core. In this case, 10042 is the HttpQueueInboundDefaultSecure port on the HCL DX 9.5 server. Adjust this according to your deployment configuration.  
 
 ### Allowlisting for file types in the file processor 
 
@@ -192,6 +194,8 @@ configuration:
 ### Common fields mapping for fallback  
 
 Common field mappings are the default mappings for WCM, DAM, JCR, and PORTAL in the `documentObject`. You can find appropriate mappings for each field in the `documentObject`. Use an empty string if none of the mappings apply.
+
+Visit for more information on [`documentObject`](https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/in-progress/deployment/manage/container_configuration/configure_opensearch/architectural_overview/#indexed-documents)  
 
 ```yaml
 commonFieldMappings:
@@ -220,6 +224,11 @@ commonFieldMappings:
       type: "category"
       tags: "tags"
 ```  
+
+- `wcm`, `dam`, `jcr` and `portal` are the types of content source currently supported.  
+- Names of common field mappings `title`, `description`, `type` and `tags` cannot be changed.  
+- Additional common fields are not allowed apart from `title`, `description`, `type` and `tags`.  
+- We have defaults defined to map different content source like `wcm`, `dam`, `jcr` and `portal` to the different common fields like `title`, `description`, `type` and `tags`. These mappings values can be changed.  
 
 ### Persistent Volume size requests  
 
