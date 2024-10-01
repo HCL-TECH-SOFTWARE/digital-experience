@@ -224,7 +224,7 @@ commonFieldMappings:
       type: "category"
       tags: "tags"
 ```  
-
+Refer to the following list for more information about the fields:  
 - `wcm`, `dam`, `jcr` and `portal` are the types of content source currently supported.  
 - Names of common field mappings `title`, `description`, `type` and `tags` cannot be changed.  
 - Additional common fields are not allowed apart from `title`, `description`, `type` and `tags`.  
