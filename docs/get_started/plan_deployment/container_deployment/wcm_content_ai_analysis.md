@@ -6,6 +6,7 @@ You can enable AI analysis for Web Content Management (WCM) content in a Kuberne
 	OpenAI ChatGPT is the supported content AI provider for CF213 and later. Custom AI implementation is supported for CF214 and later.
 
 Starting CF221, the AI model is switched to ```gpt-4o```. This model is the newest and the most capable model with up-to-date information.
+Starting CF224, AI Workflows and AI Translation has been added.
 
 ## Content AI provider overview
 
@@ -47,7 +48,7 @@ Only administrators can configure an AI class to use a custom content AI provide
 
 To configure a custom AI class:
 
-1. Write the custom content AI provider class by implementing the ```com.hcl.workplace.wcm.restv2.ai.IAIGeneration``` interface.
+1. Write the custom content AI provider class by implementing the ```com.hcl.workplace.wcm.restv2.ai.IAIGeneration``` and starting with CF224 optionally also the ```com.hcl.workplace.wcm.restv2.ai.IAITranslation``` interface.
 
     1. Create the `JAR` file.
 
@@ -57,38 +58,45 @@ To configure a custom AI class:
 
     The following example of a custom content AI provider class can be used to call custom AI services for AI analysis. 
 
-    ```
-    package com.ai.sample;
+	```
+	package com.ai.sample;
 
-    import java.util.ArrayList;
-    import java.util.List;
-    import com.hcl.workplace.wcm.restv2.ai.IAIGeneration;
-    import com.ibm.workplace.wcm.rest.exception.AIGenerationException;
+	import java.util.ArrayList;
+	import java.util.List;
+	import com.hcl.workplace.wcm.restv2.ai.IAIGeneration;
+	import com.hcl.workplace.wcm.restv2.ai.IAITranslation;
+	import com.ibm.workplace.wcm.rest.exception.AIGenerationException;
 
-    public class CustomerAI implements IAIGeneration {
+	public class CustomerAI implements IAIGeneration, IAITranslation {
 
-      @Override
-      public String generateSummary(List<String> values) throws AIGenerationException {
-        // Call the custom AI Service to get the custom AI generated summary
-        return "AIAnalysisSummary";
-      }
+		@Override
+		public String generateSummary(List<String> values) throws AIGenerationException {
+			// Call the custom AI Service to get the custom AI generated summary
+			return "AIAnalysisSummary";
+		}
 
-      @Override
-      public List<String> generateKeywords(List<String> values) throws AIGenerationException {
-        // Call the custom AI Service to get the custom AI generated keywords
-        List<String> keyWordList = new ArrayList<String>();
-        keyWordList.add("keyword1");
-        return keyWordList;
-      }
+		@Override
+		public List<String> generateKeywords(List<String> values) throws AIGenerationException {
+			// Call the custom AI Service to get the custom AI generated keywords
+			List<String> keyWordList = new ArrayList<String>();
+			keyWordList.add("keyword1");
+			return keyWordList;
+		}
 
-      @Override
-      public Sentiment generateSentiment(List<String> values) throws AIGenerationException {
-        // Call the custom AI Service to get the custom AI generated sentiment
-        return Sentiment.POSITIVE;
-      }
+		@Override
+		public Sentiment generateSentiment(List<String> values) throws AIGenerationException {
+			// Call the custom AI Service to get the custom AI generated sentiment
+			return Sentiment.POSITIVE;
+		}
 
-    }
-    ```
+		public String translate(String value, Locale language) throws AIGenerationException
+		{
+			// Call the custom AI Service to translate the value
+			return "translated";
+		}
+
+	}
+	```
 
 2. Configure the content AI provider class in the Helm chart and run ```helm upgrade```.
 <!-- Did the preceding steps take the admin through configuring. It looks a though the actual configuring happens after the last step. -->

@@ -1,4 +1,4 @@
-# AI assistance for descriptions, keyword generation, and sentiment analysis in a content item
+# AI assistance for descriptions, keyword generation, translation, and sentiment analysis in a content item
 
 This section provides the steps on how to use AI assistance for generating descriptions, keywords, and getting sentiment analysis on content elements.
 
@@ -53,3 +53,34 @@ Before you can use AI-assisted features for sentiment analysis of content, keywo
 3. Click the sentiment result icon to see more details about the result.
 
     ![](../../../../../assets/HCL_Authoring_Portlet_SentimentAnalysis_SentimentPopover.png)
+
+## Using AI-assisted translation of content items
+
+1. Fill in at least one text element (for example, rich text, text, or short text) in the **Content** tab of the content item.
+
+2. Click the **Show Hidden Fields** button in the toolbar.
+
+    ![](../../../../../assets/HCL_Authoring_Portlet_Generate_Keywords_ShowHiddenFields.png)
+
+3. Click the **More** button in the toolbar, then click **AI Translate**. The target language is the language configured for the library the item is in. If the item is not saved yet the default language of the installation is used.
+
+    ![](../../../../../assets/HCL_Authoring_Portlet_Translate_Toolbar.png)
+
+5. Select **Save** or other **Save** options to save your updates.
+
+## Using AI Workflow Actions
+
+Starting with CF224 you can use AI Workflow Actions to generate keywords, summary, or translate content.
+
+1. To define the custom workflow action in WCM Authoring choose **New** -> **Workflow Action** -> **Custom Action**.
+![](../../../../../assets/HCL_Authoring_Portlet_Custom_Action.png)
+
+2. Select an action from **Artificial Intelligence Custom Workflow Action Factory**.
+
+![](../../../../../assets/HCL_Authoring_Portlet_Custom_Action_Select.png)
+
+3. Give the workflow action a name and save.
+
+4. You can then use the workflow action (or actions) inside a workflow stage like in the sample below:
+
+![](../../../../../assets/HCL_Authoring_Portlet_Custom_Workflow_Stage.png)

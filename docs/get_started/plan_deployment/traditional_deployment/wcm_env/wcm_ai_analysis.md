@@ -5,6 +5,9 @@ Learn how to configure the AI analysis feature for WCM Content in a traditional,
 !!!note
 	OpenAI ChatGPT is the supported content AI provider in CF213 and later. Custom AI implementation is supported in CF214 and later.
 
+Starting CF221, the AI model is switched to ```gpt-4o```. This model is the newest and the most capable model with up-to-date information.
+Starting CF224, AI Workflows and AI Translation has been added.
+
 ## Content AI provider overview
 
 ### OpenAI ChatGPT overview
@@ -45,7 +48,7 @@ To enable content AI analysis:
 
 Only administrators can configure an AI class to use a custom content AI provider.
 
-1. Write the Custom Content AI Provider class by implementing the ```com.hcl.workplace.wcm.restv2.ai.IAIGeneration``` interface.
+1. Write the Custom Content AI Provider class by implementing the ```com.hcl.workplace.wcm.restv2.ai.IAIGeneration``` and starting with CF224 optionally also the ```com.hcl.workplace.wcm.restv2.ai.IAITranslation``` interface.
 
 	1. Create the JAR file.
 
@@ -61,9 +64,10 @@ Only administrators can configure an AI class to use a custom content AI provide
 	import java.util.ArrayList;
 	import java.util.List;
 	import com.hcl.workplace.wcm.restv2.ai.IAIGeneration;
+	import com.hcl.workplace.wcm.restv2.ai.IAITranslation;
 	import com.ibm.workplace.wcm.rest.exception.AIGenerationException;
 
-	public class CustomerAI implements IAIGeneration {
+	public class CustomerAI implements IAIGeneration, IAITranslation {
 
 		@Override
 		public String generateSummary(List<String> values) throws AIGenerationException {
@@ -83,6 +87,12 @@ Only administrators can configure an AI class to use a custom content AI provide
 		public Sentiment generateSentiment(List<String> values) throws AIGenerationException {
 			// Call the custom AI Service to get the custom AI generated sentiment
 			return Sentiment.POSITIVE;
+		}
+
+		public String translate(String value, Locale language) throws AIGenerationException
+		{
+			// Call the custom AI Service to translate the value
+			return "translated";
 		}
 
 	}
