@@ -6,7 +6,11 @@ To implement your own login portlet after capturing the required security creden
 
 If you only want to customize the flow of the login (for example, calling external validation), you can also consider writing a login filter. For more information, see [Configuring authentication filters](../../../../config_portal_behavior/auth_filters/index.md).
 
-To implement a login portlet with Rational Application Developer (RAD), Eclipse, or another Java development tool, refer to the following steps:
+Another approach to create a custom login user interface is to use [Script Applications](../../../../../../extend_dx/script_application/index.md). However, note that Script Applications cannot execute any server-side validation.
+
+## Developing a Java-based custom login portlet
+
+To implement a login portlet with Rational Application Developer (RAD), Eclipse, or another Java development tool, refer to the following steps. 
 
 1. Add the following to your build path as an external JAR file:
 
@@ -78,7 +82,38 @@ To implement a login portlet with Rational Application Developer (RAD), Eclipse,
     }
     ```
 
-    The setCredential method stores the user credentials in the credential vault. This sample code uses a Shared User slot. This slot is shared across all portlets this user has access to, and there is one secret per user. You can find the full code for this in the following code samples:
+    The setCredential method stores the user credentials in the credential vault. The code in the following sample uses a Shared User slot. This slot is shared across all portlets this user has access to, and there is one secret per user. 
+    
+### Sample code
+    
+You can find the full code for a custom login portlet in the following code samples:
 
-    - [CustomLoginPortlet.war](downloads/CustomLoginPortlet.war)
-    - [LoginPortletWithCV.war](downloads/LoginPortletWithCV.war)
+<!--
+```
+/*
+* Copyright 2024 HCL America, Inc.
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use these files except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* 
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+```-->
+
+!!!note "DISCLAIMER OF WARRANTIES"
+    The files in the [CustomLoginPortlet.war](downloads/CustomLoginPortlet.war) and [LoginPortletWithCV.war](downloads/LoginPortletWithCV.war) files are sample codes. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if you have been advised of the possibility of such damages.
+
+- Sample code for a custom login portlet: [CustomLoginPortlet.war](downloads/CustomLoginPortlet.war)
+- Sample code for a custom login portlet using a credential vault: [LoginPortletWithCV.war](downloads/LoginPortletWithCV.war)
+
+### Using the sample code
+
+These two WAR files contain the Java source code. The typical development steps involve reusing the WAR file in a development tool such as RAD or extracting the WAR files and using the code to create your own WAR project with Maven or another build tool.

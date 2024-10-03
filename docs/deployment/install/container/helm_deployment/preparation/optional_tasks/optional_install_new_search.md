@@ -171,7 +171,12 @@ configuration:
       aclLookupHost: ""
 ```  
 
-Configure the `automatedSetup` for `digitalAssetManagement` to automatically configure DAM content source. If `digitalAssetManagement` is enabled, DAM content source is configured automatically with the given `uuid` and `aclLookupHost` during startup of search. If `uuid` and `aclLookupHost` are not provided, the system assumes the default DAM auto configurations with `uuid: 75024f9c-2579-58f1-3new-5706ba2a62fc` and `aclLookupHost: https://dx-deployment-core:10042`.  
+Configure the `automatedSetup` for `digitalAssetManagement` to automatically configure DAM content source. If `digitalAssetManagement` is enabled, DAM content source is configured automatically with the given `uuid` and `aclLookupHost` during startup of search. 
+
+If `uuid` is not provided, the system assumes the default DAM auto configuration with `uuid: 75024f9c-2579-58f1-3new-5706ba2a62fc`. For `aclLookupHost`, a sample configuration is `aclLookupHost: https://dx-deployment-core:10042`. In this example, `dx-deployment-core` utilizes the internal name of the core container in a Helm deployment on the same cluster. Depending on your installation, you might need to point to the webEngine container or, if you use different clusters, to an external host name.  
+
+!!!note
+    The host `dx-deployment-core` and port `10042` are the Kubernetes service host and the port for DX Core. In this case, 10042 is the HttpQueueInboundDefaultSecure port on the HCL DX 9.5 server. Adjust this according to your deployment configuration.  
 
 ### Allowlisting for file types in the file processor 
 
@@ -191,7 +196,7 @@ configuration:
 
 ### Common fields mapping for fallback  
 
-Common field mappings are the default mappings for WCM, DAM, JCR, and PORTAL in the `documentObject`. You can find appropriate mappings for each field in the `documentObject`. Use an empty string if none of the mappings apply.
+Common field mappings are the default mappings for WCM, DAM, JCR, and PORTAL in the `documentObject`. You can find appropriate mappings for each field in the `documentObject`. Use an empty string if none of the mappings apply. For more information about `documentObject`, see [Indexed documents](../../../../../manage/container_configuration/configure_opensearch/architectural_overview.md#indexed-documents). 
 
 ```yaml
 commonFieldMappings:
@@ -220,6 +225,13 @@ commonFieldMappings:
       type: "category"
       tags: "tags"
 ```  
+
+Refer to the following list for more information about the fields:
+
+- `wcm`, `dam`, `jcr`, and `portal` are the types of content source currently supported.  
+- Names of common field mappings such as `title`, `description`, `type`, and `tags` cannot be changed.  
+- Apart from `title`, `description`, `type` and `tags`, additional common fields are not allowed.  
+- There are default values defined to map different content sources such as `wcm`, `dam`, `jcr` and `portal` to different common fields such as `title`, `description`, `type` and `tags`. You can change these default mapping values.
 
 ### Persistent Volume size requests  
 

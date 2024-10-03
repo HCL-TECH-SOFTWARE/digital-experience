@@ -6,8 +6,8 @@ The following features and updates are available to customers installing HCL Dig
 
 - Ability to change the context root or hostname of a virtual portal
 - User Session Reporting Tool
+- Updated supported versions of SQL Server
 - New guidance for creating a custom login portlet
-- New guidance for configuring a content source to gather documents from a single pod
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -20,10 +20,11 @@ The following features and updates are available to customers installing HCL Dig
 - DX core image - Moved directories to temporary storage
 - DX Search - File processor
 - Updated documentation for settings when deploying a new search
+- New guidance for configuring a content source to gather documents from a single pod
 - New sizing guidance for rendering in a small configuration
 - New topic for configuring IMDS hop limit in Amazon EKS v1.30
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
-- Notice of deprecation of customized OpenLDAP container starting CF224
+- Notice of deprecation of customized OpenLDAP container in a later CF
 - Removal of automated Pod restart on ConfigMap updates
 
 Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases.
@@ -43,6 +44,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     The User Session Reporting Tool is a utility designed for HCL DX users managing on-premises deployments. This tool provides a solution for analyzing and interpreting web traffic data by processing National Center for Supercomputing Applications (NCSA) access log files. Relevant parts of each log are extracted to identify and count unique user sessions. This offers a precise understanding of usage data over specified periods. For more information, see [User Session Reporting Tool](../../get_started/download/software_licensing_portal/configure_entitlement_checks/user_session_reporting_tool.md).
 
+### Updated supported versions of SQL Server
+
+=== "Containers"
+    HCL DX now supports Microsoft SQL Server Enterprise and Standard Edition 2022. For more information, see [Databases](../../get_started/system_requirements/kubernetes/databases.md).
+
+=== "On-Premises"
+    HCL DX now supports Microsoft SQL Server Enterprise and Standard Edition 2022. For more information, see [Supported configurations](../../get_started/system_requirements/traditional/supported_config.md#databases).
+
 ### New guidance for creating a custom login portlet
 
 === "Containers"
@@ -50,14 +59,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     Documentation for creating a custom login portlet for HCL DX is now available. A custom login portlet is useful if the base portlet is not in your desired format, or if you want to add additional verification to the login. For more information, see [Creating a custom login portlet](../../deployment/manage/security/people/authorization/users_and_groups/custom_login_portlet.md).
-
-### New guidance for configuring a content source to gather documents from a single pod
-
-=== "Containers"
-    The topic [Configure Remote Search](../../deployment/manage/container_configuration/kubernetes_remote_search.md#content-source-from-a-single-core-pod) is updated to include information on how to configure a content source to gather documents from a single pod. You can use the URL to index both Portal and WCM content sources.
-
-=== "On-Premises"
-    The topic [Configure Remote Search](../../deployment/manage/container_configuration/kubernetes_remote_search.md#content-source-from-a-single-core-pod) is updated to include information on how to configure a content source to gather documents from a single pod. You can use the URL to index both Portal and WCM content sources.
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
@@ -98,6 +99,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     The topic [Installing search based on OpenSearch](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md) is updated to include the settings you might want to change when deploying the new search. The topic now provides more information about specific configurations such as security, split deployment, replicas, automated setup for DAM, allowlist for file types in the file processor, common fields mapping, and Persistent Volume size requests.
 
+### New guidance for configuring a content source to gather documents from a single pod
+
+=== "Containers"
+    The topic [Configure Remote Search](../../deployment/manage/container_configuration/kubernetes_remote_search.md#content-source-from-a-single-core-pod) is updated to include information on how to configure a content source to gather documents from a single pod. You can use the URL to index both Portal and WCM content sources.
+
 ### New sizing guidance for rendering in a small configuration
 
 === "Containers"
@@ -113,10 +119,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     Starting CF216, the Harbor repository is updated with an OCI-based registry and the Helm chart command is updated to be OCI-compliant. Instructions on how to pull Helm charts using OCI commands are now available. For more information, see the Help Center topics [Configure Harbor Helm Repository](../../deployment/install/container/helm_deployment/preparation/get_the_code/configure_harbor_helm_repo.md) and [Download and Deploy from HCL Harbor Repository](../../get_started/download/harbor_container_registry.md).
     
-### Notice of deprecation of customized OpenLDAP container starting CF224
+### Notice of deprecation of customized OpenLDAP container in a later CF
 
 === "Containers"
-    Starting CF224, HCL DX will no longer build and ship its custom OpenLDAP container and will instead use an open source container. By using the robust and well-maintained Bitnami&copy; OpenLDAP image, HCL DX can focus on delivering enhanced features and support without the overhead of maintaining its customized container. This shift is to provide you with more reliable and up-to-date solutions for your test environments. The new alternative, Bitnami&copy;, will be provided but will not ship with the release. Sample LDIF (LDAP data interchange format) files for your OpenLDAP configuration will also be available.
+    Note that in a later CF, HCL DX will no longer build and ship its custom OpenLDAP container and will instead use an open source container. By using the robust and well-maintained Bitnami&copy; OpenLDAP image, HCL DX can focus on delivering enhanced features and support without the overhead of maintaining its customized container. This shift is to provide you with more reliable and up-to-date solutions for your test environments. The new alternative, Bitnami&copy;, will be provided but will not ship with the release. Sample LDIF (LDAP data interchange format) files for your OpenLDAP configuration will also be available.
+
+    This statement is not a guarantee of future releases or their features.
     
 ### Removal of automated Pod restart on ConfigMap updates
 
