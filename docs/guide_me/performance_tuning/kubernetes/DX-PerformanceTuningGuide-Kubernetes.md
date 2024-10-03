@@ -411,14 +411,14 @@ Change the **searchResultsCache** settings to match the following:
 | Attribute Cache Property | Default Value | Value Used |
 | --- | --- | --- |
 | Cache size | 4000 | 8000 |
-| Cache TimeOut | 1200 | 1200 |
+| Cache Timeout | 1200 | 1200 |
 
 **VMM Search Results Cache Settings:**
 
 | Search Results Cache Property | Default Value | Value Used |
 | --- | --- | --- |
 | Cache Size | 2000 | 8000 |
-| Cache TimeOut | 600 | 600 |
+| Cache Timeout | 600 | 600 |
 
 Note that with VMM caching content from the LDAP server, changes made to existing LDAP entries will not be visible to Portal until the cache entries expire.
 
@@ -704,7 +704,7 @@ Even though unused caches use some memory, the amount is minimal so it is not re
 
 **Cache Sizes**
 
-For some cache types, performance will be better if the cache size is a prime number due to a lower probability of cache collisions. For such cache types, the actual size is increased, at runtime, to the next prime number equal or greater then the size specified.
+For some cache types, performance will be better if the cache size is a prime number due to a lower probability of cache collisions. For such cache types, the actual size is increased, at runtime, to the next prime number equal or greater thax`n the size specified.
 
 ### People Service
 
@@ -1005,7 +1005,7 @@ We have determined a technique that has the same convenience of the reorgchk com
     db2 -v -f "runstats.db2"
     
 
-The first command is used to create a file, runstats.db2, which contains all of the runstats commands for all of the tables. The second command uses the "db2 command processor" to run these commands. These commands can be run on each Portal database and are recommended to run on the JCR and release database data population after significant content population or changes.
+The first command is used to create a file, runstats.db2, which contains all of the runstats commands for all of the tables. The second command uses the DB2 command processor to run these commands. These commands can be run on each Portal database and are recommended to run on the JCR and release database data population after significant content population or changes.
 
 To determine which tables might benefit from reorganization, we use the command:
 
@@ -2044,7 +2044,7 @@ Add the following properties:
 
 **Value**: 0
 
-Note that multiple users and groups can be added by incrementing the user or group number (e.x. group.2) and the numberOfUsers or numberOfGroups property. Ideally all groups or user that have many roles should be loaded.
+Note that multiple users and groups can be added by incrementing the user or group number (e.x. group.2) and the numberOfUsers or numberOfGroups property. Ideally all groups or users that have many roles should be loaded.
 
 See [Optimizing Portal Access Control](../../../deployment/manage/tune_servers/wp_pac_tool.md) for more information on this service.
 
@@ -3166,7 +3166,7 @@ This cache stores the policies. Out of the box, Portal comes with twelve theme p
 
 Default size: 2500, default lifetime: 600, usage pattern: regular.
 
-This cache stores connections between a policy and a policy target, for example a user distinguished name. Theme policies do not use targets, hence there is no cache entry based on these policies. The out of the box mail policy uses the user as target. Hence there is at least one entry for every user accessing the CPP mail portlet. The size of a cache entry depends on the size of the target object. For a distinguished name a cache entry is fairly small. Project Caches
+This cache stores connections between a policy and a policy target, for example a user distinguished name. Theme policies do not use targets, hence there is no cache entry based on these policies. The out-of-the-box mail policy uses the user as target. Hence there is at least one entry for every user accessing the CPP mail portlet. The size of a cache entry depends on the size of the target object. For a distinguished name a cache entry is fairly small. Project Caches
 
 _Portal User Management_
 
