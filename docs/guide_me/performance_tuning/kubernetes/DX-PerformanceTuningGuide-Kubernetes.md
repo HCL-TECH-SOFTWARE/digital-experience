@@ -411,14 +411,14 @@ Change the **searchResultsCache** settings to match the following:
 | Attribute Cache Property | Default Value | Value Used |
 | --- | --- | --- |
 | Cache size | 4000 | 8000 |
-| Cache Time Out | 1200 | 1200 |
+| Cache TimeOut | 1200 | 1200 |
 
 **VMM Search Results Cache Settings:**
 
 | Search Results Cache Property | Default Value | Value Used |
 | --- | --- | --- |
 | Cache Size | 2000 | 8000 |
-| Cache Time Out | 600 | 600 |
+| Cache TimeOut | 600 | 600 |
 
 Note that with VMM caching content from the LDAP server, changes made to existing LDAP entries will not be visible to Portal until the cache entries expire.
 
@@ -636,7 +636,7 @@ Resources → Resource Environment → Resource Environment Providers → WP Nav
 
 HCL Portal maintains information about many resource types in its databases. Some of these resources are replicated into memory for faster access; this is provided by the registry service. This replicated information will be periodically reloaded from the database, thus picking up any changes which may have been made on a peer node in a clustered environment.
 
-The registry service allows configuring a reload time, in seconds, for each type of data which it is managing. In a production environment, we expect this type of information changes very infrequently, so we used very long reload times for the registry service. These values do not include a size parameter as they are a full replication of the database.
+The registry service allows configuring a reload time, in seconds, for each type of data which it is managing. In a production environment, we expect this type of information to change very infrequently, so we used very long reload times for the registry service. These values do not include a size parameter as they are a full replication of the database.
 
 **How to Set**
 
@@ -704,7 +704,7 @@ Even though unused caches use some memory, the amount is minimal so it is not re
 
 **Cache Sizes**
 
-For some cache types, performance will be better if the cache size is a prime number due to a lower probability of cache collisions. For such cache types, the actual size is increased, at runtime, to the next prime number equal or greater the size specified.
+For some cache types, performance will be better if the cache size is a prime number due to a lower probability of cache collisions. For such cache types, the actual size is increased, at runtime, to the next prime number equal or greater then the size specified.
 
 ### People Service
 
@@ -949,7 +949,7 @@ If a deployment is not using screen flow manager, it can be removed. We saw abou
 
 ## Database Tuning
 
-Multiple databases domains are used to hold information in HCL Portal and Web Content Manager 9.5. The databases and related domains supported by Portal are:
+Multiple database domains are used to hold information in HCL Portal and Web Content Manager 9.5. The databases and related domains supported by Portal are:
 
 1. Release (release domain). This is the primary database domain used by the base Portal scenario.
 2. Customization (customization domain). This database receives some light traffic in our scenarios.
@@ -1005,7 +1005,7 @@ We have determined a technique that has the same convenience of the reorgchk com
     db2 -v -f "runstats.db2"
     
 
-The first command is used to create a file, runstats.db2, which contains all of the runstats commands for all of the tables. The second command uses the db2 command processor to run these commands. These commands can be run on each Portal database and is recommended to run on the JCR and release database data population after significant content population or changes.
+The first command is used to create a file, runstats.db2, which contains all of the runstats commands for all of the tables. The second command uses the "db2 command processor" to run these commands. These commands can be run on each Portal database and are recommended to run on the JCR and release database data population after significant content population or changes.
 
 To determine which tables might benefit from reorganization, we use the command:
 
@@ -1019,7 +1019,7 @@ You should also ensure that your database servers have adequate numbers of hard 
 
 You should ensure that the database parameter MaxAppls is greater than the total number of connections for both the data sources and the session manager for all WebSphere Portal application server instances. If MaxAppls is not large enough, you will see error messages in the Portal logs. Remember that there are multiple data sources for Portal, so this setting needs to be large enough to accommodate the maximum JDBC pools size for all data sources on all cluster nodes.
 
-You should use System Managed Storage (SMS) for temporary table spaces to benefit complex SQL which require temporary tables to compute their result sets. This saves time in buffer writes and improves disk utilization.
+You should use System Managed Storage (SMS) for temporary tablespaces to benefit complex SQL which require temporary tables to compute their result sets. This saves time in buffer writes and improves disk utilization.
 
 The maintenance tasks and practices mentioned here were found to be critical to the performance and correct operation of HCL DX Portal and Web Content Manager in our lab environment. Additional database maintenance and tuning may be needed in your production environments.
 
@@ -1059,7 +1059,7 @@ mount -o cio /u02
 
 - Increase AIX maximum number of processes per user to 4096.
 
-The default 500 processes per user is too low for database server, we increase it to 4096 in our AIX environment. To increase it, 
+The default 500 processes per user is too low for database server, we increased it to 4096 in our AIX environment. To increase it, 
 
 chdev -l sys0 -a maxuproc=’4096’
 
@@ -1070,7 +1070,7 @@ AIXTHREAD_SCOPE=S
 
 #### Linux
 
-We configured our Oracle database on RHEL6 by doing the folliwng:
+We configured our Oracle database on RHEL6 by doing the following:
 
 Tuned the resources limit settings for our Oracle user by adding the following to the /etc/security/limits.conf configuration file:
 
@@ -1161,7 +1161,7 @@ HCL Portal maintains some information about users in its database tables, which 
 
 ## Directory Server Tuning
 
-ITDS use a DB2 database for storing user information. This database is typically located on the same system as the directory server. If your workload involves creating, updating, or deleting users, then occasional database maintenance may be needed on this database.
+ITDS uses a DB2 database for storing user information. This database is typically located on the same system as the directory server. If your workload involves creating, updating, or deleting users, then occasional database maintenance may be needed on this database.
 
 On a modern server, it should be feasible to fit the majority of your user population in memory on the LDAP server. The directory servers in our base Portal Scenario measurements were tuned with this goal in mind. Note that in ITDS, both the LDAP server and its underlying DB need to be tuned to support this goal.
 
@@ -1252,50 +1252,6 @@ Out of Memory (OOM) errors in Kubernetes pods occur when a container inside a po
 **Performance Monitoring and Integration**
 
 - Refer Whitepaper-on-DX-K8s-Performance-Monitoring-Guidance document (this is internally published as of now)
-
-## Operating System Tuning 
-
-In any high-load environment, the operating system must be closely monitored to ensure that its performance is acceptable and consistent. The settings mentioned below are not necessarily optimal for all environments. Rather they are mentioned to highlight that OS tuning needs to be managed in the performance environment as part of any bottleneck resolution process, as well as show the changes we made to achieve sufficient Portal throughput.
-
-### Linux
-
-#### _Network Tuning_
-
-For Red Hat Linux on Intel, we add the following settings to file /etc/sysctl.conf, then run the command:
-
-sysctl -p
-
-To inspect current TCP parameters, run the command: sysctl -a | grep tcp
-
-**Linux Network Settings**
-
-| Parameter | Value |
-| --- | --- |
-| net.ipv4.ip_forward | 0   |
-| net.ipv4.conf.default.rp_filter | 1   |
-| net.ipv4.conf.default.accept_source_route | 0   |
-| net.core.rmem_max | 16777216 |
-| net.core.wmem_max | 16777216 |
-| net.ipv4.tcp_rmem | 4096 87380 16777216 |
-| net.ipv4.tcp_wmem | 4096 65536 16777216 |
-| net.ipv4.tcp_fin_timeout | 30  |
-| net.core.netdev_max_backlog | 3000 |
-| net.core.somaxconn | 10000 |
-| net.ipv4.tcp_keepalive_intvl | 15  |
-| net.ipv4.tcp_keepalive_probes | 5 |
-
-We added the following settings to /etc/security/limits.conf:
-
-- soft nofile 65535
-- hard nofile 65535
-
-We also added the following settings to /etc/security/limits.d/90-nproc.conf:
-
-- soft nproc 10240
-
-The system will need to be rebooted for these changes to take effect.
-
-Note: If one is running a Linux OS image container in Kubernetes or OpenShift, the preceding tuning recommendations can be applied to the OS hosting the container as opposed to the container itself.
 
 ## Web Content Management Tuning
 
@@ -1717,7 +1673,7 @@ For WCM items such as components, templates, workflows and categories, folders o
 
 ### Page Level Access Control Delegation
 
-A significant benefit can be achieved by enabling the Use Page Security option with pages that have web content associated with them. This setting bypasses the access control settings on the content items and instead defers to the access control settings of the page. By default this feature is disabled. Benchmarks are run with this setting disabled as well. However, on our WCM rendering scenario we measured a 7.5% increase in capacity when using this feature.
+A significant benefit can be achieved by enabling the Use Page Security option with pages that have web content associated with them. This setting bypasses the access control settings on the content items and instead defers to the access control settings of the page. By default this feature is disabled. Benchmarks are run with this setting disabled as well. However, in our WCM rendering scenario we measured a 7.5% increase in capacity when using this feature.
 
 **How to Set**
 
@@ -1752,7 +1708,7 @@ How to Set
 
 There are other values that can be set. For more details, see [Improving page loading performance with asynchronous web content rendering](../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/improving_asynch_render/index.md).
 
-Use of WCM advanced caching with Aynchronous Web Content Rendering is recommended to improve response times of subsequent requests.
+Use of WCM advanced caching with Asynchronous Web Content Rendering is recommended to improve response times of subsequent requests.
 
 ### Web Content Viewer Portlet Caching
 
@@ -1762,7 +1718,7 @@ This cache was not used in our benchmark testing because the purpose of our eval
 
 ### Projects
 
-WCM and Portal page management authoring environments involves constant database updates. Therefore, the best practice should be to delete unused published projects and update the database statistics on a regular basis (runstats).
+WCM and Portal page management authoring environments involve constant database updates. Therefore, the best practice should be to delete unused published projects and update the database statistics on a regular basis (runstats).
 
 **How to Delete Published Projects**
 
@@ -1889,7 +1845,7 @@ Web application bridge (WAB) is a feature that allows a user to access a backend
 
 ### Tuning via the Integrated Solutions Console
 
-The base Portal High Volume Sites tunings were used to acheive optimal WAB performance.
+The base Portal High Volume Sites tunings were used to achieve optimal WAB performance.
 
 #### JVM Tuning
 
@@ -1930,7 +1886,7 @@ Those are set in the web.xml for the JSF portlet.
 A JSF portlet should follow some best practices. This is not a complete list of best practices. Rather it is a list of practices that allowed our evaluation to get improved throughput.
 
 - If you're displaying large JSF dataTables, they should be paginated. Displaying a thousand rows at once via a JSF dataTable is expensive
-- Do not fetch data base records via a bean, which you are not going to use. Populating the beans is expensive. Avoid that overhead by fetching only records your application is going to use.
+- Do not fetch database records via a bean, which you are not going to use. Populating the beans is expensive. Avoid that overhead by fetching only records your application is going to use.
 - Data access beans should not perform a 'context lookup' for every database access like this:
 
 javax.naming.InitialContext ctx = new javax.naming.InitialContext(); datasource = (DataSource) ctx.lookup(properties.getProperty("DATASOURCE"));
@@ -1943,7 +1899,7 @@ This is an expensive call. It should be done once and the result should be store
 
 ### Tuning via the Integrated Solutions Console
 
-The base Portal High Volume Sites tunings were used to acheive optimal WAB performance.
+The base Portal High Volume Sites tunings were used to achieve optimal WAB performance.
 
 In addition, the web container threadpool minimum and maximum was set to 60.
 
@@ -2206,7 +2162,7 @@ This provides an important performance tuning point to both improve response tim
 
 #### Identifying a Full Fetch of User Attributes
 
-How can you identify a second request is made to the directory server to retrieve the full set of user attributes? This is best done in a test or staging environment, rather than a live production environment, as it requires turning on tracing in the portal server, and this can impose a significant performance overhead. There are two traces to enable to look for this condition. The first one will show if the all the needed user attributes have been retrieved. If this is false, then a full fetch of the user information will occur. The second trace shows which attributes are being requested, so you can tell which ones should be added to the base set.
+How can you identify a second request is made to the directory server to retrieve the full set of user attributes? This is best done in a test or staging environment, rather than a live production environment, as it requires turning on tracing in the portal server, and this can impose a significant performance overhead. There are two traces to enable to look for this condition. The first one will show if all the needed user attributes have been retrieved. If this is false, then a full fetch of the user information will occur. The second trace shows which attributes are being requested, so you can tell which ones should be added to the base set.
 
 The two trace strings are:
 
@@ -2247,7 +2203,7 @@ Portal, as that attribute set is satisfactory for the user management applicatio
 
 By default, Portal applies access control for user and group lookups. For a user to retrieve this type of information, they would typically need access to a portlet, such as the out-of-the-box Users and Groups admin portlet, which makes PUMA API calls to look up user and group information. Second, they would require access rights, the User role or higher, on the users and groups they will retrieve. In other words, Portal Access Control (PAC) is doing filtering based on access control over the individual users and groups, in addition to the access for the portlet.
 
-This fine-grained access control may not be necessary in every customer's case, and it has a performance cost associated with it. If your access-control use cases are such that you do not require this fine-grained access control over the users and groups, then you can turn off the fine-grained access control checks, and get a performance benefit. However, you need be aware of the resulting exposure of user and group information if you turn off the fine-grained access control checks.
+This fine-grained access control may not be necessary in every customer's case, and it has a performance cost associated with it. If your access-control use cases are such that you do not require this fine-grained access control over the users and groups, then you can turn off the fine-grained access control checks, and get a performance benefit. However, you need to be aware of the resulting exposure of user and group information if you turn off the fine-grained access control checks.
 
 There are 2 access paths through Portal to the user and group information: Via the Users and Groups administration portlet, and via the PUMA REST remote API interface. (Technically there is also a 3rd and 4th, via custom code written and deployed on your Portal instance that uses the PUMA API or directly written to the VMM API. We will ignore those possibilities, which involve the development and deployment of custom code, for this discussion).
 
@@ -3222,7 +3178,7 @@ Default size: 30000, default lifetime: 3600, usage pattern: physical cache insta
 
 This physical cache instance holds entries from PUMA OID_User_Cache, OID_Group_Cache,
 
-DN_User_Cache and DN_Group_Cache. Those caches contain the mapping between the distinguished name / internal ObjectID of users and groups and their internal data object. The size of these caches scales with the number of active users and groups or users and groups that are used for delegation multiplied with factor 4 (as each entry is stored with different keys to enhance lookup). Entries are invalidated from this cache during deletion of a user or group. Creating an entry requires database and WIM/VMM access that may trigger further LDAP requests. An entry in the cache is fairly large.
+DN_User_Cache and DN_Group_Cache. Those caches contain the mapping between the distinguished name / internal ObjectID of users and groups and their internal data object. The size of these caches scales with the number of active users and groups or user and groups that are used for delegation multiplied with factor 4 (as each entry is stored with different keys to enhance lookup). Entries are invalidated from this cache during deletion of a user or group. Creating an entry requires database and WIM/VMM access that may trigger further LDAP requests. An entry in the cache is fairly large.
 
 **com.ibm.wps.puma.DN_OID_Cache & com.ibm.wps.puma.OID_DN_Cache**
 
