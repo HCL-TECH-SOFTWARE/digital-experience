@@ -31,7 +31,7 @@ You can install additional copies of the Suggested Links and External Search Res
 
 ## Portal Search portlets are not compatible with WSRP
 
-The Portal Search portlets cannot be provided as WSRP services, as some additional and more advanced HCL Portal concepts and features are not yet reflected by the current WSRP standard. This includes the Portal Search portlets Manage Search and the Search Center.
+The Portal Search portlets cannot be provided as WSRP services, as some additional and more advanced HCL Digital Experience (DX) concepts and features are not yet reflected by the current WSRP standard. This includes the Portal Search portlets Manage Search and the Search Center.
 
 ## Search administration portlet Manage Search
 
@@ -59,7 +59,7 @@ The Search Center portlet provides a central starting point to all searchable co
 
 The Search Center portlet is installed as part of the default portal installation. Note that it is deployed and placed on a hidden portal page. The portal takes users to the Search Center when they enter a search using the portal Search Box.
 
-Starting with Version 8 of HCL Portal, the Search and Browse portlet provided with earlier portal versions is no longer available. The Search Center has been enhanced with advanced search options previously available in the Search and Browse portlet. Categorization and taxonomy are no longer available.
+Starting with Version 8 of HCL DX, the Search and Browse portlet provided with earlier portal versions is no longer available. The Search Center has been enhanced with advanced search options previously available in the Search and Browse portlet. Categorization and taxonomy are no longer available.
 
 !!! note 
     By default both the Search Center portlet and the Search box are available only to authenticated users, that is for users who have logged on with a user ID and password. Anonymous users, that is users who access the portal without logging in, cannot use the Search Center or the search box. For more information about how to use the search portlets on anonymous pages refer to Enabling anonymous users to search public pages of your portal.

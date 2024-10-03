@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ibm-websphere-personalization>
+	<ResourceCollection action="create" name="Pzn_offers">
+		<ResourceType>CONTENT</ResourceType>
+		<ResourceClass>pers_offers.Pzn_offers</ResourceClass>
+		<ResourceManagerClass>pers_offers.Pzn_offersManager</ResourceManagerClass>
+		<ResourceDomainClass>pers_offers.Pzn_offersManager</ResourceDomainClass>
+	</ResourceCollection>
+	<ResourceCollectionDefinition deploymentProtocol="SQL" generateSchemas="true" primaryResourceTable="PZNDEMO.PZN_OFFERS" type="CONTENT">
+		<ContentSpot className="Pzn_offersSpot" displayName="Pzn_offers spot"></ContentSpot>
+		<ResourceTable generateTemplates="false" name="PZN_OFFERS" schema="PZNDEMO" supportsRuntimeMetadata="false">
+			<ResourceColumn initializeOnlyWhenNeeded="false" isNullable="true" isQueryable="true" isSelected="true" length="32" name="DETAILS" sqlType="VARCHAR" userPrefType="0"></ResourceColumn>
+			<ResourceColumn initializeOnlyWhenNeeded="false" isNullable="true" isQueryable="true" isSelected="true" length="32" name="CUSTOMERTYPE" sqlType="VARCHAR" userPrefType="0">
+				<Value description="Gold">Gold</Value>
+				<Value description="Titanium">Titanium</Value>
+				<Value description="Platinum">Platinum</Value>
+			</ResourceColumn>
+			<ResourceColumn initializeOnlyWhenNeeded="false" isNullable="true" isQueryable="true" isSelected="true" length="32" name="TITLE" sqlType="VARCHAR" userPrefType="0"></ResourceColumn>
+			<ResourceColumn initializeOnlyWhenNeeded="false" isNullable="true" isPrimaryKeyColumn="true" isQueryable="true" isSelected="true" name="OFFER_ID" precision="0" scale="0" sqlType="INTEGER" userPrefType="0"></ResourceColumn>
+		</ResourceTable>
+		<DomainSettings class="com.ibm.etools.portlet.personalization.internal.model.sql.impl.SQLDomainSettings" id="SQL">
+			<ConnectionPooling>true</ConnectionPooling>
+			<DataSource>jdbc/pzndemo</DataSource>
+			<DriverClass>org.apache.derby.jdbc.EmbeddedDriver</DriverClass>
+			<DataSourceClass></DataSourceClass>
+			<ConnectionName>PZNDemo Database</ConnectionName>
+			<DataModel></DataModel>
+			<Url>jdbc:derby:C:\HCL\wp_profile\PortalServer\derby\pzndemo_db</Url>
+			<UserId></UserId>
+		</DomainSettings>
+	</ResourceCollectionDefinition>
+</ibm-websphere-personalization>

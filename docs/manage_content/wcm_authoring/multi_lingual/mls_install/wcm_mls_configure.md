@@ -1,4 +1,4 @@
-# Configuring a multilingual system Multilingual Solution
+# Configuring a multilingual system
 
 After you install the multilingual extensions, you then must configure your system to support multilingual authoring and rendering.
 
