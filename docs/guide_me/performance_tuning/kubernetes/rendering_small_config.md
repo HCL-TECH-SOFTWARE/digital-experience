@@ -295,7 +295,7 @@ This section provides details for the Kubernetes cluster, JMeter, and database.
 
 ## Results
 
-The initial test runs were conducted on an AWS-distributed Kubernetes setup with a single node of instance types c5.2xlarge and c5.4xlarge. The system successfully handled concurrent user loads of 1,000, 2,000, 3,000, 5,000 with a error rate (< 1.0001%). At 6,000 users, error rates increased dramatically and the response times went up as well. For a response time to be considered optimal, it should be under 1 second. 
+The initial test runs were conducted on an AWS-distributed Kubernetes setup with a single node of instance types c5.2xlarge and c5.4xlarge. The system successfully handled concurrent user loads of 1,000, 2,000, 3,000, 5,000 with a error rate (< 0.01%). At 6,000 users, error rates increased dramatically and the response times went up as well. For a response time to be considered optimal, it should be under 1 second. 
 
 Later tests were executed from c5.9xlarge instance and Horizontal Pod Autoscaling (HPA) was enabled for core, DAM, haproxy, and ringAPI Pods with thresholds of 50% for CPU utilization and 80% for memory utilization. HPA test run executed successfully with no errors. Through the HPA tests, it was observed that 4 pods of core, DAM, haproxy, and 3 pods of ringAPI must have a successful run for 6,000 concurrent users. With this setup, the test was run for 10,000 concurrent users. Test was executed successfully until 10,000 concurrent ramp up. 
 
