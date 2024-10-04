@@ -168,12 +168,6 @@ For convenience, these values were added to the `small-config-values.yaml` file 
 
 3. In the extracted folder, navigate to the following structure to go to the `small-config-values.yaml` file: `hcl-dx-deployment/value-samples/small-config-values.yaml`.
  
-???+ info "Related information"
-    - [DX Performance Tuning Guide](../traditional_deployments.md)
-    - [DX Helm Minimal Values](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md/#containerization-requirements-and-limitations)
-
-
-
 
 
 ## Sizing guidance for rendering in a single-node's upper limit Kubernetes configuration
@@ -352,4 +346,3 @@ There were a number of alterations done to the initial Helm chart configuration.
 ???+ info "Related information"
     - [DX Performance Tuning Guide](../traditional_deployments.md)
     - [DX Helm Minimal Values](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md/#containerization-requirements-and-limitations)
-    - [DX Helm Minimal Values](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md#containerization-requirements-and-limitations)
