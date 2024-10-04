@@ -339,7 +339,7 @@ See the following example where '...' represents truncated parameters.
 
 ## LiveSync Push WCM Design Library
 
-The LiveSync Push WCM Design Library command synchronizes your local WCM Design Library files with the DX Server, overwriting the server files with your local files. The system watches for succeeding changes within the given `wcmLibraryPath` and the changes are immediately reflected in the DX server. This feature only works on a WCM Design Library previously pulled by the [LiveSync Pull WCM Design Library feature](#livesync-pull-wcm-design-library).
+The LiveSync Push WCM Design Library command synchronizes changes in your local WCM Design Library files with the DX Server, overwriting the server files with your local files changes. The system watches for succeeding changes within the given `wcmLibraryPath` and the changes are immediately reflected in the DX server. This feature only works on a WCM Design Library previously pulled by the [LiveSync Pull WCM Design Library feature](#livesync-pull-wcm-design-library).
 
 
 -   **Command description**
