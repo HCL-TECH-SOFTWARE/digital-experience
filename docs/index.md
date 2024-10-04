@@ -16,7 +16,7 @@ hide:
 
     ---
 
-    [:octicons-arrow-right-24: Go to What's New](./whatsnew/cf20/newcf222.md)
+    [:octicons-arrow-right-24: Go to What's New](./whatsnew/cf20/newcf223.md)
     
 -   :material-code-braces-box:{ .lg .middle } __DX Architecture__
 
@@ -56,7 +56,7 @@ hide:
 
     ---
 
-    [:octicons-arrow-right-24: Go to Tutorials](./guide_me/)
+    [:octicons-arrow-right-24: Go to Tutorials](./guide_me/tutorials/index.md)
 
 -   :material-school:{ .lg .middle } __HCLSoftware U__
 

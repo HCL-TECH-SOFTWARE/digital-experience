@@ -38,9 +38,11 @@ HCL Digital Experience Cloud Native 9.5 Tier 1 – 7 offerings are purchased acc
 The maximum duration for an individual user session with continuous interactions is 4 hours.
 
 User session consumption can be viewed by using usage reports in the HCL Software Licensing Portal. To be included in these reports, your Digital Experience Cloud Native 9.5 entitlements must be as follows:
+
 - Mapped to your HCL Software License portal instances for entitlement checking.
 - Configured for production use in your deployment Helm charts.
-Refer to the guidance in the following HCL Support knowledge article: [What is the HCL Software License and Download Portal?](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344#a8). 
+
+Refer to the guidance in the following HCL Support knowledge article: [What is the HCL Software License and Download Portal?](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344#a8).
 
 Run the “Reports for Metered products” section to understand how to access your FlexNet entitlement dashboard. Users with authorized access to this service can run usage reports. The Digital Experience Cloud Native 9.5 entitlements are configured to report user-session consumption for deployments configured for production use.
 
@@ -68,14 +70,14 @@ The License Manager uses a FlexNet API to transmit the data total amount and eac
 
 Access the Reports section of the HCL Software License and Download Portal (FlexNet) server.
 
-    ![](../../software_licensing_portal/_img/access_reports_software_license_portal.png)
+![](../../software_licensing_portal/_img/access_reports_software_license_portal.png)
 
-    Select your account and then click **Search**. Select **Digital Experience Cloud Native 9.5** from the list of your account entitlements. Results are displayed and are similar to the following example. 
+Select your account and then click **Search**. Select **Digital Experience Cloud Native 9.5** from the list of your account entitlements. Results are displayed and are similar to the following example. 
 
-    !!!note
-        The results might show an overage percentage amount in parentheses which does not apply to this informational dashboard report.
+!!!note
+    The results might show an overage percentage amount in parentheses which does not apply to this informational dashboard report.
 
-        ![](../../software_licensing_portal/_img/select_account_entitlements.png)
+    ![](../../software_licensing_portal/_img/select_account_entitlements.png)
 
 The Usage report shows the following information:
 
