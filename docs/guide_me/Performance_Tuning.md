@@ -5,6 +5,3 @@ Performance Tuning an HCL Digital Experience (DX) environment involves tuning an
 To obtain the performance guidance deployments to support Kubernetes container platforms, refer to the following topics:
 
 - [Containerization requirements and limitations](../get_started/plan_deployment/container_deployment/limitations_requirements.md)
-
-- [Performance guidance for Rendering in DX K8s deployment environments](../get_started/plan_deployment/container_deployment/rm_container/dx_performance_small_cfg.md)
- 
