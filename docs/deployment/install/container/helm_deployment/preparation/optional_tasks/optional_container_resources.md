@@ -145,8 +145,6 @@ resources:
       memory: "64Mi"
 ```
 
-For recommended values for a small configuration, refer to [Performance Sizing Guidance for Rendering with a Small Configuration](../../../../../../get_started/plan_deployment/container_deployment/rm_container/dx_performance_small_cfg.md).
-
 ## Unlimited resource `limits`
 
 All `limits` are explicitly set to `null` to unset them in Kubernetes and allow for unlimited resources depending on the Kubernetes Cluster. Cluster and namespace level resource limits still apply.
