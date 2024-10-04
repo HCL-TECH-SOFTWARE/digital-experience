@@ -704,7 +704,7 @@ Even though unused caches use some memory, the amount is minimal so it is not re
 
 **Cache Sizes**
 
-For some cache types, performance will be better if the cache size is a prime number due to a lower probability of cache collisions. For such cache types, the actual size is increased, at runtime, to the next prime number equal or greater thax`n the size specified.
+For some cache types, performance will be better if the cache size is a prime number due to a lower probability of cache collisions. For such cache types, the actual size is increased, at runtime, to the next prime number equal or greater than the size specified.
 
 ### People Service
 
