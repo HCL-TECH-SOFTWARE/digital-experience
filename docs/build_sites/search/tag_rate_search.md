@@ -4,9 +4,9 @@ Users can search the tag space by using the browser search box.
 
 This works only for browsers that support OpenSearch. For details refer to http://www.opensearch.org/Home. OpenSearch is a collection of technologies that allow publishing of search results in a format suitable for syndication and aggregation. It is a way for websites and search engines to publish search results in a standardized and accessible format.
 
-To be able to search for tagged content from non-portal pages, visit the portal site, navigate to where your browser allows you to add or remove search engines and add the search engine named HCL Portal Tagging Search Service. For details about how to do this refer to the documentation for your browser. After you added the search service to your browser, you can search the tag space of the Portal via this search service.
+To be able to search for tagged content from non-portal pages, visit the portal site, navigate to where your browser allows you to add or remove search engines and add the search engine named HCL Digital Experience (DX) Tagging Search Service. For details about how to do this refer to the documentation for your browser. After you added the search service to your browser, you can search the tag space of the Portal via this search service.
 
-The tagging search service searches only the portal site at which the service was added. For example, if you use Firefox to access two different portal servers `server1` and `server2`, and you then add the HCL Portal Tagging Search Service at server1. If you then navigate to server2 and try to search for a tag, the search service searches server1 for the specified tag, not server2.
+The tagging search service searches only the portal site at which the service was added. For example, if you use Firefox to access two different portal servers `server1` and `server2`, and you then add the HCL DX Tagging Search Service at server1. If you then navigate to server2 and try to search for a tag, the search service searches server1 for the specified tag, not server2.
 
 Advantages are as follows:
 

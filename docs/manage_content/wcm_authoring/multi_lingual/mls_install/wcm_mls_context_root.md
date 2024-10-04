@@ -1,4 +1,4 @@
-# Changing the multilingual solution context root Multilingual Solution
+# Changing the multilingual solution context root
 
 The default context root for the multilingual solution application is /wps. With Version 8.5 CF3, you can change this setting to match the HCL Portal context root to better suit the requirements of your organization.
 

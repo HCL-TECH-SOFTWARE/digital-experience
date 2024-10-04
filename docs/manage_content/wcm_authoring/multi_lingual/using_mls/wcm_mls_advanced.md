@@ -1,4 +1,4 @@
-# Advanced options Multilingual Solution
+# Advanced options
 
 There are more points of extensibility where you can enhance the multilingual solution to suit your specific requirements.
 

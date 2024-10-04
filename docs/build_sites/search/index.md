@@ -1,6 +1,6 @@
 # Search
 
-Use the Digital Experience Portal Search feature to search for text that is displayed in websites that are created by HCL Web Content Manager and additional web sources integrated to your Digital Experience platform.
+Use the Digital Experience (DX) Portal Search feature to search for text that is displayed in websites that are created by HCL Web Content Manager and additional web sources integrated to your Digital Experience platform.
 
 
 1.  [HCL Digital Experience Portal Search](../search/portal_search/index.md)  
@@ -18,7 +18,7 @@ Users can search the tag space by using the browser search box.
 7.  [Planning and preparing for Portal Search](../search/planning_portal_search/index.md)  
 Learn about some planning considerations and first steps that you need to apply before working with Portal Search.
 8.  [Indexing web content](../search/indexing_webcontent/index.md)  
-To search for web content, your content must first be indexed by the HCL Portal search engine. When the content is indexed, you can run searches by using the search center or by using a search component. If you search for documents in the WebSphere Portal search center, be aware that you see search results for published documents only. Unpublished pending changes in a project are not included in the results.
+To search for web content, your content must first be indexed by the HCL DX search engine. When the content is indexed, you can run searches by using the search center or by using a search component. If you search for documents in the WebSphere Portal search center, be aware that you see search results for published documents only. Unpublished pending changes in a project are not included in the results.
 11.  [Language and region support in Portal Search](../search/language_region_support/index.md)  
 Depending on your portal environment and your users, you might want to make multilingual content available and searchable in your portal.
 12. [Crawling web content with search seedlists](../search/crawling_webcontent_seedbase/index.md)  
@@ -32,6 +32,9 @@ If you plan to develop a custom search form, you might want to redirect search r
 18. [Remote search service](../search/remotesearch/index.md)  
 You can configure the search portlets for local operation, or you can configure them for remote search service. Depending on your configuration, remote search service might have performance benefits by offloading and balancing system load.
 
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to use Search for business users, go to [Search](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D2804){target="_blank"}. To try it out yourself, refer to [Search Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-200_Search_Lab.pdf){target="_blank"}.
 
 ???+ info "Related information"
     -   [Search REST API specification](../search/search-rest-api/index.md)
