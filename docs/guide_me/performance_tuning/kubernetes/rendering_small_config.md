@@ -176,16 +176,13 @@ For convenience, these values were added to the `small-config-values.yaml` file 
 
 
 
-
-
-
-# Sizing guidance for rendering in a single-node's upper limit Kubernetes configuration
+## Sizing guidance for rendering in a single-node's upper limit Kubernetes configuration
 
 This topic provides the details of the environments used for rendering with the upper limit in a single-node configuration.. You can also find the test results and recommendations for the single-node configurations on this page.
 
-## Methodology
+### Methodology
 
-### Overview of DX rendering sizing-performance tests
+#### Overview of DX rendering sizing-performance tests
 
 This sizing work consisted of rendering scenarios of WCM, portlets, and DAM with a rendering setup enabled in AWS/Native-Kubernetes (Kubernetes installed directly in Amazon EC2 instances). A combination run was performed that rendered WCM content, DAM assets, and DX pages and portlets. The load distribution was WCM content (40%), DAM assets (30%), and DX pages and portlets (30%). All systems were pre-populated before performing the rendering tests.
 
@@ -204,11 +201,11 @@ For more information about the setup of test data, refer to the following:
 - [DAM default test data](./index.md#dam-default-test-data)
 - [Pages and portlets default test data](./index.md#pages-and-portlets-default-test-data)
 
-## Environment
+### Environment
 
 This section provides details for the Kubernetes cluster, JMeter, and database.
 
-### AWS/Native Kubernetes
+#### AWS/Native Kubernetes
 
 - A Kubernetes platform is running on an AWS Elastic Compute Cloud (EC2) instance with the DX images installed and configured. 
 
@@ -237,7 +234,7 @@ This section provides details for the Kubernetes cluster, JMeter, and database.
       ![](../../../images/AWS-Native-Kube-Volume-Info-9x.png){ width="600" }
 
 
-### DB2 instance
+#### DB2 instance
 
 - Remote DB2 - [c5.2xlarge]
 
@@ -255,7 +252,7 @@ This section provides details for the Kubernetes cluster, JMeter, and database.
       ![](../../../images/Remote-DB2-Volume-Info-Med.png){ width="600" }
 
 
-### JMeter agents
+#### JMeter agents
 
 - JMeter instance - [c5.2xlarge]
 
@@ -289,11 +286,11 @@ This section provides details for the Kubernetes cluster, JMeter, and database.
       Ramp-up time is 1.5 seconds per user. Test duration is the total of ramp-up time and 1 hour with peak load of concurrent users.
 
 
-### DX core tuning for concurrent user run
+#### DX core tuning for concurrent user run
 
  Details of tuning and enhancements done to DX core during testing [DX-Core-Tuning](./rendering_medium_config.md#dx-core-tuning-for-concurrent-user-run)
 
-## Results
+### Results
 
 The initial test runs were conducted on an AWS-distributed Kubernetes setup with a single node of instance types c5.2xlarge and c5.4xlarge. The system successfully handled concurrent user loads of 1,000, 2,000, 3,000, 5,000 with a error rate (< 0.01%). At 6,000 users, error rates increased dramatically and the response times went up as well. For a response time to be considered optimal, it should be under 1 second. 
 
@@ -303,7 +300,7 @@ At a steady state of 10,000 concurrent users, there were few failures due to the
 
 Test results were analyzed in Prometheus and Grafana dashboards. The single-node CPU usage of a node reached an average of 80% in tests with 10,000 concurrent users. The saturation was checked by reducing the number of users to 5,00, 3,000, and 2,500 users. Node CPU average usage was around 70 to 80% in all 5,000, 3,000, and 2,500 users load test results. So, the recommended load is 2,500 concurrent users where we find the response times are optimal.
 
-## Conclusion
+### Conclusion
 
 This performance guidance shows the upper limit on a single-node K8s cluster AWS instance (c5.9xlarge). It is suggested that for single-node (c5.9xlarge) rendering scenarios for DAM, WCM, and pages with portlets, the recommended load is 2,500 concurrent users.
 
@@ -323,7 +320,7 @@ This performance guidance shows the upper limit on a single-node K8s cluster AWS
 !!!note
      Performance tuning for a Kubernetes DX cluster must be conducted for the particular workloads involving the number of concurrent users. Generally, these recommendations are intended to speed up tuning for others. Refer to the [DX Core tuning guide](../traditional_deployments.md) for further enhancements.
 
-### Recommendations
+#### Recommendations
 
 - Currently, default CPU and memory values in the [Helm chart](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md/#containerization-requirements-and-limitations) are the minimum values for DX to work. For an upper limit on one instamce in AWS, the Kubernetes cluster should begin with a single node with at least a c5.9xlarge instance type to support a load of 2,500 users with optimal response time.
 
