@@ -6,7 +6,7 @@ Learn how to configure the AI analysis feature for WCM Content in a traditional,
 	OpenAI ChatGPT is the supported content AI provider in CF213 and later. Custom AI implementation is supported in CF214 and later.
 
 Starting CF221, the AI model is switched to ```gpt-4o```. This model is the newest and the most capable model with up-to-date information.
-Starting CF224, AI Workflows and AI Translation has been added.
+Starting CF224, AI Workflows and AI Translation are available.
 
 ## Content AI provider overview
 
