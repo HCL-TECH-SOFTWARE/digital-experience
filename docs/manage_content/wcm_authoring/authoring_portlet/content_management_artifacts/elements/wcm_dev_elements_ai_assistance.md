@@ -56,7 +56,7 @@ Before you can use AI-assisted features for sentiment analysis of content, keywo
 
 ## Using AI-assisted translation of content items
 
-1. Fill in at least one text element (for example, rich text, text, or short text) in the **Content** tab of the content item.
+1. In the **Content** tab of the content item, fill in at least one text element (for example, rich text, text, or short text).
 
 2. Click the **Show Hidden Fields** button in the toolbar.
 
