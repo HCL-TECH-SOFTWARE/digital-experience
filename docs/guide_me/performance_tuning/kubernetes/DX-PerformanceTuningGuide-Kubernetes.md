@@ -1,8 +1,8 @@
 ---
-title: DX-PerformanceTuningGuide-Kubernetes
+title: Performance Tuning Guide for HCL DX on Kubernetes
 ---
 
-# Performance Tuning Guide for HCL Digital Experience on Kubernetes
+# Performance Tuning Guide for HCL DX on Kubernetes
 
 ## About This Document
 
