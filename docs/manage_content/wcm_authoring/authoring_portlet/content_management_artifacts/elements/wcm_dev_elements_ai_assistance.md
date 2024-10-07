@@ -82,6 +82,6 @@ Starting CF224, you can use AI Workflow Actions to generate keywords, summary, o
 
 3. Click **Save and Close** or select other **Save** options to save your updates.
 
-4. You can then use the workflow action (or actions) inside a workflow stage like in the sample below:
+You can then use the selected workflow action or actions inside a workflow stage. See the following example:
 
 ![](../../../../../assets/HCL_Authoring_Portlet_Custom_Workflow_Stage.png)
