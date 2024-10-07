@@ -76,7 +76,7 @@ Starting CF224, you can use AI Workflow Actions to generate keywords, summary, o
           ![](../../../../../assets/HCL_Authoring_Portlet_Custom_Action.png)
 2. In the **Name** field, enter a name for the custom action. 
 3. Click **Select Action**.
-2. Select an action from **Artificial Intelligence Custom Workflow Action Factory**.
+4. Select an action from **Artificial Intelligence Custom Workflow Action Factory** and click **OK**.
 
                ![](../../../../../assets/HCL_Authoring_Portlet_Custom_Action_Select.png)
 
