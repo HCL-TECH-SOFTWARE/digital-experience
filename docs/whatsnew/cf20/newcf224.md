@@ -27,7 +27,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## All Digital Experience Versions (8.5, 9.0, 9.5)
 
-### Artificial Intelligence Translation and Workflow capabilities in WCM
+### AI Translation and Workflow capabilities in WCM
 
 === "Containers"
     You can use AI Translation in WCM for content items to translate them into different languages. Also the AI Workflow options allow you to automatically generate keywords, summary and translate content. For more information, see [# AI assistance for descriptions, keyword generation, translation, and sentiment analysis in a content item](../../manage_content/wcm_authoring/virtual_portal/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
