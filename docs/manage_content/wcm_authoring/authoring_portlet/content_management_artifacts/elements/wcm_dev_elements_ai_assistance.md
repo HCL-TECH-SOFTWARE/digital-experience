@@ -1,6 +1,6 @@
-# AI assistance for descriptions, keyword generation, and sentiment analysis in a content item
+# AI assistance for descriptions, keyword generation, translation, and sentiment analysis in a content item
 
-This section provides the steps on how to use AI assistance for generating descriptions, keywords, and getting sentiment analysis on content elements.
+This section provides the steps on how to use AI assistance for generating descriptions, keywords, translation, and getting sentiment analysis on content elements.
 
 ## Prerequisite
 
@@ -53,3 +53,39 @@ Before you can use AI-assisted features for sentiment analysis of content, keywo
 3. Click the sentiment result icon to see more details about the result.
 
     ![](../../../../../assets/HCL_Authoring_Portlet_SentimentAnalysis_SentimentPopover.png)
+
+## Using AI-assisted translation of content items
+
+To use AI-assisted translation, refer to the following steps:
+
+1. In the **Content** tab of the content item, fill in at least one text element (for example, rich text, text, or short text).
+
+2. Click the **Show Hidden Fields** button in the toolbar.
+
+    ![](../../../../../assets/HCL_Authoring_Portlet_Generate_Keywords_ShowHiddenFields.png)
+
+3. Click **More > AI Translate**. 
+           The target language is the language configured for the library the item is saved in. If the item is not yet saved, the default language of the installation is used. For steps to set the language of a library, see [Create Content Library](../../web_content_libraries/oob_content_createlib.md).
+
+    ![](../../../../../assets/HCL_Authoring_Portlet_Translate_Toolbar.png)
+
+5. Click **Save and Close** or select other **Save** options to save your updates.
+
+## Using AI Workflow Actions
+
+Starting CF224, you can use AI Workflow Actions to generate keywords, summary, or translate content.
+
+1. To define the custom workflow action in WCM Authoring, go to **New > Workflow Action > Custom Action**.
+     
+     ![](../../../../../assets/HCL_Authoring_Portlet_Custom_Action.png)
+2. In the **Name** field, enter a name for the custom action. 
+3. Click **Select Action**.
+4. Select an action from **Artificial Intelligence Custom Workflow Action Factory** and click **OK**.
+
+     ![](../../../../../assets/HCL_Authoring_Portlet_Custom_Action_Select.png)
+
+3. Click **Save and Close** or select other **Save** options to save your updates.
+
+You can then use the selected workflow action or actions inside a workflow stage. See the following example:
+
+![](../../../../../assets/HCL_Authoring_Portlet_Custom_Workflow_Stage.png)
