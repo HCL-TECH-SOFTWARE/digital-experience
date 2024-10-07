@@ -19,7 +19,7 @@ This section provides information about the functionalities and use cases of the
 
 ## Availability and system compatibility
 
-The User Session Reporting Tool (UserSessionReporting_v1.0.x.zip) is available in your [DX offering entitlements](../../software_licensing_portal/index.md) in the [HCL Software License Portal](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do){target="_blank"}.
+The User Session Reporting Tool (UserSessionReporting_v1.0.x.zip) is available in your [DX offering entitlements](../../software_licensing_portal/index.md) (for example, HCL Portal Server 9.5, HCL Web Content Manager 9.5, HCL Digital Experience Manager 9.5, HCL Digital Experience Cloud Native 9.5.1 or later) in the [HCL Software License Portal](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do){target="_blank"}.
 
 The tool is designed to integrate effortlessly into existing HCL DX deployments, particularly in on-premises deployments. It is backward compatible with previous deployment versions. You do not need to upgrade to the latest Cumulative Fix (CF) to utilize the User Session Reporting Tool, making it accessible to a broader range of deployments without requiring additional updates or changes to the existing infrastructure.
 
