@@ -1,6 +1,6 @@
 # AI assistance for descriptions, keyword generation, translation, and sentiment analysis in a content item
 
-This section provides the steps on how to use AI assistance for generating descriptions, keywords, and getting sentiment analysis on content elements.
+This section provides the steps on how to use AI assistance for generating descriptions, keywords, translation, and getting sentiment analysis on content elements.
 
 ## Prerequisite
 
