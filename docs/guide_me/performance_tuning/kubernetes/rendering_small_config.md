@@ -170,9 +170,9 @@ For convenience, these values were added to the `small-config-values.yaml` file 
  
 
 
-## Sizing guidance for rendering in a single-node's upper limit Kubernetes configuration
+## Guidance for rendering with the upper limit in a single-node configuration
 
-This topic provides the details of the environments used for rendering with the upper limit in a single-node configuration.. You can also find the test results and recommendations for the single-node configurations on this page.
+This topic provides the details of the environments used for rendering with the upper limit in a single-node Kubernetes configuration. You can also find the test results and recommendations for single-node configurations on this page.
 
 ### Methodology
 
@@ -180,7 +180,7 @@ This topic provides the details of the environments used for rendering with the 
 
 This sizing work consisted of rendering scenarios of WCM, portlets, and DAM with a rendering setup enabled in AWS/Native-Kubernetes (Kubernetes installed directly in Amazon EC2 instances). A combination run was performed that rendered WCM content, DAM assets, and DX pages and portlets. The load distribution was WCM content (40%), DAM assets (30%), and DX pages and portlets (30%). All systems were pre-populated before performing the rendering tests.
 
-To achieve the maximum throughput users mark, an initial set of runs was done with a lower number of users on a single node setup with scaling of pods.
+To achieve the maximum throughput for users, an initial set of runs was done with a lower number of users on a single-node setup. Pods were then scaled accordingly. 
 
 The following table contains the rendering scenario details for a single-node upper limit configuration. 
 
@@ -207,7 +207,7 @@ This section provides details for the Kubernetes cluster, JMeter, and database.
 
 - The tests used a remote DB2 instance for the core database (c5.2xlarge).
 
-- [Single node Configuration]  - [c5.9xlarge] 
+- [Single-node Configuration]  - [c5.9xlarge]  
 
 - The tests started with c5.2xlarge, then c5.4xlarge, and then a c5.9xlarge instance after analyzing test results and observations.
 
@@ -282,26 +282,22 @@ This section provides details for the Kubernetes cluster, JMeter, and database.
 
 #### DX core tuning for concurrent user run
 
- Details of tuning and enhancements done to DX core during testing [DX-Core-Tuning](./rendering_medium_config.md#dx-core-tuning-for-concurrent-user-run)
-
+For tuning details and enhancements done to DX core during testing, see [DX-Core-Tuning](./rendering_medium_config.md#dx-core-tuning-for-concurrent-user-run).
 ### Results
 
-The initial test runs were conducted on an AWS-distributed Kubernetes setup with a single node of instance types c5.2xlarge and c5.4xlarge. The system successfully handled concurrent user loads of 1,000, 2,000, 3,000, 5,000 with a error rate (< 0.01%). At 6,000 users, error rates increased dramatically and the response times went up as well. For a response time to be considered optimal, it should be under 1 second. 
+The initial test runs were conducted on an AWS-distributed Kubernetes setup with a single node of instance types c5.2xlarge and c5.4xlarge. The system successfully handled concurrent user loads of 1,000, 2,000, 3,000, and 5,000 with a < 0.01% error rate. At 6,000 users, error rates increased dramatically and the response times went up as well. For a response time to be considered optimal, it should be under 1 second. 
 
-Later tests were executed from c5.9xlarge instance and Horizontal Pod Autoscaling (HPA) was enabled for core, DAM, haproxy, and ringAPI Pods with thresholds of 50% for CPU utilization and 80% for memory utilization. HPA test run executed successfully with no errors. Through the HPA tests, it was observed that 4 pods of core, DAM, haproxy, and 3 pods of ringAPI must have a successful run for 6,000 concurrent users. With this setup, the test was run for 10,000 concurrent users. Test was executed successfully until 10,000 concurrent ramp up. 
+Later tests were done from a c5.9xlarge instance and Horizontal Pod Autoscaling (HPA) was enabled for core, DAM, HAProxy, and ringAPI pods with thresholds of 50% for CPU utilization and 80% for memory utilization. The HPA test run finished successfully with no errors. Through the HPA tests, it was observed that four pods of core, DAM, haproxy, and three pods of ringAPI are required to have a successful run for 6,000 concurrent users. With this setup, the test was run for 10,000 concurrent users. At 10,000 concurrent users, there were a few failures due to the ringAPI pod decreasing intermittently. RingAPI pods were then scaled to four. The test run with four pods each of core, DAM, HAProxy, and ringAPI was successful for 10,000 concurrent users.
 
-At a steady state of 10,000 concurrent users, there were few failures due to the ringAPI pod going down intermittently. RingAPI pods are then scaled to 4. The test run was successful with 10,000 concurrent users with 4 pods of core, DAM, haproxy, and ringAPI each.
-
-Test results were analyzed in Prometheus and Grafana dashboards. The single-node CPU usage of a node reached an average of 80% in tests with 10,000 concurrent users. The saturation was checked by reducing the number of users to 5,00, 3,000, and 2,500 users. Node CPU average usage was around 70 to 80% in all 5,000, 3,000, and 2,500 users load test results. So, the recommended load is 2,500 concurrent users where we find the response times are optimal.
+Test results were analyzed in Prometheus and Grafana dashboards. The single-node CPU usage of a node reached an average of 80% in tests with 10,000 concurrent users. The saturation was checked by reducing the number of users to 5,000, 3,000, and 2,500 users. For these user load numbers, the average usage of a node CPU was around 70 to 80%. The recommended load is 2,500 users; response times are optimal with this user load.
 
 ### Conclusion
 
-This performance guidance shows the upper limit on a single-node K8s cluster AWS instance (c5.9xlarge). It is suggested that for single-node (c5.9xlarge) rendering scenarios for DAM, WCM, and pages with portlets, the recommended load is 2,500 concurrent users.
+This guidance shows the upper limit on a single-node K8s cluster AWS instance (c5.9xlarge). For single-node (c5.9xlarge) rendering scenarios for DAM, WCM, and pages with portlets, the recommended load is 2,500 concurrent users.
 
-- The following table contains the number and limits for each pod. Using these values significantly improves the responsiveness of the setup and enables the system to handle 2,500 concurrent users comfortably.
+The following table contains the number and limits for each pod. Using these values significantly improves the responsiveness of the setup and enables the system to handle 2,500 concurrent users.
 
-
-| Pod name                    | Number of pods | Container                   | Container image             | Container CPU request and limit | Container memory request and limit |
+| Pod Name                    | Number of Pods | Container                   | Container Image             | Container CPU Request and Limit | Container Memory Request and Limit |
 | --------------------------- | -------------- | --------------------------- | --------------------------- | ------------------------------- | ---------------------------------- |
 | core                        | 4              | core                        | core                        | 5000 m                          | 8000 Mi                            |
 | ringApi                     | 4              | ringApi                     | ringApi                     | 800 m                           | 512 Mi                             |
@@ -316,11 +312,11 @@ This performance guidance shows the upper limit on a single-node K8s cluster AWS
 
 #### Recommendations
 
-- Currently, default CPU and memory values in the [Helm chart](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md/#containerization-requirements-and-limitations) are the minimum values for DX to work. For an upper limit on one instamce in AWS, the Kubernetes cluster should begin with a single node with at least a c5.9xlarge instance type to support a load of 2,500 users with optimal response time.
+- Currently, default CPU and memory values in the [Helm chart](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md/#containerization-requirements-and-limitations) are the minimum values for DX to work. For an upper limit on one instance in AWS, the Kubernetes cluster should begin with a single node with at least a c5.9xlarge instance type to support a load of 2,500 users for optimal response time.
 
 - For testing purposes, OpenLDAP pod values were used for holding more authenticated users for rendering. However, the OpenLDAP pod is not for production use.
 
-There were a number of alterations done to the initial Helm chart configuration. The following table contains the number and limits for each pod in the single node set-up.
+There were a number of alterations done to the initial Helm chart configuration. The following table contains the number and limits for each pod in a single-node setup.
 
 |  |  | Request | Request | Limit | Limit |
 |---|---|---:|---|---|---|
