@@ -6,7 +6,7 @@ title: Rendering - Small-Sized Configuration
 
 This topic provides the details of the environments used for rendering in a small-sized Kubernetes configuration. Test results and recommendations for small configurations are provided. 
 
-You can also find details of the environments used for rendering with the upper limit in a single-node Kubernetes configuration. 
+You can also find details of the environments used for [rendering with the upper limit in a single-node Kubernetes configuration](#guidance-for-rendering-with-the-upper-limit-in-a-single-node-configuration). 
 
 ## Methodology
 
