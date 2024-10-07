@@ -48,7 +48,7 @@ To enable content AI analysis:
 
 Only administrators can configure an AI class to use a custom content AI provider.
 
-1. Write the Custom Content AI Provider class by implementing the ```com.hcl.workplace.wcm.restv2.ai.IAIGeneration``` and starting with CF224 optionally also the ```com.hcl.workplace.wcm.restv2.ai.IAITranslation``` interface.
+1. Write the custom content AI provider class by implementing the ```com.hcl.workplace.wcm.restv2.ai.IAIGeneration```. Optionally, starting CF224, you can also implement the ```com.hcl.workplace.wcm.restv2.ai.IAITranslation``` interface.
 
 	1. Create the JAR file.
 
