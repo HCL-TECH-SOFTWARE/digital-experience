@@ -4,7 +4,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
-- Artificial Intelligence Translation and Workflow capabilities in WCM
+- AI Translation and Workflow capabilities in WCM
 - Presentation Designer to visually create and modify WCM presentation templates
 - Sync of WCM HTML components with DXClient
 - Notice of deprecation of Textbox.io Rich Text Editor
