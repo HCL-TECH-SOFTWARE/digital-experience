@@ -30,7 +30,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### AI Translation and Workflow capabilities in WCM
 
 === "Containers"
-    You can use AI Translation in WCM for content items to translate them into different languages. Also the AI Workflow options allow you to automatically generate keywords, summary and translate content. For more information, see [# AI assistance for descriptions, keyword generation, translation, and sentiment analysis in a content item](../../manage_content/wcm_authoring/virtual_portal/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
+    You can use Artificial Intelligence (AI) Translation in WCM to translate content items into different languages. The AI Workflow options, on the other hand, allow you to automatically generate keywords, summary, and translate content. For more information, see [AI assistance for descriptions, keyword generation, translation, and sentiment analysis in a content item](../../manage_content/wcm_authoring/virtual_portal/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
 
 === "On-Premises"
     You can change the context root or hostname of an already existing virtual portal using the administration portlet. For more information, see [# AI assistance for descriptions, keyword generation, translation, and sentiment analysis in a content item](../../manage_content/wcm_authoring/virtual_portal/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
