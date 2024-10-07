@@ -64,7 +64,8 @@ To use AI-assisted translation, refer to the following steps:
 
     ![](../../../../../assets/HCL_Authoring_Portlet_Generate_Keywords_ShowHiddenFields.png)
 
-3. Click the **More** button in the toolbar, then click **AI Translate**. The target language is the language configured for the library the item is in. If the item is not saved yet the default language of the installation is used.
+3. Click **More > AI Translate**. 
+           The target language is the language configured for the library the item is saved in. If the item is not yet saved, the default language of the installation is used. For steps to set the language of a library, see [Create Content Library](../../web_content_libraries/oob_content_createlib.md).
 
     ![](../../../../../assets/HCL_Authoring_Portlet_Translate_Toolbar.png)
 
