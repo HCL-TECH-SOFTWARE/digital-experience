@@ -66,7 +66,7 @@ Before you can use AI-assisted features for sentiment analysis of content, keywo
 
     ![](../../../../../assets/HCL_Authoring_Portlet_Translate_Toolbar.png)
 
-5. Select **Save** or other **Save** options to save your updates.
+5. Click **Save and Close** or select other **Save** options to save your updates.
 
 ## Using AI Workflow Actions
 
