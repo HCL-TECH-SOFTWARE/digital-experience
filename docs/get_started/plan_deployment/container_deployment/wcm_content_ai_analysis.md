@@ -56,7 +56,7 @@ To configure a custom AI class:
 
 	  3. Restart the JVM.
 
-    The following example of a custom content AI provider class can be used to call custom AI services for AI analysis. 
+    You can use the following example of a custom content AI provider class to call custom AI services for AI analysis.
 
 	```
 	package com.ai.sample;
