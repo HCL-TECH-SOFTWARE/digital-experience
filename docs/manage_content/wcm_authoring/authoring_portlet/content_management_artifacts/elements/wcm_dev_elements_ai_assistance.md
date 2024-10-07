@@ -70,7 +70,7 @@ Before you can use AI-assisted features for sentiment analysis of content, keywo
 
 ## Using AI Workflow Actions
 
-Starting with CF224 you can use AI Workflow Actions to generate keywords, summary, or translate content.
+Starting CF224, you can use AI Workflow Actions to generate keywords, summary, or translate content.
 
 1. To define the custom workflow action in WCM Authoring choose **New** -> **Workflow Action** -> **Custom Action**.
 ![](../../../../../assets/HCL_Authoring_Portlet_Custom_Action.png)
