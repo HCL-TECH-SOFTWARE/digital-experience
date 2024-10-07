@@ -74,7 +74,8 @@ Starting CF224, you can use AI Workflow Actions to generate keywords, summary, o
 
 1. To define the custom workflow action in WCM Authoring, go to **New > Workflow Action > Custom Action**.
           ![](../../../../../assets/HCL_Authoring_Portlet_Custom_Action.png)
-
+2. In the **Name** field, enter a name for the custom action. 
+3. Click **Select Action**.
 2. Select an action from **Artificial Intelligence Custom Workflow Action Factory**.
 
                ![](../../../../../assets/HCL_Authoring_Portlet_Custom_Action_Select.png)
