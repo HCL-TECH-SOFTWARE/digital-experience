@@ -56,6 +56,8 @@ Before you can use AI-assisted features for sentiment analysis of content, keywo
 
 ## Using AI-assisted translation of content items
 
+To use AI-assisted translation, refer to the following steps:
+
 1. In the **Content** tab of the content item, fill in at least one text element (for example, rich text, text, or short text).
 
 2. Click the **Show Hidden Fields** button in the toolbar.
@@ -73,12 +75,13 @@ Before you can use AI-assisted features for sentiment analysis of content, keywo
 Starting CF224, you can use AI Workflow Actions to generate keywords, summary, or translate content.
 
 1. To define the custom workflow action in WCM Authoring, go to **New > Workflow Action > Custom Action**.
-          ![](../../../../../assets/HCL_Authoring_Portlet_Custom_Action.png)
+     
+     ![](../../../../../assets/HCL_Authoring_Portlet_Custom_Action.png)
 2. In the **Name** field, enter a name for the custom action. 
 3. Click **Select Action**.
 4. Select an action from **Artificial Intelligence Custom Workflow Action Factory** and click **OK**.
 
-               ![](../../../../../assets/HCL_Authoring_Portlet_Custom_Action_Select.png)
+     ![](../../../../../assets/HCL_Authoring_Portlet_Custom_Action_Select.png)
 
 3. Click **Save and Close** or select other **Save** options to save your updates.
 
