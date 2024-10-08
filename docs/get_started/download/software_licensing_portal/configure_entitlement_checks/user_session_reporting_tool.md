@@ -23,7 +23,7 @@ The User Session Reporting Tool (UserSessionReporting_v1.0.x.zip) is available i
 
 - HCL Portal Server 9.5
 - HCL Web Content Manager 9.5
-- HCL Digital Experience Manager 9.5,
+- HCL Digital Experience Manager 9.5
 - HCL Digital Experience Cloud Native 9.5.1 or later
 - HCL Portal Extend 9.5
 - HCL Portal Enable 9.5
