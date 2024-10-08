@@ -1,8 +1,11 @@
 # Docker images for HCL Digital Experience 9.5
 
-HCL Digital Experience 9.5 supports deployments on Docker and popular Kubernetes platforms. Learn more about the latest list of container images and supported deployment platforms.
+HCL Digital Experience (DX) 9.5 supports deployments on Docker and popular Kubernetes platforms. Learn more about the latest list of container images and supported deployment platforms.
 
-HCL Digital Experience 9.5 core and related component images are provided in your HCL Digital Experience entitlements on the [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release). For the latest list of container images and supported deployment platforms, consult the Docker containers [Deployment](../container_deployment/index.md) topic pages in this section.
+!!!note
+    HCL DX Docker Compose deployments are only intended for development and test environments. The use of HCL DX Docker Compose in production environments is not supported. Only native Docker deployments are supported through Docker Compose. For questions or issues, create an issue in the [dx-docker-compose GitHub repository](https://github.com/HCL-TECH-SOFTWARE/dx-docker-compose){target="_blank"}.
+
+HCL Digital Experience 9.5 core and related component images are provided in your HCL Digital Experience entitlements on the [HCL Software Licensing Portal](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do){target="_blank"}. For the latest list of container images and supported deployment platforms, consult the Docker containers [Deployment](../container_deployment/index.md) topic pages in this section.
 
 ## Overview
 
