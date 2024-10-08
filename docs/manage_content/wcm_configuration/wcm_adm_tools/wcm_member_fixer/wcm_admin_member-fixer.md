@@ -124,6 +124,10 @@ When running this task on a virtual portal you must add either `-DVirtualPortalH
 
 To prevent your session timing out before the task has finished, you can append the option `-DsessionTimeOut=timeOut` to the command. This sets the number of seconds in which the task must complete before its session will timeout. The default session timeout is 14,440 seconds, which is 4 hours. For large repositories you should increase this setting. For example: `-DsessionTimeOut=36000`, which is 10 hours.
 
+## Parameter to set to specify lowercase or mixed case for DNs
+
+You can control how the DN will be stored in DX after the member fixer procedure is complete by setting the `-Dfix_case` parameter.  The choice is between making the DX reference all lower case ("lower") -OR- making the DX reference match exactly what the LDAP returns ("update"). Any DN that gets updated by the Member Fixer task will be stored according to this parameter value.
+
 ## Examples
 
 These options can be combined when the conditions occur at the same time. For example, if alternate DNs are available for nonexistent users and groups and there are mismatched unique IDs, you would use the following command:
