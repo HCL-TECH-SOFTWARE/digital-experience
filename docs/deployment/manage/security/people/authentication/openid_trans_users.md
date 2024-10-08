@@ -1,14 +1,14 @@
 # Configuring transient users
 
-In addition to the basic OpenID authentication option, you can give users, who are trusted and verified from an identity provider, access to HCL Digital Experience. These trusted and verified users do not require a local, registered Portal user account.
+In addition to the basic OpenID authentication option, you can give users, who are trusted and verified from an identity provider, access to HCL Digital Experience (DX). These trusted and verified users do not require a local, registered Portal user account.
 
-Facebook and Google users can authenticate with the HCL Digital Experience server instance with their identity provider credentials. These users are granted access to certain data within HCL Digital Experience without having a local account. You can grant the same access to all identity providers or you can configure different access rights that are based on the identity provider. With this option, you can provide a personalized view to unregistered users while still providing benefits to fully registered users.
+Facebook and Google users can authenticate with the HCL DX server instance with their identity provider credentials. These users are granted access to certain data within HCL DX without having a local account. You can grant the same access to all identity providers or you can configure different access rights that are based on the identity provider. With this option, you can provide a personalized view to unregistered users while still providing benefits to fully registered users.
 
-Follow the steps below to configure transient users.
+To configure transient users, refer to the following steps:
 
 1. **For Remote Dmgr only**: Copy this JAR file from the Portal server `<PortalServer_root>/base/wp.user.impl/lib/wp.user.connections.jar to the <AppServer_root>/lib` directory of the remote Dmgr.
 
-2. Run the following task from the `wp_profile_root\ConfigEngine` directory with the appropriate parameters. Complete this step only on the **primary node**.
+2. Run the following task from the [wp_profile_root](https://opensource.hcltechsw.com/digital-experience/CF217/guide_me/wpsdirstr/#wp_profile_root)\ConfigEngine directory with the appropriate parameters. Complete this step only on the **primary node**.
 
     - **AIX®**: `./ConfigEngine.sh enable-transient-user -DWasUserId=username -DWasPassword=password`
     - **HP-UX**: `./ConfigEngine.sh enable-transient-user -DWasUserId=username -DWasPassword=password`
@@ -17,30 +17,31 @@ Follow the steps below to configure transient users.
     - **Solaris**: `./ConfigEngine.sh enable-transient-user -DWasUserId=username -DWasPassword=password`
     - **Windows™**: `ConfigEngine.bat enable-transient-user -DWasUserId=username -DWasPassword=password`
 
-3. Add the following parameters to customize the task for your business requirements.
-    1. `-Dtransparent.suffix`
+    Add the following parameters to customize the task for your business requirements.
+
+    - `-Dtransparent.suffix`
 
         Set this value to a **dn** suffix that is used for transient users. The suffix must NOT match your current suffixes for fully registered users. The default value is `o=transparent`.
 
-    2. `-Dtransparent.prefix`
+        (Optional): Complete the following steps if you entered the wrong value in the **transparent.suffix** parameter.
+
+        1. Log on to WebSphere® Integrated Solutions Console as the administrator.
+        2. Go to **Security > Global Security**.
+        3. Go to **User account repository > Available realm definitions** and select **Federatedrepositories**.
+        4. Click **Configure**.
+        5. Go to **Repositories in the realm** and click the link in the Base Entry column for the **transientidp** repository identifier, for example, `o=transparent`.
+        6. Replace the value in the following fields with the new value:
+            - **Distinguished name of a base entry that uniquely identifies this set of entries in the realm**. For example, `o=transparent`.
+            - **Distinguished name of a base entry in this repository**. For example, `o=transparent`.
+        7. Click **OK**.
+        8. Save your changes.
+        9. Stop and restart the HCL DX server.
+
+    - `-Dtransparent.prefix`
 
         Set this value to a prefix that is used for transient users. For example, if you want to set the RDN attribute, set this value to `cn`.
 
-4. **Optional**: Complete the following steps if you entered the wrong value in the **transparent.suffix** parameter.
-
-    1. Log on to WebSphere® Integrated Solutions Console as the administrator.
-    2. Go to **Security > Global Security**.
-    3. Go to **User account repository > Available realm definitions** and select **Federatedrepositories**.
-    4. Click **Configure**.
-    5. Go to **Repositories in the realm** and click the link in the Base Entry column for the **transientidp** repository identifier, for example, `o=transparent`.
-    6. Replace the value in the following fields with the new value:
-        1. **Distinguished name of a base entry that uniquely identifies this set of entries in the realm**. For example, `o=transparent`.
-        2. **Distinguished name of a base entry in this repository**. For example, `o=transparent`.
-    7. Click **OK**.
-    8. Save your changes.
-    9. Stop and restart the HCL Portal server.
-
-5. **Optional**: Complete the following steps to create group objects for external providers to assign different access rights.
+3. (Optional): Complete the following steps to create group objects for external providers to assign different access rights.
 
     !!!important
         After you run the `enable-transient-user` task, all identified users are identified with the all authenticated group and do not have explicit groups.
@@ -50,28 +51,28 @@ Follow the steps below to configure transient users.
     3. Go to **User account repository > Available realm definitions** and select **Federatedrepositories**.
     4. Click **Configure**.
     5. Go to **Repositories in the realm** and click **transientidp** in the **Repository Identifier** column.
-    6. Click New and add the following information:
+    6. Click **New** and add the following information:
         - **Name**: `buildgroupsfor`
         - **Value**: Enter the list of supported Identity Providers that you want to build groups for. For example: `facebook Google`. The items in the list must be separated by a space. The Identity Providers are case-sensitive and must match what you entered for the **idp.providerlist** and **openid.servicenames** parameters.
     7. Click **OK**.
     8. Save your changes.
-    9. Stop and restart the HCL Portal server.
+    9. Stop and restart the HCL DX server.
 
-6. **Optional**: Complete the following steps to mark transient identity provider users as external.
+4. (Optional): Complete the following steps to mark transient identity provider users as external.
 
     !!!information
          After you run the `enable-transient-user task`, the system builds internal groups for each identity provider. You can use these groups in the **Resource Permissions** portlet in the **Portal Administration** menu. Use the Resource Permissions portlet to build a set of pages and portlets that transient users can see and use.
 
-        You can also combine transient users with the external user feature in HCL Digital Experience. You can identify a group of external or transient users with a database suffix. All external and transient users are then granted a special virtual principle in the access control. Use this virtual principle to grant a general set of access rights to these users.
+        You can also combine transient users with the external user feature in HCL DX. You can identify a group of external or transient users with a database suffix. All external and transient users are then granted a special virtual principle in the access control. Use this virtual principle to grant a general set of access rights to these users.
 
     1. Log on to WebSphere® Integrated Solutions Console as the administrator.
     2. Go to **Resources > Resource Environment > Resource Environment providers**.
-    3. Search for WP PumaStoreService then click **Custom properties**.
+    3. Search for `WP PumaStoreService` then click **Custom properties**.
     4. Add the `parentDN.externalUsers` property with value you entered for **transparent.suffix.** If you did not enter a value in **transparent.suffix**, enter `o=transparent`.
     5. Save your changes.
-    6. Stop and restart the HCL Portal server.
+    6. Stop and restart the HCL DX server.
 
-7. Complete the following steps to load user attributes during authentication.
+5. Complete the following steps to load user attributes during authentication.
 
     !!!note
         Transient users do not have attributes that are stored locally so it is helpful to load attributes from the Identity Provider during authentication.
@@ -81,7 +82,7 @@ Follow the steps below to configure transient users.
     1. Log on to WebSphere® Integrated Solutions Console as the administrator.
     2. Go to **Security > Global security > Web and SIP Security > Trust association > Interceptors**.
     3. Select **com.ibm.portal.auth.tai.OpenidTAI**.
-    4. Add the following new properties for OpenID. Each property must be entered as **one line**.
+    4. Add the following new properties for OpenID. Make sure to enter each property as one line.
         - `provider.openid.loadattributes=provider|method;provider2|method`
 
         !!!note
@@ -98,7 +99,7 @@ Follow the steps below to configure transient users.
         - `provider.openid.loadattributes.google=cn|http://axschema.org/namePerson/first;sn|`
           `http://axschema.org/namePerson/last ibm-primaryEmail|http://axschema.org/contact/email`
 
-    5. Add the following new property for Facebook. The property must be entered as one line.
+    5. Add the following new property for Facebook. Make sure to enter each property as one line.
         - `provider.facebook.loadattributes=portalattributename|`
           `idpattributename;portalattributename2|idpattributename2`
 
@@ -107,9 +108,9 @@ Follow the steps below to configure transient users.
         - `provider.facebook.loadattributes=sn|first_name;cn|last_name;uid|name`
 
     6. Save your changes.
-    7. Stop and restart the HCL Portal server.
+    7. Stop and restart the HCL DX server.
 
-8. **Optional**: Complete the following steps to allow attribute requests for transient users.
+6. (Optional): Complete the following steps to allow attribute requests for transient users.
 
     !!!important
         Some portal components, such as Web Content Manager, might need attributes of the current user to work as designed. The **uid** attribute is typically one of the necessary attributes.
@@ -126,4 +127,4 @@ Follow the steps below to configure transient users.
     10. Save your changes.
     11. Click **Apply**.
     12. Click **Save** to save the changes to the master configuration.
-    13. Stop and restart the HCL Portal server.
+    13. Stop and restart the HCL DX server.
