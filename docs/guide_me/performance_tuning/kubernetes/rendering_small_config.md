@@ -174,7 +174,7 @@ For convenience, these values were added to the `small-config-values.yaml` file 
 
 ## Guidance for rendering with the upper limit in a single-node configuration
 
-This topic provides the details of the environments used for rendering with the upper limit in a single-node Kubernetes configuration. You can also find the test results and recommendations for single-node configurations on this page.
+This section provides the details of the environments used for rendering with the upper limit in a single-node Kubernetes configuration. You can also find the test results and recommendations for single-node configurations in this section.
 
 ### Methodology
 
