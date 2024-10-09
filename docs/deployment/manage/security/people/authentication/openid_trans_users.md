@@ -8,14 +8,14 @@ To configure transient users, refer to the following steps:
 
 1. **For Remote Dmgr only**: Copy this JAR file from the Portal server `<PortalServer_root>/base/wp.user.impl/lib/wp.user.connections.jar to the <AppServer_root>/lib` directory of the remote Dmgr.
 
-2. Run the following task from the [wp_profile_root](https://opensource.hcltechsw.com/digital-experience/CF217/guide_me/wpsdirstr/#wp_profile_root)\ConfigEngine directory with the appropriate parameters. Complete this step only on the **primary node**.
+2. Run the following task from the [wp_profile_root](../../../../../guide_me/wpsdirstr.md#wp_profile_root)\ConfigEngine directory with the appropriate parameters. Complete this step only on the primary node.
 
-    - **AIX®**: `./ConfigEngine.sh enable-transient-user -DWasUserId=username -DWasPassword=password`
-    - **HP-UX**: `./ConfigEngine.sh enable-transient-user -DWasUserId=username -DWasPassword=password`
-    - **IBM® i**: `ConfigEngine.sh enable-transient-user -DWasUserId=username -DWasPassword=password`
-    - **Linux™**: `./ConfigEngine.sh enable-transient-user -DWasUserId=username -DWasPassword=password`
-    - **Solaris**: `./ConfigEngine.sh enable-transient-user -DWasUserId=username -DWasPassword=password`
-    - **Windows™**: `ConfigEngine.bat enable-transient-user -DWasUserId=username -DWasPassword=password`
+    - AIX®: `./ConfigEngine.sh enable-transient-user -DWasUserId=username -DWasPassword=password`
+    - HP-UX: `./ConfigEngine.sh enable-transient-user -DWasUserId=username -DWasPassword=password`
+    - IBM® i: `ConfigEngine.sh enable-transient-user -DWasUserId=username -DWasPassword=password`
+    - Linux™: `./ConfigEngine.sh enable-transient-user -DWasUserId=username -DWasPassword=password`
+    - Solaris: `./ConfigEngine.sh enable-transient-user -DWasUserId=username -DWasPassword=password`
+    - Windows™: `ConfigEngine.bat enable-transient-user -DWasUserId=username -DWasPassword=password`
 
     Add the following parameters to customize the task for your business requirements.
 
@@ -23,7 +23,7 @@ To configure transient users, refer to the following steps:
 
         Set this value to a **dn** suffix that is used for transient users. The suffix must NOT match your current suffixes for fully registered users. The default value is `o=transparent`.
 
-        (Optional): Complete the following steps if you entered the wrong value in the **transparent.suffix** parameter.
+        (Optional): If you entered the wrong value in the **transparent.suffix** parameter, complete the following steps.
 
         1. Log on to WebSphere® Integrated Solutions Console as the administrator.
         2. Go to **Security > Global Security**.
@@ -41,7 +41,7 @@ To configure transient users, refer to the following steps:
 
         Set this value to a prefix that is used for transient users. For example, if you want to set the RDN attribute, set this value to `cn`.
 
-3. (Optional): Complete the following steps to create group objects for external providers to assign different access rights.
+3. (Optional): Create group objects for external providers to assign different access rights.
 
     !!!important
         After you run the `enable-transient-user` task, all identified users are identified with the all authenticated group and do not have explicit groups.
@@ -58,7 +58,7 @@ To configure transient users, refer to the following steps:
     8. Save your changes.
     9. Stop and restart the HCL DX server.
 
-4. (Optional): Complete the following steps to mark transient identity provider users as external.
+4. (Optional): Mark transient identity provider users as external.
 
     !!!information
          After you run the `enable-transient-user task`, the system builds internal groups for each identity provider. You can use these groups in the **Resource Permissions** portlet in the **Portal Administration** menu. Use the Resource Permissions portlet to build a set of pages and portlets that transient users can see and use.
@@ -72,7 +72,7 @@ To configure transient users, refer to the following steps:
     5. Save your changes.
     6. Stop and restart the HCL DX server.
 
-5. Complete the following steps to load user attributes during authentication.
+5. Load user attributes during authentication.
 
     !!!note
         Transient users do not have attributes that are stored locally so it is helpful to load attributes from the Identity Provider during authentication.
@@ -110,7 +110,7 @@ To configure transient users, refer to the following steps:
     6. Save your changes.
     7. Stop and restart the HCL DX server.
 
-6. (Optional): Complete the following steps to allow attribute requests for transient users.
+6. (Optional): Allow attribute requests for transient users.
 
     !!!important
         Some portal components, such as Web Content Manager, might need attributes of the current user to work as designed. The **uid** attribute is typically one of the necessary attributes.
