@@ -1,12 +1,12 @@
 # LiveSync
 
-This topic provides information about syncing WebDAV-based theme<!-- or WCM Design Library files--> from local-to-server and server-to-local in real time. LiveSync watches the file system for changes in the background and reflects them in the DX server.
+This topic provides information about syncing WebDAV-based theme or WCM Design Library files from local-to-server and server-to-local in real time. LiveSync watches the file system for changes in the background and reflects them in the DX server.
 
 It is recommended that you use the node version of the DXClient while working with LiveSync. LiveSync is supported in scaled DX environment setups.
 
 !!! note
     You can trigger all LiveSync commands from within the target local theme path.
-    <!--- Starting CF223, LiveSync Pull and Push commands for WCM Design Library are available for HTML and Folder Components.-->
+    Starting CF223, LiveSync Pull and Push commands for WCM Design Library are available for HTML and Folder Components.
 
 ## LiveSync Push Theme
 
@@ -220,7 +220,7 @@ $ pwd
 
 dxclient livesync pull-theme --themePath "/Users/path/to/theme" --themeName "Portal8.5SyncTest" ...
 ```
-<!--
+
 ## LiveSync Pull WCM Design Library
 
 The LiveSync Pull WCM Design Library command syncs a WCM Design Library in a DX Server with a local folder. Pulling the WCM Design Library is a prerequisite for the [Push WCM Design Library feature](#livesync-push-wcm-design-library).
@@ -421,8 +421,6 @@ The LiveSync Push WCM Design Library command synchronizes changes in your local 
     dxclient livesync push-wcm-design-library -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -wcmLibraryPath <wcmLibraryPath> -wcmLibraryName <wcmLibraryName>
     ```
 
--->
-
 ## Limitations and Troubleshooting
 
 ### General
@@ -437,10 +435,10 @@ The LiveSync Push WCM Design Library command synchronizes changes in your local 
 - While multiple developers can use LiveSync on the same server, LiveSync restricts concurrent theme editing to one developer at a time. If another user is currently working on the same theme being pushed, LiveSync will not allow that user's changes to be pushed. Concurrent usage of this command on the same theme or using it along with [Theme Editor](../../../../build_sites/themes_skins/customizing_theme/theme_editor_portlet.md), or WebDav, is not supported.
 - Sequential usage of LiveSync on a single theme with different client operating systems (i.e., Windows and Mac) is not supported.
 - Case sensitivity for naming files and folders is not supported.
-<!--
+
 ### WCM Design Library
 
 - Currently, only HTML and Folder components are the supported components of this feature.
 - Moving and renaming of files are equivalent to deleting the original components and creating an entirely new set of components.
 - If a published component has a draft version, the feature will pull and push into the draft version.
-- The LiveSync Push WCM Design Library feature only works on a WCM Design Library previously pulled by the LiveSync Pull WCM Design Library feature.-->
+- The LiveSync Push WCM Design Library feature only works on a WCM Design Library previously pulled by the LiveSync Pull WCM Design Library feature.
