@@ -284,7 +284,8 @@ This section provides details for the Kubernetes cluster, JMeter, and database.
 
 #### DX core tuning for concurrent user run
 
-For tuning details and enhancements done to DX core during testing, see [DX-Core-Tuning](./rendering_medium_config.md#dx-core-tuning-for-concurrent-user-run).
+For tuning details and enhancements done to DX core during testing, see [DX core tuning](./rendering_medium_config.md#dx-core-tuning-for-concurrent-user-run).
+
 ### Results
 
 The initial test runs were conducted on an AWS-distributed Kubernetes setup with a single node of instance types c5.2xlarge and c5.4xlarge. The system successfully handled concurrent user loads of 1,000, 2,000, 3,000, and 5,000 with a < 0.01% error rate. At 6,000 users, error rates increased dramatically and the response times went up as well. For a response time to be considered optimal, it should be under 1 second. 
@@ -314,7 +315,7 @@ The following table contains the number and limits for each pod. Using these val
 
 #### Recommendations
 
-- Currently, default CPU and memory values in the [Helm chart](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md/#containerization-requirements-and-limitations) are the minimum values for DX to work. For an upper limit on one instance in AWS, the Kubernetes cluster should begin with a single node with at least a c5.9xlarge instance type to support a load of 2,500 users for optimal response time.
+- Currently, default CPU and memory values in the [Helm chart](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md#containerization-requirements-and-limitations) are the minimum values for DX to work. For an upper limit on one instance in AWS, the Kubernetes cluster should begin with a single node with at least a c5.9xlarge instance type to support a load of 2,500 users for optimal response time.
 
 - For testing purposes, OpenLDAP pod values were used for holding more authenticated users for rendering. However, the OpenLDAP pod is not for production use.
 
@@ -343,4 +344,4 @@ There were a number of alterations done to the initial Helm chart configuration.
  
 ???+ info "Related information"
     - [DX Performance Tuning Guide](../traditional_deployments.md)
-    - [DX Helm Minimal Values](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md/#containerization-requirements-and-limitations)
+    - [DX Helm Minimal Values](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md#containerization-requirements-and-limitations)
