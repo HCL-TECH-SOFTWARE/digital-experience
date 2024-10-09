@@ -20,6 +20,7 @@ The following features and updates are available to customers installing HCL Dig
 - Updated DAM User Interface
 - New Search UI leveraging OpenSearch
 - People Service
+- New sizing guidance for rendering in the upper limit of a single-node configuration
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Notice of deprecation of customized OpenLDAP container in a later CF
 
