@@ -1,6 +1,6 @@
 # How to translate WCM library content using export and import WCM with DXClient
 
-The HCL Multilingual Solution \(MLS\) export and import capability allows you to support translation of the content of a library by exporting it into a format supported by a translation service and importing the translated content back into HCL Digital Experience using the DXClient tool.
+The HCL Multilingual Solution (MLS) export and import capability allows you to support translation of the content of a library by exporting it into a format supported by a translation service and importing the translated content back into HCL Digital Experience using the DXClient tool.
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ There are two separate command for handling bulk translations, `export` and `imp
 
 ## Export command
 
-The `**export**` command is used to export the content of a WCM library for translation into a CSV file at the location specified by the user.
+The `export` command is used to export the content of a WCM library for translation into a CSV file at the location specified by the user.
 
 **Export command**:
 
@@ -48,15 +48,15 @@ dxclient mls-export -h
 
 **Export command options**:
 
--   `-dxProtocol <value>` - use this attribute to specify the protocol to use to connect to the DX server.
--   `-hostname <value>` - use this attribute to specify the host name of the DX server.
--   `-dxPort <value>` - use this attribute to specify the port on which to connect to the DX server.
--   `-contenthandlerPath <value>` - use this attribute to specify the path to the contenthandler servlet on the DX server (for example, /wps/mycontenthandler).
--   `-dxUsername <value>` - use this attribute to specify the user name required for authenticating with the server.
--   `-dxPassword <value>` - use this attribute to specify the password required for authenticating with the server.
--   `-wcmLibraryId <value>` - the WCM library ID to export the contents of the library.
--   `-exportPath <value>` - the path to export the WCM contents of a library.
--   `-virtualPortalContext <value>` - the context of the virtual portal that contains the WCM Library you want to export.
+-   `-dxProtocol <value>` - Use this attribute to specify the protocol to use to connect to the DX server.
+-   `-hostname <value>` - Use this attribute to specify the host name of the DX server.
+-   `-dxPort <value>` - Use this attribute to specify the port on which to connect to the DX server.
+-   `-contenthandlerPath <value>` - Use this attribute to specify the path to the contenthandler servlet on the DX server (for example, /wps/mycontenthandler).
+-   `-dxUsername <value>` - Use this attribute to specify the user name required for authenticating with the server.
+-   `-dxPassword <value>` - Use this attribute to specify the password required for authenticating with the server.
+-   `-wcmLibraryId <value>` - The WCM library ID to export the contents of the library.
+-   `-exportPath <value>` - (Optional) The path to export the WCM contents of a library.
+-   `-virtualPortalContext <value>` - The context of the virtual portal that contains the WCM Library you want to export.
 
 **Usage sample**:
 
@@ -67,7 +67,7 @@ dxclient mls-export -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPor
 
 ## Import command
 
-The `**import**` command is used to import the translated content into DX and overwrites any existing translations in the content of the environment.
+The `import` command is used to import the translated content into DX and overwrites any existing translations in the content of the environment.
 
 **Import command**:
 
@@ -83,14 +83,14 @@ dxclient mls-import -h
 
 **Export command options**:
 
--   `-dxProtocol <value>` - use this attribute to specify the protocol to use to connect to the DX server.
--   `-hostname <value>` - use this attribute to specify the host name of the DX server.
--   `-dxPort <value>` - use this attribute to specify the port on which to connect to the DX server.
--   `-contenthandlerPath <value>` - use this attribute to specify the path to the contenthandler servlet on the DX server (for example, /wps/mycontenthandler).
--   `-dxUsername <value>` - use this attribute to specify the user name required for authenticating with the server.
--   `-dxPassword <value>` - use this attribute to specify the password required for authenticating with the server.
--   `-importPath <value>` - the path to import the translated contents into DX.
--   `-virtualPortalContext <value>` - the context of the virtual portal that contains the WCM Library you want to import.
+-   `-dxProtocol <value>` - Use this attribute to specify the protocol to use to connect to the DX server.
+-   `-hostname <value>` - Use this attribute to specify the host name of the DX server.
+-   `-dxPort <value>` - Use this attribute to specify the port on which to connect to the DX server.
+-   `-contenthandlerPath <value>` - Use this attribute to specify the path to the contenthandler servlet on the DX server (for example, /wps/mycontenthandler).
+-   `-dxUsername <value>` - Use this attribute to specify the user name required for authenticating with the server.
+-   `-dxPassword <value>` - Use this attribute to specify the password required for authenticating with the server.
+-   `-importPath <value>` - The path to import the translated contents into DX.
+-   `-virtualPortalContext <value>` - The context of the virtual portal that contains the WCM Library you want to import.
 
 **Usage sample**:
 

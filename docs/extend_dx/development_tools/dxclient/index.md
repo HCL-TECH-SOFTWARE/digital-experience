@@ -781,6 +781,18 @@ Use this command to [import WCM libraries](../dxclient/dxclient_artifact_types/w
 dxclient wcm-library-import
 ```
 
+Use this command to [export the content of a WCM library for translation into a CSV file](../dxclient/dxclient_artifact_types/wcm_mls_export_import.md):
+
+```bash
+dxclient mls-export
+```
+
+Use this command to [import the translated content into DX](../dxclient/dxclient_artifact_types/wcm_mls_export_import.md):
+
+```bash
+dxclient mls-import
+```
+
 Use the `dx-core-configuration-reports` command to get a summary of the configurations of a single DX server or both source and target DX servers, which users can use to compare.
 
 ```bash
