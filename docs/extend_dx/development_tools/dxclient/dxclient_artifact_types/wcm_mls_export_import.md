@@ -55,7 +55,7 @@ dxclient mls-export -h
 -   `-dxUsername <value>` - Use this attribute to specify the user name required for authenticating with the server.
 -   `-dxPassword <value>` - Use this attribute to specify the password required for authenticating with the server.
 -   `-wcmLibraryId <value>` - The WCM library ID to export the contents of the library.
--   `-exportPath <value>` - (Optional) The path to export the WCM contents of a library.
+-   `-exportPath <value>` - (Optional) The path to export the WCM contents of a library. If not specified, the CSV file is stored under the `store/outputFiles/mls-exim` directory.
 -   `-virtualPortalContext <value>` - The context of the virtual portal that contains the WCM Library you want to export.
 
 **Usage sample**:
