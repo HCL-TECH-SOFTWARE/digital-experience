@@ -4,13 +4,17 @@ In this topic, you will learn how to use the Personalization Editor to create a 
 
 In the Personalization Editor, follow these steps:
 
-1. Within the Pers Offers folder, click **New > Rule**.
+1. In the **Pers Offers** folder, click **New > Rule**.
 
 2. In the **New Rule** field, enter **Pers Offers User Profiler**.
 
-3. Select **Profiler** from the Rule Type dropdown list.
+3. Select **Profiler** from the **Rule Type** dropdown list.
 
-4. Click **Profile**, type **Gold** in the Profile field, and click **Submit**.
+4. Click **Profile**. 
+5. In the **Profile** field, enter **Gold** and click **Submit**.
+6. Click **attribute** and select **Per_Offers_User** from the dropdown list.
+7. From the expanded dropdown list, click **Customertype**.
+8. Click **value** and select **Gold** from the dropdown list.
 
 5. Click **attribute** and select **Per_Offers_User** in the drop down, then **Customertype** in the expanded drop down.
 
