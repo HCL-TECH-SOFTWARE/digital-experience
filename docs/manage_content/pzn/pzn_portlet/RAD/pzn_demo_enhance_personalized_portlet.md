@@ -9,4 +9,4 @@ You can make the Personalized portlet more interesting with the following enhanc
 - A more complex binding rule  
 - A dynamic HTML table to display any number of special offers  
 
-In the next topic, you will earn how to implement the first enhancement, [Inserting the dynamic table HTML/JSP code.](./pzn_demo_insert_dynamic_table_code.md)
+In the next topic, you will learn how to implement the first enhancement, [Inserting the dynamic table HTML/JSP code.](./pzn_demo_insert_dynamic_table_code.md)

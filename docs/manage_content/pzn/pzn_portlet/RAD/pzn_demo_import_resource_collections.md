@@ -7,9 +7,9 @@ Use the Personalization Navigator to create Workspace folders for the resource c
 Before you can use the content and user resources in the Personalization Navigator, you must place these class files into a directory accessible by that portlet.
 
 1. Open the Rational Application Developer Pers Offers project.
-2. Export the pers_offers folder under **Pers_Offers/Java Resources/JavaSource/src/pers_offers** as a JAR file and set the target location to **PortalServer_root/pzn/prereq.pzn/collections/pers_offers.jar**  
-3. Accept the defaults and click **Finish**  
-4. Restart the server to make sure that the pers_offers.jar file is loaded correctly.  
+2. Export the **pers_offers** folder under **Pers_Offers/Java Resources/JavaSource/src/pers_offers** as a JAR file and set the target location to **PortalServer_root/pzn/prereq.pzn/collections/pers_offers.jar**.  
+3. Accept the default settings and click **Finish**. 
+4. Restart the server to make sure that the **pers_offers.jar** file is loaded correctly.  
 
 ## Importing the resource collections into the portlet  
 
@@ -17,15 +17,15 @@ Ensure you have properly followed the steps in [Export the WAR file and install 
 
 1. Click the **Personalization** tab.
 
-2. In the Personalization Navigator portlet, click **New** > **Folder**
+2. In the Personalization Navigator portlet, click **New** > **Folder**.
 
 3. Enter the name **Pers Offers** and click **Create**.
 
-4. **Navigate** to the Pers Offers folder.
+4. Navigate to the **Pers Offers** folder.
 
 5. Click **Import**.
 
-6. Select the **Pzn_offers.hrf** file in your installed Pers_Offers directory under  
+6. Select the **Pzn_offers.hrf** file in your installed **Pers_Offers** directory under  
     `<wp_profile_root>\installedApps\<cell_name>\PA_Pers_Offers.ear\PersOffers.war\WEB-INF\pzn-resourceCollections\pers_offers.`
 
 7. Click **Import**.

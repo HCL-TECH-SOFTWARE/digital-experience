@@ -2,9 +2,9 @@
 
 In this topic, you will learn how to code the JSP portlet.  
 
-Use the Rational Application Developer Project Explorer to configure `pers_offers.Pzn_offersSpot.class` and `pers_offers.Per_Offers_UserSpot.class` to define the context parameters for offersSpot and userSpot. Then, code the `setRequest` calls to pass the user context to personalization.
+Use the Rational Application Developer Project Explorer to configure `pers_offers.Pzn_offersSpot.class` and `pers_offers.Per_Offers_UserSpot.class` to define the context parameters for `offersSpot` and `userSpot`. Then, code the `setRequest` calls to pass the user context to personalization.
 
-1. From the Rational Application Developer Project Explorer, open PersOffers/WebContent/pers_offers/jsp/html/Pers_OffersPortletView.jsp
+1. From the Rational Application Developer Project Explorer, open **PersOffers/WebContent/pers_offers/jsp/html/Pers_OffersPortletView.jsp**.
 
 2. Switch to source mode in the JSP file editor.
 
