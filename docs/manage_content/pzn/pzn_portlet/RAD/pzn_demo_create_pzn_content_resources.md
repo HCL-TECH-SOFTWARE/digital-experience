@@ -2,7 +2,7 @@
 
 In this topic, you will learn how to create the Personalization content resource classes and content spot using the IBM Rational Application Developer.
 
-1. In the Project Explorer tab of the Rational® Application Developer, right-click on the **Pers_Offers** project and choose **New > Other**.
+1. In the **Project Explorer** tab of the Rational® Application Developer, right-click on the **Pers_Offers** project and choose **New > Other**.
 
 2. From the **New** window, select **Portal > Personalization > Content or User Resource**.
 
@@ -22,7 +22,7 @@ In this topic, you will learn how to create the Personalization content resource
 
     1. From the **JDBC driver** drop-down list, select **Derby Embedded JDBC Driver**.
 
-    2. From the **Database location** field, click **Browse** and select ``<wp_profile_root>/PortalServer/derby/pzndemo_db/.``
+    2. From the **Database location** field, click **Browse** and select ``<wp_profile_root>/PortalServer/derby/pzndemo_db/.``.
 
     3. From the **Class location** field, click **Browse** and select ``<AppServer_root>/derby/lib/derby.jar``.
 
@@ -30,7 +30,7 @@ In this topic, you will learn how to create the Personalization content resource
 
 9. Click **Next**. This will open the Personalization Resource wizard.
 
-10. Under the Tables tab, expand the **PZNDEMO** dropdown list.
+10. Under the **Tables** tab, expand the **PZNDEMO** dropdown list.
 
 11. Select **PZN_OFFERS**, and click **>** to add the table to the list of selected tables.  
 
@@ -64,7 +64,7 @@ In this topic, you will learn how to create the Personalization content resource
 
 17. Click **Next**.
 
-18. Enter **pers_offers** as the package name.
+18. On the **Package:** field, enter **pers_offers**.
 
 19. Tick the following checkboxes:
     1. Generate a Content Spot for this resource
