@@ -4,4 +4,5 @@ nav:
     - helm_install_commands.md
     - helm_uninstall.md
     - aws_marketplace_helm_deployment.md
+    - t_customize_dx_url.md
     - ...
