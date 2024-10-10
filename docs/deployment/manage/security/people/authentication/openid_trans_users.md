@@ -41,7 +41,7 @@ To configure transient users, refer to the following steps:
 
         Set this value to a prefix that is used for transient users. For example, if you want to set the RDN attribute, set this value to `cn`.
 
-3. (Optional): Create group objects for external providers to assign different access rights.
+3. (Optional) Create group objects for external providers to assign different access rights.
 
     !!!important
         After you run the `enable-transient-user` task, all identified users are identified with the all authenticated group and do not have explicit groups.
