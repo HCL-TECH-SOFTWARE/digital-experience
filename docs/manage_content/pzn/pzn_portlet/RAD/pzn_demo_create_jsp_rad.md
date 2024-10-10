@@ -47,9 +47,10 @@ Before you begin, ensure you have properly installed the demo and databases and 
 
     ![Create Project Pers_Offers](.\images\create_project_Pers_Offers.png)
 
-    1. When the **Open Associated Perspective?** window appears, click **Open Perspective** to open the JSP-file in the Design mode.  
+    !!!note
+        When the **Open Associated Perspective?** window appears, click **Open Perspective** to open the JSP-file in the Design mode.  
 
-    2. When the **Rich Page Editor** window appears, click the **OK** button.  
+        When the **Rich Page Editor** window appears, click the **OK** button.  
 
 11. The JSP file opens automatically in Design mode. Edit the text of the portlet to display **Welcome to Personalized Offers!**.
 
