@@ -6,11 +6,11 @@ For each customer type specified by a profile, add to the business rule (the pro
 
 1. In the **Pers Offers** folder, select **New > Rule**.  
 
-2. Type **Show Platinum Offers** in the **New Rule** field.  
+2. In the **New Rule** field, enter **Show Platinum Offers**. 
 
 3. Choose **Select Action** from the **Rule Type** dropdown list.  
 
-4. Edit the rule so that its Customertype is Platinum, then click **Save**.  
+4. Edit the rule so that its **Customertype** is **Platinum**, then click **Save**.  
 
     ![Show Platinium Offers Rule](./images/show_platinium_offer_rule.png)  
 
@@ -21,13 +21,13 @@ For each customer type specified by a profile, add to the business rule (the pro
 
 7. In the same folder, select **New > Rule** .
 
-8. Enter **Show Offers by Customer Type** in the **New Rule** field.  
+8. In the **New Rule** field, enter **Show Offers by Customer Type**.
 
 9. Select **Binding** from the **Rule Type** drop-down list.  
 
 10. Click **Profiler > Select a Profiler...**.  
 
-11. In the Pers Offers folder, select **Pers Offers User Profiler** then click **OK**.  
+11. In the **Pers Offers** folder, select **Pers Offers User Profiler** then click **OK**.  
 
 12. Click **Profile** and select **Gold** from the drop-down list.  
 
