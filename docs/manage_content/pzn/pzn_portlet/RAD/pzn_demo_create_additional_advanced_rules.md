@@ -38,13 +38,7 @@ For each customer type specified by a profile, add to the business rule (the pro
     !!!note "Tip"
         To find **Show Gold Offers**, you may reorder the columns to make navigation easier or page through the list of rules.
 
-15. Click **Profile** and choose **Platinum**.  
-
-16. Click **do Action > Select Actions...**.  
-
-17. Select **Show Platinum Offers** and click **OK**
-
-Do the same steps for Titanium customers.  
+15. Repeat step 12-14 for **Platinum** and **Titanium** customers.  
 
 ## Result
 
