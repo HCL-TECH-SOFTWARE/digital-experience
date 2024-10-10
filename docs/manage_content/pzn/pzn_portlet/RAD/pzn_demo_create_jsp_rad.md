@@ -4,7 +4,6 @@ In this topic, you will learn how to create a basic JSR 268 portlet with a JSP f
 
 Before you begin, ensure you have properly installed the demo and databases and stopped the HCL Portal server so you can connect to the database.
 
-
 1. Launch Rational Application Developer.
 
 2. Click **File > New > Project...** and select **Portlet Project**.

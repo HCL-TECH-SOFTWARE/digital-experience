@@ -6,7 +6,7 @@ For each customer type specified by a profile, add to the business rule (the pro
 
 1. In the **Pers Offers** folder, select **New > Rule**.  
 
-2. In the **New Rule** field, enter **Show Platinum Offers**. 
+2. In the **New Rule** field, enter **Show Platinum Offers**.  
 
 3. Choose **Select Action** from the **Rule Type** dropdown list.  
 
