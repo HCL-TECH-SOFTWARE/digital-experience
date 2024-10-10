@@ -58,7 +58,7 @@ To configure transient users, refer to the following steps:
     8. Save your changes.
     9. Stop and restart the HCL DX server.
 
-4. (Optional): Mark transient identity provider users as external.
+4. (Optional) Mark transient identity provider users as external.
 
     !!!information
          After you run the `enable-transient-user task`, the system builds internal groups for each identity provider. You can use these groups in the **Resource Permissions** portlet in the **Portal Administration** menu. Use the Resource Permissions portlet to build a set of pages and portlets that transient users can see and use.
