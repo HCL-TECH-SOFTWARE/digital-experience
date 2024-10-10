@@ -29,3 +29,9 @@ Use the XML configuration interface (XML Access) for exchanging portal configura
     -   [Using the XML configuration interface to provide or withdraw a portlet](../../../../extend_dx/portlets_development/usage/wsrp/portal_wsrp_producer/providing_wsrp_services_as_producer/wsrpt_prod_prvd_by_xml.md)
     -   [Exporting customized WSRP portlet instances by using the XML configuration interface](../../../../extend_dx/portlets_development/usage/wsrp/portal_wsrp_producer/wsrpr_prod_xmlxp_custplt.md)
     -   [Securing the WSRP Producer by WS-Security](../../../../extend_dx/portlets_development/usage/wsrp/portal_wsrp_producer/securing_wsrp_prod_portal/cfg_security_producer_portal/wsrpt_prod_sec_ws_wss.md)
+
+## HCLSoftware U learning materials
+
+For an introduction and a demo on DX staging, go to [Staging for Beginners](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D505){target="_blank"}.
+
+To learn how to use staging tools such as DXClient, Syndication, XMLAccess, Release Builder / Solution Installer and ConfigEngine, go to [Staging for Intermediate Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3328){target="_blank"}. You can try it out using the [Staging Lab for Intermediate Users](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab.pdf){target="_blank"} and corresponding [Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab_Resources.zip){target="_blank"}.
