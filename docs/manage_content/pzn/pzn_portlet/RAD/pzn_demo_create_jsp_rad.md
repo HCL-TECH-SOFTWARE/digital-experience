@@ -4,8 +4,6 @@ In this topic, you will learn how to create a basic JSR 268 portlet with a JSP f
 
 Before you begin, ensure you have properly installed the demo and databases and stopped the HCL Portal server so you can connect to the database.
 
-- Ensure you have properly installed the demo and databases.
-- Ensure that the HCL Portal Server is stopped so that you can connect to the database.
 
 1. Launch Rational Application Developer.
 
@@ -17,9 +15,9 @@ Before you begin, ensure you have properly installed the demo and databases and 
 
 4. Fill out the New Portlet Project fields with the following information:
 
-    1. In the **Project Name** field, type Pers\_Offers.
+    1. In the **Project Name** field, enter **Pers\_Offers**.
 
-    2. Under **Project location**, select **Use default location**
+    2. Under **Project location**, select **Use default location**.
 
     3. Select **WebSphere Portal v9.5 stub** from the **Target Runtime** list.
 
@@ -37,7 +35,7 @@ Before you begin, ensure you have properly installed the demo and databases and 
 
 5. Click **Next**.
 
-6. In the **Portlet Settings** window let the defaults and click **Next**
+6. In the **Portlet Settings** window, accept the default settings and click **Next**
 
 7. Remove the option **Add action listener to portlet to handle action requests** and click **Finish**  
 
