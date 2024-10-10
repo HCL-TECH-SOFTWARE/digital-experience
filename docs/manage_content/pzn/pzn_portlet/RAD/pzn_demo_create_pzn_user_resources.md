@@ -16,7 +16,7 @@ In this topic, you will learn how to use the Project Explorer of IBM Rational Ap
 
     ![PZNUser data model](./images/pzn_user_data_model_selection.png)  
 
-7. Select **Use an existing connection** and click **pzndemo_db** from the list of existing connections.
+7. Select **Use an existing connection** and click **PZNDemo Database** from the list of existing connections.
 
     ![PZNUser database settings](./images/RAD_jdbc_settings.png)  
 
