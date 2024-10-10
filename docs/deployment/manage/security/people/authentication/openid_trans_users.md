@@ -110,7 +110,7 @@ To configure transient users, refer to the following steps:
     6. Save your changes.
     7. Stop and restart the HCL DX server.
 
-6. (Optional): Allow attribute requests for transient users.
+6. (Optional) Allow attribute requests for transient users.
 
     !!!important
         Some portal components, such as Web Content Manager, might need attributes of the current user to work as designed. The **uid** attribute is typically one of the necessary attributes.
