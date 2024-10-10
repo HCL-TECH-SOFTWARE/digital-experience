@@ -17,25 +17,27 @@ Before you begin this procedure, ensure you have created the simple content rule
 
 4. Select **Pzn_offers** from the **Output Type** drop-down list.
 
-5. Click the button in the **Default Mapping** section.
+5. In the **Default Mapping** section, click the magnifying glass icon.
 
-6. Expand the **Pers Offers** folder in the tree, select **Show Gold Offers**, and click **OK**.
+6. Expand the **Pers Offers** folder in the tree and select **Show Gold Offers**.  
 
     ![Pzn Offer Spot rule](./images/Pzn_offersSpot_rule.png)  
 
-7. Click **Save**.
+7. Click **OK**.
 
-8. Test the content spot with the Personalization Editor portlet by selecting it in the Personalization Navigator and clicking the **Preview** tab in the Personalization Editor.
+8. Click **Save**.
+
+9. Test the content spot with the Personalization Editor portlet by selecting it in the Personalization Navigator and clicking the **Preview** tab in the Personalization Editor.
 
     ![Pzn Offer Spot rule result](./images/pzn_offersSpot_rule_result.png)  
 
     !!!note
         If the previous values appear on the Preview tab, the rule and content spot work.
 
-9. View the page with your Pers_Offers portlet.
+10. View the page with your Pers_Offers portlet.
 
 ## Result  
 
 ![Pers Offers Portlet content spot test](./images/Pers_Offers_portlet_content_spot_test_result.png)
 
-You have successfully created a content spot. In the next topic, you will learn how to [Enhance the Personalized portlet.](./pzn_demo_enhance_personalized_portlet.md).
+You have successfully created a content spot. In the next topic, you will learn how to [Enhance the Personalized portlet.](./pzn_demo_enhance_personalized_portlet.md)
