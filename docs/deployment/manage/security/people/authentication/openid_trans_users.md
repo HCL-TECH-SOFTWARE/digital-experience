@@ -23,7 +23,7 @@ To configure transient users, refer to the following steps:
 
         Set this value to a **dn** suffix that is used for transient users. The suffix must NOT match your current suffixes for fully registered users. The default value is `o=transparent`.
 
-        (Optional): If you entered the wrong value in the **transparent.suffix** parameter, complete the following steps.
+        (Optional) If you entered the wrong value in the **transparent.suffix** parameter, complete the following steps.
 
         1. Log on to WebSphere® Integrated Solutions Console as the administrator.
         2. Go to **Security > Global Security**.
