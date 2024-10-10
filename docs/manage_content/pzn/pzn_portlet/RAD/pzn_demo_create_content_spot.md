@@ -21,9 +21,9 @@ Before you begin this procedure, ensure you have created the simple content rule
 
 6. Expand the **Pers Offers** folder in the tree and select **Show Gold Offers**.  
 
-    ![Pzn Offer Spot rule](./images/Pzn_offersSpot_rule.png)  
-
 7. Click **OK**.
+
+    ![Pzn Offer Spot rule](./images/Pzn_offersSpot_rule.png)  
 
 8. Click **Save**.
 
