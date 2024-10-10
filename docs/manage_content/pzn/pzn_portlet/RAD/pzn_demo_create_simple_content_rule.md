@@ -4,15 +4,15 @@ In this topic, you will learn how to use the Personalization Editor to create a 
 
 1. Select the **Pers Offers** folder, then click **New > Rule**.  
 
-2. Type **Show Gold Offers** in the New Rule field.  
+2. Enter **Show Gold Offers** in the **New Rule** field.  
 
 3. Click  **Select Action** from the **Rule Type** drop-down list.  
 
 4. Click **Web Content** and select **Pzn_offers** from the drop-down list.  
 
-5. Click **attribute** and select **Customertype** in the drop-down list.  
+5. Click **attribute** and select **Customertype** from the drop-down list.  
 
-6. Click **value** field and select **Gold** in the drop-down list.  
+6. Click **value** and select **Gold** from the drop-down list.  
 
 7. Click **Save**.  
 
@@ -20,7 +20,7 @@ In this topic, you will learn how to use the Personalization Editor to create a 
 
 ![Rule to show all gold customers](./images/rule_result_show_gold_offers.png)  
 
-Back in the list of rules, you can also click **Preview** button to determine if the rule works. For example:
+Back in the list of rules, you can also click **Preview** to determine if the rule works. For example:
 
 ![Show all gold customers - preview](./images/rule_result_show_gold_offers_preview.png)
 

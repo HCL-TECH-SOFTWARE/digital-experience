@@ -2,7 +2,7 @@
 
 In this topic, you will learn how to use the Project Explorer of IBM Rational Application Developer to create the user resource classes and content spot for the Personalization demo that creates the Personalized Offers portlet for different customer profiles.
 
-1. In the **Project Explorer** tab of the Rational® Application Developer, right-click the **Pers_Offers** project and choose **New > Other**.
+1. In the **Project Explorer** tab of the Rational® Application Developer, right-click on the **Pers_Offers** project and choose **New > Other**.
 
 2. From the **New** window, select **Portal > Personalization > Content or User Resource**.
 
@@ -22,7 +22,7 @@ In this topic, you will learn how to use the Project Explorer of IBM Rational Ap
 
 8. Click **Next**. This will open the Personalization Resource wizard.
 
-9. Under the Tables tab, expand the PZNDEMO dropdown list.
+9. Under the **Tables** tab, expand the **PZNDEMO** dropdown list.
 
 10. Select **PZN_USER** and click **>** to add the table to the list of selected tables.  
 
