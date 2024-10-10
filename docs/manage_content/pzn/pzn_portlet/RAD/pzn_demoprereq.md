@@ -9,4 +9,4 @@ This exercise is intended for users with significant HCL Digital Experience admi
 
 For additional information please check the available HCL Digital Experience advanced development course available at [HCL Software U](https://hclsoftwareu.hcltechsw.com/).  
 
-In the next topic, you will learn how to [Install the PZNDemo resources.] (./pzn_demoinstall.md)
+In the next topic, you will learn how to [Install the PZNDemo resources.](./pzn_demoinstall.md)

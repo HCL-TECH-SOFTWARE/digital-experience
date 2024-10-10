@@ -14,7 +14,7 @@ Use the Personalization Navigator to specify the Translator Class for the resour
 
 5. Select **Standard Resource Collection**.
 
-6. Set the Translator Class to **com.ibm.websphere.personalization.security.RegularExpressionSecurityTranslator**.  
+6. Set the **Translator Class** to **com.ibm.websphere.personalization.security.RegularExpressionSecurityTranslator**.  
 
 7. Click **Save**.
 
@@ -22,4 +22,4 @@ Use the Personalization Navigator to specify the Translator Class for the resour
 
 ![Regular Expresion Security Translater](./images/regular_expresion_security_translater.png)
 
-You have successfully modified a resource collection property. In the next topic, you will learn how to [Create the user profiler rule.](./pzn_demo_create_additional_advanced_rules.md)
+You have successfully modified a resource collection property. In the next topic, you will learn how to [Create the user profiler rule.](./pzn_demo_create_user_profiler_rule.md)
