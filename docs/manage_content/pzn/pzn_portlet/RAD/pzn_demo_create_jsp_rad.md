@@ -2,7 +2,7 @@
 
 In this topic, you will learn how to create a basic JSR 268 portlet with a JSP file for the Personalized Offers project, and add the welcome text to the portlet.
 
-Before you begin, complete the following prerequisites:
+Before you begin, ensure you have properly installed the demo and databases and stopped the HCL Portal server so you can connect to the database.
 
 - Ensure you have properly installed the demo and databases.
 - Ensure that the HCL Portal Server is stopped so that you can connect to the database.
