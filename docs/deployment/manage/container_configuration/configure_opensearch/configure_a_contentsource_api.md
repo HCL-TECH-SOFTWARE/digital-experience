@@ -226,7 +226,7 @@ Provide the following properties:
 
 The various target data sources in DX which must be provided in parameter `configuration.targetDataSource` all looks very similiar.
 
-https://*HOSTNAME-AND-PORT*/wps/seedlist/myserver?SeedlistId=&Source=*DX-INTERNAL-SOURCE-NAME*&Action=GetDocuments
+https://<hostname and port>/wps/seedlist/myserver?SeedlistId=&Source=<DX internal source name>&Action=GetDocuments
 
 In this URL, *HOSTNAME-AND-PORT* is the internal HCL DX Core hostname and is also used during the Helm install. For details on the *DX-INTERNAL-SOURCE-NAME*, see the HCL DX documentation.
 
