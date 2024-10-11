@@ -38,7 +38,7 @@ For each customer type specified by a profile, add to the business rule (the pro
     !!!note "Tip"
         To find **Show Gold Offers**, you may reorder the columns to make navigation easier or page through the list of rules.
 
-15. Repeat step 12-14 for **Platinum** and **Titanium** customers.  
+15. Repeat steps 12 to 14 for **Platinum** and **Titanium** customers.  
 
 ## Result
 
