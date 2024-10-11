@@ -7,8 +7,8 @@ Use the Personalization Navigator to create Workspace folders for the resource c
 Before you can use the content and user resources in the Personalization Navigator, you must place these class files into a directory accessible by that portlet.
 
 1. Open the Rational Application Developer Pers Offers project.
-2. Export the **pers_offers** folder under **Pers_Offers/Java Resources/JavaSource/src/pers_offers** as a JAR file and set the target location to **PortalServer_root/pzn/prereq.pzn/collections/pers_offers.jar**.  
-3. Accept the default settings and click **Finish**. 
+2. Export the **pers_offers** folder under **Pers_Offers/Java Resources/JavaSource/src/pers_offers** as a JAR file and set the target location to `<PortalServer_root>/pzn/prereq.pzn/collections/pers_offers.jar`.  
+3. Accept the default settings and click **Finish**.  
 4. Restart the server to make sure that the **pers_offers.jar** file is loaded correctly.  
 
 ## Importing the resource collections into the portlet  
