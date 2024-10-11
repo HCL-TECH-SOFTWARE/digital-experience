@@ -228,7 +228,13 @@ The various target data sources in DX which must be provided in parameter `confi
 
 https://<hostname and port>/wps/seedlist/myserver?SeedlistId=&Source=<DX internal source name>&Action=GetDocuments
 
-In this URL, <hostname and port> is the internal HCL DX Core hostname and is also used during the Helm install. For details on <DX internal source name>, see the HCL DX documentation.
+In this URL, <hostname and port> is the internal HCL DX Core hostname and is also used during the Helm install. Depending on the content source type <DX internal source name> should be replaced with the corresponding value from the following table.
+
+| Type | <DX internal source name> |
+| --- | --- |
+| wcm | com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory |
+| jcr | com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory |
+| portal | com.ibm.lotus.search.plugins.seedlist.retriever.portal.PortalRetrieverFactory |
 
 The response contains the created crawler object:
 
