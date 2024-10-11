@@ -8,28 +8,28 @@ Before you can perform administrative tasks, you need to authenticate as a searc
 
 1. To authenticate, send a `POST` request to the `/dx/api/search/v2/admin/authenticate` endpoint using the following payload:
 
-  **Payload:**
+    **Payload:**
 
-  ```json
-  {
-    "username": "searchadmin",
-    "password": "yourconfiguredpassword"
-  }
-  ```
+    ```json
+    {
+      "username": "searchadmin",
+      "password": "yourconfiguredpassword"
+    }
+    ```
 
-  **Response:**
+    **Response:**
 
-  ```json
-  {
-    "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9....."
-  }
-  ```
+    ```json
+    {
+      "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9....."
+    }
+    ```
 
 2. Add the returned JWT in all upcoming HTTP requests in the `Authorization` header using the `Bearer` prefix:
 
-  | Header | Value |
-  | --- | --- |
-  | `Authorization` | `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9....` |
+    | Header | Value |
+    | --- | --- |
+    | `Authorization` | `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9....` |
 
 ## Listing existing content source types
 
@@ -228,13 +228,13 @@ The various target data sources in DX which must be provided in parameter `confi
 
 `https://<hostname and port>/wps/seedlist/myserver?SeedlistId=&Source=<DX internal source name>&Action=GetDocuments`
 
-In this URL, <hostname and port> is the internal HCL DX Core hostname and is also used during the Helm install. Depending on the content source type <DX internal source name> should be replaced with the corresponding value from the following table.
+In this URL, `<hostname and port>` is the internal HCL DX Core hostname also used during the Helm install. Depending on the content source type, replace `<DX internal source name>` with the corresponding value from the following table.
 
-| Type | <DX internal source name> |
+| Type | DX internal source name |
 | --- | --- |
-| wcm | com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory |
-| jcr | com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory |
-| portal | com.ibm.lotus.search.plugins.seedlist.retriever.portal.PortalRetrieverFactory |
+| wcm | `com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory` |
+| jcr | `com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory` |
+| portal | `com.ibm.lotus.search.plugins.seedlist.retriever.portal.PortalRetrieverFactory` |
 
 The response contains the created crawler object:
 
@@ -264,7 +264,7 @@ The response contains the created crawler object:
 }
 ```
 
-The following returned properties are populated after the crawleer has run:
+The following returned properties are populated after the crawler has run:
 
 | Property | Description |
 | --- | --- |
