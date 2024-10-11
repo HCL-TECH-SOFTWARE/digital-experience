@@ -6,7 +6,7 @@ In this topic, you will learn how to use the Personalization Editor to create a 
 
 2. Enter **Show Gold Offers** in the **New Rule** field.  
 
-3. Click  **Select Action** from the **Rule Type** drop-down list.  
+3. Click  **Select Action** from the **Rule Type** dropdown list.  
 
 4. Click **Web Content** and select **Pzn_offers** from the drop-down list.  
 
