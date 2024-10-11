@@ -66,7 +66,7 @@ In this topic, you will learn how to create the Personalization content resource
 
 18. On the **Package:** field, enter **pers_offers**.
 
-19. Tick the following checkboxes:
+19. Select the following checkboxes:
     1. Generate a Content Spot for this resource
     2. Include schema names in the generated Resource Runtime Manager
 
