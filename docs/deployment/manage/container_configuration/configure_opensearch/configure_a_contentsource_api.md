@@ -1,6 +1,6 @@
 # Configuring a Content Source using REST API
 
-This topic explains the use of the Content Source REST API to create a Content Source. This can later be used to crawl it in your HCL DX instance and will contain the items that you can find by using search queries.
+This topic explains the use of the Content Source REST API to create a Content Source. This can later be used to crawl the content source in your HCL DX instance and will contain the items that you can find by using search queries.
 
 ## Authenticating as a search administrator
 
