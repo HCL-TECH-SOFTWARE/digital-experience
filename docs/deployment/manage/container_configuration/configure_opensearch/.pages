@@ -2,5 +2,5 @@ title: Configuring OpenSearch
 nav:
   - index.md
   - architectural_overview.md
-  - configure_a_wcm_contentsource_api.md
+  - configure_a_contentsource_api.md
   - run_search_queries_api.md
