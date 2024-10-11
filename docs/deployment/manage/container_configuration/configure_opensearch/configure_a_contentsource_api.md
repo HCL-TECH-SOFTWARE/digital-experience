@@ -224,7 +224,7 @@ Provide the following properties:
 | `configuration.maxCrawlTime` | yes | Time limit in seconds for the overall crawler execution. This is useful to prevent stuck crawlers. |
 | `configuration.maxRequestTime` | yes | Maximum request time per crawler request. This limits how long the crawler will wait for an answer from the seedlist provider. |
 
-The various target data sources in DX which must be provided in parameter `configuration.targetDataSource` look similar.
+The various target data sources in DX which must be provided in parameter `configuration.targetDataSource` look similar. See the following sample URL:
 
 https://<hostname and port>/wps/seedlist/myserver?SeedlistId=&Source=<DX internal source name>&Action=GetDocuments
 
