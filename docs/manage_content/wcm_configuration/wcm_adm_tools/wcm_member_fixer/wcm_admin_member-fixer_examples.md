@@ -10,6 +10,11 @@ Some frequently asked question about how to use the web content member fixer tas
 
     Use the -DpreserveDates=true option. See [How to use the member fixer task](wcm_admin_member-fixer.md) for details.
 
+    
+-   **How can last modified by value be updated?**
+
+    The "Last modified ... by" value is part of the history control for content items. Member fixer does not update this, by design.
+
 -   **How do I avoid session time-outs before the member fixer task is finished?**
 
     The session timeout needs to be increased for long running member fixer tasks. The default is 14,440 seconds which is 4 hours. For example, to set the session timeout to 10 hours add -DsessionTimeout=36000 to the task request. See [How to use the member fixer task](wcm_admin_member-fixer.md) for details.
