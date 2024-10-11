@@ -188,7 +188,7 @@ The response contains the `id` of the content source, which is required when you
 
 ## Configuring the crawler
 
-To configure a crawler, call the `/dx/api/search/v2/crawlers` endpoint with a `POST` request and a paylod similar as followed:
+To configure a crawler, call the `/dx/api/search/v2/crawlers` endpoint with a `POST` request and a payload similar to the following example:
 
 **Payload:**
 
