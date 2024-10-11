@@ -15,7 +15,6 @@ In the Personalization Editor, follow these steps:
 7. From the expanded dropdown list, click **Customertype**.
 8. Click **value** and select **Gold** from the dropdown list.
 
-5. Click **attribute** and select **Per_Offers_User** in the drop down, then **Customertype** in the expanded drop down.
 
 6. Click to **value** and select **Gold** in the drop down list.
 
