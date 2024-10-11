@@ -228,7 +228,7 @@ The various target data sources in DX which must be provided in parameter `confi
 
 https://*HOSTNAME-AND-PORT*/wps/seedlist/myserver?SeedlistId=&Source=*DX-INTERNAL-SOURCE-NAME*&Action=GetDocuments
 
-*HOSTNAME-AND-PORT* as already mentioned is the internal HCL DX Core hostname an is also used during the helm install. For details on the *DX-INTERNAL-SOURCE-NAME* see the HCL DX documentation.
+In this URL, *HOSTNAME-AND-PORT* is the internal HCL DX Core hostname and is also used during the Helm install. For details on the *DX-INTERNAL-SOURCE-NAME*, see the HCL DX documentation.
 
 The response contains the created crawler object:
 
