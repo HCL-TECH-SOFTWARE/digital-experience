@@ -16,7 +16,6 @@ In the Personalization Editor, follow these steps:
 8. Click **value** and select **Gold** from the dropdown list.
 
 
-6. Click to **value** and select **Gold** in the drop down list.
 
 7. Click **add Profile** to add another conditional expression to the profiler rule.
 
