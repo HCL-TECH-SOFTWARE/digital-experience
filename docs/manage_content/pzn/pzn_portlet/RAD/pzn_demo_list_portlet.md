@@ -17,7 +17,7 @@ To display Web Content rules, use a Portal Personalization Component in the HCL 
 
 ## Create the Personalized List Special Offers portlet  
 
-1. Copy the **pers_offers** folder from the directory `<wp_profile_root>/installedApps/Pers_Offers/Pers_Offers.war/WEB-INF/classes`  into directory `<wp_profile_root>/PortalServer/pzn/collections`. You might need to create this classes folder first.
+1. Copy the **pers_offers** folder from the directory `<wp_profile_root>/installedApps/<cellname>/PA_Pers_Offers.ear/PersOffers.war/WEB-INF/classes`  into directory `<wp_profile_root>/PortalServer/pzn/collections`. You might need to create this classes folder first.
 
 2. Restart HCL Portal.
 
