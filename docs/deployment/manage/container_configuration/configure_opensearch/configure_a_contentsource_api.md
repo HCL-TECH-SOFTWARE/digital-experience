@@ -35,7 +35,7 @@ Before you can perform administrative tasks, you need to authenticate as a searc
 
 To see which content source types are available and can be used, call the `/dx/api/search/v2/contentsourcetypes` endpoint with a `GET` request.
 
-The response of the API call looks similar to the following sample:
+The response of the API call is similar to the following example:
 
 **Response:**
 
