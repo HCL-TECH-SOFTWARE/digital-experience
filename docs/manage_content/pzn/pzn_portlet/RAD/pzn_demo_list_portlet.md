@@ -1,6 +1,6 @@
 # Using a Personalized List portlet
 
-In this topic, you will learn how to use a Personalized List portlet you built.
+In this topic, you will learn how to use a Personalized List portlet.
 
 The Personalized List portlet provides a ready-to-use portlet for displaying personalized content from rules, content spots, or resources. In many cases, it eliminates the need to code new portlets and JSP files yourself.
 
@@ -17,7 +17,7 @@ To display Web Content rules, use a Portal Personalization Component in the HCL 
 
 ## Create the Personalized List Special Offers portlet  
 
-1. Copy the pers_offers folder from the `/Pers_Offers.war/WEB-INF/classes` directory under your `Pers_Offers` portlet in the `installedApps` location into wp_profile_root/PortalServer/pzn/collections. You might need to create this classes folder first.
+1. Copy the **pers_offers** folder from the directory `<wp_profile_root>/installedApps/Pers_Offers/Pers_Offers.war/WEB-INF/classes`  into directory `<wp_profile_root>/PortalServer/pzn/collections`. You might need to create this classes folder first.
 
 2. Restart HCL Portal.
 
