@@ -10,7 +10,7 @@ Before you begin, ensure you have properly installed the demo and databases and 
 
 3. Click **Next**.
 
-   When the **Confirm Enablement** window appears, click **OK** to enable Portal Development.
+    If the **Confirm Enablement** window appears, click **OK** to enable Portal Development.
 
 4. Fill out the New Portlet Project fields with the following information:
 
