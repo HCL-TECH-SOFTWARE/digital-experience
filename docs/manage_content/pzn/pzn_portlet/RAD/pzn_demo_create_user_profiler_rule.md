@@ -10,7 +10,6 @@ In the Personalization Editor, follow these steps:
 
 3. Select **Profiler** from the **Rule Type** dropdown list.
 
-4. Click **Profile**. 
 5. In the **Profile** field, enter **Gold** and click **Submit**.
 6. Click **attribute** and select **Per_Offers_User** from the dropdown list.
 7. From the expanded dropdown list, click **Customertype**.
