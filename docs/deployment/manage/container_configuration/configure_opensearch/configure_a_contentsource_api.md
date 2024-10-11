@@ -104,7 +104,7 @@ If you have content sources configured, the response looks similar to the follow
 }
 ```
 
-To see configured content sources for a certain type (e.g. wcm), call the `/dx/api/search/v2/contentsources?type=wcm` endpoint with a `GET` request:
+To see configured content sources for a certain type (for example, `wcm`), call the `/dx/api/search/v2/contentsources?type=wcm` endpoint with a `GET` request:
 
 **Response:**
 
