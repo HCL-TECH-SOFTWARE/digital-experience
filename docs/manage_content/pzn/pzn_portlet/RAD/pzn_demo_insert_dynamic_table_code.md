@@ -10,49 +10,49 @@ Before you begin this procedure, ensure that you created a content spot.
 
 2. Insert the following code at the end of the JSP page:
 
-   ```jsp
-   <HR>  
-   Here are all your personalized offers:    
-   <br>    
-   <%    
-   try {    
-            pers_offers.Pzn_offers[] items = offersSpot.getRuleContent();    
-            pers_offers.Pzn_offers item = items[0]; // throws an exception if empty. %>    
-            <TABLE WIDTH="100%">    
-            <TBODY>    
-            <%    
-                for (int i = 0, c = 0; ; ) 
-                {    
-                    if (c == 0) { %>    
-                     <TR bgcolor="e7e7e7"><%        
+    ```jsp
+    <HR>  
+    Here are all your personalized offers:    
+    <br>    
+    <%    
+    try {    
+                pers_offers.Pzn_offers[] items = offersSpot.getRuleContent();    
+                pers_offers.Pzn_offers item = items[0]; // throws an exception if empty. %>    
+                <TABLE WIDTH="100%">    
+                <TBODY>    
+                <%    
+                    for (int i = 0, c = 0; ; ) 
+                    {    
+                        if (c == 0) { %>    
+                        <TR bgcolor="e7e7e7"><%        
+                        }    
+                        else { %>    
+                        <TR><%        
+                    } %>    
+                <TD>
+                <%= item.getTitle() %>: <%= item.getDetails() %>             
+                </TD>    
+                </TR>
+                <%    
+                c = c == 0 ? 1 : 0;
+                i++;    
+                try {    
+                        item = items[i];    
                     }    
-                    else { %>    
-                    <TR><%        
-                } %>    
-            <TD>
-            <%= item.getTitle() %>: <%= item.getDetails() %>             
-            </TD>    
-            </TR>
-            <%    
-            c = c == 0 ? 1 : 0;
-            i++;    
-            try {    
-                    item = items[i];    
-                }    
-                catch (java.lang.ArrayIndexOutOfBoundsException _e0) 
-                {    
-                     break;    
-                }  
-            } 
-            %>    
-            </TBODY>
-            </TABLE><%    
-        }    
-        catch (Throwable _e0) { _e0.printStackTrace();%>     
-        <FONT>There are no current articles to display. </FONT>  
-   <%    
-   }%>
-   ```
+                    catch (java.lang.ArrayIndexOutOfBoundsException _e0) 
+                    {    
+                        break;    
+                    }  
+                } 
+                %>    
+                </TBODY>
+                </TABLE><%    
+            }    
+            catch (Throwable _e0) { _e0.printStackTrace();%>     
+            <FONT>There are no current articles to display. </FONT>  
+    <%    
+    }%>
+    ```
 
 3. Save and close the file. Verify that no errors are handled apart from exception handling errors.
 
