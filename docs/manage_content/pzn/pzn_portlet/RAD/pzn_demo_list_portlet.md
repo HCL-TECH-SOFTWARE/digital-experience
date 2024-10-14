@@ -19,6 +19,9 @@ To display Web Content rules, use a Portal Personalization Component in the HCL 
 
 1. Copy the **pers_offers** folder from the directory `<wp_profile_root>/installedApps/<cellname>/PA_Pers_Offers.ear/PersOffers.war/WEB-INF/classes`  into directory `<wp_profile_root>/PortalServer/pzn/collections`. You might need to create this classes folder first.
 
+    !!!note
+        If the PersOffers Portlet is not installed yet, you can download it on the [Developing a personalized portlet using IBM Rational Application Developer](./index.md) page and follow the [Install the portlet on a portal page](./pzn_demo_export_war_install_portlet.md) instructions to install it.
+
 2. Restart HCL Portal.
 
 3. Log in to HCL Portal as the Portal administrator (wpsadmin).  
