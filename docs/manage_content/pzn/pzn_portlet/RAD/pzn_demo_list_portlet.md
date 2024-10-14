@@ -6,7 +6,7 @@ The Personalized List portlet provides a ready-to-use portlet for displaying per
 
 This portlet is used to display personalized lists of documents, and can also be used with some generated or custom resource collections.
 
-You can use this portlet instead of coding the Rational Application Developer portlet. The Personalized List portlet is not intended to be used with the Web Content resource collection, or with rules that involve the Web Content resource collection.  
+You can use this portlet instead of coding your own personalized portlet in any Integrated Development Environment (IDE) like Rational Application Developer or Microsoft Visual Studio Code. The Personalized List portlet is not intended to be used with the Web Content resource collection, or with rules that involve the Web Content resource collection.  
 
 To display Web Content rules, use a Portal Personalization Component in the HCL Web Content Manager.  
 
@@ -27,44 +27,99 @@ To display Web Content rules, use a Portal Personalization Component in the HCL 
 
 5. Click **Portlet Management > Portlets**.
 
-6. Search for the Personalized List portlet.
+6. Search for the **Personalized List** portlet.  
 
-7. Make a copy of the Personalized List portlet and name it **Personalized List Special Offers**.
+7. Make a copy of the Personalized List portlet by doing a click to the **copy portlet** icon in the portlet list
 
-8. Set **access control** for the new portlet so **All Authenticated Portal Users** are **Privileged Users**.
+    ![Click copy portlet icon](./images/pzn_offers_copy_personalized_list_portlet.png)
 
-9. Add the Personalized List Special Offers portlet to a new page under Personalization called **Pers List Portlet - Rules**.
+8. Name the new portlet **Personalized List Special Offers**.
+
+    ![Copy Personalized List Portlet](./images/pzn_offers_copy_personalized_list_portlet2.png)
+
+    Click **OK** to copy the portlet.
+
+9. Search for the new portlet **Personalized List Special Offers** in the list and click to the key icon of it to modify the permissions.
+
+10. Set **access control** for the new portlet so **All Authenticated Portal Users** are **Privileged Users**.
+
+11. On the Portal Administration page go to **Site Management > Pages (Manage Pages)** and then in the page navigation go to **Content Root > Practitioner Studio > Personalization**.  
+
+12. Create a new page called **Pers List Portlet - Rules** and configure the permissions of the page to give access to **All authenticated users**.
+
+13. Add the **Personalized List Special Offers portlet** to the new page by clicking to the **Edit Page Layout** button of the portlet on the **Manage Pages** list.
+
+    ![Add the Personalization List Portlet to a page](./images/pers_offers_add_persListPortlet_to_page.png)
+
+14. Then click to the **Add Portlet** button select the portlet **Personalized List Special Offers** and click **OK** to save the changes.  
+
+    **Result**  
+
+    ![Personalization List Portlet located on page](./images/personalizedListPortlet_on_page.png)  
 
 ## Display the new page with the new portlet
 
-1. Click the **portlet menu** on the Personalized List Special Offers portlet and select **Configure** from the drop-down list.
+1. Click the **portlet menu** on the **Personalized List Special Offers portlet** and select **Configure** from the drop-down list.
+
+    ![Configuration Menu](./images/personalizedListPortlet_on_page_configure_menu.png)  
 
 2. Click the **menu icon** under **Which Personalization resources are retrieved** and choose **Select a Rule, Content Spot or Resource Collection**.  
 
-3. In the **Pers Offers** folder, select **Pzn_offers**, then click **OK**.  
+3. In the **PznDemo** folder, select **Offers**, then click **OK**.  
 
-4. Click **OK** again to see the portlet.  
+    ![Personalization Picker - Offers](./images/personalizedListPortlet_pers_picker_Offers.png)
 
-5. Click one of the title links to see the details of that resource.
+4. Click **Display Options** and set the following values.
 
-6. Click **Back**.
+    ![Display Options](./images/personalizedListPortlet_config_PZN_Offers_display_options.png)
+
+5. Click **OK** to save the changes.  
+
+6. In the Portal Menu click to **Personalization**.  
+
+7. Then on the left side in the side-bar menu, click to **Pers List Portlet - Rules** to review the page with it's portlet.  
+
+    **Sample Result - Showing the list of rules**  
+
+    ![Sample Result](./images/personalizedListPortlet_config_display_options_default_result.png)
+
+8. Click one of the title links to see the details of that resource.  
+
+    **Sample Result - Showing the car loans details**  
+
+    ![Sample Result Details](./images/personalizedListPortlet_default_options_result_details.png)
+
+9. Click **Back**.
 
 ## Configure the portlet to show more personalized offers  
 
-1. From the Personalization Picker, select the content spot **Pzn_offersSpot** under the **Workspace Root** and click **OK**.
+1. In the Portal menu go to **Administration > Site Management (Manage Pages)** and then in the page navigation go to **Content Root > Practitioner Studio > Personalization**.  
+
+2. On the **Pers List Portlet - Rules** table row click to the **Edit Page Layout** button to review the portlet setting on the page, again.
+
+3. Click to the **Portlet Menu** icon right to the portlet title and select **Configure**.
+
+4. From the Personalization Picker **(Which Personalization resources are retrieved)**, select the content spot **OffersSpot** under the **PZNDemo** folder and click **OK**.
 
     ![PersListPortlet set Pzn_offersSpot](./images/personalizedListPortlet_config_PZN_Offers_content_spot.png)
 
-2. Click **Display Options** and set the following values.  
+5. Click **Display Options** and set the following values.  
 
     ![PersListPortlet set Pzn_offersSpot Display Options](./images/personalizedListPortlet_config_PZN_Offers_display_options.png)
 
-3. Click **OK** to complete the configuration.  
+6. Click **OK** to complete the configuration.  
 
     When logged in as wpsadmin, you will see that the Personalized List Special Offers portlet is empty because the administrator did not enter customer details in the pzndemo database for the user resource that is being used.
 
-4. Log in as **Scott** and view the Personalized List Special Offers portlet. The portlet displays the personalized offers that are based on the rule, **Show Offers By Customer Type**, which is mapped to the content spot **Pzn_offers Spot**.
+7. Log in as **Scott** and view the Personalized List Special Offers portlet. The portlet displays the personalized offers that are based on the rule, **Show Offers By Customer Type**, which is mapped to the content spot **Pzn_offers Spot**.
 
-5. Test this portlet by logging in as each pzndemo user having a different profile. You must get the same content results that you saw previously by using your own custom-built portlet (Pers_Offers), except you do not have to code a portlet or a JSP file.  
+    **Sample result - Logged in as user Scott**  
+
+    ![Offers Spot list](./images/personalizedListPortlet_specific_content_spot_result.png)  
+
+    !!!note
+        If the result is not showing the expected values, please check the content spot, it's rule and the default mappings, again.
+
+8. Test this portlet by logging in as each pzndemo user having a different profile. You must get the same content results that you saw previously by using your own custom-built portlet (Pers_Offers), except you do not have to code a portlet or a JSP file.  
 
 You have successfully used the Personalized List portlet. In the next topic, you will learn how to [Uninstall the Personalization sample and database.](./pzn_demouninstall.md)
