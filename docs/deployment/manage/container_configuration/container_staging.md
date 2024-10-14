@@ -286,6 +286,12 @@ Also, a few features are enabled out-of-the-box on containers that are not enabl
 Additionally on containers we have disabled anonymous sign up via access control - it can be re-enabled via the config task or changing access control: [Registration/Edit My Profile and Login portlets](../../../deployment/manage/security/people/authorization/users_and_groups/sec_subman)
 If you are unsure what was performed on your non-container environment, check the `ConfigTrace.log` file.
 
+## HCLSoftware U learning materials
+
+For an introduction and a demo on DX staging, go to [Staging for Beginners](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D505){target="_blank"}.
+
+To learn how to use staging tools such as DXClient, Syndication, XMLAccess, ReleaseBuilder/Solution Installer, and ConfigEngine, go to [Staging for Intermediate Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3328){target="_blank"}. You can try it out using the [Staging Lab for Intermediate Users](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab.pdf){target="_blank"} and corresponding [Staging Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab_Resources.zip){target="_blank"}.
+
 ???+ info "Related information"
     -   [Database Management Systems](../../../deployment/manage/db_mgmt_sys/index.md)
     -   [HCL Digital Experience 9.5 Roadmap: Container deployment](../../../get_started/plan_deployment/container_deployment/rm_container/rm_container_deployment.md)
