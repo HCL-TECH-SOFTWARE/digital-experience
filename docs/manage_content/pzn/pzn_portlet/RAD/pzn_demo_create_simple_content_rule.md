@@ -12,7 +12,7 @@ In this topic, you will learn how to use the Personalization Editor to create a 
 
 5. Click **attribute** and select **Customertype** from the dropdown list.  
 
-6. Click **value** and select **Gold** from the drop-down list.  
+6. Click **value** and select **Gold** from the dropdown list.  
 
 7. Click **Save**.  
 
