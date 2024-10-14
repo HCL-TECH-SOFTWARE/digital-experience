@@ -34,7 +34,7 @@ Export the project to a WAR file called **PersOffers.war**.
 
 9. Create a new page called **Pers Offers**:  
 
-    a. In the Portal Menu click to **Administration**.
+    a. In the Portal Menu click to **Administration**.  
     b  In the left side bar expend **Site Manager** and click to  **Pages**.  
     c. Click to **Content Root > Practitioner Studio > Personalization**.  
     d. Click to **New Page**.  
