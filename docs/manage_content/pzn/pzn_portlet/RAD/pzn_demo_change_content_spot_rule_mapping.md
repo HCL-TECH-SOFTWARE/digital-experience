@@ -29,4 +29,4 @@ Before you begin this procedure, ensure you have properly created additional adv
 !!!note
     If you run the portlet as wpsadmin, it fails because wpsadmin does not exist in the user resource database.
 
-You have successfully changed the content spot mapping rule and finished building a Personalized portlet. In the next topic, you will learn how to [Use the Personalized List portlet.](./pzn_demo_list_portlet.md) instead of coding the Rational Application Developer portlet.
+You have successfully changed the content spot mapping rule and finished building a Personalized portlet. In the next topic, you will learn how to [Use the Personalized List portlet](./pzn_demo_list_portlet.md) instead of coding the Rational Application Developer portlet.

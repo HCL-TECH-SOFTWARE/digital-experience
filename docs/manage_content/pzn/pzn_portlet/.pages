@@ -3,3 +3,4 @@ nav:
     - index.md
     - Testing the PZNDemo: demo
     - Using IBM Rational Application Developer: RAD
+    - Using a Personalized List portlet: personalized_list_portlet.md

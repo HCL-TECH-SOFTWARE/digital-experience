@@ -22,22 +22,23 @@ Export the project to a WAR file called **PersOffers.war**.
 
 3. Click the **Administration menu** icon.
 
-4. Click **Portlet Management > Web Modules**.
+4. Click **Applications > Web Modules**.
 
 5. Click **Install**.  
 
 6. Complete the installation of PersOffers.war. Verify that installation was successful.  
 
-7. Click **Portlet Management > Portlets**.  
+7. Click **Applications > Portlets**.  
 
 8. Search for the Pers_Offers portlet and grant **Privileged User** to **All Authenticated Portal Users**.  
 
 9. Create a new page called **Pers Offers**:  
 
-    a. Select **Portal User Interface > Manage Pages**.  
-    b. Select **Content Root > Personalization**.  
-    c. Select **New Page**.  
-    d. Name the page **Pers Offer**.  
+    a. In the Portal Menu click to **Administration**.
+    b  In the left side bar expend **Site Manager** and click to  **Pages**.  
+    c. Click to **Content Root > Practitioner Studio > Personalization**.  
+    d. Click to **New Page**.  
+    e. Name the page **Pers Offer**.  
 
 10. Add the **Pers_Offers** portlet to the page.  
 

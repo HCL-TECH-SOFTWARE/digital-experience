@@ -62,7 +62,7 @@ Before you begin this procedure, ensure that you created a content spot.
 
 6. Click the **Administration menu** icon.
 
-7. Click **Portlet Management > Web Modules**.
+7. Click **Applications > Web Modules**.
 
 8. Click **Update** to update the web module.
 
