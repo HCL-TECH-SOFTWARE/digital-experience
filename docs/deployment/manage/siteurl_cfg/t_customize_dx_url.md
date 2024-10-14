@@ -1,20 +1,20 @@
 # Customizing the HCL Digital Experience (DX) URL when deployed to container platforms
 
-This page describes the procedures to define custom context root URLs or no context root URL definitions when deploying your HCL DX 9.5 software to the supported container platforms.
+This page describes the procedures to define custom context root URLs or no context root URLs when deploying your HCL DX 9.5 software to the supported container platforms.
 
-## Customize the context root in your DX container deployment
+## Prerequisites and Notes
 
-1. The following property values are the default configuration for the context root changes.
+- The following configuration procedure is supported for DX container deployments to Kubernetes and OpenShift platforms. To change the HCL DX URL hybrid container deployment and on-premise deployment, refer to the following topic: Customizing the HCL DX URL for hybrid deployment.
+- The dxctl tool is used for this configuration process. Before running the dxctl tool, the administrator must log on to the targeted DX cluster using the cloud-specific CLI login commands for the supported Kubernetes and OpenShift platforms such as Microsoft Azure Kubernetes Services (AKS), Google Kubernetes Engine (GKE), Amazon Elastic Kubernetes Service (EKS), or Red Hat OpenShift. For example, to log in to your DX container cluster on the Red Hat OpenShift platform, use the oc login command.
+- Ensure that you have updated the DxDeployment custom resource definition to the HCL DX 9.5 Container Update CF192 and later releases. For more information, see Customizing the container deployment.
+- For more information on the custom URI management for HCL Digital Experience, refer to the following topic: [Changing the portal URI after an installation | HCL Digital Experience](../../manage/siteurl_cfg/changing_portal_uri_after_install/index.md).
+- If you have already defined a custom Digital Experience URL in your existing container deployment, you need to configure the following properties with the existing values. Otherwise, the properties are updated with the default values.
 
-    ```
-    ## Path
+## Customizing the context root in your DX container deployment
 
-            dx.path.contextroot: wps
-            dx.path.home: portal
-            dx.path.personalized: myportal
-    ```
+Follow these steps to change the default values of your custom requirements, apply custom URIs during a new container deployment, and change custom URIs for previous deployments.
 
-    To change the default values to your custom requirements, update the following properties. For example:
+1. To change the default values to your custom requirements, update the following properties. For example:
 
     ```
     ## Path
@@ -22,6 +22,12 @@ This page describes the procedures to define custom context root URLs or no cont
               dx.path.home: dx
               dx.path.personalized: mydx
     ```
+
+    The default configuration for the context root changes are as follows:
+
+    - `dx.path.contextroot`: wps
+    - `dx.path.home`: portal
+    - `dx.path.personalized`: myportal
 
     !!!important
         Do not use the same value for the `dx.path.home` and `dx.path.personalized` properties.
@@ -38,7 +44,7 @@ This page describes the procedures to define custom context root URLs or no cont
     $ dxctl --deploy -p properties/full-deployment.properties
     ```
 
-## Additional considerations when customizing the context root
+### Additional considerations when customizing the context root
 
 Review the following manual, required, and optional steps to complete the context root customization updates. Perform the steps that are related to your DX deployment details. Some optional steps may not apply to your deployment.
 
@@ -75,7 +81,9 @@ Review the following manual, required, and optional steps to complete the contex
     6. Open the **Subscribers** page.
     7. Click the edit icon next to the subscriber that you want to edit and update the URL with the new context root information.
 
-## Configure no context root in your DX container deployment
+## Configuring no context root in your DX container deployment
+
+Follow these steps to configure no context root, apply custom URIs during a new container deployment, and change custom URIs for previous deployments.
 
 1. To configure no context root, update the following property values. For example:
 
@@ -91,7 +99,7 @@ Review the following manual, required, and optional steps to complete the contex
     ```
 
     !!!note
-        If the context root is removed, the home path must be removed as well. It may take more time than usual for the **DX-Core** pod to get to a running state during the update process.
+        If the context root is removed, you must remove the home path as well. It may take more time than usual for the **DX-Core** pod to get to a running state during the update process.
 
     Before login (no context root):
 
@@ -114,7 +122,7 @@ Review the following manual, required, and optional steps to complete the contex
     $ dxctl --deploy -p properties/full-deployment.properties
     ```
 
-3. To change the custom URI of a previous HCL DX 9.5 container deployment, update the property values as specified in step 1, and run the following command:
+3. To change the custom URI of a previous HCL DX 9.5 container deployment, update the property values as specified in Step 1, and run the following command:
 
      ```
     $ dxctl --deploy -p properties/full-deployment.properties
