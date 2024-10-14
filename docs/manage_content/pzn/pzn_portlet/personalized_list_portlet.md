@@ -130,6 +130,6 @@ To display Web Content rules, use a Portal Personalization Component in the HCL 
     !!!note
         If the result is not showing the expected values, please check the content spot, it's rule and the default mappings, again.
 
-8. Test this portlet by logging in as each pzndemo user having a different profile. You must get the same content results that you saw previously by using your own custom-built portlet (Pers_Offers), except you do not have to code a portlet or a JSP file.  
+8. Test this portlet by logging in as each pzndemo user having a different profile. You must get the same content results that you see when building your own custom-built portlet (Pers_Offers) using the steps mentioned in [Rational Application Developer](./RAD/index.md), except you do not have to code a portlet or a JSP file.  
 
 You have successfully used the Personalized List portlet. In the next topic, you will learn how to [Uninstall the Personalization sample and database.](./RAD/pzn_demouninstall.md)
