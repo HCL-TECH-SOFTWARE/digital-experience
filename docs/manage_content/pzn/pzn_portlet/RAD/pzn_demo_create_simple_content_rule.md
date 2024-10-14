@@ -8,11 +8,11 @@ In this topic, you will learn how to use the Personalization Editor to create a 
 
 3. Click  **Select Action** from the **Rule Type** dropdown list.  
 
-4. Click **Web Content** and select **Pzn_offers** from the drop-down list.  
+4. Click **Web Content** and select **Pzn_offers** from the dropdown list.  
 
-5. Click **attribute** and select **Customertype** from the drop-down list.  
+5. Click **attribute** and select **Customertype** from the dropdown list.  
 
-6. Click **value** and select **Gold** from the drop-down list.  
+6. Click **value** and select **Gold** from the dropdown list.  
 
 7. Click **Save**.  
 
