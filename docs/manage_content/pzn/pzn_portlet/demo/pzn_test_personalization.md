@@ -19,18 +19,18 @@ By default, when the Personalization demo (PZNDemo) is installed, the following 
         If no personalized data are displayed on the pages, click **Initialize Database** to start the database.  
         After starting the database, log out and log in to your Portal and check the pzndemo pages. You do not have to click **Initialize Database** again.  
 
-   The following images are sample pages of the Personalization demo for each user.  
+    The following images are sample pages of the Personalization demo for each user.  
   
-   **YourCo Main Page** sample for user **scott**:  
+    **YourCo Main Page** sample for user **scott**:  
 
-   ![main page sample](./images/scott_YourCo_mainpage_sample.png)
+    ![main page sample](./images/scott_YourCo_mainpage_sample.png)
 
-   **YourCo Products** sample for user **marge**:  
+    **YourCo Products** sample for user **marge**:  
 
-   ![products sample](./images/marge_YourCo_Products_sample.png)
+    ![products sample](./images/marge_YourCo_Products_sample.png)
 
-   **YourCo Services** sample for user **andy**:  
+    **YourCo Services** sample for user **andy**:  
 
-   ![services sample](./images/andy_YourCo_services_sample.png)
+    ![services sample](./images/andy_YourCo_services_sample.png)
 
 4. Log out of HCL DX.
