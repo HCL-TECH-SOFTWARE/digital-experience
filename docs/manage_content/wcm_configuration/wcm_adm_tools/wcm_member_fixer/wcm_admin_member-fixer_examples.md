@@ -13,7 +13,7 @@ Some frequently asked question about how to use the web content member fixer tas
     
 -   **How can the Last modified by value be updated?**
 
-    The "Last modified ... by" value is part of the history control for content items. Member fixer does not update this, by design.
+    The **Last modified** values are part of history control for content items. By design, member fixer does not update these values.
 
 -   **How do I avoid session time-outs before the member fixer task is finished?**
 
