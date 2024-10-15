@@ -2,6 +2,7 @@ title: Configure entitlement checks
 nav:
     - index.md
     -   configuring_local_flexnet_entitlement_server.md
+    -   configuring_mhs_api_file_based_export.md
     -   entitlement_checks_scenarios.md
     -   export_usage_report.md
     -   user_session_reporting_tool.md

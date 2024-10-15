@@ -44,11 +44,15 @@ User session consumption can be viewed by using usage reports in the HCL Softwar
 
 Refer to the guidance in the following HCL Support knowledge article: [What is the HCL Software License and Download Portal?](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344#a8).
 
+**Access Flexnet entitlement dashboard** 
 Run the “Reports for Metered products” section to understand how to access your FlexNet entitlement dashboard. Users with authorized access to this service can run usage reports. The Digital Experience Cloud Native 9.5 entitlements are configured to report user-session consumption for deployments configured for production use.
+
+**Access My HCL Software entitlement dashboard** 
+
 
 ## How user sessions in production deployments are calculated for report totals 
 
-HCL Digital Experience Cloud Native 9.5 applies the following approach when it reports totals for user session consumption in deployments configured for production to individual customer FlexNet dashboards: 
+HCL Digital Experience Cloud Native 9.5 applies the following approach when it reports totals for user session consumption in deployments configured for production to individual customer FlexNet dashboards or MHS dashboards: 
 
 When a user interacts with an HCL DX Cloud Native 9.5 production deployment site, the License Manager pod, in conjunction with the HAProxy Pod coordinates a combination of IP address and user agent to identify a unique user session. For every request, a key is computed based on the requesting IP of the user, combined with the user agent and a forwarding header (`X-Forwarded-For`) for proxy (if a customer uses a proxy in their deployment setup) usage. Subsequent interactions during the same user session period use that key to identify the same user. 
 
@@ -58,15 +62,17 @@ Some customers might choose to use a proxy, for example, a load balancer, DMZ en
 
 The License Manager pod manages entitlement checking and user-session consumption reporting for production deployments. 
 
-The License Manager transmits the total number of completed user sessions to the customer [HCL Software License Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344#a8) instance (FlexNet) dashboard. The user session keys are not transmitted, nor is any other information about users or sessions.
+The License Manager transmits the total number of completed user sessions to the customer [HCL Software License Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344#a8) instance (FlexNet/My HCL Software) dashboard. The user session keys are not transmitted, nor is any other information about users or sessions.
 
-The License Manager uses a FlexNet API to transmit the data total amount and each API request contains in its entirety the following data, and nothing more:
+The License Manager uses a FlexNet/MHS API to transmit the data total amount and each API request contains in its entirety the following data, and nothing more:
 
 -   Timestamp of data transmission (implicit in the call, not explicitly provided)
 
 -   FlexNet account identification information
 
 -   Total number of completed user sessions calculated by the License Manager since the last transmission
+
+For more details regarding MHS API refer [Configuring My HCL Software API and File based export](./configuring_mhs_api_file_based_export.md)
 
 Access the Reports section of the HCL Software License and Download Portal (FlexNet) server.
 
