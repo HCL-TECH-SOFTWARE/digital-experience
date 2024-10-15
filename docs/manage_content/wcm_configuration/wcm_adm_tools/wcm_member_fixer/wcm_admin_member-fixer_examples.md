@@ -11,7 +11,7 @@ Some frequently asked question about how to use the web content member fixer tas
     Use the -DpreserveDates=true option. See [How to use the member fixer task](wcm_admin_member-fixer.md) for details.
 
     
--   **How can last modified by value be updated?**
+-   **How can the Last modified by value be updated?**
 
     The "Last modified ... by" value is part of the history control for content items. Member fixer does not update this, by design.
 
