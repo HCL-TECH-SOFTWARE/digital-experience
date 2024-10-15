@@ -1,4 +1,4 @@
-# How to translate WCM library content using export and import WCM with DXClient
+# Translating WCM library content using DXClient export and import commands
 
 The HCL Multilingual Solution (MLS) export and import capability allows you to support translation of the content of a library by exporting it into a format supported by a translation service and importing the translated content back into HCL Digital Experience using the DXClient tool.
 
@@ -11,14 +11,14 @@ The HCL Multilingual Solution (MLS) export and import capability allows you to s
 
 There are two separate command for handling bulk translations, `export` and `import`. These commands deal with the translation of all the WCM library contents. Note, however, that only the following WCM content elements are translated: **short text**, **rich text**, and **HTML**.
 
--   The `**export**` command exports the source contents from a library into a CSV file with an auto generated file name at the location specified by the user. This command creates a new CSV file every time the command is run. The following table shows how the output of the Woodburn studio CSV file looks after MLS translation. The entries which contains the heading and then the text/html elements of two content items is translated into any language \(the following example shows French and Spanish language\). For each 'text' element a row is created for each target language \(French and Spanish\). Column "Target", is the translate language and all other information is provided to help doing the import automatically. In this table only one element is shown:
+-   The `export` command exports the source contents from a library into a CSV file with an auto generated file name at the location specified by the user. This command creates a new CSV file every time the command is run. The following table shows how the output of the Woodburn studio CSV file looks after MLS translation. The entries which contains the heading and then the text/html elements of two content items is translated into any language \(the following example shows French and Spanish language\). For each 'text' element a row is created for each target language \(French and Spanish\). Column "Target", is the translate language and all other information is provided to help doing the import automatically. In this table only one element is shown:
 
     |Source|Target|Source UUID|Target UUID|Source Language|Target Language|Field|Type|WCM Type|Component Type|
     |------|------|-----------|-----------|---------------|---------------|-----|----|--------|--------------|
     |I'm in the process of redesigning my home and visited Woodburn Studio. What a resource! Helpful, talented designers throughout with absolutely stunning home furnishings and decor.|I'm in the process of redesigning my home and visited Woodburn Studio. What a resource! Helpful, talented designers throughout with absolutely stunning home furnishings and decor.|4233a655-2e24-4a1f-8f5d-fcc58386b0eb|c66a0135-e35c-454f-b679-e16affa8fa48|en|es|Review-Text|Element|Content|Text Component|
     |I'm in the process of redesigning my home and visited Woodburn Studio. What a resource! Helpful, talented designers throughout with absolutely stunning home furnishings and decor.|I'm in the process of redesigning my home and visited Woodburn Studio. What a resource! Helpful, talented designers throughout with absolutely stunning home furnishings and decor.|4233a655-2e24-4a1f-8f5d-fcc58386b0eb|0e5d4f50-c8ba-4575-bff3-8b98b6729270|en|fr|Review-Text|Element|Content|Text Component|
 
--   The `**import**` command overwrites any existing translations in the content of the environment. It expects the Target column to be translated to each languages as indicated in the Target Language column. The following table shows a translated example of the previous export.
+-   The `import` command overwrites any existing translations in the content of the environment. It expects the Target column to be translated to each languages as indicated in the Target Language column. The following table shows a translated example of the previous export.
 
     |Source|Target|Source UUID|Target UUID|Source Language|Target Language|Field|Type|WCM Type|Component Type|
     |------|------|-----------|-----------|---------------|---------------|-----|----|--------|--------------|
@@ -99,13 +99,35 @@ dxclient mls-import -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPor
 -contenthandlerPath <contenthandlerPath> -dxUsername <dxUsername> -dxPassword <dxPassword> -importPath <importPath> -virtualPortalContext <virtualPortalContext>
 ```
 
+## Maximum data length for importing translated content
+
+Only the `ShortTextComponent` element type has an explicit maximum data length of 250 characters. The import command validates the length of the data for this particular element type before proceeding with the actual import flow. Any errors due to custom configuration of limits are caught by the import or export process during the execution cycle and the error log is reported.
+
+## CSV file length limits
+
+Only the `ShortTextComponent` element type has an explicit maximum data length of 250 characters. This limit is visible in the CSV file under the `fieldLimit` column.
+
+![fieldLimit column](../../../../images/wcm_mls_CSV_Length_limits.png)
+
+## Link field to see translators content
+
+You can preview the link of the portal content directly from the CSV file under the `previewLink` column.
+
+![prewieLink column](../../../../images/wcm_mls_Link_field_translators.png)
+
+## Content information data
+
+Content-specific information rows namely `title` and `description` are provided in the CSV file. You can edit the title and description of the content while importing them to the portal.
+
+![title and description rows](../../../../images/wcm_mls_Content_information_data.png)
+
 ## Sample pipelines
 
 You can use the sample pipelines in this section to run MLS export and import. The sample pipelines \(available under the samples folder in the DXClient root folder\) can be used by developers and administrators as a basis for Jenkins automation server jobs.
 
 These samples show how to install the DXClient tool in a pipeline and then export and import the MLS. These are designed to run from a Jenkins job with the parameters indicated.
 
-MLS Export
+### MLS Export
 
 |Parameter|Value|Notes|
 |---------|-----|-----|
@@ -120,9 +142,9 @@ MLS Export
 |`WCM_LIBRARY_ID`|WCM library ID to export the contents of the library|Exports the available content from this library ID|
 |`EXPORT_PATH`|The path to export the WCM contents of a library|The path where the content is exported|
 
-![DXClient MLS export pipeline sample](../../../../images/wcm_mls_exim_export_pipeline.png)
+![DXClient MLS export pipeline sample](../../../../images/wcm_mls_exim_export_pipeline.png){ width="1500" }
 
-MLS Import
+### MLS Import
 
 |Parameter|Value|Notes|
 |---------|-----|-----|
@@ -138,7 +160,7 @@ MLS Import
 |`CONTENT_HANDLER_PATH`|Alternate path for the portal context root or the content handler servlet|Default path: /wps/mycontenthandler/|
 |IMPORT_FILE_NAME|File name to import the translated content into DX|Imports the content from this file|
 
-![DXClient MLS import pipeline sample](../../../../images/wcm_mls_exim_import_pipeline.png)
+![DXClient MLS import pipeline sample](../../../../images/wcm_mls_exim_import_pipeline.png){ width="1500" }
 
 
 ???+ info "Related information"
