@@ -442,3 +442,6 @@ The LiveSync Push WCM Design Library command synchronizes changes in your local 
 - Moving and renaming of files are equivalent to deleting the original components and creating an entirely new set of components.
 - If a published component has a draft version, the feature will pull and push into the draft version.
 - The LiveSync Push WCM Design Library feature only works on a WCM Design Library previously pulled by the LiveSync Pull WCM Design Library feature.
+-  LiveSync Pull/Push WCM Design Library parameters are case sensitive.
+-  It allows only the following special characters for filename: " $, -,  _,  !, ( )".
+-  Inside HTML components content, special characters are allowed.
