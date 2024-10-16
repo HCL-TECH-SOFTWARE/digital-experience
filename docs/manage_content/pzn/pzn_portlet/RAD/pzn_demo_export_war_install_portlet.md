@@ -6,7 +6,7 @@ In this topic, you will learn how to export the personalized JSR 268-based JSP p
 
 Export the project to a WAR file called **PersOffers.war**.  
 
-1. Right click Pers_Offers and select **Export > WAR file**.  
+1. Right click the **Pers_Offers** project and select **Export > WAR file**.  
 
 2. In the **Destination** field, enter **filepath/PersOffers.war**.  
 
@@ -14,13 +14,15 @@ Export the project to a WAR file called **PersOffers.war**.
 
 4. Click **Finish**.  
 
-## Install the portlet on a portal page
-To install the Pers_Offers portlet on a portal page, refer to the following steps:
+## Install the portlet on a portal page  
+
+To install the Pers_Offers portlet on a portal page, refer to the following steps:  
+
 1. Start the HCL Digital Experience Portal server.  
 
 2. Log in to HCL Portal as the Portal administrator (wpsadmin).  
 
-3. Click the **Applications menu**, then go to **Administration**.
+3. Click the **Open Applications menu**, then navigate to **Administration**.
 
 4. Click **Applications > Web Modules**.
 

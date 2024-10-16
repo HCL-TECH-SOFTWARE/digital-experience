@@ -35,7 +35,7 @@ Learn how to create user profile rules in HCL Digital Experience.
 Learn how to create advanced rules in HCL Digital Experience.
 16. **[Changing content spot rule mapping](./pzn_demo_change_content_spot_rule_mapping.md)**  
 Learn how content spot rule mappings work and how to change them.  
-17. **[Using a Personalized List portlet](./pzn_demo_list_portlet.md)**  
+17. **[Using a Personalized List portlet](../personalized_list_portlet.md)**  
 Learn how to use the Personalized List portlet to simplify personalization.  
 18. **[Uninstalling the Personalization samples and database](./pzn_demouninstall.md)**  
 Learn how to uninstall the Personalization sample and database.  
