@@ -35,7 +35,7 @@ jobs:
       # Install python pre-reqs
       - name: Install Mkdocs and pre-reqs
         run: |
-          pip install mkdocs-material==9.5.10 mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin mike
+          pip install mkdocs-material==9.5.39 mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin mike
       # Do the actual deployment
       - name: Setup Git environment
         run: |
