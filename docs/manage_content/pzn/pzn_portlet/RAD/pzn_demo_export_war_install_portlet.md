@@ -15,7 +15,7 @@ Export the project to a WAR file called **PersOffers.war**.
 4. Click **Finish**.  
 
 ## Install the portlet on a portal page
-
+To install the Pers_Offers portlet on a portal page, refer to the following steps:
 1. Start the HCL Digital Experience Portal server.  
 
 2. Log in to HCL Portal as the Portal administrator (wpsadmin).  
