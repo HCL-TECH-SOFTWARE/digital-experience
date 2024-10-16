@@ -55,7 +55,6 @@ To display Web Content rules, use a Portal Personalization Component in the HCL 
     c. Click **Add**.
     d. Select the checkbox for **All Authenticated Portal Users**, then click **OK**.
 
-10. Set **access control** for the new portlet so **All Authenticated Portal Users** are **Privileged Users**.
 
 11. On the Portal Administration page go to **Site Management > Pages (Manage Pages)** and then in the page navigation go to **Content Root > Practitioner Studio > Personalization**.  
 
