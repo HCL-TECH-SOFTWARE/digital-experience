@@ -49,7 +49,11 @@ To display Web Content rules, use a Portal Personalization Component in the HCL 
 
     Click **OK** to copy the portlet.
 
-9. Search for the new portlet **Personalized List Special Offers** in the list and click to the key icon of it to modify the permissions.
+9. Set access permissions for the new portlet so **All Authenticated Portal Users** are **Privileged Users**:
+    a. Search for the Pers_Offers portlet and click the **Assign access to portlet** icon.
+    b. Click the **Edit Role** icon next to **Privileged Users**.
+    c. Click **Add**.
+    d. Select the checkbox for **All Authenticated Portal Users**, then click **OK**.
 
 10. Set **access control** for the new portlet so **All Authenticated Portal Users** are **Privileged Users**.
 
