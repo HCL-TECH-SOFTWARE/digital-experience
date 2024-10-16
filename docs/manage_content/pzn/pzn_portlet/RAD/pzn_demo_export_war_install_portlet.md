@@ -20,7 +20,7 @@ Export the project to a WAR file called **PersOffers.war**.
 
 2. Log in to HCL Portal as the Portal administrator (wpsadmin).  
 
-3. Click the **Administration menu** icon.
+3. Click the **Applications menu**, then go to **Administration**.
 
 4. Click **Applications > Web Modules**.
 
