@@ -28,7 +28,7 @@ There are two separate command for handling bulk translations, `export` and `imp
 -   All the default command options in this section are configured inside the - dist/src/configuration/config.json file of the tool. The options passed through command line overrides these default values.
 
 !!! note
-    Only the `ShortTextComponent` element type has an explicit maximum data length set at 250 characters. The `**import**` command validates the length of the data for this element type before importing. Errors due to custom configuration of limits are caught by the `**import**` and `**export**` during the cycle and are reported in an error log.
+    Only the `ShortTextComponent` element type has an explicit maximum data length set at 250 characters. The `import` command validates the length of the data for this element type before importing. Errors due to custom configuration of limits are caught by the `import` and `export` during the cycle and are reported in an error log.
 
 ## Export command
 
