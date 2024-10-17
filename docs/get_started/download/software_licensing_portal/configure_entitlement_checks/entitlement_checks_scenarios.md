@@ -44,11 +44,7 @@ User session consumption can be viewed by using usage reports in the HCL Softwar
 
 Refer to the guidance in the following HCL Support knowledge article: [What is the HCL Software License and Download Portal?](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344#a8).
 
-**Access Flexnet entitlement dashboard** 
 Run the “Reports for Metered products” section to understand how to access your FlexNet entitlement dashboard. Users with authorized access to this service can run usage reports. The Digital Experience Cloud Native 9.5 entitlements are configured to report user-session consumption for deployments configured for production use.
-
-**Access My HCL Software entitlement dashboard** 
-
 
 ## How user sessions in production deployments are calculated for report totals 
 
