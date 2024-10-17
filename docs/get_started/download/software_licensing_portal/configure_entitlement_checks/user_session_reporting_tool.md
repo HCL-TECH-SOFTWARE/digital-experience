@@ -19,11 +19,29 @@ This section provides information about the functionalities and use cases of the
 
 ## Availability and system compatibility
 
-The User Session Reporting Tool is available in your [DX offering entitlements](../../software_licensing_portal/index.md) in the [HCL Software License Portal](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do){target="_blank"}. The tool is designed to integrate effortlessly into existing HCL DX deployments, particularly in on-premises deployments. It is backward compatible with previous deployment versions. You do not need to upgrade to the latest Cumulative Fix (CF) to utilize the User Session Reporting Tool, making it accessible to a broader range of deployments without requiring additional updates or changes to the existing infrastructure.
+The User Session Reporting Tool (UserSessionReporting_v1.0.x.zip) is available in the [HCL DX Core offering](../../software_licensing_portal/index.md) you have purchased entitlements to in the [HCL Software License Portal](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do){target="_blank"}. For example:
+
+- HCL Portal Server 9.5
+- HCL Web Content Manager 9.5
+- HCL Digital Experience Manager 9.5
+- HCL Digital Experience Cloud Native 9.5.1 or later
+- HCL Portal Extend 9.5
+- HCL Portal Enable 9.5
+- HCL Portal Express 9.5
+- HCL Customer Experience Suite 9.5
+- HCL Employee Experience Suite 9.5
+
+The tool is designed to integrate effortlessly into existing HCL DX deployments, particularly in on-premises deployments. It is backward compatible with previous deployment versions. You do not need to upgrade to the latest Cumulative Fix (CF) to utilize the User Session Reporting Tool, making it accessible to a broader range of deployments without requiring additional updates or changes to the existing infrastructure.
 
 ## Prerequisites
 
-Complete the following prerequisites before running the User Session Reporting Tool.
+- Make sure that a Java Development Kit (JDK) is installed. The recommended version is at least Java 8.
+
+- Complete the following prerequisites before running the User Session Reporting Tool.
+
+    - [Enable access logs.](#enabling-access-logs)
+    - [(Optional) Handle the routing setup.](#optional-handling-the-routing-setup)
+
 
 ### Enabling access logs
 

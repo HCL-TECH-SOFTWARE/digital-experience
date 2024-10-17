@@ -340,9 +340,9 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
 
 !!!note
     Refer to the list of features that were released in the following HCL DX 9.5 releases:
-    <!--
-    -   HCL DX 9.5 CF223 release: **V223.0.0
-        -  New DXClient LiveSync sub-commands: [LiveSync push-wcm-design-library](../dxclient/dxclient_artifact_types/livesync.md#livesync-push-wcm-design-library) and [pull-wcm-design-library](../dxclient/dxclient_artifact_types/livesync.md#livesync-pull-wcm-design-library)-->
+    
+    -   HCL DX 9.5 CF224 release: **V224.0.0
+        -  New DXClient LiveSync sub-commands: [LiveSync push-wcm-design-library](../dxclient/dxclient_artifact_types/livesync.md#livesync-push-wcm-design-library) and [pull-wcm-design-library](../dxclient/dxclient_artifact_types/livesync.md#livesync-pull-wcm-design-library)
 
     -   HCL DX 9.5 CF221 release: **V221.0.0
         -  A one time license agreement click-through is enabled. To skip the prompt, use the [accept-license](#dxclient-information-commands) command.
@@ -781,6 +781,18 @@ Use this command to [import WCM libraries](../dxclient/dxclient_artifact_types/w
 dxclient wcm-library-import
 ```
 
+Use this command to [export the content of a WCM library for translation into a CSV file](../dxclient/dxclient_artifact_types/wcm_mls_export_import.md):
+
+```bash
+dxclient mls-export
+```
+
+Use this command to [import the translated content into DX](../dxclient/dxclient_artifact_types/wcm_mls_export_import.md):
+
+```bash
+dxclient mls-import
+```
+
 Use the `dx-core-configuration-reports` command to get a summary of the configurations of a single DX server or both source and target DX servers, which users can use to compare.
 
 ```bash
@@ -798,7 +810,8 @@ Use this command to download the theme files in WebDAV Server in preparation for
 ```bash
 dxclient livesync pull-theme [options]
 ```
-<!--Use this command to download the WCM Design Library files from the DX Server in preparation for [`livesync push-wcm-design-library`](../dxclient/dxclient_artifact_types/livesync.md#livesync-push-wcm-design-library):
+
+Use this command to download the WCM Design Library files from the DX Server in preparation for [`livesync push-wcm-design-library`](../dxclient/dxclient_artifact_types/livesync.md#livesync-push-wcm-design-library):
 
 ```bash
 dxclient livesync pull-wcm-design-library [options]
@@ -809,7 +822,7 @@ Use this command to sync a local WCM Design Library with the DX server. Succeedi
 ```bash
 dxclient livesync push-wcm-design-library [options]
 ```
--->
+
 ## Limitations
 
 - For hybrid deployments in which two different hostnames are used for the on-premises DX Core and Kubernetes DX Services, there are no options to enter both the hostnames. You must consider the DXClient function being used and enter the appropriate hostname. For example, for DAM tasks such as `manage-dam-staging`, you must enter the Kubernetes hostname. For DX Core tasks such as `deploy-portlet` you must enter the on-premises DX Core hostname.
@@ -820,7 +833,9 @@ dxclient livesync push-wcm-design-library [options]
 
 ## HCLSoftware U learning materials
 
-For an introduction and a demo on how to use DXClient, go to [Staging](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D505){target="_blank"}. To try it out yourself, refer to [DXClient Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-100_DXClient_for_Beginners.pdf){target="_blank"}.
+For an introduction and a demo on DX staging, go to [Staging for Beginners](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D505){target="_blank"}.
+
+To learn how to use staging tools such as DXClient, Syndication, XMLAccess, ReleaseBuilder/Solution Installer, and ConfigEngine, go to [Staging for Intermediate Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3328){target="_blank"}. You can try it out using the [Staging Lab for Intermediate Users](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab.pdf){target="_blank"} and corresponding [Staging Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab_Resources.zip){target="_blank"}.
 
 ???+ info "Related information"
     - [How to translate WCM library content using export and import WCM with DXClient](../dxclient/dxclient_artifact_types/wcm_mls_export_import.md)
