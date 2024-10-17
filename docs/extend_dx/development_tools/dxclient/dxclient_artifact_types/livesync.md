@@ -223,7 +223,7 @@ dxclient livesync pull-theme --themePath "/Users/path/to/theme" --themeName "Por
 
 ## LiveSync Pull WCM Design Library
 
-The LiveSync Pull WCM Design Library command syncs a WCM Design Library in a DX Server with a local folder. Pulling the WCM Design Library is a prerequisite for the [Push WCM Design Library feature](#livesync-push-wcm-design-library). LiveSync Pull WCM Design Library parameters are case sensitive. It allows only the following special characters for filename, folder and libraryname : " $, -,  _,  !, ( )". Inside HTML components content, special characters are allowed.
+The LiveSync Pull WCM Design Library command syncs a WCM Design Library in a DX Server with a local folder. Pulling the WCM Design Library is a prerequisite for the [Push WCM Design Library feature](#livesync-push-wcm-design-library). Note that the parameters for LiveSync Pull WCM Design Library command are case-sensitive. The feature only allows the following special characters for the file name, folder name, and library name : $, -,  _,  !, ( ). All special characters are allowed inside the HTML components content.
 
 -   **Command description**
 
