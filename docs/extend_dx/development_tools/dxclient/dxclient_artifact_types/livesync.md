@@ -223,7 +223,7 @@ dxclient livesync pull-theme --themePath "/Users/path/to/theme" --themeName "Por
 
 ## LiveSync Pull WCM Design Library
 
-The LiveSync Pull WCM Design Library command syncs a WCM Design Library in a DX Server with a local folder. Pulling the WCM Design Library is a prerequisite for the [Push WCM Design Library feature](#livesync-push-wcm-design-library). Note that the parameters for LiveSync Pull WCM Design Library command are case-sensitive. The feature only allows the following special characters for the file name, folder name, and library name : $, -,  _,  !, ( ). All special characters are allowed inside the HTML components content.
+The LiveSync Pull WCM Design Library command syncs a WCM Design Library in a DX Server with a local folder. Pulling the WCM Design Library is a prerequisite for the [Push WCM Design Library feature](#livesync-push-wcm-design-library).
 
 -   **Command description**
 
@@ -336,10 +336,10 @@ See the following example where '...' represents truncated parameters.
 
     dxclient livesync pull-wcm-design-library --wcmLibraryPath "/Users/path/to/library" --wcmLibraryName "portal site" ...
     ```
-
+ Note that the parameters for LiveSync Pull WCM Design Library command are case-sensitive. The feature only allows the following special characters for the file name, folder name, and library name : $, -,  _,  !, ( ). All special characters are allowed inside the HTML components content.
 ## LiveSync Push WCM Design Library
 
-The LiveSync Push WCM Design Library command synchronizes changes in your local WCM Design Library files with the DX Server, overwriting the server files with your local files changes. The system watches for succeeding changes within the given `wcmLibraryPath` and the changes are immediately reflected in the DX server. This feature only works on a WCM Design Library previously pulled by the [LiveSync Pull WCM Design Library feature](#livesync-pull-wcm-design-library). Note that the parameters for LiveSync Push WCM Design Library command are case-sensitive. The feature only allows the following special characters for the file name, folder name, and library name : $, -,  _,  !, ( ). All special characters are allowed inside the HTML components content.
+The LiveSync Push WCM Design Library command synchronizes changes in your local WCM Design Library files with the DX Server, overwriting the server files with your local files changes. The system watches for succeeding changes within the given `wcmLibraryPath` and the changes are immediately reflected in the DX server. This feature only works on a WCM Design Library previously pulled by the [LiveSync Pull WCM Design Library feature](#livesync-pull-wcm-design-library).
 
 
 -   **Command description**
@@ -420,6 +420,7 @@ The LiveSync Push WCM Design Library command synchronizes changes in your local 
     ```
     dxclient livesync push-wcm-design-library -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -wcmLibraryPath <wcmLibraryPath> -wcmLibraryName <wcmLibraryName>
     ```
+ Note that the parameters for LiveSync Push WCM Design Library command are case-sensitive. The feature only allows the following special characters for the file name, folder name, and library name : $, -,  _,  !, ( ). All special characters are allowed inside the HTML components content.
 
 ## Limitations and Troubleshooting
 
