@@ -339,7 +339,7 @@ See the following example where '...' represents truncated parameters.
 
 ## LiveSync Push WCM Design Library
 
-The LiveSync Push WCM Design Library command synchronizes changes in your local WCM Design Library files with the DX Server, overwriting the server files with your local files changes. The system watches for succeeding changes within the given `wcmLibraryPath` and the changes are immediately reflected in the DX server. This feature only works on a WCM Design Library previously pulled by the [LiveSync Pull WCM Design Library feature](#livesync-pull-wcm-design-library). LiveSync Push WCM Design Library parameters are case sensitive. It allows only the following special characters for filename, folder and libraryname : " $, -,  _,  !, ( )". Inside HTML components content, special characters are allowed.
+The LiveSync Push WCM Design Library command synchronizes changes in your local WCM Design Library files with the DX Server, overwriting the server files with your local files changes. The system watches for succeeding changes within the given `wcmLibraryPath` and the changes are immediately reflected in the DX server. This feature only works on a WCM Design Library previously pulled by the [LiveSync Pull WCM Design Library feature](#livesync-pull-wcm-design-library). Note that the parameters for LiveSync Push WCM Design Library command are case-sensitive. The feature only allows the following special characters for the file name, folder name, and library name : $, -,  _,  !, ( ). All special characters are allowed inside the HTML components content.
 
 
 -   **Command description**
