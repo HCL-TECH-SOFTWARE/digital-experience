@@ -99,10 +99,6 @@ dxclient mls-import -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPor
 -contenthandlerPath <contenthandlerPath> -dxUsername <dxUsername> -dxPassword <dxPassword> -importPath <importPath> -virtualPortalContext <virtualPortalContext>
 ```
 
-## Maximum data length for importing translated content
-
-Only the `ShortTextComponent` element type has an explicit maximum data length of 250 characters. The import command validates the length of the data for this particular element type before proceeding with the actual import flow. Any errors due to custom configuration of limits are caught by the import or export process during the execution cycle and the error log is reported.
-
 ## CSV file length limits
 
 Only the `ShortTextComponent` element type has an explicit maximum data length of 250 characters. This limit is visible in the CSV file under the `fieldLimit` column.
