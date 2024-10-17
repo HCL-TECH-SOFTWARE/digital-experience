@@ -9,10 +9,10 @@ My HCL Software provides seamless access to various customer-facing systems such
 
 ## MHS file based export
 
-Retrieve the MHS format from either the sessionCount.log file or the .csv files, which are categorized by month based on the start and end date parameters, located in the /mnt/licenseData/manualReport/ directory. For more details, refer to the [User Session Reporting Tool](https://git.cwp.pnp-hcl.com/websphere-portal-incubator/UserSessionReporting/blob/develop/README.md)
+Retrieve the MHS format from either the sessionCount.log file or the .csv files, which are categorized by month based on the start and end date parameters, located in the /mnt/licenseData/manualReport/ directory.
 
 ```
-# <fileName> Java class name to generate the metric
+# <fileName> Java class name to generate the metric. The timestamp in the usage metrics file should be earlier than the start date, formatted as {YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics. For example: 2024-06-24T02-50-00_usage.metrics
 # <deploymentId> String deploymentID from MHS
 # <KeyId> String KeyId from MHS
 # <startDate> Specifies the start date in YYYY-MM-DD format
@@ -24,25 +24,13 @@ java -cp UserSessionReporting-VERSION-PLACEHOLDER.jar GenerateMetricFile <deploy
 e.g by default
 java -cp UserSessionReporting-VERSION-PLACEHOLDER.jar GenerateMetricFile pnkeq6pk Alpha525634 2022-07-22 2025-07-28
 e.g with option
-java -cp UserSessionReporting-VERSION-PLACEHOLDER.jar GenerateMetricFile pnkeq6pk Alpha525634 2022-07-22 2025-07-28 file
+java -cp UserSessionReporting-VERSION-PLACEHOLDER.jar GenerateMetricFile pnkeq6pk Alpha525634 2022-07-22 2025-07-28 > /tmp/2022-06-24T02-50-00_usage.metrics
 ```
 
-## Configuring MHS APIs
+Use the following command to open a shell to generater the MHS Usage report:
+```
+kubectl exec -it <release name>-license-manager-0 -n <namespace> -- java -cp UserSessionReporting.jar GenerateMetricFile <deploymentId> <KeyId> <YYYY-MM-DD> <YYYY-MM-DD>
 
-To begin testing with MHS APIs, you must first create a test account and deployment instances within the MHS UAT environment. Interacting with MHS APIs requires an initial refresh token, typically obtained after the initial deployment. This token is used to generate an access token, which grants temporary permissions for performing API calls.
-
-**Accessing the MHS APIs**
-
-You can find detailed API specifications and usage via the Global Protect VPN using the [Base URL(UAT)](https://d2kerxf8ujkcp4.cloudfront.net)
-
--  Obtain an Access Token using exchange API
-   -  API Spec: https://github01.hclpnp.com/pages/hcl-software-bus-it/mhs-product-api/#tag/API-Keys/operation/apiKeyExchange
-   -  Example (UAT): POST {Base URL}/v1/apikeys/exchange
-
-- License Allocation API
-  - API Spec: https://github01.hclpnp.com/pages/hcl-software-bus-it/mhs-product-api/#tag/License-Allocation/operation/readLicenseAllocation
-  - Example (UAT): GET {Base URL}/v1/licenseallocation
-
-- Report Usage Metering Data
-  - API Spec: https://github01.hclpnp.com/pages/hcl-software-bus-it/mhs-product-api/#tag/Usage-Metering/operation/postUsageMeteringEvent
-  - Example (UAT): POST {Base URL}/v1/ums
+e.g
+kubectl exec -it pod/dx-deployment-license-manager-0 -n dxns -- java -cp UserSessionReporting.jar GenerateMetricFile pnkXXX AlphXXXX 2022-07-22 2025-07-28 > /tmp/2022-06-24T02-50-00_usage.metrics
+```

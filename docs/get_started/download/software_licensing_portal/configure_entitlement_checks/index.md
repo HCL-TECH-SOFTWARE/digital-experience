@@ -26,16 +26,6 @@ The following elements are the prerequisites for configuring the DX Cloud Native
 See the "How to check your entitlements" and "Map entitlements" sections in: [What is the HCL Software License & Download Portal?](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344#a8) for guidance in locating and mapping your entitlements on your deployment servers.
 -   A plan you must implement to deploy or update an [HCL DX 9.5 Container Update CF207](../../../../whatsnew/cf20/newcf207.md) or later release. 
 
-The following are the prerequisites for using MHS APIs Beta:
-
-- Contact Beta testing support (rajeshkumar_a@hcl.com) to create the test account in [MHS UAT portal](https://dmeft4t0khh41.cloudfront.net)
-- Contact Beta testing support (rajeshkumar_a@hcl.com) to add the members (internal users with hcl.com domain) to the test account
-- Create new deployment via MHS UI:
-    - Log in to the MHS Portal UAT using your HCL ID (via Okta login) at [this URL](https://dmeft4t0khh41.cloudfront.net/)
-    - Go to the Deployments tab and click Add Deployment. A new deployment will be created, labeled with a deployment prefix followed by an auto-generated name.
-    - Click the three dots in the top-right corner of the panel to create a deployment key.
-    - Use this unique deployment key (initial refresh token) to generate access tokens for calling MHS APIs. You can also replace the deployment key if needed.
-
 Review the architecture that presents the License Manager component of HCL DX v9.5 Container Update software, which follows in the next section.
 
 ## Architecture
