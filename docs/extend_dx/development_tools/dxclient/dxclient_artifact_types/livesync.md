@@ -225,8 +225,6 @@ dxclient livesync pull-theme --themePath "/Users/path/to/theme" --themeName "Por
 
 The LiveSync Pull WCM Design Library command syncs a WCM Design Library in a DX Server with a local folder. Pulling the WCM Design Library is a prerequisite for the [Push WCM Design Library feature](#livesync-push-wcm-design-library).
 
-Note that the parameters for LiveSync Pull WCM Design Library command are case-sensitive.
-
 -   **Command description**
 
     This command invokes the `livesync pull-wcm-design-library` tool inside the DXClient.
