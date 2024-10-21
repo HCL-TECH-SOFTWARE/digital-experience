@@ -99,6 +99,10 @@ dxclient mls-import -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPor
 -contenthandlerPath <contenthandlerPath> -dxUsername <dxUsername> -dxPassword <dxPassword> -importPath <importPath> -virtualPortalContext <virtualPortalContext>
 ```
 
+## Editable fields in CSV
+
+In the .csv file, only the following fields are editable: target, field, and description.
+
 ## CSV file length limits
 
 Only the `ShortTextComponent` element type has an explicit maximum data length of 250 characters. This limit is visible in the CSV file under the `fieldLimit` column.
@@ -116,10 +120,6 @@ You can preview the link of the portal content directly from the CSV file under 
 Content-specific information rows namely `title` and `description` are provided in the CSV file. You can edit the title and description of the content while importing them to the portal.
 
 ![title and description rows](../../../../images/wcm_mls_Content_information_data.png)
-
-## Note
-
-In the .csv file, only the following fields are editable: target, field, and description.
 
 ## Sample pipelines
 
