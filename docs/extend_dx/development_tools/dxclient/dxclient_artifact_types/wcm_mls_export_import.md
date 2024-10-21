@@ -101,7 +101,7 @@ dxclient mls-import -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPor
 
 ## Editable fields in CSV
 
-In the .csv file, only the following fields are editable: target, field, and description.
+In the .csv file, only the following fields are editable: target, title, and description.
 
 ## CSV file length limits
 
