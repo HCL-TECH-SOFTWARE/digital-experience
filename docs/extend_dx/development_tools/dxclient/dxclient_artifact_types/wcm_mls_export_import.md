@@ -117,6 +117,10 @@ Content-specific information rows namely `title` and `description` are provided 
 
 ![title and description rows](../../../../images/wcm_mls_Content_information_data.png)
 
+## Note
+
+In the .csv file, only the following fields are editable: target, field, and description.
+
 ## Sample pipelines
 
 You can use the sample pipelines in this section to run MLS export and import. The sample pipelines \(available under the samples folder in the DXClient root folder\) can be used by developers and administrators as a basis for Jenkins automation server jobs.
