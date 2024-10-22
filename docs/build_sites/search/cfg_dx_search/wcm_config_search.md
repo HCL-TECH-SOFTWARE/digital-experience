@@ -2,8 +2,6 @@
 
 You can edit the following search options to manage how the search service works with Web Content Manager search forms.
 
-You can edit the following search options to manage how the search service works with Web Content Manager search forms
-
 1.  Open WebSphere Integrated Solutions Console to configure the **WCM SearchService** properties. Go to **Resources** \> **Resource Environment** \> **Resource Environment Providers**.
 
 2.  Select **WCM SearchService, Custom** properties.
@@ -36,9 +34,9 @@ You can edit the following search options to manage how the search service works
 
         For example, to crawl for metadata in a text element named metaText:
 
-        -   ```
-SearchService.MetaFields=metaText,meta
-```
+        ```
+        SearchService.MetaFields=metaText,meta
+        ```
 
         -   `elementName` is the name of element you would like to search for metadata. Any valid element with that name in a searchable site area or content item is crawled.
         -   `key` is the "key" that is specified in an element tag that is used as part of a search element design. In the previous example, the key of "meta" is used. To render the content of the metaText element in a search element design, you would use the following tag: `<Element context="autoFill" type="content" key="meta"/>`
@@ -59,7 +57,11 @@ SearchService.MetaFields=metaText,meta
 
     -   **Searchservice.searchseed.excludeContentResourceTypeElement**
 
-        Set this parameter to true to exclude the default file resource element of a content item which is set to resource type from the seedlist, since the default file resource element is already being pointed to by the content item. The default setting is false.
+        Set this parameter to `true` to exclude the default file resource element of a content item which is set to resource type from the seedlist, since the default file resource element is already being pointed to by the content item. The default setting is false.
+
+    -   **Searchservice.SearchSeed.excludeFields**
+
+        Set this parameter to `true` to exclude
 
 4.  Click **Apply** and then **OK**.
 
