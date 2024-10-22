@@ -19,7 +19,7 @@ To display Web Content rules, use a Portal Personalization Component in the HCL 
 
 - You have successfully done all steps in [Installing the PZNDemo resources](./demo/pzn_demoinstall.md).  
 - Downloaded and installed the [PersOffers.war](./download/PersOffers.war) file (PersOffers Portlet) and followed the instructions on [Install the portlet on a portal page](./RAD/pzn_demo_export_war_install_portlet.md).  
-- You have successfully installed the [pzn rule classes](./download/pers_offers.jar) by following the instructions of [Importing Personalization Workspace resource collections](./RAD/pzn_demo_import_resource_collections.md).  
+- Installed the [pzn rule classes](./download/pers_offers.jar) by following the instructions of [Importing Personalization Workspace resource collections](./RAD/pzn_demo_import_resource_collections.md).  
 - You have successfully imported the [PersOffers rules (hrf-files)](./download/Portal_rules_PznOffers.zip) by following the instructions of [Importing Personalization Workspace resource collections](./RAD/pzn_demo_import_resource_collections.md).
 
 ## Create the Personalized List Special Offers portlet  
