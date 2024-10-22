@@ -31,7 +31,7 @@ Using the following configuration options, you can configure the portal server t
         -   Documentation resource: [Configuration Wizard instructions: Modify site URLs for search engine optimization](../../../../../deployment/manage/troubleshooting/troubleshooting_configwizard/cw_shorten_url_seo_ts.md)
         
         !!!note
-            The Configuration Wizard is not used to customize the context root or home URL on Kubernetes platforms. Refer to the [Customizing the HCL DX URL when deployed to container platforms](https://help.hcltechsw.com/digital-experience/9.5/containerization/t_customize_dx_url.html) topic for more information.
+            The Configuration Wizard is not used to customize the context root or home URL on Kubernetes platforms. Refer to the [Customizing the HCL DX URL when deployed to container platforms](../../../../manage/siteurl_cfg/t_customize_dx_url.md) topic for more information.
 
 2. **Cluster**
     -   **Create a Deployment Manager**
