@@ -3,11 +3,11 @@
 Learn more about managing libraries, creating, editing or cleaning up data, and setting up syndication for HCL Digital Experience web content management.
 
 - [**Authoring portlet**](../create_sites/authoring_tools/site_auth_portlet.md)<br>
-    Learn how to use the authoring portlet to add content to your website using authoring templates.
+    Learn how to use authoring templates to add content to your website.
 - [**HCL Content Reporting**](../../manage_content/wcm_authoring/content_reporting/index.md)<br>
     Learn how to generate reports and update reported items in bulk.
 - [**Previewing content on web content pages**](../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/mp_wcm_prevcontent.md)<br>
-    Learn how to preview content items in a portal environment to see they would be displayed to users.
+    Learn how to preview content items in a portal environment to see how they would be displayed to users.
 - [**Managing web content libraries**](../../manage_content/wcm_authoring/authoring_portlet/web_content_libraries/index.md)<br>
     Learn how to organize and manage your web content.
 - [**Managing syndicators and subscribers**](../../manage_content/wcm_delivery/syndication/manage_synd_subs/index.md)<br>
