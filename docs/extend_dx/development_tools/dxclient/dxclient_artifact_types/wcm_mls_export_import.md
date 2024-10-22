@@ -99,9 +99,9 @@ dxclient mls-import -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPor
 -contenthandlerPath <contenthandlerPath> -dxUsername <dxUsername> -dxPassword <dxPassword> -importPath <importPath> -virtualPortalContext <virtualPortalContext>
 ```
 
-## Editable fields in CSV
+## Editable fields in CSV files
 
-In the .csv file, only the following fields are editable: target, title, and description.
+In the exported CSV file, you can only edit the following fields: **target**, **title**, and **description**.
 
 ## CSV file length limits
 
