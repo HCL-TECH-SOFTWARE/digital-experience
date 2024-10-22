@@ -6,20 +6,19 @@ title: Configuring My HCL Software API and File based export
 
 My HCL Software provides seamless access to various customer-facing systems such as Downloads, Software Entitlements, eCommerce, Support, Subscriptions, Account Management, Marketplace, and more.
 
-
 ## Generating and Uploading User Session Data Usage in Metrics Format
 
-To generate the user session data usage in the metrics format, the report should include the session data with encrypted data for a user session.
+To generate the user session data usage in metrics format, the report must include session data that has been encrypted for each user session.
 
-To generate the usage metrics from user session usage, use the following command with the appropriate `KeyId`, `deploymentId`, `Start date` and `End date`.
+Use the following command to generate usage metrics from the user session data, specifying the appropriate `KeyId`, `deploymentId`, `startDate`, and `endDate` values:
 ```
 kubectl exec -it <release name>-license-manager-0 -n <namespace> -- java -cp UserSessionReporting.jar GenerateMetricFile <deploymentId> <KeyId> <YYYY-MM-DD> <YYYY-MM-DD>
 ```
-
-`deploymentId` The deployment identifier.
-`KeyId` The Key ID provided by MHS during registration.
-`startDate` Specifies the start date in YYYY-MM-DD format
-`endDate` Specifies the end date in YYYY-MM-DD format
+Where:
+-   `deploymentId` is the deployment identifier.
+-   `KeyId` is the Key ID provided by MHS during registration.
+-   `startDate` specifies the start date in YYYY-MM-DD format
+-   `endDate` specifies the end date in YYYY-MM-DD format
 
 To save the generated metrics to a file, use this command:
 
@@ -27,7 +26,6 @@ To save the generated metrics to a file, use this command:
 kubectl exec -it <release name>-license-manager-0 -n <namespace> -- java -cp UserSessionReporting.jar GenerateMetricFile <deploymentId> <KeyId> <YYYY-MM-DD> <YYYY-MM-DD> /tmp/{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics
 ```
 `metricsFileName` The timestamp in the usage metrics file should be earlier than the start date, formatted as {YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics. For example: 2024-06-24T02-50-00_usage.metrics
-
 
 ### Example:
 
@@ -45,5 +43,14 @@ DXPN_CloudNative_Tier1_500K@9.5,2024-10-20T07:32:00.618Z,2024-10-20T07:42:00.618
 DXPN_CloudNative_Tier1_500K@9.5,2024-10-20T08:00:37.267Z,2024-10-20T08:10:37.267Z,1,e946675c396d99f892c7099e772b776082b2a9a269a1d2670ea9063b61ac43e2
 End,370d193fe0be35950d2707026d23ce595ae46054b77efcc944aa2484eab39399976854c58321ba5437b78896908a0b78de6b7ee6db989b0ccd28ce5c58bd9a09
 ```
-## Upload usage metrics
-The generated `{YYYY-MM-DDTHH-MM-SS UTC}usage. metrics` file should then be uploaded to the MHS portal for processing.
+### Upload usage metrics
+The generated `{YYYY-MM-DDTHH-MM-SS UTC}usage.metrics` file should then be uploaded to the MHS portal for processing.
+
+
+## MHS on Kubernetes vs Non-Kubernetes
+
+The use cases for MHS on Kubernetes are similar to those on Flexnet. The integration ensures proper license validation and usage reporting.
+
+**License Validation**: We have integrated the MHS API with the license manager container to periodically check whether your license is still valid (typically valid for 12 months). A grace period is also provided, during which you will receive reminders to renew your license before it expires, ensuring that you don’t face service interruptions.
+
+**User Session Reporting**: Periodically send user session reports to MHS, allowing the product team to monitor whether you are operating within the allocated package. These reports help assess if an upgrade to a higher-tier package is required based on the number of user sessions consumed.
