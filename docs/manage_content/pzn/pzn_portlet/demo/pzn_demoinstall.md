@@ -42,7 +42,7 @@ In this exercise, you can install the Portal Personalization sample and configur
     4. Click **OK**.  
 
     !!!note  
-        By default, standard users do not have permissions to access the Personalization page or resources. In this exercise, it is recommended to add all the pzndemousers to the wpsadmins group to ensure that users get access to all demo resources.   
+        By default, standard users do not have permissions to access the Personalization page or resources. In this exercise, it is recommended to add all the pzndemousers to the wpsadmins group to ensure that users get access to all demo resources.  
 
 10. Log out of HCL DX to apply the changes.
 
