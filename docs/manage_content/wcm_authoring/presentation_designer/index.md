@@ -6,7 +6,7 @@ Presentation Designer is ideal for, but not limited to, the following sample use
 
 -  Allowing content managers to edit and customize presentation templates without relying on developers.
 -  Reducing editorial friction by empowering content managers to design and manage presentation templates independently.
--  Simplifying the creation process for web content layouts by offering a visual interface where users can drag and drop elements and instantly see   the output in real-time on the canvas.
+-  Simplifying the creation process for web content layouts by offering a visual interface where users can drag and drop elements and instantly see the output in real-time on the canvas.
 -  Enabling an interactive design experience, minimizing the need for users to preview the final output separately, as changes are immediately visible on the canvas.
 -  Generating HTML markup automatically from the designs created in Presentation Designer, ensuring that the final output is ready to be used in websites without further manual coding.
 

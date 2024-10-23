@@ -1,6 +1,6 @@
 # Editing Presentation Template in Presentation Designer
 
-This section details how to edit a presentation template in Presentation Designer. 
+This section details how to edit a presentation template in Presentation Designer using a sample scenario. 
 
 To provide a comprehensive example, the goal is to have a **Content Section** presentation template for a **project page** which will display an **image of the project**, the **project title**, and **general information** by utilizing the capabilities of Presentation Designer. 
 
@@ -8,7 +8,7 @@ To provide a comprehensive example, the goal is to have a **Content Section** pr
 
 ## Prerequisite
 
--   Create a **content template** with image, text, and rich text element. The image element will be for the Project    Image, the text element will be for the Project Title, and the rich text element will be for the Project Description. For more information on how to create a content template, see **[Author Content Templates](../../../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_templates/author_content_templates.md)**.
+-   Create a **content template** with image, text, and rich text element. The image element will be for the Project Image, the text element will be for the Project Title, and the rich text element will be for the Project Description. For more information on how to create a content template, see **[Author Content Templates](../../../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_templates/author_content_templates.md)**.
     
     ??? note "Click to see sample created content template"
         *Content Section AT*:

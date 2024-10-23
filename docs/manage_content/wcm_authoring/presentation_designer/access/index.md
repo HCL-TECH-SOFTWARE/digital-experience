@@ -8,13 +8,13 @@ In HCL Digital Experience 9.5 CF224, Presentation Designer is installed and depl
 
 
 !!! note
-    You must have **User**, **Editor**, or **Privileged User** access to the following resources to use Presentation Designer. See the details below:
+    To use Presentation Designer you must have a minimum set of roles below. Note the ones listed below are minimums — so e.g. if you have Manager or Administrator role that is sufficient too. See the details below:
 
     - **Presentation Designer page** -  Click the **Administration menu** icon. Go to **Security** > **Resource Permissions** > **Pages** > **Content Root** > **Practitioner Studio** > **Web Content** > **Presentation Designer** > Click the **Assign Access** icon to set **User** role.
     - **Presentation Designer portlet** - Click the **Administration menu** icon. Go to **Security** > **Resource Permissions** > **Portlets** > **Presentation Designer portlet** > Click **Assign Access** icon to set **User** role.
     - **WCM page** -  Click the **Administration menu** icon. Go to **Security** > **Resource Permissions** > **Pages** > **Content Root** > **Practitioner Studio** > **Web Content** > Click the **Assign Access** icon to set **User** role.
     - **WCM Authoring portlet** - Click the **Administration menu** icon. Go to **Security** > **Resource Permissions** > **Portlets** > **Web Content Authoring** > Click **Assign Access** icon to set **User** role.
-    - **WCM_REST_SERVICES** - Click the **Administration menu** icon. Go to **Security** > **Resource Permissions** > **Virtual Resources** > **WCM REST SERVICE** > Click **Assign Access** icon to set Editor role.
+    - **WCM_REST_SERVICES** - Click the **Administration menu** icon. Go to **Security** > **Resource Permissions** > **Virtual Resources** > **WCM REST SERVICE** > Click **Assign Access** icon to set **Editor** role.
     - **WCM libraries and items** - Click the **Web Content menu**. Go to **Web Content Libraries** > Click the **Assign Access** icon to set the **Editor** role for any library as needed. 
 
     **Optional:**
@@ -23,6 +23,7 @@ In HCL Digital Experience 9.5 CF224, Presentation Designer is installed and depl
 
     Refer to [Working with resource permissions](../../../../deployment/manage/security/people/authorization/controlling_access/working_with_resource_permission/index.md) for more information.
 
+---
 
 ## Accessing Presentation Designer
 
@@ -53,6 +54,7 @@ Refer to the following instructions to access and navigate to Presentation Desig
 
     ![](../../../../assets/HCL_Presentation_Desinger_Blank_Canvas.png "HCL Presentation Desinger - Blank Canvas")
 
+---
 
 ## The Presentation Designer UI
 
@@ -66,23 +68,31 @@ The Presentation Designer user interface is composed of three main sections:
 
     This section contains the **Back** button to go back to the Authoring portlet. The **display title of the Presentation Template** also appears in this section. It also contains the **Edit/Read mode** toggle which currently enables/disables the **Save** button, which gives the users the options to either Save or Save and Close the presentation template. There is also a **Cancel** button to cancel editing and go back to the Authoring portlet.
 
+    ---
+
 2.  **Panel**
     
     ![](../../../../assets/HCL_Presentation_Designer_Add_Items_Panel.png)
 
     This section contains the **Add Items** panel which contains the items/elements that you can drag and drop to the canvas. There is also a dropdown selection for the **item source** which will update the list of draggable items depending on the source. 
+
+    ---
     
     ![](../../../../assets/HCL_Presentation_Designer_Style_Panel.png)
 
     It also contains the **Style** panel where you can edit different **styling options** available for the selected item/element on the canvas. The styling options will update accordingly based on the selected item on the canvas. 
     
-    For more information on the items and style options, visit the **[Usage of Presentation Designer](../usage/index.md)**
+    For more information on the items and style options, visit the **[Usage of Presentation Designer](../usage/index.md)**.
+
+    ---
 
 3.  **Canvas**
 
     ![](../../../../assets/HCL_Presentation_Designer_Canvas.png)
 
     The Canvas serves as the central **workspace** in Presentation Designer where you can **visually build your presentation templates**. You can easily **drag and drop** items right onto the canvas, making it simpler to create your layout. Any adjustments you make to the styling appear right away, giving you instant visual feedback as you work. This hands-on area lets content managers play around with different designs and setups.
+
+    ---
 
     ![](../../../../assets/HCL_Presentation_Designer_Canvas_Item.png)
 
