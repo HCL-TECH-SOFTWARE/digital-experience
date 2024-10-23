@@ -1,0 +1,5 @@
+title: Features
+nav:
+  - index.md
+  - User profile: people_profiles.md
+  - Profile tags: people_profile_tags.md

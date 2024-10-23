@@ -1,0 +1,9 @@
+title: HCL People Services
+nav:
+    - index.md
+    - Getting Started: getting_started
+    - Features: features
+    - Deployment: deployment
+    - Administration: administration
+    - Integration: integration
+    - API documentation: api
