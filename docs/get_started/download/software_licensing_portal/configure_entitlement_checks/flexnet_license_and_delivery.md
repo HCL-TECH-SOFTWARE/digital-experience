@@ -47,7 +47,7 @@ You must configure these properties to your entitlements to the applicable **DX 
           productionEnvironment: true
           # Flexnet License Server ID
           licenseServerId: "LICENSE_SERVER_ID"
-          # Flexnet or MHS License Server URI
+          # Flexnet License Server URL
           licenseServerUri: "LICENSE_SERVER_URI"
           # Flexnet License Server's Configured Features
           licenseFeatureNameWithVersion: "LICENSE_SERVER_FEATURE_WITH_VERSION"
@@ -55,8 +55,6 @@ You must configure these properties to your entitlements to the applicable **DX 
           licenseManagerUser: "LICENSE_USERNAME"
           # Flexnet License Password
           licenseManagerPassword: "LICENSE_PASSWORD"
-          # Deployment key for MHS deployment instance
-          deploymentKeySecret: ""
 
     ```
 
@@ -103,8 +101,6 @@ configuration:
     licenseManagerUser: "admin"
     # Flexnet License Password
     licenseManagerPassword: "mypassword"
-    # Deployment key for MHS deployment instance
-    deploymentKeySecret: "aQDALT7QJVU9V8KESqvi4xE0TBwdNgWIdbm1Gt2OfodEe5QEZLr55Srxs9sM"
 ```
 
 !!!reminder

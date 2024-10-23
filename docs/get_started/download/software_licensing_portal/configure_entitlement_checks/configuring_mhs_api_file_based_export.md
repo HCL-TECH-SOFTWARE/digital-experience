@@ -46,6 +46,38 @@ End,370d193fe0be35950d2707026d23ce595ae46054b77efcc944aa2484eab39399976854c58321
 ### Upload usage metrics
 The generated `{YYYY-MM-DDTHH-MM-SS UTC}usage.metrics` file should then be uploaded to the MHS portal for processing.
 
+## My HCL Software API Configuration
+
+The below properties must be configured to your entitlements, you will configure those properties to your Helm chart to validate the entitlement details for your software.
+
+```yaml
+
+# License Manager Configuration
+  licenseManager:
+    # Configures if this environment is a production environment.
+    # For non production environments sessions are not counted but the license
+    # is still validated.
+    productionEnvironment: true
+    # Flexnet License Server ID Ex: Q8A5YCZ3A4GH
+    licenseServerId: ""
+    # Flexnet or MHS License Server URI Ex: https://hclsoftware.compliance.flexnetoperations.com
+    licenseServerUri: ""
+    # Flexnet License Server's Configured Features Ex: DXPN_CloudNative_Tier1_500K@9.5
+    licenseFeatureNameWithVersion: ""
+    # Source Identity for Manual session usage report
+    licenseManualReportUniqueIdentifier: ""
+    # AWS Service Account Name for EKS deployments
+    serviceAccountName: ""
+    # AWS License Config Secret for Self Managed Clusters
+    licenseConfigSecret: ""
+    # Deployment key for MHS deployment instance
+    deploymentKeySecret: ""
+
+```
+
+-   `productionEnvironment`: Set to true to send usage reports to MHS, and for other environments (e.g. test or UAT), set to false.
+-   `licenseServerUri`: MHS License Server URI
+-   `deploymentKeySecret`: Credentials for product deployments. This can be optain from [My HCLSoftware Portal](https://my.hcltechsw.com/)
 
 ## MHS on Kubernetes vs Non-Kubernetes
 

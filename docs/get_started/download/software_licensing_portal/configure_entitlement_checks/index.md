@@ -7,8 +7,8 @@ The [HCL Software License Portal](https://support.hcltechsw.com/csm?id=kb_articl
         -   [Online Reporting](./flexnet_license_and_delivery.md)
         -   Offline reporting for disconnected deployments - [Local flexNet license serve](configuring_local_flexnet_entitlement_server.md)
     -   My HCL Software
-        -   Online Reporting
-        -   [Offline reporting for disconnected deployments](./configuring_mhs_api_file_based_export.md)
+        -   [Online Reporting](./configuring_mhs_api_file_based_export.md/#my-hcl-software-api-configuration)
+        -   [Offline reporting for disconnected deployments](./configuring_mhs_api_file_based_export.md/#generating-and-uploading-user-session-data-usage-in-metrics-format)
     - [CSV Export](./export_usage_report.md)
   
 -   Non-Kubernetes
