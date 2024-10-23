@@ -1,6 +1,6 @@
-# Using HCL Presentation Designer
+# Using Presentation Designer
 
-Edit presentation templates in HCL Presentation Designer. Understand how to use different user items and styling options available.
+Edit presentation templates in Presentation Designer. Understand how to use different user items and styling options available.
 
 
 -   **[User Items / Elements](../usage/user_items.md)**  

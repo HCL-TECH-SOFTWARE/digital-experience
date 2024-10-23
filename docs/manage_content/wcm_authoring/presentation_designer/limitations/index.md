@@ -1,6 +1,6 @@
 # Presentation Designer limitations
 
-Take note of the following limitations when using HCL Presentation Designer:
+Take note of the following limitations when using Presentation Designer:
 
 ## Managing Presentation Template
 

@@ -1,6 +1,6 @@
 # Editing Presentation Template in Presentation Designer
 
-This section details how to edit a presentation template in HCL Presentation Designer. 
+This section details how to edit a presentation template in Presentation Designer. 
 
 To provide a comprehensive example, the goal is to have a **Content Section** presentation template for a **project page** which will display an **image of the project**, the **project title**, and **general information** by utilizing the capabilities of Presentation Designer. 
 
@@ -30,7 +30,7 @@ To provide a comprehensive example, the goal is to have a **Content Section** pr
         *Text Elements (Text & Rich Text)*:
         ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Sample_Content_Item_Text_Elements.png)
 
--   Create a blank **presentation template** in the Authoring portlet. For detailed steps, see **[Access HCL Presentation Designer](../access/index.md)**.
+-   Create a blank **presentation template** in the Authoring portlet. For detailed steps, see **[Access Presentation Designer](../access/index.md)**.
 
     ??? note "Click to see sample created presentation template"
         *Content Section PT*:

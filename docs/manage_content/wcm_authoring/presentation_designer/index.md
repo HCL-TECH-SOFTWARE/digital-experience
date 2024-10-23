@@ -1,4 +1,4 @@
-# HCL Presentation Designer
+# Presentation Designer
 
 The Presentation Designer enables users to edit presentation templates through a drag-and-drop interface, following a low-code/no-code approach. Users can style and configure elements with a real-time, visual editing experience, where changes are instantly reflected on the canvas.
 
@@ -15,14 +15,14 @@ By leveraging this visual tool, content managers can reduce their reliance on de
 
 Refer to the following pages for more information:
 
-- **[Access HCL Presentation Designer](../presentation_designer/access/index.md)**<br>
-This section provides the steps on how to access the HCL Presentation Designer and details on the user interface.
+- **[Access Presentation Designer](../presentation_designer/access/index.md)**<br>
+This section provides the steps on how to access the Presentation Designer and details on the user interface.
 
-- **[Usage of HCL Presentation Designer](../presentation_designer/usage/index.md)**<br>
-Edit presentation templates using HCL Presentation Designer. Understand how to use different user items and styling options available.
+- **[Usage of Presentation Designer](../presentation_designer/usage/index.md)**<br>
+Edit presentation templates using Presentation Designer. Understand how to use different user items and styling options available.
 
 - **[Presentation Designer Limitations](../presentation_designer/limitations/index.md)**<br>
-This section lists the current limitations when using HCL Presentation Designer.
+This section lists the current limitations when using Presentation Designer.
 
 ???+ info "Related information"
     - [Presentation Templates](../../../build_sites/create_sites/create_reusable_assets/presentation_template/index.md)

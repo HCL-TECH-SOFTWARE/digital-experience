@@ -3,7 +3,7 @@
 Styling options give the users the ability to make the user items or elements on the canvas presentable. The **styles** are integral part of Presentation Designer as it enables an interactive design experience, minimizing the need for users to preview the final output separately, as the style changes **reflect visibly on the canvas**.
 
 !!! note
-    To access Presentation Designer and gain an understanding of its user interface, see the **[Access HCL Presentation Designer](../access/index.md)** topic. 
+    To access Presentation Designer and gain an understanding of its user interface, see the **[Access Presentation Designer](../access/index.md)** topic. 
     
     To know how to use the different user items or elements in Presentation Designer, see the **[User items or elements in Presentation Designer](../usage/user_items.md)** topic. 
 

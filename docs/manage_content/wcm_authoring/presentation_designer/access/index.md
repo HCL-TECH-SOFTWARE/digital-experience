@@ -1,6 +1,6 @@
 # Accessing the Presentation Designer
 
-This section provides the steps on how to access the HCL Presentation Designer and details on the user interface.
+This section provides the steps on how to access the Presentation Designer and details on the user interface.
 
 ## Prerequisite
 
@@ -54,7 +54,7 @@ Refer to the following instructions to access and navigate to Presentation Desig
     ![](../../../../assets/HCL_Presentation_Desinger_Blank_Canvas.png "HCL Presentation Desinger - Blank Canvas")
 
 
-## The HCL Presentation Designer UI
+## The Presentation Designer UI
 
 The Presentation Designer user interface is composed of three main sections:
 
@@ -76,7 +76,7 @@ The Presentation Designer user interface is composed of three main sections:
 
     It also contains the **Style** panel where you can edit different **styling options** available for the selected item/element on the canvas. The styling options will update accordingly based on the selected item on the canvas. 
     
-    For more information on the items and style options, visit the **[Usage of HCL Presentation Designer](../usage/index.md)**
+    For more information on the items and style options, visit the **[Usage of Presentation Designer](../usage/index.md)**
 
 3.  **Canvas**
 

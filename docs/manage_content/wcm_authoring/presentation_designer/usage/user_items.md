@@ -3,7 +3,7 @@
 User items / elements refers to any element that users can edit or drag and drop onto the canvas. This section provides information on the different item types and how to use them in Presentation Designer.
 
 !!! note
-    To access Presentation Designer and gain an understanding of its user interface, see the **[Access HCL Presentation Designer](../access/index.md)** topic.
+    To access Presentation Designer and gain an understanding of its user interface, see the **[Access Presentation Designer](../access/index.md)** topic.
 
     To familiarize with the different styling options available in Presentation Designer, see the **[Styling Options in Presentation Designer](../usage/styling_options.md)** topic.
 
