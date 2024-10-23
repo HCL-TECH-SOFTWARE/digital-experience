@@ -2,7 +2,9 @@
 
 In this topic, you will learn how to import Personalization Workspace resource collections.  
 
-Use the Personalization Navigator to create Workspace folders for the resource collections. Then, import the resource collections into the Workspace of the Personalization Navigator.
+Ensure you have properly followed the steps in [Export the WAR file and install the portlet](pzn_demo_export_war_install_portlet.md) and the portlet is installed already.  
+
+## Importing the resource collection classes  
 
 Before you can use the content and user resources in the Personalization Navigator, you must place these class files into a directory accessible by that portlet.
 
@@ -11,9 +13,9 @@ Before you can use the content and user resources in the Personalization Navigat
 3. Accept the default settings and click **Finish**.  
 4. Restart the server to make sure that the **pers_offers.jar** file is loaded correctly.  
 
-## Importing the resource collections into the portlet  
+## Importing the resource collection rules
 
-Ensure you have properly followed the steps in [Export the WAR file and install the portlet](pzn_demo_export_war_install_portlet.md).
+Use the Personalization Navigator to create Workspace folders for the resource collections. Then, import the resource collections into the Workspace of the Personalization Navigator.
 
 1. Click the **Personalization** tab.
 
