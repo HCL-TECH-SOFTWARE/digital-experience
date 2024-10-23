@@ -1,7 +1,7 @@
-# Configuration
-
 !!!warning
     Please ensure these configuration properties are in sync with the release version of People Service Helm chart.
+
+# Configuration
 
 ## Image configuration
 
@@ -25,6 +25,12 @@
 | configuration.jwt.secret | string | `""` | JWT secret |
 | configuration.jwt.existingSecret | string | `""` | Existing secret for JWT secret |
 | configuration.jwt.existingSecretJwtSecretKey | string | `""` | Existing secret key for jwtSecret, if not specified, defaults to "jwtSecret" |
+| extraEnvVars | array | `[]` | Additional environment variables for the container |
+
+## OIDC configuration
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
 | configuration.oidc.issuer | string | `""` | Issuer url |
 | configuration.oidc.clientId | string | `""` | Client ID |
 | configuration.oidc.clientSecret | string | `""` | Client secret |
@@ -32,6 +38,11 @@
 | configuration.oidc.scopes | string | `"openid profile email"` | OIDC scopes |
 | configuration.oidc.existingSecret | string | `""` | Existing secret for OIDC configuration |
 | configuration.oidc.existingSecretClientSecretKey | string | `""` | Existing secret key for clientSecret, if not specified, defaults to "clientSecret" |
+
+## DX configuration
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
 | configuration.dx.sessionCookieName | string | `"JSESSIONID"` | Session cookie name |
 | configuration.dx.userValidationEndpoint | string | `"/auth/validate"` | User validation endpoint, that identifies if the user is still authenticated |
 | configuration.dx.currentUserAccessEndpoint | string | `"/dxmyrest/access/current-user?resourceId=wps.USERS"` | Current user access endpoint, that identifies the current user's access level information. This information is used to determine the user's role `Privileged`, `Authenticated` or `Unauthenticated` |
@@ -39,7 +50,12 @@
 | configuration.dx.cacheTTL | int | `3600000` | Cache time to live for current user access endpoints resopnse |
 | configuration.dx.cacheMaxEntries | int | `1000` | Maximum number of entries in the cache that stores the user's role |
 | configuration.dx.portletPageContextRoot | string | `"/wps/myportal/Practitioner/PeopleService"` | Context root for the People Service portlet page |
-| extraEnvVars | array | `[]` | Additional environment variables for the container |
+
+## Schema configuration
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| configuration.schema.readonlyFields | array | `["id","firstName","lastName","displayName","organization","email","dn","managerId"]` | List of profile fields that should be marked as read only |
 
 ## Networking configuration
 
@@ -47,7 +63,7 @@
 |-----|------|---------|-------------|
 | networking.ssl.enabled | boolean | `false` | Indicates if the application is accessible on http or https. |
 | networking.host | string | `""` | Public qualified host name. Example: "example.com". If `networking.ssl.enabled` is true, this will be prefixed with `https://` or `http://` otherwise. |
-| networking.contextRoot.api | string | `"/dx/api/people/v1"` | Context root for the API |
+| networking.contextRoot.api | string | `"/people/api/v1"` | Context root for the API |
 | networking.contextRoot.ui | string | `"/people/ui"` | Context root for the UI |
 | networking.ingress.enabled | boolean | `false` | Enable ingress for the application |
 | networking.ingress.ingressClassName | string | `""` | Class name for the ingress |
@@ -80,7 +96,7 @@
 |-----|------|---------|-------------|
 | userSynchronization.enabled | boolean | `false` | Indicates if user synchronization is enabled |
 | userSynchronization.strategy | string | `"sync"` | User synchronization strategy, possible values are `sync`, `none` |
-| userSynchronization.cronSchedule | string | `"0 */4 * * * *"` | Cron schedule for user synchronization |
+| userSynchronization.cronSchedule | string | `"0 */4 * * *"` | Cron schedule for user synchronization |
 | userSynchronization.preventConcurrentExecution | boolean | `true` | Indicates if user synchronization is run in mutual exlusive mode |
 
 ## External database configuration
@@ -210,7 +226,7 @@ The environment variables are used to configure the internal behavior of the peo
 
 #### User directory settings
 
-The user directories relate to the additional user directories that are used for user data aggregation in addition to the primary LDAP-based user directory. For more information, see the section about [custom RESTful directories](../administration/user-provisioning/custom-restful-directories.md).
+The user directories relate to the additional user directories that are used for user data aggregation in addition to the primary LDAP-based user directory. For more information, see the section about [Custom RESTful directories](../../administration/user_provisioning/custom_restful_directories.md).
 
 They are declared by their ID via the `USER_DIRECTORIES` environment variable. For each provided directory, the base URL and API key are set via the `USER_DIRECTORY_<ID>_BASE_URL` and `USER_DIRECTORY_<ID>_API_KEY` environment variables.
 

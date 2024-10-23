@@ -1,6 +1,6 @@
 title: Deployment
 nav:
     - index.md
-    - Installation: installation.md
-    - Configuration: configuration_parameters.md
-    - Uninstallation: uninstallation.md
+    - installation.md
+    - configuration
+    - uninstallation.md

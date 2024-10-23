@@ -1,8 +1,8 @@
 title: Administration
 nav:
   - index.md
-  - Authentication: authentication.md
-  - User provisioning: user_provisioning
-  - Managing user properties: managing_user_properties.md
-  - Monitoring and logging: monitoring_logging
+  - authentication
+  - user_provisioning
+  - managing_user_properties
+  - monitoring_logging
   - User privacy and PII: user_privacy_pii.md

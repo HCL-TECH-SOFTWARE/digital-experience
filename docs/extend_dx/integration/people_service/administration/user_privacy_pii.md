@@ -1,4 +1,4 @@
-# Privacy and user PII
+# User privacy and PII
 
 HCL People Service provides a set of features to manage user privacy and personal identifiable information (PII). This section outlines the procedures for handling user data, including the retrieval and erasure of personal information.
 
@@ -12,10 +12,10 @@ While the relevance of data privacy may vary depending on the organization's pol
 
 User data in the People Service can be categorized into two main types:
 
-- **Aggregated data**: Information that is provisioned from external sources. Refer to the [user provisioning](./user_provisioning/user-federation.md) section for more information.
+- **Aggregated data**: Information that is provisioned from external sources. Refer to the [User provisioning](./user_provisioning/user_federation.md) section for more information.
 - **User-generated data**: Information that users provide directly to the People Service, such as profile details or tags.
 
-Which property is aggregated or allowed to be provided by the user can be configured in the People Service. Refer to the [user properties](./managing_user_properties.md) section for more information. In the context of data privacy, it is essential to distinguish between these two types of data and ensure that they are handled appropriately.
+Which property is aggregated or allowed to be provided by the user can be configured in the People Service. Refer to the [Managing user properties](./managing_user_properties/index.md) section for more information. In the context of data privacy, it is essential to distinguish between these two types of data and ensure that they are handled appropriately.
 
 ### Data storage
 
@@ -25,13 +25,13 @@ In addition to the database, the People Service may also store user data in moun
 
 ### User synchronization
 
-The People Service synchronizes user data from external sources to maintain an up-to-date view of users within the organization. This process involves mapping and transforming user data from the source system to the People Service's data model. Refer to the [user provisioning](./user_provisioning/user-synchronization.md) section for more information on user synchronization.
+The People Service synchronizes user data from external sources to maintain an up-to-date view of users within the organization. This process involves mapping and transforming user data from the source system to the People Service's data model. Refer to the [User synchronization](./user_provisioning/user_synchronization.md) section for more information on user synchronization.
 
 This means that user data that should be removed from the People Service must also be removed from the source system. The People Service does not automatically delete user data from external sources. It is the responsibility of the organization to ensure that user data is removed from all relevant systems.
 
 ## User data retrieval
 
-Users have the right to access their personal data stored in the People Service. The People Service provides the API endpoint `/dx/api/people/v1/people/{id}/privacy/data` to retrieve user data based on the user's identifier. Currently, this endpoint is only accessible to administrators. 
+Users have the right to access their personal data stored in the People Service. The People Service provides the API endpoint `/dx/api/people/v1/people/{id}/privacy/data` to retrieve user data based on the user's identifier. Currently, this endpoint is only accessible to administrators.
 
 The response includes all user data stored in the People Service, including aggregated and user-generated data. The data may be summarized or redacted if they may contain PII of other users.
 

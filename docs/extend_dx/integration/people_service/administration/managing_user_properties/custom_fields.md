@@ -11,7 +11,7 @@ Custom fields can be added in two different ways, which also relates to the inte
 
 ### Custom fields via properties
 
-For more information on how to configure custom fields via properties in the helm config, see the [Configuration - user attribute settings](../deployment/configuration_parameters.md#user-attribute-settings) section.
+For more information on how to configure custom fields via properties in the helm config, see the [Configuration - user attribute settings](../../deployment/configuration/index.md) section.
 
 For example, to add a custom field `customField1` to the user profile, the following environment variable can be set:
 

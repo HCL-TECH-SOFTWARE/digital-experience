@@ -1,6 +1,6 @@
 # Managing user properties
 
-The central entity in the People Service are users and their properties. As requirements for user profiles can vary greatly between different organizations, the People Service provides a flexible way to map, configure or extend the user profile with existing data or additional information. 
+The central entity in the People Service are users and their properties. As requirements for user profiles can vary greatly between different organizations, the People Service provides a flexible way to map, configure or extend the user profile with existing data or additional information.
 
 ## User properties
 
@@ -45,4 +45,4 @@ Properties also have validation that can be simple string/number validation but 
 
 Custom fields are a way to extend the user profile with additional information that is not covered by the default properties. Custom fields can be of any type and can be added to the user profile via the API or the UI. Custom fields can be marked as required or optional and can have validation rules attached to them.
 
-For more information on how to manage custom fields, see the [custom fields](./custom-fields.md) section.
+For more information on how to manage custom fields, see the [Custom fields](./custom_fields.md) section.

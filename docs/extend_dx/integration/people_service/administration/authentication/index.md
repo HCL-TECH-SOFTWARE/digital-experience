@@ -11,7 +11,7 @@ HCL People Service supports following authentication strategies:
 
 Whenever an user logs in to DX, the authentication process creates Lightweight Third-Party Authentication (LTPA) cookies. People Service consumes these cookies to validate the user's identity and session using the Ring API, eliminating the need for the user to re-authenticate when accessing their own or another user's profile page. To achieve this both DX and People Service should be configured against the same user registry.
 
-For more information on DX authentication refer to [Authentication](../../../../deployment/manage/security/people/authentication/index.md) section.
+For more information on DX authentication refer to [Authentication](https://opensource.hcltechsw.com/digital-experience/latest/deployment/manage/security/people/authentication/) section.
 
 ### OIDC
 
@@ -19,7 +19,7 @@ People Service supports OpenId Connect (OIDC). OpenID Connect is an identity lay
 
 In the context of integrating the people service with other products or services, OIDC provides a standardized way to authenticate users and obtain user information. This allows for seamless user experiences across different applications and services, as well as secure and reliable authentication mechanisms.
 
-To set up People Service with OIDC for authentication, see [Configuration parameters](../deployment/configuration_parameters.md). Additionally, ensure that DX is configured with the same OIDC provider by referring to [Configuring OIDC for HCL Digital Experience](../../../../deployment/manage/security/people/authentication/oidc/index.md).
+To set up People Service with OIDC for authentication, see [OIDC configuration](./oidc_configuration.md). Additionally, ensure that DX is configured with the same OIDC provider by referring to [Configuring OIDC for HCL Digital Experience](https://opensource.hcltechsw.com/digital-experience/latest/deployment/manage/security/people/authentication/oidc/).
 
 ## Authorization
 

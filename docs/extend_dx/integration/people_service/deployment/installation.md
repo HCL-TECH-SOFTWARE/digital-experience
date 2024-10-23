@@ -4,7 +4,7 @@ This document contains instructions on how to install People Service.
 
 ## Deployment
 
-People Service is bundled as a dependency in HCL Digital Experience (DX) Helm chart. The deployment is controlled by `peopleservice.enabled` property in the Helm chart `values.yaml`. For more information, refer to [Configuring People Service](./configuration_parameters.md).
+People Service is bundled as a dependency in HCL Digital Experience (DX) Helm chart. The deployment is controlled by `peopleservice.enabled` property in the Helm chart `values.yaml`. For more information, refer to [Configuration](./configuration/index.md).
 
 ```yaml
 peopleservice:
@@ -28,15 +28,15 @@ peopleservice:
       dx: true
 ```
 
-People Service is a React integration portlet configured to load static files of the app. It also provides web components for rendering a person's business card. So deploying People Service will configure the portlet, deploy the React integration portlet page, and make the web components for rendering the business card accessible.
-
 ## Install command
 
-To run the installation of your prepared configurations using Helm, refer to [Install commands](../../../../deployment/install/container/helm_deployment/helm_install_commands.md#install-commands)
+To run the installation of your prepared configurations using Helm, refer to [Install commands](https://opensource.hcltechsw.com/digital-experience/latest/deployment/install/container/helm_deployment/helm_install_commands#install-commands)
 
 ## Enabling and disabling manually
 
-If People Service is already installed, you can manually enable or disable it by executing Config Engine tasks.
+People Service is integrated into and available through HCL DX portlet pages. It comprises of portlet, portlet page and business card web component. This is configured automatically using ConfigEngine tasks at the startup if enabled while deploying DX.
+
+If People Service is already deployed, you can manually enable or disable it by executing ConfigEngine tasks.
 
 To enable People Service, run the `enable-people-service` task.
 
