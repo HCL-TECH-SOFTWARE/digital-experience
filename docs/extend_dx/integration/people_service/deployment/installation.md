@@ -30,7 +30,7 @@ peopleservice:
 
 ## Install command
 
-To run the installation of your prepared configurations using Helm, refer to [Install commands](https://opensource.hcltechsw.com/digital-experience/latest/deployment/install/container/helm_deployment/helm_install_commands#install-commands)
+To run the installation of your prepared configurations using Helm, refer to [Install commands](../../../../deployment/install/container/helm_deployment/helm_install_commands#install-commands).
 
 ## Enabling and disabling manually
 

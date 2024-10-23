@@ -32,18 +32,16 @@ To prepare for the configuration, gather the following details:
 The configuration of the people service is conducted via values in the Helm charts. The following values need to be set to configure the people service to use OIDC and the IdP:
 
 ```yaml
-auth:
-enabled: true
-strategy: "OIDC"
-jwtTokenExpiration: 3600000
-jwtSecret: "<JWT_SECRET>"
-oidc:
-    issuer: "https://<IDP_URL>/auth/realms/<REALM>"
-    clientId: "<CLIENT_ID>"
-    clientSecret: "<CLIENT_SECRET>"
-    redirectURI: "https://<HOSTNAME>/people/api/v1/auth/login"
-    scopes: "openid profile email"
-    uniqueUserIdentifierClaim: "sub"
+peopleservice:
+  configuration:
+    oidc:
+      issuer: "https://<IDP_URL>/auth/realms/<REALM>"
+      clientId: "<CLIENT_ID>"
+      clientSecret: "<CLIENT_SECRET>"
+      redirectURI: "https://<HOSTNAME>/dx/api/people/v1/auth/login"
+      scopes: "openid profile email"
+      existingSecret: ""
+      existingSecretClientSecretKey: ""
 ```
 
 Replace the sample values or placeholders with the actual values you gathered from your IdP configuration. For more details on the values and their meaning, see the [Configuration - OIDC configuration](../../deployment/configuration/index.md#oidc-configuration).

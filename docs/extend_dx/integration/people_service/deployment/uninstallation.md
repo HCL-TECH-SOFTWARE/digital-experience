@@ -10,4 +10,4 @@ peopleservice:
 
 ## Upgrade command
 
-To run the upgrade command for uninstalling People Service using Helm, refer to [Helm Upgrade configuration command](https://opensource.hcltechsw.com/digital-experience/latest/deployment/install/container/helm_deployment/helm_uninstall/#uninstall-command).
+To run the upgrade command for uninstalling People Service using Helm, refer to [Helm Upgrade configuration command](../../../../deployment/install/container/helm_deployment/helm_uninstall/#uninstall-command).
