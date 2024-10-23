@@ -17,25 +17,25 @@ To display Web Content rules, use a Portal Personalization Component in the HCL 
 
 ## Procedure to use the Personalized List portlet
 
+The Personalized List portlet require rules and/or custom resource collection classes that need to be defined and installed first, before any personalized information can be shown up in that portlet. Details in developing such custom classes and hrf-files can be found in [Developing a personalized portlet using IBM Rational Application Developer](index.md). The subsequent steps are based on the Pers Offers sample described in that guide.  
+
+### Prerequistes  
+
+- [PZNDemo resources](./demo/pzn_demoinstall.md) are successfully installed.
+
 ### 1. Import custom classes and hrf-files
 
-The Personalized List portlet require custom classes and rules that need to be defined and installed first, before any personalized information can be shown up in that portlet. Details in developing custom classes and hrf-files can be found in [Developing a personalized portlet using IBM Rational Application Developer](index.md). The subsequent steps are based on the Pers Offers sample described in that section.  
+Based on the Pers Offers sample, complete the following tasks:  
 
-#### Prerequisites when testing the portlet with the Pers Offers sample
-
-Before the Personalized List portlet can be used to show up personalized information of the Pers Offers sample, it is needed to [Installing the PZNDemo resources](./demo/pzn_demoinstall.md). Then it requires to import the Pers Offers hrf-rules and rule classes.  
-
-Based on that sample, ensure that you have completed the following tasks:  
-
-- Installed the [rule classes](./download/pers_offers.jar) by following the instructions of [Importing Personalization Workspace resource collections](./RAD/pzn_demo_import_resource_collections.md).  
-- Imported the [rules (hrf-files)](./download/Portal_rules_PznOffers.zip) by following the instructions of [Importing Personalization Workspace resource collections](./RAD/pzn_demo_import_resource_collections.md).  
+- Install the [resource collection classes](./download/pers_offers.jar) by following the instructions of [Importing Personalization Workspace resource collections](./RAD/pzn_demo_import_resource_collections.md).  
+- Import the [rules (hrf-files)](./download/Portal_rules_PznOffers.zip) by following the instructions of [Importing Personalization Workspace resource collections](./RAD/pzn_demo_import_resource_collections.md).  
 
     !!!note
         If the PersOffers Portlet is not installed yet, you can download it from the [Developing a personalized portlet using IBM Rational Application Developer](./RAD/index.md) page. Then, follow the instructions on how to [Install the portlet on a portal page](./RAD/pzn_demo_export_war_install_portlet.md).
 
-After the import of the hrf-files and rule classes, **restart HCL Portal** to ensure that the new classes and rules are loaded.
+After the import of the hrf-files and resource collection classes, **restart HCL Portal** to ensure that the new resources are loaded.
 
-### 2. Create a Copy of the Personalized List portlet and set permissions  
+### 2. Create a Copy of the Personalized List portlet  
 
 1. Log in to HCL Portal as the Portal administrator (wpsadmin).  
 
@@ -51,13 +51,7 @@ After the import of the hrf-files and rule classes, **restart HCL Portal** to en
 
 6. Name the new portlet **Personalized List Special Offers**, then click **OK**.
 
-    ![Copy Personalized List Portlet](./RAD/images/pzn_offers_copy_personalized_list_portlet2.png)
-
-7. Set access permissions for the new portlet that **All Authenticated Portal Users** are **Privileged Users**:
-    a. Search for the Pers_Offers portlet and click the **Assign access to portlet** icon.
-    b. Click the **Edit Role** icon next to **Privileged Users**.
-    c. Click **Add**.
-    d. Select the checkbox for **All Authenticated Portal Users**, then click **OK**.
+    ![Copy Personalized List Portlet](./RAD/images/pzn_offers_copy_personalized_list_portlet2.png)  
 
 ### 3. Add the copied Personalized List portlet to a page
 
