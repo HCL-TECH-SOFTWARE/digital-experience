@@ -77,7 +77,7 @@ After the import of the hrf-files and rule classes, **restart HCL Portal** to en
 
 ### 4. Configure Content Spots and Display Options
 
-To display the **Pers List Portlet - Rules** page on the **Personalized List Special Offers portlet**, refer to the following steps.
+To configure content spots or display options on the **Personalized List Special Offers portlet**, refer to the following steps.
 
 1. Click the **Personalized List Special Offers** dropdown, then select **Configure**.  
 
