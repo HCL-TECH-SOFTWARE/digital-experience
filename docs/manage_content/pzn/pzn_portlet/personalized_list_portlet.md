@@ -36,7 +36,7 @@ To create a copy of the Personalized List portlet called **Personalized List Spe
 
 1. Log in to HCL Portal as the Portal administrator (wpsadmin).  
 
-2. Click the **Open Applications menu**, then navigate to **Administration**.  
+2. Click the **Open applications menu**, then navigate to **Administration**.  
 
 3. Click **Applications > Portlets**.
 

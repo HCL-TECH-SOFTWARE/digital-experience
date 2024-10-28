@@ -20,7 +20,7 @@ In this exercise, you can install the Portal Personalization sample and configur
 
 5. Open your web browser and log in to the Portal as **wpsadmin** user.
 
-6. Click the **Open Applications menu**, then navigate to **Administration**.
+6. Click the **Open applications menu**, then navigate to **Administration**.
 
 7. Click **Security > User and Groups > All Portal User Groups > pzndemousers**.
 
