@@ -71,7 +71,7 @@ After the import of the hrf-files and resource collection classes, **restart HCL
 
 ### Configure content spots and display options
 
-To configure content spots or display options on the **Personalized List Special Offers portlet**, refer to the following steps.
+To configure content spots or display options on the **Personalized List Special Offers portlet**, refer to the following steps:
 
 1. Click the **Personalized List Special Offers** dropdown, then select **Configure**.  
 
