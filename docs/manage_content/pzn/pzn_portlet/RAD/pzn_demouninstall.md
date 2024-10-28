@@ -10,6 +10,6 @@ To uninstall the PersOffers portlet, refer to the following steps:
 4. Search for **PersOffers.war** in the Web Module list.  
 5. Click the **Delete Web module** icon to uninstall the portlet.  
 
-## 2. Uninstall the PZNDemo resources
+## Uninstall the PZNDemo resources
 
 Follow the instructions in [Uninstalling the Personalization sample and database](../demo/pzn_demouninstall.md) to uninstall the demo.  
