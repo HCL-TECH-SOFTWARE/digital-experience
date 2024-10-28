@@ -18,7 +18,7 @@ The Personalized List portlet requires rules and/or custom resource collection c
 
 - [PZNDemo resources](./demo/pzn_demoinstall.md) are successfully installed.
 
-### Import custom classes and hrf-files
+## Import custom classes and hrf-files
 
 Based on the Pers Offers sample, complete the following tasks:  
 
@@ -30,7 +30,7 @@ Based on the Pers Offers sample, complete the following tasks:
 
 After the import of the hrf-files and resource collection classes, **restart HCL Portal** to ensure that the new resources are loaded.
 
-### Create a Copy of the Personalized List portlet  
+## Create a Copy of the Personalized List portlet  
 
 To create a copy of the Personalized List portlet called **Personalized List Special Offers**, refer to the following steps:
 
@@ -50,7 +50,7 @@ To create a copy of the Personalized List portlet called **Personalized List Spe
 
     ![Copy Personalized List Portlet](./RAD/images/pzn_offers_copy_personalized_list_portlet2.png)  
 
-### Add the copied Personalized List portlet to a page
+## Add the copied Personalized List portlet to a page
 
 1. Click **Site Management > Pages**.
 
@@ -66,7 +66,7 @@ To create a copy of the Personalized List portlet called **Personalized List Spe
 
     ![Personalization List Portlet located on page](./RAD/images/personalizedListPortlet_on_page.png)  
 
-### Configure content spots and display options
+## Configure content spots and display options
 
 To configure content spots or display options on the **Personalized List Special Offers portlet**, refer to the following steps:
 
