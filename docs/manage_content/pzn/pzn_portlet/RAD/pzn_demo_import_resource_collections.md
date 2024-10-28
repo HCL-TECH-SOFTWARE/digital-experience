@@ -2,7 +2,7 @@
 
 In this topic, you will learn how to import Personalization Workspace resource collections.  
 
-Ensure you have properly followed the steps in [Export the WAR file and install the portlet](pzn_demo_export_war_install_portlet.md) and the portlet is installed already.  
+Ensure you have [exported the WAR file and installed the portlet](pzn_demo_export_war_install_portlet.md). 
 
 ## Importing the resource collection classes  
 
