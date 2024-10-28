@@ -42,9 +42,9 @@ To install the Pers_Offers portlet on a portal page, refer to the following step
     d. Click **New Page**.  
     e. On the **Title** field, enter **Pers Offer**, then click **OK** and **Done**.  
 
-10. Add the **Pers_Offers** portlet to the page:
-    a. Go **Site Management > Pages** again, then click the **Edit Page Layout icon** for the **Pers Offers** page.
-    b. Select the checkbox for the **Pers_Offers** portlet, then click **OK > Done**.
-        The portlet is not ready to run yet and you will get an error if you try to run it.
-
+10. Add the **Pers_Offers** portlet to the page:  
+    a. Go **Site Management > Pages** again, then click the **Edit Page Layout icon** for the **Pers Offers** page.  
+    b. Select the checkbox for the **Pers_Offers** portlet, then click **OK > Done**.  
+        The portlet is not ready to run yet and you will get an error if you try to run it.  
+  
 You have successfully exported the personalized JSR 268-based JSP portlet and installed the portlet in HCL Portal. In the next topic, you will learn how to [Import Personalization Workspace resource collections.](./pzn_demo_import_resource_collections.md)
