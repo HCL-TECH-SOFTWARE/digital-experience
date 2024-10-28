@@ -5,7 +5,7 @@
 To uninstall the PersOffers portlet, refer to the following steps:  
 
 1. Log in to HCL Portal as the Portal administrator (wpsadmin).  
-2. Click the **Applications menu**, then go to **Administration**.  
+2. Click the **Open Applications menu**, then go to **Administration**.  
 3. Click **Applications > Web Modules**.  
 4. Search for **PersOffers.war** in the Web Module list.  
 5. Click the **Delete Web module** icon to uninstall the portlet.  
