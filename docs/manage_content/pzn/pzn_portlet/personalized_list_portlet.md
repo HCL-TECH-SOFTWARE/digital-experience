@@ -23,7 +23,7 @@ The Personalized List portlet require rules and/or custom resource collection cl
 
 - [PZNDemo resources](./demo/pzn_demoinstall.md) are successfully installed.
 
-### 1. Import custom classes and hrf-files
+### Import custom classes and hrf-files
 
 Based on the Pers Offers sample, complete the following tasks:  
 
@@ -35,7 +35,9 @@ Based on the Pers Offers sample, complete the following tasks:
 
 After the import of the hrf-files and resource collection classes, **restart HCL Portal** to ensure that the new resources are loaded.
 
-### 2. Create a Copy of the Personalized List portlet  
+### Create a Copy of the Personalized List portlet  
+
+To create a copy of the Personalized List portlet called **Personalized List Special Offers**, refer to the following steps:
 
 1. Log in to HCL Portal as the Portal administrator (wpsadmin).  
 

@@ -40,9 +40,11 @@ To install the Pers_Offers portlet on a portal page, refer to the following step
     b. Click **Site Management > Pages**.  
     c. Click **Content Root > Practitioner Studio > Personalization**.  
     d. Click **New Page**.  
-    e. Name the page **Pers Offer**.  
+    e. On the **Title** field, enter **Pers Offer**, then click **OK**.
 
-10. Add the **Pers_Offers** portlet to the page.  
+10. Add the **Pers_Offers** portlet to the page:
+    a. Go **Site Management > Pages** again, then click the **Edit Page Layout icon** for the **Pers Offers** page.
+    b. Select the checkbox for the **Pers_Offers** portlet, then click **OK > Done**.
 
 11. Click **Done**.  
 

@@ -20,7 +20,7 @@ In this exercise, you can install the Portal Personalization sample and configur
 
 5. Open your web browser and log in to the Portal as **wpsadmin** user.
 
-6. Click the **Open Applications menu**, then navigate to **Administration**.
+6. Click the **Applications menu**, then navigate to **Administration**.
 
 7. Click **Security > User and Groups > All Portal User Groups > pzndemousers**.
 
@@ -34,7 +34,7 @@ In this exercise, you can install the Portal Personalization sample and configur
     The following screenshot shows the PZN demo users:
     ![PZN Demo Users](./images/pzndemo_users.png)
 
-9. Add all pzndemousers to the wpsadmins group.
+9. Add all **pzndemousers** to the **wpsadmins** group.
 
     1. On the **Manage Users and Groups** page, click the navigation item **All Portal User Groups**.  
     2. Click the user group **wpsadmins**.  
