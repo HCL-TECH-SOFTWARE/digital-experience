@@ -4,7 +4,7 @@ In this topic, you will learn how to export the personalized JSR 268-based JSP p
 
 ## Export the WAR file and install the portlet
 
-Export the project to a WAR file called **PersOffers.war**.  
+To export the project to a WAR file called **PersOffers.war**, refer to the following steps:  
 
 1. Right click the **Pers_Offers** project and select **Export > WAR file**.  
 
@@ -36,13 +36,15 @@ To install the Pers_Offers portlet on a portal page, refer to the following step
 
 9. Create a new page called **Pers Offers**:  
 
-    a. In the Portal Menu click to **Administration**.  
+    a. Click the **Open Applications menu**, then go to **Administration**.  
     b. Click **Site Management > Pages**.  
     c. Click **Content Root > Practitioner Studio > Personalization**.  
     d. Click **New Page**.  
     e. On the **Title** field, enter **Pers Offer**, then click **OK** and **Done**.  
 
-    !!!note
+10. Add the **Pers_Offers** portlet to the page:
+    a. Go **Site Management > Pages** again, then click the **Edit Page Layout icon** for the **Pers Offers** page.
+    b. Select the checkbox for the **Pers_Offers** portlet, then click **OK > Done**.
         The portlet is not ready to run yet and you will get an error if you try to run it.
 
 You have successfully exported the personalized JSR 268-based JSP portlet and installed the portlet in HCL Portal. In the next topic, you will learn how to [Import Personalization Workspace resource collections.](./pzn_demo_import_resource_collections.md)
