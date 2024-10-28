@@ -1,6 +1,6 @@
 # Uninstalling the Personalization samples and database
 
-## 1. Uninstall the PersOffers portlet
+## Uninstall the PersOffers portlet
 
 To uninstall the PersOffers portlet, refer to the following steps:  
 
