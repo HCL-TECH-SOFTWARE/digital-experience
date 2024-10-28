@@ -100,7 +100,7 @@ To configure content spots or display options on the **Personalized List Special
 
 To configure the portlet to show more personalized offers based on the rules set per customer type, refer to the following steps:
 
-1. Click the **Applications menu**, then go to **Administration**.  
+1. Click the **Open applications menu**, then go to **Administration**.  
 2. Click **Site Management > Pages**.  
 3. Click **Content Root > Practitioner Studio > Personalization**.  
 
