@@ -2,24 +2,19 @@
 
 In this topic, you will learn how to use a Personalized List portlet.
 
-The Personalized List portlet provides a ready-to-use portlet for displaying personalized content from rules, content spots, or resources. In many cases, it eliminates the need to code new portlets and JSP files yourself.
+The Personalized List portlet provides a ready-to-use portlet for displaying personalized content from rules, content spots, or resources. In many cases, it eliminates the need to code new portlets and JSP files yourself. This portlet is used to display personalized lists of documents, and can also be used with some generated or custom resource collections.
 
-This portlet is used to display personalized lists of documents, and can also be used with some generated or custom resource collections.
+You can use this portlet instead of coding your own personalized portlet in any Integrated Development Environment (IDE) like Rational Application Developer or Microsoft Visual Studio Code. The Personalized List portlet is not intended to be used with the Web Content resource collection, or with rules that involve the Web Content resource collection.
 
-You can use this portlet instead of coding your own personalized portlet in any Integrated Development Environment (IDE) like Rational Application Developer or Microsoft Visual Studio Code. The Personalized List portlet is not intended to be used with the Web Content resource collection, or with rules that involve the Web Content resource collection.  
-
-To display Web Content rules, use a Portal Personalization Component in the HCL Web Content Manager.  
+The Personalized List portlet requires rules and/or custom resource collection classes that need to be defined and installed before personalized information appears in the portlet. Explore the topic [Developing a personalized portlet using IBM Rational Application Developer](./RAD/index.md) to learn more details about developing custom classes and hrf-files. The subsequent steps are based on the Pers Offers sample described in that guide.
 
 !!!note
-    - When the Web Content resource collection is used with the Personalized List portlet, certain attributes like authoring template shows raw values from the repository that cannot be translated to a readable form.  
-    - The details page of the Personalized List portlet does not show the results of the rendered content.  
+    - When the Web Content resource collection is used with the Personalized List portlet, certain attributes like authoring template shows raw values from the repository that cannot be translated to a readable form.
+    - The details page of the Personalized List portlet does not show the results of the rendered content.
     - The details page also shows attributes from the content, such as the creator or last modified date, that are not suitable for the production use of content from Web Content Manager.
+    - To display Web Content rules, use a Portal Personalization Component in the HCL Web Content Manager.
 
-## Procedure to use the Personalized List portlet
-
-The Personalized List portlet require rules and/or custom resource collection classes that need to be defined and installed first, before any personalized information can be shown up in that portlet. Details in developing such custom classes and hrf-files can be found in [Developing a personalized portlet using IBM Rational Application Developer](index.md). The subsequent steps are based on the Pers Offers sample described in that guide.  
-
-### Prerequistes  
+## Prerequistes  
 
 - [PZNDemo resources](./demo/pzn_demoinstall.md) are successfully installed.
 
@@ -41,7 +36,7 @@ To create a copy of the Personalized List portlet called **Personalized List Spe
 
 1. Log in to HCL Portal as the Portal administrator (wpsadmin).  
 
-2. Click the **Applications menu**, then go to **Administration**.  
+2. Click the **Open Applications menu**, then navigate to **Administration**.  
 
 3. Click **Applications > Portlets**.
 
@@ -55,7 +50,7 @@ To create a copy of the Personalized List portlet called **Personalized List Spe
 
     ![Copy Personalized List Portlet](./RAD/images/pzn_offers_copy_personalized_list_portlet2.png)  
 
-### 3. Add the copied Personalized List portlet to a page
+### Add the copied Personalized List portlet to a page
 
 1. Click **Site Management > Pages**.
 
@@ -101,7 +96,7 @@ To configure content spots or display options on the **Personalized List Special
 
 8. Once you're done reviewing, click **Back**.
 
-## 5.Configure the portlet to show more personalized offers  
+## Configure the portlet to show more personalized offers  
 
 To configure the portlet to show more personalized offers based on the rules set per customer type, refer to the following steps:
 
