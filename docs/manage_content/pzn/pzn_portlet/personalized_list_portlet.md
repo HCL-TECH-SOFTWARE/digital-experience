@@ -69,7 +69,7 @@ After the import of the hrf-files and resource collection classes, **restart HCL
 
     ![Personalization List Portlet located on page](./RAD/images/personalizedListPortlet_on_page.png)  
 
-### 4. Configure Content Spots and Display Options
+### Configure content spots and display options
 
 To configure content spots or display options on the **Personalized List Special Offers portlet**, refer to the following steps.
 
