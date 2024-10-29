@@ -59,9 +59,10 @@ To create a copy of the Personalized List portlet called **Personalized List Spe
 6. Name the new portlet **Personalized List Special Offers**, then click **OK**.
 
     ![Copy Personalized List Portlet](./RAD/images/pzn_offers_copy_personalized_list_portlet2.png)  
-7. Set access permissions for the new portlet so **All Authenticated Portal Users** are **Privileged Users**:
-    a. Search for the **Pers_Offers** portlet and click the **Assign access to portlet** icon.
-    b. Click the **Edit Role** icon next to **Privileged Users**.
+
+7. Set access permissions for the new portlet so **All Authenticated Portal Users** are **Privileged Users**:  
+    a. Search for the **Personalized List Special Offers** portlet and click the **Assign access to portlet** icon.  
+    b. Click the **Edit Role** icon next to **Privileged Users**.  
     c. Click **Add**.  
     d. Select the checkbox for **All Authenticated Portal Users**, then click **OK**.  
 
