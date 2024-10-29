@@ -36,7 +36,7 @@ To create a copy of the Personalized List portlet called **Personalized List Spe
 
 1. Log in to HCL Portal as the Portal administrator (wpsadmin).  
 
-2. Click the **Open applications menu**, then navigate to **Administration**.  
+2. Click **Open applications menu**, then navigate to **Administration**.  
 
 3. Click **Applications > Portlets**.
 
@@ -100,7 +100,7 @@ To configure content spots or display options on the **Personalized List Special
 
 To configure the portlet to show more personalized offers based on the rules set per customer type, refer to the following steps:
 
-1. Click the **Open applications menu**, then go to **Administration**.  
+1. Click **Open applications menu**, then go to **Administration**.  
 2. Click **Site Management > Pages**.  
 3. Click **Content Root > Practitioner Studio > Personalization**.  
 

@@ -60,7 +60,7 @@ Before you begin this procedure, ensure that you created a content spot.
 
 5. Log in to HCL Portal as the Portal administrator (wpsadmin).  
 
-6. Click the **Open applications menu**, then navigate to **Administration**.
+6. Click **Open applications menu**, then navigate to **Administration**.
 
 7. Click **Applications > Web Modules**.
 
