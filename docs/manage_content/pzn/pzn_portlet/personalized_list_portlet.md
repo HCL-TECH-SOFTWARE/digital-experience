@@ -56,7 +56,22 @@ To create a copy of the Personalized List portlet called **Personalized List Spe
 
 2. Click **Content Root > Practitioner Studio > Personalization**.  
 
-3. Add the **Personalized List Special Offers portlet** to the new page by clicking to the **Edit Page Layout** button of the portlet on the **Manage Pages** list.
+3. Create a new page called **Pers List Portlet - Rules** and configure the permissions of the page to give access to **All authenticated users**:
+
+    a. Click **New Page**.
+    b. On the **Title** field, enter **Pers List Portlet - Rules**, then click **OK**.
+    c.  Search for the **Pers List Portlet - Rules** portlet and click the **Assign access to portlet** icon.
+    d. Click the **Edit Role** icon next to **Privileged Users**.
+    e. Click **Add**.
+    f. Select the checkbox for **All Authenticated Portal Users**, then click **OK**.
+    
+4. Go **Site Management > Pages** again, then click the **Edit Page Layout icon** for the **Pers List Portlet - Rules** page.
+
+    ![Add the Personalization List Portlet to a page](./RAD/images/pers_offers_add_persListPortlet_to_page.png)
+    
+5. Select the checkbox for the **Personalized List Special Offers** portlet, then click **OK > Done**.
+
+    ![Personalization List Portlet located on page](./RAD/images/personalizedListPortlet_on_page.png)  
 
     ![Add the Personalization List Portlet to a page](./RAD/images/pers_offers_add_persListPortlet_to_page.png)
 
