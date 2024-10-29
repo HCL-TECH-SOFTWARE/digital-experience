@@ -33,6 +33,10 @@ To install the Pers_Offers portlet on a portal page, refer to the following step
 7. Click **Applications > Portlets**.  
 
 8. Search for the Pers_Offers portlet and grant **Privileged User** to **All Authenticated Portal Users**.  
+    a. Click the **Assign access to portlet** icon next to the **Pers_Offers** portlet:
+    b. Click the **Edit Role** icon next to **Privileged User**.
+    c. Click **Add**.
+    d. Select the checkbox for **All Authenticated Portal Users**, then click **OK**.
 
 9. Create a new page called **Pers Offers**:  
 
