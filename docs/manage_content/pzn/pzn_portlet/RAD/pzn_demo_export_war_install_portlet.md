@@ -1,6 +1,6 @@
 # Exporting and installing the personalized portlet
 
-In this topic, you will learn how to export the personalized JSR 268-based JSP portlet and install the portlet in HCL Portal. Before you begin, ensure that you have properly followed the steps in [Coding the portlet JSP](pzn_demo_finish_coding_portlet_jsp.md).
+In this topic, you will learn how to export the personalized JSR 268-based JSP portlet and install the portlet in HCL Digital Experience (DX). Before you begin, ensure that you have properly followed the steps in [Coding the portlet JSP](pzn_demo_finish_coding_portlet_jsp.md).
 
 ## Export the WAR file and install the portlet
 
