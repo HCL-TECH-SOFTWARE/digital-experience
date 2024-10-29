@@ -30,16 +30,6 @@ Complete the following tasks based on the Pers Offers sample by following the in
 
 3. Restart **HCL Digital Experience (DX)** to ensure that the new resources are loaded.
 
-Based on the Pers Offers sample, complete the following tasks:  
-
-- Install the [resource collection classes](./download/pers_offers.jar) by following the instructions of [Importing Personalization Workspace resource collections](./RAD/pzn_demo_import_resource_collections.md).  
-- Import the [rules (hrf-files)](./download/Portal_rules_PznOffers.zip) by following the instructions of [Importing Personalization Workspace resource collections](./RAD/pzn_demo_import_resource_collections.md).  
-
-    !!!note
-        If the PersOffers Portlet is not installed yet, you can download it from the [Developing a personalized portlet using IBM Rational Application Developer](./RAD/index.md) page. Then, follow the instructions on how to [Install the portlet on a portal page](./RAD/pzn_demo_export_war_install_portlet.md).
-
-After the import of the hrf-files and resource collection classes, **restart HCL Portal** to ensure that the new resources are loaded.
-
 ## Create a Copy of the Personalized List portlet  
 
 To create a copy of the Personalized List portlet called **Personalized List Special Offers**, refer to the following steps:
