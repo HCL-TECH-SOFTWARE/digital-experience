@@ -22,7 +22,7 @@ To install the Pers_Offers portlet on a portal page, refer to the following step
 
 2. Log in to HCL Portal as the Portal administrator (wpsadmin).  
 
-3. Click the **Open applications menu**, then navigate to **Administration**.
+3. Click **Open applications menu**, then navigate to **Administration**.
 
 4. Click **Applications > Web Modules**.
 
