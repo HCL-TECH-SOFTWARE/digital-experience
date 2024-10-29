@@ -6,7 +6,7 @@ Use Rational Application Developer to code the dynamic table in the Personalized
 
 Before you begin this procedure, ensure that you created a content spot.
 
-1. Open Rational Application Developer and open **Pers_OffersPortalView.jsp** in edit mode.
+1. In the Rational Application Developer, open **Pers_OffersPortalView.jsp** in edit mode.
 
 2. Insert the following code at the end of the JSP page:
 
