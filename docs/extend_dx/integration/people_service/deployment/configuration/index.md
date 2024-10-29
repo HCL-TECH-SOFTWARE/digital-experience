@@ -1,6 +1,3 @@
-!!!warning
-    Please ensure these configuration properties are in sync with the release version of People Service Helm chart.
-
 # Configuration
 
 ## Image configuration
@@ -56,6 +53,7 @@
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | configuration.schema.readonlyFields | array | `["id","firstName","lastName","displayName","organization","email","dn","managerId"]` | List of profile fields that should be marked as read only |
+| configuration.schema.customFields | array | `[]` | List of custom fields that need to be created while deployment |
 
 ## Networking configuration
 
