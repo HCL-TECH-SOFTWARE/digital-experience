@@ -140,7 +140,7 @@ To configure the portlet to show more personalized offers based on the rules set
     ![Offers Spot list](./RAD/images/personalizedListPortlet_specific_content_spot_result.png)  
 
     !!!note
-        If the result is not showing the expected values, please check the content spot, it's rule and the default mappings, again.
+        If the result is not showing the expected values, check the content spot, its rules, and the default mappings again.
 
 9. Test this portlet by logging in as each pzndemo user having a different profile. You must get the same content results that you see when building your own custom-built portlet (Pers_Offers) using the steps mentioned in [Rational Application Developer](./RAD/index.md), except you do not have to code a portlet or a JSP file.  
 
