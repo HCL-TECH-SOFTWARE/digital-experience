@@ -13,7 +13,7 @@ This section provides information about the functionalities and use cases of the
 
 - **Detects new unique sessions based on parameters such as Internet Protocol (IP) addresses, user-agent strings, and timestamp.** The tool increments the session counter when a session becomes inactive. Inactive is defined as no new requests from the same user for 30 minutes or after a maximum of 4 hours from the start of the session. This ensures accurate session counting, even across extended periods of user activity. It supports custom date range analysis, allowing users to track and report on specific time frames. 
 
-- **Automatically excludes internal requests.** This ensures that session data reflects only external user activity. This is crucial for organizations focusing on customer interactions rather than internal maintenance or system-generated traffic. To further ensure its reliability, the User Session Reporting Tool has been rigorously tested with large sets of log files and across different access log formats. This demonstrates its capability to handle diverse and extensive data sources without compromising accuracy.
+- **Automatically excludes internal requests.** This ensures that session data reflects only external user activity. The tool filters out internal requests, ensuring that session data reflects only external user activity. You can exclude specific IPs or Session Keys (consisting of remote host, User-Agent, and X-Forwarded-For headers—) either by passing them as command-line parameters or by listing them within text files. This is crucial for organizations focusing on customer interactions rather than internal maintenance or system-generated traffic. To further ensure its reliability, the User Session Reporting Tool has been rigorously tested with large sets of log files and across different access log formats. This demonstrates its capability to handle diverse and extensive data sources without compromising accuracy.
 
 - **Handles complex scenarios such as merging multiple log files without overcounting sessions.** This feature is useful in environments where logs are segmented or spread across different servers. You can manually input and exclude specific IP addresses for greater flexibility in reporting and ensuring that internal or irrelevant traffic does not skew the session data. The tool also supports alternate syntax inputs to avoid potential user errors during setup or configuration.
 
@@ -99,8 +99,14 @@ If a reverse proxy server, load balancer, or a similar component is used in the 
 The tool is packaged as an executable JAR file. Execute the tool by using the following parameters:
 
 ```cmd
+java -jar <jarFilepath> -h
+
 # <jarFilepath> Path to the jar file
 # <filePaths> List of input log files to get session counts
+# <excludeIPFile> Path to the file containing IPs to exclude from session counts
+# <excludeSessionKeyFile> Path to the file containing session keys to exclude from session counts
+# <exludeIPs> List of IPs (seperated by space) to exclude from session counts
+# <excludeSessionKeys> List of session keys (seperated by space) to exclude from session counts
 # <startDate> Specifies the start date in YYYY-MM-DD format
 # <endDate> Specifies the end date in YYYY-MM-DD format
 ```
@@ -108,7 +114,7 @@ The tool is packaged as an executable JAR file. Execute the tool by using the fo
 The following is a sample command for running the User Session Reporting Tool using all the parameters provided:
 
 ```cmd
-java -jar <jarFilepath> <filePaths...> <startDate> <endDate>
+java -jar <jarFilepath> <filePaths...> -excludeIPFilePath <excludeIPFile> -excludeSessionKeyFilePath <excludeSessionKeyFile> -exludeIPs <excludedIPs...> -excludeSessionKeys <excludeSessionKeys ...> <startDate> <endDate>
 ```
 
 After execution, the system returns the expected session count within the specified start and end date parameters. The tool generates the following files:
