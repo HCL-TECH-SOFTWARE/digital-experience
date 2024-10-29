@@ -2,7 +2,7 @@
 
 In this topic, you will learn how to insert the dynamic table HTML/JSP code.  
 
-Use Rational Application Developer to code the dynamic table in the Personalized Offers portlet JSP. Then, export the project as a web archive (WAR) file. Finally, open the HCL Digital Experience Administration page for Portlet Management and update the web module that contains the Personalized Offers portlet.
+Use Rational Application Developer to code the dynamic table in the Personalized Offers portlet JSP. Then, export the project as a web archive (WAR) file. Finally, open the HCL Digital Experience (DX) Administration page for Portlet Management and update the web module that contains the Personalized Offers portlet.
 
 Before you begin this procedure, ensure that you created a content spot.
 
@@ -58,7 +58,7 @@ Before you begin this procedure, ensure that you created a content spot.
 
 4. Export the project as a WAR file and close the Rational Application Developer.
 
-5. Log in to HCL Portal as the Portal administrator (wpsadmin).  
+5. Log in to HCL DX as the Portal administrator (wpsadmin).  
 
 6. Click **Open applications menu**, then navigate to **Administration**.
 

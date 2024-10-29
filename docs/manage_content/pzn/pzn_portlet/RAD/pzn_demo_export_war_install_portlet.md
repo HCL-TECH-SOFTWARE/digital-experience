@@ -18,9 +18,9 @@ To export the project to a WAR file called **PersOffers.war**, refer to the foll
 
 To install the Pers_Offers portlet on a portal page, refer to the following steps:  
 
-1. Start the HCL Digital Experience Portal server.  
+1. Start the HCL DX Portal server.  
 
-2. Log in to HCL Portal as the Portal administrator (wpsadmin).  
+2. Log in to HCL DX as the Portal administrator (wpsadmin).  
 
 3. Click **Open applications menu**, then navigate to **Administration**.
 
@@ -40,7 +40,7 @@ To install the Pers_Offers portlet on a portal page, refer to the following step
 
 9. Create a new page called **Pers Offers**:  
 
-    a. Click the **Open applications menu**, then go to **Administration**.  
+    a. Click **Open applications menu**, then go to **Administration**.  
     b. Click **Site Management > Pages**.  
     c. Click **Content Root > Practitioner Studio > Personalization**.  
     d. Click **New Page**.  
@@ -52,4 +52,4 @@ To install the Pers_Offers portlet on a portal page, refer to the following step
 
 The portlet is not ready to run yet and you will get an error if you try to run it.  
   
-You have successfully exported the personalized JSR 268-based JSP portlet and installed the portlet in HCL Portal. In the next topic, you will learn how to [Import Personalization Workspace resource collections.](./pzn_demo_import_resource_collections.md)
+You have successfully exported the personalized JSR 268-based JSP portlet and installed the portlet in HCL DX. In the next topic, you will learn how to [Import Personalization Workspace resource collections.](./pzn_demo_import_resource_collections.md)

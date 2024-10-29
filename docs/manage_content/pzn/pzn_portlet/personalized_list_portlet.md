@@ -44,7 +44,7 @@ After the import of the hrf-files and resource collection classes, **restart HCL
 
 To create a copy of the Personalized List portlet called **Personalized List Special Offers**, refer to the following steps:
 
-1. Log in to HCL Portal as the Portal administrator (wpsadmin).  
+1. Log in to HCL DX as the Portal administrator (wpsadmin).  
 
 2. Click **Open applications menu**, then navigate to **Administration**.  
 
