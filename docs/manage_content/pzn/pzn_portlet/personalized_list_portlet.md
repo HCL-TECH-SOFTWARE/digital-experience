@@ -20,6 +20,16 @@ The Personalized List portlet requires rules and/or custom resource collection c
 
 ## Import custom classes and hrf-files
 
+Complete the following tasks based on the Pers Offers sample by following the instructions of [Importing Personalization Workspace resource collections](./RAD/pzn_demo_import_resource_collections.md):
+
+1. Install the **[resource collection classes](./download/pers_offers.jar)**.
+
+2. Import the **[rules (hrf-files)](./download/Portal_rules_PznOffers.zip)**.
+    - !!!note
+        If the PersOffers Portlet is not installed yet, you can download it from the [Developing a personalized portlet using IBM Rational Application Developer](./RAD/index.md) page. Then, follow the instructions on how to [Install the portlet on a portal page](./RAD/pzn_demo_export_war_install_portlet.md).
+
+3. Restart **HCL Digital Experience (DX)** to ensure that the new resources are loaded.
+
 Based on the Pers Offers sample, complete the following tasks:  
 
 - Install the [resource collection classes](./download/pers_offers.jar) by following the instructions of [Importing Personalization Workspace resource collections](./RAD/pzn_demo_import_resource_collections.md).  
@@ -34,7 +44,7 @@ After the import of the hrf-files and resource collection classes, **restart HCL
 
 To create a copy of the Personalized List portlet called **Personalized List Special Offers**, refer to the following steps:
 
-1. Log in to HCL Portal as the Portal administrator (wpsadmin).  
+1. Log in to HCL DX as the Portal administrator (wpsadmin).  
 
 2. Click **Open applications menu**, then navigate to **Administration**.  
 
@@ -49,14 +59,33 @@ To create a copy of the Personalized List portlet called **Personalized List Spe
 6. Name the new portlet **Personalized List Special Offers**, then click **OK**.
 
     ![Copy Personalized List Portlet](./RAD/images/pzn_offers_copy_personalized_list_portlet2.png)  
-
+7. Set access permissions for the new portlet so **All Authenticated Portal Users** are **Privileged Users**:
+    a. Search for the **Pers_Offers** portlet and click the **Assign access to portlet** icon.
+    b. Click the **Edit Role** icon next to **Privileged Users**.
+    c. Click **Add**.
+    d. Select the checkbox for **All Authenticated Portal Users**, then click **OK**.
 ## Add the copied Personalized List portlet to a page
 
 1. Click **Site Management > Pages**.
 
 2. Click **Content Root > Practitioner Studio > Personalization**.  
 
-3. Add the **Personalized List Special Offers portlet** to the new page by clicking to the **Edit Page Layout** button of the portlet on the **Manage Pages** list.
+3. Create a new page called **Pers List Portlet - Rules** and configure the permissions of the page to give access to **All authenticated users**:
+
+    a. Click **New Page**.
+    b. On the **Title** field, enter **Pers List Portlet - Rules**, then click **OK**.
+    c.  Search for the **Pers List Portlet - Rules** portlet and click the **Assign access to portlet** icon.
+    d. Click the **Edit Role** icon next to **Privileged Users**.
+    e. Click **Add**.
+    f. Select the checkbox for **All Authenticated Portal Users**, then click **OK**.
+    
+4. Go **Site Management > Pages** again, then click the **Edit Page Layout icon** for the **Pers List Portlet - Rules** page.
+
+    ![Add the Personalization List Portlet to a page](./RAD/images/pers_offers_add_persListPortlet_to_page.png)
+    
+5. Select the checkbox for the **Personalized List Special Offers** portlet, then click **OK > Done**.
+
+    ![Personalization List Portlet located on page](./RAD/images/personalizedListPortlet_on_page.png)  
 
     ![Add the Personalization List Portlet to a page](./RAD/images/pers_offers_add_persListPortlet_to_page.png)
 
@@ -125,7 +154,7 @@ To configure the portlet to show more personalized offers based on the rules set
     ![Offers Spot list](./RAD/images/personalizedListPortlet_specific_content_spot_result.png)  
 
     !!!note
-        If the result is not showing the expected values, please check the content spot, it's rule and the default mappings, again.
+        If the result is not showing the expected values, check the content spot, its rules, and the default mappings again.
 
 9. Test this portlet by logging in as each pzndemo user having a different profile. You must get the same content results that you see when building your own custom-built portlet (Pers_Offers) using the steps mentioned in [Rational Application Developer](./RAD/index.md), except you do not have to code a portlet or a JSP file.  
 
