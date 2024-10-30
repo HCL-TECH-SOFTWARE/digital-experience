@@ -5,6 +5,7 @@ The following features and updates are available to customers installing HCL Dig
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - AI Translation and Workflow capabilities in WCM
+- Disabled SSL Hostname verification
 - Presentation Designer to visually create and modify WCM presentation templates
 - Sync of WCM HTML components with DXClient
 - Notice of deprecation of Textbox.io Rich Text Editor
@@ -35,6 +36,22 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     You can use Artificial Intelligence (AI) Translation in WCM to translate content items into different languages. The AI Workflow options, on the other hand, allow you to automatically generate keywords, summary, and translate content. For more information, see [AI assistance for descriptions, keyword generation, translation, and sentiment analysis in a content item](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
+
+### Disabled SSL Hostname verification
+
+=== "Containers"
+    With CF224 the underlying WebSphere Application Server has been updated to 9.0.5.21. The 9.0.5.21 fix pack contains a change where WebSphere runtimes automatically perform additional verification of certificates.
+    Since typically not all certificates adhere to this strict standard CF224 disables the setting in WAS Custom Security properties as well as ssl.client.props. 
+    For the Remote Search container in case search is newly configured CF224 also disables the setting in WAS Custom Security properties as well as ssl.client.props - if remote search was 
+    already configured it might be needed to apply the settings to disable the verification manually.
+    More information about the changes from IBM WebSphere Application Server can be found here: [Hostname verification for WebSphere Application Server traditional](https://www.ibm.com/support/pages/hostname-verification-websphere-application-server-traditional)
+
+=== "On-Premises"
+    The recent 9.0.5.21 and 8.5.5.27 fix packs contain a change where WebSphere runtimes automatically perform additional verification of certificates. 
+    Since typically not all certificates adhere to this strict standard CF224 disables the setting in WAS Custom Security properties as well as ssl.client.props when running applyCF.
+    In case all certificates are valid and the security changes should be kept in place the configuration wp.RetainSSLHostVerification=true should be added to wkplc.properties before running applyCF.
+    Remote Search is not updated automatically as no applyCF process exists there and it might be needed to apply the settings to disable the verification manually.
+    More information about the changes from IBM WebSphere Application Server can be found here: [Hostname verification for WebSphere Application Server traditional](https://www.ibm.com/support/pages/hostname-verification-websphere-application-server-traditional)
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
