@@ -1,19 +1,19 @@
-# HCL FlexNet License and Delivery Portal instance for entitlement checking
+# FlexNet Software Delivery Portal Entitlement Checking
 
 ## Prerequisites
-The following elements are the prerequisites for configuring the DX Cloud Native V9.5 entitlements to be deployed to supported Kubernetes platforms on your HCL FlexNet License and Delivery Portal instance for entitlement checking:  
+The following elements are the prerequisites for configuring the HCL DX Cloud Native V9.5 entitlements to be deployed on supported Kubernetes platforms using the FlexNet License and Delivery Portal for entitlement checking:  
 
 -   HCL Software Account and access to the [HCL Software License & Delivery Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344). 
 -   A valid [HCL DX Cloud Native 9.5 (Tier 1 – 7)](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad) offering parts have been purchased and issued by the HCL Software licensing team.
 -   Your DX Cloud Native 9.5 (Tier 1 – 7) entitlements are mapped to your HCL Software License portal instances. 
     ![DX Cloud Native 9.5 (Tier 1 – 7) entitlements](../../software_licensing_portal/_img/DX_cloud_native_entitlements.png)
-See the "How to check your entitlements" and "Map entitlements" sections in: [What is the HCL Software License & Download Portal?](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344#a8) for guidance in locating and mapping your entitlements on your deployment servers.
--   A plan you must implement to deploy or update an [HCL DX 9.5 Container Update CF207](../../../../whatsnew/cf20/newcf207.md) or later release. 
+See the "How to check your entitlements" and "Map entitlements" sections in: [What is the HCL Software License & Download Portal?](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344#a8) for guidance in locating and mapping your entitlements to your deployments.
+-   A plan to deploy or update to [HCL DX 9.5 Container Update CF207](../../../../whatsnew/cf20/newcf207.md) or later release, if currently using a prior version. 
 
 Review the architecture that presents the License Manager component of HCL DX v9.5 Container Update software, which follows in the next section.
 
 ## Architecture
-The License Manager component communicates with the HCL FlexNet server to validate license entitlement at set periods for HCL Digital Experience Cloud Native V9.5 Tier 1 – 7 software after you configure it in the DX Cloud Native 9.5 deployment Helm chart. The License Manager component also transmits user session consumption from your production DX Cloud Native 9.5 deployments to their specific FlexNet entitlements dashboard.
+The License Manager component communicates with the HCL FlexNet server to validate license entitlement at set periods for HCL Digital Experience Cloud Native V9.5 Tier 1 – 7 software after you configure it via the DX Cloud Native 9.5 deployment Helm chart. The License Manager component also transmits user session consumption from your production DX Cloud Native 9.5 deployments to their specific FlexNet entitlements dashboard.
 
 ![](../../software_licensing_portal/_img/DX_95_container_update_software_architecture_license_manager_component.png)
 
@@ -71,7 +71,7 @@ You must configure these properties to your entitlements to the applicable **DX 
 
 6. (Optional) [Create and upload a public/private key pair](#securing-license-server-communication-for-the-license-manager-application). The License Manager uses a default key when no custom key is configured.
 
-**HCL DX Cloud Native 9.5 Tier 1 – 7 parts and HCL FlexNet License Server Feature Name**
+**HCL DX Cloud Native 9.5 Tier 1 – 7 Parts and FlexNet License Server Feature Name**
 
 | HCL Digital Experience Cloud Native 9.5 Part Description Part Number | Part Number | Feature Name |
 | ----------- | ----------- | ----------- |
@@ -123,14 +123,14 @@ Entitlement checking to ensure that the entitlement period for the DX Cloud Nati
 
 Refer to [Configuring a local HCL Flexnet entitlement server](configuring_local_flexnet_entitlement_server.md) topic for additional configurations needed to enable connectivity to a local license server.
 
-## Securing License Server communication for the License Manager application
+## Securing License Server Communication for the License Manager Application
 
 Secure communication between HCL DX and the HCL License Server (cloud or local) involves signed content that uses a public and private keypair. HCL DX signs licensing requests with the private key and the License Server verifies signatures with the corresponding public key.
 
 !!! note
      The License Manager expects the public key to be uploaded to the License Server beforehand and the private key to be passed as a secret in the Helm values. However, if the private key is not provided, the default key is used and uploaded automatically.
 
-### Generating a public/private keypair
+### Generating a Public/Private Keypair
 
 You must generate a public/private keypair to be used for secure communication. The following list shows the required formats: 
 
@@ -152,7 +152,7 @@ openssl rsa -in portal_private_key.pem -pubout -outform DER -out portal_public_k
 openssl pkcs8 -topk8 -inform PEM -outform PEM -in portal_private_key.pem -out portal_private_key_pkcs8.pem -nocrypt
 
 ```
-### Uploading public key
+### Uploading the Public Key
 
 The following instructions show you how to upload the public key to your License Server by using the provided command line tool. 
 
@@ -190,7 +190,7 @@ Response from FlexNet server:
 
 ```
 
-### Helm Chart configuration to enable the private key in License Manager deployment
+### Helm Chart Configuration to Enable the Private Key in License Manager
  
 1. Create your secret using a private Key:
 
@@ -210,11 +210,11 @@ Response from FlexNet server:
      - They use the same private key.
      - They do not have a private key configured.
 
-### Revoking of public key from FlexNet
+### Revoke the Public Key in FlexNet
 
-If you have to revoke the public key from FlexNet, complete the following steps. To complete the revocation process, you must provide the Bearer Authentication token to authenticate the request. Without the token, the revocation you cannot complete the process.
+If you have to revoke the public key in FlexNet, complete the following steps. To complete the revocation process, you must provide the Bearer Authentication token to authenticate the request. Without the token, the revocation you cannot complete the process.
 
-1. Get the Bearer Authentication from Flextnet by using authorize endpoint:
+1. Get the Bearer Authentication from FlexNet by using authorize endpoint:
 
 ```sh
 curl --location 'https://hclsoftware.compliance.flexnetoperations.com/api/1.0/instances/<instance ID>/authorize' \
@@ -237,3 +237,29 @@ curl --location --request DELETE 'https://hclsoftware.compliance.flexnetoperatio
 --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6IlE4QTVZQ1ozQTRHSCIsImlhdCI6MTcwMzQ5ODg0MywiZXhwIjoxNzAzNTg1MjQzLCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9EUk9QQ0xJRU5ULFJPTEVfUkVBRCxST0xFX1JFU0VSVkFUSU9OUyIsInhzcmZUb2tlbiI6IjJlYTNjM2U3LWQ3MDEtNDFjMS05NWQ2LWEyOTMzZjBlNTQwNyJ9.u8ZAF4SpBoLucxPA0WaEtcDkuQVT3ZCGx-qAtHYbcZDD%YYBBzqvYWkxN3fTRHjNRKE0idV8bh5Zs75KSvU9A'
 ```
 Expected status: `410 Gone`
+
+
+## Accessing FlexNet Usage Reporting Dashboard
+Access the Reports section of the HCL Software License and Download Portal server.
+
+![](../../software_licensing_portal/_img/access_reports_software_license_portal.png)
+
+Select your account and then click **Search**. Select **Digital Experience Cloud Native 9.5** from the list of your account entitlements. Results are displayed and are similar to the following example. 
+
+!!!note
+    The results might show an overage percentage amount in parentheses which does not apply to this informational dashboard report.
+
+    ![](../../software_licensing_portal/_img/select_account_entitlements.png)
+
+The Usage report shows the following information:
+
+-   **Period**: The period for the report results.
+-   **Usage**: The number of user sessions that ran on your Digital Experience 9.5 Container Update deployment that is mapped to this entitlement and that has the **ProductionEnvironment** variable enabled and set to `True`. See the user session details in the [HCL Digital Experience Cloud Native 9.5 license](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad) on the [HCL Software License Agreements](https://www.hcltechsw.com/resources/license-agreements) site.
+
+    !!!note
+        Only user-session data totals per month for the calendar year of purchase are transmitted to the customer's FlexNet/MHS dashboards for their viewing and monitoring purposes. No personal or PII data is transmitted.
+        
+-   **Entitlement**: Amount will equal one, which is equivalent to your HCL Digital Experience Cloud Native 9.5 Tier 1 – 7 purchased part. 
+
+!!!note
+    The FlexNet dashboard **Usage** data might show a data percentage amount in parentheses. This overage percentage amount does not apply to HCL Digital Experience Cloud Native 9.5 Tier 1 - 7 entitlement checking and informational user-session consumption reporting and can be disregarded. 
