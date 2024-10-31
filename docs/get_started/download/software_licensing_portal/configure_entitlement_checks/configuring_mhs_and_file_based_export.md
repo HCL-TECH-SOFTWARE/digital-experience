@@ -97,15 +97,14 @@ End,370d193fe0be35950d2707026d23ce595ae46054b77efcc944aa2484eab39399976854c58321
 ```
 
 ### Upload usage metrics
-The generated `{YYYY-MM-DDTHH-MM-SS UTC}usage.metrics` file should then be uploaded to the MHS portal for processing.
+The generated `{YYYY-MM-DDTHH-MM-SS UTC}usage.metrics` file should then be uploaded to the My HCLSoftware portal for processing.
 
-## MHS on Kubernetes vs Non-Kubernetes
+## My HCLSoftware vs FlexNet on Kubernetes
+The use cases for My HCLSoftware in Kubernetes deployments are very similar to those for FlexNet. The HCL DX License Manager container has been extended to integrate with MyHCL Software in a similar way to the existing integration with FlexNet. This integration ensures proper entitlement validation and usage reporting.
 
-The use cases for MHS on Kubernetes are similar to those on Flexnet. The integration ensures proper license validation and usage reporting.
+**Entitlement Validation**: Periodically check whether the entitlement is still valid (typically valid for 12 months). The same grace period is also allowed, during which time reminders to renew the entitlelment before it expires will be posted in the container log.
 
-**License Validation**: We have integrated the MHS API with the license manager container to periodically check whether your license is still valid (typically valid for 12 months). A grace period is also provided, during which you will receive reminders to renew your license before it expires, ensuring that you don’t face service interruptions.
-
-**User Session Reporting**: Periodically send user session reports to MHS, allowing the product team to monitor whether you are operating within the allocated package. These reports help assess if an upgrade to a higher-tier package is required based on the number of user sessions consumed.
+**User Session Reporting**: Periodically send user session reports to My HCLSoftware, allowing customers and HCL to monitor consumption is aligned within the allocated entitlement tier. These reports help assess if a change to a different usage tier is required based on the number of user sessions consumed.
 
 ## Accessing MyHCL Software usage reporting dashboard
 Access the ???? section of the My HCLSoftware portal to review entitlements and user session consumption reports.
