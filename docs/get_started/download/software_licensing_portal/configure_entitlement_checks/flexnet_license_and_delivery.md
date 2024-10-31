@@ -1,4 +1,4 @@
-# FlexNet Software Delivery Portal Entitlement Checking
+# FlexNet software delivery portal entitlement checking
 
 ## Prerequisites
 The following elements are the prerequisites for configuring the HCL DX Cloud Native V9.5 entitlements to be deployed on supported Kubernetes platforms using the FlexNet License and Delivery Portal for entitlement checking:  
@@ -123,23 +123,23 @@ Entitlement checking to ensure that the entitlement period for the DX Cloud Nati
 
 Refer to [Configuring a local HCL Flexnet entitlement server](configuring_local_flexnet_entitlement_server.md) topic for additional configurations needed to enable connectivity to a local license server.
 
-## Securing License Server Communication for the License Manager Application
+## Securing license server communication for the License Manager application
 
-Secure communication between HCL DX and the HCL License Server (cloud or local) involves signed content that uses a public and private keypair. HCL DX signs licensing requests with the private key and the License Server verifies signatures with the corresponding public key.
+Secure communication between HCL DX and the HCL License Server (cloud or local) involves signed content that uses a public and private key pair. HCL DX signs licensing requests with the private key and the License Server verifies signatures with the corresponding public key.
 
 !!! note
      The License Manager expects the public key to be uploaded to the License Server beforehand and the private key to be passed as a secret in the Helm values. However, if the private key is not provided, the default key is used and uploaded automatically.
 
-### Generating a Public/Private Keypair
+### Generating a public/private key pair
 
-You must generate a public/private keypair to be used for secure communication. The following list shows the required formats: 
+You must generate a public/private key pair to be used for secure communication. The following list shows the required formats: 
 
-- The keypair must be in “RSA 2048-bit” format. 
-- The private key must be “pksc8” format. 
+- The key pair must be in “RSA 2048-bit” format. 
+- The private key must be “PKCS8” format. 
 - The public key must be in “DER” format.
 
-Various third-party tools are available for generating this keypair. See the documentation supplied with the third-party tool for instructions.
-The following is an example of keypair generation by using OpenSSL:
+Various third-party tools are available for generating this key pair. See the documentation supplied with the third-party tool for instructions.
+The following is an example of key pair generation by using OpenSSL:
 
 ```
 # Generate private key 
@@ -152,7 +152,7 @@ openssl rsa -in portal_private_key.pem -pubout -outform DER -out portal_public_k
 openssl pkcs8 -topk8 -inform PEM -outform PEM -in portal_private_key.pem -out portal_private_key_pkcs8.pem -nocrypt
 
 ```
-### Uploading the Public Key
+### Uploading the public key
 
 The following instructions show you how to upload the public key to your License Server by using the provided command line tool. 
 
@@ -190,7 +190,7 @@ Response from FlexNet server:
 
 ```
 
-### Helm Chart Configuration to Enable the Private Key in License Manager
+### Helm chart configuration to enable the private key in HCL DX License Manager
  
 1. Create your secret using a private Key:
 
@@ -210,7 +210,7 @@ Response from FlexNet server:
      - They use the same private key.
      - They do not have a private key configured.
 
-### Revoke the Public Key in FlexNet
+### Revoke the public key in FlexNet
 
 If you have to revoke the public key in FlexNet, complete the following steps. To complete the revocation process, you must provide the Bearer Authentication token to authenticate the request. Without the token, the revocation you cannot complete the process.
 
@@ -239,7 +239,7 @@ curl --location --request DELETE 'https://hclsoftware.compliance.flexnetoperatio
 Expected status: `410 Gone`
 
 
-## Accessing FlexNet Usage Reporting Dashboard
+## Accessing FlexNet usage reporting dashboard
 Access the Reports section of the HCL Software License and Download Portal server.
 
 ![](../../software_licensing_portal/_img/access_reports_software_license_portal.png)

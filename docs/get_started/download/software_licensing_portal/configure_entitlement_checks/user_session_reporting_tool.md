@@ -1,7 +1,7 @@
 ---
-title: User Session Reporting Tool
+title: User session reporting tool
 ---
-# User Session Reporting Tool
+# User session reporting tool
 
 This topic describes how you can use the User Session Reporting Tool to count and report user sessions.
 
@@ -86,7 +86,7 @@ You can obtain access log files inside the `wp_profile` directory (`/opt/IBM/Web
 !!!important
     There is a [known issue with WAS fix packs 9.0.5.16 and 9.0.5.17](https://www.ibm.com/docs/en/was/9.0.5?topic=application-enabling-access-logging){target="_blank"} where timestamps are broken, making the access log files unusable.
 
-### (Optional) Handling the routing setup
+### (Optional) handling the routing setup
 
 If you are not using a proxy server, you do not have to follow the routing setup in this section.
 
@@ -94,7 +94,7 @@ For every request, a key is computed based on the requesting IP address of the u
 
 If a reverse proxy server, load balancer, or a similar component is used in the deployment setup, the [X-Forwarded-For header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For){target="_blank"} is used to identify the user. This header is the standard for identifying the originating IP address of a client connecting to a web server through an HTTP proxy or load balancer. Make sure that the `X-Forwarded-For` header is correctly configured in your routing setup.
 
-## Running the User Session Reporting Tool
+## Running the user session reporting tool
 
 The tool is packaged as an executable JAR file. Execute the tool by using the following parameters:
 

@@ -1,8 +1,8 @@
 ---
-title: Software Licensing Portal
+title: Software licensing portals
 ---
 
-# Download and Install HCL Digital Experience from a Software Licensing Portal
+# Download and install HCL Digital Experience from a software licensing portal
 
 !!! important
     HCL Digital Experience software is now available via the new [My HCLSoftware](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011) portal, in parallel to the existing [HCL Software License Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344) (delivered via FlexNet).
@@ -13,7 +13,7 @@ New customers, or those with new deployments, should register at the My HCLSoftw
 
 Co-packaged software is identified in HCL Digital Experience 9.5 download documents, which are available in your entitlements on the [HCL Software License and Download Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344).
 
-## Getting the Software
+## Getting the software
 
 Product software can be accessed from the [HCL Software Licensing Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344){:target="_blank"}. For more guidance, see the [Step-by-step guide on downloading HCL Digital Experience products](../../../guide_me/tutorials/access-software/register-for-access.md){:target="_blank"} and watch the video tutorial about [How to download HCL Digital Experience Software from the License Server](https://youtu.be/ze0ZhLlXwfU){:target="_blank"}.
 
@@ -37,7 +37,7 @@ HCL Digital Experience software is available through several product offerings a
 
 For more HCL Digital Experience product offering and license details, see the [HCL Software Product License site](https://www.hcl-software.com/resources/license-agreements){:target="_blank"}.
 
-## Installation Paths
+## Installation paths
 
 Depending on your current scenario, you will start from different paths:
 
@@ -47,7 +47,7 @@ Depending on your current scenario, you will start from different paths:
 
 You can also test the new HCL Digital Experience API Docker image and run it. Visit the [Experience API](../../../extend_dx/apis/hcl_experience_api/index.md) documentation to learn more.
 
-## Fresh Full Installation
+## Fresh full installation
 
 For a fresh full installation, follow the installation path by using the components that follow, which you can find in the [HCL Software Licensing Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344) (FlexNet) with HCL Digital Experience software packages:
 
@@ -60,7 +60,7 @@ For a fresh full installation, follow the installation path by using the compone
 
 After you install [IBM Installation Manager](https://www.ibm.com/support/knowledgecenter/SSDV2W/im_family_welcome.html){:target="_blank"}, you must configure the repositories for IBM WebSphere Application Server 9.0.5, HCL Portal 8.5, HCL Digital Experience CF205 or later, HCL Digital Experience 9.5, and the corresponding edition files.
 
-## Update an Existing HCL Digital Experience 8.5 or 9.0 System
+## Update an existing HCL Digital Experience 8.5 or 9.0 system
 
 The path from an existing HCL Digital Experience 8.5 or 9.0 system to HCL Digital Experience 9.5 is to download the latest available HCL Digital Experience CF and the 9.5 files. Then, install the cumulative fix by the usual CF process.
 
@@ -68,7 +68,7 @@ Afterward, users start IBM Installation Manager, configure the 9.5 repository, a
 
 -   Documentation resource: [Apply Combined Cumulative Fix](../../../deployment/install/traditional/cf_install/index.md)
 
-## Deploy HCL Digital Experience to Kubernetes Platforms
+## Deploy HCL Digital Experience to Kubernetes platforms
 
 Follow this installation path to deploy DX from an existing HCL Digital Experience 8.5 or 9.0 system:
 
@@ -76,7 +76,7 @@ Follow this installation path to deploy DX from an existing HCL Digital Experien
 2.  Follow these [deployment steps](../../../deployment/install/container/index.md) to deploy DX to supported Kubernetes platforms.
 3.  Stage the content to the new environment to move from an existing system to HCL Digital Experience on Kubernetes platforms.
 
-## Configure HCL Digital Experience Cloud Native 9.5 Entitlement Checks
+## Configure HCL Digital Experience Cloud Native 9.5 entitlement checks
 Beginning with [HCL Digital Experience 9.5 Container Update CF207](../../../whatsnew/cf20/newcf207.md), you must specify certain entitlement check parameters in your [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7](../../product_overview/offerings.md#hcl-digital-experience-cloud-native) installations to accomplish entitlement checks with the HCL Software delivery portals. See [HCL Digital Experience Cloud Native 9.5 Entitlement Checks](../software_licensing_portal/configure_entitlement_checks/index.md) for more information.
 
 ???+ info "Related Information"

@@ -1,9 +1,8 @@
 ---
-title:  My HCLSoftware Delivery Portal Entitlement Checking
+title:  My HCLSoftware delivery portal entitlement checking
 ---
 
-# My HCLSoftware Delivery Portal Entitlement Checking
-
+# My HCLSoftware delivery portal entitlement checking
 My HCLSoftware (MHS) provides seamless access to various customer-facing systems such as Downloads, Software Entitlements, eCommerce, Support, Subscriptions, Account Management, Marketplace, and more.
 
 ## Prerequisites
@@ -23,7 +22,7 @@ Review the architecture that presents the License Manager component of HCL DX v9
 ## Architecture
 The License Manager component communicates with the My HCLSoftware entitlement service, to validate license entitlement at set periods for HCL Digital Experience Cloud Native V9.5 Tier 1 – 7 software after you configure it via the DX Cloud Native 9.5 deployment Helm chart. The License Manager component also transmits user session consumption from your production DX Cloud Native 9.5 deployment(s) to the My HCLSoftware usage reporting services.
 
-<<NEW DIAGRAM ?>>
+**UPDATED DIAGRAM WITH MYMHS**
 ![](../../software_licensing_portal/_img/DX_95_container_update_software_architecture_license_manager_component.png) 
 
 Follow the configuration steps in the following procedure before you deploy a new or update an existing DX 9.5 Container deployment. By completing these steps, you configure the DX Cloud Native 9.5 Tier 1 – 7 deployment a Helm chart and enable the License Manager entitlement-checking functions.  
@@ -60,8 +59,7 @@ The below properties must be configured to your entitlements, you will configure
 -   `licenseServerUri`: MHS License Server URI
 -   `deploymentKeySecret`: Credentials for product deployments. This can be optained from [My HCLSoftware Portal](https://my.hcltechsw.com/)
 
-## Generating and Uploading User Session Data Usage in Metrics Format
-
+## Generating and uploading user session data usage in metrics format
 To generate the user session data usage in metrics format, the report must include session data that has been encrypted for each user session.
 
 Use the following command to generate usage metrics from the user session data, specifying the appropriate `KeyId`, `deploymentId`, `startDate`, and `endDate` values:
@@ -87,7 +85,7 @@ kubectl exec -it <release name>-license-manager-0 -n <namespace> -- java -cp Use
 kubectl exec -it pod/dx-deployment-license-manager-0 -n dxns -- java -cp UserSessionReporting.jar GenerateMetricFile pnkXXX AlphXXXX 2022-07-22 2025-07-28 > /tmp/2022-06-24T02-50-00_usage.metrics
 ```
 
-### Expected Result
+### Expected result
 
 ```
 1,Alpha525634,HCL X,1.0.0,pnkeq6pk,ebb89d32f30abc4eed049f7afbb8a7299bdc8459fd235d0b8473ca22e9457c65
@@ -97,7 +95,8 @@ DXPN_CloudNative_Tier1_500K@9.5,2024-10-20T07:32:00.618Z,2024-10-20T07:42:00.618
 DXPN_CloudNative_Tier1_500K@9.5,2024-10-20T08:00:37.267Z,2024-10-20T08:10:37.267Z,1,e946675c396d99f892c7099e772b776082b2a9a269a1d2670ea9063b61ac43e2
 End,370d193fe0be35950d2707026d23ce595ae46054b77efcc944aa2484eab39399976854c58321ba5437b78896908a0b78de6b7ee6db989b0ccd28ce5c58bd9a09
 ```
-### Upload Usage Metrics
+
+### Upload usage metrics
 The generated `{YYYY-MM-DDTHH-MM-SS UTC}usage.metrics` file should then be uploaded to the MHS portal for processing.
 
 ## MHS on Kubernetes vs Non-Kubernetes
@@ -108,7 +107,7 @@ The use cases for MHS on Kubernetes are similar to those on Flexnet. The integra
 
 **User Session Reporting**: Periodically send user session reports to MHS, allowing the product team to monitor whether you are operating within the allocated package. These reports help assess if an upgrade to a higher-tier package is required based on the number of user sessions consumed.
 
-## Accessing MyHCL Software Usage Reporting Dashboard
+## Accessing MyHCL Software usage reporting dashboard
 Access the ???? section of the My HCLSoftware portal to review entitlements and user session consumption reports.
 
 **NEED TO INCLUDE SCREENSHOTS AND INSTRUCTIONS WHEN AVAILABLE FOR REVIEWING USAGE DATA**

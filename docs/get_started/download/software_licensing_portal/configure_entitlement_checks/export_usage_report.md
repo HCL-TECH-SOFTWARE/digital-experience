@@ -1,7 +1,7 @@
 ---
-title: Exporting a Usage Report Manually
+title: Exporting a usage report manually
 ---
-# Tracking User Session Consumption and Exporting Usage Reports 
+# Tracking user session consumption and exporting usage reports 
 
 ## Overview
 
@@ -17,9 +17,9 @@ With this feature, you can:
 
 For information on how user sessions are defined and when they begin and end, see [User Session consumption for HCL DX Cloud Native v9.5 production deployments](entitlement_checks_scenarios.md#how-to-monitor-user-session-consumption-for-hcl-dx-cloud-native-v95-production-deployments).
 
-## Unique Identifier for the HCL DX Deployment Session Usage Report
+## Unique identifier for the HCL DX deployment session usage report
 
-Optionally, set a unique identifier for the specified HCL DX Kubernetes deployment. This is included in the exported user session data helps to identify from which deployment any given report was produced.
+Optionally, set a unique identifier for the specified HCL DX Kubernetes deployment. This is included in the exported user session data and helps to identify from which deployment any given report was produced.
 
 ```yaml
 configuration:
@@ -29,7 +29,7 @@ configuration:
 
 If no unique DX Kubernetes deployment identity is set in the helm value, the deployment uses the release name and namespace combination by default. See [Kubernetes Overview](../../../../get_started/plan_deployment/container_deployment/index.md) for deployment and configuration guidance. 
 
-## Exporting the User Session Usage Report in CSV Format
+## Exporting the user session usage report in CSV format
 
 Exporting the report in CSV format is the default option when exporting the usage report to the data table. The report contains the following details:
 
@@ -74,7 +74,7 @@ month,sessions,gaps,environment
 2024-04,,2024-04-01_2024-04-02,UAT-ENV
 ```
 
-## Exporting the User Session Usage Report in Human-Readable Format
+## Exporting the user session usage report in human-readable format
 
 To export the user session usage report, use the following command and include the start date, end date, and `--pretty` option:
 
@@ -91,7 +91,7 @@ kubectl exec -it <release name>-license-manager-0 -n <namespace> -- sh exportUsa
 !!! note
     The timestamps provided indicate the time in UTC format.
 
-### Expected Result
+### Expected result
 
 ```
 ############################################################

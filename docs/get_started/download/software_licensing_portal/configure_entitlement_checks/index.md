@@ -1,4 +1,4 @@
-# HCL Digital Experience Cloud Native 9.5 Entitlement Checks
+# HCL Digital Experience Cloud Native 9.5 entitlement checks
 
 Both the [HCL Software License Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344) and [My HCLSoftware](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011) portals support entitlement checking and usage reporing for several HCL Software solutions, including the [HCL Digital Experience (DX) Cloud Native 9.5 Tier 1 – 7 offerings](https://blog.hcltechsw.com/digital-experience/introducing-new-hcl-digital-experience-cloud-native-9-5-bundle-with-user-session-pricing/) in the HCL DX portfolio. By checking entitlements, customers can track purchased software entitlement periods and usage levels. 
 
@@ -25,7 +25,7 @@ For traditional deployments (non-Kubernetes), customers can use web analytics re
 A simple standalone tool called the [User Session Reporting Tool](https://opensource.hcltechsw.com/digital-experience/CF223/get_started/download/software_licensing_portal/configure_entitlement_checks/user_session_reporting_tool/) was delivered in CF223 and is available from the software delivery portals, as an alternative to Google Analytics or other methods customers might have used to gather usage data.
 
 
-## HCL DX Cloud Native 9.5 Entitlement-Check Requirement
+## HCL DX Cloud Native 9.5 entitlement-check requirement
 
 If you deploy DX to supported Kubernetes platforms you must specify certain entitlement check parameters in [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7](../../../../get_started/product_overview/offerings.md#hcl-digital-experience-cloud-native) installations to accomplish entitlement checks. If you do not specify these entitlement check parameters or fail to configure them correctly, then the entitlement check will not pass and software access will enter the grace period.
 
@@ -33,7 +33,7 @@ Review the following [HCL Digital Experience Cloud Native 9.5](../../../product_
 
 HCL’s approach is to conduct automated license validation for all products. This kind of license validation is called an entitlement check. The following information highlights all scenarios that involve HCL Software License Portal entitlement checks for the [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7](../../../product_overview/offerings.md#hcl-digital-experience-cloud-native) offering deployments. An entitlement check verifies the customer's purchased product subscription period is valid. If a customer’s subscription lapses, the customer must renew the subscription with HCL. For example, if a customer purchases a Digital Experience Cloud Native 9.5 Tier 2 part on May 30, 2024, the entitlement period is valid through May 30, 2025.
 
-### Entitlement-Check Scenarios
+### Entitlement-check scenarios
 When the HCL DX Cloud Native 9.5 License Manager container service starts, and entitlement checking and usage reporing are enabled, it will perform an entitlement check against the configured software delivery portal and report the result of that check in log messages.
 
 During the grace period and beyond, messages are displayed in the License Manager container logs as a reminder that the contracted entitlement has expired. If you encounter these messages, contact your HCL salesperson to discuss the entitlement.
@@ -54,7 +54,7 @@ The following table describes the possible entitlement-check response scenarios 
 | 5. The connection to the entitlement server fails. You are operating within the HCL DX CN 9.5 entitlement grace period.|HCL DX Cloud Native 9.5 server starts. The following message is included in the HCL DX 9.5 Container Update License Manager pod logs: <br><br> `The connection to the entitlement server failed. You are currently operating within the HCL DX CN 9.5 entitlement grace period of four weeks, which expires on (grace period end date). Please contact HCL Support to resolve the connection issue and try again.`|
 | 6. The connection to the entitlement server fails. The HCL DX CN 9.5 entitlement grace period has expired.|The following message is included in the HCL DX 9.5 Container Update License Manager pod logs: <br><br> `HCL DX CN 9.5 entitlement grace period has ended on (grace period end date). If you feel this is an error, please log in to the HCL Customer Support portal ([https://support.hcltechsw.com/csm](https://support.hcltechsw.com/csm)) and open a Licensing case (New cases > Licensing case). Otherwise, contact your HCL salesperson to update your licensing.`<br> If you require an extension to the grace period, you can contact Support for a one-time extension of up to 14 additional days. |
 
-### How to Monitor User-Session Consumption for HCL DX Cloud Native v9.5 Production Deployments
+### How to monitor user-session consumption for HCL DX Cloud Native v9.5 production deployments
 
 !!! note
     Calculating and reporting of user session consumption produces the same results, regardless of which software delivery portal is being used.
@@ -78,7 +78,7 @@ Refer to the guidance in the following HCL Support knowledge article: [What is t
 
 Run the “Reports for Metered products” section to understand how to access your FlexNet/MHS entitlement dashboard. Users with authorized access to this service can run usage reports. The Digital Experience Cloud Native 9.5 entitlements are configured to report user-session consumption for deployments configured for production use.
 
-### How User Sessions in Production Deployments are Calculated for Report Totals 
+### How user sessions in production deployments are calculated for report totals 
 
 HCL Digital Experience Cloud Native 9.5 applies the following approach when it reports totals for user session consumption in deployments configured for production to individual customer FlexNet dashboards or MHS dashboards: 
 

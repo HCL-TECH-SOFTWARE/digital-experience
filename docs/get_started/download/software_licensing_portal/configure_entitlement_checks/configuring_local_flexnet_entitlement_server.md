@@ -1,4 +1,4 @@
-# Configuring a Local FlexNet Entitlement Server
+# Configuring a local FlexNet entitlement server
 With HCL Digital Experience Cloud Native 9.5 Kubernetes production environments, you can optionally configure a local FlexNet entitlement server to more strictly control the environment in which your entitlement checks are made.
 
 By using this process, you can remain in entitlement compliance without requiring outbound connections to the HCL-hosted FlexNet entitlement service from your HCL Digital Experience Cloud Native 9.5 Kubernetes production installations.
@@ -8,8 +8,7 @@ By having the offline version of the HCL FlexNet Embedded License Server, a loca
 !!!important
     With outbound connections disabled, however, a member of the development team must manually update the local entitlement server periodically with the HCL Software License Portal to verify entitlements with HCL.
 
-## Before You Begin
-
+## Before you begin
 - Obtain the FlexNet Embedded License Server software from HCL and the installation readme files from the [HCL License and Delivery Portal](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do). You can find the download package, “HCL Common Local License Server 2.0,” under “Uncategorized Products.”
 
     !!!important
@@ -30,7 +29,13 @@ By having the offline version of the HCL FlexNet Embedded License Server, a loca
 
     These requirements are highlighted in detail on pages 22-24 of the installation guide.
 
-## Procedure
+## Architecture
+
+The License Manager component communicates with the local license server to validate license entitlement periods for HCL Digital Experience Cloud Native V9.5 Tier 1 – 7 software configured for production use. The local license server stores user session consumption from the customer’s production DX Cloud Native 9.5 deployments and synchronizes that data from the local license server copy to the FlexNet License Portal Server for HCL when those connections are periodically established. 
+
+![Architecture](../_img/architecture_logical_deployment_kube.png)
+
+## Install and configure the local FlexNet entitlement server
 
 1. Install, configure, and start the FlexNet Embedded License Server for HCL software.
 
@@ -187,13 +192,7 @@ By having the offline version of the HCL FlexNet Embedded License Server, a loca
 
     -   SSL certificate (This certificate was generated during setup. This will be imported to the HCL Digital Experience 9.5 License manager deployment to enable the SSL connection). Refer to the **Architecture** figure below.
 
-## Architecture
-
-The License Manager component communicates with the local license server to validate license entitlement periods for HCL Digital Experience Cloud Native V9.5 Tier 1 – 7 software configured for production use. The local license server stores user session consumption from the customer’s production DX Cloud Native 9.5 deployments and synchronizes that data from the local license server copy to the FlexNet License Portal Server for HCL when those connections are periodically established. 
-
-![Architecture](../_img/architecture_logical_deployment_kube.png)
-
-## Procedure
+## Integrate HCL License Manager with local FlexNet entitlement server
 
 1. To configure the optional use of a local FlexNet license server, you add a property to the DX 9.5 Kubernetes Helm configuration to map the local license server SSL certificate (stored in a Kubernetes secret) to an environment variable. This property is optional and the DX 9.5 license manager instance will then automatically run an import to the `cacerts truststore` script if the variable contains any value.
 
