@@ -25,7 +25,7 @@ Complete the following tasks based on the Pers Offers sample by following the in
 1. Install the **[resource collection classes](./download/pers_offers.jar)**.
 
 2. Import the **[rules (hrf-files)](./download/Portal_rules_PznOffers.zip)**.
-    - !!!note
+    !!!note
         If the PersOffers Portlet is not installed yet, you can download it from the [Developing a personalized portlet using IBM Rational Application Developer](./RAD/index.md) page. Then, follow the instructions on how to [Install the portlet on a portal page](./RAD/pzn_demo_export_war_install_portlet.md).
 
 3. Restart **HCL Digital Experience (DX)** to ensure that the new resources are loaded.
@@ -57,6 +57,7 @@ To create a copy of the Personalized List portlet called **Personalized List Spe
     d. Select the checkbox for **All Authenticated Portal Users**, then click **OK**.  
 
 ## Add the copied Personalized List portlet to a page
+To add the **Personalized List Special Offers** portlet to a new page called **Pers List Portlet - Rules**, refer to the following steps:
 
 1. Click **Site Management > Pages**.
 
@@ -79,13 +80,9 @@ To create a copy of the Personalized List portlet called **Personalized List Spe
 
     ![Personalization List Portlet located on page](./RAD/images/personalizedListPortlet_on_page.png)  
 
-    ![Add the Personalization List Portlet to a page](./RAD/images/pers_offers_add_persListPortlet_to_page.png)
 
-6. Then click to the **Add Portlet** button select the portlet **Personalized List Special Offers** and click **OK** to save the changes.  
 
-    **Result**  
 
-    ![Personalization List Portlet located on page](./RAD/images/personalizedListPortlet_on_page.png)  
 
 ## Configure content spots and display options
 
@@ -97,7 +94,7 @@ To configure content spots or display options on the **Personalized List Special
 
 3. In the **PznDemo** folder, select **Offers**, then click **OK**.  
 
-4. Click **Display Options** and set the following values.
+4. Click **Display Options** and set the following values:
 
     ![Display Options](./RAD/images/personalizedListPortlet_config_PZN_Offers_display_options.png)
 
@@ -133,7 +130,7 @@ To configure the portlet to show more personalized offers based on the rules set
 
     ![PersListPortlet set Pzn_offersSpot](./RAD/images/personalizedListPortlet_config_PZN_Offers_content_spot.png)
 
-6. Click **Display Options** and set the following values.  
+6. Click **Display Options** and set the following values:
 
     ![PersListPortlet set Pzn_offersSpot Display Options](./RAD/images/personalizedListPortlet_config_PZN_Offers_display_options.png)
 
@@ -141,7 +138,8 @@ To configure the portlet to show more personalized offers based on the rules set
 
     When logged in as wpsadmin, you will see that the Personalized List Special Offers portlet is empty because the administrator did not enter customer details in the pzndemo database for the user resource that is being used.
 
-8. Log in as **Scott** and view the Personalized List Special Offers portlet. The portlet displays the personalized offers that are based on the rule, **Show Offers By Customer Type**, which is mapped to the content spot **Pzn_offers Spot**.
+8. Log in as **Scott** and view the Personalized List Special Offers portlet. 
+The portlet displays the personalized offers that are based on the rule, **Show Offers By Customer Type**, which is mapped to the content spot **Pzn_offers Spot**.
 
     **Sample result - Logged in as user Scott**  
 
