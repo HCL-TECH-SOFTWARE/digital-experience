@@ -56,7 +56,8 @@ To create a copy of the Personalized List portlet called **Personalized List Spe
     c. Click **Add**.  
     d. Select the checkbox for **All Authenticated Portal Users**, then click **OK**.  
 
-## Add the copied Personalized List portlet to a page
+## Add the copied Personalized List portlet to a page  
+
 To add the **Personalized List Special Offers** portlet to a new page called **Pers List Portlet - Rules**, refer to the following steps:
 
 1. Click **Site Management > Pages**.
@@ -76,13 +77,13 @@ To add the **Personalized List Special Offers** portlet to a new page called **P
 
     ![Add the Personalization List Portlet to a page](./RAD/images/pers_offers_add_persListPortlet_to_page.png)
 
-5. Select the checkbox for the **Personalized List Special Offers** portlet, then click **OK > Done**.
+5. Click to the **Add Portlets** button and search in the portlet list for the **Personalized List Special Offers** portlet.
+
+6. Select the **Personalized List Special Offers** portlet, then click **OK > Done**.
+
+    **Result**  
 
     ![Personalization List Portlet located on page](./RAD/images/personalizedListPortlet_on_page.png)  
-
-
-
-
 
 ## Configure content spots and display options
 
@@ -138,7 +139,7 @@ To configure the portlet to show more personalized offers based on the rules set
 
     When logged in as wpsadmin, you will see that the Personalized List Special Offers portlet is empty because the administrator did not enter customer details in the pzndemo database for the user resource that is being used.
 
-8. Log in as **Scott** and view the Personalized List Special Offers portlet. 
+8. Log in as **Scott** and view the Personalized List Special Offers portlet.
 The portlet displays the personalized offers that are based on the rule, **Show Offers By Customer Type**, which is mapped to the content spot **Pzn_offers Spot**.
 
     **Sample result - Logged in as user Scott**  

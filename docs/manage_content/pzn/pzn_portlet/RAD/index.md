@@ -56,4 +56,4 @@ Learn how to uninstall the Personalization sample and database.
 
 ## Additional resources
 
-- [Using the Personalization APIs](../../pzn_programming_ref/using_apis/index.html?h=personalization+api)  
+- [Using the Personalization APIs](../../pzn_programming_ref/using_apis/index.md?h=personalization+api)  
