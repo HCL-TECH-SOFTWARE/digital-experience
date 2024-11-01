@@ -36,7 +36,7 @@ Before you begin, ensure you have properly installed the demo and databases and 
 
 6. In the **Portlet Settings** window, accept the default settings and click **Next**
 
-7. Remove the option **Add action listener to portlet to handle action requests** and click **Finish**  
+7. Remove the option **Add action listener to portlet to handle action requests** and click **Finish**.
 
 8. Accept the default Portlet Settings and click **Next**.
 
