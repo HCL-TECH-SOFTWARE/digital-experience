@@ -19,7 +19,7 @@ Refer to the following pages for more information:
 This section provides the steps on how to access the Presentation Designer and details on the user interface.
 
 - **[Usage of Presentation Designer](../presentation_designer/usage/index.md)**<br>
-Edit presentation templates using Presentation Designer. Understand how to use different user items and styling options available.
+Edit presentation templates using Presentation Designer. Understand how to use different user elements and styling options available.
 
 - **[Presentation Designer Limitations](../presentation_designer/limitations/index.md)**<br>
 This section lists the current limitations when using Presentation Designer.

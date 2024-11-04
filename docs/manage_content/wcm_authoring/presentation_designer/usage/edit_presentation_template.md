@@ -1,21 +1,21 @@
 # Editing Presentation Template in Presentation Designer
 
-This section details how to edit a presentation template in Presentation Designer using a sample scenario. 
+This section describes how to edit a presentation template in Presentation Designer using a sample scenario. 
 
-To provide a comprehensive example, the goal is to have a **Content Section** presentation template for a **project page** which will display an **image of the project**, the **project title**, and **general information** by utilizing the capabilities of Presentation Designer. 
+To provide a comprehensive example, the goal is to have a **Content Section** presentation template for a **project page** which displays an **image of the project**, the **project title**, and **general information** by utilizing the capabilities of Presentation Designer.
 
 ---
 
-## Prerequisite
+## Prerequisites
 
--   Create a **content template** with image, text, and rich text element. The image element will be for the Project Image, the text element will be for the Project Title, and the rich text element will be for the Project Description. For more information on how to create a content template, see **[Author Content Templates](../../../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_templates/author_content_templates.md)**.
+-   **Create a content template with image, text, and rich text elements.** The image element is for the Project Image, the text element is for the Project Title, and the rich text element is for the Project Description. For more information on how to create a content template, see [Author Content Templates](../../../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_templates/author_content_templates.md).
     
     ??? note "Click to see sample created content template"
         *Content Section AT*:
 
         ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Sample_Content_Template.png)
 
--   Create 2 or more **content items** using the content template created above and add different content to the image, text, and rich text elements for each content item. For more information on how to create a content item, see **[Author Content Items](../../../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/author_content_items.md)**.
+-   **Create two or more content items using the created content template and add different content to the image, text, and rich text elements for each content item.** For more information on how to create a content item, see [Author Content Items](../../../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/author_content_items.md).
 
     ??? note "Click to see sample created content item"
         *Project Content - Home Living Furnishings*:
@@ -27,10 +27,10 @@ To provide a comprehensive example, the goal is to have a **Content Section** pr
         ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Sample_Content_Item_Image_Element.png)
         ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Sample_Content_Item_Image_DAM.png)
 
-        *Text Elements (Text & Rich Text)*:
+        *Text Elements (Text and Rich Text)*:
         ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Sample_Content_Item_Text_Elements.png)
 
--   Create a blank **presentation template** in the Authoring portlet. For detailed steps, see **[Access Presentation Designer](../access/index.md)**.
+-   **Create a blank presentation template in the Authoring portlet**. For detailed steps, see [Access Presentation Designer](../access/index.md).
 
     ??? note "Click to see sample created presentation template"
         *Content Section PT*:
@@ -41,16 +41,11 @@ To provide a comprehensive example, the goal is to have a **Content Section** pr
 
 ## Editing a Presentation Template in Presentation Designer
 
-The steps below will show how to edit a Presentation Template in Presentation Designer.
+Refer to the following steps to edit a presentation template in Presentation Designer.
 
-???+ info "Related information"
-    - [Presentation Designer UI](../access/index.md#the-hcl-presentation-designer-ui)
-    - [User Items / Elements](../usage/user_items.md)
-    - [Styling Options](../usage/styling_options.md)
+### Editing the Presentation Template
 
-### Edit Presentation Template
-
-1. Edit the newly created presentation template in Presentation designer by **selecting the template** and **clicking More options** then **Edit in Presentation Designer**.
+1. Select the the newly created presentation template and click **More > Edit in Presentation Designer**.
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_in_Presentation_Designer.png)
 
@@ -75,7 +70,7 @@ The steps below will show how to edit a Presentation Template in Presentation De
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Add_Grid.png)
 
-4. The content section template will only need a **1x2 grid**. The idea is to display an image on the first column and details on the second column. To do this, apply the following styles to the grid:
+4. The content section template only needs a **1 x 2 grid**. The idea is to display an image on the first column and details on the second column. To do this, apply the following styles to the grid:
 
     ??? note "Click to view styles"
         **Layout**
@@ -99,20 +94,20 @@ The steps below will show how to edit a Presentation Template in Presentation De
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Apply_Grid_Styles.png)
 
-5. On the Add Items panel, set the item **source** to **content elements** and **search and select the content template** prepared in [Prerequisites](#prerequisite).
+5. On the **Add Items** panel, set the element **Source** to **Content elements**. In the **Content template** field, search for and select the content template prepared in [Prerequisites](#prerequisites).
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Search_Content_Template.png)
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Select_Content_Template.png)
 
-6. Drag and drop the **Project Image** (Image Content Element) on the **first column** of the **grid** and drag and drop the **Project Title** (Text Content Element) and **Project Description** (Rich Text Content Element) on the **second column** of the **grid**.
+6. Drag and drop the **Project Image** (Image Content Element) on the first column of the **grid**. Then, drag and drop the **Project Title** (Text Content Element) and **Project Description** (Rich Text Content Element) on the second column of the grid.
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Add_Content_Elements_in_Grid.png)
 
-7. Add a **static container element** inside the **second column** of the **grid**. This will serve as the container for the project details.
+7. Add a **static container element** inside the second column of the **grid**. This will serve as the container for the project details.
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Add_Container_in_Grid.png)
 
-8. Drag and drop the **Project Title** (Text Content Element) and **Project Description** (Rich Text Content Element) inside the container added in step 7 by utilizing the **Move** icon button for each user item and apply the following styles to their parent container:
+8. Drag and drop the **Project Title** (Text Content Element) and **Project Description** (Rich Text Content Element) inside the container added in Step 7. Use the **Move** icon for each user element and apply the following styles to their parent container:
 
     ??? note "Click to view styles"
         **Dimensions**
@@ -128,7 +123,7 @@ The steps below will show how to edit a Presentation Template in Presentation De
         - Padding left: 50px
 
     ???+ info "Related information"
-        - [Item Actions](../usage/user_items.md#item-actions)
+        - [Element Actions](../usage/user_elements.md#element-actions)
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Move_Items_and_Apply_Container_Style.png)
 
@@ -152,7 +147,7 @@ The steps below will show how to edit a Presentation Template in Presentation De
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Insert_Static_Text_Element.png)
 
-11. **Input text content** "General Information" for the **static text element** and apply the following styles:
+11. Enter "General Information" in the **static text element** and apply the following styles:
     
     ??? note "Click to view styles"
         **Typography**
@@ -168,11 +163,11 @@ The steps below will show how to edit a Presentation Template in Presentation De
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Input_Text_Content_and_Apply_Styles.png)
 
-12. In the **Add Items** panel, set the item **source** to **Property tag** and drag and drop the **Last modified date** property tag under the **Project Description** (Rich Text Content Element).
+12. In the **Add Items** panel, set the element **source** to **Property tag** and drag and drop the **Last modified date** property tag under the **Project Description** (Rich Text Content Element).
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Insert_Property_Tag_Date.png)
 
-13. **Save** the changes to the presentation template by clicking the **Save** button. A snackbar with message "Presentation Template saved successfully." will appear on the screen. 
+13. Click the **Save** button to save the changes to the presentation template by clicking the **Save** button. The message "Presentation Template saved successfully." appears on the screen.
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Save_Presentation_Template.png)
 
@@ -181,31 +176,31 @@ The steps below will show how to edit a Presentation Template in Presentation De
 
         ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Markup_Generated.png)
 
-14. Go back to the Authoring portlet by clicking the back button to get ready for [Preview](#preview).
+14. Click the **Back** button to return to the Authoring portlet and [preview the presentation template](#previewing-the-presentation-template).
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Click_Back_Button.png)
 
 ---
 
-### Preview
+### Previewing the Presentation Template
 
-To see the **actual output** of the presentation template edited in Presentation designer, you can use the **Preview** feature from the **Authoring portlet**.
+To see the output of the presentation template edited in Presentation Designer, you can use the **Preview** feature from the **Authoring portlet**.
 
-1. From the Authoring Portlet, select the **Content Section PT** and click the **Preview** button.
+1. From the Authoring Portlet, select the **Content Section PT** and click **Preview**.
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Preview_from_Authoring.png)
 
-2. Select any **content item** created in [Prerequisites](#prerequisite) to use it as **rendering context** when previewing then click the **OK** button.
+2. Select any **content item** created in [Prerequisites](#prerequisites) to use as the rendering context during preview then click **OK**.
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Select_Content_Item_for_Preview.png)
 
-3. See the preview generated on the **new tab**:
+3. See the preview generated in a new tab:
 
-    *Project Content - Living Home Furnishings*:
+    The following is a sample preview for **Project Content - Living Home Furnishings**:
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Preview_Content_Home_Furnishings.png)
 
-4. Preview **other content items** by following steps 1-3.
+    See the following sample previews for other content items:
 
     *Project Content - Architectural Concept*:
 
@@ -219,7 +214,7 @@ To see the **actual output** of the presentation template edited in Presentation
 
 ### Sample Presentation Templates
 
-With Presentation Designer, users can easily create a wide range of custom designs and template layouts, all tailored to their specific needs. The intuitive drag-and-drop interface, combined with real-time styling, empowers content managers to take full control of their designs. Below, you'll find some screenshots showcasing the creative possibilities and diverse templates that have been built using Presentation Designer.
+With Presentation Designer, you can can create a wide range of custom designs and template layouts tailored to your specific needs. The intuitive drag-and-drop interface, combined with real-time styling, helps content managers to take full control of their designs. This section contains screenshots showing possible presentation templates you can build using Presentation Designer.
 
 -   **Hero Banner**
 
@@ -248,3 +243,9 @@ With Presentation Designer, users can easily create a wide range of custom desig
 
     *Preview:*
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Sample_PT_Recent_Items_Preview.png)
+
+
+???+ info "Related information"
+    - [Presentation Designer UI](../access/index.md#the-presentation-designer-ui)
+    - [User Elements](../usage/user_elements.md)
+    - [Styling Options](../usage/styling_options.md)
