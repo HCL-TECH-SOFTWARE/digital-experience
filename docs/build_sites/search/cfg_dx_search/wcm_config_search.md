@@ -49,7 +49,7 @@ Configure the **WCM SearchService** search properties from the WebSphere Integra
 
         Set this parameter to `true` to prevent file resource component attachments from being included in the search results.
         
-        Set this parameter to `false` to allow files stored in file resource elements in content items to become searchable. Files stored in file resource elements in a site area also become searchable if a default content item is selected.
+        Set this parameter to `false` to make files stored in file resource elements in content items searchable. Files stored in file resource elements in a site area also become searchable if a default content item is selected.
 
     -   **SearchService.SearchSeed.excludeExtensions**
 
