@@ -40,7 +40,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Disabled SSL Hostname verification
 
 === "Containers"
-    With CF224 the underlying WebSphere Application Server has been updated to 9.0.5.21. The 9.0.5.21 fix pack contains a change where WebSphere runtimes automatically perform additional verification of certificates.
+    With CF224, the underlying WebSphere Application Server (WAS) is updated to 9.0.5.21. The WAS 9.0.5.21 fix pack contains a change where WebSphere runtimes automatically verifies if the hostname in the certificate matches the actual hostname of the URL. Starting CF224, the system disables this setting in the WAS Custom Security properties and in the `ssl.client.props` file for users who may not have Secure Sockets Layer (SSL) certificates in place. 
+
+In case search is newly configured, the system also disables the setting in the WAS Custom Security properties and in the `ssl.client.props file` for the Remote Search container. If remote search is already configured, it might be necessary to apply the settings to disable the verification manually.
+
+For information about the changes from IBM WebSphere Application Server and steps how to disable the verification manually, see [Hostname verification for WebSphere Application Server traditional](https://www.ibm.com/support/pages/hostname-verification-websphere-application-server-traditional){target="_blank"}.
     Since typically not all certificates adhere to this strict standard CF224 disables the setting in WAS Custom Security properties as well as ssl.client.props. 
     For the Remote Search container in case search is newly configured CF224 also disables the setting in WAS Custom Security properties as well as ssl.client.props - if remote search was 
     already configured it might be needed to apply the settings to disable the verification manually.
