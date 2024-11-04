@@ -68,7 +68,7 @@ To add the **Personalized List Special Offers** portlet to a new page called **P
 
     a. Click **New Page**.  
     b. On the **Title** field, enter **Pers List Portlet - Rules**, then click **OK**.  
-    c. Back on the **Manage Pages** search for the new created page **Pers List Portlet - Rules** and click to the **Set page permission** icon to change the permissions.  
+    c. Click the **Set Page Permission** icon for the newly created **Pers List Portlet - Rules** page.  
     d. Click the **Edit Role** icon next to **Privileged Users**.  
     e. Click **Add**.  
     f. Select the checkbox for **All Authenticated Portal Users**, then click **OK**.  
@@ -77,7 +77,7 @@ To add the **Personalized List Special Offers** portlet to a new page called **P
 
     ![Add the Personalization List Portlet to a page](./RAD/images/pers_offers_add_persListPortlet_to_page.png)
 
-5. Click to the **Add Portlets** button and search in the portlet list for the **Personalized List Special Offers** portlet.
+5. Click **Add portlets**.
 
 6. Select the **Personalized List Special Offers** portlet, then click **OK > Done**.
 
