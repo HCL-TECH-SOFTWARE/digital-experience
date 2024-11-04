@@ -53,7 +53,6 @@ Static elements are predefined elements that display content exactly as it looks
     ![](../../../../assets/HCL_Presentation_Designer_Static_Element_Container.png)
     ![](../../../../assets/HCL_Presentation_Designer_Static_Element_Container_Applied_Styles.png)
 
----
 
 - **Text**
 
@@ -66,7 +65,6 @@ Static elements are predefined elements that display content exactly as it looks
     !!! note
         Placeholder text for the static text element is only a visual representation in Presentation Designer. It represents an empty value for the text content. The words *Static text element* is not saved in the actual markup.
 
----
 
 - **Link**
 
@@ -80,7 +78,6 @@ Static elements are predefined elements that display content exactly as it looks
     !!! note
         When you click a static link element on the canvas, you will not be redirected to the configured URL. To test the link, preview the presentation template in the Authoring portlet.
 
----
 
 - **Image**
 
@@ -93,7 +90,6 @@ Static elements are predefined elements that display content exactly as it looks
 
         ![](../../../../assets/HCL_Presentation_Designer_Static_Element_Image_Placeholder.png)
 
----
 
 - **Grid**
 
@@ -106,7 +102,6 @@ Static elements are predefined elements that display content exactly as it looks
 
         ![](../../../../assets/HCL_Presentation_Designer_Static_Element_Grid_Default.png)
 
----
 
 ### Content Elements
 
@@ -135,7 +130,6 @@ In Presentation Designer, the ```<p></p>``` tag wrapper for the element tag is a
 
 For more information on element tags in the Authoring portlet, refer to [Element tag](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/wcm_dev_referencing_elements.md).
 
----
 
 **Presentation Designer supports the following content elements:**
 
@@ -177,7 +171,6 @@ For more information on element tags in the Authoring portlet, refer to [Element
 
     ![](../../../../assets/HCL_Presentation_Designer_Content_Elements_Link.png)
 
----
 
 ### Property Tags
 
@@ -191,7 +184,6 @@ Sample markup generated after saving:
 
 For more information on property tags in the Authoring portlet, refer to [Property tag](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/wcm_dev_item-details_property.md).
 
----
 
 ### Generic Element Tags
 
@@ -215,7 +207,6 @@ After saving the presentation template, the generic element is converted to a **
 
 For more information on element tags in the Authoring portlet, refer to [Element tag](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/wcm_dev_referencing_elements.md).
 
----
 
 ### Generic Tags
    

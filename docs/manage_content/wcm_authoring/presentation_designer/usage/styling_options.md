@@ -7,7 +7,7 @@ To access Presentation Designer and understand its user interface, see the **[Ac
 
 To know how to use the different user elements in Presentation Designer, see the **[User Elements in Presentation Designer](../usage/user_elements.md)** topic. 
 
----
+
 ## Style Panel
 
 The styling options adjust based on the specific user element or element selected on the canvas. To see the available styling options for each user element on your canvas, click on an element and check the rendered style options in the **Style** panel.
@@ -20,7 +20,6 @@ See the following sample styling options for a static container element:
 
 ![](../../../../assets/HCL_Presentation_Designer_Styling_Options_Static_Container_Sample.png)
 
----
 
 ## Inline Styles
 
@@ -38,7 +37,6 @@ See the following sample preview displayed in a browser:
 
 ![](../../../../assets/HCL_Presentation_Designer_Styling_Options_Sample_Styles_Preview.png)
 
----
 
 ## Style Sections
 
@@ -54,7 +52,6 @@ The **Dimensions** properties allow users to control the size and scaling of ele
 - **Max width**: Defines the maximum width the element can be resized to.
 - **Max height**: Defines the maximum height the element can be resized to.
 
----
 
 ### Spacing
 **Spacing** properties control the space around and within elements, ensuring proper layout structure and breathing room for each element.
@@ -62,7 +59,6 @@ The **Dimensions** properties allow users to control the size and scaling of ele
 - **Margin**: Controls the space outside the element, affecting how far the element is from adjacent ones.
 - **Padding**: Controls the space inside the element, between its content and its border.
 
----
 
 ### Borders
 **Border** settings allow customization of the border around elements, enhancing their appearance and creating a clear visual structure.
@@ -72,7 +68,6 @@ The **Dimensions** properties allow users to control the size and scaling of ele
 - **Border color**: Allows users to choose the color of the element’s border.
 - **Border width**: Sets the thickness of the border.
 
----
 
 ### Appearance
 The **Appearance** settings focus on the visual aspects, allowing users to style the colors of elements to make them stand out or blend into the overall design.
@@ -80,7 +75,6 @@ The **Appearance** settings focus on the visual aspects, allowing users to style
 - **Background color**: Changes the background color of the selected element.
 - **Text color**: Changes the color of any text within the element.
 
----
 
 ### Layout
 Layout controls the structural positioning and setup of the element relative to other elements on the canvas, ensuring proper arrangement and organization.
@@ -90,7 +84,6 @@ Layout controls the structural positioning and setup of the element relative to 
   - **Columns**: Specifies the number of vertical sections (columns) in the grid, with each column's width defined using the **fr** unit (for example, 1fr, 3fr).
   - **Column gap**: Sets the space between columns, defining the separation between elements in different columns.
 
----
 
 ### Position
 The **Position** settings allow users to precisely control the placement of elements on the canvas to ensure accurate positioning based on the layout's needs.
@@ -102,7 +95,6 @@ The **Position** settings allow users to precisely control the placement of elem
 - **Left**: Specifies the left position of the element relative to its parent.
 - **Right**: Specifies the right position of the element relative to its parent.
 
----
 
 ### Typography
 

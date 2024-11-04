@@ -4,7 +4,6 @@ This section describes how to edit a presentation template in Presentation Desig
 
 To provide a comprehensive example, the goal is to have a **Content Section** presentation template for a **project page** which displays an **image of the project**, the **project title**, and **general information** by utilizing the capabilities of Presentation Designer.
 
----
 
 ## Prerequisites
 
@@ -37,7 +36,6 @@ To provide a comprehensive example, the goal is to have a **Content Section** pr
 
         ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Sample_Presentation_Template_Empty_Markup.png)
 
----
 
 ## Editing a Presentation Template in Presentation Designer
 
@@ -180,7 +178,6 @@ Refer to the following steps to edit a presentation template in Presentation Des
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Click_Back_Button.png)
 
----
 
 ### Previewing the Presentation Template
 
@@ -210,7 +207,6 @@ To see the output of the presentation template edited in Presentation Designer, 
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Preview_Content_Studio_Ceramics.png)
 
----
 
 ### Sample Presentation Templates
 
@@ -220,13 +216,11 @@ With Presentation Designer, you can can create a wide range of custom designs an
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Sample_PT_Hero_Banner.png)
 
----
 
 -   **Cards with Image**
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Sample_PT_Cards_with_Image.png)
 
----
 
 - **Content Section**
 
@@ -235,7 +229,6 @@ With Presentation Designer, you can can create a wide range of custom designs an
     *Preview:*
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Preview_Content_Studio_Ceramics.png)
 
----
 
 -   **Recent Items Template**
 
