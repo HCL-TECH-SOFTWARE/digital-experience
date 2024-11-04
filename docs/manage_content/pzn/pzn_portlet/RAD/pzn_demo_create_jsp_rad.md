@@ -22,9 +22,9 @@ Before you begin, ensure you have properly installed the demo and databases and 
 
     4. Unselect **Add project to an EAR**.
 
-    5. In the **Portlet settings**, select **Create a portlet** and enter the Portlet name: **Pers_Offers**  
+    5. In the **Portlet settings**, select **Create a portlet** and enter the Portlet name: **Pers_Offers**.  
 
-    6. Under **Configuration**, click **Modify...**  
+    6. Under **Configuration**, click **Modify...**.  
 
     7. Under **Portlet API**, select **JSR 268 Portlet** from the list.
 
@@ -47,9 +47,8 @@ Before you begin, ensure you have properly installed the demo and databases and 
     ![Create Project Pers_Offers](.\images\create_project_Pers_Offers.png)
 
     !!!note
-        When the **Open Associated Perspective?** window appears, click **Open Perspective** to open the JSP-file in the Design mode.  
-
-        When the **Rich Page Editor** window appears, click the **OK** button.  
+        - When the **Open Associated Perspective?** window appears, click **Open Perspective** to open the JSP-file in the Design mode.  
+        - When the **Rich Page Editor** window appears, click **OK**.  
 
 11. The JSP file opens automatically in Design mode. Edit the text of the portlet to display **Welcome to Personalized Offers!**.
 

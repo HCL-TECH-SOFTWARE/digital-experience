@@ -51,6 +51,6 @@ To install the Pers_Offers portlet on a portal page, refer to the following step
     b. Select the checkbox for the **Pers_Offers** portlet, then click **OK > Done**.  
 
 !!!note
-The portlet is not ready to run yet. You will get an error if you try to run it.  
+    The portlet is not ready to run yet. You will get an error if you try to run it.  
   
 You have successfully exported the personalized JSR 268-based JSP portlet and installed the portlet in HCL DX. In the next topic, you will learn how to [Import Personalization Workspace resource collections.](./pzn_demo_import_resource_collections.md)
