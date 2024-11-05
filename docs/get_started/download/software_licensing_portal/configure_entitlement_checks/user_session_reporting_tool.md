@@ -105,8 +105,8 @@ java -jar <jarFilepath> -h
 # <filePaths> List of input log files to get session counts
 # <excludeIPFile> Path to the file containing IPs to exclude from session counts
 # <excludeSessionKeyFile> Path to the file containing session keys to exclude from session counts
-# <excludeIPs> List of IPs (seperated by space) to exclude from session counts
-# <excludeSessionKeys> List of session keys (seperated by space) to exclude from session counts
+# <excludeIPs> List of IPs (separated by space) to exclude from session counts
+# <excludeSessionKeys> List of session keys (separated by space) to exclude from session counts
 # <startDate> Specifies the start date in YYYY-MM-DD format
 # <endDate> Specifies the end date in YYYY-MM-DD format
 ```
