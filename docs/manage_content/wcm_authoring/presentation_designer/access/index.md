@@ -48,9 +48,9 @@ Refer to the following instructions to access and navigate to Presentation Desig
 
     ![](../../../../assets/HCL_WCM_Authoring_Presentation_Template_Edit_in_Presentation_Designer.png "HCL WCM Authoring - Edit Presentation Template in Presentation Designer")
 
-7. The Presentation Designer user interface appears. You can also refer to Step 6 to view or edit your existing presentation templates. 
+The Presentation Designer user interface appears. You can also refer to Step 6 to view or edit your existing presentation templates.  
 
-    ![](../../../../assets/HCL_Presentation_Desinger_Blank_Canvas.png "HCL Presentation Desinger - Blank Canvas")
+![](../../../../assets/HCL_Presentation_Desinger_Blank_Canvas.png "HCL Presentation Desinger - Blank Canvas")
 
 
 ## The Presentation Designer UI
@@ -64,8 +64,8 @@ The Presentation Designer user interface is composed of three main sections:
 ![](../../../../assets/HCL_Presentation_Designer_Header.png)
 
 1. **Back** button. Use this to go back to the Authoring portlet. 
-2. Title of the Presentation Template.
-3. **Edit/Read mode** toggle. This toggle enables or disables the **Save** button.
+2. Title of the presentation template.
+3. **Edit/Read mode** toggle. Use this to switch from Edit to Read mode or from Read to Edit mode. This toggle enables or disables the **Save** button.
 4. **Cancel** button. Use this to to cancel editing and go back to the Authoring portlet.
 5. **Save** button. Use this to save the presentation template or click the dropdown icon to **Save and Close**.
 
@@ -78,7 +78,7 @@ There are two panels you can use in Presentation Designer: [Add Items](#add-item
 
 ![](../../../../assets/HCL_Presentation_Designer_Add_Items_Panel.png)
 
-The **Add Items** panel contains the user elements that you can drag and drop to the canvas. The **Source** field contains a dropdown menu where you can select an element source. The list of draggable elements in the **Add Items** panel depends on the element source you selected in this field.
+The **Add Items** panel contains the user elements that you can drag and drop to the canvas. The **Source** field contains a dropdown menu where you can select an element source. The list of elements you can drag in the **Add Items** panel depends on the element source you selected in this field.
 
 #### Style
     
@@ -96,11 +96,12 @@ For more information on the user elements and style options, see **[Usage of Pre
 The Canvas serves as the central workspace in Presentation Designer. This is where you can build your presentation templates. You can drag and drop elements right onto the canvas, making it simpler to create your layout. Any adjustments you make to the styling appear right away, giving you instant visual feedback as you work. This hands-on area lets content managers play around with different designs and setups.
 
 
+
+Hovering or selecting an element on the canvas displays the element name and the different action buttons available for the element. See the following actions you can do:
+
 ![](../../../../assets/HCL_Presentation_Designer_Canvas_Item.png)
 
-Hovering or selecting an element on the canvas displays the element name and the different action buttons available for it. See the following actions you can do:
-
-1. Use the **Move** icon to rearrange the elements on the canvas through drag and drop. 
-2. Use the **Arrow Up** icon to automatically select the parent of the current element. 
-3. Use the **Configure** icon to display additional configuration options for the element. 
-4. Use the **Trash** icon to delete the element from the canvas.
+1. Click the **Move** icon to rearrange the elements on the canvas through drag-and-drop
+2. Click the **Arrow Up** icon to automatically select the parent of the current element. 
+3. Click the **Configure** icon to display additional configuration options for the element. 
+4. Click the **Trash** icon to delete the element from the canvas.

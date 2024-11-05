@@ -1,4 +1,4 @@
-# Styling Options in Presentation Designer
+# Styling options in Presentation Designer
 
 Styling options provide users the ability to make the elements on the canvas presentable. Styles are integral in Presentation Designer because they enable an interactive design experience. Users do not have to preview the final output separately, as the style changes are reflected on the canvas. This topic outlines the different styling options you can do in the **Style** panel of Presentation Designer.
 
@@ -8,9 +8,9 @@ To access Presentation Designer and understand its user interface, see the **[Ac
 To know how to use the different user elements in Presentation Designer, see the **[User Elements in Presentation Designer](../usage/user_elements.md)** topic. 
 
 
-## Style Panel
+## Style panel
 
-The styling options adjust based on the specific user element or element selected on the canvas. To see the available styling options for each user element on your canvas, click on an element and check the rendered style options in the **Style** panel.
+The styling options change based on the specific user element selected on the canvas. To see the available styling options for each element on your canvas, click on an element and check the rendered style options in the **Style** panel.
 
 See the following sample styling options for a static text element:
 
@@ -21,9 +21,9 @@ See the following sample styling options for a static container element:
 ![](../../../../assets/HCL_Presentation_Designer_Styling_Options_Static_Container_Sample.png)
 
 
-## Inline Styles
+## Inline styles
 
-In **Presentation Designer**, styling options are applied directly to the selected elements through inline styles. 
+In Presentation Designer, styling options are applied directly to the selected elements through inline styles. 
 
 See the following sample static text element with styles applied in Presentation Designer:
 
@@ -38,9 +38,9 @@ See the following sample preview displayed in a browser:
 ![](../../../../assets/HCL_Presentation_Designer_Styling_Options_Sample_Styles_Preview.png)
 
 
-## Style Sections
+## Style sections
 
-Style sections in Presentation Designer refer to categorized areas where users can adjust specific style properties of the selected user element on the canvas. Each section focuses on a different aspect of the element's design and helps users navigate the style panel and apply the adjustments they need for each element.
+Style sections in Presentation Designer refer to categorized areas where users can adjust specific style properties of the selected user element on the canvas. Each section focuses on a different aspect of the element's design and helps users navigate the **Style** panel and apply the adjustments they need for each element.
 
 ### Dimensions
 The **Dimensions** properties allow users to control the size and scaling of elements within the design. These settings ensure that elements fit well within their container and across various screen sizes.
