@@ -8,89 +8,106 @@ hide:
 
 <div class="grid cards" markdown>
 
--   :material-new-box:{ .lg .middle } __Find Out What's New__
+-   :material-new-box:{ .lg .middle } __What's New?__
 
     ---
 
-    Focus on your content and generate a responsive and searchable static site
+    Find out what's new in the latest HCL DX cumulative fix.
 
     ---
 
-    [:octicons-arrow-right-24: What's New](./whatsnew/cf20/newcf221.md)
+    [:octicons-arrow-right-24: Go to What's New](./whatsnew/cf20/newcf224.md)
     
--   :material-clock-fast:{ .lg .middle } __What Is DX__
-
-    ---
-     ![](./assets/homepage-images/dx-doc-hero-banner2.png)
-
-    Install [`mkdocs-material`](#) with [`pip`](#) and get up
-    and running in minutes
+-   :material-code-braces-box:{ .lg .middle } __DX Architecture__
 
     ---
 
-    [:octicons-arrow-right-24: Learn about DX](./get_started/architecture_overview/index.md)
+    HCL DX is scalable and flexible, supports authentication for security and personalization, and aids in integration with various applications.
+
+    ---
+
+    [:octicons-arrow-right-24: Learn about DX Architecture](./get_started/architecture_overview/index.md)
 
 -   :material-server-network:{ .lg .middle } __Deploy DX__
 
     ---
 
-    Change the colors, fonts, language, icons, logo and more with a few lines
+    Learn how to deploy DX through container-based, traditional, hybrid, and Docker platforms. 
 
     ---
 
     [:octicons-arrow-right-24: Deploy DX](./deployment/index.md)
 
--   :material-web-box:{ .lg .middle } __Build Sites__
+-   :material-list-box:{ .lg .middle } __System Requirements__
 
     ---
 
-    Material for MkDocs is licensed under MIT and available on [GitHub]
+    Know the minimum system requirements for HCL DX version 9.5.
 
     ---
 
-    [:octicons-arrow-right-24: Learn More](./build_sites/index.md)
+    [:octicons-arrow-right-24: Go to System Requirements](./get_started/system_requirements/index.md)
 
--   :material-content-copy:{ .lg .middle } __Manage Your Content__
-
-    ---
-
-    Install [`mkdocs-material`](#) with [`pip`](#) and get up
-    and running in minutes
-
-    [:octicons-arrow-right-24: Content Management](./manage_content/index.md)
-
--   :material-code-braces-box:{ .lg .middle } __Extend DX__
+-   :material-book-open-variant:{ .lg .middle } __Tutorials__
 
     ---
 
-    Focus on your content and generate a responsive and searchable static site
-
-    [:octicons-arrow-right-24: Extend DX](./extend_dx/index.md)
-
--   :material-theater:{ .lg .middle } __How-Tos and Guides__
+    The DX Help Center contains a section for tutorials and how-to guides to help you use DX.
 
     ---
 
-    Change the **colors**, fonts, language, icons, logo and more with a few lines
+    [:octicons-arrow-right-24: Go to Tutorials](./guide_me/tutorials/index.md)
 
-    [:octicons-arrow-right-24: Customization](./guide_me/glossary.md)
-
--   :material-school:{ .lg .middle } __Learning Materials__
+-   :material-school:{ .lg .middle } __HCLSoftware U__
 
     ---
 
-    ![HCL Software U Logo](./assets/homepage-images/HCLSoftware-U-logo-blk.png)
+    <!--![HCL Software U Logo](./assets/homepage-images/HCLSoftware-U-logo-blk.png)-->
 
-    Access online courses for DX.
-
-    [:octicons-arrow-right-24: Visit HCL Software U](https://hclsoftwareu.hcltechsw.com/hcl-dx)
-
--   :material-lifebuoy:{ .lg .middle } __Access HCL Support__
+    Explore self-paced learning courses for using HCL DX.
 
     ---
 
-    Discover our support bulletins and access your support cases.
+    [:octicons-arrow-right-24: Visit HCL Software U](https://hclsoftwareu.hcltechsw.com/hcl-dx){target="_blank"}
 
-    [:octicons-arrow-right-24: Access Support](https://support.hcltechsw.com/csm?id=csm_index)
+-   :material-lifebuoy:{ .lg .middle } __HCL Support__
+
+    ---
+
+    Discover HCL support bulletins and access your support cases.
+
+    ---
+
+    [:octicons-arrow-right-24: Access Support](https://support.hcltechsw.com/csm?id=csm_index){target="_blank"}
+
+-   :material-theater:{ .lg .middle } __Community Forums__
+
+    ---
+
+    Join DX community forums to connect with other DX users, ask questions, and share insights.
+
+    ---
+
+    [:octicons-arrow-right-24: Go to Community Forums](https://support.hcltechsw.com/community){target="_blank"}
+
+-   :material-account-group:{ .lg .middle } __DXers User Group__
+
+    ---
+
+    Join the DXers group in Discord to participate in discussions related to HCL DX.
+
+    ---
+
+    [:octicons-arrow-right-24: Join DXers User Group](https://ptb.discord.com/channels/787019554173485067/802205783962026034){target="_blank"}
+
+-   :material-help-box:{ .lg .middle } __DX 8.5 and 9.0 Help Center__
+
+    ---
+
+    This Help Center contains documentation for older HCL DX versions.
+
+    ---
+
+    [:octicons-arrow-right-24: Go to DX 8.5 and 9.0 Help Center](https://help.hcl-software.com/digital-experience/index.html){target="_blank"}
 
 </div>

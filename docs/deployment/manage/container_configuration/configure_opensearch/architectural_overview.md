@@ -34,6 +34,14 @@ The search middleware performs the following functions:
 - Crawlers for data sources
 - REST API for document management, configuration, and search queries
 
+### File processor nodes
+
+A file processor node is an additional set of Pods that is run alongside search middleware and OpenSearch. It performs all the tasks required to run text extraction in order to provide full text search.
+
+The file processor node is mandatory for binary-to-text extraction.
+
+Whenever the search middleware detects that a document contains a reference to a binary file that text can be extracted from, the search middleware retrieves the binary file and sends it to the file processor node for text extraction.
+
 ## Content sources
 
 A content source represents a search index that contains data from a specific data source (for example, WCM). Each content source has its own independent search index inside OpenSearch. This ensures that indexing documents from different data sources does not cause conflicts with duplicate IDs. With OpenSearch, you can still perform search queries over all existing indexes, which enables a separation of indexed data while retaining all search capabilities.
@@ -66,22 +74,43 @@ Documents that are stored inside a content source contain a defined set of metad
 
 ```json
 {
-    "lastIndexed": 1712828704213,
-    "firstIndexed": 1712828704213,
-    "acls": [],
-    "created": 1564176483000,
-    "updated": 1564176483000,
-    "documentObject": {
-        ...
-    }
+  "lastIndexed": 1726633181900,
+  "firstIndexed": 1726633181900,
+  "acls": [],
+  "created": 1564176483000,
+  "updated": 1564176483000,
+  "title": "raspberry pi",
+  "type": "electronic-item/pdf/doc/txt",
+  "description": "Details of raspberry pi",
+  "dataUri": "https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg",
+  "text": "",
+  "tags": [
+    "tag-one",
+    "tag-two"
+  ],
+  "documentObject": {
+    "mimeType": "image/jpeg"
+  },
+  "id": "fe657e1b-214f-4816-b2af-77fca67fb17"
 }
 ```
 
 - The `documentObject` contains the document's real data. Its properties vary depending on the type of content source and the fields that are indexed.
 
+    If common fields are not provided, the fallback logic is to extract data from the `documentObject`. To extract data, enter the title in the `documentObject.name` field and provide the type in the `documentObject.contentType` field.
+
 - The `lastIndexed` and `firstIndexed` fields are maintained by the search. These fields display the corresponding timestamps of last indexing and first indexing, respectively. 
 
-- The fields `acls`, `created`, and `updated` are provided by the data source.
+- The `title` field is a mandatory field that provides a short, descriptive title of the document.
+
+- The `type` field is a mandatory field that contains the document type. For example, electronic-item, pdf, doc, txt.
+
+- The `description` field contains a longer description or preview text that might not be available for all types of documents stored.
+
+- The `tags` field is a common field for every type of document and array of strings. Tags can be any specific word or phrase that describes the document. If there is no appropriate tag, you can leave the `tags` field blank. 
+
+- The `dataUri` field contains the URL used to retrieve the binary file for text extraction. This field can be empty.
+
 
 A document that does not contain any ACLs will be considered public and do not have any visibility restrictions.
 

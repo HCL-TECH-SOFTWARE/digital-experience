@@ -1,4 +1,4 @@
-# Edit-time navigation creation extension Multilingual Solution
+# Edit-time navigation creation extension
 
 This extension provides a way to change between localizations of the same item and to create new items in localized libraries.
 
