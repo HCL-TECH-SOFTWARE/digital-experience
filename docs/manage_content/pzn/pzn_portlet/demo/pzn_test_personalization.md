@@ -20,7 +20,7 @@ By default, when the Personalization demo (PZNDemo) is installed, the following 
         After starting the database, log out and log in to your Portal and check the pzndemo pages. You do not have to click **Initialize Database** again.  
 
     The following images are sample pages of the Personalization demo for each user.  
-    
+  
     **YourCo Main Page** sample for user **scott**:  
 
     ![main page sample](./images/scott_YourCo_mainpage_sample.png)

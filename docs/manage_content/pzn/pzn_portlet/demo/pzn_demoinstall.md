@@ -20,9 +20,11 @@ In this exercise, you can install the Portal Personalization sample and configur
 
 5. Open your web browser and log in to the Portal as **wpsadmin** user.
 
-6. In the Portal menu, navigate to **Administration > Security > User and Groups > All Portal User Groups > pzndemousers**.
+6. Click **Open applications menu**, then navigate to **Administration**.
 
-7. Confirm that the following users were created:
+7. Click **Security > User and Groups > All Portal User Groups > pzndemousers**.
+
+8. Confirm that the following users were created:
 
     - andy  
     - scott
@@ -32,7 +34,7 @@ In this exercise, you can install the Portal Personalization sample and configur
     The following screenshot shows the PZN demo users:
     ![PZN Demo Users](./images/pzndemo_users.png)
 
-8. Add all pzndemousers to the wpsadmins group.
+9. Add all **pzndemousers** to the **wpsadmins** group.
 
     1. On the **Manage Users and Groups** page, click the navigation item **All Portal User Groups**.  
     2. Click the user group **wpsadmins**.  
@@ -40,9 +42,9 @@ In this exercise, you can install the Portal Personalization sample and configur
     4. Click **OK**.  
 
     !!!note  
-        By default, standard users do not have permissions to access the Personalization page or resources. In this exercise, it is recommended to add all the pzndemousers to the wpsadmins group to ensure that users get access to all demo resources.   
+        By default, standard users do not have permissions to access the Personalization page or resources. In this exercise, it is recommended to add all the pzndemousers to the wpsadmins group to ensure that users get access to all demo resources.  
 
-9. Log out of HCL DX to apply the changes.
+10. Log out of HCL DX to apply the changes.
 
     In the following screenshot, PZN demo users are under the wpsadmins group:
     ![Adding the PZN Demo users to the wpsadmins group](./images/pzndemo_users_wpsadmins_group.png)  
