@@ -25,6 +25,7 @@ Complete the following tasks based on the Pers Offers sample by following the in
 1. Install the **[resource collection classes](./download/pers_offers.jar)**.
 
 2. Import the **[rules (hrf-files)](./download/Portal_rules_PznOffers.zip)**.
+
     !!!note
         If the PersOffers Portlet is not installed yet, you can download it from the [Developing a personalized portlet using IBM Rational Application Developer](./RAD/index.md) page. Then, follow the instructions on how to [Install the portlet on a portal page](./RAD/pzn_demo_export_war_install_portlet.md).
 
