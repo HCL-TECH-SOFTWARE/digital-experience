@@ -1,6 +1,6 @@
 # Deployment
 
-This section will guide you through installation, configuration, uninstallation and troubleshooting.
+This section will guide you through installation, configuration, uninstallation, and troubleshooting.
 
 - [Installation](./installation.md)
 - [Configuration](./configuration)

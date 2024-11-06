@@ -1,13 +1,25 @@
 # HCL People Service
 
-The People Service enhances the digital experience by increasing visibility and interaction among team members across various projects and organizations. It aids in skill discovery and engagement, promoting a collaborative work environment.
+HCL People Service enhances HCL Digital Experience (DX) by increasing visibility and interaction among team members across various projects and organizations. It aids in skill discovery and engagement, promoting a collaborative work environment.
 
 !!!todo
     Ensure that appropriate Container Release version is mentioned. At the moment we are planning to release in CF224.
 
-Users can access the HCL People Service features in HCL Digital Experience 9.5 Container Update Release CF224 and higher releases.
+Users can access HCL People Service features starting from the HCL DX 9.5 Container Update Release CF224.
 
-Follow these steps to install, configure, and use the HCL People Service features.
+Learn how to install, configure, and use HCL People Service features.
+
+-**Installing HCL People Service**
+Learn how to Install and deploy HCL People Service.
+
+-**Accessing HCL People Service**
+Learn how to access HCL People Service features.
+
+-**Using HCL People Service**
+Learn how to integrate and use HCL People Service features.
+
+-**Limitations of HCL People Service**
+Learn about the current limitations of HCL People Service.
 
 - **[Install HCL People Service](./installation/index.md)**
 

@@ -1,4 +1,4 @@
 title: Authentication
 nav:
   - index.md
-  - oidc_configuration.md
+  - OIDC configuration: oidc_configuration.md

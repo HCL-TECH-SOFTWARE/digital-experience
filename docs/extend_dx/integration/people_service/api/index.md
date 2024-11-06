@@ -1,10 +1,10 @@
 # API documentation
 
-Explore the API documentation section of the people service, which provides an overview of the available APIs and how to interact with them. This section serves as a reference for developers and administrators looking to leverage the people service APIs to enhance their platforms. It includes details on the available APIs, including references to OpenAPI and Swagger Explorer, to help users understand and work with the people service APIs effectively.
+In this section, you will learn about the available APIs in People Service and how to interact with them. This section serves as a reference for developers and administrators looking to leverage People Service APIs to enhance their platforms. It includes details on the available APIs such as OpenAPI and Swagger Explorer to help users understand and work with People Service APIs effectively.
 
 ## Working with APIs
 
-The people service APIs are designed to provide developers and administrators with the necessary tools to interact with the service and enhance their platforms. The APIs are RESTful and follow standard conventions, making them easy to work with and integrate into existing systems. The following sections provide an overview of the available APIs and how to interact with them effectively.
+People Service APIs are designed to provide developers and administrators with the necessary tools to interact with the service and enhance their platforms. The APIs are RESTful and follow standard conventions, making them easy to work with and integrate into existing systems. The following sections provide an overview of the available APIs and how to interact with them effectively.
 
 The people service APIs are categorized into the following sections:
 
@@ -22,12 +22,14 @@ The people service APIs are categorized into the following sections:
 
 ## OpenAPI and Swagger Explorer
 
-The people service APIs are documented using OpenAPI, which provides a standard way to describe RESTful APIs and generate interactive documentation. The OpenAPI specification is available for each API category, allowing developers and administrators to explore the available endpoints, request/response formats, and authentication requirements.
+People Service APIs are documented using OpenAPI, which provides a standard way to describe RESTful APIs and generate interactive documentation. The OpenAPI specification is available for each API category, allowing developers and administrators to explore the available endpoints, request and response formats, and authentication requirements.
 
-To check out the OpenAPI documentation for the people service APIs, use the Swagger Explorer tool. The Swagger Explorer provides an interactive interface for exploring the APIs, making it easy to understand the available endpoints and test them with sample requests.
+You can check the OpenAPI documentation for People Service APIs using the Swagger Explorer tool. This tool provides an interactive interface for exploring the APIs, making it easy to understand the available endpoints and test them with sample requests.
 
-You can access the Swagger Explorer for the people service APIs via the URL &lt;HOSTNAME&gt;/dx/api/people/v1/explorer and the OpenAPI specification via the URL &lt;HOSTNAME&gt;/dx/api/people/v1/openapi/openapi.json
+Use the following URLs to access the Swagger Explorer for People Service APIs and OpenAPI specification:
+- People Service APIs: `&lt;HOSTNAME&gt;/dx/api/people/v1/explorer`
+- OpenAPI Specification: `&lt;HOSTNAME&gt;/dx/api/people/v1/openapi/openapi.json`
 
 ## OpenAPI Specification
 
-See the [OpenAPI spec](https://pages.git.cwp.pnp-hcl.com/Team-Q/internal-doc/enable/b2e-services/people-service/api-documentation/people-service-openapi-spec.json) for more details on the people service API schema.
+For more information on the People Service API schema, refer to [OpenAPI spec](https://pages.git.cwp.pnp-hcl.com/Team-Q/internal-doc/enable/b2e-services/people-service/api-documentation/people-service-openapi-spec.json).

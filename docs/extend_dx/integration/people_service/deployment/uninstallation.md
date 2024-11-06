@@ -1,6 +1,6 @@
 # Uninstallation
 
-People Service is bundled as a dependency in HCL Digital Experience (DX) Helm chart. To uninstall you must set `peopleservice.enabled` property to `false` in the Helm chart `values.yaml`.
+People Service is bundled as a dependency in the HCL Digital Experience (DX) Helm chart. To uninstall People Service, set the `peopleservice.enabled` property to `false` in the Helm chart `values.yaml`.
 
 ```yaml
 peopleservice:

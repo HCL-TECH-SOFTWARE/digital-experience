@@ -1,6 +1,6 @@
 # Managing user properties
 
-The central entity in the People Service are users and their properties. As requirements for user profiles can vary greatly between different organizations, the People Service provides a flexible way to map, configure or extend the user profile with existing data or additional information.
+The central entity in People Service are the users and their properties. As requirements for user profiles can vary greatly between different organizations, People Service provides a flexible way to map, configure, or enhance user profiles with existing data or additional information.
 
 ## User properties
 
@@ -37,12 +37,12 @@ The People Service thus has a baseline of profile attributes that are deemed gen
 
 ## Validation and configuration
 
-In general, properties can be editable by the user. In cases where the information is pulled from external sources though, this should be prevented to not run out of sync. So properties can be marked as read-only to prevent users from updating them. 
+In general, users can edit their properties. However, in cases where information is pulled from external sources, user properties should be marked as read-only to prevent syncing issues.
 
-Properties also have validation that can be simple string/number validation but also more catered email or phone number validations. Also more generally, all properties sanitize user input to prevent XSS attacks and other security vulnerabilities.
+User properties are validated through string/number, email, or phone number authentication methods. These properties also sanitize user input to prevent cross-site scripting (XSS) attacks and other security vulnerabilities.
 
 ## Custom fields
 
-Custom fields are a way to extend the user profile with additional information that is not covered by the default properties. Custom fields can be of any type and can be added to the user profile via the API or the UI. Custom fields can be marked as required or optional and can have validation rules attached to them.
+You can use custom fields to enhance user profiles with additional information that is not covered by the default properties. These fields can be configured using any data type and can be added to user profiles through the API or the UI. You can also mark fields as required or optional, and attach validation rules to them.
 
-For more information on how to manage custom fields, see the [Custom fields](./custom_fields.md) section.
+For more information on how to manage custom fields, refer to the [Custom fields](./custom_fields.md) section.
