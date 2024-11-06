@@ -1,4 +1,4 @@
-# 6. Uninstall Pers Offers Portlet and the PZNDemo
+# Uninstall Pers Offers Portlet and the PZNDemo
 
 View the steps to uninstall the Pers Offers Portlet and the Personalization sample demo, database, and users.
 

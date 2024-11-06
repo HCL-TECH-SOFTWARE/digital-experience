@@ -1,4 +1,4 @@
-# 5. Test the Pers Offers Portlet
+# Test the Pers Offers Portlet
 
 If you are currently logged in as portal admin user (wpsadmin), then please log off from the Portal.
 

@@ -26,11 +26,11 @@ Before you begin, ensure you have properly installed the demo and databases and 
 
     6. Under **Configuration**, click **Modify...**.  
 
-    7. Under **Portlet API**, select **JSR 268 Portlet** from the list.
+    7. Under **Portlet API**, select **JSR 268 Portlet**.
 
-    8. Under **Portlet type**, select **Basic Portlet** and click the **OK** button.
+    8. Under **Portlet type**, select **Basic Portlet**, then click **OK**.
 
-         ![Portlet Type](.\images\create_project_type_Pers_Offers.png)
+         ![Portlet Type](./images/create_project_type_Pers_Offers.png)
 
 5. Click **Next**.
 
@@ -44,7 +44,7 @@ Before you begin, ensure you have properly installed the demo and databases and 
 
 10. No Advanced Settings are necessary. Click **Finish**.
 
-    ![Create Project Pers_Offers](.\images\create_project_Pers_Offers.png)
+    ![Create Project Pers_Offers](./images/create_project_Pers_Offers.png)
 
     !!!note
         - When the **Open Associated Perspective?** window appears, click **Open Perspective** to open the JSP-file in the Design mode.  
@@ -56,6 +56,6 @@ Before you begin, ensure you have properly installed the demo and databases and 
 
 ## Result
 
-![Welcome JSP](.\images\Pers_Offers_Welcome_JSP.png)
+![Welcome JSP](./images/Pers_Offers_Welcome_JSP.png)
 
 You have successfully created a basic JSR 268 portlet with a JSP file using Rational Application Developer. In the next topic, you will learn how to [Create the Personalization content resource classes and content spot.](./pzn_demo_create_pzn_content_resources.md)

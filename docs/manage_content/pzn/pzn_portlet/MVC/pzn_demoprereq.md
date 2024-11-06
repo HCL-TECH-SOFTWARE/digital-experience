@@ -1,4 +1,4 @@
-# 1. Prerequisites for the Personalization portlet exercise
+# Prerequisites for the Personalization portlet exercise
 
 This exercise is intended for users with significant HCL Digital Experience administration experience and strong Java Portlet development skills.
 

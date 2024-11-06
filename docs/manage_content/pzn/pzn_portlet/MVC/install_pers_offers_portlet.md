@@ -1,4 +1,4 @@
-# 2. Install the Pers_Offers portlet  
+# Install the Pers_Offers portlet  
 
 ## Prerequiste
 
@@ -15,8 +15,8 @@ Furthermore, please make sure that you have already run the following two Config
 
 ## Detailed steps
 
-1. Clone the git repository [Personalization Example (Pers_Offers)](https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities/tree/main/personalization/Pers_Offers)  
-   `git clone https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities.git`  
+1. Clone the git repository [Personalization Example (Pers_Offers)](https://github.com/HCL-TECH-SOFTWARE/DX-Personalization-Development-Sample)  
+   `git clone https://github.com/HCL-TECH-SOFTWARE/DX-Personalization-Development-Sample`  
 
 2. start Micorosoft Visual Studio Code and open the folder:  
    `\dx-portlet-development-utilities\personalization\Pers_Offers\pers_offers`

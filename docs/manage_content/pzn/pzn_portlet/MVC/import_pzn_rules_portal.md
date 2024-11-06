@@ -1,4 +1,4 @@
-# 4. Import the pzn-rules into Portal  
+# Import the pzn-rules into Portal  
 
 The Pers_Offers sample portlet contains a folder named **rules**, which contains all rules that that will be created, when you follow the steps of section [Developing a personalized portlet using IBM Rational Application Developer](../RAD/index.md). This rules can be simple imported into Portal by using the following steps.  
 
