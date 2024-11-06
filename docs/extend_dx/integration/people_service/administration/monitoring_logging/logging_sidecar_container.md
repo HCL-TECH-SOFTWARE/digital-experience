@@ -3,7 +3,7 @@
 HCL People Service provides a logging sidecar container that can be used to collect purpose-specific logs. The sidecar container runs a simple script that collects logs from People Service and exposes them to the Kubernetes logging system. Currently, a logging sidecar container can be enabled for the following components:
 
 - Sync log: Collects logs from the synchronization process.
-- Audit log: Logs all user events based on the requested API calls
+- Audit log: Logs all user events based on the requested API calls.
 
 ## Enable logging sidecar container
 
@@ -16,7 +16,7 @@ logging:
       enabled: true
 ```
 
-By default, the logs are mounted to the `/data/people/logs` directory in the `hcl-people-service-data` persistent volume claim, which the People Service container is writing to.
+By default, the logs are mounted to the `/data/people/logs` directory in the `hcl-people-service-data` persistent volume claim, where the People Service container is writing to.
 
 ## Access logs
 
