@@ -22,8 +22,7 @@ Review the architecture that presents the License Manager component of HCL DX v9
 ## Architecture
 The License Manager component communicates with the My HCLSoftware entitlement service, to validate license entitlement at set periods for HCL Digital Experience Cloud Native V9.5 Tier 1 – 7 software after you configure it via the DX Cloud Native 9.5 deployment Helm chart. The License Manager component also transmits user session consumption from your production DX Cloud Native 9.5 deployment(s) to the My HCLSoftware usage reporting services.
 
-**UPDATED DIAGRAM WITH MYMHS**
-![](../../software_licensing_portal/_img/DX_95_container_update_software_architecture_license_manager_component.png) 
+![](../../software_licensing_portal/_img/DX_95_container_license_manager_arch_mhs.png) 
 
 Follow the configuration steps in the following procedure before you deploy a new or update an existing DX 9.5 Container deployment. By completing these steps, you configure the DX Cloud Native 9.5 Tier 1 – 7 deployment a Helm chart and enable the License Manager entitlement-checking functions.  
 

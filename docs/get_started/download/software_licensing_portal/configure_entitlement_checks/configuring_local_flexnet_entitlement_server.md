@@ -33,7 +33,7 @@ By having the offline version of the HCL FlexNet Embedded License Server, a loca
 
 The License Manager component communicates with the local license server to validate license entitlement periods for HCL Digital Experience Cloud Native V9.5 Tier 1 – 7 software configured for production use. The local license server stores user session consumption from the customer’s production DX Cloud Native 9.5 deployments and synchronizes that data from the local license server copy to the FlexNet License Portal Server for HCL when those connections are periodically established. 
 
-![Architecture](../_img/architecture_logical_deployment_kube.png)
+![Architecture](../_img/DX_95_container_local_license_manager_support_arch.png)
 
 ## Install and configure the local FlexNet entitlement server
 
