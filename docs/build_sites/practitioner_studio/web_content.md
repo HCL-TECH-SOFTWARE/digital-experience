@@ -1,7 +1,9 @@
 # Web content
 
-Learn more about managing libraries, creating, editing or cleaning up data, and setting up syndication for HCL Digital Experience web content management.
+Learn more about managing libraries, creating, editing or cleaning up data, and setting up syndication for HCL Digital Experience (DX) web content management.
 
+- [**HCL Content Composer**](../../manage_content/wcm_authoring/content_composer/index.md)<br>
+    Learn how to use the HCL Content Composer to create and manage DX site content.
 - [**Authoring portlet**](../create_sites/authoring_tools/site_auth_portlet.md)<br>
     Learn how to use authoring templates to add content to your website.
 - [**HCL Content Reporting**](../../manage_content/wcm_authoring/content_reporting/index.md)<br>
