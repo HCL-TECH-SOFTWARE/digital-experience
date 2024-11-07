@@ -99,6 +99,10 @@ dxclient mls-import -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPor
 -contenthandlerPath <contenthandlerPath> -dxUsername <dxUsername> -dxPassword <dxPassword> -importPath <importPath> -virtualPortalContext <virtualPortalContext>
 ```
 
+## Editable fields in CSV files
+
+In the exported CSV file, you can only edit the following fields: `target`, `title`, and `description`.
+
 ## CSV file length limits
 
 Only the `ShortTextComponent` element type has an explicit maximum data length of 250 characters. This limit is visible in the CSV file under the `fieldLimit` column.
