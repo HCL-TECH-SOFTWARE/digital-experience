@@ -11,7 +11,7 @@ If you are currently logged in as portal admin user (wpsadmin), then please log 
     |marge|pzndemo
     |andy|pzndemo
 
-2. Navigate to the **Pers Offers** page that was created in step 2. The **Pers Offers Portlet** should show personalized informations of the different users. For example:
+2. Navigate to the **Pers Offers** page. The **Pers Offers Portlet** should show personalized informations of the different users. For example:
 
     Logged in as scott:  
 
