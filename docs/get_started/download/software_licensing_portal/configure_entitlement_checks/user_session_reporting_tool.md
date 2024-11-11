@@ -103,8 +103,8 @@ java -jar <jarFilepath> -h
 
 # <jarFilepath> Path to the jar file
 # <filePaths> List of input log files to get session counts
-# <excludeIPFile> Path to the file containing IPs to exclude from session counts
-# <excludeSessionKeyFile> Path to the file containing session keys to exclude from session counts
+# <excludeIPFile> Path to the file containing IPs (seperated by a new line) to exclude from session counts
+# <excludeSessionKeyFile> Path to the file containing session keys (seperated by a new line) to exclude from session counts
 # <excludeIPs> List of IPs (separated by space) to exclude from session counts
 # <excludeSessionKeys> List of session keys (separated by space) to exclude from session counts
 # <startDate> Specifies the start date in YYYY-MM-DD format
@@ -118,6 +118,17 @@ java -jar <jarFilepath> <filePaths...> -excludeIPFilePath <excludeIPFile> -exclu
 
 # Example
 java UserSessionReporting.java input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIPs "192.168.243.142" -excludeSessionKeys "192.168.243.136 \"axios/1.6.7\" \"-\"" "192.168.243.137 \"axios/1.6.7\" \"-\"" 2022-07-22 2025-07-28
+
+```
+
+```text
+# Example of an excludedIPs.txt
+192.168.243.142
+192.168.243.143
+
+# Example of an excludeSessionKeys.txt
+192.168.243.139 "python-requests/2.24.0" "-"
+192.168.243.137 "axios/1.6.8" "-"
 
 ```
 
