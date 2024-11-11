@@ -32,4 +32,4 @@ Use the following URLs to access the Swagger Explorer for People Service APIs an
 
 ## OpenAPI Specification
 
-For more information on the People Service API schema, refer to [OpenAPI spec](https://pages.git.cwp.pnp-hcl.com/Team-Q/internal-doc/enable/b2e-services/people-service/api-documentation/people-service-openapi-spec.json).
+For more information on the People Service API schema, refer to [OpenAPI spec](./people-service-openapi-spec.json).
