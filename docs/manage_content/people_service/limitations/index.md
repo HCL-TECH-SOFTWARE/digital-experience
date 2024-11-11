@@ -1,4 +1,0 @@
-# Limitations
-
-!!!note
-    In progress
