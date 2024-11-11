@@ -106,6 +106,14 @@ The use cases for My HCLSoftware in Kubernetes deployments are very similar to t
 **User Session Reporting**: Periodically send user session reports to My HCLSoftware, allowing customers and HCL to monitor consumption is aligned within the allocated entitlement tier. These reports help assess if a change to a different usage tier is required based on the number of user sessions consumed.
 
 ## Accessing MyHCL Software usage reporting dashboard
-Access the ???? section of the My HCLSoftware portal to review entitlements and user session consumption reports.
+Access the Deployments section of the My HCLSoftware portal to review entitlements and user session consumption reports.
 
-**NEED TO INCLUDE SCREENSHOTS AND INSTRUCTIONS WHEN AVAILABLE FOR REVIEWING USAGE DATA**
+![](../../software_licensing_portal/_img/upload_usage_metric_file.png) 
+
+- Upload the usage metric file in MHS UI for a selected deployment.
+- Wait for successful upload or look for error message if any validation or server failure on the UI 
+  - If status is `validating` or `processing` . User can wait on the page or return back to see status changing to `completed` or `failed` or `rejected`
+  - If status is `rejected` , it could be among these many reasons- hash chaining is tampered / invalid signature / fields are not in a required format . User should upload the valid file.
+  - If status is `failed`,user should reach out to MHS support through IT operations
+  - If status is `completed`, file is validated and consumed successfully 
+
