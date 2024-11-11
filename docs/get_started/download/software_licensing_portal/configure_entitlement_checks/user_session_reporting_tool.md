@@ -121,15 +121,18 @@ java UserSessionReporting.java input.log -excludeIPFilePath ./excludedIPs.txt -e
 
 ```
 
+Example of an excludedIPs.txt:
+
 ```text
-# Example of an excludedIPs.txt
 192.168.243.142
 192.168.243.143
+```
 
-# Example of an excludeSessionKeys.txt
+Example of an excludeSessionKeys.txt:
+
+```text
 192.168.243.139 "python-requests/2.24.0" "-"
 192.168.243.137 "axios/1.6.8" "-"
-
 ```
 
 After execution, the system returns the expected session count within the specified start and end date parameters. The tool generates the following files:
