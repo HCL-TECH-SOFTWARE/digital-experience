@@ -17,6 +17,7 @@ Take note of the following limitations when using Presentation Designer:
     - Right-to-Left layout, with certain elements not fully optimized for languages that require this layout.
     - WCM tags and their attributes. Presentation Designer is currently supporting different user elements. For more information, see the [User Elements in Presentation Designer](../../presentation_designer/usage/user_elements.md) topic.
     - Translation to other languages. English is the default language used in Presentation Designer.
+    - The fixed position style of the user element may result in overlap with the header under certain conditions, rather than remaining within the intended canvas boundary. This behavior is observed when setting the element's position to fixed with a top value of 10px in the styling properties. The overlap occurs because the canvas utilizes a root div structure integrated with the document's HTML markup, meaning boundaries may not be fully isolated. While using an iframe could more effectively isolate boundaries, this option is currently not implemented.
 
 
 
