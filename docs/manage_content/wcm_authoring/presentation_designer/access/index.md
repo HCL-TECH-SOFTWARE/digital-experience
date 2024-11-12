@@ -8,14 +8,55 @@ Presentation Designer is installed and deployed by default as part of the CF upd
 
 To use Presentation Designer, you must have the following minimum set of roles. Note that the roles listed are the minimum; if you have a Manager or Administrator role, you can still access Presentation Designer.
 
-- **Presentation Designer page** -  Click the **Administration menu** icon. Go to **Security** > **Resource Permissions** > **Pages** > **Content Root** > **Practitioner Studio** > **Web Content**. In the  **Presentation Designer** row, click the **Assign Access** icon to set the **User** role.
-- **Presentation Designer portlet** - Click the **Administration menu** icon. Go to **Security** > **Resource Permissions** > **Portlets**. In the **Presentation Designer portlet** row, click the **Assign Access** icon to set the **User** role.
-- **WCM page** -  Click the **Administration menu** icon. Go to **Security** > **Resource Permissions** > **Pages** > **Content Root** > **Practitioner Studio**. In the **Web Content** row, click the **Assign Access** icon to set the **User** role.
-- **WCM Authoring portlet** - Click the **Administration menu** icon. Go to **Security** > **Resource Permissions** > **Portlets**. In the **Web Content Authoring** row, click the **Assign Access** icon to set the **User** role.
-- **WCM_REST_SERVICES** - Click the **Administration menu** icon. Go to **Security** > **Resource Permissions** > **Virtual Resources**. In the **WCM REST SERVICE** row, click the  **Assign Access** icon to set the **Editor** role.
-- **WCM libraries and items** - Click the **Web Content menu**. Go to **Web Content Libraries** and click the **Set permissions** icon to set the **Editor** role for any library as needed. 
+=== "Presentation Designer page"
+    The Presentation Designer page requires at least a **User** role to access. Follow the steps below to set this role:
 
-(Optional) To select and pick a library where you are an Editor and display it on the Library Explorer, set the **Privileged User** role on the **WCM Authoring page**. While **Privileged User** access is not needed to use Presentation Designer, this access is still is recommended so users can view specific libraries where they hold Editor permissions. They can then edit presentation templates within those libraries. To set the **Privileged User** role, navigate to the **Administration menu**. Go to **Security** > **Resource Permissions** > **Pages** > **Content Root** > **Practitioner Studio** > **Web Content** > **Authoring**. Click the **Assign Access** icon to set the **Privileged User** role.
+    1. Click the **Administration menu** icon.
+    2. Go to **Security** > **Resource Permissions** > **Pages** > **Content Root** > **Practitioner Studio** > **Web Content**.
+    3. In the  **Presentation Designer** row, click the **Assign Access** icon to set the **User** role.
+
+=== "Presentation Designer portlet"
+    The Presentation Designer portlet requires at least a **User** role to access. Follow the steps below to set this role:
+
+    1. Click the **Administration menu** icon.
+    2. Go to **Security** > **Resource Permissions** > **Portlets**.
+    3. In the **Presentation Designer portlet** row, click the **Assign Access** icon to set the **User** role.
+
+=== "WCM page"
+    The WCM page requires at least a **User** role to access. Follow the steps below to set this role:
+
+    1. Click the **Administration menu** icon.
+    2. Go to **Security** > **Resource Permissions** > **Pages** > **Content Root** > **Practitioner Studio**.
+    3. In the **Web Content** row, click the **Assign Access** icon to set the **User** role.
+
+=== "WCM Authoring portlet"
+    The WCM Authoring portlet requires at least a **User** role to access. Follow the steps below to set this role:
+
+    1. Click the **Administration menu** icon.
+    2. Go to **Security** > **Resource Permissions** > **Portlets**.
+    3. In the **Web Content Authoring** row, click the **Assign Access** icon to set the **User** role.
+
+=== "WCM_REST_SERVICES"
+    WCM_REST_SERVICES requires at least an **Editor** role to access. Follow the steps below to set this role:
+
+    1. Click the **Administration menu** icon.
+    2. Go to **Security** > **Resource Permissions** > **Virtual Resources**.
+    3. In the **WCM REST SERVICE** row, click the  **Assign Access** icon to set the **Editor** role.
+
+=== "WCM libraries and items"
+    WCM libraries and items require at least an **Editor** role to access. Follow the steps below to set this role:
+
+    1. Click the **Web Content menu**.
+    2. Go to **Web Content Libraries**.
+    3. Click the **Set permissions** icon to set the **Editor** role for any library as needed.
+
+(Optional) To select and pick a library where you are an Editor and display it on the Library Explorer, set the **Privileged User** role on the **WCM Authoring page**. While **Privileged User** access is not needed to use Presentation Designer, this access is still is recommended so users can view and edit presentation templates in specific libraries where they hold Editor permissions.
+
+To set the **Privileged User** role:
+
+1. Navigate to the **Administration menu**.
+2. Go to **Security** > **Resource Permissions** > **Pages** > **Content Root** > **Practitioner Studio** > **Web Content** > **Authoring**.
+3. Click the **Assign Access** icon to set the **Privileged User** role.
 
 Refer to [Working with resource permissions](../../../../deployment/manage/security/people/authorization/controlling_access/working_with_resource_permission/index.md) for more information.
 

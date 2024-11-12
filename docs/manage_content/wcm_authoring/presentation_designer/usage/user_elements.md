@@ -3,9 +3,9 @@
 User elements refer to any element that you can edit or drag and drop onto the canvas. This section provides information on the different element types and how to use them in Presentation Designer
 
 
-To access Presentation Designer and understand its user interface, see the **[Access Presentation Designer](../access/index.md)** topic.
+To access Presentation Designer and understand its user interface, refer to the **[Access Presentation Designer](../access/index.md)** topic.
 
-To know the different styling options available in Presentation Designer, see the **[Styling Options in Presentation Designer](../usage/styling_options.md)** topic.
+To know the different styling options available in Presentation Designer, refer to the **[Styling Options in Presentation Designer](../usage/styling_options.md)** topic.
 
 
 
@@ -23,7 +23,7 @@ Hovering or selecting an element on the canvas displays the element name and the
 
 ![](../../../../assets/HCL_Presentation_Designer_Canvas_Item.png)
 
-1. Click the **Move** icon to rearrange the elements on the canvas through drag-and-drop
+1. Click the **Move** icon to rearrange the elements on the canvas through drag-and-drop.
 2. Click the **Arrow Up** icon to automatically select the parent of the current element. 
 3. Click the **Configure** icon to display additional configuration options for the element. 
 4. Click the **Trash** icon to delete the element from the canvas.
@@ -51,7 +51,7 @@ Static elements are predefined elements that display content exactly as it looks
 
     The container element (```<div>...</div>```) serves as a foundational block for organizing and structuring content. This element allows users to group elements together. You can resize the container to fit different design needs. You can also add any other user element inside a container. 
     
-    To resize, click the container element on the canvas. The selected container is highlighted and circular resize handles appear on the borders of the container, indicating that it is ready for editing. Click and hold on the desired resizing handle and drag the handle in the direction you want. You can also resize a container through the **Style** panel by setting its width and height. Other styling options can be applied on the container as well.
+    To resize, click the container element on the canvas. The selected container is highlighted and circular resize handles appear on the corners of the container. Click and drag a resizing handle toward the direction you want. You can also resize a container through the **Style** panel by setting its width and height. Other styling options can be applied on the container as well.
 
     ![](../../../../assets/HCL_Presentation_Designer_Static_Element_Container.png)
     ![](../../../../assets/HCL_Presentation_Designer_Static_Element_Container_Applied_Styles.png)
@@ -59,11 +59,15 @@ Static elements are predefined elements that display content exactly as it looks
 
 - **Text**
 
-    Static text elements (for example, ```<p>Content goes here</p>```) are used to display text content which you can also edit on the canvas itself. These elements can include headers, paragraphs, and any other textual information. You can apply formatting and styling from the **Style** panel to enhance readability and visual appeal. To edit the text content, click the text element for the cursor to appear and enter your desired text.
+    Static text elements (for example, ```<p>Content goes here</p>```) are used to display text content which you can also edit on the canvas itself. These elements can include headers, paragraphs, and any other textual information. You can apply formatting and styling from the **Style** panel to enhance readability and visual appeal. To edit the text content, click the text element and enter your desired text.
 
-    When you drag and drop a static text element on the canvas, it displays a placeholder text as seen on the first line of text on the following example. The second line of text is a static text element with actual text content after user input. The third line of text is a static text element with actual text content and applied styles.
+    See the following sample static text elements:
 
     ![](../../../../assets/HCL_Presentation_Designer_Static_Element_Text.png)
+
+    - The first line of text shows the placeholder text that appears when you drag and drop a static text element on the canvas. 
+    - The second line of text is a static text element with actual text content after user input. 
+    - The third line of text is a static text element with actual text content and applied styles.
 
     !!! note
         Placeholder text for the static text element is only a visual representation in Presentation Designer. It represents an empty value for the text content. The words *Static text element* is not saved in the actual markup.
@@ -75,7 +79,7 @@ Static elements are predefined elements that display content exactly as it looks
 
     ![](../../../../assets/HCL_Presentation_Designer_Static_Element_Link.png)
 
-    To set the href attribute, click the **Configure** button and enter the URL.
+    To set the `href` attribute, click the **Configure** button and enter the URL.
     ![](../../../../assets/HCL_Presentation_Designer_Static_Element_Link_Configure.png)
 
     !!! note
@@ -110,13 +114,13 @@ Static elements are predefined elements that display content exactly as it looks
 
 ### Content elements
 
-Content elements (for example, ```[Element context="current" type="content" key="Element name"]```) are elements from a content template. You can search a content template from which you want to pick elements from. Placeholders are rendered on the canvas in place of the elements.
+Content elements (for example, ```[Element context="current" type="content" key="Element name"]```) are elements from a content template. You can search for a content template from which you want to pick elements from. Placeholders are rendered on the canvas in place of the elements.
 
-After setting the element source to **Content elements**, no elements are initially loaded because there is no selected content template yet.
+After setting the element source to **Content elements**, no elements are initially loaded because no content template has been selected yet.
 
 ![](../../../../assets/HCL_Presentation_Designer_Content_Elements_Empty_Panel.png)
 
-To load the elements, enter text in the **Content template** search field to search for a content template and select the content template from the results.
+To load the elements, search for a content template in the **Content template** field and select your desired template.
 
 ![](../../../../assets/HCL_Presentation_Designer_Content_Elements_Search_Panel.png)
 
@@ -124,11 +128,11 @@ After selecting a content template, it automatically pulls the supported element
 
 ![](../../../../assets/HCL_Presentation_Designer_Content_Elements_Loaded_Panel.png)
 
-After you drag and drop an element on the canvas, a placeholder appears representing the element. Note that you cannot edit placeholders in Presentation Designer because the actual display value comes from the content item. See the following content element structure:
+In Presentation Designer, the ```<p></p>``` tag wrapper for the element tag is added with the type attribute to determine the element type. Element tags (for example, ```[Element context="current" type="content" key="Element name"]```) use the element name as `key` and authors can set any element name in a content template. This could produce inconsistencies if Presentation Designer needs to rely on the element tag to determine the element type. See the following sample after saving a presentation template in Presentation Designer with a text content element:
 
 ![](../../../../assets/HCL_Presentation_Designer_Content_Elements_Structure.png)
 
-In Presentation Designer, the ```<p></p>``` tag wrapper for the element tag is added with the type attribute to determine the element type. Element tags (for example, ```[Element context="current" type="content" key="Element name"]```) use the element name as `key` and authors can set any element name in a content template. This could produce inconsistencies if Presentation Designer would rely on the element tag to determine the element type. See the following sample after saving a presentation template in Presentation Designer with a text content element:
+In Presentation Designer, the ```<p></p>``` tag wrapper for the element tag is added with the type attribute to determine the element type. Element tags (for example, ```[Element context="current" type="content" key="Element name"]```) use the element name as `key` and authors can set any element name in a content template. This could produce inconsistencies if Presentation Designer needs to rely on the element tag to determine the element type. See the following sample after saving a presentation template in Presentation Designer with a text content element:
 
 ![](../../../../assets/HCL_Presentation_Designer_Content_Elements_Markup.png)
 
@@ -144,7 +148,7 @@ For more information on element tags in the Authoring portlet, refer to [Element
 
     ![](../../../../assets/HCL_Presentation_Designer_Content_Elements_Text_Elements.png)
 
-    You can apply different styling options to the placeholder of the text elements except **Rich Text**. **Rich Text** elements are set with their own styling in the content item.
+    You can apply different styling options to the placeholder of the text elements except for **Rich Text**. **Rich Text** elements are set with their own styling in the content item. See the following sample style options for placeholders of text elements:
 
     ![](../../../../assets/HCL_Presentation_Designer_Content_Elements_Text_Elements_Applied_Styles.png)
     
@@ -172,18 +176,18 @@ For more information on element tags in the Authoring portlet, refer to [Element
 
 - **Link Element**
     
-    A link content element represents a hyperlink, which is a connection or reference to another resource depending on what is set on the content item. In Presentation Designer, a placeholder text is displayed which is the element’s display title. You can apply styling options to the placeholder text through the **Style** panel, similar to text content elements.
+    A link content element represents a hyperlink, which is a connection or reference to another resource depending on what is set on the content item. In Presentation Designer, a placeholder text using the element's display title is shown. You can apply styling options to the placeholder text through the **Style** panel, similar to text content elements.
 
     ![](../../../../assets/HCL_Presentation_Designer_Content_Elements_Link.png)
 
 
 ### Property tags
 
-Property tags (for example, ```[Property context="current" type="content" field="title"]```) are used to display metadata from content items such as **Title**, **Name**, **Description**, and **Last modified date**. In Presentation Designer, placeholders are rendered in the canvas for property tags and no styling or formatting options are currently available. The actual value changes depending on the content item.
+Property tags (for example, ```[Property context="current" type="content" field="title"]```) are used to display metadata from content items such as **Title**, **Name**, **Description**, and **Last modified date**. In Presentation Designer, placeholders are rendered on the canvas for property tags, and no styling or formatting options are currently available. The actual value changes depending on the content item.
 
 ![](../../../../assets/HCL_Presentation_Designer_Property_Tags.png)
 
-Sample markup generated after saving:
+See the following sample markup generated after saving:
 
 ![](../../../../assets/HCL_Presentation_Designer_Property_Tags_Markup.png)
 
@@ -192,7 +196,7 @@ For more information on property tags in the Authoring portlet, refer to [Proper
 
 ### Generic element tags
 
-Generic element tags are element tags that are added in a presentation template using the **Insert Element Tags** from the Authoring portlet. 
+Generic element tags are element tags added in a presentation template using the **Insert Element Tags** from the Authoring portlet. 
 
 ![](../../../../assets/HCL_Presentation_Designer_Generic_Element_Tags.png)
 

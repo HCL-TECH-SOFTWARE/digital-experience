@@ -2,7 +2,7 @@
 
 Take note of the following limitations when using Presentation Designer:
 
-- Presentation Designer can only be used to edit presentation templates. For more information, see the [Edit Presentation Template in Presentation Designer](../../presentation_designer/usage/edit_presentation_template.md) topic.
+- Presentation Designer can only be used to edit presentation templates. For more information, refer to the [Edit Presentation Template in Presentation Designer](../../presentation_designer/usage/edit_presentation_template.md) topic.
 - You cannot reuse presentation templates. It is required to create a new template for each design.
 - The following features are currently not supported:
     - Locking of a presentation template while being edited in Presentation Designer.
@@ -11,7 +11,7 @@ Take note of the following limitations when using Presentation Designer:
     - Previewing the template in Presentation Designer. Currently, you can only generate a preview through the Authoring portlet.
     - Reusing of styles from a theme.
     - Adding any script or custom markup.
-    - Using external CSS. All styles are applied as inline styles and different orientations through breakpoints are not yet supported. For more information, see the [Styling Options in Presentation Designer](../../presentation_designer/usage/styling_options.md) topic.
+    - Using external CSS. All styles are applied as inline styles and different orientations through breakpoints are not yet supported. For more information, refer to the [Styling Options in Presentation Designer](../../presentation_designer/usage/styling_options.md) topic.
 
 - The following features are not fully supported:
     - Right-to-Left layout, with certain elements not fully optimized for languages that require this layout.

@@ -10,8 +10,6 @@ Presentation Designer is ideal for, but not limited to, the following sample use
 -  Enabling an interactive design experience, minimizing the need for users to preview the final output separately as changes are immediately visible on the canvas.
 -  Generating HTML markup automatically from the designs created in Presentation Designer, ensuring that the final output is ready to be used in websites without further manual coding.
 
-By using Presentation Designer, content managers can reduce their reliance on developers to assemble presentation templates for their content. This intuitive approach mirrors the capabilities found in modern website creation tools, helping content managers to create new sites and assets on their own and reduce the editorial friction they experience.
-
 
 Refer to the following pages for more information:
 
@@ -19,7 +17,7 @@ Refer to the following pages for more information:
 This section provides the steps on how to access the Presentation Designer and details on the user interface.
 
 - **[Using Presentation Designer](../presentation_designer/usage/index.md)**<br>
-Edit presentation templates using Presentation Designer. Understand how to use different user elements and styling options available.
+This section provides information on how to edit presentation templates and how to utilize user elements and styling options in Presentation Designer.
 
 - **[Presentation Designer limitations](../presentation_designer/limitations/index.md)**<br>
 This section lists the current limitations when using Presentation Designer.

@@ -1,6 +1,6 @@
 # Using Presentation Designer
 
-This section provides information on how you can edit presentation templates in Presentation Designer. Information on how to use different user elements and styling options are also available.
+This section provides information on how to edit presentation templates and utilize user elements and styling options in Presentation Designer.
 
 
 -   **[User elements](../usage/user_elements.md)**  
