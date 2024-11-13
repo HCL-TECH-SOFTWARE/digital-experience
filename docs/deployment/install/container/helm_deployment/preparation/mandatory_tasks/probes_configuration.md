@@ -1,6 +1,6 @@
 # Probes Configuration in values.yaml file
 
-The `liveness` and `readiness` probes such as the status thresholds and time values can be modified. The probe target values are not configurable anymore because they are application specific and the values must not be changed. 
+The `liveness` and `readiness` probes such as the status thresholds and time values can be modified. The probe target values are not configurable anymore because they are application specific and the values must not be changed.
 
 ```yaml
 # Liveness probe using the applications HTTP probe endpoint 
@@ -19,9 +19,9 @@ The `liveness` and `readiness` probes such as the status thresholds and time val
       timeoutSeconds: 30
 ```
 
-There is one exception to probe target values being unconfigurable: CORE provides a customProbeURL value which allows its liveness probe target value to be configured.
+There is one exception to probe target values being unconfigurable: Core provides a customProbeURL value which allows its liveness probe target value to be configured.
 ```yaml
-# The liveness probe for CORE provides a customProbeURL value. 
+# The liveness probe for Core provides a customProbeURL value. 
 # You may add a custom URL, e.g., "/sample/url". The leading slash is required. 
   core:  
     livenessProbe:
@@ -33,7 +33,7 @@ There is one exception to probe target values being unconfigurable: CORE provide
       customProbeURL: "/sample/url"
 ```
 
-When customProbeURL is empty, the liveness probe target value for CORE defaults to "/ibm/console".
+When customProbeURL is empty, the liveness probe target value for Core defaults to "/ibm/console".
 ```yaml
 # The liveness probe target value for Core in this case is "/ibm/console"
       customProbeURL: ""
