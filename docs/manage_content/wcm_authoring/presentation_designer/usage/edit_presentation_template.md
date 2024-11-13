@@ -105,7 +105,10 @@ Refer to the following steps to edit a presentation template in Presentation Des
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Add_Container_in_Grid.png)
 
-9. Drag and drop the **Project Title** (Text Content Element) and **Project Description** (Rich Text Content Element) inside the **static container element**. 
+9. Drag and drop the **Project Title** (Text Content Element) and **Project Description** (Rich Text Content Element) inside the **static container element**.
+
+    ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Move_Content_Elements_in_Container.png)
+
 10. Select the **static container element** and enter the following values in the **Style** panel:
 
       **Dimensions**
@@ -144,7 +147,7 @@ Refer to the following steps to edit a presentation template in Presentation Des
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Insert_Static_Text_Element.png)
 
-13. Enter "General Information" in the **static text element** and enter the following values in the **Style** panel:
+13. Enter "General Information" in the **static text element** then add the following values in the **Style** panel:
     
       **Typography**
 
@@ -184,7 +187,7 @@ Use the **Preview** feature from the **Authoring portlet** to check the presenta
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Preview_from_Authoring.png)
 
-2. Select any **content item** created in [Prerequisites](#prerequisites) that you want to preview, then click **OK**.
+2. Select any **content item** created in [Prerequisites](#prerequisites) that you want to preview then click **OK**.
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Select_Content_Item_for_Preview.png)
 
