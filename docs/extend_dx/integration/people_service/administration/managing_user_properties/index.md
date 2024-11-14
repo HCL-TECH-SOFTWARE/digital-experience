@@ -4,9 +4,9 @@ The central entity in People Service are the users and their properties. As requ
 
 ## User properties
 
-User properties are generally pulled in via federation from user directories and require appropriate mappings to relate the incoming users to existing users and their properties and user data. In addition, the People Service is intended to allow customers to build richer user profiles and allow users to present themselves with more information that may not exist in other parts of the system.
+User properties lets customers build richer user profiles and allows users to present themselves with more information that may not exist in other parts of the system. These properties are pulled in through federation from user directories and require appropriate mappings to relate incoming users to existing users' properties and data. 
 
-The People Service thus has a baseline of profile attributes that are deemed generally applicable, but also allows extension via custom fields. The following properties are available by default:
+People Service has a baseline of generally applicable profile attributes, but also allows extensions through custom fields. The following properties are available by default:
 
 | Property | Type | Description |
 | --- | --- | --- |

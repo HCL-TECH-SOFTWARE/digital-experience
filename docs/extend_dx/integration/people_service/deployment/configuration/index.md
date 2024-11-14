@@ -1,6 +1,6 @@
 # Configuration
 
-HCL People Service can be deployed using HCL Digital Experience (DX) Helm chart as it is included as a dependency in form of a sub chart. Below parameters will guide you configure People Service as per your needs.
+HCL People Service can be deployed using the HCL Digital Experience (DX) Helm chart as it is included as a dependency in the form of a sub chart. The parameters below will help you configure People Service depending on your needs.
 
 ## Image configuration
 
@@ -110,7 +110,7 @@ HCL People Service can be deployed using HCL Digital Experience (DX) Helm chart 
 | externalDatabase.password | string | `""` | PostgreSQL password |
 | externalDatabase.existingSecret | string | `""` | Existing secret for external PostgreSQL configuration |
 | externalDatabase.existingSecretUserKey | string | `""` | Existing secret key for user. Defaults to `db-user` if not specified |
-| externalDatabase.existingSecretPasswordKey | string | `""` | Existing secret key for password. Defaults to "db-password" if not specified |
+| externalDatabase.existingSecretPasswordKey | string | `""` | Existing secret key for password. Defaults to `db-password` if not specified |
 
 ## Container ports configuration
 
@@ -185,7 +185,7 @@ HCL People Service can be deployed using HCL Digital Experience (DX) Helm chart 
 | volumes.data.requests.storage | string | `"1Gi"` | PVC Storage Request for People Service data volume |
 | volumes.data.selector | object | `{}` | Selector to match an existing Persistent Volume. This value is evaluated as a template |
 | volumes.data.volumeName | string | `""` | Name of the volume to bind to the PVC |
-| volumes.customPVCs | object | `[]` | List of optional additional PVCs for customer applications Each list element must include a unique "name", one or more "accessModes" from the options ReadWriteOnce, ReadOnlyMany or ReadWriteMany, a "mountPath" specifying where in the core container it should be mounted, a "storageClassName" and a size in "requests/storage". It may also optionally include a "selector" section to select specific PVs based on their labels. It may also optionally include a "volumeName" to select a specific PV. |
+| volumes.customPVCs | object | `[]` | List of optional additional PVCs for customer applications. Each list element must include a unique `name`, one or more `accessModes`(accepted values are `ReadWriteOnce`, `ReadOnlyMany`, or `ReadWriteMany`), a `mountPath` specifying where in the core container it should be mounted, a `storageClassName`, and a size in `requests/storage`. It may also optionally include a `selector` section to select specific PVs based on their labels and a `volumeName` to select a specific PV. |
 
 ## Probes configuration
 
@@ -240,6 +240,5 @@ These directories are declared by their ID using the `USER_DIRECTORIES` environm
 | Key | Default | Description |
 |-----|---------|-------------|
 | PROFILE_READONLY_FIELDS | `""` | List of read-only fields for the user separated by commas |
-
 | CUSTOM_FIELDS_LIMIT | `2` | Limit for the number of custom fields that can be added to the user profile |
 | CUSTOM_FIELDS_BASE | `""` | Base custom fields for the user profile. This is a comma separated list of custom fields that are added to the user profile |

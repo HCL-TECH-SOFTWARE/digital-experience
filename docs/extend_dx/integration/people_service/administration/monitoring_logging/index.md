@@ -14,7 +14,7 @@ kubectl logs -n <NAMESPACE> <PEOPLE_SERVICE_POD_NAME>
 
 ## Changing the log level
 
-The People Service provides the ability to change the log level of the service. Internally, the People Services leverages the [debug](https://www.npmjs.com/package/debug) package to log messages.
+People Service allows users to change the log level of the service. It leverages the [debug](https://www.npmjs.com/package/debug) package to log messages.
 You can set the log level using the `logging.level` configuration parameter in the Helm chart. For example, to set the log level to `INFO`, set the following values in the Helm chart:
 
 ```yaml

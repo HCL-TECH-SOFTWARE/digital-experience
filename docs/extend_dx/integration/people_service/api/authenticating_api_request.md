@@ -12,6 +12,4 @@ Valid tokens can also be generated with alternate providers since the JWT token 
 
 For more information about authentication in general, refer to [Authentication].(../administration/authentication/index.md). 
 
-As OIDC focuses on browser-based Single Sign-On (SSO) flows, the APIs can only be used after a user has authenticated via the browser. The people service then issues an access token that can be used to authenticate API requests. The access token is passed in the Authorization header of the API request.
 
-As the JWT token secret and expiration are configurable, valid tokens could be generated with alternate providers. For this purpose, the people service provides the API endpoint `dx/api/people/v1/auth/token` to provide a valid token for API requests. If the token is valid, it will be provided to the user's browser session for use in subsequent API requests.
