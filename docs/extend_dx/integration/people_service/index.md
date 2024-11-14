@@ -12,6 +12,7 @@ Refer to the following pages to learn how to deploy, integrate, and use HCL Peop
 - [Administration](./administration/index.md)
 - [Integration](./integration/index.md)
 - [User guides](./features/index.md)
+- [Limitations](./limitations.md)
 
 
 
