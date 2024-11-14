@@ -6,7 +6,7 @@ This section assumes that you prepared your cluster and your custom-values.yaml
 
 ## Overview of Helm Configuration Updates
 
-Once an HCL DX Kubernetes 9.5 deployment is installed, all configuration changes will be made via an update to the custom-values.yaml file used to install the deployment, and then run a Helm upgrade. This has the added benefit that your custom-values.yaml file remains an up-to-date description of the configuration of your environment.
+Once an HCL DX Kubernetes 9.5 deployment is installed, all configuration changes will be made via an update to the custom-values.yaml file used to install the deployment. This has the added benefit that your custom-values.yaml file remains an up-to-date description of the configuration of your environment.
 
 ## Prerequisites
 
