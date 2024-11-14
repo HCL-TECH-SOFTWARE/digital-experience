@@ -117,3 +117,4 @@ Access the Deployments section of the My HCLSoftware portal to review entitlemen
   - If status is `failed`,user should reach out to MHS support through IT operations
   - If status is `completed`, file is validated and consumed successfully 
 
+**INCLUDE SCREENSHOTS AND INSTRUCTIONS TO VIEW USERSESSION COUNT IN THE UI**
