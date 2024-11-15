@@ -1,9 +1,3 @@
----
-id: mx-foundry-installation
-title: MX Foundry Installation
----
-
-
 # Install MX Foundry with DX 
 This topic covers steps to install MX Foundry in the same environment where DX is deployed.
 
