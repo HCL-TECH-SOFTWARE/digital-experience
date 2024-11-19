@@ -2,6 +2,10 @@
 
 ## Configuring Ingress for HCL Digital Experience and HCL Volt MX Foundry
 
+As a pre-requisite, DX needs to be installed already. Use the below link to install and configure ingress for DX
+
+[Install DX](https://opensource.hcltechsw.com/digital-experience/CF220/deployment/)
+
 You can use an [optional Ingress](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md) with HCL Digital Experience. While an Ingress is not required to run HCL Digital Experience, it can be configured to be reused by HCL Volt MX Foundry to handle the routing for both products and make them available on the same host.
 
 1. Set up the Ingress for HCL Digital Experience. For more information, refer to the [optional Ingress documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md).
@@ -25,6 +29,10 @@ You can use an [optional Ingress](../../../../deployment/install/container/helm_
          ```
          
      Refer to the [HCL Volt MX Foundry Configuration documentation](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmxfoundry_containers_helm/Content/Installing_Containers_With_Helm.html#configuration) for more details on the used values.
+
+
+!!! important
+    Please verify DX connect before installing MX Foundry. Open link like protocol://domain_name/hcl/dxconnect/processHandler/version
 
 ## Pull MX Foundry from Harbor
     - Commands to fetch MX Foundry from Harbor:-
