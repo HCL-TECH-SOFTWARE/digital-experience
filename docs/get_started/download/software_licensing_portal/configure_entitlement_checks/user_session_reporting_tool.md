@@ -128,7 +128,7 @@ See the following sample of an `excludedIPs.txt` file:
 192.168.243.143
 ```
 
-Example of an excludeSessionKeys.txt:
+See the following sample of an `excludeSessionKeys.txt` file:
 
 ```text
 192.168.243.139 "python-requests/2.24.0" "-"
