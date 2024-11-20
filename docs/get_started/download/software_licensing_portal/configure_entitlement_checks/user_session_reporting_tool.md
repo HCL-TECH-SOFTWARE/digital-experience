@@ -121,7 +121,7 @@ java UserSessionReporting.java input.log -excludeIPFilePath ./excludedIPs.txt -e
 
 ```
 
-Example of an excludedIPs.txt:
+See the following sample of an `excludedIPs.txt` file:
 
 ```text
 192.168.243.142
