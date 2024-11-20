@@ -60,11 +60,8 @@ The following are supported media asset file formats in HCL Digital Experience 9
 |.ppt|application/vnd.ms-powerpoint|
 |.pdf|application/pdf|
 
-!!! notes
-
-    -   DAM does not scan the uploaded files for any viruses or vulnerabilities. Files like pdf's can be manipulated to contain active code. 
-    We therefore recommend for users that have access to the DAM to scan files for potential security issues or if not possible disabling file types
-    that could be exploited with active code like pdf files.
+!!! note
+    DAM does not scan the uploaded files for any viruses or vulnerabilities. Files such as PDF files can be manipulated to contain active code. For users that have access to DAM, it is recommended to scan files for potential security issues. If scanning files is not possible, you can disable file types that could be exploited with active code (for example, PDF files).
 
 
 ## Playing a video in DAM
