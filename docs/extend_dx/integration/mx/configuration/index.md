@@ -31,11 +31,16 @@ You can use an [optional Ingress](../../../../deployment/install/container/helm_
      Refer to the [HCL Volt MX Foundry Configuration documentation](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmxfoundry_containers_helm/Content/Installing_Containers_With_Helm.html#configuration) for more details on the used values.
 
 
+### Verification
+Please verify DX connect is up and running. To verify in Local use [https://localhost:10202/hcl/dxconnect/processHandler/version](https://localhost:10202/hcl/dxconnect/processHandler/version) and if the environment is hosted, then access via [https://host-name/hcl/dxconnect/processHandler/version](https://host-name/hcl/dxconnect/processHandler/version) by replacing the host name in the url.
+
+Once all services and pods are up and running, the MX Foundry can be accessed as below (Update host name and protocol accordingly):-
+
+[https://host-name/mfconsole](https://host-name/mfconsole) 
+
 !!! important
-    Please verify DX connect before installing MX Foundry. Open link like protocol://your-mx-and-dx-host.com/hcl/dxconnect/processHandler/version
-
-    Once all services and pods are up and running, the MX Foundry can be accessed by following url like below:-
-
-    protocol://your-mx-and-dx-host.com/mfconsole
+      If ingress is enabled for DX, then upload size restriction needs to be modified by executing kubectl -n dxns edit ingress/custom-routes.
+      Add `nginx.ingress.kubernetes.io/proxy-body-size: 8m` to increase it to 8 MB (Use desired value).
+    
      
 After applying the configuration, both HCL Digital Experience and HCL Volt MX Foundry can be accessed using the provided hostname.
