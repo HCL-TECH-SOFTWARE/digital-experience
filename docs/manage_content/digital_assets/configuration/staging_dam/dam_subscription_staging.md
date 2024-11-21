@@ -55,6 +55,9 @@ The credentials used in the registration are used for authentication and authori
 **To update staging secret**:<br>
 The `manage-dam-staging update-secrets` command can be used to update the publisher and subscriber staging secrets.
 
+### DAM Cross CF staging
+
+DAM Cross CF staging is supported where publisher environment is of deployment level n and subscriber environment deployment level is within last two releases
 ## Managing DAM staging
 
 Use the `manage-dam-staging trigger-staging` command to trigger DAM staging.

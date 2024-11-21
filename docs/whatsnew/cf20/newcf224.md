@@ -90,6 +90,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     Note that in a later CF, HCL DX will no longer build and ship its custom OpenLDAP container and will instead use an open source container. By using the robust and well-maintained Bitnami&copy; OpenLDAP image, HCL DX can focus on delivering enhanced features and support without the overhead of maintaining its customized container. This shift is to provide you with more reliable and up-to-date solutions for your test environments. The new alternative, Bitnami&copy;, will be provided but will not ship with the release. Sample LDIF (LDAP data interchange format) files for your OpenLDAP configuration will also be available.
 
     This statement is not a guarantee of future releases or their features.
+
+### Digital Asset Management - DAM Cross CF Staging
+
+=== "Containers"
+    DAM Cross CF staging is supported between publisher and subscriber environments. For more information regarding limitations, see [DAM Cross CF Staging](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging/#dam-cross-cf-staging).
     
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
