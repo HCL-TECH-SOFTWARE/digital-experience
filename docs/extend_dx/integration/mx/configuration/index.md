@@ -52,7 +52,7 @@ AdminTask.createOAuthProvider('[-providerName <OAuthProviderName> -fileName <Pro
 Where:
 
 `<OAuthProviderName>` is the OAuth provider name (typically OAuthConfig)
-`<ProviderConfigFile>` is the full path to the OAuth provider configuration file. Please download and use this DXProvider.xml configuration file which includes Auto Authorize setup for the huddoboards client.
+`<ProviderConfigFile>` is the full path to the OAuth provider configuration file. Please download and use this DXProvider.xml configuration file which includes Auto Authorize setup for the VoltMX client.
 
 Example:
 
@@ -76,7 +76,7 @@ cd /opt/HCL/AppServer/bin
 
 ### Configure TAI properties
 
-1. Open IBM Websepher console
+1. Open IBM Websephere console
 Click `Global security`, expand `Web and SIP security`, click `Trust association`
 
 ![alt text](image.png)
@@ -183,7 +183,7 @@ Token endpoint URL from DX -  https://dx-host/oauth2/endpoint/OAuthConfig/token
 
 ### Add SSO in Volt Iris
 
-1) Create a login page in Voltmx Iris and add the below code in form init
+1) Create a login page in VoltMX Iris and add the below code in form init
 
 ```
     if(!VMXFoundry) return;
