@@ -80,12 +80,7 @@ Play uploaded videos in DAM using the DAM binary URL or the Kaltura Player \(if 
 
         ![Playing a video using the Kaltura Player](../../../../images/dam_kaltura_player_for_synced.png)
 
-!!! note 
-    Videos being synced in progress displays a warning message and cannot be played yet.
-
-![Warning message for sync in progress](../../../../images/dam_warning_message_for_in_progress.png)
-
-For more information on the video synchronization statuses for uploaded videos, see [Upload rich media assets](upload_rich_media_assets.md).
+Information on the video synchronization statuses for uploaded videos, see [Upload rich media assets](upload_rich_media_assets.md).
 
 ## Downloading a media asset source, version, or rendition
 
@@ -189,19 +184,15 @@ configuration:
 
 ## Changing duplicate asset names using DAM
 
-If an asset happens to have the same name with another asset in a collection, a notification is displayed in the **Information** panel.
+If an asset happens to have the same name with another asset in a collection, a rename dialogue will be shown when editing an asset.
 
-![Notification to rename an asset](../../../../images/information_panel_rename_notification.png){ width=50% }
-
-You can click **Rename** from the notification and provide a unique name.
-
-![Rename asset dialog](../../../../images/dialog_rename_field.png){ width=50% }
+![Notification to rename an asset](../../../../images/duplicate-asset-rename.png){ width=50% }
 
 ## Copying friendly URLs for assets
 
 You can can copy the friendly URL and API URL of an asset from the URLs section of the asset's inspector panel.
 
-![](../../../../images/Copy_friendlyUrl.png "Copy friendly URL"){ width=50% }
+![](../../../../images/Copy_friendlyUrl.png "Copy friendly URL")
 
 ## HCL Digital Experience Solution Feedback
 

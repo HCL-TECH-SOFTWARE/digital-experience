@@ -28,8 +28,7 @@ Follow these steps to view/edit the embedded metadata of a media asset:
 
 Beginning with HCL Digital Experience 9.5 Container Update CF205, using a custom  Digital Asset Management extension that provides integration with the Google Vision API, DX practitioners can leverage the integration to automate additional asset tagging to the DAM media item details. This feature can be used alongside traditional DAM asset tagging methods and can help content authors and marketing professionals fine tune the relevance of their DAM assets in search results for target audiences.  
 
-![Leverage integration with Google Vision API image tagging on DAM assets](../../../../../images/Leverage_integration_with_Google_Vision_API.png)
-![Edit or add to keywords defined to DAM assets](../../../../../images/Edit_or_add_to_keyword_to_DAM_assets.png)
+![Leverage integration with Google Vision API image tagging on DAM assets](../../../../../images/View_and_edit_media_asset_keywords.png)
 
 **Pre-requisites:**
 

@@ -4,7 +4,7 @@ The media assets in the HCL Digital Asset Management (DAM) can be accessed throu
 
 A `customUrl` provides the original rendition of an asset. The `customUrl` is not related to a friendly URL.
 
-![](../../../../../images/edit_information_tab_custom_url_field.png "Custom URL field from the Edit page"){ width=50% }
+![](../../../../../images/edit_information_tab_custom_url_field.png "Custom URL field from the Edit page")
 
 **Sample `customUrl`**:    
 

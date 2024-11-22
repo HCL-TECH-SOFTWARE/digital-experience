@@ -48,7 +48,7 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
     Following options are displayed in Collections interface:
 
     - **Create Collection** - Create a new collection or a new nested collection (when used inside an existing collection)
-    - **View information** - Opens the Information panel and shows Access Control
+    - **View Properties** - Opens the Properties panel and shows Access Control
 
         ![Information Panel](../../../../images/dam_collections_interface_view_information.png)
 
@@ -136,13 +136,6 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
     ![Assign access rights > All](../../../../images/dam_access_control_assign_member_access_rights_all.png)
 
 6. Click **Add users and groups** to save changes.
-7. Once added, you can specify additional users for the selected access right. Select the access right to add a member or groups. For this example, click **Add Administrator**.
-
-    ![Add Administrator](../../../../images/dam_access_control_assign_member_access_rights_add_administrator.png)
-
-    ![Assign access rights > Select](../../../../images/dam_access_control_assign_member_access_rights_select.png)
-
-8. Once done, click **Add users and groups** to save changes.
 
 ## Deleting a collection
 
