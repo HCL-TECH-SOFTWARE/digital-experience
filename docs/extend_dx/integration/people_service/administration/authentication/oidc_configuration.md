@@ -31,13 +31,14 @@ Refer to the following steps to set up the IdP client and configure People Servi
         scopes: "openid profile email"
         uniqueUserIdentifierClaim: "sub"
     ```
-    For more details on the values and their meaning, refer to [Configuration - OIDC configuration](../../deployment/configuration/index.md#oidc-configuration)
+
+For more details on the values you can use, refer to [Configuration - OIDC configuration](../../deployment/configuration/index.md#oidc-configuration).
 
 ## User sessions
 
 User sessions are managed by the People Service and are based on the OIDC authentication flow. When a user logs in, the People Service issues a session token that is stored in the user's browser. This token is used to authenticate the user for subsequent requests to the service. The session token is valid for a configurable duration, after which the user will be required to log in again. Refer to the [Configuration - OIDC configuration](../../deployment/configuration/index.md#oidc-configuration) for more information on session management.
 
-First, you need to create or extend an existing client configuration within your IdP and realm. Ensure that you have prepared the appropriate and valid redirection URIs  to allow the People Service and IdP to properly redirect the users during login and logout.
+First, you need to create or extend an existing client configuration within your IdP and realm. Ensure that you have prepared the appropriate and valid redirection URIs to allow the People Service and IdP to properly redirect the users during login and logout.
 
 Add the following URIs to the configuration:
 
@@ -60,9 +61,9 @@ To prepare for the configuration, gather the following details:
 
 - The URL to which the user is redirected after a successful login. This URL is where your application receives and processes the authentication response from the IdP. It should match the one [configured in the IdP client](#configuring-the-idp-client).
 
-## Configuring the people service to use OIDC and the IdP
+## Configuring People Service to use OIDC and the IdP
 
-The configuration of the people service is conducted via values in the Helm charts. The following values need to be set to configure the people service to use OIDC and the IdP:
+People Service is conducted through the values in Helm charts. Set the following values to configure People Service to use OIDC and the IdP:
 
 ```yaml
 peopleservice:
@@ -77,7 +78,7 @@ peopleservice:
       existingSecretClientSecretKey: ""
 ```
 
-Replace the sample values or placeholders with the actual values you gathered from your IdP configuration. For more details on the values and their meaning, see the [Configuration - OIDC configuration](../../deployment/configuration/index.md#oidc-configuration).
+Replace the sample values or placeholders with the actual values you gathered from your IdP configuration. For more details on the values you can use, see the [Configuration - OIDC configuration](../../deployment/configuration/index.md#oidc-configuration).
 
 ## User sessions
 

@@ -11,7 +11,7 @@ HCL People Service supports the following authentication strategies:
 
 Whenever a user logs into DX, the authentication process creates Lightweight Third-Party Authentication (LTPA) cookies. People Service consumes these cookies to validate the user's identity and session using the Ring API, eliminating the need for the user to re-authenticate when accessing their own or another user's profile page. To achieve this, both DX and People Service should be configured against the same user registry.
 
-For more information on DX authentication, refer to [Authentication].(../../../../../deployment/manage/security/people/authentication/index.md).
+For more information on DX authentication, refer to [Authentication](../../../../../deployment/manage/security/people/authentication/index.md).
 
 ### OIDC
 

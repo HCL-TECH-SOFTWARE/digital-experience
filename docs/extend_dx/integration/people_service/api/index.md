@@ -32,4 +32,4 @@ Use the following URLs to access the Swagger Explorer for People Service APIs an
 
 ## OpenAPI Specification
 
-For more information on the People Service API schema, refer to [OpenAPI spec](./people-service-openapi-spec.json).
+For more information on the People Service API schema, refer to [OpenAPI spec](./people-service-openapi-spec.json) JSON file.
