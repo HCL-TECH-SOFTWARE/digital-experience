@@ -31,7 +31,7 @@ Refer to the following steps to set up the IdP client and configure People Servi
         scopes: "openid profile email"
         uniqueUserIdentifierClaim: "sub"
     ```
-    For more details on the values and their meaning, refer to [Configuration - OIDC configuration]
+    For more details on the values and their meaning, refer to [Configuration - OIDC configuration](../../deployment/configuration/index.md#oidc-configuration)
 
 ## User sessions
 
