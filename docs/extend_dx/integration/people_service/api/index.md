@@ -27,9 +27,10 @@ People Service APIs are documented using OpenAPI, which provides a standard way 
 You can check the OpenAPI documentation for People Service APIs using the Swagger Explorer tool. This tool provides an interactive interface for exploring the APIs, making it easy to understand the available endpoints and test them with sample requests.
 
 Use the following URLs to access the Swagger Explorer for People Service APIs and OpenAPI specification:
+
 - **People Service APIs**: `&lt;HOSTNAME&gt;/dx/api/people/v1/explorer`
 - **OpenAPI Specification**: `&lt;HOSTNAME&gt;/dx/api/people/v1/openapi/openapi.json`
 
 ## OpenAPI Specification
 
-For more information on the People Service API schema, refer to [OpenAPI spec](./people-service-openapi-spec.json) JSON file.
+For more information on the People Service API schema, refer to the [OpenAPI spec](./people-service-openapi-spec.json) JSON file.
