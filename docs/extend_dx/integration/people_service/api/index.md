@@ -8,17 +8,17 @@ People Service APIs are designed to provide developers and administrators with t
 
 The people service APIs are categorized into the following sections:
 
-- Authentication: APIs related to user authentication and session management.
-- Profiles: APIs related to managing user profiles, including creating, updating, and deleting profiles.
-- Schema: APIs related to managing profile attributes and schema definitions.
-- Custom fields: APIs related to managing custom fields for user profiles.
-- Images and media: APIs related to managing profile images and media content.
-- Tags: APIs related to managing tags for user profiles.
-- Search: APIs related to searching for user profiles based on specific criteria.
-- Privacy: APIs related to managing user privacy settings and data protection.
-- Federation and user directories: APIs related to integrating with external user directories and federated identity providers.
-- Utils: Utility APIs for common tasks and operations.
-- Probes: Health check APIs for monitoring the service status and availability.
+- **Authentication**: APIs related to user authentication and session management.
+- **Profiles**: APIs related to managing user profiles, including creating, updating, and deleting profiles.
+- **Schema**: APIs related to managing profile attributes and schema definitions.
+- **Custom fields**: APIs related to managing custom fields for user profiles.
+- **Images and media**: APIs related to managing profile images and media content.
+- **Tags**: APIs related to managing tags for user profiles.
+- **Search**: APIs related to searching for user profiles based on specific criteria.
+- **Privacy**: APIs related to managing user privacy settings and data protection.
+- **Federation and user directories**: APIs related to integrating with external user directories and federated identity providers.
+- **Utils**: Utility APIs for common tasks and operations.
+- **Probes**: Health check APIs for monitoring the service status and availability.
 
 ## OpenAPI and Swagger Explorer
 
@@ -27,8 +27,8 @@ People Service APIs are documented using OpenAPI, which provides a standard way 
 You can check the OpenAPI documentation for People Service APIs using the Swagger Explorer tool. This tool provides an interactive interface for exploring the APIs, making it easy to understand the available endpoints and test them with sample requests.
 
 Use the following URLs to access the Swagger Explorer for People Service APIs and OpenAPI specification:
-- People Service APIs: `&lt;HOSTNAME&gt;/dx/api/people/v1/explorer`
-- OpenAPI Specification: `&lt;HOSTNAME&gt;/dx/api/people/v1/openapi/openapi.json`
+- **People Service APIs**: `&lt;HOSTNAME&gt;/dx/api/people/v1/explorer`
+- **OpenAPI Specification**: `&lt;HOSTNAME&gt;/dx/api/people/v1/openapi/openapi.json`
 
 ## OpenAPI Specification
 

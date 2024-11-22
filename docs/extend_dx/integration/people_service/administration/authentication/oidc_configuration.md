@@ -1,6 +1,6 @@
 # OIDC configuration
 
-The authentication configuration of People Service is a crucial part of the setup process. The service leverages OpenID Connect (OIDC) as one of its authentication strategies. OIDC requires an existing Identity Provider (IdP) and respective setup around users, clients, and potentially mappings of identity information. In this section, you will learn how to configure People Service to use OIDC and set up the service against an IdP.
+The authentication configuration of People Service is a crucial part of the setup process. The service leverages on OpenID Connect (OIDC) as one of its authentication strategies. OIDC requires an existing Identity Provider (IdP) and respective setup around users, clients, and potentially mappings of identity information. In this section, you will learn how to configure People Service to use OIDC and set up the service against an IdP.
 
 ## Setting up IdP and configuring People Service to use OIDC
 
@@ -15,7 +15,7 @@ Refer to the following steps to set up the IdP client and configure People Servi
     c. The client secret, or a secret used alongside the client ID to authenticate your application to the IdP. Keep this secret safely secured.
     d. The duration in milliseconds before the JWT token expires. This defines how long the token will be considered valid after its issuance. This should match the validity of the IdP's access token.
     e. The OpenID Connect scopes which specify what information your application is requesting about the user. Each scope returns a set of user attributes which are used in the user's ID token or are accessible through the UserInfo endpoint and may be used to contextualize the authenticating user.
-    f. The URL to which the user is redirected after a successful login. This URL is where your application receives and processes the authentication response from the IdP. It should match the URL in Step 1.
+    f. The URL to which the user is redirected after a successful login. This URL is where your application receives and processes the authentication response from the IdP. It should match the URL in *Step 1*.
 3. Replace the sample values in the Helm chart configuration below with the actual values you gathered from your IdP configuration.
     ```
     auth:
@@ -36,9 +36,9 @@ Refer to the following steps to set up the IdP client and configure People Servi
 
 ## User sessions
 
-User sessions are managed by the people service and are based on the OIDC authentication flow. When a user logs in, the people service issues a session token that is stored in the user's browser. This token is used to authenticate the user for subsequent requests to the service. The session token is valid for a configurable duration, after which the user will be required to log in again. Refer to the [Configuration - OIDC configuration](../../deployment/configuration/index.md#oidc-configuration) for more information on session management.
+User sessions are managed by the People Service and are based on the OIDC authentication flow. When a user logs in, the People Service issues a session token that is stored in the user's browser. This token is used to authenticate the user for subsequent requests to the service. The session token is valid for a configurable duration, after which the user will be required to log in again. Refer to the [Configuration - OIDC configuration](../../deployment/configuration/index.md#oidc-configuration) for more information on session management.
 
-First, you need to create or extend an existing client configuration within your IdP and realm. Most importantly, you need to prepare the appropriate and valid redirection URIs to allow the people service and IdP to properly redirect the users during login and logout.
+First, you need to create or extend an existing client configuration within your IdP and realm. Ensure that you have prepared the appropriate and valid redirection URIs  to allow the People Service and IdP to properly redirect the users during login and logout.
 
 Add the following URIs to the configuration:
 
@@ -82,4 +82,4 @@ Replace the sample values or placeholders with the actual values you gathered fr
 
 ## User sessions
 
-User sessions are managed by the people service and are based on the OIDC authentication flow. When a user logs in, the people service issues a session token that is stored in the user's browser. This token is used to authenticate the user for subsequent requests to the service. The session token is valid for a configurable duration, after which the user will be required to log in again. Refer to the [Configuration - OIDC configuration](../../deployment/configuration/index.md#oidc-configuration) for more information on session management.
+User sessions are managed by the People Service and are based on the OIDC authentication flow. When a user logs in, the People Service issues a session token that is stored in the user's browser. This token is used to authenticate the user for subsequent requests to the service. The session token is valid for a configurable duration, after which the user will be required to log in again. Refer to the [Configuration - OIDC configuration](../../deployment/configuration/index.md#oidc-configuration) for more information on session management.

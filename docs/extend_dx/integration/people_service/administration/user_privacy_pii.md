@@ -1,6 +1,6 @@
 # User privacy and PII
 
-HCL People Service provides a set of features to manage user privacy and personal identifiable information (PII). This section outlines the procedures for handling user data, including the retrieval and erasure of personal information.
+HCL People Service provides a set of features to manage user privacy and Personal Identifiable Information (PII). This section outlines the procedures for handling user data, including the retrieval and erasure of personal information.
 
 ## Data privacy
 
@@ -12,8 +12,8 @@ While the relevance of data privacy may vary depending on the organization's pol
 
 User data in People Service can be categorized into two main types:
 
-- Aggregated data: Information that is provisioned from external sources. Refer to the [User provisioning](./user_provisioning/user_federation.md) section for more information.
-- User-generated data: Information that users provide directly to People Service, such as profile details or tags.
+- **Aggregated data**: Information that is provisioned from external sources. Refer to the [User provisioning](./user_provisioning/user_federation.md) section for more information.
+- **User-generated data**: Information that users provide directly to People Service, such as profile details or tags.
 
 In the context of data privacy, it is essential to distinguish between these two types of data and ensure that they are handled appropriately. 
 
@@ -43,7 +43,7 @@ Users can request the erasure of their personal data from People Service. The AP
 
 This process anonymizes the user's data by removing all personal information from the People Service. The user's profile is retained, but all PII is replaced with generic or placeholder values, or is removed entirely. The anonymized data is still available for reporting and analytics purposes, but the user's identity is no longer identifiable.
 
-!!!note
+!!! note
     In case of aggregated PII, ensure that the data is also removed from the source system. Otherwise, the data may be synchronized back to the People Service.
 
 An anonymized user profile is also displayed differently in the People Service UI to indicate that the data has been anonymized. This ensures that administrators and other users can easily identify which profiles have been anonymized.

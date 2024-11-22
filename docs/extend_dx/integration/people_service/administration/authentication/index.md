@@ -25,4 +25,4 @@ To set up People Service with OIDC for authentication, refer to [OIDC configurat
 
 Authorization will be relayed to and consumed through DX. People Service uses the Ring API to retrieve a user's roles and permissions. These roles will then be mapped against People Service's own authorization model to determine which actions a user can perform.
 
-People Service differentiates between anonymous users, authenticated users, and administrators. While authenticated, users can view and interact with user profiles and manage their own profile. Administrators have additional permissions to manage all user profiles and system settings and configure the service.
+People Service differentiates between anonymous users, authenticated users, and administrators. While authenticated, users can view and interact with other user profiles and manage their own profile. Administrators have additional permissions to manage all user profiles and system settings and configure the service.

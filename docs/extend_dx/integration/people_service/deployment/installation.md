@@ -40,7 +40,7 @@ If People Service is already deployed, you can manually enable or disable it by 
 
 To enable People Service, run the `enable-people-service` task.
 
-!!!note
+!!! note
     You do not need to stop or restart the Portal when executing these configuration tasks.
 
 - AIX, Linux: `./ConfigEngine.sh enable-people-service -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
