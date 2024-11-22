@@ -32,7 +32,6 @@ Refer to the following steps to set up the IdP client and configure People Servi
         uniqueUserIdentifierClaim: "sub"
     ```
     For more details on the values and their meaning, refer to [Configuration - OIDC configuration]
-(http://127.0.0.1:8000/digital-experience/extend_dx/integration/people_service/deployment/configuration/#oidc-configuration).
 
 ## User sessions
 
