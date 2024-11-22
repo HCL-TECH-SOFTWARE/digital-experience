@@ -7,16 +7,21 @@ The authentication configuration of People Service is a crucial part of the setu
 Refer to the following steps to set up the IdP client and configure People Service to use OIDC.
 
 1. Add the following URIs to the configuration to allow People Service and IdP to properly redirect the users during login and logout.
-    a. `https://<HOSTNAME>/dx/api/people/v1/auth/login`
-    b. `https://<HOSTNAME>/dx/ui/people`
+
+    - `https://<HOSTNAME>/dx/api/people/v1/auth/login`
+    - `https://<HOSTNAME>/dx/ui/people`
+
 2. Gather the following details:
-    a. The URL of the IdP that issues the OpenID Connect tokens. This URL is used to discover the IdP's public keys and other important configuration details.
-    b. The client ID, or the unique identifier assigned to your application by the IdP. This ID is used during the authentication process to identify the application requesting access.
-    c. The client secret, or a secret used alongside the client ID to authenticate your application to the IdP. Keep this secret safely secured.
-    d. The duration in milliseconds before the JWT token expires. This defines how long the token will be considered valid after its issuance. This should match the validity of the IdP's access token.
-    e. The OpenID Connect scopes which specify what information your application is requesting about the user. Each scope returns a set of user attributes which are used in the user's ID token or are accessible through the UserInfo endpoint and may be used to contextualize the authenticating user.
-    f. The URL to which the user is redirected after a successful login. This URL is where your application receives and processes the authentication response from the IdP. It should match the URL in *Step 1*.
+
+    - The URL of the IdP that issues the OpenID Connect tokens. This URL is used to discover the IdP's public keys and other important configuration details.
+    - The client ID, or the unique identifier assigned to your application by the IdP. This ID is used during the authentication process to identify the application requesting access.
+    - The client secret, or a secret used alongside the client ID to authenticate your application to the IdP. Keep this secret safely secured.
+    - The duration in milliseconds before the JWT token expires. This defines how long the token will be considered valid after its issuance. This should match the validity of the IdP's access token.
+    - The OpenID Connect scopes which specify what information your application is requesting about the user. Each scope returns a set of user attributes which are used in the user's ID token or are accessible through the UserInfo endpoint and may be used to contextualize the authenticating user.
+    - The URL to which the user is redirected after a successful login. This URL is where your application receives and processes the authentication response from the IdP. It should match the URL in *Step 1*.
+
 3. Replace the sample values in the Helm chart configuration below with the actual values you gathered from your IdP configuration.
+
     ```
     auth:
     enabled: true
