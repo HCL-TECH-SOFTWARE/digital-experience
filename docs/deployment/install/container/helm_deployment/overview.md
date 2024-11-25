@@ -12,6 +12,9 @@ Older versions of HCL DX shipped with an operator instead of helm charts, and sh
 
 **Before you begin:** Refer to the latest HCL DX 9.5 Update image files list provided in the [Container image list](../image_list.md) topic.
 
+!!!important
+    To prevent Kubernetes deployments from failing in Kubernetes versions 1.29 and 1.28, enter the `modprobe br_netfilter` command before running `kubeadm init`.
+
 ``` mermaid
 flowchart TD
   accTitle: Steps in DX Helm installation.
