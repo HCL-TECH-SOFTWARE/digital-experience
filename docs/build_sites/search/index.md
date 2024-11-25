@@ -31,8 +31,8 @@ You can enable anonymous users \(sometimes also called unauthenticated users\) t
 If you plan to develop a custom search form, you might want to redirect search requests issued by the search form to the Search Center.
 18. [Remote search service](../search/remotesearch/index.md)  
 You can configure the search portlets for local operation, or you can configure them for remote search service. Depending on your configuration, remote search service might have performance benefits by offloading and balancing system load.
-19. [Search Component](../search/search_component/index.md)
-One can used this page as a reference on how to use the search component inside their application. This is page where evrything related to the search component is found.  
+19. [Search Component](../search_using_opensearch/index.md)
+One can used this page as a reference on how to use the search using openSearch inside their application. This is page where evrything related to the opensearch component is found.  
 
 ## HCLSoftware U learning materials
 
