@@ -45,7 +45,7 @@ Review your chosen Kubernetes platform and ensure that it supports the following
 |CF221| Kubernetes 1.30<br/>Kubernetes 1.29<br/>Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>|
 
 !!!important
-    To prevent Kubernetes deployments from failing in Kubernetes versions 1.29 and 1.28, enter the `modprobe br_netfilter` command before running `kubeadm init`.
+        To prevent a possible Kubernetes deployment failure in Kubernetes versions 1.28 and 1.29, it may be required to run the command `modprobe br_netfilter` before running `kubeadm init`. This is a potential solution to avoid a networking bridge/iptables issue.
 
 ## Prerequisites checker for DX deployment
 
