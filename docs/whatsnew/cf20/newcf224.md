@@ -18,8 +18,8 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - WebEngine container
-- Updated DAM UI
-- New Search UI leveraging OpenSearch
+- Digital Asset Management - Updated UI
+- DX Search - New UI
 - People Service
 - New topic for configuring of `hostAliases` for DX Pods
 - New guidance for rendering in the upper limit of a single-node configuration
@@ -99,11 +99,17 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### WebEngine container
 
 === "Containers"
-    WebEngine container leveraging OpenLiberty instead of IBM WebSphere Application Server.
+    WebEngine container leveraging OpenLiberty instead of IBM WebSphere Application Server. (In progress)
 
-### Updated DAM UI
+### Digital Asset Management - Updated UI
 
-### New Search UI leveraging OpenSearch
+=== "Containers"
+    The Digital Asset Management (DAM) user interface (UI) is now using a new theme to provide an improved visual experience for managing the digital assets. Note that this update is limited to the UI theme only; no changes are made to DAM functionality at this time.
+
+### DX Search - New UI 
+
+=== "Containers"
+    New UI for DX Search based on OpenSearch (In progress)
 
 ### People Service
 
@@ -114,7 +120,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
     For more information, see [People Service](../../extend_dx/integration/people_service/index.md).
 
-### New topic for configuring of `hostAliases` for DX Pods
+### New guidance for configuring `hostAliases` for DX Pods
 
 === "Containers"
     New documentation for setting the `hostAliases` for DX Pods is now available. With the `hostAliases` field, you can add entries to the `/etc/hosts` file in the Pods. This is useful for setting up domain name system (DNS) names for other services in the cluster or for mapping hostnames to IP addresses. For more information, see [Setting the `hostAliases` for DX Pods](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_options_host_alias.md).
@@ -123,7 +129,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Results of DX sizing tests for rendering with the upper limit in a single-node Kubernetes configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic [Guidance for rendering with the upper limit in a single-node configuration](../../guide_me/performance_tuning/kubernetes/rendering_small_config.md#guidance-for-rendering-with-the-upper-limit-in-a-single-node-configuration).
-
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
