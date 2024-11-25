@@ -104,7 +104,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Digital Asset Management - Updated UI
 
 === "Containers"
-    (In progress)
+    The Digital Asset Management (DAM) user interface (UI) is now using a new theme to provide an improved visual experience for managing the digital assets. Note that this update is limited to the UI theme only; no changes are made to DAM functionality at this time.
 
 ### DX Search - New UI 
 
