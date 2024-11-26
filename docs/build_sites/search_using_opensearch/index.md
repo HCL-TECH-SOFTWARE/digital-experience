@@ -1,8 +1,8 @@
 # End-User Search Powered by OpenSearch
 
-This guide will help you understand and utilize the new end-user search functionality powered by OpenSearch. follow along to explore its components, styling options, and extendable features.
+This guide explains how to use the new search functionality powered by open search. Follow along to learn about its components, styling options, and extendable features.
 
-deafult search component will look like the below image but it is responsive and can be imported and used anywhere inside an application.
+The default search component, shown in the image below, is responsive and can be imported and used anywhere within an application.
 
 ![Screenshot](../../../assets/search_result.png)
 
@@ -11,9 +11,9 @@ deafult search component will look like the below image but it is responsive and
 
 The search component is designed to be: 
 
-1. **User-friendly:** Provides intuitive search interactions.
-2. **Customizable:** Supports user-defined styling and component extensions.
-3. **Extendable:** can be placed anywhere in your application.
+1. **User-friendly:** Offers intuitive search interactions.
+2. **Customizable:** Allows user-defined styling and extensions.
+3. **Extendable:** Can be integrated anywhere in your application.
 
 ## Components Overview
 
@@ -134,8 +134,8 @@ dx-search-center-layout div.search-input-div {
 
 You can override styles by targeting the component's class names:
 
-???+ info "Note"
-    Here part names declared using the part attribute are used as the parameter of the ::part() pseudo-element. In this way, you can apply CSS styles to elements in the shadow tree from outside of it. Part attribute makes a shadow tree element visible to its parent DOM.
+!!!  "Note"
+    The `part` attribute is used to name parts of a shadow tree, which can then be styled from outside the shadow DOM using the `::part()` pseudo-element. This allows you to apply CSS styles to shadow tree elements from the parent DOM.
 
 ```css
 /* for dx-button */
