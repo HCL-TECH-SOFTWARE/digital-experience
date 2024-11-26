@@ -11,7 +11,7 @@ HCL People Service supports the following authentication strategies:
 
 Whenever a user logs into DX, the authentication process creates Lightweight Third-Party Authentication (LTPA) cookies. People Service consumes these cookies to validate the user's identity and session using the Ring API, eliminating the need for the user to re-authenticate when accessing their own or another user's profile page. To achieve this, both DX and People Service should be configured against the same user registry.
 
-For more information on DX authentication, refer to [Authentication].(../../../../../deployment/manage/security/people/authentication/index.md).
+For more information on DX authentication, refer to [Authentication](../../../../../deployment/manage/security/people/authentication/index.md).
 
 ### OIDC
 
@@ -25,4 +25,4 @@ To set up People Service with OIDC for authentication, refer to [OIDC configurat
 
 Authorization will be relayed to and consumed through DX. People Service uses the Ring API to retrieve a user's roles and permissions. These roles will then be mapped against People Service's own authorization model to determine which actions a user can perform.
 
-People Service differentiates between anonymous users, authenticated users, and administrators. While authenticated, users can view and interact with user profiles and manage their own profile. Administrators have additional permissions to manage all user profiles and system settings and configure the service.
+People Service differentiates between anonymous users, authenticated users, and administrators. While authenticated, users can view and interact with other user profiles and manage their own profile. Administrators have additional permissions to manage all user profiles and system settings and configure the service.

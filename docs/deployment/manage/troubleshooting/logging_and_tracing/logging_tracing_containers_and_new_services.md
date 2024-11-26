@@ -2,7 +2,7 @@
 
 Starting CF200, a new mechanism is introduced for configuring log settings at runtime (without pod restarts) in Helm-based DX deployments. Log levels and trace strings are set in your custom-values.yaml file. [Configure and Access Logs](../../../../deployment/manage/container_configuration/troubleshooting/configure_access_helm_logs.md) gives more detail on how to configure logging in Helm amd how to access Kubernetes container logs. 
 
-Prerequisite: Install and configure Content Composer and Digital Asset Management to your HCL Digital Experience deployment.
+Prerequisite: Install and configure Content Composer, Digital Asset Management, and Presentation Designer to your HCL Digital Experience deployment.
 
 -   **Trace string format**
 
@@ -16,10 +16,11 @@ Prerequisite: Install and configure Content Composer and Digital Asset Managemen
 
 -   **app-name**
 
-    The application name is configured in the Digital Asset Management shared settings. The following values are currently in use:
+    The application name is configured in the shared settings. The following values are currently in use:
 
     -   `medialibrary` - for Digital Asset Management
     -   `content-ui` - for Content Composer
+    -   `presentation-designer` - for Presentation Designer
 
 -   **severity**
 
@@ -30,7 +31,7 @@ Prerequisite: Install and configure Content Composer and Digital Asset Managemen
 
 -   **client-hierarchy**
 
-    This specifies the subsections of the client application where tracing can be enabled. It is specified in dot-separated trace strings and is converted by the Digital Asset Management to colon-separated trace strings. The exact hierarchy depends on the client application. Examples include:
+    This specifies the subsections of the client application where tracing can be enabled. It is specified in dot-separated trace strings and is converted to colon-separated trace strings. The exact hierarchy depends on the client application. Examples include:
 
     -   `app.*`
     -   `app.redux.*`
@@ -50,7 +51,7 @@ Prerequisite: Install and configure Content Composer and Digital Asset Managemen
 
 !!!note
     The following tracing configurations for enabling tracing only apply to client-side logging.
-    The Warning **The configured trace state included the following specifications that do not match any loggers currently registered in the server: ''hcl.logging.content-ui.*=all:hcl.logging.medialibrary.*=all'' Ignore this message if the trace specifications ''hcl.logging.content-ui.*=all:hcl.logging.medialibrary.*=all'' are valid.** can be ignored.
+    The Warning **The configured trace state included the following specifications that do not match any loggers currently registered in the server: ''hcl.logging.content-ui.*=all:hcl.logging.medialibrary.*=all:hcl.logging.presentation-designer.*=all'' Ignore this message if the trace specifications ''hcl.logging.content-ui.*=all:hcl.logging.medialibrary.*=all'' are valid.** can be ignored.
 
 
 ## Enabling tracing permanently
@@ -67,6 +68,7 @@ Prerequisite: Install and configure Content Composer and Digital Asset Managemen
     ```
     hcl.logging.content-ui.*=all 
     hcl.logging.medialibrary.*=all
+    hcl.logging.presentation-designer.*=all
     ```
 
 7.  Save the changes.
@@ -82,6 +84,7 @@ Prerequisite: Install and configure Content Composer and Digital Asset Managemen
     ```
     hcl.logging.content-ui.*=all 
     hcl.logging.medialibrary.*=all
+    hcl.logging.presentation-designer.*=all
     ```
 
 

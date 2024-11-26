@@ -60,6 +60,10 @@ The following are supported media asset file formats in HCL Digital Experience 9
 |.ppt|application/vnd.ms-powerpoint|
 |.pdf|application/pdf|
 
+!!! note
+    DAM does not scan uploaded files for any viruses or vulnerabilities. Files such as PDF files can be manipulated to contain active code. For users that have access to DAM, it is recommended to scan files for potential security issues. If scanning files is not possible, you can disable file types that could be exploited with active code (for example, PDF files).
+
+
 ## Playing a video in DAM
 
 Play uploaded videos in DAM using the DAM binary URL or the Kaltura Player \(if the Kaltura plugin is configured and enabled\):

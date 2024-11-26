@@ -5,8 +5,9 @@ The following features and updates are available to customers installing HCL Dig
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - AI Translation and Workflow capabilities in WCM
-- Presentation Designer to visually create and modify WCM presentation templates
-- Sync of WCM HTML components with DXClient
+- Disabled SSL hostname verification
+- Presentation Designer
+- DXClient - LiveSync Pull and Push commands for WCM Design Library
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -16,15 +17,16 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
-- WebEngine container leveraging OpenLiberty instead of IBM WebSphere Application Server
-- Updated DAM User Interface
-- New Search UI leveraging OpenSearch
+- WebEngine container
+- Digital Asset Management - Updated UI
+- DX Search - New UI
 - People Service
-- New sizing guidance for rendering in the upper limit of a single-node configuration
+- New topic for configuring of `hostAliases` for DX Pods
+- New guidance for rendering in the upper limit of a single-node configuration
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Notice of deprecation of customized OpenLDAP container in a later CF
 
-Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases.
+Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){target="_blank"} for the list of software fixes, including Container Update releases.
 
 ## All Digital Experience Versions (8.5, 9.0, 9.5)
 
@@ -35,6 +37,40 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     You can use Artificial Intelligence (AI) Translation in WCM to translate content items into different languages. The AI Workflow options, on the other hand, allow you to automatically generate keywords, summary, and translate content. For more information, see [AI assistance for descriptions, keyword generation, translation, and sentiment analysis in a content item](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
+
+### Disabled SSL hostname verification
+
+=== "Containers"
+    With CF224, the underlying WebSphere Application Server (WAS) is updated to 9.0.5.21. The WAS 9.0.5.21 fix pack contains a change where WebSphere runtimes automatically verify if the hostname in the certificate matches the actual hostname of the URL. Starting CF224, the system disables this setting in the WAS Custom Security properties and in the `ssl.client.props` file for users who may not have Secure Sockets Layer (SSL) certificates in place.
+
+    In case remote search is newly configured, the system also disables the setting in the WAS Custom Security properties and in the `ssl.client.props` file for the Remote Search container. If remote search is already configured, it might be necessary to disable the verification manually.
+
+    For information about the changes from IBM WebSphere Application Server and steps how to disable the verification, see [Hostname verification for WebSphere Application Server traditional](https://www.ibm.com/support/pages/hostname-verification-websphere-application-server-traditional){target="_blank"}.
+
+=== "On-Premises"
+    The recent WebSphere Application Server (WAS) 9.0.5.21 and 8.5.5.27 fix packs contain a change where WebSphere runtimes automatically verify if the hostname in the certificate matches the actual hostname of the URL. Starting CF224, the system disables this setting in the WAS Custom Security properties and in the  `ssl.client.props` file when running the `applyCF` process for users who may not have Secure Sockets Layer (SSL) certificates in place.
+
+    If all certificates are valid and the security changes must be maintained, add the configuration `wp.RetainSSLHostVerification=true` to `wkplc.properties` before running `applyCF`.
+
+    Remote search is not updated automatically because the `applyCF` process is not present. It might be necessary to disable the verification manually.
+
+    For information about the changes from IBM WebSphere Application Server and steps how to disable the verification, see [Hostname verification for WebSphere Application Server traditional](https://www.ibm.com/support/pages/hostname-verification-websphere-application-server-traditional){target="_blank"}.
+
+### Presentation Designer
+
+=== "Containers"
+    You can now edit presentation templates through a drag-and-drop interface using Presentation Designer. You can select available user elements and use a variety of styling options for your presentation template. Changes you make are instantly reflected on the canvas, providing you with a real-time, visual editing experience. For more information, see [Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/index.md).
+
+=== "On-Premises"
+    You can now edit presentation templates through a drag-and-drop interface using Presentation Designer. You can select available user elements and use a variety of styling options for your presentation template. Changes you make are instantly reflected on the canvas, providing you with a real-time, visual editing experience. For more information, see [Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/index.md).
+
+### DXClient - LiveSync Pull and Push commands for WCM Design Library
+
+=== "Containers"
+    LiveSync Pull and Push commands for WCM Design Library are now available for HTML and Folder Components. The [LiveSync Pull WCM Design Library command](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#livesync-pull-wcm-design-library) syncs a WCM Design Library in a DX Server with a local folder. The [LiveSync Push WCM Design Library command](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#livesync-push-wcm-design-library) syncs your WCM Design Library local files with the DX Server. For more information, see [LiveSync](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md).
+
+=== "On-Premises"
+    LiveSync Pull and Push commands for WCM Design Library are now available for HTML and Folder Components. The [LiveSync Pull WCM Design Library command](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#livesync-pull-wcm-design-library) syncs a WCM Design Library in a DX Server with a local folder. The [LiveSync Push WCM Design Library command](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#livesync-push-wcm-design-library) syncs your WCM Design Library local files with the DX Server. For more information, see [LiveSync](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md).
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
@@ -59,6 +95,40 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
 ## Digital Experience 9.5 Container Version
+
+### WebEngine container
+
+=== "Containers"
+    WebEngine container leveraging OpenLiberty instead of IBM WebSphere Application Server. (In progress)
+
+### Digital Asset Management - Updated UI
+
+=== "Containers"
+    The Digital Asset Management (DAM) user interface (UI) is now using a new theme to provide an improved visual experience for managing the digital assets. Note that this update is limited to the UI theme only; no changes are made to DAM functionality at this time.
+
+### DX Search - New UI 
+
+=== "Containers"
+    New UI for DX Search based on OpenSearch (In progress)
+
+### People Service
+
+=== "Containers"
+    People Service adds a layer of social connectivity in HCL DX, making it easier for team members to connect. It enhances user profiles with additional data and interactive features, improving team collaboration and project execution.
+
+    Within the DX environment, authored content is linked to actual users, adding interactivity through pop-up business cards and profile links. The service is also supported by a robust API layer compatible with OpenAPI, ensuring third-party support and extensibility.
+
+    For more information, see [People Service](../../extend_dx/integration/people_service/index.md).
+
+### New guidance for configuring `hostAliases` for DX Pods
+
+=== "Containers"
+    New documentation for setting the `hostAliases` for DX Pods is now available. With the `hostAliases` field, you can add entries to the `/etc/hosts` file in the Pods. This is useful for setting up domain name system (DNS) names for other services in the cluster or for mapping hostnames to IP addresses. For more information, see [Setting the `hostAliases` for DX Pods](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_options_host_alias.md).
+
+### New guidance for rendering in the upper limit of a single-node configuration
+
+=== "Containers"
+    Results of DX sizing tests for rendering with the upper limit in a single-node Kubernetes configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic [Guidance for rendering with the upper limit in a single-node configuration](../../guide_me/performance_tuning/kubernetes/rendering_small_config.md#guidance-for-rendering-with-the-upper-limit-in-a-single-node-configuration).
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
