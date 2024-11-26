@@ -113,7 +113,7 @@ Refer to the following steps if you want to copy a media asset from one collecti
 
 1. Click the **more menu** option of the asset. 
 
-    This displays more options such as **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename**, and **Delete**.
+    This displays more options such as **Edit**, **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename**, and **Delete**.
 
 2. Click **Copy**.
 
@@ -137,7 +137,7 @@ Refer to the following steps if you want to move a media asset from one collecti
 
 1. Click the **more menu** option of the asset. 
 
-    This displays more options such as **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename**, and **Delete**.
+    This displays more options such as **Edit**, **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename**, and **Delete**.
 
 2. Click **Move**.
 
@@ -160,7 +160,7 @@ Refer to the following steps to modify the name of a media asset.
 
 1. Click the **more menu** option of the asset. 
 
-    This displays more options such as **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename** and **Delete**.
+    This displays more options such as **Edit**, **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename** and **Delete**.
 
 2. Click **Rename**.
 

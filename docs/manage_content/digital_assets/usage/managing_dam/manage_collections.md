@@ -34,9 +34,6 @@ While creating or editing a collection, DAM checks for any duplication of the un
 
 When the user clicks on the suggested name, the unique-name input field gets pre-filled with the suggested unique-name.
 
-![](../../../../images/EditCollectionError_friendlyUrl_1.png "Edit collection duplicate unique name"){ width=45% }
-![](../../../../images/EditCollectionError_friendlyUrl_2.png "Edit collection suggestion click"){ width=50% }
-
 ## Browsing and searching for media assets in a collection
 
 Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
@@ -114,7 +111,7 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
     ![DAM Collection Information](../../../../images/dam_collection_information.png)
 
-2. On the **Information** panel, edit the **Collection name** and **Description** as applicable.
+2. On the **Properties** panel, edit the **Collection name** and **Description** as applicable.
 3. Click **Save** to save changes.
 
 ## Manage user access permissions of a media asset collection
