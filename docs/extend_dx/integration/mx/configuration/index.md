@@ -52,7 +52,7 @@ AdminTask.createOAuthProvider('[-providerName <OAuthProviderName> -fileName <Pro
 Where:
 
 `<OAuthProviderName>` is the OAuth provider name (typically OAuthConfig)
-`<ProviderConfigFile>` is the full path to the OAuth provider configuration file. Please download and use this DXProvider.xml configuration file which includes Auto Authorize setup for the VoltMX client.
+`<ProviderConfigFile>` is the full path to the OAuth provider configuration file. Please download and use this [DXProvider.xml](../configuration/DXProvider.xml) configuration file which includes Auto Authorize setup for the VoltMX client.
 
 Example:
 
@@ -176,14 +176,20 @@ Authorize endpoint URL from DX -  https://dx-host/oauth2/endpoint/OAuthConfig/au
 
 Token endpoint URL from DX -  https://dx-host/oauth2/endpoint/OAuthConfig/token
 
-2) Enable SSO for the identity services
+Client Id and Secret will be the same which was provided during [Register OAuth Client](#register-oauth-client) in `base.clients.xml`
+
+2) Click on Test login should show the OAuth Authorization form as below. Clicking on Yes should give success response. Click on Save
+
+![alt text](image-6.png)
+
+3) Enable SSO for the identity services
 
 ![alt text](image-5.png)
 
 
 ### Add SSO in Volt Iris
 
-1) Create a login page in VoltMX Iris and add the below code in form init
+1) Create a login page in VoltMX Iris and add the below code in form init. Ensure the Iris is connected to the Foundry app which contains the above SSO configurations. 
 
 ```
     if(!VMXFoundry) return;
