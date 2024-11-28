@@ -18,14 +18,14 @@ The search component is designed to be:
 ## Components Overview
 
 AC (Atomic Components)
-These are the smallest posssible building blocks of the search functionality:
+These are the smallest possible building blocks of the search functionality:
 
-- **dx-ac-base-element:** This class sets up a base element for building a custom web component that is highly reusable, can handle internationalization/localization, and encapsulates its internal structure using the Shadow DOM.        
-- **dx-button:** This custom button component provides a highly customizable button with internationalization support, conditional rendering for icons and text, and a clean separation of concerns for styling via shadow DOM and CSS parts.                   
-- **dx-input-select:** This is a flexible, accessible, and customizable select component for a web application, handling a variety of user interactions and scenarios. And other features of this component is          
-- **dx-list:** This component is a simple wrapper around an unordered list (<ul>), and it allows for flexibility by using a slot to project light DOM content (e.g., list items) into the component. The part="unordered-list" attribute helps with styling by allowing you to target the <ul> from outside the component.                     
-- **dx-switch:** This is a well-structured custom component that is fully accessible and customizable, with clear separation of behavior (handling toggle state and events) and appearance (dynamic part attribute for CSS styling). As of now we are not using this component.
-- **dx-anchor:** This component provides a highly flexible and reusable anchor element with support for pagination and custom actions, making it suitable for interactive UI elements like navigation menus or paginated lists.               
+- **dx-ac-base-element:** This class creates a foundational element for developing custom web components. It supports internationalization and localization, and uses the Shadow DOM to encapsulate its internal structure, ensuring high reusability.        
+- **dx-button:** A customisable button component with internationalisation support, conditional icon and text rendering, and isolated styling using Shadow DOM and CSS parts.                 
+- **dx-input-select:** This is a flexible, accessible, and customizable select component for a web application, handling a variety of user interactions and scenarios.          
+- **dx-list:** This component wraps an unordered list (`<ul>`) and uses a slot to insert content (e.g., list items) into the component. The `part="unordered-list"` attribute allows external styling of the `<ul>`.                     
+- **dx-switch:** A fully accessible and customizable custom component that separates behavior (toggle state and events) from appearance (CSS styling via dynamic part attribute). Currently, this component is not in use.
+- **dx-anchor:** A versatile anchor component that supports pagination and custom actions, ideal for navigation menus and paginated lists.               
 - **dx-chip:** This component is ideal for use in UIs where you need to display a "chip" or "tag" with a numerical count, such as notification counters, tag lists, or pill-style labels, with built-in localization support.                  
 - **dx-input-textfield:** This component is well-suited for creating rich input fields with enhanced user experience, such as search bars, forms, or any situation where text input with optional icons and labels is required.         
 - **dx-search-center-layout:** This is a customizable web component that provides a structured layout for a search interface. It includes slots for injecting content like a header, search input, search output, and an optional tag cloud. The component dynamically adjusts its layout based on the isTagsAvailable property: when true, it displays a tag cloud and a full search container; when false, it hides the tag cloud and simplifies the search container. 
@@ -46,10 +46,10 @@ Composite components combines atomic elements to provide higher-level functional
 - **dx-fcc-base-element:** This is a base class in the FCC framework that integrates BroadcastChannel for component communication and ensures no shadow DOM is used. It also handles cleanup of resources when components are disconnected.               
 - **dx-search-input-scope:** This component is a well-structured LitElement-based component designed to manage and display a list of content sources for a search input. It fetches data from an external service, allows users to select a content source, and updates the search scope dynamically. It can be used as part of a larger search interface to provide filtering options based on available content sources.             
 - **dx-search-output-pagination:** This component is a well-structured, flexible pagination component designed for search results. It supports multiple pagination types, including infinite scroll and numbered pagination, and is capable of handling different languages and locales. The use of debouncing for scroll events and clean separation of concerns makes it both efficient and maintainable.      
-- **dx-search-tag-match:** This component is a robust and flexible solution for rendering and managing search-related tag matches. It listens for changes in the search result context and updates the UI accordingly. The component also provides a user-friendly way to clear tag matches, improving the overall search experience.
-- **dx-search-input-button:** This is a search button component that integrates with the BroadcastChannel to trigger a search action when clicked. It supports properties for customization, including disabling the button and changing the button text. The component leverages debouncing to optimize search requests and provides a clean, reusable UI element for triggering search functionality in a web application.         
-- **dx-search-input-type:** This component is a flexible and dynamic search input dropdown designed for selecting a document object type in a search interface. It fetches available searchable fields from a backend service, updates the selected document type, and communicates this change through the searchChannel to update search parameters. The component is built using LitElement, which ensures efficient rendering and reactivity.            
-- **dx-search-output:** This component is a comprehensive search result display component that integrates with backend search services, handles various search states (loading, results, no results, error), and dynamically updates the UI based on search parameters. It's well-suited for applications that require real-time search capabilities, including pagination, filtering, and handling errors gracefully.
+- **dx-search-tag-match:** A component for displaying and managing search tags. It listens for changes in search results and updates the tags in real-time. Users can easily clear tags, enhancing the search experience.
+- **dx-search-input-button:** A customizable search button component that uses BroadcastChannel to trigger search actions on click. It supports properties to disable the button and change its text. Debouncing is used to optimize search requests, making it a reusable UI element for web applications.         
+- **dx-search-input-type:** A dynamic dropdown component for selecting document types in a search interface. It fetches searchable fields from a backend service, updates the selected document type, and communicates changes via searchChannel to update search parameters. Built with LitElement for efficient rendering and reactivity.           
+- **dx-search-output:** A search result display component that integrates with backend search services. It manages various search states (loading, results, no results, error) and updates the UI dynamically based on search parameters. Ideal for applications needing real-time search with pagination, filtering, and error handling.
 
 ## Styling the search components
 
@@ -155,4 +155,4 @@ dx-input-textfield::part(label) {
 }
 
 ```
-Similar way other components can also be overridden.
+Other components can be overridden in a similar manner.
