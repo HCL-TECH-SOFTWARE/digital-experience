@@ -174,7 +174,7 @@ All LDAP Servers that support the LDAP V3 Specification are supported.
 |Supported software|Supported software minimum|Product minimum|
 |-----------|------------------|-----|
 |IBM Security Directory Suite|8.0.1 and later maintenance releases|8.5|
-|IBM Security Directory Server|10.0.1 and later maintenance releases|8.5|
+|IBM Security Verify Directory|10.0.1 and later maintenance releases|8.5|
 
 ## Product-specific or mixed content 
 |Supported software|Supported software minimum|Product minimum|
