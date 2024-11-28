@@ -1,7 +1,7 @@
 
 # Customizing the Business Card Component in HCL Digital Experience
 
-The business card component in HCL Digital Experience (DX) provides a quick overview of a user's profile information. While the shipped business card component does not support direct customization, you can fully replace the shipped system module or web component to suit your needs. This guide will walk you through the steps to customize the business card component.
+The Business Card component in HCL Digital Experience (DX) provides a quick overview of a user's profile information. While the shipped Business Card component does not support direct customization, you can fully replace the shipped system module or web component to suit your needs. This guide provides the steps to customize the Business Card component.
 
 ## Steps to Customize the Business Card Component
 
@@ -13,13 +13,13 @@ First, create a custom web component that will replace the default business card
 https://your-host-name/dx/ui/people/components/web-components.js
 ```
 
-Once copied, make the desired changes to the web component code and deploy it. For more information on defining or writing modules, please refer to [the module framework](https://opensource.hcltechsw.com/digital-experience/latest/build_sites/themes_skins/the_module_framework/)
+Once copied, modify the web component code as needed and deploy it. For more information on defining or writing modules, please refer to [the module framework](https://opensource.hcltechsw.com/digital-experience/latest/build_sites/themes_skins/the_module_framework/)
 
 ### Style Customization
 
-You can customize the styling of the business card component using CSS, just like you would inject styles from anywhere else. It's essentially a web application built with HTML and CSS, so you have full flexibility to apply your custom styles.
+You can easily customize the appearance of the business card component using CSS. Just like any web application, it's built with HTML and CSS, allowing full flexibility in applying your custom styles.
 
-While you can align your overall People Service changes with the business card theme module, you can also add them in any other theme module or through other methods like a script app. The business card component will not utilize the CSS rules directly but will instead allow the browser to apply new and custom CSS rules that supersede the existing ones.
+While you can align your overall People Service changes with the Business Card theme module, you can also add them in any other theme module or through other methods like a script app. The  Business Card component will not utilize the CSS rules directly but will instead allow the browser to apply new and custom CSS rules that supersede the existing ones.
 
 You can inject these styles into your theme module or any other method you prefer. Here are some ways to apply custom styles:
 

@@ -4,7 +4,7 @@
 You can add a link to your pages that takes you to your profile. There are many ways to achieve this. In the context of this document, we will provide guidance on how to add a "My Profile" link to Woodburn.
 
 
-## Steps to create the My Profile link
+## Creating the "My Profile" link
 
 1. Click **Administration** on the Practitioner Studio Home Page.
     ![Administration Page](./img/my-profile-administration-page.png)

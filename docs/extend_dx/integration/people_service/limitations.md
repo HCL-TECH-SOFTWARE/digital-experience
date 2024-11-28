@@ -8,7 +8,7 @@
 ## User profiles
 
 - The user profile does not support customization of the layout or makeup and can only be customized via style overrides or script based manipulation of the user profile page.
-- There is no rich text editing for long text properties, e.g. the user's professional summary.
+- There is no rich text editing for long text properties, such as,  the user's professional summary.
 
 ## DX business card integration
 
