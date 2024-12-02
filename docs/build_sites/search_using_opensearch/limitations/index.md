@@ -6,6 +6,10 @@ Take note of the following limitations when using HCL Enduser Search with Opense
 
 - The number of results shown per page is currently fixed at 50.
 
+## Searchable Fields
+
+- Only common fields such a title, description, type, and tags may be specifically searched for now. If you wish to search beyond these attributes, search using **All attributes** may be used since this will look at all attributes inside the document objects.
+
 ## Localization
 
 - The Search user interface supports only English at the moment.
@@ -13,6 +17,8 @@ Take note of the following limitations when using HCL Enduser Search with Opense
 ## Accessibility
 
 - To ensure full accessibility on the Search page, the user's browser-specific settings for keyboard navigation must be enabled.
-- A sample browser setting interface you may find on your browser is shown below.
+- Sample browser setting interfaces you may find on your browsers such as Safari and Firefox are shown below.
 
-    ![](../../../assets/HCL_Search_Sample_Browser_Settings.png)
+    ![](../../../assets/HCL_Search_Browser_Safari_Settings.png)
+
+    ![](../../../assets/HCL_Search_Browser_Firefox_Settings.png)

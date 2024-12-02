@@ -52,12 +52,16 @@ A search results set is a list of items that matches the search term that the en
 
     ![](../../../assets/HCL_Search_08_Input_Query_Change.png "Change the search term in the Search input box")
 
-10.  Click on the blue link title of one of the result items to open that item in a new tab.
+9.  Click on the blue link title of one of the result items to open that item in a new tab.
 
     ![](../../../assets/HCL_Search_09_Open_Result_Item.png "Click on one of the result items to open it in a new tab")
-    
-### Other actions available
+
+## Other search result scenarios
 
 - When the search term yields no results, the following message will be displayed in the output area.
     
-    ![](../../../../assets/HCL_Search_10_No_Results_Found.png)
+    ![](../../../assets/HCL_Search_10_No_Results_Found.png)
+
+- When the search engine is down or unavailable, the following message will be displayed in the output area.
+    
+    ![](../../../assets/HCL_Search_11_Search_Engine_Unavailable.png)
