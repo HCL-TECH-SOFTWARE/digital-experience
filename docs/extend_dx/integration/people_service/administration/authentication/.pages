@@ -1,0 +1,4 @@
+title: Authentication
+nav:
+  - index.md
+  - OIDC configuration: oidc_configuration.md
