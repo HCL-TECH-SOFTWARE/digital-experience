@@ -12,7 +12,7 @@ For container-based Helm deployment, the deployment values.yaml can also be upda
 
 This section describes how to enable and disable HCL Enduser Search using Opensearch manually.
 
-Beginning with HCL Digital Experience 9.5 CF214, Enduser Search with Opensearch is available to be enabled. The **enable-search-v2** config task is **not** automatically executed so you have the freedom to enable and disable it by running **enable-search-v2** and **disable-search-v2**, respectively. Once enabled, it is available for use also once you instantiate a Virtual Portal.
+Beginning with HCL Digital Experience 9.5 CF224, Enduser Search with Opensearch is available to be enabled. The **enable-search-v2** config task is **not** automatically executed so you have the freedom to enable and disable it by running **enable-search-v2** and **disable-search-v2**, respectively. Once enabled, it is available for use also once you instantiate a Virtual Portal.
 
 !!! important
     Before manually enabling HCL Enduser Search using Opensearch, it is required to enable Practitioner Studio. For more information on how to enable Practitioner Studio, refer to [How to enable Practitioner Studio](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md).
