@@ -29,11 +29,11 @@ To enable HCL Enduser Search using Opensearch manually, run the **enable-search-
 !!! important
         The `{search.middleware.ui.uri}` placeholder needs to be replaced with the exact search middleware service name you have in your deployment. For example, it can be something like, `http://dx-search-search-middleware-query:3000`
         
-For information on how to enable the HCL Enduser Search using Opensearch on container deployments, see [Running DX Core configuration tasks](../../../../deployment/manage/container_configuration/run_core_config_engine.md).
+For information on how to enable the HCL Enduser Search using Opensearch on container deployments, see [Running DX Core configuration tasks](../../../deployment/manage/container_configuration/run_core_config_engine.md).
 
 ### Enabling HCL Enduser Search using Opensearch via Helm deployment
 
-For information on how to do container-based Helm deployments, see [Deploying using Helm](../../../../deployment/install/container/helm_deployment/overview.md).
+For information on how to do container-based Helm deployments, see [Deploying using Helm](../../../deployment/install/container/helm_deployment/overview.md).
 
 The following changes must be made to your installation values.yaml to enable HCL Enduser Search using Opensearch.
 
@@ -58,13 +58,13 @@ To disable HCL Enduser Search using Opensearch, run the **disable-search-v2** co
 -   Linux: `./ConfigEngine.sh disable-search-v2 -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
 -   Windows: `ConfigEngine.bat disable-search-v2 -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
 
-For information on how to run the ConfigEngine tasks on container deployments, refer to [Running DX Core configuration tasks](../../../../deployment/manage/container_configuration/run_core_config_engine.md).
+For information on how to run the ConfigEngine tasks on container deployments, refer to [Running DX Core configuration tasks](../../../deployment/manage/container_configuration/run_core_config_engine.md).
 
 After HCL Enduser Search using Opensearch is disabled by running the **disable-search-v2** config task, the HCL Enduser Search using Opensearch page is removed. To enable HCL Enduser Search using Opensearch again, the **enable-search-v2** config task must be executed manually.
 
 ### Disabling HCL Enduser Search using Opensearch via Helm deployment
 
-For information on how to do container-based Helm deployments, see [Deploying using Helm](../../../../deployment/install/container/helm_deployment/overview.md).
+For information on how to do container-based Helm deployments, see [Deploying using Helm](../../../deployment/install/container/helm_deployment/overview.md).
 
 The following changes must be made to your installation values.yaml to enable HCL Enduser Search using Opensearch.
 
