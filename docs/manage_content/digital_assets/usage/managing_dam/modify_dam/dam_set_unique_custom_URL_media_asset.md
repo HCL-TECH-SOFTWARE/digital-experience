@@ -17,8 +17,8 @@ https://sample-url.com/dx/api/dam/custom/car
 Follow these steps to set a unique custom URL value for a media asset:
 
 1.  From the HCL Digital Experience 9.5 DAM user interface, click to select the collection where the media asset is located.
-2.  Hover over a media asset and click **Edit** (pencil icon).
-3.  Click **Information** and enter the expected text in the **Custom URL** field. A helper text shows a preview of the custom URL below the field.
+2.  Click on the **More** menu of a media asset to access **Edit** option and click **Edit** (pencil icon).
+3.  Click **Properties** and enter the expected text in the **Custom URL** field. A helper text shows a preview of the custom URL below the field.
 
     !!! note 
         Supported values for the **Custom URL** field:
@@ -49,8 +49,8 @@ Follow these steps to set a unique custom URL value for a media asset:
 Follow these steps to edit or delete a custom URL value for a media asset:
 
 1.  From the HCL Digital Experience 9.5 DAM user interface, click to select the collection where the media asset with the custom URL is located.
-2.  Hover over a media asset and click the **Edit** \(pencil icon\).
-3.  Click **Information** and edit \(or delete\) the text in the **Custom URL** field. A helper text shows an updated preview of the custom URL below the field. When the **Custom URL** field is empty, the helper text below no longer shows.
+2.  Click on the **More** menu of a media asset to access **Edit** option and click the **Edit** \(pencil icon\).
+3.  Click **Properties** and edit \(or delete\) the text in the **Custom URL** field. A helper text shows an updated preview of the custom URL below the field. When the **Custom URL** field is empty, the helper text below no longer shows.
 4.  Click **Save** to save the changes made. A notification shows the media asset information is updated successfully.
 
 ## HCL Digital Experience Solution Feedback

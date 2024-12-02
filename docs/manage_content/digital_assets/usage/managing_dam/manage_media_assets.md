@@ -100,7 +100,7 @@ Use the HCL Digital Experience 9.5 DAM editor to download a media asset source, 
 
 Use the HCL Digital Experience 9.5 DAM editor to delete a media asset, including its renditions:
 
-1.  From the HCL Digital Experience 9.5 DAM user interface, hover over a media asset to access and click the Overflow menu on the far right (three vertical dots icon). Then, select **Delete**.
+1.  From the HCL Digital Experience 9.5 DAM user interface, hover over a media asset to access and click the Overflow menu on the far right (three horizontal dots icon). Then, select **Delete**.
 2.  A pop-up will appear for you to select your Delete action. If the selected media assets will not affect any references, click **Check for references and delete** to complete action.
 
     ![Check references and delete media asset](../../../../images/Check_for_references_and_delete_HCL_DAM.png)
@@ -119,13 +119,11 @@ Refer to the following steps if you want to copy a media asset from one collecti
 
     A dialogue box appears that shows the list of collections. You can search for a specific collection or you can also navigate inside a collection if a subcollection is present. 
 
-3. (Optional) Check the **Add new keywords to existing** box if you want newly generated keywords to be added to existing keywords. This is available only when Plugin is enabled.
-
-4. Navigate to the collection where you want to copy the asset to and click **Copy**.
+3. Navigate to the collection where you want to copy the asset to and click **Paste here**.
 
     If you copied an asset to the same collection, a dialogue box to rename the asset appears. 
 
-5. Click **View Location** to navigate inside the collection.
+4. Click **View Location** to navigate inside the collection.
 
 ## Moving a media asset
 
@@ -141,7 +139,7 @@ Refer to the following steps if you want to move a media asset from one collecti
 
 2. Click **Move**.
 
-    A dialogue box appears that shows the list of collections. You can search for a specific collection or you can also navigate inside a collection if a subcollection is present. 
+    A dialogue box appears that shows the list of collections. You can search for a specific collection or you can also navigate inside a collection. 
 
     ![Move a media asset](../../../../images/Move_Media_Asset.png)
 
@@ -168,7 +166,7 @@ Refer to the following steps to modify the name of a media asset.
 
     ![Rename a media asset](../../../../images/Rename_Media_Asset.png)
     
-3. In the **Rename** dialogue box, enter the new name of the media asset. Click **Save**. 
+3. In the **Rename** dialogue box, enter the new name of the media asset. Click **Rename**. 
 
 Another way to modify the name of a media asset is to edit the asset by clicking the **Pencil** icon. Go to **Properties**. You can edit the **Name** of the media asset in this panel, along with the **Title** and **Description**. Click **Save**.
 
@@ -190,7 +188,7 @@ If an asset happens to have the same name with another asset in a collection, a 
 
 ## Copying friendly URLs for assets
 
-You can can copy the friendly URL and API URL of an asset from the URLs section of the asset's inspector panel.
+You can can copy the friendly URL and UUID URL of an asset from the URLs section of the asset's inspector panel.
 
 ![](../../../../images/Copy_friendlyUrl.png "Copy friendly URL")
 
