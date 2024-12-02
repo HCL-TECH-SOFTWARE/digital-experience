@@ -32,5 +32,5 @@ The HCL Enduser Search UI has the following components:
 
 -   **Main header** - This section contains the title of the page.
 -   **Search Input** - This section displays the fields the user can interact with to change the result set. There are 3 fields: the query textfield, the search scope select with dropdown, the search attribute select with dropdown, and lastly the button to trigger the search.
--   **Search Input** - This section displays the search results. Each result in the list has its own title, description, and detailed context when available depending on your data source. The title also functions as a link you can click to open the result item in a new browser tab.
+-   **Search Output** - This section displays the search results. Each result in the list has its own title, description, and detailed context when available depending on your data source. The title also functions as a link you can click to open the result item in a new browser tab.
 -   **Pagination** - This section displays the pages you can navigate in the search results.
