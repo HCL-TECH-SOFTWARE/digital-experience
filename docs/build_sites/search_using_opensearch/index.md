@@ -18,7 +18,7 @@ The search component is designed to be:
 ## Components Overview
 
 AC (Atomic Components)
-These are the smallest possible building blocks of the search functionality:
+Atomic Components are the smallest possible building blocks of the search functionality, such as buttons, input fields, and chips. These components are built using Web Components standards like Shadow DOM for encapsulation and reusability.
 
 - **dx-ac-base-element:** This class creates a foundational element for developing custom web components. It supports internationalization and localization, and uses the Shadow DOM to encapsulate its internal structure, ensuring high reusability.        
 - **dx-button:** A customisable button component with internationalisation support, conditional icon and text rendering, and isolated styling using Shadow DOM and CSS parts.                 
@@ -37,7 +37,7 @@ These are the smallest possible building blocks of the search functionality:
 
 
 FCC (Functional Composite Components)
-Composite components combines atomic elements to provide higher-level functionality:
+Functional Composite Components combine Atomic Components to deliver higher-level functionality, such as displaying search results or managing pagination.
 
 - **dx-circular-progress:** This component is a customizable circular progress spinner that uses SVG graphics and CSS animations to display a loading state. It supports various styling options like size, stroke width, and color, and can be integrated into any web app to visually indicate progress.             
 - **dx-search-input-query:** It provides a rich set of properties for customization, including the ability to disable the input and define placeholder and label text. The component also checks the URL for existing query parameters on load, making it ideal for dynamic search-driven applications.             
@@ -156,3 +156,53 @@ dx-input-textfield::part(label) {
 
 ```
 Other components can be overridden in a similar manner.
+
+# Theme module
+## Overview
+The search components support **theme modules**, allowing users to create custom styling themes for all components. This flexibility is ideal for adapting the search functionality to match your application's look and feel.
+
+## Default Theme Module
+
+We provide a default theme module (CSS and JS files) that can be replaced or extended by customers.
+
+CSS Source File Location: ../../src/styles/base/ac.scss
+JS Source File Location: ../../src/components/
+
+## Creating a Custom Theme Module
+To create your custom theme:
+
+1. Download the default theme CSS file from the provided location.
+
+2. Update the styles in the file as needed.
+
+3. Link your custom theme file in the application:
+
+```html 
+  <link rel="stylesheet" href="path/to/custom-theme.css"> 
+```
+
+## Example of Customization
+
+Suppose you want to change the background color of the dx-search-center-layout component. In your custom CSS file:
+
+```css
+  dx-search-center-layout::part(main) {
+  background-color: #f0f0f0;
+}
+```
+
+## Web Components: Features and Benefits
+Web components provide the following benefits:
+
+1. **Encapsulation:** Styles and functionality are isolated from the rest of your application using Shadow DOM.
+2. **Reusability:** Build once and reuse across different parts of your application.
+3. **Customizability:** Use attributes, properties, and part selectors to customize components without altering their core code.
+
+## Broadcast Channel API and FCC Communication
+The Broadcast Channel API enables seamless communication between different FCC components, even when they are placed in separate areas of your application (e.g., themes, JSPs, portlets, WCM).
+
+Why Broadcast Channel API?
+
+1. **Real-Time Synchronization:** Keeps components in sync, such as updating search results when a new query is entered.
+2. **Decoupled Design:** FCC components can work independently and communicate without direct references.
+3. **Flexibility:** FCC components can be distributed across different sections of the application, ensuring modularity.
