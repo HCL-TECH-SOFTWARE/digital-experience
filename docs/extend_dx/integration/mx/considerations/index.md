@@ -1,22 +1,15 @@
 # Considerations
 
-## MX on Cloud
+## Volt MX on Cloud
 
 Ensure to configure [CORS](https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Foundry/vmf_integrationservice_admin_console_userguide/Content/Runtime_Configuration.html#cors-configuration) while setting up [SSO](../configuration/index.md#enable-sso-for-dx-and-mx)
 
-## MX and DX on Same environment
+## Volt MX Foundry and HCL DX in same deployment
 
-MX uses ingress and hence if DX is deployed on the same environment, the ingress routing should be used. Also note that, the portlet size during upload will be restricted to 1 MB and hence its necessary to modify the configuration through `kubectl -n <namespace> edit ingress/custom-routes`
-
-```
-metadata:
-    annotations:
-        nginx.ingress.kubernetes.io/proxy-body-size: 8m
-```
-
+MX uses ingress and hence if HCL DX is deployed on the same deployment, the ingress routing should be used. Please refer this [link](../configuration/index.md#configuring-ingress-for-hcl-digital-experience-and-hcl-volt-mx-foundry) for more details
 
 ## Limitations
 
-1. Though MX Portlet supports multi language, deployed portelt will be searchable only in English while adding it to the page in HCL DX
+1. Though portlets built with Iris support multiple languages for content rendering, only the English version of the portlet name can be used to search for it while adding it to the HCL DX page.
 2. Default Language for the portlet would be still english and not the configured default DX portal language.
 

@@ -187,9 +187,9 @@ Client Id and Secret will be the same which was provided during [Register OAuth 
 ![alt text](image-5.png)
 
 
-### Add SSO in Volt Iris
+### Add SSO in Iris
 
-1) Create a login page in VoltMX Iris and add the below code in form init. Ensure the Iris is connected to the Foundry app which contains the above SSO configurations. 
+1) Create a login page in Iris and add the below code in form init. Ensure the Iris is connected to the Foundry app which contains the above SSO configurations. 
 
 ```
     if(!VMXFoundry) return;
