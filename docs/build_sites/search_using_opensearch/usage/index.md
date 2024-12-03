@@ -1,26 +1,26 @@
-# Using HCL Enduser Search with Opensearch
+# Using HCL End-user Search with Opensearch
 
-Create and export reports on content items using HCL Enduser Search with Opensearch. Users can also update the reported content items in bulk.
+Create and export reports on content items using HCL End-user Search with Opensearch. Users can also update the reported content items in bulk.
 
 # Generating a search results set
 
-This section details how to generate a search results set in HCL Enduser Search with Opensearch.
+This section details how to generate a search results set in HCL End-user Search with Opensearch.
 
 ## Prerequisites
 
-- Beginning with HCL Digital Experience 9.5 release update CF224, Enduser Search with Opensearch is available to be enabled. For instructions on installing Enduser Search with Opensearch manually on supported environments, see the [Installing HCL Digital Experience 9.5 Enduser Search with Opensearch](../installation/index.md) topic.
+- Beginning with HCL Digital Experience 9.5 release update CF224, End-user Search with Opensearch is available to be enabled. For instructions on installing End-user Search with Opensearch manually on supported environments, see the [Installing HCL Digital Experience 9.5 End-user Search with Opensearch](../installation/index.md) topic.
 
-- To acess the HCL Enduser Search UI, see the [Accessing HCL Digital Experience 9.5 Enduser Search with Opensearch](../access/index.md) topic.
+- To acess the HCL End-user Search UI, see the [Accessing HCL Digital Experience 9.5 End-user Search with Opensearch](../access/index.md) topic.
 
 ## Generating a search results set
 
-A search results set is a list of items that matches the search term that the enduser enters in the Search input box. It may be limited further when the enduser specifies the scope of the result (i.e. the data source to search) as well as the specific attribute to search (e.g. title, description, type, or tags).
+A search results set is a list of items that matches the search term that the end-user enters in the Search input box. It may be limited further when the end-user specifies the scope of the result (i.e. the data source to search) as well as the specific attribute to search (e.g. title, description, type, or tags).
 
 1.  Log in to your HCL Digital Experience 9.5 platform, and select **Search** from the Practitioner Studio navigator.
 
-    ![](../../../assets/HCL_DX_95_Practitioner_Studio_interface.png "Log in to HCL Digital Experience 9.5 and Go to the Enduser Search UI")
+    ![](../../../assets/HCL_DX_95_Practitioner_Studio_interface.png "Log in to HCL Digital Experience 9.5 and Go to the End-user Search UI")
 
-2.  In the Enduser Search user interface, go to the **Search** input box and type a term you need to search e.g "blog".
+2.  In the End-user Search user interface, go to the **Search** input box and type a term you need to search e.g "blog".
 
     ![](../../../assets/HCL_Search_01_Input_Query.png "Input a search term in the Search input box")
 

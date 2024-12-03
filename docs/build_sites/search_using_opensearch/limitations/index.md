@@ -1,6 +1,6 @@
-# Enduser Search with Opensearch limitations
+# End-user Search with Opensearch limitations
 
-Take note of the following limitations when using HCL Enduser Search with Opensearch:
+Take note of the following limitations when using HCL End-user Search with Opensearch:
 
 ## Pagination
 
