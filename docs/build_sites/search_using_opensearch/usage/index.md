@@ -1,16 +1,16 @@
-# Using HCL End-user Search with Opensearch
+# Using HCL End-user Search with OpenSearch
 
-Create and export reports on content items using HCL End-user Search with Opensearch. Users can also update the reported content items in bulk.
+Create and export reports on content items using HCL End-user Search with OpenSearch. Users can also update the reported content items in bulk.
 
 # Generating a search results set
 
-This section details how to generate a search results set in HCL End-user Search with Opensearch.
+This section details how to generate a search results set in HCL End-user Search with OpenSearch.
 
 ## Prerequisites
 
-- Beginning with HCL Digital Experience 9.5 release update CF224, End-user Search with Opensearch is available to be enabled. For instructions on installing End-user Search with Opensearch manually on supported environments, see the [Installing HCL Digital Experience 9.5 End-user Search with Opensearch](../installation/index.md) topic.
+- Beginning with HCL Digital Experience 9.5 release update CF224, End-user Search with OpenSearch is available to be enabled. For instructions on installing End-user Search with OpenSearch manually on supported environments, see the [Installing HCL Digital Experience 9.5 End-user Search with OpenSearch](../installation/index.md) topic.
 
-- To access the HCL End-user Search UI, see the [Accessing HCL Digital Experience 9.5 End-user Search with Opensearch](../access/index.md) topic.
+- To access the HCL End-user Search UI, see the [Accessing HCL Digital Experience 9.5 End-user Search with OpenSearch](../access/index.md) topic.
 
 ## Generating a search results set
 

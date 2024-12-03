@@ -1,8 +1,8 @@
-# HCL End-user Search with Opensearch
+# HCL End-user Search with OpenSearch
 
-The End-user Search with Opensearch is intended to replace the existing Search with a new user interface and a new backend service using Opensearch to provide a seamless search experience.
+The End-user Search with OpenSearch is intended to replace the existing Search with a new user interface and a new backend service using OpenSearch to provide a seamless search experience.
 
-End-user Search with Opensearch is for, but not limited to, the following sample use cases:
+End-user Search with OpenSearch is for, but not limited to, the following sample use cases:
 
 - using the new Search page right out of the box in DX once it is enabled
 - adding the new Java application we provide i.e. called Search V2 Portlet to a new page you created so you can have the exact same UI and functionality on your own page
@@ -10,17 +10,17 @@ End-user Search with Opensearch is for, but not limited to, the following sample
 
 Refer to the following pages for more information:
 
-- **[Install HCL End-user Search with Opensearch](../search_using_opensearch/installation/index.md)**<br>
-This section provides a high-level overview of the architecture and the steps to install, enable, and update HCL End-user Search with Opensearch.
+- **[Install HCL End-user Search with OpenSearch](../search_using_opensearch/installation/index.md)**<br>
+This section provides a high-level overview of the architecture and the steps to install, enable, and update HCL End-user Search with OpenSearch.
 
-- **[Access HCL End-user Search with Opensearch](../search_using_opensearch/access/index.md)**<br>
-This section provides the steps on how to access the HCL End-user Search with Opensearch portlet.
+- **[Access HCL End-user Search with OpenSearch](../search_using_opensearch/access/index.md)**<br>
+This section provides the steps on how to access the HCL End-user Search with OpenSearch portlet.
 
-- **[Usage of HCL End-user Search with Opensearch](../search_using_opensearch/usage/index.md)**<br>
-This section provides guide on how to generate results in the HCL Generate results using the HCL End-user Search with Opensearch.
+- **[Usage of HCL End-user Search with OpenSearch](../search_using_opensearch/usage/index.md)**<br>
+This section provides guide on how to generate results in the HCL Generate results using the HCL End-user Search with OpenSearch.
 
-- **[End-user Search with Opensearch limitations](../search_using_opensearch/limitations/index.md)**<br>
-This section lists the current limitations when using HCL End-user Search with Opensearch.
+- **[End-user Search with OpenSearch limitations](../search_using_opensearch/limitations/index.md)**<br>
+This section lists the current limitations when using HCL End-user Search with OpenSearch.
 
-- **[Utilizing the Web Components used in HCL End-user Search with Opensearch](../search_using_opensearch/component/index.md)**<br>
+- **[Utilizing the Web Components used in HCL End-user Search with OpenSearch](../search_using_opensearch/component/index.md)**<br>
 This section provides guide on how to use the Web Components that HCL End-user Search provides to create your own custom End-user Search page.
