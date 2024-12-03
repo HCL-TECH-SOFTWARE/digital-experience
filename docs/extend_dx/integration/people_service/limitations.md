@@ -4,6 +4,7 @@
 
 - Currently only supports and provides English localization.
 - There is no search user interface to search for or discover other users.
+- Hybrid deployment is not supported with the CF224 release.
 
 ## User profiles
 
