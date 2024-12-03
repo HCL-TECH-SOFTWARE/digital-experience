@@ -66,7 +66,7 @@ After HCL End-user Search using OpenSearch is disabled by running the **disable-
 
 For information on how to do container-based Helm deployments, see [Deploying using Helm](../../../deployment/install/container/helm_deployment/overview.md).
 
-The following changes must be made to your installation values.yaml to enable HCL End-user Search using OpenSearch.
+The following changes must be made to your installation values.yaml to disable HCL End-user Search using OpenSearch.
 
 ```
 # Application configuration
