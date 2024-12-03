@@ -42,9 +42,6 @@ You can inject these styles into your theme module or any other method you prefe
 For more information on customizing styles in HCL Digital Experience, refer to the [Customizing Theme Styles](https://opensource.hcltechsw.com/digital-experience/latest/build_sites/themes_skins/customizing_theme/styles/?h=custom+style) page.
 
 
-### Verify and Link the Custom Module to the Theme
-
-For detailed instructions on verifying and linking system modules, refer to the [Verifying and Linking People Service System Modules in HCL Digital Experience](../link_system_module_to_theme.md)
 
 ???+ info "Related information"
     - [Deploy JavaScript Libraries/Dependencies as a DX Module](https://opensource.hcltechsw.com/digital-experience/latest/guide_me/tutorials/scriptapps/how_to/02_dependencies_as_module/)
