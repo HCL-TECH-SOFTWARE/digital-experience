@@ -4,7 +4,7 @@ This guide explains how to use the new search functionality powered by openSearc
 
 The default search component, shown in the image below, is responsive and can be imported and used anywhere within an application.
 
-![Screenshot](../../assets/search_result.png)
+![Screenshot](../../../assets/search_result.png)
 
 
 ## Overview of the search functionality.
@@ -19,6 +19,13 @@ The search component is designed to be:
 
 AC (Atomic Components)
 Atomic Components are the smallest possible building blocks of the search functionality, such as buttons, input fields, and chips. These components are built using Web Components standards like Shadow DOM for encapsulation and reusability.
+
+## Web Components: Features and Benefits
+Web components provide the following benefits:
+
+1. **Encapsulation:** Styles and functionality are isolated from the rest of your application using Shadow DOM.
+2. **Reusability:** Build once and reuse across different parts of your application.
+3. **Customizability:** Use attributes, properties, and part selectors to customize components without altering their core code.
 
 - **dx-ac-base-element:** This class creates a foundational element for developing custom web components. It supports internationalization and localization, and uses the Shadow DOM to encapsulate its internal structure, ensuring high reusability.        
 - **dx-button:** A customisable button component with internationalisation support, conditional icon and text rendering, and isolated styling using Shadow DOM and CSS parts.                 
@@ -55,7 +62,7 @@ Functional Composite Components combine Atomic Components to deliver higher-leve
 
 ## Default styling
 
-Each component comes with deafult styles. for example
+Each component comes with default styles. For example
 
 ```scss
 /* for dx-search-center-layout */
@@ -161,7 +168,7 @@ Other components can be overridden in a similar manner.
 ## Overview
 The search components support **theme modules**, allowing users to create custom styling themes for all components. This flexibility is ideal for adapting the search functionality to match your application's look and feel.
 
-## Default Theme Module
+## Default Theme Modules
 
 We provide a default theme module (CSS and JS files) that can be replaced or extended by customers.
 
@@ -197,13 +204,6 @@ Suppose you want to change the background color of the dx-search-center-layout c
   background-color: #f0f0f0;
 }
 ```
-
-## Web Components: Features and Benefits
-Web components provide the following benefits:
-
-1. **Encapsulation:** Styles and functionality are isolated from the rest of your application using Shadow DOM.
-2. **Reusability:** Build once and reuse across different parts of your application.
-3. **Customizability:** Use attributes, properties, and part selectors to customize components without altering their core code.
 
 ## Broadcast Channel API and FCC Communication
 The Broadcast Channel API enables seamless communication between different FCC components, even when they are placed in separate areas of your application (e.g., themes, JSPs, portlets, WCM).
