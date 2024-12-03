@@ -165,8 +165,15 @@ The search components support **theme modules**, allowing users to create custom
 
 We provide a default theme module (CSS and JS files) that can be replaced or extended by customers.
 
-CSS Source File Location: ../../src/styles/base/ac.scss
-JS Source File Location: ../../src/components/
+CSS Source File Location:
+`
+https://toblerone-release-scaled-latest.team-q-dev.com/wps/mycontenthandler/!ut/p/digest!kX0UNnz5TO1GsC7pSRsHcg/?uri=http://dx-search-search-middleware-query:3000/dx/ui/search/default.css
+`
+
+JS Source File Location: 
+`
+https://toblerone-release-scaled-latest.team-q-dev.com/wps/mycontenthandler/!ut/p/digest!kX0UNnz5TO1GsC7pSRsHcg/?uri=http://dx-search-search-middleware-query:3000/dx/ui/search/index.js
+`
 
 ## Creating a Custom Theme Module
 To create your custom theme:
