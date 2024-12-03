@@ -12,7 +12,7 @@
 
 # Managing profile tags
 
-Profile tagging is a method of labeling user profiles based on their traits, actions, or interests. This process enhances personalized experiences, improves search and recommendation systems, and organizes user profiles more effectively. It's a practical way to categorize and manage information, ensuring better user interactions and efficient data handling.
+Profile tagging is a method of labeling user profiles based on their traits, actions, or interests. This process enhances personalized experiences, improves search and recommendation systems, and organizes user profiles more effectively. It is a practical way to categorize and manage information, ensuring better user interactions and efficient data handling.
 
 Tags can be added to profiles by users or administrators. They are designed to be user-friendly, efficient, and consistent. This guide provides an overview of the profile tagging system, including how to add, endorse, and remove tags, as well as the enforcement rules that ensure tag consistency.
 
@@ -57,7 +57,7 @@ Removing Tags
 #### Adding tags to other profiles
 
 1. Go to the profile page of the user you want to tag.
-2. Click on the `Add/Edit tags` button in the `Tags` section.
+2. Click on the **Add/Edit tags** button in the **Tags** section.
     ![Add/Edit tags button](./img/xxx/tag-other-user-add-button.png){class="list"}
 3. A textbox will appear and will be focused.
     ![new tags input box](./img/xxx/tag-other-user-inputbox.png){class="list"}
@@ -68,7 +68,7 @@ Removing Tags
     2. If the tag doesn't exist, you can create a new tag by pressing the `Enter` key.
     ![newly created tag](./img/xxx/tag-other-user-new-tag.png){class="list"}
 
-5. Tags created or selected in step 4 will be automatically added to the Tags of that user.
+5. Tags created or selected in *Step 4* will be automatically added to the Tags of that user.
 6. A notification will appear at the bottom of the page indicating that the tags were successfully updated.
     ![tag creation confirmation message](./img/xxx/tag-other-user-confirmation-msg.png){class="list"}
 
@@ -77,7 +77,7 @@ If a Tag already exists for the user you are tagging, it will be automatically e
 #### Adding tags to your own profile
 
 1. Go to your profile page.
-2. Click on the `Add/Edit tags` button in the `Tags` section.
+2. Click on the **Add/Edit tags** button in the **Tags** section.
     ![Add/Edit tags button](./img/xxx/tag-self-add-button.png){class="list"}
 3. A dialog box will appear with a text field that is already focused.
     ![Add/Edit tags button](./img/xxx/tag-self-edit-dialog.png){class="list"}
@@ -89,19 +89,19 @@ If a Tag already exists for the user you are tagging, it will be automatically e
 
 5. When the Tag was selected it will appear inside the the text box of the dialog.
     ![Add/Edit tags button](./img/xxx/tag-self-created.png){class="list"}
-6. Click on the `Save` button that is enabled only when you have made a change to the existing set of tags.
+6. Click on the **Save** button that is enabled only when you have made a change to the existing set of tags.
 7. A notification will appear at the bottom of the page indicating that the tags were successfully updated.
 
-You can add more than one Tag at once by repeating the steps 4 and 5.
+You can add more than one Tag at once by repeating *Step 4* and *Step 5*.
 
 #### Tag Enforcement Rules
 
 To maintain consistency and prevent errors, all tags must adhere to the following rules:
 
-* **Lower Case Only**: All tags must be in lower case letters.
-* **Spaces Replaced by Dashes**: Any spaces within a tag will be automatically replaced by dashes.
-* **Latin Characters Only**: Tags can only include Latin characters.
-* **Special Characters**: The only special character allowed is the dash/hyphen `-`
+- **Lower Case Only**: All tags must be in lower case letters.
+- **Spaces Replaced by Dashes**: Any spaces within a tag will be automatically replaced by dashes.
+- **Latin Characters Only**: Tags can only include Latin characters.
+- **Special Characters**: The only special character allowed is the dash/hyphen `-`
 
 These rules are enforced by the user interface to ensure that all tags are standardized and easily searchable, enhancing the overall functionality of the profile tagging system.
 
@@ -113,8 +113,8 @@ The meaning of Tags is emphasised by the number of endorsements they have. The m
 
 Users can manage tags on their own profile in various ways:
 
-* you can add, remove, endorse and unendores tags using the `Edit Tag` dialog opened up by clicking on the `Add/Edit tags` button in the `Tags` section.
-* you can endorse, unendorse and remove tags directly from the `Tags` section of your profile.
+- you can add, remove, endorse and unendorse tags using the **Edit Tag** accessible by clicking on the **Add/Edit tags** button in the **Tags** section.
+- you can endorse, unendorse, and remove tags directly from the **Tags** section of your profile.
 
 ## Viewing tags on a profile
 
@@ -134,36 +134,36 @@ Tags can be removed from a profile in three ways:
 ### Removing tags from your own profile
 
 1. Go to your profile page.
-2. Lookup the tag to remove from the list of tags in the `Tags` section.
-3. Click on the `Remove` button next to the tag you want to remove.
+2. Search for the tag to be removed from the list of tags in the **Tags** section.
+3. Click on the **Remove** button next to the tag you want to remove.
 4. A notification will appear at the bottom of the page indicating that the tags were successfully updated.
 
-Alternatively, you can remove tags by opening the `Edit Tag` dialog and clicking on the `Remove` button next to the tag you want to remove.
+Alternatively, you can remove tags by opening the **Edit Tag** window and clicking on the **Remove** button next to the tag you want to remove.
 
 ### Removing tags as an administrator
 
 1. Go to your profile page.
-2. Lookup the tag to remove from the list of tags in the `Tags` section.
-3. Click on the `Remove` button next to the tag you want to remove.
+2. Search for the tag to be removed from the list of tags in the **Tags** section.
+3. Click on the **Remove** button next to the tag you want to remove.
 4. A notification will appear at the bottom of the page indicating that the tags were successfully updated.
 
-Alternatively, you can remove tags by opening the `Edit Tag` dialog and clicking on the `Remove` button next to the tag you want to remove.
+Alternatively, you can remove tags by opening the **Edit Tag** window and clicking on the **Remove** button next to the tag you want to remove.
 
 ### Removing tags as the last endorser
 
 1. Go to the profile page you want to remove the tag from.
-2. Lookup the tag to remove from the list of tags in the `Tags` section.
+2. Search for the tag to be removed from the list of tags in the **Tags** section.
 3. when the tag is endorsed only by you, you will see the Endorsement count as `1` and the *Unendorse* button in the Tag.
     ![Add/Edit tags button](./img/xxx/tags-last-endorser-tag.png){class="list"}
-4. Click on the `Unendorse` button in the Tag you want to remove.
+4. Click on the **Unendorse** button in the Tag you want to remove.
 5. A confirmation dialog will appear requesting whether you want to remove the tag.
     ![Add/Edit tags button](./img/xxx/tag-remove-confirmation.png){class="list"}
 
 ### User list who endorsed tag
 
-1. Hover on count of the tag, it will popup list of the user who endorse that specific tag. Only 5 users will be displayed initially and link is given for all user's view.
+1. Hover on count of the tag, to display the list of the user who endorsed that specific tag. Note that, only 5 users who endorsed the tag are initially displayed and a link is given for the complete list users.
 ![Endorsed User list](./img/endorsedUserList.png)
-2. On Hover of user, business card for that user will be displayed as below-
+2. On Hover of user, to display the business card for that user.
 ![biz card](./img/bizCard.png)
-3. On click of link "View all users", dialog with all users will display as below-
+3. On click of link **View all users** to display all the users.
 ![user list dialog](./img/userListDialog.png)

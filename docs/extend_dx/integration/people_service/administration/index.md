@@ -2,8 +2,11 @@
 
 In this section, you will learn how to configure authentication, set up user provisioning through the Lightweight Directory Access Protocol (LDAP), and manage user properties with customization options.
 
-- [Authentication](./authentication)
-- [User provisioning](./user_provisioning)
-- [Managing user properties](./managing_user_properties)
-- [Monitoring and logging](./monitoring_logging)
-- [User privacy and PII](./user_privacy_pii.md)
+- **[Authentication](./authentication)**<br>
+Learn about the supported authentication strategies in HCL People Service.
+- **[Managing user properties](./managing_user_properties)**<br>
+Learn about the user properties you can use to map, configure, or enhance user profiles.
+- **[Monitoring and logging](./monitoring_logging)**<br>
+Learn about the monitoring and logging capabilities provided for HCL People Service.
+- **[User privacy and PII](./user_privacy_pii.md)**<br>
+Learn how to manage user privacy and Personal Identifiable Information (PII) in HCL People Service.

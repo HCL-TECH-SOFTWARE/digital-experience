@@ -1,27 +1,27 @@
 # Rendering the business card in DX pages
 
-Apart from rendering business card via Person Tag link, you may want to leverage them in other scenarios and use cases.
+Apart from rendering a Business Card using a person tag link, you may want to leverage it in other scenarios and use cases.
 
-Consider a use case where you want to provide information about a person of interest on your page. This feature allows the end user to hover over a link, displaying that person's information in a popup.
+For example, you may want to provide information about a person of interest on your page. This feature allows the end user to hover over a link and display that person's information in a popup.
 
-This can be achived in many ways, for the context of this document we will try to look at how we can achive this using the Script Application.
+In this guide, you will learn how to enable this feature using a Script Application.
 
 ## Script Application
 
-Script applications are web applications built with standard libraries/frameworks and tools, running as a page component in HCL Digital Experience (DX).
+Script Applications are web applications built with standard libraries, frameworks, and tools, running as a page component in HCL Digital Experience (DX).
 
-You can import an application that you developed already. The components are saved in Web Content Manager. You can also edit the HTML, JavaScript, and CSS in the Script Application.
+Using Script Applications, you can import existing applications and edit its HTML, JavaScript, and CSS. Its components are saved in the Web Content Manager.
 
-Please refer to [The Script Application | HCL Digital Experience](https://help.hcl-software.com/digital-experience/8.5/script-portlet/script_portlet.html) for more information.
+Refer to [The Script Application](https://help.hcl-software.com/digital-experience/8.5/script-portlet/script_portlet.html) page for more information.
 
 ## Examples
 
-Here we will look at what should a script application html code snippet look like for below scenarios:
+The following are sample Script Application HTML code snippets for two different scenarios:
 
-- [Business card on hover](#business-card-on-hover)
-- [Business card in a page](#business-card-in-a-page)
+- [Business Card on hover](#business-card-on-hover)
+- [Business Card in a page](#business-card-in-a-page)
 
-### Business card on hover
+### Business Card on hover
 
 ```html
 <html>
@@ -44,7 +44,7 @@ Here we will look at what should a script application html code snippet look lik
 </html>
 ```
 
-### Business card in a page
+### Business Card in a page
 
 ```html
 <html>
