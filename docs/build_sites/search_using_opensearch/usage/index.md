@@ -1,6 +1,6 @@
 # Using HCL End-user Search with OpenSearch
 
-Create and export reports on content items using HCL End-user Search with OpenSearch. Users can also update the reported content items in bulk.
+Generate search results from different content sources (from WCM or Portal) using HCL End-user Search with OpenSearch. Users can open the result items from the result list. Users can also bookmark the search by copy/paste of the URL after a search is done.
 
 # Generating a search results set
 
