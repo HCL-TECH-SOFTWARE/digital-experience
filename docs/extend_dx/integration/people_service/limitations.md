@@ -7,25 +7,25 @@
 
 ## User profiles
 
-- The user profile does not support customization of the layout or makeup and can only be customized via style overrides or script based manipulation of the user profile page.
-- There is no rich text editing for long text properties, such as,  the user's professional summary.
+- Customizing the layout or makeup of user profiles is not supported. User profiles can only be customized through style overrides or script-based manipulation of the user profile page.
+- Rich-text editing for long text properties such as a user's professional summary is not supported.
 
-## DX business card integration
+## DX Business Card integration
 
-- The business card web component does not support customization of the layout or content, but can be fully replaced with a custom implementation.
+- Customizing the layout or content of a Business Card web component is not supported, but can be fully replaced with a custom implementation.
 
 ## Virtual Portals
 
-- The people service does not support usage within Virtual Portals.
-- The business card web component does not replace the semantic person card within Virtual Portals.
+- People Service cannot be used within Virtual Portals.
+- The Business Card web component does not replace the semantic person card within Virtual Portals.
 
 ## Integration with existing user directories
 
-- Only a single LDAP server and base DN can be configured for user synchronization. Grouping, scoping or access control based on organizational units or other criteria is not supported.
-- User information created in the People Service is not synchronized back to the LDAP server.
+- Only a single LDAP server and base DN can be configured for user synchronization. Grouping, scoping, or access control based on organizational units or other criteria is not supported.
+- User information created in People Service is not synchronized back to the LDAP server.
 - User directories or databases other than LDAP are not supported automatically. Custom development is required to integrate or consolidate results with other user directories.
 
 ## Integration with OpenID Connect providers
 
-- The People Service will require an OIDC authentication flow or redirection to be completed to display content. The frequency of this flow can be controlled by the session duration configuration.
-- When connecting the People Service directly with OpenID Connect providers, the business card web component requires a login flow to happen before it can display user information.
+- People Service requires an OIDC authentication flow or redirection to be completed to display content. The frequency of this flow can be controlled by the session duration configuration.
+- When connecting People Service directly with OpenID Connect providers, the Business Card web component requires a login flow to occur before it can display user information.
