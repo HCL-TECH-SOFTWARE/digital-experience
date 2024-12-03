@@ -6,7 +6,7 @@ This document contains instructions on how to install and deploy the HCL End-use
 
 HCL End-user Search using Opensearch is an instance of a search integration portlet configured to point to where the static assets (javascript, stylesheets, and html markup) can be loaded from. It can be enabled and disabled by using ConfigEngine tasks for both traditional, hybrid, and container-based deployments. The enable task would deploy, configure the portlet, create the http outbound proxy policy so DX can fetch the assets, and then deploy the page.
 
-For container-based Helm deployment, the deployment values.yaml can also be updated so that the HCL End-user Search with Opensearch will be enabled by default automatically and there is no futher need to use ConfigEngine task to enable.
+For container-based Helm deployment, the deployment values.yaml can also be updated so that the HCL End-user Search with Opensearch will be enabled by default automatically and there is no further need to use ConfigEngine task to enable.
 
 ## Enabling and disabling HCL End-user Search using Opensearch
 

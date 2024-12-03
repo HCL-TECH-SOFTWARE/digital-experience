@@ -10,11 +10,11 @@ This section details how to generate a search results set in HCL End-user Search
 
 - Beginning with HCL Digital Experience 9.5 release update CF224, End-user Search with Opensearch is available to be enabled. For instructions on installing End-user Search with Opensearch manually on supported environments, see the [Installing HCL Digital Experience 9.5 End-user Search with Opensearch](../installation/index.md) topic.
 
-- To acess the HCL End-user Search UI, see the [Accessing HCL Digital Experience 9.5 End-user Search with Opensearch](../access/index.md) topic.
+- To access the HCL End-user Search UI, see the [Accessing HCL Digital Experience 9.5 End-user Search with Opensearch](../access/index.md) topic.
 
 ## Generating a search results set
 
-A search results set is a list of items that matches the search term that the end-user enters in the Search input box. It may be limited further when the end-user specifies the scope of the result (i.e. the data source to search) as well as the specific attribute to search (e.g. title, description, type, or tags).
+A search results set is a list of items that matches the search term that the end-user enters in the Search input box. It may be limited further when the end-user specifies the scope of the result (i.e. the content source to search) as well as the specific attribute to search (e.g. title, description, type, or tags).
 
 1.  Log in to your HCL Digital Experience 9.5 platform, and select **Search** from the Practitioner Studio navigator.
 
