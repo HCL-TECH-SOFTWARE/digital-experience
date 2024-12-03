@@ -1,3 +1,8 @@
-title: Search using openSearch
+title: End-user Search with OpenSearch
 nav:
     - index.md
+    - Installation: installation
+    - Access Search User Interface: access
+    - Usage: usage
+    - Limitations: limitations
+    - Component: component
