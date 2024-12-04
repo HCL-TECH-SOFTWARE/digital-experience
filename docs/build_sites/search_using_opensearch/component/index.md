@@ -15,10 +15,6 @@ The search component is designed to be:
 2. **Customizable:** Allows user-defined styling and extensions.
 3. **Extendable:** Can be integrated anywhere in your application.
 
-## Components Overview
-
-AC (Atomic Components)
-Atomic Components are the smallest possible building blocks of the search functionality, such as buttons, input fields, and chips. These components are built using Web Components standards like Shadow DOM for encapsulation and reusability.
 
 ## Web Components: Features and Benefits
 Web components provide the following benefits:
@@ -26,6 +22,11 @@ Web components provide the following benefits:
 1. **Encapsulation:** Styles and functionality are isolated from the rest of your application using Shadow DOM.
 2. **Reusability:** Build once and reuse across different parts of your application.
 3. **Customizability:** Use attributes, properties, and part selectors to customize components without altering their core code.
+
+## Components Overview
+
+AC (Atomic Components)
+Atomic Components are the smallest possible building blocks of the search functionality, such as buttons, input fields, and chips. These components are built using Web Components standards like Shadow DOM for encapsulation and reusability.
 
 - **dx-ac-base-element:** This class creates a foundational element for developing custom web components. It supports internationalization and localization, and uses the Shadow DOM to encapsulate its internal structure, ensuring high reusability.        
 - **dx-button:** A customisable button component with internationalisation support, conditional icon and text rendering, and isolated styling using Shadow DOM and CSS parts.                 
