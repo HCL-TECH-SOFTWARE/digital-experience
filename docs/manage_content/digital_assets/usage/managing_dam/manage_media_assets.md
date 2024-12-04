@@ -80,7 +80,7 @@ Play uploaded videos in DAM using the DAM binary URL or the Kaltura Player \(if 
 
         ![Playing a video using the Kaltura Player](../../../../images/dam_kaltura_player_for_synced.png)
 
-Information on the video synchronization statuses for uploaded videos, see [Upload rich media assets](upload_rich_media_assets.md).
+For more information on the video synchronization statuses for uploaded videos, see [Upload rich media assets](upload_rich_media_assets.md).
 
 ## Downloading a media asset source, version, or rendition
 
