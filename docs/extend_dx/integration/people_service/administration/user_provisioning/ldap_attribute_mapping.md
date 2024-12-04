@@ -4,7 +4,7 @@
 Attribute Mapping defines how corresponding data points between different sources and the people service are identified and translated. This ensures user information like names, emails, or IDs are accurately transferred while adhering to the people service's data structure.
 
 ## Configuring Attributes
-The attribute mapping settings are defined in the [LDAP configuration documentation](https://pages.git.cwp.pnp-hcl.com/stefan-hessler/common-dev-docs/b2e-services/people-service/deployment/configuration/index.html#ldap-configuration). Key configurations include:
+The attribute mapping settings are defined in the [LDAP configuration documentation](../../deployment/configuration/index.md#ldap-configuration). Key configurations include:
 
 - **ldap.attributeMapping**: Maps LDAP attributes to People Service user properties.
 - **CUSTOM_FIELDS_BASE**: Base custom fields for the user profile. This is a comma separated list of custom fields that are added to the user profile.
