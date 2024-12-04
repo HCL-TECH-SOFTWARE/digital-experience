@@ -136,7 +136,7 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
 ## Deleting a collection
 
-1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click on the **More** menu of a collection to access **Delete** option and click **Delete**.
+1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **More** menu of a collection to access **Delete** option and click **Delete**.
 2. A pop-up message displays to confirm your action. Once a collection is deleted, you can no longer retrieve it, including the media assets, renditions, and versions you have used as your web content.
 3. Click **Delete collection** to proceed with deleting the collection.
 
