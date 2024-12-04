@@ -1,0 +1,4 @@
+title: Additional configurations
+nav:
+    - OIDC configuration: oidc_configuration.md
+    - LDAP configuration: ldap_configuration.md

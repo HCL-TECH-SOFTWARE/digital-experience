@@ -1,0 +1,4 @@
+title: Monitoring and logging
+nav:
+  - index.md
+  - logging_sidecar_container.md
