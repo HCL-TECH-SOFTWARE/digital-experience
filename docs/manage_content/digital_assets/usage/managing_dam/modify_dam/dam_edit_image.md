@@ -33,7 +33,7 @@ Follow these steps to edit images using HCL Digital Experience 9.5 Digital Asset
 
         - **Copy link** - Copies the URL address of the digital media asset.
         - **Download** - Downloads a copy of the digital media asset, including versions and renditions. See [Generate Digital Asset Renditions](dam_generate_renditions_and_versions.md).
-        - **Move** - Moves the selected asset into another location
+        - **Move** - Moves the selected asset into another location.
         - **Copy** - Copy the selected asset into another location.
         - **Delete** - Deletes the selected digital media asset.
 
