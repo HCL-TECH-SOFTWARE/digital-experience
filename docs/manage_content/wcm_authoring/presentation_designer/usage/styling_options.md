@@ -147,7 +147,7 @@ The **Position** section allows users to precisely control the placement of elem
 The **Typography** section allows users to customize text-based elements, giving them full control over the font, size, and styling of text. This ensures readability and alignment with design standards.
 
 - **Paragraph format**: Defines the paragraph style to be used such as headings and body text.
-- **Font**: Defines the font family used for the text. If the blank option is selected, the text will follow the default browser font or the user's system font. This ensures that the text remains readable even if a specific font is not set. 
+- **Font**: Defines the font family used for the text.
 - **Font size**: Adjusts the size of the font.
     - **Supported Units**: `px`, `em`, `rem`, `%`  
     - **Sample Values**: `16px`, `1em`, `1.5rem`, `10%`, `large`
