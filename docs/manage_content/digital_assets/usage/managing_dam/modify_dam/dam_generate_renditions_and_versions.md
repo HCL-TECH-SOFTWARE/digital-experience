@@ -76,7 +76,7 @@ Follow these steps to work with versions of an image using HCL Digital Experienc
 
 You need to save original source rendition before getting cascade changes to other renditions option. Here's how:
 
-1.  From the HCL Digital Experience 9.5 DAM user interface, click on the **More** menu of a media asset to access **Edit** options. Select the Edit (pencil).
+1.  From the HCL Digital Experience 9.5 DAM user interface, click the **More** menu of a media asset to access **Edit** options. Select the Edit (pencil).
 
     ![Edit media asset](../../../../../images/dam_edit_media.png)
 
