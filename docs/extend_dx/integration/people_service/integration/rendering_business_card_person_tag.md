@@ -13,6 +13,7 @@ Hovering over an active (underlined) name using the semantic person tag displays
 The hover-over functionality is not automatically triggered if names are displayed outside the semantic person tag context. Practitioners must integrate web components into their presentation templates to enable this functionality.
 
 ![Person link and business card - Example](../user_guides/img/person-link-business-card.png)
+
 If HCL Portal cannot recognize the person's name, it will display the name as plain text, and the business card will not be available.
 
 !!! Notes
@@ -26,7 +27,7 @@ Clicking a person link will direct you to the user's profile in a new tab. This 
 
 ## Customizing the Business Card component
 
-- Unlike Person Cards, the current Business Card component does not support any customization, such as adding or removing fields. However, you can fully replace the existing system module or web component to your liking.
-For detailed instructions on how to replace and customize the Business Card component, refer to the [Customizing Business Card Component](./customization/customizing_business_card_component.md) page.
+Unlike Person Cards, the current Business Card component does not support any customization such as adding or removing fields. However, you can fully replace the existing system module or web component to your liking.
+For detailed instructions on how to replace and customize the Business Card component, refer to the [Customizing the Business Card component](./customization/customizing_business_card_component.md) page.
 
   

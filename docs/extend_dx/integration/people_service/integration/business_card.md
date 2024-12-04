@@ -1,8 +1,7 @@
 # Business Card component
 
-## Default web component
 
-The default Business Card web component in People Service replaces the existing Person Card component. It provides a concise and informative snapshot of a user's profile, displaying essential information such as the user’s image or avatar, name, role, organization, email address, and phone number. This digital business card serves as a quick reference to facilitate communication and connection within the organization.
+The default Business Card web component in People Service provides a concise and informative snapshot of a user's profile. It displays essential information such as the user’s image or avatar, name, role, organization, email address, and phone number. This digital business card replaces the existing Person Card component and serves as a quick reference to facilitate communication and connection within the organization. 
 
 Business Cards appear when users hover over names such as the author of a blog entry or a user’s comment on a post. It allows users to view other user profiles or contact another person directly.
 

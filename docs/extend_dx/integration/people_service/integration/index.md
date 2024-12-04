@@ -1,8 +1,8 @@
 # Integration
 
-HCL People Service provides a seamless and adaptable experience within HCL Digital Experience (DX) platforms. People Service enables practitioners and developers with integration points, hooks, components, or interfaces to incorporate these services into user-facing applications effectively.
+HCL People Service provides a seamless and adaptable experience within HCL Digital Experience (DX) platforms. People Service provides practitioners and developers with integration points, hooks, components, or interfaces to incorporate these services into user-facing applications effectively.
 
-This document provides an overview of how to integrate People Service into HCL DX. It outlines the entry points, approaches, and strategies for effectively incorporating the Business Card web component into existing DX environments and customization.
+This document provides an overview of how to integrate People Service into HCL DX. It outlines the entry points, approaches, and strategies required to effectively incorporate the Business Card web component into existing DX environments and customization.
 
 - **[Business Card component](./business_card.md)**<br>
 Learn about the Business Card web component.

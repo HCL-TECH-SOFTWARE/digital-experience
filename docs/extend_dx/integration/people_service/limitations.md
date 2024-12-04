@@ -26,7 +26,7 @@
 - User information created in People Service is not synchronized back to the LDAP server.
 - User directories or databases other than LDAP are not supported automatically. Custom development is required to integrate or consolidate results with other user directories.
 
-## Integration with OpenID Connect providers
+## Integration with OIDC providers
 
-- People Service requires an OIDC authentication flow or redirection to be completed to display content. The frequency of this flow can be controlled by the session duration configuration.
-- When connecting People Service directly with OpenID Connect providers, the Business Card web component requires a login flow to occur before it can display user information.
+- People Service requires an OpenID Connect (OIDC) authentication flow or redirection to be completed to display content. The frequency of this flow can be controlled by the session duration configuration.
+- When connecting People Service directly with OIDC providers, the Business Card web component requires a login flow to occur before it can display user information.

@@ -1,18 +1,12 @@
-# Rendering the business card in DX pages
+# Rendering the Business Card in DX pages
 
-Apart from rendering a Business Card using a person tag link, you may want to leverage it in other scenarios and use cases.
-
-For example, you may want to provide information about a person of interest on your page. This feature allows the end user to hover over a link and display that person's information in a popup.
-
-In this guide, you will learn how to enable this feature using a Script Application.
+Apart from rendering a Business Card using a person tag link, you may want to leverage it in other scenarios and use cases. For example, you may want to provide information about a person of interest on your page. This feature allows the end user to hover over a link and display that person's information in a popup. In this guide, you will learn how to enable this feature using a Script Application.
 
 ## Script Application
 
 Script Applications are web applications built with standard libraries, frameworks, and tools, running as a page component in HCL Digital Experience (DX).
 
-Using Script Applications, you can import existing applications and edit its HTML, JavaScript, and CSS. Its components are saved in the Web Content Manager.
-
-Refer to [The Script Application](https://help.hcl-software.com/digital-experience/8.5/script-portlet/script_portlet.html) page for more information.
+Using Script Applications, you can import existing applications and edit its HTML, JavaScript, and CSS. Its components are saved in the Web Content Manager. Refer to [The Script Application](https://help.hcl-software.com/digital-experience/8.5/script-portlet/script_portlet.html) page for more information.
 
 ## Examples
 
