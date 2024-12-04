@@ -28,19 +28,19 @@ You can use an [optional Ingress](../../../../deployment/install/container/helm_
      
 After applying the configuration, both HCL Digital Experience and HCL Volt MX Foundry can be accessed using the provided hostname.
 
-## Enable SSO for DX and MX
+## Enabling SSO for DX and MX
 
-OAuth must be configured in Websphere to authenticate with HCL DX
+Configure OAuth in Websphere to authenticate with HCL DX.
 
-Connect to the core server, e.g on Kubernetes:
+Connect to the core server (for example, on Kubernetes):
 
-```
+```sh
   kubectl exec -it hcl-dx-dev1-core-0 core -n hcl-dx-dev1 -- sh
 ```
 
-### Create service provider
+### Creating the service provider
 
-1. Create the OAuth provider by using the wsadmin utility
+1. Create the OAuth provider by using the wsadmin utility.
 
 ```
 cd /opt/HCL/AppServer/bin
@@ -51,10 +51,10 @@ AdminTask.createOAuthProvider('[-providerName <OAuthProviderName> -fileName <Pro
 
 Where:
 
-`<OAuthProviderName>` is the OAuth provider name (typically OAuthConfig)
-`<ProviderConfigFile>` is the full path to the OAuth provider configuration file. Please download and use this [DXProvider.xml](../configuration/DXProvider.xml) configuration file which includes Auto Authorize setup for the VoltMX client.
+- `<OAuthProviderName>` is the OAuth provider name (typically OAuthConfig).
+- `<ProviderConfigFile>` is the full path to the OAuth provider configuration file. Download and use the [DXProvider.xml](../configuration/DXProvider.xml) configuration file which includes Auto Authorize setup for the VoltMX client.
 
-Example:
+For example:
 
 ```
 AdminTask.createOAuthProvider('[-providerName OAuthConfig -fileName /opt/HCL/AppServer/properties/DXProvider.xml]')
@@ -62,47 +62,47 @@ AdminConfig.save()
 quit
 ```
 
-This should copy the configuration file to `<was_profile_root>/config/cells/<cell_name>/oauth20`
+This command copies the configuration file to `<was_profile_root>/config/cells/<cell_name>/oauth20`.
 
-Please confirm this file exists, e.g. `/opt/HCL/wp_profile/config/cells/dockerCell/oauth20/OAuthConfig.xml`
+Confirm the OAuth file exists. For example, `/opt/HCL/wp_profile/config/cells/dockerCell/oauth20/OAuthConfig.xml`.
 
-2. Restart the WebSphere Application Server
+2. Restart the WebSphere Application Server.
 
-```
+```sh
 cd /opt/HCL/AppServer/bin
 ./stopServer.sh WebSphere_Portal -profileName wp_profile -username <username> -password <password>
 ./startServer.sh WebSphere_Portal -profileName wp_profile
 ```
 
-### Configure TAI properties
+### Configuring TAI properties
 
-1. Open IBM Websephere console
-Click `Global security`, expand `Web and SIP security`, click `Trust association`
+1. In the IBM WebSphere console, go to **Security > Global security**. 
+2. In **Global security**, expand **Web and SIP security** and click **Trust association**.
 
 ![alt text](image.png)
 
-2. Click Interceptors
+3. Under **Additional Properties**, click **Interceptors**.
 
 ![alt text](image-1.png)
 
-3. Ensure that `com.ibm.ws.security.oauth20.tai.OAuthTAI` exists
+4. Make sure the `com.ibm.ws.security.oauth20.tai.OAuthTAI` exists.
 
 ![alt text](image-2.png)
 
-If not, click `New` enter the Interceptor class name `com.ibm.ws.security.oauth20.tai.OAuthTAI`, and click `OK`
+If not, click **New**. Enter the **Interceptor Class Name** `com.ibm.ws.security.oauth20.tai.OAuthTAI`, and click **OK**.
 
-4. Update the custom properties to match
+5. Update the custom properties to match the following:
 ```
 provider_1.name=OAuthConfig
 provider_1.filter=Authorization%=Bearer
 ```
 
-example:
+For example:
 ![alt text](image-3.png)
 
-### Register OAuth Client
+### Registering the OAuth client
 
-1. Copy default client definitions
+1. Copy the default client definitions using the following command:
 
 ```
 cp <app_server_root>/properties/base.clients.xml <was_profile_root>/config/cells/<cell_name>/oauth20oauth20/
@@ -113,7 +113,7 @@ For example:
 cp /opt/HCL/AppServer/properties/base.clients.xml /opt/HCL/wp_profile/config/cells/dockerCell/oauth20/
 ```
 
-2. Edit file to include Volt MX client
+2. Edit the file to include Volt MX client using the following commands:
 
 ```
 vi /opt/HCL/wp_profile/config/cells/dockerCell/oauth20/base.clients.xml
@@ -124,13 +124,13 @@ vi /opt/HCL/wp_profile/config/cells/dockerCell/oauth20/base.clients.xml
 ```
 Where:
 
-  `<OAUTH_PROVIDER_NAME>` is the name of the Provider specified above, typically OAuthConfig
+  - `<OAUTH_PROVIDER_NAME>` is the name of the provider specified (for example, OAuthConfig).
 
-  `<OAUTH_SECRET>` is a complex, random secret, e.g. a UUID. This will be required later.
+  - `<OAUTH_SECRET>` is a complex, random secret (for example, a UUID). This secret will be required later.
   
-  `<VOLT_MX_HOST>` is the URL of the VoltMX deployment. [Redirect URL](#add-a-new-app-in-foundry) should be available in the Foundry, e.g. voltmx-env.com
+  - `<VOLT_MX_HOST>` is the URL of the Volt MX deployment. [Redirect URL](#add-a-new-app-in-foundry) should be available in Volt MX Foundry (for example, voltmx-env.com).
 
-  `<BASE_64_ENCODED_DX_HOSTNAME>` is a base64(dx-hostname) encoded string
+  - `<BASE_64_ENCODED_DX_HOSTNAME>` is a base64 (dx-hostname) encoded string.
 
 For example:
 
@@ -139,16 +139,16 @@ For example:
 </client>
 ```
 
-### Install OAuth Application
+### Install the OAuth application
 
-1. Install the OAuth 2.0 service provider application
+1. Install the OAuth 2.0 service provider application using the following command:
 
 ```
 cd /opt/HCL/AppServer/bin
 ./wsadmin.sh -f ./installOAuth2Service.py install dockerNode WebSphere_Portal -profileName wp_profile -username <username> -password <password>
 ```
 
-2. Enable OAuth 2.0 TAI
+2. Enable OAuth 2.0 TAI using the following command:
 
 ```
 cd /opt/HCL/AppServer/bin
@@ -158,7 +158,7 @@ AdminConfig.save()
 quit
 ```
 
-3. Restart the WebSphere Application Server
+3. Restart the WebSphere Application Server using the following command:
 
 ```
 cd /opt/HCL/AppServer/bin
@@ -166,9 +166,9 @@ cd /opt/HCL/AppServer/bin
 ./startServer.sh WebSphere_Portal -profileName wp_profile
 ```
 
-### Add a new App in Foundry
+### Adding a new application in Volt MX Foundry
 
-1) Create a new App and configure the identity services as type OAuth.
+1. Create a new application and configure the identity services as type OAuth.
 
 ![alt text](image-4.png)
 
@@ -178,7 +178,10 @@ Token endpoint URL from DX -  https://dx-host/oauth2/endpoint/OAuthConfig/token
 
 Client Id and Secret will be the same which was provided during [Register OAuth Client](#register-oauth-client) in `base.clients.xml`
 
-2) Click on Test login should show the OAuth Authorization form as below. Clicking on Yes should give success response. Click on Save
+2. Click **Test login**. 
+           The OAuth authorization form appears.
+3. When asked if you want to allow client Volt MX to access your data, click **Yes**. 
+4. Click **Save**.
 
 ![alt text](image-6.png)
 
@@ -187,7 +190,7 @@ Client Id and Secret will be the same which was provided during [Register OAuth 
 ![alt text](image-5.png)
 
 
-### Add SSO in Iris
+### Adding SSO in Iris
 
 1) Create a login page in Iris and add the below code in form init. Ensure the Iris is connected to the Foundry app which contains the above SSO configurations. 
 

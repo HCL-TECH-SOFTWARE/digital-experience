@@ -4,7 +4,7 @@ This section provides an overview of the possibilities offered by the integratio
 
 -   **[Integrating Volt MX data or applications into HCL DX](./integrate_voltmx_into_dx.md)**
 -   **[Using HCL DX APIs in HCL Volt MX Foundry](./dx_apis_in_foundry.md)**
--   **[Deploy Volt MX portlet into HCL DX](./mx_portlet_in_dx.md)**
+-   **[Deploying Volt MX portlet into HCL DX](./mx_portlet_in_dx.md)**
 
 
 ## HCLSoftware U learning materials
