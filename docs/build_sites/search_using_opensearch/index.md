@@ -17,10 +17,10 @@ This section provides a high-level overview of the architecture and the steps to
 This section provides the steps on how to access the HCL End-user Search with OpenSearch portlet.
 
 - **[Usage of HCL End-user Search with OpenSearch](../search_using_opensearch/usage/index.md)**<br>
-This section provides guide on how to generate results in the HCL Generate results using the HCL End-user Search with OpenSearch.
+This section provides a guide on generating results using the HCL End-user Search with OpenSearch.
 
 - **[End-user Search with OpenSearch limitations](../search_using_opensearch/limitations/index.md)**<br>
 This section lists the current limitations when using HCL End-user Search with OpenSearch.
 
 - **[Utilizing the Web Components used in HCL End-user Search with OpenSearch](../search_using_opensearch/component/index.md)**<br>
-This section provides guide on how to use the Web Components that HCL End-user Search provides to create your own custom End-user Search page.
+This section provides a guide on using the Web Components from HCL End-user Search to create your own custom End-user Search page.

@@ -1,6 +1,6 @@
 # Using HCL End-user Search with OpenSearch
 
-Generate search results from different content sources (from WCM or Portal) using HCL End-user Search with OpenSearch. Users can open the result items from the result list. Users can also bookmark the search by copy/paste of the URL after a search is done.
+Generate search results from different content sources (from WCM or Portal) using HCL End-user Search with OpenSearch. Users can open the result items from the result list. Users can also bookmark the search by copying and pasting the URL after a search is done.
 
 # Generating a search results set
 
@@ -8,7 +8,7 @@ This section details how to generate a search results set in HCL End-user Search
 
 ## Prerequisites
 
-- Beginning with HCL Digital Experience 9.5 release update CF224, End-user Search with OpenSearch is available to be enabled. For instructions on installing End-user Search with OpenSearch manually on supported environments, see the [Installing HCL Digital Experience 9.5 End-user Search with OpenSearch](../installation/index.md) topic.
+- Starting with HCL Digital Experience 9.5 CF224, you can enable End-user Search with OpenSearch. For instructions on installing End-user Search with OpenSearch manually on supported environments, see the [Installing HCL Digital Experience 9.5 End-user Search with OpenSearch](../installation/index.md) topic.
 
 - To access the HCL End-user Search UI, see the [Accessing HCL Digital Experience 9.5 End-user Search with OpenSearch](../access/index.md) topic.
 
@@ -40,7 +40,7 @@ A search results set is a list of items that matches the search term that the en
 
     ![](../../../assets/HCL_Search__05_Input_Type.png "Click on Select an attribute and choose one option")
 
-7.  Click on the blue **Search** button to start another search.
+7.  Click the blue **Search** button to start another search.
 
     ![](../../../assets/HCL_Search_06_Button_Trigger.png "Click on Search button to start another search")
 
@@ -48,11 +48,11 @@ A search results set is a list of items that matches the search term that the en
 
     ![](../../../assets/HCL_Search_07_Results_Set_Filtered.png "View the filtered down search results and note the count of results found")
 
-9.  Go back to the **Search** input box and type a new term you need to search e.g "interiors" and click the blue **Search** button again to start the search. View the new results list. Above the results, you can find a description of the total count of results found for the search term e.g. "3 results for **interiors**".
+9.  Go back to the **Search** input box and type a new search term you need to search e.g "interiors" and click the blue **Search** button again to start the search. View the new results list. Above the results, you can find a description of the total count of results found for the search term e.g. "3 results for **interiors**"
 
     ![](../../../assets/HCL_Search_08_Input_Query_Change.png "Change the search term in the Search input box")
 
-9.  Click on the blue link title of one of the result items to open that item in a new tab.
+10.  Click the blue link title of one of the result items to open that item in a new tab.
 
     ![](../../../assets/HCL_Search_09_Open_Result_Item.png "Click on one of the result items to open it in a new tab")
 

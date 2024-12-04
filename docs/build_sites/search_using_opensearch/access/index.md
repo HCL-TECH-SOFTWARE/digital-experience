@@ -31,13 +31,13 @@ The HCL End-user Search UI has the following components:
 ![](../../../assets/HCL_Search_General_Components.png)
 
 -   **Main Header** - This section contains the title of the page.
--   **Search Input** - This section displays the fields the user can interact with to change the result set. There are 3 fields: the query textfield, the search scope select with dropdown, the search attribute select with dropdown, and lastly the button to trigger the search.
+-   **Search Input** - This section displays the fields the user can interact with to change the result set. There are three fields: the query text field, the search scope select dropdown, the search attribute select dropdown, and the button to trigger the search.
 -   **Search Output** - This section displays the search results. Each result in the list has its own title, description, and detailed context when available depending on your content source. The title also functions as a link you can click to open the result item in a new browser tab.
--   **Pagination** - This section displays the pages you can navigate in the search results.
+-   **Pagination** - This section lists the pages available for navigation within the search results.
 
 ## Other ways of Accessing the HCL End-user Search UI
 
-There are 2 other ways you can get redirected to the HCL End-user Search UI. After getting redirected, you can proceed to use the search results or start another search. See the [Usage of HCL End-user Search with OpenSearch](../usage/index.md) topic.
+You can also access the HCL End-user Search UI through two additional methods. Once redirected, you can utilize the search results or initiate a new search. For more information, refer to the [Usage of HCL End-user Search with OpenSearch](../usage/index.md) topic.
 
 ### Via Woodburn landing page search bar
 

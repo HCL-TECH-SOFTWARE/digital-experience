@@ -202,8 +202,8 @@ Suppose you want to change the background color of the dx-search-center-layout c
 
 ```css
   dx-search-center-layout::part(main) {
-  background-color: #f0f0f0;
-}
+    background-color: #f0f0f0;
+  }
 ```
 
 ## Broadcast Channel API and FCC Communication
