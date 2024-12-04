@@ -46,7 +46,7 @@ You can view, compare, download, and set as current any of image versions availa
 
 Follow these steps to work with versions of an image using HCL Digital Experience 9.5 DAM.
 
-1.  From the HCL Digital Experience 9.5 DAM user interface, click on the **More** menu of a media asset to access **Edit** options. Select Edit \(pencil\) icon.
+1.  From the HCL Digital Experience 9.5 DAM user interface, click the **More** menu of a media asset to access **Edit** options. Select Edit \(pencil\) icon.
 
     ![Edit media asset](../../../../../images/dam_edit_media.png)
 
