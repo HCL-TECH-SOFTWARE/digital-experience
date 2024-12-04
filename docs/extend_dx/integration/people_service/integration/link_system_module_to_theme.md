@@ -10,7 +10,7 @@ This guide provides step-by-step instructions on enabling People Service resourc
 
 To enable People Service resources on a theme in HCL Digital Experience (DX), follow these steps:
 
- 1. In the Practitioner Studio Home Page, go to **Themes**.
+ 1. In the Practitioner Studio homepage, go to **Themes**.
         ![System modules - Theme option from practitioner](./img/system-module-themes-page.png)
 
  2. Click the **Edit theme** pencil icon on the theme you want to use.

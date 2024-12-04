@@ -8,7 +8,7 @@ You can add a link to your pages that takes you to your profile. There are many 
 
 To create a link to your **My Profile** page, follow these steps:
 
-1. In the Practitioner Studio Home Page, go to **Applications menu** > **Administration** > **Site Management**.
+1. In the Practitioner Studio homepage, go to **Applications menu** > **Administration** > **Site Management**.
     ![Administration Page](./img/my-profile-administration-page.png)
     
 2. Click **Content Root > Woodburn Studio**.

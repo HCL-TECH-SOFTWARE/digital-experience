@@ -12,7 +12,7 @@ Learn how to use person tags to render a user's Business Card.
 Learn how to render Business Cards in DX pages.
 - **[Linking system modules to a theme](./link_system_module_to_theme.md)**<br>
 Learn how to link People Service system modules in HCL DX.
-- **[Creating a My Profile link](./creating_my_profile_link.md)**<br>
+- **[Creating My Profile links](./creating_my_profile_link.md)**<br>
 Learn how to create a My Profile link.
 - **[Customizing your content](./customization/index.md)**<br>
 Learn about the customization options in People Service.
