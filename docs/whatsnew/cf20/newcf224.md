@@ -95,10 +95,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
-### Digital Asset Management - Updated UI
+### DAM - Updated UI
 
 === "Containers"
-    The Digital Asset Management (DAM) user interface (UI) is now using a new theme to provide an improved visual experience for managing the digital assets. Note that this update is limited to the UI theme only; no changes are made to DAM functionality at this time.
+    The Digital Asset Management (DAM) user interface (UI) is now using a new theme to provide an improved visual experience for managing the digital assets. Note that this update is limited to the UI theme only; no changes are made to DAM functionality at this time. For more information, see [Digital Asset Management](../../manage_content/digital_assets/index.md).
 
 ### DX Search - New UI 
 
