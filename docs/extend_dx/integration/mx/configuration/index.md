@@ -2,9 +2,9 @@
 
 ## Configuring Ingress for HCL Digital Experience and HCL Volt MX Foundry
 
-As a pre-requisite, DX needs to be installed already. Use the below link to install DX and configure ingress for DX
+As a pre-requisite, HCL DX needs to be installed already. Use the below link to install HCL DX and configure ingress
 
-[Install DX](https://opensource.hcltechsw.com/digital-experience/CF220/deployment/)
+[Install HCL DX](../../../../deployment/index.md#deploying-dx)
 
 You can use an [optional Ingress](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md) with HCL Digital Experience. While an Ingress is not required to run HCL Digital Experience, it can be configured to be reused by HCL Volt MX Foundry to handle the routing for both products and make them available on the same host.
 
@@ -32,9 +32,9 @@ You can use an [optional Ingress](../../../../deployment/install/container/helm_
 
 
 ### Verification
-Please verify DX connect is up and running. To verify in Local use [https://localhost:10202/hcl/dxconnect/processHandler/version](https://localhost:10202/hcl/dxconnect/processHandler/version) and if the environment is hosted, then access via [https://host-name/hcl/dxconnect/processHandler/version](https://host-name/hcl/dxconnect/processHandler/version) by replacing the host name in the url.
+When testing with a local deployment that does not include haproxy, access DXConnect by specifying the container port with a URL of the form [https://localhost:10202/hcl/dxconnect/processHandler/version](https://localhost:10202/hcl/dxconnect/processHandler/version). If the target environment includes haproxy, then access via [https://host-name/hcl/dxconnect/processHandler/version](https://host-name/hcl/dxconnect/processHandler/version) and replace the host-name part as appropriate.
 
-Once all services and pods are up and running, the MX Foundry can be accessed as below (Update host name and protocol accordingly):-
+Once all services and pods are up and running, the MX Foundry admin console can be accessed as below after updating host-name accordingly:-
 
 [https://host-name/mfconsole](https://host-name/mfconsole) 
 

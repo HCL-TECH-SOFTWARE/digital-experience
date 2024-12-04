@@ -1,5 +1,5 @@
 
-# Integrating Volt MX data or applications into HCL DX using DDC
+# Integrating Volt MX data or applications into HCL DX
 
 ## Showing HCL Volt MX Foundry data on HCL DX pages 
 
