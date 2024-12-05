@@ -2,6 +2,9 @@
 
 The End-user Search with OpenSearch is intended to replace the existing Search with a new user interface and a new backend service using OpenSearch to provide a seamless search experience.
 
+!!! important
+    First, it is required to install Search based on Opensearch. For more information on how to install Search based on Opensearch, refer to  [Installing search based on OpenSearch](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md).
+
 End-user Search with OpenSearch is for, but not limited to, the following sample use cases:
 
 - using the new Search page right out of the box in DX once it is enabled

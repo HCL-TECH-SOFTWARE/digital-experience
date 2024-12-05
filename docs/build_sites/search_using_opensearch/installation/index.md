@@ -8,6 +8,9 @@ HCL End-user Search using OpenSearch is an instance of a search integration port
 
 For container-based Helm deployment, the deployment values.yaml can also be updated so that the HCL End-user Search with OpenSearch will be enabled by default automatically and there is no further need to use ConfigEngine task to enable.
 
+!!! important
+    Before proceeding with the steps below, it is required to install Search based on Opensearch. For more information on how to install Search based on Opensearch, refer to  [Installing search based on OpenSearch](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md).
+
 ## Enabling and disabling HCL End-user Search using OpenSearch
 
 This section describes how to enable and disable HCL End-user Search using OpenSearch manually.
@@ -16,7 +19,6 @@ Beginning with HCL Digital Experience 9.5 CF224, End-user Search with OpenSearch
 
 !!! important
     Before manually enabling HCL End-user Search using OpenSearch, it is required to enable Practitioner Studio. For more information on how to enable Practitioner Studio, refer to [How to enable Practitioner Studio](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md).
-
 
 ### Enabling HCL End-user Search using OpenSearch via ConfigEngine task
 
