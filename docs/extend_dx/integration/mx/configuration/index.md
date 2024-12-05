@@ -195,19 +195,23 @@ For more information on foundry, please refer to this [link](https://opensource.
 
 1. Create a login page in Iris and add the below code in form init. Ensure the Iris is connected to the Foundry app which contains the above SSO configurations. For more information on how to create an App refer to [Volt MX Iris setup and configuration](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Iris/voltmxIrisFundamentals.html)
 
-```
-    if(!VMXFoundry) return;
-	var voltmxIdent = VMXFoundry.getIdentityService("DXAuth");
-    var options = {};
-	var loginOptions = {};
-   	loginOptions.isSSOEnabled = true;
-	options.loginOptions = loginOptions;
-    voltmxIdent.login(options, function(res) {
-            alert("SSO user store success" + JSON.stringify(res));
-      var ntf = new voltmx.mvc.Navigation("frmHome");
-    ntf.navigate();
-        },
+    ```
+      if(!VMXFoundry) return;
+      var voltmxIdent = VMXFoundry.getIdentityService("DXAuth");
+      var options = {};
+      var loginOptions = {};
+      loginOptions.isSSOEnabled = true;
+      options.loginOptions = loginOptions;
+      voltmxIdent.login(options, function(res) {
+        alert("SSO user store success" + JSON.stringify(res));
+        var ntf = new voltmx.mvc.Navigation("frmHome");
+        ntf.navigate();
+      },
         function(res) {
-            alert("SSO user store failed" + JSON.stringify(res));
-        });
-```
+          alert("SSO user store failed" + JSON.stringify(res));
+        }
+      );
+    ```
+
+2. Once the Iris changes are completed and app is deployed on HCL DX page, when the user access the web page, a window opens up to  allow client Volt MX to access the data. Click on **Yes** to allow the portlet to login for single sign-on. Refer to this [link](../example/mx_portlet_in_dx.md) for more details.
+
