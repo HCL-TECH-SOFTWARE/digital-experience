@@ -86,7 +86,7 @@ For more information on the video synchronization statuses for uploaded videos, 
 
 Use the HCL Digital Experience 9.5 DAM editor to download a media asset source, version, or rendition:
 
-1.  From the HCL Digital Experience 9.5 DAM user interface, hover over a media asset to access and click the Overflow menu on the far right \(three vertical dots icon\). Then, select **Download**.
+1.  From the HCL Digital Experience 9.5 DAM user interface, click the Overflow menu (three horizontal dots icon) of a media asset. Click **Download**.
 
     ![Digital asset menu options](../../../../images/dam_05_edit_media.png)
 

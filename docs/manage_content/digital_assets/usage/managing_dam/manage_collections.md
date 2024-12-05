@@ -52,7 +52,7 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
         - **Properties** - Allows you to update the Collection name and description.
         - **Access Control** - Allows you to set who can access the media assets in the Collection.
 
-    - **Delete Collection** - Deletes the selected Collection.
+    - **Delete** - Deletes the selected Collection.
 
 2. Select the **Filter** option to filter media asset results by **Favorites**, **Asset types**, or **Asset size**.
 
@@ -107,7 +107,7 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
 ## Modify information metadata of a media asset collection
 
-1. From the HCL Digital Experience 9.5 DAM user interface, hover over a collection and click the **Properties** icon \(small i\).
+1. From the HCL Digital Experience 9.5 DAM user interface, click the Overflow menu (three horizontal dots icon) of a collection and click the **Properties** icon \(small i\).
 
     ![DAM Collection Properties](../../../../images/dam_collection_information.png)
 
@@ -118,7 +118,7 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
 **Video**: [Configuring user access permissions to Digital Asset Management assets](https://youtu.be/vNJFcQViNVo)
 
-1. From the HCL Digital Experience 9.5 Digital Asset Management interface, hover over a collection and click **Properties** \(small i\).
+1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the Overflow menu (three horizontal dots icon) of a collection and click **Properties** \(small i\).
 2. Click **Access**.
 3. Assign levels for other users to access media items stored within the collection by clicking **Add user**.
 
