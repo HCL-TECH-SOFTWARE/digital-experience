@@ -45,7 +45,7 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
     Following options are displayed in Collections interface:
 
     - **Create Collection** - Create a new collection or a new nested collection (when used inside an existing collection)
-    - **Properties** - Opens the Properties panel and shows Access Control
+    - **Properties** - Opens the Properties panel and shows Access Control.
 
         ![Properties Panel](../../../../images/dam_collections_interface_view_information.png)
 
