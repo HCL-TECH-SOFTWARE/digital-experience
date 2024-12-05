@@ -52,7 +52,7 @@ Before you can use AI-assisted features for sentiment analysis of content, keywo
 
 3. Click the sentiment result icon to see more details about the result.
 
-    ![](../../../../../assets/HCL_Authoring_Portlet_SentimentAnalysis_SentimentPopover.png){ width="600" }
+    ![](../../../../../assets/HCL_Authoring_Portlet_SentimentAnalysis_SentimentPopover.png){ width="300" }
 
 ## Using AI-assisted translation of content items
 
