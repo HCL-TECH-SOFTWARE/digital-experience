@@ -100,7 +100,7 @@ Use the HCL Digital Experience 9.5 DAM editor to download a media asset source, 
 
 Use the HCL Digital Experience 9.5 DAM editor to delete a media asset, including its renditions:
 
-1.  From the HCL Digital Experience 9.5 DAM user interface, hover over a media asset to access and click the Overflow menu on the far right (three horizontal dots icon). Then, select **Delete**.
+1.  From the HCL Digital Experience 9.5 DAM user interface, click the Overflow menu (three horizontal dots icon) of a media asset. Click **Delete**.
 2.  A pop-up will appear for you to select your Delete action. If the selected media assets will not affect any references, click **Check for references and delete** to complete action.
 
     ![Check references and delete media asset](../../../../images/Check_for_references_and_delete_HCL_DAM.png)
