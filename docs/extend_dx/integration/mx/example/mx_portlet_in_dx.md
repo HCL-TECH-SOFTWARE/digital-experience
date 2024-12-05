@@ -17,7 +17,8 @@ The following example provides the steps to generate the Volt MX portlet through
 
 This creates a Volt MX portlet with the project name and deploys the same portlet in HCL DX.
 
-For detailed steps refer to this [link](TBD) 
+<!-- TODO: The link for this needs to be updated on the MX team publishes the doc-->
+For detailed steps refer to this [link](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Iris/iris_tutorials/Content/Introduction.html) 
 
 
 ## Adding the Volt MX portlet to HCL DX and verifying the portlet

@@ -189,6 +189,7 @@ cd /opt/HCL/AppServer/bin
 
   ![alt text](image-5.png)
 
+For more information on foundry, please refer to this [link](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmxFoundryFundamentals.html)
 
 ### Adding SSO in Iris
 
