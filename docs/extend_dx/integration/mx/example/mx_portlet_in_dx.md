@@ -6,20 +6,34 @@ The following example provides the steps to generate the Volt MX portlet through
 ## Creating a Volt MX portlet and deploying in HCL DX
 
 1. Create a new project in Iris. For more information, refer to [Introducing Volt MX](https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/index.html){target="_blank"}.
+
 2. Configure the HCL DX host details in Iris.
-![alt text](image1.png)
+
+    ![alt text](image1.png)
+
 3. Once the App is created in Iris, choose build and publish web option from build menu.
-![alt text](image2.png)
-This creates a Volt MX portlet with the project name and deploy the same portlet in HCL DX.
+    
+    ![alt text](image2.png)
+
+This creates a Volt MX portlet with the project name and deploys the same portlet in HCL DX.
+
+For detailed steps refer to this [link](TBD) 
 
 
 ## Adding the Volt MX portlet to HCL DX and verifying the portlet
 1. Log in to HCL DX.
-2. Go to the site menu and turn on Edit Mode.
+
+2. Go to the site menu and turn on **Edit Mode**.
+
 3. Navigate to the page where you want to add the Volt MX portlet.
+
 4. Click the**Add page components and application** icon.
-![alt text](image3.png)
-4. Search for the deployed Volt MX portlet in the `Applications` tab and add it to the page.
-![alt text](image4.png)
-6. Turn off Edit Mode and verify if the portlet is properly rendered. If the app contains a login page but you prefer using single sign-on (SSO) with HCL DX credentials, you can configure SSO using the steps in [Enabling SSO for DX and MX](../configuration/index.md#enable-sso-for-dx-and-mx).
+
+    ![alt text](image3.png)
+
+4. Search for the deployed Volt MX portlet in  the **search bar** on the **Applications** tab and click on **add** symbol on hover over the portlet to add it to the page.
+
+    ![alt text](image4.png)
+
+5. Turn off **Edit Mode** and verify if the portlet is properly rendered. If the app contains a login page but you prefer using single sign-on (SSO) with HCL DX credentials, you can configure SSO using the steps in [Enabling SSO between HCL DX and Volt MX](../configuration/index.md#enabling-sso-between-hcl-dx-and-volt-mx).
 

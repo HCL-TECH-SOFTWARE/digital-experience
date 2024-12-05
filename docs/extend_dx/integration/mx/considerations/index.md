@@ -1,5 +1,7 @@
 # Considerations and limitations
 
+This topic lists down the things to consider when integrating HCL Volt MX Foundry with HCL Digital Experience (DX).
+
 ## Volt MX on Cloud
 
 Make sure to configure [CORS](https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Foundry/vmf_integrationservice_admin_console_userguide/Content/Runtime_Configuration.html#cors-configuration){target="_blank"} while setting up [single sign-on](../configuration/index.md#enable-sso-for-dx-and-mx) (SSO).
