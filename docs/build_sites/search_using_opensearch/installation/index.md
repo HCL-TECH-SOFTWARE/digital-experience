@@ -1,10 +1,10 @@
 # Installing and Deploying HCL End-user Search using OpenSearch
 
-This document contains instructions on how to install and deploy the HCL End-user Search using OpenSearch application manually. Note that beginning with HCL Digital Experience 9.5 CF224, End-user Search with OpenSearch is available to be enabled.
+This document contains instructions on how to install and deploy the HCL End-user Search using OpenSearch application manually. Note that beginning with HCL Digital Experience 9.5 CF224, End-user Search with OpenSearch is available to be enabled for container-based deployments.
 
 ## Packaging, installing, and deploying design
 
-HCL End-user Search using OpenSearch is an instance of a search integration portlet configured to point to where the static assets (javascript, stylesheets, and html markup) can be loaded from. It can be enabled and disabled by using ConfigEngine tasks for both traditional, hybrid, and container-based deployments. The enable task would deploy, configure the portlet, create the http outbound proxy policy so DX can fetch the assets, and then deploy the page.
+HCL End-user Search using OpenSearch is an instance of a search integration portlet configured to point to where the static assets (javascript, stylesheets, and html markup) can be loaded from. It can be enabled and disabled by using ConfigEngine tasks for container-based deployments. The enable task would deploy, configure the portlet, create the http outbound proxy policy so DX can fetch the assets, and then deploy the page.
 
 For container-based Helm deployment, the deployment values.yaml can also be updated so that the HCL End-user Search with OpenSearch will be enabled by default automatically and there is no further need to use ConfigEngine task to enable.
 
@@ -52,7 +52,7 @@ configuration:
       inputRedirectVersion: "v2"
 ```
 
-### Disabling HCL End-user Search using OpenSearch for traditional deployment
+### Disabling HCL End-user Search using OpenSearch via Config Engine task
 
 To disable HCL End-user Search using OpenSearch, run the **disable-search-v2** config task.
 
