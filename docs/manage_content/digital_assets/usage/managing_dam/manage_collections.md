@@ -147,7 +147,7 @@ Refer to the following steps if you want to move a collection from one location 
 !!! note 
     If a collection is moved to another collection, permissions and access restrictions of the collection and its contents align with the permissions of the destination location. If the collection is moved to the root level, the permissions align with the source permissions. 
 
-1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **More** menu of a collection to access **Move** option and click **Move collection**.
+1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **More** menu of a collection and click **Move**.
 
     ![Move collection option](../../../../images/Move_collection_option.png)
 
