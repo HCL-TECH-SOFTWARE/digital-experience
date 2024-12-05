@@ -12,7 +12,7 @@ Renditions of the assets are system-generated for desktop, tablet, and smartphon
 
 Follow these steps to access renditions of a media asset using HCL Digital Experience 9.5 DAM.
 
-1.  From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **More** menu of a media asset to access **Edit** options. Select the Edit \(pencil\) icon.
+1.  From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **More** menu of a media asset and click **Edit** \(pencil icon\).
 
     ![Edit media asset](../../../../../images/dam_edit_media.png)
 
