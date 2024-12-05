@@ -1,8 +1,3 @@
-!!! Abstract "Status"
-    **In progress**
-
-    - [DXQ-39456](https://jira.cwp.pnp-hcl.com/browse/DXQ-39456): Create style customization doc
-
 # Customization
 
 People Service allows following customization options

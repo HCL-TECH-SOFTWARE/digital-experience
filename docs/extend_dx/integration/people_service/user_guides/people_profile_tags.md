@@ -5,11 +5,6 @@
 </style>
 ---
 
-!!! Abstract "Status"
-    **In progress**
-
-    - [DXQ-39722](https://jira.cwp.pnp-hcl.com/browse/DXQ-39722): Revisit and refine user guides docs
-
 # Managing profile tags
 
 Profile tagging is a method of labeling user profiles based on their traits, actions, or interests. This process enhances personalized experiences, improves search and recommendation systems, and organizes user profiles more effectively. It is a practical way to categorize and manage information, ensuring better user interactions and efficient data handling.

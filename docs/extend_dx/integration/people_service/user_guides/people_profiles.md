@@ -1,12 +1,4 @@
-!!! Abstract "Status"
-    **In progress**
-
-    - [DXQ-39722](https://jira.cwp.pnp-hcl.com/browse/DXQ-39722): Revisit and refine user guides docs
-
 # Working with people profiles
-
-!!! Notes
-    Write doc about how to work with and relate to user profiles. This includes much of the information in here, likely in more catered order. I.e., what the profile shows, how to find and edit my own profile (w/ different sections, validation and image), how to work with tags.
 
 User profiles are a central entity in the people service, providing a way to manage and access information about individuals, including their personal information, skills, and more. This guide will help you understand what a profile shows, how to find and edit your own profile, and how to work with tags.
 

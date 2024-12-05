@@ -1,8 +1,3 @@
-!!! Abstract "Status"
-    **In progress**
-
-    - [DXQ-39455](https://jira.cwp.pnp-hcl.com/browse/DXQ-39455): Add/ Update Business card practitioner, admin docs
-
 # NLS and localization customization
 
 This document provides guidance on customizing our service's National Language Support (NLS) features. This service enables dynamic management of language translations and localization settings through environment configurations and JSON files.
