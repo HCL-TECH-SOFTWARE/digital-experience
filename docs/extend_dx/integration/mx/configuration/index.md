@@ -38,7 +38,9 @@ Configure OAuth in Websphere to authenticate with HCL DX. Connect to the HCL DX 
   kubectl exec -it hcl-dx-dev1-core-0 core -n hcl-dx-dev1 -- sh
 ```
 
-### Creating the service provider
+### Creating the OAuth service provider
+
+Follow the steps to create the OAuth service provider.
 
 1. Create the OAuth provider by using the wsadmin utility.
 
@@ -68,15 +70,18 @@ Configure OAuth in Websphere to authenticate with HCL DX. Connect to the HCL DX 
 
 2. Restart the WebSphere Application Server using the following command:
 
-```sh
-cd /opt/HCL/AppServer/bin
-./stopServer.sh WebSphere_Portal -profileName wp_profile -username <username> -password <password>
-./startServer.sh WebSphere_Portal -profileName wp_profile
-```
+  ```sh
+  cd /opt/HCL/AppServer/bin
+  ./stopServer.sh WebSphere_Portal -profileName wp_profile -username <username> -password <password>
+  ./startServer.sh WebSphere_Portal -profileName wp_profile
+  ```
 
 ### Configuring TAI properties
 
+Follow the steps to configure the Trust Association Interceptors (TAI) properties.
+
 1. In the IBM WebSphere console, go to **Security > Global security**. 
+
 2. In **Global security**, expand **Web and SIP security** and click **Trust association**.
 
     ![alt text](image.png)
@@ -116,7 +121,7 @@ cd /opt/HCL/AppServer/bin
     cp /opt/HCL/AppServer/properties/base.clients.xml /opt/HCL/wp_profile/config/cells/dockerCell/oauth20/
     ```
 
-2. Edit the file to include Volt MX client using the following commands:
+2. Edit `base.clients.xml` file to include Volt MX client using the following commands:
 
     ```sh
     vi /opt/HCL/wp_profile/config/cells/dockerCell/oauth20/base.clients.xml
@@ -172,7 +177,7 @@ cd /opt/HCL/AppServer/bin
 
 ### Adding a new application in Volt MX Foundry
 
-1. Create a new application and configure the identity services as type OAuth.
+1. Create a new application and configure the identity services as type OAuth. Refer [How to add applications in foundry](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/Adding_Applications.html)
 
     ![alt text](image-4.png)
 
@@ -188,9 +193,9 @@ cd /opt/HCL/AppServer/bin
 
     ![alt text](image-6.png)
 
-4. Click **Save** to finish the Identify service configurations.
+4. Click **Save** to finish the identity service configurations.
 
-5. To Enable SSO for the identity service, Navigate to the service, click on the more menu icon, and select **Enable SSO**.
+5. To Enable SSO for the identity service, Navigate to the service, click on the kebab menu icon (three dots menu), and select **Enable SSO**.
 
   ![alt text](image-5.png)
 
@@ -218,5 +223,5 @@ For more information on foundry, please refer to this [link](https://opensource.
       );
     ```
 
-2. Once the Iris changes are completed and app is deployed on HCL DX page, when the user access the web page, a window opens up to  allow client Volt MX to access the data. Click on **Yes** to allow the portlet to login for single sign-on. Refer to this [link](../example/mx_portlet_in_dx.md) for more details.
+2. Once the Iris changes are completed and app is deployed on HCL DX page, when the user access the web page, a window opens up to  allow client Volt MX to access the data. Click on **Yes** to allow the portlet to login for single sign-on. Refer to  [Deploying Volt MX portlet into HCL DX](../example/mx_portlet_in_dx.md) for more details.
 
