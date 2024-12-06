@@ -3,28 +3,53 @@
         display: block;
     }
 </style>
----
 
-# Managing profile tags
+# Profile tags
 
-Profile tagging is a method of labeling user profiles based on their traits, actions, or interests. This process enhances personalized experiences, improves search and recommendation systems, and organizes user profiles more effectively. It is a practical way to categorize and manage information, ensuring better user interactions and efficient data handling.
+Profile tags are used to label user profiles based on a person's traits, actions, or interests. These tags are designed to be user-friendly, efficient, and consistent, and can be added by users and administrators.  
 
-Tags can be added to profiles by users or administrators. They are designed to be user-friendly, efficient, and consistent. This guide provides an overview of the profile tagging system, including how to add, endorse, and remove tags, as well as the enforcement rules that ensure tag consistency.
+Profile tagging enhances personalized experiences, improves search and recommendation systems, and organizes user profiles more effectively. It is a practical way of categorizing and managing information, ensuring better user interactions and efficient data handling.
 
-## Anatonomy of a Tag
+In this page, you will learn about the profile tagging system and the rules that ensure tag consistency.
 
-A tag is a single word or phrase that describes a trait, action, or interest of a user. Tags are used to categorize and organize profiles, making it easier to search, recommend, and interact with users. Each tag has the following components:
+1. [Profile tag components](#profile-tag-components)
+2. [Profile tag rules](#profile-tag-rules)
+3. [Adding profile tags](#adding-profile-tags)
+4. [Endorsing profile tags](#endorsing-profile-tags)
+5. [Removing profile tags](#removing-profile-tags)
+6. [Viewing profile tag endorsers](#viewing-profile-tag-endorsers)
 
-* **Name**: The name of the tag, which is a single word or phrase.
-* **Endorsement Count**: The number of users who have endorsed the tag.
-* **Endorsers**: The users who have endorsed the tag.
-* **Actions**: The actions that can be performed on the tag, such as endorsing, unendorsing, or removing the tag.
 
-This Tag is endorsable (outlined endorse icon) and can be deleted (delete icon).
+## Profile tag components
+
+A profile tag is a single word or phrase that describes a trait, action, or interest of a user. Tags are used to categorize and organize profiles, making it easier to search, recommend, and interact with users. Each tag has the following components:
+
+- **Name**: A single word or phrase used to name the tag.
+- **Endorsement Count**: The number of users who have endorsed the tag.
+- **Endorsers**: The users who have endorsed the tag.
+- **Actions**: Actions that can be performed on the tag, such as endorsing, unendorsing, or removing the tag.
+
+Profile tags are located on the **Tags** section at bottom-right corner of a user profile. Profile tags are automatically sorted by endorsement count first, then alphabetically.
+    ![Add/Edit tags button](./img/xxx/tags-section.png){class="list"}
+
+See the following profile tag examples:
+
+- This profile tag is endorsable and can be deleted.
     ![Add/Edit tags button](./img/xxx/tags-anatonomy-endorsable.png){class="list"}
 
-This Tag was aleready endorsed by the current user and is unendorsable (filled endorse icon) and cannot be deleted (missing delete icon).
+- This profile tag is already endorsed by the current user and cannot be deleted.
     ![Add/Edit tags button](./img/xxx/tags-anatonomy-no-delete.png){class="list"}
+
+## Profile tag rules
+
+To maintain consistency and prevent errors, all tags must adhere to the following rules:
+
+- **Lowercase only**: All tags must be in lowercase.
+- **Spaces replaced by dashes**: Any spaces within a tag will be automatically replaced by dashes.
+- **Latin characters only**: Tags can only include Latin characters.
+- **Special characters**: The only special character allowed is the dash or hyphen `-`.
+
+These rules are enforced by the user interface to ensure that all tags are standardized and easily searchable, enhancing the overall functionality of the profile tagging system.
 
 ## Adding Tags to a Profile
 

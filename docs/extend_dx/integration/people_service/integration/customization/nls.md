@@ -1,6 +1,6 @@
 # NLS and localization customization
 
-This document provides guidance on customizing our service's National Language Support (NLS) features. This service enables dynamic management of language translations and localization settings through environment configurations and JSON files.
+HCL People Service enables dynamic management of language translations and localization settings through environment configurations and JSON files. In this page, you will learn how to customize the National Language Support (NLS) features of People Service.
 
 ## Configuration overview
 
@@ -42,10 +42,10 @@ To identify the key of a specific translated value you want to update, use the U
 
 ## Kubernetes configuration
 
-Since the application runs on Kubernetes, administrators should consider using a persistent volume to store the NLS configuration files. This ensures that the translations are maintained across pod restarts and deployments.
+Administrators should consider using a persistent volume to store the NLS configuration files to ensure translations are maintained across pod restarts and deployments.
 
-It is suggested to reuse the existent RWX volume (`hcl-people-service-data`) or attach another custom RWO volume via the helm `customPVCs` property.
+Administrators can reuse the existing ReadWriteMany (RWX) volume (`hcl-people-service-data`) or attach another custom ReadWriteOnce (RWO) volume through the Helm `customPVCs` property.
 
 ### Volume path considerations
 
-Ensure the volume path is correctly mapped to the expected directory in your service configuration. For example, if your persistent volume is mounted at `/persistent-volume-path/people/nls`, the service should recognize this as `/data/people/nls`. Ensure the nls folder is created within your volume mount.
+Ensure the volume path is correctly mapped to the expected directory in your service configuration. For example, if your persistent volume is mounted at `/persistent-volume-path/people/nls`, the service should recognize this as `/data/people/nls`. Ensure that the NLS folder is created within your volume mount.

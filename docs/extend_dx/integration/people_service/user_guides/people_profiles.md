@@ -1,6 +1,6 @@
 # Working with people profiles
 
-User profiles are a central entity in the people service, providing a way to manage and access information about individuals, including their personal information, skills, and more. This guide will help you understand what a profile shows, how to find and edit your own profile, and how to work with tags.
+User profiles provide a way to manage and access information about individuals, including their personal details, skills, and more. In this guide, you will learn how to find and edit your own profile and assign tags to user profiles.
 
 ## What the Profile Shows
 
@@ -16,9 +16,9 @@ A user profile typically includes the following sections:
 
 ## Accessing user profiles
 
-Depending on the integration mode of the People Service, user profiles can be accessed in different ways. In a standalone mode, the People Service provides a user interface that allows users to search for and view profiles. In an integrated mode, user profiles can be accessed through the integrated application, such as a Digital Experience (DX) platform.
+User profiles can be accessed in different ways depending on the integration mode of HCL People Service. In a standalone mode, People Service provides a user interface that allows users to search for and view profiles. In an integrated mode, user profiles can be accessed through the integrated application, such as the Digital Experience (DX) platform.
 
-In DX, for example, user profiles are referenced via portlets or via components or hooks that DX practicioners can use to integrate user profiles into their DX content and pages. In addition, they can be accessed through the people service business card component, which provides a quick overview of a user's profile information. Refer to the section about [working with business cards](../integration/rendering_business_card_person_tag.md) for more information.
+For example, in DX, user profiles are referenced using portlets, components, or hooks that DX practitioners can use to integrate user profiles into their DX content and pages. User profiles can also be accessed through the People Service Business Card component which provides a quick overview of a user's profile information. Refer to the  [Rendering Business Cards using person tags](../integration/rendering_business_card_person_tag.md) page for more information.
 
 ![Person link and business card - Example](./img/person-link-business-card.png)
 
@@ -32,11 +32,11 @@ The profile page is divided into different sections, such as contact information
 
 ### Field validation
 
-To ensure data accuracy and completeness, field validation is implemented. For example, email addresses are validated to ensure they are in the correct format. Error messages are displayed in the edit form if there are any issues with the information provided.
+To ensure data accuracy and completeness, field validation is implemented in text fields. For example, email addresses are validated to ensure correct formatting. Error messages are displayed in the text field if there are issues with the information provided.
 
-### Read only fields
+### Read-only fields
 
-Some fields in your profile may be read-only, meaning that you cannot edit them. These fields are typically populated from an external source, such as a user directory, and are managed by an administrator. If you need to update information in a read-only field, contact your administrator for assistance.
+Some fields in your profile may be read-only and cannot be edited. These fields are typically populated from an external source, such as a user directory, and managed by an administrator. If you need to update information in a read-only field, contact your administrator.
 
 ### Profile image
 
@@ -45,7 +45,7 @@ Your profile image is an important part of your profile, as it helps other users
 !!! Notes
     You cannot update the profile image if that field is marked as read-only.
 
-## Working with Tags
-Tags are a powerful tool for categorizing and identifying key attributes of a profile. They can represent interests, hobbies, skills, or other categorizations that help users stand out and be easily searchable within the organizational environment.
+## Assigning tags to user profiles
+Tags are a useful tool for categorizing and identifying key attributes of a profile. These tags can represent interests, hobbies, skills, or other categories that help a user stand out, making it easier for other users to search for their profile.
 
-For more details on managing tags, refer to the [People Profile Tags guide](./people_profile_tags.md).
+For more details on assigning tags, refer to the [Profile tags](./people_profile_tags.md) page.
