@@ -49,7 +49,7 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
         ![Properties Panel](../../../../images/dam_collections_interface_view_information.png)
 
-        - **Properties** - Allows you to update the Collection name and description.
+        - **Properties** tab - Allows you to update the collection name and description.
         - **Access Control** - Allows you to set who can access the media assets in the Collection.
 
     - **Delete** - Deletes the selected collection.
