@@ -45,12 +45,12 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
     The following options are displayed in Collections interface:
 
     - **Create collection** - Create a new collection or a new nested collection (when used inside an existing collection).
-    - **Properties** - Opens the Properties panel. The Properties panel has two tabs: Properties and Access Control.
+    - **Properties** - Opens the Properties panel. The Properties panel has two tabs: Properties and Access control.
 
         ![Properties Panel](../../../../images/dam_collections_interface_view_information.png)
 
         - **Properties** tab - Allows you to update the name and description.
-        - **Access Control** tab - Allows you to set who can access the media assets in the collection.
+        - **Access control** tab - Allows you to set who can access the media assets in the collection.
 
     - **Move** - Moves the selected collection into another location.
     - **Delete** - Deletes the selected collection.
@@ -108,7 +108,7 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
 ## Modify information metadata of a media asset collection
 
-1. From the HCL Digital Experience 9.5 DAM user interface, click the **More actions** menu (three horizontal dots icon) of a collection and click the **Properties** icon \(small i\).
+1. From the HCL Digital Experience 9.5 DAM user interface, click the **More actions** menu (three horizontal dots icon) of a collection and click the **Properties**.
 
     ![DAM Collection Properties](../../../../images/dam_collection_information.png)
 
@@ -119,8 +119,8 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
 **Video**: [Configuring user access permissions to Digital Asset Management assets](https://youtu.be/vNJFcQViNVo)
 
-1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **More actions** menu (three horizontal dots icon) of a collection and click **Properties** \(small i\).
-2. Click **Access**.
+1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **More actions** menu (three horizontal dots icon) of a collection and click **Properties**.
+2. Click **Access control**.
 3. Assign levels for other users to access media items stored within the collection by clicking **Add user**.
 
     ![Access Control > Add user](../../../../images/dam_access_panel.png)
