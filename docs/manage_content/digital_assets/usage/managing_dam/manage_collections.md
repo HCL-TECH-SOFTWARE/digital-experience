@@ -111,7 +111,7 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
     ![DAM Collection Properties](../../../../images/dam_collection_information.png)
 
-2. On the **Properties** panel, edit the **Collection name** and **Description** as applicable.
+2. On the **Properties** panel, edit the **Name** and **Description** as applicable.
 3. Click **Save** to save changes.
 
 ## Manage user access permissions of a media asset collection
