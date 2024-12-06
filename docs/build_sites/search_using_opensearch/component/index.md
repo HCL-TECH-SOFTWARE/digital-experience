@@ -211,19 +211,19 @@ We provide default theme modules (CSS and JS files) that can be used as-is or ex
 
     ![](../../../assets/HCL_Search_Get_Theme_Modules_09.png "Click on `dx_search_js` and on the right side, you will find the module information, scroll down to find Contributions and under it Location")
 
-9. Click on the Location URL to view the js file
+10. Click on the Location URL to view the js file
 
     ![](../../../assets/HCL_Search_Get_Theme_Modules_10.png "Click on the Location URL to view the js file")
 
-9. Right click on the Location URL to download it. Save as `index.js` for now.
+11. Right click on the Location URL to download it. Save as `index.js` for now.
 
     ![](../../../assets/HCL_Search_Get_Theme_Modules_11.png "Right click on the Location URL to download it. Save as index.js for now.")
 
-9. Open the `default.css` file you have downloaded in a code editor such as Visual Studio Code. On your keyboard, hold down Cmd + Shift + P (on Mac) or Ctrl + Shift + P (on Windows) to open the Command Palette. Find and click `Format Document`.
+12. Open the `default.css` file you have downloaded in a code editor such as Visual Studio Code. On your keyboard, hold down Cmd + Shift + P (on Mac) or Ctrl + Shift + P (on Windows) to open the Command Palette. Find and click `Format Document`.
 
     ![](../../../assets/HCL_Search_Get_Theme_Modules_12.png "Open the `default.css` file you have downloaded in a code editor such as Visual Studio Code")
 
-10. View the resulting `default.css` file in a prettyfied format that is easy to read and inspect so you can plan the style overrides you like to make later. See [Styling the search components](#styling-the-search-components)
+13. View the resulting `default.css` file in a prettyfied format that is easy to read and inspect so you can plan the style overrides you like to make later. See [Styling the search components](#styling-the-search-components)
 
     ![](../../../assets/HCL_Search_Get_Theme_Modules_13.png "Log in to HCL Digital Experience 9.5 and Go to the End-user Search UI")
 
