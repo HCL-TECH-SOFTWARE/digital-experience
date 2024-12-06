@@ -40,7 +40,7 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
 1. From the HCL Digital Experience 9.5 DAM user interface, click **Collections**. The HCL DAM user user interface allows you to see previews of media assets for a specified collection. For example, a curated set of media assets are grouped in a collection named **Furniture Gallery** as shown below.
 
-    ![Digital Asset Management user interface](../../../../images/dam_upload_media_collections.png)
+    ![Digital Asset Management user interface](../../../../images/dam_root_collections_page.png)
 
     The following options are displayed in Collections interface:
 
@@ -49,9 +49,10 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
         ![Properties Panel](../../../../images/dam_collections_interface_view_information.png)
 
-        - **Properties** tab - Allows you to update the collection name and description.
+        - **Properties** tab - Allows you to update the name and description.
         - **Access Control** tab - Allows you to set who can access the media assets in the collection.
 
+    - **Move** - Moves the selected collection into another location.
     - **Delete** - Deletes the selected collection.
 
 2. Select the **Filter** option to filter media asset results by **Favorites**, **Asset types**, or **Asset size**.
@@ -107,7 +108,7 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
 ## Modify information metadata of a media asset collection
 
-1. From the HCL Digital Experience 9.5 DAM user interface, click the Overflow menu (three horizontal dots icon) of a collection and click the **Properties** icon \(small i\).
+1. From the HCL Digital Experience 9.5 DAM user interface, click the **More actions** menu (three horizontal dots icon) of a collection and click the **Properties** icon \(small i\).
 
     ![DAM Collection Properties](../../../../images/dam_collection_information.png)
 
@@ -118,7 +119,7 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
 **Video**: [Configuring user access permissions to Digital Asset Management assets](https://youtu.be/vNJFcQViNVo)
 
-1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the Overflow menu (three horizontal dots icon) of a collection and click **Properties** \(small i\).
+1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **More actions** menu (three horizontal dots icon) of a collection and click **Properties** \(small i\).
 2. Click **Access**.
 3. Assign levels for other users to access media items stored within the collection by clicking **Add user**.
 
@@ -136,7 +137,7 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
 ## Deleting a collection
 
-1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **More** menu of a collection and click **Delete**.
+1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **More actions** menu of a collection and click **Delete**.
 A message appears to confirm your action. Once a collection is deleted, you can no longer retrieve it, including the media assets, renditions, and versions you have used as your web content.
 3. Click **Delete collection** to delete the collection.
 
@@ -147,7 +148,7 @@ Refer to the following steps if you want to move a collection from one location 
 !!! note 
     If a collection is moved to another collection, permissions and access restrictions of the collection and its contents align with the permissions of the destination location. If the collection is moved to the root level, the permissions align with the source permissions. 
 
-1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **More** menu of a collection and click **Move**.
+1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **More actions** menu of a collection and click **Move**.
 
     ![Move collection option](../../../../images/Move_collection_option.png)
 

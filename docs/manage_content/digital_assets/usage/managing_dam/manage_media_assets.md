@@ -86,7 +86,7 @@ For more information on the video synchronization statuses for uploaded videos, 
 
 Use the HCL Digital Experience 9.5 DAM editor to download a media asset source, version, or rendition:
 
-1.  From the HCL Digital Experience 9.5 DAM user interface, click the Overflow menu (three horizontal dots icon) of a media asset. Click **Download**.
+1.  From the HCL Digital Experience 9.5 DAM user interface, click the **More actions** menu (three horizontal dots icon) of a media asset. Click **Download**.
 
     ![Digital asset menu options](../../../../images/dam_05_edit_media.png)
 
@@ -100,7 +100,7 @@ Use the HCL Digital Experience 9.5 DAM editor to download a media asset source, 
 
 Use the HCL Digital Experience 9.5 DAM editor to delete a media asset, including its renditions:
 
-1.  From the HCL Digital Experience 9.5 DAM user interface, click the Overflow menu (three horizontal dots icon) of a media asset. Click **Delete**.
+1.  From the HCL Digital Experience 9.5 DAM user interface, click the **More actions** menu (three horizontal dots icon) of a media asset. Click **Delete**.
 2.  A pop-up will appear for you to select your Delete action. If the selected media assets will not affect any references, click **Check for references and delete** to complete action.
 
     ![Check references and delete media asset](../../../../images/Check_for_references_and_delete_HCL_DAM.png)
@@ -111,9 +111,9 @@ When copying a media asset, only the latest version of the source assets is copi
 
 Refer to the following steps if you want to copy a media asset from one collection to another.
 
-1. Click the **more menu** option of the asset. 
+1. Click the **More actions** menu of the asset. 
 
-    This displays more options such as **Edit**, **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename**, and **Delete**.
+    This displays more actions such as **Edit**, **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename**, and **Delete**.
 
 2. Click **Copy**.
 
@@ -133,9 +133,9 @@ Refer to the following steps if you want to move a media asset from one collecti
     Moving an asset location can break its links if it is referenced in WCM or any external references. To update the link, manual relinking is necessary. 
     To view the asset references, go to **Properties > Insights**.
 
-1. Click the **more menu** option of the asset. 
+1. Click the **More actions** menu of the asset. 
 
-    This displays more options such as **Edit**, **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename**, and **Delete**.
+    This displays more actions such as **Edit**, **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename**, and **Delete**.
 
 2. Click **Move**.
 
@@ -156,9 +156,9 @@ Refer to the following steps to modify the name of a media asset.
 !!! note 
     Renaming an asset name breaks existing references to the asset name in WCM or any external content. To update the asset name, manual relinking is necessary.
 
-1. Click the **more menu** option of the asset. 
+1. Click the **More actions** menu of the asset. 
 
-    This displays more options such as **Edit**, **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename** and **Delete**.
+    This displays more actions such as **Edit**, **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename** and **Delete**.
 
 2. Click **Rename**.
 
