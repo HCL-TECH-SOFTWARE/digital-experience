@@ -52,7 +52,7 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
         - **Properties** - Allows you to update the Collection name and description.
         - **Access Control** - Allows you to set who can access the media assets in the Collection.
 
-    - **Delete** - Deletes the selected Collection.
+    - **Delete** - Deletes the selected collection.
 
 2. Select the **Filter** option to filter media asset results by **Favorites**, **Asset types**, or **Asset size**.
 
