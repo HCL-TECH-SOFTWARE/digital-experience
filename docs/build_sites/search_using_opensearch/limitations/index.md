@@ -8,7 +8,7 @@ Take note of the following limitations when using HCL End-user Search with OpenS
 
 ## Searchable Fields
 
-- Only common fields such a title, description, type, and tags may be specifically searched for now. If you wish to search beyond these attributes, search using **All attributes** can be used since this will look at all attributes inside the document objects.
+- Only common fields such as title, description, type, and tags may be specifically searched for now. If you wish to search beyond these attributes, you can use **All attributes** since this will look at all attributes inside the document objects.
 
 ## Localization
 

@@ -6,15 +6,15 @@ This section provides steps on how to access the HCL End-user Search with OpenSe
 
 Starting from HCL Digital Experience 9.5 CF224, End-user Search with OpenSearch is installed and deployed by default as part of the CF update process. However, for CF224, End-user Search with OpenSearch must be installed and configured. For instructions on installing End-user Search with OpenSearch manually on supported environments, see the [Installing HCL Digital Experience 9.5 End-user Search with OpenSearch](../installation/index.md) topic.
 
-After image configuration in your HCL Digital Experience 9.5 CF224 deployment, End-user Search with OpenSearch is accessible from the Practitioner Studio interface.
+After configuring the image in your HCL Digital Experience 9.5 CF224 deployment, you can access End-user Search with OpenSearch from the Practitioner Studio interface.
 
 !!! note
-    You must be authenticated to use the Search page. The search results you will get will vary based on your current user role.
+    You must be authenticated to use the Search page. The search results will vary based on your current user role.
 
 
 ## Accessing End-user Search with OpenSearch
 
-Refer to the following instructions to access HCL Digital Experience 9.5 End-user Search with OpenSearch from the Practitioner Studio.
+Follow the instructions below to access HCL Digital Experience 9.5 End-user Search with OpenSearch from the Practitioner Studio.
 
 1.  Log in to your HCL Digital Experience 9.5 platform, and select **Search** from the Practitioner Studio navigator.
 
@@ -51,7 +51,7 @@ You can also access the HCL End-user Search UI through two additional methods. O
 
 ### Via Practitioner Studio SideNav search bar
 
-1. Click the search icon on the upper left side of Practitioner Studio when the Side Nav is open.
+1. Click the search icon located on the upper left side of Practitioner Studio when the Side Navigation is open.
 
     ![](../../../assets/HCL_Search_Access_Page_Via_PS_Sidenav_1.png)
 
