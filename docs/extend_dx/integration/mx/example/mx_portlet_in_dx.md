@@ -28,13 +28,15 @@ For detailed steps refer to this [link](https://opensource.hcltechsw.com/volt-mx
 
 3. Navigate to the page where you want to add the Volt MX portlet.
 
-4. Click the**Add page components and application** icon.
+4. Click the **Add page components and application** icon.
 
     ![alt text](image3.png)
 
-4. Search for the deployed Volt MX portlet in  the **search bar** on the **Applications** tab and click on **add** symbol on hover over the portlet to add it to the page.
+4. Under the **Applications** tab, search for the deployed Volt MX portlet in the search bar.
+
+5. Hover over the portlet you want to add and click **Add** (+). 
 
     ![alt text](image4.png)
 
-5. Turn off **Edit Mode** and verify if the portlet is properly rendered. If the app contains a login page but you prefer using single sign-on (SSO) with HCL DX credentials, you can configure SSO using the steps in [Enabling SSO between HCL DX and Volt MX](../configuration/index.md#enabling-sso-between-hcl-dx-and-volt-mx).
+6. Turn off **Edit Mode** and verify if the portlet is properly rendered. If the app contains a login page but you prefer using single sign-on (SSO) with HCL DX credentials, you can configure SSO using the steps in [Enabling SSO between HCL DX and Volt MX](../configuration/index.md#enabling-sso-between-hcl-dx-and-volt-mx).
 

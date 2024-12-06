@@ -32,7 +32,7 @@ After applying the configuration, both HCL Digital Experience and HCL Volt MX Fo
 
 This section provides information on how to enable single sign-on (SSO) for DX and MX. 
 
-Configure OAuth in Websphere to authenticate with HCL DX. Connect to the HCL DX core server (for example, on Kubernetes):
+Configure OAuth in Websphere to authenticate with HCL DX. Connect to the HCL DX core server (for example, on Kubernetes) using the following command:
 
 ```sh
   kubectl exec -it hcl-dx-dev1-core-0 core -n hcl-dx-dev1 -- sh
@@ -66,7 +66,7 @@ Configure OAuth in Websphere to authenticate with HCL DX. Connect to the HCL DX 
 
   Confirm the OAuth file exists. For example, `/opt/HCL/wp_profile/config/cells/dockerCell/oauth20/OAuthConfig.xml`.
 
-2. Restart the WebSphere Application Server.
+2. Restart the WebSphere Application Server using the following command:
 
 ```sh
 cd /opt/HCL/AppServer/bin
@@ -89,7 +89,12 @@ cd /opt/HCL/AppServer/bin
 
     ![alt text](image-2.png)
 
-5. If not, click **New**. Enter the **Interceptor Class Name** `com.ibm.ws.security.oauth20.tai.OAuthTAI` and add the custom properties as mentioned below. The additional row can be added by clicking **New** button. Once the custom properties are added, click **OK**.
+5. (Optional) If the `com.ibm.ws.security.oauth20.tai.OAuthTAI` does not exist, add an Interceptor.
+             1. Click **New**. 
+             2. In the **Interceptor class name** field, enter `com.ibm.ws.security.oauth20.tai.OAuthTAI`.
+             3. Under **Custom properties**, click **New**. Add the following custom properties:
+                        <lines 96-99 and image must be moved here>
+             4. After the custom properties are added, click **OK**.
 
     ![alt text](image-3.png)
 
@@ -123,7 +128,7 @@ cd /opt/HCL/AppServer/bin
     ```
     Where:
 
-      - `<OAUTH_PROVIDER_NAME>` is the name of the provider specified (for example, OAuthConfig).
+      - `<OAUTH_PROVIDER_NAME>` is the name of the specified provider (for example, OAuthConfig).
 
       - `<OAUTH_SECRET>` is a complex, random secret (for example, a UUID). This secret will be required later.
       
@@ -138,7 +143,7 @@ cd /opt/HCL/AppServer/bin
     </client>
     ```
 
-### Install the OAuth application
+### Installing the OAuth application
 
 1. Install the OAuth 2.0 service provider application using the following command:
 
@@ -193,7 +198,7 @@ For more information on foundry, please refer to this [link](https://opensource.
 
 ### Adding SSO in Iris
 
-1. Create a login page in Iris and add the below code in form init. Ensure the Iris is connected to the Foundry app which contains the above SSO configurations. For more information on how to create an App refer to [Volt MX Iris setup and configuration](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Iris/voltmxIrisFundamentals.html)
+1. Create a login page in Iris and add the following code in form init. Ensure the Iris is connected to the Foundry application which contains the SSO configurations. For more information on how to create an application, refer to [Volt MX Iris setup and configuration](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Iris/voltmxIrisFundamentals.html){target="_blank"}.
 
     ```
       if(!VMXFoundry) return;
