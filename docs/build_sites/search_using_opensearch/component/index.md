@@ -245,7 +245,7 @@ To use the theme modules (CSS and JS files) on your new or existing theme pages,
 
 4. Download the default theme CSS `dx_search_js` from the provided location as `index.js`.
 
-5. Add the script to your application's html head.
+4. Add the script to your application's html head.
 
 ```html 
   <script type="module" src="/path/to/index.js"></script>

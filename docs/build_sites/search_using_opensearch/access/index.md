@@ -4,7 +4,7 @@ This section provides steps on how to access the HCL End-user Search with OpenSe
 
 ## Prerequisite
 
-Starting from HCL Digital Experience 9.5 CF224, End-user Search with OpenSearch is installed and deployed by default as part of the CF update process. However, for CF224, End-user Search with OpenSearch must be installed and configured. For instructions on installing End-user Search with OpenSearch manually on supported environments, see the [Installing HCL Digital Experience 9.5 End-user Search with OpenSearch](../installation/index.md) topic.
+Starting from HCL Digital Experience 9.5 CF224, End-user Search with OpenSearch is available to be enabled. For instructions on installing End-user Search with OpenSearch manually on supported environments, see the [Installing HCL Digital Experience 9.5 End-user Search with OpenSearch](../installation/index.md) topic.
 
 After configuring the image in your HCL Digital Experience 9.5 CF224 deployment, you can access End-user Search with OpenSearch from the Practitioner Studio interface.
 
