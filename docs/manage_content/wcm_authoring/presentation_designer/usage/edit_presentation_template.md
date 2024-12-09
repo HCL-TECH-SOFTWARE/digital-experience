@@ -109,9 +109,6 @@ Refer to the following steps to edit a presentation template in Presentation Des
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Move_Content_Elements_in_Container.png)
 
-    ???+ info "Related information"
-        - [Element Actions](../usage/user_elements.md#element-actions)
-
 10. Select the **static container element** and enter the following values in the **Style** panel:
 
       **Dimensions**

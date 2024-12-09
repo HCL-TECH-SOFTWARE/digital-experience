@@ -51,8 +51,10 @@ The **Dimensions** section allows users to control the size and scaling of eleme
 - **Max width**: Defines the maximum width the element can be resized to.
 - **Max height**: Defines the maximum height the element can be resized to.
 
-**Supported Units**: `px`, `vh`, `vw`, `%`, `calc()`  
-**Sample Values**: `200px`, `100vh`, `25%`, `calc(50vh - 10px)`, `auto`, `inherit`
+This section supports the following units and values:
+
+- **Supported Units**: `px`, `vh`, `vw`, `%`, `calc()`  
+- **Sample Values**: `200px`, `100vh`, `25%`, `calc(50vh - 10px)`, `auto`, `inherit`
 
 
 ### Spacing
@@ -61,8 +63,10 @@ The **Dimensions** section allows users to control the size and scaling of eleme
 - **Margin**: Controls the space outside the element, determining how far an element is from adjacent ones.
 - **Padding**: Controls the space between the content and its border inside the element.
 
-**Supported Units**: `px`, `em`, `rem`, `vh`, `vw`, `%`, `calc()`  
-**Sample Values**: `10px`, `1em`, `2rem`, `5%`, `calc(10px + 2vw)`, `auto`
+This section supports the following units and values:
+
+- **Supported Units**: `px`, `em`, `rem`, `vh`, `vw`, `%`, `calc()`  
+- **Sample Values**: `10px`, `1em`, `2rem`, `5%`, `calc(10px + 2vw)`, `auto`
 
 
 ### Borders
@@ -95,10 +99,10 @@ The **Appearance** section allows users to change the colors of elements to make
 ### Layout
 The **Layout** section allows users to control the structural positioning and setup of the grid element, ensuring proper arrangement and organization of content within rows and columns.
 
-- **Rows**: Specifies the number of horizontal sections (rows) in the grid, with a minimum of 1 row.  
+- **Rows**: Specifies the number of horizontal sections (rows) in the grid. The minimum value is `1` row. 
     - **Sample Values**: `1`, `2`, `3`
 
-- **Columns**: Specifies the number of vertical sections (columns) in the grid, with a minimum of 1 column.  
+- **Columns**: Specifies the number of vertical sections (columns) in the grid. The minimum value is `1` column.  
     - **Sample Values**: `1`, `2`, `3`
 
 - **Row Gap**: Defines the space between rows in the grid.  
@@ -109,7 +113,7 @@ The **Layout** section allows users to control the structural positioning and se
     - **Supported Units**: `px`  
     - **Sample Values**: `15px`, `25px`
 
-- **Grid (Column and Row Setup)**: Defines how space is distributed within the grid by using fractional units (`fr`) for both rows and columns. This allows for flexible layouts where the size of each section is proportionally based on available space.
+- **Grid (Column and Row Setup)**: Defines how space is distributed within the grid using fractional units (`fr`) for columns and rows. This setup allows you to create equally proportioned grid layouts.
 
 - **Grid Cell (Columns)**: Specifies the number of columns the grid cell will occupy.  
     - **Sample Values**: `1`, `2`, `3`
@@ -123,23 +127,23 @@ The **Position** section allows users to precisely control the placement of elem
 
 - **Object position**: Sets an element’s position relative to its parent or containing element. Possible values include static, relative, absolute, sticky, and fixed.
 
-- Under the **Object position** property, you can also specify the exact placement of an element with the following properties:
-    - **Top**: Specifies the distance between the top edge of the element and the top edge of its containing element.
-    - **Bottom**: Specifies the distance between the bottom edge of the element and the bottom edge of its containing element.
-    - **Left**: Specifies the distance between the left edge of the element and the left edge of its containing element.
-    - **Right**: Specifies the distance between the right edge of the element and the right edge of its containing element.
-  
-    **Supported Units**: `px`, `vh`, `vw`, `%`, `calc()`  
-    **Sample Values**: `20px`, `10vh`, `15%`, `calc(10% + 5px)`, `auto`, `inherit`
+    Under **Object position**, you can also specify the exact placement of an element using the following properties:
 
-- **Order of Elements**: Controls the stacking order of elements, determining which elements appear in front or behind other elements on the canvas. There are four options available:
+      - **Top**: Specifies the distance between the top edge of the element and the top edge of its containing element.
+      - **Bottom**: Specifies the distance between the bottom edge of the element and the bottom edge of its containing element.
+      - **Left**: Specifies the distance between the left edge of the element and the left edge of its containing element.
+      - **Right**: Specifies the distance between the right edge of the element and the right edge of its containing element.
+
+        The **top, bottom, left, and right** properties supports the following units and values:
+
+        **Supported Units**: `px`, `vh`, `vw`, `%`, `calc()`  
+        **Sample Values**: `20px`, `10vh`, `15%`, `calc(10% + 5px)`, `auto`, `inherit`
+
+- **Order of Elements**: Controls the stacking order of elements, determining which elements appear in front or behind other elements on the canvas. The following properties adjust the `z-index` style property to change the stacking order of the elements:
     - **Bring Forward**: Moves the selected element one layer up in the stacking order.
-    - **Bring to Front**: Moves the selected element to the topmost layer in the stacking order.
+    - **Bring to Front**: Moves the selected element to the highest layer in the stacking order.
     - **Send Backward**: Moves the selected element one layer down in the stacking order.
-    - **Send to Back**: Moves the selected element to the bottommost layer in the stacking order.
-
-    *These actions adjust the `z-index` style property to change the stacking order of the elements.*
-
+    - **Send to Back**: Moves the selected element to the lowest layer in the stacking order.
 
 
 ### Typography
@@ -156,15 +160,16 @@ The **Typography** section allows users to customize text-based elements, giving
 - **Wrap**: Controls whether long lines of text wrap or remain on a single line.
 - **Capitalization**: Adjusts text to be uppercase, lowercase, or sentence case.
 
-!!! note
-    - **Use `px`** for fixed and precise measurements, such as button widths or border thickness.
-    - **Use `em` and `rem`** for scalable layouts, allowing text sizes to adjust proportionally while maintaining consistency.
-    - **Use `%`, `vw`, and `vh`** for responsive designs, enabling elements to adapt based on screen size or parent container dimensions.
-    - **Use `calc()`** for complex layouts that require dynamic calculations, like combining fixed and flexible measurements.
-    - **Use unitless values** (e.g., `none`, `inherit`, `auto`) for properties that don't require a specific unit.
-    - **Use color values like `hex`, `rgba`, `rgb`, and named colors** to specify colors in various formats:
-        - **`hex`**: Common for precise color definition (e.g., `#FFFFFF` for white).
-        - **`rgb`**: Defines colors with red, green, and blue values (e.g., `rgb(255, 99, 71)`).
-        - **`rgba`**: Adds alpha transparency to colors (e.g., `rgba(255, 99, 71, 0.5)` for a semi-transparent color).
-        - **Named colors**: Simple and intuitive way to use common color names (e.g., `red`, `blue`, `green`).
+### Units of measurement
+Refer to the following tips on selecting the appropriate unit of measurement for the properties you want to adjust.
+
+- Use `px` for fixed and precise measurements such as button width or border thickness.
+- Use `em` and `rem` for scalable layouts to allow text sizes to adjust proportionally while maintaining consistency.
+- Use `%`, `vw`, and `vh` for responsive designs to enable elements to adjust based on the screen size or parent container dimensions.
+- Use `calc()` for complex layouts that require dynamic calculations. For example, you can use this unit when combining fixed and flexible measurements.
+- Use unitless values such as `none`, `inherit`, or `auto` for properties that don't require a specific unit.
+- Use specific color values such as  `hex`, `rgba`, `rgb` for more precise color combinations. You can also use general color names such as `red`, `blue`, or `green`.
+    - **`hex`**: Uses hex values for precise color definition. For example, you can use`#FFFFFF` for the color white.
+    - **`rgb`**: Defines colors with red, green, and blue values. For example, you can enter `rgb(255, 99, 71)`.
+    - **`rgba`**: Adds alpha transparency to colors. For example, use `rgba(255, 99, 71, 0.5)` for a semi-transparent color.
 
