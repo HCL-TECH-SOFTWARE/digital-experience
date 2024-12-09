@@ -1,18 +1,7 @@
-# Working with people profiles
+# User profiles
 
 User profiles provide a way to manage and access information about individuals, including their personal details, skills, and more. In this guide, you will learn how to find and edit your own profile and assign tags to user profiles.
 
-## What the Profile Shows
-
-A user profile typically includes the following sections:
-
-  - Profile Image: A visual representation of the user.
-  - Contact Information: Email, phone number, and other contact details.
-  - Personal Information: Name, date of birth, and other personal details.
-  - Professional Summary: Job title, organization, and a brief professional summary.
-  - Tags: Keywords that describe the user's skills, interests, and other attributes.
-
-![Profile Page - Example Profile](./img/profile-page.png)
 
 ## Accessing user profiles
 
@@ -24,11 +13,29 @@ For example, in DX, user profiles are referenced using portlets, components, or 
 
 ## Managing your own profile
 
-Users can manage their own profiles by adding or updating their information. To manage your profile, simply navigate to your profile page after logging into DX. Click the **My Profile** link in the DX navigation to access your profile. From there, you can view and edit your personal information.
+Refer to the following steps to view and manage your own profile.
 
-The profile page is divided into different sections, such as contact information, personal information, and professional summary. You can update your profile image, contact details, and other information by clicking the **Edit** button in the respective section. Modify the information as needed and click **Save** to save your changes.
+1. Log into your HCL DX account.
 
-![Profile Page - Edit Profile](./img/profile-page-edit-profile.png)
+2. In the navigation bar, select **My Profile**.
+    ![Profile Page - Example Profile](./img/profile-page.png)
+
+3. Click the **Edit** button next to the section you want to update:
+    - Profile Image: A visual representation of the user.
+    - Contact Information: Email, phone number, and other contact details.
+    - Personal Information: Name, date of birth, and other personal details.
+    - Professional Summary: Job title, organization, and a brief professional summary.
+    - Tags: Keywords that describe the user's skills, interests, and other attributes.
+    ![Profile Page - Edit Profile](./img/profile-page-edit-profile.png)
+
+4. Modify your information as needed, then click **Save changes**.
+
+### Profile image
+
+Your profile image is an important part of your profile as it helps other users confirm your identify. You can upload a new image or remove the existing one. Make sure to select an image that is clear and professional to represent you appropriately.
+
+!!! Notes
+    You cannot update the profile image if the field is marked as read-only.
 
 ### Field validation
 
@@ -38,12 +45,6 @@ To ensure data accuracy and completeness, field validation is implemented in tex
 
 Some fields in your profile may be read-only and cannot be edited. These fields are typically populated from an external source, such as a user directory, and managed by an administrator. If you need to update information in a read-only field, contact your administrator.
 
-### Profile image
-
-Your profile image is an important part of your profile, as it helps other users identify you. To update your profile image, click on the "Edit profile image" button in the profile image section. You can upload a new image or remove the existing one. Make sure to select an image that is clear and professional to represent you appropriately.
-
-!!! Notes
-    You cannot update the profile image if that field is marked as read-only.
 
 ## Assigning tags to user profiles
 Tags are a useful tool for categorizing and identifying key attributes of a profile. These tags can represent interests, hobbies, skills, or other categories that help a user stand out, making it easier for other users to search for their profile.
