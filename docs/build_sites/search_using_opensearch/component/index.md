@@ -238,18 +238,18 @@ To use the theme modules (CSS and JS files) on your new or existing theme pages,
 
 3. Link the default and custom css files in this order in your application's html head.
 
-```html 
-  <link rel="stylesheet" href="/path/to/default.css"> 
-  <link rel="stylesheet" href="/path/to/custom-theme.css"> 
-```
+    ```html 
+      <link rel="stylesheet" href="/path/to/default.css"> 
+      <link rel="stylesheet" href="/path/to/custom-theme.css"> 
+    ```
 
 4. Download the default theme CSS `dx_search_js` from the provided location as `index.js`.
 
-4. Add the script to your application's html head.
+5. Add the script to your application's html head.
 
-```html 
-  <script type="module" src="/path/to/index.js"></script>
-```
+    ```html 
+      <script type="module" src="/path/to/index.js"></script>
+    ```
 
 ## Example of Customization
 
