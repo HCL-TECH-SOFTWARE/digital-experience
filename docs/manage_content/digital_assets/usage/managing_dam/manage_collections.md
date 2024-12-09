@@ -108,7 +108,7 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
 ## Modify information metadata of a media asset collection
 
-1. From the HCL Digital Experience 9.5 DAM user interface, click the **More actions** menu (three horizontal dots icon) of a collection and click the **Properties**.
+1. From the HCL Digital Experience 9.5 DAM user interface, click the **More actions** menu (three horizontal dots icon) of a collection and click **Properties**.
 
     ![DAM Collection Properties](../../../../images/dam_collection_information.png)
 
