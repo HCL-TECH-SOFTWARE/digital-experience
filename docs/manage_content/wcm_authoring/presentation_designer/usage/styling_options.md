@@ -133,11 +133,11 @@ The **Position** section allows users to precisely control the placement of elem
       - **Bottom**: Specifies the distance between the bottom edge of the element and the bottom edge of its containing element.
       - **Left**: Specifies the distance between the left edge of the element and the left edge of its containing element.
       - **Right**: Specifies the distance between the right edge of the element and the right edge of its containing element.
+      
+      The **top, bottom, left, and right** properties support the following units and values:
 
-        The **top, bottom, left, and right** properties supports the following units and values:
-
-        **Supported Units**: `px`, `vh`, `vw`, `%`, `calc()`  
-        **Sample Values**: `20px`, `10vh`, `15%`, `calc(10% + 5px)`, `auto`, `inherit`
+      - **Supported Units**: `px`, `vh`, `vw`, `%`, `calc()`  
+      - **Sample Values**: `20px`, `10vh`, `15%`, `calc(10% + 5px)`, `auto`, `inherit`
 
 - **Order of Elements**: Controls the stacking order of elements, determining which elements appear in front or behind other elements on the canvas. The following properties adjust the `z-index` style property to change the stacking order of the elements:
     - **Bring Forward**: Moves the selected element one layer up in the stacking order.
@@ -170,6 +170,6 @@ Refer to the following tips on selecting the appropriate unit of measurement for
 - Use unitless values such as `none`, `inherit`, or `auto` for properties that don't require a specific unit.
 - Use specific color values such as  `hex`, `rgba`, `rgb` for more precise color combinations. You can also use general color names such as `red`, `blue`, or `green`.
     - **`hex`**: Uses hex values for precise color definition. For example, you can use`#FFFFFF` for the color white.
-    - **`rgb`**: Defines colors with red, green, and blue values. For example, you can enter `rgb(255, 99, 71)`.
+    - **`rgb`**: Defines colors with red, green, and blue values. For example, you can enter `rgb(255, 165, 0)` for the color orange.
     - **`rgba`**: Adds alpha transparency to colors. For example, use `rgba(255, 99, 71, 0.5)` for a semi-transparent color.
 
