@@ -1,10 +1,10 @@
 # Architectural Overview
 
-Know more about the different components of the DX search based on OpenSearch and how they are used.
+Know more about the different components of the DX search v2 and how they are used.
 
 ## Key goals
 
-The DX search based on OpenSearch is designed with the weaknesses of the existing search in mind. The following properties are considered:
+The DX search v2 is designed with the weaknesses of the existing search in mind. The following properties are considered:
 
 - **High Availability**: The existing search solution using Remote Search in clustered environments does not provide any high availability features. The Remote Search server is a singleton instance that represents a single point of failure. The new OpenSearch-based implementation allows to have multiple nodes running at the same time and is resilient against single node outages.
 
@@ -12,9 +12,9 @@ The DX search based on OpenSearch is designed with the weaknesses of the existin
 
 - **Kubernetes native deployment**: The OpenSearch-based implementation uses existing proven Kubernetes patterns and technologies that work well in such an environment.
 
-## Current capabilties
+## Current capabilities
 
-The DX search based on OpenSearch in its first version is not yet integrated in any of the search UIs inside DX. It provides a REST API where you can index WCM content based on the WCM Seedlist and perform queries using the [OpenSearch Query Syntax](https://opensearch.org/docs/latest/query-dsl/). If you only need search capabilities inside the DX search UIs, you do not need to deploy OpenSearch.
+The DX search based v2 in its first version is not yet integrated in any of the search UIs inside DX. It provides a REST API where you can index WCM content based on the WCM Seedlist and perform queries using the [OpenSearch Query Syntax](https://opensearch.org/docs/latest/query-dsl/). If you only need search capabilities inside the DX search UIs, you do not need to deploy OpenSearch.
 
 ## Main components
 
@@ -110,7 +110,6 @@ Documents that are stored inside a content source contain a defined set of metad
 - The `tags` field is a common field for every type of document and array of strings. Tags can be any specific word or phrase that describes the document. If there is no appropriate tag, you can leave the `tags` field blank. 
 
 - The `dataUri` field contains the URL used to retrieve the binary file for text extraction. This field can be empty.
-
 
 A document that does not contain any ACLs will be considered public and do not have any visibility restrictions.
 
