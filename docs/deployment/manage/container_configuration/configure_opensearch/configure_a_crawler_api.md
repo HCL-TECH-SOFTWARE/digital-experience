@@ -215,3 +215,34 @@ After triggering a crawler, you can check the crawler status by calling the `/dx
 ## Out of the box crawlers
 
 The search v2 will configure out of the box crawlers for default content sources, if enabled during the Helm installation. These crawlers are configured with the default seedlist URLs and credentials. You can adjust the configuration of these crawlers to your needs.
+
+## Forcing a full re-crawl
+
+In some cases it might be necessary to force a full re-crawl of a data source.
+
+Doing so is a two step process:
+
+### Remove existing data in the Content Source index
+
+Since a full crawl will not inform you about documents that do not exist anymore, it is advised to remove all content from the Content Source index. This will ensure that only the newly reported documents by the seedlist are actually stored and returned in the search results.
+
+To remove all existing data, leverage the Push REST API endpoint to delete by query:
+
+`DELETE` - `/dx/api/search/v2/contentsources/<content_source_id>/documents/byquery`
+
+If you leave the query to match all documents, you will delete all documents stored in the Content Source index:
+
+```json
+{
+  "query": {}
+}
+```
+
+### Trigger the crawler with the clear_timestamp parameter
+
+After the data has been deleted, you can trigger your crawler again and provide the query parameter `clear_timestamp` with the value `true`.  
+This will cause the currently stored `incrementalTimestamp` of the crawler to be removed and trigger a new full crawl.
+
+Call the `/dx/api/search/v2/crawlers/{crawler_id}/trigger?clear_timestamp_true` endpoint with a `POST` request.
+
+After the crawler has run, all current state data is indexed in the Content Source.
