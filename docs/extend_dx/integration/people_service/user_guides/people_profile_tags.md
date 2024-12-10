@@ -12,14 +12,6 @@ Profile tagging enhances personalized experiences, improves search and recommend
 
 In this page, you will learn about the profile tagging system and the rules that ensure tag consistency.
 
-1. [Profile tag components](#profile-tag-components)
-2. [Profile tag rules](#profile-tag-rules)
-3. [Adding profile tags](#adding-profile-tags)
-4. [Endorsing profile tags](#endorsing-profile-tags)
-5. [Removing profile tags](#removing-profile-tags)
-6. [Viewing profile tag endorsers](#viewing-profile-tag-endorsers)
-
-
 ## Profile tag components
 
 A profile tag is a single word or phrase that describes a trait, action, or interest of a user. Tags are used to categorize and organize profiles, making it easier to search, recommend, and interact with users. Each tag has the following components:
