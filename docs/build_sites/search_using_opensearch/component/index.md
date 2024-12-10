@@ -4,7 +4,7 @@ This guide explains how to use the HCL End-user Search UI. Follow along to learn
 
 The default search component, shown in the image below, is responsive and can be imported and used anywhere within an application.
 
-![Screenshot](../../../assets/search_result.png)
+![Screenshot](../../../assets/HCL_Search_Search_Result.png)
 
 
 ## Overview of the search functionality
