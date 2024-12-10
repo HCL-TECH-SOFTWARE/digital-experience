@@ -52,7 +52,7 @@ configuration:
       inputRedirectVersion: "v2"
 ```
 
-### Disabling HCL End-user Search using OpenSearch via Config Engine task
+### Disabling HCL End-user Search using OpenSearch using a Config Engine task
 
 To disable HCL End-user Search using OpenSearch, run the **disable-search-v2** config task.
 
@@ -64,7 +64,7 @@ For information on how to run the ConfigEngine tasks on container deployments, r
 
 After HCL End-user Search using OpenSearch is disabled by running the **disable-search-v2** config task, the HCL End-user Search using OpenSearch page is removed. To enable HCL End-user Search using OpenSearch again, the **enable-search-v2** config task must be executed manually.
 
-### Disabling HCL End-user Search using OpenSearch via Helm deployment
+### Disabling HCL End-user Search using OpenSearch through Helm deployment
 
 For information on how to do container-based Helm deployments, see [Deploying using Helm](../../../deployment/install/container/helm_deployment/overview.md).
 

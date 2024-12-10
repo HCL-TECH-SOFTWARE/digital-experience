@@ -23,6 +23,12 @@ Web components provide the following benefits:
 2. **Reusability:** Build once and reuse across different parts of your application.
 3. **Customizability:** Use attributes, properties, and part selectors to customize components without altering their core code.
 
+Why did we use Broadcast Channel API?
+
+1. **Real-Time Synchronization:** Keeps components in sync, such as updating search results when a new query is entered.
+2. **Decoupled Design:** FCC components can work independently and communicate without direct references.
+3. **Flexibility:** FCC components can be distributed across different sections of the application, ensuring modularity.
+
 ## Components Overview
 
 AC (Atomic Components)
@@ -61,7 +67,7 @@ Functional Composite Components combine Atomic Components to deliver higher-leve
 
 ### Default styling
 
-Each component comes with default styles. For example
+Each component comes with default styles. See the following examples of different default styles below.
 
 ```scss
 /* for dx-search-center-layout */
@@ -262,10 +268,7 @@ Suppose you want to change the background color of the dx-search-center-layout c
 ```
 
 ## Communication between Components using Broadcast Channel API
-The Broadcast Channel API enables seamless communication between different FCC components, even when they are placed in separate areas of your application (e.g., themes, JSPs, portlets, WCM). This functionality is already present in the provided JS theme module.
+HCL End-user Search with OpenSearch utilizes the Broadcast Channel API for its components. The Broadcast Channel API provides real-time synchronization, updating search search results when a new query is entered. It also has a decouple design that allows FCC components to work independently and communicate without direct references. 
 
-Why did we use Broadcast Channel API?
+This API also enables seamless communication between different FCC components, even when they are placed in separate areas of your application such as themes, JSPs, portlets, or WCM. This functionality is already present in the provided JS theme module.
 
-1. **Real-Time Synchronization:** Keeps components in sync, such as updating search results when a new query is entered.
-2. **Decoupled Design:** FCC components can work independently and communicate without direct references.
-3. **Flexibility:** FCC components can be distributed across different sections of the application, ensuring modularity.
