@@ -1,6 +1,6 @@
 # LDAP attribute mapping
 
-Attribute Mapping defines how corresponding data points between different sources and the people service are identified and translated. This ensures user information like names, emails, or IDs are accurately transferred while adhering to the people service's data structure.
+Attribute mapping defines how corresponding data points between different sources and People Service are identified and translated. This ensures user information like names, emails, or IDs are accurately transferred while adhering to People Service's data structure.
 
 ## Configuring Attributes
 The attribute mapping settings are defined in the [LDAP configuration documentation](../../deployment/configuration/index.md#ldap-configuration). Key configurations include:

@@ -1,6 +1,6 @@
 # User provisioning
 
-User provisioning in the context of the HCL People Service refers to the process of creating, updating, and deleting user accounts in the system based on external data sources. This process is typically automated and involves synchronizing user data from one or multiple external source. This section outlines the key concepts and tasks related to user provisioning in the People Service.
+User provisioning in the context of the HCL People Service refers to the process of creating, updating, and deleting user accounts in the system based on external data sources. This process is typically automated and involves synchronizing user data from one or multiple external sources. This section outlines the key concepts and tasks related to user provisioning in the People Service.
 
 - **[User federation](./user_federation.md)**<br>
 Learn how to link existing user directories to HCL People Service.
