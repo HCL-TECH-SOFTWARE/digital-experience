@@ -24,21 +24,27 @@ A set of search results set is generated to match the search terms that you ente
 
     ![](../../../assets/HCL_Search_03_Results_Set_Initial.png "View the search results and note the count of results found")
 
-4.  Specify the search results further by selecting a content source and attribute, then click **Search** again.
+4.  Refine the search results further by selecting a content source and attribute, then click **Search** again.
+
     1. Click the **Select a content source** dropdown and select a content source, such as "MyWCM".
+
+        ![](../../../assets/HCL_Search_04_Input_Scope.png "Click on Select a content source and choose one option")
+
     2. Click the **Select an attribute** dropdown and select an attribute, such as "title".
+
+        ![](../../../assets/HCL_Search_05_Input_Type.png "Click on Select an attribute and choose one option")
 
 5.  View the search results generated again. By selecting a content source and attribute, searching for the term "blog" generated eight, more specific search results.
 
     ![](../../../assets/HCL_Search_07_Results_Set_Filtered.png "View the filtered down search results and note the count of results found")
 
-9.  Go back to the **Search** input box and type a new search term you need to search e.g "interiors" and click the blue **Search** button again to start the search. View the new results list. Above the results, you can find a description of the total count of results found for the search term e.g. "3 results for **interiors**"
+6.  Click on a search result link.
 
-    ![](../../../assets/HCL_Search_08_Input_Query_Change.png "Change the search term in the Search input box")
+    ![](../../../assets/HCL_Search_08_Click_Result_Link.png "Click on one of the result items to open it in a new tab")
 
-6.  Click a search result link to open that item in a new tab.
+7.  View the opened item in a new tab.
 
-    ![](../../../assets/HCL_Search_09_Open_Result_Item.png "Click on one of the result items to open it in a new tab")
+    ![](../../../assets/HCL_Search_09_Open_Result_Item.png "View the opened item in a new tab")
 
 ## Other search result scenarios
 
