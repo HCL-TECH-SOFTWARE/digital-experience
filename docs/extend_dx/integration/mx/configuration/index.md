@@ -2,10 +2,10 @@
 
 ## Configuring Ingress for HCL Digital Experience and HCL Volt MX Foundry
 
-As a pre-requisite, HCL DX needs to be installed already. Use the below link to install HCL DX and configure ingress
+### Prerequisite
+Install HCL Digital Experience (DX).  For more information, see [Deploying DX](../../../../deployment/index.md#deploying-dx).
 
-[Install HCL DX](../../../../deployment/index.md#deploying-dx)
-
+### Configuring Ingress for HCL DX
 You can use an [optional Ingress](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md) with HCL Digital Experience. While an Ingress is not required to run HCL Digital Experience, it can be configured to be reused by HCL Volt MX Foundry to handle the routing for both products and make them available on the same host.
 
 1. Set up the Ingress for HCL Digital Experience. For more information, refer to the [optional Ingress documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md).
@@ -31,16 +31,16 @@ You can use an [optional Ingress](../../../../deployment/install/container/helm_
      Refer to the [HCL Volt MX Foundry Configuration documentation](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmxfoundry_containers_helm/Content/Installing_Containers_With_Helm.html#configuration) for more details on the used values.
 
 
-### Verification
+### Verifying the deployment
 When testing with a local deployment that does not include haproxy, access DXConnect by specifying the container port with a URL of the form [https://localhost:10202/hcl/dxconnect/processHandler/version](https://localhost:10202/hcl/dxconnect/processHandler/version). If the target environment includes haproxy, then access via [https://host-name/hcl/dxconnect/processHandler/version](https://host-name/hcl/dxconnect/processHandler/version) and replace the host-name part as appropriate.
 
-Once all services and pods are up and running, the MX Foundry admin console can be accessed as below after updating host-name accordingly:-
+Once all services and pods are running, you can access the Volt MX Foundry admin console using the following URL. Make sure to update the host-name accordingly.
 
-[https://host-name/mfconsole](https://host-name/mfconsole) 
+```https://<host-name>/mfconsole```
 
 !!! important
-      If ingress is enabled for DX, then upload size restriction needs to be modified by executing kubectl -n dxns edit ingress/custom-routes.
-      Add `nginx.ingress.kubernetes.io/proxy-body-size: 8m` to increase it to 8 MB (Use desired value).
+      If Ingress is enabled for DX, modify the upload size restriction by running `kubectl -n dxns edit ingress/custom-routes`.
+      Add `nginx.ingress.kubernetes.io/proxy-body-size: 8m` to increase it to 8 MB. You can modify the value based on your preference.
     
      
 After applying the configuration, both HCL Digital Experience and HCL Volt MX Foundry can be accessed using the provided hostname.
