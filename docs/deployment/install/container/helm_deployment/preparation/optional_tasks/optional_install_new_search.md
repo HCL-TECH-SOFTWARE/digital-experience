@@ -158,25 +158,28 @@ scaling:
 - If split deployment is enabled, both the `searchMiddlewareQuery` and `searchMiddlewareData` values are considered. In a non-split deployment, only the `searchMiddlewareQuery` value is considered.  
 - You can enable automated scaling by enabling `horizontalPodAutoScaler` for both `searchMiddlewareQuery` and `searchMiddlewareData`. Enter the minimum number of pods in the `minReplicas` field and the maximum number of pods in `maxReplicas`. By default, automated scaling is disabled for both `searchMiddlewareQuery` and `searchMiddlewareData` settings.  
 
-### Automated setup for DAM  
+### Automated setup of content sources and crawlers
 
 ```yaml
-# Automated DAM setup
 configuration:
   automatedSetup:
-    # Configuring DAM automatically
     digitalAssetManagement: 
-      enabled: false
-      uuid: ""
-      aclLookupHost: ""
+      enabled: true
+    jcr:
+      enabled: true
+    portal:
+      enabled: true
+    wcm:
+      enabled: true
 ```  
 
-Configure the `automatedSetup` for `digitalAssetManagement` to automatically configure DAM content source. If `digitalAssetManagement` is enabled, DAM content source is configured automatically with the given `uuid` and `aclLookupHost` during startup of search. 
+You can enable an automated setup for content sources and crawlers. This setting is enabled by default for all content sources and crawlers. This includes the following content sources:
+- 'dam' for Digital Asset Management (`dam_default_content_source` - `75024f9c-2579-58f1-3new-5706ba2a62fc`)
+- 'jcr' for Java Content Repository (`jcr_default_content_source` - `680f8805-92f3-45d4-a900-8f28c7160935`)
+- 'portal' for Portal (`portal_default_content_source` - `5d2d2fa4-8f71-435d-9341-c3034ff9c509`)
+- 'wcm' for Web Content Manager (`wcm_default_content_source` - `972369e7-041c-4459-9211-069f4917c1ba`)
 
-If `uuid` is not provided, the system assumes the default DAM auto configuration with `uuid: 75024f9c-2579-58f1-3new-5706ba2a62fc`. For `aclLookupHost`, a sample configuration is `aclLookupHost: https://dx-deployment-core:10042`. In this example, `dx-deployment-core` utilizes the internal name of the core container in a Helm deployment on the same cluster. Depending on your installation, you might need to point to the webEngine container or, if you use different clusters, to an external host name.  
-
-!!!note
-    The host `dx-deployment-core` and port `10042` are the Kubernetes service host and the port for DX Core. In this case, 10042 is the HttpQueueInboundDefaultSecure port on the HCL DX 9.5 server. Adjust this according to your deployment configuration.  
+For each of the content sources, you can enable or disable the automated setup by setting the `enabled` field to `true` or `false`. It is possible to override the default settings for `uuid`, `aclLookupHost`, and `aclLookupPath` for each content source. If left empty, the setup will automatically detect default values by inspecting the existing DX deployment.
 
 ### Allowlisting for file types in the file processor 
 
@@ -192,6 +195,7 @@ configuration:
         - "text/plain"
         - "application/pdf"
         - "image/jpeg"
+        ...
 ```   
 
 ### Common fields mapping for fallback  
