@@ -334,7 +334,7 @@ Based on the previously created Remote Search service, create a **Portal Search 
 
 ##### Selecting the right host for the Search Collections
 
-When you run crawlers, it is important that they will always use the pod to retrieve their data, since the seedlist providers are not shared between pods. In the following examples a placeholder for the host is used. This placeholder must be replaced with the correct host name and port number.
+When you run crawlers, it is important that they will always use the pod to retrieve their data, since the seedlist providers are not shared between pods. In the following examples a placeholder for the host is used. This placeholder must be replaced with the correct host name.
 
 The host is composed of the deployment name used in the helm install command and the namespace. The port number is the secure port of the DX Core pod and is 10042 by default.
 
