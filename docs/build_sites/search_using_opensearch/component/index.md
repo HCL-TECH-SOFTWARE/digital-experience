@@ -60,7 +60,7 @@ Atomic Components are the smallest possible building blocks of the search functi
     | **disabled**   | Boolean | Indicates if the dropdown is disabled, preventing user interaction. | false |
     | **selectedValue**     | String | The currently selected value. | undefined |
     | **selectedId** | String | The id of the currently selected option. | undefined |
-    | **options**    | String, string[], OptionData[] | List of options to display in the dropdown. Can be a JSON string, an array of strings, or an array of objects with id and name properties. | [] |
+    | **options**    | String, String[], OptionData[] | List of options to display in the dropdown. Can be a JSON string, an array of strings, or an array of objects with id and name properties. | [] |
     | **field**    | DxSearchInputFieldType, String | The type of the input field, used to determine default labels or handle specific behaviors. You can use DxSearchInputFieldType strings such as "contentSource" or "documentObjectType" or leave it blank. | '' |
 
 - **dx-list:** This component wraps an unordered list (`<ul>`) and uses a slot to insert content (e.g., list items) into the component. The `part="unordered-list"` attribute allows external styling of the `<ul>`.                     
@@ -121,8 +121,8 @@ Atomic Components are the smallest possible building blocks of the search functi
     |**disabled** |	Boolean	| Determines if the button is disabled. |	false |
     |**outlined** |	Boolean	| Controls if the button has an outlined style.|	false |
     | **selectedValue** |	String |	The currently selected value of the toggle button. |	'' |
-    |**iconUrls** |	Array<String> |	Array of URLs for the icons displayed on the buttons. |	[] |
-    |**values** |	Array<String> |	Array of values corresponding to each button's selection state. |	[] |
+    |**iconUrls** |	String[] |	Array of URLs for the icons displayed on the buttons. |	[] |
+    |**values** |	String[] |	Array of values corresponding to each button's selection state. |	[] |
 
 - **dx-avatar:** The component ensures flexibility by allowing customization of the avatar's appearance, and it uses placeholder assets if specific URLs are not provided. The renderAvatarContent method dynamically decides what to render based on the variant. As of now it is not in use in our OpenSearch component.  
 
@@ -237,7 +237,7 @@ Functional Composite Components combine Atomic Components to deliver higher-leve
     |**templatePaginationId** |	String	| The ID of the pagination template element used for paginated search results. |	'' |
     | **searchValue** |	String |	The current search query or keyword entered by the user. |	'' |
     |**documentObjectType** |	String |	The attribute in the document object being searched. |	'' |
-    |**scope** |	Array<String> |	A list of content sources ids that limit the search query. |	[] |
+    |**scope** |	String[] |	A list of content sources ids that limit the search query. |	[] |
     |**searchResults** |	DxSearchResults	| Contains the search results, including hit count, individual hits, and scores. |	{ hits: { total: { value: NaN, relation: 'eq' }, max_score: 0, hits: [] } } |
     |**isLoading** |	Boolean	| A flag indicating whether search results are being loaded. |	false |
 
