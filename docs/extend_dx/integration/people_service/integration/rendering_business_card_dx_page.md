@@ -10,10 +10,7 @@ Using Script Applications, you can import existing applications and edit its HTM
 
 ## Examples
 
-The following are sample Script Application HTML code snippets for two different scenarios:
-
-- [Business Card on hover](#business-card-on-hover)
-- [Business Card in a page](#business-card-in-a-page)
+The following are sample Script Application HTML code snippets for rendering a Business Card on a page and on hover:
 
 ### Business Card on hover
 

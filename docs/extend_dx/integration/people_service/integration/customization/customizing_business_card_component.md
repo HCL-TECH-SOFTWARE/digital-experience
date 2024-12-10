@@ -5,10 +5,7 @@ The Business Card component in HCL Digital Experience (DX) provides a quick over
 
 ## Steps to Customize the Business Card Component
 
-In this guide, you will learn how to:
-
-  1. [Create a custom web component](#creating-a-custom-web-component)
-  2. [Customize a Business Card](#customizing-a-business-card)
+In this guide, you will learn how to create a custom web component and customize a Business Card.
 
 For detailed instructions on how to verify and link system modules, refer to the [Verifying and Linking People Service System Modules](../link_system_module_to_theme.md) page.
 
