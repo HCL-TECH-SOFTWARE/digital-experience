@@ -142,7 +142,7 @@ Atomic Components are the smallest possible building blocks of the search functi
     | **showBackIcon** |	Boolean |	Determines if the back icon should be shown. |	false |
     |**isSideNavOpen** |	Boolean |	Indicates if the side navigation is open. |	false |
     |**disabled** |	Boolean |	If true, disables certain components in the header. |	false |
-    |**variant** |	HEADER_VARIANT |	Array of values corresponding to each button's selection state. |	undefined |
+    |**variant** |	HEADER_VARIANT |	The predetermined structure and styling of the header according to its use-case. You can use "header-endUser" |	undefined |
 
 - **dx-list-item:**  The component is designed to be flexible and reusable in various list-based UI components, with the ability to mark items as selected and apply different styles accordingly. The list item also supports a slot element, allowing content to be inserted into the item when the component is used.
 
