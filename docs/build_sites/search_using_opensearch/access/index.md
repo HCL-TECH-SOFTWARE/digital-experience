@@ -32,29 +32,15 @@ The HCL End-user Search UI has the following components:
 
 -   **Main Header** - This section contains the title of the page.
 -   **Search Input** - This section displays the fields the user can interact with to modify the search parameters before clicking **Search**. There are three fields: the search field, the content source dropdown, and the search attribute dropdown.
--   **Search Output** - This section displays the search results. Each result in the list has its own title, description, and detailed context when available depending on your content source. The title also functions as a link you can click to open the result item in a new browser tab.
--   **Pagination** - This section lists the pages available for navigation within the search results.
+-   **Search Output** - This section displays the search results, with each result having its own title and description. Depending on your content source, search results may also provide detailed context. You can also click the title of a search result to open it in a new tab.
+-   **Pagination** - This section lists the number of pages you can view to check the search results.
 
 ## Other ways of Accessing the HCL End-user Search UI
 
-You can also access the HCL End-user Search UI through two additional methods. Once redirected, you can utilize the search results or initiate a new search. For more information, refer to the [Usage of HCL End-user Search with OpenSearch](../usage/index.md) topic.
+You can also access the HCL End-user Search UI through the Woodburn Studio homepage search bar and the Practitioner Studio side navigation panel. Once redirected, you can utilize the search results or initiate a new search. For more information, refer to [Using HCL End-user Search with OpenSearch](../usage/index.md).
 
-### Via Woodburn landing page search bar
-
-1. Find the search bar on the upper right side of the Woodburn landing page once you are logged in.
-
+- To access the End-user Search UI from Woodburn Studio, go to the Woodburn Studio homepage then click the **Search Site** search field on the top-right corner of the page.
     ![](../../../assets/HCL_Search_Access_Page_Via_Woodburn_1.png)
 
-2. Type the search term in the search bar and hit `Enter` on your keyboard.
-    
-    ![](../../../assets/HCL_Search_Access_Page_Via_Woodburn_2.png)
-
-### Via Practitioner Studio SideNav search bar
-
-1. Click the search icon located on the upper left side of Practitioner Studio when the Side Navigation is open.
-
+- To access the End-user Search UI from Practitioner Studio, go to the Practitioner Studio homepage then click the **Open search** icon on the top-left corner of the side navigation panel. The **Search Site** search field will appear, allowing you to utilize its search functionality.
     ![](../../../assets/HCL_Search_Access_Page_Via_PS_Sidenav_1.png)
-
-2. Type the search term in the search bar and hit `Enter` on your keyboard.
-    
-    ![](../../../assets/HCL_Search_Access_Page_Via_PS_Sidenav_2.png)
