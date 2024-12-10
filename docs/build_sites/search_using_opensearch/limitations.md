@@ -1,4 +1,4 @@
-# End-User Search with Opensearch: Limitations
+# Limitations of End-User Search with Opensearch
 
 Take note of the following limitations when using HCL End-user Search with OpenSearch:
 

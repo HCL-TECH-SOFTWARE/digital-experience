@@ -1,4 +1,4 @@
-# End-User Search with Opensearch: Web Components
+# Web Components of End-User Search with Opensearch
 
 This guide explains how to use the HCL End-user Search UI. Follow along to learn about its components, styling options, and extendable features.
 
