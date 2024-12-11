@@ -44,37 +44,37 @@ Follow the steps to create the OAuth service provider.
 
 1. Create the OAuth provider by using the wsadmin utility.
 
-  ```
-  cd /opt/HCL/AppServer/bin
-  ./wsadmin.sh -lang jython -username <username> -password <password>
+    ```
+    cd /opt/HCL/AppServer/bin
+    ./wsadmin.sh -lang jython -username <username> -password <password>
 
-  AdminTask.createOAuthProvider('[-providerName <OAuthProviderName> -fileName <ProviderConfigFile>]')
-  ```
+    AdminTask.createOAuthProvider('[-providerName <OAuthProviderName> -fileName <ProviderConfigFile>]')
+    ```
 
-  Where:
+    Where:
 
-  - `<OAuthProviderName>` is the OAuth provider name (typically OAuthConfig).
-  - `<ProviderConfigFile>` is the full path to the OAuth provider configuration file. Download and use the [DXProvider.xml](../configuration/DXProvider.xml) configuration file which includes Auto Authorize setup for the VoltMX client.
+    - `<OAuthProviderName>` is the OAuth provider name (typically OAuthConfig).
+    - `<ProviderConfigFile>` is the full path to the OAuth provider configuration file. Download and use the [DXProvider.xml](../configuration/DXProvider.xml) configuration file which includes Auto Authorize setup for the VoltMX client.
 
-  For example:
+    For example:
 
-  ```
-  AdminTask.createOAuthProvider('[-providerName OAuthConfig -fileName /opt/HCL/AppServer/properties/DXProvider.xml]')
-  AdminConfig.save()
-  quit
-  ```
+    ```
+    AdminTask.createOAuthProvider('[-providerName OAuthConfig -fileName /opt/HCL/AppServer/properties/DXProvider.xml]')
+    AdminConfig.save()
+    quit
+    ```
 
-  This command copies the configuration file to `<was_profile_root>/config/cells/<cell_name>/oauth20`.
+    This command copies the configuration file to `<was_profile_root>/config/cells/<cell_name>/oauth20`.
 
-  Confirm the OAuth file exists. For example, `/opt/HCL/wp_profile/config/cells/dockerCell/oauth20/OAuthConfig.xml`.
+    Confirm the OAuth file exists. For example, `/opt/HCL/wp_profile/config/cells/dockerCell/oauth20/OAuthConfig.xml`.
 
 2. Restart the WebSphere Application Server using the following command:
 
-  ```sh
-  cd /opt/HCL/AppServer/bin
-  ./stopServer.sh WebSphere_Portal -profileName wp_profile -username <username> -password <password>
-  ./startServer.sh WebSphere_Portal -profileName wp_profile
-  ```
+    ```sh
+    cd /opt/HCL/AppServer/bin
+    ./stopServer.sh WebSphere_Portal -profileName wp_profile -username <username> -password <password>
+    ./startServer.sh WebSphere_Portal -profileName wp_profile
+    ```
 
 ### Configuring TAI properties
 
@@ -95,20 +95,22 @@ Follow the steps to configure the Trust Association Interceptors (TAI) propertie
     ![alt text](image-2.png)
 
 5. (Optional) If the `com.ibm.ws.security.oauth20.tai.OAuthTAI` does not exist, add an Interceptor.
-             1. Click **New**. 
-             2. In the **Interceptor class name** field, enter `com.ibm.ws.security.oauth20.tai.OAuthTAI`.
-             3. Under **Custom properties**, click **New**. Add the following custom properties:
-                        <lines 96-99 and image must be moved here>
-             4. After the custom properties are added, click **OK**.
+    
+    1. Click **New**. 
+    2. In the **Interceptor class name** field, enter `com.ibm.ws.security.oauth20.tai.OAuthTAI`.
+    3. Under **Custom properties**, click **New**. Add the following custom properties:
+        
+        ```
+        provider_1.name=OAuthConfig
+        provider_1.filter=Authorization%=Bearer
+        ```
 
-    ![alt text](image-3.png)
-
-  ```
-  provider_1.name=OAuthConfig
-  provider_1.filter=Authorization%=Bearer
-  ```
+        ![alt text](image-3.png)
+    4. After the custom properties are added, click **OK**.
 
 ### Registering the OAuth client
+
+Follow the steps to register the OAuth client.
 
 1. Copy the default client definitions using the following command:
 
@@ -121,7 +123,7 @@ Follow the steps to configure the Trust Association Interceptors (TAI) propertie
     cp /opt/HCL/AppServer/properties/base.clients.xml /opt/HCL/wp_profile/config/cells/dockerCell/oauth20/
     ```
 
-2. Edit `base.clients.xml` file to include Volt MX client using the following commands:
+2. Edit the `base.clients.xml` file to include Volt MX client using the following commands:
 
     ```sh
     vi /opt/HCL/wp_profile/config/cells/dockerCell/oauth20/base.clients.xml
@@ -131,6 +133,7 @@ Follow the steps to configure the Trust Association Interceptors (TAI) propertie
     <client id="voltmx" component="<OAUTH_PROVIDER_NAME>" secret="<OAUTH_SECRET>" displayname="Volt MX" redirect="https://<VOLT_MX_HOST>/auth/dx/<BASE_64_ENCODED_DX_HOSTNAME>/callback" enabled="true">
     </client>
     ```
+
     Where:
 
       - `<OAUTH_PROVIDER_NAME>` is the name of the specified provider (for example, OAuthConfig).
@@ -149,6 +152,8 @@ Follow the steps to configure the Trust Association Interceptors (TAI) propertie
     ```
 
 ### Installing the OAuth application
+
+Follow the steps to install the OAuth 2.0 service provider application.
 
 1. Install the OAuth 2.0 service provider application using the following command:
 
@@ -202,6 +207,8 @@ Follow the steps to configure the Trust Association Interceptors (TAI) propertie
 For more information on foundry, please refer to this [link](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmxFoundryFundamentals.html)
 
 ### Adding SSO in Iris
+
+Follow the steps to add SSO in Iris.
 
 1. Create a login page in Iris and add the following code in form init. Ensure the Iris is connected to the Foundry application which contains the SSO configurations. For more information on how to create an application, refer to [Volt MX Iris setup and configuration](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Iris/voltmxIrisFundamentals.html){target="_blank"}.
 
