@@ -8,6 +8,7 @@ The following features and updates are available to customers installing HCL Dig
 - Disabled SSL hostname verification
 - Presentation Designer
 - DXClient - LiveSync Pull and Push commands for WCM Design Library
+- HCL Volt MX integration - Enabling SSO and deploying Volt MX portlet to DX
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -70,6 +71,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     LiveSync Pull and Push commands for WCM Design Library are now available for HTML and Folder Components. The [LiveSync Pull WCM Design Library command](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#livesync-pull-wcm-design-library) syncs a WCM Design Library in a DX Server with a local folder. The [LiveSync Push WCM Design Library command](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#livesync-push-wcm-design-library) syncs your WCM Design Library local files with the DX Server. For more information, see [LiveSync](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md).
+
+### HCL Volt MX integration - Enabling SSO and deploying Volt MX portlet to DX
+
+=== "Containers"
+    You can now enable single sign-on (SSO) between HCL DX and HCL Volt MX. In addition, you can also deploy HCL Volt MX portlets to HCL DX pages. For more information, see the topics [Enabling SSO between HCL DX and Volt MX]() and [Deploying HCL Volt MX portlet into HCL DX]().<!--will add link once merged>
+
+=== "On-Premises"
+    You can now enable single sign-on (SSO) between HCL DX and HCL Volt MX. In addition, you can also deploy HCL Volt MX portlets to HCL DX pages. For more information, see the topics [Enabling SSO between HCL DX and Volt MX]() and [Deploying HCL Volt MX portlet into HCL DX]().
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
