@@ -75,7 +75,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### HCL Volt MX integration - Enabling SSO and deploying Volt MX portlet to DX
 
 === "Containers"
-    You can now enable single sign-on (SSO) between HCL DX and HCL Volt MX. In addition, you can also deploy HCL Volt MX portlets to HCL DX pages. For more information, see the topics [Enabling SSO between HCL DX and Volt MX]() and [Deploying HCL Volt MX portlet into HCL DX]().<!--will add link once merged>
+    You can now enable single sign-on (SSO) between HCL DX and HCL Volt MX. In addition, you can also deploy HCL Volt MX portlets to HCL DX pages. For more information, see the topics [Enabling SSO between HCL DX and Volt MX]() and [Deploying HCL Volt MX portlet into HCL DX]().<!--will add link once merged-->
 
 === "On-Premises"
     You can now enable single sign-on (SSO) between HCL DX and HCL Volt MX. In addition, you can also deploy HCL Volt MX portlets to HCL DX pages. For more information, see the topics [Enabling SSO between HCL DX and Volt MX]() and [Deploying HCL Volt MX portlet into HCL DX]().
