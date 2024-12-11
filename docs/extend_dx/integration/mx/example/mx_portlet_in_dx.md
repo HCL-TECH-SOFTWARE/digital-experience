@@ -5,7 +5,7 @@ The following example provides the steps to generate the Volt MX portlet through
 
 ## Creating a Volt MX portlet and deploying in HCL DX
 
-1. Create a new project in Iris. For more information, refer to [Introducing Volt MX](https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/index.html){target="_blank"}.
+1. Create a new or use an existing **web app** project in Iris. For more general information about projects in Iris, refer to [Create, Migrate, or Import a Project](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Iris/iris_user_guide/Content/CreateMigrateOrImportProject.html){target="_blank"}.
 
 2. Configure the HCL DX host details in Iris. See the following example:
 
@@ -20,7 +20,7 @@ The following example provides the steps to generate the Volt MX portlet through
 
 This creates a Volt MX portlet with the project name and deploys the same portlet in HCL DX.
 
-For detailed steps refer to this [link](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Iris/iris_user_guide/Content/WebPublish.html#publish-a-portlet-for-dx) 
+For additional details about publishing portlets to HCL DX, refer to the relevant sections of [Publishing a Web App in Volt MX Iris](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Iris/iris_user_guide/Content/WebPublish.html#overview) 
 
 
 ## Adding the Volt MX portlet to HCL DX and verifying the portlet

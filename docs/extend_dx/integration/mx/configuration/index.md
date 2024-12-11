@@ -217,7 +217,7 @@ Follow the steps to install the OAuth 2.0 service provider application.
 
   ![alt text](image-5.png)
 
-For more information on Volt MX Foundry, refer to [Volt MX Foundry Fundamentals](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmxFoundryFundamentals.html){target="_blank"}.
+For more information on Volt MX Foundry identity services, refer to [Configure Identity Services](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/ConfigureIdentiryService.html){target="_blank"}.
 
 !!! note
     If VoltMX and HCL DX environments are hosted on separate instances, there may be CORS issues. For more details refer to [CORS](https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Foundry/vmf_integrationservice_admin_console_userguide/Content/Runtime_Configuration.html#cors-configuration){target="_blank"} configuration. 
@@ -227,7 +227,7 @@ For more information on Volt MX Foundry, refer to [Volt MX Foundry Fundamentals]
 
 Follow the steps to add SSO in Iris.
 
-1. Create a login page in Iris and add the following code in form init. Ensure the Iris is connected to the Foundry application which contains the SSO configurations. For more information on how to create an application, refer to [Volt MX Iris setup and configuration](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Iris/voltmxIrisFundamentals.html){target="_blank"}.
+1. Create a login page in Iris and add the following code in form init. Ensure the Iris is connected to the Foundry application which contains the SSO configurations. For more information on how to create an application, refer to [Getting started with Iris](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Iris/iris_tutorials/Content/Module/getting_started_iris.html){target="_blank"}.
 
     ```
       if(!VMXFoundry) return;
