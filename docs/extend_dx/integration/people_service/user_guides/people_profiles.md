@@ -18,7 +18,6 @@ Refer to the following steps to view and manage your own profile.
 1. Log into your HCL DX account.
 
 2. In the navigation bar, select **My Profile**.
-    ![Profile Page - Example Profile](./img/profile-page.png)
 
 3. Click the **Edit** button next to the section you want to update:
     - Profile Image: A visual representation of the user.
@@ -26,6 +25,11 @@ Refer to the following steps to view and manage your own profile.
     - Personal Information: Name, date of birth, and other personal details.
     - Professional Summary: Job title, organization, and a brief professional summary.
     - Tags: Keywords that describe the user's skills, interests, and other attributes.
+    
+    ![Profile Page - Example Profile](./img/profile-page.png)
+    
+    See the UI when editing your Personal Information below.
+    
     ![Profile Page - Edit Profile](./img/profile-page-edit-profile.png)
 
 4. Modify your information as needed, then click **Save changes**.
@@ -34,12 +38,12 @@ Refer to the following steps to view and manage your own profile.
 
 Your profile image is an important part of your profile as it helps other users confirm your identify. You can upload a new image or remove the existing one. Make sure to select an image that is clear and professional to represent you appropriately.
 
-!!! Notes
+!!! Note
     You cannot update the profile image if the field is marked as read-only.
 
 ### Field validation
 
-To ensure data accuracy and completeness, field validation is implemented in text fields. For example, email addresses are validated to ensure correct formatting. Error messages are displayed in the text field if there are issues with the information provided.
+Field validation is implemented to ensure data accuracy and completeness in text fields. For example, email addresses are validated to ensure correct formatting. You will see error messages displayed in the text field if there are issues with the information you entered.
 
 ### Read-only fields
 

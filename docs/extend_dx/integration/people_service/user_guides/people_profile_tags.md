@@ -57,7 +57,7 @@ Authenticated users can add profile tags to their own profiles, or other user pr
     After selecting or entering a tag, it will appear inside the tag field. You can add multiple tags to a profile.
     ![Add/Edit tags button](./img/xxx/tag-self-created.png){class="list"}
     
-3. Once you are done, click **Save*.  A notification will appear at the bottom of the page indicating that the tags were successfully updated. 
+3. Once you are done, click **Save**.  A notification will appear at the bottom of the page indicating that the tags were successfully updated. 
     ![tag creation confirmation message](./img/xxx/tag-other-user-confirmation-msg.png){class="list"}
 
 
@@ -73,7 +73,7 @@ Profile tags are emphasized by the number of endorsements they have. The more en
 
 ## Removing profile tags
 
-Profile tags can be directly removed by the profile owner, or an administrator. To remove a profile tag, navigate to the **Tags** section of your profile then click the **Remove** button next to the tag you want to delete. A notification will appear at the bottom indicating that the tags were successfully updated.
+Profile tags can be directly removed by the profile owner or an administrator. To remove a profile tag, navigate to the **Tags** section of your profile then click the **Remove** button next to the tag you want to delete. A notification will appear at the bottom indicating that the tags were successfully removed.
 
 !!!Notes
     - Alternatively, you remove the tags from the **Add/Edit tag** window.
@@ -81,12 +81,15 @@ Profile tags can be directly removed by the profile owner, or an administrator. 
 
 ## Viewing profile tag endorsers
 
-You can hover on the **Endorsement count** to display the list of the users who endorsed the tag. Only the first five users who endorsed the tag are initially displayed. You can click **View all users** to display the full list.
+You can hover over the **Endorsement count** to display the list of the users who endorsed the tag. Only the first five users who endorsed the tag are initially displayed. You can click **View all users** to display the full list.
+
 ![Endorsed User list](./img/endorsedUserList.png)
 
 From the list of users displayed from the **Endorsement count**, you can hover over a user's name to display their Business card.
+
 ![biz card](./img/bizCard.png)
 
 You can also view a user's Business Card when you hover over their name from the **View all users** popup.
+
 ![user list dialog](./img/userListDialog.png)
 

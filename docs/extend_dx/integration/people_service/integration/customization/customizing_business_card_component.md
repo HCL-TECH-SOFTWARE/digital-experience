@@ -1,9 +1,7 @@
 
 # Customizing the Business Card Component in HCL Digital Experience
 
-The Business Card component in HCL Digital Experience (DX) provides a quick overview of a user's profile information. While the shipped Business Card component does not support direct customization, you can fully replace the shipped system module or web component to suit your needs. This guide provides the steps to customize the Business Card component.
-
-## Steps to Customize the Business Card Component
+The Business Card component in HCL Digital Experience (DX) provides a quick overview of a user's profile information. While the shipped Business Card component does not support direct customization, you can fully replace the shipped system module or web component to suit your needs.
 
 In this guide, you will learn how to create a custom web component and customize a Business Card.
 
