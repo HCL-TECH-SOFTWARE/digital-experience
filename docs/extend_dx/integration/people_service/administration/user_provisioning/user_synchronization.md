@@ -4,7 +4,7 @@ HCL People Service is designed to store user data and enrich it with additional 
 
 As companies vary in the way they store and manage user data, People Service provides a flexible way to synchronize user data from different sources and map them into the service's data model. It allows users to enhance their profiles and provide details that may not exist in the external sources.
 
-User synchronization leverages the process of [user federation](./user_federation.md) to gather user data from external sources and synchronize it with the People Service.
+User synchronization leverages the process of [user federation](./user_federation.md) to gather user data from external sources and synchronize it with People Service.
 
 ## User synchronization job
 
