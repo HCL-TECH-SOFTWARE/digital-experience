@@ -136,10 +136,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
     This statement is not a guarantee of future releases or their features.
 
-### Digital Asset Management - DAM Cross CF Staging
+### DAM - Cross-CF staging
 
 === "Containers"
-    Staging of DAM content between different CF versions is supported. For more information on limitations, please refer to the documentation [DAM Cross CF Staging](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging/#dam-cross-cf-staging).
+    Staging of DAM content between different cumulative fix (CF) versions is supported. For more information on limitations, refer to [DAM Cross-CF staging](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging/#dam-cross-cf-staging).
     
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 

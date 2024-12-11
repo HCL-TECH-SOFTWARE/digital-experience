@@ -55,12 +55,12 @@ The credentials used in the registration are used for authentication and authori
 **To update staging secret**:<br>
 The `manage-dam-staging update-secrets` command can be used to update the publisher and subscriber staging secrets.
 
-### DAM Cross CF staging
+### DAM Cross-CF staging
 
 The DAM Cross CF staging feature allows the staging of DAM content from one version of CF to another. Key points to note are:
 
-1) DAM Cross CF staging is supported only from higher to lower CF versions.
-2) Testing has been conducted up to last two lower CF versions.
+- DAM Cross-CF staging is supported only from higher to lower CF versions.
+- Testing has been conducted up to last two lower CF versions. For example: Publisher is in CF224 and Subscriber is in CF222, we support staging between these environments
 
 ## Managing DAM staging
 
