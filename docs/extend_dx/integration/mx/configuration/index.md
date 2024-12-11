@@ -30,7 +30,7 @@ After applying the configuration, both HCL Digital Experience and HCL Volt MX Fo
 
 ## Enabling SSO between HCL DX and Volt MX
 
-This section provides information on how to enable single sign-on (SSO) for DX and MX. 
+This section provides information on how to enable single sign-on (SSO) for DX and Volt MX Foundry. 
 
 Configure OAuth in Websphere to authenticate with HCL DX. Connect to the HCL DX core server (for example, on Kubernetes) using the following command:
 
