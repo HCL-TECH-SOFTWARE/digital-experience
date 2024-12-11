@@ -1,6 +1,6 @@
 # Configuring HCL Volt MX Foundry for integration with HCL Digital Experience
 
-## Configuring Ingress for HCL Digital Experience and HCL Volt MX Foundry
+This topic provides information on how to configure Ingress for HCL Digital Experience (DX) for integration with HCL Volt MX Foundry.
 
 ### Prerequisite
 Install HCL Digital Experience (DX).  For more information, see [Deploying DX](../../../../deployment/index.md#deploying-dx).
@@ -32,15 +32,23 @@ You can use an [optional Ingress](../../../../deployment/install/container/helm_
 
 
 ### Verifying the deployment
-When testing with a local deployment that does not include haproxy, access DXConnect by specifying the container port with a URL of the form [https://localhost:10202/hcl/dxconnect/processHandler/version](https://localhost:10202/hcl/dxconnect/processHandler/version). If the target environment includes haproxy, then access via [https://host-name/hcl/dxconnect/processHandler/version](https://host-name/hcl/dxconnect/processHandler/version) and replace the host-name part as appropriate.
+To test a local deployment that does not include High Availability (HAproxy), access DXConnect by specifying the container port in the following URL:
+          ```
+          https://<localhost>:10202/hcl/dxconnect/processHandler/version
+          ```
+If the target environment includes HAproxy, access DXConnect with the following URL:
+          ```
+          https://<host-name>/hcl/dxconnect/processHandler/version
+          ```
+Make sure to replace the host-name.
 
-Once all services and pods are running, you can access the Volt MX Foundry admin console using the following URL. Make sure to update the host-name accordingly.
+When all services and pods are running, access the Volt MX Foundry admin console using the following URL. Make sure to update the host-name accordingly.
 
 ```https://<host-name>/mfconsole```
 
 !!! important
       If Ingress is enabled for DX, modify the upload size restriction by running `kubectl -n dxns edit ingress/custom-routes`.
-      Add `nginx.ingress.kubernetes.io/proxy-body-size: 8m` to increase it to 8 MB. You can modify the value based on your preference.
+      Add `nginx.ingress.kubernetes.io/proxy-body-size: <size restriction>m` to increase the size restriction. Make sure to specify your preferred size in the <size restriction> value.  For example, to increase the restriction to 8 MB, add `nginx.ingress.kubernetes.io/proxy-body-size: 8m`.
     
      
 After applying the configuration, both HCL Digital Experience and HCL Volt MX Foundry can be accessed using the provided hostname.
