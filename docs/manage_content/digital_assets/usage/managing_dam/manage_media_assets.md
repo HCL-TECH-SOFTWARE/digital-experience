@@ -80,13 +80,18 @@ Play uploaded videos in DAM using the DAM binary URL or the Kaltura Player \(if 
 
         ![Playing a video using the Kaltura Player](../../../../images/dam_kaltura_player_for_synced.png)
 
+!!! note 
+    Videos being synced in progress displays a warning message and cannot be played yet.
+
+![Warning message for sync in progress](../../../../images/dam_warning_message_for_in_progress.png)
+
 For more information on the video synchronization statuses for uploaded videos, see [Upload rich media assets](upload_rich_media_assets.md).
 
 ## Downloading a media asset source, version, or rendition
 
 Use the HCL Digital Experience 9.5 DAM editor to download a media asset source, version, or rendition:
 
-1.  From the HCL Digital Experience 9.5 DAM user interface, click the **More actions** menu (three horizontal dots icon) of a media asset. Click **Download**.
+1.  From the HCL Digital Experience 9.5 DAM user interface, hover over a media asset to access and click the Overflow menu on the far right \(three vertical dots icon\). Then, select **Download**.
 
     ![Digital asset menu options](../../../../images/dam_05_edit_media.png)
 
@@ -100,7 +105,7 @@ Use the HCL Digital Experience 9.5 DAM editor to download a media asset source, 
 
 Use the HCL Digital Experience 9.5 DAM editor to delete a media asset, including its renditions:
 
-1.  From the HCL Digital Experience 9.5 DAM user interface, click the **More actions** menu (three horizontal dots icon) of a media asset. Click **Delete**.
+1.  From the HCL Digital Experience 9.5 DAM user interface, hover over a media asset to access and click the Overflow menu on the far right (three vertical dots icon). Then, select **Delete**.
 2.  A pop-up will appear for you to select your Delete action. If the selected media assets will not affect any references, click **Check for references and delete** to complete action.
 
     ![Check references and delete media asset](../../../../images/Check_for_references_and_delete_HCL_DAM.png)
@@ -111,19 +116,21 @@ When copying a media asset, only the latest version of the source assets is copi
 
 Refer to the following steps if you want to copy a media asset from one collection to another.
 
-1. Click the **More actions** menu of the asset. 
+1. Click the **more menu** option of the asset. 
 
-    This displays more actions such as **Edit**, **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename**, and **Delete**.
+    This displays more options such as **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename**, and **Delete**.
 
 2. Click **Copy**.
 
     A dialogue box appears that shows the list of collections. You can search for a specific collection or you can also navigate inside a collection if a subcollection is present. 
 
-3. Navigate to the collection where you want to copy the asset to and click **Paste here**.
+3. (Optional) Check the **Add new keywords to existing** box if you want newly generated keywords to be added to existing keywords. This is available only when Plugin is enabled.
+
+4. Navigate to the collection where you want to copy the asset to and click **Copy**.
 
     If you copied an asset to the same collection, a dialogue box to rename the asset appears. 
 
-4. Click **View Location** to navigate inside the collection.
+5. Click **View Location** to navigate inside the collection.
 
 ## Moving a media asset
 
@@ -133,13 +140,13 @@ Refer to the following steps if you want to move a media asset from one collecti
     Moving an asset location can break its links if it is referenced in WCM or any external references. To update the link, manual relinking is necessary. 
     To view the asset references, go to **Properties > Insights**.
 
-1. Click the **More actions** menu of the asset. 
+1. Click the **more menu** option of the asset. 
 
-    This displays more actions such as **Edit**, **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename**, and **Delete**.
+    This displays more options such as **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename**, and **Delete**.
 
 2. Click **Move**.
 
-    A dialogue box appears that shows the list of collections. You can search for a specific collection or you can also navigate inside a collection. 
+    A dialogue box appears that shows the list of collections. You can search for a specific collection or you can also navigate inside a collection if a subcollection is present. 
 
     ![Move a media asset](../../../../images/Move_Media_Asset.png)
 
@@ -156,9 +163,9 @@ Refer to the following steps to modify the name of a media asset.
 !!! note 
     Renaming an asset name breaks existing references to the asset name in WCM or any external content. To update the asset name, manual relinking is necessary.
 
-1. Click the **More actions** menu of the asset. 
+1. Click the **more menu** option of the asset. 
 
-    This displays more actions such as **Edit**, **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename** and **Delete**.
+    This displays more options such as **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename** and **Delete**.
 
 2. Click **Rename**.
 
@@ -166,7 +173,7 @@ Refer to the following steps to modify the name of a media asset.
 
     ![Rename a media asset](../../../../images/Rename_Media_Asset.png)
     
-3. In the **Rename** dialogue box, enter the new name of the media asset. Click **Rename**. 
+3. In the **Rename** dialogue box, enter the new name of the media asset. Click **Save**. 
 
 Another way to modify the name of a media asset is to edit the asset by clicking the **Pencil** icon. Go to **Properties**. You can edit the **Name** of the media asset in this panel, along with the **Title** and **Description**. Click **Save**.
 
@@ -182,15 +189,19 @@ configuration:
 
 ## Changing duplicate asset names using DAM
 
-If an asset happens to have the same name with another asset in a collection, a rename dialogue will be shown when editing an asset.
+If an asset happens to have the same name with another asset in a collection, a notification is displayed in the **Information** panel.
 
-![Notification to rename an asset](../../../../images/duplicate-asset-rename.png){ width=50% }
+![Notification to rename an asset](../../../../images/information_panel_rename_notification.png){ width=50% }
+
+You can click **Rename** from the notification and provide a unique name.
+
+![Rename asset dialog](../../../../images/dialog_rename_field.png){ width=50% }
 
 ## Copying friendly URLs for assets
 
-You can can copy the friendly URL and UUID URL of an asset from the URLs section of the asset's inspector panel.
+You can can copy the friendly URL and API URL of an asset from the URLs section of the asset's inspector panel.
 
-![](../../../../images/Copy_friendlyUrl.png "Copy friendly URL")
+![](../../../../images/Copy_friendlyUrl.png "Copy friendly URL"){ width=50% }
 
 ## HCL Digital Experience Solution Feedback
 

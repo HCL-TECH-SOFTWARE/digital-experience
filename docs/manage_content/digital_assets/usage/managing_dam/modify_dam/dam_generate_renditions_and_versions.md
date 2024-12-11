@@ -12,8 +12,9 @@ Renditions of the assets are system-generated for desktop, tablet, and smartphon
 
 Follow these steps to access renditions of a media asset using HCL Digital Experience 9.5 DAM.
 
-1.  From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **More actions** menu of a media asset and click **Edit** \(pencil icon\).
+1.  From the HCL Digital Experience 9.5 Digital Asset Management interface, hover over a media asset to access **Edit** options. Select the Edit \(pencil\) icon.
 
+    ![](../../../../../images/dam_edit_media.png)
     ![Edit media asset](../../../../../images/dam_edit_media.png)
 
 2.  From the HCL DAM editor user interface, click any of the **Desktop**, **Smartphone** or **Tablet** icons on the left side menu to view the renditions of the selected media asset.
@@ -46,7 +47,7 @@ You can view, compare, download, and set as current any of image versions availa
 
 Follow these steps to work with versions of an image using HCL Digital Experience 9.5 DAM.
 
-1.  From the HCL Digital Experience 9.5 DAM user interface, click the **More actions** menu of a media asset and click **Edit** \(pencil icon\).
+1.  From the HCL Digital Experience 9.5 DAM user interface, hover over a media asset to access **Edit** options. Select Edit \(pencil\) icon.
 
     ![Edit media asset](../../../../../images/dam_edit_media.png)
 
@@ -76,7 +77,7 @@ Follow these steps to work with versions of an image using HCL Digital Experienc
 
 You need to save original source rendition before getting cascade changes to other renditions option. Here's how:
 
-1.  From the HCL Digital Experience 9.5 DAM user interface, click the **More actions** menu of a media asset and click **Edit** \(pencil icon\).
+1.  From the HCL Digital Experience 9.5 DAM user interface, hover over a media asset to access **Edit** options. Select the Edit (pencil).
 
     ![Edit media asset](../../../../../images/dam_edit_media.png)
 

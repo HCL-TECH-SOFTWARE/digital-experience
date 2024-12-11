@@ -1,0 +1,27 @@
+title: Performance Tuning for Kubernetes
+nav:
+    - index.md
+    - env_reco.md
+    - base_portal.md
+    - sec_fields.md
+    - internationalization_service.md
+    - resource_env_provider.md
+    - disable_tag_rate.md
+    - tuning_portal_admin.md
+    - other_portal_tuning.md
+    - database_tuning.md
+    - other_db_considerations.md
+    - directory_server_tuning.md
+    - haproxy_routing.md
+    - pod_cpu_limits_requests.md
+    - focus_areas.md
+    - wcm_tuning.md
+    - other_wcm_tuning.md
+    - wcm_db_tuning.md
+    - wab_tuning.md
+    - jsf.md
+    - wef.md
+    - high_volume_sites.md
+    - other_tuning_considerations.md
+    - hcl_dx_light
+    - appendix.md

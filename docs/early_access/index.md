@@ -1,15 +1,12 @@
-# HCL Digital Experience Early Access Program
+# HCL Digital Experience Early Access Program 
 
 ## Overview
 
 Welcome to the HCL Digital Experience (DX) Early Access Program.
 
-The goal of the HCL DX Early Access Program is for the community of participants to conduct an honest, constructive and thoughtful review and testing of new components introduced for use with the [HCL DX 9.5](../get_started/product_overview/index.md) software.
+The goal of the HCL DX Early Access Program is for the community of participants to conduct an honest, constructive and thoughtful review and testing of new components introduced for use with the [HCL DX 9.5](../get_started/product_overview/index.md) software. 
 
-!!!note
-    The HCL DX team will announce new DX components or services available for non-production, non-warranty evaluation in this Help Center section as they are made available in the future.
-
-<!-- ## HCL DX Early Access Program Milestone 2
+## HCL DX Early Access Program Milestone 2
 
 [HCL DX Early Access Program Milestone 2](eap_milestone_1.md) includes the following component:
 
@@ -32,7 +29,7 @@ Milestone 2 additions include:
 
 ## Get Started with the HCL DX Early Access Program components
 
-To get started, go to the [Early Access Program Milestone 1](eap_milestone_1.md) topic and documentation on the Open Source Liberty portlet container, its system requirements, prerequisite software, and how to obtain the HCL DX Early Access Program - Milestone 1 and 2 components for evaluation. -->
+To get started, go to the [Early Access Program Milestone 1](eap_milestone_1.md) topic and documentation on the Open Source Liberty portlet container, its system requirements, prerequisite software, and how to obtain the HCL DX Early Access Program - Milestone 1 and 2 components for evaluation.
 
 ## HCL Digital Experience Early Access Q&A Forum
 
@@ -41,9 +38,11 @@ Your input and feedback are crucial to us. Let us know what you think about the 
 !!!note
     The HCL DX Early Access components are provided for evaluation in non-production environments and are not supported through HCL Support processes. Questions and feedback are welcome through the [HCL DX Early Access Q&A Forum](https://support.hcltechsw.com/community?id=community_forum&sys_id=2ef7245c1b97f990534c4159cc4bcbf3).
 
-The HCL DX Early Access Q&A forum is a sub-forum to the HCL Digital Experience Q&A forum. You can view and register for this forum through the [HCL Software community](https://support.hcltechsw.com/community?id=community_home) site.
+The HCL DX Early Access Q&A forum is a sub-forum to the HCL Digital Experience Q&A forum.
 
 ![HCL DX Q&A forum](../images/hcl_dx_forum.png)
+
+You can view and register for participation in HCL Software product forums through the [HCL Software community](https://support.hcltechsw.com/community?id=community_home) site.
 
 <!--Refer to the following topics for more information:
 
@@ -60,4 +59,7 @@ This topic provides a sample application that you can test with Open Liberty por
 -   **[Suggested areas for evaluation](evaluation_eap.md)**   
 This topic lists down possible questions when testing the Open Liberty Portlet container with your application.-->
 
+
 *Copyright HCL Technologies Limited, 2024. All rights reserved.*
+
+

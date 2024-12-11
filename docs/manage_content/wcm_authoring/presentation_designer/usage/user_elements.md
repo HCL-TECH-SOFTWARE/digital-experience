@@ -49,7 +49,9 @@ Static elements are predefined elements that display content exactly as it looks
 
 - **Container**
 
-    The container element (```<div>...</div>```) serves as a foundational block for organizing and structuring content. This element allows users to group elements together. You can resize the container through the **Style** panel by setting its width and height to fit different design needs. You can also apply other styling options to a container and add other user elements inside it.
+    The container element (```<div>...</div>```) serves as a foundational block for organizing and structuring content. This element allows users to group elements together. You can resize the container to fit different design needs. You can also add any other user element inside a container. 
+    
+    To resize, click the container element on the canvas. The selected container is highlighted and circular resize handles appear on the corners of the container. Click and drag a resizing handle toward the direction you want. You can also resize a container through the **Style** panel by setting its width and height. Other styling options can be applied on the container as well.
 
     ![](../../../../assets/HCL_Presentation_Designer_Static_Element_Container.png)
     ![](../../../../assets/HCL_Presentation_Designer_Static_Element_Container_Applied_Styles.png)
@@ -75,17 +77,9 @@ Static elements are predefined elements that display content exactly as it looks
 
     Static links (for example, ```<a href="https://example.com">Click Here</a>```) enable users to create clickable hyperlinks to other websites or resources. You can edit the display text for the link element the same way as editing a text element. Different styling options are also available.
 
-    See the following sample static text elements:
-
     ![](../../../../assets/HCL_Presentation_Designer_Static_Element_Link.png)
 
-    - The first line of text shows the default display text that appears when you drag and drop a static link element on the canvas.
-    - The second line of text shows the placeholder text that appears when you remove the default display text of the link element.
-    - The third line of text is a static link element with modified display text content after user input. 
-    - The fourth line of text is a static link element with modified display text content and applied styles.
-
     To set the `href` attribute, click the **Configure** button and enter the URL.
-
     ![](../../../../assets/HCL_Presentation_Designer_Static_Element_Link_Configure.png)
 
     !!! note
@@ -134,7 +128,7 @@ After selecting a content template, it automatically pulls the supported element
 
 ![](../../../../assets/HCL_Presentation_Designer_Content_Elements_Loaded_Panel.png)
 
-After you drag and drop an element on the canvas, a placeholder representing the element appears. You cannot edit placeholders in Presentation Designer as the actual display value comes from the content item. See the following content element structure:
+In Presentation Designer, the ```<p></p>``` tag wrapper for the element tag is added with the type attribute to determine the element type. Element tags (for example, ```[Element context="current" type="content" key="Element name"]```) use the element name as `key` and authors can set any element name in a content template. This could produce inconsistencies if Presentation Designer needs to rely on the element tag to determine the element type. See the following sample after saving a presentation template in Presentation Designer with a text content element:
 
 ![](../../../../assets/HCL_Presentation_Designer_Content_Elements_Structure.png)
 
@@ -189,13 +183,9 @@ For more information on element tags in the Authoring portlet, refer to [Element
 
 ### Property tags
 
-Property tags (for example, ```[Property context="current" type="content" field="title"]```) are used to display metadata from content items such as **Title**, **Name**, **Description**, and **Last modified date**. In Presentation Designer, placeholders are rendered on the canvas for property tags with different styling options available. The actual value changes depending on the content item.
+Property tags (for example, ```[Property context="current" type="content" field="title"]```) are used to display metadata from content items such as **Title**, **Name**, **Description**, and **Last modified date**. In Presentation Designer, placeholders are rendered on the canvas for property tags, and no styling or formatting options are currently available. The actual value changes depending on the content item.
 
 ![](../../../../assets/HCL_Presentation_Designer_Property_Tags.png)
-
-These styles are stored in the ```<p></p>``` tag style attribute. See the styled placeholder **Property tags**:
-
-![](../../../../assets/HCL_Presentation_Designer_Property_Tags_Applied_Styles.png)
 
 See the following sample markup generated after saving:
 
@@ -210,24 +200,17 @@ Generic element tags are element tags added in a presentation template using the
 
 ![](../../../../assets/HCL_Presentation_Designer_Generic_Element_Tags.png)
 
-When editing a presentation template that has a generic element tag in Presentation Designer, a placeholder text of the element name is rendered on the canvas.
-
-![](../../../../assets/HCL_Presentation_Designer_Generic_Element_Tags_Placeholder.png)
-
-You can configure the element and assign an element type. Click the **Configure** button to see the dropdown selection for the element type:
+When editing a presentation template that has generic element tag in Presentation Designer, a placeholder text of the element name is rendered on the canvas. You can configure the element and assign an element type. Click the **Configure** button to see the dropdown selection for the element type:
 
 ![](../../../../assets/HCL_Presentation_Designer_Generic_Element_Tags_Assign_Element_Type.png)
 
-In the following example, **Text** is selected as an element type, converting the generic element to a **Text Content Element**.
+In the following example, **Text** is selected as an element type:
 
 ![](../../../../assets/HCL_Presentation_Designer_Generic_Element_Tags_Text_Type_Assigned.png)
 
-With the generic element converted into a **Text Content Element**, you can now apply styling options to the placeholder text from the **Style** panel.
+After saving the presentation template, the generic element is converted to a **Text Content Element**.
 
 ![](../../../../assets/HCL_Presentation_Designer_Generic_Element_Tags_Text_Type_Converted.png)
-
-See the markup generated after saving:
-
 ![](../../../../assets/HCL_Presentation_Designer_Generic_Element_Tags_Text_Type_Markup.png)
 
 

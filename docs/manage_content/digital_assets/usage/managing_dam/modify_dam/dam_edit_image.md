@@ -2,9 +2,9 @@
 
 Follow these steps to edit images using HCL Digital Experience 9.5 Digital Asset Management:
 
-1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **More actions** menu of a media asset and click **Edit** \(pencil icon\).
+1. From the HCL Digital Experience 9.5 Digital Asset Management interface, hover over a media asset to access **Edit** options. Click the **Edit** (pencil) icon.
 
-    ![Edit digital media asset](../../../../../images/dam_edit_media.png)
+    ![Edit digital media asset](../../../../../images/dam_05_edit_media.png)
 
 2. From the **Edit** page, several options are available to edit the image.
 
@@ -32,10 +32,8 @@ Follow these steps to edit images using HCL Digital Experience 9.5 Digital Asset
         ![Edit > More options](../../../../../images/dam_edit_more_options.png)
 
         - **Copy link** - Copies the URL address of the digital media asset.
-        - **Download** - Downloads a copy of the digital media asset, including versions and renditions. See [Generate Digital Asset Renditions](dam_generate_renditions_and_versions.md).
-        - **Move** - Moves the selected asset into another location.
-        - **Copy** - Copies the selected asset into another location.
         - **Delete** - Deletes the selected digital media asset.
+        - **Download** - Downloads a copy of the digital media asset, including versions and renditions. See [Generate Digital Asset Renditions](dam_generate_renditions_and_versions.md).
 
 4. Click **Undo** or **Redo** to undo and/or redo any edits to an image prior to saving the image.
 5. Click **Apply** to save your changes.
