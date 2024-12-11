@@ -30,19 +30,28 @@ After applying the configuration, both HCL Digital Experience and HCL Volt MX Fo
 
 ## Enabling SSO between HCL DX and Volt MX
 
-This section provides information on how to enable single sign-on (SSO) for DX and Volt MX Foundry. 
+This section provides information on how to enable single sign-on (SSO) for DX and Volt MX Foundry. HCL DX will act as the OAuth service provider. Therefore, configure OAuth in WebSphere to authenticate with HCL DX. The following steps outline the process to enable SSO:
 
-Configure OAuth in Websphere to authenticate with HCL DX. Connect to the HCL DX core server (for example, on Kubernetes) using the following command:
+1. [Create the OAuth service provider](#creating-the-oauth-service-provider).
+2. [Configure TAI properties](#configuring-tai-properties).
+3. [Register the OAuth client](#registering-the-oauth-client).
+4. [Install the OAuth application](#installing-the-oauth-application).
+5. [Add a new application in VoltMX Foundry](#adding-a-new-application-in-volt-mx-foundry).
+6. [Add SSO in Iris](#adding-sso-in-iris).
 
-```sh
-  kubectl exec -it hcl-dx-dev1-core-0 core -n hcl-dx-dev1 -- sh
-```
+
 
 ### Creating the OAuth service provider
 
 Follow the steps to create the OAuth service provider.
 
-1. Create the OAuth provider by using the wsadmin utility.
+1. Connect to the HCL DX core pod using the following command:
+
+    ```sh
+      kubectl exec -it hcl-dx-dev1-core-0 core -n hcl-dx-dev1 -- sh
+    ```
+
+2. Create the OAuth provider by using the wsadmin utility.
 
     ```
     cd /opt/HCL/AppServer/bin
@@ -147,7 +156,7 @@ Follow the steps to register the OAuth client.
     For example:
 
     ```
-    <client id="voltmx" component="OAuthConfig" secret="a2e3d8c3-7875-4512-a0da-8b5fd61f2245" displayname="Volt MX" redirect="https://voltmx-env.com/authService/100000002/oauth2/callback" enabled="true">
+    <client id="voltmx" component="OAuthConfig" secret="a2e3d8c3-7875-4512-a0da-8b5fd61f2245" displayname="Volt MX" redirect="https://<voltmx-env.com>/authService/100000002/oauth2/callback" enabled="true">
     </client>
     ```
 
@@ -186,11 +195,15 @@ Follow the steps to install the OAuth 2.0 service provider application.
 
     ![alt text](image-4.png)
 
-    - **Authorize Endpoint**: ```https://dx-host/oauth2/endpoint/OAuthConfig/authorize```
+    Refer to the following list for the field values:
 
-    - **Token Endpoint**: ```https://dx-host/oauth2/endpoint/OAuthConfig/token```
+    - **Authorize Endpoint**: ```https://<dx-host>/oauth2/endpoint/OAuthConfig/authorize```
+
+    - **Token Endpoint**: ```https://<dx-host>/oauth2/endpoint/OAuthConfig/token```
 
     - The values for **Client Id** and **Secret** are the same. The value is provided when you [registered the OAuth client](#registering-the-oauth-client) in the `base.clients.xml`.
+
+    Replace `<dx-host>` in the URLs for Authorize Endpoint and Token Endpoint with the HCL DX hostname.
   
 2. Click **Test login**. The OAuth authorization form appears.
 
@@ -205,6 +218,10 @@ Follow the steps to install the OAuth 2.0 service provider application.
   ![alt text](image-5.png)
 
 For more information on Volt MX Foundry, refer to [Volt MX Foundry Fundamentals](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmxFoundryFundamentals.html){target="_blank"}.
+
+!!! note
+    If VoltMX and HCL DX environments are hosted on separate instances, there may be CORS issues. For more details refer to [CORS](https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Foundry/vmf_integrationservice_admin_console_userguide/Content/Runtime_Configuration.html#cors-configuration){target="_blank"} configuration. 
+
 
 ### Adding SSO in Iris
 

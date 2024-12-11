@@ -11,7 +11,10 @@ The following example provides the steps to generate the Volt MX portlet through
 
     ![alt text](image1.png)
 
-3. Once the App is created in Iris, choose build and publish web option from build menu.
+3. Once the App is created in Iris, choose `build and publish web` option from `build` menu.
+    ![alt text](image5.png)
+
+4. Choose `Build and Publish Portlet to DX` from the drop down of `Post Build Actions`. Select the `Clean Build` checkbox and click on `Build`.
     
     ![alt text](image2.png)
 
