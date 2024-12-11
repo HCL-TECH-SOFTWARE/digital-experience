@@ -57,7 +57,11 @@ The `manage-dam-staging update-secrets` command can be used to update the publis
 
 ### DAM Cross CF staging
 
-DAM Cross CF staging is supported where publisher environment is of deployment level n and subscriber environment deployment level is within last two releases
+The DAM Cross CF staging feature allows the staging of DAM content from one version of CF to another. Key points to note are:
+
+1) DAM Cross CF staging is supported only from higher to lower CF versions.
+2) Testing has been conducted up to last two lower CF versions.
+
 ## Managing DAM staging
 
 Use the `manage-dam-staging trigger-staging` command to trigger DAM staging.

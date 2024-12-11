@@ -94,7 +94,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Digital Asset Management - DAM Cross CF Staging
 
 === "Containers"
-    DAM Cross CF staging is supported between publisher and subscriber environments. For more information regarding limitations, see [DAM Cross CF Staging](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging/#dam-cross-cf-staging).
+    Staging of DAM content between different CF versions is supported. For more information on limitations, please refer to the documentation [DAM Cross CF Staging](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging/#dam-cross-cf-staging).
     
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
