@@ -13,13 +13,12 @@ After an HCL DX Kubernetes 9.5 deployment is installed, all configuration change
 Make sure that the `wkplc_dbdomain.properties` file is correct. The HCL DX upgrade runs several ConfigEngine scripts. These scripts depend on the `wkplc_dbdomain.properties` being up-to-date and accurate, especially with the password properties. 
 
 Edit the `(wp_profile root)/ConfigEngine/properties/wkplc_dbdomain.properties` file and ensure the following values are set correctly:
-
--   `release.DbPassword=(your database user password)`
--   `community.DbPassword=(your database user password)`
--   `customization.DbPassword=(your database user password)`
--   `jcr.DbPassword=(your database user password)`
--   `likeminds.DbPassword=(your database user password)`
--   `feedback.DbPassword=(your database user password)`
+    -   `release.DbPassword=(your database user password)`
+    -   `community.DbPassword=(your database user password)`
+    -   `customization.DbPassword=(your database user password)`
+    -   `jcr.DbPassword=(your database user password)`
+    -   `likeminds.DbPassword=(your database user password)`
+    -   `feedback.DbPassword=(your database user password)`
 
 If you do not want these password values removed after every run, make sure `PWordDelete=false` is set in `(wp_profile root)/ConfigEngine/properties/wkplc.properties`.
 

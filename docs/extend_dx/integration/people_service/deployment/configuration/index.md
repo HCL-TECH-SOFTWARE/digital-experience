@@ -1,6 +1,6 @@
 # Configuration
 
-HCL People Service can be deployed using the HCL Digital Experience (DX) Helm chart as it is included as a dependency in the form of a sub chart. The parameters below will help you configure People Service depending on your needs.
+You can deploy HCL People Service using the HCL Digital Experience (DX) Helm chart as it is included as a dependency in the form of a sub chart. The parameters below will help you configure People Service depending on your needs.
 
 ## Image configuration
 

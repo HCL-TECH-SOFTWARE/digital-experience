@@ -17,6 +17,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- WebEngine container
 - Digital Asset Management - Updated UI
 - DX Search - New UI
 - People Service
@@ -32,10 +33,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### AI Translation and Workflow capabilities in WCM
 
 === "Containers"
-    You can use Artificial Intelligence (AI) Translation in WCM to translate content items into different languages. In addition, the AI Workflow options allow you to automatically generate keywords, summary, and translate content. For more information, see the topics [Using AI-assisted translation of content items](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md#using-ai-assisted-translation-of-content-items) and [Using AI workflow actions](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md#using-ai-workflow-actions).
+    You can use Artificial Intelligence (AI) Translation in WCM to translate content items into different languages. The AI Workflow options, on the other hand, allow you to automatically generate keywords, summary, and translate content. For more information, see [AI assistance for descriptions, keyword generation, translation, and sentiment analysis in a content item](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
 
 === "On-Premises"
-    You can use Artificial Intelligence (AI) Translation in WCM to translate content items into different languages. In addition, the AI Workflow options allow you to automatically generate keywords, summary, and translate content. For more information, see the topics [Using AI-assisted translation of content items](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md#using-ai-assisted-translation-of-content-items) and [Using AI workflow actions](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md#using-ai-workflow-actions).
+    You can use Artificial Intelligence (AI) Translation in WCM to translate content items into different languages. The AI Workflow options, on the other hand, allow you to automatically generate keywords, summary, and translate content. For more information, see [AI assistance for descriptions, keyword generation, translation, and sentiment analysis in a content item](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
 
 ### Disabled SSL hostname verification
 
@@ -95,10 +96,15 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
-### DAM - Updated UI
+### WebEngine container
 
 === "Containers"
-    The Digital Asset Management (DAM) user interface (UI) is now using a new theme to provide an improved visual experience for managing digital assets. Note that this update is limited to the UI theme only; no changes are made to DAM functionality. For more information, see [Digital Asset Management](../../manage_content/digital_assets/index.md).
+    WebEngine container leveraging OpenLiberty instead of IBM WebSphere Application Server. (In progress)
+
+### Digital Asset Management - Updated UI
+
+=== "Containers"
+    The Digital Asset Management (DAM) user interface (UI) is now using a new theme to provide an improved visual experience for managing the digital assets. Note that this update is limited to the UI theme only; no changes are made to DAM functionality at this time.
 
 ### DX Search - New UI 
 
