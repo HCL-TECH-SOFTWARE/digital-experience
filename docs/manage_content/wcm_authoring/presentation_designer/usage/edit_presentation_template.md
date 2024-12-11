@@ -114,7 +114,7 @@ Refer to the following steps to edit a presentation template in Presentation Des
       **Dimensions**
 
       - **Width**: 445px
-      - **Height**: 390px
+      - **Height**: 370px
 
       **Spacing**
 
@@ -122,9 +122,6 @@ Refer to the following steps to edit a presentation template in Presentation Des
       - **Padding right**: 20px
       - **Padding bottom**: 20px
       - **Padding left**: 50px
-
-    ???+ info "Related information"
-        - [Element Actions](../usage/user_elements.md#element-actions)
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Move_Items_and_Apply_Container_Style.png)
 
