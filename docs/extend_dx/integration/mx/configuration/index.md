@@ -182,15 +182,15 @@ Follow the steps to install the OAuth 2.0 service provider application.
 
 ### Adding a new application in Volt MX Foundry
 
-1. Create a new application and configure the identity services as type OAuth. Refer [How to add applications in foundry](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/Adding_Applications.html)
+1. Create a new application and configure the identity services as type OAuth. For instructions, refer to [How to Add Applications](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/Adding_Applications.html){target="_blank"}.
 
     ![alt text](image-4.png)
 
-    a. Authorize endpoint URL from DX -  ```https://dx-host/oauth2/endpoint/OAuthConfig/authorize```
+    - **Authorize Endpoint**: ```https://dx-host/oauth2/endpoint/OAuthConfig/authorize```
 
-    b. Token endpoint URL from DX -  ```https://dx-host/oauth2/endpoint/OAuthConfig/token```
+    - **Token Endpoint**: ```https://dx-host/oauth2/endpoint/OAuthConfig/token```
 
-    c. **Client Id** and **Secret** will be the same which was provided during [Register OAuth Client](#register-oauth-client) in `base.clients.xml`
+    - The values for **Client Id** and **Secret** are the same. The value is provided when you [registered the OAuth client](#registering-the-oauth-client) in the `base.clients.xml`.
   
 2. Click **Test login**. The OAuth authorization form appears.
 
@@ -200,11 +200,11 @@ Follow the steps to install the OAuth 2.0 service provider application.
 
 4. Click **Save** to finish the identity service configurations.
 
-5. To Enable SSO for the identity service, Navigate to the service, click on the kebab menu icon (three dots menu), and select **Enable SSO**.
+5. To enable SSO for the identity service, navigate to the service, click the <insert menu name here> icon (three dots menu), and select **Enable SSO**.
 
   ![alt text](image-5.png)
 
-For more information on foundry, please refer to this [link](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmxFoundryFundamentals.html)
+For more information on Volt MX Foundry, refer to [Volt MX Foundry Fundamentals](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmxFoundryFundamentals.html){target="_blank"}.
 
 ### Adding SSO in Iris
 
@@ -230,5 +230,8 @@ Follow the steps to add SSO in Iris.
       );
     ```
 
-2. Once the Iris changes are completed and app is deployed on HCL DX page, when the user access the web page, a window opens up to  allow client Volt MX to access the data. Click on **Yes** to allow the portlet to login for single sign-on. Refer to  [Deploying Volt MX portlet into HCL DX](../example/mx_portlet_in_dx.md) for more details.
+2. Deploy the Iris application to HCL DX. For more information, see [Deploying Volt MX portlet into HCL DX](../example/mx_portlet_in_dx.md).
+         After deploying the application, when the user goes to a web page, a window appears asking for permission to allow the client Volt MX to access the data. 
+
+3. Click **Yes** to allow the portlet to login for single sign-on.
 
