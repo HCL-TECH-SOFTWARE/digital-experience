@@ -19,7 +19,7 @@ Refer to the following steps to view and manage your own profile.
 
 2. In the navigation bar, select **My Profile**.
 
-3. Click the **Edit** button next to the section you want to update:
+3. Click the **Edit** pencil icon next to the section you want to update:
     - Profile Image: A visual representation of the user.
     - Contact Information: Email, phone number, and other contact details.
     - Personal Information: Name, date of birth, and other personal details.
@@ -28,7 +28,7 @@ Refer to the following steps to view and manage your own profile.
     
     ![Profile Page - Example Profile](./img/profile-page.png)
     
-    See the UI when editing your Personal Information below.
+    For example, see the UI when editing your Personal Information below.
     
     ![Profile Page - Edit Profile](./img/profile-page-edit-profile.png)
 
@@ -39,7 +39,7 @@ Refer to the following steps to view and manage your own profile.
 Your profile image is an important part of your profile as it helps other users confirm your identify. You can upload a new image or remove the existing one. Make sure to select an image that is clear and professional to represent you appropriately.
 
 !!! Note
-    You cannot update the profile image if the field is marked as read-only.
+    You cannot update your profile image if the field is marked as read-only.
 
 ### Field validation
 

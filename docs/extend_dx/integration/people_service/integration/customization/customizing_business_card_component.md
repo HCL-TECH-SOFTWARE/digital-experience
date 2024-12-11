@@ -25,13 +25,13 @@ While you can align your overall People Service changes with the Business Card t
 
 You can inject these styles into your theme module or any other method you prefer. Here are some ways to apply custom styles:
 
-  1. Adding Styles to a Theme Module:
+  - Adding Styles to a Theme Module:
 
     1. Create or edit a theme module to include your custom CSS.
     2. Add the custom styles to the module's CSS file.
     3. Ensure the module is linked to your theme.
 
-  2. Using a Script App:
+  - Using a Script App:
 
     1. Create a Script App that injects the custom CSS into the page.
     2. Deploy the Script App to your DX environment.
@@ -39,6 +39,6 @@ You can inject these styles into your theme module or any other method you prefe
 For more information on customizing styles in HCL Digital Experience, refer to the [Customizing Theme Styles](https://opensource.hcltechsw.com/digital-experience/latest/build_sites/themes_skins/customizing_theme/styles/?h=custom+style) page.
 
 ???+ info "Related information"
-    - [Deploy JavaScript Libraries/Dependencies as a DX Module](https://opensource.hcltechsw.com/digital-experience/latest/guide_me/tutorials/scriptapps/how_to/02_dependencies_as_module/)
-    - [The module framework](https://opensource.hcltechsw.com/digital-experience/latest/build_sites/themes_skins/the_module_framework/)
-    - [Writing modules](https://opensource.hcltechsw.com/digital-experience/latest/build_sites/themes_skins/the_module_framework/writing_module/)
+    - [Deploy JavaScript Libraries/Dependencies as a DX Module](../../../../../guide_me/tutorials/scriptapps/how_to/02_dependencies_as_module.md)
+    - [The module framework](../../../../../build_sites/themes_skins/the_module_framework/index.md)
+    - [Writing modules](../../../../../build_sites/themes_skins/the_module_framework/writing_module/index.md)

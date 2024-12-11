@@ -21,9 +21,9 @@ You can configure which property is aggregated or allowed to be provided by the 
 
 ### Data storage
 
-The majority of user data in the People Service is stored within the persistence layer of the service, namely a Postgres database. This relates to both aggregated and user-generated data. Ensure that the database configuration follows best practices for data security, such as encryption and access control.
+The majority of user data in People Service is stored within the persistence layer of the service, namely a Postgres database. This relates to both aggregated and user-generated data. Ensure that the database configuration follows best practices for data security, such as encryption and access control.
 
-In addition to the database, the People Service may also store user data in mounted volumes. This can include profile photos or information in log files. The mounted volume and path to write to is configurable for individual components.
+In addition to the database, People Service may also store user data in mounted volumes. This can include profile photos or information in log files. The mounted volume and path to write to is configurable for individual components.
 
 ### User synchronization
 
@@ -35,15 +35,15 @@ User data that should be removed from People Service must also be removed from t
 
 Users can access their personal data stored in People Service. The API endpoint `/dx/api/people/v1/people/{id}/privacy/data` can be used to retrieve user data based on the user's identifier. Currently, this endpoint is only accessible to administrators.
 
-The response includes all user data stored in the People Service, including aggregated and user-generated data. The data may be summarized or redacted if they may contain PII of other users.
+The response includes all user data stored in People Service, including aggregated and user-generated data. The data may be summarized or redacted if they may contain PII of other users.
 
 ## User data erasure
 
 Users can request the erasure of their personal data from People Service. The API endpoint `/dx/api/people/v1/people/{id}/privacy/anonymize` can be used to initiate the data erasure process. Currently, this endpoint is only accessible to administrators.
 
-This process anonymizes the user's data by removing all personal information from the People Service. The user's profile is retained, but all PII is replaced with generic or placeholder values, or is removed entirely. The anonymized data is still available for reporting and analytics purposes, but the user's identity is no longer identifiable.
+This process anonymizes the user's data by removing all personal information from People Service. The user's profile is retained, but all PII is replaced with generic or placeholder values, or is removed entirely. The anonymized data is still available for reporting and analytics purposes, but the user's identity is no longer identifiable.
 
 !!! note
-    In case of aggregated PII, ensure that the data is also removed from the source system. Otherwise, the data may be synchronized back to the People Service.
+    In case of aggregated PII, ensure that the data is also removed from the source system. Otherwise, the data may be synchronized back to People Service.
 
 An anonymized user profile is also displayed differently in the People Service UI to indicate that the data has been anonymized. This ensures that administrators and other users can easily identify which profiles have been anonymized.

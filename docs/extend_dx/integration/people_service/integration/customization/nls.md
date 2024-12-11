@@ -29,7 +29,7 @@ Follow these steps to set up and customize the NLS features of People Service:
 
 4. Place your JSON files in the `NLS_DIRECTORY`.
 
-5. Use the URL query parameter `nlsIgnore=true` to identify the key of a specific translated value you want to update. For example, `https://customer.com/people/ui/profiles/admin?nlsIgnore=true`. This parameter suppresses the translation initialization, displaying the underlying translation keys instead of the actual translations. This allows you to easily identify the key for your customization needs.
+5. Use the URL query parameter `nlsIgnore=true` to identify the key of a specific translated value you want to update. This parameter suppresses the translation initialization and displays the underlying translation keys instead of the actual translations, allowing you to easily identify the key for your customization needs. For example, `https://customer.com/people/ui/profiles/admin?nlsIgnore=true`.
 
     !!! Note
         Ensure that your translation keys use the correct lettercase. Some UI values may appear differently after editing their CSS styles (for example, `text-transform: uppercase`). Check the HTML element for the original value if you are unsure.
