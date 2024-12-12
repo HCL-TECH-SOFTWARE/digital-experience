@@ -106,7 +106,7 @@ The Presentation Designer user interface is composed of three main sections:
 
 1. **Back** button. Use this to go back to the Authoring portlet. 
 2. Title of the presentation template.
-3. **Edit/Read mode** toggle. Use this to switch from Edit to Read mode or from Read to Edit mode. This toggle enables or disables the **Save** button.
+3. **Edit/Read mode** toggle. Use this to switch from Edit to Read mode or from Read to Edit mode.
 4. **Cancel** button. Use this to to cancel editing and go back to the Authoring portlet.
 5. **Save** button. Use this to save the presentation template or click the dropdown icon to **Save and Close**.
 

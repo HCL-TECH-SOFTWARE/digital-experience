@@ -1,6 +1,6 @@
 # Monitoring and logging
 
-People Service provides monitoring and logging capabilities to help you observe and troubleshoot your deployment. This section provides an overview of the monitoring and logging features available in People Service.
+People Service provides monitoring and logging capabilities to help you observe and troubleshoot your deployment. This section provides an overview of the monitoring and logging features available in the People Service.
 
 Kubernetes logging capabilities are used to collect and store logs from People Service. Customers can configure the logging level and leverage the logging sidecar containers to collect purpose-specific logs. Optionally, the monitoring capabilities can be extended with additional tools such as Logstash to provide more advanced log processing and analysis.
 

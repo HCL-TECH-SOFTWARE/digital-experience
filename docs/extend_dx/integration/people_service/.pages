@@ -6,5 +6,4 @@ nav:
     - Integration: integration
     - API documentation: api
     - User guides: user_guides
-    - limitations.md
     - ...

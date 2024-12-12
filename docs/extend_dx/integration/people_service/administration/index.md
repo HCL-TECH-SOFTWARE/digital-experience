@@ -4,6 +4,8 @@ In this section, you will learn how to configure authentication, set up user pro
 
 - **[Authentication](./authentication)**<br>
 Learn about the supported authentication strategies in HCL People Service.
+- **[User provisioning](./user_provisioning)**<br>
+Learn about the existing features you can use to manage user provisioning in HCL People Service.
 - **[Managing user properties](./managing_user_properties)**<br>
 Learn about the user properties you can use to map, configure, or enhance user profiles.
 - **[Monitoring and logging](./monitoring_logging)**<br>
