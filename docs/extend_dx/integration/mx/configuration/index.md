@@ -47,7 +47,7 @@ When all services and pods are running, access the Volt MX Foundry admin console
 ```https://<host-name>/mfconsole```
 
 !!! important
-    If Ingress is enabled for DX, modify the upload size restriction by running `kubectl -n dxns edit ingress/custom-routes`. Add `nginx.ingress.kubernetes.io/proxy-body-size: <size-restriction>m` to increase the upload size restriction. Make sure to specify your preferred size in the `<size-restriction>` value.  For example, to increase the restriction to 8 MB, add `nginx.ingress.kubernetes.io/proxy-body-size: 8m`.
+    If Ingress is enabled for HCL DX, modify the upload size restriction by running `kubectl -n <namespace> edit ingress/custom-routes`. Add `nginx.ingress.kubernetes.io/proxy-body-size: <size-restriction>m` to increase the upload size restriction. Make sure to specify your preferred size in the `<size-restriction>` value.  For example, to increase the restriction to 8 MB, add `nginx.ingress.kubernetes.io/proxy-body-size: 8m`.
     
      
 After applying the configuration, both HCL Digital Experience and HCL Volt MX Foundry can be accessed using the provided hostname.
