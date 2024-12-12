@@ -57,10 +57,10 @@ The `manage-dam-staging update-secrets` command can be used to update the publis
 
 ### DAM Cross-CF staging
 
-The DAM Cross CF staging feature allows the staging of DAM content from one version of CF to another. Key points to note are:
+The DAM Cross-CF staging feature allows the staging of DAM content from one cumulative fix (CF) version to another. Note the following limitations:
 
 - DAM Cross-CF staging is supported only from higher to lower CF versions.
-- Testing has been conducted up to last two lower CF versions. For example: If the Publisher is on CF224 and the Subscriber is on CF222, staging between these environments is supported.
+- Tests were conducted for up to two lower CF versions. For example, if the publisher is on CF224, staging up to the CF222 version of the subscriber is supported.
 
 ## Managing DAM staging
 
