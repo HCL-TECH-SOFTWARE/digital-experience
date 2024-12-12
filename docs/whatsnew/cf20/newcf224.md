@@ -8,6 +8,7 @@ The following features and updates are available to customers installing HCL Dig
 - Disabled SSL hostname verification
 - Presentation Designer
 - DXClient - LiveSync Pull and Push commands for WCM Design Library
+- Support for portlets built and published by Volt MX Iris
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -70,6 +71,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     LiveSync Pull and Push commands for WCM Design Library are now available for HTML and Folder Components. The [LiveSync Pull WCM Design Library command](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#livesync-pull-wcm-design-library) syncs a WCM Design Library in a DX Server with a local folder. The [LiveSync Push WCM Design Library command](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#livesync-push-wcm-design-library) syncs your WCM Design Library local files with the DX Server. For more information, see [LiveSync](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md).
+
+### Support for portlets built and published by Volt MX Iris
+
+=== "Containers"
+    With the release of HCL DX CF224 and HCL Volt MX Iris 9.5.45, developers can now use the Iris integrated development environment (IDE) to build web applications and publish them as portlets directly to a designated HCL DX environment. For more information, see the topics [Deploying HCL Volt MX portlet into HCL DX](../../extend_dx/integration/mx/example/mx_portlet_in_dx.md) and [Enabling SSO between HCL DX and Volt MX](../../extend_dx/integration/mx/configuration/index.md#enabling-sso-between-hcl-dx-and-volt-mx).
+
+=== "On-Premises"
+    With the release of HCL DX CF224 and HCL Volt MX Iris 9.5.45, developers can now use the Iris integrated development environment (IDE) to build web applications and publish them as portlets directly to a designated HCL DX environment. For more information, see the topics [Deploying HCL Volt MX portlet into HCL DX](../../extend_dx/integration/mx/example/mx_portlet_in_dx.md) and [Enabling SSO between HCL DX and Volt MX](../../extend_dx/integration/mx/configuration/index.md#enabling-sso-between-hcl-dx-and-volt-mx).
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
