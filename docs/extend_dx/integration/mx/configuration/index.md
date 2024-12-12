@@ -214,7 +214,7 @@ Follow the steps to install the OAuth 2.0 service provider application.
 
 4. Click **Save** to finish the identity service configurations.
 
-5. To enable SSO for the identity service, navigate to the service, click the <insert menu name here> icon (three dots menu), and select **Enable SSO**.
+5. To enable SSO for the identity service, navigate to the service, click the **More actions** icon (three dots menu), and select **Enable SSO**.
 
   ![alt text](image-5.png)
 
