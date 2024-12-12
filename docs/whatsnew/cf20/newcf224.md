@@ -75,10 +75,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Support for portlets built and published by Volt MX Iris
 
 === "Containers"
-    With the release of HCL DX CF224 and HCL Volt MX Iris 9.5.45, developers can now use the Iris integrated development environment (IDE) to build web applications and publish them as portlets directly to a designated HCL DX environment. For more information, see the topics [Deploying HCL Volt MX portlet into HCL DX]() and [Enabling SSO between HCL DX and Volt MX]().
+    With the release of HCL DX CF224 and HCL Volt MX Iris 9.5.45, developers can now use the Iris integrated development environment (IDE) to build web applications and publish them as portlets directly to a designated HCL DX environment. For more information, see the topics [Deploying HCL Volt MX portlet into HCL DX](../../extend_dx/integration/mx/example/mx_portlet_in_dx.md) and [Enabling SSO between HCL DX and Volt MX](../../extend_dx/integration/mx/configuration/index.md#enabling-sso-between-hcl-dx-and-volt-mx).
 
 === "On-Premises"
-    With the release of HCL DX CF224 and HCL Volt MX Iris 9.5.45, developers can now use the Iris integrated development environment (IDE) to build web applications and publish them as portlets directly to a designated HCL DX environment. For more information, see the topics [Deploying HCL Volt MX portlet into HCL DX]() and [Enabling SSO between HCL DX and Volt MX]().
+    With the release of HCL DX CF224 and HCL Volt MX Iris 9.5.45, developers can now use the Iris integrated development environment (IDE) to build web applications and publish them as portlets directly to a designated HCL DX environment. For more information, see the topics [Deploying HCL Volt MX portlet into HCL DX](../../extend_dx/integration/mx/example/mx_portlet_in_dx.md) and [Enabling SSO between HCL DX and Volt MX](../../extend_dx/integration/mx/configuration/index.md#enabling-sso-between-hcl-dx-and-volt-mx).
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
