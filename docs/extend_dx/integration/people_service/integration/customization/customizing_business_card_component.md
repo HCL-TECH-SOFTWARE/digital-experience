@@ -1,4 +1,3 @@
-
 # Customizing the Business Card Component in HCL Digital Experience
 
 The Business Card component in HCL Digital Experience (DX) provides a quick overview of a user's profile information. While the shipped Business Card component does not support direct customization, you can fully replace the shipped system module or web component to suit your needs.
@@ -15,7 +14,7 @@ Before you can start customizing your Business Card, you need to create a custom
 https://your-host-name/dx/ui/people/components/web-components.js
 ```
 
-Then, modify the web component code as needed and deploy it. For more information on defining or writing modules, refer to [the module framework](https://opensource.hcltechsw.com/digital-experience/latest/build_sites/themes_skins/the_module_framework/) page.
+Then, modify the web component code as needed and deploy it. For more information on defining or writing modules, refer to [the module framework](../../../../../build_sites/themes_skins/the_module_framework/index.md) page.
 
 ### Customizing a Business Card
 
@@ -36,7 +35,7 @@ You can inject these styles into your theme module or any other method you prefe
     1. Create a Script App that injects the custom CSS into the page.
     2. Deploy the Script App to your DX environment.
 
-For more information on customizing styles in HCL Digital Experience, refer to the [Customizing Theme Styles](https://opensource.hcltechsw.com/digital-experience/latest/build_sites/themes_skins/customizing_theme/styles/?h=custom+style) page.
+For more information on customizing styles in HCL Digital Experience, refer to [Customizing Theme Styles](../../../../../build_sites/themes_skins/customizing_theme/styles/index.md).
 
 ???+ info "Related information"
     - [Deploy JavaScript Libraries/Dependencies as a DX Module](../../../../../guide_me/tutorials/scriptapps/how_to/02_dependencies_as_module.md)

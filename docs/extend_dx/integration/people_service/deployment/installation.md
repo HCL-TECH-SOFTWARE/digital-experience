@@ -2,7 +2,7 @@
 
 In this page, you will learn how to install HCL People Service.
 
-## Deployment
+## Deploying HCL People Service
 
 People Service is bundled as a dependency in the HCL Digital Experience (DX) Helm chart. The deployment is controlled by the `peopleservice.enabled` property in the Helm chart `values.yaml`. For more information, refer to [Configuration](./configuration/index.md).
 
@@ -28,9 +28,9 @@ peopleservice:
       dx: true
 ```
 
-## Install command
+## Running the install command
 
-To run the installation of your prepared configurations using Helm, refer to the [Install commands](../../../../deployment/install/container/helm_deployment/helm_install_commands#install-commands).
+To run the installation of your prepared configurations using Helm, refer to the [Install commands](../../../../deployment/install/container/helm_deployment/helm_install_commands.md#install-commands).
 
 ## Enabling and disabling manually
 

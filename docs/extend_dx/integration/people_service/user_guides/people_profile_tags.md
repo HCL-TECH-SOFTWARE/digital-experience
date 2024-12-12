@@ -44,6 +44,7 @@ To maintain consistency and prevent errors, all tags must adhere to the followin
 These rules are enforced by the user interface to ensure that all tags are standardized and easily searchable, enhancing the overall functionality of the profile tagging system.
 
 ## Adding profile tags
+
 Authenticated users can add profile tags to their own profiles, or other user profiles. Refer to the following steps to add profile tags to your profile or other user profiles.
 
 1. In the **Tags** section of a profile page, click **Add/Edit tags**.
@@ -56,10 +57,9 @@ Authenticated users can add profile tags to their own profiles, or other user pr
 
     After selecting or entering a tag, it will appear inside the tag field. You can add multiple tags to a profile.
     ![Add/Edit tags button](./img/xxx/tag-self-created.png){class="list"}
-    
+
 3. Once you are done, click **Save**.  A notification will appear at the bottom of the page indicating that the tags were successfully updated. 
     ![tag creation confirmation message](./img/xxx/tag-other-user-confirmation-msg.png){class="list"}
-
 
 ## Endorsing profile tags
 
@@ -68,8 +68,6 @@ Profile tags are emphasized by the number of endorsements they have. The more en
 - To endorse a profile tag, click the **Endorse** thumbs-up icon on the profile tag associated with the user. Profile tags added through the **Add/Edit tag** button are automatically endorsed.
 
 - To unendorse a profile tag, click the **Unendorse** thumbs-up icon on an endorsed profile tag associated with the user. Profile tags removed through the **Add/Edit tag** button are automatically unendorsed.
-
-
 
 ## Removing profile tags
 
@@ -92,4 +90,3 @@ From the list of users displayed from the **Endorsement count**, you can hover o
 You can also view a user's Business Card when you hover over their name from the **View all users** popup.
 
 ![user list dialog](./img/userListDialog.png)
-

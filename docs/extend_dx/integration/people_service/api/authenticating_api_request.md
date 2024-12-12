@@ -10,6 +10,4 @@ As OIDC focuses on browser-based Single Sign-On (SSO) flows, the APIs can only b
 
 Valid tokens can also be generated with alternate providers since the JWT token secret and expiration are configurable. People Service provides the API endpoint `dx/api/people/v1/auth/token` to provide a valid token for API requests. If the token is valid, it will be used in subsequent API requests for the user's browser session.
 
-For more information about authentication in general, refer to [Authentication](../administration/authentication/index.md). 
-
-
+For more information about authentication in general, refer to [Authentication](../administration/authentication/index.md).

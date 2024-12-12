@@ -1,4 +1,3 @@
-
 # Verifying and Linking People Service System Modules in HCL Digital Experience
 
 This guide provides step-by-step instructions on enabling People Service resources on a theme in HCL Digital Experience (DX) and verifying their integration.
@@ -39,5 +38,3 @@ To verify that the People Service module is correctly integrated, follow these s
 
  4. Scroll down to the **Contributions** section on the right side and click the listed **Location**. Ensure that the link shows the expected JavaScript resource (Web component).
         ![System modules - find people service module](./img/system-module-contribution-listed-location.png)
-
-

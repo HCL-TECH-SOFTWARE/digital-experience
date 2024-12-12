@@ -2,7 +2,7 @@
 
 Apart from rendering a Business Card using a person tag link, you may want to leverage it in other scenarios and use cases. For example, you may want to provide information about a person of interest on your page. This feature allows the end user to hover over a link and display that person's information in a popup. In this guide, you will learn how to enable this feature using a Script Application.
 
-## Script Application
+## Script Applications
 
 Script Applications are web applications built with standard libraries, frameworks, and tools, running as a page component in HCL Digital Experience (DX).
 

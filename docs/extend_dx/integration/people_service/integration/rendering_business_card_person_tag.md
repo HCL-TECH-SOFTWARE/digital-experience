@@ -8,7 +8,7 @@ When you incorporate a JSP Tag Library Descriptor (TLD) for a person tag into yo
 
 ## Hovering over a person link
 
-Hovering over an active (underlined) name using the semantic person tag displays a Business Card with a quick overview of the user's profile information without needing to navigate to another page. For more information, refer to the [semantic person tag documentation](../../../../extend_dx/portlets_development/collaborative_services_api_person_tag/index.md).
+Hovering over an active (underlined) name using the semantic person tag displays a Business Card with a quick overview of the user's profile information without needing to navigate to another page. For more information, refer to the [Collaborative Services API and the person tag](../../../../extend_dx/portlets_development/collaborative_services_api_person_tag/index.md) page.
 
 The hover-over functionality is not automatically triggered if names are displayed outside the semantic person tag context. Practitioners must integrate web components into their presentation templates to enable this functionality.
 
@@ -19,6 +19,7 @@ If HCL Portal cannot recognize the person's name, it will display the name as pl
 !!! Notes
     - Issues with unrecognized names arise from inconsistencies in the user ID associated with the web component. Ensure you are using the correct user ID.
     - However, for person tags, this may not always be accurate. When using person tags, the user ID may not always align between DX and People Service. For example, DX may pull users from multiple LDAPs or search domains that People Service cannot access, leading to unrecognized names. To avoid this, ensure to maintain consistent user baseline configurations on DX and People Service.
+
 ## Clicking a person link
 
 Clicking a person link will direct you to the user's profile in a new tab. This profile page contains more detailed information about the user, such as their contact information, professional summary, and other relevant details.
@@ -28,6 +29,4 @@ Clicking a person link will direct you to the user's profile in a new tab. This 
 ## Customizing the Business Card component
 
 Unlike Person Cards, the current Business Card component does not support any customization such as adding or removing fields. However, you can fully replace the existing system module or web component to your liking.
-For detailed instructions on how to replace and customize the Business Card component, refer to the [Customizing the Business Card component](./customization/customizing_business_card_component.md) page.
-
-  
+For detailed instructions on how to replace and customize the Business Card component, refer to [Customizing the Business Card component](./customization/customizing_business_card_component.md).
