@@ -15,11 +15,11 @@ The custom directory API schema consists of the following endpoints:
 - `GET /probes/ready`: Confirms that the custom directory is ready to serve requests.
 - `GET /probes/auth`: Checks if the custom directory can be authenticated against using the configured API key.
 
-For more details about the custom directory API schema refer to the [OpenAPI spec](./custom-restful-directories-openapi-spec.json) page.
+For more details about the custom directory API schema refer to [OpenAPI spec](./custom-restful-directories-openapi-spec.json).
 
 ## Configuration
 
-You can configure custom directories using environment variables during the deployment of HCL People Service. For more details on the available configuration options, Refer to the [configuration properties - user directory settings](../../deployment/configuration/index.md#user-directory-settings) page.
+You can configure custom directories using environment variables during the deployment of HCL People Service. For more details on the available configuration options, Refer to [Configuration - Application configuration](../../deployment/configuration/index.md#application-configuration).
 
 For example, if you want to add a custom directory with the ID `LOOKASIDEDB`, you need to set the following environment variables:
 

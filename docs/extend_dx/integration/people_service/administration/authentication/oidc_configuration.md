@@ -41,9 +41,9 @@ For more details on the values you can use, refer to [Configuration - OIDC confi
 
 ## User sessions
 
-User sessions are managed by the People Service and are based on the OIDC authentication flow. When a user logs in, the People Service issues a session token that is stored in the user's browser. This token is used to authenticate the user for subsequent requests to the service. The session token is valid for a configurable duration, after which the user will be required to log in again. Refer to the [Configuration - OIDC configuration](../../deployment/configuration/index.md#oidc-configuration) for more information on session management.
+User sessions are managed by People Service and are based on the OIDC authentication flow. When a user logs in, People Service issues a session token that is stored in the user's browser. This token is used to authenticate the user for subsequent requests to the service. The session token is valid for a configurable duration, after which the user will be required to log in again. Refer to the [Configuration - OIDC configuration](../../deployment/configuration/index.md#oidc-configuration) page for more information on session management.
 
-First, you need to create or extend an existing client configuration within your IdP and realm. Ensure that you have prepared the appropriate and valid redirection URIs to allow the People Service and IdP to properly redirect the users during login and logout.
+First, you need to create or extend an existing client configuration within your IdP and realm. Ensure that you have prepared the appropriate and valid redirection URIs to allow People Service and IdP to properly redirect the users during login and logout.
 
 Add the following URIs to the configuration:
 
@@ -62,9 +62,9 @@ To prepare for the configuration, gather the following details:
 
 - The duration in milliseconds after which the JWT token expires. This defines how long the token will be considered valid after its issuance. This should match the validity of the IdP's access token.
 
-- The OpenID Connect scopes, which specify what information your application is requesting about the user. Each scope returns a set of user attributes, which are used in the user's ID token or are accessible via the UserInfo endpoint and may be used to contextualize the authenticating user.
+- The OpenID Connect scopes, which specify what information your application is requesting about the user. Each scope returns a set of user attributes, which are used in the user's ID token or are accessible through the UserInfo endpoint and may be used to contextualize the authenticating user.
 
-- The URL to which the user is redirected after a successful login. This URL is where your application receives and processes the authentication response from the IdP. It should match the one [configured in the IdP client](#configuring-the-idp-client).
+- The URL to which the user is redirected after a successful login. This URL is where your application receives and processes the authentication response from the IdP. It should match the one [configured in the IdP client](#configuring-people-service-to-use-oidc-and-the-idp).
 
 ## Configuring People Service to use OIDC and the IdP
 
@@ -87,4 +87,4 @@ Replace the sample values or placeholders with the actual values you gathered fr
 
 ## User sessions
 
-User sessions are managed by the People Service and are based on the OIDC authentication flow. When a user logs in, the People Service issues a session token that is stored in the user's browser. This token is used to authenticate the user for subsequent requests to the service. The session token is valid for a configurable duration, after which the user will be required to log in again. Refer to the [Configuration - OIDC configuration](../../deployment/configuration/index.md#oidc-configuration) for more information on session management.
+User sessions are managed by People Service and are based on the OIDC authentication flow. When a user logs in, People Service issues a session token that is stored in the user's browser. This token is used to authenticate the user for subsequent requests to the service. The session token is valid for a configurable duration, after which the user will be required to log in again. Refer to the [Configuration - OIDC configuration](../../deployment/configuration/index.md#oidc-configuration) for more information on session management.

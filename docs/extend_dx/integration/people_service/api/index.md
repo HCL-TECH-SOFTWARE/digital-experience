@@ -6,7 +6,7 @@ In this section, you will learn about the available APIs in People Service and h
 
 People Service APIs are designed to provide developers and administrators with the necessary tools to interact with the service and enhance their platforms. The APIs are RESTful and follow standard conventions, making them easy to work with and integrate into existing systems. The following sections provide an overview of the available APIs and how to interact with them effectively.
 
-The people service APIs are categorized into the following sections:
+People Service APIs are categorized into the following sections:
 
 - **Authentication**: APIs related to user authentication and session management.
 - **Profiles**: APIs related to managing user profiles, including creating, updating, and deleting profiles.
@@ -28,8 +28,10 @@ You can check the OpenAPI documentation for People Service APIs using the Swagge
 
 Use the following URLs to access the Swagger Explorer for People Service APIs and OpenAPI specification:
 
-- **People Service APIs**: `&lt;HOSTNAME&gt;/dx/api/people/v1/explorer`
-- **OpenAPI Specification**: `&lt;HOSTNAME&gt;/dx/api/people/v1/openapi/openapi.json`
+- **People Service APIs**: `<HOSTNAME>/dx/api/people/v1/explorer`
+- **OpenAPI Specification**: `<HOSTNAME>/dx/api/people/v1/openapi/openapi.json`
+
+Ensure to replace `<HOSTNAME>` with the correct value.
 
 ## OpenAPI Specification
 

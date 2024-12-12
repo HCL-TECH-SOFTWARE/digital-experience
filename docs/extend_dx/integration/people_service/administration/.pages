@@ -3,6 +3,6 @@ nav:
   - index.md
   - authentication
   - user_provisioning
-  - managing_user_properties
+  - User properties: managing_user_properties.md
   - monitoring_logging
   - User privacy and PII: user_privacy_pii.md

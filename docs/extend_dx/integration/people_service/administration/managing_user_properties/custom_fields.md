@@ -11,7 +11,7 @@ Custom fields can be added through the Helm configuration or the People Service 
 
 ### Configuring custom fields through the Helm configuration
 
-For more information on how to configure custom fields through the properties in the Helm configuration, refer to [Configuration - user attribute settings](../../deployment/configuration/index.md).
+For more information on how to configure custom fields through the properties in the Helm configuration, refer to [Configuration - Application configuration](../../deployment/configuration/index.md#application-configuration).
 
 For example, to add a custom field `customField1` to the user profile, set the following environment variable as follows:
 
