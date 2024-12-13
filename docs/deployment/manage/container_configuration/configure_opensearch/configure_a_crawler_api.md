@@ -226,7 +226,7 @@ Doing so is a two step process:
 
 ### Remove existing data in the Content Source index
 
-Since a full crawl will not inform you about documents that do not exist anymore, it is advised to remove all content from the Content Source index. This will ensure that only the newly reported documents by the seedlist are actually stored and returned in the search results.
+A full crawl will not inform you about documents that do not exist anymore. Therefore, it is recommended to remove all content from the content source index. Removing all content ensures that only the newly reported documents by the seedlist are actually stored and returned in the search results.
 
 To remove all existing data, use the Push REST API endpoint to delete by query:
 
