@@ -206,7 +206,10 @@ Follow the steps to install the OAuth 2.0 service provider application.
 
     For the **Authorize Endpoint** and **Token Endpoint** fields, replace `<dx-host>` in the URLs with the HCL DX hostname.
   
-2. Click **Test login**. The OAuth authorization form appears.
+2. Click **Test login**. The OAuth authorization form appears. 
+
+    !!! note
+        If the test login fails due to SSL handshake error about a missing certification path, add the certificates for the HCL DX host in the Admin console by navigating to Security > SSL certificate and key management > Key stores and certificates > NodeDefaultTrustStore > Signer certificates > Retrieve from port. Enter the HCL DX host, port, and alias, then click **Retrieve signer information** and save it.
 
 3. When asked if you want to allow client Volt MX to access your data, click **Yes**. 
 
