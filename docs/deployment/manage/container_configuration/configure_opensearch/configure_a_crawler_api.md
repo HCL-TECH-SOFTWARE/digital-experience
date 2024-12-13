@@ -245,4 +245,4 @@ This removes the currently stored `incrementalTimestamp` of the crawler and trig
 
 Call the `/dx/api/search/v2/crawlers/{crawler_id}/trigger?clear_timestamp_true` endpoint with a `POST` request.
 
-After the crawler has run, all current state data is indexed in the Content Source.
+After the crawler has run, all current state data is indexed in the content source.
