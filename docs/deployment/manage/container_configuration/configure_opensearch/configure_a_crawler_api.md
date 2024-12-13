@@ -1,4 +1,4 @@
-# Configuring a Crawler using the REST API
+# Configuring a crawler using REST API
 
 Certain types of Content Sources come with an integrated crawler that can be configured to pull data from the data source. This topic explains how to configure a crawler using the REST API.
 
