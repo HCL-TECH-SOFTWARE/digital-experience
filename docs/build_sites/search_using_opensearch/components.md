@@ -1,11 +1,10 @@
 # End-User Search with Opensearch web components
 
-This guide provides an overview about the HCL End-user Search UI, its components, styling options, and extendable features.
+The HCL End-user Search UI is composed of Web Components. This guide explains how to use the HCL End-user Search UI Web Components. Follow along to learn about the different types of web components we provide, their styling options, and extendable features.
 
 The default search component for End-User Search is designed to be user-friendly, customizable, and extendable. It offers intuitive search interactions, allows user-defined styling and extensions, and can be integrated anywhere in your application. See an example of the search component below.
 
 ![Screenshot](../../assets/HCL_Search_Search_Result.png)
-
 
 ## Web Components: Features and Benefits
 Web components provide the following benefits:
