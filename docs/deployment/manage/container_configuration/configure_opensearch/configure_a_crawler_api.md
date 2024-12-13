@@ -90,7 +90,7 @@ The target data source configures the endpoint where the crawler pulls the data 
 
 You can either use the internal HAProxy service of your DX deployment or the regular hostname of your deployment.
 
-The following endpoints can be used to crawl the different types of content sources:
+You can use the following endpoints to crawl the different types of content sources:
 
 - `wcm`: `/seedlist/myserver?SeedlistId=&Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&Action=GetDocuments`
 - `jcr`: `/seedlist/myserver?Action=GetDocuments&Format=ATOM&Locale=en_US&Range=100&Source=com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory&Start=0&SeedlistId=1@OOTB_CRAWLER1`
