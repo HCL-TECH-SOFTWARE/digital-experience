@@ -86,7 +86,7 @@ Provide the following properties:
 
 ### Crawler endpoints for `targetDataSource`
 
-The target data source configures the endpoint where the crawler pulls the data from. The configuration depends on the content source type, your DX context root, a possible virtual portal and the DX host.
+The target data source configures the endpoint where the crawler pulls the data from. The configuration depends on the content source type, your DX context root, a possible virtual portal, and the DX host.
 
 You can either use the internal HAProxy service of your DX deployment or the regular hostname of your deployment.
 
