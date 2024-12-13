@@ -152,7 +152,7 @@ The following returned properties are populated after the crawler has run:
 | Property | Description |
 | --- | --- |
 | `crawlingInstance` | The actual search-middleware node that performs the crawls. Will state the actual Pod name in Kubernetes. |
-| `lastCrawled` | UNIX Timestamp of the last time the crawler ran. |
+| `lastCrawled` | UNIX timestamp of the last time the crawler ran. |
 | `lastCrawlDuration` | Last runtime in milliseconds of the crawler. |
 | `status` | Last known status of the crawler. |
 | `incrementalTimestamp` | The stored timestamp of the crawler that is used in the next crawl iteration. |
