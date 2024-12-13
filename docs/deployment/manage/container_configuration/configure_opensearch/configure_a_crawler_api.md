@@ -12,7 +12,7 @@ The following crawler types are available:
 - `jcr`
 - `portal`
 
-It is technically possible to configure one or more crawlers per content source. All crawled documents will then be stored inside the same content source index. However, it is recommended to use one crawler per content source to keep the data separated. It is not possible to assign a crawler of a different type to a content source. This means you can only crawl WCM data with a WCM crawler in a WCM content source.
+It is technically possible to configure one or more crawlers per content source. All crawled documents are then stored inside the same content source index. However, it is recommended to use one crawler per content source to keep the data separated. It is not possible to assign a crawler of a different type to a content source. This means you can only crawl WCM data with a WCM crawler in a WCM content source.
 
 ## Authenticating as a search administrator
 
