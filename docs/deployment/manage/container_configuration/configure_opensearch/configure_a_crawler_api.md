@@ -75,7 +75,7 @@ Provide the following properties:
 | `type` | no | The type of crawler, allowed types are `wcm`, `portal` and `jcr` - Must match the type of the associated Content Source |
 | `configuration.targetDataSource` | no | The seedlist URL. You can use the internal HCL DX Core hostname for direct communication to it. The name consists of the release name used during the Helm install (for example, `dx`). |
 | `configuration.schedule` | yes | A cron type notation controlling the automated execution of the crawler. You can omit this for no schedule. |
-| `configuration.security.type` | no | The type of authentication used for the crawler, allowed types are `basic`, `form`, `inherit` and `none` |
+| `configuration.security.type` | no | The type of authentication used for the crawler. Allowed types are `basic`, `form`, `inherit` and `none`. |
 | `configuration.security.username` | no | The username of a user that has access to crawl the seedlist. |
 | `configuration.security.password` | no | The password of a user that has access to crawl the seedlist. |
 | `configuration.security.usernameField` | yes | The field name of the username field in a FORM based authentication. |
