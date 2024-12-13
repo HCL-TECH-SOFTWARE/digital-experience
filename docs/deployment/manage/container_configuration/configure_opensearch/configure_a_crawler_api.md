@@ -241,7 +241,7 @@ If you leave the query to match all documents, you will delete all documents sto
 ### Trigger the crawler with the clear_timestamp parameter
 
 After the data has been deleted, you can trigger your crawler again and provide the query parameter `clear_timestamp` with the value `true`.  
-This will cause the currently stored `incrementalTimestamp` of the crawler to be removed and trigger a new full crawl.
+This removes the currently stored `incrementalTimestamp` of the crawler and triggers a new, full crawl.
 
 Call the `/dx/api/search/v2/crawlers/{crawler_id}/trigger?clear_timestamp_true` endpoint with a `POST` request.
 
