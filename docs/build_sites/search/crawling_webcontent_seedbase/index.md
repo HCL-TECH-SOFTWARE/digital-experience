@@ -8,7 +8,7 @@ Search seedlist 1.0 can make access control information available in a way that 
 
 !!! important
     If changing access control on libraries or setting access on the library root, note that seedlist requests relative to a timestamp will not list items that would be affected by such an access control change. To get those updates we recommend to trigger a full crawl. 
-    DX Search uses post access control filtering and is therefore not affected.
+    DX classic (either local or remote) Search uses post access control filtering and is therefore not affected.
 
 
 -   **[The search seedlist 1.0 format](../crawling_webcontent_seedbase/wcm_searchseed/index.md)**  
