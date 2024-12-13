@@ -19,7 +19,7 @@ DX Search v2 supports currently the following aspects:
 - Configuration of content sources and crawlers using REST API
 - Crawling multiple data sources (JCR, WCM, Portal)
 - Adding, modifying, and deleting documents in the indexes using REST API
-- Search queries using the [OpenSearch Query Syntax](https://opensearch.org/docs/latest/query-dsl/) via the REST API
+- Search queries using the [OpenSearch Query Syntax](https://opensearch.org/docs/latest/query-dsl/){target="_blank"} using REST API
 - Text extraction of binary file content
 - Out of the box configuration of default Content Sources and Crawlers (configured via the Helm Chart)
 - End user search UI
