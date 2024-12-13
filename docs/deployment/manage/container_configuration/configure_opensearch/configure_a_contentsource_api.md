@@ -164,7 +164,7 @@ You can provide the following properties:
 | `type` | no | The type of content source you want to create. Allowed types are `wcm`, `jcr`, `portal` and `dam`. |
 | `aclLookupHost` | no | The host where the ACL lookup for search requests is being made. It can directly point to your HCL DX HAProxy Service inside your Kubernetes deployment. The name consists of the release name used during the `helm install` and the suffix `-haproxy`. You can also use the regular hostname of your deployment. |
 | `aclLookupPath` | yes | The path where the ACL lookup for search requests is being made. This should point to the `mycontenthandler` endpoint of your deployment, example would be `/wps/mycontenthandler`. If none is provided, it will automatically fall back to `/wps/mycontenthandler` |
-| `security.type` | no | The type of authentication to use, allowed are `none`, `basic` and `form`. |
+| `security.type` | no | The type of authentication to use. Allowed types are `none`, `basic` and `form`. |
 | `security.username` | no | The username of a user that has access to crawl the seedlist. |
 | `security.password` | no | The password of a user that has access to crawl the seedlist. |
 | `security.usernameField` | yes | The field name of the username field in a FORM based authentication. |
