@@ -14,7 +14,7 @@ The DX search v2 is designed with the weaknesses of search v1 in mind. The follo
 
 ## Current capabilities
 
-DX Search V2 supports currently the following aspects:
+DX Search v2 supports currently the following aspects:
 
 - Configuration of Content Sources and Crawlers via the REST API
 - Crawling multiple Data Sources (JCR, WCM, Portal)
