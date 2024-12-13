@@ -6,6 +6,10 @@ By default Portal Search is configured to use seedlist format 1.0 when indexing 
 
 Search seedlist 1.0 can make access control information available in a way that makes pre-filtering of contents possible. Pre-filtering provides the fastest filtering approach because it takes place in the search index level. An extra advantage of pre-filtering is that remote secured content sources can be searched from the portal. The filtering mode is defined as part of the search service configuration parameters.
 
+!!! important
+    If changing access control on libraries or setting access on the library root, note that seedlist requests relative to a timestamp will not list items that would be affected by such an access control change. To get those updates we recommend to trigger a full crawl. 
+    DX Search uses post access control filtering and is therefore not affected.
+
 
 -   **[The search seedlist 1.0 format](../crawling_webcontent_seedbase/wcm_searchseed/index.md)**  
 Portal Search is configured to support the HCL Web Content Manager search seedlist 1.0 format by default.
