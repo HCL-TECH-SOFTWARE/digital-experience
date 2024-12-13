@@ -336,7 +336,7 @@ Based on the previously created Remote Search service, create a **Portal Search 
 
 When you run crawlers, it is important that they always use the pod to retrieve their data because the seedlist providers are not shared between pods. In the following examples, a placeholder for the host is used. Replace this placeholder with the correct host name.
 
-The host is composed of the deployment name used in the helm install command and the namespace. The port number is the secure port of the DX Core pod and is 10042 by default.
+The host is composed of the deployment name used in the `helm install` command and the namespace. The port number is the secure port of the DX Core pod and is `10042` by default.
 
 This is the pattern for the host name: `<dx-deployment>-core-<n>.<dx-deployment>-core.<namespace>.svc.cluster.local`.
 
