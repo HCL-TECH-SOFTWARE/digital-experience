@@ -218,7 +218,9 @@ The search v2 will configure out of the box crawlers for default content sources
 
 ## Forcing a full re-crawl
 
-In some cases it might be necessary to force a full re-crawl of a data source.
+In some cases, it might be necessary to force a full re-crawl of a data source. Re-crawling a data source is a two-step process:
+1. [Remove existing data in the content source index.](#removing-existing-data-in-the-content-source-index)
+2. [Trigger the crawler with the clear_timestamp parameter.](#triggering-the-crawler-with-the-clear_timestamp-parameter)
 
 Doing so is a two step process:
 
