@@ -209,7 +209,7 @@ Below are some example configurations:
 | Base portal  | `/mycontext` | `/mycontext/mycontenthandler` |
 | Base portal  | `/` | `/mycontenthandler` |
 
-The `aclLookupPath` will be used by the search v2 UI to determine which content sources are available for your current portal. This ensures that only the content sources that are available for the current portal are shown in the search UI and you only see results from your current portal.
+The search v2 UI uses the  `aclLookupPath` to determine which content sources are available for your current portal. This ensures that only the content sources that are available for the current portal are shown in the search UI and you only see results from your current portal.
 
 It is also used to validate the users ACLs when performing a search query and to ensure that only results are shown that the user has access to.
 
