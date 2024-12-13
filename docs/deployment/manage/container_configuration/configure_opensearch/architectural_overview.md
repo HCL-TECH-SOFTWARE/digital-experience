@@ -16,7 +16,7 @@ The DX search v2 is designed with the weaknesses of search v1 in mind. The follo
 
 DX Search v2 supports currently the following aspects:
 
-- Configuration of Content Sources and Crawlers via the REST API
+- Configuration of content sources and crawlers using REST API
 - Crawling multiple Data Sources (JCR, WCM, Portal)
 - Adding, Modifying and Deleting documents in the indexes via the REST API
 - Search queries using the [OpenSearch Query Syntax](https://opensearch.org/docs/latest/query-dsl/) via the REST API
