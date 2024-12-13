@@ -213,6 +213,6 @@ The search v2 UI uses the  `aclLookupPath` to determine which content sources ar
 
 `aclLookupPath` is also used to validate the users' ACLs when performing a search query and to ensure that only results are shown that the user has access to.
 
-## Out of the box content sources
+## Out-of-the-box content sources
 
 The search v2 will configure the content sources out of the box, if enabled in the Helm chart during deployment. These content sources are for the `wcm`, `dam`, `jcr` and `portal` types and will be scoped at your configured context root and the base portal.
