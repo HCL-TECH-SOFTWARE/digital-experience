@@ -2,7 +2,7 @@
 
 This topic explains the use of the Content Source REST API to create a Content Source. This can later be used to crawl the content source in your HCL DX instance and will contain the items that you can find by using search queries.
 
-All API endpoints can be accessed via a swagger UI that is available at the following URL: `/dx/api/search/v2/explorer`.
+You can access all API endpoints through a Swagger UI available at the following URL: `/dx/api/search/v2/explorer`.
 
 ## Authenticating as a search administrator
 
