@@ -200,7 +200,7 @@ The response contains the `id` of the content source, which is required when you
 
 If you want to configure content sources for a virtual portal or for an alternate context root, you must adjust the `aclLookupPath` to match you target portal.
 
-Below are some example configurations:
+See the following sample configurations:
 
 | Portal | Context root | `aclLookupPath` |
 | --- | --- | --- |
