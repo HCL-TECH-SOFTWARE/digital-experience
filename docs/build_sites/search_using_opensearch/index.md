@@ -19,17 +19,17 @@ Before you can use End-user Search with OpenSearch, complete the following prere
 
 Refer to the following pages for more information:
 
-- **[Installing HCL End-user Search with OpenSearch](../search_using_opensearch/installation/index.md)**<br>
+- **[Installing HCL End-user Search with OpenSearch](./installation.md)**<br>
 This section provides a high-level overview of the architecture and the steps to install, enable, and update HCL End-user Search with OpenSearch.
 
-- **[Accessing HCL End-user Search with OpenSearch](../search_using_opensearch/access/index.md)**<br>
+- **[Accessing HCL End-user Search with OpenSearch](./access.md)**<br>
 This section provides the steps on how to access the HCL End-user Search with OpenSearch portlet.
 
-- **[Using HCL End-user Search with OpenSearch](../search_using_opensearch/usage/index.md)**<br>
+- **[Using HCL End-user Search with OpenSearch](./usage.md)**<br>
 This section provides a guide on generating results using the HCL End-user Search with OpenSearch.
 
-- **[Limitations of End-User Search with Opensearch](../search_using_opensearch/limitations/index.md)**<br>
+- **[Limitations of End-User Search with Opensearch](./limitations.md)**<br>
 This section lists the current limitations of HCL End-user Search with OpenSearch.
 
-- **[Web Components of End-User Search with Opensearch](../search_using_opensearch/component/index.md)**<br>
+- **[Web Components of End-User Search with Opensearch](./components.md)**<br>
 This section provides a guide on using web components from HCL End-user Search to customize new or existing theme pages.

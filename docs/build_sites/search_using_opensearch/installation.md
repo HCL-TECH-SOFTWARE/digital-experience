@@ -12,7 +12,7 @@ HCL End-user Search using OpenSearch is an instance of a search integration port
 For container-based Helm deployment, the deployment values.yaml can also be configured so HCL End-user Search with OpenSearch is enabled by default.
 
 !!! important
-    Before you can enable HCL End-user Search using Opensearch, you need to install Search based on Opensearch. For more information on how to install this feature, refer to [Installing search based on OpenSearch](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md).
+    Before you can enable HCL End-user Search using Opensearch, you need to install Search based on Opensearch. For more information on how to install this feature, refer to [Installing search based on OpenSearch](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md).
 
 ## Enabling and disabling HCL End-user Search using OpenSearch
 
@@ -21,11 +21,11 @@ This section describes how to enable and disable HCL End-user Search using OpenS
 The `enable-search-v2` config task is not automatically executed. You can enable and disable this task by running `enable-search-v2` and `disable-search-v2` respectively. Once enabled, you can also use it after creating a Virtual Portal.
 
 !!! important
-    Before manually enabling HCL End-user Search using OpenSearch, you need to enable Practitioner Studio. For more information on how to enable Practitioner Studio, refer to [How to enable Practitioner Studio](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md).
+    Before manually enabling HCL End-user Search using OpenSearch, you need to enable Practitioner Studio. For more information on how to enable Practitioner Studio, refer to [How to enable Practitioner Studio](../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md).
 
-For more information on how to do container-based Helm deployments, refer to [Deploying using Helm](../../../deployment/install/container/helm_deployment/overview.md).
+For more information on how to do container-based Helm deployments, refer to [Deploying using Helm](../../deployment/install/container/helm_deployment/overview.md).
 
-For more information on how to run ConfigEngine tasks on container deployments, refer to [Running DX Core configuration tasks](../../../deployment/manage/container_configuration/run_core_config_engine.md).
+For more information on how to run ConfigEngine tasks on container deployments, refer to [Running DX Core configuration tasks](../../deployment/manage/container_configuration/run_core_config_engine.md).
 
 ### Enabling HCL End-user Search using OpenSearch using a ConfigEngine task
 

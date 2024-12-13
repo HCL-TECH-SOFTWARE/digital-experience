@@ -4,7 +4,7 @@ This section provides steps on how to access the HCL End-user Search with OpenSe
 
 ## Prerequisite
 
-Starting from HCL Digital Experience (DX) 9.5 CF224, you can enable End-user Search with OpenSearch. For instructions on how to install End-user Search with OpenSearch manually on supported environments, refer to [Installing HCL Digital Experience 9.5 End-user Search with OpenSearch](../installation/index.md).
+Starting from HCL Digital Experience (DX) 9.5 CF224, you can enable End-user Search with OpenSearch. For instructions on how to install End-user Search with OpenSearch manually on supported environments, refer to [Installing HCL Digital Experience 9.5 End-user Search with OpenSearch](./installation.md).
 
 After configuring the image in your HCL DX 9.5 CF224 deployment, you can access End-user Search with OpenSearch from the Practitioner Studio interface.
 
@@ -14,9 +14,9 @@ After configuring the image in your HCL DX 9.5 CF224 deployment, you can access 
 
 ## Accessing End-user Search with OpenSearch
 
-To access End-user Search with OpenSearch from the Practitioner Studio, log in to your HCL DX 9.5 platform then select **Search** from the Practitioner Studio navigator.
+Access End-user Search with OpenSearch from the Practitioner Studio.
 
-1.  Log in to your HCL Digital Experience 9.5 platform, and select **Search** from the Practitioner Studio navigator.
+1.  Log in to your HCL Digital Experience 9.5 platform, and select **Search** from the Practitioner Studio homepage.
 
     ![](../../../assets/HCL_DX_95_Practitioner_Studio_interface.png "Log in to HCL Digital Experience 9.5")
 
@@ -37,7 +37,7 @@ The HCL End-user Search UI has the following components:
 
 ## Other ways of Accessing the HCL End-user Search UI
 
-You can also access the HCL End-user Search UI through the Woodburn Studio homepage search bar and the Practitioner Studio side navigation panel. Once redirected, you can utilize the search results or initiate a new search. For more information, refer to [Using HCL End-user Search with OpenSearch](../usage/index.md).
+You can also access the HCL End-user Search UI through the Woodburn Studio homepage search bar and the Practitioner Studio side navigation panel. Once redirected, you can utilize the search results or initiate a new search. For more information, refer to [Using HCL End-user Search with OpenSearch](./usage.md).
 
 - To access the End-user Search UI from Woodburn Studio, go to the Woodburn Studio homepage then click the **Search Site** search field on the top-right corner of the page.
     ![](../../../assets/HCL_Search_Access_Page_Via_Woodburn_1.png)

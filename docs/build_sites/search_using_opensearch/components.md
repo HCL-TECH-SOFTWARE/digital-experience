@@ -4,7 +4,7 @@ This guide explains how to use the HCL End-user Search UI. Follow along to learn
 
 The default search component, shown in the image below, is responsive and can be imported and used anywhere within an application.
 
-![Screenshot](../../../assets/HCL_Search_Search_Result.png)
+![Screenshot](../../assets/HCL_Search_Search_Result.png)
 
 
 ## Overview of the search functionality
@@ -359,7 +359,7 @@ The search components are provided via **theme modules**, allowing users to crea
 
 We provide default theme modules (CSS and JS files) that can be used as-is or extended by customers. These are the steps to get the provided theme modules for the HCL End-user Search UI on your own DX deployment instance.
 
-1.  Log in to your HCL Digital Experience 9.5 platform, and select **Themes** from the Practitioner Studio navigator home cards or side nav.
+1.  Log in to your HCL Digital Experience 9.5 platform, and select **Themes** from the Practitioner Studio homepage home cards or side nav.
 
     ![](../../../assets/HCL_Search_Get_Theme_Modules_01.png "Log in to HCL Digital Experience 9.5 and Go to the Themes page")
 
