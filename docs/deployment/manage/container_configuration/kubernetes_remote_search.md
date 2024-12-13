@@ -403,7 +403,7 @@ Create the following Content Source:
 |Content Source Name|Portal Content Source|
 |Collect documents linked from this URL|`https://<dx-core-pod-hostname>:10042/wps/seedlist/myserver?Action=GetDocuments&Format=ATOM&Locale=en_US&Range=100&Source=com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory&Start=0&SeedlistId=1@OOTB_CRAWLER1`|
 
-In the `Security` panel, use the determined DX Core Pod hostname, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
+In the `Security` panel, use the specified DX Core Pod hostname, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
 
 !!!note "Notes"
     - Click the **create** button to create the security realm definition inside the frame where you first entered the data. This action ensures that you have the security realm defintion before saving the content source.
