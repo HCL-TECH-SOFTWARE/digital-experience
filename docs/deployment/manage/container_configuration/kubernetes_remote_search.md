@@ -340,7 +340,7 @@ The host is composed of the deployment name used in the `helm install` command a
 
 This is the pattern for the host name: `<dx-deployment>-core-<n>.<dx-deployment>-core.<namespace>.svc.cluster.local`.
 
-The following example shows you how to replace the placeholder with the correct host name and port number:
+The following example shows you how to replace the placeholder with the correct hostname and port number:
 
 - Deployment name: `dx-deployment`
 - Namespace: `dxns`
