@@ -82,7 +82,7 @@ Provide the following properties:
 | `configuration.security.passwordField` | yes | The field name of the password field in a FORM based authentication. |
 | `configuration.security.loginPath` | yes | The path where the FORM authentication request is being made. |
 | `configuration.maxCrawlTime` | yes | The time limit in seconds for the overall crawler execution. This is useful to prevent stuck crawlers. |
-| `configuration.maxRequestTime` | yes | Maximum request time per crawler request. This limits how long the crawler will wait for an answer from the seedlist provider. |
+| `configuration.maxRequestTime` | yes | The maximum request time per crawler request. This limits how long the crawler will wait for an answer from the seedlist provider. |
 
 ### Crawler endpoints for `targetDataSource`
 
