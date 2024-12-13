@@ -2,7 +2,7 @@
 title: Configuring the Search v2 backend 
 ---
 
-# Search v2 backend configuration
+#  Configuring the Search v2 backend 
 
 This section gives you an introduction into the configuration of the Search v2 backend for HCL Digital Experience (DX).
 
