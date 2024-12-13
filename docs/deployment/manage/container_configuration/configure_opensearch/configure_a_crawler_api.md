@@ -232,7 +232,7 @@ To remove all existing data, use the Push REST API endpoint to delete by query:
 
 `DELETE` - `/dx/api/search/v2/contentsources/<content_source_id>/documents/byquery`
 
-If you leave the query to match all documents, you will delete all documents stored in the Content Source index:
+If you leave the query to match all documents, you must delete all documents stored in the content source index:
 
 ```json
 {
