@@ -222,8 +222,6 @@ In some cases, it might be necessary to force a full re-crawl of a data source. 
 1. [Remove existing data in the content source index.](#removing-existing-data-in-the-content-source-index)
 2. [Trigger the crawler with the clear_timestamp parameter.](#triggering-the-crawler-with-the-clear_timestamp-parameter)
 
-Doing so is a two step process:
-
 ### Removing existing data in the content source index
 
 A full crawl will not inform you about documents that do not exist anymore. Therefore, it is recommended to remove all content from the content source index. Removing all content ensures that only the newly reported documents by the seedlist are actually stored and returned in the search results.
