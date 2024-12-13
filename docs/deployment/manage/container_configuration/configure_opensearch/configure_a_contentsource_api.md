@@ -6,7 +6,7 @@ All API endpoints can be accessed via a swagger UI that is available at the foll
 
 ## Authenticating as a search administrator
 
-Before you can perform administrative tasks, you need to authenticate as a search administrator. The search admin credentials are configured during the Helm installation of search v2.
+Before you can perform administrative tasks, you need to authenticate as a search administrator. The search administrator credentials are configured during the Helm installation of search v2.
 
 1. To authenticate, send a `POST` request to the `/dx/api/search/v2/admin/authenticate` endpoint using the following payload:
 
