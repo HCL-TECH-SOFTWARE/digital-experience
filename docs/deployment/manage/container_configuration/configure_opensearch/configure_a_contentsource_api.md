@@ -215,4 +215,4 @@ The search v2 UI uses the  `aclLookupPath` to determine which content sources ar
 
 ## Out-of-the-box content sources
 
-The search v2 will configure the content sources out of the box, if enabled in the Helm chart during deployment. These content sources are for the `wcm`, `dam`, `jcr` and `portal` types and will be scoped at your configured context root and the base portal.
+If enabled in the Helm chart during deployment, the search v2 configures the content sources out-of-the-box. These content sources are for the `wcm`, `dam`, `jcr` and `portal` types and are scoped at your configured context root and base portal.
