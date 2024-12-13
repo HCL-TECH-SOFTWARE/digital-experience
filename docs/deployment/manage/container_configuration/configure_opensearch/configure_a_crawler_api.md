@@ -1,6 +1,6 @@
 # Configuring a crawler using REST API
 
-Certain types of Content Sources come with an integrated crawler that can be configured to pull data from the data source. This topic explains how to configure a crawler using the REST API.
+Certain types of content sources come with an integrated crawler that you can configure to pull data from the data source. This topic explains how to configure a crawler using the REST API.
 
 You can access all API endpoints through the Swagger UI available at the following URL: `/dx/api/search/v2/explorer`.
 
