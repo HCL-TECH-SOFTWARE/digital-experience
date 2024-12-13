@@ -32,11 +32,11 @@ You can use an [optional Ingress](../../../../deployment/install/container/helm_
 
 
 ### Verifying the deployment
-To test a local deployment that does not include High Availability (HAproxy) container, access DXConnect by specifying the container port in the following URL:
+To test a local deployment that does not include haproxy container, access DXConnect by specifying the container port in the following URL:
           ```
           https://<localhost>:10202/hcl/dxconnect/processHandler/version
           ```
-If the target environment includes HAproxy container, access DXConnect with the following URL:
+If the target environment includes haproxy container, access DXConnect with the following URL:
           ```
           https://<host-name>/hcl/dxconnect/processHandler/version
           ```
