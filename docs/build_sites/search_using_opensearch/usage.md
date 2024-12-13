@@ -10,7 +10,7 @@ Generate search results from different content sources (from WCM or Portal) usin
 
 ## Generating a set of search results
 
-A set of search results set is generated to match the search terms that you enter in the Search input field. You can get more specific results if you define the content source to search from and specify the attributes to search for, such as the title, description, type, or tags.
+A set of search results is generated based on the keywords or phrases you enter in the Search input field. You can get more specific results if you define the content source to search from and specify the attributes to search for, such as the title, description, type, or tags.
 
 1.  Log in to your HCL DX 9.5 platform then select **Search** from the Practitioner Studio homepage.
 
