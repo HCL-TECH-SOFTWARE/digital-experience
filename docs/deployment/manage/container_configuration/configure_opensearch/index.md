@@ -1,5 +1,5 @@
 ---
-title: Search v2 backend configuration
+title: Configuring the Search v2 backend 
 ---
 
 # Search v2 backend configuration
