@@ -71,7 +71,7 @@ Provide the following properties:
 
 | Property | Optional | Description |
 | --- | --- | --- |
-| `contentSource` | no | The `id` of the Content Source you want the crawler to be configured for. |
+| `contentSource` | no | The `id` of the content source you want the crawler to be configured for. |
 | `type` | no | The type of crawler, allowed types are `wcm`, `portal` and `jcr` - Must match the type of the associated Content Source |
 | `configuration.targetDataSource` | no | The seedlist URL. You can use the internal HCL DX Core hostname for direct communication to it. The name consists of the release name used during the Helm install (for example, `dx`). |
 | `configuration.schedule` | yes | A cron type notation controlling the automated execution of the crawler. You can omit this for no schedule. |
