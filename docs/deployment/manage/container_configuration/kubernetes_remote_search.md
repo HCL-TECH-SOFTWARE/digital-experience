@@ -338,7 +338,7 @@ When you run crawlers, it is important that they always use the pod to retrieve 
 
 The host is composed of the deployment name used in the `helm install` command and the namespace. The port number is the secure port of the DX Core pod and is `10042` by default.
 
-This is the pattern for the host name: `<dx-deployment>-core-<n>.<dx-deployment>-core.<namespace>.svc.cluster.local`.
+This is the pattern for the hostname: `<dx-deployment>-core-<n>.<dx-deployment>-core.<namespace>.svc.cluster.local`.
 
 The following example shows you how to replace the placeholder with the correct hostname and port number:
 
