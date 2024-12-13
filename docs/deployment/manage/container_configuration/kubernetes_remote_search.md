@@ -369,7 +369,7 @@ Create the following Content Sources:
 |Content Source Name|Portal Content Source|
 |Collect documents linked from this URL|`https://<dx-core-pod-hostname>:10042/wps/seedlist/myserver?Source=com.ibm.lotus.search.plugins.seedlist.retriever.portal.PortalRetrieverFactory&Action=GetDocuments&Range=100`|
 
-In the `Security` panel, use the determined DX Core Pod hostname, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
+In the `Security` panel, use the specified DX Core Pod hostname, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
 
 ###### WCM Content Source
 
