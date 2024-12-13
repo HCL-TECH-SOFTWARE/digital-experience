@@ -379,7 +379,7 @@ In the `Security` panel, use the determined DX Core Pod hostname, along with the
 |Content Source Name|WCM Content Source|
 |Collect documents linked from this URL|`https://<dx-core-pod-hostname>:10042//wps/seedlist/myserver?SeedlistId=&Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&Action=GetDocuments`|
 
-In the `Security` panel, use the determined DX Core Pod hostname, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
+In the `Security` panel, use the specified DX Core Pod hostname, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
 
 ##### JCR Search Collection
 
