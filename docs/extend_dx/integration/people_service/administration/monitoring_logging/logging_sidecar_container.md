@@ -26,4 +26,4 @@ To access the logs, you can use the `kubectl logs` command with the `-c` flag to
 kubectl logs -n <NAMESPACE> <PEOPLE_SERVICE_POD_NAME> -c <SYNC_LOG_CONTAINER_NAME>
 ```
 
-Refer to the [Configuration - logging](../../deployment/configuration/index.md#logging-configuration) for more information on the available configuration options for the logging sidecar container.
+Refer to the [Configuration - Logging configuration](../../deployment/configuration/index.md#logging-configuration) page for more information on the available configuration options for the logging sidecar container.
