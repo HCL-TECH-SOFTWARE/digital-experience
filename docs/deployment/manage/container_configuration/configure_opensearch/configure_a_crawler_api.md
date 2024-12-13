@@ -240,7 +240,7 @@ If you leave the query to match all documents, you must delete all documents sto
 }
 ```
 
-### Trigger the crawler with the clear_timestamp parameter
+### Triggering the crawler with the clear_timestamp parameter
 
 After the data has been deleted, you can trigger your crawler again and provide the query parameter `clear_timestamp` with the value `true`.  
 This removes the currently stored `incrementalTimestamp` of the crawler and triggers a new, full crawl.
