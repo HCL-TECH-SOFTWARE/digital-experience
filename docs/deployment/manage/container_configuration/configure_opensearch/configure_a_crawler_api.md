@@ -2,7 +2,7 @@
 
 Certain types of Content Sources come with an integrated crawler that can be configured to pull data from the data source. This topic explains how to configure a crawler using the REST API.
 
-All API endpoints can be accessed via a swagger UI that is available at the following URL: `/dx/api/search/v2/explorer`.
+You can access all API endpoints through the Swagger UI available at the following URL: `/dx/api/search/v2/explorer`.
 
 ## Available crawler types
 
