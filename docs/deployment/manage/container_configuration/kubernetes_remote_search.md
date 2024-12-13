@@ -332,7 +332,7 @@ For **Search Services** configuration, the following values are used:
 
 Based on the previously created Remote Search service, create a **Portal Search Collection** and a **JCR Search Collection** using the following parameters.
 
-##### Selecting the right host for the Search Collections
+##### Selecting the right host for the search collections
 
 When you run crawlers, it is important that they will always use the pod to retrieve their data, since the seedlist providers are not shared between pods. In the following examples a placeholder for the host is used. This placeholder must be replaced with the correct host name.
 
