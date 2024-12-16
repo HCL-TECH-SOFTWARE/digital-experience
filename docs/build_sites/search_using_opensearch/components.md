@@ -368,7 +368,7 @@ You can use the default theme modules (CSS and JS files) provided to you as-is, 
 
 5. Expand the **System Modules** folder then locate and click the `dx_search_css` file.
 
-    ![](../../../assets/HCL_Search_Get_Theme_Modules_05.png "Expand the system modules and scroll down to find dx_search_css and dx_search_js")
+    ![](../../../assets/HCL_Search_Get_Theme_Modules_14.png "Expand the system modules and scroll down to find dx_search_css")
 
 6. On the right-side panel that appears, scroll down and click **Contributions**.
 
@@ -384,23 +384,24 @@ You can use the default theme modules (CSS and JS files) provided to you as-is, 
 
 9. Go back to the **System Modules** folder then locate and click the `dx_search_js` file.
 
-    ![](../../../assets/HCL_Search_Get_Theme_Modules_09.png "Click on `dx_search_js` and on the right side, you will find the module information, scroll down to find Contributions and under it Location")
+    ![](../../../assets/HCL_Search_Get_Theme_Modules_15.png "Expand the system modules and scroll down to find dx_search_js")
 
 10. On the right-side panel, scroll down and click **Contributions** again.
 
-    ![](../../../assets/HCL_Search_Get_Theme_Modules_10.png "Click on the Location URL to view the js file")
+    ![](../../../assets/HCL_Search_Get_Theme_Modules_09.png "Click on `dx_search_js` and on the right side, you will find the module information, scroll down to find Contributions and under it Location")
 
 11. Click the **Location** URL to view the JS file.
 
-    ![](../../../assets/HCL_Search_Get_Theme_Modules_11.png "Right click on the Location URL to download it. Save as index.js for now.")
+    ![](../../../assets/HCL_Search_Get_Theme_Modules_10.png "Click on the Location URL to view the js file")
 
 12. Right click on the **Location** URL then click **Save Link As...** and name the file `index.js`.
+
+    ![](../../../assets/HCL_Search_Get_Theme_Modules_11.png "Right click on the Location URL to download it. Save as index.js for now.")
 
 13. Open the `default.css`file in a code editor such as Visual Studio Code then open the **Command Palette**. You can open the **Command Palette** by pressing Cmd + Shift + P for Mac, or Ctrl + Shift + P for Windows.
 
 14. In the **Command Palette**, enter `> Format Document` to format the CSS file in a more structured view. This allows you to read and inspect the code more easily so you can override the styles to your liking. For more information, refer to [Styling the search components](#styling-the-search-components).
 
-See the sample view of the formatted CSS file.
 
    ![](../../../assets/HCL_Search_Get_Theme_Modules_12.png "Open the `default.css` file you have downloaded in a code editor such as Visual Studio Code")
 
