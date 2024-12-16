@@ -7,7 +7,7 @@ By default Portal Search is configured to use seedlist format 1.0 when indexing 
 Search seedlist 1.0 can make access control information available in a way that makes pre-filtering of contents possible. Pre-filtering provides the fastest filtering approach because it takes place in the search index level. An extra advantage of pre-filtering is that remote secured content sources can be searched from the portal. The filtering mode is defined as part of the search service configuration parameters.
 
 !!! important
-    If changing access control on libraries or setting access on the library root, note that seedlist requests relative to a timestamp will not list items that would be affected by such an access control change. To get those updates we recommend to trigger a full crawl. 
+    When changing access control on libraries or setting access on the library root, note that seedlist requests relative to a timestamp will not list items affected by an access control change. To retrieve those updates, it is recommended to trigger a full crawl. 
     DX classic (either local or remote) Search uses post access control filtering and is therefore not affected.
 
 
