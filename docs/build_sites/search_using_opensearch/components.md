@@ -1,25 +1,27 @@
 # End-user Search with OpenSearch components
 
-The HCL End-user Search UI is composed of Web Components. This guide explains how to use the HCL End-user Search UI Web Components. Follow along to learn about the different types of web components we provide, their styling options, and extendable features.
+The HCL End-user Search UI is composed of web components called search components. This guide explains how to use the HCL End-user Search UI search components. Follow along to learn about the different types of search components, their styling options, and extendable features.
 
 The default search component for End-User Search is designed to be user-friendly, customizable, and extendable. It offers intuitive search interactions, allows user-defined styling and extensions, and can be integrated anywhere in your application. See an example of the search component below.
 
 ![Screenshot](../../assets/HCL_Search_Search_Result.png)
 
-## Web Components: Features and Benefits
-Web components provide the following benefits:
+## Search component features and benefits
+End-user Search with OpenSearch components provide the following benefits:
 
 1. **Encapsulation:** Styles and functionality are isolated from the rest of your application using Shadow DOM.
 2. **Reusability:** Build once and reuse across different parts of your application.
 3. **Customizability:** Use attributes, properties, and part selectors to customize components without altering their core code.
 
-Why did we use Broadcast Channel API?
+## Communication between components using the Broadcast Channel API
 
-1. **Real-Time Synchronization:** Keeps components in sync, such as updating search results when a new query is entered.
-2. **Decoupled Design:** FCC components can work independently and communicate without direct references.
-3. **Flexibility:** FCC components can be distributed across different sections of the application, ensuring modularity.
+HCL End-user Search with OpenSearch utilizes the Broadcast Channel API for its components. The Broadcast Channel API provides real-time synchronization, updating search search results when a new query is entered. It has a decoupled design that allows FCC components to work independently and communicate without direct references. 
 
-## Components Overview
+This API also enables seamless communication between different FCC components, even when they are placed in separate areas of your application such as themes, JSPs, portlets, or WCM. This functionality is already present in the provided JS theme module.
+
+## Search components overview
+
+End-user Search with OpenSearch components has two distinct types: Atomic Components (AC) and Functional Composite Components (FCC). 
 
 ### Atomic Components
 
@@ -52,7 +54,7 @@ Atomic Components (AC) are the smallest possible building blocks of the search f
     | **selectedValue**     | String | The currently selected value. | undefined |
     | **selectedId** | String | The id of the currently selected option. | undefined |
     | **options**    | String, String[], OptionData[] | List of options to display in the dropdown. The options can be a JSON string, an array of strings, or an array of objects with id and name properties. | [] |
-    | **field**    | DxSearchInputFieldType, String | TThe type of the input field used to determine default labels or handle specific behaviors. You can use `DxSearchInputFieldType` strings such as `contentSource` or `documentObjectType` or leave it blank. | '' |
+    | **field**    | DxSearchInputFieldType, String | The type of the input field used to determine default labels or handle specific behaviors. You can use `DxSearchInputFieldType` strings such as `contentSource` or `documentObjectType` or leave it blank. | '' |
 
 - **dx-list:** This component wraps an unordered list (`<ul>`) and uses a slot to insert content such as list items into the component. The `part="unordered-list"` attribute allows external styling of the `<ul>`.                     
 - **dx-switch:** This fully accessible and customizable custom component separates behavior (toggle state and events) from appearance (CSS styling through the dynamic part attribute). This component is currently not in use.
@@ -146,7 +148,7 @@ Atomic Components (AC) are the smallest possible building blocks of the search f
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    |**color** | String	| Determines the color of the SVG icon. If `useCurrentColor` is set to `false`, this color will be applied directly to the SVG's fill.|	'' |
+    |**color** | String	| The color of the SVG icon. If `useCurrentColor` is set to `false`, this color will be applied directly to the SVG's fill.|	'' |
     |**size** |	String	| The size of the icon. Used for both width and height. |	'' |
     | **useCurrentColor** |	Boolean |	Determines whether the icon will inherit the color of the parent element's color property (using CSS currentColor). |	false |
     |**icon** |	TemplateResult |	The SVG icon content passed as a template to render the icon. |	undefined |
@@ -342,8 +344,6 @@ dx-input-textfield::part(label) {
 
 ## Theme modules
 
-## Overview
-
 Search components are provided using theme modules, allowing users to create custom stylesheets for all components. This flexibility is ideal for adapting the search functionality to match your application's design. For more information about themes and skins in DX, refer to  [Developing themes and skins](../../../build_sites/themes_skins/index.md).
 
 ## Default theme modules
@@ -378,7 +378,7 @@ You can use the default theme modules (CSS and JS files) provided to you as-is, 
 
     ![](../../../assets/HCL_Search_Get_Theme_Modules_07.png "Click on the Location URL to view the css file")
 
-8. Right click on the *Location** URL then click **Save Link As...** and name the file `default.css`.
+8. Right click on the **Location** URL then click **Save Link As...** and name the file `default.css`.
 
     ![](../../../assets/HCL_Search_Get_Theme_Modules_08.png "Right click on the Location URL to download it. Save as default.css for now")
 
@@ -441,9 +441,4 @@ See the sample customized CSS code which changed the background color dx-search-
     background-color: #f0f0f0;
   }
 ```
-
-## Communication between components using the Broadcast Channel API
-HCL End-user Search with OpenSearch utilizes the Broadcast Channel API for its components. The Broadcast Channel API provides real-time synchronization, updating search search results when a new query is entered. It has a decoupled design that allows FCC components to work independently and communicate without direct references. 
-
-This API also enables seamless communication between different FCC components, even when they are placed in separate areas of your application such as themes, JSPs, portlets, or WCM. This functionality is already present in the provided JS theme module.
 
