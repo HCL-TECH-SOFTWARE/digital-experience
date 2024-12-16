@@ -7,21 +7,16 @@ The default search component for End-User Search is designed to be user-friendly
 ![Screenshot](../../assets/HCL_Search_Search_Result.png)
 
 ## Search component features and benefits
+
 End-user Search with OpenSearch components provide the following benefits:
 
 1. **Encapsulation:** Styles and functionality are isolated from the rest of your application using Shadow DOM.
 2. **Reusability:** Build once and reuse across different parts of your application.
 3. **Customizability:** Use attributes, properties, and part selectors to customize components without altering their core code.
 
-## Communication between components using the Broadcast Channel API
-
-HCL End-user Search with OpenSearch utilizes the Broadcast Channel API for its components. The Broadcast Channel API provides real-time synchronization, updating search search results when a new query is entered. It has a decoupled design that allows FCC components to work independently and communicate without direct references. 
-
-This API also enables seamless communication between different FCC components, even when they are placed in separate areas of your application such as themes, JSPs, portlets, or WCM. This functionality is already present in the provided JS theme module.
-
 ## Search components overview
 
-End-user Search with OpenSearch components has two distinct types: Atomic Components (AC) and Functional Composite Components (FCC). 
+End-user Search with OpenSearch components has two distinct types: Atomic Components (AC) and Functional Composite Components (FCC).
 
 ### Atomic Components
 
@@ -316,9 +311,9 @@ dx-search-center-layout div.search-input-div {
 ```
 
 
-### Customizing Styles
+### Style customization
 
-You can override styles by targeting the component's class names. Other components can be overridden in a similar manner.
+You can override styles by targeting the component's class names. Other components can be overridden in a similar manner. Refer to the styling examples below for `dx-button` and `dx-input-textfield`.
 
 !!! note
     The `part` attribute is used to name parts of a shadow tree, which can then be styled from outside the shadow DOM using the `::part()` pseudo-element. This allows you to apply CSS styles to shadow tree elements from the parent DOM.
@@ -346,7 +341,7 @@ dx-input-textfield::part(label) {
 
 Search components are provided using theme modules, allowing users to create custom stylesheets for all components. This flexibility is ideal for adapting the search functionality to match your application's design. For more information about themes and skins in DX, refer to  [Developing themes and skins](../../../build_sites/themes_skins/index.md).
 
-## Default theme modules
+## Getting the default theme modules
 
 You can use the default theme modules (CSS and JS files) provided to you as-is, or customize it to suit your needs. Follow these steps to get the provided theme modules for the HCL End-user Search UI on your own DX deployment instance.
 
@@ -403,14 +398,14 @@ You can use the default theme modules (CSS and JS files) provided to you as-is, 
 14. In the **Command Palette**, enter `> Format Document` to format the CSS file in a more structured view. This allows you to read and inspect the code more easily so you can override the styles to your liking. For more information, refer to [Styling the search components](#styling-the-search-components).
 
 
-   ![](../../../assets/HCL_Search_Get_Theme_Modules_12.png "Open the `default.css` file you have downloaded in a code editor such as Visual Studio Code")
+    ![](../../../assets/HCL_Search_Get_Theme_Modules_12.png "Open the `default.css` file you have downloaded in a code editor such as Visual Studio Code")
 
-See the sample view of the formatted CSS file.
+    See the sample view of the formatted CSS file.
 
-   ![](../../../assets/HCL_Search_Get_Theme_Modules_13.png "Log in to HCL Digital Experience 9.5 and Go to the End-user Search UI")
+    ![](../../../assets/HCL_Search_Get_Theme_Modules_13.png "Log in to HCL Digital Experience 9.5 and Go to the End-user Search UI")
 
 
-## Using the theme modules
+## Using and customizing the theme modules
 
 Follow these steps to use the theme module files you downloaded on your new or existing theme pages.
 
@@ -435,11 +430,16 @@ Follow these steps to use the theme module files you downloaded on your new or e
       <script type="module" src="/path/to/index.js"></script>
     ```
 
-See the sample customized CSS code which changed the background color dx-search-center-layout component.
+    See the sample customized CSS code which changed the background color dx-search-center-layout component.
 
-```css
-  dx-search-center-layout::part(main) {
-    background-color: #f0f0f0;
-  }
-```
+    ```css
+    dx-search-center-layout::part(main) {
+        background-color: #f0f0f0;
+    }
+    ```
 
+## Communication between components using the Broadcast Channel API
+
+HCL End-user Search with OpenSearch utilizes the Broadcast Channel API for its components. The Broadcast Channel API provides real-time synchronization, updating search search results when a new query is entered. It has a decoupled design that allows FCC components to work independently and communicate without direct references.
+
+This API also enables seamless communication between different FCC components, even when they are placed in separate areas of your application such as themes, JSPs, portlets, or WCM. This functionality is already present in the provided JS theme module.
