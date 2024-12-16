@@ -20,7 +20,7 @@ Access End-user Search with OpenSearch from the Practitioner Studio.
 
     ![](../../../assets/HCL_DX_95_Practitioner_Studio_interface.png "Log in to HCL Digital Experience 9.5")
 
-2.  See the End-user Search with OpenSearch user interface below.
+See the End-user Search with OpenSearch user interface below.
 
     ![](../../../assets/HCL_Search_Landing_Page.png "HCL Search Landing Page")
 
