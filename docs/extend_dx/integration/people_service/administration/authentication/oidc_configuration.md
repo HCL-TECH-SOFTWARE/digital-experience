@@ -1,4 +1,4 @@
-# OIDC configuration
+# Configuring OIDC for authentication
 
 The authentication configuration of People Service is a crucial part of the setup process. The service leverages on OpenID Connect (OIDC) as one of its authentication strategies. OIDC requires an existing Identity Provider (IdP) and respective setup around users, clients, and potentially mappings of identity information. In this section, you will learn how to configure People Service to use OIDC and set up the service against an IdP.
 

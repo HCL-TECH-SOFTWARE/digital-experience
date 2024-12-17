@@ -5,4 +5,4 @@ Lightweight Directory Access Protocol (LDAP) allows People Service to integrate 
 !!! note
     Ensure that the base DN is configured to match the HCL Digital Experience configuration.
 
-To set up People Service with LDAP for user federation, refer to [Configuration - LDAP configuration](../index.md#ldap-configuration).
+To set up People Service with LDAP for user federation, refer to [Configuration - LDAP configuration](../configuration/index.md#ldap-configuration).

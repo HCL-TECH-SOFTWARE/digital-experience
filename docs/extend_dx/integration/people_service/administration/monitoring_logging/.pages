@@ -1,4 +1,4 @@
 title: Monitoring and logging
 nav:
   - index.md
-  - logging_sidecar_container.md
+  - Using the logging sidecar container: logging_sidecar_container.md

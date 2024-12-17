@@ -1,4 +1,4 @@
-title: Managing user properties
+title: User properties
 nav:
   - index.md
-  - Custom fields: custom_fields.md
+  - Adding and configuring custom fields: custom_fields.md

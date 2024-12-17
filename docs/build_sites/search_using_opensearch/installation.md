@@ -9,7 +9,7 @@ This section contains instructions on how to install and deploy the HCL End-user
 
 HCL End-user Search using OpenSearch is an instance of a search integration portlet configured to point to where the static assets such as Javascript, stylesheets, and HTML markup can be loaded from. You can enable or disable it using ConfigEngine tasks for container-based deployments. The enable task would deploy, configure the portlet, create the http outbound proxy policy so DX can fetch the assets, and then deploy the page.
 
-For container-based Helm deployment, the deployment values.yaml can also be configured so HCL End-user Search with OpenSearch is enabled by default.
+For container-based Helm deployment, the deployment `values.yaml` can also be configured so HCL End-user Search with OpenSearch is enabled by default.
 
 !!! important
     Before you can enable HCL End-user Search using Opensearch, you need to install Search based on Opensearch. For more information on how to install this feature, refer to [Installing search based on OpenSearch](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md).
@@ -42,7 +42,7 @@ To enable HCL End-user Search using OpenSearch manually, run the **enable-search
 ### Enabling HCL End-user Search using OpenSearch through Helm deployment
 
 
-Apply the following changes to your installation values.yaml to enable HCL End-user Search using OpenSearch.
+Apply the following changes to your installation `values.yaml` to enable HCL End-user Search using OpenSearch.
 
 ```
 # Application configuration
@@ -71,7 +71,7 @@ After disabling HCL End-user Search using OpenSearch using the **disable-search-
 ### Disabling HCL End-user Search using OpenSearch through Helm deployment
 
 
-Apply the following changes to your installation values.yaml to disable HCL End-user Search using OpenSearch.
+Apply the following changes to your installation `values.yaml` to disable HCL End-user Search using OpenSearch.
 
 ```
 # Application configuration

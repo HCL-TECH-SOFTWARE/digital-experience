@@ -43,4 +43,4 @@ User properties are validated through string/number, email, or phone number auth
 
 You can use custom fields to enhance user profiles with additional information that is not covered by the default properties. These fields can be configured using any data type and can be added to user profiles through the API or the UI. You can also mark fields as required or optional, and attach validation rules to them.
 
-For more information on how to manage custom fields, refer to [Custom fields](./custom_fields.md).
+For more information on how to manage custom fields, refer to [Adding and configuring custom fields](./custom_fields.md).

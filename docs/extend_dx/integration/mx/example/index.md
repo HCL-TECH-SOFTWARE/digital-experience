@@ -2,10 +2,9 @@
 
 This section provides an overview of the possibilities offered by the integration of HCL Volt MX Foundry and HCL Digital Experience (DX). The following examples show options to integrate HCL Volt MX into HCL DX pages and to use HCL DX APIs in Volt MX Foundry.
 
--   **[Integrating Volt MX data or applications into HCL DX](./integrate_voltmx_into_dx.md)**
 -   **[Using HCL DX APIs in HCL Volt MX Foundry](./dx_apis_in_foundry.md)**
+-   **[Integrating Volt MX data or applications into HCL DX](./integrate_voltmx_into_dx.md)**
 -   **[Deploying Volt MX portlet into HCL DX](./mx_portlet_in_dx.md)**
-
 
 ## HCLSoftware U learning materials
 
