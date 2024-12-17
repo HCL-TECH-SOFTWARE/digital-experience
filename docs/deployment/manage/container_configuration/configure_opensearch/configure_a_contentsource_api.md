@@ -2,9 +2,11 @@
 
 This topic explains the use of the Content Source REST API to create a Content Source. This can later be used to crawl the content source in your HCL DX instance and will contain the items that you can find by using search queries.
 
+You can access all API endpoints through a Swagger UI available at the following URL: `/dx/api/search/v2/explorer`.
+
 ## Authenticating as a search administrator
 
-Before you can perform administrative tasks, you need to authenticate as a search administrator.
+Before you can perform administrative tasks, you need to authenticate as a search administrator. The search administrator credentials are configured during the Helm installation of Search v2.
 
 1. To authenticate, send a `POST` request to the `/dx/api/search/v2/admin/authenticate` endpoint using the following payload:
 
@@ -30,6 +32,7 @@ Before you can perform administrative tasks, you need to authenticate as a searc
     | Header | Value |
     | --- | --- |
     | `Authorization` | `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9....` |
+
 
 ## Listing existing content source types
 
@@ -76,13 +79,13 @@ If you have content sources configured, the response looks similar to the follow
       "created": 1712661494724,
       "updated": 1712661494724,
       "aclLookupHost": "https://my-environment.arbitarydomaintest.com",
+      "aclLookupPath": "/wps/mycontenthandler",
       "security": {
-        "type": "none",
-        "username": "",
-        "password": "",
+        "type": "basic",
+        "username": "dxadminuser",
+        "password": "dxadminpassword",
         "usernameField": "",
-        "passwordField": "",
-        "loginPath": ""
+        "passwordField": ""
       }
     },
     {
@@ -92,6 +95,7 @@ If you have content sources configured, the response looks similar to the follow
       "created": 1728638173742,
       "updated": 1728638173742,
       "aclLookupHost": "https://my-environment.arbitarydomaintest.com",
+      "aclLookupPath": "/wps/mycontenthandler",
       "security": {
         "type": "basic",
         "username": "dxadminuser",
@@ -99,7 +103,7 @@ If you have content sources configured, the response looks similar to the follow
         "usernameField": "",
         "passwordField": ""
       }
-    }
+    },
   ]
 }
 ```
@@ -118,6 +122,7 @@ To see configured content sources for a certain type (for example, `wcm`), call 
       "created": 1728614431815,
       "updated": 1728614431815,
       "aclLookupHost": "https://my-environment.arbitarydomaintest.com",
+      "aclLookupPath": "/wps/mycontenthandler",
       "security": {
         "type": "none",
         "username": "",
@@ -131,7 +136,6 @@ To see configured content sources for a certain type (for example, `wcm`), call 
 }
 ```
 
-
 ## Creating a new content source
 
 To create a new content source, call the `/dx/api/search/v2/contentsources` endpoint with a `POST` request and the following payload:
@@ -143,6 +147,7 @@ To create a new content source, call the `/dx/api/search/v2/contentsources` endp
   "name": "mytest3",
   "type": "jcr",
   "aclLookupHost": "https://my-environment.arbitarydomaintest.com",
+  "aclLookupPath": "/wps/mycontenthandler",
   "security": {
     "type": "basic",
     "username": "dxadminuser",
@@ -151,16 +156,20 @@ To create a new content source, call the `/dx/api/search/v2/contentsources` endp
 }
 ```
 
-Provide the following properties:
+You can provide the following properties:
 
 | Property | Optional | Description |
 | --- | --- | --- |
 | `name` | no | A speaking identifier for your content source. |
-| `type` | no | The type of content source you want to create (for example, `wcm`). |
-| `aclLookupHost` | no | The host where the ACL lookup for search requests is being made. It can directly point to your HCL DX Core Service inside your Kubernetes deployment. The name consists of the release name used during the helm install and the suffix `-core:10042`. |
-| `security.type` | no | The type of authentication to use (for example, `basic`). |
+| `type` | no | The type of content source you want to create. Allowed types are `wcm`, `jcr`, `portal` and `dam`. |
+| `aclLookupHost` | no | The host where the ACL lookup for search requests is being made. It can directly point to your HCL DX HAProxy Service inside your Kubernetes deployment. The name consists of the release name used during the `helm install` and the suffix `-haproxy`. You can also use the regular hostname of your deployment. |
+| `aclLookupPath` | yes | The path where the ACL lookup for search requests is being made. This should point to the `mycontenthandler` endpoint of your deployment (for example, `/wps/mycontenthandler`). If no path is provided, it defaults back to `/wps/mycontenthandler`. |
+| `security.type` | no | The type of authentication to use. Allowed types are `none`, `basic` and `form`. |
 | `security.username` | no | The username of a user that has access to crawl the seedlist. |
 | `security.password` | no | The password of a user that has access to crawl the seedlist. |
+| `security.usernameField` | yes | The field name of the username field in a FORM based authentication. |
+| `security.passwordField` | yes | The field name of the password field in a FORM based authentication. |
+| `security.loginPath` | yes | The path where the FORM authentication request is being made. |
 
 The response of the API call looks similar to the following sample:
 
@@ -174,6 +183,7 @@ The response of the API call looks similar to the following sample:
   "created": 1712661954517,
   "updated": 1712661954517,
   "aclLookupHost": "https://my-environment.arbitarydomaintest.com",
+  "aclLookupPath": "/wps/mycontenthandler",
   "security": {
     "type": "basic",
     "username": "dxadminuser",
@@ -186,145 +196,23 @@ The response of the API call looks similar to the following sample:
 
 The response contains the `id` of the content source, which is required when you [configure a crawler](#configuring-the-crawler).
 
-## Configuring the crawler
+## Configuring content sources for virtual portals and alternate context roots
 
-To configure a crawler, call the `/dx/api/search/v2/crawlers` endpoint with a `POST` request and a payload similar to the following example:
+If you want to configure content sources for a virtual portal or for an alternate context root, you must adjust the `aclLookupPath` to match you target portal.
 
-**Payload:**
+See the following sample configurations:
 
-```json
-{
-  "contentSource": "fd544d6e-6007-401c-8984-ec3b650de458",
-  "type": "wcm",
-  "configuration": {
-    "targetDataSource": "https://dx-core:10042/wps/seedlist/myserver?SeedlistId=&Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&Action=GetDocuments",
-    "schedule": "*/15 * * * *",
-    "security": {
-      "type": "basic",
-      "username": "dxadminuser",
-      "password": "dxadminpassword"
-    },
-    "maxCrawlTime": 3600,
-    "maxRequestTime": 60
-  }
-}
-```
-
-Provide the following properties:
-
-| Property | Optional | Description |
+| Portal | Context root | `aclLookupPath` |
 | --- | --- | --- |
-| `contentSource` | no | The `id` of the content source you want the crawler to be configured for. |
-| `type` | no | The type of crawler (for example, `wcm`) |
-| `configuration.targetDataSource` | no | The seedlist URL. You can use the internal HCL DX Core hostname for direct communication to it. The name consists of the release name used during the Helm install (for example, `dx`). |
-| `configuration.schedule` | yes | A cron type notation controlling the automated execution of the crawler. You can omit this for no schedule. |
-| `configuration.security.type` | no | The type of authentication to use (for example, `basic`). |
-| `configuration.security.username` | no | The username of a user that has access to crawl the seedlist. |
-| `configuration.security.password` | no | The password of a user that has access to crawl the seedlist. |
-| `configuration.maxCrawlTime` | yes | Time limit in seconds for the overall crawler execution. This is useful to prevent stuck crawlers. |
-| `configuration.maxRequestTime` | yes | Maximum request time per crawler request. This limits how long the crawler will wait for an answer from the seedlist provider. |
+| VP: `myportal` | `/mycontext` | `/mycontext/mycontenthandler/myportal` |
+| VP: `myportal` | `/` | `/mycontenthandler/myportal` |
+| Base portal  | `/mycontext` | `/mycontext/mycontenthandler` |
+| Base portal  | `/` | `/mycontenthandler` |
 
-The various target data sources in DX which must be provided in parameter `configuration.targetDataSource` look similar. See the following sample URL:
+The Search v2 UI uses the  `aclLookupPath` to determine which content sources are available for your current portal. This ensures that only the content sources that are available for the current portal are shown in the search UI and you only see results from your current portal.
 
-`https://<hostname and port>/wps/seedlist/myserver?SeedlistId=&Source=<DX internal source name>&Action=GetDocuments`
+`aclLookupPath` is also used to validate the users' ACLs when performing a search query and to ensure that only results are shown that the user has access to.
 
-In this URL, `<hostname and port>` is the internal HCL DX Core hostname also used during the Helm install. Depending on the content source type, replace `<DX internal source name>` with the corresponding value from the following table.
+## Out-of-the-box content sources
 
-| Type | DX internal source name |
-| --- | --- |
-| wcm | `com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory` |
-| jcr | `com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory` |
-| portal | `com.ibm.lotus.search.plugins.seedlist.retriever.portal.PortalRetrieverFactory` |
-
-The response contains the created crawler object:
-
-**Response:**
-
-```json
-{
-  "id": "62d8560d-9a41-4a18-abf8-3d9df697e54f",
-  "contentSource": "fd544d6e-6007-401c-8984-ec3b650de458",
-  "crawlingInstance": "",
-  "lastCrawled": 0,
-  "lastCrawlDuration": 0,
-  "status": "",
-  "type": "wcm",
-  "configuration": {
-    "targetDataSource": "https://dx-core:10042/wps/seedlist/myserver?SeedlistId=&Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&Action=GetDocuments",
-    "schedule": "*/15 * * * *",
-    "security": {
-      "type": "basic",
-      "username": "dxadminuser",
-      "password": "********"
-    },
-    "maxCrawlTime": 3600,
-    "maxRequestTime": 60
-  },
-  "incrementalTimestamp": ""
-}
-```
-
-The following returned properties are populated after the crawler has run:
-
-| Property | Description |
-| --- | --- |
-| `crawlingInstance` | The actual search-middleware node that performs the crawls. Will state the actual Pod name in Kubernetes. |
-| `lastCrawled` | UNIX Timestamp of the last time the crawler ran. |
-| `lastCrawlDuration` | Last runtime in milliseconds of the crawler. |
-| `status` | Last known status of the crawler. |
-| `incrementalTimestamp` | The stored timestamp of the crawler that is used in the next crawl iteration. |
-
-## Testing the crawler configuration
-
-To test if your crawler configuration is correct, call the `/dx/api/search/v2/crawlers/{crawler_id}/test` endpoint with a `POST` request. The system then tries to retrieve the first page of the seedlist without actually performing a crawl. This ensures the URL and credentials are correct and search is able to contact the seedlist provider.
-
-Calling the endpoint responds with a fitting HTTP status code after execution. A `200 OK` is returned if the configuration is working.
-
-## Triggering the crawler manually
-
-If you do not want to wait for the crawler to run by schedule or you have not configured a schedule, you can manually trigger the crawler.
-
-Call the `/dx/api/search/v2/crawlers/{crawler_id}/trigger` endpoint with a `POST` request.
-
-The following response is returned after a crawl is triggered:
-
-**Response:**
-
-```json
-{
-  "message": "Crawler triggered."
-}
-```
-
-## Verifying the crawler status
-
-After triggering a crawler, you can check the crawler status by calling the `/dx/api/search/v2/crawlers/{crawler_id}` endpoint with a `GET` request. This returns complete crawler object to you, including the status.
-
-**Response:**
-
-```json
-{
-  "crawlers": [
-    {
-      "contentSource": "fd544d6e-6007-401c-8984-ec3b650de458",
-      "crawlingInstance": "dx-search-search-middleware-query-66f457d9d8-qdnnx",
-      "lastCrawled": 1712664216691,
-      "lastCrawlDuration": 7599,
-      "status": "finished",
-      "type": "wcm",
-      "configuration": {
-        "targetDataSource": "https://dx-core:10042/wps/seedlist/myserver?SeedlistId=&Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&Action=GetDocuments",
-        "schedule": "*/15 * * * *",
-        "security": {
-          "type": "basic",
-          "username": "dxadminuser",
-          "password": "********"
-        },
-        "maxCrawlTime": 3600,
-        "maxRequestTime": 60
-      },
-      "incrementalTimestamp": "AAABjsK+BU0="
-    }
-  ]
-}
-```
+If enabled in the Helm chart during deployment, the Search v2 configures the content sources out-of-the-box. These content sources are for the `wcm`, `dam`, `jcr` and `portal` types and are scoped at your configured context root and base portal.
