@@ -1,6 +1,6 @@
 title: Deployment
 nav:
     - index.md
-    - installation.md
-    - configuration
-    - uninstallation.md
+    - Installing HCL People Service: installation.md
+    - Configuration parameters: configuration
+    - Uninstalling HCL People Service: uninstallation.md

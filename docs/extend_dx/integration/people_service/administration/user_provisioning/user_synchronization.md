@@ -12,7 +12,7 @@ The user synchronization job is a scheduled task that runs at regular intervals 
 
 The synchronization process handles user data in batches to ensure efficient processing, even for large datasets. By processing user data in smaller sets, the system can manage large amounts of data without overloading system resources, maintaining smooth performance for organizations with extensive userbases.
 
-The schedule is based on a cron notation that defines the frequency of synchronization. For more details on the cron schedule, refer to [Configuration - User synchronization](../../deployment/configuration/index.md#user-synchronization-configuration).
+The schedule is based on a cron notation that defines the frequency of synchronization. For more details on the cron schedule, refer to [Configuration - User synchronization configuration](../../deployment/configuration/index.md#user-synchronization-configuration).
 
 Since People Service leverages Kubernetes as its deployment environment and allows horizontal scaling, the synchronization job uses a database lock to ensure that only one instance of the job runs at a given time. This prevents multiple instances of the job from running concurrently, which may cause data inconsistencies.
 
