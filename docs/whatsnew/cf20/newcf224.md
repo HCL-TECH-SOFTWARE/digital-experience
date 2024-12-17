@@ -18,6 +18,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - Digital Asset Management - Updated UI
+- DAM - Cross-CF staging
 - DX Search - New UI
 - People Service
 - New topic for configuring of `hostAliases` for DX Pods
@@ -99,6 +100,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     The Digital Asset Management (DAM) user interface (UI) is now using a new theme to provide an improved visual experience for managing digital assets. Note that this update is limited to the UI theme only; no changes are made to DAM functionality. For more information, see [Digital Asset Management](../../manage_content/digital_assets/index.md).
+    
+### DAM - Cross-CF staging
+
+=== "Containers"
+    Staging of DAM content between different cumulative fix (CF) versions is supported.  Note that the subscriber must be at least on CF223. For more information on limitations, refer to [DAM Cross-CF staging](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging/#dam-cross-cf-staging).
 
 ### DX Search - New UI 
 
@@ -135,11 +141,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     Note that in a later CF, HCL DX will no longer build and ship its custom OpenLDAP container and will instead use an open source container. By using the robust and well-maintained Bitnami&copy; OpenLDAP image, HCL DX can focus on delivering enhanced features and support without the overhead of maintaining its customized container. This shift is to provide you with more reliable and up-to-date solutions for your test environments. The new alternative, Bitnami&copy;, will be provided but will not ship with the release. Sample LDIF (LDAP data interchange format) files for your OpenLDAP configuration will also be available.
 
     This statement is not a guarantee of future releases or their features.
-
-### DAM - Cross-CF staging
-
-=== "Containers"
-    Staging of DAM content between different cumulative fix (CF) versions is supported.  Note that the subscriber must be at least on CF223. For more information on limitations, refer to [DAM Cross-CF staging](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging/#dam-cross-cf-staging).
     
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
