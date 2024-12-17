@@ -1,6 +1,6 @@
 # Installing search v2 backend
 
-This topic provides information on how to configure search based on OpenSearch for your DX deployment.
+This topic provides information on how to configure search based on OpenSearch (Search v2) for your DX deployment.
 
 The search currently provides the following capabilities:
 
