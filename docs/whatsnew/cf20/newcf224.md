@@ -19,6 +19,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - Digital Asset Management - Updated UI
+- DAM - Cross-CF staging
 - DX Search - New UI
 - People Service
 - New topic for configuring of `hostAliases` for DX Pods
@@ -108,6 +109,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     The Digital Asset Management (DAM) user interface (UI) is now using a new theme to provide an improved visual experience for managing digital assets. Note that this update is limited to the UI theme only; no changes are made to DAM functionality. For more information, see [Digital Asset Management](../../manage_content/digital_assets/index.md).
+    
+### DAM - Cross-CF staging
+
+=== "Containers"
+    Staging of DAM content between different cumulative fix (CF) versions is supported.  Note that the subscriber must be at least on CF223. For more information on limitations, refer to [DAM Cross-CF staging](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging/#dam-cross-cf-staging).
 
 ### DX Search - New UI 
 
