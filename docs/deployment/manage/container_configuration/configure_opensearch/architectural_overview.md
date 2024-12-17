@@ -1,6 +1,6 @@
 # Architectural Overview
 
-Know more about the different components of the DX search v2 and how they are used.
+Know more about the different components of DX Search v2 and how they are used.
 
 ## Key goals
 
