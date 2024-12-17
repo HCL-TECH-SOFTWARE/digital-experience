@@ -61,7 +61,7 @@ The DAM Cross-CF staging feature allows the staging of DAM content from one cumu
 
 - DAM Cross-CF staging is supported only from higher to lower CF versions.
 - Tests were conducted for up to two lower CF versions. For example, if the publisher is on CF225, staging up to the CF223 version of the subscriber is supported.
-- The subscriber needs to be at least on CF223
+- The subscriber must be at least on CF223.
 
 ## Managing DAM staging
 
