@@ -26,4 +26,4 @@ The debug module allows you to set the log level for specific modules. You can i
 
 ## Purpose-specific logs
 
-People Service provides a logging sidecar container that can be used to collect purpose-specific logs. Refer to the [Logging sidecar container](./logging_sidecar_container.md) page for more information on how to enable and access the logs.
+People Service provides a logging sidecar container that can be used to collect purpose-specific logs. Refer to [Using the logging sidecar container](./logging_sidecar_container.md) for more information on how to enable and access the logs.

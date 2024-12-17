@@ -1,4 +1,5 @@
-title: Configuration
+title: Configuration parameters
 nav:
   - index.md
-  - additional_configurations
+  - ldap_configuration.md
+  - oidc_configuration.md

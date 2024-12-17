@@ -8,7 +8,7 @@ People Service allows users to customize the following:
 
 ## Profile attributes
 
-Using People Service, you can tailor profile attributes to your organization's specific needs. You can add, remove, or modify profile attributes to capture relevant information for your users. This customization ensures that People Service aligns with your organization's unique requirements and provides a personalized user experience. Refer to the [Managing user properties](../../administration/managing_user_properties/index.md) page for more information.
+Using People Service, you can tailor profile attributes to your organization's specific needs. You can add, remove, or modify profile attributes to capture relevant information for your users. This customization ensures that People Service aligns with your organization's unique requirements and provides a personalized user experience. Refer to the [User properties](../../administration/managing_user_properties/index.md) page for more information.
 
 ## Styles
 

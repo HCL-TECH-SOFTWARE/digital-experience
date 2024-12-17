@@ -4,4 +4,4 @@ OpenID Connect (OIDC) is an identity layer built on top of the OAuth 2.0 protoco
 
 When integrating People Service with other products or services, OIDC provides a standardized way to authenticate users and obtain user information. This ensures seamless user experiences across different applications and services, as well as secure and reliable authentication mechanisms.
 
-To set up People Service with OIDC for authentication, refer to [Configuration - OIDC configuration](../index.md#oidc-configuration).
+To set up People Service with OIDC for authentication, refer to [Configuration - OIDC configuration](../configuration/index.md#oidc-configuration).

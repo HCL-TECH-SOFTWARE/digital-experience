@@ -14,5 +14,5 @@ Learn how to render Business Cards in DX pages.
 Learn how to link People Service system modules in HCL DX.
 - **[Creating My Profile links](./creating_my_profile_link.md)**<br>
 Learn how to create a My Profile link.
-- **[Customizing your content](./customization/index.md)**<br>
+- **[Customization](./customization/index.md)**<br>
 Learn about the customization options in People Service.

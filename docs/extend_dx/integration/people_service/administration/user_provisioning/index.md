@@ -10,5 +10,5 @@ Learn how to synchronize user data from different sources and map them into HCL 
 Learn how to link custom user directories to HCL People Service.
 - **[User synchronization monitoring and reporting](./user_synchronization_monitoring_reporting.md)**<br>
 Learn how to monitor and interpret logs from the user synchronization process.
-- **[LDAP Attribute Mapping](./ldap_attribute_mapping.md)**<br>
+- **[LDAP attribute mapping](./ldap_attribute_mapping.md)**<br>
 Learn about the configuration parameters used to map LDAP attributes to HCL People Service user properties.
