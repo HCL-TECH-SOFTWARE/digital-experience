@@ -214,7 +214,7 @@ After triggering a crawler, you can check the crawler status by calling the `/dx
 
 ## Out-of-the-box crawlers
 
-If enabled during the Helm installation, the search v2 configures out-of-the box crawlers for default content sources. These crawlers are configured with the default seedlist URLs and credentials. You can adjust the configuration of these crawlers to your needs.
+If enabled during the Helm installation, Search v2 configures out-of-the box crawlers for default content sources. These crawlers are configured with the default seedlist URLs and credentials. You can adjust the configuration of these crawlers to your needs.
 
 ## Forcing a full re-crawl
 
