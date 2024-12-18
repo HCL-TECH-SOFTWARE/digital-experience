@@ -20,7 +20,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Digital Asset Management - Updated UI
 - DAM - Cross-CF staging
-- DX Search - New UI
+- Search V2 - New search interface
 - People Service
 - New topic for configuring of `hostAliases` for DX Pods
 - New guidance for rendering in the upper limit of a single-node configuration
@@ -115,10 +115,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     Staging of DAM content between different cumulative fix (CF) versions is supported.  Note that the subscriber must be at least on CF223. For more information on limitations, refer to [DAM Cross-CF staging](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging/#dam-cross-cf-staging).
 
-### DX Search - New UI 
+### Search V2 - New search interface
 
 === "Containers"
-    New UI for DX Search based on OpenSearch (In progress)
+    Search V2 replaces the existing Search feature in HCL DX. This feature introduces a new search interface along with a new backend service that uses OpenSearch to provide a seamless search experience. For more information, see [End-user Search with Search V2](../../build_sites/search_using_opensearch/index.md).
 
 ### People Service
 
