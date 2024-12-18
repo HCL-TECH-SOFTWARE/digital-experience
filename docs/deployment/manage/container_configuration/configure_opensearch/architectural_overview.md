@@ -1,10 +1,10 @@
 # Architectural Overview
 
-Know more about the different components of DX Search v2 and how they are used.
+Know more about the different components of DX Search V2 and how they are used.
 
 ## Key goals
 
-DX Search v2 is designed with the weaknesses of search v1 in mind. The following properties are considered:
+DX Search V2 is designed with the weaknesses of search v1 in mind. The following properties are considered:
 
 - **High Availability**: The existing search solution using Remote Search in clustered environments does not provide any high availability features. The Remote Search server is a singleton instance that represents a single point of failure. The new OpenSearch-based implementation allows to have multiple nodes running at the same time and is resilient against single node outages.
 
@@ -14,7 +14,7 @@ DX Search v2 is designed with the weaknesses of search v1 in mind. The following
 
 ## Current capabilities
 
-DX Search v2 supports currently the following aspects:
+DX Search V2 supports currently the following aspects:
 
 - Configuration of content sources and crawlers using REST API
 - Crawling multiple data sources (JCR, WCM, Portal)

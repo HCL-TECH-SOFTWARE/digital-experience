@@ -16,7 +16,7 @@ It is technically possible to configure one or more crawlers per content source.
 
 ## Authenticating as a search administrator
 
-Before you can perform administrative tasks, you must authenticate as a search administrator. The search administrator credentials are configured during the Helm installation of Search v2.
+Before you can perform administrative tasks, you must authenticate as a search administrator. The search administrator credentials are configured during the Helm installation of Search V2.
 
 1. To authenticate, send a `POST` request to the `/dx/api/search/v2/admin/authenticate` endpoint using the following payload:
 
@@ -214,7 +214,7 @@ After triggering a crawler, you can check the crawler status by calling the `/dx
 
 ## Out-of-the-box crawlers
 
-If enabled during the Helm installation, Search v2 configures out-of-the box crawlers for default content sources. These crawlers are configured with the default seedlist URLs and credentials. You can adjust the configuration of these crawlers to your needs.
+If enabled during the Helm installation, Search V2 configures out-of-the box crawlers for default content sources. These crawlers are configured with the default seedlist URLs and credentials. You can adjust the configuration of these crawlers to your needs.
 
 ## Forcing a full re-crawl
 

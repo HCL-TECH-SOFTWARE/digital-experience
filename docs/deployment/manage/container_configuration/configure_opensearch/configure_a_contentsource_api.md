@@ -6,7 +6,7 @@ You can access all API endpoints through a Swagger UI available at the following
 
 ## Authenticating as a search administrator
 
-Before you can perform administrative tasks, you need to authenticate as a search administrator. The search administrator credentials are configured during the Helm installation of Search v2.
+Before you can perform administrative tasks, you need to authenticate as a search administrator. The search administrator credentials are configured during the Helm installation of Search V2.
 
 1. To authenticate, send a `POST` request to the `/dx/api/search/v2/admin/authenticate` endpoint using the following payload:
 
@@ -209,10 +209,10 @@ See the following sample configurations:
 | Base portal  | `/mycontext` | `/mycontext/mycontenthandler` |
 | Base portal  | `/` | `/mycontenthandler` |
 
-The Search v2 UI uses the  `aclLookupPath` to determine which content sources are available for your current portal. This ensures that only the content sources that are available for the current portal are shown in the search UI and you only see results from your current portal.
+The Search V2 UI uses the  `aclLookupPath` to determine which content sources are available for your current portal. This ensures that only the content sources that are available for the current portal are shown in the search UI and you only see results from your current portal.
 
 `aclLookupPath` is also used to validate the users' ACLs when performing a search query and to ensure that only results are shown that the user has access to.
 
 ## Out-of-the-box content sources
 
-If enabled in the Helm chart during deployment, the Search v2 configures the content sources out-of-the-box. These content sources are for the `wcm`, `dam`, `jcr` and `portal` types and are scoped at your configured context root and base portal.
+If enabled in the Helm chart during deployment, the Search V2 configures the content sources out-of-the-box. These content sources are for the `wcm`, `dam`, `jcr` and `portal` types and are scoped at your configured context root and base portal.
