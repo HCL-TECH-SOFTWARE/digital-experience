@@ -19,7 +19,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - Digital Asset Management - Updated UI
-- Search v2 - New UI
+- Search V2 - New search interface
 - People Service
 - New topic for configuring of `hostAliases` for DX Pods
 - New guidance for rendering in the upper limit of a single-node configuration
@@ -109,10 +109,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     The Digital Asset Management (DAM) user interface (UI) is now using a new theme to provide an improved visual experience for managing digital assets. Note that this update is limited to the UI theme only; no changes are made to DAM functionality. For more information, see [Digital Asset Management](../../manage_content/digital_assets/index.md).
 
-### Search v2 - New UI 
+### Search V2 - New search interface
 
 === "Containers"
-    DX Search v2 replaces the existing Search feature in HCL DX. This feature introduces a new search interface along with a new backend service that utilizes OpenSearch to provide a seamless search experience. For more information, see [HCL End-user Search with OpenSearch](../../build_sites/search_using_opensearch/index.md).
+    Search V2 replaces the existing Search feature in HCL DX. This feature introduces a new search interface along with a new backend service that uses OpenSearch to provide a seamless search experience. For more information, see [End-user Search with Search V2](../../build_sites/search_using_opensearch/index.md).
 
 ### People Service
 
