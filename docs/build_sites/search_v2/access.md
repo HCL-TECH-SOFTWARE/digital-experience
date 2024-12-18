@@ -1,4 +1,4 @@
-# Accessing the Search V2
+# Accessing Search V2
 
 This section provides steps on how to access the Search V2 page and portlet.
 
@@ -11,7 +11,7 @@ After configuring the image in your HCL DX 9.5 CF224 deployment, you can access 
 !!! note
     You must be authenticated to use the Search page. The search results will vary based on your current user role.
 
-## Accessing Search V2
+## Accessing Search V2 from Practitioner Studio
 
 To access Search V2 from the Practitioner Studio, log in to your HCL Digital Experience 9.5 platform, and select **Search** from the Practitioner Studio homepage.
 
