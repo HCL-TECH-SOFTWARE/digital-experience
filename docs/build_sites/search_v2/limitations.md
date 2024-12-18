@@ -1,6 +1,6 @@
-# Limitations of End-User Search with Opensearch
+# Limitations of Search V2
 
-Take note of the following limitations when using HCL End-user Search with OpenSearch:
+Take note of the following limitations when using Search V2:
 
 ## Pagination
 
