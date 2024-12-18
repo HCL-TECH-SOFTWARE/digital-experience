@@ -339,7 +339,7 @@ dx-input-textfield::part(label) {
 
 ## Theme modules
 
-Search components are provided using theme modules, allowing users to create custom stylesheets for all components. This flexibility is ideal for adapting the search functionality to match your application's design. For more information about themes and skins in DX, refer to  [Developing themes and skins](../../../build_sites/themes_skins/index.md).
+Search components are provided using theme modules, allowing users to create custom stylesheets for all components. This flexibility is ideal for adapting the search functionality to match your application's design. For more information about themes and skins in DX, refer to  [Developing themes and skins](../../build_sites/themes_skins/index.md).
 
 ## Getting the default theme modules
 
@@ -347,62 +347,62 @@ You can use the default theme modules (CSS and JS files) provided to you as-is, 
 
 1.  Log in to your HCL DX 9.5 platform then select **Themes** from the Practitioner Studio homepage or side navigation panel.
 
-    ![](../../../assets/HCL_Search_Get_Theme_Modules_01.png "Log in to HCL Digital Experience 9.5 and Go to the Themes page")
+    ![](../../assets/HCL_Search_Get_Theme_Modules_01.png "Log in to HCL Digital Experience 9.5 and Go to the Themes page")
 
 2. In the side navigation panel, go to **Analyzer** then click **Examine modules**.
     
-    ![](../../../assets/HCL_Search_Get_Theme_Modules_02.png "Go to Theme Analyzer view and click Examine modules")
+    ![](../../assets/HCL_Search_Get_Theme_Modules_02.png "Go to Theme Analyzer view and click Examine modules")
 
 3. Click **Examine all modules**.
 
-    ![](../../../assets/HCL_Search_Get_Theme_Modules_03.png "Click Examine all modules")
+    ![](../../assets/HCL_Search_Get_Theme_Modules_03.png "Click Examine all modules")
 
 4. Double-click the **Practitioner Studio Theme** module.
 
-    ![](../../../assets/HCL_Search_Get_Theme_Modules_04.png "Click on Practitioner Studio Theme")
+    ![](../../assets/HCL_Search_Get_Theme_Modules_04.png "Click on Practitioner Studio Theme")
 
 5. Expand the **System Modules** folder then locate and click the `dx_search_css` file.
 
-    ![](../../../assets/HCL_Search_Get_Theme_Modules_14.png "Expand the system modules and scroll down to find dx_search_css")
+    ![](../../assets/HCL_Search_Get_Theme_Modules_14.png "Expand the system modules and scroll down to find dx_search_css")
 
 6. On the right-side panel that appears, scroll down and click **Contributions**.
 
-    ![](../../../assets/HCL_Search_Get_Theme_Modules_06.png "Click on `dx_search_css` and on the right side, you will find the module information, scroll down to find Contributions and under it Location")
+    ![](../../assets/HCL_Search_Get_Theme_Modules_06.png "Click on `dx_search_css` and on the right side, you will find the module information, scroll down to find Contributions and under it Location")
 
 7. Click the **Location** URL to view the CSS file.
 
-    ![](../../../assets/HCL_Search_Get_Theme_Modules_07.png "Click on the Location URL to view the css file")
+    ![](../../assets/HCL_Search_Get_Theme_Modules_07.png "Click on the Location URL to view the css file")
 
 8. Right click on the **Location** URL then click **Save Link As...** and name the file `default.css`.
 
-    ![](../../../assets/HCL_Search_Get_Theme_Modules_08.png "Right click on the Location URL to download it. Save as default.css for now")
+    ![](../../assets/HCL_Search_Get_Theme_Modules_08.png "Right click on the Location URL to download it. Save as default.css for now")
 
 9. Go back to the **System Modules** folder then locate and click the `dx_search_js` file.
 
-    ![](../../../assets/HCL_Search_Get_Theme_Modules_15.png "Expand the system modules and scroll down to find dx_search_js")
+    ![](../../assets/HCL_Search_Get_Theme_Modules_15.png "Expand the system modules and scroll down to find dx_search_js")
 
 10. On the right-side panel, scroll down and click **Contributions** again.
 
-    ![](../../../assets/HCL_Search_Get_Theme_Modules_09.png "Click on `dx_search_js` and on the right side, you will find the module information, scroll down to find Contributions and under it Location")
+    ![](../../assets/HCL_Search_Get_Theme_Modules_09.png "Click on `dx_search_js` and on the right side, you will find the module information, scroll down to find Contributions and under it Location")
 
 11. Click the **Location** URL to view the JS file.
 
-    ![](../../../assets/HCL_Search_Get_Theme_Modules_10.png "Click on the Location URL to view the js file")
+    ![](../../assets/HCL_Search_Get_Theme_Modules_10.png "Click on the Location URL to view the js file")
 
 12. Right click on the **Location** URL then click **Save Link As...** and name the file `index.js`.
 
-    ![](../../../assets/HCL_Search_Get_Theme_Modules_11.png "Right click on the Location URL to download it. Save as index.js for now.")
+    ![](../../assets/HCL_Search_Get_Theme_Modules_11.png "Right click on the Location URL to download it. Save as index.js for now.")
 
 13. Open the `default.css`file in a code editor such as Visual Studio Code then open the **Command Palette**. You can open the **Command Palette** by pressing Cmd + Shift + P for Mac, or Ctrl + Shift + P for Windows.
 
 14. In the **Command Palette**, enter `> Format Document` to format the CSS file in a more structured view. This allows you to read and inspect the code more easily so you can override the styles to your liking. For more information, refer to [Styling the search components](#styling-the-search-components).
 
 
-    ![](../../../assets/HCL_Search_Get_Theme_Modules_12.png "Open the `default.css` file you have downloaded in a code editor such as Visual Studio Code")
+    ![](../../assets/HCL_Search_Get_Theme_Modules_12.png "Open the `default.css` file you have downloaded in a code editor such as Visual Studio Code")
 
     See the sample view of the formatted CSS file.
 
-    ![](../../../assets/HCL_Search_Get_Theme_Modules_13.png "Log in to HCL Digital Experience 9.5 and Go to the End-user Search UI")
+    ![](../../assets/HCL_Search_Get_Theme_Modules_13.png "Log in to HCL Digital Experience 9.5 and Go to the End-user Search UI")
 
 
 ## Using and customizing the theme modules
@@ -410,7 +410,7 @@ You can use the default theme modules (CSS and JS files) provided to you as-is, 
 Follow these steps to use the theme module files you downloaded on your new or existing theme pages.
 
 !!!note
-    Ensure you have downloaded the `dx_search_css` and `dx_search_js` files from [Default theme modules](#default-theme-modules) and saved the files as `default.css` and `index.js` respectively.
+    Ensure you have downloaded the `dx_search_css` and `dx_search_js` files from [Getting the default theme modules](#getting-the-default-theme-modules) and saved the files as `default.css` and `index.js` respectively.
 
 1. Open the `default.css` file and update the styles in the file as needed. 
 

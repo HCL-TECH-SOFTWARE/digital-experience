@@ -16,17 +16,17 @@ After configuring the image in your HCL DX 9.5 CF224 deployment, you can access 
 
 To access End-user Search with OpenSearch from the Practitioner Studio, log in to your HCL Digital Experience 9.5 platform, and select **Search** from the Practitioner Studio homepage.
 
-![](../../../assets/HCL_DX_95_Practitioner_Studio_interface.png "Log in to HCL Digital Experience 9.5")
+![](../../assets/HCL_DX_95_Practitioner_Studio_interface.png "Log in to HCL Digital Experience 9.5")
 
 See the End-user Search with OpenSearch user interface below.
 
-![](../../../assets/HCL_Search_Landing_Page.png "HCL Search Landing Page")
+![](../../assets/HCL_Search_Landing_Page.png "HCL Search Landing Page")
 
 ## The HCL End-user Search UI
 
 The HCL End-user Search UI has the following components:
 
-![](../../../assets/HCL_Search_General_Components.png)
+![](../../assets/HCL_Search_General_Components.png)
 
 -   **Main Header** - This section contains the title of the page.
 -   **Search Input** - This section displays the fields the user can interact with to modify the search parameters before clicking **Search**. There are three fields: the search field, the content source dropdown, and the search attribute dropdown.
@@ -38,7 +38,7 @@ The HCL End-user Search UI has the following components:
 You can also access the HCL End-user Search UI through the Woodburn Studio homepage search bar and the Practitioner Studio side navigation panel. Once redirected, you can utilize the search results or initiate a new search. For more information, refer to [Using HCL End-user Search with OpenSearch](./usage.md).
 
 - To access the End-user Search UI from Woodburn Studio, go to the Woodburn Studio homepage then click the **Search Site** search field on the top-right corner of the page.
-    ![](../../../assets/HCL_Search_Access_Page_Via_Woodburn_1.png)
+    ![](../../assets/HCL_Search_Access_Page_Via_Woodburn_1.png)
 
 - To access the End-user Search UI from Practitioner Studio, go to the Practitioner Studio homepage then click the **Open search** icon on the top-left corner of the side navigation panel. The **Search Site** search field will appear, allowing you to utilize its search functionality.
-    ![](../../../assets/HCL_Search_Access_Page_Via_PS_Sidenav_1.png)
+    ![](../../assets/HCL_Search_Access_Page_Via_PS_Sidenav_1.png)
