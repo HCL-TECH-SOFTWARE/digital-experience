@@ -1,4 +1,4 @@
-# Custom fields
+# Adding and configuring custom fields
 
 Custom fields are added to improve user profiles using additional information not covered by the default properties. You can use them to allow additional user data mapping from external sources or allow users to enrich their profiles with more information. Custom fields are string-type data that can be marked as required or optional and read-only or hidden. This steers the behavior of the UI and API when interacting with the custom fields.
 

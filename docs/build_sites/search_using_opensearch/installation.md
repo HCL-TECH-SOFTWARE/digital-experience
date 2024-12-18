@@ -51,10 +51,10 @@ configuration:
   core:
       # Settings for SearchV2 UI configuration
       search:
-      # Determines if search ui v2 is enabled or not
-      uiV2Enabled: true
-      # Determines to which search center any input box on DX redirects by default
-      inputRedirectVersion: "v2"
+        # Determines if search ui v2 is enabled or not
+        uiV2Enabled: true
+        # Determines to which search center any input box on DX redirects by default
+        inputRedirectVersion: "v2"
 ```
 
 ### Disabling HCL End-user Search using OpenSearch using a Config Engine task
@@ -80,8 +80,8 @@ configuration:
   core:
       # Settings for SearchV2 UI configuration
       search:
-      # Determines if search ui v2 is enabled or not
-      uiV2Enabled: false
-      # Determines to which search center any input box on DX redirects by default
-      inputRedirectVersion: "v1"
+        # Determines if search ui v2 is enabled or not
+        uiV2Enabled: false
+        # Determines to which search center any input box on DX redirects by default
+        inputRedirectVersion: "v1"
 ```
