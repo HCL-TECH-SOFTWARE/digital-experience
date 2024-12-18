@@ -1,12 +1,12 @@
-# Using HCL End-user Search with OpenSearch
+# Using Search V2
 
-Generate search results from different content sources (from WCM or Portal) using HCL End-user Search with OpenSearch. This section details how to generate a set of search results in HCL End-user Search with OpenSearch.
+Generate search results from different content sources (from WCM or Portal) using Search V2. This section details how to generate a set of search results in Search V2.
 
 ## Prerequisites
 
-- Starting from HCL Digital Experience (DX) 9.5 CF224, you can enable End-user Search with OpenSearch. For instructions on how to manually install End-user Search with OpenSearch on supported environments, refer to [Installing HCL Digital Experience 9.5 End-user Search with OpenSearch](./installation.md).
+- Starting from HCL Digital Experience (DX) 9.5 CF224, you can enable Search V2. For instructions on how to manually install Search V2 on supported environments, refer to [Installing HCL Digital Experience 9.5 Search V2](./installation.md).
 
-- For instructions on how to access the HCL End-user Search UI, refer to [Accessing HCL DX 9.5 End-user Search with OpenSearch](./access.md).
+- For instructions on how to access the Search V2 UI, refer to [Accessing HCL DX 9.5 Search V2](./access.md).
 
 ## Generating a set of search results
 
@@ -14,9 +14,9 @@ A set of search results is generated based on the keywords or phrases you enter 
 
 1.  Log in to your HCL DX 9.5 platform then select **Search** from the Practitioner Studio homepage.
 
-    ![](../../assets/HCL_DX_95_Practitioner_Studio_interface.png "Log in to HCL Digital Experience 9.5 and Go to the End-user Search UI")
+    ![](../../assets/HCL_DX_95_Practitioner_Studio_interface.png "Log in to HCL Digital Experience 9.5 and Go to the Search V2 UI")
 
-2.  In the End-user Search user interface, enter your search terms on the **Search** field, then click **Search**. In the example below, the term "blog" is searched.
+2.  In the Search V2 user interface, enter your search terms on the **Search** field, then click **Search**. In the example below, the term "blog" is searched.
 
     ![](../../assets/HCL_Search_02_Button_Trigger.png "Click on the blue Search button")
 
