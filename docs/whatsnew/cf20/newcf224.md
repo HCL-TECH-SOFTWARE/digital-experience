@@ -18,7 +18,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
-- Digital Asset Management - Updated UI
+- DAM - New UI theme
 - DAM - Cross-CF staging
 - Search V2 - New search interface
 - People Service
@@ -105,7 +105,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
-### DAM - Updated UI
+### DAM - New UI theme
 
 === "Containers"
     The Digital Asset Management (DAM) user interface (UI) is now using a new theme to provide an improved visual experience for managing digital assets. Note that this update is limited to the UI theme only; no changes are made to DAM functionality. For more information, see [Digital Asset Management](../../manage_content/digital_assets/index.md).
@@ -113,12 +113,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### DAM - Cross-CF staging
 
 === "Containers"
-    Staging of DAM content between different cumulative fix (CF) versions is supported.  Note that the subscriber must be at least on CF223. For more information on limitations, refer to [DAM Cross-CF staging](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging/#dam-cross-cf-staging).
+    Staging of DAM content between different cumulative fix (CF) versions is supported.  Note that the subscriber must be at least on CF223. For more information on limitations, refer to [DAM Cross-CF staging](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md#dam-cross-cf-staging).
 
 ### Search V2 - New search interface
 
 === "Containers"
-    Search V2 replaces the existing Search feature in HCL DX. This feature introduces a new search interface along with a new backend service that uses OpenSearch to provide a seamless search experience. For more information, see [End-user Search with Search V2](../../build_sites/search_using_opensearch/index.md).
+    Search V2 replaces the existing Search feature in HCL DX. This feature introduces a new search interface along with a new backend service that uses OpenSearch to provide a seamless search experience. For more information, see [Search V2](../../build_sites/search_v2/index.md).
 
 ### People Service
 
