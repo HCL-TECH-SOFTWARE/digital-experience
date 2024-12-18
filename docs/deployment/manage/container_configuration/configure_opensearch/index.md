@@ -1,10 +1,10 @@
 ---
-title: Configuring the Search v2 backend 
+title: Configuring the Search V2 backend 
 ---
 
-#  Configuring the Search v2 backend 
+#  Configuring the Search V2 backend 
 
-This section gives you an introduction into the configuration of the Search v2 backend for HCL Digital Experience (DX).
+This section gives you an introduction into the configuration of the Search V2 backend for HCL Digital Experience (DX).
 
 - **[Architectural overview](architectural_overview.md)**  
 This topic shows you how the new search using OpenSearch works and is structured. This discusses the different types of deployments and the runtime behavior of the search.
