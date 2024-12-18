@@ -15,6 +15,6 @@ HCL Volt MX Foundry uses ingress. If HCL DX is deployed on the same deployment, 
 - Portlets built with Iris support multiple languages for content rendering. However, you can only use the English version of the portlet name to search for the portlet when adding it to the HCL DX page.
 - [Single sign-on](../configuration/index.md#enabling-sso-between-hcl-dx-and-volt-mx) between HCL DX and Volt MX on different hosts is not supported.
 - The default language for the portlet is still English and not the configured default DX portal language.
-- Portlets built with Iris do not render in page edit mode.
-- In multi-column layout pages, ensure the web app designed in Iris stays within allowed width and height  to avoid data truncation. Refer to [Use Rulers and Guides for the Desktop Channel](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Iris/iris_user_guide/Content/UseRulersAndGuidesforDesktopChannel.html#show-or-hide-rulers) for more information. 
+- Portlets built with Iris are not rendered when in Edit Mode.
+- In multi-column layout pages, ensure the web app designed in Iris stays within the allowed width and height to avoid data truncation. Refer to [Use Rulers and Guides for the Desktop Channel](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Iris/iris_user_guide/Content/UseRulersAndGuidesforDesktopChannel.html#show-or-hide-rulers){target="_blank"} for more information. 
 
