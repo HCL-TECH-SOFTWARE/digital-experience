@@ -1,10 +1,10 @@
 # Architectural Overview
 
-Know more about the different components of the DX search based on OpenSearch and how they are used.
+Know more about the different components of DX Search V2 and how they are used.
 
 ## Key goals
 
-The DX search based on OpenSearch is designed with the weaknesses of the existing search in mind. The following properties are considered:
+DX Search V2 is designed with the weaknesses of search v1 in mind. The following properties are considered:
 
 - **High Availability**: The existing search solution using Remote Search in clustered environments does not provide any high availability features. The Remote Search server is a singleton instance that represents a single point of failure. The new OpenSearch-based implementation allows to have multiple nodes running at the same time and is resilient against single node outages.
 
@@ -12,9 +12,17 @@ The DX search based on OpenSearch is designed with the weaknesses of the existin
 
 - **Kubernetes native deployment**: The OpenSearch-based implementation uses existing proven Kubernetes patterns and technologies that work well in such an environment.
 
-## Current capabilties
+## Current capabilities
 
-The DX search based on OpenSearch in its first version is not yet integrated in any of the search UIs inside DX. It provides a REST API where you can index WCM content based on the WCM Seedlist and perform queries using the [OpenSearch Query Syntax](https://opensearch.org/docs/latest/query-dsl/). If you only need search capabilities inside the DX search UIs, you do not need to deploy OpenSearch.
+DX Search V2 supports currently the following aspects:
+
+- Configuration of content sources and crawlers using REST API
+- Crawling multiple data sources (JCR, WCM, Portal)
+- Adding, modifying, and deleting documents in the indexes using REST API
+- Search queries using the [OpenSearch Query Syntax](https://opensearch.org/docs/latest/query-dsl/){target="_blank"} using REST API
+- Text extraction of binary file content
+- Out-of-the-box configuration of default content sources and crawlers (configured through the Helm chart)
+- Search UI for end users
 
 ## Main components
 
@@ -99,7 +107,7 @@ Documents that are stored inside a content source contain a defined set of metad
 
     If common fields are not provided, the fallback logic is to extract data from the `documentObject`. To extract data, enter the title in the `documentObject.name` field and provide the type in the `documentObject.contentType` field.
 
-- The `lastIndexed` and `firstIndexed` fields are maintained by the search. These fields display the corresponding timestamps of last indexing and first indexing, respectively. 
+- The `lastIndexed` and `firstIndexed` fields are maintained by the search. These fields display the corresponding timestamps of last indexing and first indexing, respectively.
 
 - The `title` field is a mandatory field that provides a short, descriptive title of the document.
 
@@ -107,10 +115,9 @@ Documents that are stored inside a content source contain a defined set of metad
 
 - The `description` field contains a longer description or preview text that might not be available for all types of documents stored.
 
-- The `tags` field is a common field for every type of document and array of strings. Tags can be any specific word or phrase that describes the document. If there is no appropriate tag, you can leave the `tags` field blank. 
+- The `tags` field is a common field for every type of document and array of strings. Tags can be any specific word or phrase that describes the document. If there is no appropriate tag, you can leave the `tags` field blank.
 
 - The `dataUri` field contains the URL used to retrieve the binary file for text extraction. This field can be empty.
-
 
 A document that does not contain any ACLs will be considered public and do not have any visibility restrictions.
 

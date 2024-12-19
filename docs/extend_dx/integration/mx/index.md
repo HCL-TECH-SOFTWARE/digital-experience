@@ -50,7 +50,7 @@ style node_6 fill:#BFC6FF, color:#fff
 -   **[Install HCL Digital Experience and HCL Volt MX Foundry using Helm](./installation/index.md)**
 -   **[HCL Volt MX Foundry configuration for the integration with HCL Digital Experience](./configuration/index.md)**  
 -   **[Test the integration using example integrations](./example/index.md)** 
-
+-   **[Considerations and limitations](./considerations/index.md)**
 
 
 ## HCLSoftware U learning materials

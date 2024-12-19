@@ -11,4 +11,5 @@ nav:
     - Enabling HTTP Basic Authentication for simple clients: basic_auth
     - Updating user ID and passwords: updating_userid_pwd
     - Integrating Transient Users with OpenID Connect: integrate_oid
+    - openid_trans_users.md
 

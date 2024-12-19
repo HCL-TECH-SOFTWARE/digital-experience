@@ -31,10 +31,13 @@ The resource tag includes attributes that are specific for the property: propert
 
     3.  Run the following task:
 
+        !!!note
+            The general properties in the following tasks, such as the node name and server name, are **case-sensitive**.
+
         |Environment|Task|
         |-----------|----|
-        |Stand-alone environment| - AIX® HP-UX Linux™ Solarisz/OS®: ./ConfigEngine.sh wp-la-install-ear -DWasPassword=password<br> - IBM® i: ConfigEngine.sh wp-la-install-ear -DWasPassword=password<br> - Windows™: ConfigEngine.bat wp-la-install-ear -DWasPassword=password|
-        |Clustered environment| - AIX HP-UX Linux Solarisz/OS: ./ConfigEngine.sh wp-la-install-ear -DWasPassword=dmgr\_password -DServerName=dmgr\_server\_name -DNodeName=node\_name<br> - IBM i: ConfigEngine.sh wp-la-install-ear -DWasPassword=dmgr\_password -DServerName=dmgr\_server\_name -DNodeName=node\_name<br> - Windows: ConfigEngine.bat wp-la-install-ear -DWasPassword=dmgr\_password -DServerName=dmgr\_server\_name -DNodeName=node\_name<br> Where the default value for dmgr\_server\_name is dmgr. You can find the dmgr\_server\_name value in the WebSphere Integrated Solutions Console. Go to **System administrator** \> **Deployment Manager** \> **Configuration tab** \> **General Properties** \> **Name**.<br> Where node\_name is the name of the node where the deployment manager is located. You can find the node\_name value in the WebSphere Integrated Solutions Console. Go to **System administrator** \> **Deployment Manager** \> **Runtime tab** \> **General Properties** \> **Node Name**.|
+        |Stand-alone environment| - AIX® HP-UX Linux™ Solarisz/OS®: `./ConfigEngine.sh wp-la-install-ear -DWasPassword=password`<br> - IBM® i: `ConfigEngine.sh wp-la-install-ear -DWasPassword=password`<br> - Windows™: `ConfigEngine.bat wp-la-install-ear -DWasPassword=password`
+        |Clustered environment| - AIX HP-UX Linux Solarisz/OS: `./ConfigEngine.sh wp-la-install-ear -DWasPassword=dmgr\_password -DServerName=dmgr\_server\_name -DNodeName=node\_name`<br> - IBM i: `ConfigEngine.sh wp-la-install-ear -DWasPassword=dmgr\_password -DServerName=dmgr\_server\_name -DNodeName=node\_name`<br> - Windows: `ConfigEngine.bat wp-la-install-ear -DWasPassword=dmgr\_password -DServerName=dmgr\_server\_name -DNodeName=node\_name`<br><br> The default value for `dmgr\_server\_name` is `dmgr`. <br> To find the `dmgr\_server\_name` value in the WebSphere Integrated Solutions Console, go to **System administrator** \> **Deployment Manager** \> **Configuration tab** \> **General Properties** \> **Name**.<br><br>`node\_name` is the name of the node where the deployment manager is located. <br> To find the `node\_name` value in the WebSphere Integrated Solutions Console, go to **System administrator** \> **Deployment Manager** \> **Runtime tab** \> **General Properties** \> **Node Name**.|
 
 3.  Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](../../../../../stopstart.md).
 
