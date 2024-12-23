@@ -53,12 +53,9 @@ Learn the how to enable client side logging and tracing of your HCL Digital Expe
 
 ## HCLSoftware U learning materials
 
-To learn how to monitor, troubleshoot, and contact support about issues you encounter with DX, go to [Monitoring and Troubleshooting](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3436){target="_blank”}. You can try it out using the [Monitoring and Troubleshooting Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Monitoring_and_Troubleshooting_Lab.pdf){target="_blank”} and corresponding [Monitoring and Troubleshooting Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Monitoring_and_Troubleshooting_Lab_Resources.zip){target="_blank”}.
+To learn how to monitor, troubleshoot, and contact Support about issues you encounter with DX, go to [Monitoring and Troubleshooting](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3436){target="_blank”}. You can try it out using the [Monitoring and Troubleshooting Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Monitoring_and_Troubleshooting_Lab.pdf){target="_blank”} and corresponding [Monitoring and Troubleshooting Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Monitoring_and_Troubleshooting_Lab_Resources.zip){target="_blank”}.
 
-**Related information**  
-
-[Portal Search trace and log files](../../../../build_sites/search/portal_search/hint_tips/srrlogtrac.md)
-
-[Debugging your module systematically](../../../../build_sites/themes_skins/the_module_framework/troubleshooting_modular_themes/themeopt_mod_debug_pattern.md)
-
-[Data collection and symptom analysis](../../../manage/troubleshooting/tools_for_troubleshooting_and_diagnostics/tbl_apdt_over.md)
+???+ info "Related information"
+    - [Portal Search trace and log files](../../../../build_sites/search/portal_search/hint_tips/srrlogtrac.md)
+    - [Debugging your module systematically](../../../../build_sites/themes_skins/the_module_framework/troubleshooting_modular_themes/themeopt_mod_debug_pattern.md)
+    - [Data collection and symptom analysis](../../../manage/troubleshooting/tools_for_troubleshooting_and_diagnostics/tbl_apdt_over.md)
