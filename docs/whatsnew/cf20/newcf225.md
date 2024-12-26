@@ -23,10 +23,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Adjustment of seedlists for access control changes
 
 === "Containers"
-    Starting with CF225 a new option is available to have the seedlist return items affected by library access control changes. To enable this new feature set ```seedlistUpdateLibrariesForAccessControl=true``` in `WCM WCMConfigService`. For more information, see [Crawling web content with search seedlists](../../build_sites/search/crawling_webcontent_seedbase/index.md).
+    A new option is available where you can have the seedlist return items affected by library access control changes. To enable this feature, set ```seedlistUpdateLibrariesForAccessControl=true``` in `WCM WCMConfigService`. For more information, see [Crawling web content with search seedlists](../../build_sites/search/crawling_webcontent_seedbase/index.md).
 
 === "On-Premises"
-    Starting with CF225 a new option is available to have the seedlist return items affected by library access control changes. To enable this new feature set ```seedlistUpdateLibrariesForAccessControl=true``` in `WCM WCMConfigService`. For more information, see [Crawling web content with search seedlists](../../build_sites/search/crawling_webcontent_seedbase/index.md).
+    A new option is available where you can have the seedlist return items affected by library access control changes. To enable this feature, set ```seedlistUpdateLibrariesForAccessControl=true``` in `WCM WCMConfigService`. For more information, see [Crawling web content with search seedlists](../../build_sites/search/crawling_webcontent_seedbase/index.md).
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
