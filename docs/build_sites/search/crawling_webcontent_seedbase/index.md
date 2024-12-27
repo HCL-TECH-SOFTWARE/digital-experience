@@ -7,9 +7,9 @@ By default Portal Search is configured to use seedlist format 1.0 when indexing 
 Search seedlist 1.0 can make access control information available in a way that makes pre-filtering of contents possible. Pre-filtering provides the fastest filtering approach because it takes place in the search index level. An extra advantage of pre-filtering is that remote secured content sources can be searched from the portal. The filtering mode is defined as part of the search service configuration parameters.
 
 !!! important
-    - When changing access control on libraries or setting access on the library root, note that seedlist requests relative to a timestamp will not list items affected by an access control change. To retrieve those updates, it is recommended to trigger a full crawl. 
-    - DX classic Search, either local or remote, uses post-access control filtering and is therefore not affected.
-    - Starting CF225, you can have the seedlist return items affected by library access control changes. To enable this feature, set ```seedlistUpdateLibrariesForAccessControl=true``` in `WCM WCMConfigService`.
+    When changing access control on libraries or setting access on the library root, note that seedlist requests relative to a timestamp will not list items affected by an access control change. To retrieve those updates, it is recommended to trigger a full crawl. 
+    DX classic Search, either local or remote, uses post-access control filtering and is therefore not affected.
+    Starting CF225, you can have the seedlist return items affected by library access control changes. To enable this feature, set ```seedlistUpdateLibrariesForAccessControl=true``` in `WCM WCMConfigService`.
 
 
 -   **[The search seedlist 1.0 format](../crawling_webcontent_seedbase/wcm_searchseed/index.md)**  
