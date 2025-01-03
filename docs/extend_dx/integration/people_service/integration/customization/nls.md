@@ -25,7 +25,7 @@ Follow these steps to set up and customize the NLS features of People Service:
     }
     ```
 
-3. Name the JSON files using `<LANG>.json` format, where `<LANG>` refers to the ISO language code, such as **en** for English or **de** for German. Refer to the list of [Supported Languages](../../../../../deployment/manage/portal_admin_tools/language_support/Supporting_language.md)for the available languages and their respective language codes.
+3. Name the JSON files using `<LANG>.json` format, where `<LANG>` refers to the ISO language code, such as **en** for English or **de** for German. Refer to the list of [Supported Languages](../../../../../deployment/manage/portal_admin_tools/language_support/Supporting_language.md) for the available languages and their respective language codes.
 
 4. Place your JSON files in the `NLS_DIRECTORY`.
 

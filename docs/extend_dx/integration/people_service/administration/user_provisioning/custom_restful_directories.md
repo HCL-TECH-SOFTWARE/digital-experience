@@ -15,7 +15,7 @@ The custom directory API schema consists of the following endpoints:
 - `GET /probes/ready`: Confirms that the custom directory is ready to serve requests.
 - `GET /probes/auth`: Checks if the custom directory can be authenticated against using the configured API key.
 
-For more details about the custom directory API schema refer to [OpenAPI spec](./custom-restful-directories-openapi-spec.json).
+For more details about the custom directory API schema, refer to the [OpenAPI spec](./custom-restful-directories-openapi-spec.json) JSON file.
 
 ## Configuration
 
