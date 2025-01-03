@@ -63,7 +63,7 @@ To generate the user session data usage in metrics format, the report must inclu
 
 Use the following command to generate usage metrics from the user session data, specifying the appropriate `startDate`, `endDate` and `deploymentId` values:
 ```
-kubectl exec -it <release name>-license-manager-0 -n <namespace> -- java UserSessionReporting.jar GenerateMetricFile <YYYY-MM-DD> <YYYY-MM-DD> <deploymentId>
+kubectl exec -it <release name>-license-manager-0 -n <namespace> -- java -jar UserSessionReporting.jar GenerateMetricFile <YYYY-MM-DD> <YYYY-MM-DD> <deploymentId>
 ```
 Where:
 -   `startDate` specifies the start date in YYYY-MM-DD format
@@ -73,14 +73,14 @@ Where:
 To save the generated metrics to a file, use this command:
 
 ```
-kubectl exec -it <release name>-license-manager-0 -n <namespace> -- java UserSessionReporting.jar GenerateMetricFile <YYYY-MM-DD> <YYYY-MM-DD> <deploymentId> /tmp/{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics
+kubectl exec -it <release name>-license-manager-0 -n <namespace> -- java -jar UserSessionReporting.jar GenerateMetricFile <YYYY-MM-DD> <YYYY-MM-DD> <deploymentId> /tmp/{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics
 ```
 `metricsFileName` The timestamp in the usage metrics file should be earlier than the start date, formatted as {YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics. For example: 2024-06-24T02-50-00_usage.metrics
 
 ### Example
 
 ```
-kubectl exec -it pod/dx-deployment-license-manager-0 -n dxns -- java UserSessionReporting.jar GenerateMetricFile 2022-07-22 2025-07-28 pnkeq6pk > /tmp/2022-06-24T02-50-00_usage.metrics
+kubectl exec -it pod/dx-deployment-license-manager-0 -n dxns -- java -jar UserSessionReporting.jar GenerateMetricFile 2022-07-22 2025-07-28 pnkeq6pk > /tmp/2022-06-24T02-50-00_usage.metrics
 ```
 
 ### Expected result
