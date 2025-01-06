@@ -37,29 +37,27 @@ The below properties must be configured to your entitlements, you will configure
     # For non production environments sessions are not counted but the license
     # is still validated.
     productionEnvironment: true
-    # Flexnet License Server ID Ex: Q8A5YCZ3A4GH
-    licenseServerId: ""
-    # Flexnet or MHS License Server URI Ex: https://hclsoftware.compliance.flexnetoperations.com
+    # MHS License Server URI
     licenseServerUri: ""
-    # Flexnet License Server's Configured Features Ex: DXPN_CloudNative_Tier1_500K@9.5
-    licenseFeatureNameWithVersion: ""
-    # Source Identity for Manual session usage report
-    licenseManualReportUniqueIdentifier: ""
-    # AWS Service Account Name for EKS deployments
-    serviceAccountName: ""
-    # AWS License Config Secret for Self Managed Clusters
-    licenseConfigSecret: ""
+    # Custom Deployment key secret for MHS deployment instance
+    customMhsDeploymentKeySecret: ""
     # Deployment key for MHS deployment instance
-    deploymentKeySecret: ""
+    mhsDeploymentKey: ""
 
 ```
 
 -   `productionEnvironment`: Set to true to send usage reports to MHS, and for other environments (e.g. test or UAT), set to false.
 -   `licenseServerUri`: MHS License Server URI
--   `deploymentKeySecret`: Credentials for product deployments. This can be optained from [My HCLSoftware Portal](https://my.hcltechsw.com/)
+-   `customMhsDeploymentKeySecret`: The deployment key creates a custom secret name. Any method can use `customMhsDeploymentKeySecret` or `mhsDeploymentKey` for the deployment key. 
+-   `mhsDeploymentKey`: Credentials for product deployments. Any method can use `customMhsDeploymentKeySecret` or `mhsDeploymentKey` for the deployment key. This can be optained from [My HCLSoftware Portal](https://my.hcltechsw.com/)
+
+```console
+#Example to create custom secret
+$ kubectl create secret generic <secret-name> --from-literal=deploymentKey=<deploymentKey> --namespace=<namespace>
+```
 
 ## Generating and uploading user session data usage in metrics format
-To generate the user session data usage in metrics format, the report must include session data that has been encrypted for each user session.
+This session data usage reporting method will only be used in disconnected use cases within the Kubernetes environment. To generate the user session data usage in metrics format, the report must include session data that has been encrypted for each user session.
 
 Use the following command to generate usage metrics from the user session data, specifying the appropriate `startDate`, `endDate` and `deploymentId` values:
 ```
@@ -97,13 +95,6 @@ End,370d193fe0be35950d2707026d23ce595ae46054b77efcc944aa2484eab39399976854c58321
 ### Upload usage metrics
 The generated `{YYYY-MM-DDTHH-MM-SS UTC}usage.metrics` file should then be uploaded to the My HCLSoftware portal for processing.
 
-## My HCLSoftware vs FlexNet on Kubernetes
-The use cases for My HCLSoftware in Kubernetes deployments are very similar to those for FlexNet. The HCL DX License Manager container has been extended to integrate with MyHCL Software in a similar way to the existing integration with FlexNet. This integration ensures proper entitlement validation and usage reporting.
-
-**Entitlement Validation**: Periodically check whether the entitlement is still valid (typically valid for 12 months). The same grace period is also allowed, during which time reminders to renew the entitlelment before it expires will be posted in the container log.
-
-**User Session Reporting**: Periodically send user session reports to My HCLSoftware, allowing customers and HCL to monitor consumption is aligned within the allocated entitlement tier. These reports help assess if a change to a different usage tier is required based on the number of user sessions consumed.
-
 ## Accessing MyHCL Software usage reporting dashboard
 Access the Deployments section of the My HCLSoftware portal to review entitlements and user session consumption reports.
 
@@ -115,5 +106,12 @@ Access the Deployments section of the My HCLSoftware portal to review entitlemen
   - If status is `rejected` , it could be among these many reasons- hash chaining is tampered / invalid signature / fields are not in a required format . User should upload the valid file.
   - If status is `failed`,user should reach out to MHS support through IT operations
   - If status is `completed`, file is validated and consumed successfully 
+
+## My HCLSoftware vs FlexNet on Kubernetes
+The use cases for My HCLSoftware in Kubernetes deployments are very similar to those for FlexNet. The HCL DX License Manager container has been extended to integrate with MyHCL Software in a similar way to the existing integration with FlexNet. This integration ensures proper entitlement validation and usage reporting.
+
+**Entitlement Validation**: Periodically check whether the entitlement is still valid (typically valid for 12 months). The same grace period is also allowed, during which time reminders to renew the entitlelment before it expires will be posted in the container log.
+
+**User Session Reporting**: Periodically send user session reports to My HCLSoftware, allowing customers and HCL to monitor consumption is aligned within the allocated entitlement tier. These reports help assess if a change to a different usage tier is required based on the number of user sessions consumed.
 
 **INCLUDE SCREENSHOTS AND INSTRUCTIONS TO VIEW USERSESSION COUNT IN THE UI**
