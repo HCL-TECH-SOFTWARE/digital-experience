@@ -1,0 +1,5 @@
+title: User guide
+nav:
+  - index.md
+  - User profiles: people_profiles.md
+  - Profile tags: people_profile_tags.md

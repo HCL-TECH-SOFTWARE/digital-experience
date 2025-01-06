@@ -103,8 +103,8 @@ java -jar <jarFilepath> -h
 
 # <jarFilepath> Path to the jar file
 # <filePaths> List of input log files to get session counts
-# <excludeIPFile> Path to the file containing IPs to exclude from session counts
-# <excludeSessionKeyFile> Path to the file containing session keys to exclude from session counts
+# <excludeIPFile> Path to the file containing IPs (separated by a new line) to exclude from session counts
+# <excludeSessionKeyFile> Path to the file containing session keys (separated by a new line) to exclude from session counts
 # <excludeIPs> List of IPs (separated by space) to exclude from session counts
 # <excludeSessionKeys> List of session keys (separated by space) to exclude from session counts
 # <startDate> Specifies the start date in YYYY-MM-DD format
@@ -121,6 +121,20 @@ java UserSessionReporting.java input.log -excludeIPFilePath ./excludedIPs.txt -e
 
 ```
 
+See the following sample of an `excludedIPs.txt` file:
+
+```text
+192.168.243.142
+192.168.243.143
+```
+
+See the following sample of an `excludeSessionKeys.txt` file:
+
+```text
+192.168.243.139 "python-requests/2.24.0" "-"
+192.168.243.137 "axios/1.6.8" "-"
+```
+
 After execution, the system returns the expected session count within the specified start and end date parameters. The tool generates the following files:
 
 - A CSV file named  `sessionCounts<startDate><endDate>.csv` (for example, sessionCounts_2024-01-01_2024-12-31.csv) which reports the session counts sorted and categorized by months based on the start and end date parameters.
@@ -130,3 +144,7 @@ After execution, the system returns the expected session count within the specif
 You can run the User Session Reporting Tool either once for all collected log files or incrementally every X days, hours, or minutes. It stores its state between runs, processing only the logs that are after the last previously processed timestamp to prevent reprocessing old entries. This ensures that you still get the correct overall result, even when processing logs in multiple stages. 
 
 Additionally, if there are logs from multiple deployments belonging to the same system (for example, in Active-Active setups or backups), you must process those logs together in one run, because the tool will merge them to provide a comprehensive and accurate session count.
+
+## HCLSoftware U learning materials
+
+To learn how to monitor, troubleshoot, and contact Support about issues you encounter with DX, go to [Monitoring and Troubleshooting](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3436){target="_blank”}. You can try it out using the [Monitoring and Troubleshooting Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Monitoring_and_Troubleshooting_Lab.pdf){target="_blank”} and corresponding [Monitoring and Troubleshooting Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Monitoring_and_Troubleshooting_Lab_Resources.zip){target="_blank”}.
