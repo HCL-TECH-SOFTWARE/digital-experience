@@ -1,4 +1,4 @@
-# Creating more multilingual sites
+# Creating more multilingual sites Multilingual Solution
 
 In many cases, the number of languages or regions you require for a site is fixed, but there are times when you need to roll out new locales as your organization grows.
 

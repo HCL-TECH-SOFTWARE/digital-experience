@@ -1,4 +1,4 @@
-# Update notification extension
+# Update notification extension Multilingual Solution
 
 This extension uses the settings in the workflow synchronization section of the multilingual configuration file to automate the creation of localized items.
 

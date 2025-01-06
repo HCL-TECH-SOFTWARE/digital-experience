@@ -37,8 +37,8 @@ In this deployment pattern, HCL DX is used for displaying information, providing
 
 ## HCLSoftware U learning materials
 
-For courses on how to integrate HCL Commerce with HCL DX as a business user, developer, and administrator, go to [HCL Commerce Cloud Integration with HCL DX](https://hclsoftwareu.hcltechsw.com/courses/course/hce-int-hdx-hcl-commerce-cloud-integration-with-hcl-digital-experience){target="_blank"}.
+For courses on how to integrate HCL Commerce with HCL DX as a business user, developer, and administrator, go to [HCL Commerce Cloud Integration with HCL DX](https://hclsoftwareu.hcltechsw.com/courses/course/hce-int-hdx-hcl-commerce-cloud-integration-with-hcl-digital-experience).
 
-For an introduction and a demo on integrating HCL Commerce with HCL DX, go to [DX Integration with HCL Commerce](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D955){target="_blank"}. To try it out yourself, refer to [Integrate HCL Commerce in DX Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Introduction/Woodburn_Stores_Demo_Lab.pdf){target="_blank"} and corresponding [Integrate HCL Commerce in DX Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Introduction/Woodburn_Stores_Demo_Lab_Resources.zip).
+For an introduction and a demo on integrating HCL Commerce with HCL DX, go to [DX Integration with HCL Commerce](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D955). To try it out yourself, refer to [Integrate HCL Commerce in DX Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Introduction/Woodburn_Stores_Demo_Lab.pdf) and corresponding [Integrate HCL Commerce in DX Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Introduction/Woodburn_Stores_Demo_Lab_Resources.zip).
 
 

@@ -1,4 +1,4 @@
-# Multilingual Content and Sites
+# HCL Web Content Manager Multilingual Solution
 
 The HCL Web Content Manager Multilingual Solution is a set of tools that are used to manage translated versions of localized and regionalized websites.
 
@@ -19,7 +19,7 @@ The multilingual solution uses a set of extensions that can be used with existin
 
 ## HCLSoftware U learning materials
 
-For an introduction and a demo on how to use the Web Content Manager Multilingual Solution, go to [Multilingual](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D2792){target="_blank"}. To try it out yourself, refer to [Multilingual Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-200_Multilingual_Lab.pdf){target="_blank"} and corresponding [Multilingual Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-200_Multilingual_Lab_Resources.zip).
+For an introduction and a demo on how to use the Web Content Manager Multilingual Solution, go to [Multilingual](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D2792). To try it out yourself, refer to [Multilingual Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-200_Multilingual_Lab.pdf) and corresponding [Multilingual Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-200_Multilingual_Lab_Resources.zip).
 
 
 ???+ info "Related information"

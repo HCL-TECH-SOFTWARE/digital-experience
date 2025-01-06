@@ -1,5 +1,0 @@
-title: Performance Tuning Guides
-nav:
-    - index.md
-    - kubernetes
-    - Traditional Deployments: traditional_deployments.md

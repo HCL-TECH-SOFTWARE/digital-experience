@@ -55,10 +55,6 @@ Page titles in any language are not copied.
 -   A new community is created in HCL Connections. The name of the community is derived from the title of the new page.
 -   The community association on the new page is modified to reference the newly created community.
 
-## HCLSoftware U learning materials
-
-For an introduction and a demo on how to use Page Templates as a business user, go to [Page Template](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D2999){target="_blank"}. To try it out yourself, refer to [Page Template Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-300_Page_Template.pdf){target="_blank"}.
-
 ???+ info "Related information"  
     -   [Page templates](../../../../../../build_sites/sitebuilder/site_dev_with_sitebuilder/creating_sites_using_sitebuilder/sitebuilder_learn_pgtemplate.md)
 

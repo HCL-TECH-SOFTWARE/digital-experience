@@ -33,7 +33,7 @@ In a Helm-based deployment, moving from one cumulative fix (CF) to another one i
 
 - Back up the file system of the persistent volumes associated with the namespace. Also, take a matching backup of the database associated with the Core pod.
 - If you are running a 24/7 environment, it is recommended to set up a blue/green deployment before applying a CF to ensure high availability. While DX Core stays available with multiple pods, DAM is not highly available during CF application. See the topic [Difference and Similarities Between Traditional and Kubernetes DX Deployments](../../../manage/container_configuration/deploy_container_artifact_updates.md#difference-and-similarities-between-traditional-and-kubernetes-dx-deployments) that shows how a DX solution could be deployed for high availability and blue/green deployments in a single Kubernetes cluster.
-- Before upgrading, temporarily set the DAM staging interval to 1440 (24 hours) using the `dxclient manage-dam-staging trigger-staging` command or adjust the cycleLength to 1440 using the DAM REST API [StagingController.updateSubscriberData](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/StagingController.updateSubscriberData). Alternatively, you can disable DAM Staging while the publisher (source) and the subscriber (target) are not yet on the same CF version but note that reestablishing staging restages all assets.
+- Before upgrading, disable DAM Staging while the publisher (source) and the subscriber (target) are not yet on the same CF version.
 - (Optional) Consider disabling WCM Syndication from and to the current environment.
 
 ## Helm Upgrade configuration command

@@ -1,4 +1,4 @@
-# Multilingual deployment
+# Multilingual deployment Multilingual Solution
 
 Deployment of multilingual sites can be centralized, running out of single environment, or decentralized where locales are served from different environments.
 

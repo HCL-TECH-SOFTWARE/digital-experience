@@ -13,8 +13,6 @@ You can log in to either of the following portals using your HCLSoftware ID:
     - File name: **hcl-lpc-kubernetes-CF219.zip**
     - File name: **hcl-lpc-kubernetes-CF220.zip**
     - File name: **hcl-lpc-kubernetes-CF221.zip**
-    - File name: **hcl-lpc-kubernetes-CF222.zip**
-    - File name: **hcl-lpc-kubernetes-CF223.zip**
 
     **Milestone 1**
 
@@ -30,8 +28,6 @@ You can log in to either of the following portals using your HCLSoftware ID:
     - File name: **hcl-lpc-kubernetes-CF219.zip**
     - File name: **hcl-lpc-kubernetes-CF220.zip**
     - File name: **hcl-lpc-kubernetes-CF221.zip**
-    - File name: **hcl-lpc-kubernetes-CF222.zip**
-    - File name: **hcl-lpc-kubernetes-CF223.zip**
 
     **Milestone 1**
 

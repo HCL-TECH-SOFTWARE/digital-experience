@@ -18,5 +18,5 @@ To learn more about deploying HCL DX using Helm, Docker, and Docker Compose, wat
 
 ## HCLSoftware U learning materials
 
-For an introduction and a demo on DX deployment, go to [Deployment](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1479){target="_blank"}. Several deployment options are provided in the course. 
+For an introduction and a demo on DX deployment, go to [Deployment](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1479). Several deployment options are provided in the course. 
 

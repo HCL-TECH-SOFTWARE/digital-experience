@@ -101,7 +101,7 @@ HCL Digital Experience 9.5 requires the following capabilities and products to p
 ||9.0.0.2 and later maintenance releases|9.0|
 ||9.0.5 and later maintenance releases**|9.0 CF17|
 
-** Starting CF222, the issue with the fix packs 9.0.5.19 and 8.5.5.25 has been addressed. WAS versions 8.5.5.26, 9.0.5.20, and later are now supported.
+** WebSphere Application Server fix packs 9.0.5.19 and 8.5.5.25 are currently causing an issue with ConfigEngine tasks and should not be used at this time. See the documentation [ConfigEngine errors when updating WebSphere Application Server](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0112396) for more details.
 
 |Prerequisite|Prerequisite minimum and supported versions|Product minimum|
 |----------|----------|----------|
@@ -129,7 +129,7 @@ HCL Digital Experience 9.5 requires JDK 7.0 or later for installation.
 |-----------|------------------|-----|
 |Apache Derby|10.11*<br/>|8.5|
 |DB2 Standard and Advanced Edition|11.5** and later maintenance releases|8.5|
-|Microsoft SQL Server Enterprise and Standard Edition|2017, 2019, 2022 and later maintenance releases|8.5|
+|Microsoft SQL Server Enterprise and Standard Edition|2017, 2019 and later maintenance releases|8.5|
 |Oracle Database 19c|19c and later maintenance releases|8.5|
 |Oracle on Amazon Relational Database Service|12.2.0.1.0 and later maintenance releases|8.5|
 
@@ -157,7 +157,7 @@ JDBC Drivers support forward compatibility for all maintenance levels and also n
 |IBM Application Connectivity for DB2 for z/OS Feature|All versions and later maintenance releases|8.5|
 |IBM DB2 Universal JDBC Provider (XA) from DB2 z/OS (type 2)*|All versions and later maintenance releases|8.5|
 |IBM DB2 Universal JDBC Provider (XA) from DB2 z/OS (type 4)**|All versions and later maintenance releases|8.5|
-|IBM Data Server Driver for JDBC and SQLJ|4.26 (11.5) <br> No future versions supported. <br>Later maintenance releases are categorized as Other Configuration Support|8.5|
+|IBM Data Server Driver for JDBC and SQLJ|4.21 (11.1)<br>No future versions, releases, or fix packs supported.|8.5|
 |Microsoft SQL Server JDBC Driver|6.2, and later maintenance releases|8.5|
 |Oracle JDBC Driver 12.c***|12.2, and later maintenance releases|8.5|
 
@@ -207,7 +207,7 @@ All LDAP Servers that support the LDAP V3 Specification are supported.
 ||9.0.5 and later maintenance releases|8.5|
 |Microsoft Internet Information Services|10.0 and later maintenance releases|8.5|
 
-*IBM HTTP Server 8.5.5 is supported only with WebSphere Application V8.5.5.x.  
+*IBM HTTP Server 8.5.5 is supported only with HCL Digital Experience Server V8.5.5.x.  
 
 
 ## Hardware requirements

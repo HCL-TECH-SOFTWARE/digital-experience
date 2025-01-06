@@ -1,4 +1,4 @@
-# Domain locale redirection extension
+# Domain locale redirection extension Multilingual Solution
 
 This extension provides a redirection from the main domain to another locale based on the locale settings of the current user.
 

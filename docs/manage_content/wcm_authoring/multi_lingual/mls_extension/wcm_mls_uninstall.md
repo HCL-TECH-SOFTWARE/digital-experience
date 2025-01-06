@@ -1,4 +1,4 @@
-# Uninstalling the multilingual solution extensions
+# Uninstalling the multilingual solution extensions Multilingual Solution
 
 The following steps are required to uninstall the multilingual solution extensions. These must be run on every server on non-clustered systems, or on the primary cluster node.
 

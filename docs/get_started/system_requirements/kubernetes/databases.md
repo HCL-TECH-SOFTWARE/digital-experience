@@ -15,7 +15,7 @@
 |DB2 for z/OS|11.1.0|11.1.0 and later maintenance|9.5|Full|None|
 |Microsoft SQL Server|2014|2014 and later maintenance|9.5|Full|None|
 ||2016|2016 and later maintenance|9.5|Full|None|
-|Microsoft SQL Server Enterprise and Standard Edition|2017, 2019 and 2022|2017, 2019, 2022 and later maintenance|9.5|Full|None|
+|Microsoft SQL Server Enterprise and Standard Edition|2017 and 2019|2017, 2019 and later maintenance|9.5|Full|None|
 |Oracle Database 12.2 Standard Edition|(12.2.0.0)|(12.2.0.0) and later maintenance|9.5|Full|None|
 |Oracle Database 12.2 Enterprise Edition|(12.2.0.0)|(12.2.0.0) and later maintenance|9.5|Full|None|
 |Oracle Database 12.2.0.1.0 Enterprise Edition|12.2.0.1.0|12.2.0.1.0 and later maintenance|9.5|Full|None|

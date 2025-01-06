@@ -1,6 +1,6 @@
-# Installation and upgrade for customers running on DX 8.5 on WAS 8.5/9.0 and Java SDK 7.0 or 8.0
+# Installation and upgrade for customers running on DX 8.5 on WAS 8.5/9.0
 
-This guide shows how to upgrade your HCL Digital Experience (DX) or Web Content Manager 8.5 environment to HCL DX or Web Content Manager 9.5. Information on how to either stay at IBM WebSphere Application Server ND 8.5.x or migrate the WAS layer to IBM WebSphere Application Server ND Version 9.0.5.x is also available.
+This guide shows how to upgrade your HCL Digital Experience (DX) Portal or Web Content Manager 8.5 environment to HCL DX Portal or Web Content Manager 9.5. Information on how to either stay at IBM WebSphere Application Server ND 8.5.x or migrate the WAS layer to IBM WebSphere Application Server ND Version 9.0.5.x is also available.
 
 ## Preparing the environment
 
@@ -219,4 +219,4 @@ Starting with HCL Digital Experience Combined fix pack 12, you can change your S
 
 ## HCLSoftware U learning materials
 
-For an introduction and a demo on how to upgrade your HCL Digital Experience deployment to the latest Cumulative Fix, go to [Upgrade the HCL Digital Experience software](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1461){target="_blank"}.
+For an introduction and a demo on how to upgrade your HCL Digital Experience deployment to the latest Cumulative Fix, go to [Upgrade the HCL Digital Experience software](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1461).

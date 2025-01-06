@@ -10,6 +10,8 @@ Bring the power of HCL Connections to your portal applications.
 Bring the power of HCL Connections to your portal applications.
 -   **[Configuring common Directory Services for your security configuration](../connections/configuration/cfg_portal_with_cnx/cfg_common_dir/t_connections_portlets_common_directory.md)**  
 Configure the common Directory Services to work with your security configuration.
+-   **[Configuring the Ajax proxy to allow FileNet requests](../connections/configuration/cfg_portal_with_cnx/setup_ajax/t_connections_portlest_proxy_Filenet.md)**  
+Configure the Ajax proxy so that direct requests that the CCM portlet makes to the FileNet server are allowed to pass through the proxy server.
 -   **[Testing the Ajax proxy configuration](../connections/configuration/cfg_portal_with_cnx/setup_ajax/c_connections_portlets_ajax_proxy_testing.md)**  
 Test the configuration of the application-specific Ajax proxy to manage authentication for the HCL Connections portlets.
 -   **[Optional and recommended configuration](../connections/configuration/cfg_portal_with_cnx/optional_config/index.md)**  

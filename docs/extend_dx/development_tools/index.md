@@ -12,7 +12,7 @@ HCL Web Experience Factory (WEF) creates applications with rich, interactive dig
 By using the Web Services for Remote Portlets (WSRP) standard, HCL Digital Experience can provide portlets, applications, and content as WSRP services.
 -   **[Dojo Toolkit](dojo/dojo_overview.md)**  
 HCL Digital Experience contains an instance of the Dojo Toolkit, a JavaScript library that is based on the Dojo Toolkit.
--   **[Web Developer Toolkit](web_developer_toolkit/web_developer_toolkit.md)**  
+-   **[Web Developer Toolkit](../integration/wab/index.md)**  
 The Web Developer toolkit for HCL Digital Experience provides the ability to sync themes, content, and script portlets (also known as Script Applications).
 -   **[Extending DX class path](ext_wp_classpath/ext_wp_classpath.md)**  
 There are several options to add the general code that is not part of an EAR or WAR files.

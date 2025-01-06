@@ -11,7 +11,7 @@ This section discusses the regeneration of missing renditions and versions and t
 - **CleanUp HeartBeat** - This heartbeat runs once a day and deletes binary and records of all invalid media which are marked as cleanup required.
 - **Orphan Data and File Cleanup HeartBeat** - This heartbeat runs once a day and deletes orphan directories/binaries and orphan media storage records.
 
-All of these heartbeats run on a configured interval. Starting CF222, heartbeat intervals and threshold times can be configured in `values.yaml` under `configuration.digitalAssetManagement` section.
+All of these heartbeats run on a configured interval. Heartbeat intervals and Threshold times can be configured in `values.yaml` under `incubator.configuration.digitalAssetManagement` section.
 
 ```Yaml
 configuration:

@@ -1,4 +1,4 @@
-# Capacity planning for multilingual sites
+# Capacity planning for multilingual sites Multilingual Solution
 
 It is important to consider the additional load that is placed on the authoring server in comparison with single language websites.
 

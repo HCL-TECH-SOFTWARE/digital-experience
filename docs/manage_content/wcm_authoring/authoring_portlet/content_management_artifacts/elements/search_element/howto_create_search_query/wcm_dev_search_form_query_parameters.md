@@ -15,7 +15,7 @@ The following parameters can be used in a search query in this format.
 |Parameter|Details|
 |---------|-------|
 |`search_query`|Used to search the content of any elements that are stored in a content item.|
-|`search_authoringtemplate`|Used to search the authoring template, if available, that was used to create the content item. <br> If your authoring template has spaces, replace them with a '+'. For example, to search for content based on the content template "Product - CT", use: `<input name="search_authoringtemplate" value="Product+-+CT" />`.|
+|`search_authoringtemplate`|Used to search the authoring template, if available, that was used to create the content item.|
 |`search_authors`|Used to search the name or names of the authors for the content item, if any are defined.<br> **Searching for LDAP users:** When you search for LDAP users, the full distinguished name must be submitted. Users are unaware of what the actual distinguished name of a user is. It is recommended that if planning to allow users to search for authors, you should create a predefined list or dropdown to allow users to select a known author. That way the user names can be displayed in a user-friendly manner, but the parameters submitted by the form can be the distinguished name for the selected user.|
 |`search_author`|This is similar to search\_authors except that search\_author only searches the first author name for each content item, whereas search\_authors searches against all the authors for each content item.|
 |`search_categories`|Used to search the categories of the content item if any are defined.|
