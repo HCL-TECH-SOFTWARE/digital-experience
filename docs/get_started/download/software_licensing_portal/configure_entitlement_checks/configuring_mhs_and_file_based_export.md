@@ -51,9 +51,9 @@ The below properties must be configured to your entitlements, you will configure
 -   `customMhsDeploymentKeySecret`: The deployment key creates a custom secret name. Any method can use `customMhsDeploymentKeySecret` or `mhsDeploymentKey` for the deployment key. 
 -   `mhsDeploymentKey`: Credentials for product deployments. Any method can use `customMhsDeploymentKeySecret` or `mhsDeploymentKey` for the deployment key. This can be optained from [My HCLSoftware Portal](https://my.hcltechsw.com/)
 
-```console
+```
 #Example to create custom secret
-$ kubectl create secret generic <secret-name> --from-literal=deploymentKey=<deploymentKey> --namespace=<namespace>
+kubectl create secret generic <secret-name> --from-literal=deploymentKey=<deploymentKey> --namespace=<namespace>
 ```
 
 ## Generating and uploading user session data usage in metrics format
