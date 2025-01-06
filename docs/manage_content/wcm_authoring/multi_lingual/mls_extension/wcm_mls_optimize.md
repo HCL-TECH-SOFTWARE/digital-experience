@@ -1,4 +1,4 @@
-# Optimizing the performance of the extensions
+# Optimizing the performance of the extensions \| HCL Web Content Manager Multilingual Solution
 
 How to optimize your system for best performance of the multilingual solution.
 

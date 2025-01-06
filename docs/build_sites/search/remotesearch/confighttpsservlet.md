@@ -44,7 +44,7 @@ This is an optional step that can be completed while installing and configuring 
 5.  Restart all servers in your configuration for your updates to take effect.
 
 
-Remove any local search collections that are defined in HCL Digital Experience and create new search collections by using the remote search server. For more information about deleting and creating search collections, see the following topics:
+Remove any local search collections that are defined in HCL Portal and create new search collections by using the remote search server. For more information about deleting and creating search collections, see the following topics:
 
 -   If your system is operating in a portal farm, continue on to *Configuring search in a portal farm*.
 -   If your system is operating in a clustered environment, continue on to *Configuring search in a cluster*.

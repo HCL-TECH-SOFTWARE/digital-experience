@@ -1,4 +1,4 @@
-# Multilingual authoring
+# Multilingual authoring Multilingual Solution
 
 Nearly all authoring tasks occur in the base site, and are then replicated, if appropriate, to all of the localized sites. Authoring occurs on translated sites for language or region-specific content, or to fix errors in translation.
 

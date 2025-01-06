@@ -1,4 +1,4 @@
-# How to Switch the languages in the Digital Experience theme
+# How to Switch the languages in the Digital Experience theme\| HCL Digital Experience Multilingual Solution
 
 To showcase our ongoing efforts in enhancing Multilingual support, we have now added an icon in the Woodburn Studio website to select the language of your choice in the Digital Experience theme. The currently supported languages are English, French, and Spanish.
 

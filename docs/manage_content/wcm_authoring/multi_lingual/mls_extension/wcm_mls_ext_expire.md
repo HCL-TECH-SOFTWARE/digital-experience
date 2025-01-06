@@ -1,4 +1,4 @@
-# Expiry synchronization extension
+# Expiry synchronization extension Multilingual Solution
 
 This extension ensures that the base item and any published localized items are expired at the same time.
 

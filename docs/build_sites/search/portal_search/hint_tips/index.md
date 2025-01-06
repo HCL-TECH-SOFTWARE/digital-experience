@@ -8,17 +8,17 @@ Currently, the Content Model Search Service has only one search collection. This
 
 ## Using the Search Center with external search services with different languages
 
-In order to use external search services such as Google and Yahoo! with an English search keyword, a URL such as the sample URL mentioned in the Search Center portlet help for configuring the portlet works fine as is: http://www.google.com/search?q=. However, if you search in other languages, consult the documentation of the remote search service that you use to ensure that the web interface is set up and used appropriately for the language that you use for your search. This can avoid problems with the displayed results, depending on the combination of languages set for HCL Digital Experience (DX), your browser, and the search.
+In order to use external search services such as Google and Yahoo! with an English search keyword, a URL such as the sample URL mentioned in the Search Center portlet help for configuring the portlet works fine as is: http://www.google.com/search?q=. However, if you search in other languages, consult the documentation of the remote search service that you use to ensure that the web interface is set up and used appropriately for the language that you use for your search. This can avoid problems with the displayed results, depending on the combination of languages set for HCL Portal, your browser, and the search.
 
 ## Dynamic portal pages are not added to the search seedlist
 
-Dynamic HCL DX pages are not added to the Portal Search seedlist. Dynamic pages can have portlets, and portlets are added to the seedlist; therefore, if such pages are added to the seedlist, users get duplicate result list items. If you want to make HTML on a page searchable, create a static portal page and add the HTML. The static page is then added to the seedlist and listed among search results. For more detailed information about static and dynamic pages, see *Creating and adding static content* and *Dynamic user interfaces*.
+Dynamic HCL Portal pages are not added to the Portal Search seedlist. Dynamic pages can have portlets, and portlets are added to the seedlist; therefore, if such pages are added to the seedlist, users get duplicate result list items. If you want to make HTML on a page searchable, create a static portal page and add the HTML. The static page is then added to the seedlist and listed among search results. For more detailed information about static and dynamic pages, see *Creating and adding static content* and *Dynamic user interfaces*.
 
 ## Search collections unavailable in cluster if failover occurs
 
 If a cluster member in a cluster fails, users who were using the affected cluster member when the failover occurred can no longer access search collections. This problem can occur with horizontal scaling when a node fails or with vertical scaling when a particular cluster member fails.
 
-Users who are logged in to the cluster member that failed must log out of HCL DX and then log back in before they are able to access search collections again.
+Users who are logged in to the cluster member that failed must log out of HCL Portal and then log back in before they are able to access search collections again.
 
 ## Search can return documents based on metadata
 
@@ -37,7 +37,7 @@ When you delete a web content library, you must also delete the corresponding en
 
 ## Portal Search portlets are not compatible with WSRP
 
-The Portal Search portlets cannot be provided as WSRP services, as some additional and more advanced HCL DX concepts and features are not reflected by the current WSRP standard yet. These Portal Search portlets include Manage Search and the Search Center.
+The Portal Search portlets cannot be provided as WSRP services, as some additional and more advanced HCL Portal concepts and features are not reflected by the current WSRP standard yet. These Portal Search portlets include Manage Search and the Search Center.
 
 ## Default Portal Search Service and its collections show in the portal default language
 

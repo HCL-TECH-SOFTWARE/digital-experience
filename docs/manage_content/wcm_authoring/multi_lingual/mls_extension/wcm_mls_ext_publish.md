@@ -1,4 +1,4 @@
-# Publishing synchronization extension
+# Publishing synchronization extension Multilingual Solution
 
 This extension uses projects to ensure that the base item and any draft localized items are published at the same time.
 
