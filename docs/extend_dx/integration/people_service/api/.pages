@@ -1,0 +1,4 @@
+title: API documentation
+nav:
+  - index.md
+  - authenticating_api_request.md

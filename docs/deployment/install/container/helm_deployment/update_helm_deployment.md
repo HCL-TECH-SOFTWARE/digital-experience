@@ -6,21 +6,20 @@ This section assumes that you prepared your cluster and your custom-values.yaml
 
 ## Overview of Helm Configuration Updates
 
-Once an HCL DX Kubernetes 9.5 deployment is installed, it is possible to update its configuration directly using the standard Kubernetes or OpenShift commands (for example, by updating values in the various config maps). However, this is NOT the recommended approach. Some of the configuration parameters have interdependencies, as outlined in the [Preparation before installing HCL DX using Helm](../helm_deployment/preparation/index.md) topic. These require knowledgeable management to make changes that are compatible with interdependency requirements. For example, if you change the context root for DX Core you also need to change the readiness and liveness probes.
-
-The recommended approach for configuration changes is to update the custom-values.yaml file used to install the deployment, and then run a Helm upgrade. This has the added benefit that your custom-values.yaml file remains an up-to-date description of the configuration of your environment.
+After an HCL DX Kubernetes 9.5 deployment is installed, all configuration changes are made by updating the `custom-values.yaml` file used to install the deployment. This way, your `custom-values.yaml` file remains an up-to-date description of the configuration of your environment.
 
 ## Prerequisites
 
 Make sure that the `wkplc_dbdomain.properties` file is correct. The HCL DX upgrade runs several ConfigEngine scripts. These scripts depend on the `wkplc_dbdomain.properties` being up-to-date and accurate, especially with the password properties. 
 
 Edit the `(wp_profile root)/ConfigEngine/properties/wkplc_dbdomain.properties` file and ensure the following values are set correctly:
-    -   `release.DbPassword=(your database user password)`
-    -   `community.DbPassword=(your database user password)`
-    -   `customization.DbPassword=(your database user password)`
-    -   `jcr.DbPassword=(your database user password)`
-    -   `likeminds.DbPassword=(your database user password)`
-    -   `feedback.DbPassword=(your database user password)`
+
+-   `release.DbPassword=(your database user password)`
+-   `community.DbPassword=(your database user password)`
+-   `customization.DbPassword=(your database user password)`
+-   `jcr.DbPassword=(your database user password)`
+-   `likeminds.DbPassword=(your database user password)`
+-   `feedback.DbPassword=(your database user password)`
 
 If you do not want these password values removed after every run, make sure `PWordDelete=false` is set in `(wp_profile root)/ConfigEngine/properties/wkplc.properties`.
 

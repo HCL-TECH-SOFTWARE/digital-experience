@@ -1,0 +1,10 @@
+title: Integration
+
+nav:
+  - index.md
+  - Business Card component: business_card.md
+  - Rendering Business Cards using person tags: rendering_business_card_person_tag.md
+  - Rendering Business Cards in DX pages: rendering_business_card_dx_page.md
+  - Linking system modules to a theme: link_system_module_to_theme.md
+  - Creating My Profile links: creating_my_profile_link.md
+  - customization
