@@ -10,14 +10,16 @@ The `Content` tag directly renders a content item or site area.
 The format of an `Content` tag:
 
 ```
-[Content context=" " presentationPath=" " renderMode=" "]
+[Content context=" " presentationPath=" " renderMode=" " uuid=" " path=" "]
 
 ```
 
 !!! note
     The content tag renders nothing in the case of an infinite loop. For example if a presentation template uses the content tag to render the current content, this will cause the same presentation template to render, which in turn will render the content, and so forth without end. Take care to avoid this occurring because it slows down the time that is taken to render the tag.
 
-To create an `Content` tag:
+## Creating a Content tag
+
+Refer to the following steps to create an `Content` tag:
 
 1.  Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
 
