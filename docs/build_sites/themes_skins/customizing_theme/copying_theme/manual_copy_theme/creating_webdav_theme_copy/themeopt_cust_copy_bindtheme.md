@@ -1,6 +1,6 @@
 # Binding your theme to the context root of the web application
 
-You must bind your theme to the context root of the web application for your theme. You can bind your theme using the command line or by using XMLAccess in the Portal Administration pages.
+You must bind your theme to the context root of the web application for your theme. You can bind your theme using XMLAccess through the command line or the Portal Administration pages.
 
 ## Binding your theme through the command line
 
@@ -31,9 +31,9 @@ Refer to the following steps to bind your theme using the command line.
 
     1. Search for the title of your theme, such as **Custom Theme**.
     
-    2. Navigate to the line with the surrounding <theme> tag. It is likely the last <theme> tag in the file.
+    2. Navigate to the line with the surrounding `<theme>` tag. It is likely the last `<theme>` tag in the file.
     
-    3. Modify the tag from:
+    3. Set the correct `context-root` and `uniquename` for your theme. For example, modify the tag from:
 
         ```
         <theme action="update" active="true" context-root="/wps/themeModules" default="false" domain="rel" 
@@ -47,15 +47,13 @@ Refer to the following steps to bind your theme using the command line.
           objectid="ZJ_MLSU3F54089F00IP6G7P3F10S5" resourceroot="dynamicSpots" uniquename="customTheme">
         ```
 
-    4. Set the correct `context-root` and `uniquename` for your theme.
-
 4. Modify the `<skin>` tag of your theme.
 
     1. Search for the title of your skin.
     
-    2. Navigate to the line with the surrounding <skin> tag. It is likely the last <skin> tag in the file.
+    2. Navigate to the line with the surrounding `<skin>` tag. It is likely the last `<skin>` tag in the file.
     
-    3. Modify the tag from:
+    3. Set the correct `context-root`, `resourceroot`, and `uniquename` for your skin. For example, modify the tag from:
 
         ```
         <skin action="update" active="true" context-root="/wps/themeModules" default="false" domain="rel" 
@@ -69,10 +67,8 @@ Refer to the following steps to bind your theme using the command line.
           objectid="ZK_73OKBB1A088IE0I5O7IP2J0G77" resourceroot="customSkin" type="default" uniquename="customSkin">
         ```
 
-    4. Set the correct context-root, resourceroot, and uniquename for your skin.
-
     !!! note
-        The `resourceroot` tag was used in previous versions of Portal when multiple themes were deployed in the same WAR file. It indicates which folder in the WAR file to find the specific theme. For the skin, this parameter should be set to the folder name where the skin is located.
+        The `resourceroot` parameter was used in previous versions of Portal when multiple themes were deployed in the same WAR file. It indicates which folder in the WAR file to find the specific theme. For the skin, set this parameter to the folder name where the skin is located.
 
 5.  Add the `<allowed-skin>` tag  to your `customTheme` theme.
 
@@ -84,11 +80,11 @@ Refer to the following steps to bind your theme using the command line.
       <allowed-skin skin="ZK_CGAH47L00GJJ40IDC03MS13OS2" update="set"/>
       ```
 
-    3. Find the `<theme>` tag for your `customTheme` theme. it is likely the last `<theme>` tag in the file. 
+    3. Find the `<theme>` tag for your `customTheme` theme. It is likely the last `<theme>` tag in the file. 
     
-    4. Paste the `<allowed-skin>` tag line in just before the `<parameter>` tags.
+    4. Paste the `<allowed-skin>` tag line just before the `<parameter>` tags.
     
-    5. Change the `skin` parameter value identifier to the unique name of your `customSkin` skin, which can be found in the `uniquename` parameter of the `<skin>` tag of your `customSkin` skin. It is likely the last `<skin>` tag in the file, such as:
+    5. Change the `skin` parameter value identifier to the unique name of your `customSkin` skin. You can find this name in the `uniquename` parameter of the `<skin>` tag of your `customSkin` skin. It is likely the last `<skin>` tag in the file, such as:
 
       ```
       <allowed-skin skin="customSkin" update="set"/>
@@ -114,7 +110,7 @@ Refer to the following steps to bind your theme by using XMLAccess in the Portal
 
 1. Click the **Administration menu** icon.
 
-2. Click **Portal Settings** > **Import XML**.
+2. Click **Portal Settings > Import XML**.
 
 3. Click **Browse** and select the `input.xml` file.
 
