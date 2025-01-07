@@ -12,10 +12,9 @@ The following elements are the prerequisites for configuring the HCL DX Cloud Na
 -   A valid [HCL DX Cloud Native 9.5 (Tier 1 – 7)](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad) offering part purchased and issued by the HCL Software licensing team.
 -   Your DX Cloud Native 9.5 (Tier 1 – 7) entitlements are mapped to your My HCLSoftware portal instances.  
    
-   ![DX Cloud Native 9.5 (Tier 1 – 7) entitlements]() **NEED IMAGE OF MYMHS ENTITLEMENT**  
-
-See the "How to check your entitlements" and "Map entitlements" sections in: [link to MHS entitlement checking info]() for guidance in locating and mapping your entitlements to your deployments.
 -   A plan to deploy or update to [HCL DX 9.5 Container Update CF226](../../../../whatsnew/cf20/newcf226.md) or later release, if currently using a prior version.
+
+-   Create a deployment in [My HCLSoftware](../../software_licensing_portal/configure_entitlement_checks/create_deplyment_mhs_ui.md).
 
 Review the architecture that presents the License Manager component of HCL DX v9.5 Container Update software, which follows in the next section.
 
@@ -55,6 +54,12 @@ The below properties must be configured to your entitlements, you will configure
 #Example to create custom secret
 kubectl create secret generic <secret-name> --from-literal=deploymentKey=<deploymentKey> --namespace=<namespace>
 ```
+### Obtain the deployment key from My HCLSoftware Portal
+- Login to [My HCLSoftware Portal](https://my.hcltechsw.com/)
+- Navigate to deployments
+- Select the appripoate deplyment 
+- Select the Replace Deployment Key to obtain the new deplymnet key
+
 
 ## Generating and uploading user session data usage in metrics format
 This session data usage reporting method will only be used in disconnected use cases within the Kubernetes environment. To generate the user session data usage in metrics format, the report must include session data that has been encrypted for each user session.
