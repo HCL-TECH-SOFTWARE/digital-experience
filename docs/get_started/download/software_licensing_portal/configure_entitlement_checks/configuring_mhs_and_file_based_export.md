@@ -73,6 +73,8 @@ Where:
 -   `endDate` specifies the end date in YYYY-MM-DD format
 -   `deploymentId` is the deployment identifier.
 
+`deploymentId` can be found in the deployment URL, for example, `https://my.hcltechsw.com/deployments/pzneck8m`. In this case, `pzneck8m` represents the `deploymentId` as illustrated in the example URL.
+
 To save the generated metrics to a file, use this command:
 
 ```
