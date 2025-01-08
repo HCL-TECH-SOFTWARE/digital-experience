@@ -30,10 +30,10 @@ Refer to the following steps to bind your theme using the command line.
 3. In the `output.xml` file, modify the `<theme>` tag of your theme.
 
     1. Search for the title of your theme, such as **Custom Theme**.
-    
+
     2. Navigate to the line with the surrounding `<theme>` tag. It is likely the last `<theme>` tag in the file.
-    
-    3. Set the correct `context-root` and `uniquename` for your theme. For example, modify the tag from:
+
+    3. Modify the `<theme>` tag from:
 
         ```
         <theme action="update" active="true" context-root="/wps/themeModules" default="false" domain="rel" 
@@ -47,13 +47,15 @@ Refer to the following steps to bind your theme using the command line.
           objectid="ZJ_MLSU3F54089F00IP6G7P3F10S5" resourceroot="dynamicSpots" uniquename="customTheme">
         ```
 
+        Make sure to set the correct `context-root` and `uniquename` for your theme.
+
 4. Modify the `<skin>` tag of your theme.
 
     1. Search for the title of your skin.
-    
+
     2. Navigate to the line with the surrounding `<skin>` tag. It is likely the last `<skin>` tag in the file.
-    
-    3. Set the correct `context-root`, `resourceroot`, and `uniquename` for your skin. For example, modify the tag from:
+
+    3. Modify the `<skin>` tag from:
 
         ```
         <skin action="update" active="true" context-root="/wps/themeModules" default="false" domain="rel" 
@@ -67,13 +69,15 @@ Refer to the following steps to bind your theme using the command line.
           objectid="ZK_73OKBB1A088IE0I5O7IP2J0G77" resourceroot="customSkin" type="default" uniquename="customSkin">
         ```
 
+        Make sure to set the correct `context-root`, `resourceroot`, and `uniquename` for your skin. 
+
     !!! note
         The `resourceroot` parameter was used in previous versions of Portal when multiple themes were deployed in the same WAR file. It indicates which folder in the WAR file to find the specific theme. For the skin, set this parameter to the folder name where the skin is located.
 
 5.  Add the `<allowed-skin>` tag  to your `customTheme` theme.
 
     1. Find the `<theme>` tag for the Portal 8.5 theme. It is likely the first `<theme>` tag in the file. 
-    
+
     2. Find and copy one of the `<allowed-skin>` tag lines, such as:
 
       ```
@@ -81,9 +85,9 @@ Refer to the following steps to bind your theme using the command line.
       ```
 
     3. Find the `<theme>` tag for your `customTheme` theme. It is likely the last `<theme>` tag in the file. 
-    
+
     4. Paste the `<allowed-skin>` tag line just before the `<parameter>` tags.
-    
+
     5. Change the `skin` parameter value identifier to the unique name of your `customSkin` skin. You can find this name in the `uniquename` parameter of the `<skin>` tag of your `customSkin` skin. It is likely the last `<skin>` tag in the file, such as:
 
       ```
