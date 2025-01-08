@@ -6,7 +6,7 @@ This document offers guidance on setting up and creating deployment instances in
 
 Create new deployment via MHS UI:
 
-1. Login below [My HCLSoftware PortalURL:](https://my.hcltechsw.com/)
+1. Login to [My HCLSoftware PortalURL:](https://my.hcltechsw.com/)
 2. Go to Deployments tab and click Add Deployment
 ![Add Deployment](../../software_licensing_portal/_img/add_deployment.png)
 3. You can see the Add deployment panel where you can enter the

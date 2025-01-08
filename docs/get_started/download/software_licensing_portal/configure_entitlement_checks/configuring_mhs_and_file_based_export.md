@@ -54,15 +54,14 @@ The below properties must be configured to your entitlements, you will configure
 #Example to create custom secret
 kubectl create secret generic <secret-name> --from-literal=deploymentKey=<deploymentKey> --namespace=<namespace>
 ```
-### Obtain the deployment key from My HCLSoftware Portal
-- Login to [My HCLSoftware Portal](https://my.hcltechsw.com/)
-- Navigate to deployments
-- Select the appripoate deplyment 
-- Select the Replace Deployment Key to obtain the new deplymnet key
 
+## User Session Reporting Tool in Kubernetes environment
+This session data usage reporting method will only be used in disconnected use cases within the Kubernetes environment where Helm has not configured My HCLSoftware Portal.
 
-## Generating and uploading user session data usage in metrics format
-This session data usage reporting method will only be used in disconnected use cases within the Kubernetes environment. To generate the user session data usage in metrics format, the report must include session data that has been encrypted for each user session.
+### Generating and uploading user session data usage in metrics format
+To generate the user session data usage in metrics format, the report must include session data that has been encrypted for each user session.
+
+The `deploymentId` can be found in the deployment URL, for example, `https://my.hcltechsw.com/deployments/pzneck8m`. In this case, `pzneck8m` represents the `deploymentId` as illustrated in the example URL.
 
 Use the following command to generate usage metrics from the user session data, specifying the appropriate `startDate`, `endDate` and `deploymentId` values:
 ```
@@ -72,8 +71,6 @@ Where:
 -   `startDate` specifies the start date in YYYY-MM-DD format
 -   `endDate` specifies the end date in YYYY-MM-DD format
 -   `deploymentId` is the deployment identifier.
-
-`deploymentId` can be found in the deployment URL, for example, `https://my.hcltechsw.com/deployments/pzneck8m`. In this case, `pzneck8m` represents the `deploymentId` as illustrated in the example URL.
 
 To save the generated metrics to a file, use this command:
 
@@ -100,19 +97,8 @@ End,370d193fe0be35950d2707026d23ce595ae46054b77efcc944aa2484eab39399976854c58321
 ```
 
 ### Upload usage metrics
-The generated `{YYYY-MM-DDTHH-MM-SS UTC}usage.metrics` file should then be uploaded to the My HCLSoftware portal for processing.
+The generated `{YYYY-MM-DDTHH-MM-SS UTC}usage.metrics` file should then be uploaded to the [My HCLSoftware portal for processing](../../software_licensing_portal/configure_entitlement_checks/mhs_upload_usage_metrics.md).
 
-## Accessing MyHCL Software usage reporting dashboard
-Access the Deployments section of the My HCLSoftware portal to review entitlements and user session consumption reports.
-
-![](../../software_licensing_portal/_img/upload_usage_metric_file.png) 
-
-- Upload the usage metric file in MHS UI for a selected deployment.
-- Wait for successful upload or look for error message if any validation or server failure on the UI 
-  - If status is `validating` or `processing` . User can wait on the page or return back to see status changing to `completed` or `failed` or `rejected`
-  - If status is `rejected` , it could be among these many reasons- hash chaining is tampered / invalid signature / fields are not in a required format . User should upload the valid file.
-  - If status is `failed`,user should reach out to MHS support through IT operations
-  - If status is `completed`, file is validated and consumed successfully 
 
 ## My HCLSoftware vs FlexNet on Kubernetes
 The use cases for My HCLSoftware in Kubernetes deployments are very similar to those for FlexNet. The HCL DX License Manager container has been extended to integrate with MyHCL Software in a similar way to the existing integration with FlexNet. This integration ensures proper entitlement validation and usage reporting.
