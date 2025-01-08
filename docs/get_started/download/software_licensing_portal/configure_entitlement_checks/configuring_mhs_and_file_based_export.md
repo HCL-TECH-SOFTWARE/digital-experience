@@ -55,11 +55,11 @@ The below properties must be configured to your entitlements, you will configure
 kubectl create secret generic <secret-name> --from-literal=deploymentKey=<deploymentKey> --namespace=<namespace>
 ```
 
-## User Session Reporting Tool in Kubernetes environment
-This session data usage reporting method will only be used in disconnected use cases within the Kubernetes environment where Helm has not configured My HCLSoftware Portal.
+## File based export in Kubernetes environment
+This session data usage reporting method will only be used in disconnected use cases within the Kubernetes environment where Helm has not configured Digital Experience with My HCLSoftware Portal.
 
 ### Generating and uploading user session data usage in metrics format
-To generate the user session data usage in metrics format, the report must include session data that has been encrypted for each user session. The `deploymentId` can be found in the My HCLSoftware Portal after clicking the deployment card in the URL; for example, https://my.hcltechsw.com/deployments/pzneck8m. In this case, `pzneck8m` represents the `deploymentId` as illustrated in the example URL.
+To generate the user session data usage in metrics format, the report include session data that has been encrypted for each user session. The `deploymentId` can be found in the My HCLSoftware Portal after clicking the deployment card in the URL; for example, `https://my.hcltechsw.com/deployments/pzneck8m`. In this case, `pzneck8m` represents the `deploymentId` as illustrated in the example URL.
 
 Use the following command to generate usage metrics from the user session data, specifying the appropriate `startDate`, `endDate` and `deploymentId` values:
 
@@ -98,7 +98,7 @@ End,370d193fe0be35950d2707026d23ce595ae46054b77efcc944aa2484eab39399976854c58321
 ```
 
 ### Upload usage metrics
-The generated `{YYYY-MM-DDTHH-MM-SS UTC}usage.metrics` file should then be uploaded to the [My HCLSoftware portal for processing](../../software_licensing_portal/configure_entitlement_checks/mhs_upload_usage_metrics.md).
+The generated `{YYYY-MM-DDTHH-MM-SS UTC}usage.metrics` file should then be uploaded to the [My HCLSoftware](../../software_licensing_portal/configure_entitlement_checks/mhs_upload_usage_metrics.md) portal for processing.
 
 
 ## My HCLSoftware vs FlexNet on Kubernetes
