@@ -29,10 +29,9 @@ Ensure that enough disk space is available in the following directories:
 
     If you missed this configuration step, you can still manually re-add the user or groups after the update.
 
-
 ## Best Practices
 
-Go to the [HCL Software Support](https://support.hcltechsw.com/csm) page to read the Portal Upgrade Best Practices.
+For more information about upgrading to HCL DX 9.5, refer to the [Portal Upgrades: Best Practices for 8.5](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0012732){target="_blank"} page and the [From the DX Experts! Best Practices: How to upgrade to HCL DX 9.5](https://support.hcl-software.com/csm?id=community_question&sys_id=5d4013ae1bf1f9d0574121f7ec4bcbd3){target="_blank"} webinars.
 
 ## Backing up the Installation Manager data
 
