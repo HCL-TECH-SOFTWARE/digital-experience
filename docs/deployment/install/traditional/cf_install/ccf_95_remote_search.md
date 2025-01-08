@@ -4,7 +4,7 @@ Read the installation instructions to learn how to apply a cumulative fix to a p
 
 ## About Version 8.5 Cumulative Fixes
 
-This cumulative fix can only be applied to an existing functional version of HCL Portal Version 8.5 remote search or document conversion services (DCS) server, with or without a previous cumulative fix applied.
+This cumulative fix can only be applied to an existing functional version of HCL Digital Experience (DX) Version 8.5 remote search or document conversion services (DCS) server, with or without a previous cumulative fix applied.
 
 ## Overview
 
@@ -45,7 +45,7 @@ The default locations of these directories are:
 
 ## Known Issues
 
-Review the *Known issues for combined cumulative fix* topic page to be aware of any known issues for the HCL Portal Version 8.5 CF releases.
+Review the *Known issues for combined cumulative fix* topic page to be aware of any known issues for the HCL DX Version 8.5 CF releases.
 
 ## Review supported hardware/software requirements
 
@@ -60,7 +60,7 @@ All temporary or interim fixes on your system must be removed before installing 
 ## Download the cumulative fix
 
 
-1.  Download the latest zip file that corresponds to the installation on your system. Go to the [HCL Software Support](https://support.hcltechsw.com/csm) page and download the HCL Portal Remote Search CF file 8.5-WP-RemoteSearch-CFPInnnnn-CFnn.zip.
+1.  Download the latest zip file that corresponds to the installation on your system. Go to the [HCL Software Support](https://support.hcltechsw.com/csm) page and download the HCL DX Remote Search CF file 8.5-WP-RemoteSearch-CFPInnnnn-CFnn.zip.
 2.  Create a directory and extract the downloaded zip file into this directory. Inside the zip file are a readme file, sample response files, and the actual cumulative fix file itself. The cumulative fix file is named as follows, where **nn** represents the CF number associated with this cumulative fix: WP8500CFnn\_Remote.zip.
 3.  Create a sub-directory and extract theWP8500CFnn\_Remote.zip file to this directory. The extraction results in a repository.config file that is used by IBM Installation Manager during the update.
 
@@ -82,11 +82,11 @@ Choose one method that is available for your system and follow the detailed step
     -   Linux: `./serverStatus.sh -all`
     -   Windows: `serverStatus.bat -all`
 
-3.  Launch the IBM Installation Manager that was used to install HCL Portal Remote Search Version 8.5.
+3.  Launch the IBM Installation Manager that was used to install HCL DX Remote Search Version 8.5.
 4.  Using Installation Manager, click **File > Preferences**.
 5.  Go to the **Repositories** panel and click **Add Repository**.
 6.  Navigate to the repository.config file mentioned earlier and select it.
-7.  Select **Update** and follow the prompts to update HCL Portal Remote Search.
+7.  Select **Update** and follow the prompts to update HCL DX Remote Search.
 8.  If you are running an external web server, restart it now.
 
 
@@ -211,14 +211,14 @@ Choose one method that is available for your system and follow the detailed step
     -   Enter P to go to the **Preferences** menu.
     -   Enter 1 to go to the **Repositories** menu.
     -   Enter D to add repositories.
-    -   Type the path for your HCL Portal Remote Search Version 8.5 CF repository file.
+    -   Type the path for your HCL DX Remote Search Version 8.5 CF repository file.
     -   Enter A to apply your repositories and return to the **Preferences** menu.
     -   Enter R to return to the Main menu.
-6.  Select **Update** and follow the prompts to update HCL Portal.
+6.  Select **Update** and follow the prompts to update HCL DX.
 7.  If you are running an external web server, restart it now.
 
 !!!reminder
-    Go to Known Issues in this topic section to be aware of any known issues for HCL Portal CF releases.
+    Go to Known Issues in this topic section to be aware of any known issues for HCL DX CF releases.
 
 ## Steps for rolling back the cumulative fix
 
@@ -308,7 +308,5 @@ Choose one method that is available for your system. Follow the detailed steps f
         imcl.exe -c
         ```
 
-5.  Select **Roll back** and follow the prompts to roll back HCL Portal Remote Search.
+5.  Select **Roll back** and follow the prompts to roll back HCL DX Remote Search.
 6.  If you are running an external web server, restart it now.
-
-
