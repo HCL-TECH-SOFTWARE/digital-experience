@@ -50,7 +50,7 @@ The below properties must be configured to your entitlements, you will configure
 -   `customMhsDeploymentKeySecret`: The deployment key creates a custom secret name. Any method can use `customMhsDeploymentKeySecret` or `mhsDeploymentKey` for the deployment key. 
 -   `mhsDeploymentKey`: Credentials for product deployments. Any method can use `customMhsDeploymentKeySecret` or `mhsDeploymentKey` for the deployment key. This can be optained from [My HCLSoftware Portal](https://my.hcltechsw.com/)
 
-```
+```sh
 #Example to create custom secret
 kubectl create secret generic <secret-name> --from-literal=deploymentKey=<deploymentKey> --namespace=<namespace>
 ```
@@ -59,29 +59,30 @@ kubectl create secret generic <secret-name> --from-literal=deploymentKey=<deploy
 This session data usage reporting method will only be used in disconnected use cases within the Kubernetes environment where Helm has not configured My HCLSoftware Portal.
 
 ### Generating and uploading user session data usage in metrics format
-To generate the user session data usage in metrics format, the report must include session data that has been encrypted for each user session.
-
-The `deploymentId` can be found in the deployment URL, for example, `https://my.hcltechsw.com/deployments/pzneck8m`. In this case, `pzneck8m` represents the `deploymentId` as illustrated in the example URL.
+To generate the user session data usage in metrics format, the report must include session data that has been encrypted for each user session. The `deploymentId` can be found in the My HCLSoftware Portal after clicking the deployment card in the URL; for example, https://my.hcltechsw.com/deployments/pzneck8m. In this case, `pzneck8m` represents the `deploymentId` as illustrated in the example URL.
 
 Use the following command to generate usage metrics from the user session data, specifying the appropriate `startDate`, `endDate` and `deploymentId` values:
-```
+
+```sh
 kubectl exec -it <release name>-license-manager-0 -n <namespace> -- java -jar UserSessionReporting.jar GenerateMetricFile <YYYY-MM-DD> <YYYY-MM-DD> <deploymentId>
 ```
+
 Where:
+
 -   `startDate` specifies the start date in YYYY-MM-DD format
 -   `endDate` specifies the end date in YYYY-MM-DD format
 -   `deploymentId` is the deployment identifier.
 
 To save the generated metrics to a file, use this command:
 
-```
+```sh
 kubectl exec -it <release name>-license-manager-0 -n <namespace> -- java -jar UserSessionReporting.jar GenerateMetricFile <YYYY-MM-DD> <YYYY-MM-DD> <deploymentId> /tmp/{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics
 ```
-`metricsFileName` The timestamp in the usage metrics file should be earlier than the start date, formatted as {YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics. For example: 2024-06-24T02-50-00_usage.metrics
+The timestamp in the usage metrics file should be earlier than the start date, formatted as {YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics. For example:`2024-06-24T02-50-00_usage.metrics`
 
 ### Example
 
-```
+```sh
 kubectl exec -it pod/dx-deployment-license-manager-0 -n dxns -- java -jar UserSessionReporting.jar GenerateMetricFile 2022-07-22 2025-07-28 pnkeq6pk > /tmp/2022-06-24T02-50-00_usage.metrics
 ```
 

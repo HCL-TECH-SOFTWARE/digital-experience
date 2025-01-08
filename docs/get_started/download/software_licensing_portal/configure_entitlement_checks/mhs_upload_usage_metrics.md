@@ -1,3 +1,7 @@
+---
+title:  Upload usage metric file to My HCLSoftware
+---
+
 ## Accessing MyHCL Software usage reporting dashboard
 Access the Deployments section of the My HCLSoftware portal to review entitlements and user session consumption reports.
 

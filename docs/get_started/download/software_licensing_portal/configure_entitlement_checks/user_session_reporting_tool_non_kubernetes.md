@@ -1,11 +1,11 @@
 ---
-title: User session reporting tool For non kubernetes
+title: User session reporting tool for non kubernetes
 ---
-# User Session Reporting Tool For non kubernetes
+# User Session Reporting Tool for Non Kubernetes
 
 This topic describes how you can use the User Session Reporting Tool to count and report user sessions.
 
-The User Session Reporting Tool is a utility designed for HCL Digital Experience (DX) users managing on-premises deployments. This tool provides a solution for analyzing and interpreting web traffic data by processing National Center for Supercomputing Applications (NCSA) access log files. Relevant parts of each log are extracted to identify and count unique user sessions. This offers a precise understanding of usage data over specified periods.
+The User Session Reporting Tool is a utility designed for HCL Digital Experience (DX) users managing on-premises deployments. This tool provides a solution for analyzing and interpreting web traffic data by processing National Center for Supercomputing Applications (NCSA) access log files. Relevant parts of each log are extracted to identify and count unique user sessions. This tool will generate the user session data usage in metrics format, the report include session data that has been encrypted that will uploaded the My HCLSoftware. This offers a precise understanding of usage data over specified periods.
 
 ## Functionalities
 
@@ -98,7 +98,8 @@ If a reverse proxy server, load balancer, or a similar component is used in the 
 
 ## Running the User Session Reporting Tool
 
-The `deploymentId` can be found in the deployment URL, for example, `https://my.hcltechsw.com/deployments/pzneck8m`. In this case, `pzneck8m` represents the `deploymentId` as illustrated in the example URL.
+### Generating and uploading user session data usage in metrics format
+To generate the user session data usage in metrics format, the report must include session data that has been encrypted for each user session. The `deploymentId` can be found in the My HCLSoftware Portal after clicking the deployment card in the URL; for example, https://my.hcltechsw.com/deployments/pzneck8m. In this case, `pzneck8m` represents the `deploymentId` as illustrated in the example URL.
 
 The tool is packaged as an executable JAR file. Execute the tool by using the following parameters:
 
@@ -154,9 +155,11 @@ DXPN_CloudNative_Tier1_500K@9.5,2024-07-22T01:00:00.000Z,2024-07-22T23:59:00.000
 END,30f0dd458d3ca9463870c1275d344d2361df87d617e32077a5c3c379a7e9e05f413fc1fa491e808b82e1eccc70c1ab4a89d2606904a1d5c64cea50588cca8509
 ```
 
-`metricsFileName` The timestamp in the usage metrics file should be earlier than the start date, formatted as {YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics. For example: 2024-06-24T02-50-00_usage.metrics
+The timestamp in the usage metrics file should be earlier than the start date, formatted as {YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics. For example: `2024-06-24T02-50-00_usage.metrics`
 
 After execution, the system returns the expected session count within the specified start and end date parameters. The tool generates the following files:
+
+- A generate the user session data usage in metrics format, the report include session data that has been encrypted in file or terminal output.
 
 - A DAT file named `sessionStorage.dat` which serves as the internal storage for saving session data and counts between runs. This file allows the tool to maintain its state, enabling accurate aggregation of session counts over time. It is important to save this file and store it securely because it will be used by the tool to continue the session count during the next run. Losing or tampering with this file could result in incorrect session data and an inaccurate count.
 
@@ -166,8 +169,3 @@ Additionally, if there are logs from multiple deployments belonging to the same 
 
 ### Upload usage metrics
 The generated `{YYYY-MM-DDTHH-MM-SS UTC}usage.metrics` file should then be uploaded to the [My HCLSoftware portal for processing](../../software_licensing_portal/configure_entitlement_checks/mhs_upload_usage_metrics.md).
-
-
-## HCLSoftware U learning materials
-
-To learn how to monitor, troubleshoot, and contact Support about issues you encounter with DX, go to [Monitoring and Troubleshooting](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3436){target="_blank”}. You can try it out using the [Monitoring and Troubleshooting Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Monitoring_and_Troubleshooting_Lab.pdf){target="_blank”} and corresponding [Monitoring and Troubleshooting Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Monitoring_and_Troubleshooting_Lab_Resources.zip){target="_blank”}.
