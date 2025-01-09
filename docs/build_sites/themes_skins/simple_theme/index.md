@@ -47,7 +47,7 @@ The Simple Theme includes the following features:
 
 -   **Footer**
 
-    The Simple Theme uses the `st_wcm_footer_HCL` dynamic content spot to manage the theme. You can also use web content to allow your business users to manage the Simple Theme footer using the `st_wcm_content` dynamic content spot with a path to a web content library, site area, or content. For example, to point to a sample content under the **Articles** site area in the **Web Content** web content library, use: `<a rel="dynamic-content"  href="dyn-cs:id:st_wcm_content?path= Web+Content/Articles/Sample+Article"></a>`
+    The Simple Theme uses the `st_wcm_footer_HCL` dynamic content spot to manage the theme. You can also use web content to allow your business users to manage the Simple Theme footer using the `st_wcm_content` dynamic content spot with a path to a web content library, site area, or content. For example, to point to a sample content under the **Articles** site area in the **Web Content** web content library, use: `<a rel="dynamic-content"  href="dyn-cs:id:st_wcm_content?path= Web+Content/Articles/Sample+Article"></a>`.
 
 -   **[Theme templates](../simple_theme/theme_templates/index.md)**  
 You can use static HTML to write portal themes. Then, add static and server-side dynamic content by modifying the `theme.html` in WebDAV at `fs-type1/themes/themename/theme.html`.
