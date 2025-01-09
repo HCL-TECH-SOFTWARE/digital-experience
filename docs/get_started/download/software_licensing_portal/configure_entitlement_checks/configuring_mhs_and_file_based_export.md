@@ -12,10 +12,9 @@ The following elements are the prerequisites for configuring the HCL DX Cloud Na
 -   A valid [HCL DX Cloud Native 9.5 (Tier 1 – 7)](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad) offering part purchased and issued by the HCL Software licensing team.
 -   Your DX Cloud Native 9.5 (Tier 1 – 7) entitlements are mapped to your My HCLSoftware portal instances.  
    
-   ![DX Cloud Native 9.5 (Tier 1 – 7) entitlements]() **NEED IMAGE OF MYMHS ENTITLEMENT**  
-
-See the "How to check your entitlements" and "Map entitlements" sections in: [link to MHS entitlement checking info]() for guidance in locating and mapping your entitlements to your deployments.
 -   A plan to deploy or update to [HCL DX 9.5 Container Update CF226](../../../../whatsnew/cf20/newcf226.md) or later release, if currently using a prior version.
+
+-   Create a deployment in [My HCLSoftware](../../software_licensing_portal/configure_entitlement_checks/create_deplyment_mhs_ui.md).
 
 Review the architecture that presents the License Manager component of HCL DX v9.5 Container Update software, which follows in the next section.
 
@@ -37,51 +36,54 @@ The below properties must be configured to your entitlements, you will configure
     # For non production environments sessions are not counted but the license
     # is still validated.
     productionEnvironment: true
-    # Flexnet License Server ID Ex: Q8A5YCZ3A4GH
-    licenseServerId: ""
-    # Flexnet or MHS License Server URI Ex: https://hclsoftware.compliance.flexnetoperations.com
+    # MHS License Server URI
     licenseServerUri: ""
-    # Flexnet License Server's Configured Features Ex: DXPN_CloudNative_Tier1_500K@9.5
-    licenseFeatureNameWithVersion: ""
-    # Source Identity for Manual session usage report
-    licenseManualReportUniqueIdentifier: ""
-    # AWS Service Account Name for EKS deployments
-    serviceAccountName: ""
-    # AWS License Config Secret for Self Managed Clusters
-    licenseConfigSecret: ""
+    # Custom Deployment key secret for MHS deployment instance
+    customMhsDeploymentKeySecret: ""
     # Deployment key for MHS deployment instance
-    deploymentKeySecret: ""
+    mhsDeploymentKey: ""
 
 ```
 
 -   `productionEnvironment`: Set to true to send usage reports to MHS, and for other environments (e.g. test or UAT), set to false.
 -   `licenseServerUri`: MHS License Server URI
--   `deploymentKeySecret`: Credentials for product deployments. This can be optained from [My HCLSoftware Portal](https://my.hcltechsw.com/)
+-   `customMhsDeploymentKeySecret`: The deployment key creates a custom secret name. Any method can use `customMhsDeploymentKeySecret` or `mhsDeploymentKey` for the deployment key. 
+-   `mhsDeploymentKey`: Credentials for product deployments. Any method can use `customMhsDeploymentKeySecret` or `mhsDeploymentKey` for the deployment key. This can be optained from [My HCLSoftware Portal](https://my.hcltechsw.com/)
 
-## Generating and uploading user session data usage in metrics format
-To generate the user session data usage in metrics format, the report must include session data that has been encrypted for each user session.
+```sh
+#Example to create custom secret
+kubectl create secret generic <secret-name> --from-literal=deploymentKey=<deploymentKey> --namespace=<namespace>
+```
 
-Use the following command to generate usage metrics from the user session data, specifying the appropriate `KeyId`, `deploymentId`, `startDate`, and `endDate` values:
+## File based export in Kubernetes environment
+This session data usage reporting method will only be used in disconnected use cases within the Kubernetes environment where Helm has not configured Digital Experience with My HCLSoftware Portal.
+
+### Generating and uploading user session data usage in metrics format
+To generate the user session data usage in metrics format, the report include session data that has been encrypted for each user session. The `deploymentId` can be found in the My HCLSoftware Portal after clicking the deployment card in the URL; for example, `https://my.hcltechsw.com/deployments/pzneck8m`. In this case, `pzneck8m` represents the `deploymentId` as illustrated in the example URL.
+
+Use the following command to generate usage metrics from the user session data, specifying the appropriate `startDate`, `endDate` and `deploymentId` values:
+
+```sh
+kubectl exec -it <release name>-license-manager-0 -n <namespace> -- java -jar UserSessionReporting.jar GenerateMetricFile <YYYY-MM-DD> <YYYY-MM-DD> <deploymentId>
 ```
-kubectl exec -it <release name>-license-manager-0 -n <namespace> -- java -cp UserSessionReporting.jar GenerateMetricFile <deploymentId> <KeyId> <YYYY-MM-DD> <YYYY-MM-DD>
-```
+
 Where:
--   `deploymentId` is the deployment identifier.
--   `KeyId` is the Key ID provided by MHS during registration.
+
 -   `startDate` specifies the start date in YYYY-MM-DD format
 -   `endDate` specifies the end date in YYYY-MM-DD format
+-   `deploymentId` is the deployment identifier.
 
 To save the generated metrics to a file, use this command:
 
+```sh
+kubectl exec -it <release name>-license-manager-0 -n <namespace> -- java -jar UserSessionReporting.jar GenerateMetricFile <YYYY-MM-DD> <YYYY-MM-DD> <deploymentId> /tmp/{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics
 ```
-kubectl exec -it <release name>-license-manager-0 -n <namespace> -- java -cp UserSessionReporting.jar GenerateMetricFile <deploymentId> <KeyId> <YYYY-MM-DD> <YYYY-MM-DD> /tmp/{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics
-```
-`metricsFileName` The timestamp in the usage metrics file should be earlier than the start date, formatted as {YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics. For example: 2024-06-24T02-50-00_usage.metrics
+The timestamp in the usage metrics file should be earlier than the start date, formatted as {YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics. For example:`2024-06-24T02-50-00_usage.metrics`
 
 ### Example
 
-```
-kubectl exec -it pod/dx-deployment-license-manager-0 -n dxns -- java -cp UserSessionReporting.jar GenerateMetricFile pnkXXX AlphXXXX 2022-07-22 2025-07-28 > /tmp/2022-06-24T02-50-00_usage.metrics
+```sh
+kubectl exec -it pod/dx-deployment-license-manager-0 -n dxns -- java -jar UserSessionReporting.jar GenerateMetricFile 2022-07-22 2025-07-28 pnkeq6pk > /tmp/2022-06-24T02-50-00_usage.metrics
 ```
 
 ### Expected result
@@ -96,7 +98,8 @@ End,370d193fe0be35950d2707026d23ce595ae46054b77efcc944aa2484eab39399976854c58321
 ```
 
 ### Upload usage metrics
-The generated `{YYYY-MM-DDTHH-MM-SS UTC}usage.metrics` file should then be uploaded to the My HCLSoftware portal for processing.
+The generated `{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics` file should then be uploaded to the [My HCLSoftware](../../software_licensing_portal/configure_entitlement_checks/mhs_upload_usage_metrics.md) portal for processing.
+
 
 ## My HCLSoftware vs FlexNet on Kubernetes
 The use cases for My HCLSoftware in Kubernetes deployments are very similar to those for FlexNet. The HCL DX License Manager container has been extended to integrate with MyHCL Software in a similar way to the existing integration with FlexNet. This integration ensures proper entitlement validation and usage reporting.
@@ -104,17 +107,5 @@ The use cases for My HCLSoftware in Kubernetes deployments are very similar to t
 **Entitlement Validation**: Periodically check whether the entitlement is still valid (typically valid for 12 months). The same grace period is also allowed, during which time reminders to renew the entitlelment before it expires will be posted in the container log.
 
 **User Session Reporting**: Periodically send user session reports to My HCLSoftware, allowing customers and HCL to monitor consumption is aligned within the allocated entitlement tier. These reports help assess if a change to a different usage tier is required based on the number of user sessions consumed.
-
-## Accessing MyHCL Software usage reporting dashboard
-Access the Deployments section of the My HCLSoftware portal to review entitlements and user session consumption reports.
-
-![](../../software_licensing_portal/_img/upload_usage_metric_file.png) 
-
-- Upload the usage metric file in MHS UI for a selected deployment.
-- Wait for successful upload or look for error message if any validation or server failure on the UI 
-  - If status is `validating` or `processing` . User can wait on the page or return back to see status changing to `completed` or `failed` or `rejected`
-  - If status is `rejected` , it could be among these many reasons- hash chaining is tampered / invalid signature / fields are not in a required format . User should upload the valid file.
-  - If status is `failed`,user should reach out to MHS support through IT operations
-  - If status is `completed`, file is validated and consumed successfully 
 
 **INCLUDE SCREENSHOTS AND INSTRUCTIONS TO VIEW USERSESSION COUNT IN THE UI**

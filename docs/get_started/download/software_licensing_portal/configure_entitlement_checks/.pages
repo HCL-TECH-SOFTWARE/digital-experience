@@ -6,3 +6,4 @@ nav:
     -   configuring_mhs_and_file_based_export.md
     -   export_usage_report.md
     -   user_session_reporting_tool.md
+    -   user_session_reporting_tool_non_kubernetes.md
