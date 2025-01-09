@@ -16,7 +16,7 @@ This section provides steps on how some styling customizations of the new search
 
     2. Create a new theme module
         1. A connection agains the `themes` folder via WebDav should be done
-        2. Now you have to open the PractitionerStudio theme
+        2. Now you have to open the `PractitionerStudio` theme
         3. Create a new folder under the `modules` folder with a unique module ID (for example: `dx_search_custom_css`)
         4. Please apply this structur to the new module
             - `../PractitionerStudio/modules/<unique-module-id>/localization.properties`
@@ -35,7 +35,7 @@ This section provides steps on how some styling customizations of the new search
 
 2. Used the new custom css module in a theme profile
     
-    Adjust the `../PractitionerStudio/profiles/profile_search_v2.json` and add the new custom theme module id to it
+    Adjust the `../PractitionerStudio/profiles/profile_search_v2.json` and add the new unique module ID to the profile
 
 3. Open DX and start a new search, now you should see your styling overrides
 
@@ -55,7 +55,7 @@ This section provides steps on how some styling customizations of the new search
 
     2. Create a new theme module
         1. A connection agains the `themes` folder via WebDav should be done
-        2. Now you have to open the PractitionerStudio theme
+        2. Now you have to open the `PractitionerStudio` theme
         3. Create a new folder under the `modules` folder with a unique module ID (for example: `dx_search_custom_css`)
         4. Please apply this structur to the new module:
             - `../PractitionerStudio/modules/<unique-module-id>/localization.properties`
@@ -74,6 +74,6 @@ This section provides steps on how some styling customizations of the new search
 
 5. Used the new custom css module in a theme profile
     
-    Adjust the `../PractitionerStudio/profiles/profile_search_v2.json` and replace the `dx_search_css` with the new custom theme module id
+    Adjust the `../PractitionerStudio/profiles/profile_search_v2.json` and replace the `dx_search_css` module ID with the new custom unique module ID
 
 6. Open DX and start a new search, now you should see your styling adjustments
