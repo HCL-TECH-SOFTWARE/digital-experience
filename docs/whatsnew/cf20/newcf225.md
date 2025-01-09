@@ -30,6 +30,8 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new option is available where you can have the seedlist return items affected by library access control changes. To enable this feature, set ```seedlistUpdateLibrariesForAccessControl=true``` in `WCM WCMConfigService`. For more information, see [Crawling web content with search seedlists](../../build_sites/search/crawling_webcontent_seedbase/index.md).
 
+### User Session Reporting Tool for non-Kubernetes deployments
+
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
 === "Containers"
