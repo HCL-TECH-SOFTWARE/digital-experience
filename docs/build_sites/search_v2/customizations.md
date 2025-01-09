@@ -1,8 +1,8 @@
-# Customisations of Search V2
+# Customizations of Search V2
 
-## Styling customisations
+## Styling customizations
 
-This section provides steps on how some styling customisations of the new search are possible. Two options are possbile:
+This section provides steps on how some styling customizations of the new search are possible. Two options are possbile:
 
 1. Provide a custom CSS theme module with some styling overrides
 2. Provide a custom CSS theme module with all search stylings and some styling adjustments
@@ -12,7 +12,7 @@ This section provides steps on how some styling customisations of the new search
 1. Create under the PractitionerStudio a new module
     1. Connect against the Core theme section via WebDav
         - Please open the theme resources from your DX system via WebDav to adjust some resources. Please follow this  [instruction](../../manage_content/wcm_delivery/webdav/administer_webdav/mash_webdav_store.md) here.
-        - You can also use the DxClient tool to do that.
+        - You can also use the DxClient tool to do that. Please follow this [instruction](../../extend_dx/development_tools/dxclient/index.md) here.
 
     2. Create a new theme module
         1. A connection agains the `themes` folder via WebDav should be done
@@ -51,7 +51,7 @@ This section provides steps on how some styling customisations of the new search
 3. Create under the PractitionerStudio a new module
     1. Connect against the Core theme section via WebDav
         - Please open the theme resources from your DX system via WebDav to adjust some resources. Please follow this  [instruction](../../manage_content/wcm_delivery/webdav/administer_webdav/mash_webdav_store.md) here.
-        - You can also use the DxClient tool to do that.
+        - You can also use the DxClient tool to do that. Please follow this [instruction](../../extend_dx/development_tools/dxclient/index.md) here.
 
     2. Create a new theme module
         1. A connection agains the `themes` folder via WebDav should be done
