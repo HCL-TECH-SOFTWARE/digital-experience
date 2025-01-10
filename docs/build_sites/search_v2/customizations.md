@@ -42,7 +42,9 @@ This section provides steps on how some styling customizations of the new search
 ### Provide a custom CSS theme module with all search stylings and some styling adjustments
 
 1. Download the current stylings via the Theme analyzer
-![Screenshot](../../assets/HCL_Search_Theme_Analyzer.png)
+    ![Screenshot](../../assets/HCL_Search_Theme_Analyzer.png)
+
+    For more information please check this [instruction](../components/#getting-the-default-theme-modules) here.
 
 2. Adjust the stylings
     - Please use a formatting tool to get a formatted version of the CSS content
