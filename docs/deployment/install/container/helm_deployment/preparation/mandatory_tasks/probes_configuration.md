@@ -1,6 +1,6 @@
 # Probes Configuration in values.yaml file
 
-The `liveness` and `readiness` probes such as the status thresholds and time values can be modified. The probe target values are not configurable anymore because they are application specific and the values must not be changed.
+You can modify `liveness` and `readiness` probes such as the status thresholds and time values. However, you cannot configure the probe target values because they are specific to the application and the values must not be changed.
 
 ```yaml
 # Liveness probe using the applications HTTP probe endpoint 
@@ -19,7 +19,8 @@ The `liveness` and `readiness` probes such as the status thresholds and time val
       timeoutSeconds: 30
 ```
 
-There is one exception to probe target values being unconfigurable: Core provides a customProbeURL value which allows its liveness probe target value to be configured.
+Note that there is an exception to the probe target values being not configurable. Core provides a `customProbeURL` value which allows its `liveness` probe target value to be configured.
+
 ```yaml
 # The liveness probe for Core provides a customProbeURL value. 
 # You may add a custom URL, e.g., "/sample/url". The leading slash is required. 
@@ -33,10 +34,11 @@ There is one exception to probe target values being unconfigurable: Core provide
       customProbeURL: "/sample/url"
 ```
 
-When customProbeURL is empty, the liveness probe target value for Core defaults to "/ibm/console".
+When the `customProbeURL` is empty, the `liveness` probe target value for Core is `"/ibm/console"` by default.
+
 ```yaml
 # The liveness probe target value for Core in this case is "/ibm/console"
       customProbeURL: ""
 ```
 
-Information about the configuration options can be found in the [Kubernetes documentation](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#configure-probes).
+You can find information about the configuration options in the [Kubernetes documentation](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#configure-probes){target="_blank"}.
