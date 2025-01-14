@@ -1,13 +1,11 @@
 # Customizations of Search V2
 
-## Styling customizations
+This topic provides information on the possible style customizations for Search V2. There are two options:
 
-This section provides steps on how some styling customizations of the new search are possible. Two options are possible:
+- [Provide a custom CSS theme module with some styling overrides.](#providing-a-custom-css-theme-module-with-some-styling-overrides)
+- [Provide a custom CSS theme module with all search stylings and some styling adjustments.](#providing-a-custom-css-theme-module-with-all-search-stylings-and-some-styling-adjustments)
 
-1. Provide a custom CSS theme module with some styling overrides
-2. Provide a custom CSS theme module with all search stylings and some styling adjustments
-
-### Provide a custom CSS theme module with some stylings overrides
+## Provide a custom CSS theme module with some stylings overrides
 
 1. Create a new module under Practitioner Studio
     1. Connect against the Core theme section via WebDav
@@ -29,24 +27,25 @@ This section provides steps on how some styling customizations of the new search
 
         6. Add styling overrides to the `index.css` file
 
-        7. Check the new theme module via the theme analyzer
+        7. Verify the `index.css` stylings by clicking the **Sub-Contribution** link
             ![Screenshot](../../assets/HCL_Search_Theme_Analyzer_New_Module.png)
-            Click on the `Sub-Contribution` link to verfy the `index.css` stylings.
 
-2. Use the new custom css module in a theme profile
+2. Use the new custom CSS module in a theme profile
     
-    Adjust the `../PractitionerStudio/profiles/profile_search_v2.json` and add the new unique module ID to the profile
+    Edit the `../PractitionerStudio/profiles/profile_search_v2.json` and add the new unique module ID to the profile.
 
-3. Open DX and start a new search, now you should see your styling overrides
+3. Open DX and start a new search
 
-### Provide a custom CSS theme module with all search stylings and some styling adjustments
+    Your styling changes should be visible when you start a new search.
+
+## Provide a custom CSS theme module with all search stylings and some styling adjustments
 
 1. Download the current stylings via the Theme analyzer
     ![Screenshot](../../assets/HCL_Search_Theme_Analyzer.png)
 
     For more information please check this [instruction](../components/#getting-the-default-theme-modules) here.
 
-2. Adjust the stylings
+2. Edit the stylings
     - Please use a formatting tool to get a formatted version of the CSS content
     - Now you can adjust some stylings
 
@@ -59,7 +58,7 @@ This section provides steps on how some styling customizations of the new search
         1. A connection agains the `themes` folder via WebDav should be done
         2. Now you have to open the `PractitionerStudio` theme
         3. Create a new folder under the `modules` folder with a unique module ID (for example: `dx_search_custom_css`)
-        4. Please apply this structure to the new module:
+        4. Please apply this structure to the new module
             - `../PractitionerStudio/modules/<unique-module-id>/localization.properties`
             - `../PractitionerStudio/modules/<unique-module-id>/head/`
             - `../PractitionerStudio/modules/<unique-module-id>/head/index.css`
@@ -70,12 +69,13 @@ This section provides steps on how some styling customizations of the new search
 
         6. Transfer your formatted and adjusted stylings to the `index.css` file
 
-        7. Check the new theme module via the theme analyzer
+        7. Verify the `index.css` stylings by clicking the **Sub-Contribution** link
             ![Screenshot](../../assets/HCL_Search_Theme_Analyzer_New_Module.png)
-            Click on the `Sub-Contribution` link to verify the `index.css` stylings.
 
 5. Use the new custom css module in a theme profile
     
-    Adjust the `../PractitionerStudio/profiles/profile_search_v2.json` and replace the `dx_search_css` module ID with the new custom unique module ID
+    Edit the `../PractitionerStudio/profiles/profile_search_v2.json` and replace the `dx_search_css` module ID with the new custom unique module ID.
 
-6. Open DX and start a new search, now you should see your styling adjustments
+6. Open DX and start a new search
+
+    Your styling changes should be visible when you start a new search.
