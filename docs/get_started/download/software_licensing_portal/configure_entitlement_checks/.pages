@@ -4,6 +4,7 @@ nav:
     -   flexnet_license_and_delivery.md
     -   configuring_local_flexnet_entitlement_server.md
     -   configuring_mhs_and_file_based_export.md
+    -   create_deployment_mhs_ui.md
     -   export_usage_report.md
     -   user_session_reporting_tool.md
     -   user_session_reporting_tool_non_kubernetes.md
