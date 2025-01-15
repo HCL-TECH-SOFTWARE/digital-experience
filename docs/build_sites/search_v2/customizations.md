@@ -2,7 +2,7 @@
 
 This topic provides information on the possible style customizations for Search V2. There are two options:
 
-- [Provide a custom CSS theme module with some styling overrides.](#providing-a-custom-css-theme-module-with-some-styling-overrides)
+- [Provide a custom CSS theme module with some styling overrides.](#providing-a-custom-css-theme-module-with-some-stylings-overrides)
 - [Provide a custom CSS theme module with all search stylings and some styling adjustments.](#providing-a-custom-css-theme-module-with-all-search-stylings-and-some-styling-adjustments)
 
 ## Providing a custom CSS theme module with some stylings overrides
