@@ -43,7 +43,7 @@ This topic provides information on the possible style customizations for Search 
 
 1. Download the current stylings using the **Analyzer** tab. For more information, see [Getting the default theme modules](components.md#getting-the-default-theme-modules).
 
-2. Edit the stylings you downloaded. Make sure to use a formatting tool to get a formatted version of the CSS content.
+2. Apply your desired changes to the stylings you downloaded. Make sure to use a formatting tool to get a formatted version of the CSS content.
 
 3. In Practitioner Studio, create a new module.
     1. Connect to the Core theme section using WebDav. There are two options:
@@ -62,7 +62,7 @@ This topic provides information on the possible style customizations for Search 
             - `title.en=DX Search Customization CSS`
             - `description.en=DX Search Customization CSS`
 
-        5. Transfer your formatted and adjusted stylings to the `index.css` file.
+        5. Copy your formatted and adjusted stylings and paste them to the `index.css` file.
 
         6. Check the new theme module using the **Analyzer** tab.
 
