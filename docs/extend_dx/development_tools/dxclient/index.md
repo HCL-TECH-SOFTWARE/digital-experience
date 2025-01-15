@@ -10,12 +10,12 @@ DXClient comes with multiple deployment options:
 
 - DXClient is now free to download and install through [NpmJS and Harbor repositories](#public-and-free-dxclient-installation-options)
 
-- Under licensed portal, one option is to deploy using the DXClient container package. DXClient is packaged as a container that you can run using OCI-based runtimes such as Docker or Podman. It is available as a container image from HCL DX 9.5 CF196 and later releases. For more information, see [DXClient installation using container package](#installing-dxclient-using-the-container-package-from-hcl-software-portal).
+- Under HCL Software licensed portal, one option is to deploy using the DXClient container package. DXClient is packaged as a container that you can run using OCI-based runtimes such as Docker or Podman. It is available as a container image from HCL DX 9.5 CF196 and later releases. For more information, see [DXClient installation using container package](#installing-dxclient-using-the-container-package-from-hcl-software-portal).
 
 !!!warning
     Recent changes to Podman introduced by RedHat have caused a compatibility issue with the container implementation of DXClient. HCL is currently investigating how this might be resolved. Until further notice, Docker is recommended for using the DXClient container implementation.
 
-- Under licensed portal, the alternative option is to deploy DXClient as native JavaScript code. Users who want to use this deployment option must install their own Node.js and Node Package Manager (npm) runtime environment in the correct version. Users must also install the required dependencies. For more information, see [DXClient installation using native js package](#installing-dxclient-using-the-native-javascript-package-from-hcl-software-portal).
+- Under HCL Software licensed portal, the alternative option is to deploy DXClient as native JavaScript code. Users who want to use this deployment option must install their own Node.js and Node Package Manager (npm) runtime environment in the correct version. Users must also install the required dependencies. For more information, see [DXClient installation using native js package](#installing-dxclient-using-the-native-javascript-package-from-hcl-software-portal).
 
 !!!important "Information about DXClient versions and distribution"
     DXClient is now free to download and install through [NpmJS and Harbor repositories](#public-and-free-dxclient-installation-options). After openly distributing DXClient, the versioning format of DXClient is now changed from 1.xx.x to <CFNumber\>.x.x. For example, the version of DXClient in the previous release was "1.29.0". Starting CF221, the versioning format uses the corresponding CF number of the DX deployment, making the DXClient version for CF221 "221.0.0". 
