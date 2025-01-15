@@ -37,7 +37,7 @@ This topic provides information on the possible style customizations for Search 
 
 3. Open DX and start a new search.
 
-    Your styling changes should be visible when you start a new search.
+     Your styling overrides should be visible when you start a new search. 
 
 ## Providing a custom CSS theme module with all search stylings and some styling adjustments
 
@@ -58,7 +58,7 @@ This topic provides information on the possible style customizations for Search 
             - `../PractitionerStudio/modules/<unique-module-id>/head/`
             - `../PractitionerStudio/modules/<unique-module-id>/head/index.css`
 
-        4. Add the following NLS information to the `localization.properties` file:
+        4. Add the following localization information to the `localization.properties` file:
             - `title.en=DX Search Customization CSS`
             - `description.en=DX Search Customization CSS`
 
