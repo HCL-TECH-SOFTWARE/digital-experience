@@ -6,7 +6,7 @@ Connector plug-ins are used for connections to other systems.
 -   **Connections Context Plug-in**
 
     -   Used to query various aspects of a connections context of a certain type.
-    -   The supported types are `service`, `portal`, `config` and `context`. Each type reveals different aspects of the current connections context.
+    -   The supported types are `service`, `portal`, `config`, and `context`. Each type reveals different aspects of the current connections context.
     -   To retrieve the current user from the portal context, use `[Plugin:ConnectionsContext type="portal" key="userId"]`.
     -   To get the URL of the social object that is currently selected, use `[Plugin:ConnectionsContext type="context" key="url"]`.
 

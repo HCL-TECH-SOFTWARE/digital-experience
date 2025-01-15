@@ -68,7 +68,7 @@ Content plug-ins are used with the current content item.
 
     -   Used to write a value from a text provider.
     -   The syntax of the plug-in is `[Plugin:TextProvider provider="" key="" defaultValue="" param.0="" param.1="" param.X=""]` where the `provider` parameter must be set to the name of the text provider, and the `key` parameter set to the key that should be retrieved.
-    -   If no provider is set, the plug-in will use the text provider that is set for the title of the current content.
+    -   If no provider is set, the plug-in uses the text provider that is set for the title of the current content.
     -   The optional parameter `defaultValue` can be used to set a value that is written if the text provider does not return a result. Otherwise, nothing is written by this plug-in.
     -   Placeholders in the text are replaced with the values of all optional parameters that are specified in the plug-in tag.
     -   From CF09, you can also use the tag alias of `Localize` for this tag. This can be more applicable when you use this tag purely to render localized text. For example: `[Plugin:Localize provider="translated" key="title"]`.
