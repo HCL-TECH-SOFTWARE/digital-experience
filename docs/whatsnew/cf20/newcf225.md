@@ -5,7 +5,7 @@ The following features and updates are available to customers installing HCL Dig
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Adjustment of seedlists for access control changes
-- User Session Reporting Tool for non-Kubernetes deployments
+- DXClient - LiveSync supports Presentation Templates
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -16,6 +16,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - Search V2 - Styling customizations
+- Custom `liveness` probe target value
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Removal of automated Pod restart on ConfigMap updates
 
@@ -31,7 +32,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new option is available where you can have the seedlist return items affected by library access control changes. To enable this feature, set ```seedlistUpdateLibrariesForAccessControl=true``` in `WCM WCMConfigService`. For more information, see [Crawling web content with search seedlists](../../build_sites/search/crawling_webcontent_seedbase/index.md).
 
-### User Session Reporting Tool for non-Kubernetes deployments
+### DXClient - LiveSync supports Presentation Templates
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
@@ -58,6 +59,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ## Digital Experience 9.5 Container Version
 
 ### Search V2 - Styling customizations
+
+=== "Containers"
+
+
+### Custom `liveness` probe target value
+
+=== "Containers"
+    In previous releases, the `liveness` probe target values are fixed because they are specific to the application and should not be changed. Starting CF225, Core provides a `customProbeURL` value that allows you to configure the `liveness` probe target value. If the `customProbeURL` is empty, the `liveness` probe target value for Core is `"/ibm/console"` by default. For more information, see [Probes configuration in values.yaml file](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/probes_configuration.md).
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
