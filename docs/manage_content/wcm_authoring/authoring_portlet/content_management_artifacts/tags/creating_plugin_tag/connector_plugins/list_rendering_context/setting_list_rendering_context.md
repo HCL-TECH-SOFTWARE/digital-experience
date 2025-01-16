@@ -1,7 +1,6 @@
 # Setting the list-rendering context
 
-
-Learn about how you set the list-rendering context in Digital Data Connector \(DDC\) for HCL Portal.
+Learn how to set the list-rendering context in Digital Data Connector \(DDC\) for HCL Digital Experience.
 
 To establish the list-rendering context, you add the following tag to your presentation template:
 
