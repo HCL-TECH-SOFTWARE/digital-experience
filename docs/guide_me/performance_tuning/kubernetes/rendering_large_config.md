@@ -2,7 +2,7 @@
 title: Rendering - Large-Sized Configuration
 ---
 
-# Sizing guidance for rendering in a medium-sized Kubernetes configuration
+# Sizing guidance for rendering in a large-sized Kubernetes configuration
 
 This topic provides the details of the environments used for rendering in a Large-sized Kubernetes configuration. You can also find the test results and recommendations for Large configurations on this page.
 
@@ -55,7 +55,6 @@ This section provides details for the Kubernetes cluster, Jmeter, LDAP, and data
 
       - Volume details
 
-      ![](../../../images/c5_4xlarge_volume_info.png){ width="600" }
       ![](../../../images/c5_4xlarge_volume_info.png){ width="600" }
 
 - c5.2xlarge
@@ -157,11 +156,11 @@ There are several factors that can affect the performance of DX in Kubernetes. C
 
 - For a large-sized workload in AWS, the Kubernetes cluster should begin with one master and twelve worker nodes. 
 
-- Recommendations similar to medium config [recommendations](./rendering_medium_config.md/#recommendations)
+- Please follow the same recommendations in the medium config [medium-config-recommendations](./rendering_medium_config.md/#recommendations)
 
 - Core pods to increase proportional to the load, then we can see the response times improving.
 
-- Additionally to that memory of pods like DAM, persistence-node, haproxy and ringapi increased to avoid the OOM issues during 25k and 30k concurrent loads. 
+- Additionally to that memory of pods like DAM, persistence-node, haproxy and ringapi increased to avoid the OOM (Object Out of Memory) issues during 25k and 30k concurrent loads. 
 
 
 !!!note
@@ -183,7 +182,7 @@ There were a number of alterations done to the initial Helm chart configuration.
 | runtimeController | 1 | 100 | 256 | 100 | 256 |
 | **haproxy** | **2** | **3000** | **2048** | **3000** | **2048** |
 | licenseManager | 1 | 100 | 300 | 100 | 300 |
-| **Total** | | **56000** | **79532** | **56000** | **79532** |
+| **Total** | | **1476000** | **223916** | **1476000** | **223916** |
 
 !!!note
      Values in bold are tuned Helm values while the rest are default minimal values.
