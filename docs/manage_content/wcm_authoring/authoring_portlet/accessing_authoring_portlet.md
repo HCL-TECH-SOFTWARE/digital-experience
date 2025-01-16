@@ -2,7 +2,7 @@
 title: Access Web Content Authoring
 ---
 
-To access the Authoring page configured with the Web Content Authoring portlet, open the applications menu then go to **Web Content > Authoring**.
+To access the Authoring page configured with the Web Content Authoring portlet, open the **Applications Menu** then go to **Web Content > Authoring**. Alternatively, you can go to **Web Content > Authoring** from the Practitioner Studio homepage.
 
 ## Authoring portlet access rights
 
