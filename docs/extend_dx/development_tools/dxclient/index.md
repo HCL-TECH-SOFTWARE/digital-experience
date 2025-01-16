@@ -8,7 +8,7 @@ DXClient is meant to be the one-stop, platform-independent solution that lets yo
 
 DXClient comes with multiple deployment options:
 
-- DXClient is now free to download and install through [NpmJS and Harbor repositories](#public-and-free-dxclient-installation-options)
+- DXClient is free to download and install through [NpmJS and Harbor repositories](#public-and-free-dxclient-installation-options).
 
 - Under HCL Software licensed portal, one option is to deploy using the DXClient container package. DXClient is packaged as a container that you can run using OCI-based runtimes such as Docker or Podman. It is available as a container image from HCL DX 9.5 CF196 and later releases. For more information, see [DXClient installation using container package](#installing-dxclient-using-the-container-package-from-hcl-software-portal).
 
