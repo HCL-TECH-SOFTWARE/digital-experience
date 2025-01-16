@@ -352,7 +352,7 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
 
     -   HCL DX 9.5 CF224 release: **V224.0.0
         -  New DXClient LiveSync sub-commands: [LiveSync push-wcm-design-library](../dxclient/dxclient_artifact_types/livesync.md#livesync-push-wcm-design-library) and [pull-wcm-design-library](../dxclient/dxclient_artifact_types/livesync.md#livesync-pull-wcm-design-library)
-        - Livesync enabled for HTML Components under WCM Design Library.
+        - Livesync is enabled for HTML Components under WCM Design Library.
 
     -   HCL DX 9.5 CF221 release: **V221.0.0
         -  A one time license agreement click-through is enabled. To skip the prompt, use the [accept-license](#dxclient-information-commands) command.
