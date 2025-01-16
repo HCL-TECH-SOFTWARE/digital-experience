@@ -128,7 +128,7 @@ This section provides details for the Kubernetes cluster, Jmeter, LDAP, and data
 
 ### DX core tuning for concurrent user run
 
-[Tuning details](./rendering_medium_config.md#dx-core-tuning-for-concurrent-user-run)
+- Followed the same tunings in medium config [Medium-Config-Tuning](./rendering_medium_config.md#dx-core-tuning-for-concurrent-user-run)
 
 - LTPA token timeout increased from 120 minutes to 600 minutes for rendering tests execution.
 
