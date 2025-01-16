@@ -1,8 +1,8 @@
 ---
-title: Access the Authoring Portlet
+title: Access Web Content Authoring
 ---
 
-To access the authoring portlet, open the **Applications menu** then go to **Content > Web Content Management**.
+To access the Authoring page configured with the Web Content Authoring portlet, open the applications menu then go to **Web Content > Authoring**.
 
 ## Authoring portlet access rights
 
