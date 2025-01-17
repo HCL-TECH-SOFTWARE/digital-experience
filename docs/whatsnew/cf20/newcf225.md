@@ -34,6 +34,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ### DXClient - LiveSync supports Presentation Templates
 
+=== "Containers"
+    LiveSync now supports Presentation Templates. For more information, see [DXClient](../../extend_dx/development_tools/dxclient/index.md) and [](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md).
+
+=== "On-Premises"
+    LiveSync now supports Presentation Templates. For more information, see [DXClient](../../extend_dx/development_tools/dxclient/index.md) and [](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md).
+
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
 === "Containers"
@@ -61,12 +67,17 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Search V2 - Styling customizations
 
 === "Containers"
-
+    You can customize Search V2 by providing custom CSS modules. For more information, see [Customizations for Search V2](../../build_sites/search_v2/customizations.md).
 
 ### Custom `liveness` probe target value
 
 === "Containers"
     In previous releases, the `liveness` probe target values are fixed because they are specific to the application and should not be changed. Starting CF225, Core provides a `customProbeURL` value that allows you to configure the `liveness` probe target value. If the `customProbeURL` is empty, the `liveness` probe target value for Core is `"/ibm/console"` by default. For more information, see [Probes configuration in values.yaml file](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/probes_configuration.md).
+
+### New sizing guidance for rendering in a large configuration
+
+=== "Containers"
+    Results of DX sizing tests for rendering in a large Kubernetes configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic []().
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
