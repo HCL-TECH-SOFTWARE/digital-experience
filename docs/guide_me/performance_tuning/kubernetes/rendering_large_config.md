@@ -186,6 +186,14 @@ There were a number of alterations done to the initial Helm chart configuration.
 
 !!!note
      Values in bold are tuned Helm values while the rest are default minimal values.
+
+For convenience, these values were added to the `large-config-values.yaml` file in the hcl-dx-deployment Helm chart. To use these values, complete the following steps:
+
+1. Download the Helm chart from FlexNet or Harbor.
+
+2. Extract the TGZ file (`hcl-dx-deployment-XXX.tgz`).
+
+3. In the extracted folder, navigate to the following structure to go to the `large-config-values.yaml` file: `hcl-dx-deployment/value-samples/large-config-values.yaml`.    
  
 ???+ info "Related information"
     - [DX Performance Tuning Guide](../traditional_deployments.md)
