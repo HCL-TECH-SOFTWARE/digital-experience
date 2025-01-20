@@ -123,7 +123,7 @@ This section provides details for the Kubernetes cluster, JMeter, LDAP, and data
 
 
 !!!note
-      Ramp-up time is 1.5 seconds per user. Test duration is the total of ramp-up time and 1 hour with peak load of concurrent users.
+      Ramp-up time is 4 seconds per user. Test duration is the total of ramp-up time and 1 hour with peak load of concurrent users.
 
 
 ### DX core tuning for concurrent user run
