@@ -1,11 +1,12 @@
 # Customizations for Search V2
 
+## Provide a custom CSS theme module
 This topic provides information on the possible style customizations for Search V2. There are two options:
 
 - [Provide a custom CSS theme module with some styling overrides.](#providing-a-custom-css-theme-module-with-some-stylings-overrides)
 - [Provide a custom CSS theme module with all search stylings and some styling adjustments.](#providing-a-custom-css-theme-module-with-all-search-stylings-and-some-styling-adjustments)
 
-## Providing a custom CSS theme module with some stylings overrides
+### Providing a custom CSS theme module with some stylings overrides
 
 1. Create a new module under Practitioner Studio.
     1. Connect to the Core theme section using WebDav. There are two options:
@@ -26,6 +27,14 @@ This topic provides information on the possible style customizations for Search 
 
         5. Add styling overrides to the `index.css` file.
 
+            See the sample customized CSS code which changed the background color dx-search-center-layout component.
+
+            ```css
+            dx-search-center-layout::part(main) {
+                background-color: #f0f0f0;
+            }
+            ```
+
         6. Check the new theme module using the **Analyzer** tab. 
 
         7. Verify the `index.css` stylings by clicking the **Sub-Contribution** link.
@@ -39,7 +48,7 @@ This topic provides information on the possible style customizations for Search 
 
     Your styling overrides should be visible when you start a new search. 
 
-## Providing a custom CSS theme module with all search stylings and some styling adjustments
+### Providing a custom CSS theme module with all search stylings and some styling adjustments
 
 1. Download the current stylings using the **Analyzer** tab. For more information, see [Getting the default theme modules](components.md#getting-the-default-theme-modules).
 
@@ -64,6 +73,14 @@ This topic provides information on the possible style customizations for Search 
 
         5. Copy your formatted and adjusted stylings and paste them to the `index.css` file.
 
+            See the sample customized CSS code which changed the background color dx-search-center-layout component.
+
+            ```css
+            dx-search-center-layout::part(main) {
+                background-color: #f0f0f0;
+            }
+            ```
+
         6. Check the new theme module using the **Analyzer** tab.
 
         7. Verify the `index.css` stylings by clicking the **Sub-Contribution** link.
@@ -76,3 +93,100 @@ This topic provides information on the possible style customizations for Search 
 6. Open DX and start a new search.
 
     Your styling changes should be visible when you start a new search.
+
+## Styling the search components
+
+This section explains the default styles for search components and how to customize them.
+
+### Default styling
+
+Each component comes with default styles. See the following examples of different default styles below.
+
+```scss
+dx-button::part(button) {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  background-color: #0550DC;
+  border: none;
+  color: #FFFFFF;
+  display: flex;
+  flex: 0 1 auto;
+  font-size: 16px;
+  height: 32px;
+  padding: 8px 12px;
+}
+dx-button::part(button-disabled) {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  background-color: #0550DC;
+  border: none;
+  color: #FFFFFF;
+  display: flex;
+  flex: 0 1 auto;
+  font-size: 16px;
+  height: 32px;
+  padding: 8px 12px;
+  background-color: lightgray;
+  color: darkgray;
+  cursor: not-allowed;
+}
+dx-button::part(button-text) {
+  font-size: 16px;
+  line-height: 1;
+  overflow: hidden;
+}
+...
+
+dx-input-textfield::part(div) {
+  width: 100%;
+  position: relative;
+}
+dx-input-textfield::part(label) {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  display: block;
+  color: rgba(0, 0, 0, 0.87);
+}
+dx-input-textfield::part(input) {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #FFFFFF;
+  display: block;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.38);
+  padding: 7px 8px;
+  height: 16px;
+}
+...
+```
+
+
+### Style customization
+
+You can override styles by targeting the component's class names. Other components can be overridden in a similar manner. Refer to the styling examples below for `dx-button` and `dx-input-textfield`.
+
+!!! note
+    The `part` attribute is used to name parts of a shadow tree, which can then be styled from outside the shadow DOM using the `::part()` pseudo-element. This allows you to apply CSS styles to shadow tree elements from the parent DOM. More information about supported `part` attributes, see [Atomic Components](components.md#atomic-components).    
+
+```css
+/* for dx-button */
+dx-button::part(button-text) {
+  color: #FF0000; /* is overriding the button-start-icon color */
+}
+
+/* for dx-input-textfield */
+dx-input-textfield::part(label) {
+  color: #FF0000; /* is overriding the button label color */
+}
+```
