@@ -96,11 +96,11 @@ This section provides details for the Kubernetes cluster, JMeter, LDAP, and data
 
 - JMeter instance details (c5.2xlarge)
 
-- To run the tests, a distributed AWS/JMeter agents setup consisting of 1 primary and 20 subordinates was used.
-
       ![](../../../images/Header-1-AWS-Med.png){ width="1000" }
 
       ![](../../../images/C5.2xlarge.png){ width="1000" }
+
+      To run the tests, a distributed AWS/JMeter agents setup consisting of 1 primary and 20 subordinates was used.
 
 
 - Processor details
@@ -123,7 +123,7 @@ This section provides details for the Kubernetes cluster, JMeter, LDAP, and data
 
 
 !!!note
-      Ramp-up time is 0.4 seconds per user. Test duration is the total of ramp-up time and 1 hour with peak load of concurrent users.
+      Ramp-up time is 0.4 seconds per user. Test duration is the total of ramp-up time and one hour with peak load of concurrent users.
 
 
 ### DX core tuning for concurrent user run
@@ -188,12 +188,12 @@ Alterations were made to the initial Helm chart configuration during the tests. 
      Values in bold are tuned Helm values while the rest are default minimal values.
 
 For convenience, these values were added to the `large-config-values.yaml` file in the `hcl-dx-deployment` Helm chart. To use these values, complete the following steps:
-	
-	1. Download the `hcl-dx-deployment` Helm chart from FlexNet or Harbor.
-	
-	2. Extract the `hcl-dx-deployment-XXX.tgz` file.
-	
-	3. In the extracted folder, navigate to `hcl-dx-deployment/value-samples/large-config-values.yaml` and copy the `large-config-values.yaml` file.   
- 
+
+1. Download the `hcl-dx-deployment` Helm chart from FlexNet or Harbor.
+
+2. Extract the `hcl-dx-deployment-XXX.tgz` file.
+
+3. In the extracted folder, navigate to `hcl-dx-deployment/value-samples/large-config-values.yaml` and copy the `large-config-values.yaml` file.   
+
 ???+ info "Related information"
     - [DX Performance Tuning Guide](../traditional_deployments.md)
