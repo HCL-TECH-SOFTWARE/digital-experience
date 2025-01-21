@@ -123,7 +123,7 @@ This section provides details for the Kubernetes cluster, JMeter, LDAP, and data
 
 
 !!!note
-      Ramp-up time is 0.4 seconds per user. Test duration is the total of ramp-up time and one hour with peak load of concurrent users.
+      Ramp-up time is 5 virtual users every 2 seconds. Test duration is the total of ramp-up time and one hour with peak load of concurrent users.
 
 
 ### DX core tuning for concurrent user run
@@ -158,9 +158,11 @@ There are several factors that can affect the performance of DX in Kubernetes. C
 
 - Follow the same recommendations in the sizing activity for a [medium-sized configuration](./rendering_medium_config.md/#recommendations).
 
-- Increase the number of Core pods proportionally to the load to improve response times.
+- For a load of 10,000 concurrent users, we used 7 core pods. To maintain good response times for 30,000 concurrent users, we proportionally increased the number of core pods to 23.
 
-- Increase the memory of pods such as DAM, persistence-node, haproxy and ringapi to avoid OOM (Object Out of Memory) issues when testing with 25,000 and 30,000 concurrent loads.
+- Increase the memory allocation for the DAM pod by approximately 1024Mi for every 10,000 concurrent users to prevent Out of Memory (OOM) issues.
+
+- Increase the CPU allocation for the haproxy pod by approximately 1 CPU for every 10,000 concurrent users.
 
 
 !!!note
@@ -193,7 +195,12 @@ For convenience, these values were added to the `large-config-values.yaml` file 
 
 2. Extract the `hcl-dx-deployment-XXX.tgz` file.
 
-3. In the extracted folder, navigate to `hcl-dx-deployment/value-samples/large-config-values.yaml` and copy the `large-config-values.yaml` file.   
+3. In the extracted folder, navigate to `hcl-dx-deployment/value-samples/large-config-values.yaml` and copy the `large-config-values.yaml` file.  
+
+### Roadmap
+
+- Update the large configuration setups to include 10 times the content (pages, pages and portlets, and DAM assets) and test with 30,000 concurrent user load. we will provide the detailed guidance in this document with results.
+
 
 ???+ info "Related information"
     - [DX Performance Tuning Guide](../traditional_deployments.md)
