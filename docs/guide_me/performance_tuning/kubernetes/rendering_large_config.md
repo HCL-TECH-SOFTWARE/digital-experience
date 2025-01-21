@@ -10,7 +10,7 @@ This topic provides the details of the environments used for rendering in a larg
 
 ### Overview of DX rendering sizing-performance tests
 
-This sizing activity rendered scenarios for the Web Content Manager (WCM), Digital Asset Management (DAM), and Pages & Portlets. This activity used a rendering setup enabled in AWS/Native-Kubernetes, where Kubernetes is installed directly in Amazon Elastic Cloud Compute (EC2) instances. A combination run was performed that rendered WCM content, DAM assets, and HCL Digital Experience (DX) pages and portlets. The load distribution was WCM content (40%), DAM assets (30%), and DX pages and portlets (30%). All systems were pre-populated before performing the rendering tests.
+This sizing activity rendered scenarios for the Web Content Manager (WCM), Digital Asset Management (DAM), and HCL Digital Experience (DX) pages & portlets. This activity used a rendering setup enabled in AWS/Native-Kubernetes, where Kubernetes is installed directly in Amazon Elastic Cloud Compute (EC2) instances. A combination run was performed that rendered WCM content, DAM assets, and DX pages and portlets. The load distribution was WCM content (40%), DAM assets (30%), and DX pages and portlets (30%). All systems were pre-populated before performing the rendering tests.
 
 To achieve the 30,000 concurrent users mark, an initial set of runs was done with a lower number of users on a multiple node setup with varying numbers of worker nodes. The tests started with eight worker nodes. The number of worker nodes and pods were increased as needed to achieve the desired load with an acceptable error rate (< 0.01%). After establishing the number of nodes, further steps were taken to optimize the limits on the available resources for each pod, as well as the ratios of key pods to each other.
 
@@ -123,7 +123,7 @@ This section provides details for the Kubernetes cluster, JMeter, LDAP, and data
 
 
 !!!note
-      Ramp-up time is 4 seconds per user. Test duration is the total of ramp-up time and 1 hour with peak load of concurrent users.
+      Ramp-up time is 0.4 seconds per user. Test duration is the total of ramp-up time and 1 hour with peak load of concurrent users.
 
 
 ### DX core tuning for concurrent user run
@@ -141,9 +141,9 @@ This section provides details for the Kubernetes cluster, JMeter, LDAP, and data
 
 The initial test runs were conducted on an AWS-distributed Kubernetes setup with one master and eight worker nodes. The system successfully handled concurrent user loads of 10,000 and 15,000 with a low error rate (< 0.0001%). At 20,000 users, error rates increased dramatically and response times went up. For a response time to be considered optimal, it should be under 1 second.
 
-Afterward, the tests moved to a setup with twelve worker nodes and 30,000 concurrent users. The error rates were low (<0.0001%) and response times were satisfactory. Then, alterations were made to the number of pods, CPU, and memory of each of the following containers: HAProxy, Core, RingAPI, digitalAssetManagement, persistenceNode, and persistenceConnectionPool. The alterations to these containers aimed to determine which factors were significantly beneficial.
+Afterward, the tests moved to a setup with twelve worker nodes and 30,000 concurrent users. The error rates were low (<0.0001%) and response times were satisfactory. In this setup, alterations were made to the number of pods, CPU, and memory of each of the following containers: HAProxy, Core, RingAPI, digitalAssetManagement, persistenceNode, and persistenceConnectionPool. These alterations aimed to determine which factors were significantly beneficial.
 
-For the Core pod, increasing the CPU limit gave a boost to performance, but this effect eventually saturated at 5600 millicore. Increasing the number of Core pods at this point had additional benefits
+For the Core pod, increasing the CPU limit gave a boost to performance, but this effect eventually saturated at 5600 millicore. Increasing the number of Core pods at this point had additional benefits.
 
 ## Conclusion
 
@@ -156,9 +156,9 @@ There are several factors that can affect the performance of DX in Kubernetes. C
 
 - For a large-sized workload in AWS, start the Kubernetes cluster with 1 master and 12 worker nodes.
 
-- Follow the same recommendations in the [medium configuration](./rendering_medium_config.md/#recommendations).
+- Follow the same recommendations in the sizing activity for a [medium-sized configuration](./rendering_medium_config.md/#recommendations).
 
-- Increase the number of `Core` pods proportionally to the load to improve response times.
+- Increase the number of Core pods proportionally to the load to improve response times.
 
 - Increase the memory of pods such as DAM, persistence-node, haproxy and ringapi to avoid OOM (Object Out of Memory) issues when testing with 25,000 and 30,000 concurrent loads.
 
