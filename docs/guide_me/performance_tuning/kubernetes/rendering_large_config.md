@@ -92,6 +92,10 @@ This section provides details for the Kubernetes cluster, JMeter, LDAP, and data
       ![](../../../images/Remote-DB2-Volume-Info-Med.png){ width="600" }
 
 
+### Load Balancer Set-up
+
+We used AWS Elastic Load Balancing (ELB) to automatically distribute incoming application traffic across multiple targets. In our DX Kubernetes deployment, we updated the HAProxy service type from "LoadBalancer" to "NodePort" with a specific serviceNodePort. We then added the EC2 worker node instances containing HAProxy pods as a target group in the AWS ELB listeners.
+
 ### JMeter agents
 
 - JMeter instance details (c5.2xlarge)
