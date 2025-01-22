@@ -37,7 +37,7 @@ There are multiple ways to create a new Postgres instance. Please refer to the d
     ```
 
     !!! Note
-        The credentials for `damUser` and `dxUser` can obtained from the configurations under `security.digitalAssetManagement` in `values.yaml`
+        The credentials for `damUser` and `dbUser` can obtained from the configurations under `security.digitalAssetManagement` in `values.yaml`.
 
 4. **Exit the Container**:
     ```sh
