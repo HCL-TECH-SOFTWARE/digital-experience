@@ -1,16 +1,22 @@
 # Configure External Database
 
-The [Digital Asset Management (DAM) persistence](../../../get_started/plan_deployment/container_deployment/dam_persistence_architecture.md) framework includes a Postgres database by default as persistence containers. This section provides instructions on how to externalize the database persistence containers to cloud or self-hosted databases.
+The [Digital Asset Management (DAM) persistence](../../../get_started/plan_deployment/container_deployment/dam_persistence_architecture.md) framework uses a Postgres database by default. This guide explains how to externalize the database persistence to cloud or self-hosted environments.
 
-## Back Up the Existing Database
+## External Database Requirements
 
-First, export the database dump from the current persistence node.
+Ensure the following prerequisites are met before configuring the external database:
 
-Refer to the [Backup Persistence](../../digital_assets/dam_backup_restore_image.md#backup-persistence) section for instructions on exporting the dump from the existing persistence nodes.
+- The external database must be PostgreSQL version 16.
+- Ensure network connectivity between the DX application and the external database.
+
+Follow these steps to configure the external database for your DAM application.
 
 ## Create and Set Up a New Postgres Database
 
-There are multiple ways to create a new Postgres instance. Please refer to the documentation from your cloud provider if you intend to use one of those. In this example, we will use a Postgres Docker image to set up externalization.
+You can create a new Postgres instance in various ways. Refer to your cloud provider's documentation if you plan to use one. This example uses a Postgres Docker image for externalization.
+
+!!! note
+    These steps are specific to a Docker image but may vary depending on the cloud offering. The intention is to create a database and users with necessary permissions and import the database dump.
 
 ### Steps to Set Up Postgres Using Docker
 
@@ -36,21 +42,25 @@ There are multiple ways to create a new Postgres instance. Please refer to the d
     ALTER DATABASE dxmediadb OWNER TO <damUser>;
     ```
 
-    !!! Note
-        The credentials for `damUser` and `dbUser` can obtained from the configurations under `security.digitalAssetManagement` in `values.yaml`.
+    !!! note
+        Obtain the credentials for `damUser` and `dbUser` from the configurations under `security.digitalAssetManagement` in the custom values YAML file.
 
 4. **Exit the Container**:
     ```sh
     exit
     ```
 
-5. **Move the Database Dump File**:
-    Move the database dump file to the server where the Docker container is running. Import the dump using the following command:
+5. **Back Up the Existing Database**:
+
+    Export the database dump from the current persistence node. Refer to the [Backup Persistence](../../digital_assets/dam_backup_restore_image.md#backup-persistence) section for instructions.
+
+6. **Move the Database Dump File**:
+    Transfer the database dump file to the server where the Docker container is running. Import the dump using:
     ```sh
     docker exec -i <external-postgres-name> psql -U postgres -d dxmediadb < dxmediadb.dmp
     ```
 
-6. **Verify the Database Import**:
+7. **Verify the Database Import**:
     ```sh
     docker exec -it <external-postgres-name> bash
     psql dxmediadb -U <damUser>
@@ -60,10 +70,10 @@ There are multiple ways to create a new Postgres instance. Please refer to the d
 
 Configure the external database host details in the Helm chart.
 
-1. **Modify `values.yaml`**:
-    - In the Helm chart, modify `values.yaml` or a custom values file if it exists.
+1. **Modify custom values YAML**:
+    - Open the custom values YAML file in edit mode.
     - Set the replica count for `persistence-connection-pool` and `persistence-node` to 0.
-    - Modify the database host name in `values.yaml` or the custom values file under `configuration.persistence.host`.
+    - Update the database host name under `configuration.persistence.host`.
 
 2. **Perform Helm Upgrade**:
     ```sh
@@ -73,5 +83,5 @@ Configure the external database host details in the Helm chart.
 ## Limitations
 
 - This configuration is not applicable for new deployments.
-- Creating or updating user credentials via helm chart is not supported.
+- Creating or updating user credentials via the Helm chart is not supported.
 - The DAM database will not be disabled if DAM is disabled in the Helm chart.
