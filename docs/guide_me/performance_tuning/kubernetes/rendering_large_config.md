@@ -145,13 +145,13 @@ We used AWS Elastic Load Balancing (ELB) to automatically distribute incoming ap
 
 The initial test runs were conducted on an AWS-distributed Kubernetes setup with one master and eight worker nodes. The system successfully handled concurrent user loads of 10,000 and 15,000 with a low error rate (< 0.0001%). At 20,000 users, error rates increased dramatically and response times went up. For a response time to be considered optimal, it should be under 1 second.
 
-Afterward, the tests moved to a setup with twelve worker nodes and 30,000 concurrent users. The error rates were low (<0.0001%) and response times were satisfactory. In this setup, alterations were made to the number of pods, CPU, and memory of each of the following containers: HAProxy, Core, RingAPI, digitalAssetManagement, persistenceNode, and persistenceConnectionPool. These alterations aimed to determine which factors were significantly beneficial.
+Subsequent tests were conducted on a setup with twelve worker nodes, evaluating various user loads up to 30,000 concurrent users. The error rates remained low (<0.0001%) and response times were satisfactory. Adjustments were made to the number of pods, CPU, and memory for the following containers: HAProxy, Core, RingAPI, digitalAssetManagement, persistenceNode, and persistenceConnectionPool. These changes aimed to identify the most beneficial factors.
 
 For the Core pod, increasing the CPU limit gave a boost to performance, but this effect eventually saturated at 5600 millicore. Increasing the number of Core pods at this point had additional benefits.
 
 ## Conclusion
 
-There are several factors that can affect the performance of DX in Kubernetes. Changes in the number of running nodes, number of pods, and the capacity of individual pods can improve its performance.
+There are several factors that can affect the performance of DX in Kubernetes. Changes in the number of running nodes, number of pods, and the capacity of individual pods can improve its performance. Any changes should be closely monitored to ensure precise tracking of resource utilization.
 
 !!!note
      Performance tuning for a Kubernetes DX cluster must be conducted for the particular workloads involving the number of concurrent users. Refer to the [DX Core tuning guide](../traditional_deployments.md) for further enhancements.
@@ -164,7 +164,7 @@ There are several factors that can affect the performance of DX in Kubernetes. C
 
 - For a load of 10,000 concurrent users, we used 7 core pods. To maintain good response times for 30,000 concurrent users, we proportionally increased the number of core pods to 23.
 
-- Increase the memory allocation for the DAM pod by approximately 1024Mi for every 10,000 concurrent users to prevent Out of Memory (OOM) issues.
+- Increase the memory allocation for the DAM and haproxy pods by approximately 1024Mi for every 10,000 concurrent users to prevent Out of Memory (OOM) issues.
 
 - Increase the CPU allocation for the haproxy pod by approximately 1 CPU for every 10,000 concurrent users.
 
