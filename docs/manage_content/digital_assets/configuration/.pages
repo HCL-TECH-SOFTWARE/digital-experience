@@ -10,3 +10,4 @@ nav:
     - Configure Digital Asset Management with a CDN: configure_dam_with_CDN.md
     - Rendition Version Regeneration and Cleanup: rendition_version_regeneration_and_cleanup.md
     - DAM Indexing: dam_indexing
+    - External DAM Database: external_dam_database.md
