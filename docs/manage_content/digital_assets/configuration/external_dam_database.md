@@ -8,6 +8,7 @@ Ensure the following prerequisites are met before configuring the external datab
 
 - The external database must be PostgreSQL version 16.
 - Ensure network connectivity between the DX application and the external database.
+- The default database user should have permissions to create roles, databases, and grant/alter privileges.
 
 Follow these steps to configure the external database for your DAM application.
 
