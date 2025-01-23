@@ -160,14 +160,21 @@ There are several factors that can affect the performance of DX in Kubernetes. C
 
 - For a large-sized workload in AWS, start the Kubernetes cluster with 1 master and 12 worker nodes.
 
-- Follow the same recommendations in the sizing activity for a [medium-sized configuration](./rendering_medium_config.md/#recommendations).
+- For a medium-sized workload in AWS, the Kubernetes cluster should begin with one master and four worker nodes. 
 
-- For a load of 10,000 concurrent users, we used 7 core pods. To maintain good response times for 30,000 concurrent users, we proportionally increased the number of core pods to 23.
+- For the HAProxy and RingApi containers, increasing the CPU increases throughput, but increasing the number of pods does not.
+
+- For DAM and persistence node pods, CPU limits were increased due to the observations from Grafana about the usage of CPU and memory on the load test. After this initial change, increasing the pod replicas boosted the performance and handling of the 10,000 concurrent users load. For DAM, increasing the number of pods increases throughput.
+
+- For testing purposes, OpenLDAP pod values were also increased for holding more authenticated users for rendering. However, the OpenLDAP pod is not for production use.
+
+- For optimizing the Core container, start with increasing the CPU until this saturates. After the optimal CPU level is determined, increase the number of pods to increase performance.
+
+-  Increase the number of `Core` pods proportionally to the load to improve response times. For example, for a load of 10,000 concurrent users, we used 7 core pods and for 30,000 concurrent users, we proportionally increased the number of core pods to 23.
 
 - Increase the memory allocation for the DAM and haproxy pods by approximately 1024Mi for every 10,000 concurrent users to prevent Out of Memory (OOM) issues.
 
 - Increase the CPU allocation for the haproxy pod by approximately 1 CPU for every 10,000 concurrent users.
-
 
 !!!note
      Do not size your JVM Heap size larger than the allotted memory for the pod.

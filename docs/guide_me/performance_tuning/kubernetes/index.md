@@ -1,6 +1,6 @@
 # Performance Sizing Guide for Kubernetes Deployments
 
-This section provides sizing guides for HCL Digital Experience (DX) rendering scenarios in a Kubernetes configuration. The goal of these sizing guides is to identify the optimal Kubernetes configurations for varying levels of DX demands, ranging from small to large setups.
+This section provides sizing guides for HCL Digital Experience (DX) rendering scenarios in a Kubernetes configuration. The goal of these sizing guides is to identify the optimal Kubernetes configurations for varying levels of DX demands, ranging from small to large setups. Additionally, this guide provides tuning recommendations for Kubernetes pods based on their specific workloads, such as rendering-intensive tasks.
 
 For the performance guidance deployments to support Kubernetes container platforms, refer to [Containerization requirements and limitations](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md).
 
@@ -11,6 +11,14 @@ In Digital Experience (DX) performance testing, it is important to determine bot
 In this investigation, the key performance indicators are the number of concurrent users, the average response time, and throughput. These metrics serve as benchmarks for evaluating the performance of a small, medium and large DX configurations, providing insights into the system's ability to handle specific loads. This sizing guidance shows how strategic changes can lead to significant improvements in performance.
  
 The sizing tests examined rendering scenarios for Web Content Manager (WCM), portlets, and Digital Asset Management (DAM). The tests were facilitated by a rendering setup deployed on AWS/Native-Kubernetes (Kubernetes installed directly in Amazon EC2 instances). This guide presents a comprehensive overview of the findings, offering guidance for organizations seeking to optimize their DX platforms for peak performance.
+
+## Definition of terms
+
+- In Apache JMeter, concurrent users refer to the number of virtual users that are actively making requests to the server at the same time during a performance test. These users simulate real-world load on the application to measure its performance under various conditions.
+
+- The ramp-up period determines how quickly the concurrent users are introduced into the system. Example: If you have 100 users with a 10-second ramp-up, JMeter will add 10 users per second, reaching 100 users in 10 seconds.
+
+- OpenLDAP is an open-source implementation of LDAP (Lightweight Directory Access Protocol)
 
 ## Methodology
 
@@ -27,6 +35,16 @@ The following table contains the rendering scenario details for each configurati
 | Small – 1,000 users  | 20                 | 2,500                |    8                          |
 | Medium – 10,000 users| 200                | 25,000               |    80                         |
 | Large – 30,000 users | 200                | 25,000               |    80                         |
+
+#### Rendering users details
+
+- Concurrent user load distribution: WCM - 40% users (50% authenticated and 50% anonymous), Pages and Portlets - 30% users (50% authenticated and 50% anonymous), DAM - 30% users (anonymous).
+
+- All authenticated users were added to openLDAP with the "User" role.
+
+- The same users are utilized for both WCM and Pages and Portlets. 
+
+#### Test data details
 
 Based on these details for small, medium and large configurations, the following test data are created to support the DX rendering performance tests:
 
