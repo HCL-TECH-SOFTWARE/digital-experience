@@ -107,18 +107,18 @@ java -jar <jarFilepath> -h
 # <excludeSessionKeyFile> Path to the file containing session keys (separated by a new line) to exclude from session counts
 # <excludeIPs> List of IPs (separated by space) to exclude from session counts
 # <excludeSessionKeys> List of session keys (separated by space) to exclude from session counts
-# <productFeatureId> Poduct name (HCL_DX_CloudNative or DX_Compose)
 # <startDate> Specifies the start date in YYYY-MM-DD format
 # <endDate> Specifies the end date in YYYY-MM-DD format
+# <productFeatureId> Poduct name (HCL_DX_CloudNative or DX_Compose)
 ```
 
 The following is a sample command for running the User Session Reporting Tool using all the parameters provided:
 
 ```cmd
-java -jar <jarFilepath> <filePaths...> -excludeIPFilePath <excludeIPFile> -excludeSessionKeyFilePath <excludeSessionKeyFile> -excludeIPs <excludedIPs...> -excludeSessionKeys <excludeSessionKeys ...> <productFeatureId> <startDate> <endDate>
+java -jar <jarFilepath> <filePaths...> -excludeIPFilePath <excludeIPFile> -excludeSessionKeyFilePath <excludeSessionKeyFile> -excludeIPs <excludedIPs...> -excludeSessionKeys <excludeSessionKeys ...> <startDate> <endDate> [-productFeatureIdName <productFeatureId>]
 
 # Example
-java UserSessionReporting.java input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIPs "192.168.243.142" -excludeSessionKeys "192.168.243.136 \"axios/1.6.7\" \"-\"" "192.168.243.137 \"axios/1.6.7\" \"-\"" 2022-07-22 2025-07-28
+java UserSessionReporting.java input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIPs "192.168.243.142" -excludeSessionKeys "192.168.243.136 \"axios/1.6.7\" \"-\"" "192.168.243.137 \"axios/1.6.7\" \"-\"" 2022-07-22 2025-07-28 -productFeatureIdName HCL_DX_CloudNative
 
 ```
 
