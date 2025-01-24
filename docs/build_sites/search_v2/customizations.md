@@ -3,10 +3,10 @@
 ## Provide a custom CSS theme module
 This topic provides information on the possible style customizations for Search V2. There are two options:
 
-- [Provide a custom CSS theme module with some styling overrides.](#providing-a-custom-css-theme-module-with-some-stylings-overrides)
-- [Provide a custom CSS theme module with all search stylings and some styling adjustments.](#providing-a-custom-css-theme-module-with-all-search-stylings-and-some-styling-adjustments)
+- [Add a custom CSS theme module with styling overrides.](#add-a-custom-css-theme-module-with-styling-overrides)
+- [Create a custom CSS theme module, extending the default CSS module.](#create-a-custom-css-theme-module-extending-the-default-css-module)
 
-### Providing a custom CSS theme module with some stylings overrides
+### Add a custom CSS theme module with styling overrides
 
 1. Create a new module under Practitioner Studio.
     1. Connect to the Core theme section using WebDav. There are two options:
@@ -48,7 +48,7 @@ This topic provides information on the possible style customizations for Search 
 
     Your styling overrides should be visible when you start a new search. 
 
-### Providing a custom CSS theme module with all search stylings and some styling adjustments
+### Create a custom CSS theme module, extending the default CSS module
 
 1. Download the current stylings using the **Analyzer** tab. For more information, see [Getting the default theme modules](components.md#getting-the-default-theme-modules).
 
