@@ -57,7 +57,7 @@ This How-to document is structured as a workflow sample that include different p
 
 8. On the properties tab scroll down and expand the ***Profile*** section
 
-9. In the Keyword section it is possible to include specific keywords that later can be used to find the page by filtering for keywords. In this sample workflow please add the keyword ***mykeyword***.
+9. In the Keyword section it is possible to include specific keywords that later can be used to find the page by filtering for keywords. In this sample workflow add the keyword ***mykeyword***.
 
 10. Click to ***Save and Close***. The Test-page should look like the following:
 
