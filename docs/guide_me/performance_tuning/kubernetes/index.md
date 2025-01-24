@@ -6,9 +6,9 @@ For the performance guidance deployments to support Kubernetes container platfor
 
 ## Introduction
 
-In Digital Experience (DX) performance testing, it is important to determine both DX container sizing and the relationships between the components that make up DX. The goal of performance testing is to identify the optimal Kubernetes configurations for varying levels of DX demands, ranging from small to large setups. This sizing guidance examines these factors in a configuration using 1,000, 10,000 and 30,000 virtual users for small, medium and large configurations, respectively.
+In Digital Experience (DX) performance testing, it is important to determine both DX container sizing and the relationships between the components that make up DX. The goal of performance testing is to identify the optimal Kubernetes configurations for varying levels of DX demands, ranging from small to large setups. This sizing guidance evaluates configurations supporting 1,000, 10,000, and 30,000 virtual users for small, medium, and large setups, respectively.
  
-In this investigation, the key performance indicators are the number of concurrent users, the average response time, and throughput. These metrics serve as benchmarks for evaluating the performance of a small, medium and large DX configurations, providing insights into the system's ability to handle specific loads. This sizing guidance shows how strategic changes can lead to significant improvements in performance.
+In this investigation, the key performance indicators are the number of concurrent users, the average response time, and throughput. These metrics serve as benchmarks for evaluating the performance of a small, medium and large DX configurations, offering insights into the system's capacity to handle varying loads.. This sizing guidance demonstrates how strategic adjustments can result in significant performance improvements.
  
 The sizing tests examined rendering scenarios for Web Content Manager (WCM), portlets, and Digital Asset Management (DAM). The tests were facilitated by a rendering setup deployed on AWS/Native-Kubernetes (Kubernetes installed directly in Amazon EC2 instances). This guide presents a comprehensive overview of the findings, offering guidance for organizations seeking to optimize their DX platforms for peak performance.
 
@@ -82,7 +82,7 @@ This setup is common in most of the scenarios where there are multi-nested site 
 
 The following DAM setup covers the mix and match of the different types of most commonly used assets in three different ways: UUID, custom, and friendly URLs. Testers uploaded 2,500 assets for a small configuration and 25,000 assets for a medium and large configurations. These assets include images (136 KB, .jpg), documents (199 KB, .docx), and videos (1.1 MB, .mp4) to preheat the environment. After preloading 2,500 assets for small and 25,000 assets for medium and large configurations, 15 assets containing a mix of original images and renditions were uploaded and rendered for 1 hour at peak load after ramp-up time.
 
-The test then rendered those assets by way of 3 custom URLs, 8 UUID URLs, and 8 short URLs for an hour. Further details provided in the following summary of the results.
+The test rendered assets using three custom URLs, 8 UUID URLs, and 8 short URLs over a duration of one hour. A detailed summary of the results is provided below.
 
 | Asset    | Type          | Size                                            |
 | -------- | ------------- |-------------------------------------------------|
@@ -123,3 +123,4 @@ For details about the environments used and the test results and recommendations
 
 - [Sizing guidance for rendering in a small-sized Kubernetes configuration](rendering_small_config.md)
 - [Sizing guidance for rendering in a medium-sized Kubernetes configuration](rendering_medium_config.md)
+- [Sizing guidance for rendering in a large-sized Kubernetes configuration](rendering_large_config.md)

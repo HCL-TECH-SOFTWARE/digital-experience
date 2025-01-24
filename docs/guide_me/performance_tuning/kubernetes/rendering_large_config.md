@@ -94,7 +94,9 @@ This section provides details for the Kubernetes cluster, JMeter, LDAP, and data
 
 ### Load Balancer Set-up
 
-We used AWS Elastic Load Balancing (ELB) to automatically distribute incoming application traffic across multiple targets. In our DX Kubernetes deployment, we updated the HAProxy service type from "LoadBalancer" to "NodePort" with a specific serviceNodePort. We then added the EC2 worker node instances containing HAProxy pods as a target group in the AWS ELB listeners.
+We used AWS Elastic Load Balancing (ELB) to automatically distribute incoming application traffic across multiple targets. We are using c5.4xlarge instances, which support a network bandwidth upto 10Gbps. For handling more virtual users in a large configuration, we chose to use AWS ELB.
+
+In our DX Kubernetes deployment, the HAProxy service type was updated from "LoadBalancer" to "NodePort" with a designated serviceNodePort. The EC2 worker node instances hosting the HAProxy pods were then added as a target group within the AWS ELB listeners.
 
 ### JMeter agents
 
@@ -177,9 +179,9 @@ There are several factors that can affect the performance of DX in Kubernetes. C
 - Increase the CPU allocation for the haproxy pod by approximately 1 CPU for every 10,000 concurrent users.
 
 !!!note
-     Do not size your JVM Heap size larger than the allotted memory for the pod.
+     Do not set the JVM heap size larger than the allocated memory for the pod.
 
-Alterations were made to the initial Helm chart configuration during the tests. The following table contains the number and limits for each pod. Using these values significantly improves the responsiveness of the setup and enables the system to handle 30,000 concurrent users with a vastly improved average response time and a minimal error rate.
+Modifications were made to the initial Helm chart configuration during the tests. The following table outlines the pod count and limits for each pod. By applying these values, the setup's responsiveness was significantly improved, allowing the system to handle 30,000 concurrent users with a substantial reduction in average response time and a minimal error rate.
 
 |  |  | Request | Request | Limit | Limit |
 |---|---|---:|---|---|---|
