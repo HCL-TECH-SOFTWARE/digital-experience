@@ -3,10 +3,10 @@
 ## Provide a custom CSS theme module
 This topic provides information on the possible style customizations for Search V2. There are two options:
 
-- [Add a custom CSS theme module with styling overrides.](#add-a-custom-css-theme-module-with-styling-overrides)
-- [Create a custom CSS theme module, extending the default CSS module.](#create-a-custom-css-theme-module-extending-the-default-css-module)
+- [Adding a custom CSS theme module with styling overrides.](#adding-a-custom-css-theme-module-with-styling-overrides)
+- [Creating a custom CSS theme module and extending the default CSS module.](#creating-a-custom-css-theme-module-and-extending-the-default-css-module)
 
-### Add a custom CSS theme module with styling overrides
+### Adding a custom CSS theme module with styling overrides
 
 1. Create a new module under Practitioner Studio.
     1. Connect to the Core theme section using WebDav. There are two options:
@@ -27,7 +27,7 @@ This topic provides information on the possible style customizations for Search 
 
         5. Add styling overrides to the `index.css` file.
 
-            See the sample customized CSS code which changed the background color dx-search-center-layout component.
+            See the following customized CSS code sample. This code changes the background color of the `dx-search-center-layout` component.
 
             ```css
             dx-search-center-layout::part(main) {
@@ -48,7 +48,7 @@ This topic provides information on the possible style customizations for Search 
 
     Your styling overrides should be visible when you start a new search. 
 
-### Create a custom CSS theme module, extending the default CSS module
+### Creating a custom CSS theme module and extending the default CSS module
 
 1. Download the current stylings using the **Analyzer** tab. For more information, see [Getting the default theme modules](components.md#getting-the-default-theme-modules).
 
@@ -73,7 +73,7 @@ This topic provides information on the possible style customizations for Search 
 
         5. Copy your formatted and adjusted stylings and paste them to the `index.css` file.
 
-            See the sample customized CSS code which changed the background color dx-search-center-layout component.
+            See the following customized CSS code sample. This code changes the background color of the `dx-search-center-layout` component.
 
             ```css
             dx-search-center-layout::part(main) {
@@ -94,13 +94,13 @@ This topic provides information on the possible style customizations for Search 
 
     Your styling changes should be visible when you start a new search.
 
-## Styling the search components
+## Styling search components
 
 This section explains the default styles for search components and how to customize them.
 
 ### Default styling
 
-Each component comes with default styles. See the following examples of different default styles below.
+Each component comes with default styles. See the following examples of different default styles:
 
 ```scss
 dx-button::part(button) {
@@ -174,7 +174,7 @@ dx-input-textfield::part(input) {
 
 ### Style customization
 
-You can override styles by targeting the component's class names or part attribute. Other components can be overridden in a similar manner. Refer to the styling examples below for `dx-button` and `dx-input-textfield`.
+You can override styles by targeting the component's class names or part attribute. You can override ther components in a similar manner. Refer to the following styling examples for `dx-button` and `dx-input-textfield`.
 
 !!! note
     The `part` attribute is used to name parts of a shadow tree, which can then be styled from outside the shadow DOM using the `::part()` pseudo-element. This allows you to apply CSS styles to shadow tree elements from the parent DOM. For more information about supported `part` attributes, see [Atomic Components](components.md#atomic-components).    
