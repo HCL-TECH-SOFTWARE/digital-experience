@@ -7,18 +7,18 @@
 ## Introduction
 
 HCL Digital Experience includes different kinds of search-features that can be used to find documents. One of these features is the Search Center.
-This documentation is written to get a better understanding for using the DX Search and the Search Center when trying to find different kinds of documents used in the HCL Digital Experience. It also provide detailed steps that can be used to prepare Web Content Management (WCM) articles to find them better with the search service (by defining metadata).  
+This documentation is written to get a better understanding for using the DX Search and the Search Center when trying to find different kinds of documents used in the HCL Digital Experience. It also provides detailed steps that can be used to prepare Web Content Management (WCM) documents to find them more easily with the search service (by defining metadata).  
 
-This How-to document is structured as a workflow sample that include different parts. First of all, a sample user will be created in HCL Digital Experience. Then a WCM document is created for which that user will be set as an author. Additional metadata will be added to that document (keywords, name, title etc.). Finally the created WCM document will be used in the Search Center to find it with different search-filters (finding by title, author etc.)
+This How-to document is structured as a workflow sample that include different parts. First of all, a sample user will be created in HCL Digital Experience. Then a WCM document is created for which that user will be set as an author. Additional metadata will be added to that document (keywords, name, title etc.). Finally the Search Center will be used to find the created WCM document, using different search-filters (finding by title, author etc.)
 
 [Part 1 - Create a sample user in HCL Digital Experience](#part1)  
-[Part 2 - Create a sample document that contain metadata](#part2)  
+[Part 2 - Create a sample document that contains metadata](#part2)  
 [Part 3 - Check the configuration settings of the clasic search feature](#part3)  
 [Part 4 - (Optional) Optimize the Search Service to use AND operator for searches](#part4)  
 [Part 5 - (Optional) Optimize your search by applying the boost factors to specific metadata fields](#part5)  
 [Part 6 - (Optional) Configuring search by metadata for the Search Center portlet](#part6)  
 [Part 7 - Search for Documents using the Search-Center Portlet](#part7)  
-[Part 8 - Use the Search Center to search for the own created Document](#part8)  
+[Part 8 - Use the Search Center to search for the newly created Document](#part8)  
 [Additional Information](#additionalinformation)  
 
 ## Instructions
@@ -35,7 +35,7 @@ This How-to document is structured as a workflow sample that include different p
 
 5. Create a new user with the last name ***Test User 1*** and save it.
 
-### Part 2 - Create a sample document that contain metadata {#part2}  
+### Part 2 - Create a sample document that contains metadata {#part2}  
 
 1. Go to ***Web Content***
 
@@ -83,7 +83,7 @@ This How-to document is structured as a workflow sample that include different p
     A search scope allows you to partition or organize your search collections. As a result your site visitors can limit their search to specific areas. Defined scopes are visible to visitors from the search dialog. For details, please check:  
     [Configure Search Collections and Scopes](https://opensource.hcltechsw.com/digital-experience/latest/build_sites/search/search_center/searchcenter/oob_search_scope/?h=configure+search+collections+scopes){:target=”_blank”}  & [Creating a Search Scope](https://opensource.hcltechsw.com/digital-experience/latest/build_sites/search/manage_search/searchscopes_customlinks/crt_nw_srch_scp/?h=search+scope){:target=”_blank”}  
 
-    Click on ***Search Service*** and check the status of the service. You should see a green check mark icon. If you see a red X icon it indicates that your search service is not working at all, you will need to review the configuration settings of your search service. For details, please check: [Search service configuration parameters](https://opensource.hcltechsw.com/digital-experience/latest/build_sites/search/cfg_dx_search/search_service_params/){:target=”_blank”}  
+    Click on ***Search Service*** and check the status of the service. You should see a green check mark icon. If you see a red X icon it indicates that your search service is not working.  You will need to review the configuration settings of your search service. For details, please check: [Search service configuration parameters](https://opensource.hcltechsw.com/digital-experience/latest/build_sites/search/cfg_dx_search/search_service_params/){:target=”_blank”}  
   
     ![Properties Sections](./images/Status_Search_Service.png)
 
@@ -127,20 +127,20 @@ By default, the meta elements title, keywords, and description of documents are 
 
 2. Open the Portal Administration Page and then to ***Search***
 
-3. Click to ***Search Collections*** and monitor the results. Do you see Documents already listed?
+3. Click on ***Search Collections*** and monitor the results. Do you see Documents already listed?
 
     ![Properties Sections](./images/collections_overview.png)  
     *(In this sample you can see that the Default Search Collection has already 465 documents and the JCRCollection1 has 1689 documents indexed.)*  
 
-4. Click to ***Default Search Collection***.  
+4. Click on ***Default Search Collection***.  
 
-    You will find two Content Sources with the name ***WCM Content Source*** and ***Portal Content Source***. For both, options exist to configure the content sources and to start/stop the crawler. Because earlier a new WCM Document was created under the WCM Content Source, it is now required to update the index of that collection. This can be down by clicking to the ***Start Crawler WCM Content Source*** icon. After clicking to the button, check the status. Before you click to the icon, you will see the status ***idle***. Once the button is clicked the status will change to ***Running***. By clicking to the ***Refresh*** icon it can be verified, when the crawler gets finished and the status get back then to ***idle*** again. If metadata information of documents are changed, it might be require to regather all documents. There is a seperate button named ***regather all content from Content Source*** available that can be used to index all documents of that specified content source, again.  
+    You will find two Content Sources with the name ***WCM Content Source*** and ***Portal Content Source***. For both, options exist to configure the content sources and to start/stop the crawler. Because you created a new WCM Document under the WCM Content Source, it is now required to update the index of that collection. This can be down by clicking on the ***Start Crawler WCM Content Source*** icon. After clicking to the button, check the status. Before you click on the icon, you will see the status ***idle***. Once the button is clicked the status will change to ***Running***. By clicking on the ***Refresh*** icon it can be verified, when the crawler finishes and the status returns to ***idle*** again. If metadata information of documents are changed, it might be required to regather all documents. There is a seperate button named ***regather all content from Content Source*** available that can be used to index all documents of that specified content source, again.  
 
     ![Properties Sections](./images/collections_configure_content_sources.png)  
 
-    In the ***Documents*** column of the table the new number, or number of changed documents can be found. It maybe still show up a number of 0 in the column, if the crawler has not run yet. With the start of the crawler you may also see then that the number then increase to 1 for that new created WCM document that was created in [Part 2](#part2). Make sure that the new document is already crawled by clicking the ***start Crawler*** button at minimum once.  
+    In the ***Documents*** column of the table, the new number, or number of changed documents can be found. It may still show 0 in the column, if the crawler has not run yet. With the start of the crawler you may see then that the number increases to 1 due to the WCM document that was created in [Part 2](#part2). Make sure that the new document is already crawled by clicking the ***start Crawler*** button at minimum once.  
 
-### Part 8 - Use the Search Center to search for the own created Document {#part8}
+### Part 8 - Use the Search Center to search for the newly created Document {#part8}
 
 1. In the Portal Administration Page go back to ***Manage Search***.
 
@@ -150,23 +150,23 @@ By default, the meta elements title, keywords, and description of documents are 
 
     ![Properties Sections](./images/Open_Search_Center_Portlet.png)  
 
-4. In the Search Center page click to the ***Advanced Search*** button. Then under ***Search in:*** select ***Author*** and in the ***Search for:*** section, enter the text ***Test User 1***.
-    (If you have created another user name or added any other user as Author in your own created document, then please choice that user.). Hit enter to search for it. The following result should be shown:
+4. In the Search Center page click on the ***Advanced Search*** button. Then under ***Search in:*** select ***Author*** and in the ***Search for:*** section, enter the text ***Test User 1***.
+    (If you have created another user name or added any other user as Author in your newly created document, then please choose that user.). Hit enter to search for it. The following result should be shown:
 
     ![Properties Sections](./images/search_result_author_search.png)  
 
-    As you can see, based on the defined metadata and the search-filters that belong to them the exact document can be found.  Please remember that the search operator has been changed to ***AND*** for which an exact search-match only will be found, if both metadata information match.
+    As you can see, based on the defined metadata and the search-filters that belong to them, the exact document can be found.  Please remember that the search operator has been changed to ***AND***.  As a result, search will only return results for which both metadata information match.
 
 5. Run some further tests and check the result of the different filters (for example when searching for the title, keyword,author or when mixing some metadata as a filter-option)  
-    It should be possible to find the document as soon as the metadata-filter value match the value of the metadata mentioned in the article.  
+    It should be possible to find the document as soon as the metadata-filter value matches the value of the metadata mentioned in the article.  
     Further information about the Metadata (Entire document, Title, Author, Description, Keywords, Subject):  
-    - When searching for the "Entire document" for a keyword and the document will not be found, try to search for some keywords that are part of the BODY tag in your documents.
+    - When searching the "Entire document" for a keyword and the document is not be found, try to search for some keywords that are part of the BODY tag in your documents.
     - Beside the pre-defined metadata fields it is also possible to specify own/custom metadata fields. For details, please check:  
 
     [Configuring search by metadata for the Search Center Portlet](https://opensource.hcltechsw.com/digital-experience/latest/build_sites/search/cfg_dx_search/cfg_searchcenter/srtcfg_sc_metadata/?h=configuring+search+metadata+center+portlet){:target=”_blank”}  
 
 ### Additional Information {#additionalinformation}
 
-Beside the Search Portal there are also options available to use the DX search by using the [DX Search REST API](https://opensource.hcltechsw.com/experience-api-documentation/search-api/){:target=”_blank”}  & [Search REST API specification](https://opensource.hcltechsw.com/digital-experience/latest/build_sites/search/search-rest-api/){:target=”_blank”}  
+Beside the Search Center Portlet there are also options available to use the DX search by using the [DX Search REST API](https://opensource.hcltechsw.com/experience-api-documentation/search-api/){:target=”_blank”}  & [Search REST API specification](https://opensource.hcltechsw.com/digital-experience/latest/build_sites/search/search-rest-api/){:target=”_blank”}  
 
 Please also check: [Troubleshooting Remote Search, Collection and search issues](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0105738){:target=”_blank”}  
