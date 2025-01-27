@@ -41,4 +41,7 @@ When the `customProbeURL` is empty, the `liveness` probe target value for Core i
       customProbeURL: ""
 ```
 
+!!!warning
+    Setting the probe URL to a path that is slow or not reliable can cause the pod to restart. Change the path only if it's necessary for your specific use case. 
+
 You can find information about the configuration options in the [Kubernetes documentation](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#configure-probes){target="_blank"}.
