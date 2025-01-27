@@ -50,7 +50,7 @@ Metrics
 
 This sizing work consisted of rendering scenarios of WCM, portlets, and DAM with a rendering setup enabled in AWS/Native-Kubernetes (Kubernetes installed directly in Amazon EC2 instances). A combination run was performed that rendered WCM content, DAM assets, and DX pages and portlets. The load distribution was WCM content (40%), DAM assets (30%), and DX pages and portlets (30%). All systems were pre-populated before performing the rendering tests.
 
-### Rendering scenario details
+### Rendering scenarios and users details
 
 The following table contains the rendering scenario details for each configuration.
 
@@ -60,13 +60,15 @@ The following table contains the rendering scenario details for each configurati
 | Medium – 10,000 users| 200                | 25,000               |    80                         |
 | Large – 30,000 users | 200                | 25,000               |    80                         |
 
-#### Rendering scenarios and users details
+
+- [DX Sizing rendering scenarios guide](./dxsizing_rendering_scenarios.pdf)
 
 - Concurrent user load distribution: WCM - 40% users (50% authenticated and 50% anonymous), Pages and Portlets - 30% users (50% authenticated and 50% anonymous), DAM - 30% users (anonymous).
 
 - All authenticated users were added to openLDAP with the "User" role.
 
 - The same users are utilized for both WCM and Pages and Portlets. 
+
 
 #### Test data details
 
