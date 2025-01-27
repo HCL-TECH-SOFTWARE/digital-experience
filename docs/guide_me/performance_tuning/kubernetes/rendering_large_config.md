@@ -20,7 +20,6 @@ The following table contains the rendering scenario details for a large configur
 | -------------------- | ------------------ | -------------------- | ----------------------------- |
 | 30,000 users         | 200                | 25,000               |    80                         |
 
-
 For more information about the setup of test data, refer to the following test data:
 
 - [WCM default test data](./index.md#wcm-default-test-data)

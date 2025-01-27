@@ -14,11 +14,35 @@ The sizing tests examined rendering scenarios for Web Content Manager (WCM), por
 
 ## Definition of terms
 
-- In Apache JMeter, concurrent users refer to the number of virtual users that are actively making requests to the server at the same time during a performance test. These users simulate real-world load on the application to measure its performance under various conditions.
+- In the JMeter context, a Concurrent User refers to the number of users executing test requests at the same time (in parallel). It represents how many virtual users are actively sending requests to the target application simultaneously.
 
-- The ramp-up period determines how quickly the concurrent users are introduced into the system. Example: If you have 100 users with a 10-second ramp-up, JMeter will add 10 users per second, reaching 100 users in 10 seconds.
+In JMeter, concurrent users are simulated using Thread Groups, where: 
 
-- OpenLDAP is an open-source implementation of LDAP (Lightweight Directory Access Protocol)
+- Number of Threads (users) – Represents the number of concurrent users.
+
+- Ramp-up Period – The time taken to start all the threads (users).
+
+- Loop Count – Number of iterations each user performs.
+
+- Example setup: Threads (Users): 100,  Ramp-up Period: 10 seconds, Loop Count: 1
+
+This means JMeter will start 100 users over 10 seconds, leading to approximately 10 users per second.
+
+- Think Time: If timers (e.g., Think Time) are added to simulate real user behavior, the number of concurrent users at any given time may fluctuate.
+
+- Authenticated user - Portal “User”role
+- Unauthenticated user - Portal “Anonymous User”
+
+- OpenLDAP is an open-source implementation of LDAP (Lightweight Directory Access Protocol). All authenticated Users are added to OpenLDAP
+
+Metrics
+
+- Average response time: The average time taken to receive a response from the server for all the requests made during the test.
+
+- 95th Percentile Response Time (95th pct): The response time below which 95% of the requests were completed. In other words, only 5% of the requests took longer than this time to complete.
+
+- Throughput: The number of requests processed by the system per unit of time (e.g., requests per second or per minute).
+
 
 ## Methodology
 
@@ -36,7 +60,7 @@ The following table contains the rendering scenario details for each configurati
 | Medium – 10,000 users| 200                | 25,000               |    80                         |
 | Large – 30,000 users | 200                | 25,000               |    80                         |
 
-#### Rendering users details
+#### Rendering scenarios and users details
 
 - Concurrent user load distribution: WCM - 40% users (50% authenticated and 50% anonymous), Pages and Portlets - 30% users (50% authenticated and 50% anonymous), DAM - 30% users (anonymous).
 
@@ -56,27 +80,39 @@ Based on these details for small, medium and large configurations, the following
 
 This setup is common in most of the scenarios where there are multi-nested site areas in libraries with content such as rich text, PDF files, and images in a page and nearly 20 pages in a small configuration and 200 pages in a medium and large configuration. Refer to the following list for more information about this setup:
 
-- The default test data has a WCM design library called "PerformanceTestDesign" and five content libraries named "PerformanceTestContent01" through "PerformanceTestContent05".
+The default test data includes a WCM design library named "PerformanceTestDesign", along with five content libraries named "PerformanceTestContent01" to "PerformanceTestContent05".
 
--  Each content library contains four levels of site areas, with four site areas per level. Only the 256 leaf site areas contain content.
+Each content library has four levels of site areas, with four site areas per level, resulting in a total of 256 leaf site areas that contain content.
 
-- Each leaf site area contains ten content items, for a total of 12,800 content items across the libraries.
+Each leaf site area holds 10 content items, making a total of 12,800 content items across all libraries.
 
-- Half of the content items are visible to "Anonymous" and "All Authenticated" users. The other half are visible only to members of ten groups per content item. These ten groups are spread out among the 500 groups assumed to exist in the test LDAP (and assumed to be called "Group0000" through "Group0499").
+##### Content visibility
 
-- Half of the content items visible to members of ten groups per content item are profiled with the keyword "MENU".
+- Half of the content items are accessible to both "Anonymous" and "All Authenticated" users.
 
-- There are 20 test portal pages created under the label "PerformanceTest". Each has a friendly URL of the form "<context-root>/perf/page-xx".
+- The remaining half is restricted to members of 10 specific groups per content item, distributed among 500 groups in the test LDAP, named "Group0000" to "Group0499". Half of these restricted content items are tagged with the keyword "MENU" for categorization.
 
-- Each page contains six WCM viewer portlets that show content below one of the 20 top-level site areas. Pages 01 to 04 show content from site areas "SA01" through "SA04" in library "PerformanceTestContent01". Pages 05 to 08 show content from site areas "SA01" through "SA04" in library "PerformanceTestContent02", and so on.
+##### Portal page setup
 
-- Four of the portlets on each page show single content items. For page 01, these would be the first content items in site areas "SA01.01.01.01", "SA01.02.01.01", "SA01.03.01.01", and "SA01.04.01.01" respectively. Other pages follow the same pattern.
+- There are 20 test portal pages under the label "PerformanceTest", each with a user-friendly URL format like "/perf/page-xx".
 
-- Another portlet on each page shows a navigator of site areas and content items below the same top-level area.
+- Each page contains six WCM viewer portlets, displaying content from one of the 20 top-level site areas.
 
-- The final portlet on each page shows a menu of items. This portlet is scoped to the top-level site area and selects only those items profiled with the "MENU" keyword.
+- Pages 01 to 04 display content from site areas "SA01" to "SA04" in the library "PerformanceTestContent01".
 
-- A total of 99,999 users was added to openLDAP as authenticated users.
+- Pages 05 to 08 display content from "SA01" to "SA04" in "PerformanceTestContent02", and so on.
+
+##### Portlet configurations:
+
+- Four portlets on each page display a single content item from different sub-site areas (e.g., on page 01, the first items from "SA01.01.01.01", "SA01.02.01.01", etc.).
+
+- One portlet provides a navigator for browsing site areas and content items under the top-level site area.
+
+- The final portlet presents a menu, filtering items tagged with the keyword "MENU", scoped to the top-level site area.
+
+##### User setup:
+
+A total of 99,999 authenticated users were added to openLDAP for performance testing.
 
 #### DAM default test data
 
@@ -96,7 +132,7 @@ The test rendered assets using three custom URLs, 8 UUID URLs, and 8 short URLs 
 
       -  Custom - `https://<host-name>/dx/api/dam/custom/customURL2-1715776542673?binary=true`
 
-      -  Fiendly - `https://<host-name>/dx/api/dam/v1/assets/Jmeter.11667/wcm-sample-content.png?rendition=Tablet?binary=true`
+      -  Friendly - `https://<host-name>/dx/api/dam/v1/assets/Jmeter.11667/wcm-sample-content.png?rendition=Tablet?binary=true`
 
 !!!note
       For DAM, only anonymous rendering is available.
@@ -118,6 +154,12 @@ The tests used a total of eight unique pages with portlets for small configurati
 
 
 After completing the authoring steps, the anonymous portal user and authenticated users (added to openLDAP) must render the pages. Every page request uses a /GET API call (for example, /wps/portal/portletsperf/page1) and there is a response assertion in a sampler to validate the content HTML in the response body.
+
+
+## Limitations
+
+- Our primary focus is on DAM API performance testing. Client-side rendering (e.g., browser-based rendering) is excluded from our tests. 
+ 
 
 For details about the environments used and the test results and recommendations for each configuration, refer to the following pages:
 
