@@ -19,7 +19,7 @@ You can modify `liveness` and `readiness` probes such as the status thresholds a
       timeoutSeconds: 30
 ```
 
-If you want to configure probe target values, Core provides a `customProbeURL` value.  This is a relative URL that you can use to configure the `liveness` probe target value.
+If you want to configure probe target values, Core provides a `customProbeURL` value.  This is a relative URL that you can use to overwrite the default `liveness` probe target value.
 
 ```yaml
 # The liveness probe for Core provides a customProbeURL value. 
