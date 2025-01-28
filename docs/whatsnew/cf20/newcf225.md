@@ -17,6 +17,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Search V2 - Styling customizations
 - Custom `liveness` probe target value
+- New sizing guidance for rendering in a large configuration
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Removal of automated Pod restart on ConfigMap updates
 
