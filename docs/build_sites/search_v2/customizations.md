@@ -1,10 +1,13 @@
 # Customizations for Search V2
 
-## Provide a custom CSS theme module
-This topic provides information on the possible style customizations for Search V2. There are two options:
+This topic provides information on the possible style customizations for Search V2.
 
-- [Adding a custom CSS theme module with styling overrides.](#adding-a-custom-css-theme-module-with-styling-overrides)
-- [Creating a custom CSS theme module and extending the default CSS module.](#creating-a-custom-css-theme-module-and-extending-the-default-css-module)
+## Providing a custom CSS theme module
+
+To provide a custom Cascading Style Sheets (CSS) theme module, there are two options:
+
+- [Add a custom CSS theme module with styling overrides.](#adding-a-custom-css-theme-module-with-styling-overrides)
+- [Create a custom CSS theme module and extend the default CSS module.](#creating-a-custom-css-theme-module-and-extending-the-default-css-module)
 
 ### Adding a custom CSS theme module with styling overrides
 
@@ -171,10 +174,9 @@ dx-input-textfield::part(input) {
 ...
 ```
 
-
 ### Style customization
 
-You can override styles by targeting the component's class names or part attribute. You can override ther components in a similar manner. Refer to the following styling examples for `dx-button` and `dx-input-textfield`.
+You can override styles by targeting the component's class names or part attribute. You can override other components in a similar manner. Refer to the following styling examples for `dx-button` and `dx-input-textfield`.
 
 !!! note
     The `part` attribute is used to name parts of a shadow tree, which can then be styled from outside the shadow DOM using the `::part()` pseudo-element. This allows you to apply CSS styles to shadow tree elements from the parent DOM. For more information about supported `part` attributes, see [Atomic Components](components.md#atomic-components).    
