@@ -1,12 +1,15 @@
-# Import the pzn-rules into Portal  
+# Importing the Personalization rules into HCL Digital Experience  
 
-The Pers_Offers sample portlet contains a folder named **rules**, which contains all rules that that will be created, when you follow the steps of section [Developing a personalized portlet using IBM Rational Application Developer](../RAD/index.md). This rules can be simple imported into Portal by using the following steps.  
+In this topic, you will learn how to import the Personalization rules into Portal.
+The Pers_Offers sample portlet contains a folder named **rules**, which contains all rules that will be created, when you follow the steps of section [Developing a personalized portlet using IBM Rational Application Developer](../RAD/index.md). This rules can be simple imported into Portal by using the following steps.  
 
-1. Extract the **Portal_rules_PznOffers.zip** file located in the rules directory to any folder
-2. Login to the Portal Administration page as potal admin user.
-3. Navigate to **Personalization** > **Business Rules**
-4. Click to **New** > **folder** to create a new folder with name **Pers Offers**.
-5. Click the **Import** button and import the following rules into the **Pers Offers** folder.
+1. Extract the **Portal_rules_PznOffers.zip** file located in the **rules** directory to any folder.  
+2. Log in to the HCL Digital Experience (DX) as the Portal administrator (wpsadmin).
+3. Open the **Applications menu** then go to  **Personalization > Business Rules**.
+4. Click **New** > **Folder**.  
+5. Name the folder **Pers Offers** then click **Save**.
+6. Go into the folder **Pers Offers**.
+7. Click **Import**, select one of the following files from the **Portal_rules_PznOffers** folder, then click **Import**. You need to import each file one by one.
 
     1. Per_Offers_User.nodes
     2. Pzn_offers.nodes
@@ -16,12 +19,12 @@ The Pers_Offers sample portlet contains a folder named **rules**, which contains
     6. Show+Offers+by+Customer+Type.nodes
     7. Pers+Offers+User+Profiler.nodes
 
-6. Click the **Import** button and select the following rule to be imported into the **main (workspace)** folder.
+8. In the **browsing workspace** directory, select **Workspace** then click **Import**.
 
-    1. Pzn_offers+spot.nodes
+9. Select the **Pzn_offers+spot.nodes** file then click **Import**.
 
-!!!note "Tip"
-       The name of the Content Spot rule need to match the displayName of the Content Spot used in the hrf-file!
+!!! Note  
+       The name of the content spot rule needs to match the `displayName` of the content spot used in the HRF file.  
 
 ## Result
 
