@@ -16,7 +16,8 @@ Before configuring the external database, ensure the following:
   - Assign the `<damUser>` role to `<dbUser>` with the admin option.
   - Set `<damUser>` as the owner of the `dxmediadb` database.
 
-    > **Note**: Obtain the credentials for `damUser` and `dbUser` from the `security.digitalAssetManagement` section in the custom values YAML file.
+    !!! note
+        Obtain the credentials for `damUser` and `dbUser` from the `security.digitalAssetManagement` section in the custom values YAML file.
 
 ## Configuring DAM to Use the External Database
 
@@ -42,7 +43,8 @@ After ensuring the database is set up, configure DAM to connect to the external 
 
 You can create a PostgreSQL instance in various ways, including through cloud providers. This example demonstrates how to set up a PostgreSQL instance using Docker to externalize the database.
 
-> **Note**: These steps are specific to using a Docker image, but they may vary based on the cloud provider you choose. The goal is to create the necessary database, roles, and permissions, and import the database dump.
+!!! note
+    These steps are specific to using a Docker image, but they may vary based on the cloud provider you choose. The goal is to create the necessary database, roles, and permissions, and import the database dump.
 
 ### Steps for Setting Up PostgreSQL with Docker
 
@@ -92,6 +94,10 @@ You can create a PostgreSQL instance in various ways, including through cloud pr
     docker exec -it <external-postgres-name> bash
     psql dxmediadb -U <damUser>
     ```
+
+8. **Connect DAM to External database**:
+    Once the database setup is done, point the DAM application to the external database by [modifying HELM values](#2-update-the-custom-values-yaml-file) and performing a [HELM Upgrade](#3-run-helm-upgrade).
+
 
 ## Limitations
 
