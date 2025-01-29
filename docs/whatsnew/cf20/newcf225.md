@@ -6,7 +6,6 @@ The following features and updates are available to customers installing HCL Dig
 
 - Adjustment of seedlists for access control changes
 - DXClient - LiveSync enabled for Presentation Templates
-- Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -40,14 +39,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     LiveSync now supports Presentation Templates. For more information, see [DXClient](../../extend_dx/development_tools/dxclient/index.md) and [LiveSync](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md).
-
-### Notice of deprecation of Textbox.io Rich Text Editor 
-
-=== "Containers"
-    The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and End of Support (EOS) is on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
-
-=== "On-Premises"
-    The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and End of Support (EOS) is on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
 
 ## Digital Experience 8.5 and 9.0 Versions
 
