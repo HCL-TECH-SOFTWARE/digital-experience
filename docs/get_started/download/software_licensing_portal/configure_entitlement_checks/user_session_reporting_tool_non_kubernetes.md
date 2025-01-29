@@ -116,20 +116,21 @@ java -jar <jarFilepath> -h
 # <endDate> Specifies the end date in YYYY-MM-DD format
 # <deploymentId> String deploymentID from MHS
 # <option> Specify "fileOutput" to write usage into an automatically named file. If option is unspecified, the usage metrics are displayed in the terminal and not saved in a file.
+# <productFeatureId> Poduct name (HCL_DX_CloudNative or DX_Compose)
 ```
 
 The following is a sample command for running the User Session Reporting Tool using all the parameters provided:
 
 ```cmd
-java -jar <jarFilepath> <filePaths...> -excludeIPFilePath <excludeIPFile> -excludeSessionKeyFilePath <excludeSessionKeyFile> -excludeIPs <excludedIPs...> -excludeSessionKeys <excludeSessionKeys ...> <startDate> <endDate> <deploymentId> <option>
+java -jar <jarFilepath> <filePaths...> -excludeIPFilePath <excludeIPFile> -excludeSessionKeyFilePath <excludeSessionKeyFile> -excludeIPs <excludedIPs...> -excludeSessionKeys <excludeSessionKeys ...> <startDate> <endDate> <deploymentId> <option> [-productFeatureIdName <productFeatureId>]
 ```
 ### Example
 ```
 # Output in the terminal
-java -jar UserSessionReporting.jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIPs "192.168.243.142" -excludeSessionKeys "192.168.243.136 \"axios/1.6.7\" \"-\"" "192.168.243.137 \"axios/1.6.7\" \"-\"" 2022-07-22 2025-07-28 pnkeq6pk > /tmp/2022-06-24T02-50-00_usage.metrics
+java -jar UserSessionReporting.jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIPs "192.168.243.142" -excludeSessionKeys "192.168.243.136 \"axios/1.6.7\" \"-\"" "192.168.243.137 \"axios/1.6.7\" \"-\"" 2022-07-22 2025-07-28 pnkeq6pk  -productFeatureIdName HCL_DX_CloudNative > /tmp/2022-06-24T02-50-00_usage.metrics
 
 # Write Output in file
-java -jar UserSessionReporting.jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIPs "192.168.243.142" -excludeSessionKeys "192.168.243.136 \"axios/1.6.7\" \"-\"" "192.168.243.137 \"axios/1.6.7\" \"-\"" 2022-07-22 2025-07-28 pnkeq6pk fileOutput
+java -jar UserSessionReporting.jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIPs "192.168.243.142" -excludeSessionKeys "192.168.243.136 \"axios/1.6.7\" \"-\"" "192.168.243.137 \"axios/1.6.7\" \"-\"" 2022-07-22 2025-07-28 pnkeq6pk fileOutput -productFeatureIdName HCL_DX_CloudNative
 
 ```
 
@@ -150,8 +151,8 @@ See the following sample of an `excludeSessionKeys.txt` file:
 ### Expected Output
 
 ```
-1,Alpha525634,HCL X,1.0.0,pnkeq6pk,ebb89d32f30abc4eed049f7afbb8a7299bdc8459fd235d0b8473ca22e9457c65
-DXPN_CloudNative_Tier1_500K@9.5,2024-07-22T01:00:00.000Z,2024-07-22T23:59:00.000Z,109,569b2e7f63d5d60fc30c725cbefd175c8fee423d796a01966a72425492017725
+1,Alpha525634,HCL Digital Experience,v9.5,pnkeq6pk,ebb89d32f30abc4eed049f7afbb8a7299bdc8459fd235d0b8473ca22e9457c65
+HCL_DX_CloudNative,2024-07-22T01:00:00.000Z,2024-07-22T23:59:00.000Z,109,569b2e7f63d5d60fc30c725cbefd175c8fee423d796a01966a72425492017725
 END,30f0dd458d3ca9463870c1275d344d2361df87d617e32077a5c3c379a7e9e05f413fc1fa491e808b82e1eccc70c1ab4a89d2606904a1d5c64cea50588cca8509
 ```
 
