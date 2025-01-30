@@ -94,4 +94,3 @@ plugins:
       alias_type: redirect
   - git-revision-date-localized:
       type: date
-      enabled: false

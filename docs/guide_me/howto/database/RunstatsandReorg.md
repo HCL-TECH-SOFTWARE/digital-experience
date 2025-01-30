@@ -2,9 +2,13 @@
 
 ## Applies to
 
-HCL Digital Experience 8.5 and higher
+> HCL Digital Experience 8.5 and higher
 
 ## Introduction
+
+The DB2 RUNSTATS command updates statistics in the DB2 system catalog about the characteristics of a table, associated indexes, or statistical views.
+The REORG TABLE command reorganizes a table by reconstructing the rows to eliminate fragmented data, and by compacting information.  
+Both commands can be used to optimize the DB2 performance. This document provides information that can be used to optimize the db2 database that might be used in an HCL Digital Experience environment.
 
 ## Instructions
 
