@@ -114,15 +114,6 @@ This section provides details for the Kubernetes cluster, Jmeter, LDAP, and data
       ![](../../../images/Remote-DB2-Volume-Info-Med.png){ width="600" }
 
 
-- Processor details
-
-      ![](../../../images/Processor_Info_Native-Kube.png){ width="600" }
-
-- Volume details
-
-      ![](../../../images/AWS-Native-Kube-Volume-Info.png){ width="600" }
-
-
 !!!note
       Ramp-up time is 1.5 seconds per user. Test duration is the total of ramp-up time and 1 hour with peak load of concurrent users.
 
