@@ -2,7 +2,7 @@
 site_name: HCL Digital Experience Help Center
 site_url: https://opensource.hcltechsw.com/digital-experience/
 site_description: >-
-  HCL Digital Experience documentation for users and admins.
+  A next-gen documentation site for HCL Digital Experience.
 
 # Theme Configuration
 theme:
@@ -20,11 +20,9 @@ theme:
     - search.suggest
     - navigation.prune
     - content.code.copy
-    - content.action.edit
   custom_dir: theme_overrides/
   icon:
     repo: fontawesome/brands/github
-    edit: fontawesome/regular/pen-to-square
   font:
     text: Roboto
     code: Roboto Mono
@@ -94,4 +92,3 @@ plugins:
       alias_type: redirect
   - git-revision-date-localized:
       type: date
-      enabled: false
