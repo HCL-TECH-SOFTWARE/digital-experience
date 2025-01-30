@@ -24,7 +24,6 @@ For more information about the setup of test data, refer to the following test p
 - [DAM default test data](./index.md#dam-default-test-data)
 - [Pages and portlets default test data](./index.md#pages-and-portlets-default-test-data)
 
-
 ## Environment
 
 This section provides details for the Kubernetes cluster, Load Balancer, JMeter agents, LDAP, and tuning setups used for this activity.
@@ -49,7 +48,6 @@ The Kubernetes platform ran on an AWS EC2 instance with the DX images installed 
 
       ![](../../../images/Remote-DB2-Volume-Info-Med.png){ width="600" }
 
-
 - **c5.4xlarge worker nodes**
 
       - Node details
@@ -65,7 +63,6 @@ The Kubernetes platform ran on an AWS EC2 instance with the DX images installed 
       - Volume details
 
       ![](../../../images/c5_4xlarge_volume_info.png){ width="600" }
-
 
 ### DB2 instance
 
@@ -86,38 +83,34 @@ The Kubernetes platform ran on an AWS EC2 instance with the DX images installed 
 
       ![](../../../images/Remote-DB2-Volume-Info-Med.png){ width="600" }
 
-
 ### Load Balancer Set-up
 
-We utilized AWS Elastic Load Balancing (ELB) to distribute incoming application traffic across multiple targets automatically. The c5.4xlarge instances, which support network bandwidth up to 10Gbps, were selected to handle more virtual users in a large configuration, making AWS ELB an optimal choice.
+AWS Elastic Load Balancing (ELB) was used to distribute incoming application traffic across multiple targets automatically. The c5.4xlarge instances, which support network bandwidth of up to 10Gbps, were selected to handle more virtual users in a large configuration, making AWS ELB an optimal choice.
 
 During the DX Kubernetes deployment, the HAProxy service type was updated from `LoadBalancer` to `NodePort` with a designated `serviceNodePort`. Then, the EC2 worker node instances hosting the HAProxy pods were added as a target group within the AWS ELB listeners.
 
 ### JMeter agents
 
-**c5.2xlarge JMeter instance** 
+**c5.2xlarge JMeter instance**
 
-To run the tests, a distributed AWS/JMeter agents setup consisting of 1 primary and 20 subordinates was used, all of type c5.2xlarge. Details about the setup are listed below.
+To run the tests, a distributed AWS/JMeter agents setup consisting of 1 primary and 20 subordinate c5.2xlarge instances was used. Details about the setup are listed below.
 
-- Instance details 
+- Instance details
 
       ![](../../../images/Header-1-AWS-Med.png){ width="1000" }
 
-            ![](../../../images/C5.2xlarge.png){ width="1000" }
+      ![](../../../images/C5.2xlarge.png){ width="1000" }
 
 - Processor details
 
       ![](../../../images/Processor_Info_RemoteDB2_Med.png){ width="600" }
 
-
 - Volume details
 
       ![](../../../images/Remote-DB2-Volume-Info-Med.png){ width="600" }
 
-
 !!!note
-      Ramp-up time is 5 virtual users every 2 seconds. Test duration is the total of ramp-up time and one hour with peak load of concurrent users.
-
+      Ramp-up time is five virtual users every two seconds. The test duration includes the ramp-up time plus one hour at the peak load of concurrent users.
 
 ### DX Core tuning
 
@@ -126,13 +119,13 @@ To run the tests, a distributed AWS/JMeter agents setup consisting of 1 primary 
 - LTPA token timeout was increased from 120 minutes to 600 minutes for the rendering tests.
 
 !!!note
-      - For DAM, no tuning details are mentioned in this topic except for the pod resources like CPU and memory limits for all pods related to DAM, such as ring-api, persistence-node, persistence-connection-pool, and core. Since DAM uses `Node.js`, you can monitor CPU and memory usage using Prometheus and Grafana. Based on your observations, you can modify memory requests and limits in Kubernetes accordingly.
+      For DAM, no tuning details are mentioned in this topic except for the pod resources like CPU and memory limits for all pods related to DAM, such as ring-api, persistence-node, persistence-connection-pool, and core. Since DAM uses `Node.js`, you can monitor CPU and memory usage using Prometheus and Grafana. Based on your observations, you can modify memory requests and limits in Kubernetes accordingly.
 
 ## Results
 
 The initial test runs were conducted on an AWS-distributed Kubernetes setup with one master and eight worker nodes. The system successfully handled concurrent user loads of 10,000 and 15,000 with a low error rate (< 0.0001%). At 20,000 users, error rates increased dramatically and response times went up. For a response time to be considered optimal, it should be under one second.
 
-Subsequent tests were conducted on a setup with twelve worker nodes which evaluated various user loads up to 30,000 concurrent users. The error rates remained low (<0.0001%) and response times were satisfactory. Adjustments were made to the number of pods, CPU, and memory for the following containers: HAProxy, Core, RingAPI, digitalAssetManagement, persistenceNode, and persistenceConnectionPool. These changes aimed to identify the most beneficial factors for the activity
+Subsequent tests were conducted on a setup with twelve worker nodes which evaluated various user loads up to 30,000 concurrent users. The error rates remained low (<0.0001%) and response times were satisfactory. Adjustments were made to the number of pods, CPU, and memory for the following containers: HAProxy, Core, RingAPI, digitalAssetManagement, persistenceNode, and persistenceConnectionPool. These changes aimed to identify the most beneficial factors for the activity.
 
 For the Core pod, increasing the CPU limit gave a boost to performance, but this effect eventually saturated at 5600 millicore. This result indicated that increasing the number of Core pods at this point provided additional benefits.
 
@@ -147,15 +140,15 @@ There are several factors that can affect the performance of DX in Kubernetes. C
 
 - For a large-sized workload in AWS, start the Kubernetes cluster with 1 master and 12 worker nodes.
 
--  To increase the throughput for the HAProxy and RingAPI containers, increase their CPU allocations. Note that increasing the number of pods does not increase throughput.
+- To increase the throughput for the HAProxy and RingAPI containers, increase their CPU allocations. Note that increasing the number of pods does not increase throughput.
 
 - To boost performance for the DAM and persistence-node pods, increase the CPU limits first, then increase the number of pod replicas. Increasing the number of pods also increases throughput for DAM.
 
 - To hold more authenticated users for testing purposes, increase the OpenLDAP pod values. Note that the OpenLDAP pod is not for production use.
 
--  To optimize the Core container, increase the CPU allocation until this saturates. After the optimal CPU level is determined, increase the number of pods to boost performance.
+- To optimize the Core container, increase the CPU allocation until the container saturates. After the optimal CPU level is determined, increase the number of pods to boost performance.
 
--  To improve response times, increase the number of Core pods proportionally to the user load. For example, 7 core pods were used for a load of 10,000 concurrent users, and 23 core pods for a load of 30,000 concurrent users.
+- To improve response times, increase the number of Core pods proportionally to the user load. For example, 7 core pods were used for a load of 10,000 concurrent users, and 23 core pods for a load of 30,000 concurrent users.
 
 - To prevent Out of Memory (OOM) issues, increase the memory allocation for the DAM and HAProxy pods by approximately 1024Mi for every 10,000 concurrent users.
 
