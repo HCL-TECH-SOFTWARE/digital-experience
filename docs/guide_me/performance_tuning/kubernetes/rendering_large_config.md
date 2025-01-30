@@ -8,7 +8,7 @@ This topic provides the details of the environments used for rendering in a larg
 
 ## Methodology
 
-This sizing activity rendered scenarios for the Web Content Manager (WCM), Digital Asset Management (DAM), and HCL Digital Experience (DX) pages & portlets. This activity used a rendering setup enabled in AWS/Native-Kubernetes, where Kubernetes is installed directly in Amazon Elastic Cloud Compute (EC2) instances. A combination run was performed that rendered WCM content, DAM assets, and DX pages and portlets. The load distribution was WCM content (40%), DAM assets (30%), and DX pages and portlets (30%). All systems were pre-populated before performing the rendering tests.
+This sizing activity rendered scenarios for the Web Content Manager (WCM), Digital Asset Management (DAM), and HCL Digital Experience (DX) pages and portlets. This activity used a rendering setup enabled in AWS/Native-Kubernetes, where Kubernetes is installed directly in AWS Elastic Cloud Compute (EC2) instances. A combination run was performed that rendered WCM content, DAM assets, and DX pages and portlets. The load distribution was WCM content (40%), DAM assets (30%), and DX pages and portlets (30%). All systems were pre-populated before performing the rendering tests.
 
 To achieve the 30,000 concurrent users mark, an initial set of runs was done with a lower number of users on a multiple node setup with varying numbers of worker nodes. The tests started with eight worker nodes. The number of worker nodes and pods were increased as needed to achieve the desired load with an acceptable error rate (< 0.01%). After establishing the number of nodes, further steps were taken to optimize the limits on the available resources for each pod, as well as the ratios of key pods to each other.
 
@@ -18,7 +18,7 @@ The following table contains the rendering scenario details for a large configur
 | -------------------- | ------------------ | -------------------- | ----------------------------- |
 | 30,000 users         | 200                | 25,000               |    80                         |
 
-For more information about the setup of test data, refer to the following test pages:
+For more information about the setup of test data, refer to the following sections:
 
 - [WCM default test data](./index.md#wcm-default-test-data)
 - [DAM default test data](./index.md#dam-default-test-data)
@@ -30,7 +30,7 @@ This section provides details for the Kubernetes cluster, Load Balancer, JMeter 
 
 ### AWS/Native Kubernetes
 
-The Kubernetes platform ran on an AWS EC2 instance with the DX images installed and configured. In AWS/Native Kubernetes, the tests were executed in EC2 instances with 1 c5.2xlarge master node and 12 c5.4xlarge worker nodes . The tests also used a c5.2xlarge remote DB2 instance for the core database. Details about the nodes and the database instance are listed below.
+The Kubernetes platform ran on an AWS EC2 instance with the DX images installed and configured. In AWS/Native Kubernetes, the tests were executed in EC2 instances with 1 c5.2xlarge master node and 12 c5.4xlarge worker nodes. Details about the node setup are listed below.
 
 - **c5.2xlarge master node**
 
@@ -66,6 +66,8 @@ The Kubernetes platform ran on an AWS EC2 instance with the DX images installed 
 
 ### DB2 instance
 
+The tests used a c5.2xlarge remote DB2 instance for the core database. Details about the DB2 setup are listed below.
+
 **c5.2xlarge remote DB2 instance**
 
 - DB2 details
@@ -77,7 +79,6 @@ The Kubernetes platform ran on an AWS EC2 instance with the DX images installed 
 - Processor details
 
       ![](../../../images/Processor_Info_RemoteDB2_Med.png){ width="600" }
-
 
 - Volume details
 
@@ -91,9 +92,9 @@ During the DX Kubernetes deployment, the HAProxy service type was updated from `
 
 ### JMeter agents
 
-**c5.2xlarge JMeter instance**
+To run the tests, a distributed AWS/JMeter agents setup consisting of 1 primary and 20 subordinate c5.2xlarge JMeter instances was used. Details about the JMeter setup are listed below.
 
-To run the tests, a distributed AWS/JMeter agents setup consisting of 1 primary and 20 subordinate c5.2xlarge instances was used. Details about the setup are listed below.
+**c5.2xlarge JMeter instance**
 
 - Instance details
 
@@ -114,9 +115,11 @@ To run the tests, a distributed AWS/JMeter agents setup consisting of 1 primary 
 
 ### DX Core tuning
 
-- This activity followed the same tunings used in the sizing activity for a [medium-sized configuration](./rendering_medium_config.md#dx-core-tuning-for-concurrent-user-run).
+The following list contains details about the tuning and enhancements done to the DX Core during testing:
 
-- LTPA token timeout was increased from 120 minutes to 600 minutes for the rendering tests.
+- Followed the same tunings used in the sizing activity for a [medium-sized configuration](./rendering_medium_config.md#dx-core-tuning).
+
+- Increased the LTPA token timeout from 120 minutes to 600 minutes for the rendering tests.
 
 !!!note
       For DAM, no tuning details are mentioned in this topic except for the pod resources like CPU and memory limits for all pods related to DAM, such as ring-api, persistence-node, persistence-connection-pool, and core. Since DAM uses `Node.js`, you can monitor CPU and memory usage using Prometheus and Grafana. Based on your observations, you can modify memory requests and limits in Kubernetes accordingly.
@@ -148,7 +151,7 @@ There are several factors that can affect the performance of DX in Kubernetes. C
 
 - To optimize the Core container, increase the CPU allocation until the container saturates. After the optimal CPU level is determined, increase the number of pods to boost performance.
 
-- To improve response times, increase the number of Core pods proportionally to the user load. For example, 7 core pods were used for a load of 10,000 concurrent users, and 23 core pods for a load of 30,000 concurrent users.
+- To improve response times, increase the number of Core pods proportionally to the user load. For example, 7 Core pods were used for a load of 10,000 concurrent users, and 23 Core pods for a load of 30,000 concurrent users.
 
 - To prevent Out of Memory (OOM) issues, increase the memory allocation for the DAM and HAProxy pods by approximately 1024Mi for every 10,000 concurrent users.
 
