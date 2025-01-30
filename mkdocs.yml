@@ -1,0 +1,94 @@
+#Project Information
+site_name: HCL Digital Experience Help Center
+site_url: https://opensource.hcltechsw.com/digital-experience/
+site_description: >-
+  A next-gen documentation site for HCL Digital Experience.
+
+# Theme Configuration
+theme:
+  name: material
+  logo: assets/dx_logo.png
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - navigation.instant
+    - navigation.prune
+    - search.highlight
+    - search.share
+    - search.suggest
+    - navigation.prune
+    - content.code.copy
+  custom_dir: theme_overrides/
+  icon:
+    repo: fontawesome/brands/github
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+  
+  # Static files
+  static_templates:
+    - 404.html
+
+# Markdown Extensions
+markdown_extensions:
+  - pymdownx.highlight:
+      use_pygments: true
+      pygments_lang_class: true
+      auto_title: false
+      linenums: false
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      title: On this page
+
+# Copyright
+copyright: >-
+  Copyright &copy; 2019-2024, HCL Technologies Limited - 
+  <a href="#__consent">Change cookie settings</a>
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/HCL-TECH-SOFTWARE
+  version:
+    provider: mike
+  analytics: 
+    provider: custom
+    property: G-7LF0XY95M1
+
+# Repository
+repo_url: https://github.com/HCL-TECH-SOFTWARE/digital-experience
+repo_name: HCL-TECH-SOFTWARE/digital-experience
+edit_uri: edit/main/docs
+
+# Customization
+extra_css:
+  - assets/stylesheets/style.css
+
+extra_javascript:
+  - javascripts/extra.js
+
+plugins:
+  - awesome-pages
+  - search
+  - tags
+  - mike:
+      canonical_version: latest
+      alias_type: redirect
+  - git-revision-date-localized:
+      type: date
