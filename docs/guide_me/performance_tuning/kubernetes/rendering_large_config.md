@@ -83,7 +83,7 @@ The Kubernetes platform ran on an AWS EC2 instance with the DX images installed 
 
       ![](../../../images/Remote-DB2-Volume-Info-Med.png){ width="600" }
 
-### Load Balancer Set-up
+### Load Balancer setup
 
 AWS Elastic Load Balancing (ELB) was used to distribute incoming application traffic across multiple targets automatically. The c5.4xlarge instances, which support network bandwidth of up to 10Gbps, were selected to handle more virtual users in a large configuration, making AWS ELB an optimal choice.
 
@@ -185,10 +185,6 @@ For convenience, these values were added to the `large-config-values.yaml` file 
 2. Extract the `hcl-dx-deployment-XXX.tgz` file.
 
 3. In the extracted folder, navigate to `hcl-dx-deployment/value-samples/large-config-values.yaml` and copy the `large-config-values.yaml` file.  
-
-### Roadmap
-
-A future update to this sizing guidance will include large configuration setups that incorporates 10 times the WCM content, DAM assets, and DX pages and portlets, and test them with 30,000 concurrent user loads. A detailed guidance will be provided in this document along with the results.
 
 ???+ info "Related information"
     - [DX Performance Tuning Guide](../traditional_deployments.md)
