@@ -8,7 +8,7 @@ This topic provides the details of the environments used for rendering in a smal
 
 ## Methodology
 
-This sizing activity rendered scenarios for the Web Content Manager (WCM), Digital Asset Management (DAM), and HCL Digital Experience (DX) pages and portlets. This activity used a rendering setup enabled in AWS/Native-Kubernetes, where Kubernetes is installed directly in AWS Elastic Cloud Compute (EC2) instances. A combination run was performed that rendered WCM content, DAM assets, and DX pages and portlets. The load distribution was WCM content (40%), DAM assets (30%), and DX pages and portlets (30%). All systems were pre-populated before performing the rendering tests.
+This sizing activity rendered scenarios for the Web Content Manager (WCM), Digital Asset Management (DAM), and HCL Digital Experience (DX) pages and portlets. This activity used a rendering setup enabled in AWS/Native-Kubernetes, where Kubernetes is installed directly in Amazon Elastic Cloud Compute (EC2) instances. A combination run was performed that rendered WCM content, DAM assets, and DX pages and portlets. The load distribution was WCM content (40%), DAM assets (30%), and DX pages and portlets (30%). All systems were pre-populated before performing the rendering tests.
 
 To achieve the 1,000 concurrent users mark, an initial set of runs was done with a lower number of users on a single node setup. The tests started with the desired load of 1,000 users and an acceptable error rate (< 0.01%). Further steps were taken to optimize the limits on the available resources for each pod.
 
@@ -30,7 +30,7 @@ This section provides details for the Kubernetes cluster, JMeter agents, and dat
 
 ### AWS/Native Kubernetes
 
-The Kubernetes platform ran on an AWS EC2 instance with the DX images installed and configured. In AWS/Native Kubernetes, the tests were executed in EC2 instances with one c5.2xlarge node. Details about the node setup are listed below.
+The Kubernetes platform ran on an Amazon EC2 instance with the DX images installed and configured. In AWS/Native Kubernetes, the tests were executed in EC2 instances with one c5.2xlarge node. Details about the node setup are listed below.
 
 **c5.2large node**
 
@@ -163,7 +163,7 @@ This section provides the details of the environments used for rendering with th
 
 ### Methodology
 
-This sizing activity rendered scenarios for the WCM, DAM, and HCL DX pages and portlets. This activity used a rendering setup enabled in AWS/Native-Kubernetes, where Kubernetes is installed directly in AWS EC2 instances. A combination run was performed that rendered WCM content, DAM assets, and DX pages and portlets. The load distribution was WCM content (40%), DAM assets (30%), and DX pages and portlets (30%). All systems were pre-populated before performing the rendering tests.
+This sizing activity rendered scenarios for the WCM, DAM, and HCL DX pages and portlets. This activity used a rendering setup enabled in AWS/Native-Kubernetes, where Kubernetes is installed directly in Amazon EC2 instances. A combination run was performed that rendered WCM content, DAM assets, and DX pages and portlets. The load distribution was WCM content (40%), DAM assets (30%), and DX pages and portlets (30%). All systems were pre-populated before performing the rendering tests.
 
 To achieve the maximum throughput for users, an initial set of runs was done with a lower number of users on a single-node setup. Pods were then scaled accordingly.
 
@@ -185,7 +185,7 @@ This section provides details for the Kubernetes cluster, JMeter, and database.
 
 #### AWS/Native Kubernetes
 
-The Kubernetes platform ran on an AWS EC2 instance with the DX images installed and configured. In AWS/Native Kubernetes, the tests were executed in EC2 instances with one c5.xlarge master node instance. The test started with a c5.2xlarge node and moved to a c5.4xlarge node. After analyzing test results and further observations, the test moved and settled with a c5.9xlarge node. Details about the node setup are listed below.
+The Kubernetes platform ran on an Amazon EC2 instance with the DX images installed and configured. In AWS/Native Kubernetes, the tests were executed in EC2 instances with one c5.xlarge master node instance. The test started with a c5.2xlarge node and moved to a c5.4xlarge node. After analyzing test results and further observations, the test moved and settled with a c5.9xlarge node. Details about the node setup are listed below.
 
 **c5.9xlarge node**
 
