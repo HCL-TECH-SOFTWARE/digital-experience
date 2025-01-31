@@ -30,7 +30,7 @@ This section provides details for the Kubernetes cluster, Load Balancer, JMeter 
 
 ### AWS/Native Kubernetes
 
-The Kubernetes platform ran on an Amazon EC2 instance with the DX images installed and configured. In AWS/Native Kubernetes, the tests were executed in EC2 instances with 1 c5.2xlarge master node and 12 c5.4xlarge worker nodes. Details about the node setup are listed below.
+The Kubernetes platform ran on an Amazon EC2 instance with the DX images installed and configured. In AWS/Native Kubernetes, the tests were executed in EC2 instances with 1 c5.2xlarge master node and 12 c5.4xlarge worker nodes. Refer to the following node setup details:
 
 - **c5.2xlarge master node**
 
@@ -66,7 +66,7 @@ The Kubernetes platform ran on an Amazon EC2 instance with the DX images install
 
 ### DB2 instance
 
-The tests used a c5.2xlarge remote DB2 instance for the core database. Details about the DB2 setup are listed below.
+The tests used a c5.2xlarge remote DB2 instance for the core database. Refer to the following DB2 setup details:
 
 **c5.2xlarge remote DB2 instance**
 
@@ -92,7 +92,7 @@ During the DX Kubernetes deployment, the HAProxy service type was updated from `
 
 ### JMeter agents
 
-To run the tests, a distributed AWS/JMeter agents setup consisting of 1 primary and 20 subordinate c5.2xlarge JMeter instances was used. Details about the JMeter setup are listed below.
+To run the tests, a distributed AWS/JMeter agents setup consisting of 1 primary and 20 subordinate c5.2xlarge JMeter instances was used. Refer to the following JMeter setup details:
 
 **c5.2xlarge JMeter instance**
 
@@ -128,13 +128,13 @@ The following list contains details about the tuning and enhancements done to th
 
 The initial test runs were conducted on an AWS-distributed Kubernetes setup with one master and eight worker nodes. The system successfully handled concurrent user loads of 10,000 and 15,000 with a low error rate (< 0.0001%). At 20,000 users, error rates increased dramatically and response times went up. For a response time to be considered optimal, it should be under one second.
 
-Subsequent tests were conducted on a setup with twelve worker nodes which evaluated various user loads up to 30,000 concurrent users. The error rates remained low (<0.0001%) and response times were satisfactory. Adjustments were made to the number of pods, CPU, and memory for the following containers: HAProxy, Core, RingAPI, digitalAssetManagement, persistenceNode, and persistenceConnectionPool. These changes aimed to identify the most beneficial factors for the activity.
+Subsequent tests were conducted on a setup with twelve worker nodes which evaluated various user loads up to 30,000 concurrent users. The error rates remained low (<0.0001%) and response times were satisfactory. Adjustments were made to the number of pods, CPU, and memory for the following containers: HAProxy, Core, RingAPI, digitalAssetManagement, persistenceNode, and persistenceConnectionPool. These changes aimed to identify the most beneficial factors for the sizing activity.
 
 For the Core pod, increasing the CPU limit gave a boost to performance, but this effect eventually saturated at 5600 millicore. This result indicated that increasing the number of Core pods at this point provided additional benefits.
 
 ## Conclusion
 
-There are several factors that can affect the performance of DX in Kubernetes. Changes in the number of running nodes, number of pods, and the capacity of individual pods can improve its performance. Any changes should be closely monitored to ensure precise tracking of resource utilization.
+There are several factors that can affect the performance of DX in Kubernetes. Changes in the number of running nodes, number of pods, and the capacity of individual pods can improve HCL DX performance. Any changes should be closely monitored to ensure precise tracking of resource utilization.
 
 !!!note
      Performance tuning for a Kubernetes DX cluster must be conducted for the particular workloads involving the number of concurrent users. Refer to the [DX Core tuning guide](../traditional_deployments.md) for further enhancements.

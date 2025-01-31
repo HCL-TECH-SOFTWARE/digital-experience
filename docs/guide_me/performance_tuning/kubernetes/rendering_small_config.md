@@ -30,7 +30,7 @@ This section provides details for the Kubernetes cluster, JMeter agents, and dat
 
 ### AWS/Native Kubernetes
 
-The Kubernetes platform ran on an Amazon EC2 instance with the DX images installed and configured. In AWS/Native Kubernetes, the tests were executed in EC2 instances with one c5.2xlarge node. Details about the node setup are listed below.
+The Kubernetes platform ran on an Amazon EC2 instance with the DX images installed and configured. In AWS/Native Kubernetes, the tests were executed in EC2 instances with one c5.2xlarge node. Refer to the following node setup details:
 
 **c5.2large node**
 
@@ -50,7 +50,7 @@ The Kubernetes platform ran on an Amazon EC2 instance with the DX images install
 
 ### DB2 instance
 
-The tests used a c5.2xlarge remote DB2 instance for the core database. Details about the DB2 setup are listed below.
+The tests used a c5.2xlarge remote DB2 instance for the core database. Refer to the following DB2 setup details:
 
 **c5.2xlarge remote DB2 instance**
 
@@ -70,7 +70,7 @@ The tests used a c5.2xlarge remote DB2 instance for the core database. Details a
 
 ### JMeter agents
 
-To run the tests, a distributed AWS/JMeter agents setup consisting of one primary and two subordinate t2.xlarge instances was used. Details about the JMeter setup are listed below.
+To run the tests, a distributed AWS/JMeter agents setup consisting of one primary and two subordinate t2.xlarge instances was used. Refer to the following JMeter setup details:
 
 **t2.xlarge JMeter instance**
 
@@ -185,7 +185,7 @@ This section provides details for the Kubernetes cluster, JMeter, and database.
 
 #### AWS/Native Kubernetes
 
-The Kubernetes platform ran on an Amazon EC2 instance with the DX images installed and configured. In AWS/Native Kubernetes, the tests were executed in EC2 instances with one c5.xlarge master node instance. The test started with a c5.2xlarge node and moved to a c5.4xlarge node. After analyzing test results and further observations, the test moved and settled with a c5.9xlarge node. Details about the node setup are listed below.
+The Kubernetes platform ran on an Amazon EC2 instance with the DX images installed and configured. In AWS/Native Kubernetes, the tests were executed in EC2 instances with one c5.xlarge master node instance. The test started with a c5.2xlarge node and moved to a c5.4xlarge node. After analyzing test results and further observations, the test moved and settled with a c5.9xlarge node. Refer to the following node setup details:
 
 **c5.9xlarge node**
 
@@ -207,7 +207,7 @@ The Kubernetes platform ran on an Amazon EC2 instance with the DX images install
 
 #### DB2 instance
 
-The tests used a c5.2xlarge remote DB2 instance for the core database. Details about the DB2 setup are listed below.
+The tests used a c5.2xlarge remote DB2 instance for the core database. Refer to the following DB2 setup details:
 
 **c5.2xlarge remote DB2 instance**
 
@@ -227,7 +227,7 @@ The tests used a c5.2xlarge remote DB2 instance for the core database. Details a
 
 #### JMeter agents
 
-To run the tests, a distributed AWS/JMeter agents setup consisting of one primary and eight subordinate instances was used. Details about the JMeter setup are listed below.
+To run the tests, a distributed AWS/JMeter agents setup consisting of one primary and eight subordinate instances was used. Refer to the following JMeter setup details:
 
 **c5.2xlarge JMeter instance**
 

@@ -30,7 +30,7 @@ This section provides details for the Kubernetes cluster, JMeter agents, LDAP, a
 
 ### AWS/Native Kubernetes
 
-The Kubernetes platform ran on an Amazon EC2 instance with the DX images installed and configured. In AWS/Native Kubernetes, the tests were executed in EC2 instances with one c5.xlarge master node and four c5.4xlarge worker nodes. The test started with c5.2xlarge worker nodes and moved to c5.4xlarge worker nodes after analyzing test results. Details about the node setups are listed below.
+The Kubernetes platform ran on an Amazon EC2 instance with the DX images installed and configured. In AWS/Native Kubernetes, the tests were executed in EC2 instances with one c5.xlarge master node and four c5.4xlarge worker nodes. The test started with c5.2xlarge worker nodes and moved to c5.4xlarge worker nodes after analyzing test results. Refer to the following node setup details:
 
 - **c5.large master node**
 
@@ -66,7 +66,7 @@ The Kubernetes platform ran on an Amazon EC2 instance with the DX images install
 
 ### DB2 instance
 
-The tests used a c5.2xlarge remote DB2 instance for the core database. Details about the DB2 setup are listed below.
+The tests used a c5.2xlarge remote DB2 instance for the core database. Refer to the following DB2 setup details:
 
 **c5.2xlarge remote DB2 instance**
 
@@ -86,7 +86,7 @@ The tests used a c5.2xlarge remote DB2 instance for the core database. Details a
 
 ### JMeter agents
 
-To run the tests, a distributed AWS/JMeter agents setup consisting of one primary and eight subordinate c5.2xlarge JMeter instances was used. Details about the JMeter setup are listed below.
+To run the tests, a distributed AWS/JMeter agents setup consisting of one primary and eight subordinate c5.2xlarge JMeter instances was used. Refer to the following JMeter setup details:
 
 **c5.2xlarge JMeter instance**
 
@@ -161,7 +161,7 @@ The following list contains details about the tuning and enhancements done to th
 
 The initial test runs were conducted on an AWS-distributed Kubernetes setup with one master and three worker nodes. The system successfully handled concurrent user loads of 1,000, 2,500, 4,000, and 5,000 users, with a low error rate (< 0.0001%). At 8,000 users, error rates increased dramatically and the response times went up. For a response time to be considered optimal, it should be under one second.
 
-Subsequent tests were conducted on a setup with four worker nodes and 10,000 concurrent users. The error rates were low (<0.0001%) and response times were satisfactory. Adjustments were made to the number of pods, CPU, and memory of each of the following containers: HAProxy, Core, RingAPI, digitalAssetManagement, persistenceNode, and persistenceConnectionPool. These changes aimed to identify the most beneficial factors for the activity.
+Subsequent tests were conducted on a setup with four worker nodes and 10,000 concurrent users. The error rates were low (<0.0001%) and response times were satisfactory. Adjustments were made to the number of pods, CPU, and memory of each of the following containers: HAProxy, Core, RingAPI, digitalAssetManagement, persistenceNode, and persistenceConnectionPool. These changes aimed to identify the most beneficial factors for the sizing activity.
 
 For the HAProxy container, increasing the CPU allocation dramatically increased throughput. When the number of HAProxy pods was increased, the throughput decreased.
 
@@ -169,7 +169,7 @@ For the Core pod, increasing the CPU limit gave a boost to performance, but this
 
 ## Conclusion
 
-There are several factors that can affect the performance of DX in Kubernetes. Changes in the number of running nodes, number of pods, and the capacity of individual pods can improve its performance. 
+There are several factors that can affect the performance of DX in Kubernetes. Changes in the number of running nodes, number of pods, and the capacity of individual pods can improve HCL DX performance.
 
 !!!note
      Performance tuning for a Kubernetes DX cluster must be conducted for the particular workloads involving the number of concurrent users. Refer to the [DX Core tuning guide](../traditional_deployments.md) for further enhancements.
