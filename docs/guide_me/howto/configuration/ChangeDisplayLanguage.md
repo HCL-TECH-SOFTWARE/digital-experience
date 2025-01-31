@@ -32,6 +32,5 @@ Steps for changing the display language of HCL Digital Experience log files:
 
 6. Test  
 
-References:
-
+Reference:
 [Setting generic JVM arguments in WebSphere Application Server](https://www.ibm.com/support/pages/setting-generic-jvm-arguments-websphere-application-server)
