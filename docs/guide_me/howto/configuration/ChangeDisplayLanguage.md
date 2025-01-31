@@ -1,4 +1,4 @@
-# How to change the display language in WebSphere Portal log files without changing the locale in OS?
+# How to change the display language in HCL Digital Experience log files without changing the locale in OS?
 
 ## Applies to
 
@@ -6,17 +6,17 @@
 
 ## Introduction
 
-When we check WebSphere Portal log files we will see messages are shown in the locale language. Now we want to change the display language without changing the locale in the Operating System. How to do it?
+When the HCL Digital Experience log files will be reviewed, messages are shown in the locale language. How can the display language been changed, without changing the locale in the Operating System?
 
 ## Instructions
 
-The language of WebSphere Portal Server log files can be overwritten by using Java properties. These properties need to be set into the Generic JVM arguments before restarting target JVM.
+The language of the HCL Digital Experience log files can be overwritten by using Java properties. These properties need to be set into the Generic JVM arguments before restarting target JVM.
 
-Here are steps for changing the display language of Portal log files:
+Steps for changing the display language of HCL Digital Experience log files:
 
-1. Log on to WebSphere Integrated Solutions Console.
+1. Log on to IBM WebSphere Integrated Solutions Console.  
 
-2. Navigate to Servers -> Server Types -> WebSphere application servers -> PORTAL_SERVER_NAME -> Java and Process Management -> Process definition -> Java Virtual Machine.
+2. Navigate to `Servers > Server Types > WebSphere application servers > <PORTAL_SERVER_NAME> > Java and Process Management > Process definition > Java Virtual Machine`.
 
 3. Add the parameters below in the Generic JVM arguments:
 
@@ -28,7 +28,7 @@ Here are steps for changing the display language of Portal log files:
 
 4. Click OK and Save to save the changing.
 
-5. Restart the Portal server.
+5. Restart the HCL Digital Experience environment.
 
 6. Test  
 
