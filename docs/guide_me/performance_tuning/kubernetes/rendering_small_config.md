@@ -120,7 +120,7 @@ This performance tuning guide aims to understand how the ratios of key pod limit
 - The modifications recommended in [small-config-helm-values](#recommendations) lead to an improved response time and throughput by 50% compared to using the [default minimal values in the Helm chart](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md#containerization-requirements-and-limitations).
 
 !!!note
-     Performance tuning for a Kubernetes DX cluster must be conducted for the particular workloads involving the number of concurrent users. Generally, these recommendations are intended to speed up tuning for others. Refer to the [DX Core tuning guide](../traditional_deployments.md) for further enhancements.
+     For more information on OS tuning, Web Server tuning, JSF best practices, and other performance tuning	guidelines and recommendations for traditional deployments, refer to the [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md).
 
 ### Recommendations
 
@@ -278,7 +278,7 @@ The following table outlines the pod count and limits for each pod. After applyi
 | persistence-node            | 2              | persistence-node            | persistence-node            | 1000 m                          | 2048 Mi         
 
 !!!note
-     Performance tuning for a Kubernetes DX cluster must be conducted for the particular workloads involving the number of concurrent users. Refer to the [DX Core tuning guide](../traditional_deployments.md) for further enhancements.
+     For more information on OS tuning, Web Server tuning, JSF best practices, and other performance tuning	guidelines and recommendations for traditional deployments, refer to the [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md).
 
 ### Recommendations
 
@@ -308,5 +308,5 @@ Modifications were made to the initial Helm chart configuration during the tests
      Values in bold are tuned Helm values while the rest are default minimal values.
 
 ???+ info "Related information"
-    - [DX Performance Tuning Guide](../traditional_deployments.md)
+    - [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md)
     - [DX Helm Minimal Values](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md#containerization-requirements-and-limitations)

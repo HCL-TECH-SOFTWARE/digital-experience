@@ -117,14 +117,14 @@ The following list contains details about the tuning and enhancements done to th
 
       ![](../../../images/Core_Tuning_LTPA.png){ width="1000" }
 
-- Updated the WCM object cache for rendering. Refer to the [DX Core tuning guide](../traditional_deployments.md) for more information.
+- Updated the WCM object cache for rendering. Refer to the [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md) for more information.
 
       ![](../../../images/Core_WCM_Object_Cache_list.png){ width="1000" }
 
 
       ![](../../../images/WCM_Object_Cache_Instances.png){ width="1000" }
 
-- Updated abspath, abspathreverse, processing, session, strategy, summary values, and WCM rendering values as per [DX Core tuning guide](../traditional_deployments.md).
+- Updated abspath, abspathreverse, processing, session, strategy, summary values, and WCM rendering values as per [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md).
 
 - Added a new custom property under **Resource environment providers > WP CacheManagerService > Custom properties > cacheinstance.com.ibm.wps.resolver.friendly.cache.size**.
 
@@ -172,7 +172,7 @@ For the Core pod, increasing the CPU limit gave a boost to performance, but this
 There are several factors that can affect the performance of DX in Kubernetes. Changes in the number of running nodes, number of pods, and the capacity of individual pods can improve HCL DX performance.
 
 !!!note
-     Performance tuning for a Kubernetes DX cluster must be conducted for the particular workloads involving the number of concurrent users. Refer to the [DX Core tuning guide](../traditional_deployments.md) for further enhancements.
+     For more information on OS tuning, Web Server tuning, JSF best practices, and other performance tuning guidelines and recommendations for traditional deployments, refer to the [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md).
 
 ### Recommendations
 
@@ -219,4 +219,4 @@ For convenience, these values were added to the `medium-config-values.yaml` file
 3. In the extracted folder, navigate to `hcl-dx-deployment/value-samples/medium-config-values.yaml` and copy the `medium-config-values.yaml` file.
 
 ???+ info "Related information"
-    - [DX Performance Tuning Guide](../traditional_deployments.md)
+    - [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md)
