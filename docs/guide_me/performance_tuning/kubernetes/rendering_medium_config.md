@@ -146,16 +146,16 @@ The following list contains details about the tuning and enhancements done to th
 
       ![](../../../images/Core_Tuning_Delete_Search_Collections.png)
 
-- Logged level changes from info to severe in WAS (WebSphere Application Server) for both configuration and run time.
+- Logged level changes from info to severe in the WebSphere Application Server (WAS) for both configuration and run time.
 
       ![](../../../images/Core_Tuning_Log_Level_Details.png){ width="1000" }
 
 - Tuned DB2 by executing DB2 Reorg and Runstats.
 
 !!!note
-     - Neither fragment caching nor static resource caching were enabled to trigger actual stress and processing. In a customer scenario, it is recommended to enable both fragment caching and static resource caching. 
+     - Neither fragment caching nor static resource caching were enabled to trigger actual stress and processing. In a customer scenario, it is recommended to enable both fragment caching and static resource caching.
 
-     - For DAM, no tuning details are mentioned in this topic except the pod resources like CPU and memory limits for all pods related to DAM (for example, ring-api, persistence-node, persistence-connection-pool, and core). Because DAM uses Node.js, you can monitor CPU and memory usage using Prometheus and Grafana. Based on your observations, you can modify memory requests and limits in Kubernetes accordingly.
+     - For DAM, no tuning details are mentioned in this topic except for the pod resources like CPU and memory limits for all pods related to DAM, such as ring-api, persistence-node, persistence-connection-pool, and core. Since DAM uses `Node.js`, you can monitor CPU and memory usage using Prometheus and Grafana. Based on your observations, you can modify memory requests and limits in Kubernetes accordingly.
 
 ## Results
 
