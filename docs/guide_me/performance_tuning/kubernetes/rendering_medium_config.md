@@ -146,7 +146,7 @@ The following list contains details about the tuning and enhancements done to th
 
       ![](../../../images/Core_Tuning_Delete_Search_Collections.png)
 
-- Logged level changes from info to severe in WAS for both configuration and run time.
+- Logged level changes from info to severe in WAS (WebSphere Application Server) for both configuration and run time.
 
       ![](../../../images/Core_Tuning_Log_Level_Details.png){ width="1000" }
 

@@ -245,14 +245,6 @@ To run the tests, a distributed AWS/JMeter agents setup consisting of one primar
 
       ![](../../../images/Remote-DB2-Volume-Info-Med.png){ width="600" }
 
-- Processor details
-
-      ![](../../../images/Processor_Info_Native-Kube.png){ width="600" }
-
-- Volume details
-
-      ![](../../../images/AWS-Native-Kube-Volume-Info.png){ width="600" }
-
 !!!note
       Ramp-up time is 1.5 seconds per user. The test duration includes the ramp-up time plus one hour at the peak load of concurrent users.
 
