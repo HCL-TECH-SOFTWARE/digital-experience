@@ -1,58 +1,78 @@
-# Install the Pers_Offers portlet  
+# Installing the Pers_Offers portlet  
 
-## Prerequiste
+## Prerequisites
 
-Make sure that you have already installed git or git-bash, Microsoft Visual Studio Code and Maven.
-Furthermore, please make sure that you have already run the following two ConfigEngine tasks:
+- Ensure you have installed git or git-bash, Microsoft VSC, and Maven. Refer to [Prerequisites for the Personalization portlet exercise](./pzn_demoprereq.md) for more information.
+- Ensure to run the following ConfigEngine tasks:
 
-- UNIX™Linux™:  
-   `./ConfigEngine.sh create-pzndemo-users -DPortalAdminPwd=<password> -DWasPassword=<password>`  
-   `./ConfigEngine.sh install-pzndemo -DPortalAdminPwd=<password> -DWasPassword=<password>`  
+  - UNIX™Linux™:  
+        - `./ConfigEngine.sh create-pzndemo-users -DPortalAdminPwd=<password> -DWasPassword=<password>`  
+        - `./ConfigEngine.sh install-pzndemo -DPortalAdminPwd=<password> -DWasPassword=<password>`  
 
-- Windows™:  
-   `ConfigEngine.bat create-pzndemo-users -DPortalAdminPwd=<password> -DWasPassword=<password>`  
-   `ConfigEngine.bat install-pzndemo -DPortalAdminPwd=<password> -DWasPassword=<password>`  
+  - Windows™:  
+        - `ConfigEngine.bat create-pzndemo-users -DPortalAdminPwd=<password> -DWasPassword=<password>`
+        - `ConfigEngine.bat install-pzndemo -DPortalAdminPwd=<password> -DWasPassword=<password>`  
 
-## Detailed steps
+## Compiling and packaging the pers_offers project
 
-1. Clone the git repository [Personalization Example (Pers_Offers)](https://github.com/HCL-TECH-SOFTWARE/DX-Personalization-Development-Sample)  
-   `git clone https://github.com/HCL-TECH-SOFTWARE/DX-Personalization-Development-Sample`  
+1. Clone the **[Personalization development sample (Pers_Offers)](https://github.com/HCL-TECH-SOFTWARE/DX-Personalization-Development-Sample){target="_blank"}** git repository using the following command:
 
-2. start Micorosoft Visual Studio Code and open the folder:  
-   `\dx-portlet-development-utilities\personalization\Pers_Offers\pers_offers`
+    ```text
+    git clone https://github.com/HCL-TECH-SOFTWARE/DX-Personalization-Development-Sample
+    ```  
 
-3. add the ejb-thin-client jar dependiencies to the pom.xml file of the pers_offers project.  
-   Here is an example:  
+2. In Microsoft VSC, go to this file path:  
+
+    ```text
+    \dx-portlet-development-utilities\personalization\Pers_Offers\pers_offers  
+    ```
+
+3. Add the `ejb-thin-client` JAR dependencies to the `pom.xml` file of the pers_offers project. For example:  
 
     ![Change in pom.xml](./images/ejb_thin_client_pre_req.png)  
 
-4. Compile and package the project using the Maven Plugin in Microsoft Visual Studio Code  
-   ![Maven Packaging](./images/maven_packaging_pers_offers.png)  
+4. Compile and package the **pers_offers** project using the Maven plugin in Microsoft VSC. After packaging the project, a`\target\pers_offers-1.0-SNAPSHOT\WEB-INF\lib\pers_offers-1.0-SNAPSHOT.jar` file is created.  
 
-5. By packaging the project a `\target\pers_offers-1.0-SNAPSHOT\WEB-INF\lib\pers_offers-1.0-SNAPSHOT.jar` file will be created. Modify the jar-file (for example with 7zip) to make sure that it just include the pers_offers folder in it with all its java classes. Remove all other files and directories in that jar-file! That modification is required, because when the other files and folders will be kept, the rule classes can not be loaded correctly by the Portal runtime.  
+    ![Maven Packaging](./images/maven_packaging_pers_offers.png)  
 
-    Another option is to use the java jar-utility to package all classes of the pers_offers folder into a jar-file. For details, please check: [Java JAR-Tool](https://docs.oracle.com/javase/tutorial/deployment/jar/basicsindex.html)  
+5. Modify the `pers_offers-1.0-SNAPSHOT.jar` file using tools such as 7-zip to ensure the file only contains the pers_offers folder and its Java classes. Remove all other files and directories in the JAR file to ensure that the rule classes are loaded correctly by the Portal runtime.  
 
-6. Copy the modified `pers_offers-1.0-SNAPSHOT.jar` file to `\PortalServer\pzn\prereq.pzn\collections`  
+    You can also use the Java JAR-Tool to package all classes of the pers_offers folder into a JAR file. Refer to [Java JAR-Tool](https://docs.oracle.com/javase/tutorial/deployment/jar/basicsindex.html) for more information.  
 
-7. restart the portal server  
+6. Copy the modified `pers_offers-1.0-SNAPSHOT.jar` file to `\PortalServer\pzn\prereq.pzn\collections`.  
 
-8. As soon as the server is started the **Pers Offers Portlet** can be installed. That can be done in two different ways.  
+7. restart the DX server  
 
-    **DX-Client installation**
+## Installing the Pers_Offers portlet manually or through the DX client  
 
-      1. In Visual Studio Code open the tasks.json file and verify the dxclient command settings, to make sure that it matchs your DX environment settings.  
-      2. The portlet can be installed in Microsoft Visual Studio Code, by navigating to **Terminal** > **Run task...**  
-      3. Click to the option **deploy_OR_Update_Portlet**. In the terminal window it can be checked, if the deployment is successfully.  
-         There is also another task available to undeploy the portlet again. (see task: **undeploy_Portlet**)  
+As soon as the server restarts, you can install the **Pers_Offers** portlet. You can install the portlet manually, or through the HCL Digital Experience (DX) client.  
 
-    **Manual installation**
+1. Install the **Pers_Offers** portlet:  
 
-      1. Login as portal admin user to your portal. Navigate to **Administration** > **Applications** > **Web Modules**  
-      2. Click to the **Install** button  
-      3. Select the `\dx-portlet-development-utilities\personalization\Pers_Offers\pers_offers\target\pers_offers-1.0-SNAPSHOT.war` file and install it.  
+    - DX client installation  
 
-9. Create a new page with name **Pers Offers** and add the **Pers Offers** portlet.  
+        1. In Microsoft VSC, open the `tasks.json` file and verify the DXclient command settings to ensure it matches your DX environment settings.  
+
+        2. Click **Terminal** > **Run task...**.  
+
+        3. Click **deploy_OR_Update_Portlet**. A window will appear confirming if the deployment is successful.  
+
+            You can also click **undeploy_Portlet** to undeploy the portlet again.  
+
+    - Manual installation  
+
+        1. Log in to HCL DX as the Portal administrator (wpsadmin).  
+
+        2. Navigate to **Administration** > **Applications** > **Web Modules**.  
+
+        3. Click **Install**.  
+
+        4. Select the `\dx-portlet-development-utilities\personalization\Pers_Offers\pers_offers\target\pers_offers-1.0-SNAPSHOT.war` file and install it.  
+
+2. Create a new page with name **Pers Offers**.  
+
+3. Add the **Pers Offers** portlet.  
 
 !!!note
-    As soon as the Pers Offers portlet is installed, you might still will not see any personalized information in that portlet. This is because the pzn-rules are not installed yet. That will be done in the next steps. Furthermore, personalized information are just shown up for the pzndemo-users (for example username: scott / password: pzndemo) and not for the portal admin user (wpsadmin). That means that it is required to login as such a pzn-demo user to see personalized information.  
+    - After installing the Pers_Offers portlet, you will not see any personalized information in the portlet because the Personalization rules are not yet installed.  
+    - Personalized information only appear for the Personalization sample users and not the Portal administrator (wpsadmin).  

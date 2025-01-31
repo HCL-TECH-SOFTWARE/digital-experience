@@ -1,6 +1,6 @@
-# Test the Pers Offers Portlet
+# Testing the Pers_Offers portlet
 
-If you are currently logged in as portal admin user (wpsadmin), then please log off from the Portal.
+If you are currently logged in as portal admin user (wpsadmin), then please log off from the HCL Digital Experience.
 
 1. Login as one of the following uers:
 
