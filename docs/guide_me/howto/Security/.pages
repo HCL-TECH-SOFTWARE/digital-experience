@@ -1,0 +1,4 @@
+title: DX Security
+nav:
+    - index.md
+    - transient_users_with_OpenID_Connect.md
