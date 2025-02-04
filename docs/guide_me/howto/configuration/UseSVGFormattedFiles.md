@@ -2,60 +2,67 @@
 
 ## Applies to
 
-> HCL Digital Experience 8.5 and higher
+> HCL Digital Experience v8.5 and higher
 
 ## Introduction
 
-Out of the box, HCL Web Content Manager does not support the SVG filetypes.  These are the steps in how to have the server recognize these file types in the UI.
+HCL Digital Experience does not support the SVG filetypes out of the box. These are the steps in how to have the server recognize these file types in the UI.
 
 ## Instructions
 
-Open the WebSphere Integrated Solutions console and navigate to the Resources > Resource Environment Providers > WCM WCMConfig_Service and select the "custom properties"
+1. Open the IBM Integrated Solutions Console (WAS admin console) and navigate to **Resources > Resource Environment Providers > WCM WCMConfig_Service** and select the **custom properties**.  
 
-- Create "extensiontype.svg" with a value of "image/svg+xml"
+2. Create the custom property `extensiontype.svg` with a value `image/svg+xml`.  
 
-- Create the variable "imageresourcecmpnt.allowedmimetypes" and set this value:
+3. Create the custom property `imageresourcecmpnt.allowedmimetypes` and set the value:  
 
-        imageresourcecmpnt.allowedmimetypes = image/gif,image/png,image/jpeg,image/jpg,image/jpe,image/jfif,image/bmp,image/x-bmp,image/x-bitmap,image/x-xbitmap,image/x-win-bitmap,image/x-windows-bmp,image/ms-bmp,image/x-ms-bmp,application/bmp,application/x-bmp,application/x-win-bitmap,image/ico,image/svg+xml
+    `image/gif,image/png,image/jpeg,image/jpg,image/jpe,image/jfif,image/bmp,image/x-bmp,image/x-bitmap,image/x-xbitmap,image/x-win-bitmap,image/x-windows-bmp,image/ms-bmp,image/x-ms-bmp,application/bmp,application/x-bmp,application/x-win-bitmap,image/ico,image/svg+xml`  
 
-- To the variable "image.initialFileExtensions" add the value of "SVG" to the list  
+4. To the custom property `image.initialFileExtensions` add the value `SVG` to the list.  
 
-Save all of these values.
+5. Review and save the changes to the master configuration.  
 
-Click the Environment -> Virtual Hosts link. > Select the virtual host where WebSphere Portal is installed, for example: default_host.
+6. In the IBM Integrated Solutions Console navigate to **Environment > Virtual Hosts**.  
 
-Click the MIME Types link under "Additional Properties" > Review the current MIME types.
+7. Select the virtual host where HCL Digital Experience is installed, for example: `default_host`.  
 
-Check for the MIME Type image/svg+xml
+8. Click the **MIME Types** link under **Additional Properties**  
 
-If is not there, so you will need to create it.
+9. Review the current MIME types and check for the MIME Type `image/svg+xml`  
+    If it is missing, please add it as following:  
 
-Click "New" to add a new MIME Type.
+    Click the **New** button to add a new MIME Type with the following values:  
 
-MIME Type: image/svg+xml Extensions : svg svgz
+    ```text
+    MIME Type: image/svg+xml
+    Extensions: svg svgz  
+    ```
 
-Restart the WebSphere Application Server server.
+10. Restart the Application Server server.  
 
-**Additional notes:**
+**Additional information:**
 
-The above process has been used for the following types as well and should be applicable to other file types:
+The above process can be used for the following types as well and should be applicable to other file types:  
 
-WCM WCMConfigService --> Custom properties the following extensiontypes were created:
+1. In the IBM Integrated Solutions Console navigate to **Resources > Resource Environment Providers > WCM WCMConfigService > Custom properties**  
+2. The following extension types can be created:
 
-- extensiontype.webp with value image/webp
-- extensiontype.jxr with value image/jxr
-- extensiontype.jp2 with value image/jp2
+   - `extensiontype.webp` with value `image/webp`
+   - `extensiontype.jxr` with value `image/jxr`
+   - `extensiontype.jp2` with value `image/jp2`
 
-Then for property imageresourcecmpnt.allowedmimetypes added the following values to the end: image/webp,image/jxr,image/jp2
+3. Then for property `imageresourcecmpnt.allowedmimetypes` add the following values to the end: `image/webp,image/jxr,image/jp2`  
 
-Under environment --> Virtual host --> default_host --> MIME Types, created MIME Types:
+4. In the IBM Integrated Solutions Console navigate to  **Environment > Virtual host > default_host > MIME Types**  
 
-- image/webp with value webp
-- image/jxr with value jxr
-- image/jp2 with value jp2
+5. Created MIME Types:  
 
-After adding all new types, click Apply >OK >Save.
+   - `image/webp` with value `webp`  
+   - `image/jxr` with value `jxr`  
+   - `image/jp2` with value `jp2`  
 
-Click Save again to complete the changes.
+6. After adding all new types, click **Apply > OK > Save**.  
 
-Restart the WebSphere Application Server server.
+7. Save the changes to the master configuration.  
+
+8. Restart the WebSphere Application Server server.  
