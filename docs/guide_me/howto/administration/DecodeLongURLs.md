@@ -2,7 +2,7 @@
 
 ## Applies to
 
-> HCL Digital Experience 8.5 and higher
+> HCL Digital Experience v8.5 and higher
 
 ## Introduction
 
@@ -14,15 +14,19 @@ The main reason the URL is long and unreadable is that it's a base64 and gzip en
 
 To decode a URL, paste the whole URL or URL starting with /wps in a contentHandler query:
 
-`http://<server>:<port>/wps/mycontenthandler?uri=state:http://<server>:<port>/<URL to be decoded>`
+```url
+http://<server>:<port>/wps/mycontenthandler?uri=state:http://<server>:<port>/<URL to be decoded>
+```
 
 So it would be like this:
 
-`http://<server>:<port>/wps/mycontenthandler?uri=state:http://<server>:<port>/wps/portal/home/shopapply/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zizSzcDTzcDYx8DMzdHA0cDV2MTM2cLA1M_A31wwkpiAJKG-AAjgZA_VFgJThMMPA1gSrAY0ZBboRBpqOiIgBSYigH/dz/d5/L2dBISEvZ0FBIS9nQSEh/`
+```url
+http://<server>:<port>/wps/mycontenthandler?uri=state:http://<server>:<port>/wps/portal/home/shopapply/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zizSzcDTzcDYx8DMzdHA0cDV2MTM2cLA1M_A31wwkpiAJKG-AAjgZA_VFgJThMMPA1gSrAY0ZBboRBpqOiIgBSYigH/dz/d5/L2dBISEvZ0FBIS9nQSEh/
+```
 
 Then you will see an XML output like this:
 
-```text
+```xml
 <root>
 <state type="navigational">  
 <selection selection-node="Z6_68G0HG02L07FA0A1D256B904O1">  
