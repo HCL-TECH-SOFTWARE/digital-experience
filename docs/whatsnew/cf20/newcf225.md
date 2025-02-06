@@ -9,7 +9,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 8.5 and 9.0 Versions**
 
-- Extended Support option now available for DX versions 8.5 and 9.0 
+- Extended Support option now available for DX versions 8.5 and 9.0
 - Automatically apply 9.5 from a later CF installation
 
 **Digital Experience 9.5 Container Version**
