@@ -2,17 +2,17 @@
 
 ## Applies to
 
-> HCL Digital Experience 8.5 and higher
+> HCL Digital Experience v8.5 and higher
 
 ## Introduction
 
-Sample command syntax to install Digital Experience fixes using IBM Installation Manager
+This article desribe sample command syntax information to install Digital Experience fixes using IBM Installation Manager
 
 ## Instructions
 
 If any questions about what parameters to pass to install/uninstall a package, use " imcl.exe -c " and respond to the prompts, see below.
 
-[Combined Cumulative Fix (CF) Installation](https://help.hcl-software.com/digital-experience/9.5/CF224/deployment/install/traditional/cf_install/ccf_95_standalone/)
+[Combined Cumulative Fix (CF) Installation](https://help.hcl-software.com/digital-experience/9.5/latest/deployment/install/traditional/cf_install/ccf_95_standalone/)
 
 **Installation Manager command line to list installed packages:**
 
