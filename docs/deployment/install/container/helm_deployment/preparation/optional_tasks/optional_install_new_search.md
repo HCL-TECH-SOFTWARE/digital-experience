@@ -1,6 +1,6 @@
-# Installing search based on OpenSearch
+# Installing the Search V2 backend
 
-This topic provides information on how to configure search based on OpenSearch for your DX deployment.
+This topic provides information on how to configure search based on OpenSearch (Search V2) for your DX deployment.
 
 The search currently provides the following capabilities:
 
@@ -88,13 +88,170 @@ images:
   tags:
     openSearch: "IMAGE_TAG_FROM_LOADED_IMAGES"
     searchMiddleware: "IMAGE_TAG_FROM_LOADED_IMAGES"
+    fileProcessor: "IMAGE_TAG_FROM_LOADED_IMAGES"
   # Image name for each application
   names:
     openSearch: "path/in/your/repository/dx-opensearch"
     searchMiddleware: "path/in/your/repository/dx-search-middleware"
+    fileProcessor: "path/in/your/repository/dx-file-processor"
 ```
 
 Configure other parameters inside the `custom-search-values.yaml` of the search deployment based on your requirements. The default out-of-the-box deployment is a minimal deployment with one replica per service.
+
+### Security settings  
+
+You can reconfigure security-related configurations such as **Search admin** and **Push admin**.
+
+```yaml
+# Security related configuration, e.g. default credentials
+security:
+  # Security configuration for Search administration
+  administration:
+    searchAdminUser: "searchadmin"
+    searchAdminPassword: "adminsearch"
+  pushAdministration:
+    pushAdminUser: "pushadmin"
+    pushAdminPassword: "adminpush"  
+``` 
+
+- **Search admin**: Reconfigure `searchAdminUser` to the search admin username and `searchAdminPassword` to the search admin password.   
+- **Push admin**: Reconfigure `pushAdminUser` to the push admin username and `pushAdminPassword` to the push admin password.  
+
+### Split deployment settings  
+
+```yaml
+configuration:
+  openSearch:
+    splitDeployment: false
+  searchMiddleware:
+    splitDeployment: false 
+```  
+
+- `splitDeployment` under the `openSearch` configuration controls whether the OpenSearch roles are split into manager and data pods or not. This configuration is set to `false` by default to ensure all roles are combined into the manager pods and no additional data pods are created. Change the configuration to `true` to create distinct manager data pods which can be configured individually.  
+- `splitDeployment` under the `searchMiddleware` configuration controls whether the data and query load should be split between pods or not.  
+
+### Replicas settings  
+
+You can reconfigure the default amount of replicas per application.
+
+```yaml
+scaling:
+  # The default amount of replicas per application
+  replicas:
+    openSearchManager: 1
+    openSearchData: 1
+    searchMiddlewareQuery: 1
+    searchMiddlewareData: 1
+  # Automated scaling using HorizontalPodAutoScaler
+  horizontalPodAutoScaler:
+    searchMiddlewareQuery:
+      # Enable or disable autoscaling
+      enabled: false
+      minReplicas: 1
+      maxReplicas: 3
+      # Target CPU utilization scaling threshold
+      targetCPUUtilizationPercentage: 75
+      # Target Memory utilization scaling threshold
+      targetMemoryUtilizationPercentage: 80
+```  
+
+- If split deployment is enabled, both the `searchMiddlewareQuery` and `searchMiddlewareData` values are considered. In a non-split deployment, only the `searchMiddlewareQuery` value is considered.  
+- You can enable automated scaling by enabling `horizontalPodAutoScaler` for both `searchMiddlewareQuery` and `searchMiddlewareData`. Enter the minimum number of pods in the `minReplicas` field and the maximum number of pods in `maxReplicas`. By default, automated scaling is disabled for both `searchMiddlewareQuery` and `searchMiddlewareData` settings.  
+
+### Automated setup of content sources and crawlers
+
+```yaml
+configuration:
+  automatedSetup:
+    digitalAssetManagement: 
+      enabled: true
+    jcr:
+      enabled: true
+    portal:
+      enabled: true
+    wcm:
+      enabled: true
+```  
+
+You can enable an automated setup for content sources and crawlers. This setting is enabled by default for all content sources and crawlers. This includes the following content sources:
+- 'dam' for Digital Asset Management (`dam_default_content_source` - `75024f9c-2579-58f1-3new-5706ba2a62fc`)
+- 'jcr' for Java Content Repository (`jcr_default_content_source` - `680f8805-92f3-45d4-a900-8f28c7160935`)
+- 'portal' for Portal (`portal_default_content_source` - `5d2d2fa4-8f71-435d-9341-c3034ff9c509`)
+- 'wcm' for Web Content Manager (`wcm_default_content_source` - `972369e7-041c-4459-9211-069f4917c1ba`)
+
+For each of the content sources, you can enable or disable the automated setup by setting the `enabled` field to `true` or `false`. It is possible to override the default settings for `uuid`, `aclLookupHost`, and `aclLookupPath` for each content source. If left empty, the setup will automatically detect default values by inspecting the existing DX deployment.
+
+### Allowlisting for file types in the file processor 
+
+The allowlist for file types has a list of configurable mime types that are allowed to be processed during file extraction. 
+
+```yaml
+configuration:
+  textExtraction:
+      # Configuring Fileprocessor
+      allowedMimeTypes:
+        - "application/msword"
+        - "application/rtf"
+        - "text/plain"
+        - "application/pdf"
+        - "image/jpeg"
+        ...
+```   
+
+### Common fields mapping for fallback  
+
+Common field mappings are the default mappings for WCM, DAM, JCR, and PORTAL in the `documentObject`. You can find appropriate mappings for each field in the `documentObject`. Use an empty string if none of the mappings apply. For more information about `documentObject`, see [Indexed documents](../../../../../manage/container_configuration/configure_opensearch/architectural_overview.md#indexed-documents). 
+
+```yaml
+commonFieldMappings:
+    # Mappings for WCM Crawler
+    wcm:
+      title: "title"
+      description: "summary"
+      type: "documentType"
+      tags: "tags"
+    # Mappings for DAM
+    dam:
+      title: "name"
+      description: "description"
+      type: "type"
+      tags: "tags"
+    # Mappings for JCR Crawler
+    jcr:
+      title: "title"
+      description: "description"
+      type: "category"
+      tags: ""
+    # Mappings for Portal Crawler
+    portal:
+      title: "title"
+      description: "summary"
+      type: "category"
+      tags: "tags"
+```  
+
+Refer to the following list for more information about the fields:
+
+- `wcm`, `dam`, `jcr`, and `portal` are the types of content source currently supported.  
+- Names of common field mappings such as `title`, `description`, `type`, and `tags` cannot be changed.  
+- Apart from `title`, `description`, `type` and `tags`, additional common fields are not allowed.  
+- There are default values defined to map different content sources such as `wcm`, `dam`, `jcr` and `portal` to different common fields such as `title`, `description`, `type` and `tags`. You can change these default mapping values.
+
+### Persistent Volume size requests  
+
+The default storage size for OpenSearch is set to `1Gi`. You can adjust the storage size for more indexing and larger deployments.
+
+```yaml
+# Persistent Volume Setup
+volumes:
+  # Persistent Volumes for OpenSearch
+  openSearchManager:
+    # Data persistence for OpenSearch nodes
+    data: 
+      storageClassName: "manual"
+      requests:
+        storage: "1Gi"
+```  
 
 ## Running Helm install
 
@@ -166,6 +323,7 @@ dx-deployment-ring-api-5c4c75b7c7-85qpk                      1/1     Running    
 dx-deployment-runtime-controller-657fbbf7c7-4kbdk            1/1     Running             0               12m
 dx-search-open-search-manager-0                              1/1     Running             0               32s
 dx-search-search-middleware-query-5f7fb4798f-gglvj           1/1     Running             0               32s
+dx-search-file-processor-98bd64657-h82mx                     1/1     Running             0               32s
 ```
 
 ### Validating access to API explorer

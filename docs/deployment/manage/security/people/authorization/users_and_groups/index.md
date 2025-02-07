@@ -20,6 +20,8 @@ Use the impersonation feature to access another user's system as though you are 
 Two groups are nested if one of the groups contains the other group as a member. The access control system treats nested groups as though all members of the contained group are also members of the containing group. In other words, permissions for nested groups are treated as cumulative.
 -   **[Registration/Edit My Profile and Login portlets](../users_and_groups/sec_subman.md)**  
 In HCL Portal, the Registration/Edit My Profile and Login portlets reside on special pages where the anonymous user has access rights based on the User role.
+-   **[Creating a custom login portlet](custom_login_portlet.md)**  
+Learn how to create a custom login portlet for HCL DX.
 -   **[Removing users and groups](../users_and_groups/adxmltsk_del_usrs_grps.md)**  
 Depending on circumstances, you might want to remove users or groups from your HCL Digital Experience that are no longer used or required. You can use the XML configuration interface \(XML Access\) to list such users and groups. You can also remove only some selected users and groups, and keep others for further use.
 

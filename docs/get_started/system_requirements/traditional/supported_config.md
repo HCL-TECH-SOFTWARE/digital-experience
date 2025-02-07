@@ -101,7 +101,7 @@ HCL Digital Experience 9.5 requires the following capabilities and products to p
 ||9.0.0.2 and later maintenance releases|9.0|
 ||9.0.5 and later maintenance releases**|9.0 CF17|
 
-** WebSphere Application Server fix packs 9.0.5.19 and 8.5.5.25 are currently causing an issue with ConfigEngine tasks and should not be used at this time. See the documentation [ConfigEngine errors when updating WebSphere Application Server](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0112396) for more details.
+** Starting CF222, the issue with the fix packs 9.0.5.19 and 8.5.5.25 has been addressed. WAS versions 8.5.5.26, 9.0.5.20, and later are now supported.
 
 |Prerequisite|Prerequisite minimum and supported versions|Product minimum|
 |----------|----------|----------|
@@ -130,7 +130,7 @@ HCL Digital Experience 9.5 requires JDK 7.0 or later for installation.
 |Apache Derby|10.11*<br/>|8.5|
 |DB2 Standard and Advanced Edition|11.5** and later maintenance releases|8.5|
 |DB2 on Amazon Relational Database Service|11.5** and later maintenance releases|8.5|
-|Microsoft SQL Server Enterprise and Standard Edition|2017, 2019 and later maintenance releases|8.5|
+|Microsoft SQL Server Enterprise and Standard Edition|2017, 2019, 2022 and later maintenance releases|8.5|
 |Oracle Database 19c|19c and later maintenance releases|8.5|
 |Oracle on Amazon Relational Database Service|12.2.0.1.0 and later maintenance releases|8.5|
 
@@ -162,17 +162,20 @@ JDBC Drivers support forward compatibility for all maintenance levels and also n
 |Microsoft SQL Server JDBC Driver|6.2, and later maintenance releases|8.5|
 |Oracle JDBC Driver 12.c***|12.2, and later maintenance releases|8.5|
 
-*JDBC drivers are shipped as DB2 for z/OS APARs. You can check for the appropriate APAR/PTF numbers in the DB2 for z/OS Infocenter, 'Programming for DB2 > Programming for Java > Supported drivers for JDBC and SQLJ'. Obtain the PTFs from DB2 on z/OS support or IBMLINK. Version 3.58 and later are supported.  
-**Requires APAR PK93123 for DB2 on z/OS V9.1. You can obtain the fix from DB2 on z/OS support or IBMLINK.  
+\*JDBC drivers are shipped as DB2 for z/OS APARs. You can check for the appropriate APAR/PTF numbers in the DB2 for z/OS Infocenter, 'Programming for DB2 > Programming for Java > Supported drivers for JDBC and SQLJ'. Obtain the PTFs from DB2 on z/OS support or IBMLINK. Version 3.58 and later are supported. 
+
+\**Requires APAR PK93123 for DB2 on z/OS V9.1. You can obtain the fix from DB2 on z/OS support or IBMLINK.
+
 ***Oracle JDBC Driver Thin (type 4) Oracle JDBC Driver Thick, TAF (type 2) - Supported on Linux operating systems only.  
 		 
 
 ## LDAP servers 
 All LDAP Servers that support the LDAP V3 Specification are supported.
 
-|Supported software|Supported software minimum|product minimum|
+|Supported software|Supported software minimum|Product minimum|
 |-----------|------------------|-----|
 |IBM Security Directory Suite|8.0.1 and later maintenance releases|8.5|
+|IBM Security Verify Directory|10.0.1 and later maintenance releases|8.5|
 
 ## Product-specific or mixed content 
 |Supported software|Supported software minimum|Product minimum|

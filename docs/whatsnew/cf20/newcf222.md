@@ -8,12 +8,13 @@ The following features and updates are available to customers installing HCL Dig
 - Updated documentation for creating categories by using external URLs
 - Updated documentation for WAB filters
 - Updated documentation for generating WCM search URLs
+- New guidance for cleaning up WCM items
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
 
 - End of Support announced for Digital Experience v8.5 and 9
-- Automatically apply 9.5 from CF223 installation
+- Automatically apply 9.5 from a later CF installation
 
 **Digital Experience 9.5 Container Version**
 
@@ -22,7 +23,6 @@ The following features and updates are available to customers installing HCL Dig
 - New sizing guidance for rendering in a medium configuration
 - Documentation for using Logstash to push pod logs to OpenSearch
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
-- Notice of deprecation of customized OpenLDAP container starting CF223
 - Removal of automated Pod restart on ConfigMap updates
 
 Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases.
@@ -32,12 +32,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### WAS versions 8.5.5.26, 9.0.5.20, and later now supported
 
 === "Containers"
-    As indicated in [ConfigEngine errors when updating WebSphere Application Server (WAS) to Fix pack v9.0.5.19 & v8.5.5.25](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0112396), the WAS fix packs 9.0.5.19 and 8.5.5.25 or later were not supported due to changes in the WAS ANT implementation.
+    As stated in [ConfigEngine errors when updating WebSphere Application Server (WAS) to Fix pack v9.0.5.19 & v8.5.5.25](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0112396), the WAS fix packs 9.0.5.19 and 8.5.5.25 or later were not supported due to changes in the WAS ANT implementation.
 
     Starting CF222, this issue has been addressed. HCL DX now ships with the WAS fix pack 9.0.5.20 applied.
 
 === "On-Premises"
-    As indicated in [ConfigEngine errors when updating WebSphere Application Server (WAS) to Fix pack v9.0.5.19 & v8.5.5.25](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0112396), the WAS fix packs 9.0.5.19 and 8.5.5.25 or later were not supported due to changes in the WAS ANT implementation.
+    As stated in [ConfigEngine errors when updating WebSphere Application Server (WAS) to Fix pack v9.0.5.19 & v8.5.5.25](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0112396), the WAS fix packs 9.0.5.19 and 8.5.5.25 or later were not supported due to changes in the WAS ANT implementation.
 
     Starting CF222, this issue has been addressed. HCL DX now supports versions 8.5.5.26, 9.0.5.20, and later versions of WAS. 
 
@@ -65,6 +65,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     The topic [HCL Web Content Manager Support Tools](../../deployment/manage/troubleshooting/wcm_support_tools.md#generate-wcm-search-url) is updated to include steps on how to generate a WCM search URL to be used within a content source. Note that Administrator access is required to generate a WCM Search URL.
 
+### New guidance for cleaning up WCM items
+
+=== "Containers"
+    The amount of Web Content Manager (WCM) items can accumulate over time. To maintain good system performance, it is recommended to clean up old items that are no longer needed. See the new topic [Cleaning up WCM items](../../guide_me/cleanup_wcm.md) for more information.
+
+=== "On-Premises"
+    The amount of Web Content Manager (WCM) items can accumulate over time. To maintain good system performance, it is recommended to clean up old items that are no longer needed. See the new topic [Cleaning up WCM items](../../guide_me/cleanup_wcm.md) for more information.
+
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
 === "Containers"
@@ -80,10 +88,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     On June 30, 2023, HCL Software announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
     
-### Automatically apply 9.5 from CF223 installation
+### Automatically apply 9.5 from a later CF installation
 
 === "On-Premises"
-    In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that starting with the next DX release, CF223, 9.5 is applied by default unless you set `install_95=false`.
+    In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
 ## Digital Experience 9.5 Container Version
 
@@ -105,17 +113,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Documentation for using Logstash to push pod logs to OpenSearch
 
 === "Containers"
-    As applications scale, managing Kubernetes logs is important for monitoring, debugging, and compliance. The new topic [Using Logstash to push pod logs to OpenSearch]() outlines the steps for configuring Logstash and Filebeat so that Kubernetes pod logs are forwarded to OpenSearch, an open source search and analytics engine. 
+    As applications scale, managing Kubernetes logs is important for monitoring, debugging, and compliance. The new topic [Using Logstash to push pod logs to OpenSearch](../../guide_me/performance_tuning/kubernetes/logstash_opensearch.md) provides the steps for configuring Logstash and Filebeat to have Kubernetes pod logs forwarded to OpenSearch, an open source search and analytics engine.
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
 === "Containers"
     Starting CF216, the Harbor repository is updated with an OCI-based registry and the Helm chart command is updated to be OCI-compliant. Instructions on how to pull Helm charts using OCI commands are now available. For more information, see the Help Center topics [Configure Harbor Helm Repository](../../deployment/install/container/helm_deployment/preparation/get_the_code/configure_harbor_helm_repo.md) and [Download and Deploy from HCL Harbor Repository](../../get_started/download/harbor_container_registry.md).
-    
-### Notice of deprecation of customized OpenLDAP container starting CF223
-
-=== "Containers"
-    Starting CF223, HCL DX will no longer build and ship its custom OpenLDAP container and will instead use an open source container. By using the robust and well-maintained Bitnami&copy; OpenLDAP image, HCL DX can focus on delivering enhanced features and support without the overhead of maintaining its customized container. This shift is to provide you with more reliable and up-to-date solutions for your test environments. The new alternative, Bitnami&copy;, will be provided but will not ship with the release. Sample LDIF (LDAP data interchange format) files for your OpenLDAP configuration will also be available.
     
 ### Removal of automated Pod restart on ConfigMap updates
 

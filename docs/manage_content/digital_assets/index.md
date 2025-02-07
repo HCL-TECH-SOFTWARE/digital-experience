@@ -6,11 +6,11 @@ Users can access the HCL DAM features in HCL Digital Experience 9.5 Container Up
 
 Follow these steps to install, configure, and use the HCL Digital Experience 9.5 DAM features.
 
-- **[Configure HCL Digital Asset Management](configuration/index.md)**
+- **[Configure HCL Digital Asset Management](configuration/index.md)**  
 This section provides steps on how to configure HCL Digital Asset Management for specific use.
-- **[Usage of HCL Digital Asset Management](usage/index.md)**
+- **[Usage of HCL Digital Asset Management](usage/index.md)**  
 Upload, manage, and modify rich media assets and collections using HCL Digital Asset Management.
-- **[Limitations](limitations/index.md)**
+- **[Limitations](limitations/index.md)**  
 List of limitations that currently exist in HCL Digital Asset Management.
 
 

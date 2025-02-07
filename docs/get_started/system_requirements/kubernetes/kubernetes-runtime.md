@@ -9,10 +9,10 @@ For best results, customers should remain up-to-date on the latest HCL DX and Ku
 
 ## Kubernetes platform support policy
 
-HCL DX 9.5 CF200 and later is designed to run on any Certified Kubernetes platform ([https://www.cncf.io/certification/software-conformance](https://www.cncf.io/certification/software-conformance)), provided that the following statements are true:
+HCL DX 9.5 CF200 and later versions are designed to run on any [Certified Kubernetes platform](https://www.cncf.io/certification/software-conformance){target="_blank"}, provided that the following statements are true:
 
 * The Kubernetes platform is hosted on x86-64 hardware.
-* The Kubernetes platform is officially supported by Helm ([https://helm.sh/docs/topics/kubernetes\_distros/](https://helm.sh/docs/topics/kubernetes_distros/)).
+* The Kubernetes platform is officially supported by [Helm](https://helm.sh/docs/topics/kubernetes_distros/){target="_blank"}.
 
 HCL tests DX against a range of Kubernetes platforms that are regularly reviewed and updated with the intent of staying as up-to-date as possible. HCL does not test with every platform vendor or with every Kubernetes version, but HCL aims to cover a representative sample of popular Kubernetes implementations. See [Table 1](#table-1-tested-kubernetes-platforms-on-full-container-deployment) for the list of Kubernetes platforms that HCL tested with.
 
@@ -40,12 +40,13 @@ Review your chosen Kubernetes platform and ensure that it supports the following
 
 |CF Level|Kubernetes versions|
 |--------------|-----------------|
-|CF221| Kubernetes 1.30<br/>Kubernetes 1.29<br/>Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>|
-|CF220| Kubernetes 1.30<br/>Kubernetes 1.29<br/>Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>|
-|CF219| Kubernetes 1.29<br/>Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>|
+|CF225| Kubernetes 1.32<br/>Kubernetes 1.31<br/>Kubernetes 1.30<br/>Kubernetes 1.29<br/>Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>|
+|CF224| Kubernetes 1.31<br/>Kubernetes 1.30<br/>Kubernetes 1.29<br/>Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>|
+|CF223| Kubernetes 1.31<br/>Kubernetes 1.30<br/>Kubernetes 1.29<br/>Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>|
 
-!!! important "__*__ CF203 limited support statement"
-    In CF203, HCL DX supports Kubernetes 1.22 only for HAProxy-based deployments.
+
+!!!important
+    To prevent a possible Kubernetes deployment failure in Kubernetes versions 1.28 and 1.29, it may be required to run the command `modprobe br_netfilter` before running `kubeadm init`. This is a potential solution to avoid a networking bridge/iptables issue.
 
 ## Prerequisites checker for DX deployment
 

@@ -332,6 +332,21 @@ For **Search Services** configuration, the following values are used:
 
 Based on the previously created Remote Search service, create a **Portal Search Collection** and a **JCR Search Collection** using the following parameters.
 
+##### Selecting the right host for the search collections
+
+When you run crawlers, it is important that they always use the pod to retrieve their data because the seedlist providers are not shared between pods. In the following examples, a placeholder for the host is used. Replace this placeholder with the correct host name.
+
+The host is composed of the deployment name used in the `helm install` command and the namespace. The port number is the secure port of the DX Core pod and is `10042` by default.
+
+This is the pattern for the hostname: `<dx-deployment>-core-<n>.<dx-deployment>-core.<namespace>.svc.cluster.local`.
+
+The following example shows you how to replace the placeholder with the correct hostname and port number:
+
+- Deployment name: `dx-deployment`
+- Namespace: `dxns`
+
+The resulting hostname for pod 0 looks like this: `dx-deployment-core-0.dx-deployment-core.dxns.svc.cluster.local`.
+
 ##### Portal Search Collection
 
 Use the following parameters to create a [Portal search collection](https://help.hcltechsw.com/digital-experience/9.5/admin-system/create_search_coll.html)<!-- (../../9.0/admin-system/create_search_coll.md) -->.
@@ -344,7 +359,7 @@ Use the following parameters to create a [Portal search collection](https://help
 !!!note
     The `Search collection location` is relative to the remote search container. Furthermore, one places the collection in the **profile** of the Remote Search server because the profile of the remote search server is persisted. One obviously wants the search indexes persisted across restarts.
 
-Create the two following Content Sources:
+Create the following Content Sources:
 
 ###### Portal Content Source
 
@@ -352,25 +367,19 @@ Create the two following Content Sources:
 |---------|-----|
 |Content Source Type|Portal Site|
 |Content Source Name|Portal Content Source|
-|Collect documents linked from this URL|`https://dx-core-service:10042/wps/seedlist/myserver?Source=com.ibm.lotus.search.plugins.seedlist.retriever.portal.PortalRetrieverFactory&Action=GetDocuments&Range=100`|
+|Collect documents linked from this URL|`https://<dx-core-pod-hostname>:10042/wps/seedlist/myserver?Source=com.ibm.lotus.search.plugins.seedlist.retriever.portal.PortalRetrieverFactory&Action=GetDocuments&Range=100`|
 
-In the `Security` panel, use the DX Core Service name (e.g., `dx-core`) as the host name, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
-
-!!!tip
-    Note: The host `dx-core` and port `10042` are the Kubernetes service host and the port for DX Core. In this case, 10042 is the HttpQueueInboundDefaultSecure port on the HCL DX 9.5 server. Adjust this according to your deployment configuration.
+In the `Security` panel, use the specified DX Core Pod hostname, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
 
 ###### WCM Content Source
 
 |Parameter|Value|
 |---------|-----|
-|Content Source Type|Seedlist provider|
-|Content Source Name|Portal Content Source|
-|Collect documents linked from this URL|`https://dx-core-service:10042//wps/seedlist/myserver?SeedlistId=&Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&Action=GetDocuments`|
+|Content Source Type|WCM Site|
+|Content Source Name|WCM Content Source|
+|Collect documents linked from this URL|`https://<dx-core-pod-hostname>:10042//wps/seedlist/myserver?SeedlistId=&Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&Action=GetDocuments`|
 
-In the `Security` panel, use the DX Core Service name (e.g., `dx-core`) as the host name, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
-
-!!!tip
-    Note: The host `dx-core` and port `10042` are the Kubernetes service host and the port for DX Core. In this case, 10042 is the HttpQueueInboundDefaultSecure port on the HCL DX 9.5 server.  Adjust this according to your deployment configuration.
+In the `Security` panel, use the specified DX Core Pod hostname, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
 
 ##### JCR Search Collection
 
@@ -392,13 +401,12 @@ Create the following Content Source:
 |---------|-----|
 |Content Source Type|Seedlist provider|
 |Content Source Name|Portal Content Source|
-|Collect documents linked from this URL|`https://dx-core:10042/wps/seedlist/myserver?Action=GetDocuments&Format=ATOM&Locale=en_US&Range=100&Source=com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory&Start=0&SeedlistId=1@OOTB_CRAWLER1`|
+|Collect documents linked from this URL|`https://<dx-core-pod-hostname>:10042/wps/seedlist/myserver?Action=GetDocuments&Format=ATOM&Locale=en_US&Range=100&Source=com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory&Start=0&SeedlistId=1@OOTB_CRAWLER1`|
 
-In the `Security` panel, use the DX Core Service name (e.g., `dx-core`) as the host name, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
+In the `Security` panel, use the specified DX Core Pod hostname, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
 
 !!!note "Notes"
     - Click the **create** button to create the security realm definition inside the frame where you first entered the data. This action ensures that you have the security realm defintion before saving the content source.
-    - The host `dx-core` and port `10042` are the Kubernetes service host and the port for DX Core. In this case, 10042 is the HttpQueueInboundDefaultSecure port on the HCL DX 9.5 server. Adjust this according to your deployment configuration.
     - The parsing of the `SeedlistId` positional parameter in this URL uses an index of the virtual portal being crawled. In this case, 1 (in 2 places) represents the base virtual portal.
 
 

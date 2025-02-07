@@ -6,11 +6,16 @@ DXClient can take artifacts developed locally and deploy them to HCL DX servers 
 
 DXClient is meant to be the one-stop, platform-independent solution that lets you integrate HCL DX with any automation infrastructure of your choice.
 
-DXClient comes with two deployment options:
+DXClient comes with multiple deployment options:
 
-- First option is to deploy using the DXClient container package. DXClient is packaged as a container that you can run using OCI-based runtimes such as Docker or Podman. It is available as a container image from HCL DX 9.5 CF196 and later releases. For more information, see [DXClient installation using container package](#installing-dxclient-using-the-container-package-from-hcl-software-portal).
+- DXClient is free to download and install through [NpmJS and Harbor repositories](#public-and-free-dxclient-installation-options).
 
-- The alternative option is to deploy DXClient as native JavaScript code. Users who want to use this deployment option must install their own Node.js and Node Package Manager (npm) runtime environment in the correct version. Users must also install the required dependencies. For more information, see [DXClient installation using native js package](#installing-dxclient-using-the-native-javascript-package-from-hcl-software-portal).
+- In the HCL Software License Portal, one option is to deploy using the DXClient container package. DXClient is packaged as a container that you can run using OCI-based runtimes such as Docker or Podman. It is available as a container image from HCL DX 9.5 CF196 and later releases. For more information, see [DXClient installation using container package](#installing-dxclient-using-the-container-package-from-hcl-software-portal).
+
+!!!warning
+    Recent changes to Podman introduced by RedHat have caused a compatibility issue with the container implementation of DXClient. HCL is currently investigating how this might be resolved. Until further notice, Docker is recommended for using the DXClient container implementation.
+
+- An alternative option in the HCL Software License Portal is to deploy DXClient as native JavaScript code. Users who want to use this deployment option must install their own Node.js and Node Package Manager (npm) runtime environment in the correct version. Users must also install the required dependencies. For more information, see [DXClient installation using native js package](#installing-dxclient-using-the-native-javascript-package-from-hcl-software-portal).
 
 !!!important "Information about DXClient versions and distribution"
     DXClient is now free to download and install through [NpmJS and Harbor repositories](#public-and-free-dxclient-installation-options). After openly distributing DXClient, the versioning format of DXClient is now changed from 1.xx.x to <CFNumber\>.x.x. For example, the version of DXClient in the previous release was "1.29.0". Starting CF221, the versioning format uses the corresponding CF number of the DX deployment, making the DXClient version for CF221 "221.0.0". 
@@ -190,7 +195,8 @@ In addition, the package includes scripts for all operating systems that make it
             make_unlink.bat
             ```
 
-2.  Ensure that Node.js version 12.18.3 or later version is installed to the local workstation. The DXClient tool is supported on Microsoft Windows, Linux, and Apple macOS workstations and automation servers.
+2.  Ensure that a long-term support (LTS) version of Node.js or a later version is installed in the local workstation. The DXClient tool is supported on Microsoft Windows, Linux, and Apple macOS workstations and automation servers.
+    
 
 3.  Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local directory on the local workstation from your DX 9.5 CF19 or later entitlements on the [HCL Software License Portal](https://www.hcltech.com/software/support/release).
 
@@ -340,10 +346,18 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
 
 !!!note
     Refer to the list of features that were released in the following HCL DX 9.5 releases:
+    
+    -   HCL DX 9.5 CF225 release: **V225.0.0
+        -  Livesync is enabled for Presentation Template under WCM Design Library.
+
+    -   HCL DX 9.5 CF224 release: **V224.0.0
+        -  New DXClient LiveSync sub-commands: [LiveSync push-wcm-design-library](../dxclient/dxclient_artifact_types/livesync.md#livesync-push-wcm-design-library) and [pull-wcm-design-library](../dxclient/dxclient_artifact_types/livesync.md#livesync-pull-wcm-design-library)
+        - Livesync is enabled for HTML Components under WCM Design Library.
 
     -   HCL DX 9.5 CF221 release: **V221.0.0
         -  A one time license agreement click-through is enabled. To skip the prompt, use the [accept-license](#dxclient-information-commands) command.
         -   DXClient is now openly distributed in [NpmJS and Harbor repository](#public-and-free-dxclient-installation-options).
+        -   In [DAM Staging](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md) tasks, the parameters `dxWASUsername`, `dxWASPassword`, `targetServerWASUsername`, and `targetServerWASPassword` are now deprecated and should no longer be used.
 
     -   HCL DX 9.5 CF219 release: **V1.28.0 
         - [Enabled multiple environment configuration in node version](#configuring-multiple-environments-in-dxclient)
@@ -586,6 +600,9 @@ Use the following command to skip prompt of click-through license acceptance agr
 dxclient accept-license
 ```
 
+!!!note
+    For container versions, you only have to accept the license agreement once for every volume directory created.
+
 Use the following command to show version compatibility details between DX Core and DXClient [`version-compat`](../dxclient/dxclient_artifact_types/versionCompat.md):
 
 ```bash
@@ -774,6 +791,18 @@ Use this command to [import WCM libraries](../dxclient/dxclient_artifact_types/w
 dxclient wcm-library-import
 ```
 
+Use this command to [export the content of a WCM library for translation into a CSV file](../dxclient/dxclient_artifact_types/wcm_mls_export_import.md):
+
+```bash
+dxclient mls-export
+```
+
+Use this command to [import the translated content into DX](../dxclient/dxclient_artifact_types/wcm_mls_export_import.md):
+
+```bash
+dxclient mls-import
+```
+
 Use the `dx-core-configuration-reports` command to get a summary of the configurations of a single DX server or both source and target DX servers, which users can use to compare.
 
 ```bash
@@ -791,7 +820,19 @@ Use this command to download the theme files in WebDAV Server in preparation for
 ```bash
 dxclient livesync pull-theme [options]
 ```
-    
+
+Use this command to download the WCM Design Library files from the DX Server in preparation for [`livesync push-wcm-design-library`](../dxclient/dxclient_artifact_types/livesync.md#livesync-push-wcm-design-library):
+
+```bash
+dxclient livesync pull-wcm-design-library [options]
+```
+
+Use this command to sync a local WCM Design Library with the DX server. Succeeding changes are immediately reflected in the DX Server:
+
+```bash
+dxclient livesync push-wcm-design-library [options]
+```
+
 ## Limitations
 
 - For hybrid deployments in which two different hostnames are used for the on-premises DX Core and Kubernetes DX Services, there are no options to enter both the hostnames. You must consider the DXClient function being used and enter the appropriate hostname. For example, for DAM tasks such as `manage-dam-staging`, you must enter the Kubernetes hostname. For DX Core tasks such as `deploy-portlet` you must enter the on-premises DX Core hostname.
@@ -802,7 +843,9 @@ dxclient livesync pull-theme [options]
 
 ## HCLSoftware U learning materials
 
-For an introduction and a demo on how to use DXClient, go to [Staging](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D505){target="_blank"}. To try it out yourself, refer to [DXClient Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-100_DXClient_for_Beginners.pdf){target="_blank"}.
+For an introduction and a demo on DX staging, go to [Staging for Beginners](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D505){target="_blank"}.
+
+To learn how to use staging tools such as DXClient, Syndication, XMLAccess, ReleaseBuilder/Solution Installer, and ConfigEngine, go to [Staging for Intermediate Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3328){target="_blank"}. You can try it out using the [Staging Lab for Intermediate Users](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab.pdf){target="_blank"} and corresponding [Staging Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab_Resources.zip){target="_blank"}.
 
 ???+ info "Related information"
     - [How to translate WCM library content using export and import WCM with DXClient](../dxclient/dxclient_artifact_types/wcm_mls_export_import.md)
