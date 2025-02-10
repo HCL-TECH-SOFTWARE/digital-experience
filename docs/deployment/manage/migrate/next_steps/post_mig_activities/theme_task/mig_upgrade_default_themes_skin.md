@@ -21,8 +21,9 @@ EJPFD0097E: No theme was found to render the page. Navigate to Administration an
 
 5.  Click **Set as default portal skin**.
 
+## HCLSoftware U learning materials
 
+To learn how to further develop WebDAV-based DX themes, go to [Theme Development for Intermediate Users](https://hclsoftwareu.hcltechsw.com/courses/lesson/?id=3462){target="_blank"}. You can try it out using the [Theme Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Theme_Development.pdf){target="_blank"} and corresponding [Theme Development Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Theme_Development_Lab_Resources.zip){target="_blank”}.
 
 ???+ info "Related information" 
     -   [Skins](../../../../../../build_sites/themes_skins/customizing_theme/skins/index.md)
-

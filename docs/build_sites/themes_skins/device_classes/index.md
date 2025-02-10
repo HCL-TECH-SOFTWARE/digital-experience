@@ -20,7 +20,9 @@ The process of assigning a device class to one of the supported clients in HCL D
 6.  [Device class equations](themeopt_devclass_equat.md)  
 Device class equations are expressions that involve a mixture of device class operands and Boolean logic operators.
 
+## HCLSoftware U learning materials
+
+To learn how to further develop WebDAV-based DX themes, go to [Theme Development for Intermediate Users](https://hclsoftwareu.hcltechsw.com/courses/lesson/?id=3462){target="_blank"}. You can try it out using the [Theme Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Theme_Development.pdf){target="_blank"} and corresponding [Theme Development Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Theme_Development_Lab_Resources.zip){target="_blank”}.
 
 ???+ info "Related information"
     - [Target MobileFirst resources](../../../extend_dx/integration/ibm_mobilefirst/wl_device_classes.md)
-

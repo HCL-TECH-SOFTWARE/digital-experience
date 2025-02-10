@@ -122,3 +122,7 @@ Users need different roles to perform the following actions:
 Generally, the page layout that is stored and leveraged on a page is staged as part of the page, therefore, using syndication of the managed pages or `xmlaccess`, the data is transferred.
 
 However, if you are storing the layout as a new layout and want to leverage it on the target server in an Edit mode, then the layout is saved as a system layout. In this case, you must manually stage the `webdav system layouts.json` file (for example, [https://myserver.hcl.com/wps/mycontenthandler/dav/fs-type1/system/layouts.json](https://myserver.hcl.com/wps/mycontenthandler/dav/fs-type1/system/layouts.json)).
+
+## HCLSoftware U learning materials
+
+To learn how to further develop WebDAV-based DX themes, go to [Theme Development for Intermediate Users](https://hclsoftwareu.hcltechsw.com/courses/lesson/?id=3462){target="_blank"}. You can try it out using the [Theme Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Theme_Development.pdf){target="_blank"} and corresponding [Theme Development Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Theme_Development_Lab_Resources.zip){target="_blank”}.
