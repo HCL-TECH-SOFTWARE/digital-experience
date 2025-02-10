@@ -293,7 +293,7 @@ You can use the default theme modules (CSS and JS files) provided to you as-is, 
 
     ![](../../assets/HCL_Search_Get_Theme_Modules_12.png "Open the `default.css` file you have downloaded in a code editor such as Visual Studio Code")
 
-    See the sample view of the formatted CSS file.
+    See the sample view of the formatted `default.css` file.
 
     ![](../../assets/HCL_Search_Get_Theme_Modules_13.png "Log in to HCL Digital Experience 9.5 and Go to the Search V2 UI")
 
