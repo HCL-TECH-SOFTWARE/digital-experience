@@ -33,7 +33,7 @@ hcl-dx-image-processor-image-v1.38.0_20250203-2244.tar.gz
 hcl-dx-license-manager-image-v95_CF225_20250203-2229.tar.gz
 hcl-dx-logging-sidecar-image-v1.0.0_20250203-2231.tar.gz
 hcl-dx-openldap-image-v2.6.8_20250203-2228.tar.gz
-hcl-dx-opensearch-image-v2.0.0_20250205-1249.tar.gz
+hcl-dx-opensearch-image-v2.0.0_20250207-1432.tar.gz
 hcl-dx-people-service-image-v1.0.0_20250203-2223.tar.gz
 hcl-dx-persistence-connection-pool-image-v1.35.0_20250203-2301.tar.gz
 hcl-dx-persistence-metrics-exporter-image-v1.33.0_20250203-2241.tar.gz
@@ -42,8 +42,8 @@ hcl-dx-prereqs-checker-image-v1.0.0_20250203-2234.tar.gz
 hcl-dx-remote-search-image-v95_CF225_20250204-1402.tar.gz
 hcl-dx-ringapi-image-v1.38.0_20250203-2244.tar.gz
 hcl-dx-runtime-controller-image-v95_CF225_20250203-2236.tar.gz
-hcl-dx-search-middleware-image-v2.0.0_20250205-1249.tar.gz
-hcl-dx-search-v2.23.0_20250205-1353.tgz
+hcl-dx-search-middleware-image-v2.0.0_20250207-1433.tar.gz
+hcl-dx-search-v2.23.0_20250207-1739.tgz
 ```
 
 ### HCL Digital Experience File package listings (supported OS platforms)
