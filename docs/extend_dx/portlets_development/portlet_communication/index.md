@@ -17,9 +17,11 @@ HCL Digital Experience supports special purpose techniques for data exchange.
 -   **[Shared portlet sessions](pltcom_shrd_ptlts.md)**  
 The following communication methods are based on shared state between multiple portlets. This means that two or more portlets read and write to the same data.
 
+## HCLSoftware U learning materials
+
+To learn how to turn UI design into DX web design and develop reusable components with different configure options, go to the [HCL Digital Experience for Developers Intermediate course](https://hclsoftwareu.hcltechsw.com/courses/lesson/?id=3461){target="_blank”}. Details about communication between portlets and page components, debugging, and development best practices are also available.
 
 ???+ info "Related information" 
     - [Struts Portlet Framework](https://help.hcltechsw.com/digital-experience/9.5/dev-portlet/wpsstruts.html)
     - [Relation to cooperative portlet wiring](../web2_ui/live_text/w2_smtg_ref_wire.md)
     - [Comparison of the new features with click-to-action in HCL Digital Experience portlets](../web2_ui/live_text/w2_smtg_ref_compr.md)
-
