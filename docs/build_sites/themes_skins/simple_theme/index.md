@@ -30,15 +30,16 @@ The Simple Theme includes the following features:
 
         Creates a mega-menu that uses the bootstrap framework.
 
-        **Note:** The bootstrap navigation requires the bootstrap profile to run. Before you use this navigation, change the profile setting from the default deferred profile to the bootstrap profile by editing your theme from the theme manager.
+        !!!note
+             The bootstrap navigation requires the bootstrap profile to run. Before you use this navigation, change the profile setting from the default deferred profile to the bootstrap profile by editing your theme from the theme manager.
 
 -   **Actions menu**
 
-    By default, the **Actions** menu does not include any entries. You can add entries by editing fs-type1/themes/themename/menu-definitions/pageActions.json in the WebDAV repository of the theme.
+    By default, the **Actions** menu does not include any entries. You can add entries by editing `fs-type1/themes/themename/menu-definitions/pageActions.json` in the WebDAV repository of the theme.
 
 -   **Edit Profile menu**
 
-    The **Edit Profile** menu includes two options: **Edit My Profile** and **Log Out**. If the user sets a profile picture, the picture displays as the menu icon. You can modify these options in fs-type1/themes/themename/menu-definitions/profileActions.json.
+    The **Edit Profile** menu includes two options: **Edit My Profile** and **Log Out**. If the user sets a profile picture, the picture displays as the menu icon. You can modify these options in `fs-type1/themes/themename/menu-definitions/profileActions.json`.
 
 -   **Search**
 
@@ -46,11 +47,10 @@ The Simple Theme includes the following features:
 
 -   **Footer**
 
-    The Simple Theme includes three options for generating a footer. The default footer presents the child pages of the hidden page that has the unique name ibm.portal.theme.simple.footer. You can change this hidden page in the theme metadata. You can also generate a footer by hardcoding the footer elements or by using the st\_wcm\_footer dynamic content spot.
-
+    The Simple Theme uses the `st_wcm_footer_HCL` dynamic content spot to manage the theme. You can also use web content to allow your business users to manage the Simple Theme footer using the `st_wcm_content` dynamic content spot with a path to a web content library, site area, or content. For example, to point to a sample content under the **Articles** site area in the **Web Content** web content library, use: `<a rel="dynamic-content"  href="dyn-cs:id:st_wcm_content?path=Web+Content/Articles/Sample+Article"></a>`.
 
 -   **[Theme templates](../simple_theme/theme_templates/index.md)**  
-You can use static HTML to write portal themes. Then, add static and server-side dynamic content by modifying the theme.html in WebDAV at fs-type1/themes/themename/theme.html.
+You can use static HTML to write portal themes. Then, add static and server-side dynamic content by modifying the `theme.html` in WebDAV at `fs-type1/themes/themename/theme.html`.
 -   **[Dynamic content spots](../simple_theme/dynamic_content_spots/index.md)**  
 The Simple Theme template includes many different dynamic content spots that you can use to customize your custom theme.
 -   **[Changing the theme logo in the Simple Theme](themeopt_themedev_changelogo_simpletheme.md)**  
@@ -71,5 +71,3 @@ You can use simple menus to customize your pages.
 You can add a message module that displays system messages, such as error, warning, or informational messages, at the beginning of the page.
 -   **[Globalization](../simple_theme/globalization/index.md)**  
 By default, the WebDAV files in the Simple Theme template are English only, but you can add other locales to your custom theme.
-
-

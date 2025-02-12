@@ -16,7 +16,7 @@ hide:
 
     ---
 
-    [:octicons-arrow-right-24: Go to What's New](./whatsnew/cf20/newcf224.md)
+    [:octicons-arrow-right-24: Go to What's New](./whatsnew/cf20/newcf225.md)
     
 -   :material-code-braces-box:{ .lg .middle } __DX Architecture__
 
