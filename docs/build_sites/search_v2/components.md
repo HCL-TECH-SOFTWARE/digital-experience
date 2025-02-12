@@ -230,113 +230,6 @@ Functional Composite Components (FCC) combine ACs to deliver higher-level functi
     |**searchResults** |	DxSearchResults	| Contains the search results, including hit count, individual hits, and scores. |	{ hits: { total: { value: NaN, relation: 'eq' }, max_score: 0, hits: [] } } |
     |**isLoading** |	Boolean	| A flag that indicates whether search results are being loaded. |	false |
 
-## Styling the search components
-
-This section explains the default styles for search components and how to customize them.
-
-### Default styling
-
-Each component comes with default styles. See the following examples of different default styles below.
-
-```scss
-/* for dx-search-center-layout */
-dx-search-center-layout::part(main) {
-  display: flex;
-}
-/* for dx-input-textfield */
-dx-input-textfield::part(div) {
-  width: 100%;
-  position: relative;
-}
-/* for dx-button */
-dx-button::part(button) {
-  @include button;
-}
-/* for dx-circular-progress */
-@keyframes rotateCircularProgress {
-  100% {
-   transform: rotate(360deg);
-  }
-}
-/* for dx-header */
-dx-header::part(div) {
-  width: 100%;
-  position: relative;
-}
-/* for dx-chip */
-dx-chip::part(chip-div) {
-  background-color: $BLACK8P;
-  border-radius: 4px;
-  display:inline-flex;
-  padding:8px 8px 8px 8px;
-  align-items: center;
-  height: 16px;
-}
-/* for dx-avatar */
-dx-avatar::part(avatar-div) {
-  height: 32px;
-  width: 32px;
-  border: 1px solid $avatar-border-color;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-// for the input select fields
-dx-search-center-layout .search-input-div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-  dx-search-input-scope,
-  dx-search-input-type {
-    display: flex;
-    align-self: center;
-    max-width: 49%;
-    width: 49%;
-  }
-}
-// for the input query field and button
-dx-search-center-layout div.search-input-div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-  dx-search-input-query {
-    display: flex;
-    align-self: center;
-    width: calc(100% - 125px);
-    max-width: calc(100% - 125px);
-  }
-```
-
-
-### Style customization
-
-You can override styles by targeting the component's class names. Other components can be overridden in a similar manner. Refer to the styling examples below for `dx-button` and `dx-input-textfield`.
-
-!!! note
-    The `part` attribute is used to name parts of a shadow tree, which can then be styled from outside the shadow DOM using the `::part()` pseudo-element. This allows you to apply CSS styles to shadow tree elements from the parent DOM.
-
-```css
-/* for dx-button */
-dx-button::part(button-start-icon) {
-  color: #FBCD00;    /* change the color as per your requirements and also other things can be changed */
-  height: 16px;
-  margin-right: 4px;
-  width: 16px;
-}
-/* for dx-input-textfield */
-dx-input-textfield::part(label) {
-  @include font-default;
-  width: 100%;
-  margin-bottom: 16px;
-  display: red;
-  color: #AFC002;
-}
-
-```
-
 ## Theme modules
 
 Search components are provided using theme modules, allowing users to create custom stylesheets for all components. This flexibility is ideal for adapting the search functionality to match your application's design. For more information about themes and skins in DX, refer to  [Developing themes and skins](../../build_sites/themes_skins/index.md).
@@ -400,43 +293,10 @@ You can use the default theme modules (CSS and JS files) provided to you as-is, 
 
     ![](../../assets/HCL_Search_Get_Theme_Modules_12.png "Open the `default.css` file you have downloaded in a code editor such as Visual Studio Code")
 
-    See the sample view of the formatted CSS file.
+    See the sample view of the formatted `default.css` file.
 
     ![](../../assets/HCL_Search_Get_Theme_Modules_13.png "Log in to HCL Digital Experience 9.5 and Go to the Search V2 UI")
 
-
-## Using and customizing the theme modules
-
-Follow these steps to use the theme module files you downloaded on your new or existing theme pages.
-
-!!!note
-    Ensure you have downloaded the `dx_search_css` and `dx_search_js` files from [Getting the default theme modules](#getting-the-default-theme-modules) and saved the files as `default.css` and `index.js` respectively.
-
-1. Open the `default.css` file and update the styles in the file as needed. 
-
-- You can also create your own CSS file, such as `custom-theme.css`, where you can add your overrides, using the `default.css` as your guide for the base styles.
-
-2. Link the default and custom CSS files in your application's HTML code as follows.
-
-    ```html 
-      <link rel="stylesheet" href="/path/to/default.css"> 
-      <link rel="stylesheet" href="/path/to/custom-theme.css"> 
-    ```
-
-3. Download the default theme CSS `dx_search_js` from the provided location as `index.js`.
-
-4. Add the script to your application's html head.
-    ```html 
-      <script type="module" src="/path/to/index.js"></script>
-    ```
-
-    See the sample customized CSS code which changed the background color dx-search-center-layout component.
-
-    ```css
-    dx-search-center-layout::part(main) {
-        background-color: #f0f0f0;
-    }
-    ```
 
 ## Communication between components using the Broadcast Channel API
 

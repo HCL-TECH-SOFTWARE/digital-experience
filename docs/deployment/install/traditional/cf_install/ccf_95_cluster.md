@@ -42,7 +42,7 @@ Limitations on 24x7 maintenance:
 
 4. When installing the cumulative fix in a clustered environment, the portlets are only deployed when installing the cumulative fix on the primary node. The cumulative fix installation on additional \(also known as secondary\) nodes simply synchronizes the node with the deployment manager to receive updated portlets. During the portlet deployment on the primary node, the database will be updated with the portlet configuration. This updated database, which is shared between all nodes, would be available to additional nodes before the additional nodes receive the updated portlet binary files. It is possible that the new portlet configuration will not be compatible with the previous portlet binary files, and in a 24x7 production environment problems may arise with anyone attempting to use a portlet that is not compatible with the new portlet configuration. Therefore it is recommended that you test your portlets before upgrading the production system in a 24x7 environment to determine if any portlets will become temporarily unavailable on additional nodes during the time between the completion of the cumulative fix installation on the primary node and the installation of the cumulative fix on the additional node.
 
-5. In order to maintain 24x7 operations in a clustered environment, it is required that you stop HCL Portal on one node at a time and upgrade it. It is also required that during the upgrade of the primary node, you manually stop node agents on all other cluster nodes that continue to service user requests. Failure to do so may result in portlets being shown as unavailable on nodes having the node agent running.
+5. In order to maintain 24x7 operations in a clustered environment, it is required that you stop HCL Digital Experience (DX) on one node at a time and upgrade it. It is also required that during the upgrade of the primary node, you manually stop node agents on all other cluster nodes that continue to service user requests. Failure to do so may result in portlets being shown as unavailable on nodes having the node agent running.
 
 When rolling back of the cumulative fix in a clustered environment, the portlets are only redeployed when roll back of the cumulative fix is on the primary node. The cumulative fix roll back on additional nodes simply synchronizes the node with the deployment manager to receive updated portlets. During the portlet redeployment on the primary node, the database will be updated with the portlet configuration, which would be available to additional nodes before the additional nodes receive the updated binary files, since all nodes share the same database. It is recommended that you test your portlets before rolling back on the production system in a 24x7 environment because the possibility of such incompatibility might arise if the previous portlet configuration is not compatible with the new portlet binary files.
 
@@ -60,7 +60,7 @@ Space Requirements: Ensure that enough disk space is available in the following 
 
 ## Best Practices
 
-Go to the [HCL Software Support](https://support.hcltechsw.com/csm) page for *Portal Upgrade Best Practices*.
+For more information about upgrading to HCL DX 9.5, refer to the [Portal Upgrades: Best Practices for 8.5](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0012732){target="_blank"} page and the [From the DX Experts! Best Practices: How to upgrade to HCL DX 9.5](https://support.hcl-software.com/csm?id=community_question&sys_id=5d4013ae1bf1f9d0574121f7ec4bcbd3){target="_blank"} webinars.
 
 ## Syndicator/Subscriber Information
 
@@ -68,7 +68,7 @@ It is recommended that servers utilizing syndication have associated syndicators
 
 Otherwise syndication updates that run during install may clash with install modifications and can cause the CF update to fail.
 
-Syndicators and subscribers can be disabled by editing them in the syndication administration portlet. Go to the [Syndication](../../../../manage_content/wcm_delivery/syndication/index.md) and [Subscriber settings](../../../../manage_content/wcm_delivery/syndication/manage_synd_subs/wcm_reference_subscriberfields.md) topic pages in the HCL Digital Experience Version 8.5 product documentation for more information. Syndication should then be re-enabled after the update is complete.
+Syndicators and subscribers can be disabled by editing them in the syndication administration portlet. Go to the [Syndication](../../../../manage_content/wcm_delivery/syndication/index.md) and [Subscriber settings](../../../../manage_content/wcm_delivery/syndication/manage_synd_subs/wcm_reference_subscriberfields.md) topic pages in the HCL DX Version 8.5 product documentation for more information. Syndication should then be re-enabled after the update is complete.
 
 Alternatively, the following ConfigEngine tasks have also been integrated into CF09 or later to globally disable and enable syndication (These tasks can be used in place of the manual updates linked above):
 
@@ -91,7 +91,7 @@ The default locations of these directories are:
 
 ## Known Issues
 
-Review the [Known issues for combined cumulative fix](ccf_95_known_issues.md) topic page to be aware of any known issues for the HCL Portal Version 9.5 CF releases.
+Review the [Known issues for combined cumulative fix](ccf_95_known_issues.md) topic page to be aware of any known issues for the HCL DX Version 9.5 CF releases.
 
 ## Review supported hardware/software requirements
 
@@ -108,7 +108,7 @@ All temporary or interim fixes on your system must be removed before installing 
 
 Also check whether the fixes installed on your system are included in the list of fixes provided in this cumulative fix. If you have temporary or interim fixes on your system that are not included in this cumulative fix then contact [HCL Software Support](https://support.hcltechsw.com/csm) for an updated version of those fixes or for more information.
 
-## Special instructions pertaining to HCL Digital Experience Patterns
+## Special instructions pertaining to HCL DX Patterns
 
 These instructions are highlighted in this section but should be taken in the context of the rest of this readme. For each step, assure that you have read thru this readme and are taking all other documentation into account.
 
@@ -138,7 +138,7 @@ If the Portal server default profile (wp_profile) directory is owned by a differ
 
 ## Ensure `wkplc` properties files are correct
 
-The HCL Portal upgrade will run several `ConfigEngine` scripts. These scripts depend on the `wkplc.properties` being up to date and accurate, particularly with the password properties. If you are using multiple profiles, verify that the information in each profile is correct.
+The HCL DX upgrade will run several `ConfigEngine` scripts. These scripts depend on the `wkplc.properties` being up to date and accurate, particularly with the password properties. If you are using multiple profiles, verify that the information in each profile is correct.
 
 1.  Edit the <wp\_profile root\>/ConfigEngine/properties/wkplc.properties file and ensure the following values are set correctly:
     -   `WasRemoteHostName=<the hostname of your WAS instance>`
@@ -178,7 +178,7 @@ PWordDelete=false
 
 Verify that all of your profiles are at the same level before starting the upgrade or rollback. All profiles that share the same Portal installation directory (multiple profile option) must be manually upgraded after the IBM Installation Manager update completes. See the *Additional configuration steps* for details.
 
-**Non-root considerations:** In Linux environments, you must install the cumulative fix as the same user which you used to install HCL Portal originally. This could be either root or a non-root user. If you need to use a non-root user, ensure the following conditions are met:
+**Non-root considerations:** In Linux environments, you must install the cumulative fix as the same user which you used to install HCL DX originally. This could be either root or a non-root user. If you need to use a non-root user, ensure the following conditions are met:
 
 -   If you are installing as a non-root user on Linux, the `umask` setting for your login session must be set to 0022 or better (`umask` is a setting that controls what file permissions are set for newly created files and directories. A value of 0022 correspond to permission settings of `rwxr-xr-x`). If the umask is not set appropriately by default, you must set it when you start Installation Manager or when you open a command-line utility to run Installation Manager commands.
 -   The non-root user has a "ulimit - n" setting of at least 18192. This must be a number and not "unlimited".
@@ -253,7 +253,7 @@ There are several different methods to install the cumulative fix, and they are:
 Start with the step *Stopping IP traffic* then choose one method that is available for your system. Follow the detailed steps for that option, and then proceed with the *Additional configuration steps*.
 
 !!!note
-    Do not attempt to combine the steps for primary and secondary nodes. The update must be performed first on the primary node and then on the additional nodes, according to the following instructions. When instructed to stop or start the HCL Portal server, stop or start all Portal server instances including vertical cluster members on the node.
+    Do not attempt to combine the steps for primary and secondary nodes. The update must be performed first on the primary node and then on the additional nodes, according to the following instructions. When instructed to stop or start the HCL DX server, stop or start all Portal server instances including vertical cluster members on the node.
 
 ## Stopping IP traffic (Required only if following the 24x7 single cluster upgrade)
 
@@ -279,11 +279,11 @@ Note that the web server plug-in will check periodically for configuration updat
     -   Linux: `./serverStatus.sh -all`
     -   Windows: `serverStatus.bat -all`
 
-2.  Launch the IBM Installation Manager that was used to install HCL Portal Version 8.5.
+2.  Launch the IBM Installation Manager that was used to install HCL DX Version 8.5.
 3.  Using Installation Manager, click **File > Preferences**.
 4.  Go to the **Repositories** panel and click **Add Repository**.
 5.  Navigate to the `repository.config` file mentioned earlier and select it.
-6.  Select **Update** and follow the prompts to update HCL Portal.
+6.  Select **Update** and follow the prompts to update HCL DX.
 7.  After installation completes, proceed with the *Additional configuration steps*.
 
 ## Use a command line (available on Windows and Linux operating systems)
@@ -352,7 +352,7 @@ Note that the web server plug-in will check periodically for configuration updat
 2.  Open a command window and switch to the `eclipse/tools` sub-directory of Installation Manager. By default, this is:
     -   Linux: /opt/IBM/InstallationManager/eclipse/tools
     -   Windows: C:\\Program Files\IBM\\Installation Manager\eclipse\\tools
-3.  Update the sample response file that is packaged with your cumulative fix level according to the comments in the file. You can also record a response file to use to install the fix in silent mode. Do note that the feature set listed in your response file must match the feature set you have installed. You cannot add or remove features during the cumulative fix update. The feature set listed in the sample response file is `features='ce.install,portal.binary,portal.profile'`. If you do not have any profiles on this node (because you are in the process of migration from a previous version of HCL Portal, or installing an additional node for a cluster, or creating multiple profiles, or you originally installed HCL Portal Version 8.5 as a binary install), then you should remove the `portal.profile` feature from the `features='ce.install,portal.binary'` list.
+3.  Update the sample response file that is packaged with your cumulative fix level according to the comments in the file. You can also record a response file to use to install the fix in silent mode. Do note that the feature set listed in your response file must match the feature set you have installed. You cannot add or remove features during the cumulative fix update. The feature set listed in the sample response file is `features='ce.install,portal.binary,portal.profile'`. If you do not have any profiles on this node (because you are in the process of migration from a previous version of HCL DX, or installing an additional node for a cluster, or creating multiple profiles, or you originally installed HCL DX Version 8.5 as a binary install), then you should remove the `portal.profile` feature from the `features='ce.install,portal.binary'` list.
 4.  Run the following command to install in silent mode:
 
     ```
@@ -377,7 +377,7 @@ Note that the web server plug-in will check periodically for configuration updat
     -   For Windows: `imcl.exe -c` 
 
 4.  Add the repositories.
-5.  Select **Update** and follow the prompts to update HCL Portal.
+5.  Select **Update** and follow the prompts to update HCL DX.
 6.  After installation completes, proceed with the *Additional configuration steps*.
 
 To add the repositories:
@@ -385,7 +385,7 @@ To add the repositories:
 -   Enter P to go to the **Preferences** menu.
 -   Enter 1 to go to the **Repositories** menu.
 -   Enter D to add repositories.
--   Type the path for your HCL Portal 8.5 CF repository file.
+-   Type the path for your HCL DX 8.5 CF repository file.
 -   Enter A to apply your repositories and return to the **Preferences** menu.
 -   Enter R to return to the Main menu.
 
@@ -393,7 +393,7 @@ To add the repositories:
 
 If you have any profiles the following configuration steps are mandatory.
 
-If you do not have any profiles at this point (because you are in the process of migration from a previous version of HCL Portal), no additional configuration steps are necessary and you can continue with the *Restoring IP traffic steps* described below.
+If you do not have any profiles at this point (because you are in the process of migration from a previous version of HCL DX), no additional configuration steps are necessary and you can continue with the *Restoring IP traffic steps* described below.
 
 !!!note
     The following configuration steps should be run as the user who normally administers the Portal Server, which may or may not be the same user who runs the installation program.
@@ -409,7 +409,7 @@ Use the following commands to update all profiles. These steps must be repeated 
 !!!note "Optional note"
     To skip regeneration of the profile template, add the following flag to the CF update command: `applyCF.sh -Dskip.profile.template.update=true`<br><br>If an updated template is needed at a later time, this command can be run to do so at any time: `ConfigEngine.sh cf-create-profile-templates`
 
-1.  Ensure the `nodeagent` and HCL Portal servers are stopped on the profile you intend to upgrade. The Deployment Manager must be started.
+1.  Ensure the `nodeagent` and HCL DX servers are stopped on the profile you intend to upgrade. The Deployment Manager must be started.
 2.  On the Farm Master Server execute the following command from within the path of the profile to configure: If you are installing the CF on an empty portal, see the *Special Considerations* below before running `applyCF`.
 
     -   Linux: `<profile_root>/PortalServer/bin/applyCF.sh -DPortalAdminPwd=<password> -DWasPassword=<password>`
@@ -491,7 +491,7 @@ There are several different methods to install the cumulative fix, and they are:
 Start with the step *Stopping IP traffic for additional nodes* then choose one method that is available for your system. Follow the detailed steps for that option, and then proceed with the Additional configuration steps.
 
 !!!note
-    Do not attempt to upgrade additional nodes until after completing the upgrade of the primary node. The update for the primary must be performed and completed before the upgrade of any additional nodes. Additional node upgrades can be performed sequentially or in parallel. Update the additional nodes according to the following instructions. When instructed to stop or start the HCL Portal server, stop or start all Portal server instances including vertical cluster members on the node.
+    Do not attempt to upgrade additional nodes until after completing the upgrade of the primary node. The update for the primary must be performed and completed before the upgrade of any additional nodes. Additional node upgrades can be performed sequentially or in parallel. Update the additional nodes according to the following instructions. When instructed to stop or start the HCL DX server, stop or start all Portal server instances including vertical cluster members on the node.
 
 ## Stopping IP traffic for additional nodes (Required only if following the 24x7 single cluster upgrade)
 
@@ -512,11 +512,11 @@ Note that the web server plug-in will check periodically for configuration updat
     -   Linux: `./serverStatus.sh -all`
     -   Windows: `serverStatus.bat -all`
 
-2.  Launch the IBM Installation Manager that was used to install HCL Portal 8.5.
+2.  Launch the IBM Installation Manager that was used to install HCL DX 8.5.
 3.  Using Installation Manager, click **File > Preferences**.
 4.  Go to the **Repositories** panel and click **Add Repository**.
 5.  Navigate to the `repository.config` file mentioned earlier and select it.
-6.  Select **Update** and follow the prompts to update HCL Portal.
+6.  Select **Update** and follow the prompts to update HCL DX.
 7.  After installation completes, proceed with the *Additional configuration steps on additional nodes*.
 
 
@@ -580,7 +580,7 @@ Note that the web server plug-in will check periodically for configuration updat
 2.  Open a command window and switch to the eclipse/tools sub-directory of Installation Manager. By default, this is:
     -   Linux: /opt/IBM/InstallationManager/eclipse/tools
     -   Windows: C:\\Program Files\IBM\Installation Manager\eclipse\tools
-3.  Update the sample response file that is packaged with your cumulative fix level according to the comments in the file. You can also record a response file to use to install the fix in silent mode. Do note that the feature set listed in your response file must match the feature set you have installed. You cannot add or remove features during the cumulative fix update. The feature set listed in the sample response file is: `features='ce.install,portal.binary,portal.profile`. If you do not have any profiles on this node (because you are in the process of migration from a previous version of HCL Portal, or installing an additional node for a cluster, or creating multiple profiles, or you originally installed HCL Portal Version 8.5 as a binary install), then you should remove the 'portal.profile' feature from the **features='ce.install,portal.binary'** list.
+3.  Update the sample response file that is packaged with your cumulative fix level according to the comments in the file. You can also record a response file to use to install the fix in silent mode. Do note that the feature set listed in your response file must match the feature set you have installed. You cannot add or remove features during the cumulative fix update. The feature set listed in the sample response file is: `features='ce.install,portal.binary,portal.profile`. If you do not have any profiles on this node (because you are in the process of migration from a previous version of HCL DX, or installing an additional node for a cluster, or creating multiple profiles, or you originally installed HCL DX Version 8.5 as a binary install), then you should remove the 'portal.profile' feature from the **features='ce.install,portal.binary'** list.
 
 4.  Run the following command to install in silent mode:
 
@@ -605,7 +605,7 @@ Note that the web server plug-in will check periodically for configuration updat
     -   For Windows: `imcl.exe -c`
 
 4.  Complete the following steps to add the repositories.
-5.  Select **Update** and follow the prompts to update HCL Portal.
+5.  Select **Update** and follow the prompts to update HCL DX.
 6.  After installation completes, proceed with the *Additional configuration steps*.
 
 To add the repositories:
@@ -613,7 +613,7 @@ To add the repositories:
 1.  Enter P to go to the **Preferences** menu.
 2.  Enter 1 to go to the **Repositories** menu.
 3.  Enter D to add repositories.
-4.  Type the path for your HCL Portal Version 8.5 CF repository file.
+4.  Type the path for your HCL DX Version 8.5 CF repository file.
 5.  Enter A to apply your repositories and return to the **Preferences** menu.
 6.  Enter R to return to the Main menu.
 
@@ -621,7 +621,7 @@ To add the repositories:
 
 If you have any profiles the following configuration steps are mandatory.
 
-If you do not have any profiles at this point (because you are in the process of migration from a previous version of HCL Portal), no additional configuration steps are necessary and you can continue with the *Restoring IP traffic steps* described below.
+If you do not have any profiles at this point (because you are in the process of migration from a previous version of HCL DX), no additional configuration steps are necessary and you can continue with the *Restoring IP traffic steps* described below.
 
 !!!note
     The following configuration steps should be run as the user who normally administers the Portal Server, which may or may not be the same user who runs the installation program.
@@ -635,7 +635,7 @@ Linux or Windows: Use the following commands to update all profiles. These steps
 !!!note "Optional note"
     To skip regeneration of the profile template, add the following flag to the CF update command. For example: `applyCF.sh -Dskip.profile.template.update=true`. If an updated template is needed at a later time, this command can be run to do so at any time, for example: `ConfigEngine.sh cf-create-profile-templates`.
 
-1.  Ensure the nodeagent and HCL Portal servers are stopped on the profile you intend to upgrade. The Deployment Manager must be started.
+1.  Ensure the nodeagent and HCL DX servers are stopped on the profile you intend to upgrade. The Deployment Manager must be started.
 2.  Execute the following command from within the path of the profile to configure. Do note that if you are installing the CF on an empty portal, see the *Special Considerations* below before running `applyCF`:
 
     -   Linux: `<profile_root>/PortalServer/bin/applyCF.sh -DPortalAdminPwd=<password> -DWasPassword=<password>`
@@ -717,8 +717,8 @@ If you are installing the CF on an empty portal then extra steps are required to
     -   Select all node agents where automatic synchronization has been re-enabled and click **Restart**.
 2.  If there is a custom theme that contains a static content WAR and the `com.hcl.portal.resource.blacklist` and `com.hcl.portal.resource.whitelist` context parameters have not yet been added to the web.xml file, Go and log in to [HCL Software Support](https://support.hcltechsw.com/csm) to find detailed information associated with *Security Bulletin: Fix Available for Security Vulnerability in HCL Digital Experience (CVE-2014-8912)*. The changes associated with this security bulletin can cause custom themes to produce a lot of warning messages in the logs resulting in a significant performance penalty. The custom theme must be redeployed before the changes will take effect.
 3.  If necessary, redeploy any customizations, including JSPs, to the WCM portlets (if using Web Content Manager), any other portlets, or any other Portal enterprise applications, if these were customized prior to installing the cumulative fix.
-4.  If you have set up a remote search server or document conversion server for use with HCL Portal Version 8.5, then whenever you apply a cumulative fix to the portal server, you should also apply the corresponding cumulative fix to the remote server. Refer to the *HCL Portal Version 8.5 combined cumulative fix instructions: remote search* for the details of applying a cumulative fix to the remote server.
-5.  Go and log in to [HCL Software Support](https://support.hcltechsw.com/csm) to find documentation to see if Configuration Changes and Options introduced in HCL Digital Experience Version 8.5 Combined Cumulative Fixes applies to your environment.
+4.  If you have set up a remote search server or document conversion server for use with HCL DX Version 8.5, then whenever you apply a cumulative fix to the portal server, you should also apply the corresponding cumulative fix to the remote server. Refer to the *HCL DX Version 8.5 combined cumulative fix instructions: remote search* for the details of applying a cumulative fix to the remote server.
+5.  Go and log in to [HCL Software Support](https://support.hcltechsw.com/csm) to find documentation to see if Configuration Changes and Options introduced in HCL DX Version 8.5 Combined Cumulative Fixes applies to your environment.
 6.  If you brought down the entire cluster to perform the upgrade (not maintaining 24 x 7 on a single cluster), and the automatic plug-in generation and propagation are disabled on your web server Plug-in properties, you will need to manually generate and/or propagate the `plugin-cfg.xml` file to the Web servers.
 7.  Clear the browser cache.
 8.  Please go to *Recommended Updates for HCL Digital Experience* to review and apply any recommended fixes.
@@ -747,11 +747,11 @@ If you are installing the CF on an empty portal then extra steps are required to
 
 -   Changing the server context root after upgrading is an unsupported rollback path. To roll back after changing the context root, you must first change the server context root to the values of the previous version.
 -   When rolling back a CF install, if you have configured an empty context root you cannot roll back to a CF level that does not support the empty context root capability. For instance, if you have applied CF08 and have configured an empty context root you cannot rollback to CF07. If you have applied CF09 and have configured an empty context root you can roll back to CF08 but you would not be able to roll back if your previous CF level was CF07 or prior.
--   Configuring HCL Portal from a stand-alone environment to a clustered environment after upgrading is an unsupported rollback path.
+-   Configuring HCL DX from a standalone environment to a clustered environment after upgrading is an unsupported rollback path.
 
 ## Ensure wkplc properties files are correct for rollback
 
-The HCL Portal rollback will run several ConfigEngine scripts. These scripts depend on the `wkplc.properties` being up to date and accurate on each node in the cluster, particularly with the password properties. If you are using multiple profiles, verify that the information in each profile is correct. These steps need to be performed on all nodes.
+The HCL DX rollback will run several ConfigEngine scripts. These scripts depend on the `wkplc.properties` being up to date and accurate on each node in the cluster, particularly with the password properties. If you are using multiple profiles, verify that the information in each profile is correct. These steps need to be performed on all nodes.
 
 1.  Edit the <wp\_profile root\>/ConfigEngine/properties/wkplc.properties file and ensure the following values are set correctly:
     -   `WasRemoteHostName=<the hostname of your Dmgr>`
@@ -822,8 +822,8 @@ Start with the step *Stopping IP traffic for roll back* then choose one method t
     -   Linux: `./serverStatus.sh -all` 
     -   Windows: `serverStatus.bat -all `
 
-2.  Launch the IBM Installation Manager that was used to install HCL Portal Version 8.5.
-3.  Select **Roll Back** on the Installation Manager main window and follow the prompts to roll HCL Portal back to the desired level.
+2.  Launch the IBM Installation Manager that was used to install HCL DX Version 8.5.
+3.  Select **Roll Back** on the Installation Manager main window and follow the prompts to roll HCL DX back to the desired level.
 4.  After rollback completes, proceed with the *Post Rollback Steps*.
 
 ## Use a command line to roll back (available on Windows and Linux operating systems)
@@ -901,7 +901,7 @@ Start with the step *Stopping IP traffic for roll back* then choose one method t
     -   For Linux: `./imcl  -c`
     -   For Windows: `imcl.exe -c` 
 
-4.  Select **Roll back** and follow the prompts to roll back HCL Portal.
+4.  Select **Roll back** and follow the prompts to roll back HCL DX.
 5.  After installation completes, proceed with the *Post Rollback Steps*.
 
 ## Post Rollback Steps (Linux or Windows)
@@ -980,8 +980,8 @@ Start with the step *Stopping IP traffic for roll back for additional nodes* the
     -   Linux: `./serverStatus.sh -all`
     -   Windows: `serverStatus.bat -all`
 
-2.  Launch the IBM Installation Manager that was used to install HCL Portal 8.5.
-3.  Select **Roll Back** on the Installation Manager main window and follow the prompts to roll HCL Portal back to the desired level.
+2.  Launch the IBM Installation Manager that was used to install HCL DX 8.5.
+3.  Select **Roll Back** on the Installation Manager main window and follow the prompts to roll HCL DX back to the desired level.
 4.  After roll back completes, proceed with the *Post Rollback Steps on additional nodes*.
 
 ## Use a command line to roll back on additional nodes (available on Windows and Linux operating systems)
@@ -1059,7 +1059,7 @@ Start with the step *Stopping IP traffic for roll back for additional nodes* the
     -   For Linux: `./imcl  -c`
     -   For Windows: `imcl.exe -c`
 
-4.  Select **Roll back** and follow the prompts to roll back HCL Portal.
+4.  Select **Roll back** and follow the prompts to roll back HCL DX.
 5.  After installation completes, proceed with the *Post Rollback Steps*.
 
 ## Post Rollback Steps on additional nodes (For Linux and Windows)
@@ -1122,7 +1122,7 @@ Use the following commands to roll back all profiles. These steps must be repeat
     -   Select **System administration > Node agents** in the navigation tree.
     -   Select all node agents where automatic synchronization has been re-enabled and click **Restart**.
 2.  If necessary, redeploy any customizations, including JSPs, to the WCM portlets (if using HCL Web Content Manager), any other portlets, or any other Portal enterprise applications, if these were customized prior to rolling back the cumulative fix.
-3.  If you have set up a remote search server or document conversion server for use with HCL Portal Version 8.5, then whenever you roll back a cumulative fix to the portal server, you should also roll back the corresponding cumulative fix to the remote server. Refer to the *HCL Portal Version 8.5 combined cumulative fix instructions: remote search* for the details of rolling back a cumulative fix to the remote server.
+3.  If you have set up a remote search server or document conversion server for use with HCL DX Version 8.5, then whenever you roll back a cumulative fix to the portal server, you should also roll back the corresponding cumulative fix to the remote server. Refer to the *HCL DX Version 8.5 combined cumulative fix instructions: remote search* for the details of rolling back a cumulative fix to the remote server.
 4.  For rollback to CF03 or earlier level only: If the Brightcove integration was enabled perform the following steps:
     -   Uninstall the old Brightcove plugins.
     -   Install the new Brightcove plugins by following the install steps in the *Configuring* topic section to use Brightcove.

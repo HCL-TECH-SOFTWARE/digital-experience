@@ -6,14 +6,16 @@ DXClient can take artifacts developed locally and deploy them to HCL DX servers 
 
 DXClient is meant to be the one-stop, platform-independent solution that lets you integrate HCL DX with any automation infrastructure of your choice.
 
-DXClient comes with two deployment options:
+DXClient comes with multiple deployment options:
 
-- First option is to deploy using the DXClient container package. DXClient is packaged as a container that you can run using OCI-based runtimes such as Docker or Podman. It is available as a container image from HCL DX 9.5 CF196 and later releases. For more information, see [DXClient installation using container package](#installing-dxclient-using-the-container-package-from-hcl-software-portal).
+- DXClient is free to download and install through [NpmJS and Harbor repositories](#public-and-free-dxclient-installation-options).
+
+- In the HCL Software License Portal, one option is to deploy using the DXClient container package. DXClient is packaged as a container that you can run using OCI-based runtimes such as Docker or Podman. It is available as a container image from HCL DX 9.5 CF196 and later releases. For more information, see [DXClient installation using container package](#installing-dxclient-using-the-container-package-from-hcl-software-portal).
 
 !!!warning
     Recent changes to Podman introduced by RedHat have caused a compatibility issue with the container implementation of DXClient. HCL is currently investigating how this might be resolved. Until further notice, Docker is recommended for using the DXClient container implementation.
 
-- The alternative option is to deploy DXClient as native JavaScript code. Users who want to use this deployment option must install their own Node.js and Node Package Manager (npm) runtime environment in the correct version. Users must also install the required dependencies. For more information, see [DXClient installation using native js package](#installing-dxclient-using-the-native-javascript-package-from-hcl-software-portal).
+- An alternative option in the HCL Software License Portal is to deploy DXClient as native JavaScript code. Users who want to use this deployment option must install their own Node.js and Node Package Manager (npm) runtime environment in the correct version. Users must also install the required dependencies. For more information, see [DXClient installation using native js package](#installing-dxclient-using-the-native-javascript-package-from-hcl-software-portal).
 
 !!!important "Information about DXClient versions and distribution"
     DXClient is now free to download and install through [NpmJS and Harbor repositories](#public-and-free-dxclient-installation-options). After openly distributing DXClient, the versioning format of DXClient is now changed from 1.xx.x to <CFNumber\>.x.x. For example, the version of DXClient in the previous release was "1.29.0". Starting CF221, the versioning format uses the corresponding CF number of the DX deployment, making the DXClient version for CF221 "221.0.0". 
@@ -345,8 +347,12 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
 !!!note
     Refer to the list of features that were released in the following HCL DX 9.5 releases:
     
+    -   HCL DX 9.5 CF225 release: **V225.0.0
+        -  Livesync is enabled for Presentation Template under WCM Design Library.
+
     -   HCL DX 9.5 CF224 release: **V224.0.0
         -  New DXClient LiveSync sub-commands: [LiveSync push-wcm-design-library](../dxclient/dxclient_artifact_types/livesync.md#livesync-push-wcm-design-library) and [pull-wcm-design-library](../dxclient/dxclient_artifact_types/livesync.md#livesync-pull-wcm-design-library)
+        - Livesync is enabled for HTML Components under WCM Design Library.
 
     -   HCL DX 9.5 CF221 release: **V221.0.0
         -  A one time license agreement click-through is enabled. To skip the prompt, use the [accept-license](#dxclient-information-commands) command.
