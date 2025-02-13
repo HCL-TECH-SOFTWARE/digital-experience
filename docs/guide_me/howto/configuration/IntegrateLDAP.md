@@ -1,8 +1,8 @@
-# Guide to Integrating HCL Portal v8.5 with LDAP
+# How to integrate HCL Digital Experience with LDAP (Guide)
 
 ## Applies to
 
-> HCL Digital Experience 8.5 and higher
+> HCL Digital Experience v8.5 and higher
 
 ## Introduction
 
@@ -10,7 +10,8 @@ Applications commonly require HCL Digital Experience to integrate with existing 
 
 In most organizations, different groups administer HCL Digital Experience and the LDAP server. Integrating the two requires in-depth knowledge of both systems. This document guides HCL Digital Experience administrators on obtaining the necessary information to integrate HCL Digital Experience with existing LDAP servers.
 
-Table of Contents  
+**Table of Contents**  
+
 Introduction  
 Lab Environment  
 Task 1 - Understand the initial security configuration and how to restore it  
@@ -28,9 +29,11 @@ Task 12 - Other Performance, LDAP, and Networking Considerations
 Task 13 - Consider other requirements, beyond the scope of this guide  
 Resources
 
-The attached HCL Digital Experience v8.5 and LDAP Integration Guide.pdf contains the complete contents of this guide.
+The attached HCL Digital Experience v8.5 and [LDAP Integration Guide](./files/HCL%20Portal%20v8.5%20and%20LDAP%20Integration%20Guide.pdf) contains the complete contents of this guide.
 
 ## Instructions
+
+The following PDF documents are available:
 
 [HCL Portal v8.5 and LDAP Integration Guide](./files/HCL%20Portal%20v8.5%20and%20LDAP%20Integration%20Guide.pdf)
 
