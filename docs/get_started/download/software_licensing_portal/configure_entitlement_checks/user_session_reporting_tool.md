@@ -109,16 +109,15 @@ java -jar <jarFilepath> -h
 # <excludeSessionKeys> List of session keys (separated by space) to exclude from session counts
 # <startDate> Specifies the start date in YYYY-MM-DD format
 # <endDate> Specifies the end date in YYYY-MM-DD format
-# <productFeatureId> Poduct name (HCL_DX_CloudNative or DX_Compose)
 ```
 
 The following is a sample command for running the User Session Reporting Tool using all the parameters provided:
 
 ```cmd
-java -jar <jarFilepath> <filePaths...> -excludeIPFilePath <excludeIPFile> -excludeSessionKeyFilePath <excludeSessionKeyFile> -excludeIPs <excludedIPs...> -excludeSessionKeys <excludeSessionKeys ...> <startDate> <endDate> [-productFeatureIdName <productFeatureId>]
+java -jar <jarFilepath> <filePaths...> -excludeIPFilePath <excludeIPFile> -excludeSessionKeyFilePath <excludeSessionKeyFile> -excludeIPs <excludedIPs...> -excludeSessionKeys <excludeSessionKeys ...> <startDate> <endDate>
 
 # Example
-java UserSessionReporting.java input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIPs "192.168.243.142" -excludeSessionKeys "192.168.243.136 \"axios/1.6.7\" \"-\"" "192.168.243.137 \"axios/1.6.7\" \"-\"" 2022-07-22 2025-07-28 -productFeatureIdName HCL_DX_CloudNative
+java -jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIPs "192.168.243.142" -excludeSessionKeys "192.168.243.136 \"axios/1.6.7\" \"-\"" "192.168.243.137 \"axios/1.6.7\" \"-\"" 2022-07-22 2025-07-28
 
 ```
 
