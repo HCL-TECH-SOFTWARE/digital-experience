@@ -1,11 +1,11 @@
 ---
-title: User session reporting tool
+title: User session reporting tool for non kubernetes
 ---
-# User session reporting tool
+# User Session Reporting Tool for Non Kubernetes
 
 This topic describes how you can use the User Session Reporting Tool to count and report user sessions.
 
-The User Session Reporting Tool is a utility designed for HCL Digital Experience (DX) users managing on-premises deployments. This tool provides a solution for analyzing and interpreting web traffic data by processing National Center for Supercomputing Applications (NCSA) access log files. Relevant parts of each log are extracted to identify and count unique user sessions. This offers a precise understanding of usage data over specified periods.
+The User Session Reporting Tool is a utility designed for HCL Digital Experience (DX) users managing on-premises deployments. This tool provides a solution for analyzing and interpreting web traffic data by processing National Center for Supercomputing Applications (NCSA) access log files. Relevant parts of each log are extracted to identify and count unique user sessions. This tool will generate the user session data usage in metrics format, the report include session data that has been encrypted that will uploaded the My HCLSoftware. This offers a precise understanding of usage data over specified periods.
 
 ## Functionalities
 
@@ -41,6 +41,8 @@ The tool is designed to integrate effortlessly into existing HCL DX deployments,
 
     - [Enable access logs.](#enabling-access-logs)
     - [(Optional) Handle the routing setup.](#optional-handling-the-routing-setup)
+
+-   Create a deployment in [My HCLSoftware](../../software_licensing_portal/configure_entitlement_checks/create_deplyment_mhs_ui.md).
 
 
 ### Enabling access logs
@@ -86,7 +88,7 @@ You can obtain access log files inside the `wp_profile` directory (`/opt/IBM/Web
 !!!important
     There is a [known issue with WAS fix packs 9.0.5.16 and 9.0.5.17](https://www.ibm.com/docs/en/was/9.0.5?topic=application-enabling-access-logging){target="_blank"} where timestamps are broken, making the access log files unusable.
 
-### (Optional) handling the routing setup
+### (Optional) Handling the routing setup
 
 If you are not using a proxy server, you do not have to follow the routing setup in this section.
 
@@ -94,7 +96,10 @@ For every request, a key is computed based on the requesting IP address of the u
 
 If a reverse proxy server, load balancer, or a similar component is used in the deployment setup, the [X-Forwarded-For header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For){target="_blank"} is used to identify the user. This header is the standard for identifying the originating IP address of a client connecting to a web server through an HTTP proxy or load balancer. Make sure that the `X-Forwarded-For` header is correctly configured in your routing setup.
 
-## Running the user session reporting tool
+## Running the User Session Reporting Tool
+
+### Generating and uploading user session data usage in metrics format
+To generate the user session data usage in metrics format, the report must include session data that has been encrypted for each user session. The `deploymentId` can be found in the My HCLSoftware Portal after clicking the deployment card in the URL; for example, https://my.hcltechsw.com/deployments/pzneck8m. In this case, `pzneck8m` represents the `deploymentId` as illustrated in the example URL.
 
 The tool is packaged as an executable JAR file. Execute the tool by using the following parameters:
 
@@ -109,16 +114,23 @@ java -jar <jarFilepath> -h
 # <excludeSessionKeys> List of session keys (separated by space) to exclude from session counts
 # <startDate> Specifies the start date in YYYY-MM-DD format
 # <endDate> Specifies the end date in YYYY-MM-DD format
+# <deploymentId> String deploymentID from MHS
+# <option> Specify "fileOutput" to write usage into an automatically named file. If option is unspecified, the usage metrics are displayed in the terminal and not saved in a file.
 # <productFeatureId> Poduct name (HCL_DX_CloudNative or DX_Compose)
 ```
 
 The following is a sample command for running the User Session Reporting Tool using all the parameters provided:
 
 ```cmd
-java -jar <jarFilepath> <filePaths...> -excludeIPFilePath <excludeIPFile> -excludeSessionKeyFilePath <excludeSessionKeyFile> -excludeIPs <excludedIPs...> -excludeSessionKeys <excludeSessionKeys ...> <startDate> <endDate> [-productFeatureIdName <productFeatureId>]
+java -jar <jarFilepath> <filePaths...> -excludeIPFilePath <excludeIPFile> -excludeSessionKeyFilePath <excludeSessionKeyFile> -excludeIPs <excludedIPs...> -excludeSessionKeys <excludeSessionKeys ...> <startDate> <endDate> <deploymentId> <option> [-productFeatureIdName <productFeatureId>]
+```
+### Example
+```
+# Output in the terminal
+java -jar UserSessionReporting.jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIPs "192.168.243.142" -excludeSessionKeys "192.168.243.136 \"axios/1.6.7\" \"-\"" "192.168.243.137 \"axios/1.6.7\" \"-\"" 2022-07-22 2025-07-28 pnkeq6pk  -productFeatureIdName HCL_DX_CloudNative > /tmp/2022-06-24T02-50-00_usage.metrics
 
-# Example
-java UserSessionReporting.java input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIPs "192.168.243.142" -excludeSessionKeys "192.168.243.136 \"axios/1.6.7\" \"-\"" "192.168.243.137 \"axios/1.6.7\" \"-\"" 2022-07-22 2025-07-28 -productFeatureIdName HCL_DX_CloudNative
+# Write Output in file
+java -jar UserSessionReporting.jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIPs "192.168.243.142" -excludeSessionKeys "192.168.243.136 \"axios/1.6.7\" \"-\"" "192.168.243.137 \"axios/1.6.7\" \"-\"" 2022-07-22 2025-07-28 pnkeq6pk fileOutput -productFeatureIdName HCL_DX_CloudNative
 
 ```
 
@@ -136,16 +148,25 @@ See the following sample of an `excludeSessionKeys.txt` file:
 192.168.243.137 "axios/1.6.8" "-"
 ```
 
+### Expected Output
+
+```
+1,Alpha525634,HCL Digital Experience,v9.5,pnkeq6pk,ebb89d32f30abc4eed049f7afbb8a7299bdc8459fd235d0b8473ca22e9457c65
+HCL_DX_CloudNative,2024-07-22T01:00:00.000Z,2024-07-22T23:59:00.000Z,109,569b2e7f63d5d60fc30c725cbefd175c8fee423d796a01966a72425492017725
+END,30f0dd458d3ca9463870c1275d344d2361df87d617e32077a5c3c379a7e9e05f413fc1fa491e808b82e1eccc70c1ab4a89d2606904a1d5c64cea50588cca8509
+```
+
+The timestamp in the usage metrics file should be earlier than the start date, formatted as {YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics. For example: `2024-06-24T02-50-00_usage.metrics`
+
 After execution, the system returns the expected session count within the specified start and end date parameters. The tool generates the following files:
 
-- A CSV file named  `sessionCounts<startDate><endDate>.csv` (for example, sessionCounts_2024-01-01_2024-12-31.csv) which reports the session counts sorted and categorized by months based on the start and end date parameters.
-- An LOG file named `sessionCounts.log` where the incremental session counts are logged.
+- A generate the user session data usage in metrics format, the report include session data that has been encrypted in file or terminal output.
+
 - A DAT file named `sessionStorage.dat` which serves as the internal storage for saving session data and counts between runs. This file allows the tool to maintain its state, enabling accurate aggregation of session counts over time. It is important to save this file and store it securely because it will be used by the tool to continue the session count during the next run. Losing or tampering with this file could result in incorrect session data and an inaccurate count.
 
 You can run the User Session Reporting Tool either once for all collected log files or incrementally every X days, hours, or minutes. It stores its state between runs, processing only the logs that are after the last previously processed timestamp to prevent reprocessing old entries. This ensures that you still get the correct overall result, even when processing logs in multiple stages. 
 
 Additionally, if there are logs from multiple deployments belonging to the same system (for example, in Active-Active setups or backups), you must process those logs together in one run, because the tool will merge them to provide a comprehensive and accurate session count.
 
-## HCLSoftware U learning materials
-
-To learn how to monitor, troubleshoot, and contact Support about issues you encounter with DX, go to [Monitoring and Troubleshooting](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3436){target="_blank”}. You can try it out using the [Monitoring and Troubleshooting Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Monitoring_and_Troubleshooting_Lab.pdf){target="_blank”} and corresponding [Monitoring and Troubleshooting Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Monitoring_and_Troubleshooting_Lab_Resources.zip){target="_blank”}.
+### Upload usage metrics
+The generated `{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics` file should then be uploaded to the [My HCLSoftware](../../software_licensing_portal/configure_entitlement_checks/mhs_upload_usage_metrics.md) portal for processing.
