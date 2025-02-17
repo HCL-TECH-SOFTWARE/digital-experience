@@ -1,19 +1,21 @@
 # Installing the Pers_Offers portlet  
 
+In this topic, you will learn how to install the Pers_Offers portlet using Microsoft Visual Studio Code (VSC). You will also learn how to clone, compile, and package the Pers_offers project required to install the portlet.
+
 ## Prerequisites
 
 - Ensure you have installed git or git-bash, Microsoft VSC, and Maven. Refer to [Prerequisites for the Personalization portlet exercise](./pzn_demoprereq.md) for more information.
 - Ensure to run the following ConfigEngine tasks:
-
-  - UNIX™Linux™:  
+    - UNIX™Linux™:  
         - `./ConfigEngine.sh create-pzndemo-users -DPortalAdminPwd=<password> -DWasPassword=<password>`  
         - `./ConfigEngine.sh install-pzndemo -DPortalAdminPwd=<password> -DWasPassword=<password>`  
-
-  - Windows™:  
+    - Windows™:  
         - `ConfigEngine.bat create-pzndemo-users -DPortalAdminPwd=<password> -DWasPassword=<password>`
         - `ConfigEngine.bat install-pzndemo -DPortalAdminPwd=<password> -DWasPassword=<password>`  
 
-## Compiling and packaging the pers_offers project
+## Compiling and packaging the Pers_offers project
+
+Refer to the following steps to compile and package the Pers_offers project in VSC.
 
 1. Clone the **[Personalization development sample (Pers_Offers)](https://github.com/HCL-TECH-SOFTWARE/DX-Personalization-Development-Sample){target="_blank"}** git repository using the following command:
 
@@ -27,7 +29,7 @@
     \dx-portlet-development-utilities\personalization\Pers_Offers\pers_offers  
     ```
 
-3. Add the `ejb-thin-client` JAR dependencies to the `pom.xml` file of the pers_offers project. For example:  
+3. Add the `ejb-thin-client` JAR dependencies to the `pom.xml` file of the **pers_offers** project. For example:  
 
     ![Change in pom.xml](./images/ejb_thin_client_pre_req.png)  
 
@@ -35,17 +37,17 @@
 
     ![Maven Packaging](./images/maven_packaging_pers_offers.png)  
 
-5. Modify the `pers_offers-1.0-SNAPSHOT.jar` file using tools such as 7-zip to ensure the file only contains the pers_offers folder and its Java classes. Remove all other files and directories in the JAR file to ensure that the rule classes are loaded correctly by the Portal runtime.  
+5. Modify the `pers_offers-1.0-SNAPSHOT.jar` file using tools such as 7-zip to ensure the file only contains the **pers_offers** folder and its Java classes. Remove all other files and directories in the JAR file to ensure that the rule classes are loaded correctly by the Portal runtime.  
 
     You can also use the Java JAR-Tool to package all classes of the pers_offers folder into a JAR file. Refer to [Java JAR-Tool](https://docs.oracle.com/javase/tutorial/deployment/jar/basicsindex.html) for more information.  
 
 6. Copy the modified `pers_offers-1.0-SNAPSHOT.jar` file to `\PortalServer\pzn\prereq.pzn\collections`.  
 
-7. restart the DX server  
+7. Restart the HCL Digital Experience (DX) server.
 
 ## Installing the Pers_Offers portlet manually or through the DX client  
 
-As soon as the server restarts, you can install the **Pers_Offers** portlet. You can install the portlet manually, or through the HCL Digital Experience (DX) client.  
+As soon as the server restarts, you can install the **Pers_Offers** portlet. You can install the portlet manually, or through the HCL DX client.  
 
 1. Install the **Pers_Offers** portlet:  
 
@@ -69,7 +71,7 @@ As soon as the server restarts, you can install the **Pers_Offers** portlet. You
 
         4. Select the `\dx-portlet-development-utilities\personalization\Pers_Offers\pers_offers\target\pers_offers-1.0-SNAPSHOT.war` file and install it.  
 
-2. Create a new page with name **Pers Offers**.  
+2. Create a new page and name it **Pers Offers**.
 
 3. Add the **Pers Offers** portlet.  
 

@@ -1,15 +1,16 @@
 # Importing the Personalization rules into HCL Digital Experience  
 
 In this topic, you will learn how to import the Personalization rules into Portal.
-The Pers_Offers sample portlet contains a folder named **rules**, which contains all rules that will be created, when you follow the steps of section [Developing a personalized portlet using IBM Rational Application Developer](../RAD/index.md). This rules can be simple imported into Portal by using the following steps.  
+
+The Pers_Offers sample portlet contains a folder named **rules** that has all the rules created after you complete the steps in [Developing a personalized portlet using IBM Rational Application Developer](../RAD/index.md). You can import these rules into HCL Digital Experience (DX) through the following steps.
 
 1. Extract the **Portal_rules_PznOffers.zip** file located in the **rules** directory to any folder.  
-2. Log in to the HCL Digital Experience (DX) as the Portal administrator (wpsadmin).
-3. Open the **Applications menu** then go to  **Personalization > Business Rules**.
+2. Log in to HCL DX as the Portal administrator (wpsadmin).
+3. Open the **Applications menu** then go to **Personalization > Business Rules**.
 4. Click **New** > **Folder**.  
 5. Name the folder **Pers Offers** then click **Save**.
-6. Go into the folder **Pers Offers**.
-7. Click **Import**, select one of the following files from the **Portal_rules_PznOffers** folder, then click **Import**. You need to import each file one by one.
+6. In the **Pers Offers** folder, click **Import**.
+7. Select one of the following files from the **Portal_rules_PznOffers** folder then click **Import**. You need to import each file one by one.
 
     1. Per_Offers_User.nodes
     2. Pzn_offers.nodes
@@ -28,10 +29,10 @@ The Pers_Offers sample portlet contains a folder named **rules**, which contains
 
 ## Result
 
-Rules in the Workspace:
+See the imported rules under **Workspace**.
 
 ![Workspace Rules](./images/pers_offers_import_rules1.png)
 
-Rules in the Pers Offers folder:
+See the imported rules under **Pers Offers**.
 
 ![Pers Offers folder rules](./images/pers_offers_import_rules2.png)  

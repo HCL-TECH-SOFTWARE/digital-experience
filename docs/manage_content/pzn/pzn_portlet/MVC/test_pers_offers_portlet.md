@@ -1,8 +1,8 @@
 # Testing the Pers_Offers portlet
 
-If you are currently logged in as portal admin user (wpsadmin), then please log off from the HCL Digital Experience.
+In this topic, you will learn how to test if your Pers_Offers portlet is working correctly. If you are currently logged in as Portal administrator (wpsadmin), log off from HCL Digital Experience (DX).
 
-1. Login as one of the following uers:
+1. Login as one of the following users:
 
     |Username|Password
     |--------|--------
@@ -13,10 +13,10 @@ If you are currently logged in as portal admin user (wpsadmin), then please log 
 
 2. Navigate to the **Pers Offers** page. The **Pers Offers Portlet** should show personalized informations of the different users. For example:
 
-    Logged in as scott:  
+    See the Pers Offers page when you are logged in as Scott.
 
     ![Logged in as scott](./images/Pers_offers_portlet_scott_info.png)
 
-    Logged in as andy:
+    See the Pers Offers page when you are logged in as Andy.
 
-    ![Logged in as scott](./images/Pers_offers_portlet_andy_info.png)
+    ![Logged in as andy](./images/Pers_offers_portlet_andy_info.png)

@@ -1,10 +1,12 @@
 # Developing a personalized portlet using Microsoft Visual Studio Code
 
-This section aims to help developers use the Personalization API to fully personalize the experience of DX users with a personalization portlet. It supplements the PZNDemo with an additional JSP portlet that will be developed in IBM Rational Application Developer to show personalized offerings to users based on defined rules and content spots.  
+This section aims to help developers use the Personalization API to fully personalize the experience of DX users with a personalization portlet. It supplements the [PZNDemo](../demo/index.md) with an additional JSP portlet that will be developed in IBM Rational Application Developer to show personalized offerings to users based on defined rules and content spots.  
 
-It is highly recommended to review the detailed steps mentioned in [Developing a personalized portlet using IBM Rational Application Developer](../RAD/index.md) first to get a better understanding on the different kinds of development steps that needed to use the Portal personalization API.  
+It is highly recommended to review the detailed steps mentioned in [Developing a personalized portlet using IBM Rational Application Developer](../RAD/index.md) first to get a better understanding of the steps needed to use the Portal personalization API.
 
-Microsoft Visual Studio Code (VSC) currently does not have a software wizard like the IBM Rational Application Developer that can be used to create HRF files. HRF files are used to perform the data mappings between the rules, Java classes, and backend databases. It also does not contain a feature to automatically create the required resource collection classes for the resource-mappings like IBM Rational Application Developer does.  
+Microsoft Visual Studio Code (VSC) currently does not have a software wizard like the IBM Rational Application Developer that can be used to create HRF files. HRF files are used to perform the data mappings between the rules, Java classes, and backend databases. It also does not contain a feature to automatically create the required resource collection classes for the resource-mappings like IBM Rational Application Developer does.
+
+Refer to the following steps below to import the existing [Pers_Offers](../RAD/index.md) personalization sample into Microsoft Visual Studio Code with all of its source codes. This project can be compiled and packaged with VSC.
 
 1. **[Prerequisites for the Personalization portlet exercise](./pzn_demoprereq.md)**  
 Learn which prerequisites are needed to develop the personalized portlet using VSC.  
