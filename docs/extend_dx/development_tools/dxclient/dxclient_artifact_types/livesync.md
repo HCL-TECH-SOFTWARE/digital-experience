@@ -443,6 +443,7 @@ The LiveSync Push WCM Design Library command synchronizes changes in your local 
 - While multiple developers can use LiveSync on the same server, LiveSync restricts concurrent theme editing to one developer at a time. If another user is currently working on the same theme being pushed, LiveSync will not allow that user's changes to be pushed. Concurrent usage of this command on the same theme or using it along with [Theme Editor](../../../../build_sites/themes_skins/customizing_theme/theme_editor_portlet.md), or WebDav, is not supported.
 - Sequential usage of LiveSync on a single theme with different client operating systems (i.e., Windows and Mac) is not supported.
 - Case sensitivity for naming files and folders is not supported.
+- During the live sync process between the local and DX servers, if any files from the Themes are deleted at the same time on the DX server, they will not be pushed from the local system. If updates are made to the deleted files, a 'File not found' error will occur. In this case, stop the sync, repull the Themes, and then push them again. Live sync does not support bidirectional synchronization.
 
 ### WCM Design Library
 
@@ -451,3 +452,4 @@ The LiveSync Push WCM Design Library command synchronizes changes in your local 
 - If a published component has a draft version, the feature will pull and push into the draft version.
 - The LiveSync Push WCM Design Library feature only works on a WCM Design Library previously pulled by the LiveSync Pull WCM Design Library feature.
 - The LiveSync Pull and Push WCM Design Library feature only allows the following special characters for the file name, folder name, and library name : $, -,  _,  !, ( ).
+- During the live sync process between the local and DX servers, if any files from the WCM library are deleted simultaneously on the DX server, they will not be pushed from the local system. If any updates are made to the deleted files, a 'File not found' error will occur. In this case, stop the sync, repull the WCM library, and then push it again. Live sync does not support bidirectional synchronization.
