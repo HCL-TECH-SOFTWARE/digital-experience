@@ -68,6 +68,8 @@ Change the contextPool settings to match the following:
 The number of active LDAP connections can be monitored by viewing the number of open connections on the LDAP server via the netstat command:
 **netstat -an | grep 389 | wc -l**
 
+**Note:**  If using HTTPS to connect to the LDAP, replace 389 in the previous command with the SSL setting (usually 636).
+
 Note: If your networking configuration requires your Portal server to access the LDAP server through a proxy (such as a firewall or a load balancer) that breaks TCP connections without notifying it’s endpoint, it may be necessary to modify the pool timeout to never reuse a connection past a certain age. View additional guidance on connection pooling options available from the [IBM WebSphere Application Server Knowledge Center documentation](https://www.ibm.com/docs/en/was/9.0.5?topic=settings-session-pool){target="_blank"}.
 
 **VMM Caches**
