@@ -138,7 +138,7 @@ Secure communication between HCL DX and the HCL License Server (cloud or local) 
 
 ### Generating a public/private key pair
 
-If you choose to have your own key, you must generate a public/private key pair for secure communication. The following list shows the required formats: 
+If you want to have your own key, you must generate a public/private key pair for secure communication. The following list shows the required formats: 
 
 - The key pair must be in “RSA 2048-bit” format. 
 - The private key must be in “PKCS8” format. 
