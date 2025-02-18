@@ -12,8 +12,8 @@ The following table identifies the reporting options for Kubernetes deployments:
 | --------------- | ------------------- |
 | FlexNet | [Online Reporting](./flexnet_license_and_delivery.md) |
 | FlexNet | [Offline / Disconnected Reporting](configuring_local_flexnet_entitlement_server.md) (Local FlexNet License Server) |
-| My HCLSoftware | [Online Reporting](./configuring_mhs_and_file_based_export.md/#my-hcl-software-api-configuration)<!--broken link--> |
-| My HCLSoftware | [Offline / Disconnected Reporting](./configuring_mhs_and_file_based_export.md/#generating-and-uploading-user-session-data-usage-in-metrics-format)<!--broken link--> |
+| My HCLSoftware | [Online Reporting](./configuring_mhs.md/#my-hcl-software-api-configuration) |
+| My HCLSoftware | [Offline / Disconnected Reporting](./configuring_mhs.md/#generating-and-uploading-user-session-data-usage-in-metrics-format) |
 | Manual CSV Extract | [Manual Report Extracts](./export_usage_report.md) |
 
 
@@ -101,7 +101,7 @@ The License Manager uses whichever FlexNet or MHS service endpoint is configured
 
 For more details regarding FlexNet entitlement checking / usage reporting see [FlexNet Software Delivery Portal Entitlement Checking](./flexnet_license_and_delivery.md).
 
-For more details regarding My HCLSoftware entitlement checking / usage reporting see [My HCLSoftware Delivery Portal Entitlement Checking](./configuring_mhs_and_file_based_export.md)<!--broken link-->.
+For more details regarding My HCLSoftware entitlement checking / usage reporting see [My HCLSoftware Delivery Portal Entitlement Checking](./configuring_mhs.md).
 
 ???+ info "Related information"
     -   [HCL Digital Experience Cloud Native v9.5 license](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad){target="_blank"}

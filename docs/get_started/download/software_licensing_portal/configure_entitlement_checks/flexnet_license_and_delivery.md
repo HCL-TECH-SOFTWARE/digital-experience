@@ -125,8 +125,6 @@ Use `kubectl` logs for the license manager pod. For example, in a namespace dxns
 kubectl logs pod/<release-name>-license-manager-0 -n <namespace>
 ```
 
-See the HCL DX Cloud Native 9.5 entitlement check scenarios for success and error messages and how to manage them: [HCL Digital Experience Cloud Native 9.5 entitlement check scenarios](entitlement_checks_scenarios.md). <!--this page has been deleted in this PR, can we delete?-->
-
 Entitlement checking to ensure that the entitlement period for the DX Cloud Native 9.5 part is valid for the purchased term is initiated at deployment start, upgrade, or configuration-change processes. Entitlement checking also occurs once per day for active deployments. 
 
 Refer to [Configuring a local HCL Flexnet entitlement server](configuring_local_flexnet_entitlement_server.md) for additional configurations needed to enable connectivity to a local license server.
@@ -138,9 +136,9 @@ Secure communication between HCL DX and the HCL License Server (cloud or local) 
 !!! note
      The License Manager expects the public key to be uploaded to the License Server beforehand and the private key to be passed as a secret in the Helm values. However, if the private key is not provided, the default key is used and uploaded automatically.
 
-### Generating a public/private key pair <!--line 114 says that this is optional but why does the description say "You must generate"?-->
+### Generating a public/private key pair
 
-You must generate a public/private key pair to be used for secure communication. The following list shows the required formats: 
+If you choose to have your own key, you must generate a public/private key pair for secure communication. The following list shows the required formats: 
 
 - The key pair must be in “RSA 2048-bit” format. 
 - The private key must be in “PKCS8” format. 
