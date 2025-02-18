@@ -1,19 +1,33 @@
 ---
-title: Create deployment in  My HCLSoftware Portal
+title: Creating a deployment in My HCLSoftware Portal
 ---
 
-This document offers guidance on setting up and creating deployment instances in the  My HCLSoftware environment, as well as acquiring the initial deployment key.
+This document provides steps on how to set up and create deployment instances in the My HCLSoftware (MHS) environment and how to obtain the initial deployment key.
 
-Create new deployment via MHS UI:
+## Creating a new deployment
 
-1. Login to [My HCLSoftware PortalURL:](https://my.hcltechsw.com/)
-2. Go to Deployments tab and click Add Deployment
-![Add Deployment](../../software_licensing_portal/_img/add_deployment.png)
-3. You can see the Add deployment panel where you can enter the
-Deployment Name(free text) and Select the type of the deployment.
-![Create Deployment](../../software_licensing_portal/_img/create_deployment.png)
-4. Click Add Deployment to create deployment `deployment name`.
-5. Go to the main menu and check the deployment card list. You will find the deployment name created under the deployment menu. Click the three dots (top right corner of the deployment card) to access the option to create a deployment key or generate a new refresh token by clicking `Replace Deployment Key` as shown.
-![create deployment](../../software_licensing_portal/_img/deployment_key.png)
-6. You can use the unique deployment key, also called the initial refresh token. If you lose the old one, you can replace it with a new deployment key by clicking `Replace Deployment Key`
-![Deployment key](../../software_licensing_portal/_img/new_deployment_key.png)
+1. Log in to [My HCLSoftware PortalURL](https://my.hcltechsw.com/).
+
+2. Go to **Deployments** tab and click **Add Deployment**.
+
+3. In the **Add Deployments** window, enter the **Deployment Name** and select the type of the deployment.
+    
+    ![Create Deployment](../../software_licensing_portal/_img/create_deployment.png){ width="500" }
+
+4. Click the **Add Deployment** button to create the deployment.
+
+## Obtaining the deployment key
+
+After creating a deployment, refer to the following steps to get the deployment key.
+
+1. Go to Main menu and check the deployment card list. You can see the deployment card of the deployment you created (for example, **My Deployment**) under **Deployments**. 
+
+2. In the deployment card of your deployment, click the three-dot menu to get the option to create a deployment key and create a new refresh token. Select **Replace Deployment Key**.
+
+    ![More menu](../../software_licensing_portal/_img/deployment_key.png){ width="500" }
+
+3. Copy the unique deployment key, also known as the initial refresh token.
+
+    ![Deployment key](../../software_licensing_portal/_img/new_deployment_key.png){ width="500" }
+
+4. (Optional) If you lose the old deployment key, you can replace it with a new deployment key by clicking the three-dot menu in the deployment card and clicking **Replace Deployment Key**.

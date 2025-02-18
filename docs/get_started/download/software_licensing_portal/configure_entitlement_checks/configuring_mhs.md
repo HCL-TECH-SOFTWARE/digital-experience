@@ -1,33 +1,32 @@
 ---
-title:  My HCLSoftware delivery portal entitlement checking
+title:  Checking entitlements in the My HCLSoftware delivery portal
 ---
 
-# My HCLSoftware delivery portal entitlement checking
-My HCLSoftware (MHS) provides seamless access to various customer-facing systems such as Downloads, Software Entitlements, eCommerce, Support, Subscriptions, Account Management, Marketplace, and more.
+My HCLSoftware (MHS) provides access to various customer-facing systems such as Downloads, Software Entitlements, eCommerce, Support, Subscriptions, Account Management, Marketplace, and more. In MHS, you can find and download the latest HCLSoftware product releases and supported older releases. This topic provides information on how you can check your entitlements in the My HCLSoftware delivery portal. 
 
 ## Prerequisites
-The following elements are the prerequisites for configuring the HCL DX Cloud Native V9.5 entitlements to be deployed on supported Kubernetes platforms using My HCLSoftware delivery portal for entitlement checking:  
 
--   My HCLSoftware account and access to the [My HCLSoftware](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011) portal.
--   A valid [HCL DX Cloud Native 9.5 (Tier 1 – 7)](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad) offering part purchased and issued by the HCL Software licensing team.
+Make sure you have the following elements before configuring the HCL Digital Experience (DX) Cloud Native V9.5 entitlements to be deployed on supported Kubernetes platforms using My HCLSoftware delivery portal for entitlement checking:  
+
+-   A My HCLSoftware account and access to the [My HCLSoftware](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011){target="_blank"} portal.
+-   A valid [HCL DX Cloud Native 9.5 (Tier 1 – 7)](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad){target="_blank"} offering part purchased and issued by the HCL Software licensing team.
 -   Your DX Cloud Native 9.5 (Tier 1 – 7) entitlements are mapped to your My HCLSoftware portal instances.  
-   
--   A plan to deploy or update to [HCL DX 9.5 Container Update CF226](../../../../whatsnew/cf20/newcf226.md) or later release, if currently using a prior version.
+-   A plan to deploy or update to [HCL DX 9.5 Container Update CF226](../../../../whatsnew/cf20/newcf226.md) or to a later release, if currently using a prior version.
+-   An instance deployment. To create an instance deployment, refer to the steps in [Creating a deployment in My HCLSoftware Portal](../../software_licensing_portal/configure_entitlement_checks/create_deployment_mhs_ui.md).
 
--   To create an instance deployment, please follow the specific [steps outlined](../../software_licensing_portal/configure_entitlement_checks/create_deployment_mhs_ui.md) in the [My HCLSoftware Portal](https://my.hcltechsw.com/).
-
-
-Review the architecture that presents the License Manager component of HCL DX v9.5 Container Update software, which follows in the next section.
+In addition to these elements, review the [architecture](#architecture) that presents the License Manager component of the HCL DX v9.5 Container Update software.
 
 ## Architecture
-The License Manager component communicates with the My HCLSoftware entitlement service, to validate license entitlement at set periods for HCL Digital Experience Cloud Native V9.5 Tier 1 – 7 software after you configure it via the DX Cloud Native 9.5 deployment Helm chart. The License Manager component also transmits user session consumption from your production DX Cloud Native 9.5 deployment(s) to the My HCLSoftware usage reporting services.
 
-![](../../software_licensing_portal/_img/DX_95_container_license_manager_arch_mhs.png) 
+The License Manager component communicates with the My HCLSoftware entitlement service. This is to validate license entitlement at set periods for HCL DX Cloud Native V9.5 Tier 1 – 7 software after configuring the DX Cloud Native 9.5 deployment through the Helm chart. The License Manager component also transmits user session consumption from your production DX Cloud Native 9.5 deployments to the My HCLSoftware usage reporting services.
 
-Follow the configuration steps in the following procedure before you deploy a new or update an existing DX 9.5 Container deployment. By completing these steps, you configure the DX Cloud Native 9.5 Tier 1 – 7 deployment a Helm chart and enable the License Manager entitlement-checking functions.  
+![Architecture](../../software_licensing_portal/_img/DX_95_container_license_manager_arch_mhs.png) 
 
-## Procedure
-The below properties must be configured to your entitlements, you will configure those properties in your Helm chart to validate the entitlement details for your software.
+Follow the configuration steps in [Configuring the DX Cloud Native 9.5 entitlement](#configuring-the-dx-cloud-native-95-entitlement) before you deploy a new or update an existing DX 9.5 Container deployment. By completing these steps, you configure the DX Cloud Native 9.5 Tier 1 – 7 deployment using a Helm chart and enable the License Manager entitlement-checking functions.  
+
+## Configuring the DX Cloud Native 9.5 entitlement
+
+To validate the entitlement details for your software, configure the following properties in the Helm chart:
 
 ```yaml
 
@@ -46,26 +45,30 @@ The below properties must be configured to your entitlements, you will configure
 
 ```
 
--   `productionEnvironment`: Set to true to send usage reports to MHS, and for other environments (e.g. test or UAT), set to false.
--   `licenseServerUri`: MHS License Server URI
--   `customMhsDeploymentKeySecret`: The deployment key creates a custom secret name. Any method can use `customMhsDeploymentKeySecret` or `mhsDeploymentKey` for the deployment key. 
--   `mhsDeploymentKey`: Credentials for product deployments. Any method can use `customMhsDeploymentKeySecret` or `mhsDeploymentKey` for the deployment key. This can be optained from [My HCLSoftware Portal](https://my.hcltechsw.com/)
+-   `productionEnvironment`: Set to `true` to send usage reports to MHS. For other environments (for example, test or UAT), set to `false`.
+-   `licenseServerUri`: Set to the MHS License Server URI.
+-   `customMhsDeploymentKeySecret`: Set to the deployment key that creates a custom secret name. Any method can use `customMhsDeploymentKeySecret` or `mhsDeploymentKey` for the deployment key.
+-   `mhsDeploymentKey`: Set to the credentials for product deployments. Any method can use `customMhsDeploymentKeySecret` or `mhsDeploymentKey` for the deployment key. You can obtain the deployment key from [My HCLSoftware Portal](https://my.hcltechsw.com/).
+
+To create a custom secret, run the following command:
 
 ```sh
 #Example to create custom secret
 kubectl create secret generic <secret-name> --from-literal=deploymentKey=<deploymentKey> --namespace=<namespace>
 ```
 
-## Validation
+## Validating the DX Cloud Native 9.5 deployment entitlement
 
-To perform this validation, you need to check the logs generated by the License Manager component. The example command provided uses kubectl to fetch the logs from a specific pod within a Kubernetes namespace.
+To validate your entitlement, you must check the logs generated by the License Manager component. The following sample command uses `kubectl` to fetch the logs from a specific pod within a Kubernetes namespace.
+
 ```sh
  #Example to get logs:
  kubectl logs pod/dx-deployment-license-manager-0 --namespace=<namespace>
 ``` 
 
-## Expected logs
-The expected logs section shows what a successful entitlement check should look like. The logs should indicate a successful connection to the entitlement server, confirmation of a valid.
+### Expected logs
+
+This section shows what a successful entitlement check should look like. The logs should indicate a successful connection to the entitlement server, as illustrated in the following example:
 
 ```log
 INFO: The connection to the entitlement server is successful. You have a valid HCL Digital Experience Cloud Native 9.5 entitlement. HCL DX Cloud Native 9.5 server starts.

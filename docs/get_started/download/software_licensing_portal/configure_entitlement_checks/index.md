@@ -1,10 +1,10 @@
 # HCL Digital Experience Cloud Native 9.5 entitlement checks
 
-Both the [HCL Software License Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344) and [My HCLSoftware](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011) portals support entitlement checking and usage reporing for several HCL Software solutions, including the [HCL Digital Experience (DX) Cloud Native 9.5 Tier 1 – 7 offerings](https://blog.hcltechsw.com/digital-experience/introducing-new-hcl-digital-experience-cloud-native-9-5-bundle-with-user-session-pricing/) in the HCL DX portfolio. By checking entitlements, customers can track purchased software entitlement periods and usage levels. 
+Both the [HCL Software License Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344){target="_blank"} and [My HCLSoftware](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011){target="_blank"} portals support entitlement checking and usage reporting for several HCL Software solutions, including the [HCL Digital Experience (DX) Cloud Native 9.5 Tier 1 – 7 offerings](https://blog.hcltechsw.com/digital-experience/introducing-new-hcl-digital-experience-cloud-native-9-5-bundle-with-user-session-pricing/){target="_blank"} in the HCL DX portfolio. By checking entitlements, customers can track purchased software entitlement periods and usage levels. 
 
 Entitlement checking and usage reporting are done differently, depending on whether customers are using Cloud Native (Kubernetes) or traditional (non-Kuberntes) deployments.
 
-For Kubernetes deployments, the HCL License Manager container service is configured to check entitlements and record usage against one or other (but not both) of the software delivery portals. Where customers cannot or do not want to integrate directly with a delivery portal for automatic online reporting, alternate options are available to connect to either a Local License Server (in the case of FlexNet), or to produce report extracts in a simple file format, that can be read and shared in other ways.
+For Kubernetes deployments, the HCL License Manager container service is configured to check entitlements and record usage against one or another (but not both) of the software delivery portals. Where customers cannot or do not want to integrate directly with a delivery portal for automatic online reporting, alternative options are available to connect to either a local License Server (in the case of FlexNet), or to produce report extracts in a simple file format, that can be read and shared in other ways.
 
 The following table identifies the reporting options for Kubernetes deployments:
 
@@ -12,29 +12,30 @@ The following table identifies the reporting options for Kubernetes deployments:
 | --------------- | ------------------- |
 | FlexNet | [Online Reporting](./flexnet_license_and_delivery.md) |
 | FlexNet | [Offline / Disconnected Reporting](configuring_local_flexnet_entitlement_server.md) (Local FlexNet License Server) |
-| My HCLSoftware | [Online Reporting](./configuring_mhs_and_file_based_export.md/#my-hcl-software-api-configuration) |
-| My HCLSoftware | [Offline / Disconnected Reporting](./configuring_mhs_and_file_based_export.md/#generating-and-uploading-user-session-data-usage-in-metrics-format) |
+| My HCLSoftware | [Online Reporting](./configuring_mhs_and_file_based_export.md/#my-hcl-software-api-configuration)<!--broken link--> |
+| My HCLSoftware | [Offline / Disconnected Reporting](./configuring_mhs_and_file_based_export.md/#generating-and-uploading-user-session-data-usage-in-metrics-format)<!--broken link--> |
 | Manual CSV Extract | [Manual Report Extracts](./export_usage_report.md) |
 
 
 !!! note
-    Entitlement checking is not implemented in HCL DX Cloud Native v9.5 software that is deployed to supported specified Operating Systems (for example, Windows, Linux or IBM AIX). Customers deploying HCL DX Cloud Native v9.5 software to these platforms should plan to measure and report the total number of User Sessions consumed per contract year, in accordance with the terms of the [HCL DX Cloud Native v9.5 license](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-ofP.t-Y).  
+    Entitlement checking is not implemented in the HCL DX Cloud Native v9.5 software that is deployed to supported specified Operating Systems (for example, Windows, Linux or IBM AIX). Customers deploying HCL DX Cloud Native v9.5 software to these platforms should plan to measure and report the total number of user sessions consumed per contract year, in accordance with the terms of the [HCL DX Cloud Native v9.5 license](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-ofP.t-Y){target="_blank"} .  
 
-For traditional deployments (non-Kubernetes), customers can use web analytics reporting software such as Google Analytics to track user session consumption in their DX v9.5 production deployments. For more information, see [Integrate Google Analytics with HCL Digital Experience](../../../../build_sites/site_analytics/google_analytics/index.md).
+For traditional deployments (non-Kubernetes), you can use web analytics reporting software such as Google Analytics to track user session consumption in their DX v9.5 production deployments. For more information, see [Integrate Google Analytics with HCL Digital Experience](../../../../build_sites/site_analytics/google_analytics/index.md).
 
-A simple standalone tool called the [User Session Reporting Tool](https://opensource.hcltechsw.com/digital-experience/CF223/get_started/download/software_licensing_portal/configure_entitlement_checks/user_session_reporting_tool/) was delivered in CF223 and is available from the software delivery portals, as an alternative to Google Analytics or other methods customers might have used to gather usage data.
+A standalone tool called the [User Session Reporting Tool](user_session_reporting_tool.md) was delivered in CF223 and is available from the software delivery portals, as an alternative to Google Analytics or other methods customers might have used to gather usage data.
 
 
 ## HCL DX Cloud Native 9.5 entitlement-check requirement
 
-If you deploy DX to supported Kubernetes platforms you must specify certain entitlement check parameters in [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7](../../../../get_started/product_overview/offerings.md#hcl-digital-experience-cloud-native) installations to accomplish entitlement checks. If you do not specify these entitlement check parameters or fail to configure them correctly, then the entitlement check will not pass and software access will enter the grace period.
+If you deploy DX to supported Kubernetes platforms, you must specify certain entitlement check parameters in [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7](../../../../get_started/product_overview/offerings.md#hcl-digital-experience-cloud-native) installations to accomplish entitlement checks. If you do not specify these entitlement check parameters or fail to configure them correctly, then the entitlement check will not pass and software access will enter the grace period.
 
 Review the following [HCL Digital Experience Cloud Native 9.5](../../../product_overview/offerings.md#hcl-digital-experience-cloud-native) entitlement validation check scenarios see responses when entitlement-validation attempts fail.
 
-HCL’s approach is to conduct automated license validation for all products. This kind of license validation is called an entitlement check. The following information highlights all scenarios that involve HCL Software License Portal entitlement checks for the [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7](../../../product_overview/offerings.md#hcl-digital-experience-cloud-native) offering deployments. An entitlement check verifies the customer's purchased product subscription period is valid. If a customer’s subscription lapses, the customer must renew the subscription with HCL. For example, if a customer purchases a Digital Experience Cloud Native 9.5 Tier 2 part on May 30, 2024, the entitlement period is valid through May 30, 2025.
+HCL’s approach is to conduct automated license validation for all products. This kind of license validation is called an entitlement check. The following information highlights all scenarios that involve HCL Software License Portal entitlement checks for the [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7](../../../product_overview/offerings.md#hcl-digital-experience-cloud-native) offering deployments. An entitlement check verifies the customer's purchased product subscription period is valid. If a customer’s subscription lapses, the customer must renew the subscription with HCL. For example, if a customer purchases a Digital Experience Cloud Native 9.5 Tier 2 part on May 30, 2024, the entitlement period is valid until May 30, 2025.
 
 ### Entitlement-check scenarios
-When the HCL DX Cloud Native 9.5 License Manager container service starts, and entitlement checking and usage reporing are enabled, it will perform an entitlement check against the configured software delivery portal and report the result of that check in log messages.
+
+When the HCL DX Cloud Native 9.5 License Manager container service starts, and entitlement checking and usage reporting are enabled, it will perform an entitlement check against the configured software delivery portal and report the result of that check in log messages.
 
 During the grace period and beyond, messages are displayed in the License Manager container logs as a reminder that the contracted entitlement has expired. If you encounter these messages, contact your HCL salesperson to discuss the entitlement.
 
@@ -52,59 +53,56 @@ The following table describes the possible entitlement-check response scenarios 
 | 3. The connection to the entitlement server is successful. You do not have a valid HCL Digital Experience Cloud Native 9.5 entitlement. |HCL DX Cloud Native 9.5 server starts. The following message is included in the server-side log file: <br><br> `HCL DX CN 9.5 entitlement grace period has ended on grace period end date. Resolve this issue to avoid interruption in the service.`|
 | 4. The connection to the entitlement server fails. The HCL DX CN 9.5 entitlement grace period has started.|HCL DX Cloud Native 9.5 server starts. The following message is included in the server-side log file in the HCL DX 9.5 Container Update License Manager pod logs: <br><br> `The connection to the entitlement server failed. HCL DX CN 9.5 entitlement grace period of four weeks has started and will expire on (grace period end date). Please contact HCL Support to resolve the connection issue and try again.`|
 | 5. The connection to the entitlement server fails. You are operating within the HCL DX CN 9.5 entitlement grace period.|HCL DX Cloud Native 9.5 server starts. The following message is included in the HCL DX 9.5 Container Update License Manager pod logs: <br><br> `The connection to the entitlement server failed. You are currently operating within the HCL DX CN 9.5 entitlement grace period of four weeks, which expires on (grace period end date). Please contact HCL Support to resolve the connection issue and try again.`|
-| 6. The connection to the entitlement server fails. The HCL DX CN 9.5 entitlement grace period has expired.|The following message is included in the HCL DX 9.5 Container Update License Manager pod logs: <br><br> `HCL DX CN 9.5 entitlement grace period has ended on (grace period end date). If you feel this is an error, please log in to the HCL Customer Support portal ([https://support.hcltechsw.com/csm](https://support.hcltechsw.com/csm)) and open a Licensing case (New cases > Licensing case). Otherwise, contact your HCL salesperson to update your licensing.`<br> If you require an extension to the grace period, you can contact Support for a one-time extension of up to 14 additional days. |
+| 6. The connection to the entitlement server fails. The HCL DX CN 9.5 entitlement grace period has expired.|The following message is included in the HCL DX 9.5 Container Update License Manager pod logs: <br><br> `HCL DX CN 9.5 entitlement grace period has ended on (grace period end date). If you feel this is an error, please log in to the HCL Customer Support portal ([https://support.hcltechsw.com/csm](https://support.hcltechsw.com/csm)) and open a Licensing case (New cases > Licensing case). Otherwise, contact your HCL salesperson to update your licensing.`<br><br> If you require an extension to the grace period, you can contact Support for a one-time extension of up to 14 additional days. |
 
-### How to monitor user-session consumption for HCL DX Cloud Native v9.5 production deployments
+### Monitoring user-session consumption for HCL DX Cloud Native v9.5 production deployments
 
 !!! note
     Calculating and reporting of user session consumption produces the same results, regardless of which software delivery portal is being used.
 
-In addition to verifying entitlement to the contract period for purchased subscription software, the HCL Software delivery portals can present usage information of HCL Software offerings that have been developed to report usage metrics. This information includes HCL Digital Experience Cloud Native v9.5 Tier 1 – 7 offerings for production deployments. 
+In addition to verifying entitlement to the contract period for purchased subscription software, the HCL Software delivery portals can present usage information of HCL Software offerings that have been developed to report usage metrics. This information includes HCL DX Cloud Native v9.5 Tier 1 – 7 offerings for production deployments. 
 
-HCL Digital Experience Cloud Native 9.5 Tier 1 – 7 offerings are purchased according to the number of user sessions to be consumed annually.  A *user session* is defined as a single web session or other online interaction by anonymous or authenticated users of the program when it is deployed for production use. User sessions also include API calls, which deliver production-use website content or application data to external resources, excluding deliveries to a content-delivery network.
+HCL DX Cloud Native 9.5 Tier 1 – 7 offerings are purchased according to the number of user sessions to be consumed annually.  A user session is defined as a single web session or other online interaction by anonymous or authenticated users of the program when it is deployed for production use. User sessions also include API calls, which deliver production-use website content or application data to external resources, excluding deliveries to a content-delivery network.
 
 **A user session begins** when a user (authenticated or anonymous) visits a DX deployment operating for production use and then interacts with program website pages and is identified through appropriate tags that use the appropriate scripts for each site page view request. User session interactions can include one or more production-use website page views.
 
 **A user session ends** when the user interaction with the production-use program is idle for 30 minutes or until the user ends the interaction explicitly by closing their authentication or web session with the site.
 
-The maximum duration for an individual user session with continuous interactions is 4 hours.
+The maximum duration for an individual user session with continuous interactions is four hours.
 
-User session consumption can be viewed by using usage reports in the corresponding software delivery portal. To be included in these reports, your Digital Experience Cloud Native 9.5 entitlements must be as follows:
+You can view user-session consumption by using usage reports in the corresponding software delivery portal. To be included in these reports, your DX Cloud Native 9.5 entitlements must be:
 
 - Mapped to the appropriate software delivery portal for entitlement checking.
 - Configured for production use in your deployment Helm charts.
 
-Refer to the guidance in the following HCL Support knowledge article: [What is the HCL Software License and Download Portal?](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344#a8).
+For more information, refer to [What is the HCL Software License and Download Portal?](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344#a8){target="_blank"}.
 
-Run the “Reports for Metered products” section to understand how to access your FlexNet/MHS entitlement dashboard. Users with authorized access to this service can run usage reports. The Digital Experience Cloud Native 9.5 entitlements are configured to report user-session consumption for deployments configured for production use.
+Run the [Reports for metered products](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0073344#a8){target="_blank"} section to understand how to access your FlexNet/MHS entitlement dashboard. Users with authorized access to this service can run usage reports. The DX Cloud Native 9.5 entitlements are configured to report user-session consumption for deployments configured for production use.
 
-### How user sessions in production deployments are calculated for report totals 
+### How user sessions in production deployments are calculated for report totals
 
-HCL Digital Experience Cloud Native 9.5 applies the following approach when it reports totals for user session consumption in deployments configured for production to individual customer FlexNet dashboards or MHS dashboards: 
+HCL DX Cloud Native 9.5 applies the following approach when it reports totals for user-session consumption in deployments configured for production to individual customer FlexNet dashboards or MHS dashboards: 
 
-When a user interacts with an HCL DX Cloud Native 9.5 production deployment site, the License Manager pod, in conjunction with the HAProxy Pod coordinates a combination of IP address and user agent to identify a unique user session. For every request, a key is computed based on the requesting IP of the user, combined with the user agent and a forwarding header (`X-Forwarded-For`) for proxy (if a customer uses a proxy in their deployment setup) usage. Subsequent interactions during the same user session period use that key to identify the same user. 
+When a user interacts with an HCL DX Cloud Native 9.5 production deployment site, the License Manager pod, in conjunction with the HAProxy Pod, coordinates a combination of IP address and user agent to identify a unique user session. For every request, a key is computed based on the requesting IP of the user, combined with the user agent and a forwarding header (`X-Forwarded-For`) for proxy (if a customer uses a proxy in their deployment setup) usage. Subsequent interactions during the same user session period use that key to identify the same user. 
 
-This information is stored in memory only for up to 4 hours. It is discarded afterward. This information is only accessible by a Kubernetes administrator with permissions to access the log files. HCL cannot access this information at any time.
+This information is stored in memory only for up to four hours and is discarded afterwards. This information is only accessible by a Kubernetes administrator with permissions to access the log files. HCL cannot access this information at any time.
 
 Some customers might choose to use a proxy, for example, a load balancer, DMZ endpoint, or other service that resides between the user and the HCL DX Cloud Native v9.5 deployment. In that case, the customer should ensure the relevant information to facilitate user-session tracking arrives properly at the DX deployment for accurate tracking.
 
 The License Manager pod manages entitlement checking and user-session consumption reporting for production deployments. 
 
-The License Manager transmits the total number of completed user sessions to the customer [HCL Software License Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344#a8) instance (FlexNet/My HCL Software) dashboard. The user session keys are not transmitted, nor is any other information about users or sessions.
+The License Manager transmits the total number of completed user sessions to the customer [HCL Software License Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344#a8){target="_blank"} instance (FlexNet/My HCL Software) dashboard. The user session keys are not transmitted, nor is any other information about users or sessions.
 
-The License Manager uses whichever FlexNet or MHS service endpoint is configured to transmit the data total amount and each API request contains in its entirety the following data, and nothing more:
+The License Manager uses whichever FlexNet or MHS service endpoint is configured to transmit the data total amount and each API request contains in its entirety the following data:
 
 -   Timestamp of data transmission (implicit in the call, not explicitly provided)
-
 -   Deployment identification information
-
 -   Total number of completed user sessions calculated by the License Manager since the last transmission
-
 
 For more details regarding FlexNet entitlement checking / usage reporting see [FlexNet Software Delivery Portal Entitlement Checking](./flexnet_license_and_delivery.md).
 
-For more details regarding My HCLSoftware entitlement checking / usage reporting see [My HCLSoftware Delivery Portal Entitlement Checking](./configuring_mhs_and_file_based_export.md).
+For more details regarding My HCLSoftware entitlement checking / usage reporting see [My HCLSoftware Delivery Portal Entitlement Checking](./configuring_mhs_and_file_based_export.md)<!--broken link-->.
 
-???+ info "Additional references"
-    -   [HCL Digital Experience Cloud Native v9.5 license](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad)
-    -   [Simplified Pricing, More Value: HCL Digital Experience v9.5 User Session bundle](https://blog.hcltechsw.com/digital-experience/simplified-pricing-more-value-hcl-digital-experience-cloud-native-9-5-bundle-with-user-session-pricing/)
+???+ info "Related information"
+    -   [HCL Digital Experience Cloud Native v9.5 license](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad){target="_blank"}
+    -   [Simplified Pricing, More Value: HCL Digital Experience v9.5 User Session bundle](https://blog.hcltechsw.com/digital-experience/simplified-pricing-more-value-hcl-digital-experience-cloud-native-9-5-bundle-with-user-session-pricing/){target="_blank"}

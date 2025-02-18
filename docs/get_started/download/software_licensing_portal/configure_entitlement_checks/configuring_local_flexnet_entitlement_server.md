@@ -1,4 +1,5 @@
 # Configuring a local FlexNet entitlement server
+
 With HCL Digital Experience Cloud Native 9.5 Kubernetes production environments, you can optionally configure a local FlexNet entitlement server to more strictly control the environment in which your entitlement checks are made.
 
 By using this process, you can remain in entitlement compliance without requiring outbound connections to the HCL-hosted FlexNet entitlement service from your HCL Digital Experience Cloud Native 9.5 Kubernetes production installations.
@@ -9,6 +10,7 @@ By having the offline version of the HCL FlexNet Embedded License Server, a loca
     With outbound connections disabled, however, a member of the development team must manually update the local entitlement server periodically with the HCL Software License Portal to verify entitlements with HCL.
 
 ## Before you begin
+
 - Obtain the FlexNet Embedded License Server software from HCL and the installation readme files from the [HCL License and Delivery Portal](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do). You can find the download package, “HCL Common Local License Server 2.0,” under “Uncategorized Products.”
 
     !!!important
@@ -16,8 +18,8 @@ By having the offline version of the HCL FlexNet Embedded License Server, a loca
 
 -   Review the following documentation about how to configure a server-based (online) or local license (offline) server: 
 
-    - For Linux Server, see [How to install HCL Local License Server on Linux](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0090792).
-    - For Windows Server, see [How to install HCL Local License Server on Windows Operating System](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0082090).
+    - For Linux Server, see [How to install HCL Local License Server on Linux](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0090792){target="_blank"}.
+    - For Windows Server, see [How to install HCL Local License Server on Windows Operating System](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0082090){target="_blank"}.
 
     You can use these guides as the primary information for installing and configuring the FlexNet Embedded License Server for HCL.
 
@@ -31,11 +33,11 @@ By having the offline version of the HCL FlexNet Embedded License Server, a loca
 
 ## Architecture
 
-The License Manager component communicates with the local license server to validate license entitlement periods for HCL Digital Experience Cloud Native V9.5 Tier 1 – 7 software configured for production use. The local license server stores user session consumption from the customer’s production DX Cloud Native 9.5 deployments and synchronizes that data from the local license server copy to the FlexNet License Portal Server for HCL when those connections are periodically established. The following diagram illustrates the architecture for the License Manager for local Flexnet:
+The License Manager component communicates with the local license server to validate license entitlement periods for HCL Digital Experience Cloud Native V9.5 Tier 1 – 7 software configured for production use. The local license server stores user session consumption from the customer’s production DX Cloud Native 9.5 deployments and synchronizes that data from the local license server copy to the FlexNet License Portal Server for HCL when those connections are periodically established. 
 
 ![Architecture](../_img/DX_95_container_local_license_manager_support_arch.png)
 
-## Install and configure the local FlexNet entitlement server
+## Installing and configuring the local FlexNet entitlement server
 
 1. Install, configure, and start the FlexNet Embedded License Server for HCL software.
 
@@ -140,7 +142,7 @@ The License Manager component communicates with the local license server to vali
         
         4. Click **Save**. The device is created.
 
-    2. Map your HCL Digital Experience Cloud Native 9.5 entitlements to the local license server. Refer to the following table: [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7 parts and FlexNet License Server Feature Name](index.md) for details.
+    2. Map your HCL Digital Experience Cloud Native 9.5 entitlements to the local license server. See the table [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7 parts and FlexNet License Server Feature Name](flexnet_license_and_delivery.md) for more information.
         
         1. On the device page, select **Action > Map Entitlements**.
         
@@ -156,9 +158,9 @@ The License Manager component communicates with the local license server to vali
     
     1. Copy the downloaded file into the FlexNet Embedded License Server for the HCL installation configuration directory. Typically, these paths are similar to the following examples:
     
-    -   Windows: `C:\HCL_CLLS-x64-windows-2018.02-online\server\`
-    
-    -   Linux: `/opt/flexnetls/HCL/`
+        -   Windows: `C:\HCL_CLLS-x64-windows-2018.02-online\server\`
+        
+        -   Linux: `/opt/flexnetls/HCL/`
     
     2. Upload the capability response (`.bin`) file into the server.
 
@@ -167,6 +169,7 @@ The License Manager component communicates with the local license server to vali
         ```
 
         Where:
+
         -   `<token value>` is the token.
         -   `<Bin File Name.bin>` is the capability response file.
         -   `<license server hostname>` is the host name of the local license server.
@@ -192,7 +195,7 @@ The License Manager component communicates with the local license server to vali
 
     -   SSL certificate (This certificate was generated during setup. This will be imported to the HCL Digital Experience 9.5 License manager deployment to enable the SSL connection). Refer to the **Architecture** figure below.
 
-## Integrate HCL License Manager with local FlexNet entitlement server
+## Integrating HCL License Manager with local FlexNet entitlement server
 
 1. To configure the optional use of a local FlexNet license server, you add a property to the DX 9.5 Kubernetes Helm configuration to map the local license server SSL certificate (stored in a Kubernetes secret) to an environment variable. This property is optional and the DX 9.5 license manager instance will then automatically run an import to the `cacerts truststore` script if the variable contains any value.
 
@@ -232,7 +235,7 @@ The License Manager component communicates with the local license server to vali
 
     3. `licenseServer URL` – verify your connection to the Local License Server URL.
 
-    4. `licenseFeatureNameWithVersion` – Configure this variable according to the [HCL DX Cloud Native 9.5 Tier 1 – 7](../../../product_overview/offerings.md#hcl-digital-experience-cloud-native) offering part that your organization has acquired and is mapped to your FlexNet server for HCL instances. See Table [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7 parts and FlexNet License Server Feature Name](../configure_entitlement_checks/index.md#procedure).
+    4. `licenseFeatureNameWithVersion` – Configure this variable according to the [HCL DX Cloud Native 9.5 Tier 1 – 7](../../../product_overview/offerings.md#hcl-digital-experience-cloud-native) offering part that your organization has acquired and is mapped to your FlexNet server for HCL instances. See the table [HCL DX Cloud Native 9.5 Tier 1 – 7 parts and FlexNet License Server Feature Name](flexnet_license_and_delivery.md) for more information.
 
     5. `licenseManagerUser` – Configure this variable with the user name of the administrator authenticated to manage your Local License Server. (By default, this user name is set to 'admin'.)
 
@@ -256,12 +259,14 @@ The License Manager component communicates with the local license server to vali
     kubectl -n <namespace> rollout restart sts <deployment-name>-license-manager
     ```
 
+## Viewing the pod logs
+
 Ensure that your connection to the local FlexNet license server is successful by viewing your HCL DX 9.5 Container Update Server License Manager pod logs.
 
-Use `kubectl` logs for the license manager pod. For example:
+Use `kubectl` logs for the License Manager pod. For example:
 
 ```
 kubectl logs pod/dx-deployment-license-manager-0 -n <namespace>
 ```
 
-Additional references from the HCL Software Support Knowledge Article resources are available: [How to check the license usage on FlexNet using the FlexNet Admin tool included with the local license server download](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0084616).
+For more information , see [How to check the license usage on FlexNet using the FlexNet Admin tool included with the local license server download](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0084616){target="_blank"}.
