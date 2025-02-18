@@ -100,7 +100,7 @@ The License Manager uses whichever FlexNet or MHS service endpoint is configured
 
 For more information about FlexNet entitlement checking / usage reporting, see [Entitlement checking in FlexNet software delivery portal](./flexnet_license_and_delivery.md).
 
-For more details regarding My HCLSoftware entitlement checking / usage reporting see [My HCLSoftware Delivery Portal Entitlement Checking](./configuring_mhs.md).
+For more information about My HCLSoftware entitlement checking / usage reporting, see [Entitlement checking in My HCLSoftware delivery portal](./configuring_mhs.md).
 
 ???+ info "Related information"
     -   [HCL Digital Experience Cloud Native v9.5 license](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad){target="_blank"}
