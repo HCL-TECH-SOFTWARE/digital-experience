@@ -256,27 +256,27 @@ Resources → Resource Environment → Resource Environment Providers → WCM WC
 
 Note that Basic caching only works with the WCM servlet. Advanced caching is needed for WCM Rendering Portlets.
 
-**When to Use Each Caching Level**
+**WCM Advanced Cache Scenarios**
 
 - Content is not personalized / only anonymous users accessing the system: **Site**
 
-Every user can access the same cached items.Content is personalized
+   Every user accesses exactly the same WCM content items. Content is not personalized nor unique to a security group.
 
 - Content is unique for different groups of users: **Secured**
 
-Users that belong to the same groups will access the same cached items 
+   Users that belong to the same groups will access the same cached items 
 
 - Content is unique for different personalization profiles: **Personalized**
 
-Users that share the same personalization profile will access the same cached items 
+   Users that share the same personalization profile will access the same cached items 
 
 - Content is unique for every user: **User**
 
-Every user gets its own cached items; items are stored in a cache 
+   Every user gets its own cached items; items are stored in a cache 
 
 - Content is unique for every session: **Session**
 
-Every user gets its own cached items; items are stored in the session 
+   Every user gets its own cached items; items are stored in the session 
 
 **Cache Expire Time Formats**
 

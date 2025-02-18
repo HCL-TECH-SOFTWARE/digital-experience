@@ -1,6 +1,6 @@
 # Directory Server Tuning
 
-ITDS uses a DB2 database for storing user information. This database is typically located on the same system as the directory server. If your workload involves creating, updating, or deleting users, then occasional database maintenance may be needed on this database.
+IBM ITDS uses a DB2 database for storing user information. This database is typically located on the same system as the directory server. If your workload involves creating, updating, or deleting users, then occasional database maintenance may be needed on this database.
 
 On a modern server, it should be feasible to fit the majority of your user population in memory on the LDAP server. The directory servers in our base Portal Scenario measurements were tuned with this goal in mind. Note that in ITDS, both the LDAP server and its underlying DB need to be tuned to support this goal.
 
