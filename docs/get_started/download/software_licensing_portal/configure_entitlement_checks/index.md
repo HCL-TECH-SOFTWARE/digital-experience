@@ -98,7 +98,7 @@ The License Manager uses whichever FlexNet or MHS service endpoint is configured
 -   Deployment identification information
 -   Total number of completed user sessions calculated by the License Manager since the last transmission
 
-For more details regarding FlexNet entitlement checking / usage reporting see [FlexNet Software Delivery Portal Entitlement Checking](./flexnet_license_and_delivery.md).
+For more information about FlexNet entitlement checking / usage reporting, see [Entitlement checking in FlexNet software delivery portal](./flexnet_license_and_delivery.md).
 
 For more details regarding My HCLSoftware entitlement checking / usage reporting see [My HCLSoftware Delivery Portal Entitlement Checking](./configuring_mhs.md).
 
