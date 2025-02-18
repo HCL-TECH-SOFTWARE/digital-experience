@@ -1,4 +1,4 @@
-# Checking entitlements in the FlexNet software delivery portal
+# Entitlement checking in the FlexNet software delivery portal
 
 This topic provides information on how you can check your entitlements in the FlexNet software delivery portal. 
 
