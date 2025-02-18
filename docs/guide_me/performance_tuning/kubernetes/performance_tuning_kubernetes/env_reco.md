@@ -25,6 +25,10 @@ For these checks, one separate sidecar container is deployed with the main appli
 
 The primary objective of the Prereqs Checker is to learn whether the specified prerequisites are met and to inform users of the result in the logs. You can also use the checker to discover basic information about the file system of the mounted volumes, which helps track the issues related to the file systems.
 
+** Note ** Never allow DX Core to run if the Prereqs Checker indicates a problem with the attached storage. 
+There are Portal cache attached to the attached storage.
+If there are insufficient resources to efficiently access these caches, Portal performance can be erratic or catastrophic.
+
 ## DX deployment options
 
 HCL Digital Experience is a platform that helps you deliver the critical services of your organization. It is designed to be scalable and flexible, supports authentication for security and personalization, and aids in integration with varied applications. Strong encryption and cross-system authentication keep your business-critical functions safe. Your teams can create, manage, and deliver powerful and reliable digital experiences every day.
@@ -50,6 +54,8 @@ Whether developing, testing, or running a full production environment, using con
 ## Hardware Multithreading
 
 Many modern processor architectures support hardware multithreading. For example, this is known as Hyper-Threading (HT) on Intel processors and Simultaneous Multithreading (SMT) on Power processors. Our experience is that using hardware multithreading provides an improvement in capacity in all of the scenarios and platforms we have measured, so we would recommend its use on platforms where this is an option.
+
+However, you can never allow pods running DX Core to over commit resources. The CPU and Memory allocation for a pod running DX Core must account for the worst case needs (both in CPU and Memory) and never be allowed to share this memory with other pods. 
 
 ## Virtualization
 
