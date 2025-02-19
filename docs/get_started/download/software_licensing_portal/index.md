@@ -6,7 +6,7 @@ title: Software licensing portals
 
 HCL Digital Experience (DX) software is now available through the new [My HCLSoftware](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011){target="_blank"} portal, in parallel to the existing [HCL Software License Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344){target="_blank"} delivered in FlexNet.
 
-To change your reporting from FlexNet to the My HCLSoftware portal, describe in [My HCLSoftware](./configure_entitlement_checks/configuring_mhs.md). If there is any overlap between the data from FlexNet and the My HCLSoftware portal, you can retrieve the session usage figures from both platforms separately. Then, add these two figures together to obtain the total number of sessions for a specific period.
+To change your entitlement server from FlexNet to My HCLSoftware portal, see the instructions in [Entitlement server configuration in the My HCLSoftware delivery portal](./configure_entitlement_checks/configuring_mhs.md). If there is any overlap between the data from FlexNet and My HCLSoftware portal, you can retrieve the session usage numbers from both platforms separately. You can then add the numbers from both platforms to obtain the total number of sessions for a specific period.
 
 New customers, or those with new deployments, must register at the My HCLSoftware portal and download their entitled HCL DX packages there to avoid any need to convert later.
 
