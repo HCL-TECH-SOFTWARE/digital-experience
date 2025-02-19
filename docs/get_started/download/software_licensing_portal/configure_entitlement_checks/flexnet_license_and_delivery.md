@@ -125,7 +125,8 @@ Use `kubectl` logs for the license manager pod. For example, in a namespace dxns
 kubectl logs pod/<release-name>-license-manager-0 -n <namespace>
 ```
 
-See the HCL DX Cloud Native 9.5 entitlement check scenarios for success and error messages and how to manage them: [HCL Digital Experience Cloud Native 9.5 entitlement check scenarios](./index.md).
+See the HCL DX Cloud Native 9.5 entitlement-check scenarios and how to manage them in [HCL Digital Experience Cloud Native 9.5 entitlement check scenarios](./index.md#entitlement-check-scenarios).
+
 Entitlement checking to ensure that the entitlement period for the DX Cloud Native 9.5 part is valid for the purchased term is initiated at deployment start, upgrade, or configuration-change processes. Entitlement checking also occurs once per day for active deployments. 
 
 Refer to [Configuring a local HCL Flexnet entitlement server](configuring_local_flexnet_entitlement_server.md) for additional configurations needed to enable connectivity to a local license server.
