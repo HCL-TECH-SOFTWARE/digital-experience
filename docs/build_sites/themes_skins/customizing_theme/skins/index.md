@@ -9,9 +9,10 @@ You can create global or theme-based skins to customize a theme. A successful ap
 -   **[Default skins](themeopt_cust_skindefault.md)**  
 The default theme includes these skins that can be used as a basis for creating custom skins: Hidden, Standard, and NoSkin.
 
+## HCLSoftware U learning materials
+
+To learn how to further develop WebDAV-based DX themes, go to [Theme Development for Intermediate Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3462){target="_blank"}. You can try it out using the [Theme Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Theme_Development.pdf){target="_blank"} and corresponding [Theme Development Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Theme_Development_Lab_Resources.zip){target="_blank”}.
 
 ???+ info "Related information"
-[Updating the default theme and skin](../../../../deployment/manage/migrate/next_steps/post_mig_activities/theme_task/mig_upgrade_default_themes_skin.md)
-
-[Applying the new theme to your Portal pages](../../../../deployment/manage/migrate/next_steps/post_mig_activities/theme_task/mig_post_apply_theme.md)
-
+    - [Updating the default theme and skin](../../../../deployment/manage/migrate/next_steps/post_mig_activities/theme_task/mig_upgrade_default_themes_skin.md)
+    - [Applying the new theme to your Portal pages](../../../../deployment/manage/migrate/next_steps/post_mig_activities/theme_task/mig_post_apply_theme.md)
