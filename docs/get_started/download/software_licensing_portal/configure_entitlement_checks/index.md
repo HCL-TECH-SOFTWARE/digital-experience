@@ -13,17 +13,16 @@ The following table identifies the reporting options for Kubernetes deployments:
 | FlexNet | [Online Reporting](./flexnet_license_and_delivery.md) |
 | FlexNet | [Offline / Disconnected Reporting](configuring_local_flexnet_entitlement_server.md) (Local FlexNet License Server) |
 | My HCLSoftware | [Online Reporting](./configuring_mhs.md#configuring-the-dx-cloud-native-95-entitlement) |
-| My HCLSoftware | [OffOnline Reporting](./configuring_mhs.md#configuring-the-dx-cloud-native-95-entitlement) |
+| My HCLSoftware | [Offline / Disconnected Reporting](./configuring_mhs.md/#generating-and-uploading-user-session-data-usage-in-metrics-format) |
 | Manual CSV Extract | [Manual Report Extracts](./export_usage_report.md) |
-
+| My HCLSoftware | [Traditional deployments(non-Kubernetes)](./user_session_reporting_tool_non_kubernetes.md) |
 
 !!! note
     Entitlement checking is not implemented in the HCL DX Cloud Native v9.5 software that is deployed to supported specified Operating Systems (for example, Windows, Linux or IBM AIX). Customers deploying HCL DX Cloud Native v9.5 software to these platforms should plan to measure and report the total number of user sessions consumed per contract year, in accordance with the terms of the [HCL DX Cloud Native v9.5 license](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-ofP.t-Y){target="_blank"} .  
 
 For traditional deployments (non-Kubernetes), you can use web analytics reporting software such as Google Analytics to track user session consumption in their DX v9.5 production deployments. For more information, see [Integrate Google Analytics with HCL Digital Experience](../../../../build_sites/site_analytics/google_analytics/index.md).
 
-A standalone tool called the [User Session Reporting Tool](user_session_reporting_tool.md) was delivered in CF223 and is available from the software delivery portals, as an alternative to Google Analytics or other methods customers might have used to gather usage data.
-
+A standalone tool called the [User Session Reporting Tool](./user_session_reporting_tool.md) was delivered in CF223 and is available from the software delivery portals, as an alternative to Google Analytics or other methods customers might have used to gather usage data.
 
 ## HCL DX Cloud Native 9.5 entitlement-check requirement
 
