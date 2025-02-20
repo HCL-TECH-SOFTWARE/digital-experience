@@ -13,6 +13,7 @@ The following table identifies the reporting options for Kubernetes deployments:
 | FlexNet | [Online Reporting](./flexnet_license_and_delivery.md) |
 | FlexNet | [Offline / Disconnected Reporting](configuring_local_flexnet_entitlement_server.md) (Local FlexNet License Server) |
 | My HCLSoftware | [Online Reporting](./configuring_mhs.md#configuring-the-dx-cloud-native-95-entitlement) |
+| My HCLSoftware | [OffOnline Reporting](./configuring_mhs.md#configuring-the-dx-cloud-native-95-entitlement) |
 | Manual CSV Extract | [Manual Report Extracts](./export_usage_report.md) |
 
 
