@@ -55,7 +55,7 @@ Whether developing, testing, or running a full production environment, using con
 
 Many modern processor architectures support hardware multithreading. For example, this is known as Hyper-Threading (HT) on Intel processors and Simultaneous Multithreading (SMT) on Power processors. Our experience is that using hardware multithreading provides an improvement in capacity in all of the scenarios and platforms we have measured, so we would recommend its use on platforms where this is an option.
 
-However, you can never allow pods running DX Core to over commit resources. The CPU and Memory allocation for a pod running DX Core must account for the worst case needs (both in CPU and Memory) and never be allowed to share this memory with other pods. 
+However, do not allow pods running DX Core to over commit resources. The CPU and Memory allocation for a pod running DX Core must account for the worst case needs (both in CPU and Memory) and should not be allowed to share this memory with other pods. 
 
 ## Virtualization
 
