@@ -179,7 +179,7 @@ We recommend setting the minimum and maximum thread pool size equal to each othe
 
 ## Data Source Tuning
 
-DX Core Portal uses multiple database domains to store information. Each database domain has its own JDBC data source, so when tuning in the admin console remember to tune all the data sources.
+DX Core Portal uses multiple database domains to store information. Each database domain has its own JDBC data source, so when tuning in the admin console, remember to tune all the data sources.
 
 ### Connection Pool Size
 
