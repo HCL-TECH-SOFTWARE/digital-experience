@@ -8,11 +8,11 @@ My HCLSoftware (MHS) provides access to various customer-facing systems such as 
 
 Make sure you have the following elements before configuring the HCL Digital Experience (DX) Cloud Native V9.5 entitlements to be deployed on supported Kubernetes platforms using My HCLSoftware delivery portal for entitlement checking:  
 
--   A My HCLSoftware account and access to the [My HCLSoftware](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011){target="_blank"} portal.
+-   A My HCLSoftware account and access to the [MyHCLSoftware](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011){target="_blank"} portal.
 -   A valid [HCL DX Cloud Native 9.5 (Tier 1 – 7)](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad){target="_blank"} offering part purchased and issued by the HCL Software licensing team.
--   Your DX Cloud Native 9.5 (Tier 1 – 7) entitlements are mapped to your My HCLSoftware portal instances.  
+-   Your DX Cloud Native 9.5 (Tier 1 – 7) entitlements are mapped to your MyHCLSoftware portal instances.  
 -   A plan to deploy or update to [HCL DX 9.5 Container Update CF226](../../../../whatsnew/cf20/newcf226.md) or to a later release, if currently using a prior version.
--   An instance deployment. To create an instance deployment, refer to the steps in [Creating a deployment](../../software_licensing_portal/configure_entitlement_checks/create_deployment_mhs_ui.md) in [My HCLSoftware Portal](https://my.hcltechsw.com/).
+-   An instance deployment. To create an instance deployment, refer to the steps in [Creating a deployment](../../software_licensing_portal/configure_entitlement_checks/create_deployment_mhs_ui.md) in [MyHCLSoftware portal](https://my.hcltechsw.com/).
 
 In addition to these elements, review the [architecture](#architecture) that presents the License Manager component of the HCL DX v9.5 Container Update software.
 
@@ -48,7 +48,7 @@ To validate the entitlement details for your software, configure the following p
 -   `productionEnvironment`: Set to `true` to send usage reports to MHS. For other environments (for example, test or UAT), set to `false`.
 -   `licenseServerUri`: Set to the MHS License Server URI.
 -   `customMhsDeploymentKeySecret`: Set to the deployment key that creates a custom secret name. Any method can use `customMhsDeploymentKeySecret` or `mhsDeploymentKey` for the deployment key.
--   `mhsDeploymentKey`: Set to the credentials for product deployments. Any method can use `customMhsDeploymentKeySecret` or `mhsDeploymentKey` for the deployment key. You can obtain the deployment key from [My HCLSoftware Portal](https://my.hcltechsw.com/).
+-   `mhsDeploymentKey`: Set to the credentials for product deployments. Any method can use `customMhsDeploymentKeySecret` or `mhsDeploymentKey` for the deployment key. You can obtain the deployment key from [MyHCLSoftware portal](https://my.hcltechsw.com/).
 
 To create a custom secret, run the following command:
 
