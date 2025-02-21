@@ -2,7 +2,7 @@
 
 The tuning documented in the base Portal chapter can allow a single Portal server to handle several thousand logged in users serving a few hundred page views per second, depending on application processing requirements. For sites that require more users, it may be necessary to increase some tuning parameters to higher values. These values are detailed in this section.
 
-Note that the values in this section are unique to the testing done in DX Core development. The only way to know the precise values applicable to a particular (customer) deployment are through load testing applied to a DX Core Portal server with an approximation of the actual user load required. Typically, this load is generated synthetically prior to the DX Core Portal going live; but these values can also be gleaned once the DX Core Portal is live as well (albeit with potential bottlenecks due to resource constraints).
+Note that the values in this section are unique to the testing done in DX Core development. The only way to determine the precise values applicable to a particular deployment are through load testing applied to a DX Core Portal server with an approximation of the actual user load required. Typically, the user load is generated synthetically before the DX Core Portal goes live. However, these values can also be extracted after the DX Core Portal is live as well. Note that generating the user load after the DX Core Portal is live may have bottlenecks due to resource constraints.
 
 ## JVM Tuning
 
