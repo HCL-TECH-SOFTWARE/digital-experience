@@ -20,7 +20,7 @@ When setting the heap size for an application server, keep the following in mind
 - After doing any tuning of heap sizes, monitor the system to make sure that paging is not occurring.
 - We set the minimum and maximum heap sizes to the same values since we’re using the generational, concurrent (or ‘gencon’) garbage collection which helps avoid heap fragmentation. Generational concurrent garbage collection has given the best throughput and response time results in our measurements.
 
-   Setting the minimum equal to the maximum also insures that memory in the system is available at start up. It also avoids memory allocation slowness that may result after DX Core is already active.
+   Setting the minimum equal to the maximum also ensures that memory in the system is available at startup. It also avoids memory allocation slowness that may result after DX Core is already active.
 
 - Note that running clustered WebSphere nodes may require larger heap sizes compared to standalone, non-clustered systems if session replication is being used. This is especially true if using memory-to-memory session replication since session information is also stored in the JVM. After doing any heap size tuning, monitor the verbose garbage collection output to determine if the selected size is appropriate. Ideally, the system should spend no more than 10% of its time in garbage collection.
    
