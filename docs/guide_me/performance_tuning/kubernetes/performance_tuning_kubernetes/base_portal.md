@@ -185,7 +185,7 @@ DX Core Portal uses multiple database domains to store information. Each databas
 
 The default settings of 10 minimum and 50 maximum were used for the connection pool sizes for the base Portal Scenario. For WCM, higher maximum connection pool sizes are needed. Higher connection pool sizes may also be needed in other cases, such as using parallel portlet rendering or if larger web container thread pool is needed. In all cases, we recommend monitoring the database connection pools and increasing their maximum sizes if the pool is completely utilized.
 
-In general, each WebContainer thread will require 1 RELEASE DB domain connection and 2 JCR connections. So, if one configures DX Core Portal for 50 WebContainer threads, one should also insure that the DB server can handle 150 inbound TCP socket connections from each DX Core Portal pod. 
+In general, each WebContainer thread will require one RELEASE DB domain connection and two JCR connections. If you configure DX Core Portal for 50 WebContainer threads, you must ensure that the DB server can handle 150 inbound TCP socket connections from each DX Core Portal pod. 
 
 **How to Set**
 
