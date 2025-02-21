@@ -6,7 +6,7 @@ This document provides steps on how to set up and create deployment instances in
 
 ## Creating a new deployment
 
-1. Log in to [MyHCLSoftware portal URL](https://my.hcltechsw.com/).
+1. Log in to [MyHCLSoftware portal](https://my.hcltechsw.com/).
 
 2. Go to **Deployments** tab and click **Add Deployment**.
 
