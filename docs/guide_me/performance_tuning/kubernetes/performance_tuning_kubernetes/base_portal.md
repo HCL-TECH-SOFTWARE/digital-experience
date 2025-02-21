@@ -24,7 +24,7 @@ When setting the heap size for an application server, keep the following in mind
 
 - Note that running clustered WebSphere nodes may require larger heap sizes compared to standalone, non-clustered systems if session replication is being used. This is especially true if using memory-to-memory session replication since session information is also stored in the JVM. After doing any heap size tuning, monitor the verbose garbage collection output to determine if the selected size is appropriate. Ideally, the system should spend no more than 10% of its time in garbage collection.
    
-   Keep in mind, however, that DX Core recommends to NOT use session replication.
+   However,  note that it is not recommended by DX Core to use session replication.
 
 In HCL Portal, the maximum heap size is highly dependent on cache tuning values (amoung other factors). In general, the larger the caches, the better performance will be. Larger caches, however, use more JVM heap.
 
