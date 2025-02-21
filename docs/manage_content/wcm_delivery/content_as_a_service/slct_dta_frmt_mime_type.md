@@ -1,10 +1,10 @@
 # Select data format based on MIME type
 
-With Content as a Service pages, you can specify different representation of your web content for different MIME types. This way when you request Content as a Service pages, you can specify the preferred representation of your web content. There are different options to manage the presentation components that produce the output for the MIME types you like to support.
+With Content as a Service (CaaS) pages, you can specify different representation of your web content for different MIME types. This way when you request Content as a Service pages, you can specify the preferred representation of your web content. There are different options to manage the presentation components that produce the output for the MIME types you like to support.
 
 ## How to use well-defined element names in your content
 
-The portal supports selecting different presentation components for the Content as a Service pages based on the requested MIME type. Depending on the MIME type parameter, different presentation components can be specified for generating the data format. For more information about the MIME type parameter, go to the section *Writing links to web content*.
+The portal supports selecting different presentation components for the Content as a Service pages based on the requested MIME type. Depending on the MIME type parameter, different presentation components can be specified for generating the data format. For more information about the MIME type parameter, refer to [Writing links to web content](../../wcm_authoring/authoring_portlet/content_management_artifacts/tags/wcm_dev_writing-links.md).
 
 You can use this MIME type-specific presentation component selection by adding component reference elements with well-defined names such as ibm.design.json, ibm.design.xml, and ibm.design.html to your content items. You can define the value for the component reference elements in your Authoring template that you use for creating your content items.
 
@@ -39,8 +39,5 @@ For example, you might use a naming convention to select the proper presentation
 
 -   With Content as a Service, you cannot produce binary web content. For example, you cannot respond with the MIME type `image/jpg`. If you want to retrieve binary web content, such as images, from a web content library, include the URL to the web content in the Content as a Service response. The client can then use the URL to make a second request to load the binary web content.
 
-
-
 ???+ info "Related information"
     - [Writing links to web content](../../wcm_authoring/authoring_portlet/content_management_artifacts/tags/wcm_dev_writing-links.md)
-
