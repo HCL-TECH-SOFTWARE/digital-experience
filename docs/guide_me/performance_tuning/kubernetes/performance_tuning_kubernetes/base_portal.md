@@ -164,7 +164,7 @@ Set the servlet engine thread pool size and monitor the results. Increase this v
 
 The default minimum and maximum value of 50 was used for performance benchmarks. Fifty threads were enough to drive Portal to capacity with the portlets used in the measurement workload. Portlets which require access external systems, like databases or web services, may require more threads.
 
-If response times increase before CPU loads reach a high level, monitor the Web Container Thread Pool through the WebSphere PMI interface. If the thread pool is significantly utilized and these threads are not waiting on an external service (as just previously noted), the size should be increased.
+If response times increase before CPU loads reach a high level, monitor the Web Container Thread Pool through the WebSphere PMI interface. If the thread pool is significantly utilized and these threads are not waiting on an external service as previously noted, the size should be increased.
 
 **How to Set**
 
