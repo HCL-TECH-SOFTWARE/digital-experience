@@ -42,7 +42,7 @@ Servers → Server Types → WebSphere application servers → WebSphere_Portal 
 
 **Maximum Heap Size**
 
-During our performance testing, we observed a 2% improvement by increasing the heap size to **4096MB** (4 GB). This adjustment was particularly beneficial when WCM advanced caching was enabled. We recommend using this configuration as a reference for your medium configuration tests to optimize performance.
+During our performance testing, we observed a 2% improvement by increasing the heap size to **4096MB** (4 GB). This adjustment was particularly beneficial when WCM advanced caching was enabled. It is recommended to use this configuration as a reference for your medium configuration tests to optimize performance.
 
 This suggests that by adjusting the heap size in your environment, especially when caching mechanisms are in place, you may achieve similar performance gains.
 
