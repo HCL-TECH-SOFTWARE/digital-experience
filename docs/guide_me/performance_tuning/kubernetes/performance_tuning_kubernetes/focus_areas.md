@@ -17,7 +17,7 @@ Out of Memory (OOM) errors in Kubernetes pods occur when a container inside a po
 **WCM advanced Caching**
 
 - Refer WCM advanced caching topic in this guide.
-- In a rendering environment (e.g. an environment that serves users as opposed to authors), WCM advanced caching almost always need to be used,
+- In a rendering environment (for example, an environment that serves users as opposed to authors), WCM advanced caching must almost always be used.
 
 **Performance Monitoring and Integration**
 
