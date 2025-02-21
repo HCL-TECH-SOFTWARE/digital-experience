@@ -25,7 +25,8 @@ For these checks, one separate sidecar container is deployed with the main appli
 
 The primary objective of the Prereqs Checker is to learn whether the specified prerequisites are met and to inform users of the result in the logs. You can also use the checker to discover basic information about the file system of the mounted volumes, which helps track the issues related to the file systems.
 
-** Note ** Never allow DX Core to run if the Prereqs Checker indicates a problem with the attached storage. 
+!!!important
+            Do not allow DX Core to run if the Prereqs Checker indicates a problem with the attached storage. There are Portal cache attached to the attached storage. If there are insufficient resources to efficiently access these caches, Portal performance can be.
 There are Portal cache attached to the attached storage.
 If there are insufficient resources to efficiently access these caches, Portal performance can be erratic or catastrophic.
 
