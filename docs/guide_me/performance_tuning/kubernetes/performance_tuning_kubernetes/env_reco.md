@@ -27,7 +27,6 @@ The primary objective of the Prereqs Checker is to learn whether the specified p
 
 !!!important
             Do not allow DX Core to run if the Prereqs Checker indicates a problem with the attached storage. There are Portal cache attached to the attached storage. If there are insufficient resources to efficiently access these caches, Portal performance can be.
-There are Portal cache attached to the attached storage.
 If there are insufficient resources to efficiently access these caches, Portal performance can be erratic or catastrophic.
 
 ## DX deployment options
