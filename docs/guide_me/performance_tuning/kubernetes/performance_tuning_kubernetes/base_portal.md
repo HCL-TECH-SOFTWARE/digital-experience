@@ -26,7 +26,7 @@ When setting the heap size for an application server, keep the following in mind
    
    However,  note that it is not recommended by DX Core to use session replication.
 
-In HCL Portal, the maximum heap size is highly dependent on cache tuning values (amoung other factors). In general, the larger the caches, the better performance will be. Larger caches, however, use more JVM heap.
+In HCL Portal, the maximum heap size is highly dependent on cache tuning values, among other factors. In general, the larger the caches, the better performance will be. Larger caches, however, use more JVM heap.
 
 The values used in performance benchmarks, detailed below, are set primarily to allow larger cache sizes, not because the measured portlets use significant amounts of memory. These values are related to the hardware configuration and the total throughput each can support. They do not reflect the absolute limits of each architecture. Values will need to be tuned based on specific hardware and application configuration, especially the throughput and number of active users required.
 
