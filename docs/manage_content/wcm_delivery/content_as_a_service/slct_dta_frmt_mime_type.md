@@ -1,6 +1,6 @@
 # Select data format based on MIME type
 
-With Content as a Service (CaaS) pages, you can specify different representation of your web content for different MIME types. This way when you request Content as a Service pages, you can specify the preferred representation of your web content. There are different options to manage the presentation components that produce the output for the MIME types you like to support.
+With Content as a Service (CaaS) pages, you can specify different representation of your web content for different MIME types. This way when you request CaaS pages, you can specify the preferred representation of your web content. There are different options to manage the presentation components that produce the output for the MIME types you want to support.
 
 ## How to use well-defined element names in your content
 
