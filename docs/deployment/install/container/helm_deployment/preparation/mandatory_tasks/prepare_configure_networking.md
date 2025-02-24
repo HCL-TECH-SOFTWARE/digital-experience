@@ -86,7 +86,7 @@ Please refer to the original values.yaml for all available applications that c
 Setting the add-on host is required for all hybrid deployments. Given the default use of relative hostnames, you must set an absolute FQDN for hybrid deployments. API calls must still point to one absolute hostname to avoid authentication issues when making requests. With that, it is not supported to configure your HCL DX environment to support multiple hostnames if you are running a hybrid deployment. See [Hybrid Deployment Installation](../../../../hybrid/index.md) for more details.
 
 !!! note
-    If your DX Core deployment is configured with a self signed or otherwise not publicly trusted certificate, you must add the certificate to the trust store of the add-on applications. See [Adding additional CA to the trust store of DAM or RingAPI](../../../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-additonal-ca.md) for more information.
+    If your DX Core deployment is configured with a self-signed certificate or a certificate that is not publicly trusted, you must add the certificate to the trust store of the add-on applications. See [Adding additional CA to the trust store of DAM or RingAPI](../../../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-additonal-ca.md) for more information.
 
 ## Configure HAProxy certificate
 

@@ -20,4 +20,4 @@ The following features and updates are available to customers installing HCL Dig
 ### RingAPI - Extending the trust store
 
 === "Containers"
-    DX 9.5 Container Update CF226 adds capability to add additional certificate authorities to the trust store. This enables support for self-signed certificates in hybrid deployments. For more information, see [Adding additional CA to the trust store of DAM or RingAPI](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-additonal-ca.md).
+    Starting CF226, you can add additional certificate authorities to the trust store of RingAPI. This enables support for self-signed certificates in hybrid deployments. For more information, see [Adding additional CA to the trust store of DAM or RingAPI](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-additonal-ca.md).

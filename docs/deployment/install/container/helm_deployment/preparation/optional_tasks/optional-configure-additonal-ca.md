@@ -6,7 +6,7 @@ In hybrid deployments RingAPI needs to trust the certificate of your core deploy
 
 ## Prerequisites
 
-Both services leverages basic Node.JS functionality to extend the trust store by using the [NODE_EXTRA_CA_CERTS](https://nodejs.org/api/cli.html#node_extra_ca_certsfile) flag. Therefore, the certificate file used for the next steps must be one single file in the `pem` format with all necessary CAs aggregated into it.
+DAM and RingAPI both use basic Node.JS functionality to extend the trust store by using the [NODE_EXTRA_CA_CERTS](https://nodejs.org/api/cli.html#node_extra_ca_certsfile) flag. Therefore, the certificate file used for the next steps must be one single file in the `pem` format with all necessary CAs aggregated into it.
 
 ## Adding the PEM file as a secret
 
