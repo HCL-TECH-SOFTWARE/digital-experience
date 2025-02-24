@@ -6,9 +6,7 @@ Portal Administrators can use the Solution Installer through the Configuration W
 
 Complete the following tasks to install, uninstall, and update add-ons.
 
-???+ info "Related information"  
-    -   [Installing Integrator for SAP](https://help.hcltechsw.com/digital-experience/8.5/admin-system/sap_int_instal.html)
-    -   [Development and operations overview](../../../../build_sites/themes_skins/developing_theme/dev_op_overview/index.md)
-
-???+ info "References"  
+???+ info "Related information"
     -   [Accessing the Configuration Wizard](../../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+    -   [Development and operations overview](../../../../build_sites/themes_skins/developing_theme/dev_op_overview/index.md)
+    -   [Installing Integrator for SAP](https://help.hcltechsw.com/digital-experience/8.5/admin-system/sap_int_instal.html)
