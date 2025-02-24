@@ -2,7 +2,7 @@
 
 Implementing a custom plugin for the [Digital Asset Management extensibility](../../../../../../manage_content/digital_assets/configuration/dam_extensibility/configure_dam_extensibility.md) is by default limited to publicly trusted certificates. If the plugin is signed with a self-signed or otherwise untrusted certificate authority (CA), the trust store of DAM can be extended. Starting CF216, you can add additional certificate authorities to the trust store.
 
-In hybrid deployments RingAPI needs to trust the certificate of your core deployment. If you are running a self-signed certificate in your core deployment, starting CF226 you need to add the certificate to the trust store of RingAPI.
+In hybrid deployments, RingAPI must trust the certificate of your core deployment. If you are running a self-signed certificate in your core deployment, you have to add the certificate to the trust store of RingAPI.
 
 ## Prerequisites
 
