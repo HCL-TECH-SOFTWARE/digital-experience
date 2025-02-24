@@ -13,3 +13,11 @@ The following features and updates are available to customers installing HCL Dig
 
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Removal of automated Pod restart on ConfigMap updates
+- RingAPI - Extending the trust store
+
+## Digital Experience 9.5 Container Version
+
+### RingAPI - Extending the trust store
+
+=== "Containers"
+    Starting CF226, you can add additional certificate authorities to the trust store of RingAPI. This enables support for self-signed certificates in hybrid deployments. For more information, see [Adding additional CA to the trust store of DAM or RingAPI](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-additonal-ca.md).
