@@ -1,5 +1,5 @@
 ---
-title: User session reporting tool for non kubernetes
+title: User session reporting tool for non-Kubernetes deployments
 ---
 # User session reporting tool for non-Kubernetes deployments
 
