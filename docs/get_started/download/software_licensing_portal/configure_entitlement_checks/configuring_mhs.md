@@ -80,7 +80,7 @@ INFO: License validity: true
 The method of using a file-based export of user session data usage is only used in disconnected use cases within the Kubernetes environment where the Helm chart has not configured DX with My HCLSoftware Portal.
 
 ### Generating and uploading user session data usage in metrics format
-To generate the user session data usage in metrics format, the report include session data that has been encrypted for each user session. The `deploymentId` can be found in the My HCLSoftware Portal after clicking the deployment card in the URL; for example, `https://my.hcltechsw.com/deployments/pzneck8m`. In this case, `pzneck8m` represents the `deploymentId` as illustrated in the example URL.
+To generate the user session data usage in metrics format, the report must include the session data encrypted for each user session.
 
 Use the following command to generate usage metrics from the user session data. Make sure to specify the appropriate `startDate`, `endDate` and `deploymentId` values.
 
