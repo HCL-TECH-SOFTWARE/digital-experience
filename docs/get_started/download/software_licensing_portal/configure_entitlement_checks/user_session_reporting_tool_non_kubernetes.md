@@ -1,7 +1,7 @@
 ---
 title: User session reporting tool for non kubernetes
 ---
-# User Session Reporting Tool for Non Kubernetes
+# User session reporting tool for non-Kubernetes deployments
 
 This topic describes how you can use the User Session Reporting Tool to count and report user sessions.
 
