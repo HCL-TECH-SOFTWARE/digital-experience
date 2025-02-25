@@ -533,7 +533,7 @@ In the WebSphere® Integrated Solutions Console, the portal Configuration Servic
     -   [How administrators define persistent session options](../../../../config_portal_behavior/user_session_persistence/adm_define_user_session_persistence/index.md)
     -   [Configuring globally how social object links are resolved](../../../../../../build_sites/social_rendering/cfg_global_settings_social_rendering/soc_rendr_cfg_reslv_links.md)
     -   [Authenticating outbound HTTP connections](../../../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/authenticating_outbound_http_connections/index.md)
-    -   [Configuring Integrator for SAP](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_cfg.html)
+    -   [Configuring Integrator for SAP](https://help.hcltechsw.com/digital-experience/8.5/admin-system/sap_int_cfg.html)
     -   [Configuring Tivoli Federated Identity Manager with SAML for single sign-on to SAP NetWeaver Portal](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_cfg_tfimsaml_sso.html)
     -   [Performance tuning for Integrator for SAP](https://help.hcltechsw.com/digital-experience/8.5/admin-system/sap_int_perf_tun.html)
     - [WebSphere® Integrated Solutions Console](../../../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
