@@ -76,7 +76,7 @@ INFO: Starting session count of the license manager
 INFO: License validity: true
 ```
 
-## File based export in Kubernetes environment
+## File-based export in a Kubernetes environment
 The method of using a file-based export of user session data usage is only used in disconnected use cases within the Kubernetes environment where the Helm chart has not configured DX with My HCLSoftware Portal.
 
 ### Generating and uploading user session data usage in metrics format
