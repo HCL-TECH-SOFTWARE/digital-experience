@@ -12,7 +12,7 @@ delete-outbound-http-connection-config
 clean-outbound-http-connection-config
 ```
 
-For more information on how to work with outbound HTTP connection configuration settings, read the following topics. Information about working with application-scoped configuration settings are also available.
+For more information on how to work with outbound HTTP connection configuration settings, read the following topics. Information about working with application-scoped configuration settings is also available.
 
 -   **[How to create an outbound HTTP connection configuration profile](./outbhttp_cfg_tsk_create.md)**  
 This configuration task creates an outbound HTTP connection configuration profile by using the settings that you specify in an XML document. Use this task if you want to initially create outbound HTTP settings for your configuration. You can create a global configuration or an application-scoped configuration.
