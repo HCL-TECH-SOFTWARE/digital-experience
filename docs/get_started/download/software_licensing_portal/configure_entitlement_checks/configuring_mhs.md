@@ -90,7 +90,7 @@ kubectl exec -it <release name>-license-manager-0 -n <namespace> -- java -jar Us
 
 Where:
 
--   `startDate` specifies the start date in YYYY-MM-DD format
+-   `startDate` is the start date of the user session in YYYY-MM-DD format.
 -   `endDate` specifies the end date in YYYY-MM-DD format
 -   `deploymentId` is the deployment identifier.
 -   `productFeatureId` is the poduct name either HCL_DX_CloudNative or DX_Compose
