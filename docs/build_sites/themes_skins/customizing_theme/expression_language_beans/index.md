@@ -1,6 +1,6 @@
 # Expression language beans for accessing programming models
 
-Expression language (EL) beans are used to access WebSphere Programming models. These beans are accessed through the PortalBean (wp). The beans allow you to use HCL Digital Experience models and associated classes.
+Expression language (EL) beans are used to access some HCL Digital Experience (DX) programming models. These beans are accessed through the PortalBean (wp). The beans allow you to use HCL DX models and associated classes.
 
 ## PortalBean
 
@@ -72,7 +72,7 @@ You can access the PortalBean with the following items. Append the following bea
         Represents one individual module.
 
     - **[CurrentModuleList](./module_list/current_module_list/themeopt_el_bean_mod_current_list.md)** <br>
-        Represents the list of modules within the scope of the current request, which is the currently selected page and theme. This module iterates through all modules, locate individual modules, and query their capabilities. This is especially useful for portlet developers to check whether certain capabilities are available on the page or not.
+        Represents the list of modules within the scope of the current request, which is the currently selected page and theme. This module iterates through all modules, locates individual modules, and queries their capabilities. This is especially useful for portlet developers to check whether certain capabilities are available on the page or not.
 
         - **[ModuleCapabilitiesList](./module_list/current_module_list/module_capabilities_list/index.md)** <br>
             Represents the aggregated capabilities of a list of modules. This is usually the non-deferred or deferred capabilities of the currently selected page and depends on how this object was fetched. It is useful for portlet developers to check whether certain capabilities are available on the page or not.
