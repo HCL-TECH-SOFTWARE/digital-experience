@@ -4,6 +4,10 @@ The following features and updates are available to customers installing HCL Dig
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
+- MyHCLSoftware delivery portal
+- Presentation Designer - Canvas settings
+- DXClient - New limitations for LiveSync
+
 **Digital Experience 8.5 and 9.0 Versions**
 
 - Extended Support option now available for DX versions 8.5 and 9.0
@@ -18,6 +22,30 @@ The following features and updates are available to customers installing HCL Dig
 Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){target="_blank"} for the list of software fixes, including Container Update releases.
 
 ## All Digital Experience Versions (8.5, 9.0, 9.5)
+
+### MyHCLSoftware delivery portal
+
+=== "Containers"
+    HCL DX software is now available through the new [MyHCLSoftware portal](https://my.hcltechsw.com/){target="_blank"} for customers licensed for the HCL Digital Experience Compose v9.5 offering. This in parallel to the existing HCL Software License Portal delivered in FlexNet. For more information, see the topics [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md), [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_mhs.md), [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/flexnet_license_and_delivery.md), and [](../../get_started/download/software_licensing_portal/index.md).
+
+=== "On-Premises"
+    HCL DX software is now available through the new [MyHCLSoftware portal](https://my.hcltechsw.com/){target="_blank"} for customers licensed for the HCL Digital Experience Compose v9.5 offering. This in parallel to the existing HCL Software License Portal delivered in FlexNet. For more information, see the topics [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md), [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_mhs.md), [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/flexnet_license_and_delivery.md), and [](../../get_started/download/software_licensing_portal/index.md).
+
+### Presentation Designer - Canvas settings
+
+=== "Containers"
+    Canvas settings are now available in Presentation Designer. With these settings, you can configure various aspects of the presentation such as canvas dimensions, direction, zoom level, and orientation. For more information, see []() and []().
+
+=== "On-Premises"
+    Canvas settings are now available in Presentation Designer. With these settings, you can configure various aspects of the presentation such as canvas dimensions, direction, zoom level, and orientation. For more information, see []() and []().
+
+### DXClient - New limitations for LiveSync
+
+=== "Containers"
+    New limitations are documented for using LiveSync for [Themes](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#themes) and [WCM Design Library](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#wcm-design-library).
+
+=== "On-Premises"
+    New limitations are documented for using LiveSync for [Themes](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#themes) and [WCM Design Library](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#wcm-design-library).
 
 ## Digital Experience 8.5 and 9.0 Versions
 
@@ -38,7 +66,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### RingAPI - Extending the trust store
 
 === "Containers"
-    Starting CF226, you can add additional certificate authorities to the trust store of RingAPI. This enables support for self-signed certificates in hybrid deployments. For more information, see [Adding additional CA to the trust store of DAM or RingAPI](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-additonal-ca.md).
+    You can now add additional certificate authorities to the trust store of RingAPI. This enables support for self-signed certificates in hybrid deployments. For more information, see [Adding additional CA to the DAM or RingAPI trust store](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-additonal-ca.md).
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
