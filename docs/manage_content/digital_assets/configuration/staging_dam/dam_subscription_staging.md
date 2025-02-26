@@ -25,6 +25,9 @@ The DAM staging framework allows you to stage your DAM content from an authoring
     !!! note
         A subscriber must be registered with a publisher. Access rights to DAM staging assets are not transferred for subscribers who do not have the same distinguished names (for example, uid=wpsadmin,o=hcl.com) in both publisher's and subscriber's Lightweight Directory Access Protocol (LDAP) or other user registry.
 
+    !!! note
+        Ensure that both the publisher and subscriber have the same Helm configuration for creating collections( `allowEditorToCreateCollections`). This ensures consistent behavior for creating collections across environments. For more details, see the [DAM Access Control Management](../../usage/managing_dam/dam_access_control.md#application-configuration) section.
+
 ### Configure staging hostname
 The hostname configuration for the DAM staging publisher and subscriber must be specified in the values.yaml file of HCL DX's helm charts. If the value is empty, the default host details will be the load balancer hostname. In case of a hybrid deployment, the hostname details must be specified.
 
@@ -169,6 +172,9 @@ Use the `manage-dam-staging trigger-staging` command to trigger DAM staging.
 
 !!! note
     For hybrid deployments, refer to the ["Setting up staging for hybrid deployments"](#setting-up-staging-for-hybrid-deployments) section. 
+
+!!! note
+    Ensure that both the publisher and subscriber have the same Helm configuration for creating collections (`allowEditorToCreateCollections`). This ensures consistent behavior for creating collections across environments. For more details, see the [DAM Access Control Management](../../usage/managing_dam/dam_access_control.md#overview-on-dam-collection-access-control) section.
 
 Use the `manage-dam-staging register-dam-subscriber` command to register or the `manage-dam-staging deregister-dam-subscriber` command to deregister the subscriber for DAM staging.
 
