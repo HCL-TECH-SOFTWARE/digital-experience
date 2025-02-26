@@ -1,4 +1,4 @@
-# How to change a cell name and node name in a standalone HCL Digital Experience environment?  
+# How to change cell and node names in a standalone HCL DX environment?  
 
 ## Applies to  
 
@@ -6,36 +6,36 @@
 
 ## Introduction  
 
-HCL Digital Experience is based on IBM WebSphere Application Server. When the product is installed, by default a "wp_profile" will be created with a cell- and node name. In some situations it is required to change the cell name and node name after installation. This document provides detailed instructions that can be used to change these names.  
+HCL Digital Experience (DX) is based on IBM WebSphere Application Server. When the product is installed, a wp_profile is created with a cell name and a node name by default. In some scenarios, it is required to change the cell name and node name after installation. This document provides instructions on how to change these names.  
 
 ## Instructions  
 
-In order to change the cell name and node name in a standalone Digital Experience environment the following steps can be used:  
+To change the cell name and node name in a standalone DX environment, refer to the following steps:  
 
-1) Open the command line window and go to `<WAS_HOME>/profiles/<profile_name>/bin` directory.  
+1. Open the command line window and go to the `<WAS_HOME>/profiles/<profile_name>/bin` directory.  
 
-2) Run wsadmin command in non connected mode as shown below.  
+2) Run the `wsadmin` command in non-connected mode, as shown in the following example. 
 
    `./wsadmin.sh -lang jython -user <wasadmin> -password <waspassword> -CONNTYPE none`  
 
-3) Run below command in wsadmin prompt to change the cell name. Make sure to replace newname with new cell name value.  
+3) Change the cell name by running the following command in `wsadmin` prompt. Make sure to replace `newName` with new cell name value.  
 
    `AdminTask.renameCell('[-newCellName <newName>]')`  
 
-4) Run below command in wsadmin prompt to change the node name. Make sure to replace oldname with old node name value and newname with new node name value.  
+4. Change the node name by running the following command in `wsadmin` prompt. Make sure to replace `oldname` with old node name value and `newname` with new node name value.  
 
    `AdminTask.renameNode('[-nodeName <oldname> -newNodeName <newname>]')`  
 
-5) Save the changes by using the command:  
+5. Save the changes by using the following command:  
 
    `AdminConfig.save()`  
 
-6) Exit the wsadmin prompt by using the command:  
+6. Exit the `wsadmin` prompt by using the command:  
 
    `exit`  
 
 7) Take a backup of `setupCmdLine.sh` located under `WAS_HOME/profiles/<profile_name>/bin`.  
 
-8) Edit `setupCmdLine.sh` file, change `WAS_NODE` value to new node name. Also, make sure that the `WAS_CELL` value is updated with new cell name.  
+8. Edit `setupCmdLine.sh` file and change the `WAS_NODE` value to the new node name. Make sure that the `WAS_CELL` value is updated with new cell name.  
 
-9) Restart the WebSphere_Portal server  
+9. Restart the WebSphere_Portal server.
