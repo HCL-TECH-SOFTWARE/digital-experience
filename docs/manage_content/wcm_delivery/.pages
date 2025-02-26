@@ -1,5 +1,6 @@
 title: Deliver Web Content
 nav:
+    - index.md
     - Vanity URLs: vanity_url
     - Syndication: syndication
     - WebDAV: webdav
