@@ -14,27 +14,37 @@ To change the cell name and node name in a standalone DX environment, refer to t
 
 1. Open the command line window and go to the `<WAS_HOME>/profiles/<profile_name>/bin` directory.  
 
-2) Run the `wsadmin` command in non-connected mode, as shown in the following example. 
+2. Run the `wsadmin` command in non-connected mode, as shown in the following example. Make sure to replace `<wsadmin>` and `<waspassword>` with the correct values.  
 
-   `./wsadmin.sh -lang jython -user <wasadmin> -password <waspassword> -CONNTYPE none`  
+    ```text
+     ./wsadmin.sh -lang jython -user <wasadmin> -password <waspassword> -CONNTYPE none  
+    ```  
 
-3) Change the cell name by running the following command in `wsadmin` prompt. Make sure to replace `newName` with new cell name value.  
+3. Change the cell name by running the following command in `wsadmin` prompt. Make sure to replace `<newName>` with new cell name value.  
 
-   `AdminTask.renameCell('[-newCellName <newName>]')`  
+    ```text
+     AdminTask.renameCell('[-newCellName <newName>]')  
+    ```  
 
-4. Change the node name by running the following command in `wsadmin` prompt. Make sure to replace `oldname` with old node name value and `newname` with new node name value.  
+4. Change the node name by running the following command in `wsadmin` prompt. Make sure to replace `<oldname>` with old node name value and `<newname>` with new node name value.  
 
-   `AdminTask.renameNode('[-nodeName <oldname> -newNodeName <newname>]')`  
+    ```text
+     AdminTask.renameNode('[-nodeName <oldname> -newNodeName <newname>]')
+    ```  
 
 5. Save the changes by using the following command:  
 
-   `AdminConfig.save()`  
+    ```text
+     AdminConfig.save()  
+    ```
 
 6. Exit the `wsadmin` prompt by using the command:  
 
-   `exit`  
+    ```text
+     exit
+    ```
 
-7) Take a backup of `setupCmdLine.sh` located under `WAS_HOME/profiles/<profile_name>/bin`.  
+7. Create a backup copy of `setupCmdLine.sh` located in `WAS_HOME/profiles/<profile_name>/bin`.  
 
 8. Edit `setupCmdLine.sh` file and change the `WAS_NODE` value to the new node name. Make sure that the `WAS_CELL` value is updated with new cell name.  
 
