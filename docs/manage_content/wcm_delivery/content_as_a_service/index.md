@@ -1,6 +1,6 @@
 # Content as a Service pages
 
-Starting with version 8.5 CF05, HCL Digital Experience (DX) introduces the concept of Content as a Service (CaaS) pages. You can use CaaS pages to render content that is managed by your HCL Web Content Manager (WCM) in different data formats.
+You can use Content as a Service (CaaS) pages in HCL Digital Experience (DX) to render content managed by your HCL Web Content Manager (WCM) in different data formats.
 
 You can generate individual representations of your web content using the corresponding HCL WCM presentation components. Instead of generating HTML, you can use HCL WCM presentation components to generate representations of your web content in formats of your choice such as JSON, or XML. CaaS pages allow the content that is centrally authored and maintained on your website to be accessed by the other data clients in raw data formats. Those data clients can generate their own client-specific visualization of the data. This approach of generating data is especially useful in mobile application that might want to present content consistently with other parts of the application.
 
