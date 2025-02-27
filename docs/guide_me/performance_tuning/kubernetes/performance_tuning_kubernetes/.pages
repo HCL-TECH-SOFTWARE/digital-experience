@@ -12,7 +12,6 @@ nav:
     - database_tuning.md
     - other_db_considerations.md
     - directory_server_tuning.md
-    - haproxy_routing.md
     - pod_cpu_limits_requests.md
     - focus_areas.md
     - wcm_tuning.md
