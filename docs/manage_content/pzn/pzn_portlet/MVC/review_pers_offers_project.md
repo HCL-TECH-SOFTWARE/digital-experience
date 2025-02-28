@@ -19,4 +19,4 @@ In this topic, you will learn about the structure of the Pers_Offers project. Up
     ![HRF File descriptions](./images/hrf_file_descriptions.png)  
 
     1. The specification and registration of the Java resource classes in the **src/main/java/pers_offers** folder.  
-    2. The resource collection definition in which a content spot, tables, column-values, and db-domains can be specified.  
+    2. The resource collection definition in which a content spot, tables, column values, and database domains can be specified.  
