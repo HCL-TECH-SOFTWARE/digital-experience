@@ -19,7 +19,7 @@ For base Portal the Release domain is the primary database being exercised.
 
 ## DB2 Tuning
 
-HCL Portal uses database servers for core functionality. In our measurement environment, we used a DB2 database server for the Portal application. The LDAP server, IBM Tivoli Directory Server also included a DB2 database as a repository, but that database is configured only indirectly through the LDAP administration utilities.
+HCL Portal uses database servers for core functionality. In our measurement environment, we used a DB2 database server for the Portal application. The LDAP server, IBM Security Verify Directory (ISVD) also included a DB2 database as a repository, but that database is configured only indirectly through the LDAP administration utilities.
 
 We recommend using a remote database server for high throughput workloads. For our measurements we used IBM DB2 Enterprise Edition 11.5 as our database server.
 
@@ -76,7 +76,7 @@ The maintenance tasks and practices mentioned here were found to be critical to 
 
 ## Oracle Tuning
 
-WebSphere Portal uses database servers for core functionality. In this measurement environment, we used Oracle database server for the Portal application. The LDAP server, IBM Tivoli Directory Server included a DB2 database as a repository.
+WebSphere Portal uses database servers for core functionality. In this measurement environment, we used Oracle database server for the Portal application. The LDAP server, IBM Security Verify Directory (ISVD) included a DB2 database as a repository.
 
 ### Planning for Oracle Enterprise Edition
 
@@ -98,70 +98,6 @@ We recommend that you refer to the Oracle Administrator’s Guide to help you ma
 - **ICMSFQ04:** 230MB
 - **ICMVFQ04:** 1MB
 - **Redo log groups:** 500MB each
-
-### AIX
-
-We configure our Oracle database on AIX using the following setup,
-
-- Set the filesystem for Portal databases to Enhanced Journal File System (JFS2).
-- Turn on concurrent I/O (CIO) for database filesystem as this improves performance. Do not enable CIO for Oracle product filesystem, ie, /u01, as Oracle could fail to start. To enable CIO, use the following command to mount the database fileset.
-
-mount -o cio /u02
-
-- Increase AIX maximum number of processes per user to 4096.
-
-The default 500 processes per user is too low for database server, we increased it to 4096 in our AIX environment. To increase it, 
-
-chdev -l sys0 -a maxuproc=’4096’
-
-- Enable AIX async I/O, and increase MinServer to 5. smitty aio → Change/Show Characteristics of Async I/O → MinServers = 5
-- We also set in oracle user’s profile as Oracle Installation Guide for AIX recommends
-
-AIXTHREAD_SCOPE=S
-
-### Linux
-
-We configured our Oracle database on RHEL6 by doing the following:
-
-Tuned the resources limit settings for our Oracle user by adding the following to the /etc/security/limits.conf configuration file:
-
-oracle soft nproc 2047 
-
-oracle hard nproc 16384 
-
-oracle soft nofile 1024 
-
-oracle hard nofile 65536
-
-For Linux kernel parameters, we ran the fixup script generated during the install process. The script added the following parameters to our /etc/sysctl.conf configuration file:
-
-############################
-
-\# ORACLE PARMS
-
-############################
-
-kernel.shmall = 2097152 
-
-kernel.shmmax = 2147483648 
-
-kernel.shmmni = 4096 
-
-kernel.sem = 250 32000 100 128 
-
-net.core.rmem_default = 4194304 
-
-net.core.rmem_max = 4194304 
-
-net.core.wmem_default = 262144 
-
-fs.file-max = 6815744 
-
-net.core.wmem_max = 1048576 
-
-fs.aio-max-nr = 1048576
-
-net.ipv4.ip_local_port_range = 9000 65500
 
 ### Oracle Enterprise Edition Parameter Tuning
 
