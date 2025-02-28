@@ -10,7 +10,7 @@ Applications commonly require HCL Digital Experience to integrate with existing 
 
 In most organizations, different groups administer HCL Digital Experience and the LDAP server. Integrating the two requires in-depth knowledge of both systems. This document guides HCL Digital Experience administrators on obtaining the necessary information to integrate HCL Digital Experience with existing LDAP servers.
 
-**Table of Contents**  
+### Table of Contents  
 
 Introduction  
 Lab Environment  
@@ -29,18 +29,18 @@ Task 12 - Other Performance, LDAP, and Networking Considerations
 Task 13 - Consider other requirements, beyond the scope of this guide  
 Resources
 
-The attached HCL Digital Experience v8.5 and [LDAP Integration Guide](./files/HCL%20Portal%20v8.5%20and%20LDAP%20Integration%20Guide.pdf) contains the complete contents of this guide.
+The attached HCL Digital Experience v8.5 and [LDAP Integration Guide](./files/HCL%20Portal%20v8.5%20and%20LDAP%20Integration%20Guide.pdf){target="_blank"} contains the complete contents of this guide.
 
 ## Instructions
 
 The following PDF documents are available:
 
-[HCL Portal v8.5 and LDAP Integration Guide](./files/HCL%20Portal%20v8.5%20and%20LDAP%20Integration%20Guide.pdf)
+[HCL Portal v8.5 and LDAP Integration Guide](./files/HCL%20Portal%20v8.5%20and%20LDAP%20Integration%20Guide.pdf){target="_blank"}
 
-[Sample_LDIFs](./files/HCL_sample_LDIFs.pdf)
+[Sample_LDIFs](./files/HCL_sample_LDIFs.pdf){target="_blank"}
 
-[Worksheet_Task3PartA](./files/HCL_Worksheet_Task3PartA.pdf)
+[Worksheet_Task3PartA](./files/HCL_Worksheet_Task3PartA.pdf){target="_blank"}
 
-[Worksheet_Task4](./files/HCL_Worksheet_Task4.pdf)
+[Worksheet_Task4](./files/HCL_Worksheet_Task4.pdf){target="_blank"}
 
-[Worksheet_Task_5_to_9](./files/HCL_Worksheet_Tasks_5_to_9.pdf)
+[Worksheet_Task_5_to_9](./files/HCL_Worksheet_Tasks_5_to_9.pdf){target="_blank"}
