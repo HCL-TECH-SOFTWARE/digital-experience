@@ -6,32 +6,53 @@
 
 ## Introduction
 
-Sometimes it is easier to clear WCM Caches from the command line than using a UI. Especially useful when debugging stale content issues.
+Sometimes, it is easier to clear WCM Caches from the command line than using the user interface, especially when debugging stale content issues.
 
 ## Instructions
 
-To clear all WCM Caches run the following [ConfigEngine](https://help.hcl-software.com/digital-experience/9.5/latest/guide_me/wpsdirstr/?h=Configuration_Engine_profile_directory#configuration-engine-profile-directory) task:
+With the [ConfigEngine](../../../../deployment/manage/portal_admin_tools/?h=configengine#overview-of-configengine) command it is possible to clear all- or only individual WCM caches.
 
-`./ConfigEngine.sh action-wcm-clear-cache-all`
+### Clear all WCM caches
 
-To clear individual WCM Caches, run one of these tasks instead:
+To clear all WCM caches, run the following ConfigEngine task:
 
-    - action-wcm-clear-cache-menu
-    - action-wcm-clear-cache-nav
-    - action-wcm-clear-cache-strategy
-    - action-wcm-clear-cache-global
-    - action-wcm-clear-cache-module
-    - action-wcm-clear-cache-processing
-    - action-wcm-clear-cache-site
-    - action-wcm-clear-cache-session
-    - action-wcm-clear-cache-summary
-    - action-wcm-clear-cache-abspath
-    - action-wcm-clear-cache-abspathreverse
+```text
+ ./ConfigEngine.sh action-wcm-clear-cache-all
+```
 
-If you have [user.cache.enable=true](https://help.hcl-software.com/digital-experience/9.5/latest/manage_content/wcm_configuration/wcm_svc_cfg/srvcfgwcmref_config/?h=user.cache.enable) you may also want to clear that cache using task:
+### Clear individual WCM caches
 
-`./ConfigEngine.sh action-wcm-clear-cache-principalinformation`
+To clear individual WCM caches, run the ConfigEngine script as following:  
 
-You may need to also include the Portal/WAS password if not stored in [wkplc.properties](https://help.hcl-software.com/digital-experience/9.5/latest/deployment/manage/cfg_property_files/wkplc-dita/?h=wkplc.p), for example:
+```text
+ ./ConfigEngine.sh <task-name>
+```
 
-`./ConfigEngine.sh  action-wcm-clear-cache-summary  -DPortalAdminPwd=myPassword  -DWasPassword=myPassword`
+ Please replace `<task-name>` with one of the following available tasks:
+
+- action-wcm-clear-cache-menu  
+- action-wcm-clear-cache-nav  
+- action-wcm-clear-cache-strategy  
+- action-wcm-clear-cache-global  
+- action-wcm-clear-cache-module  
+- action-wcm-clear-cache-processing  
+- action-wcm-clear-cache-site  
+- action-wcm-clear-cache-session  
+- action-wcm-clear-cache-summary  
+- action-wcm-clear-cache-abspath  
+- action-wcm-clear-cache-abspathreverse  
+
+### Additional Options
+
+If you have [user.cache.enable=true](../../../manage_content/wcm_configuration/wcm_svc_cfg/srvcfgwcmref_config.md), you can also clear that cache using the following task:  
+
+```text
+./ConfigEngine.sh action-wcm-clear-cache-principalinformation
+```  
+
+If the Portal/WAS password is not stored in [wkplc.properties](../../../deployment/manage/cfg_property_files/wkplc-dita.md), you can include Portal/WAS password using the following command:  
+
+```text
+./ConfigEngine.sh  action-wcm-clear-cache-summary  -DPortalAdminPwd=<password1>  -DWasPassword=<password2>
+```
+Replace the `<password1>` & `<password2>` to match your Portal administration and WebSphere Application Server administration password.  
