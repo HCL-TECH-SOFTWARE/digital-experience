@@ -1,4 +1,4 @@
-# How to clear WCM Caches with ConfigEngine Task
+# How to clear WCM caches with ConfigEngine task
 
 ## Applies to
 
@@ -6,13 +6,11 @@
 
 ## Introduction
 
-Sometimes, it is easier to clear WCM Caches from the command line than using the user interface, especially when debugging stale content issues.
+Sometimes, it is easier to clear WCM caches from the command line than using the user interface, especially when debugging stale content issues. With the [ConfigEngine](../../../../deployment/manage/portal_admin_tools/?h=configengine#overview-of-configengine) command, you have the option to clear all WCM caches or clear individual WCM caches.
 
 ## Instructions
 
-With the [ConfigEngine](../../../../deployment/manage/portal_admin_tools/?h=configengine#overview-of-configengine) command it is possible to clear all- or only individual WCM caches.
-
-### Clear all WCM caches
+### Clearing all WCM caches
 
 To clear all WCM caches, run the following ConfigEngine task:
 
@@ -20,7 +18,7 @@ To clear all WCM caches, run the following ConfigEngine task:
  ./ConfigEngine.sh action-wcm-clear-cache-all
 ```
 
-### Clear individual WCM caches
+### Clearing individual WCM caches
 
 To clear individual WCM caches, run the ConfigEngine script as following:  
 
@@ -28,7 +26,7 @@ To clear individual WCM caches, run the ConfigEngine script as following:
  ./ConfigEngine.sh <task-name>
 ```
 
- Please replace `<task-name>` with one of the following available tasks:
+Make sure to replace `<task-name>` with one of the following available tasks:
 
 - action-wcm-clear-cache-menu  
 - action-wcm-clear-cache-nav  
@@ -42,17 +40,18 @@ To clear individual WCM caches, run the ConfigEngine script as following:
 - action-wcm-clear-cache-abspath  
 - action-wcm-clear-cache-abspathreverse  
 
-### Additional Options
+### Additional options
 
-If you have [user.cache.enable=true](../../../manage_content/wcm_configuration/wcm_svc_cfg/srvcfgwcmref_config.md), you can also clear that cache using the following task:  
+- If you have [`user.cache.enable=true`](../../../manage_content/wcm_configuration/wcm_svc_cfg/srvcfgwcmref_config.md), you can also clear that cache using the following task:  
 
-```text
-./ConfigEngine.sh action-wcm-clear-cache-principalinformation
-```  
+    ```text
+    ./ConfigEngine.sh action-wcm-clear-cache-principalinformation
+    ```  
 
-If the Portal/WAS password is not stored in [wkplc.properties](../../../deployment/manage/cfg_property_files/wkplc-dita.md), you can include Portal/WAS password using the following command:  
+- If the Portal/WAS password is not stored in [wkplc.properties](../../../deployment/manage/cfg_property_files/wkplc-dita.md), you can include Portal/WAS password using the following command:  
 
-```text
-./ConfigEngine.sh  action-wcm-clear-cache-summary  -DPortalAdminPwd=<password1>  -DWasPassword=<password2>
-```
-Replace the `<password1>` & `<password2>` to match your Portal administration and WebSphere Application Server administration password.  
+    ```text
+    ./ConfigEngine.sh  action-wcm-clear-cache-summary  -DPortalAdminPwd=<password1>  -DWasPassword=<password2>
+    ```
+
+    Replace `<password1>` and `<password2>` with your Portal administration and WebSphere Application Server administration password respectively.  
