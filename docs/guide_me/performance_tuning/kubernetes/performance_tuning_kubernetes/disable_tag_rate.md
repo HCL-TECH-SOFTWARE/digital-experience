@@ -104,7 +104,7 @@ Resources → Resource Environment → Resource Environment Providers → WP Con
 **Name:** `cache.dynamic.content.spot`  
 **Value:** `false`
 
-This setting increased throughput when using the Portal 9.5 theme, but might have a performance impact with the Page Builder theme. If an installation is using the Page Builder theme as well as the Portal 9.5 theme, benchmarks should be run to determine if the net effect is positive before setting this value.
+This setting increased throughput when using the Portal 9.5 theme, but might have a performance impact with the Portal 8.5 theme. If an installation is using the Portal 8.5 theme as well as the Portal 9.5 theme, benchmarks should be run to determine if the net effect is positive before setting this value.
 
 ## Cache ra:collections
 
@@ -232,6 +232,9 @@ Even though unused caches use some memory, the amount is minimal so it is not re
 For some cache types, performance will be better if the cache size is a prime number due to a lower probability of cache collisions. For such cache types, the actual size is increased, at runtime, to the next prime number equal or greater than the size specified.
 
 ## People Service
+
+!!!note
+    The People Service mentioned in this topic is the old People Service application and not the [People Service](../../../../extend_dx/integration/people_service/index.md) available starting CF224.
 
 When assigning user and group permissions for WCM resources through the People Picker portlet, the People Service is used. While we did not use this tuning for our own benchmarks, in some cases the selection of users and groups may be slow and can be improved by reducing the default search attributes used by the service. In an example, note that People Picker expects 4 attributes. To improve search performance it’s possible to configure the same attribute 4 times since only one is needed. Attribute: pickerPeopleSearchAttribute
 
