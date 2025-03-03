@@ -24,11 +24,11 @@ The components of a portal theme include:
 
         Defines the decoration of the individual portlets on the page.
 
-    If the files used by the theme are not part of the theme folder, and therefore not part of the theme structure, then those files are named external. External files are shared by multiple themes.
+    If the files used by the theme are not part of the theme folder, and therefore not part of the theme structure, those files are named external. External files are shared by multiple themes.
 
 -   **Dynamic content**
 
-    Generated based on the data model of HCL Digital Experience (DX) with technologies such as JavaServer Pages or Java code.
+    Generated based on the data model of HCL Digital Experience (DX) with technologies such as JavaServer Pages (JSP) or Java code.
 
 -   **Configuration**
 
