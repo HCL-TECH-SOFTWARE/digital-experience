@@ -1,4 +1,4 @@
-# How to change cell and node names in a standalone HCL DX environment?  
+# How to change cell and node names in a standalone HCL DX environment
 
 ## Applies to  
 
@@ -20,32 +20,38 @@ To change the cell name and node name in a standalone DX environment, refer to t
      ./wsadmin.sh -lang jython -user <wasadmin> -password <waspassword> -CONNTYPE none  
     ```  
 
-3. Change the cell name by running the following command in `wsadmin` prompt. Make sure to replace `<newName>` with new cell name value.  
+3. Change the cell or node name by using the following commands in `wsadmin` prompt:
 
-    ```text
-     AdminTask.renameCell('[-newCellName <newName>]')  
-    ```  
+    - To change the cell name, run: 
 
-4. Change the node name by running the following command in `wsadmin` prompt. Make sure to replace `<oldname>` with old node name value and `<newname>` with new node name value.  
+        ```text
+        AdminTask.renameCell('[-newCellName <newName>]')  
+        ```  
 
-    ```text
-     AdminTask.renameNode('[-nodeName <oldname> -newNodeName <newname>]')
-    ```  
+        Make sure to replace `<newName>` with new cell name value.
 
-5. Save the changes by using the following command:  
+    - To change the node name, run:  
+
+        ```text
+        AdminTask.renameNode('[-nodeName <oldname> -newNodeName <newname>]')
+        ``` 
+
+        Make sure to replace `<oldname>` with old node name value and `<newname>` with new node name value.  
+
+4. Save the changes by using the following command:  
 
     ```text
      AdminConfig.save()  
     ```
 
-6. Exit the `wsadmin` prompt by using the command:  
+5. Exit the `wsadmin` prompt by using the command:  
 
     ```text
      exit
     ```
 
-7. Create a backup copy of `setupCmdLine.sh` located in `WAS_HOME/profiles/<profile_name>/bin`.  
+6. Create a backup copy of `setupCmdLine.sh` located in `WAS_HOME/profiles/<profile_name>/bin`.  
 
-8. Edit `setupCmdLine.sh` file and change the `WAS_NODE` value to the new node name. Make sure that the `WAS_CELL` value is updated with new cell name.  
+7. Edit `setupCmdLine.sh` file and change the `WAS_NODE` value to the new node name. Make sure that the `WAS_CELL` value is updated with new cell name.  
 
-9. Restart the WebSphere_Portal server.
+8. Restart the WebSphere_Portal server.
