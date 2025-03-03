@@ -3,4 +3,6 @@ nav:
     - index.md
     - rendering_small_config.md
     - rendering_medium_config.md
+    - rendering_large_config.md
+    - performance_tuning_kubernetes
     - logstash_opensearch.md

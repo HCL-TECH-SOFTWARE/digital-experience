@@ -6,7 +6,7 @@ title: Accessing error information
 
 
 
-When you use the Digital Data Connector \(DDC\) for HCL Portal, you can access error messages for problems that occurred during the bean list computation.
+When you use the Digital Data Connector \(DDC\) for HCL Digital Experience, you can access error messages for problems that occurred during the bean list computation.
 
 Computing the bean list objects that result from setting a specific list-rendering context can fail due to various reasons. For example, there can be network problems, or the backend service that normally serves the data can be down. In this situation, the resulting bean list is empty and does not contain any items. To detect whether an error occurred and to access the error message that the DDC framework generates for the error situation, access the `[Plugin:ListRenderingContext]` plug-in.
 

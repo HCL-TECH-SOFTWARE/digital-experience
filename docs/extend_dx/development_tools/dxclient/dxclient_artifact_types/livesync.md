@@ -443,6 +443,8 @@ The LiveSync Push WCM Design Library command synchronizes changes in your local 
 - While multiple developers can use LiveSync on the same server, LiveSync restricts concurrent theme editing to one developer at a time. If another user is currently working on the same theme being pushed, LiveSync will not allow that user's changes to be pushed. Concurrent usage of this command on the same theme or using it along with [Theme Editor](../../../../build_sites/themes_skins/customizing_theme/theme_editor_portlet.md), or WebDav, is not supported.
 - Sequential usage of LiveSync on a single theme with different client operating systems (i.e., Windows and Mac) is not supported.
 - Case sensitivity for naming files and folders is not supported.
+-  If files from Themes are deleted from the DX server while the LiveSync process is in progress, the files will not be restored from the local system. LiveSync does not support bidirectional synchronization, therefore, any local updates to the deleted files will result in a **File not found** error.
+   To resolve the **File not found** error, push your local files back to the theme. Note that this action overrides the existing files on the server. To proceed, stop the sync and push the files again. If a full replacement is not required, stop the sync and manually add the files again to the theme on the server.
 
 ### WCM Design Library
 
@@ -451,3 +453,8 @@ The LiveSync Push WCM Design Library command synchronizes changes in your local 
 - If a published component has a draft version, the feature will pull and push into the draft version.
 - The LiveSync Push WCM Design Library feature only works on a WCM Design Library previously pulled by the LiveSync Pull WCM Design Library feature.
 - The LiveSync Pull and Push WCM Design Library feature only allows the following special characters for the file name, folder name, and library name : $, -,  _,  !, ( ).
+- If any files from the WCM library are deleted from the DX server by a concurrent user during the LiveSync process between the local and DX servers, the files will not be restored from the local system, and there will be no local indication of this deletion. LiveSync is a unidirectional process that only happens from your local server to the DX server. If the deleted file is modified locally, it results in a **File not found** error. In this scenario, you cannot push the local files back to the DX server. To resolve this error, you must stop the sync, manually add the local file to the  DX server, and pull the WCM library.
+
+## HCLSoftware U learning materials
+
+To learn how to further develop WebDAV-based DX themes, go to the [Theme Development lesson in the HCL Digital Experience for Developers (Intermediate) course](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3462){target="_blank"}. You can try it out using the [Theme Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Theme_Development.pdf){target="_blank"} and corresponding [Theme Development Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Theme_Development_Lab_Resources.zip){target="_blank”}.

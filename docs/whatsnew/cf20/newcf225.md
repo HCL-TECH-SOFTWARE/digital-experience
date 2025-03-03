@@ -5,17 +5,18 @@ The following features and updates are available to customers installing HCL Dig
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Adjustment of seedlists for access control changes
-- User Session Reporting Tool for non-Kubernetes deployments
-- Notice of deprecation of Textbox.io Rich Text Editor
+- DXClient - LiveSync enabled for Presentation Templates
 
 **Digital Experience 8.5 and 9.0 Versions**
 
-- Extended Support option now available for DX versions 8.5 and 9.0 
+- Extended Support option now available for DX versions 8.5 and 9.0
 - Automatically apply 9.5 from a later CF installation
 
 **Digital Experience 9.5 Container Version**
 
 - Search V2 - Styling customizations
+- Custom `liveness` probe target value
+- New sizing guidance for rendering in a large configuration
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Removal of automated Pod restart on ConfigMap updates
 
@@ -31,15 +32,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new option is available where you can have the seedlist return items affected by library access control changes. To enable this feature, set ```seedlistUpdateLibrariesForAccessControl=true``` in `WCM WCMConfigService`. For more information, see [Crawling web content with search seedlists](../../build_sites/search/crawling_webcontent_seedbase/index.md).
 
-### User Session Reporting Tool for non-Kubernetes deployments
-
-### Notice of deprecation of Textbox.io Rich Text Editor 
+### DXClient - LiveSync enabled for Presentation Templates
 
 === "Containers"
-    The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and End of Support (EOS) is on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
+    LiveSync now supports Presentation Templates. For more information, see [DXClient](../../extend_dx/development_tools/dxclient/index.md) and [LiveSync](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md).
 
 === "On-Premises"
-    The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and End of Support (EOS) is on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
+    LiveSync now supports Presentation Templates. For more information, see [DXClient](../../extend_dx/development_tools/dxclient/index.md) and [LiveSync](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md).
 
 ## Digital Experience 8.5 and 9.0 Versions
 
@@ -58,6 +57,19 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ## Digital Experience 9.5 Container Version
 
 ### Search V2 - Styling customizations
+
+=== "Containers"
+    You can customize Search V2 by providing custom CSS modules. For more information, see [Customizations for Search V2](../../build_sites/search_v2/customizations.md).
+
+### Custom `liveness` probe target value
+
+=== "Containers"
+    In previous releases, the `liveness` probe target values are fixed because they are specific to the application and should not be changed. Starting CF225, Core provides a `customProbeURL` value that allows you to configure the `liveness` probe target value. If the `customProbeURL` is empty, the `liveness` probe target value for Core is `"/ibm/console"` by default. For more information, see [Probes configuration in values.yaml file](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/probes_configuration.md).
+
+### New sizing guidance for rendering in a large configuration
+
+=== "Containers"
+    Results of DX sizing tests for rendering in a large Kubernetes configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic [Sizing guidance for rendering in a large-sized Kubernetes configuration](../../guide_me/performance_tuning/kubernetes/rendering_large_config.md).
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 

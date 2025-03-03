@@ -1,8 +1,8 @@
 # Setting up Content as a Service
 
-To be able to work with Content as a Service pages in HCL Portal, you must enable it by using an HCL Digital Experience configuration task.
+To be able to work with Content as a Service pages in HCL Digital Experience (DX), you must enable it by using an HCL DX configuration task.
 
-For Content as a Service pages to work, you must have the new functions for HCL Portal and HCL Web Content Manager Version 8.5 CF05 enabled. For more information, see the *readme file for WebSphere Portal and Web Content Manager V8.5 CF05*.
+For Content as a Service pages to work, you must have the new functions for HCL DX and HCL Web Content Manager Version 8.5 CF05 enabled. For more information, see the *readme file for WebSphere Portal and Web Content Manager V8.5 CF05*.
 
 The setup for Content as a Service pages comprises both resources that are shared across virtual portals and virtual portal scoped resources.
 
@@ -26,7 +26,7 @@ The setup for Content as a Service pages comprises both resources that are share
     -   AIX and Linux: `./ConfigEngine.sh install-caas-vp -DPortalAdminId=user_id -DPortalAdminPwd=password -DWasUserid=user_id -DWasPassword=password -DVirtualPortalContext=virtual_portal_context`
     -   Windows: `ConfigEngine.bat install-caas-vp -DPortalAdminId=user_id -DPortalAdminPwd=password -DWasUserid=user_id -DWasPassword=password -DVirtualPortalContext=virtual_portal_context`
 
-5.  Restart your portal server.
+5.  Restart your DX server.
 
 
 
