@@ -28,6 +28,36 @@ The following image illustrates the DXClient Architecture diagram:
 
 ![HCL DXclient Architecture diagram](../../../images/HCLDXClient_Architecture_Diagram.png)
 
+## Public and free DXClient installation options 
+
+The following options to install DXClient are available starting CF221. Both options are free to use.
+
+- [Install DXClient from the NpmJS public registry.](#installing-or-uninstalling-dxclient-from-npmjs-registry)
+
+- [Install DXClient from the container image in the public Harbor repository.](#installing-dxclient-using-the-container-image-in-the-harbor-repository)
+
+### Installing or uninstalling DXClient from NpmJS registry
+          
+The option to install or uninstall from the NpmJS registry is only available starting CF221. The DXClient version installed must be 221.0.0.
+
+- To install the latest version of DXClient, use the `npm install @hcl-software/dxclient` command. 
+
+- To install DXClient globally, use the `npm install -g @hcl-software/dxclient` command. 
+
+- To uninstall DXClient, use the `npm uninstall @hcl-software/dxclient` command.
+
+### Installing DXClient using the container image in the Harbor repository
+
+1. Pull the docker image from https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab using the following command:
+
+    ```
+     docker pull hclcr.io/dx-public/dxclient:IMAGE_TAG
+    ```
+
+2. Download DXClient scripts.
+    
+    To download DXClient scripts, go to [dxclient-scripts](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts) of the HCL-TECH-SOFTWARE GitHub repository. In this repository, you can find the installation and usage details, and the latest scripts for using the containerized version of DXClient which is openly distributed in [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab).
+
 ## Installing DXClient using the container package from HCL Software portal
 
 The container package provides a fully packaged OCI-compliant container that contains everything to successfully run DXClient. You may use any container runtime that implements OCI Runtime Specification (for example, Docker or Podman).
@@ -303,36 +333,6 @@ In addition, the package includes scripts for all operating systems that make it
         ```bash
         make_unlink.bat
         ```
-
-## Public and free DXClient installation options 
-
-The following options to install DXClient are available starting CF221. Both options are free to use.
-
-- [Install DXClient from the NpmJS public registry.](#installing-or-uninstalling-dxclient-from-npmjs-registry)
-
-- [Install DXClient from the container image in the public Harbor repository.](#installing-dxclient-using-the-container-image-in-the-harbor-repository)
-
-### Installing or uninstalling DXClient from NpmJS registry
-          
-The option to install or uninstall from the NpmJS registry is only available starting CF221. The DXClient version installed must be 221.0.0.
-
-- To install the latest version of DXClient, use the `npm install @hcl-software/dxclient` command. 
-
-- To install DXClient globally, use the `npm install -g @hcl-software/dxclient` command. 
-
-- To uninstall DXClient, use the `npm uninstall @hcl-software/dxclient` command.
-
-### Installing DXClient using the container image in the Harbor repository
-
-1. Pull the docker image from https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab using the following command:
-
-    ```
-     docker pull hclcr.io/dx-public/dxclient:IMAGE_TAG
-    ```
-
-2. Download DXClient scripts.
-    
-    To download DXClient scripts, go to [dxclient-scripts](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts) of the HCL-TECH-SOFTWARE GitHub repository. In this repository, you can find the installation and usage details, and the latest scripts for using the containerized version of DXClient which is openly distributed in [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab).
 
 ## Verifying your DXClient installation
 
