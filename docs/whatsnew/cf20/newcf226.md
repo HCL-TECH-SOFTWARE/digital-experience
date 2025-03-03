@@ -7,6 +7,7 @@ The following features and updates are available to customers installing HCL Dig
 - MyHCLSoftware delivery portal
 - Presentation Designer - Canvas settings
 - DXClient - New limitations for LiveSync
+- New section for How-to articles
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -16,6 +17,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - RingAPI - Extending the trust store
+- People Service and Search V2 integration
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Removal of automated Pod restart on ConfigMap updates
 
@@ -47,6 +49,9 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     New limitations are documented for using LiveSync for [Themes](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#themes) and [WCM Design Library](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#wcm-design-library).
 
+### New section for How-to articles
+<No doc yet>
+
 ## Digital Experience 8.5 and 9.0 Versions
 
 ### Extended Support option now available for DX versions 8.5 and 9.0 
@@ -67,6 +72,9 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     You can now add additional certificate authorities to the trust store of RingAPI. This enables support for self-signed certificates in hybrid deployments. For more information, see [Adding additional CA to the DAM or RingAPI trust store](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-additonal-ca.md).
+
+### People Service and Search V2 integration
+<No doc yet>
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
