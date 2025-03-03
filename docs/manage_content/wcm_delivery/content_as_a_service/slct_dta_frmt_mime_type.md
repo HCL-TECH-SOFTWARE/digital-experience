@@ -11,7 +11,7 @@ You can use this MIME type-specific presentation component selection by adding c
 For example, specifying the parameter `mime-type=application/json` specifies the content element with the name `ibm.design.json` as the presentation component for representing your web content.
 
 !!! important 
-    Choosing this approach has implications for how oyu manage your content. The presentation component elements are part of your content. Adding, removing, or updating one of these well-defined elements requires you to update all related content items individually. Restoring previous versions of content items can require you to update the presentation component again.
+    Choosing this approach has implications for how you manage your content. The presentation component elements are part of your content. Adding, removing, or updating one of these well-defined elements requires you to update all related content items individually. Restoring previous versions of content items can require you to update the presentation component again.
 
 ## How to use presentation templates with the `pagedesign` query parameter
 
@@ -30,7 +30,7 @@ http://hostname/context_root/virtual_portal_context/caas?current=true&urile=wcm%
 
 Instead of using the `pagedesign` query parameter, you can also implement a custom context processor that sets the presentation template dynamically based on the requested MIME type. This solution provides you with the full MIME type flexibility as the second option and does not require the `pagedesign` parameter in web content links. Your context processor can change the presentation template for a request based on the requested MIME type from the `mime-type` parameter. For more information on custom context processors, go to the topic [Creating a context processor class](../../wcm_development/wcm_custom_plugin/wcm_dev_api_context_processor.md).
 
-For example, you might use a naming convention to select the proper presentation template for a request: `authoring_template_name.mime_type`. Given this simple naming convention, requesting the JSON representation of the content item `Web Content/Articles/Sample Article` that is based on the authoring template `Web Content/Article` would mean that your context processor sets the alternative presentation for the request to `Web Content/Article.json`.
+For example, you might use a naming convention to select the proper presentation template for a request such as `authoring_template_name.mime_type`. Given this simple naming convention, requesting the JSON representation of the content item `Web Content/Articles/Sample Article` that is based on the authoring template `Web Content/Article` would mean that your context processor sets the alternative presentation for the request to `Web Content/Article.json`.
 
 !!! important
     You need to configure the instance of the Web Content Viewer portlet that is located on the CaaS page with the unique name `ibm.portal.caas.page` to use your context processor. To configure the context processor for the instance of the portlet, use the **Edit Shared Settings** mode of the portlet from the CaaS page. More information on configuring the Web Content Viewer portlet, go to the topic [Advanced options](https://help.hcltechsw.com/digital-experience/8.5/panel_help/wcm_config_wcmviewer_hadv.html). If you use CaaS pages with virtual portals, make sure to also configure the portlet instances on the CaaS pages in each virtual portal.
