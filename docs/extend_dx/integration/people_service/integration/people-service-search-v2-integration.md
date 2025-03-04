@@ -2,7 +2,7 @@
 
 ## Overview
 
-The People Service now integrates with **Search V2** to enhance user discoverability and search performance. This integration enables efficient access to user profile data with real-time synchronization of updates.
+The People Service now integrates with **Search V2** to enhance user discoverability and search performance. This integration allows efficient access to user profile data with real-time update synchronization.
 
 ## Key Features
 
@@ -16,7 +16,7 @@ People Service provides indexing capabilities to ensure search results are up-to
 ## Configuration
 
 People Service now supports [Search V2](https://help.hcl-software.com/digital-experience/9.5/latest/build_sites/search_v2/). You can enable the Search V2 integration through the parameter `configuration.search.middleware.enabled` in the People Service helm chart.
-For more configuration details, refer to the [configuration parameters page](../deployment/configuration/index.md#search-configuration).
+For more information on the configuration details, refer to the [configuration parameters page](../deployment/configuration/index.md#search-configuration).
 
 ## Indexing Process
 
@@ -28,11 +28,11 @@ When creating and mutating users via the API or provisioning users via the [User
 
 ### On-demand indexing
 
-If immediate processing is required, the people service provides an indexing API that fully resynchronizes the index with the people service user data.
+If immediate processing is required, the People Service provides an indexing API that fully resynchronizes the index with the people service user data.
 
 ### Upgrading to CF226 or Later
 
-If the people service already persisted user data, a manual triggering of the indexing API is required.
+If the People Service already persisted user data, a manual triggering of the indexing API is required.
 
 ## Searching for a User via DX
 
