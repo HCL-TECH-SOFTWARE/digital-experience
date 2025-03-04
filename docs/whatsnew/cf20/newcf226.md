@@ -50,7 +50,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     New limitations are documented for using LiveSync for [Themes](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#themes) and [WCM Design Library](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#wcm-design-library).
 
 ### New section for How-to articles
-<No doc yet>
+
+=== "Containers"
+    There is a new section in the DX Help Center containing How-to articles. For more information, see [How-to articles](../../guide_me/howto/index.md).
+
+=== "On-Premises"
+    There is a new section in the DX Help Center containing How-to articles. For more information, see [How-to articles](../../guide_me/howto/index.md).
 
 ## Digital Experience 8.5 and 9.0 Versions
 
