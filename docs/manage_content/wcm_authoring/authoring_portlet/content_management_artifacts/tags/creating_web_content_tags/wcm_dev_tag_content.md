@@ -2,7 +2,7 @@
 title: Content tag
 ---
 
-The `Content` tag directly renders a content item or site area. See the format of an `Content` tag:
+The `Content` tag directly renders a content item or site area. See the format of a `Content` tag:
 
 ```
 [Content context=" " presentationPath=" " renderMode=" " uuid=" " path=" "]
@@ -59,20 +59,20 @@ When you add the tag to your design, you can also add the following parameters t
 |Tag parameters|Details|
 |--------------|-------|
 |`presentationPath="``NamePath"`|You can specify a specific presentation template to be used to render the content item or site area, in place of the default.|
-|`renderMode="`"|You can define specific mappings of presentation templates to authoring templates based on the `renderMode`. <br> Specifying the `renderMode` allows you to select the presentation template mapped to the authoring template for that `renderMode`. This parameter accepts the following values: `summary`, `json`, `xml`, `html`, and `default`. You can use the Web Content Manager API to define further render modes. You can also create separate presentation templates for each type and select them when you create a site area template or content template.<br>-   **Default Presentation Template**: This presentation template is used to render an item within a Web Content Viewer portlet. <br>-   **Summary Presentation Template**: This presentation template is used when the summary render mode is used to render an item. <br>-   **JSON Record Presentation Template**: This presentation template is used when the JSON render mode is used to render an item on mobile devices. <br>-   **XML Document Presentation Template**: This presentation template is used when the XML render mode is used to render an item on mobile devices. <br>-   **HTML Document Presentation Template**: This presentation template is used when the HTML render mode is used to render an item as a complete web page.|
+|`renderMode="`"|You can define specific mappings of presentation templates to authoring templates based on the `renderMode`. <br> Specifying the `renderMode` allows you to select the presentation template mapped to the authoring template for that `renderMode`. This parameter accepts the following values: `summary`, `json`, `xml`, `html`, and `default`. You can use the Web Content Manager API to define further render modes. You can also create separate presentation templates for each type and select them when you create a site area template or content template.<br>-   **Default Presentation Template**: This presentation template is used to render an item within a Web Content Viewer portlet. <br>-   **Summary Presentation Template**: This presentation template is used when the summary render mode is used to render an item. <br>-   **JSON Record Presentation Template**: This presentation template is used when the JSON render mode is used to render an item. <br>-   **XML Document Presentation Template**: This presentation template is used when the XML render mode is used to render an item. <br>-   **HTML Document Presentation Template**: This presentation template is used when the HTML render mode is used to render an item as a complete web page.|
 
 ## Examples
 
 Refer to the following examples of use cases for the `Content` tag.
 
-- You can set a content or site area with a specified UUID to render by specifying the site area or content that is linked to by an element named `MyLinkElement`.
+- You can set a content item or site area with a specified UUID to render by specifying the site area or content that is linked to by an element named `MyLinkElement`.
 
     ```
     [Content uuid="[Element key='MyLinkElement' format='id']"]
 
     ```
 
-- You can render a content or site area from a predefined context. This context can be `portalContext`, `portletContext`, `portalMapping`, or `autofill`.
+- You can render a content item or site area from a predefined context. This context can be `portalContext`, `portletContext`, `portalMapping`, or `autofill`.
 
     ```
     [Content context="portalContext"]
