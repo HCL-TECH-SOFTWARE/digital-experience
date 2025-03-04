@@ -1,6 +1,8 @@
 # How-to articles
 
-This section contains how-to articles to help you learn how to use HCL Digital Experience (DX) and all its features.
+This section contains how-to articles to help you learn how to use HCL Digital Experience (DX) and all its features. The how-to articles are classified into the following topics:
+
+- **[Configuration](configuration)**  
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
