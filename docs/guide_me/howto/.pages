@@ -1,4 +1,5 @@
 title: How-to
 nav:
-     - index.md
-     - administration
+    - index.md
+    - administration
+    - configuration

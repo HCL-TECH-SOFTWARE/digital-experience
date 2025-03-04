@@ -1,14 +1,16 @@
-# Adding additional CA to the DAM trust store
+# Adding additional CA to the trust store of DAM or RingAPI
 
 Implementing a custom plugin for the [Digital Asset Management extensibility](../../../../../../manage_content/digital_assets/configuration/dam_extensibility/configure_dam_extensibility.md) is by default limited to publicly trusted certificates. If the plugin is signed with a self-signed or otherwise untrusted certificate authority (CA), the trust store of DAM can be extended. Starting CF216, you can add additional certificate authorities to the trust store.
 
+In hybrid deployments, RingAPI must trust the certificate of your core deployment. If you are running a self-signed certificate in your core deployment, you have to add the certificate to the trust store of RingAPI.
+
 ## Prerequisites
 
-The Digital Asset Management leverages basic Node.JS functionality to extend the trust store by using the [NODE_EXTRA_CA_CERTS](https://nodejs.org/api/cli.html#node_extra_ca_certsfile) flag. Therefore, the certificate file used for the next steps must be one single file in the `pem` format with all necessary CAs aggregated into it.
+DAM and RingAPI both use basic Node.JS functionality to extend the trust store by using the [NODE_EXTRA_CA_CERTS](https://nodejs.org/api/cli.html#node_extra_ca_certsfile) flag. Therefore, the certificate file used for the next steps must be one single file in the `pem` format with all necessary CAs aggregated into it.
 
 ## Adding the PEM file as a secret
 
-To have your deployment and DAM use the certificate, you must store it in the Kubernetes cluster as a secret.
+To have your deployment and the corresponding service use the certificate, you must store it in the Kubernetes cluster as a secret.
 
 The secret can be created using the following commands:
 
@@ -34,7 +36,9 @@ networking:
   addon:
     digitalAssetManagement:
       caTrustSecret: "custom-ca-cert"
+    ringApi:
+      caTrustSecret: "custom-ca-cert"
 ```
 
 !!! note
-    Verify you have entered the correct name.
+    Verify you have entered the correct name. The secret name can differ for each service.

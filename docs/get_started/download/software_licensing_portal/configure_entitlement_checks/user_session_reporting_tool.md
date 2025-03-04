@@ -1,7 +1,7 @@
 ---
-title: User Session Reporting Tool
+title: User session reporting tool
 ---
-# User Session Reporting Tool
+# User session reporting tool
 
 This topic describes how you can use the User Session Reporting Tool to count and report user sessions.
 
@@ -94,7 +94,7 @@ For every request, a key is computed based on the requesting IP address of the u
 
 If a reverse proxy server, load balancer, or a similar component is used in the deployment setup, the [X-Forwarded-For header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For){target="_blank"} is used to identify the user. This header is the standard for identifying the originating IP address of a client connecting to a web server through an HTTP proxy or load balancer. Make sure that the `X-Forwarded-For` header is correctly configured in your routing setup.
 
-## Running the User Session Reporting Tool
+## Running the user session reporting tool
 
 The tool is packaged as an executable JAR file. Execute the tool by using the following parameters:
 
@@ -117,7 +117,7 @@ The following is a sample command for running the User Session Reporting Tool us
 java -jar <jarFilepath> <filePaths...> -excludeIPFilePath <excludeIPFile> -excludeSessionKeyFilePath <excludeSessionKeyFile> -excludeIPs <excludedIPs...> -excludeSessionKeys <excludeSessionKeys ...> <startDate> <endDate>
 
 # Example
-java UserSessionReporting.java input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIPs "192.168.243.142" -excludeSessionKeys "192.168.243.136 \"axios/1.6.7\" \"-\"" "192.168.243.137 \"axios/1.6.7\" \"-\"" 2022-07-22 2025-07-28
+java -jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIPs "192.168.243.142" -excludeSessionKeys "192.168.243.136 \"axios/1.6.7\" \"-\"" "192.168.243.137 \"axios/1.6.7\" \"-\"" 2022-07-22 2025-07-28
 
 ```
 
