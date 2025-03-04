@@ -1,6 +1,6 @@
-# Themes Artifacts
+# Themes
 
-This topic provides information about the deployment and undeployment of themes artifacts.
+This topic provides information about the deployment and undeployment of themes.
 
 ## Deploy theme
 

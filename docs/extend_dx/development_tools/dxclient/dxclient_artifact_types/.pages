@@ -2,8 +2,8 @@ Title: DXClient Artifact Types
 nav:
     - Applications: deployapplication.md
     - Credential Vault Slot: credentialvaultslot.md
-    - DAM artifacts: dam_artifacts
-    - Digital Asset Management: index.md
+    - Digital Asset Management: dam_artifacts
+    - index.md
     - dxcoreserver.md
     - livesync.md
     - personalization.md
