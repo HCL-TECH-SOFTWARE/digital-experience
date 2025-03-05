@@ -68,7 +68,7 @@ You can deploy HCL People Service using the HCL Digital Experience (DX) Helm cha
 | configuration.search.middleware.ssl | boolean | `false` | Setting if SSL is enabled for search middleware. |
 | configuration.search.middleware.pushAdminUser | string | `pushadmin` | Username of the push administrator. |
 | configuration.search.middleware.pushAdminPassword | string | `adminpush` | Password of the push administrator. |
-| configuration.search.middleware.existingPushAdminSecret | string | `` | Provide an existing secret that will be used to set credentials for push administration. If `customPushAdminSecret` is provided , `pushAdminUser` & `pushAdminPassword` values are ignored. |
+| configuration.search.middleware.existingPushAdminSecret | string | `` | Provide an existing secret that will be used to set credentials for push administration. If `customPushAdminSecret` is provided, `pushAdminUser` and `pushAdminPassword` values are ignored. |
 | configuration.search.contentSourceId | string | `` | Content Source ID for People Service. |
 
 ## Networking configuration

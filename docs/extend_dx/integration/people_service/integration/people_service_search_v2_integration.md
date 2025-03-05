@@ -2,7 +2,7 @@
 
 ## Overview
 
-The People Service now integrates with [Search V2](../../../../build_sites/search_v2/index.md) to enhance user discoverability and search performance. This integration provides efficient access to user profile data with real-time update synchronization.
+You can integrate People Service with [Search V2](../../../../build_sites/search_v2/index.md) to enhance user discoverability and search performance. This integration provides efficient access to user profile data with real-time update synchronization.
 
 ## Key features
 
@@ -39,9 +39,10 @@ If the People Service already persisted user data, a manual triggering of the in
 To search for a user via HCL Digital Experience (DX):
 
 1. Click the search box located at the top of the DX interface.
-2. Enter the user's name, role, email address, or other relevant attributes.
-3. Ensure that the content source for people is the relevant one.
-4. Review the search results and click the desired user to open their profile.
+2. In the **Search** field, enter the name, role, email address, or other relevant attributes of the user you are looking for.
+3. In the **Select a content source** field, select the relevant content source.
+4. In the **Select an attribute** field, select the relevant attribute.
+5. Click **Search**. Review the search results and click the desired user to open their profile.
     ![Search V2 - Search center](./img/dx-search-center.png)
 
 For more detailed instructions, refer to the [Search V2 End User Guide](../../../../build_sites/search_v2/usage.md).
