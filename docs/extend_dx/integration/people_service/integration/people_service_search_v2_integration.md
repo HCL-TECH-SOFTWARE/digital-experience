@@ -43,11 +43,8 @@ To search for a user via HCL Digital Experience (DX):
 3. In the **Select a content source** field, select the relevant content source.
 4. In the **Select an attribute** field, select the relevant attribute.
 5. Click **Search**. Review the search results and click the desired user to open their profile.
+
+The following image shows the Search Center where you can search for a user:
     ![Search V2 - Search center](./img/dx-search-center.png)
 
 For more detailed instructions, refer to the [Search V2 End User Guide](../../../../build_sites/search_v2/usage.md).
-
-
-## Summary
-
-The integration with **Search V2** enhances user discovery, ensures real-time synchronization, and improves the accessibility of user profile data within HCL Digital Experience.
