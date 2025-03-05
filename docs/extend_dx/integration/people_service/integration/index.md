@@ -16,5 +16,5 @@ Learn how to link People Service system modules in HCL DX.
 Learn how to create a My Profile link.
 - **[Customization](./customization/index.md)**<br>
 Learn about the customization options in People Service.
-- **[People Service and Search v2 integration](./people-service-search-v2-integration.md)**<br>
+- **[People Service and Search v2 integration](./people_service_search_v2_integration.md)**<br>
 Learn how to integrate People Service with Search V2.
