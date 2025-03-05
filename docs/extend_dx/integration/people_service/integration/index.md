@@ -17,4 +17,4 @@ Learn how to create a My Profile link.
 - **[Customization](./customization/index.md)**<br>
 Learn about the customization options in People Service.
 - **[People Service and Search v2 integration](./people-service-search-v2-integration.md)**<br>
-Learn about integrating people service with search V2
+Learn how to integrate People Service with Search V2.

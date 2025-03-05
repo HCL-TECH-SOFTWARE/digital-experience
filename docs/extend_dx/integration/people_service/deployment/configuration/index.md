@@ -62,14 +62,14 @@ You can deploy HCL People Service using the HCL Digital Experience (DX) Helm cha
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| configuration.search.middleware.enabled | boolean | `false` | Enable/Disable Search Middleware. |
-| configuration.search.middleware.host | string | `` | Host of Search middleware |
-| configuration.search.middleware.port | number | `nil` | Port of Search middleware |
-| configuration.search.middleware.ssl | boolean | `false` | Setting if SSL is enabled for Search Middleware |
-| configuration.search.middleware.pushAdminUser | string | `pushadmin` | Username of the push administrator |
-| configuration.search.middleware.pushAdminPassword | string | `adminpush` | Password of the push administrator |
-| configuration.search.middleware.existingPushAdminSecret | string | `` | Provide a existing secret that will be used to set credentials for push administration. If customPushAdminSecret is provided then pushAdminUser & pushAdminPassword values are ignored |
-| configuration.search.contentSourceId | string | `` | Content Source ID for People Service |
+| configuration.search.middleware.enabled | boolean | `false` | Enable/Disable search middleware. |
+| configuration.search.middleware.host | string | `` | Host of search middleware. |
+| configuration.search.middleware.port | number | `nil` | Port of search middleware. |
+| configuration.search.middleware.ssl | boolean | `false` | Setting if SSL is enabled for search middleware. |
+| configuration.search.middleware.pushAdminUser | string | `pushadmin` | Username of the push administrator. |
+| configuration.search.middleware.pushAdminPassword | string | `adminpush` | Password of the push administrator. |
+| configuration.search.middleware.existingPushAdminSecret | string | `` | Provide an existing secret that will be used to set credentials for push administration. If `customPushAdminSecret` is provided , `pushAdminUser` & `pushAdminPassword` values are ignored. |
+| configuration.search.contentSourceId | string | `` | Content Source ID for People Service. |
 
 ## Networking configuration
 

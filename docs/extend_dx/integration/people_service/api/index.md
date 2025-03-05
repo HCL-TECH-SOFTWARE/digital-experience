@@ -19,7 +19,7 @@ People Service APIs are categorized into the following sections:
 - **Federation and user directories**: APIs related to integrating with external user directories and federated identity providers.
 - **Utils**: Utility APIs for common tasks and operations.
 - **Probes**: Health check APIs for monitoring the service status and availability.
-- **Search Re-Index**: APIs related to retrying full or partial re-indexing for all or pending user profiles
+- **Search Re-Index**: APIs related to retrying full or partial re-indexing for all or pending user profiles.
 
 ## OpenAPI and Swagger Explorer
 
