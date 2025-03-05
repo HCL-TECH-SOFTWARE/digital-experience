@@ -1,6 +1,6 @@
 # Development and operations overview
 
-The steps for developing themes for a production portal includes the development of the theme components, their packaging, and their deployment to systems.
+The steps for developing themes for a production portal include the development of the theme components, their packaging, and their deployment to systems.
 
 The package is created either as the result of a build process that takes the code from a version control system and creates the correct artifacts or the artifacts are created by developers. Multiple artifacts create a release and the team that operates the integration and production servers receive and deploy them.
 
@@ -8,7 +8,7 @@ The components of a portal theme include:
 
 -   **Static content**
 
-    A component similar to the content of a static website. The markup is defined by HTML files. Static content also includes the CSS and JavaScript files that are used by the themes.
+    A component similar to the content of a static website. The markup is defined by HTML files. Static content also includes the CSS and JavaScript files that are used by the theme.
 
     The difference between a static website and a portal is that three kinds of HTML files exist:
 
@@ -42,7 +42,7 @@ There are several ways to develop a custom theme.
 
 -   **Developing within an IDE**
 
-    1. Set up a project using the form that you selected for packaging and add the artifacts such as HTML, CSS, and JavaScript files.
+    1. Set up a project using the format that you selected for packaging and add the artifacts such as HTML, CSS, and JavaScript files.
     2. Export the project and deploy it to your server, either as a compressed file in the file store or as an EAR file. 
     3. Register the theme with a custom developed `theme.xml` file.
 
@@ -53,7 +53,7 @@ There are several ways to develop a custom theme.
 
 -   **Developing on the live server**
 
-    This method of developing a theme was introduced recently and is driven through the WebDAV entry point to the file store.
+    This method of developing a theme is driven through the WebDAV entry point to the file store.
 
     1. Copy a theme with the existing content from one of the ready-to-use HCL DX themes or create a folder.
     2. Add your custom HTML, CSS, and JavaScript files.
@@ -85,7 +85,7 @@ The method you used to package the theme component determines the method you wil
 
 -   **Compressed file without EAR file**
 
-    Use the `webdav-deploy-zip-file` command to deploy the compressed file and use the XMLAccess command to run the script. Use the WebSphere® Integrated Solutions Console to add the runtime configuration.
+    Use the `webdav-deploy-zip-file` command to deploy the compressed file and use the XMLAccess command to run the script.
 
 -   **Compressed file with EAR file**
 
