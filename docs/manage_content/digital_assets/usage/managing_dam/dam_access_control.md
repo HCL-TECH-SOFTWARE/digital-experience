@@ -38,7 +38,7 @@ From the DAM perspective, each individual root-level collection and child collec
 
 A user that creates a root collection gets the Administrator role on the collection and so can do anything with that collection as indicated above.
 
-The following Helm configuration allows users with the Editor role to create collections in the DAM. By default, both Administrator and Editor roles can create collections. Setting `allowEditorToCreateCollections` to `false` disables this capability for Editors. This configuration is set to `true` by default.
+The following Helm configuration allows users with the Editor role to create collections in DAM. By default, both Administrator and Editor roles can create collections. To disable Editors from creating collections, set `allowEditorToCreateCollections` to `false`. This configuration is set to `true` by default.
 
 ```
 # Application Configuration
