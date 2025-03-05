@@ -6,7 +6,7 @@ Expression language (EL) beans are used to access some HCL Digital Experience (D
 
 The PortalBean provides access to EL beans that represent some of the HCL Portal models. You can use these models to access resource information in your JSPs.
 
-You can access the PortalBean with the following items. Append the following beans to `wp.` to create a bean in your JSP. For example, `wp.themeList.current` gets the current element and returns [Theme](./theme_list/theme/index.md).
+You can access following items using the PortalBean. Append the following bean names to `wp.` to create a bean in your JSP. For example, `wp.themeList.current` gets the current theme and returns a [Theme](./theme_list/theme/index.md) bean representing it.
 
 - **[wp.ac](./access_control/index.md)** <br>
     Provides read access to the current access control permissions for a resource.
