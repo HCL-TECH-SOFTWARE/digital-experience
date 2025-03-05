@@ -1,6 +1,6 @@
 # Canvas settings in Presentation Designer
 
-With Canvas settings, you can configure various aspects of the presentation such as canvas dimensions, direction, zoom level, and orientation. Presentation Designer retains the last used Canvas settings for the user in the browser. These settings include the width, height, zoom level, rotate, and the RTL toggle. This topic outlines the available settings in the **Header** section of Presentation Designer.
+With Canvas settings, you can configure various aspects of the presentation such as canvas dimensions, direction, zoom level, and orientation. Presentation Designer retains the last used Canvas settings for the user in the browser. These settings include the width, height, zoom level, canvas orientation, and the RTL toggle. This topic outlines the available settings in the **Header** section of Presentation Designer.
 
 To access Presentation Designer and understand its user interface, refer to the **[Access Presentation Designer](../access/index.md)** topic.
 
