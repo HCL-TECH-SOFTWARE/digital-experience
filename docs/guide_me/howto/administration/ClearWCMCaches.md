@@ -6,7 +6,7 @@
 
 ## Introduction
 
-Sometimes, it is easier to clear WCM caches from the command line than using the user interface, especially when debugging stale content issues. With the [ConfigEngine](../../../deployment/manage/portal_admin_tools/index.md#overview-of-configengine){target="_blank"} command, you have the option to clear all WCM caches or clear individual WCM caches.
+Sometimes, it is easier to clear WCM caches from the command line than using the user interface, especially when debugging stale content issues. With the [ConfigEngine](../../../deployment/manage/portal_admin_tools/index.md#overview-of-configengine) command, you have the option to clear all WCM caches or clear individual WCM caches.
 
 ## Instructions
 
@@ -42,13 +42,13 @@ Make sure to replace `<task-name>` with one of the following available tasks:
 
 ### Additional options
 
-- If you have [`user.cache.enable=true`](../../../manage_content/wcm_configuration/wcm_svc_cfg/srvcfgwcmref_config.md){target="_blank"}, you can also clear that cache using the following task:  
+- If you have [`user.cache.enable=true`](../../../manage_content/wcm_configuration/wcm_svc_cfg/srvcfgwcmref_config.md), you can also clear that cache using the following task:  
 
     ```text
     ./ConfigEngine.sh action-wcm-clear-cache-principalinformation
     ```  
 
-- If the Portal/WAS password is not stored in [wkplc.properties](../../../deployment/manage/cfg_property_files/wkplc-dita.md){target="_blank"}, you can include Portal/WAS password using the following command:  
+- If the Portal/WAS password is not stored in [wkplc.properties](../../../deployment/manage/cfg_property_files/wkplc-dita.md), you can include Portal/WAS password using the following command:  
 
     ```text
     ./ConfigEngine.sh  action-wcm-clear-cache-summary  -DPortalAdminPwd=<password1>  -DWasPassword=<password2>
