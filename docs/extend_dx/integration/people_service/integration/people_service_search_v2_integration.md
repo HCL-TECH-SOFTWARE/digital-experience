@@ -44,7 +44,7 @@ To search for a user via HCL Digital Experience (DX):
 4. Review the search results and click the desired user to open their profile.
     ![Search V2 - Search center](./img/dx-search-center.png)
 
-For more detailed instructions, refer to the [Search V2 End User Guide](https://help.hcl-software.com/digital-experience/9.5/latest/build_sites/search_v2/usage/).
+For more detailed instructions, refer to the [Search V2 End User Guide](../../../../build_sites/search_v2/usage.md).
 
 
 ## Summary
