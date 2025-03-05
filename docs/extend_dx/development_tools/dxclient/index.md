@@ -347,6 +347,9 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
 !!!note
     Refer to the list of features that were released in the following HCL DX 9.5 releases:
     
+    -   HCL DX 9.5 CF226 release: **V226.0.0
+        -  [Enabled TLS certificate validation while using DXClient.](#configuring-tls-certificate-validation-for-secure-connections)
+
     -   HCL DX 9.5 CF225 release: **V225.0.0
         -  Livesync is enabled for Presentation Template under WCM Design Library.
 
@@ -567,6 +570,31 @@ Common command arguments can be pre-configured inside the config.json file avail
 
 !!!note
     You must create the config.json in each `<VOLUME_DIR>` folder to set up multiple configurations. Otherwise, the system picks up the configurations specified in the default config.json available under `dist/configuration` in node version.
+
+### Configuring TLS Certificate Validation for Secure Connections
+
+As part of our ongoing efforts to improve security and maintain best practices in our development and production environments, we have made a key change in the way we handle TLS (Transport Layer Security) connections while using DXClient from CF226. You can still trust custom certificates (e.g., self-signed or third-party CAs), without disabling validation entirely.
+
+Step 1:Obtain the Certificate
+Ensure you have the .pem certificate file that you wish to add to the trust store. It must contain the whole content of both key and certificate files.
+
+Step 2:Add the certificate
+You have two ways to add/set the Certificate file.
+a. Using NODE_EXTRA_CA_CERTS
+By enabling NODE_EXTRA_CA_CERTS, we now provide a secure way to add custom trusted certificates. To use the NODE_EXTRA_CA_CERTS environment variable, you need to specify the path to a PEM file that contains the key & certificate details. Here's how you can configure it in your local or production environment:
+
+"Linux and Apple macOS"
+	```
+	export NODE_EXTRA_CA_CERTS=/Users/myUser/my-cert.pem
+
+	```
+"Microsoft Windows"
+	```
+	set NODE_EXTRA_CA_CERTS=C:\Users\myUser\my-cert.pem
+	```
+b. Add certificate to the trust store on your OS.
+
+**Note**  In local or development environments, you may want to disable this security feature to allow connections to services with self-signed or invalid certificates. By setting NODE_TLS_REJECT_UNAUTHORIZED to 0, you can bypass certificate validation. This can be useful for testing, but it should never be used in production environments because it can expose your application to potential security risks.
 
 ## DXClient information commands
 
