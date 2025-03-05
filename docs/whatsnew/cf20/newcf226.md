@@ -17,6 +17,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - RingAPI - Extending the trust store
+- DAM - New parameter for access control
 - People Service and Search V2 integration
 - Performance tuning for Kubernetes
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
@@ -79,6 +80,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     You can now add additional certificate authorities to the trust store of RingAPI. This enables support for self-signed certificates in hybrid deployments. For more information, see [Adding additional CA to the DAM or RingAPI trust store](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-additonal-ca.md).
+
+### DAM - New parameter for access control
+
+=== "Containers"
+    New parameter `allowEditorToCreateCollections` is available to enable or disable creating collections for users assigned the Editor role. By default, this parameter is set to `true`. For more information, see [DAM Access Control Management](../../manage_content/digital_assets/usage/managing_dam/dam_access_control.md#dam-access-control-in-detail).
 
 ### People Service and Search V2 integration
 
