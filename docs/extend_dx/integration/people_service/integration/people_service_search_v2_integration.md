@@ -47,4 +47,4 @@ To search for a user via HCL Digital Experience (DX):
 The following image shows the Search Center where you can search for a user:
     ![Search V2 - Search center](./img/dx-search-center.png)
 
-For more detailed instructions, refer to the [Search V2 End User Guide](../../../../build_sites/search_v2/usage.md).
+For more information, refer to the [Search V2 End User Guide](../../../../build_sites/search_v2/usage.md).
