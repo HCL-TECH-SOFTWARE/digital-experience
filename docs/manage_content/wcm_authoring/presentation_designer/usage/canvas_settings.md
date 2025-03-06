@@ -19,9 +19,9 @@ In the following image, you can see the options for selecting predefined sizes (
 
 ## Canvas rotate
 
-You can rotate the canvas using the **rotate** button in Presentation Designer.
+You can rotate the canvas using the **Rotate** button in Presentation Designer.
 
-The following image shows the **rotate** button.
+The following image shows the **Rotate** button.
 
 ![](../../../../assets/HCL_Presentation_Designer_Canvas_Settings_Rotate.png)
 
