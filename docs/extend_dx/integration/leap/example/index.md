@@ -29,7 +29,7 @@ configuration:
     leapProperties: ibm.nitro.NitroConfig.blockAnonAccess = disabled
 ```
 
-3\. Check that your app is accessible without having to log in. Opening your anonymous link (as an example, ours was: `https://native-kube-pio-10-feb-2.team-q-dev.com/apps/anon/org/app/6d4059ad-4faf-4616-869c-cb08060231de/launch/index.html?form=F_CustomerSurvey`; note the "anon" in the link) should not show a log in screen.
+3\. Check that your app is accessible without having to log in. 
 
 4\. **Create a new library** via Practitioner Studio > Web Content > Web Content Libraries. Enable viewing it in Authoring by going to Authoring > Preferences > Shared Settings > Library Selection and add your new library to the Selected Libraries box.
 
@@ -43,8 +43,7 @@ configuration:
 
 <img src="../../../../assets/dx-leap-integration-siteareakeyword.png" alt="keyword property" width="400" height="800">
 
-8\. Inside the Site Area you created, create the Content based on your `Simple HTML - CT` content template. Click on the “Remove Workflow” button. For the HTML value, use the script below, replacing the `***` with the appropriate values, depending on your app. The Launch link of your Leap app should have the details you need. The image below shows this; the appId is in the red box, while the formId is in the blue box.
-    - ![](../../../../assets/dx-leap-integration-link.png)
+8\. Inside the Site Area you created, create the Content based on your `Simple HTML - CT` content template. Click on the “Remove Workflow” button. For the HTML value, use the script below, replacing the `***` with the appropriate values, depending on your app. The Launch link of your Leap app should have the details you need; refer to the pattern `sample-hostname.com/.../app/<appId>/launch/index.html?form=<formId>`, that is, your appId should come after the word "app" in your link, whereas the formId should come after "form=".
 ```
 <div id="[Plugin:ScriptPortletNamespace]leapDiv" style="width: 100%"></div>
 
