@@ -19,7 +19,6 @@ The following features and updates are available to customers installing HCL Dig
 - RingAPI - Extending the trust store
 - DAM - New parameter for access control
 - People Service and Search V2 integration
-- Performance tuning for Kubernetes
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Removal of automated Pod restart on ConfigMap updates
 
@@ -90,9 +89,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     You can integrate [People Service](../../extend_dx/integration/people_service/index.md) with [Search V2](../../build_sites/search_v2/index.md) to enhance user discoverability and search performance. With this integration, you can access user profile data with real-time synchronization. For more information, see [People Service and Search V2 Integration](../../extend_dx/integration/people_service/integration/people_service_search_v2_integration.md).
-
-### Performance tuning for Kubernetes
-(No doc yet)
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
