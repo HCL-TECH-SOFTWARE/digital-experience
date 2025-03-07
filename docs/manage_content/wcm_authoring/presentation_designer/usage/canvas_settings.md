@@ -8,7 +8,7 @@ To learn how to use the different user elements in Presentation Designer, refer 
 
 ## Canvas dimensions
 
-The canvas dimensions settings in Presentation Designer can be used to set the width and height of the canvas to adapt to specified size requirements. You can also use Canvas dimensions to select from predefined sizes such as **Desktop**, **Tablet**, and **Mobile**.
+The canvas dimensions settings in Presentation Designer can be used to set the width and height of the canvas to adapt to specified size requirements. You can also use the dimensions settings to select from predefined sizes such as **Desktop**, **Tablet**, and **Mobile**.
 
 In the following image, you can see the options for selecting predefined sizes and for entering specific dimensions for width and height.
 
