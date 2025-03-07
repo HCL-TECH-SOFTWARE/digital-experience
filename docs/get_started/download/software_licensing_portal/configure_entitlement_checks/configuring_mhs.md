@@ -93,7 +93,7 @@ Where:
 -   `startDate` is the start date of the user session in YYYY-MM-DD format.
 -   `endDate` is the end date of the user session in YYYY-MM-DD format.
 -   `deploymentId` is the deployment identifier.
--   `productFeatureId` is the poduct name either HCL_DX_CloudNative or DX_Compose
+-   `productFeatureId` is the Product name either HCL_DX_CloudNative or HCL_DX_Compose
 
 To save the generated metrics to a file, use this command:
 
@@ -125,6 +125,6 @@ The generated `{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics` file should then be uplo
 ## My HCLSoftware vs FlexNet on Kubernetes
 The use cases for My HCLSoftware in Kubernetes deployments are very similar to those for FlexNet. The HCL DX License Manager container has been extended to integrate with MyHCL Software in a similar way to the existing integration with FlexNet. This integration ensures proper entitlement validation and usage reporting.
 
-**Entitlement Validation**: Periodically check whether the entitlement is still valid (typically valid for 12 months). The same grace period is also allowed, during which time reminders to renew the entitlelment before it expires will be posted in the container log.
+**Entitlement Validation**: Periodically check whether the entitlement is still valid (typically valid for 12 months). The same grace period is also allowed, during which time reminders to renew the entitlement before it expires will be posted in the container log.
 
 **User Session Reporting**: Periodically send user session reports to My HCLSoftware, allowing customers and HCL to monitor consumption is aligned within the allocated entitlement tier. These reports help assess if a change to a different usage tier is required based on the number of user sessions consumed.

@@ -115,7 +115,7 @@ java -jar <jarFilepath> -h
 # <endDate> Specifies the end date in YYYY-MM-DD format
 # <deploymentId> String deploymentID from MHS
 # <option> Specify "fileOutput" to write usage into an automatically named file. If option is unspecified, the usage metrics are displayed in the terminal and not saved in a file.
-# <productFeatureId> Poduct name (HCL_DX_CloudNative or DX_Compose)
+# <productFeatureId> Product name (HCL_DX_CloudNative or HCL_DX_Compose)
 ```
 
 The following is a sample command for running the User Session Reporting Tool using all the parameters provided:
