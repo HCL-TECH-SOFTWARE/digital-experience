@@ -40,16 +40,15 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     Canvas settings are now available in Presentation Designer. With these settings, you can configure various aspects of the presentation such as canvas dimensions, direction, zoom level, and orientation. For more information, see [Accessing the Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/access/index.md) and [Canvas settings in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/canvas_settings.md).
 
 === "On-Premises"
-=== "Containers"
     Canvas settings are now available in Presentation Designer. With these settings, you can configure various aspects of the presentation such as canvas dimensions, direction, zoom level, and orientation. For more information, see [Accessing the Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/access/index.md) and [Canvas settings in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/canvas_settings.md).
 
 ### DXClient - New limitations for LiveSync
 
 === "Containers"
-    New limitations are documented for using LiveSync for [Themes](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#themes) and [WCM Design Library](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#wcm-design-library).
+    New limitations are documented for using LiveSync. For [Themes](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#themes), if files are deleted from the DX server while the LiveSync process is in progress, the files will not be restored from the local system. For [WCM Design Library](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#wcm-design-library), if any files from the WCM library are deleted from the DX server by a concurrent user during the LiveSync process between the local and DX servers, the files will not be restored from the local system, and there will be no local indication of this deletion. Steps on how to resolve these limitations to the LiveSync process are provided.
 
 === "On-Premises"
-    New limitations are documented for using LiveSync for [Themes](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#themes) and [WCM Design Library](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#wcm-design-library).
+    New limitations are documented for using LiveSync. For [Themes](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#themes), if files are deleted from the DX server while the LiveSync process is in progress, the files will not be restored from the local system. For [WCM Design Library](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#wcm-design-library), if files from the WCM library are deleted from the DX server by a concurrent user during the LiveSync process between the local and DX servers, the files will not be restored from the local system, and there will be no local indication of this deletion. Steps on how to resolve these limitations to the LiveSync process are provided.
 
 ### New section for How-to articles
 
